@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Reader</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="fflate.js"></script>
+</head>
+<body>
+    <div id="header">
+        <div id="header-content">
+            <div class="header-container">
+                <a id="backBtn" class="header-btn" href="#" onclick="history.back(); return false;">
+                    <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+                </a>
+                <a id="search" class="header-btn" href="search.html">
+                    <img src="images/icons/search.svg" alt="Search">
+                </a>
+            </div>
+            <h1 id="headTitle"></h1>
+            <div class="header-container">
+                <a id="bookshelfAddRemove" class="header-btn" href="#" style="display: none">
+                    <img src="images/icons/add-book.svg" alt="Add/remove from bookshelf">
+                </a>
+                <a class="header-btn" href="html/categories.html">
+                    <img src="images/icons/categories.svg" alt="Browse Categories">
+                </a>
+                <a id="savedBooksLink" class="header-btn" href="bookshelf.html">
+                    <img src="images/icons/bookshelf.svg" alt="Bookshelf">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="body">
+        <div id="book-content">Loading book...</div>
+    </div>
+    <script src="reader.js" defer></script>
+</body>
+</html>

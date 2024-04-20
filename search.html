@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PG ZWI Search</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="search.js"></script>
+</head>
+<body>
+    <div id="header">
+        <div id="header-content">
+            <h1 id="headTitle">Project Gutenberg Search</h1>
+            <div id="tagline">Built by the Knowledge<br>Standards Foundation</div>
+            <div class="header-container">
+                <a class="header-btn" href="html/categories.html">
+                    <img src="images/icons/categories.svg">
+                </a>
+                <a id="bookshelfAddRemove" class="header-btn" href="#" style="display: none">
+                    <img src="images/icons/add-book.svg">
+                </a>
+                <a id="savedBooksLink" class="header-btn" href="bookshelf.html">
+                    <img src="images/icons/bookshelf.svg">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="body">
+        <div id="loadingMessage">Loading data...</div>
+        <script src="metadatabase.min.js"></script>
+
+        <div id="searchContainer">
+            <input type="text" id="searchBox" oninput="searchTitles(this.value)" placeholder="Search titles...">
+            <button id="searchButton">Go</button>
+        </div>
+        <form id="searchOptionsForm">
+            <div id="searchOptions">
+                <input type="radio" id="titleOnly" name="searchOption" value="title">
+                <label for="titleOnly">Title only</label>
+
+                <input type="radio" id="authorOnly" name="searchOption" value="author">
+                <label for="authorOnly">Author only</label>
+
+                <input type="radio" id="both" name="searchOption" value="both" checked>
+                <label for="both">Both</label>
+            </div>
+        </form>
+        <div id="searchResults"></div>
+    </div>
+</body>
+</html>

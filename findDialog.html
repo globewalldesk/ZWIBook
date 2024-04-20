@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Find Text</title>
+</head>
+<body>
+  <h1>Find Text</h1>
+  <input type="text" id="searchText" placeholder="Enter text to find">
+  <button onclick="sendSearch()">Find</button>
+
+  <script>
+    const { ipcRenderer } = require('electron');
+
+    function sendSearch() {
+      const text = document.getElementById('searchText').value;
+      ipcRenderer.send('perform-find', text);
+    }
+  </script>
+</body>
+</html>

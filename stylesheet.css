@@ -1,0 +1,316 @@
+/* Ensure the header stays fixed at the top of the viewport with original styling */
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;  /* Header takes full viewport width */
+    z-index: 1000;
+    background-color: #007BFF; /* Background color extends across the full width */
+    color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#header-content {
+    max-width: 800px;
+    margin: 0 auto; /* Centers the content within the header */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px 20px; /* Padding inside the content container */
+}
+
+.header #headTitle {
+    font-size: 1.1em; /* Reduce font size */
+    white-space: nowrap; /* Prevent wrapping to a new line */
+    overflow: hidden; /* Hide overflow */
+    text-overflow: ellipsis; /* Show ellipsis for overflow */
+    max-width: 60%; /* Adjust based on your header's layout and size */
+    margin: 0 auto; /* Center the title if there's space */
+}
+
+/* Adjust the body padding-top to prevent content from being hidden behind the fixed header */
+body {
+    padding-top: 100px; /* Adjust based on the header's height to ensure content starts below the header */
+    font-family: Arial, sans-serif;
+}
+
+/* Loading message animation */
+@keyframes fadeInOut {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+#loadingMessage {
+    animation: fadeInOut 750ms infinite;
+    text-align: left;
+    margin: 10px 0px 20px 20px;
+    color: green;
+}
+
+.header-btn {
+    background: none;
+    outline: none;
+    border: none;
+    display: flex;
+    padding: 10px; /* Increase padding to make the whole area clickable */
+    border-radius: 10px;
+    transition: background-color 0.1s;
+}
+
+.header-btn:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Optional: Change background color on hover */
+}
+
+#headTitle {
+    font-size: 20px;
+    margin: 0;
+}
+
+#tagline {
+    font-size: 10px;
+}
+
+/* Responsive font size for larger viewports */
+@media (min-width: 850px) {
+    #headTitle {
+        font-size: 20px;
+    }
+}
+
+/* Responsive adjustments for viewports between 770px and 850px */
+@media (min-width: 770px) and (max-width: 850px) {
+    #headTitle, #savedBooksLink {
+        font-size: 0.9em !important; /* Slightly reduce font size for these screens */
+    }
+
+    #tagline, #savedBooksLink {
+        margin: 0 10px; /* Adjust margins */
+    }
+}
+
+/* Responsive adjustments for smaller viewports below 770px */
+@media (max-width: 770px) {
+    #tagline {
+        display: none; /* Hide tagline on smaller viewports */
+    }
+
+    #headTitle, #savedBooksLink {
+        font-size: 0.9em !important; /* Further reduce font size for smaller screens */
+        /*white-space: nowrap;  Prevent wrapping to maintain layout */
+    }
+
+    #tagline, #savedBooksLink {
+        margin: 0 10px; /* Adjust margins */
+    }
+}
+
+.header-container {
+    display: flex;
+    gap: 10px;
+    margin-right: 20px;
+}
+
+#body {
+    margin: 0 auto; /* Center the content */
+    max-width: 800px; /* Max content width */
+}
+
+.searchResultItem {
+    margin-bottom: 10px; /* Adds space between each book-and-author unit */
+}
+
+.searchResultItem a {
+    display: block; /* Makes the title take up the full width, pushing the author to a new line */
+    color: #007bff; /* Adjust the color as needed */
+    font-weight: bold; /* Makes the title stand out */
+    text-decoration: none; /* Removes underline from links */
+}
+
+.searchResultItem .title {
+    font-family: Times;
+}
+
+.subtitle {
+    font-family: Times;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+.searchResultItem .author {
+    margin-left: 20px; /* Slightly indents the author */
+    font-size: 0.9em; /* Makes the author a tiny bit smaller */
+    color: #555; /* Adjust the color as needed */
+}
+
+
+#searchContainer {
+    display: flex;
+    gap: 10px; /* Space between elements */
+    align-items: center; /* Align items vertically */
+    max-width: 500px; /* Max width of search box */
+    margin-left: 20px; /* Align to the left with some space */
+}
+
+#searchBox {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    font-size: inherit;
+    width: 400px; /* Fixed width */
+}
+
+#searchButton {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: inherit;
+}
+
+#searchButton:hover {
+    background-color: #0056b3;
+}
+
+#searchOptions {
+    display: inline-flex;
+    justify-content: flex-start; /* Align items to the start */
+    gap: 5px; /* Spacing between radio buttons and labels */
+    margin-top: 10px; /* Spacing below the search box */
+    margin-left: 20px; /* Align to the left with the search box */
+}
+
+#searchOptions input[type="radio"] {
+    margin: 0;
+    cursor: pointer;
+}
+
+#searchOptions label {
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+#searchResults {
+    margin-top: 20px; /* Space between search options and results */
+    margin-left: 20px; /* Align to the left with the search box */
+}
+
+
+
+/* Tabs container */
+#bookshelfTabs {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabContent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+.tab.active {
+    background-color: #007BFF;
+    color: white;
+    font-weight: bold;
+}
+
+
+#bookshelfControls {
+    float: right; /* Float the image to the right */
+    margin: 0 0 10px 10px; /* Add some margin to create space between the image and the text */
+}
+
+#bookshelfAddRemove {
+    color: white;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+a.more {
+    font-size: 16px;
+    vertical-align: middle;
+}
+
+a.more:visited,
+a.more:link {
+    color: lightblue;
+}
+a.more:hover {
+    color: yellow;
+}
+
+#pagination-controls {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#prev, #next {
+    padding: 5px 10px;
+    margin: 0 10px;
+}
+
+#book-content {
+    overflow-y: auto; /* Scrollable content */
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.count {
+    font-size: 0.8em;
+    font-style: italic;
+    color:green;
+}
+
+#sortDropdown {
+    background-color: white;
+    border: 2px solid gray;
+    border-radius: 5px;
+    padding: 10px;
+    position: absolute;
+    top: 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#sortDropdown a {
+    text-decoration: none;
+    color: black;
+    background-color: lightgray;
+    padding: 4px 8px;
+    border-radius: 3px;
+}
+
+.from-plaintext p {
+    margin: 0;
+    line-height: 1.2;
+}
