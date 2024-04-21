@@ -17,7 +17,7 @@
     align-items: center;
     justify-content: space-between;
     gap: 10px;
-    padding: 10px 20px; /* Padding inside the content container */
+    padding: 10px 10px; /* Padding inside the content container */
 }
 
 .header #headTitle {
@@ -107,9 +107,16 @@ body {
 
 .header-container {
     display: flex;
-    gap: 10px;
+    gap: 0px;
     margin-right: 20px;
 }
+
+
+.header-container img {
+    height: 24px;
+    width: auto;
+}
+
 
 #body {
     margin: 0 auto; /* Center the content */
@@ -313,4 +320,13 @@ a.more:hover {
 .from-plaintext p {
     margin: 0;
     line-height: 1.2;
+}
+
+#bookmarkIcon {
+    position: absolute;
+    bottom: 0;
+    top: 63px; /* Adjust this value to make the bookmark 'hang' from the header */
+    right: 5px;
+    width: 50px; /* Set the size of your bookmark icon */
+    height: auto;
 }

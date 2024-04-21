@@ -108,7 +108,42 @@ document.addEventListener('DOMContentLoaded', async () => {
     
         return finalHTML;
     }
-            
+
+        
+    function assignParagraphIDs(container) {
+        const paragraphs = container.querySelectorAll('p');
+        paragraphs.forEach((p, index) => {
+            p.id = 'p' + index; // Assign ID like 'para0', 'para1', etc.
+        });
+    }
+
+    function saveCurrentPosition() {
+        const paragraphs = document.querySelectorAll('p');
+        let closest = null;
+        let minDistance = Infinity;
+    
+        paragraphs.forEach(paragraph => {
+            const rect = paragraph.getBoundingClientRect();
+            const distance = Math.abs(rect.top);
+            if (distance < minDistance) {
+                minDistance = distance;
+                closest = paragraph;
+            }
+        });
+    
+        if (closest) {
+            localStorage.setItem('lastReadPosition', closest.id);
+            // Optionally, send this to main process to save in bookshelf.json
+            window.electronAPI.sendLastReadPosition({ bookId: currentBookId, position: closest.id });
+        }
+    }
+
+    // Event listener to save position on page unload
+    window.addEventListener('beforeunload', saveCurrentPosition);
+    
+    // Optionally, save position periodically or on specific user actions
+    setInterval(saveCurrentPosition, 5000);  // Save every 5 seconds
+
        
     fflate.unzip(zwiData, async (err, unzipped) => {
         if (err) {
@@ -128,7 +163,20 @@ document.addEventListener('DOMContentLoaded', async () => {
     
         // Set content in the appropriate format
         bookContentDiv.innerHTML = primaryFilename.endsWith(".txt") ? prepPlainText(bookContent) : bookContent;
-    
+        
+        // Assign IDs to each paragraph
+        assignParagraphIDs(bookContentDiv);
+
+        // After setting the book content and IDs
+        const lastReadPosition = localStorage.getItem('lastReadPosition');
+        if (lastReadPosition) {
+            const paragraphToScroll = document.getElementById(lastReadPosition);
+            if (paragraphToScroll) {
+                paragraphToScroll.scrollIntoView();
+                // Optionally, animate the scroll or adjust position slightly for better UX
+            }
+        }
+
         // Update image sources within the loaded content immediately after setting innerHTML
         Array.from(bookContentDiv.querySelectorAll('img')).forEach(img => {
             const originalSrc = img.getAttribute('src');
@@ -211,4 +259,15 @@ document.addEventListener('DOMContentLoaded', async () => {
     } else {
         headTitle.textContent = wholeTitle;
     }
+
 });
+
+
+    function toggleBookmark() {
+        const bookmarkIcon = document.getElementById('bookmarkIcon');
+        if (bookmarkIcon.src.includes('bookmark.svg')) { // If currently showing the unfilled icon
+            bookmarkIcon.src = 'images/icons/bookmark-fill.svg'; // Change to filled icon
+        } else {
+            bookmarkIcon.src = 'images/icons/bookmark.svg'; // Change back to unfilled icon
+        }
+    }    

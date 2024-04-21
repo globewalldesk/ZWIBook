@@ -6,4 +6,5 @@ contextBridge.exposeInMainWorld('electronAPI', {
         ipcRenderer.on('bookshelf-update-confirmation', (event, ...args) => func(...args));
     },
     requestBookshelfData: () => ipcRenderer.invoke('get-bookshelf-data'),
+    sendLastReadPosition: (data) => ipcRenderer.send('save-last-read-position', data)
 });

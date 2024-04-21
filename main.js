@@ -2,6 +2,17 @@ const { app, BrowserWindow, ipcMain, Menu } = require('electron');
 const fs = require('fs');
 const path = require('path');
 
+// Path to the new subdirectory under the directory of main.js
+const dataDir = path.join(__dirname, 'data');
+
+// Check if the directory exists, if not create it
+if (!fs.existsSync(dataDir)){
+    fs.mkdirSync(dataDir);
+}
+
+const bookshelfPath = path.join(dataDir, 'bookshelf.json');
+process.stdout.write(bookshelfPath);
+
 let mainWindow; // Declare mainWindow globally
 
 // Function to open the find dialog
@@ -17,8 +28,18 @@ function openFindDialog() {
     findWindow.loadFile('findDialog.html');
     findWindow.on('closed', () => findWindow = null);
 }
-    
-     
+
+
+function getBookshelfData() {
+    try {
+        const data = fs.readFileSync(bookshelfPath, 'utf8');
+        return JSON.parse(data);
+    } catch (error) {
+        console.error('Failed to read bookshelf data:', error);
+        return { viewedBooks: [], savedBooks: [] };
+    }
+}
+
 
 function createWindow() {
     // Create the browser window.
@@ -161,7 +182,6 @@ app.on('activate', () => {
 
 // IPC event for updating the bookshelf with clicked book metadata
 ipcMain.on('update-bookshelf', (event, { bookMetadata, action }) => {
-    const bookshelfPath = path.join(app.getPath('userData'), 'bookshelf.json');
     let bookshelf;
 
     try {
@@ -211,7 +231,6 @@ ipcMain.on('update-bookshelf', (event, { bookMetadata, action }) => {
 
 
 ipcMain.handle('get-bookshelf-data', async (event) => {
-    const bookshelfPath = path.join(app.getPath('userData'), 'bookshelf.json');
     try {
         const data = fs.readFileSync(bookshelfPath, 'utf8');
         return JSON.parse(data);
@@ -226,3 +245,29 @@ ipcMain.on('perform-find', (event, text) => {
     mainWindow.webContents.findInPage(text);
 });
 
+ipcMain.on('save-last-read-position', (event, { bookId, position }) => {
+    const bookshelf = getBookshelfData(); // Retrieve current bookshelf data
+
+    // Ensure that readingPositions array exists
+    if (!bookshelf.readingPositions) {
+        bookshelf.readingPositions = [];
+    }
+
+    // Check if there is already an entry for this book in readingPositions
+    let positionEntry = bookshelf.readingPositions.find(entry => entry.PG_ID === bookId);
+
+    if (positionEntry) {
+        // Update existing entry
+        positionEntry.lastReadPosition = position;
+    } else {
+        // Create a new entry if none exists
+        bookshelf.readingPositions.push({
+            PG_ID: bookId,
+            lastReadPosition: position
+        });
+    }
+
+    // Write the updated bookshelf data back to the file
+    fs.writeFileSync(bookshelfPath, JSON.stringify(bookshelf, null, 2), 'utf8');
+    event.reply('position-save-confirmation', 'Last read position saved successfully.');
+});
