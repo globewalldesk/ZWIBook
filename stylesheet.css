@@ -322,11 +322,45 @@ a.more:hover {
     line-height: 1.2;
 }
 
-#bookmarkIcon {
+/* Base styling for paragraph containers */
+.paragraph {
+    position: relative;
+    display: block; /* Ensure block-level element behavior */
+    margin-left: 20px; /* Reduced left margin */
+    margin-right: 20px; /* New right margin for symmetry */
+}
+
+/* Extend the clickable area using ::before pseudo-element */
+.paragraph::before {
+    content: '';
     position: absolute;
-    bottom: 0;
-    top: 63px; /* Adjust this value to make the bookmark 'hang' from the header */
-    right: 5px;
-    width: 50px; /* Set the size of your bookmark icon */
-    height: auto;
+    left: -30px; /* Position relative to the paragraph */
+    width: 30px; /* Width of the clickable area */
+    height: 100%; /* Full height of the paragraph */
+    z-index: 500; /* Lower than the icon but above other content */
+    cursor: pointer;
+}
+
+/* Styling for bookmark icons */
+.bookmark-icon {
+    visibility: hidden;
+    width: 16px; /* Reverting to original size */
+    height: 16px;
+    cursor: pointer;
+    position: absolute;
+    left: -20px; /* Adjust based on new clickable area size */
+    top: 0;
+    z-index: 10000; /* Ensure the icon is above the clickable area */
+}
+
+/* Show bookmark icon when the parent paragraph is hovered */
+.paragraph:hover .bookmark-icon,
+.paragraph:hover::before { /* Make the ::before area visible on hover */
+    visibility: visible;
+}
+
+/* Additional class for filled bookmarks */
+.bookmark-icon.filled {
+    content: url('images/icons/bookmark-fill.svg'); /* Path to the filled bookmark icon */
+    visibility: visible;
 }

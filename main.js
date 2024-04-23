@@ -33,11 +33,43 @@ function openFindDialog() {
 function getBookshelfData() {
     try {
         const data = fs.readFileSync(bookshelfPath, 'utf8');
-        return JSON.parse(data);
+        const bookshelf = JSON.parse(data);
+
+        // Initialize 'bookmarks' if it does not exist
+        if (!bookshelf.bookmarks) {
+            bookshelf.bookmarks = [];
+        }
+
+        return bookshelf;
     } catch (error) {
         console.error('Failed to read bookshelf data:', error);
-        return { viewedBooks: [], savedBooks: [] };
+        // Initialize with defaults if there's an error reading or parsing the file
+        return { viewedBooks: [], savedBooks: [], readingPositions: [], bookmarks: [] };
     }
+}
+
+// Example function to update bookmarks in bookshelf data
+function updateBookmarks(bookId, bookmarkId, add = true) {
+    let bookshelf = getBookshelfData(); // Retrieve current bookshelf data
+
+    let bookEntry = bookshelf.viewedBooks.find(book => book.PG_ID === bookId);
+    if (!bookEntry) {
+        console.error('Book not found');
+        return;
+    }
+
+    if (add) {
+        bookEntry.bookmarks = bookEntry.bookmarks || [];
+        if (!bookEntry.bookmarks.includes(bookmarkId)) {
+            bookEntry.bookmarks.push(bookmarkId);
+        }
+    } else {
+        if (bookEntry.bookmarks) {
+            bookEntry.bookmarks = bookEntry.bookmarks.filter(id => id !== bookmarkId);
+        }
+    }
+
+    fs.writeFileSync(bookshelfPath, JSON.stringify(bookshelf, null, 2), 'utf8');
 }
 
 
@@ -230,6 +262,7 @@ ipcMain.on('update-bookshelf', (event, { bookMetadata, action }) => {
 });
 
 
+// Used in bookshelf.html
 ipcMain.handle('get-bookshelf-data', async (event) => {
     try {
         const data = fs.readFileSync(bookshelfPath, 'utf8');
@@ -245,6 +278,7 @@ ipcMain.on('perform-find', (event, text) => {
     mainWindow.webContents.findInPage(text);
 });
 
+// This is used in reader.html to update last reading position
 ipcMain.on('save-last-read-position', (event, { bookId, position }) => {
     const bookshelf = getBookshelfData(); // Retrieve current bookshelf data
 
@@ -270,4 +304,41 @@ ipcMain.on('save-last-read-position', (event, { bookId, position }) => {
     // Write the updated bookshelf data back to the file
     fs.writeFileSync(bookshelfPath, JSON.stringify(bookshelf, null, 2), 'utf8');
     event.reply('position-save-confirmation', 'Last read position saved successfully.');
+});
+
+ipcMain.on('update-bookmark', (event, { bookId, bookmarkId, isAdd }) => {
+    let bookshelf = getBookshelfData();  // This now includes bookmarks initialization
+    const bookmarkEntry = bookshelf.bookmarks.find(entry => entry.PG_ID === bookId);
+
+    if (isAdd) {
+        if (!bookmarkEntry) {
+            bookshelf.bookmarks.push({
+                PG_ID: bookId,
+                positions: [bookmarkId]
+            });
+        } else {
+            if (!bookmarkEntry.positions.includes(bookmarkId)) {
+                bookmarkEntry.positions.push(bookmarkId);
+            }
+        }
+    } else {
+        if (bookmarkEntry) {
+            bookmarkEntry.positions = bookmarkEntry.positions.filter(id => id !== bookmarkId);
+        }
+    }
+
+    fs.writeFileSync(bookshelfPath, JSON.stringify(bookshelf, null, 2), 'utf8');
+    event.reply('bookmark-update-confirmation', 'Bookmark updated successfully.');
+});
+
+ipcMain.handle('get-bookmarks', async (event, bookId) => {
+    const bookshelf = getBookshelfData();
+    console.log(JSON.stringify(bookshelf, null, 2));  // Detailed print of the bookshelf
+    
+    // Safely check if bookmarks exist and then find the entry
+    const bookmarksEntry = bookshelf.bookmarks && bookshelf.bookmarks.find(entry => entry.PG_ID === bookId);
+    console.log(`Searching for PG_ID: ${bookId}`);
+    console.log(`bookmarksEntry = ${JSON.stringify(bookmarksEntry)}`);
+    
+    return bookmarksEntry ? bookmarksEntry.positions : [];
 });

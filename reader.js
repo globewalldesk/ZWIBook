@@ -1,18 +1,24 @@
+let currentBookId;
+
 document.addEventListener('DOMContentLoaded', async () => {
     const bookContentDiv = document.getElementById('book-content');
     const urlParams = new URLSearchParams(window.location.search);
     const bookId = urlParams.get('bookId');
-    const currentBookId = bookId;
+    currentBookId = bookId; 
+    
+    const bookshelfData = await window.electronAPI.requestBookshelfData();
+
+    // Find last read position for current book
+    const lastReadData = bookshelfData.readingPositions.find(pos => pos.PG_ID === currentBookId);
+    const lastReadPosition = lastReadData ? lastReadData.lastReadPosition : null;
 
     const bookshelfAddRemove = document.querySelector('#bookshelfAddRemove');
+    
     bookshelfAddRemove.style.display = 'flex';
 
-    const bookshelfData = await window.electronAPI.requestBookshelfData();
-    
     const currentBookMetadata = JSON.parse(localStorage.getItem('currentBookMetadata'));
     
     async function toggleSaved(bookId) {
-        const bookshelfData = await window.electronAPI.requestBookshelfData();
         const icon = bookshelfAddRemove.querySelector('img');
         if (bookshelfData.savedBooks.some(book => book.PG_ID === currentBookId)) {
             bookshelfAddRemove.classList.add("bi-journal-minus");
@@ -51,80 +57,73 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     function prepPlainText(text) {
-        // Split the text on any newline character sequence (\r\n, \r, or \n)
+        // Split the incoming text by any type of newline characters to process it line by line
         const lines = text.split(/\r\n|\r|\n/);
-    
-        // Array to hold the final paragraphs
+        // This array will store all the paragraph HTML after processing
         const paragraphs = [];
-    
-        // Temporary array to hold lines of a potential paragraph
+        // A temporary array to hold lines until they're ready to be joined into a paragraph
         let tempParagraph = [];
+        // An index to keep track of paragraph numbers for assigning unique IDs
+        let paragraphIndex = 0;
     
-        // Function to flush the current paragraph into the main paragraphs array
+        // Function to handle the end of a paragraph and push it into the paragraphs array
         function flushParagraph() {
             if (tempParagraph.length > 0) {
-                // Join lines into a single paragraph and replace multiple consecutive spaces
-                let combinedText = tempParagraph.join(' ').replace(/ {2,}/g, match => '&nbsp;'.repeat(match.length));
+                // Join all collected lines into a single string and handle multiple consecutive spaces
+                let combinedText = tempParagraph.join(' ').replace(/ {2,}/g, ' ');
     
-                // Additional replacements for specific two-space scenarios
-                combinedText = combinedText.replace(/(\w)&nbsp;&nbsp;(\w)/g, '$1&nbsp;$2')
-                                           .replace(/(\.)&nbsp;&nbsp;(\w)/g, '$1&nbsp;$2')
-                                           .replace(/(\.)&nbsp;&nbsp;(")/g, '$1&nbsp;$2')
-                                           .replace(/(\.)&nbsp;&nbsp;(<)/g, '$1&nbsp;$2');
+                // Correct handling of spacing around punctuation and words
+                combinedText = combinedText.replace(/(\w)  (\w)/g, '$1 $2');
     
-                // Replace underscores with italic tags when they occur in pairs
-                combinedText = combinedText.replace(/_([^_]+)_/g, '<i>$1</i>');
-    
-                paragraphs.push(`<p>${combinedText}</p>`);
-                tempParagraph = []; // Reset the temporary paragraph
+                // Construct the paragraph HTML with a bookmark icon
+                paragraphs.push(`
+                    <div class="paragraph" id="p${paragraphIndex}">
+                        <img src="images/icons/bookmark.svg" class="bookmark-icon" id="bookmark-${paragraphIndex}" onclick="toggleBookmark(${paragraphIndex})">
+                        <p>${combinedText}</p>
+                    </div>
+                `);
+                // Increment the paragraph index for the next paragraph
+                paragraphIndex++;
+                // Reset the temporary paragraph storage for the next flush
+                tempParagraph = [];
             }
         }
     
-        // Iterate through each line to determine paragraph breaks
+        // Process each line individually
         lines.forEach((line, index) => {
-            if (line === '') {
-                // When encountering a blank line, flush current paragraph
+            if (line.trim() === '') {
+                // Flush the current paragraph if the line is empty, indicating a paragraph break
                 flushParagraph();
-                paragraphs.push('<p>&nbsp;</p>'); // Add a visible blank line
             } else {
-                // Add the current line to the paragraph buffer
+                // Add non-empty lines to the temporary paragraph array
                 tempParagraph.push(line);
-    
-                // Check if the current line and the next line form part of a paragraph
-                if (line.length < 60 || (lines[index + 1] && lines[index + 1].length < 60 && !/\w/.test(lines[index + 1]))) {
-                    flushParagraph(); // This line and the next don't meet the criteria, flush what we have
-                }
             }
         });
     
-        // Make sure to flush the last paragraph if any
+        // Make sure to flush the last paragraph if the text doesn't end with a newline
         flushParagraph();
     
-        // Join all paragraphs into a single string
-        const formattedText = paragraphs.join('');
-    
-        // Wrap the formatted text in a <div> with the specified class
-        const finalHTML = `<div class="from-plaintext">${formattedText}</div>`;
-    
-        return finalHTML;
+        // Return all processed paragraphs joined into a single HTML string
+        return paragraphs.join('');
     }
-
+    
+    
         
-    function assignParagraphIDs(container) {
-        const paragraphs = container.querySelectorAll('p');
-        paragraphs.forEach((p, index) => {
-            p.id = 'p' + index; // Assign ID like 'para0', 'para1', etc.
-        });
-    }
-
     function saveCurrentPosition() {
-        const paragraphs = document.querySelectorAll('p');
+        const paragraphs = document.querySelectorAll('p, div'); // Including div.paragraph based on your previous setup
         let closest = null;
         let minDistance = Infinity;
+        const viewportHeight = window.innerHeight;
     
         paragraphs.forEach(paragraph => {
             const rect = paragraph.getBoundingClientRect();
-            const distance = Math.abs(rect.top);
+            let distance = Math.abs(rect.top - (viewportHeight / 2)); // Distance from the center of the viewport
+    
+            // Check if the paragraph is below the middle but still visible in the viewport
+            if (rect.top > viewportHeight / 2 && rect.bottom < viewportHeight) {
+                distance = Math.abs(rect.bottom - viewportHeight);
+            }
+    
             if (distance < minDistance) {
                 minDistance = distance;
                 closest = paragraph;
@@ -132,18 +131,14 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
     
         if (closest) {
-            localStorage.setItem('lastReadPosition', closest.id);
-            // Optionally, send this to main process to save in bookshelf.json
+            localStorage.setItem('lastReadPosition', JSON.stringify({ bookId: currentBookId, position: closest.id }));
             window.electronAPI.sendLastReadPosition({ bookId: currentBookId, position: closest.id });
         }
     }
-
-    // Event listener to save position on page unload
+        
+    // Periodic save setup and other event listeners...
     window.addEventListener('beforeunload', saveCurrentPosition);
-    
-    // Optionally, save position periodically or on specific user actions
     setInterval(saveCurrentPosition, 5000);  // Save every 5 seconds
-
        
     fflate.unzip(zwiData, async (err, unzipped) => {
         if (err) {
@@ -164,11 +159,64 @@ document.addEventListener('DOMContentLoaded', async () => {
         // Set content in the appropriate format
         bookContentDiv.innerHTML = primaryFilename.endsWith(".txt") ? prepPlainText(bookContent) : bookContent;
         
-        // Assign IDs to each paragraph
-        assignParagraphIDs(bookContentDiv);
+        function addBookmarkIcon(element, index) {
+            // Ensure the inner HTML of the element wraps its current content with a paragraph and includes the bookmark icon
+            element.innerHTML = `<img src="images/icons/bookmark.svg" class="bookmark-icon" id="bookmark-${index}" onclick="toggleBookmark(${index})">${element.tagName === 'P' ? '<p>' + element.innerHTML + '</p>' : element.innerHTML}`;
+            element.classList.add("paragraph"); // Ensure it has the 'paragraph' class for consistent styling and behavior
+        }
+
+        function assignIDsToContentElements(content) {
+            let paragraphIndex = 0;
+            // Target both <p> and <div> tags
+            let elements = content.querySelectorAll('p, div');
+            
+            elements.forEach(element => {
+                // Ensure that <div> tags that do not contain <p> tags and have non-empty text content
+                // as well as <p> tags get properly processed for bookmark icons and IDs
+                if ((element.tagName === 'DIV' && !element.querySelector('p') && element.textContent.trim().length > 0) || element.tagName === 'P') {
+                    if (!element.id) {  // Only assign an ID if none exists
+                        element.id = `p${paragraphIndex}`; // Assign ID
+                        addBookmarkIcon(element, paragraphIndex); // Add bookmark icon and other necessary HTML modifications
+                        paragraphIndex++;
+                    }
+                }
+            });
+            return content;
+        }
+                
+        // Usage after setting the innerHTML for bookContentDiv
+        if (primaryFilename.endsWith(".html") || primaryFilename.endsWith(".htm")) {
+            bookContentDiv.innerHTML = bookContent;
+            assignIDsToContentElements(bookContentDiv);
+            applyBookmarks();  // Ensure to call applyBookmarks after IDs are assigned
+        }        
+
+        async function applyBookmarks() {
+            try {
+                const bookmarks = await window.electronAPI.requestBookmarks(currentBookId);
+                bookmarks.forEach(bookmarkId => {
+                    const elem = document.getElementById(bookmarkId);
+                    if (elem) {
+                        const icon = elem.querySelector('.bookmark-icon');
+                        if (icon) {
+                            icon.classList.add('filled');
+                            icon.src = 'images/icons/bookmark-fill.svg';
+                            icon.style.visibility = 'visible'; // Ensure it is always visible
+                        } else {
+                            console.log('Bookmark icon not found for:', bookmarkId);
+                        }
+                    } else {
+                        console.log('Element not found for bookmark:', bookmarkId); // Log missing elements
+                    }
+                });
+            } catch (error) {
+                console.error('Error fetching bookmarks:', error);
+            }
+        }
+                
+        applyBookmarks();
 
         // After setting the book content and IDs
-        const lastReadPosition = localStorage.getItem('lastReadPosition');
         if (lastReadPosition) {
             const paragraphToScroll = document.getElementById(lastReadPosition);
             if (paragraphToScroll) {
@@ -176,18 +224,21 @@ document.addEventListener('DOMContentLoaded', async () => {
                 // Optionally, animate the scroll or adjust position slightly for better UX
             }
         }
-
+    
         // Update image sources within the loaded content immediately after setting innerHTML
         Array.from(bookContentDiv.querySelectorAll('img')).forEach(img => {
             const originalSrc = img.getAttribute('src');
+            if (originalSrc.startsWith('images/icons/')) {
+                // These are static assets and should not be processed like dynamic content images
+                return;
+            }
             if (resourceMap[originalSrc]) {
-                console.log('Updating src for:', originalSrc); // Log updating action
                 img.setAttribute('src', resourceMap[originalSrc]);
             } else {
-                console.log('No Blob URL found for:', originalSrc); // Log missing mapping
+                console.log('No Blob URL found for:', originalSrc);
             }
         });
-    
+
         // Function to clean up file paths
         function cleanPath(path) {
             return path.replace(/<\/?[^>]+>/gi, ''); // Strip out HTML tags
@@ -201,23 +252,24 @@ document.addEventListener('DOMContentLoaded', async () => {
                 // Normalize and clean filename to match the expected src format in HTML
                 const normalizedFilename = cleanPath(filename.replace('data/media/images/', ''));
                 resourceMap[normalizedFilename] = fileUrl;
-                console.log('Mapped', normalizedFilename, 'to', fileUrl); // Log normalized mapping
             }
         });
 
         // When replacing src in HTML:
         document.querySelectorAll('#book-content img').forEach(img => {
             const originalSrc = img.getAttribute('src');
-            const normalizedSrc = cleanPath(originalSrc.replace('data/media/images/', '')); // Ensure this matches the normalization used above
-            console.log('Trying to update src for:', originalSrc, 'with', normalizedSrc); // Debugging log
+            // Skip processing for known static assets to avoid unnecessary errors
+            if (originalSrc.startsWith('images/icons/')) {
+                return; // Skip this image as it's a static asset
+            }
+            const normalizedSrc = cleanPath(originalSrc.replace('data/media/images/', ''));
             if (resourceMap[normalizedSrc]) {
-                console.log('Updating src for:', originalSrc, 'to', resourceMap[normalizedSrc]); // Successful update log
                 img.setAttribute('src', resourceMap[normalizedSrc]);
             } else {
-                console.log('No Blob URL found for:', originalSrc); // Log missing mapping
+                console.log('No Blob URL found for:', originalSrc);
             }
         });
-
+        
     });
     
     // Helper for title-setter
@@ -239,7 +291,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     // Set the title
-    console.log(currentBookMetadata.PG_ID);
     if (currentBookMetadata && currentBookMetadata.Title) {
         let headTitle = document.getElementById('headTitle');
         const wholeTitle = currentBookMetadata.Title;
@@ -260,14 +311,41 @@ document.addEventListener('DOMContentLoaded', async () => {
         headTitle.textContent = wholeTitle;
     }
 
+
+    try {
+        const bookmarks = await window.electronAPI.requestBookmarks(currentBookId);
+        bookmarks.forEach(bookmarkId => {
+            const elem = document.getElementById(bookmarkId);
+            if (elem) {
+                const icon = elem.querySelector('.bookmark-icon');
+                icon.classList.add('filled');
+                icon.src = 'images/icons/bookmark-fill.svg';
+                icon.style.visibility = 'visible'; // Ensure it is always visible
+            }
+        });
+    } catch (error) {
+        console.error('Error fetching bookmarks:', error);
+    }
+
+
 });
 
 
-    function toggleBookmark() {
-        const bookmarkIcon = document.getElementById('bookmarkIcon');
-        if (bookmarkIcon.src.includes('bookmark.svg')) { // If currently showing the unfilled icon
-            bookmarkIcon.src = 'images/icons/bookmark-fill.svg'; // Change to filled icon
-        } else {
-            bookmarkIcon.src = 'images/icons/bookmark.svg'; // Change back to unfilled icon
-        }
-    }    
+function toggleBookmark(index) {
+    const bookmarkIcon = document.getElementById(`bookmark-${index}`);
+    const isAdding = !bookmarkIcon.classList.contains('filled');
+
+    if (isAdding) {
+        bookmarkIcon.classList.add('filled');
+        bookmarkIcon.src = 'images/icons/bookmark-fill.svg';
+    } else {
+        bookmarkIcon.classList.remove('filled');
+        bookmarkIcon.src = 'images/icons/bookmark.svg';
+    }
+
+    window.electronAPI.sendBookmarkUpdate({
+        bookId: currentBookId,
+        bookmarkId: `p${index}`,
+        isAdd: isAdding
+    });
+}    
