@@ -30,64 +30,80 @@ function formatTitle(title) {
     return title;
 }
 
+
+// List of common words to ignore in OR searches
+const stopWords = new Set(['the', 'of', 'in', 'on', 'at', 'for', 'with', 'a', 'an', 'and', 'or', 'but', 'is', 'if', 'it', 'as', 'to', 'that', 'which', 'by', 'from', 'up', 'out', 'on', 'off', 'this', 'all']);
+
 function searchTitles(query, searchType) {
     const resultsDiv = document.getElementById('searchResults');
     resultsDiv.innerHTML = ''; // Clear previous results before displaying new ones
 
+    const phrases = [];
+    query = query.replace(/['"]([^'"]+)['"]/g, (match, phrase) => {
+        phrases.push(phrase.toLowerCase());
+        return '';
+    }).trim();
+
+    let keywords;
+    if (query.length > 0) {
+        keywords = query.toLowerCase().split(/\s+/).filter(word => !stopWords.has(word));
+    } else {
+        keywords = [];
+    }
+
+    // Combine keywords and phrases for final searching
+    keywords = keywords.concat(phrases);
+
+    if (keywords.length === 0) {
+        // If no effective keywords or phrases, do not proceed with any search
+        return; // Optionally, you might show a message or clear previous results explicitly here
+    }
+
     let results;
     switch (searchType) {
         case 'title':
-            results = metadatabase.filter(book => book.Title.toLowerCase().includes(query.toLowerCase()));
+            results = metadatabase.filter(book =>
+                keywords.every(keyword => book.Title.toLowerCase().includes(keyword))
+            );
             break;
         case 'author':
             results = metadatabase.filter(book =>
-                Array.isArray(book.CreatorNames) && book.CreatorNames.some(author => author.toLowerCase().includes(query.toLowerCase()))
+                Array.isArray(book.CreatorNames) && keywords.every(keyword =>
+                    book.CreatorNames.some(author => author.toLowerCase().includes(keyword))
+                )
             );
             break;
         case 'both':
         default:
             results = metadatabase.filter(book =>
-                book.Title.toLowerCase().includes(query.toLowerCase()) ||
-                (Array.isArray(book.CreatorNames) && book.CreatorNames.some(author => author.toLowerCase().includes(query.toLowerCase())))
+                keywords.every(keyword =>
+                    book.Title.toLowerCase().includes(keyword) ||
+                    (Array.isArray(book.CreatorNames) && book.CreatorNames.some(author => author.toLowerCase().includes(keyword)))
+                )
             );
             break;
     }
 
     // Display filtered results
-    results.forEach(book => {
-        const div = document.createElement('div');
-        div.classList.add('searchResultItem');
-        const formattedTitle = formatTitle(book.Title);
-        // Ensure CreatorNames is treated as an array, even if it's undefined or in a different format
-        const creatorNames = Array.isArray(book.CreatorNames) ? book.CreatorNames.join(', ') : '';
-        div.innerHTML = `<a href="javascript:void(0);" class="title" onclick="onBookClick('${book.PG_ID}')">${formattedTitle}</a><div class="author">${creatorNames}</div>`;
-        resultsDiv.appendChild(div);
-    });
-
-    // Optionally, other logic to save state, handle scrolling, etc.
+    if (results.length > 0) {
+        results.forEach(book => {
+            const div = document.createElement('div');
+            div.classList.add('searchResultItem');
+            const formattedTitle = formatTitle(book.Title);
+            const creatorNames = Array.isArray(book.CreatorNames) ? book.CreatorNames.join(', ') : '';
+            div.innerHTML = `<a href="javascript:void(0);" class="title" onclick="onBookClick('${book.PG_ID}')">${formattedTitle}</a><div class="author">${creatorNames}</div>`;
+            resultsDiv.appendChild(div);
+        });
+    } else {
+        resultsDiv.innerHTML = '<p>No results found.</p>'; // Display a no results message
+    }
 }
+
 
 function onBookClick(bookId) {
     const bookMetadata = metadatabase.find(book => book.PG_ID === bookId);
 
     if (bookMetadata) {
-        // Safely retrieve and update the "Books Viewed" list
-        try {
-            const viewedBooks = JSON.parse(localStorage.getItem('booksViewed')) || [];
-            const existingIndex = viewedBooks.findIndex(book => book.PG_ID === bookId);
-
-            if (existingIndex > -1) {
-                viewedBooks.splice(existingIndex, 1);
-            }
-            console.log(viewedBooks);
-
-            viewedBooks.unshift(bookMetadata);
-            localStorage.setItem('booksViewed', JSON.stringify(viewedBooks));
-        } catch (e) {
-            console.error("Error updating Books Viewed in local storage: ", e);
-            // Handle error (e.g., show a message to the user or attempt to fix the issue)
-        }
-
         // Existing functionality to navigate to reader.html
         localStorage.setItem('currentBookMetadata', JSON.stringify(bookMetadata));
 
@@ -118,43 +134,101 @@ document.addEventListener('DOMContentLoaded', async() => {
     }
 
     // Set up event listeners for search input changes and search option changes
-    setupEventListeners(searchType);
+    setupEventListeners('both');
+
+
+    /////////////////////////////
+    // Find on page functionality
+    const inputField = document.getElementById('searchText');
+    const findButton = document.getElementById('findButton');
+    const modal = document.getElementById('myModal');
+    let lastFind = '';  // Variable to store the last searched term
+
+    // Helper function to perform search or find next
+    function searchOnPage(newSearch = false) {
+        const currentSearchTerm = inputField.value;
+        if (newSearch || currentSearchTerm !== lastFind) {
+            window.electronAPI.performFind(currentSearchTerm);
+            lastFind = currentSearchTerm;  // Update last search term
+        } else {
+            window.electronAPI.findNext();
+        }
+    }
+
+    // Event listener for keypress in the search input to handle the Enter key
+    inputField.addEventListener('keypress', function(event) {
+        if (event.key === 'Enter') {
+            event.preventDefault();
+            window.requestAnimationFrame(() => inputField.focus());  // Refocus on the input field to allow continuous 'Enter' presses
+            searchOnPage();
+        }
+    });
+
+    // Event listener for the Find button click
+    findButton.addEventListener('click', () => searchOnPage(true));
+
+    // This function listens for the toggle command from the main process
+    window.electronAPI.onToggleFindModal(() => {
+        modal.style.display = modal.style.display === 'block' ? 'none' : 'block';
+        if (modal.style.display === 'block') {
+            inputField.focus();  // Automatically focus on the input when the modal is shown
+        }
+    });
+
+    // Handling closing modal when clicking outside the modal
+    window.onclick = function(event) {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    };
+
+    // Handling closing modal on pressing the 'Escape' key
+    document.onkeydown = function(event) {
+        if (event.key === 'Escape') {
+            modal.style.display = 'none';
+        }
+    };
 });
 
+// Debounce function to delay execution
+function debounce(func, delay) {
+    let debounceTimer;
+    return function() {
+        const context = this;
+        const args = arguments;
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(() => func.apply(context, args), delay);
+    };
+}
+
 function setupEventListeners(defaultSearchType) {
+    const debouncedSearch = debounce(function(query, searchType) {
+        performSearch(query, searchType, true);
+    }, 2000); // 2000 milliseconds delay
+
     // Event listener for search input changes
     document.getElementById('searchBox').oninput = (e) => {
         const query = e.target.value;
         const searchType = document.querySelector('input[name="searchOption"]:checked').value;
 
-        // Check the length of the query to determine if it's a new search or if we should clear the results
-        if (query.length >= 3) {
-            // Perform the search if there are at least three characters
-            performSearch(query, searchType, true); // True indicates a new search
-        } else {
-            // Clear the search results if the query is shorter than three characters
-            const resultsDiv = document.getElementById('searchResults');
-            resultsDiv.innerHTML = '';
-            sessionStorage.removeItem('searchResultsHTML');
-            sessionStorage.removeItem('scrollPosition');
-        }
+        // Delay search until 2s after the last keypress or until "Enter" or "Go" is clicked
+        debouncedSearch(query, searchType);
     };
 
-    // Event listener for changes in search options (title, author, both)
-    document.querySelectorAll('input[name="searchOption"]').forEach((radio) => {
-        radio.addEventListener('change', () => {
-            const query = document.getElementById('searchBox').value;
-            // Only perform search if query length is at least three characters
-            if (query.length >= 3) {
-                performSearch(query, radio.value, true); // True indicates a change in search type constitutes a new search
-            } else {
-                // Clear the search results if the query is shorter than three characters
-                const resultsDiv = document.getElementById('searchResults');
-                resultsDiv.innerHTML = '';
-                sessionStorage.removeItem('searchResultsHTML');
-                sessionStorage.removeItem('scrollPosition');
-            }
-        });
+    // Event listener for the "Go" button or "Enter" key press
+    document.getElementById('searchButton').onclick = () => {
+        const query = document.getElementById('searchBox').value;
+        const searchType = document.querySelector('input[name="searchOption"]:checked').value;
+        performSearch(query, searchType, true); // Immediate execution on button click
+    };
+
+    document.getElementById('searchBox').addEventListener('keypress', function(event) {
+        if (event.key === 'Enter') {
+            event.preventDefault(); // Prevent form submission
+            const query = event.target.value;
+            const searchType = document.querySelector('input[name="searchOption"]:checked').value;
+            performSearch(query, searchType, true); // Immediate execution on enter press
+        }
     });
 }
 

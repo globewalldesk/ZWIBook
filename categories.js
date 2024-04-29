@@ -92,4 +92,57 @@ window.onload = () => {
     document.getElementById('sortBtn').addEventListener('click', () => {
         sortDropdown.style.display = sortDropdown.style.display === 'flex' ? 'none' : 'flex';
     });
+
+    /////////////////////////////
+    // Find on page functionality
+    const inputField = document.getElementById('searchText');
+    const findButton = document.getElementById('findButton');
+    const modal = document.getElementById('myModal');
+    let lastSearch = '';  // Variable to store the last searched term
+
+    // Helper function to perform search or find next
+    function performSearch(newSearch = false) {
+        const currentSearchTerm = inputField.value;
+        if (newSearch || currentSearchTerm !== lastSearch) {
+            window.electronAPI.performFind(currentSearchTerm);
+            lastSearch = currentSearchTerm;  // Update last search term
+        } else {
+            window.electronAPI.findNext();
+        }
+    }
+
+    // Event listener for keypress in the search input to handle the Enter key
+    inputField.addEventListener('keypress', function(event) {
+        if (event.key === 'Enter') {
+            event.preventDefault();
+            window.requestAnimationFrame(() => inputField.focus());  // Refocus on the input field to allow continuous 'Enter' presses
+            performSearch();
+        }
+    });
+
+    // Event listener for the Find button click
+    findButton.addEventListener('click', () => performSearch(true));
+
+    // This function listens for the toggle command from the main process
+    window.electronAPI.onToggleFindModal(() => {
+        modal.style.display = modal.style.display === 'block' ? 'none' : 'block';
+        if (modal.style.display === 'block') {
+            inputField.focus();  // Automatically focus on the input when the modal is shown
+        }
+    });
+
+    // Handling closing modal when clicking outside the modal
+    window.onclick = function(event) {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    };
+
+    // Handling closing modal on pressing the 'Escape' key
+    document.onkeydown = function(event) {
+        if (event.key === 'Escape') {
+            modal.style.display = 'none';
+        }
+    };
+
 };

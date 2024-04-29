@@ -9,6 +9,31 @@
     <script src="fflate.js"></script>
 </head>
 <body>
+    <!-- The Find on Page Modal -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+            <button id="findButton">Find</button>
+        </div>
+    </div>
+    <div id="fontModal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="label">Serif Fonts</span>
+            <button id="TimesNewRoman" onclick="applyFont('Times New Roman')">Times New Roman</button>
+            <button id="Georgia" onclick="applyFont('Georgia')">Georgia</button>
+            <button id="Cambria" onclick="applyFont('Cambria')">Cambria</button>
+            <hr>
+            <span class="label">Sans-Serif Fonts</span>
+            <button id="Arial" onclick="applyFont('Arial')">Arial</button>
+            <button id="Verdana" onclick="applyFont('Verdana')">Verdana</button>
+            <button id="Calibri" onclick="applyFont('Calibri')">Calibri</button>
+            <hr>
+            <span class="label">Monospace Font</span>
+            <button id="Courier" onclick="applyFont('Courier New')">Courier New</button>
+        </div>
+    </div>    
     <div id="header">
         <div id="header-content">
             <div class="header-container">
@@ -16,19 +41,23 @@
                     <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
                 </a>
                 <a id="search" class="header-btn" href="search.html">
-                    <img src="images/icons/search.svg" alt="Search">
+                    <img src="images/icons/search.svg" title="Search book titles">
                 </a>
             </div>
             <h1 id="headTitle"></h1>
             <div class="header-container">
                 <a id="bookshelfAddRemove" class="header-btn" href="#" style="display: none">
-                    <img src="images/icons/add-book.svg" alt="Add/remove from bookshelf">
+                    <img src="images/icons/add-book.svg" title="Bookshelf add/remove">
                 </a>
+                <a id="bookmarksBtn" class="header-btn" href="#">
+                    <img src="images/icons/bookmarks.svg" title="View bookmarks">
+                </a>
+                <div id="bookmarksDropdown" class="dropdown" style="display: none"></div>
                 <a class="header-btn" href="html/categories.html">
-                    <img src="images/icons/categories.svg" alt="Browse Categories">
+                    <img src="images/icons/categories.svg" title="Browse categories">
                 </a>
                 <a id="savedBooksLink" class="header-btn" href="bookshelf.html">
-                    <img src="images/icons/bookshelf.svg" alt="Bookshelf">
+                    <img src="images/icons/bookshelf.svg" title="Viewed/saved books">
                 </a>
             </div>
         </div>

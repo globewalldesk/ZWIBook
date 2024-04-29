@@ -8,5 +8,10 @@ contextBridge.exposeInMainWorld('electronAPI', {
     requestBookshelfData: () => ipcRenderer.invoke('get-bookshelf-data'),
     sendLastReadPosition: (data) => ipcRenderer.send('save-last-read-position', data),
     sendBookmarkUpdate: (data) => ipcRenderer.send('update-bookmark', data),
-    requestBookmarks: (bookId) => ipcRenderer.invoke('get-bookmarks', bookId)
+    requestBookmarks: (bookId) => ipcRenderer.invoke('get-bookmarks', bookId),
+    performFind: (text) => ipcRenderer.send('perform-find', text),
+    findNext: () => ipcRenderer.send('find-next'),
+    onToggleFindModal: (callback) => ipcRenderer.on('toggle-find-modal', callback),
+    onChooseFont: (callback) => ipcRenderer.on('choose-font', (event) => callback()),
+    applyFont: (fontName) => ipcRenderer.send('apply-font', fontName)
 });

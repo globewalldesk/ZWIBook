@@ -4,9 +4,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     const bookContentDiv = document.getElementById('book-content');
     const urlParams = new URLSearchParams(window.location.search);
     const bookId = urlParams.get('bookId');
+    console.log(`Opening book Project Gutenberg number: ${bookId}`)
     currentBookId = bookId; 
     
-    const bookshelfData = await window.electronAPI.requestBookshelfData();
+    let bookshelfData = await window.electronAPI.requestBookshelfData();
 
     // Find last read position for current book
     const lastReadData = bookshelfData.readingPositions.find(pos => pos.PG_ID === currentBookId);
@@ -18,8 +19,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     const currentBookMetadata = JSON.parse(localStorage.getItem('currentBookMetadata'));
     
-    async function toggleSaved(bookId) {
+    async function showSavedState(bookId) {
         const icon = bookshelfAddRemove.querySelector('img');
+        // If the book is in the savedBooks list, show the right icon.
         if (bookshelfData.savedBooks.some(book => book.PG_ID === currentBookId)) {
             bookshelfAddRemove.classList.add("bi-journal-minus");
             bookshelfAddRemove.classList.remove("bi-journal-plus");
@@ -30,12 +32,23 @@ document.addEventListener('DOMContentLoaded', async () => {
             icon.src = "images/icons/add-book.svg";
         }
     }
-    toggleSaved(bookId);
+    showSavedState(bookId); // Initially loads saved state from currentBookMetadata.
 
+    // Listener for adding or removing a book from saved list
     bookshelfAddRemove.addEventListener("click", async () => {
-        const action = bookshelfAddRemove.classList.contains('bi-journal-plus') ? 'addSaved' : 'removeSaved';
+        // Determine the action based on the current class
+        let isAdding = bookshelfAddRemove.classList.contains('bi-journal-plus');
+        let action = isAdding ? 'addSaved' : 'removeSaved';
+
+        // Update the bookshelf with the appropriate action
         await window.electronAPI.updateBookshelf({ bookMetadata: currentBookMetadata, action: action });
-        await toggleSaved(currentBookId);
+
+        // Re-fetch the updated bookshelf data to ensure the UI can correctly reflect the new state
+        bookshelfData = await window.electronAPI.requestBookshelfData();
+
+        // Show the updated saved state based on the newly fetched data
+        showSavedState(currentBookId);
+
     });
 
     let resourceMap = {};
@@ -143,16 +156,29 @@ document.addEventListener('DOMContentLoaded', async () => {
     fflate.unzip(zwiData, async (err, unzipped) => {
         if (err) {
             bookContentDiv.textContent = 'Failed to unzip book.';
-            console.error(err);
+            console.error('Unzip error:', err);
             return;
         }
-    
+
         const primaryFilename = currentBookMetadata.Primary;
         const rawContent = unzipped[primaryFilename];
-        const utf8Decoder = new TextDecoder("utf-8");
-        const preliminaryContent = utf8Decoder.decode(rawContent);
-        const useUTF8 = preliminaryContent.includes("UTF-8");
-        const decoder = new TextDecoder(useUTF8 ? "utf-8" : "ISO-8859-1");
+        const preliminaryContent = new TextDecoder("utf-8").decode(rawContent);
+    
+        let decoder;  
+        if (preliminaryContent.toLowerCase().includes("utf-8")) {
+            decoder = new TextDecoder("utf-8");
+        } else if (preliminaryContent.toLowerCase().includes("language: serbian")) {
+            decoder = new TextDecoder("cp1251");
+        } else if (preliminaryContent.toLowerCase().includes("iso-8859-2")) {
+            decoder = new TextDecoder("iso88592");
+        } else if (preliminaryContent.toLowerCase().includes("unicode")) {
+            decoder = new TextDecoder("utf-8");
+        } else if (preliminaryContent.toLowerCase().includes("language: chinese")) {
+            decoder = new TextDecoder("utf-8");
+        } else {
+            decoder = new TextDecoder("ISO-8859-1");
+        }
+    
         let bookContent = decoder.decode(rawContent);
         bookContent = processText(bookContent);
     
@@ -322,13 +348,197 @@ document.addEventListener('DOMContentLoaded', async () => {
                 icon.src = 'images/icons/bookmark-fill.svg';
                 icon.style.visibility = 'visible'; // Ensure it is always visible
             }
+            
         });
     } catch (error) {
         console.error('Error fetching bookmarks:', error);
     }
 
+    const bookmarksBtn = document.getElementById('bookmarksBtn');
+    const bookmarksDropdown = document.getElementById('bookmarksDropdown');
+
+    bookmarksBtn.addEventListener('click', function(event) {
+        event.preventDefault();
+        const isDisplayed = bookmarksDropdown.style.display === 'flex';
+        bookmarksDropdown.style.display = isDisplayed ? 'none' : 'flex';
+        
+        if (!isDisplayed) {
+            displayBookmarks();
+        }
+    });
+
+    document.addEventListener('click', function(event) {
+        if (!bookmarksDropdown.contains(event.target) && !bookmarksBtn.contains(event.target)) {
+            bookmarksDropdown.style.display = 'none';
+        }
+    });
+
+    // Prevent clicks inside the dropdown from propagating
+    bookmarksDropdown.addEventListener('click', function(event) {
+        event.stopPropagation();
+    });
+    
+    async function displayBookmarks() {
+        try {
+            const bookmarks = await window.electronAPI.requestBookmarks(currentBookId);
+            const docHeight = document.documentElement.scrollHeight;
+            if (bookmarks && bookmarks.length > 0) {
+                const bookmarksHtml = bookmarks.map(id => {
+                    const paragraphElement = document.getElementById(id);
+                    let snippet = paragraphElement ? paragraphElement.textContent.slice(0, 150) + '...' : 'No preview available';
+                    let position = paragraphElement ? (paragraphElement.offsetTop / docHeight) * 100 : 0;
+                    position = position.toFixed(0); // Format to 2 decimal places
+                    return `
+                    <div class="dropdown-btn bookmark-item" data-bookmark-id="${id}">
+                        <div class="bookmark-column" onclick='goToBookmark(${id});'">
+                            <img src="images/icons/bookmark-fill.svg">
+                            <div class="bookmark-percentage">${position}%</div>
+                        </div>
+                        <span class="bookmark-snippet" onclick='goToBookmark(${id});'>${snippet}</span>
+                        <img src="images/icons/trash.svg" class="delete-bookmark" onclick="deleteBookmark('${id}')" title="Delete">
+                    </div>
+                    `;
+                }).join('');
+                bookmarksDropdown.innerHTML = bookmarksHtml;
+            } else {
+                bookmarksDropdown.innerHTML = '<i>No bookmarks yet.<br>To add some, click next to a paragraph.</i>';
+            }
+            // Ensure the dropdown remains visible
+            bookmarksDropdown.style.display = 'flex';
+        } catch (error) {
+            console.error('Failed to fetch bookmarks:', error);
+            bookmarksDropdown.innerHTML = '<i>Error loading bookmarks.</i>';
+            // Ensure the dropdown remains visible even on error
+            bookmarksDropdown.style.display = 'flex';
+        }
+    }       
+     
+    /////////////////////////////
+    // Find on page functionality
+    const inputField = document.getElementById('searchText');
+    const findButton = document.getElementById('findButton');
+    const modal = document.getElementById('myModal');
+    let lastSearch = '';  // Variable to store the last searched term
+
+    // Helper function to perform search or find next
+    function performSearch(newSearch = false) {
+        const currentSearchTerm = inputField.value;
+        if (newSearch || currentSearchTerm !== lastSearch) {
+            window.electronAPI.performFind(currentSearchTerm);
+            lastSearch = currentSearchTerm;  // Update last search term
+        } else {
+            window.electronAPI.findNext();
+        }
+    }
+
+    // Event listener for keypress in the search input to handle the Enter key
+    inputField.addEventListener('keypress', function(event) {
+        if (event.key === 'Enter') {
+            event.preventDefault();
+            window.requestAnimationFrame(() => inputField.focus());  // Refocus on the input field to allow continuous 'Enter' presses
+            performSearch();
+        }
+    });
+
+    // Event listener for the Find button click
+    findButton.addEventListener('click', () => performSearch(true));
+
+    // This function listens for the toggle command from the main process
+    window.electronAPI.onToggleFindModal(() => {
+        modal.style.display = modal.style.display === 'block' ? 'none' : 'block';
+        if (modal.style.display === 'block') {
+            inputField.focus();  // Automatically focus on the input when the modal is shown
+        }
+    });
+
+    // Handling closing modal when clicking outside the modal
+    window.onclick = function(event) {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        } else if (event.target === fontModal) {
+            closeFontModal(); // Close the modal if the click was outside the modal content
+        }
+    };
+
+    // Handling closing modal on pressing the 'Escape' key
+    document.onkeydown = function(event) {
+        if (event.key === 'Escape') {
+            modal.style.display = 'none';
+        }
+    };
+
+    function updateBooksViewed() {
+        try {
+            // First, check if book metadata is correctly loaded
+            if (!currentBookMetadata) {
+                console.error("No current book metadata available.");
+                return;
+            }
+    
+            // Retrieve the viewed books list from local storage
+            const viewedBooks = JSON.parse(localStorage.getItem('booksViewed')) || [];
+            
+            // Find if the current book is already in the viewed books list
+            const existingIndex = viewedBooks.findIndex(book => book.PG_ID === currentBookMetadata.PG_ID);
+    
+            // If it exists, remove it to avoid duplicates and to update its position
+            if (existingIndex > -1) {
+                viewedBooks.splice(existingIndex, 1);
+            }
+    
+            // Add the current book to the front of the list
+            viewedBooks.unshift(currentBookMetadata);
+    
+            // Update local storage with the new viewed books list
+            localStorage.setItem('booksViewed', JSON.stringify(viewedBooks));
+    
+            // Update the bookshelf in the backend via IPC
+            window.electronAPI.updateBookshelf({ bookMetadata: currentBookMetadata, action: 'addViewed' });
+    
+        } catch (e) {
+            console.error("Error updating Books Viewed: ", e);
+        }
+    }
+    
+    updateBooksViewed();
+
+    function loadFont() {
+        // Load the font choice from local storage
+        const selectedFont = localStorage.getItem('selectedFont') || 'Arial';  // Default font
+        
+        // If there's a font saved, apply it
+        document.body.style.fontFamily = selectedFont;
+    }
+    
+    // Add this to ensure the font is applied on page load
+    loadFont();
 
 });
+
+async function deleteBookmark(bookmarkId) {
+    // Remove bookmark visually from the dropdown
+    const bookmarkElement = document.querySelector(`.bookmark-item[data-bookmark-id="${bookmarkId}"]`);
+    if (bookmarkElement) {
+        bookmarkElement.remove();
+    }
+
+    // Update the filled icon to the empty state if the bookmark is currently visible
+    const bookmarkIcon = document.getElementById(`bookmark-${bookmarkId.split('p')[1]}`);
+    if (bookmarkIcon && bookmarkIcon.classList.contains('filled')) {
+        bookmarkIcon.classList.remove('filled');
+        bookmarkIcon.src = 'images/icons/bookmark.svg';
+    }
+
+    // Send the update to the main process to update the storage
+    await window.electronAPI.sendBookmarkUpdate({
+        bookId: currentBookId,
+        bookmarkId: bookmarkId,
+        isAdd: false // Set to false to indicate removal
+    });
+
+    // Re-display the bookmarks to refresh the list and keep the dropdown open
+//    await displayBookmarks();
+}
 
 
 function toggleBookmark(index) {
@@ -349,3 +559,52 @@ function toggleBookmark(index) {
         isAdd: isAdding
     });
 }    
+
+// This function might be defined to scroll to the specific paragraph
+function goToBookmark(paragraphId) {
+    const element = document.getElementById(paragraphId.id);
+    if (element) {
+        element.scrollIntoView({ behavior: 'auto', block: 'start' });
+        window.scrollBy(0,-120);
+    }
+}
+
+//////////////////////
+// Font modal logic
+const fontModal = document.getElementById('fontModal');
+
+// Function to display the font chooser modal
+function showFontModal() {
+    fontModal.style.display = 'block'; // Make the modal visible
+}
+
+function setFont(fontName) {
+    // Apply the font to the body or specific element
+    document.body.style.fontFamily = fontName;
+    
+    // Save the font choice to local storage
+    localStorage.setItem('selectedFont', fontName);
+}
+
+function applyFont(fontName) {
+    const contentArea = document.body;
+    contentArea.style.fontFamily = fontName;  // Apply the font
+    setFont(fontName);
+    closeFontModal();  // Close the modal
+}
+
+function closeFontModal() {
+    fontModal.style.display = 'none';
+}
+
+// Listen for the choose-font event to open the modal
+electronAPI.onChooseFont(() => {
+    showFontModal(); // Call function to display the font modal
+});
+
+// Keydown event to close modal on pressing the Escape key
+window.onkeydown = function(event) {
+    if (event.key === "Escape") {
+        closeFontModal();
+    }
+};

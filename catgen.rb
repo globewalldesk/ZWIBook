@@ -56,6 +56,14 @@ File.open('./html/categories.html', 'w') do |file|
   <link rel="stylesheet" href="../stylesheet.css">
   </head>
   <body>
+  <!-- The Find on Page Modal -->
+  <div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+        <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+        <button id="findButton">Find</button>
+    </div>
+  </div>
   <div id="header">
     <div id="header-content">
       <div class="header-container">
@@ -63,16 +71,16 @@ File.open('./html/categories.html', 'w') do |file|
             <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
         </a>
         <a id="search" class="header-btn" href="../search.html">
-            <img src="../images/icons/search.svg" alt="Search">
+            <img src="../images/icons/search.svg" title="Search took titles">
         </a>
       </div>
       <h1 id="headTitle">Browse Categories</h1>
       <div class="header-container">
         <a id="bookshelfAddRemove" class="header-btn" href="#" style="display: none">
-            <img src="../images/icons/add-book.svg">
+            <img src="../images/icons/add-book.svg" title="Bookshelf add/remove">
         </a>
         <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
-            <img src="../images/icons/bookshelf.svg">
+            <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
         </a>
       </div>
     </div>
@@ -100,6 +108,14 @@ categories.each do |parent_code, details|
     <script src="../categories.js"></script>
     </head>
     <body>
+    <!-- The Find on Page Modal -->
+      <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+    </div>
     <div id="header">
       <div id="header-content">
         <div class="header-container">
@@ -107,21 +123,21 @@ categories.each do |parent_code, details|
               <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
           </a>
           <a id="search" class="header-btn" href="../search.html">
-              <img src="../images/icons/search.svg" alt="Search">
+              <img src="../images/icons/search.svg" title="Search book titles">
           </a>
         </div>
         <h1 id="headTitle">Category: #{details[:description]} (#{parent_code})</h1>
         <div class="header-container">
           <a id="sortBtn" class="header-btn" href="#">
-            <img src="../images/icons/sort.svg">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
           </a>
-          <div id="sortDropdown" style="display: none">
-            <a id="sortAuthor" href="#">Sort by author</a>
-            <a id="sortTitle" href="#">Sort by title</a>
-            <a id="sortDate" href="#">Sort by date</a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
           </div>
           <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
-              <img src="../images/icons/bookshelf.svg">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
           </a>
         </div>
       </div>
@@ -192,6 +208,14 @@ books.each do |book|
         <script src="../categories.js"></script>
         </head>
         <body>
+            <!-- The Find on Page Modal -->
+              <div id="myModal" class="modal">
+              <!-- Modal content -->
+              <div class="modal-content">
+                  <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+                  <button id="findButton">Find</button>
+              </div>
+          </div>
           <div id="header">
             <div id="header-content">
               <div class="header-container">
@@ -199,21 +223,21 @@ books.each do |book|
                     <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
                 </a>
                 <a id="search" class="header-btn" href="../search.html">
-                    <img src="../images/icons/search.svg" alt="Search">
+                    <img src="../images/icons/search.svg" title="Search book titles">
                 </a>
               </div>
               <h1 id="headTitle">#{description} (#{code})</h1>
               <div class="header-container">
                   <a id="sortBtn" class="header-btn" href="#">
-                    <img src="../images/icons/sort.svg">
+                    <img src="../images/icons/sort.svg" title="Re-sort books">
                   </a>
-                  <div id="sortDropdown" style="display: none">
-                    <a id="sortAuthor" href="#">Sort by author</a>
-                    <a id="sortTitle" href="#">Sort by title</a>
-                    <a id="sortDate" href="#">Sort by date</a>
+                  <div id="sortDropdown" class="dropdown" style="display: none">
+                    <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+                    <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+                    <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
                   </div>
                   <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
-                      <img src="../images/icons/bookshelf.svg">
+                      <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
                   </a>
               </div>
             </div>

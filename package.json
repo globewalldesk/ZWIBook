@@ -2,17 +2,62 @@
   "name": "ksf-pg-reader",
   "version": "1.0.0",
   "description": "A reader for Project Gutenberg books stored in ZWI format.",
+  "homepage": "https://encyclosphere.org/",
+  "author": {
+    "name": "Larry Sanger / Knowledge Standards Foundation",
+    "email": "larry@encyclosphere.org"
+  },
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "minify": "minify metadatabase.js > metadatabase.min.js"
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "build": "electron-builder"
   },
-  "author": "Knowledge Standards Foundation",
   "license": "Copyright 2024. All rights reserved.",
   "dependencies": {
-    "electron": "^15.5.7"
   },
   "devDependencies": {
-    "minify": "^11.1.1"
+    "electron": "^30.0.1",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.knowledgestandardsfoundation.pgreader",
+    "linux": {
+      "maintainer": "Larry Sanger/KSF <larry@encyclosphere.org>"
+    },
+    "files": [
+      "bookshelf.html",
+      "bookshelf.js",
+      "categories.js",
+      "fflate.js",
+      "html/**/*",
+      "images/**/*",
+      "main.js",
+      "metadatabase.js",
+      "metadatabase.json",
+      "metadatabase.min.js",
+      "preload.js",
+      "reader.html",
+      "reader.js",
+      "search.html",
+      "search.js",
+      "stylesheet.css"
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "mac": {
+      "target": "dmg"
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    }
+  },
+  "devDependencies": {
+    "electron-builder": "^24.13.3"
   }
 }
