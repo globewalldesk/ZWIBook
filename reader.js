@@ -52,13 +52,21 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
 
     let resourceMap = {};
+    let zwiData;
 
-    const response = await fetch(`book_zwis/${bookId}.zwi`);
-    if (!response.ok) {
-        bookContentDiv.textContent = 'Failed to load book.';
-        return;
+    try {
+        const buffer = await window.electronAPI.fetchZWI(bookId);
+        if (!buffer) {
+            bookContentDiv.textContent = 'Failed to load book: no buffer.';
+            return;
+        }
+        // Convert Buffer to Uint8Array directly
+        zwiData = new Uint8Array(buffer);
+        // Now use zwiData as needed for further processing/display
+    } catch (error) {
+        bookContentDiv.textContent = 'Failed to load book: error.';
+        console.error('Failed to fetch book data:', error);
     }
-    const zwiData = new Uint8Array(await response.arrayBuffer());
 
     function processText(text) {
         return text.replace(/_(.+?)_/g, (match, p1) => {

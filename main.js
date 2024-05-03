@@ -3,63 +3,24 @@ const fs = require('fs');
 const path = require('path');
 const os = require('os');
 
+/*
+// Logging dev console output.
+const logFilePath = path.join(process.cwd(), 'app.log'); // Creates a log file in the current working directory
+const logStream = fs.createWriteStream(logFilePath, { flags: 'a' });
+console.log = function (message) {
+    logStream.write(new Date().toISOString() + " - " + message + '\n');
+};
+*/
+
 let mainWindow; // Declare mainWindow globally
 let dataDir, latestUrlPath, bookshelfPath; // Declare these globally to use in createWindow()
-
-// Function to get the default data directory based on OS
-function getDefaultDataDir() {
-    const homeDir = os.homedir();
-    switch (os.platform()) {
-        case 'darwin': // macOS
-            return path.join(homeDir, '.ksfdata');
-        case 'win32': // Windows
-            return path.join(homeDir, 'ksfdata');
-        case 'linux': // Linux
-            return path.join(homeDir, '.ksfdata');
-        default:
-            return path.join(homeDir, '.ksfdata');
-    }
-}
-
-// Function to prompt the user to select a data directory
-async function selectDataDirectory(defaultPath) {
-    // Show a message box to the user with options
-    const response = await dialog.showMessageBox(mainWindow, {
-        type: 'info',
-        title: 'Set Up Data Directory',
-        message: 'Thanks for installing the Knowledge Standards Foundation\'s Book Reader for Project Gutenberg!\n\n' +
-                 'One set-up task: where to put your bookmarks and program data (not the books: the books stay on the thumb drive unless you move them yourself).\n\n' +
-                 'On your ' + os.platform().replace('darwin', 'macOS').replace('win32', 'Windows').replace('linux', 'Linux') +
-                 ' system, we can make the data directory at the default location:\n\n' + defaultPath +
-                 '\n\nUse this (should be fine), or select another location?',
-        buttons: ['Use default', 'Select another location'],
-        defaultId: 0, // Default button index
-        cancelId: 1, // Cancel (or alternative action) button index
-        noLink: true
-    });
-
-    // Handle user response
-    if (response.response === 1) { // User wants to select another location
-        // Open a directory chooser dialog
-        let result = await dialog.showOpenDialog(mainWindow, {
-            title: 'Select Data Directory',
-            defaultPath: defaultPath,
-            properties: ['openDirectory', 'createDirectory', 'promptToCreate']
-        });
-        if (result.canceled || !result.filePaths.length) {
-            return defaultPath; // Use default if canceled or no selection
-        }
-        return result.filePaths[0];
-    }
-    // Use default if the user selects "Use default" or closes the dialog
-    return defaultPath;
-}
 
 const configFilePath = path.join(app.getPath('userData'), 'config.json'); // Path for config file
 
 // Function to load configuration or return null if not found
 async function loadConfig() {
     try {
+        console.log("Does the file exist?", fs.existsSync(configFilePath));
         if (fs.existsSync(configFilePath)) {
             const configData = fs.readFileSync(configFilePath);
             return JSON.parse(configData);
@@ -83,52 +44,106 @@ async function saveConfig(config) {
     }
 }
 
-// Dynamic setup of data directory based on user input or existing config
+// Dynamic setup of data directory based on existing config
 async function setupDataDirectory() {
-    let config = await loadConfig();
-    let dataDir = config?.dataDir;
+    try {
+        let config = await loadConfig();
+        logTime(120, 'Config retrieved in setupDataDirectory');
 
-    if (dataDir) {
-        // If we have a data directory in config, we use it and don't ask the user again.
-        if (!fs.existsSync(dataDir)) {
-            fs.mkdirSync(dataDir, { recursive: true });
+        // Ensure config is not null and initialize if needed
+        config = config || {};
+        let dataDir = config.dataDir || path.join(os.homedir(), '.ksfdata');
+        logTime(121, 'Using data directory: ' + dataDir);
+
+        // Ensure the directory exists
+        try {
+            await fs.promises.mkdir(dataDir, { recursive: true });
+            logTime(122, 'Data directory verified/created');
+        } catch (error) {
+            if (error.code !== 'EEXIST') { // Ignore error if the directory already exists
+                console.error('Error creating data directory:', error);
+                throw error;  // Rethrow to handle it in the calling context
+            }
         }
+
+        // Save the data directory back to config, if needed
+        if (!config.dataDir) {
+            config.dataDir = dataDir;  // Update the config object before saving
+            await saveConfig(config);
+            logTime(123, 'Data directory saved to config');
+        }
+
         return dataDir;
+    } catch (error) {
+        console.error('Failed to set up data directory:', error);
+        throw error; // Rethrow to ensure the calling function is aware of the failure
     }
-
-    // If we don't have a data directory, we ask the user to select one.
-    const defaultDataDir = getDefaultDataDir();
-    dataDir = await selectDataDirectory(defaultDataDir);
-    await saveConfig({ dataDir });
-
-    if (!fs.existsSync(dataDir)) {
-        fs.mkdirSync(dataDir, { recursive: true });
-    }
-    return dataDir;
 }
 
-let startupWindow;
-
-function createStartupWindow() {
-    startupWindow = new BrowserWindow({
-        width: 200,
-        height: 100,
-        frame: false,
-        transparent: true,
-        alwaysOnTop: true
+// Function to prompt the user to confirm the location of book_zwis directory
+async function confirmZwiDirectory() {
+    if (!mainWindow) {
+        console.error("Main window is not initialized.");
+        await app.whenReady();  // Wait until the app is ready
+        if (!mainWindow) {
+            console.error("Main window still not initialized.");
+            return -1; // Or handle the error more gracefully
+        }
+    }
+    const response = await dialog.showMessageBox(mainWindow, {
+        type: 'info',
+        title: 'Confirm Book ZWIs Location',
+        message: '(2) Let\'s confirm where the books are (i.e., the big directory of ZWI format book files).\n\n' +
+                 'Are you running this app from a new KSF thumb drive? If so, the files should be on there. Or have you moved the directory somewhere else? (You probably haven\'t.)',
+        buttons: ['Thumb drive', 'Somewhere else'],
+        defaultId: 0, // Default button index for Thumb drive
+        cancelId: 1, // Alternative action for Somewhere else
+        noLink: true
     });
-
-    startupWindow.loadURL('data:text/html;charset=utf-8,' +
-        encodeURI('<html><body><p>Starting up...</p></body></html>'));
-    
-    // Don't show the startup window in the taskbar
-    startupWindow.setSkipTaskbar(true);
+    return response.response;
 }
 
-process.on('uncaughtException', (error) => {
-    console.error('An unhandled exception occurred:', error);
-});
-  
+// Function to get the ZWI directory path on Linux
+const linuxGetZwiDirectoryPath = () => {
+    const appImagePath = process.env.APPIMAGE;
+    if (appImagePath) {
+        // Running from an AppImage
+        return path.join(path.dirname(path.dirname(appImagePath)), 'book_zwis');
+    } else {
+        // Running from the command line
+        return path.join(__dirname, 'book_zwis');
+    }
+};
+
+// Function to get the ZWI directory path on macOS
+const macGetZwiDirectoryPath = () => {
+    const appPath = path.dirname(process.execPath);
+    return path.join(path.dirname(appPath), 'book_zwis');
+};
+
+// Function to get the ZWI directory path on Windows
+const windowsGetZwiDirectoryPath = () => {
+    const appPath = path.dirname(process.execPath);
+    return path.join(path.dirname(appPath), 'book_zwis');
+};
+
+// Main function to determine the ZWI directory path based on the operating system
+const getZwiDirectoryPath = () => {
+    switch (os.platform()) {
+        case 'linux':
+            return linuxGetZwiDirectoryPath();
+        case 'darwin': // macOS
+            return macGetZwiDirectoryPath();
+        case 'win32': // Windows
+            return windowsGetZwiDirectoryPath();
+        default:
+            return null;
+    }
+};
+
+let zwiDirectoryPath = getZwiDirectoryPath();
+console.log('ZWI Directory Path:', zwiDirectoryPath);
+
 
 function createWindow() {
     // Create the browser window.
@@ -154,14 +169,6 @@ function createWindow() {
 
     // Load the URL
     mainWindow.loadURL(initialUrl);
-
-    mainWindow.once('ready-to-show', () => {
-        if (startupWindow) {
-            startupWindow.close();
-            startupWindow = null;
-        }
-        mainWindow.show();
-    });
 
     // Set up event listeners for URL changes
     mainWindow.webContents.on('did-navigate', (event, url) => {
@@ -361,24 +368,75 @@ function createWindow() {
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
+const startTime = Date.now();  // This captures the start time of the app
+
+function logTime(id, message) {
+    const elapsed = Date.now() - startTime;
+    console.log(`TIMELOG-${id}: ${message} at ${elapsed}ms`);
+}
+
 app.whenReady().then(async () => {
-    createStartupWindow();
+    logTime(100, 'App is ready');
+
     try {
-        dataDir = await setupDataDirectory(); // Ensure dataDir is set
-        latestUrlPath = path.join(dataDir, 'latest.txt'); // Now we assign latestUrlPath
-        bookshelfPath = path.join(dataDir, 'bookshelf.json'); // And bookshelfPath
-        // The rest of your setup
-        if (startupWindow) {
-            startupWindow.close();
-            startupWindow = null;
+        logTime(101, 'Loading configuration');
+        let config = await loadConfig();
+        logTime(102, 'Configuration loaded');
+
+        if (!config) {
+            config = {};
+            logTime(103, 'No configuration found, initializing new config');
         }
-        createWindow(); // Safe to create the window now
+
+        if (!config.dataDir) {
+            logTime(104, 'No data directory in config, setting up...');
+            dataDir = await setupDataDirectory();
+            logTime(105, 'Data directory set up at ' + dataDir);
+            config.dataDir = dataDir;
+            await saveConfig(config);
+            logTime(106, 'Configuration saved');
+        } else {
+            dataDir = config.dataDir;
+            logTime(107, 'Using existing data directory from config: ' + dataDir);
+        }
+
+        latestUrlPath = path.join(dataDir, 'latest.txt');
+        bookshelfPath = path.join(dataDir, 'bookshelf.json');
+        logTime(108, 'Paths set');
+
+        if (!fs.existsSync(bookshelfPath)) {
+            const defaultBookshelfContent = JSON.stringify({
+                viewedBooks: [],
+                savedBooks: [],
+                readingPositions: [],
+                bookmarks: []
+            }, null, 2);
+            await fs.promises.writeFile(bookshelfPath, defaultBookshelfContent);
+            logTime(109, 'bookshelf.json created');
+        }
+
+        logTime(110, 'Initializing main window');
+        createWindow();
+
+        if (!config.zwiDirectoryPath) {
+            logTime(111, 'Prompting for ZWI directory path');
+            const zwiLocationChoice = await confirmZwiDirectory();
+            logTime(112, 'User made a choice for ZWI directory');
+            zwiDirectoryPath = zwiLocationChoice === 0 ? getZwiDirectoryPath() : await selectZwiDirectory();
+            if (!zwiDirectoryPath) {
+                console.error('ZWI path could not be determined. Exiting application.');
+                app.quit();
+                return;
+            }
+            config.zwiDirectoryPath = zwiDirectoryPath;
+            await saveConfig(config);
+            logTime(113, 'ZWI directory path set and saved: ' + zwiDirectoryPath);
+        } else {
+            zwiDirectoryPath = config.zwiDirectoryPath;
+            logTime(114, 'Using saved ZWI Directory Path: ' + zwiDirectoryPath);
+        }
     } catch (err) {
-        console.error('Failed to set up the data directory:', err);
-        if (startupWindow) {
-            startupWindow.close();
-            startupWindow = null;
-        }
+        console.error('Failed during application initialization:', err);
     }
 });
 
@@ -553,4 +611,23 @@ ipcMain.on('apply-font', (event, fontName) => {
 // React to font chooser trigger
 ipcMain.on('choose-font', () => {
     mainWindow.webContents.send('choose-font');
+});
+
+// New IPC handler to fetch ZWI files (used in reader.js)
+ipcMain.handle('fetch-zwi', async (event, bookId) => {
+    if (!zwiDirectoryPath) {
+        console.error('ZWI directory path is not set.');
+        return null;
+    }
+
+    const bookPath = path.join(zwiDirectoryPath, `${bookId}.zwi`);
+    console.log(`Opening ${bookPath}`);
+
+    try {
+        const data = await fs.promises.readFile(bookPath);
+        return data;  // Sending binary data directly, consider converting to base64 if needed
+    } catch (error) {
+        console.error('Error reading ZWI file:', error);
+        return null; // Or send error details to handle on the client side
+    }
 });

@@ -13,5 +13,6 @@ contextBridge.exposeInMainWorld('electronAPI', {
     findNext: () => ipcRenderer.send('find-next'),
     onToggleFindModal: (callback) => ipcRenderer.on('toggle-find-modal', callback),
     onChooseFont: (callback) => ipcRenderer.on('choose-font', (event) => callback()),
-    applyFont: (fontName) => ipcRenderer.send('apply-font', fontName)
+    applyFont: (fontName) => ipcRenderer.send('apply-font', fontName),
+    fetchZWI: (bookId) => ipcRenderer.invoke('fetch-zwi', bookId)
 });

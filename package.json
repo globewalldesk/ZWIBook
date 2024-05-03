@@ -12,19 +12,23 @@
     "start": "electron .",
     "pack": "electron-builder --dir",
     "dist": "electron-builder",
-    "build": "electron-builder"
+    "build": "electron-builder",
+    "rebuild": "electron-rebuild"
   },
   "license": "Copyright 2024. All rights reserved.",
-  "dependencies": {
-  },
   "devDependencies": {
-    "electron": "^30.0.1",
+    "@electron/rebuild": "^3.6.0",
+    "electron": "^30.0.2",
     "electron-builder": "^24.13.3"
   },
   "build": {
     "appId": "com.knowledgestandardsfoundation.pgreader",
     "linux": {
-      "maintainer": "Larry Sanger/KSF <larry@encyclosphere.org>"
+      "maintainer": "Larry Sanger/KSF <larry@encyclosphere.org>",
+      "target": [
+        "AppImage",
+        "deb"
+      ]
     },
     "files": [
       "bookshelf.html",
@@ -49,15 +53,6 @@
     },
     "mac": {
       "target": "dmg"
-    },
-    "linux": {
-      "target": [
-        "AppImage",
-        "deb"
-      ]
     }
-  },
-  "devDependencies": {
-    "electron-builder": "^24.13.3"
   }
 }
