@@ -1,4 +1,4 @@
-const { app, BrowserWindow, ipcMain, Menu, shell, dialog } = require('electron');
+const { app, BrowserWindow, ipcMain, Menu, MenuItem, shell, dialog } = require('electron');
 const fs = require('fs');
 const path = require('path');
 const os = require('os');
@@ -16,6 +16,9 @@ let mainWindow; // Declare mainWindow globally
 let dataDir, latestUrlPath, bookshelfPath; // Declare these globally to use in createWindow()
 
 const configFilePath = path.join(app.getPath('userData'), 'config.json'); // Path for config file
+
+// Define a global variable to store the menu item references
+let gutenbergMenuItems = [];
 
 // Function to load configuration or return null if not found
 async function loadConfig() {
@@ -48,17 +51,14 @@ async function saveConfig(config) {
 async function setupDataDirectory() {
     try {
         let config = await loadConfig();
-        logTime(120, 'Config retrieved in setupDataDirectory');
 
         // Ensure config is not null and initialize if needed
         config = config || {};
         let dataDir = config.dataDir || path.join(os.homedir(), '.ksfdata');
-        logTime(121, 'Using data directory: ' + dataDir);
 
         // Ensure the directory exists
         try {
             await fs.promises.mkdir(dataDir, { recursive: true });
-            logTime(122, 'Data directory verified/created');
         } catch (error) {
             if (error.code !== 'EEXIST') { // Ignore error if the directory already exists
                 console.error('Error creating data directory:', error);
@@ -70,7 +70,6 @@ async function setupDataDirectory() {
         if (!config.dataDir) {
             config.dataDir = dataDir;  // Update the config object before saving
             await saveConfig(config);
-            logTime(123, 'Data directory saved to config');
         }
 
         return dataDir;
@@ -93,7 +92,7 @@ async function confirmZwiDirectory() {
     const response = await dialog.showMessageBox(mainWindow, {
         type: 'info',
         title: 'Confirm Book ZWIs Location',
-        message: '(2) Let\'s confirm where the books are (i.e., the big directory of ZWI format book files).\n\n' +
+        message: 'Let\'s confirm where the books are (i.e., the big directory of ZWI format book files).\n\n' +
                  'Are you running this app from a new KSF thumb drive? If so, the files should be on there. Or have you moved the directory somewhere else? (You probably haven\'t.)',
         buttons: ['Thumb drive', 'Somewhere else'],
         defaultId: 0, // Default button index for Thumb drive
@@ -254,7 +253,29 @@ function createWindow() {
                             console.log('Failed to save PDF:', error);
                         }
                     }
-                }
+                },
+                {
+                    label: 'Export ZWI',
+                    accelerator: 'CmdOrCtrl+Shift+Z',
+                    click: () => {
+                        mainWindow.webContents.send('export-zwi');
+                    }
+                },
+                { type: 'separator' },
+                {
+                    label: 'Project Gutenberg book files (requires Internet)',
+                    submenu: [
+                        { label: 'Project Gutenberg book page', id: 'pgBookPage', click: () => shell.openExternal('https://www.gutenberg.org/ebooks/') },
+                        { label: 'Read online (HTML with images)', id: 'readOnline', click: () => shell.openExternal('https://www.gutenberg.org/ebooks/.html.images') },
+                        { label: 'EPUB3 (E-readers, with images)', id: 'epub3', click: () => shell.openExternal('https://www.gutenberg.org/ebooks/.epub3.images') },
+                        { label: 'EPUB (Older E-readers, with images)', id: 'epubOldImages', click: () => shell.openExternal('https://www.gutenberg.org/ebooks/.epub.images') },
+                        { label: 'EPUB (No images, Older E-readers)', id: 'epubNoImages', click: () => shell.openExternal('https://www.gutenberg.org/ebooks/.epub.noimages') },
+                        { label: 'Kindle with images', id: 'kindleImages', click: () => shell.openExternal('https://www.gutenberg.org/ebooks/.kf8.images') },
+                        { label: 'Older Kindles with images', id: 'kindleOldImages', click: () => shell.openExternal('https://www.gutenberg.org/ebooks/.kindle.images') },
+                        { label: 'Plain Text UTF-8', id: 'plainText', click: () => shell.openExternal('https://www.gutenberg.org/ebooks/.txt.utf-8') },
+                        { label: 'Download HTML (ZIP)', id: 'downloadHtmlZip', click: () => shell.openExternal('https://www.gutenberg.org/cache/epub//pg-h.zip') }
+                    ]
+                }                
             ]
         },
         {
@@ -341,68 +362,110 @@ function createWindow() {
         }
     ];
 
+    const fileMenuIndex = isMac ? 1 : 0; // This will select the correct index for the 'File' menu based on platform
+    const pgSubMenuIndex = template[fileMenuIndex].submenu.length - 1;
+
+
+    // CONTEXT (RIGHT-CLICK) MENU
+    mainWindow.webContents.on('context-menu', (event, params) => {
+        const contextMenu = new Menu();
+        contextMenu.append(new MenuItem({
+            label: 'Copy',
+            accelerator: 'CmdOrCtrl+C',
+            role: 'copy'  // This automatically handles copying text to the clipboard
+        }));
+        contextMenu.append(new MenuItem({
+            label: 'Select All',
+            accelerator: 'CmdOrCtrl+A',
+            role: 'selectAll'  // Automatically handles selecting all text
+        }));
+        contextMenu.append(new MenuItem({
+            label: 'Search for books on this',
+            click: () => {
+                // Assuming search.html is capable of handling a query parameter 'q'
+                const selectedText = encodeURIComponent(params.selectionText);
+                mainWindow.loadURL(`file://${__dirname}/search.html?q=${selectedText}`);
+            }
+        }));              
+        contextMenu.append(new MenuItem({
+            label: 'Look up on EncycloSearch.org',
+            click: () => {
+                const selectedText = encodeURIComponent(params.selectionText);
+                shell.openExternal(`https://encyclosearch.org/?q=${selectedText}`);
+            }
+        }));
+        contextMenu.append(new MenuItem({
+            label: 'Look up on EncycloReader.org',
+            click: () => {
+                const selectedText = encodeURIComponent(params.selectionText);
+                shell.openExternal(`https://encycloreader.org/find.php?query=${selectedText}`);
+            }
+        }));
+        contextMenu.append(new MenuItem({
+            label: 'Define on TheFreeDictionary.com',
+            click: () => {
+                const selectedText = encodeURIComponent(params.selectionText);
+                shell.openExternal(`https://www.thefreedictionary.com/_/search.aspx?tab=1&SearchBy=0&Word=${selectedText}&TFDBy=0`);
+            }
+        }));
+        contextMenu.append(new MenuItem({
+            label: 'Translate with Google',
+            click: () => {
+                const selectedText = encodeURIComponent(params.selectionText);
+                shell.openExternal(`https://translate.google.com/?sl=auto&tl=en&text=${selectedText}`);
+            }
+        }));
+        contextMenu.append(new MenuItem({
+            label: 'Translate with Bing',
+            click: () => {
+                const selectedText = encodeURIComponent(params.selectionText);
+                shell.openExternal(`https://www.bing.com/translator/?text=${selectedText}`);
+            }
+        }));
+
+        contextMenu.popup(mainWindow);
+    });    
+
+    // Store references to submenu items
+    gutenbergMenuItems = template[1].submenu;  // Adjust index according to your menu structure
+
     const menu = Menu.buildFromTemplate(template);
     Menu.setApplicationMenu(menu);
-
+    
     let currentSearchText = '';
 
     // Listen to the search request
     ipcMain.on('perform-find', (event, text) => {
         if (text !== currentSearchText) {
-            mainWindow.webContents.findInPage(text);
+            mainWindow.webContents.findInPage(text, { findNext: true });
             currentSearchText = text; // Store the new search text
         } else {
-            mainWindow.webContents.findInPage(text, { findNext: true });
+            mainWindow.webContents.findInPage(text);
         }
     });
-
-    // Listen to the find next request
-    ipcMain.on('find-next', (event) => {
-        if (currentSearchText) {
-            mainWindow.webContents.findInPage(currentSearchText, { findNext: true });
-        }
-    });
-
 }
 
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
-const startTime = Date.now();  // This captures the start time of the app
-
-function logTime(id, message) {
-    const elapsed = Date.now() - startTime;
-    console.log(`TIMELOG-${id}: ${message} at ${elapsed}ms`);
-}
-
 app.whenReady().then(async () => {
-    logTime(100, 'App is ready');
-
     try {
-        logTime(101, 'Loading configuration');
         let config = await loadConfig();
-        logTime(102, 'Configuration loaded');
 
         if (!config) {
             config = {};
-            logTime(103, 'No configuration found, initializing new config');
         }
 
         if (!config.dataDir) {
-            logTime(104, 'No data directory in config, setting up...');
             dataDir = await setupDataDirectory();
-            logTime(105, 'Data directory set up at ' + dataDir);
             config.dataDir = dataDir;
             await saveConfig(config);
-            logTime(106, 'Configuration saved');
         } else {
             dataDir = config.dataDir;
-            logTime(107, 'Using existing data directory from config: ' + dataDir);
         }
 
         latestUrlPath = path.join(dataDir, 'latest.txt');
         bookshelfPath = path.join(dataDir, 'bookshelf.json');
-        logTime(108, 'Paths set');
 
         if (!fs.existsSync(bookshelfPath)) {
             const defaultBookshelfContent = JSON.stringify({
@@ -412,16 +475,12 @@ app.whenReady().then(async () => {
                 bookmarks: []
             }, null, 2);
             await fs.promises.writeFile(bookshelfPath, defaultBookshelfContent);
-            logTime(109, 'bookshelf.json created');
         }
 
-        logTime(110, 'Initializing main window');
         createWindow();
 
         if (!config.zwiDirectoryPath) {
-            logTime(111, 'Prompting for ZWI directory path');
             const zwiLocationChoice = await confirmZwiDirectory();
-            logTime(112, 'User made a choice for ZWI directory');
             zwiDirectoryPath = zwiLocationChoice === 0 ? getZwiDirectoryPath() : await selectZwiDirectory();
             if (!zwiDirectoryPath) {
                 console.error('ZWI path could not be determined. Exiting application.');
@@ -430,10 +489,8 @@ app.whenReady().then(async () => {
             }
             config.zwiDirectoryPath = zwiDirectoryPath;
             await saveConfig(config);
-            logTime(113, 'ZWI directory path set and saved: ' + zwiDirectoryPath);
         } else {
             zwiDirectoryPath = config.zwiDirectoryPath;
-            logTime(114, 'Using saved ZWI Directory Path: ' + zwiDirectoryPath);
         }
     } catch (err) {
         console.error('Failed during application initialization:', err);
@@ -629,5 +686,177 @@ ipcMain.handle('fetch-zwi', async (event, bookId) => {
     } catch (error) {
         console.error('Error reading ZWI file:', error);
         return null; // Or send error details to handle on the client side
+    }
+});
+
+
+// Construct the path to metadatabase.json
+const metaDataPath = path.join(__dirname, 'metadatabase.json');
+
+let metadatabase;
+
+// Asynchronously read the file using the traditional callback method
+fs.readFile(metaDataPath, 'utf8', (err, data) => {
+    if (err) {
+        console.error('Failed to load the metadatabase:', err);
+        return; // Stop further execution in case of an error
+    }
+    try {
+        metadatabase = JSON.parse(data);  // Parse the JSON data
+    } catch (parseError) {
+        console.error('Error parsing the metadatabase:', parseError);
+    }
+});
+
+function searchDatabase(query, searchType) {
+    if (!metadatabase) {
+        console.log("Metadatabase not loaded yet.");
+        return []; // Return empty array or suitable error response
+    }
+
+    const keywords = query.toLowerCase().split(/\s+/);
+    let results = metadatabase.filter(book => {
+        switch (searchType) {
+            case 'title':
+                return keywords.every(keyword => book.Title.toLowerCase().includes(keyword));
+            case 'author':
+                return Array.isArray(book.CreatorNames) && keywords.every(keyword =>
+                    book.CreatorNames.some(author => author.toLowerCase().includes(keyword))
+                );
+            case 'both':
+            default:
+                return keywords.every(keyword =>
+                    book.Title.toLowerCase().includes(keyword) ||
+                    (Array.isArray(book.CreatorNames) && book.CreatorNames.some(author => author.toLowerCase().includes(keyword)))
+                );
+        }
+    });
+    return results;
+}
+
+ipcMain.handle('perform-search', async (event, { query, searchType }) => {
+    return searchDatabase(query, searchType); // this assumes searchDatabase is defined as earlier mentioned
+});
+
+ipcMain.handle('fetch-book-metadata', async (event, bookId) => {
+    if (!metadatabase) {
+        console.log("Metadatabase not loaded yet.");
+        return null;
+    }
+
+    const bookMetadata = metadatabase.find(book => book.PG_ID === bookId);
+    if (bookMetadata) {
+        return bookMetadata;  // Return the metadata as an object
+    } else {
+        console.error("No book found with ID:", bookId);
+        return null;
+    }
+});
+
+ipcMain.on('update-gutenberg-menu', (event, bookId) => {
+    // Assume gutenbergMenuItems are stored globally or are fetched dynamically from the menu
+    let menu = Menu.getApplicationMenu();
+    let fileMenu = menu.items.find(m => m.label === 'File'); // Assuming 'File' is not a variable label
+    let pgSubMenu = fileMenu.submenu.items.find(item => item.label === 'Project Gutenberg book files (requires Internet)');
+
+    if (pgSubMenu && pgSubMenu.submenu) {
+        pgSubMenu.submenu.items.forEach(item => {
+            switch(item.id) {
+                case 'pgBookPage':
+                    item.click = () => shell.openExternal(`https://www.gutenberg.org/ebooks/${bookId}`);
+                    break;
+                case 'readOnline':
+                    item.click = () => shell.openExternal(`https://www.gutenberg.org/ebooks/${bookId}.html.images`);
+                    break;
+                case 'epub3':
+                    item.click = () => shell.openExternal(`https://www.gutenberg.org/ebooks/${bookId}.epub3.images`);
+                    break;
+                case 'epubOldImages':
+                    item.click = () => shell.openExternal(`https://www.gutenberg.org/ebooks/${bookId}.epub.images`);
+                    break;
+                case 'epubNoImages':
+                    item.click = () => shell.openExternal(`https://www.gutenberg.org/ebooks/${bookId}.epub.noimages`);
+                    break;
+                case 'kindleImages':
+                    item.click = () => shell.openExternal(`https://www.gutenberg.org/ebooks/${bookId}.kf8.images`);
+                    break;
+                case 'kindleOldImages':
+                    item.click = () => shell.openExternal(`https://www.gutenberg.org/ebooks/${bookId}.kindle.images`);
+                    break;
+                case 'plainText':
+                    item.click = () => shell.openExternal(`https://www.gutenberg.org/ebooks/${bookId}.txt.utf-8`);
+                    break;
+                case 'downloadHtmlZip':
+                    item.click = () => shell.openExternal(`https://www.gutenberg.org/cache/epub/${bookId}/pg${bookId}-h.zip`);
+                    break;
+            }
+        });
+
+        // Rebuild and set the menu with updated items
+        Menu.setApplicationMenu(menu);
+    }
+});
+
+
+// Event listener to refresh the menu when called from the renderer process
+ipcMain.on('refresh-menu', () => {
+    if (mainWindow) {
+        // Get the current URL and check if it includes 'reader.html'
+        const isReaderPage = mainWindow.webContents.getURL().includes('reader.html');
+        
+        // Access the current menu
+        let menu = Menu.getApplicationMenu();
+        if (menu) {
+            // Find the 'File' menu
+            const fileMenu = menu.items.find(item => item.label === 'File');
+            if (fileMenu) {
+                // Find the 'Export ZWI' menu item
+                const exportZwiItem = fileMenu.submenu.items.find(item => item.label === 'Export ZWI');
+                if (exportZwiItem) {
+                    // Update the visibility based on the current URL
+                    exportZwiItem.visible = isReaderPage;
+                }
+            }
+            // Rebuild and reset the application menu to apply changes
+            Menu.setApplicationMenu(menu);
+        }
+    }
+});
+
+
+ipcMain.on('finish-export-zwi', async (event, bookId) => {
+    console.log(`Received export request for book ID: ${bookId}`);
+
+    // Construct the path to the ZWI file
+    let zwiFilePath = path.join(zwiDirectoryPath, `${bookId}.zwi`);
+    
+    // Check if the file exists
+    if (fs.existsSync(zwiFilePath)) {
+        // Prompt the user to select a save location
+        const { canceled, filePath } = await dialog.showSaveDialog({
+            title: 'Save ZWI File',
+            defaultPath: path.join(app.getPath('downloads'), `${bookId}.zwi`),
+            buttonLabel: 'Save ZWI',
+            filters: [{ name: 'ZWI Files', extensions: ['zwi'] }]
+        });
+
+        // If the user hasn't canceled, write the file to the new location
+        if (!canceled && filePath) {
+            fs.copyFile(zwiFilePath, filePath, (err) => {
+                if (err) {
+                    console.error('Failed to export ZWI file:', err);
+                    event.reply('zwi-export-status', `Error exporting ZWI: ${err.message}`);
+                } else {
+                    console.log('ZWI file saved successfully:', filePath);
+                    event.reply('zwi-export-status', 'File saved successfully!');
+                }
+            });
+        } else {
+            console.log('Export canceled by the user.');
+            event.reply('zwi-export-status', 'Export canceled by user.');
+        }
+    } else {
+        console.log(`ZWI file does not exist: ${zwiFilePath}`);
+        event.reply('zwi-export-status', 'ZWI file not found.');
     }
 });

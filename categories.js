@@ -82,6 +82,7 @@ function sortByDate() {
 }
 
 window.onload = () => {
+    window.electronAPI.refreshMenu();
     // Adding event listeners for sorting buttons (assuming their presence in the HTML)
     document.getElementById('sortAuthor').addEventListener('click', sortByAuthor);
     document.getElementById('sortTitle').addEventListener('click', sortByTitle);

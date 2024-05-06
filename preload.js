@@ -14,5 +14,15 @@ contextBridge.exposeInMainWorld('electronAPI', {
     onToggleFindModal: (callback) => ipcRenderer.on('toggle-find-modal', callback),
     onChooseFont: (callback) => ipcRenderer.on('choose-font', (event) => callback()),
     applyFont: (fontName) => ipcRenderer.send('apply-font', fontName),
-    fetchZWI: (bookId) => ipcRenderer.invoke('fetch-zwi', bookId)
+    fetchZWI: (bookId) => ipcRenderer.invoke('fetch-zwi', bookId),
+    performSearch: (query, searchType) => ipcRenderer.invoke('perform-search', { query, searchType }),
+    fetchBookMetadata: (bookId) => ipcRenderer.invoke('fetch-book-metadata', bookId),
+    updateGutenbergMenu: (bookId) => ipcRenderer.send('update-gutenberg-menu', bookId),
+    refreshMenu: () => ipcRenderer.send('refresh-menu'),
+    startZWIExport: (callback) => ipcRenderer.on('export-zwi', callback),
+    finishZwiExport: (bookId) => ipcRenderer.send('finish-export-zwi', bookId),
+    sendNavigate: (url) => {
+        console.log(`sendNavigate called with URL: ${url}`);
+        ipcRenderer.send('navigate', url);
+    }
 });

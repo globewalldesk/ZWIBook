@@ -1,6 +1,15 @@
 let currentBookId;
 
+function loadFont() {
+    // Load the font choice from local storage
+    const selectedFont = localStorage.getItem('selectedFont') || 'Arial';  // Default font
+    
+    // If there's a font saved, apply it
+    document.body.style.fontFamily = selectedFont;
+}
+
 document.addEventListener('DOMContentLoaded', async () => {
+    loadFont();
     const bookContentDiv = document.getElementById('book-content');
     const urlParams = new URLSearchParams(window.location.search);
     const bookId = urlParams.get('bookId');
@@ -18,7 +27,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     bookshelfAddRemove.style.display = 'flex';
 
     const currentBookMetadata = JSON.parse(localStorage.getItem('currentBookMetadata'));
-    
+
     async function showSavedState(bookId) {
         const icon = bookshelfAddRemove.querySelector('img');
         // If the book is in the savedBooks list, show the right icon.
@@ -77,59 +86,60 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
     }
 
-    function prepPlainText(text) {
-        // Split the incoming text by any type of newline characters to process it line by line
+    function prepPlainText(text, isPoetry) {
         const lines = text.split(/\r\n|\r|\n/);
-        // This array will store all the paragraph HTML after processing
         const paragraphs = [];
-        // A temporary array to hold lines until they're ready to be joined into a paragraph
-        let tempParagraph = [];
-        // An index to keep track of paragraph numbers for assigning unique IDs
         let paragraphIndex = 0;
     
-        // Function to handle the end of a paragraph and push it into the paragraphs array
-        function flushParagraph() {
-            if (tempParagraph.length > 0) {
-                // Join all collected lines into a single string and handle multiple consecutive spaces
-                let combinedText = tempParagraph.join(' ').replace(/ {2,}/g, ' ');
-    
-                // Correct handling of spacing around punctuation and words
-                combinedText = combinedText.replace(/(\w)  (\w)/g, '$1 $2');
-    
-                // Construct the paragraph HTML with a bookmark icon
-                paragraphs.push(`
-                    <div class="paragraph" id="p${paragraphIndex}">
+        if (isPoetry) {
+            // If the text is poetry, preserve the line breaks and handle empty lines
+            lines.forEach(line => {
+                if (line.trim() === '') {
+                    // Handle empty lines by inserting a placeholder paragraph
+                    paragraphs.push('<p class="single-spaced">&nbsp;</p>');
+                } else {
+                    // Wrap each line in a paragraph tag to preserve formatting
+                    paragraphs.push(`<div class="paragraph single-spaced" id="p${paragraphIndex}">
                         <img src="images/icons/bookmark.svg" class="bookmark-icon" id="bookmark-${paragraphIndex}" onclick="toggleBookmark(${paragraphIndex})">
-                        <p>${combinedText}</p>
-                    </div>
-                `);
-                // Increment the paragraph index for the next paragraph
-                paragraphIndex++;
-                // Reset the temporary paragraph storage for the next flush
-                tempParagraph = [];
+                        <p>${line}</p>
+                    </div>`);
+                    paragraphIndex++;
+                }
+            });
+        } else {
+            // Non-poetry text handling
+            let tempParagraph = [];
+            function flushParagraph() {
+                if (tempParagraph.length > 0) {
+                    let combinedText = tempParagraph.join(' ').replace(/ {2,}/g, ' ');
+                    combinedText = combinedText.replace(/(\w)  (\w)/g, '$1 $2');
+                    paragraphs.push(`
+                        <div class="paragraph" id="p${paragraphIndex}">
+                            <img src="images/icons/bookmark.svg" class="bookmark-icon" id="bookmark-${paragraphIndex}" onclick="toggleBookmark(${paragraphIndex})">
+                            <p>${combinedText}</p>
+                        </div>
+                    `);
+                    paragraphIndex++;
+                    tempParagraph = [];
+                }
             }
+    
+            // Process each line individually
+            lines.forEach(line => {
+                if (line.trim() === '') {
+                    flushParagraph();
+                } else {
+                    tempParagraph.push(line);
+                }
+            });
+    
+            flushParagraph();
         }
     
-        // Process each line individually
-        lines.forEach((line, index) => {
-            if (line.trim() === '') {
-                // Flush the current paragraph if the line is empty, indicating a paragraph break
-                flushParagraph();
-            } else {
-                // Add non-empty lines to the temporary paragraph array
-                tempParagraph.push(line);
-            }
-        });
-    
-        // Make sure to flush the last paragraph if the text doesn't end with a newline
-        flushParagraph();
-    
-        // Return all processed paragraphs joined into a single HTML string
         return paragraphs.join('');
     }
-    
-    
         
+    
     function saveCurrentPosition() {
         const paragraphs = document.querySelectorAll('p, div'); // Including div.paragraph based on your previous setup
         let closest = null;
@@ -189,9 +199,17 @@ document.addEventListener('DOMContentLoaded', async () => {
     
         let bookContent = decoder.decode(rawContent);
         bookContent = processText(bookContent);
-    
+
+        // Define a regular expression that includes the root words for "poet" or "poem" in various languages
+        // Words: poet, poem, poète, poème, dichter, gedicht, poeta, poema, poet, dikt, поэт, стих, 诗人, 诗
+        const pattern = /poet|poem|poète|poème|dichter|gedicht|poeta|poema|dikt|поэт|стих|诗人|诗/i;
+
+        // Fetch the title from the metadata and test it against the regular expression
+        const isPoetry = pattern.test(currentBookMetadata.Title);
+        
         // Set content in the appropriate format
-        bookContentDiv.innerHTML = primaryFilename.endsWith(".txt") ? prepPlainText(bookContent) : bookContent;
+        // Call prepPlainText with the isPoetry flag to adjust processing accordingly
+        bookContentDiv.innerHTML = primaryFilename.endsWith(".txt") ? prepPlainText(bookContent, isPoetry) : bookContent;
         
         function addBookmarkIcon(element, index) {
             // Ensure the inner HTML of the element wraps its current content with a paragraph and includes the bookmark icon
@@ -426,30 +444,22 @@ document.addEventListener('DOMContentLoaded', async () => {
     const inputField = document.getElementById('searchText');
     const findButton = document.getElementById('findButton');
     const modal = document.getElementById('myModal');
-    let lastSearch = '';  // Variable to store the last searched term
-
-    // Helper function to perform search or find next
-    function performSearch(newSearch = false) {
-        const currentSearchTerm = inputField.value;
-        if (newSearch || currentSearchTerm !== lastSearch) {
-            window.electronAPI.performFind(currentSearchTerm);
-            lastSearch = currentSearchTerm;  // Update last search term
-        } else {
-            window.electronAPI.findNext();
-        }
-    }
-
-    // Event listener for keypress in the search input to handle the Enter key
+    
+    /* HENRY TO FINISH LATER
+    // Modify the keypress listener to use the search counter
     inputField.addEventListener('keypress', function(event) {
         if (event.key === 'Enter') {
-            event.preventDefault();
-            window.requestAnimationFrame(() => inputField.focus());  // Refocus on the input field to allow continuous 'Enter' presses
-            performSearch();
+            event.preventDefault();  // Prevent form submission
+            window.electronAPI.performFind(inputField.value.trim());
+            setTimeout(() => inputField.focus(), 100); // Refocus after a delay
         }
     });
-
-    // Event listener for the Find button click
-    findButton.addEventListener('click', () => performSearch(true));
+    */
+    
+    // Reset the search counter explicitly when the "Find" button is clicked
+    findButton.addEventListener('click', function() {
+        performSearch(true); // Explicitly treat button clicks as new searches to reset the process
+    });
 
     // This function listens for the toggle command from the main process
     window.electronAPI.onToggleFindModal(() => {
@@ -509,18 +519,25 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
     
     updateBooksViewed();
-
-    function loadFont() {
-        // Load the font choice from local storage
-        const selectedFont = localStorage.getItem('selectedFont') || 'Arial';  // Default font
-        
-        // If there's a font saved, apply it
-        document.body.style.fontFamily = selectedFont;
-    }
     
-    // Add this to ensure the font is applied on page load
-    loadFont();
+    // Listen for the 'export-zwi' message from the main process
+    window.electronAPI.startZWIExport(() => {
+        console.log("Received 'export-zwi' message in reader.js");
+        console.log(`Exporting ZWI for book ID: ${currentBookId}`);
+        window.electronAPI.finishZwiExport(currentBookId);  // This should now work as intended
+    });
 
+
+    // Definition of the exportZwiFunction, which handles exporting a ZWI file
+    function exportZwiFunction(bookId) {
+        console.log(`Initiating export for book ID: ${bookId}`);
+        // Send the book ID back to the main process for exporting the ZWI
+        window.electronAPI.finishZwiExport(bookId);
+    }    
+
+    // Menu management
+    window.electronAPI.updateGutenbergMenu(currentBookId);
+    window.electronAPI.refreshMenu();
 });
 
 async function deleteBookmark(bookmarkId) {

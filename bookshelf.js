@@ -1,7 +1,9 @@
 // Your bookshelf data
 const bookshelfData = {
     viewedBooks: [],
-    savedBooks: []
+    savedBooks: [],
+    readingPositions: [],
+    bookmarks: []
 };
 
 function formatTitle(title) {
@@ -31,21 +33,35 @@ function onBookClick(bookId) {
     }
 }
 
-// Done after deleting book from bookshelf.html
 function refreshBookshelfUI() {
     window.electronAPI.requestBookshelfData().then(data => {
         bookshelfData.viewedBooks = data.viewedBooks;
         bookshelfData.savedBooks = data.savedBooks;
+        bookshelfData.readingPositions = data.readingPositions;
+        bookshelfData.bookmarks = data.bookmarks;
 
-        document.getElementById('viewed').innerHTML = '';
-        document.getElementById('saved').innerHTML = '';
+        const viewedDiv = document.getElementById('viewed');
+        const savedDiv = document.getElementById('saved');
+
+        viewedDiv.innerHTML = '';
+        savedDiv.innerHTML = '';
         
         bookshelfData.viewedBooks.forEach(book => {
-            document.getElementById('viewed').appendChild(createBookDiv(book, 'Viewed'));
+            viewedDiv.appendChild(createBookDiv(book, 'Viewed'));
         });
         bookshelfData.savedBooks.forEach(book => {
-            document.getElementById('saved').appendChild(createBookDiv(book, 'Saved'));
+            savedDiv.appendChild(createBookDiv(book, 'Saved'));
         });
+
+        // Check if the content of the viewed tab is empty
+        if (!viewedDiv.innerHTML.trim()) {
+            viewedDiv.innerHTML = '<h4 style="color:#007BFF">Nothing to show here yet. Those you view will show up here.</h4>';
+        }
+        // Check if the content of the saved tab is empty
+        if (!savedDiv.innerHTML.trim()) {
+            savedDiv.innerHTML = '<h4 style="color:#007BFF">Nothing to show here yet. To save a book, open it and press this button:</h4><p><span style="background-color:#007BFF; height: 32px; display: inline-block; padding: 5px"><img src="./images/icons/add-book.svg"></span></p>';
+        }
+
     }).catch(error => {
         console.error("Error fetching bookshelf data: ", error);
     });
@@ -106,14 +122,23 @@ function showTab(tabName) {
         tabs[i].classList.remove('active');
     }
     
+    // Retrieve the selected tab content
+    const selectedTabContent = document.getElementById(tabName);
+
+    // Check if the content of the selected tab is empty
+    if (!selectedTabContent.innerHTML.trim()) {
+        selectedTabContent.innerHTML = '<h4 style="color:#007BFF">Nothing to show here yet. Start viewing, or saving, some books! To save one, open it and press this button:</h4><p><span style="background-color:#007BFF; height: 32px; display: inline-block; padding: 5px"><img src="./images/icons/add-book.svg"></span></p>';
+    }
+
     // Show the selected tab content and add active class to the clicked tab
-    document.getElementById(tabName).style.display = 'block';
+    selectedTabContent.style.display = 'block';
     const activeTab = document.querySelector(`.tab[onclick="showTab('${tabName}')"]`);
     activeTab.classList.add('active');
 
     // Save the current tab to localStorage
     localStorage.setItem('lastViewedTab', tabName);
 }
+
 
 // Function to get the currently active tab content for sorting
 function getActiveTabContent() {
@@ -182,17 +207,45 @@ function sortByDate() {
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
+    window.electronAPI.refreshMenu();
     try {
-        // Adding event listeners for sorting buttons (assuming their presence in the HTML)
+  
+        /////////////////////////////
+        // Sorting functionality
+
+        // Add event listeners for sorting
         document.getElementById('sortAuthor').addEventListener('click', sortByAuthor);
         document.getElementById('sortTitle').addEventListener('click', sortByTitle);
         document.getElementById('sortDate').addEventListener('click', sortByDate);
 
+        const sortButton = document.getElementById('sortBtn');
         const sortDropdown = document.getElementById('sortDropdown');
+        const sortOverlay = document.getElementById('sortOverlay');
 
-        document.getElementById('sortBtn').addEventListener('click', () => {
-            sortDropdown.style.display = sortDropdown.style.display === 'flex' ? 'none' : 'flex';
+        // Event listener to show/hide the sort modal
+        sortButton.addEventListener('click', (event) => {
+            event.stopPropagation();  // Prevent the click from propagating to the document
+            if (sortDropdown.style.display === 'flex') {
+                hideSortModal();
+            } else {
+                showSortModal();
+            }
         });
+
+        // Event listener to hide the sort modal when clicking outside of it or on the overlay
+        document.addEventListener('click', (event) => {
+            if (event.target === sortOverlay || !sortDropdown.contains(event.target)) {
+                hideSortModal();
+            }
+        });
+
+        // Event listener to hide the sort modal on pressing the 'Escape' key
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') {
+                hideSortModal();
+            }
+        });
+
 
         const data = await window.electronAPI.requestBookshelfData();
         if (data) {
@@ -280,3 +333,94 @@ document.addEventListener('DOMContentLoaded', async () => {
         console.error("Error fetching bookshelf data: ", error);
     }
 });
+
+
+////////////////////////////
+// SORTING FUNCTIONS
+
+function getVisibleTabContent() {
+    const viewedContent = document.getElementById('viewed');
+    const savedContent = document.getElementById('saved');
+
+    // Return the element that is currently visible
+    if (viewedContent.style.display !== 'none') {
+        return viewedContent;
+    } else if (savedContent.style.display !== 'none') {
+        return savedContent;
+    } else {
+        // Fallback in case neither is visible
+        return null;
+    }
+}
+
+// Function to sort by author last name
+function sortByAuthor() {
+    const container = getVisibleTabContent();
+    let items = container.querySelectorAll('.searchResultItem');
+    let itemsArray = Array.from(items);
+
+    itemsArray.sort((a, b) => {
+        let authorA = a.querySelector('.author').textContent.split(',')[0].trim();
+        let authorB = b.querySelector('.author').textContent.split(',')[0].trim();
+        return authorA.localeCompare(authorB);
+    });
+
+    itemsArray.forEach(item => container.appendChild(item));
+}
+
+// Function to sort by title, stripping non-word characters
+function sortByTitle() {
+    const container = getVisibleTabContent();
+    let items = container.querySelectorAll('.searchResultItem');
+    let itemsArray = Array.from(items);
+
+    itemsArray.sort((a, b) => {
+        let titleA = a.querySelector('.title').textContent.replace(/\W/g, '').toLowerCase();
+        let titleB = b.querySelector('.title').textContent.replace(/\W/g, '').toLowerCase();
+        return titleA.localeCompare(titleB);
+    });
+
+    itemsArray.forEach(item => container.appendChild(item));
+}
+
+// Function to sort by date extracted from author or title field
+function sortByDate() {
+    const container = getVisibleTabContent();
+    let items = container.querySelectorAll('.searchResultItem');
+    let itemsArray = Array.from(items);
+
+    itemsArray.sort((a, b) => {
+        let dateRegex = /(\d+)(\??)( BCE| CE| AD| BC)?/g;
+        let getDateValue = (text) => {
+            let dates = [...text.matchAll(dateRegex)];
+            let earliest = dates.reduce((min, current) => {
+                let year = parseInt(current[1]);
+                let isBCE = current[3] && current[3].includes("BCE");
+                if (isBCE) year = -year; // Convert BCE to negative for correct chronological order
+                return Math.min(min, year);
+            }, Number.POSITIVE_INFINITY);
+            return earliest === Number.POSITIVE_INFINITY ? new Date().getFullYear() : earliest;
+        };
+
+        let dateA = getDateValue(a.querySelector('.author').textContent);
+        let dateB = getDateValue(b.querySelector('.author').textContent);
+
+        return dateA - dateB;
+    });
+
+    itemsArray.forEach(item => container.appendChild(item));
+}
+
+function showSortModal() {
+    const sortDropdown = document.getElementById('sortDropdown');
+    const sortOverlay = document.getElementById('sortOverlay');
+    sortDropdown.style.display = 'flex';  // Display the sort options modal
+    sortOverlay.style.display = 'block';   // Display the overlay
+}
+
+function hideSortModal() {
+    const sortDropdown = document.getElementById('sortDropdown');
+    const sortOverlay = document.getElementById('sortOverlay');
+    sortDropdown.style.display = 'none';   // Hide the sort options modal
+    sortOverlay.style.display = 'none';    // Hide the overlay
+}
