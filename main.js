@@ -143,6 +143,21 @@ const getZwiDirectoryPath = () => {
 let zwiDirectoryPath = getZwiDirectoryPath();
 console.log('ZWI Directory Path:', zwiDirectoryPath);
 
+async function setupDataDirectory() {
+    // Open a dialog for the user to select a directory
+    const result = await dialog.showOpenDialog({
+        properties: ['openDirectory']
+    });
+
+    if (result.canceled) {
+        // Handle what happens if the user cancels the dialog
+        console.log("User cancelled the directory selection.");
+        return null;
+    } else {
+        // Return the selected directory path
+        return result.filePaths[0];
+    }
+}
 
 function createWindow() {
     // Create the browser window.
