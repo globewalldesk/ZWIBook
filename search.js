@@ -1,6 +1,7 @@
 function formatTitle(title) {
     // Regex to match ':', ';', or '-' not surrounded by \w characters
     const breakRegex = /([-:;])(?!\w)/;
+    title = title.replace(/""/g, '"'); // Fix weird PG "" title tic
     // Find the first occurrence of the break character
     const match = title.match(breakRegex);
     if (match) {
@@ -66,13 +67,25 @@ function sortAndDisplayResults(results, query, searchType) {
 }
 
 function performSearch(query, searchType, isNewSearch) {
-    query = query.trim().toLowerCase();
-    if (query.length < 3) {
-        document.getElementById('searchResults').innerHTML = '<p>Type at least 3 characters to search.</p>';
-        return;
-    }
+    query = query.trim();
+    const disjuncts = query.split(' OR ');
 
-    // Store the current search state
+    // Check each disjunct to ensure it has at least three alphanumeric characters
+    for (let disjunct of disjuncts) {
+        // Split the disjunct into words and remove non-alphanumeric characters per word
+        let words = disjunct.split(/\s+/).map(word => word.replace(/\W/g, '').toLowerCase());
+    
+        // Filter out the stop words
+        let filteredWords = words.filter(word => !stopWords.has(word));
+    
+        // Join the filtered words and check the remaining length
+        if (filteredWords.join('').length < 3) {
+            document.getElementById('searchResults').innerHTML = '<p style="color:grey">Enter a search.</p>';
+            return;
+        }
+    }
+    
+    // Store the current search state, storing the original query for display purposes
     const searchState = { query, searchType };
     sessionStorage.setItem('lastSearch', JSON.stringify(searchState));
 
@@ -80,9 +93,17 @@ function performSearch(query, searchType, isNewSearch) {
     const resultsDiv = document.getElementById('searchResults');
     resultsDiv.innerHTML = '';
 
-    return window.electronAPI.performSearch(query, searchType)
+    // Process the query for the search
+    // Apply lowercase for searching, but preserve 'OR' as a logical operator
+    const searchQuery = disjuncts.map(disjunct => 
+        disjunct.split(/\s+/).map(word => 
+            word === "OR" ? "OR" : word.toLowerCase()
+        ).join(" ")
+    ).join(" OR ");
+
+    return window.electronAPI.performSearch(searchQuery, searchType)
         .then(results => {
-            sortAndDisplayResults(results, query, searchType);
+            sortAndDisplayResults(results, query, searchType);  // Use original query for sorting and displaying
             console.log(`Search performed. Query: '${query}', Type: '${searchType}'`);
         })
         .catch(error => {
@@ -99,6 +120,7 @@ let lastSearchType = '';
 let searchTimeout = null;
 
 function initiateSearch(query, searchType) {
+    localStorage.setItem('sortingType', 'default');
     const currentTime = Date.now();
     const isRecent = currentTime - lastSearchTime < 500;
     const isSameSearch = query === lastQuery && searchType === lastSearchType && currentTime - lastSearchTime < 2000;
@@ -117,6 +139,7 @@ function initiateSearch(query, searchType) {
     searchTimeout = setTimeout(() => {
         lastSearchTime = Date.now(); // Update time when the search is actually initiated
         performSearch(query, searchType, true);
+        highlightCurrentSortButton();
     }, isRecent ? 500 : 0);
 }
 
@@ -177,6 +200,7 @@ document.addEventListener('DOMContentLoaded', async() => {
     // Perform the search again using the saved query and type, if any
     if (query) {
         await performSearch(query, searchType, false);
+        applySavedSorting();    
         restoreScrollPosition();
     } else {
         restoreScrollPosition();
@@ -193,6 +217,7 @@ document.addEventListener('DOMContentLoaded', async() => {
     document.getElementById('sortAuthor').addEventListener('click', sortByAuthor);
     document.getElementById('sortTitle').addEventListener('click', sortByTitle);
     document.getElementById('sortDate').addEventListener('click', sortByDate);
+    document.getElementById('sortDefault').addEventListener('click', sortByDefault);
 
     const sortButton = document.getElementById('sortBtn');
     const sortDropdown = document.getElementById('sortDropdown');
@@ -226,31 +251,27 @@ document.addEventListener('DOMContentLoaded', async() => {
     // Find on page functionality
     const inputField = document.getElementById('searchText');
     const findButton = document.getElementById('findButton');
-    const modal = document.getElementById('myModal');
-    let lastFind = '';  // Variable to store the last searched term
+    const modal = document.getElementById('findOnPage');
 
-    // Helper function to perform search or find next
-    function searchOnPage(newSearch = false) {
-        const currentSearchTerm = inputField.value;
-        if (newSearch || currentSearchTerm !== lastFind) {
-            window.electronAPI.performFind(currentSearchTerm);
-            lastFind = currentSearchTerm;  // Update last search term
-        } else {
-            window.electronAPI.findNext();
-        }
-    }
+    const performFindOnPage = () => window.electronAPI.performFind(inputField.value.trim());
 
-    // Event listener for keypress in the search input to handle the Enter key
+    const realText = "";
+    
+    // Modify the keypress listener to use the search counter
     inputField.addEventListener('keypress', function(event) {
         if (event.key === 'Enter') {
-            event.preventDefault();
-            window.requestAnimationFrame(() => inputField.focus());  // Refocus on the input field to allow continuous 'Enter' presses
-            searchOnPage();
+            event.preventDefault();  // Prevent form submission
+            inputField.setAttribute("inert", "");
+            performFindOnPage();
+            setTimeout(() => {
+                inputField.removeAttribute("inert");
+                inputField.focus();
+            }, 100); // Refocus after a delay
         }
     });
-
-    // Event listener for the Find button click
-    findButton.addEventListener('click', () => searchOnPage(true));
+    
+    // Reset the search counter explicitly when the "Find" button is clicked
+    findButton.addEventListener('click', performFindOnPage);
 
     // This function listens for the toggle command from the main process
     window.electronAPI.onToggleFindModal(() => {
@@ -273,6 +294,7 @@ document.addEventListener('DOMContentLoaded', async() => {
             modal.style.display = 'none';
         }
     };
+
 });
 
 // Debounce function to delay execution
@@ -322,6 +344,7 @@ function restoreScrollPosition() {
             window.scrollTo(0, parseInt(lastScrollPosition, 10));
         }, 100); // A slight delay to ensure all elements have been rendered
     }
+    
 }
 
 
@@ -330,6 +353,55 @@ function restoreScrollPosition() {
 // Function to get the search results container
 function getSearchResultsContainer() {
     return document.getElementById('searchResults');
+}
+
+// Function to apply saved sorting type on page load
+function applySavedSorting() {
+    const savedSortingType = localStorage.getItem('sortingType');
+    switch (savedSortingType) {
+        case 'author':
+            sortByAuthor();
+            break;
+        case 'title':
+            sortByTitle();
+            break;
+        case 'date':
+            sortByDate();
+            break;
+        default:
+            sortByDefault();
+            break;
+    }
+    highlightCurrentSortButton();
+}
+
+function highlightCurrentSortButton() {
+    // Retrieve the current sorting type from Local Storage
+    const sortingType = localStorage.getItem('sortingType');
+
+    // Define the mapping between sorting types and corresponding button IDs
+    const buttonIdMap = {
+        author: 'sortAuthor',
+        title: 'sortTitle',
+        date: 'sortDate',
+        default: 'sortDefault'
+    };
+
+    // Get the ID of the button to highlight based on the sorting type
+    const buttonIdToHighlight = buttonIdMap[sortingType];
+
+    // Remove highlighted class from all buttons first
+    document.querySelectorAll('.dropdown-btn').forEach(button => {
+        button.classList.remove('sort-button-highlighted');
+    });
+
+    // Add highlighted class to the button that matches the current sorting type
+    if (buttonIdToHighlight) {
+        const buttonToHighlight = document.getElementById(buttonIdToHighlight);
+        if (buttonToHighlight) {
+            buttonToHighlight.classList.add('sort-button-highlighted');
+        }
+    }
 }
 
 // Function to sort by author last name
@@ -345,6 +417,8 @@ function sortByAuthor() {
     });
 
     itemsArray.forEach(item => container.appendChild(item));
+    localStorage.setItem('sortingType', 'author');
+    highlightCurrentSortButton();
 }
 
 // Function to sort by title, stripping non-word characters
@@ -360,6 +434,8 @@ function sortByTitle() {
     });
 
     itemsArray.forEach(item => container.appendChild(item));
+    localStorage.setItem('sortingType', 'title');
+    highlightCurrentSortButton();
 }
 
 // Function to sort by date extracted from author or title field
@@ -388,6 +464,21 @@ function sortByDate() {
     });
 
     itemsArray.forEach(item => container.appendChild(item));
+    localStorage.setItem('sortingType', 'date');
+    highlightCurrentSortButton();
+}
+
+function sortByDefault() {
+    const container = getSearchResultsContainer();
+    let items = container.querySelectorAll('.searchResultItem');
+    let itemsArray = Array.from(items);
+    // Perform search again
+    const query = document.getElementById('searchBox').value;
+    const searchType = document.querySelector('input[name="searchOption"]:checked').value;
+    initiateSearch(query, searchType);
+    // Save the sorting type in Local Storage
+    localStorage.setItem('sortingType', 'default');
+    highlightCurrentSortButton();
 }
 
 function showSortModal() {

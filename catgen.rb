@@ -54,15 +54,16 @@ File.open('./html/categories.html', 'w') do |file|
   <head>
   <title>Categories</title>
   <link rel="stylesheet" href="../stylesheet.css">
+  <script src="../categories.js"></script>
   </head>
   <body>
   <!-- The Find on Page Modal -->
-  <div id="myModal" class="modal">
-    <!-- Modal content -->
-    <div class="modal-content">
-        <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
-        <button id="findButton">Find</button>
-    </div>
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
   </div>
   <div id="header">
     <div id="header-content">
@@ -83,6 +84,15 @@ File.open('./html/categories.html', 'w') do |file|
             <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
         </a>
       </div>
+    </div>
+    <a id="sortBtn" class="header-btn" href="#" style="display:none"><!-- must be here or JS breaks -->
+      <img src="../images/icons/sort.svg" title="Re-sort books">
+    </a>
+      <div id="sortDropdown" class="dropdown" style="display: none">
+      <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+      <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+      <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+      <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
     </div>
   </div>
   <div id="body">
@@ -109,7 +119,7 @@ categories.each do |parent_code, details|
     </head>
     <body>
     <!-- The Find on Page Modal -->
-      <div id="myModal" class="modal">
+      <div id="findOnPage" class="modal">
       <!-- Modal content -->
       <div class="modal-content">
           <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
@@ -135,21 +145,26 @@ categories.each do |parent_code, details|
             <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
             <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
             <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
           </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>
           <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
               <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
           </a>
         </div>
       </div>
     </div>
+    <div id="body">
+    <ul>
 HTML
-    file.puts "<div id='body'>"
-    file.puts '<ul>'
     details[:subcategories].each do |code, description|
+      next if locc_counts[code] == 0
       count = locc_counts[code] || '0'  # Default to '0' if no count is available
       file.puts "<li><a href='#{code}.html'>#{description} (#{code})</a> <span class='count'>#{count}</span></li>"
     end
-    file.puts '</ul>'
+    file.puts "<p>&nbsp;</p>"
   end
 end
 
@@ -174,6 +189,7 @@ codes = CSV.read('codes.csv', col_sep: '|', headers: false)
 
 # Create a method to format titles as specified
 def format_title(title)
+  title.gsub!('""', '"')
   match = title.match(/([-:;])(?!\w)/)  # Find the first occurrence of ':', ';', or '-' not surrounded by \w characters
   if match
     index = match.begin(0)
@@ -208,14 +224,15 @@ books.each do |book|
         <script src="../categories.js"></script>
         </head>
         <body>
-            <!-- The Find on Page Modal -->
-              <div id="myModal" class="modal">
+          <!-- The Find on Page Modal -->
+          <div id="findOnPage" class="modal">
               <!-- Modal content -->
               <div class="modal-content">
                   <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
                   <button id="findButton">Find</button>
               </div>
           </div>
+          <div class="sort-overlay" id="sortOverlay"></div>
           <div id="header">
             <div id="header-content">
               <div class="header-container">
@@ -235,7 +252,11 @@ books.each do |book|
                     <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
                     <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
                     <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+                    <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
                   </div>
+                  <a class="header-btn" href="categories.html">
+                    <img src="../images/icons/categories.svg" title="Browse categories">
+                  </a>      
                   <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
                       <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
                   </a>

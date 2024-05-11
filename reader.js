@@ -1,4 +1,8 @@
-let currentBookId;
+const urlParams = new URLSearchParams(window.location.search);
+const bookId = urlParams.get('bookId');
+console.log(`Opening book Project Gutenberg number: ${bookId}`)
+let currentBookId = bookId; 
+let bookshelfData = null;
 
 function loadFont() {
     // Load the font choice from local storage
@@ -11,17 +15,9 @@ function loadFont() {
 document.addEventListener('DOMContentLoaded', async () => {
     loadFont();
     const bookContentDiv = document.getElementById('book-content');
-    const urlParams = new URLSearchParams(window.location.search);
-    const bookId = urlParams.get('bookId');
-    console.log(`Opening book Project Gutenberg number: ${bookId}`)
-    currentBookId = bookId; 
+
+    bookshelfData = await window.electronAPI.requestBookshelfData();
     
-    let bookshelfData = await window.electronAPI.requestBookshelfData();
-
-    // Find last read position for current book
-    const lastReadData = bookshelfData.readingPositions.find(pos => pos.PG_ID === currentBookId);
-    const lastReadPosition = lastReadData ? lastReadData.lastReadPosition : null;
-
     const bookshelfAddRemove = document.querySelector('#bookshelfAddRemove');
     
     bookshelfAddRemove.style.display = 'flex';
@@ -137,39 +133,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     
         return paragraphs.join('');
-    }
-        
-    
-    function saveCurrentPosition() {
-        const paragraphs = document.querySelectorAll('p, div'); // Including div.paragraph based on your previous setup
-        let closest = null;
-        let minDistance = Infinity;
-        const viewportHeight = window.innerHeight;
-    
-        paragraphs.forEach(paragraph => {
-            const rect = paragraph.getBoundingClientRect();
-            let distance = Math.abs(rect.top - (viewportHeight / 2)); // Distance from the center of the viewport
-    
-            // Check if the paragraph is below the middle but still visible in the viewport
-            if (rect.top > viewportHeight / 2 && rect.bottom < viewportHeight) {
-                distance = Math.abs(rect.bottom - viewportHeight);
-            }
-    
-            if (distance < minDistance) {
-                minDistance = distance;
-                closest = paragraph;
-            }
-        });
-    
-        if (closest) {
-            localStorage.setItem('lastReadPosition', JSON.stringify({ bookId: currentBookId, position: closest.id }));
-            window.electronAPI.sendLastReadPosition({ bookId: currentBookId, position: closest.id });
-        }
-    }
-        
-    // Periodic save setup and other event listeners...
-    window.addEventListener('beforeunload', saveCurrentPosition);
-    setInterval(saveCurrentPosition, 5000);  // Save every 5 seconds
+    }    
        
     fflate.unzip(zwiData, async (err, unzipped) => {
         if (err) {
@@ -180,13 +144,15 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         const primaryFilename = currentBookMetadata.Primary;
         const rawContent = unzipped[primaryFilename];
-        const preliminaryContent = new TextDecoder("utf-8").decode(rawContent);
+        const preliminaryContent = new TextDecoder("utf-8").decode(rawContent).substring(0, 5000);
     
         let decoder;  
         if (preliminaryContent.toLowerCase().includes("utf-8")) {
             decoder = new TextDecoder("utf-8");
         } else if (preliminaryContent.toLowerCase().includes("language: serbian")) {
             decoder = new TextDecoder("cp1251");
+        } else if (preliminaryContent.toLowerCase().includes("iso-8859-1")) {
+            decoder = new TextDecoder("iso88591");
         } else if (preliminaryContent.toLowerCase().includes("iso-8859-2")) {
             decoder = new TextDecoder("iso88592");
         } else if (preliminaryContent.toLowerCase().includes("unicode")) {
@@ -194,10 +160,12 @@ document.addEventListener('DOMContentLoaded', async () => {
         } else if (preliminaryContent.toLowerCase().includes("language: chinese")) {
             decoder = new TextDecoder("utf-8");
         } else {
-            decoder = new TextDecoder("ISO-8859-1");
+            decoder = new TextDecoder("iso88591");
         }
     
         let bookContent = decoder.decode(rawContent);
+        // Remove weird PG tic: double-double quotes in titles
+        bookContent = bookContent.replace(/(?<!=[ ]?)""/g, '"');
         bookContent = processText(bookContent);
 
         // Define a regular expression that includes the root words for "poet" or "poem" in various languages
@@ -221,16 +189,14 @@ document.addEventListener('DOMContentLoaded', async () => {
             let paragraphIndex = 0;
             // Target both <p> and <div> tags
             let elements = content.querySelectorAll('p, div');
-            
+        
             elements.forEach(element => {
-                // Ensure that <div> tags that do not contain <p> tags and have non-empty text content
-                // as well as <p> tags get properly processed for bookmark icons and IDs
-                if ((element.tagName === 'DIV' && !element.querySelector('p') && element.textContent.trim().length > 0) || element.tagName === 'P') {
-                    if (!element.id) {  // Only assign an ID if none exists
-                        element.id = `p${paragraphIndex}`; // Assign ID
-                        addBookmarkIcon(element, paragraphIndex); // Add bookmark icon and other necessary HTML modifications
-                        paragraphIndex++;
-                    }
+                // Process div tags that do not contain <p> tags and have non-empty text content
+                // and p tags that do not already have an ID
+                if (!element.id && ((element.tagName === 'DIV' && !element.querySelector('p') && element.textContent.trim().length > 0) || element.tagName === 'P')) {
+                    element.id = `p${paragraphIndex}`; // Assign ID
+                    addBookmarkIcon(element, paragraphIndex); // Add bookmark icon and other necessary HTML modifications
+                    paragraphIndex++;
                 }
             });
             return content;
@@ -239,9 +205,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         // Usage after setting the innerHTML for bookContentDiv
         if (primaryFilename.endsWith(".html") || primaryFilename.endsWith(".htm")) {
             bookContentDiv.innerHTML = bookContent;
+            console.time("foo");
             assignIDsToContentElements(bookContentDiv);
-            applyBookmarks();  // Ensure to call applyBookmarks after IDs are assigned
-        }        
+            console.timeEnd("foo");
+        }
 
         async function applyBookmarks() {
             try {
@@ -267,30 +234,52 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
                 
         applyBookmarks();
-
-        // After setting the book content and IDs
-        if (lastReadPosition) {
-            const paragraphToScroll = document.getElementById(lastReadPosition);
-            if (paragraphToScroll) {
-                paragraphToScroll.scrollIntoView();
-                // Optionally, animate the scroll or adjust position slightly for better UX
-            }
+        
+        // Function to preprocess <a> and <img> tags by removing <i>, </i> and updating refs
+        function preprocessDocumentElements() {
+            // Process anchor tags
+            document.querySelectorAll('a').forEach(anchor => {
+                ['name', 'id', 'href'].forEach(attr => {
+                    if (anchor.hasAttribute(attr)) {
+                        let value = anchor.getAttribute(attr);
+                        // Remove <i> and </i> tags
+                        value = value.replace(/<\/?i>/g, '_');
+                        value = value.replace(/(noteref|note|page|fnote|fnanchor)(\d+)/ig, (match, p1, p2) => {
+                            return `${p1}_${p2}`;
+                        });
+        
+                        // Correct href formatting for references
+                        if (attr === 'href' && value.startsWith('#')) {
+                            value = value.replace(/#(noteref|note|page)(\d+)/ig, (match, p1, p2) => {
+                                return `#${p1}_${p2}`;
+                            });
+                        }
+                        anchor.setAttribute(attr, value);
+                    }
+                });
+        
+                // Check if there is a 'name' attribute without a corresponding 'id'
+                if (anchor.hasAttribute('name') && !anchor.hasAttribute('id')) {
+                    // Set 'id' to the value of 'name'
+                    anchor.setAttribute('id', anchor.getAttribute('name'));
+                }
+            });
+        
+            // Process image tags (removes restores '_' where needed)
+            document.querySelectorAll('img').forEach(img => {
+                if (img.hasAttribute('src')) {
+                    let src = img.getAttribute('src');
+                    // Remove <i> and </i> tags from src
+                    src = src.replace(/<\/?i>/g, '_');
+                    img.setAttribute('src', src);
+                }
+            });
         }
-    
-        // Update image sources within the loaded content immediately after setting innerHTML
-        Array.from(bookContentDiv.querySelectorAll('img')).forEach(img => {
-            const originalSrc = img.getAttribute('src');
-            if (originalSrc.startsWith('images/icons/')) {
-                // These are static assets and should not be processed like dynamic content images
-                return;
-            }
-            if (resourceMap[originalSrc]) {
-                img.setAttribute('src', resourceMap[originalSrc]);
-            } else {
-                console.log('No Blob URL found for:', originalSrc);
-            }
-        });
-
+        
+        console.time('Preprocess Document Elements');
+        preprocessDocumentElements(); // Preprocessing anchor and image elements
+        console.timeEnd('Preprocess Document Elements');
+            
         // Function to clean up file paths
         function cleanPath(path) {
             return path.replace(/<\/?[^>]+>/gi, ''); // Strip out HTML tags
@@ -310,15 +299,45 @@ document.addEventListener('DOMContentLoaded', async () => {
         // When replacing src in HTML:
         document.querySelectorAll('#book-content img').forEach(img => {
             const originalSrc = img.getAttribute('src');
+        
             // Skip processing for known static assets to avoid unnecessary errors
             if (originalSrc.startsWith('images/icons/')) {
                 return; // Skip this image as it's a static asset
             }
+        
             const normalizedSrc = cleanPath(originalSrc.replace('data/media/images/', ''));
             if (resourceMap[normalizedSrc]) {
                 img.setAttribute('src', resourceMap[normalizedSrc]);
+        
+                // Add event listener for opening the modal
+                img.onclick = function(event) {
+                    event.preventDefault(); // Prevent the default anchor behavior
+                    const modal = document.getElementById('imageModal');
+                    const modalImg = document.getElementById('modalImage');
+                    const captionText = document.getElementById('caption');
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                    captionText.innerHTML = img.alt; // Assuming you might use the alt attribute as caption
+                };
             } else {
                 console.log('No Blob URL found for:', originalSrc);
+            }
+        });
+
+        // Close the image modal that was just created
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            var modal = document.getElementById('imageModal');
+            modal.style.display = "none";
+        }
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") {  // Check if the key pressed is 'Escape'
+                var modal = document.getElementById('imageModal');
+                if (modal.style.display === "block") {  // Check if the modal is currently displayed
+                    modal.style.display = "none";  // Hide the modal
+                }
             }
         });
         
@@ -342,26 +361,49 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
     }
 
-    // Set the title
-    if (currentBookMetadata && currentBookMetadata.Title) {
-        let headTitle = document.getElementById('headTitle');
-        const wholeTitle = currentBookMetadata.Title;
-        let truncatedTitle = wholeTitle;
-        let more = document.createElement('a');
-        more.classList.add("more");
-        const space = document.createTextNode(" ");
-        if (wholeTitle.length > 50) {
-            truncatedTitle = truncatedTitle.substring(0, 75) + "…";
-            more.textContent = "more";
-            more.href = "#";
-            setMoretext(more, headTitle, wholeTitle, truncatedTitle, space)
+    function setTitle() {
+        if (currentBookMetadata && currentBookMetadata.Title) {
+            let headTitle = document.getElementById('headTitle');
+
+            let wholeTitle = currentBookMetadata.Title;
+            wholeTitle = wholeTitle.replace(/\"\"/g, '"'); // Remove weird PG tic: double-double quotes in titles
+            let truncatedTitle = wholeTitle;
+            let more = document.createElement('a');
+            more.classList.add("more");
+            const space = document.createTextNode(" ");
+    
+            // Determine truncation length based on viewport width
+            const viewportWidth = window.innerWidth;
+            let truncationLength = 65; // Default truncation length for large screens
+            if (viewportWidth > 675 && viewportWidth <= 850) {
+                truncationLength = 55; // Truncate more for middle-sized viewports
+            } else if (viewportWidth > 530 && viewportWidth <= 675) {
+                truncationLength = 45;
+            } else if (viewportWidth <= 530) {
+                truncationLength = 37;
+            }
+    
+            // Adjust the title display based on actual length
+            if (wholeTitle.length > truncationLength) {
+                truncatedTitle = wholeTitle.substring(0, truncationLength) + "…";
+                more.textContent = "more";
+                more.href = "#";
+                setMoretext(more, headTitle, wholeTitle, truncatedTitle, space);
+            } else {
+                truncatedTitle = wholeTitle; // Use the full title if no truncation is needed
+                more.style.display = 'none'; // Optionally hide the 'more' link if not needed
+            }
+
+            headTitle.textContent = truncatedTitle;
+            headTitle.appendChild(space);
+            headTitle.appendChild(more);
+        } else {
+            headTitle.textContent = wholeTitle;
         }
-        headTitle.textContent = truncatedTitle;
-        headTitle.appendChild(space);
-        headTitle.appendChild(more);
-    } else {
-        headTitle.textContent = wholeTitle;
     }
+
+    setTitle();
+    window.addEventListener('resize', setTitle);
 
 
     try {
@@ -443,23 +485,27 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Find on page functionality
     const inputField = document.getElementById('searchText');
     const findButton = document.getElementById('findButton');
-    const modal = document.getElementById('myModal');
+    const modal = document.getElementById('findOnPage');
+
+    const performSearch = () => window.electronAPI.performFind(inputField.value.trim());
+
+    const realText = "";
     
-    /* HENRY TO FINISH LATER
     // Modify the keypress listener to use the search counter
     inputField.addEventListener('keypress', function(event) {
         if (event.key === 'Enter') {
             event.preventDefault();  // Prevent form submission
-            window.electronAPI.performFind(inputField.value.trim());
-            setTimeout(() => inputField.focus(), 100); // Refocus after a delay
+            inputField.setAttribute("inert", "");
+            performSearch();
+            setTimeout(() => {
+                inputField.removeAttribute("inert");
+                inputField.focus();
+            }, 100); // Refocus after a delay
         }
     });
-    */
     
     // Reset the search counter explicitly when the "Find" button is clicked
-    findButton.addEventListener('click', function() {
-        performSearch(true); // Explicitly treat button clicks as new searches to reset the process
-    });
+    findButton.addEventListener('click', performSearch);
 
     // This function listens for the toggle command from the main process
     window.electronAPI.onToggleFindModal(() => {
@@ -533,11 +579,90 @@ document.addEventListener('DOMContentLoaded', async () => {
         console.log(`Initiating export for book ID: ${bookId}`);
         // Send the book ID back to the main process for exporting the ZWI
         window.electronAPI.finishZwiExport(bookId);
-    }    
+    }
 
+    document.body.addEventListener('click', function(e) {
+        // Use closest to find the nearest ancestor that is an <a> tag with an href attribute starting with "#"
+        let target = e.target.closest('a[href^="#"]');
+    
+        if (target) {
+            e.preventDefault(); // Prevent default anchor click behavior
+    
+            const targetId = target.getAttribute('href');
+            if (targetId == '#') {
+                return;
+            }
+            const targetElement = document.querySelector(targetId);
+    
+            if (targetElement) {
+                // Calculate the corrected scroll position considering the fixed header
+                const headerHeight = 80; // Adjust if your header height changes
+                const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+                const offsetPosition = elementPosition - headerHeight;
+    
+                window.scrollTo({
+                    top: offsetPosition
+                });
+    
+                history.pushState(null, null, targetId);
+            }
+        }
+    });
+        
+
+    // Save Current Position for Current Book
+    function saveCurrentPosition() {
+        const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const scrollPosition = window.scrollY;
+        let percentageThrough = (scrollPosition / totalHeight) * 100;
+        percentageThrough = isNaN(percentageThrough) ? 0 : percentageThrough; // Default to 0 if calculation fails
+    
+        console.log(`Attempting to save position: ${percentageThrough.toFixed(2)}% for bookId: ${currentBookId}`);
+    
+        if (percentageThrough >= 0 && percentageThrough <= 100) {
+            window.electronAPI.sendLastReadPosition({ 
+                bookId: currentBookId, 
+                position: percentageThrough.toFixed(2)  // Make sure to use 'position' as the key
+            });
+        } else {
+            console.error(`Invalid scroll percentage: ${percentageThrough.toFixed(2)}%`);
+        }
+    }
+    
+    // Throttle position saving
+    function throttlePosition(func, initialDelay, interval) {
+        let timeout;
+        let lastExec = 0;
+    
+        return function() {
+            const context = this;
+            const args = arguments;
+            const elapsed = Date.now() - lastExec;
+    
+            const execute = function() {
+                func.apply(context, args);
+                lastExec = Date.now();
+            };
+    
+            clearTimeout(timeout);
+    
+            if (elapsed > interval) {
+                // If sufficient time has elapsed, execute immediately
+                execute();
+            } else {
+                // Otherwise, delay the execution
+                timeout = setTimeout(execute, initialDelay);
+            }
+        };
+    }
+    
+    // Usage of the updated throttle function
+    window.addEventListener('scroll', throttlePosition(saveCurrentPosition, 500, 2000));
+    
     // Menu management
     window.electronAPI.updateGutenbergMenu(currentBookId);
     window.electronAPI.refreshMenu();
+
 });
 
 async function deleteBookmark(bookmarkId) {
@@ -561,10 +686,7 @@ async function deleteBookmark(bookmarkId) {
         isAdd: false // Set to false to indicate removal
     });
 
-    // Re-display the bookmarks to refresh the list and keep the dropdown open
-//    await displayBookmarks();
 }
-
 
 function toggleBookmark(index) {
     const bookmarkIcon = document.getElementById(`bookmark-${index}`);
@@ -598,9 +720,10 @@ function goToBookmark(paragraphId) {
 // Font modal logic
 const fontModal = document.getElementById('fontModal');
 
-// Function to display the font chooser modal
-function showFontModal() {
-    fontModal.style.display = 'block'; // Make the modal visible
+// Function to toggle the font chooser modal
+function toggleFontModal() {
+    const fontModal = document.getElementById('fontModal');
+    fontModal.style.display = (fontModal.style.display === 'block' ? 'none' : 'block');
 }
 
 function setFont(fontName) {
@@ -622,14 +745,43 @@ function closeFontModal() {
     fontModal.style.display = 'none';
 }
 
-// Listen for the choose-font event to open the modal
+// Listen for the choose-font event to toggle the modal
 electronAPI.onChooseFont(() => {
-    showFontModal(); // Call function to display the font modal
+    toggleFontModal(); // Call function to toggle the font modal
 });
 
-// Keydown event to close modal on pressing the Escape key
+
+// Keydown event to close modal on pressing the Escape key or toggle with CmdOrCtrl+Alt+F
 window.onkeydown = function(event) {
-    if (event.key === "Escape") {
-        closeFontModal();
+    const fontModal = document.getElementById('fontModal');
+    if (event.key === "Escape" && fontModal.style.display === 'block') {
+        fontModal.style.display = 'none';
     }
+    // Optionally, add toggling with CmdOrCtrl+Alt+F if it needs to be handled directly here
+};
+
+
+// Restore Last Read Position for Current Book, defined globally
+function restoreScrollPosition() {
+    if (bookshelfData) {
+        const lastReadData = bookshelfData.readingPositions.find(pos => pos.PG_ID === currentBookId);
+        const lastReadPercentage = lastReadData ? parseFloat(lastReadData.lastReadPosition) : null;
+    
+        if (lastReadPercentage) {
+            const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPosition = (lastReadPercentage / 100) * totalHeight;
+            console.log(`Restoring to position: ${scrollPosition}px out of ${totalHeight}px total height`);
+    
+            window.scrollTo(0, scrollPosition);
+        }
+    } else {
+        console.log("bookshelfData is not loaded yet");
+    }
+}
+
+// Load last read position with a delay to ensure complete page load
+window.onload = function() {
+    setTimeout(() => {
+        restoreScrollPosition();
+    }, 250); // Adjust the timing as necessary based on your application's needs
 };

@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>PG ZWI Bookshelf</title>
-    <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
+    <link rel="stylesheet" href="stylesheet.css">
     <!-- The Find on Page Modal -->
-    <div id="myModal" class="modal">
+    <div id="findOnPage" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
             <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
@@ -20,6 +20,7 @@
         <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
         <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
         <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+        <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
     </div>    
     <div id="header">
         <div id="header-content">
@@ -52,15 +53,21 @@
             <button class="tab" onclick="showTab('viewed')">Books Viewed</button>
         </div>
 
-        <div id="viewed" class="tabContent">
+        <div id="viewed" class="tabContent" style="display: block;">
             <div class="tabInnerContent">
-            <!-- Books viewed will be listed here -->
+                <!-- Books viewed will be listed here -->
+            </div>
+            <div class="remove-all-button-container">
+                <button id="removeAllViewedButton" style="display: none;">Remove All Viewed Books</button>
             </div>
         </div>
-
+        
         <div id="saved" class="tabContent" style="display: none">
             <div class="tabInnerContent">
-            <!-- Books saved will be listed here -->
+                <!-- Books saved will be listed here -->
+            </div>
+            <div class="remove-all-button-container">
+                <button id="removeAllSavedButton" style="display: none;">Remove All "Books Saved"</button>
             </div>
         </div>
     </div>

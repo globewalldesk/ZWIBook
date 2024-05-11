@@ -4,125 +4,238 @@ function onBookClick(bookId, bookMetadata) {
     window.location.href = `../reader.html?bookId=${stringBookId}`;
 }
 
-// Function to sort by author last name
-function sortByAuthor() {
-    let items = document.querySelectorAll('.searchResultItem');
-    let itemsArray = Array.from(items);
-
-    itemsArray.sort((a, b) => {
-        let authorA = a.querySelector('.author').textContent.split(',')[0].trim();
-        let authorB = b.querySelector('.author').textContent.split(',')[0].trim();
-        return authorA.localeCompare(authorB);
-    });
-
-    const parent = document.querySelector('#body > ul');
-    itemsArray.forEach(item => parent.appendChild(item));
-
-    // Collapse the popup after 1 second
-    setTimeout(() => {
-        document.getElementById('sortDropdown').style.display = 'none';
-    }, 250);    
-}
-
-// Function to sort by title, stripping non-word characters
-function sortByTitle() {
-    let items = document.querySelectorAll('.searchResultItem');
-    let itemsArray = Array.from(items);
-
-    itemsArray.sort((a, b) => {
-        let titleA = a.querySelector('.title').textContent.replace(/\W/g, '').toLowerCase();
-        let titleB = b.querySelector('.title').textContent.replace(/\W/g, '').toLowerCase();
-        return titleA.localeCompare(titleB);
-    });
-
-    const parent = document.querySelector('#body > ul');
-    itemsArray.forEach(item => parent.appendChild(item));
-
-    // Collapse the popup after 1 second
-    setTimeout(() => {
-        document.getElementById('sortDropdown').style.display = 'none';
-    }, 250);
-}
-
-// Function to sort by date extracted from author or title field
-function sortByDate() {
-    let items = document.querySelectorAll('.searchResultItem');
-    let itemsArray = Array.from(items);
-
-    itemsArray.sort((a, b) => {
-        // Improved regex to find common historical date formats, handling BCE/CE more effectively
-        let dateRegex = /(\d+)(\??)( BCE| CE| AD| BC)?/g;
-
-        let getDateValue = (text) => {
-            let dates = [...text.matchAll(dateRegex)];
-            let earliest = dates.reduce((min, current) => {
-                let year = parseInt(current[1]);
-                let isBCE = current[3] && current[3].includes("BCE");
-                let isUncertain = current[2] === '?';
-                if (isBCE) year = -year; // Convert BCE to negative for correct chronological order
-                if (isUncertain && year > 0) year -= 50; // Adjust uncertain CE dates slightly earlier
-                return Math.min(min, year);
-            }, Number.POSITIVE_INFINITY);
-            return earliest === Number.POSITIVE_INFINITY ? new Date().getFullYear() : earliest; // Default to current year if no date found
-        };
-
-        let dateA = getDateValue(a.querySelector('.author').textContent);
-        let dateB = getDateValue(b.querySelector('.author').textContent);
-
-        return dateA - dateB; // Sort by earliest date
-    });
-
-    const parent = document.querySelector('#body > ul');
-    itemsArray.forEach(item => parent.appendChild(item));
-
-    // Collapse the popup after 1 second
-    setTimeout(() => {
-        document.getElementById('sortDropdown').style.display = 'none';
-    }, 250);
-}
-
 window.onload = () => {
+    function getDefaultContents() {
+        const ulElement = document.querySelector('#body');
+        return ulElement ? ulElement.innerHTML : ''; // Return an empty string if the element is not found
+    }
+    
+    // Stash default book order for 'default' sort
+    const defaultContents = getDefaultContents();
+
     window.electronAPI.refreshMenu();
-    // Adding event listeners for sorting buttons (assuming their presence in the HTML)
+
+    /////////////////////////////
+    // Sorting listeners etc.
+
+    // Add event listeners for sorting
     document.getElementById('sortAuthor').addEventListener('click', sortByAuthor);
     document.getElementById('sortTitle').addEventListener('click', sortByTitle);
     document.getElementById('sortDate').addEventListener('click', sortByDate);
+    document.getElementById('sortDefault').addEventListener('click', sortByDefault);
 
+    highlightCurrentSortButton();
+
+    applySavedSorting()
+
+    const sortButton = document.getElementById('sortBtn');
     const sortDropdown = document.getElementById('sortDropdown');
+    const sortOverlay = document.getElementById('sortOverlay');
 
-    document.getElementById('sortBtn').addEventListener('click', () => {
-        sortDropdown.style.display = sortDropdown.style.display === 'flex' ? 'none' : 'flex';
+    // Event listener to show/hide the sort modal
+    sortButton.addEventListener('click', (event) => {
+        event.stopPropagation();  // Prevent the click from propagating to the document
+        if (sortDropdown.style.display === 'flex') {
+            hideSortModal();
+        } else {
+            showSortModal();
+        }
     });
+
+    // Event listener to hide the sort modal when clicking outside of it or on the overlay
+    document.addEventListener('click', (event) => {
+        if (event.target === sortOverlay || !sortDropdown.contains(event.target)) {
+            hideSortModal();
+        }
+    });
+
+    // Event listener to hide the sort modal on pressing the 'Escape' key
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+            hideSortModal();
+        }
+    });
+
+    function getSearchResultsContainer() {
+        return document.getElementById('body');
+    }
+    
+    // Function to sort by author last name
+    function sortByAuthor() {
+        const container = getSearchResultsContainer();
+        let items = container.querySelectorAll('.searchResultItem');
+        let itemsArray = Array.from(items);
+    
+        itemsArray.sort((a, b) => {
+            let authorA = a.querySelector('.author').textContent.split(',')[0].trim();
+            let authorB = b.querySelector('.author').textContent.split(',')[0].trim();
+            return authorA.localeCompare(authorB);
+        });
+    
+        itemsArray.forEach(item => container.appendChild(item));
+
+        // Save the sorting type in Local Storage
+        localStorage.setItem('sortingType', 'author');
+        highlightCurrentSortButton();
+    }
+    
+    // Function to sort by title, stripping non-word characters
+    function sortByTitle() {
+        const container = getSearchResultsContainer();
+        let items = container.querySelectorAll('.searchResultItem');
+        let itemsArray = Array.from(items);
+    
+        itemsArray.sort((a, b) => {
+            let titleA = a.querySelector('.title').textContent.replace(/\W/g, '').toLowerCase();
+            let titleB = b.querySelector('.title').textContent.replace(/\W/g, '').toLowerCase();
+            return titleA.localeCompare(titleB);
+        });
+    
+        itemsArray.forEach(item => container.appendChild(item));
+
+        // Save the sorting type in Local Storage
+        localStorage.setItem('sortingType', 'title');
+        highlightCurrentSortButton();
+    }
+    
+    // Function to sort by date extracted from author or title field
+    function sortByDate() {
+        const container = getSearchResultsContainer();
+        let items = container.querySelectorAll('.searchResultItem');
+        let itemsArray = Array.from(items);
+    
+        itemsArray.sort((a, b) => {
+            let dateRegex = /(\d+)(\??)( BCE| CE| AD| BC)?/g;
+            let getDateValue = (text) => {
+                let dates = [...text.matchAll(dateRegex)];
+                let earliest = dates.reduce((min, current) => {
+                    let year = parseInt(current[1]);
+                    let isBCE = current[3] && current[3].includes("BCE");
+                    if (isBCE) year = -year; // Convert BCE to negative for correct chronological order
+                    return Math.min(min, year);
+                }, Number.POSITIVE_INFINITY);
+                return earliest === Number.POSITIVE_INFINITY ? new Date().getFullYear() : earliest;
+            };
+    
+            let dateA = getDateValue(a.querySelector('.author').textContent);
+            let dateB = getDateValue(b.querySelector('.author').textContent);
+    
+            return dateA - dateB;
+        });
+    
+        itemsArray.forEach(item => container.appendChild(item));
+
+        // Save the sorting type in Local Storage
+        localStorage.setItem('sortingType', 'date');
+        highlightCurrentSortButton();
+    }
+
+    function sortByDefault() {
+        // Save the sorting type in Local Storage
+        localStorage.setItem('sortingType', 'default');
+        restoreDefaultOrder();
+        highlightCurrentSortButton();
+    }
+
+    function restoreDefaultOrder() {
+        // Retrieve the specific <ul> element
+        const ulElement = document.querySelector('#body');
+    
+        // Check if the element exists to avoid errors
+        if (ulElement) {
+            ulElement.innerHTML = ''; // Clear existing contents of the <ul>
+            ulElement.innerHTML = defaultContents; // Insert the stored default contents
+        } else {
+            console.log('The specified element does not exist.');
+        }
+    }
+
+    function showSortModal() {
+        const sortDropdown = document.getElementById('sortDropdown');
+        sortDropdown.style.display = 'flex';  // Display the sort options modal
+    }
+    
+    function hideSortModal() {
+        const sortDropdown = document.getElementById('sortDropdown');
+        sortDropdown.style.display = 'none';   // Hide the sort options modal
+    }
+
+    // Function to apply saved sorting type on page load
+    function applySavedSorting() {
+        const savedSortingType = localStorage.getItem('sortingType');
+        switch (savedSortingType) {
+            case 'author':
+                sortByAuthor();
+                break;
+            case 'title':
+                sortByTitle();
+                break;
+            case 'date':
+                sortByDate();
+                break;
+            default:
+                sortByDefault();
+                break;
+        }
+        highlightCurrentSortButton();
+    }
+
+    function highlightCurrentSortButton() {
+        // Retrieve the current sorting type from Local Storage
+        const sortingType = localStorage.getItem('sortingType');
+
+        // Define the mapping between sorting types and corresponding button IDs
+        const buttonIdMap = {
+            author: 'sortAuthor',
+            title: 'sortTitle',
+            date: 'sortDate',
+            default: 'sortDefault'
+        };
+
+        // Get the ID of the button to highlight based on the sorting type
+        const buttonIdToHighlight = buttonIdMap[sortingType];
+
+        // Remove highlighted class from all buttons first
+        document.querySelectorAll('.dropdown-btn').forEach(button => {
+            button.classList.remove('sort-button-highlighted');
+        });
+
+        // Add highlighted class to the button that matches the current sorting type
+        if (buttonIdToHighlight) {
+            const buttonToHighlight = document.getElementById(buttonIdToHighlight);
+            if (buttonToHighlight) {
+                buttonToHighlight.classList.add('sort-button-highlighted');
+            }
+        }
+    }
+
+
 
     /////////////////////////////
     // Find on page functionality
     const inputField = document.getElementById('searchText');
     const findButton = document.getElementById('findButton');
-    const modal = document.getElementById('myModal');
-    let lastSearch = '';  // Variable to store the last searched term
+    const modal = document.getElementById('findOnPage');
 
-    // Helper function to perform search or find next
-    function performSearch(newSearch = false) {
-        const currentSearchTerm = inputField.value;
-        if (newSearch || currentSearchTerm !== lastSearch) {
-            window.electronAPI.performFind(currentSearchTerm);
-            lastSearch = currentSearchTerm;  // Update last search term
-        } else {
-            window.electronAPI.findNext();
-        }
-    }
+    const performSearch = () => window.electronAPI.performFind(inputField.value.trim());
 
-    // Event listener for keypress in the search input to handle the Enter key
+    const realText = "";
+    
+    // Modify the keypress listener to use the search counter
     inputField.addEventListener('keypress', function(event) {
         if (event.key === 'Enter') {
-            event.preventDefault();
-            window.requestAnimationFrame(() => inputField.focus());  // Refocus on the input field to allow continuous 'Enter' presses
+            event.preventDefault();  // Prevent form submission
+            inputField.setAttribute("inert", "");
             performSearch();
+            setTimeout(() => {
+                inputField.removeAttribute("inert");
+                inputField.focus();
+            }, 100); // Refocus after a delay
         }
     });
-
-    // Event listener for the Find button click
-    findButton.addEventListener('click', () => performSearch(true));
+    
+    // Reset the search counter explicitly when the "Find" button is clicked
+    findButton.addEventListener('click', performSearch);
 
     // This function listens for the toggle command from the main process
     window.electronAPI.onToggleFindModal(() => {

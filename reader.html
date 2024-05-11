@@ -9,14 +9,19 @@
     <script src="fflate.js"></script>
 </head>
 <body>
+    <header></header>
+    <!-- Image Modal -->
+    <div id="imageModal" class="image-modal">
+        <span class="close">&times;</span>
+        <img class="image-modal-content" id="modalImage">
+        <div id="caption"></div>
+    </div>
     <!-- The Find on Page Modal -->
-    <div id="myModal" class="modal">
+    <div id="findOnPage" class="modal">
         <!-- Modal content -->
         <div class="modal-content">
             <span class="close">&times;</span>
-            <iframe>
-                <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
-            </iframe>
+            <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
             <button id="findButton">Find</button>
         </div>
     </div>

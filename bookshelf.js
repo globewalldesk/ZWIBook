@@ -7,6 +7,7 @@ const bookshelfData = {
 };
 
 function formatTitle(title) {
+    title = title.replace(/""/g, '"');
     // Regex to match ':', ';', or '-' not surrounded by \w characters
     const breakRegex = /([-:;])(?!\w)/;
     // Find the first occurrence of the break character
@@ -35,36 +36,85 @@ function onBookClick(bookId) {
 
 function refreshBookshelfUI() {
     window.electronAPI.requestBookshelfData().then(data => {
-        bookshelfData.viewedBooks = data.viewedBooks;
-        bookshelfData.savedBooks = data.savedBooks;
-        bookshelfData.readingPositions = data.readingPositions;
-        bookshelfData.bookmarks = data.bookmarks;
+        Object.assign(bookshelfData, data);
 
         const viewedDiv = document.getElementById('viewed');
         const savedDiv = document.getElementById('saved');
 
         viewedDiv.innerHTML = '';
         savedDiv.innerHTML = '';
-        
-        bookshelfData.viewedBooks.forEach(book => {
-            viewedDiv.appendChild(createBookDiv(book, 'Viewed'));
-        });
-        bookshelfData.savedBooks.forEach(book => {
-            savedDiv.appendChild(createBookDiv(book, 'Saved'));
-        });
 
-        // Check if the content of the viewed tab is empty
-        if (!viewedDiv.innerHTML.trim()) {
-            viewedDiv.innerHTML = '<h4 style="color:#007BFF">Nothing to show here yet. Those you view will show up here.</h4>';
-        }
-        // Check if the content of the saved tab is empty
-        if (!savedDiv.innerHTML.trim()) {
-            savedDiv.innerHTML = '<h4 style="color:#007BFF">Nothing to show here yet. To save a book, open it and press this button:</h4><p><span style="background-color:#007BFF; height: 32px; display: inline-block; padding: 5px"><img src="./images/icons/add-book.svg"></span></p>';
-        }
+        populateDivWithBooks(viewedDiv, bookshelfData.viewedBooks, 'Viewed');
+        populateDivWithBooks(savedDiv, bookshelfData.savedBooks, 'Saved');
 
+        appendRemoveAllButton(viewedDiv, 'Viewed');
+        appendRemoveAllButton(savedDiv, 'Saved');
+
+        checkAndDisplayButtons();
     }).catch(error => {
         console.error("Error fetching bookshelf data: ", error);
     });
+}
+
+function populateDivWithBooks(divElement, books, listType) {
+    books.forEach(book => {
+        divElement.appendChild(createBookDiv(book, listType));
+    });
+    appendRemoveAllButtonContainer(divElement, listType);
+}
+
+function appendRemoveAllButtonContainer(divElement, listType) {
+    const buttonContainer = document.createElement('div');
+    buttonContainer.className = 'remove-all-button-container';
+    divElement.appendChild(buttonContainer);
+    appendRemoveAllButton(buttonContainer, listType);
+}
+
+function appendRemoveAllButton(container, listType) {
+    const buttonId = `removeAll${listType}Button`;
+    let button = document.getElementById(buttonId);
+
+    if (!button) {
+        button = document.createElement('button');
+        button.id = buttonId;
+        button.textContent = `Remove All ${listType} Books`;
+        button.addEventListener('click', () => handleRemoveAll(button, listType));
+        container.appendChild(button);
+    }
+}
+
+function handleRemoveAll(button, listType) {
+    const confirmed = confirm(`This will empty the '${listType} Books' tab. Are you sure?`);
+    if (confirmed) {
+        console.log(`Clearing ${listType.toLowerCase()} books`);
+        const action = `removeAll${listType}`;
+        window.electronAPI.updateBookshelf({ action: action });
+        window.electronAPI.onBookshelfUpdated(() => {
+            refreshBookshelfUI();  // Refresh the UI only after confirmation
+        });
+    }
+}
+
+function checkAndDisplayButtons() {
+    const viewedItems = document.querySelectorAll('#viewed .searchResultItem');
+    const savedItems = document.querySelectorAll('#saved .searchResultItem');
+    
+    const removeAllViewedBtn = document.getElementById('removeAllViewedButton');
+    const removeAllSavedBtn = document.getElementById('removeAllSavedButton');
+
+    removeAllViewedBtn.style.display = viewedItems.length >= 20 ? 'block' : 'none';
+    removeAllSavedBtn.style.display = savedItems.length >= 20 ? 'block' : 'none';
+}
+
+function checkAndDisplayButtons() {
+    const viewedItems = document.querySelectorAll('#viewed .searchResultItem');
+    const savedItems = document.querySelectorAll('#saved .searchResultItem');
+    
+    const removeAllViewedBtn = document.getElementById('removeAllViewedButton');
+    const removeAllSavedBtn = document.getElementById('removeAllSavedButton');
+
+    removeAllViewedBtn.style.display = viewedItems.length >= 20 ? 'block' : 'none';
+    removeAllSavedBtn.style.display = savedItems.length >= 20 ? 'block' : 'none';
 }
 
 function removeBook(bookId, listType) {
@@ -79,7 +129,6 @@ function removeBook(bookId, listType) {
         refreshBookshelfUI(); // Refresh the UI after the backend confirms the update
     });
 }
-
 
 // Function to create and return a book div element
 function createBookDiv(book, listType) {
@@ -137,6 +186,8 @@ function showTab(tabName) {
 
     // Save the current tab to localStorage
     localStorage.setItem('lastViewedTab', tabName);
+
+    applySavedSorting()
 }
 
 
@@ -148,195 +199,182 @@ function getActiveTabContent() {
     return (viewedContent.style.display !== 'none') ? viewedContent : savedContent;
 }
 
-// Function to sort by author last name
-function sortByAuthor() {
-    const parent = getActiveTabContent();
-    let items = parent.querySelectorAll('.searchResultItem');
-    let itemsArray = Array.from(items);
-
-    itemsArray.sort((a, b) => {
-        let authorA = a.querySelector('.author').textContent.split(',')[0].trim();
-        let authorB = b.querySelector('.author').textContent.split(',')[0].trim();
-        return authorA.localeCompare(authorB);
-    });
-
-    itemsArray.forEach(item => parent.appendChild(item));
-}
-
-// Function to sort by title, stripping non-word characters
-function sortByTitle() {
-    const parent = getActiveTabContent();
-    let items = parent.querySelectorAll('.searchResultItem');
-    let itemsArray = Array.from(items);
-
-    itemsArray.sort((a, b) => {
-        let titleA = a.querySelector('.title').textContent.replace(/\W/g, '').toLowerCase();
-        let titleB = b.querySelector('.title').textContent.replace(/\W/g, '').toLowerCase();
-        return titleA.localeCompare(titleB);
-    });
-
-    itemsArray.forEach(item => parent.appendChild(item));
-}
-
-// Function to sort by date extracted from author or title field
-function sortByDate() {
-    const parent = getActiveTabContent();
-    let items = parent.querySelectorAll('.searchResultItem');
-    let itemsArray = Array.from(items);
-
-    itemsArray.sort((a, b) => {
-        let dateRegex = /(\d+)(\??)( BCE| CE| AD| BC)?/g;
-        let getDateValue = (text) => {
-            let dates = [...text.matchAll(dateRegex)];
-            let earliest = dates.reduce((min, current) => {
-                let year = parseInt(current[1]);
-                let isBCE = current[3] && current[3].includes("BCE");
-                if (isBCE) year = -year; // Convert BCE to negative for correct chronological order
-                return Math.min(min, year);
-            }, Number.POSITIVE_INFINITY);
-            return earliest === Number.POSITIVE_INFINITY ? new Date().getFullYear() : earliest;
-        };
-
-        let dateA = getDateValue(a.querySelector('.author').textContent);
-        let dateB = getDateValue(b.querySelector('.author').textContent);
-
-        return dateA - dateB;
-    });
-
-    itemsArray.forEach(item => parent.appendChild(item));
-}
-
 document.addEventListener('DOMContentLoaded', async () => {
     window.electronAPI.refreshMenu();
+    
     try {
-  
-        /////////////////////////////
-        // Sorting functionality
-
-        // Add event listeners for sorting
-        document.getElementById('sortAuthor').addEventListener('click', sortByAuthor);
-        document.getElementById('sortTitle').addEventListener('click', sortByTitle);
-        document.getElementById('sortDate').addEventListener('click', sortByDate);
-
-        const sortButton = document.getElementById('sortBtn');
-        const sortDropdown = document.getElementById('sortDropdown');
-        const sortOverlay = document.getElementById('sortOverlay');
-
-        // Event listener to show/hide the sort modal
-        sortButton.addEventListener('click', (event) => {
-            event.stopPropagation();  // Prevent the click from propagating to the document
-            if (sortDropdown.style.display === 'flex') {
-                hideSortModal();
-            } else {
-                showSortModal();
-            }
-        });
-
-        // Event listener to hide the sort modal when clicking outside of it or on the overlay
-        document.addEventListener('click', (event) => {
-            if (event.target === sortOverlay || !sortDropdown.contains(event.target)) {
-                hideSortModal();
-            }
-        });
-
-        // Event listener to hide the sort modal on pressing the 'Escape' key
-        document.addEventListener('keydown', (event) => {
-            if (event.key === 'Escape') {
-                hideSortModal();
-            }
-        });
-
-
         const data = await window.electronAPI.requestBookshelfData();
         if (data) {
             bookshelfData.viewedBooks = data.viewedBooks;
             bookshelfData.savedBooks = data.savedBooks;
-
-            // Clear existing content and populate tabs
-            document.getElementById('viewed').innerHTML = '';
-            document.getElementById('saved').innerHTML = '';
-            bookshelfData.viewedBooks.forEach(book => {
-                document.getElementById('viewed').appendChild(createBookDiv(book, 'Viewed')); // Pass 'Viewed'
-            });
-            bookshelfData.savedBooks.forEach(book => {
-                document.getElementById('saved').appendChild(createBookDiv(book, 'Saved')); // Pass 'Saved'
-            });
-
-            // Retrieve the last viewed tab from localStorage or default to 'viewed'
-            const lastViewedTab = localStorage.getItem('lastViewedTab') || 'viewed';
-            showTab(lastViewedTab);
+            refreshBookshelfUI();  // Use a dedicated function to refresh UI
         } else {
             console.error('No book data received');
         }
-        
-        /////////////////////////////
-        // Find on page functionality
-        const inputField = document.getElementById('searchText');
-        const findButton = document.getElementById('findButton');
-        const modal = document.getElementById('myModal');
-        let lastSearch = '';  // Variable to store the last searched term
-
-        // Helper function to perform search or find next
-        function performSearch(newSearch = false) {
-            const currentSearchTerm = inputField.value;
-            if (newSearch || currentSearchTerm !== lastSearch) {
-                window.electronAPI.performFind(currentSearchTerm);
-                lastSearch = currentSearchTerm;  // Update last search term
-            } else {
-                window.electronAPI.findNext();
-            }
-        }
-
-        // Event listener for keypress in the search input to handle the Enter key
-        inputField.addEventListener('keypress', function(event) {
-            if (event.key === 'Enter') {
-                event.preventDefault();
-                window.requestAnimationFrame(() => inputField.focus());  // Refocus on the input field to allow continuous 'Enter' presses
-                performSearch();
-            }
-        });
-
-        // Event listener for the Find button click
-        findButton.addEventListener('click', () => performSearch(true));
-
-        // This function listens for the toggle command from the main process
-        window.electronAPI.onToggleFindModal(() => {
-            modal.style.display = modal.style.display === 'block' ? 'none' : 'block';
-            if (modal.style.display === 'block') {
-                inputField.focus();  // Automatically focus on the input when the modal is shown
-            }
-        });
-
-        // Handling closing modal and sort dropdown when clicking outside
-        window.onclick = function(event) {
-            console.log(event.target);
-            if (event.target === modal) {
-                modal.style.display = 'none';
-            } else if (event.target === sortDropdown) {
-                sortDropdown.style.display = 'none';
-            }
-        };
-
-        // Handling closing modal and sort dropdown on pressing the 'Escape' key
-        document.onkeydown = function(event) {
-            if (event.key === 'Escape') {
-                if (modal.style.display === 'block') {
-                    modal.style.display = 'none';
-                }
-                if (sortDropdown.style.display === 'flex') {
-                    sortDropdown.style.display = 'none';
-                }
-            }
-        };
-
     } catch (error) {
         console.error("Error fetching bookshelf data: ", error);
     }
+
+    /////////////////////////////
+    // Sorting functionality
+
+    // Add event listeners for sorting
+    document.getElementById('sortAuthor').addEventListener('click', sortByAuthor);
+    document.getElementById('sortTitle').addEventListener('click', sortByTitle);
+    document.getElementById('sortDate').addEventListener('click', sortByDate);
+    document.getElementById('sortDefault').addEventListener('click', sortDefault);
+
+    const sortButton = document.getElementById('sortBtn');
+    const sortDropdown = document.getElementById('sortDropdown');
+    const sortOverlay = document.getElementById('sortOverlay');
+
+    // Event listener to show/hide the sort modal
+    sortButton.addEventListener('click', (event) => {
+        event.stopPropagation();  // Prevent the click from propagating to the document
+        if (sortDropdown.style.display === 'flex') {
+            hideSortModal();
+        } else {
+            showSortModal();
+        }
+    });
+
+    // Event listener to hide the sort modal when clicking outside of it or on the overlay
+    document.addEventListener('click', (event) => {
+        if (event.target === sortOverlay || !sortDropdown.contains(event.target)) {
+            hideSortModal();
+        }
+    });
+
+    // Event listener to hide the sort modal on pressing the 'Escape' key
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+            hideSortModal();
+        }
+    });
+
+
+    // Clear existing content and populate tabs
+    document.getElementById('viewed').innerHTML = '';
+    document.getElementById('saved').innerHTML = '';
+    bookshelfData.viewedBooks.forEach(book => {
+        document.getElementById('viewed').appendChild(createBookDiv(book, 'Viewed')); // Pass 'Viewed'
+    });
+    bookshelfData.savedBooks.forEach(book => {
+        document.getElementById('saved').appendChild(createBookDiv(book, 'Saved')); // Pass 'Saved'
+    });
+
+    // Retrieve the last viewed tab from localStorage or default to 'viewed'
+    const lastViewedTab = localStorage.getItem('lastViewedTab') || 'viewed';
+    showTab(lastViewedTab);
+        
+    /////////////////////////////
+    // Find on page functionality
+    const inputField = document.getElementById('searchText');
+    const findButton = document.getElementById('findButton');
+    const modal = document.getElementById('findOnPage');
+
+    const performSearch = () => window.electronAPI.performFind(inputField.value.trim());
+
+    const realText = "";
+    
+    // Modify the keypress listener to use the search counter
+    inputField.addEventListener('keypress', function(event) {
+        if (event.key === 'Enter') {
+            event.preventDefault();  // Prevent form submission
+            inputField.setAttribute("inert", "");
+            performSearch();
+            setTimeout(() => {
+                inputField.removeAttribute("inert");
+                inputField.focus();
+            }, 100); // Refocus after a delay
+        }
+    });
+    
+    // Reset the search counter explicitly when the "Find" button is clicked
+    findButton.addEventListener('click', performSearch);
+
+    // This function listens for the toggle command from the main process
+    window.electronAPI.onToggleFindModal(() => {
+        modal.style.display = modal.style.display === 'block' ? 'none' : 'block';
+        if (modal.style.display === 'block') {
+            inputField.focus();  // Automatically focus on the input when the modal is shown
+        }
+    });
+
+    // Handling closing modal when clicking outside the modal
+    window.onclick = function(event) {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    };
+
+    // Handling closing modal on pressing the 'Escape' key
+    document.onkeydown = function(event) {
+        if (event.key === 'Escape') {
+            modal.style.display = 'none';
+        }
+    };
+   
 });
 
 
 ////////////////////////////
 // SORTING FUNCTIONS
+
+// Function to apply saved sorting type on page load
+function applySavedSorting() {
+    const savedSortingType = localStorage.getItem('sortingType');
+    switch (savedSortingType) {
+        case 'author':
+            sortByAuthor();
+            break;
+        case 'title':
+            sortByTitle();
+            break;
+        case 'date':
+            sortByDate();
+            break;
+        default:
+            sortByDefault();
+            break;
+    }
+    highlightCurrentSortButton();
+}
+
+function highlightCurrentSortButton() {
+    // Retrieve the current sorting type from Local Storage
+    const sortingType = localStorage.getItem('sortingType');
+
+    // Define the mapping between sorting types and corresponding button IDs
+    const buttonIdMap = {
+        author: 'sortAuthor',
+        title: 'sortTitle',
+        date: 'sortDate',
+        default: 'sortDefault'
+    };
+
+    // Get the ID of the button to highlight based on the sorting type
+    const buttonIdToHighlight = buttonIdMap[sortingType];
+
+    // Remove highlighted class from all buttons first
+    document.querySelectorAll('.dropdown-btn').forEach(button => {
+        button.classList.remove('sort-button-highlighted');
+    });
+
+    // Add highlighted class to the button that matches the current sorting type
+    if (buttonIdToHighlight) {
+        const buttonToHighlight = document.getElementById(buttonIdToHighlight);
+        if (buttonToHighlight) {
+            buttonToHighlight.classList.add('sort-button-highlighted');
+        }
+    }
+}
+
+// Call this function when the page loads or when the bookmarks.js is initialized
+document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(applySavedSorting, 100);  // Delay the sorting application by 250 milliseconds
+    highlightCurrentSortButton();
+});
 
 function getVisibleTabContent() {
     const viewedContent = document.getElementById('viewed');
@@ -353,6 +391,17 @@ function getVisibleTabContent() {
     }
 }
 
+// Moves "remove all" button to bottom after sorting
+function moveRemoveAllButtonToBottom() {
+    const container = Array.from(document.querySelectorAll('div#saved, div#viewed')).find(div => getComputedStyle(div).display === 'block');
+    const buttonContainer = container.querySelector('.remove-all-button-container');
+    console.log(container, buttonContainer);
+
+    if (buttonContainer) {
+        container.appendChild(buttonContainer); // This moves it to the bottom
+    }
+}
+
 // Function to sort by author last name
 function sortByAuthor() {
     const container = getVisibleTabContent();
@@ -366,6 +415,11 @@ function sortByAuthor() {
     });
 
     itemsArray.forEach(item => container.appendChild(item));
+    moveRemoveAllButtonToBottom();
+
+    // Save the sorting type in Local Storage
+    localStorage.setItem('sortingType', 'author');
+    highlightCurrentSortButton();
 }
 
 // Function to sort by title, stripping non-word characters
@@ -381,6 +435,11 @@ function sortByTitle() {
     });
 
     itemsArray.forEach(item => container.appendChild(item));
+    moveRemoveAllButtonToBottom();
+
+    // Save the sorting type in Local Storage
+    localStorage.setItem('sortingType', 'title');
+    highlightCurrentSortButton();
 }
 
 // Function to sort by date extracted from author or title field
@@ -409,6 +468,23 @@ function sortByDate() {
     });
 
     itemsArray.forEach(item => container.appendChild(item));
+    moveRemoveAllButtonToBottom();
+
+    // Save the sorting type in Local Storage
+    localStorage.setItem('sortingType', 'date');
+    highlightCurrentSortButton();
+}
+
+function sortByDefault() {
+    const container = getVisibleTabContent();
+    let items = container.querySelectorAll('.searchResultItem');
+    let itemsArray = Array.from(items);
+    refreshBookshelfUI();
+    moveRemoveAllButtonToBottom();
+
+    // Save the sorting type in Local Storage
+    localStorage.setItem('sortingType', 'default');
+    highlightCurrentSortButton();
 }
 
 function showSortModal() {
@@ -424,3 +500,4 @@ function hideSortModal() {
     sortDropdown.style.display = 'none';   // Hide the sort options modal
     sortOverlay.style.display = 'none';    // Hide the overlay
 }
+

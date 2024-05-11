@@ -15,7 +15,7 @@ console.log = function (message) {
 let mainWindow; // Declare mainWindow globally
 let dataDir, latestUrlPath, bookshelfPath; // Declare these globally to use in createWindow()
 
-const configFilePath = path.join(app.getPath('userData'), 'config.json'); // Path for config file
+const configFilePath = path.join(app.getPath('userData'), 'config.json'); // Default path for config file
 
 // Define a global variable to store the menu item references
 let gutenbergMenuItems = [];
@@ -50,6 +50,7 @@ async function saveConfig(config) {
 // Dynamic setup of data directory based on existing config
 async function setupDataDirectory() {
     try {
+        // Get (or initialize) config file 
         let config = await loadConfig();
 
         // Ensure config is not null and initialize if needed
@@ -143,20 +144,16 @@ const getZwiDirectoryPath = () => {
 let zwiDirectoryPath = getZwiDirectoryPath();
 console.log('ZWI Directory Path:', zwiDirectoryPath);
 
-async function setupDataDirectory() {
-    // Open a dialog for the user to select a directory
-    const result = await dialog.showOpenDialog({
+function selectZwiDirectory() {
+    return dialog.showOpenDialog({
         properties: ['openDirectory']
+    }).then(result => {
+        if (result.canceled) {
+            return null;
+        } else {
+            return result.filePaths[0];
+        }
     });
-
-    if (result.canceled) {
-        // Handle what happens if the user cancels the dialog
-        console.log("User cancelled the directory selection.");
-        return null;
-    } else {
-        // Return the selected directory path
-        return result.filePaths[0];
-    }
 }
 
 function createWindow() {
@@ -381,65 +378,79 @@ function createWindow() {
     const pgSubMenuIndex = template[fileMenuIndex].submenu.length - 1;
 
 
+
     // CONTEXT (RIGHT-CLICK) MENU
     mainWindow.webContents.on('context-menu', (event, params) => {
         const contextMenu = new Menu();
-        contextMenu.append(new MenuItem({
-            label: 'Copy',
-            accelerator: 'CmdOrCtrl+C',
-            role: 'copy'  // This automatically handles copying text to the clipboard
-        }));
+        
+        // Only show 'Copy' if text is selected
+        if (params.selectionText) {
+            contextMenu.append(new MenuItem({
+                label: 'Copy',
+                accelerator: 'CmdOrCtrl+C',
+                role: 'copy'  // This automatically handles copying text to the clipboard
+            }));
+        }
+
+        // 'Select All' is always visible
         contextMenu.append(new MenuItem({
             label: 'Select All',
             accelerator: 'CmdOrCtrl+A',
             role: 'selectAll'  // Automatically handles selecting all text
         }));
-        contextMenu.append(new MenuItem({
-            label: 'Search for books on this',
-            click: () => {
-                // Assuming search.html is capable of handling a query parameter 'q'
-                const selectedText = encodeURIComponent(params.selectionText);
-                mainWindow.loadURL(`file://${__dirname}/search.html?q=${selectedText}`);
-            }
-        }));              
-        contextMenu.append(new MenuItem({
-            label: 'Look up on EncycloSearch.org',
-            click: () => {
-                const selectedText = encodeURIComponent(params.selectionText);
-                shell.openExternal(`https://encyclosearch.org/?q=${selectedText}`);
-            }
-        }));
-        contextMenu.append(new MenuItem({
-            label: 'Look up on EncycloReader.org',
-            click: () => {
-                const selectedText = encodeURIComponent(params.selectionText);
-                shell.openExternal(`https://encycloreader.org/find.php?query=${selectedText}`);
-            }
-        }));
-        contextMenu.append(new MenuItem({
-            label: 'Define on TheFreeDictionary.com',
-            click: () => {
-                const selectedText = encodeURIComponent(params.selectionText);
-                shell.openExternal(`https://www.thefreedictionary.com/_/search.aspx?tab=1&SearchBy=0&Word=${selectedText}&TFDBy=0`);
-            }
-        }));
-        contextMenu.append(new MenuItem({
-            label: 'Translate with Google',
-            click: () => {
-                const selectedText = encodeURIComponent(params.selectionText);
-                shell.openExternal(`https://translate.google.com/?sl=auto&tl=en&text=${selectedText}`);
-            }
-        }));
-        contextMenu.append(new MenuItem({
-            label: 'Translate with Bing',
-            click: () => {
-                const selectedText = encodeURIComponent(params.selectionText);
-                shell.openExternal(`https://www.bing.com/translator/?text=${selectedText}`);
-            }
-        }));
+
+        // Show these items only if some text is selected and it is under 50 characters
+        if (params.selectionText && params.selectionText.length <= 50) {
+            contextMenu.append(new MenuItem({
+                label: 'Search for books on this',
+                click: () => {
+                    const selectedText = encodeURIComponent(params.selectionText);
+                    mainWindow.loadURL(`file://${__dirname}/search.html?q=${selectedText}`);
+                }
+            }));              
+            contextMenu.append(new MenuItem({
+                label: 'Look up on EncycloSearch.org',
+                click: () => {
+                    const selectedText = encodeURIComponent(params.selectionText);
+                    shell.openExternal(`https://encyclosearch.org/?q=${selectedText}`);
+                }
+            }));
+            contextMenu.append(new MenuItem({
+                label: 'Look up on EncycloReader.org',
+                click: () => {
+                    const selectedText = encodeURIComponent(params.selectionText);
+                    shell.openExternal(`https://encycloreader.org/find.php?query=${selectedText}`);
+                }
+            }));
+            contextMenu.append(new MenuItem({
+                label: 'Define on TheFreeDictionary.com',
+                click: () => {
+                    const selectedText = encodeURIComponent(params.selectionText);
+                    shell.openExternal(`https://www.thefreedictionary.com/_/search.aspx?tab=1&SearchBy=0&Word=${selectedText}&TFDBy=0`);
+                }
+            }));
+        }
+
+        // Translate options do not have the character limit but require text selection
+        if (params.selectionText) {
+            contextMenu.append(new MenuItem({
+                label: 'Translate with Google',
+                click: () => {
+                    const selectedText = encodeURIComponent(params.selectionText);
+                    shell.openExternal(`https://translate.google.com/?sl=auto&tl=en&text=${selectedText}`);
+                }
+            }));
+            contextMenu.append(new MenuItem({
+                label: 'Translate with Bing',
+                click: () => {
+                    const selectedText = encodeURIComponent(params.selectionText);
+                    shell.openExternal(`https://www.bing.com/translator/?text=${selectedText}`);
+                }
+            }));
+        }
 
         contextMenu.popup(mainWindow);
-    });    
+    });
 
     // Store references to submenu items
     gutenbergMenuItems = template[1].submenu;  // Adjust index according to your menu structure
@@ -465,14 +476,16 @@ function createWindow() {
 // Some APIs can only be used after this event occurs.
 app.whenReady().then(async () => {
     try {
+        // Load (or initialize) config (which says where ZWIs are located)
         let config = await loadConfig();
 
+        // If unable to set up, initialize here
         if (!config) {
             config = {};
         }
-
+        // Set data directory
         if (!config.dataDir) {
-            dataDir = await setupDataDirectory();
+            dataDir = await setupDataDirectory(config);
             config.dataDir = dataDir;
             await saveConfig(config);
         } else {
@@ -553,19 +566,19 @@ ipcMain.on('update-bookshelf', (event, { bookMetadata, action }) => {
     let bookshelf;
 
     try {
-        // Check if the bookshelf.json file exists and read or initialize it
         if (fs.existsSync(bookshelfPath)) {
             bookshelf = JSON.parse(fs.readFileSync(bookshelfPath, 'utf8'));
         } else {
             bookshelf = { viewedBooks: [], savedBooks: [] };
         }
 
-        // Default to an empty array if properties are undefined
-        bookshelf.viewedBooks = bookshelf.viewedBooks || [];
-        bookshelf.savedBooks = bookshelf.savedBooks || [];
-
-        // Determine action type
         switch (action) {
+            case 'removeAllViewed':
+                bookshelf.viewedBooks = [];
+                break;
+            case 'removeAllSaved':
+                bookshelf.savedBooks = [];
+                break;
             case 'addViewed':
                 // Find the index of the book if it already exists in the viewed list
                 const viewedIndex = bookshelf.viewedBooks.findIndex(book => book.PG_ID === bookMetadata.PG_ID);
@@ -615,31 +628,27 @@ ipcMain.handle('get-bookshelf-data', async (event) => {
 
 // This is used in reader.html to update last reading position
 ipcMain.on('save-last-read-position', (event, { bookId, position }) => {
-    const bookshelf = getBookshelfData(); // Retrieve current bookshelf data
+    console.log("Main process received save request:", bookId, "with position:", position);
 
-    // Ensure that readingPositions array exists
+    const bookshelf = getBookshelfData(); // Assuming this function retrieves your current bookshelf data correctly
     if (!bookshelf.readingPositions) {
         bookshelf.readingPositions = [];
     }
 
-    // Check if there is already an entry for this book in readingPositions
     let positionEntry = bookshelf.readingPositions.find(entry => entry.PG_ID === bookId);
-
     if (positionEntry) {
-        // Update existing entry
-        positionEntry.lastReadPosition = position;
+        positionEntry.lastReadPosition = position;  // Update position
     } else {
-        // Create a new entry if none exists
         bookshelf.readingPositions.push({
             PG_ID: bookId,
-            lastReadPosition: position
+            lastReadPosition: position  // Create new position entry
         });
     }
 
-    // Write the updated bookshelf data back to the file
     fs.writeFileSync(bookshelfPath, JSON.stringify(bookshelf, null, 2), 'utf8');
     event.reply('position-save-confirmation', 'Last read position saved successfully.');
 });
+
 
 ipcMain.on('update-bookmark', (event, { bookId, bookmarkId, isAdd }) => {
     let bookshelf = getBookshelfData();  // This now includes bookmarks initialization
@@ -724,30 +733,49 @@ fs.readFile(metaDataPath, 'utf8', (err, data) => {
 });
 
 function searchDatabase(query, searchType) {
+    console.log(query);
     if (!metadatabase) {
         console.log("Metadatabase not loaded yet.");
         return []; // Return empty array or suitable error response
     }
 
-    const keywords = query.toLowerCase().split(/\s+/);
-    let results = metadatabase.filter(book => {
-        switch (searchType) {
-            case 'title':
-                return keywords.every(keyword => book.Title.toLowerCase().includes(keyword));
-            case 'author':
-                return Array.isArray(book.CreatorNames) && keywords.every(keyword =>
-                    book.CreatorNames.some(author => author.toLowerCase().includes(keyword))
-                );
-            case 'both':
-            default:
-                return keywords.every(keyword =>
-                    book.Title.toLowerCase().includes(keyword) ||
-                    (Array.isArray(book.CreatorNames) && book.CreatorNames.some(author => author.toLowerCase().includes(keyword)))
-                );
-        }
+    let results = [];
+    const orSplit = query.split(/\s+OR\s+/);
+
+    console.log("Split queries: ", orSplit); // Debug: Log split queries
+
+    orSplit.forEach(subQuery => {
+        subQuery = subQuery.trim(); // Trim spaces from each sub-query
+        const keywords = subQuery.split(/\s+/);
+        console.log("Keywords for sub-query '" + subQuery + "':", keywords); // Debug: Log keywords
+
+        let subResults = metadatabase.filter(book => {
+            let titleMatch = keywords.every(keyword => book.Title.toLowerCase().includes(keyword));
+            let authorMatch = Array.isArray(book.CreatorNames) && keywords.every(keyword =>
+                book.CreatorNames.some(author => author.toLowerCase().includes(keyword))
+            );
+
+            switch (searchType) {
+                case 'title':
+                    return titleMatch;
+                case 'author':
+                    return authorMatch;
+                case 'both':
+                default:
+                    return titleMatch || authorMatch;
+            }
+        });
+
+        console.log("Results for sub-query '" + subQuery + "':", subResults.length); // Debug: Log results count for each sub-query
+        results = results.concat(subResults);
     });
+
+    // Remove duplicates
+    results = results.filter((value, index, self) => self.findIndex(v => v.PG_ID === value.PG_ID) === index);
+
     return results;
 }
+
 
 ipcMain.handle('perform-search', async (event, { query, searchType }) => {
     return searchDatabase(query, searchType); // this assumes searchDatabase is defined as earlier mentioned
@@ -823,7 +851,7 @@ ipcMain.on('refresh-menu', () => {
         let menu = Menu.getApplicationMenu();
         if (menu) {
             // Find the 'File' menu
-            const fileMenu = menu.items.find(item => item.label === 'File');
+            let fileMenu = menu.items.find(item => item.label === 'File');
             if (fileMenu) {
                 // Find the 'Export ZWI' menu item
                 const exportZwiItem = fileMenu.submenu.items.find(item => item.label === 'Export ZWI');
@@ -832,12 +860,19 @@ ipcMain.on('refresh-menu', () => {
                     exportZwiItem.visible = isReaderPage;
                 }
             }
+            // Do similar but for "Font styles..." now
+            fileMenu = menu.items.find(item => item.label === 'Text and View');
+            if (fileMenu) {
+                const fontStylesItem = fileMenu.submenu.items.find(item => item.label.includes('Font styles'));
+                if (fontStylesItem) {
+                    fontStylesItem.visible = isReaderPage;
+                }                
+            }
             // Rebuild and reset the application menu to apply changes
             Menu.setApplicationMenu(menu);
         }
     }
 });
-
 
 ipcMain.on('finish-export-zwi', async (event, bookId) => {
     console.log(`Received export request for book ID: ${bookId}`);

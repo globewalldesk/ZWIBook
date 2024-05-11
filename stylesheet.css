@@ -1,5 +1,5 @@
 /* Ensure the header stays fixed at the top of the viewport with original styling */
-#header {
+body > #header {
     position: fixed;
     top: 0;
     left: 0;
@@ -24,24 +24,34 @@
     /* Padding inside the content container */
 }
 
-#header #headTitle {
-    font-size: 1.1em !important;
+#header-content #headTitle {
     font-family: Arial, sans-serif !important;
     font-weight: bold !important;
     line-height: normal !important;
     letter-spacing: normal !important;
     word-spacing: normal !important;
+    font-variant: normal !important;
+    padding: 0px !important;
     max-width: 60%;
+    text-align: center !important;
     /* Adjust based on your header's layout and size */
     margin: 0 auto !important;
     /* Center the title if there's space */
 }
 
+/* Fixes specific problem with wonky PG CSS */
+#header a img {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
 /* Adjust the body padding-top to prevent content from being hidden behind the fixed header */
 body {
-    padding-top: 100px;
+    margin-top: unset !important;
+    padding-top: 100px !important;
     /* Adjust based on the header's height to ensure content starts below the header */
     font-family: Arial, sans-serif;
+    background:#fff !important;
 }
 
 .dropdown {
@@ -91,6 +101,10 @@ body {
     left: calc(50% + 220px);
 }
 
+.sort-button-highlighted {
+    background-color: #2f93ff;
+    color: white;
+}
 
 /* Loading message animation */
 @keyframes fadeInOut {
@@ -132,12 +146,27 @@ body {
     font-size: 10px;
 }
 
-/* Media query for print */
+/* Media query for print and PDF*/
 @media print {
+    @page { 
+        size: auto; 
+        margin: 100px 0 !important;
+    }
 
+    @bottom-right {
+        content: "Page " counter(page);
+        margin-right: 10px;
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+    
     /* Hide the header when printing */
     #header,
-    #myModal {
+    #findOnPage {
+        height: 0px;
         display: none !important;
     }
 
@@ -147,27 +176,32 @@ body {
     body {
         background: white !important;
     }
+
+    header {
+
+    }
+}
+
+/* print header */
+header {
+    display: none;
 }
 
 
 /* Responsive font size for larger viewports */
 @media (min-width: 850px) {
     #headTitle {
-        font-size: 20px !important;
+        font-size: 1.5em !important;
     }
 }
 
 /* Responsive adjustments for viewports between 770px and 850px */
-@media (min-width: 770px) and (max-width: 850px) {
-
-    #headTitle,
-    #savedBooksLink {
-        font-size: 0.9em !important;
-        /* Slightly reduce font size for these screens */
+@media (min-width: 650px) and (max-width: 850px) {
+    #headTitle {
+        font-size: 1.2em !important;
     }
 
-    #tagline,
-    #savedBooksLink {
+    #tagline {
         margin: 0 10px;
         /* Adjust margins */
     }
@@ -178,17 +212,16 @@ body {
 }
 
 /* Responsive adjustments for smaller viewports below 770px */
-@media (max-width: 770px) {
+@media (max-width: 675px) {
+    #headTitle {
+        font-size: 1em !important;
+        /* Further reduce font size for smaller screens */
+        /*white-space: nowrap;  Prevent wrapping to maintain layout */
+    }
+
     #tagline {
         display: none;
         /* Hide tagline on smaller viewports */
-    }
-
-    #headTitle,
-    #savedBooksLink {
-        font-size: 0.9em !important;
-        /* Further reduce font size for smaller screens */
-        /*white-space: nowrap;  Prevent wrapping to maintain layout */
     }
 
     #tagline,
@@ -361,6 +394,30 @@ body {
     border-top: none;
 }
 
+/* Styles the container to align the button to the right */
+.remove-all-button-container {
+    display: flex;
+    padding-bottom: 5px;
+    justify-content: flex-end;
+}
+
+/* Styles "Remove all" button */
+.remove-all-button-container button {
+    padding: 5px 10px;
+    background-color: #ff786e; /* Red color to indicate a delete action */
+    background-color;
+    font-size: small;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.remove-all-button-container button:hover {
+    background-color: #ff2111;
+}
+
+
 .tab.active {
     background-color: #007BFF;
     color: white;
@@ -443,6 +500,33 @@ a.more:hover {
     margin-bottom: 10px;
 }
 
+#book-content p.titlepage,
+#book-content p.titlepage p,
+#book-content p.center,
+#book-content p.center p,
+.ph2 p,
+.c p,
+.caption p,
+.booktitle,
+.h1.paragraph,
+.h1.paragraph p
+.h2.paragraph,
+.h2.paragraph p,
+.h3.paragraph,
+.h3.paragraph p,
+.volumedate.paragraph,
+.volumedate.paragraph p {
+    text-align: center !important;
+}
+
+p.author, p.author p {
+    text-align: right;
+}
+
+#book-content img {
+    cursor: pointer;
+}
+
 .count {
     font-size: 0.8em;
     font-style: italic;
@@ -452,6 +536,11 @@ a.more:hover {
 .from-plaintext p {
     margin: 0;
     line-height: 1.2;
+}
+
+pre {
+    text-wrap: wrap;
+    margin: 0 10px !important;
 }
 
 .single-spaced p, p.single-spaced {
@@ -482,6 +571,41 @@ a.more:hover {
     z-index: 500;
     /* Lower than the icon but above other content */
     cursor: pointer;
+}
+
+p .pagenum, .xxpn {
+    position: unset !important;
+    float: right;
+    padding: 13px 0 0 10px;
+    color: gray;
+    border: none !important;
+}
+
+.pagenum a {
+    border: none !important;
+}
+
+/* weird pagenums in "Institutes of the Christian Religion */
+.tei-pb {
+    position: unset !important;
+    float: right;
+    padding: 13px 0 0 10px;
+    color: gray;
+    border: none !important;
+}
+
+.footnote .label {
+    position: unset !important;
+    right: unset !important;
+}
+
+a:has(> sup) {
+    text-decoration-line: none !important; /* Force override of browser default styles */
+}
+
+.paragraph a img {
+    position: relative !important;
+    z-index: 1 !important;
 }
 
 /* Styling for bookmark icons */
@@ -702,4 +826,58 @@ a.more:hover {
 /* Monospace Font */
 #Courier {
     font-family: 'Courier New', Courier, monospace;
+}
+
+/* The Modal (background) */
+.image-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    padding-top: 100px; /* Location of the box */
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.image-modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Content */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 85px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    z-index: 2000;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
 }
