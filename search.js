@@ -180,6 +180,50 @@ document.addEventListener('DOMContentLoaded', async() => {
     
     window.electronAPI.refreshMenu();
 
+    // Back button logic
+    function manageNavigationOnLoad() {
+        if (history.length > 1 && localStorage.getItem('lastAddress') && 
+            localStorage.getItem('lastAddress') == window.location.pathname) {
+            console.log(window.location.pathname);
+            return;
+        } else if (history.length <= 1) {
+            localStorage.removeItem('navCounter');
+        }
+        localStorage.setItem('lastAddress', window.location.pathname);
+        if (history.length == 1) {localStorage.removeItem('navCounter')};
+        let navCounter = parseInt(localStorage.getItem('navCounter'), 10);
+        if (isNaN(navCounter)) { // Case 1: navCounter empty
+            localStorage.setItem('navCounter', '2'); // Initial setting
+            displayBackButton(false);
+        } else if (navCounter === 1) { // Case 2: navCounter == 1
+            navCounter += 1;
+            localStorage.setItem('navCounter', navCounter.toString());
+            displayBackButton(false);
+        } else { // Case 3: navCounter > 1
+            navCounter += 1;
+            localStorage.setItem('navCounter', navCounter.toString());
+            displayBackButton(true);
+        }
+    }    
+    function displayBackButton(shouldDisplay) {
+        const backBtn = document.getElementById('backBtn');
+        if (shouldDisplay) {
+            backBtn.style.display = 'block';
+        } else {
+            backBtn.style.display = 'none';
+        }
+    }
+    manageNavigationOnLoad();
+    // Event listener for the back button
+    document.getElementById('backBtn').addEventListener('click', function(event) {
+        event.preventDefault();
+        let navCounter = parseInt(localStorage.getItem('navCounter'), 10);
+        navCounter -= 2;
+        localStorage.setItem('navCounter', navCounter.toString());
+        history.back();
+    });
+    // End back button block
+
     // Support internal searches from context menu
     const urlParams = new URLSearchParams(window.location.search);
     const passedFromContext = urlParams.get('q');

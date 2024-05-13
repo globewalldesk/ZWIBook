@@ -515,7 +515,8 @@ a.more:hover {
 .h3.paragraph,
 .h3.paragraph p,
 .volumedate.paragraph,
-.volumedate.paragraph p {
+.volumedate.paragraph p,
+h1.center, h2.center {
     text-align: center !important;
 }
 
@@ -573,12 +574,14 @@ pre {
     cursor: pointer;
 }
 
-p .pagenum, .xxpn {
+p .pagenum, .xxpn, .stpagenum {
     position: unset !important;
     float: right;
-    padding: 13px 0 0 10px;
+    clear: right;
+    padding: 13px 0 0 10px !important;
     color: gray;
     border: none !important;
+    background-color: #fff !important;
 }
 
 .pagenum a {
@@ -592,6 +595,15 @@ p .pagenum, .xxpn {
     padding: 13px 0 0 10px;
     color: gray;
     border: none !important;
+}
+
+.sidenote, .fn {
+    display: inline-block !important;
+    position: unset !important;
+    float: left !important;
+    width: 100px !important;
+    margin: 10px 10px 10px 0 !important;
+    padding: 3px !important;
 }
 
 .footnote .label {
@@ -873,6 +885,10 @@ a:has(> sup) {
     font-weight: bold;
     transition: 0.3s;
     z-index: 2000;
+}
+
+#findOnPage .close {
+    display: none;
 }
 
 .close:hover,

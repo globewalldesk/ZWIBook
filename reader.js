@@ -14,6 +14,51 @@ function loadFont() {
 
 document.addEventListener('DOMContentLoaded', async () => {
     loadFont();
+
+    // Back button logic
+    function manageNavigationOnLoad() {
+        if (history.length > 1 && localStorage.getItem('lastAddress') && 
+            localStorage.getItem('lastAddress') == window.location.pathname) {
+            console.log(window.location.pathname);
+            return;
+        } else if (history.length <= 1) {
+            localStorage.removeItem('navCounter');
+        }
+        localStorage.setItem('lastAddress', window.location.pathname);
+        if (history.length == 1) {localStorage.removeItem('navCounter')};
+        let navCounter = parseInt(localStorage.getItem('navCounter'), 10);
+        if (isNaN(navCounter)) { // Case 1: navCounter empty
+            localStorage.setItem('navCounter', '2'); // Initial setting
+            displayBackButton(false);
+        } else if (navCounter === 1) { // Case 2: navCounter == 1
+            navCounter += 1;
+            localStorage.setItem('navCounter', navCounter.toString());
+            displayBackButton(false);
+        } else { // Case 3: navCounter > 1
+            navCounter += 1;
+            localStorage.setItem('navCounter', navCounter.toString());
+            displayBackButton(true);
+        }
+    }    
+    function displayBackButton(shouldDisplay) {
+        const backBtn = document.getElementById('backBtn');
+        if (shouldDisplay) {
+            backBtn.style.display = 'block';
+        } else {
+            backBtn.style.display = 'none';
+        }
+    }
+    manageNavigationOnLoad();
+    // Event listener for the back button
+    document.getElementById('backBtn').addEventListener('click', function(event) {
+        event.preventDefault();
+        let navCounter = parseInt(localStorage.getItem('navCounter'), 10);
+        navCounter -= 2;
+        localStorage.setItem('navCounter', navCounter.toString());
+        history.back();
+    });
+    // End back button block
+    
     const bookContentDiv = document.getElementById('book-content');
 
     bookshelfData = await window.electronAPI.requestBookshelfData();
@@ -82,70 +127,138 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
     }
 
+    function extractAuthor() {
+        let creatorNames = currentBookMetadata.CreatorNames;
+        console.log(creatorNames);
+        const suffixes = ["Ph.D.", "PhD", "Ph. D.", "D.Phil.", "DPhil", "Doctor", "D.D.", "D. D.", "Jr.", "Junior", "Sr.", "Senior", "II", "III", "IV", "V", "Esq.", "Esquire", "MD", "M.D.", "Dr.", "Doctor", "RN", "R.N.", "DO", "D.O.", "DDS", "D.D.S.", "DVM", "D.V.M.", "JD", "J.D.", "LLD", "LL.D.", "EdD", "Ed.D.", "PharmD", "Pharm.D.", "MBA", "M.B.A.", "CPA", "C.P.A.", "DMD", "D.M.D.", "DC", "D.C.", "OD", "O.D.", "PA", "P.A.", "P.A.-C", "MA", "M.A.", "MS", "M.S.", "MSc", "M.Sc.", "MPH", "M.P.H.", "BSc", "B.Sc.", "BA", "B.A.", "BS", "B.S.", "MFA", "M.F.A.", "MPhil", "M.Phil.", "PsyD", "Psy.D.", "EdS", "Ed.S.", "MSW", "M.S.W.", "BFA", "B.F.A.", "MSEd", "M.S.Ed.", "MSE", "M.S.E.", "DPT", "D.P.T.", "DPA", "D.P.A.", "ScD", "Sc.D.", "EngD", "Eng.D.", "ASN", "A.S.N."];
+    
+        // Clean creator names by removing square brackets and anything inside them
+        let cleanedNames = creatorNames.map(name => name.replace(/\s*\[.*?\]\s*/g, '').trim());
+    
+        console.log("Cleaned Creator Names:", cleanedNames);
+    
+        // Continue with extracting the first author's formatted name
+        if (cleanedNames.length > 0) {
+            const firstAuthorRegex = /^([^,]+),\s*([^,]+)/;
+            let match = cleanedNames[0].match(firstAuthorRegex);
+    
+            if (match) {
+                let lastName = match[1].trim();
+                let firstName = match[2].trim();
+    
+                // Handle suffixes
+                let suffix = suffixes.find(s => firstName.endsWith(s));
+                if (suffix) {
+                    firstName = firstName.replace(new RegExp(`\\s*${suffix}$`), ''); // Remove suffix from first name
+                }
+    
+                // Reformat name from "Lastname, Firstname" to "Firstname Lastname"
+                let formattedName = `${firstName} ${lastName}`;
+    
+                if (suffix) {
+                    formattedName += `, ${suffix}`; // Append suffix if present
+                }
+    
+                console.log(`Extracted Author: ${formattedName}`);
+                return formattedName;
+            } else {
+                console.log("No valid author data found.");
+                return "No valid author data found.";
+            }
+        } else {
+            console.log("No creator names available.");
+            return "No creator names available.";
+        }
+    }
+    
     function prepPlainText(text, isPoetry) {
         const lines = text.split(/\r\n|\r|\n/);
         const paragraphs = [];
         let paragraphIndex = 0;
     
-        if (isPoetry) {
-            // If the text is poetry, preserve the line breaks and handle empty lines
-            lines.forEach(line => {
-                if (line.trim() === '') {
-                    // Handle empty lines by inserting a placeholder paragraph
+        // Extract and format author name
+        const formattedAuthorName = extractAuthor(); // Assuming extractAuthor() is available globally and returns a formatted name
+        const title = currentBookMetadata.Title; // Assuming title is stored in currentBookMetadata
+    
+        let tempParagraph = [];
+        function flushParagraph() {
+            if (tempParagraph.length > 0) {
+                let combinedText = tempParagraph.join(' ').replace(/ {2,}/g, ' ');
+                combinedText = combinedText.replace(/(\w)  (\w)/g, '$1 $2');
+                paragraphs.push(`
+                    <div class="paragraph" id="p${paragraphIndex}">
+                        <img src="images/icons/bookmark.svg" class="bookmark-icon" id="bookmark-${paragraphIndex}" onclick="toggleBookmark(${paragraphIndex})">
+                        <p>${combinedText}</p>
+                    </div>
+                `);
+                paragraphIndex++;
+                tempParagraph = [];
+            }
+        }
+    
+        // Process each line individually
+        lines.forEach((line, index) => {
+            // Replace leading spaces and tabs with `&nbsp;`
+            const modifiedLine = line.replace(/^(\s+)/, function(match) {
+                return match.replace(/ /g, '&nbsp;').replace(/\t/g, '&nbsp;&nbsp;&nbsp;');
+            });
+    
+            // Check for title or author in the line
+            if (line.toLowerCase() === title.toLowerCase()) {
+                paragraphs.push(`<h1 class="center">${title}</h1>`); 
+            } else if (line.toLowerCase().startsWith('by') && percentageMatch(line.substring(3).toLowerCase(), formattedAuthorName.toLowerCase()) >= 50) {
+                paragraphs.push(`<h2 class="center">By ${formattedAuthorName}</h2>`);
+            } else if (isPoetry || /^\s+/.test(line)) {
+                if (modifiedLine.trim() === '') {
                     paragraphs.push('<p class="single-spaced">&nbsp;</p>');
                 } else {
-                    // Wrap each line in a paragraph tag to preserve formatting
                     paragraphs.push(`<div class="paragraph single-spaced" id="p${paragraphIndex}">
                         <img src="images/icons/bookmark.svg" class="bookmark-icon" id="bookmark-${paragraphIndex}" onclick="toggleBookmark(${paragraphIndex})">
-                        <p>${line}</p>
+                        <p>${modifiedLine}</p>
                     </div>`);
                     paragraphIndex++;
                 }
-            });
-        } else {
-            // Non-poetry text handling
-            let tempParagraph = [];
-            function flushParagraph() {
-                if (tempParagraph.length > 0) {
-                    let combinedText = tempParagraph.join(' ').replace(/ {2,}/g, ' ');
-                    combinedText = combinedText.replace(/(\w)  (\w)/g, '$1 $2');
-                    paragraphs.push(`
-                        <div class="paragraph" id="p${paragraphIndex}">
-                            <img src="images/icons/bookmark.svg" class="bookmark-icon" id="bookmark-${paragraphIndex}" onclick="toggleBookmark(${paragraphIndex})">
-                            <p>${combinedText}</p>
-                        </div>
-                    `);
-                    paragraphIndex++;
-                    tempParagraph = [];
-                }
-            }
-    
-            // Process each line individually
-            lines.forEach(line => {
-                if (line.trim() === '') {
+            } else {
+                if (modifiedLine.trim() === '') {
                     flushParagraph();
                 } else {
-                    tempParagraph.push(line);
+                    tempParagraph.push(modifiedLine);
                 }
-            });
+            }
+        });
     
-            flushParagraph();
-        }
-    
+        flushParagraph();  // Ensure the last paragraph is flushed if not already
         return paragraphs.join('');
-    }    
-       
+    }
+    
+    // Helper function to calculate the percentage match between two strings
+    function percentageMatch(str1, str2) {
+        const words1 = str1.split(/\s+/);
+        const words2 = new Set(str2.split(/\s+/));
+        const matches = words1.filter(word => words2.has(word));
+        return (matches.length / words1.length) * 100;
+    }
+
     fflate.unzip(zwiData, async (err, unzipped) => {
         if (err) {
-            bookContentDiv.textContent = 'Failed to unzip book.';
+            bookContentDiv.textContent = 'Failed to unzip book. Error: ' + err.message;
             console.error('Unzip error:', err);
             return;
         }
-
+    
+        console.log('Unzipped content:', unzipped); // Log the content of unzipped
+    
         const primaryFilename = currentBookMetadata.Primary;
+        console.log(currentBookMetadata);
+        if (!primaryFilename || !unzipped[primaryFilename]) {
+            bookContentDiv.textContent = 'Error loading book. Try again.';
+            console.error('Error: Primary file missing or not found in unzipped content.', primaryFilename);
+            return;
+        }
+    
         const rawContent = unzipped[primaryFilename];
         const preliminaryContent = new TextDecoder("utf-8").decode(rawContent).substring(0, 5000);
-    
+
         let decoder;  
         if (preliminaryContent.toLowerCase().includes("utf-8")) {
             decoder = new TextDecoder("utf-8");
@@ -164,6 +277,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     
         let bookContent = decoder.decode(rawContent);
+
         // Remove weird PG tic: double-double quotes in titles
         bookContent = bookContent.replace(/(?<!=[ ]?)""/g, '"');
         bookContent = processText(bookContent);
@@ -178,7 +292,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         // Set content in the appropriate format
         // Call prepPlainText with the isPoetry flag to adjust processing accordingly
         bookContentDiv.innerHTML = primaryFilename.endsWith(".txt") ? prepPlainText(bookContent, isPoetry) : bookContent;
-        
+
         function addBookmarkIcon(element, index) {
             // Ensure the inner HTML of the element wraps its current content with a paragraph and includes the bookmark icon
             element.innerHTML = `<img src="images/icons/bookmark.svg" class="bookmark-icon" id="bookmark-${index}" onclick="toggleBookmark(${index})">${element.tagName === 'P' ? '<p>' + element.innerHTML + '</p>' : element.innerHTML}`;

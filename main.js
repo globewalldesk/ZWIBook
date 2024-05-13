@@ -883,7 +883,7 @@ ipcMain.on('finish-export-zwi', async (event, bookId) => {
     // Check if the file exists
     if (fs.existsSync(zwiFilePath)) {
         // Prompt the user to select a save location
-        const { canceled, filePath } = await dialog.showSaveDialog({
+        const { canceled, filePath } = await dialog.showSaveDialog(mainWindow, { // Specify mainWindow as parent
             title: 'Save ZWI File',
             defaultPath: path.join(app.getPath('downloads'), `${bookId}.zwi`),
             buttonLabel: 'Save ZWI',
