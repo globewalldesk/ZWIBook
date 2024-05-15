@@ -220,6 +220,7 @@ document.addEventListener('DOMContentLoaded', async() => {
         let navCounter = parseInt(localStorage.getItem('navCounter'), 10);
         navCounter -= 2;
         localStorage.setItem('navCounter', navCounter.toString());
+        localStorage.setItem('backBtnInvoked', true);
         history.back();
     });
     // End back button block

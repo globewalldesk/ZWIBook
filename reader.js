@@ -1,8 +1,15 @@
+// Declare variables globally
 const urlParams = new URLSearchParams(window.location.search);
 const bookId = urlParams.get('bookId');
 console.log(`Opening book Project Gutenberg number: ${bookId}`)
 let currentBookId = bookId; 
 let bookshelfData = null;
+let bookContentDiv;
+let currentBookMetadata;
+let resourceMap = {};
+let zwiData;
+let buffer;
+
 
 function loadFont() {
     // Load the font choice from local storage
@@ -12,8 +19,54 @@ function loadFont() {
     document.body.style.fontFamily = selectedFont;
 }
 
+// Perform asynchronous operations
+async function fetchData() {
+    return new Promise(async(resolve, reject) => {
+        try {
+            bookshelfData = await window.electronAPI.requestBookshelfData();
+            const backBtnInvoked = localStorage.getItem('backBtnInvoked') === 'true';
+    
+            //if (backBtnInvoked) {
+                buffer = await window.electronAPI.fetchZWI(currentBookId);
+                if (!buffer) {
+                    console.error('Failed to load book: no buffer.');
+                    return;
+                }
+                // Convert Buffer to Uint8Array directly
+                zwiData = new Uint8Array(buffer);
+    
+                const bookMetadata = await window.electronAPI.fetchBookMetadata(currentBookId);
+                if (bookMetadata) {
+                    // Convert the metadata to a string and store it
+                    currentBookMetadata = bookMetadata;
+                    localStorage.setItem('currentBookMetadata', JSON.stringify(bookMetadata));        
+                    window.electronAPI.updateBookshelf({bookMetadata, action: 'addViewed'});
+                } else {
+                    console.error("Book metadata not found for ID:", bookId);
+                }
+                resolve();
+            //} else {
+            //    currentBookMetadata = JSON.parse(localStorage.getItem('currentBookMetadata'));
+            //}
+        } catch (error) {
+            console.error('Failed to fetch book data:', error);
+            reject(error);
+        }
+    });
+}
+
 document.addEventListener('DOMContentLoaded', async () => {
     loadFont();
+
+    // Fetch data
+    await fetchData();
+    
+    // Now the DOM is fully loaded and we can safely interact with it
+    bookContentDiv = document.getElementById('book-content');
+    if (!buffer) {
+        bookContentDiv.textContent = 'Failed to load book: no buffer.';
+        return;
+    }
 
     // Back button logic
     function manageNavigationOnLoad() {
@@ -55,19 +108,15 @@ document.addEventListener('DOMContentLoaded', async () => {
         let navCounter = parseInt(localStorage.getItem('navCounter'), 10);
         navCounter -= 2;
         localStorage.setItem('navCounter', navCounter.toString());
+        localStorage.setItem('backBtnInvoked', true);
         history.back();
     });
     // End back button block
     
-    const bookContentDiv = document.getElementById('book-content');
-
-    bookshelfData = await window.electronAPI.requestBookshelfData();
     
     const bookshelfAddRemove = document.querySelector('#bookshelfAddRemove');
     
     bookshelfAddRemove.style.display = 'flex';
-
-    const currentBookMetadata = JSON.parse(localStorage.getItem('currentBookMetadata'));
 
     async function showSavedState(bookId) {
         const icon = bookshelfAddRemove.querySelector('img');
@@ -82,7 +131,9 @@ document.addEventListener('DOMContentLoaded', async () => {
             icon.src = "images/icons/add-book.svg";
         }
     }
-    showSavedState(bookId); // Initially loads saved state from currentBookMetadata.
+
+    // Ensure fetchData has completed and bookshelfData is available
+    await showSavedState(bookId); // Initially loads saved state
 
     // Listener for adding or removing a book from saved list
     bookshelfAddRemove.addEventListener("click", async () => {
@@ -95,38 +146,31 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         // Re-fetch the updated bookshelf data to ensure the UI can correctly reflect the new state
         bookshelfData = await window.electronAPI.requestBookshelfData();
+        console.log(bookshelfData);
 
         // Show the updated saved state based on the newly fetched data
         showSavedState(currentBookId);
 
     });
 
-    let resourceMap = {};
-    let zwiData;
-
-    try {
-        const buffer = await window.electronAPI.fetchZWI(bookId);
-        if (!buffer) {
-            bookContentDiv.textContent = 'Failed to load book: no buffer.';
-            return;
-        }
-        // Convert Buffer to Uint8Array directly
-        zwiData = new Uint8Array(buffer);
-        // Now use zwiData as needed for further processing/display
-    } catch (error) {
-        bookContentDiv.textContent = 'Failed to load book: error.';
-        console.error('Failed to fetch book data:', error);
-    }
-
     function processText(text) {
-        return text.replace(/_(.+?)_/g, (match, p1) => {
-            if (p1.length <= 100) {
-                return `<i>${p1}</i>`;
+        // Split the text into parts by HTML tags
+        const parts = text.split(/(<[^>]*>)/);
+        return parts.map(part => {
+            // If the part is an HTML tag, return it as is
+            if (part.startsWith('<') && part.endsWith('>')) {
+                return part;
             }
-            return match; // Return the original text if it's too long
-        });
+            // Otherwise, process the text to replace underscores
+            return part.replace(/_(.+?)_/g, (match, p1) => {
+                if (p1.length <= 100) {
+                    return `<i>${p1}</i>`;
+                }
+                return match; // Return the original text if it's too long
+            });
+        }).join('');
     }
-
+    
     function extractAuthor() {
         let creatorNames = currentBookMetadata.CreatorNames;
         console.log(creatorNames);
@@ -170,11 +214,29 @@ document.addEventListener('DOMContentLoaded', async () => {
             return "No creator names available.";
         }
     }
-    
+
+    // "poetrySwitch" logic (user sets separate vs. merged lines)
+    function addSwitch() {
+        // Create the switch element as an object
+        const switchElement = document.createElement('div');
+        switchElement.innerHTML = `
+            <div class="switchContainer">
+                <label class="poetrySwitch">
+                    <span class="switchLabel leftLabel">Merged lines<br/>(prose)</span>
+                    <input type="checkbox" id="separateLinesSwitch">
+                    <span class="slider round"></span>
+                    <span class="switchLabel rightLabel">Separated lines<br/>(poetry)</span>
+                </label>
+            </div>
+        `;
+        return switchElement.innerHTML; // Return the HTML to be added
+    }    
+
     function prepPlainText(text, isPoetry) {
         const lines = text.split(/\r\n|\r|\n/);
         const paragraphs = [];
         let paragraphIndex = 0;
+        let singleLineFlag = false;
     
         // Extract and format author name
         const formattedAuthorName = extractAuthor(); // Assuming extractAuthor() is available globally and returns a formatted name
@@ -221,13 +283,20 @@ document.addEventListener('DOMContentLoaded', async () => {
             } else {
                 if (modifiedLine.trim() === '') {
                     flushParagraph();
+                    if (singleLineFlag) {
+                        paragraphs.push('<p class="single-spaced">&nbsp;</p>');
+                    }
+                    singleLineFlag = true;
                 } else {
                     tempParagraph.push(modifiedLine);
+                    singleLineFlag = false;
                 }
             }
         });
     
         flushParagraph();  // Ensure the last paragraph is flushed if not already
+        const separateSwitch = addSwitch();  // Prepand the poetrySwitch
+        paragraphs.unshift(separateSwitch);
         return paragraphs.join('');
     }
     
@@ -241,219 +310,253 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     fflate.unzip(zwiData, async (err, unzipped) => {
         if (err) {
-            bookContentDiv.textContent = 'Failed to unzip book. Error: ' + err.message;
-            console.error('Unzip error:', err);
-            return;
-        }
-    
-        console.log('Unzipped content:', unzipped); // Log the content of unzipped
-    
-        const primaryFilename = currentBookMetadata.Primary;
-        console.log(currentBookMetadata);
-        if (!primaryFilename || !unzipped[primaryFilename]) {
-            bookContentDiv.textContent = 'Error loading book. Try again.';
-            console.error('Error: Primary file missing or not found in unzipped content.', primaryFilename);
-            return;
-        }
-    
-        const rawContent = unzipped[primaryFilename];
-        const preliminaryContent = new TextDecoder("utf-8").decode(rawContent).substring(0, 5000);
+        bookContentDiv.textContent = 'Failed to unzip book. Error: ' + err.message;
+        console.error('Unzip error:', err);
+        return;
+    }
 
-        let decoder;  
-        if (preliminaryContent.toLowerCase().includes("utf-8")) {
-            decoder = new TextDecoder("utf-8");
-        } else if (preliminaryContent.toLowerCase().includes("language: serbian")) {
-            decoder = new TextDecoder("cp1251");
-        } else if (preliminaryContent.toLowerCase().includes("iso-8859-1")) {
-            decoder = new TextDecoder("iso88591");
-        } else if (preliminaryContent.toLowerCase().includes("iso-8859-2")) {
-            decoder = new TextDecoder("iso88592");
-        } else if (preliminaryContent.toLowerCase().includes("unicode")) {
-            decoder = new TextDecoder("utf-8");
-        } else if (preliminaryContent.toLowerCase().includes("language: chinese")) {
-            decoder = new TextDecoder("utf-8");
-        } else {
-            decoder = new TextDecoder("iso88591");
-        }
-    
-        let bookContent = decoder.decode(rawContent);
+    const primaryFilename = currentBookMetadata.Primary;
+    if (!primaryFilename || !unzipped[primaryFilename]) {
+        bookContentDiv.textContent = 'Error loading book. Try again.';
+        console.error('Error: Primary file missing or not found in unzipped content.', primaryFilename);
+        return;
+    }
 
-        // Remove weird PG tic: double-double quotes in titles
-        bookContent = bookContent.replace(/(?<!=[ ]?)""/g, '"');
-        bookContent = processText(bookContent);
+    const rawContent = unzipped[primaryFilename];
+    const preliminaryContent = new TextDecoder("utf-8").decode(rawContent).substring(0, 5000);
 
-        // Define a regular expression that includes the root words for "poet" or "poem" in various languages
-        // Words: poet, poem, poète, poème, dichter, gedicht, poeta, poema, poet, dikt, поэт, стих, 诗人, 诗
-        const pattern = /poet|poem|poète|poème|dichter|gedicht|poeta|poema|dikt|поэт|стих|诗人|诗/i;
+    let decoder;  
+    if (preliminaryContent.toLowerCase().includes("utf-8")) {
+        decoder = new TextDecoder("utf-8");
+    } else if (preliminaryContent.toLowerCase().includes("language: serbian")) {
+        decoder = new TextDecoder("cp1251");
+    } else if (preliminaryContent.toLowerCase().includes("iso-8859-1")) {
+        decoder = new TextDecoder("iso88591");
+    } else if (preliminaryContent.toLowerCase().includes("iso-8859-2")) {
+        decoder = new TextDecoder("iso88592");
+    } else if (preliminaryContent.toLowerCase().includes("unicode")) {
+        decoder = new TextDecoder("utf-8");
+    } else if (preliminaryContent.toLowerCase().includes("language: chinese")) {
+        decoder = new TextDecoder("utf-8");
+    } else {
+        decoder = new TextDecoder("iso88591");
+    }
 
-        // Fetch the title from the metadata and test it against the regular expression
-        const isPoetry = pattern.test(currentBookMetadata.Title);
-        
-        // Set content in the appropriate format
-        // Call prepPlainText with the isPoetry flag to adjust processing accordingly
-        bookContentDiv.innerHTML = primaryFilename.endsWith(".txt") ? prepPlainText(bookContent, isPoetry) : bookContent;
+    let bookContent = decoder.decode(rawContent);
 
-        function addBookmarkIcon(element, index) {
-            // Ensure the inner HTML of the element wraps its current content with a paragraph and includes the bookmark icon
-            element.innerHTML = `<img src="images/icons/bookmark.svg" class="bookmark-icon" id="bookmark-${index}" onclick="toggleBookmark(${index})">${element.tagName === 'P' ? '<p>' + element.innerHTML + '</p>' : element.innerHTML}`;
-            element.classList.add("paragraph"); // Ensure it has the 'paragraph' class for consistent styling and behavior
-        }
+    // Remove weird PG tic: double-double quotes in titles
+    bookContent = bookContent.replace(/(?<!=[ ]?)""/g, '"');
+    bookContent = processText(bookContent);
 
-        function assignIDsToContentElements(content) {
-            let paragraphIndex = 0;
-            // Target both <p> and <div> tags
-            let elements = content.querySelectorAll('p, div');
-        
-            elements.forEach(element => {
-                // Process div tags that do not contain <p> tags and have non-empty text content
-                // and p tags that do not already have an ID
-                if (!element.id && ((element.tagName === 'DIV' && !element.querySelector('p') && element.textContent.trim().length > 0) || element.tagName === 'P')) {
-                    element.id = `p${paragraphIndex}`; // Assign ID
-                    addBookmarkIcon(element, paragraphIndex); // Add bookmark icon and other necessary HTML modifications
-                    paragraphIndex++;
-                }
-            });
-            return content;
-        }
-                
-        // Usage after setting the innerHTML for bookContentDiv
-        if (primaryFilename.endsWith(".html") || primaryFilename.endsWith(".htm")) {
-            bookContentDiv.innerHTML = bookContent;
-            console.time("foo");
-            assignIDsToContentElements(bookContentDiv);
-            console.timeEnd("foo");
-        }
+    // Define a regular expression that includes the root words for "poet" or "poem" in various languages
+    // Words: poet, poem, poète, poème, dichter, gedicht, poeta, poema, poet, dikt, поэт, стих, 诗人, 诗
+    const pattern = /poet|poem|poète|poème|dichter|gedicht|poeta|poema|dikt|поэт|стих|诗人|诗/i;
 
-        async function applyBookmarks() {
-            try {
-                const bookmarks = await window.electronAPI.requestBookmarks(currentBookId);
-                bookmarks.forEach(bookmarkId => {
-                    const elem = document.getElementById(bookmarkId);
-                    if (elem) {
-                        const icon = elem.querySelector('.bookmark-icon');
-                        if (icon) {
-                            icon.classList.add('filled');
-                            icon.src = 'images/icons/bookmark-fill.svg';
-                            icon.style.visibility = 'visible'; // Ensure it is always visible
-                        } else {
-                            console.log('Bookmark icon not found for:', bookmarkId);
-                        }
-                    } else {
-                        console.log('Element not found for bookmark:', bookmarkId); // Log missing elements
-                    }
-                });
-            } catch (error) {
-                console.error('Error fetching bookmarks:', error);
-            }
-        }
-                
-        applyBookmarks();
-        
-        // Function to preprocess <a> and <img> tags by removing <i>, </i> and updating refs
-        function preprocessDocumentElements() {
-            // Process anchor tags
-            document.querySelectorAll('a').forEach(anchor => {
-                ['name', 'id', 'href'].forEach(attr => {
-                    if (anchor.hasAttribute(attr)) {
-                        let value = anchor.getAttribute(attr);
-                        // Remove <i> and </i> tags
-                        value = value.replace(/<\/?i>/g, '_');
-                        value = value.replace(/(noteref|note|page|fnote|fnanchor)(\d+)/ig, (match, p1, p2) => {
-                            return `${p1}_${p2}`;
-                        });
-        
-                        // Correct href formatting for references
-                        if (attr === 'href' && value.startsWith('#')) {
-                            value = value.replace(/#(noteref|note|page)(\d+)/ig, (match, p1, p2) => {
-                                return `#${p1}_${p2}`;
-                            });
-                        }
-                        anchor.setAttribute(attr, value);
-                    }
-                });
-        
-                // Check if there is a 'name' attribute without a corresponding 'id'
-                if (anchor.hasAttribute('name') && !anchor.hasAttribute('id')) {
-                    // Set 'id' to the value of 'name'
-                    anchor.setAttribute('id', anchor.getAttribute('name'));
-                }
-            });
-        
-            // Process image tags (removes restores '_' where needed)
-            document.querySelectorAll('img').forEach(img => {
-                if (img.hasAttribute('src')) {
-                    let src = img.getAttribute('src');
-                    // Remove <i> and </i> tags from src
-                    src = src.replace(/<\/?i>/g, '_');
-                    img.setAttribute('src', src);
-                }
-            });
-        }
-        
-        console.time('Preprocess Document Elements');
-        preprocessDocumentElements(); // Preprocessing anchor and image elements
-        console.timeEnd('Preprocess Document Elements');
-            
-        // Function to clean up file paths
-        function cleanPath(path) {
-            return path.replace(/<\/?[^>]+>/gi, ''); // Strip out HTML tags
-        }
+    // Fetch the title from the metadata and test it against the regular expression
+    let isPoetry = pattern.test(currentBookMetadata.Title);
 
-        // When creating Blob URLs and storing them in the resourceMap:
-        Object.keys(unzipped).forEach(filename => {
-            if (filename !== primaryFilename && (filename.endsWith('.png') || filename.endsWith('.jpg') || filename.endsWith('.gif'))) {
-                const fileBlob = new Blob([unzipped[filename]], {type: 'image/' + filename.split('.').pop()});
-                const fileUrl = URL.createObjectURL(fileBlob);
-                // Normalize and clean filename to match the expected src format in HTML
-                const normalizedFilename = cleanPath(filename.replace('data/media/images/', ''));
-                resourceMap[normalizedFilename] = fileUrl;
-            }
-        });
+    // Override isPoetry based on the separateLines setting from localStorage
+    const settingKey = `separateLines_${bookId}`;
+    let separateLinesSetting = localStorage.getItem(settingKey);
+    if (separateLinesSetting !== null) {
+        isPoetry = separateLinesSetting === 'true';
+    }
 
-        // When replacing src in HTML:
-        document.querySelectorAll('#book-content img').forEach(img => {
-            const originalSrc = img.getAttribute('src');
+    // Set content in the appropriate format
+    // Call prepPlainText with the isPoetry flag to adjust processing accordingly
+    bookContentDiv.innerHTML = primaryFilename.endsWith(".txt") ? prepPlainText(bookContent, isPoetry) : bookContent;
+
         
-            // Skip processing for known static assets to avoid unnecessary errors
-            if (originalSrc.startsWith('images/icons/')) {
-                return; // Skip this image as it's a static asset
-            }
-        
-            const normalizedSrc = cleanPath(originalSrc.replace('data/media/images/', ''));
-            if (resourceMap[normalizedSrc]) {
-                img.setAttribute('src', resourceMap[normalizedSrc]);
-        
-                // Add event listener for opening the modal
-                img.onclick = function(event) {
-                    event.preventDefault(); // Prevent the default anchor behavior
-                    const modal = document.getElementById('imageModal');
-                    const modalImg = document.getElementById('modalImage');
-                    const captionText = document.getElementById('caption');
-                    modal.style.display = "block";
-                    modalImg.src = this.src;
-                    captionText.innerHTML = img.alt; // Assuming you might use the alt attribute as caption
-                };
+    // Check if the switch exists
+    const poetrySwitch = document.querySelector('.poetrySwitch input');
+    if (poetrySwitch) {
+        // Adding event listener to the switch
+        poetrySwitch.addEventListener('change', function() {
+            const settingKey = `separateLines_${bookId}`;
+            if (this.checked) {
+                localStorage.setItem(settingKey, 'true');
+                setTimeout(() => {
+                    location.reload();
+                }, 800);
             } else {
-                console.log('No Blob URL found for:', originalSrc);
+                localStorage.setItem(settingKey, 'false');
+                setTimeout(() => {
+                    location.reload();
+                }, 800);            
             }
         });
 
-        // Close the image modal that was just created
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function() {
-            var modal = document.getElementById('imageModal');
-            modal.style.display = "none";
+        // Set the switch position based on the latest setting
+        const settingKey = `separateLines_${bookId}`;
+        const separateLinesSetting = localStorage.getItem(settingKey);
+        if (separateLinesSetting === 'true') {
+            poetrySwitch.checked = true;
+        } else {
+            poetrySwitch.checked = false;
         }
-        document.addEventListener('keydown', function(event) {
-            if (event.key === "Escape") {  // Check if the key pressed is 'Escape'
-                var modal = document.getElementById('imageModal');
-                if (modal.style.display === "block") {  // Check if the modal is currently displayed
-                    modal.style.display = "none";  // Hide the modal
-                }
+    }
+
+    function addBookmarkIcon(element, index) {
+        // Ensure the inner HTML of the element wraps its current content with a paragraph and includes the bookmark icon
+        element.innerHTML = `<img src="images/icons/bookmark.svg" class="bookmark-icon" id="bookmark-${index}" onclick="toggleBookmark(${index})">${element.tagName === 'P' ? '<p>' + element.innerHTML + '</p>' : element.innerHTML}`;
+        element.classList.add("paragraph"); // Ensure it has the 'paragraph' class for consistent styling and behavior
+    }
+
+    function assignIDsToContentElements(content) {
+        let paragraphIndex = 0;
+        // Target both <p> and <div> tags
+        let elements = content.querySelectorAll('p, div');
+    
+        elements.forEach(element => {
+            // Process div tags that do not contain <p> tags and have non-empty text content
+            // and p tags that do not already have an ID
+            if (!element.id && ((element.tagName === 'DIV' && !element.querySelector('p') && element.textContent.trim().length > 0) || element.tagName === 'P')) {
+                element.id = `p${paragraphIndex}`; // Assign ID
+                addBookmarkIcon(element, paragraphIndex); // Add bookmark icon and other necessary HTML modifications
+                paragraphIndex++;
             }
         });
+        return content;
+    }
+            
+    // Usage after setting the innerHTML for bookContentDiv
+    if (primaryFilename.endsWith(".html") || primaryFilename.endsWith(".htm")) {
+        bookContentDiv.innerHTML = bookContent;
+        console.time("foo");
+        assignIDsToContentElements(bookContentDiv);
+        console.timeEnd("foo");
+    }
+
+    async function applyBookmarks() {
+        try {
+            const bookmarks = await window.electronAPI.requestBookmarks(currentBookId);
+            bookmarks.forEach(bookmarkId => {
+                const elem = document.getElementById(bookmarkId);
+                if (elem) {
+                    const icon = elem.querySelector('.bookmark-icon');
+                    if (icon) {
+                        icon.classList.add('filled');
+                        icon.src = 'images/icons/bookmark-fill.svg';
+                        icon.style.visibility = 'visible'; // Ensure it is always visible
+                    } else {
+                        console.log('Bookmark icon not found for:', bookmarkId);
+                    }
+                } else {
+                    console.log('Element not found for bookmark:', bookmarkId); // Log missing elements
+                }
+            });
+        } catch (error) {
+            console.error('Error fetching bookmarks:', error);
+        }
+    }
+            
+    applyBookmarks();
+    
+    // Function to preprocess <a> and <img> tags by removing <i>, </i> and updating refs
+    function preprocessDocumentElements() {
+        // Process anchor tags
+        document.querySelectorAll('a').forEach(anchor => {
+            ['name', 'id', 'href'].forEach(attr => {
+                if (anchor.hasAttribute(attr)) {
+                    let value = anchor.getAttribute(attr);
+                    // Remove <i> and </i> tags
+                    value = value.replace(/<\/?i>/g, '_');
+                    value = value.replace(/(noteref|note|page|fnote|fnanchor)(\d+)/ig, (match, p1, p2) => {
+                        return `${p1}_${p2}`;
+                    });
+    
+                    // Correct href formatting for references
+                    if (attr === 'href' && value.startsWith('#')) {
+                        value = value.replace(/#(noteref|note|page)(\d+)/ig, (match, p1, p2) => {
+                            return `#${p1}_${p2}`;
+                        });
+                    }
+                    anchor.setAttribute(attr, value);
+                }
+            });
+    
+            // Check if there is a 'name' attribute without a corresponding 'id'
+            if (anchor.hasAttribute('name') && !anchor.hasAttribute('id')) {
+                // Set 'id' to the value of 'name'
+                anchor.setAttribute('id', anchor.getAttribute('name'));
+            }
+        });
+    
+        // Process image tags (removes restores '_' where needed)
+        document.querySelectorAll('img').forEach(img => {
+            if (img.hasAttribute('src')) {
+                let src = img.getAttribute('src');
+                // Remove <i> and </i> tags from src
+                src = src.replace(/<\/?i>/g, '_');
+                img.setAttribute('src', src);
+            }
+        });
+    }
+    
+    console.time('Preprocess Document Elements');
+    preprocessDocumentElements(); // Preprocessing anchor and image elements
+    console.timeEnd('Preprocess Document Elements');
+        
+    // Function to clean up file paths
+    function cleanPath(path) {
+        return path.replace(/<\/?[^>]+>/gi, ''); // Strip out HTML tags
+    }
+
+    // When creating Blob URLs and storing them in the resourceMap:
+    Object.keys(unzipped).forEach(filename => {
+        if (filename !== primaryFilename && (filename.endsWith('.png') || filename.endsWith('.jpg') || filename.endsWith('.gif'))) {
+            const fileBlob = new Blob([unzipped[filename]], {type: 'image/' + filename.split('.').pop()});
+            const fileUrl = URL.createObjectURL(fileBlob);
+            // Normalize and clean filename to match the expected src format in HTML
+            const normalizedFilename = cleanPath(filename.replace('data/media/images/', ''));
+            resourceMap[normalizedFilename] = fileUrl;
+        }
+    });
+
+    // When replacing src in HTML:
+    document.querySelectorAll('#book-content img').forEach(img => {
+        const originalSrc = img.getAttribute('src');
+    
+        // Skip processing for known static assets to avoid unnecessary errors
+        if (originalSrc.startsWith('images/icons/')) {
+            return; // Skip this image as it's a static asset
+        }
+    
+        const normalizedSrc = cleanPath(originalSrc.replace('data/media/images/', ''));
+        if (resourceMap[normalizedSrc]) {
+            img.setAttribute('src', resourceMap[normalizedSrc]);
+    
+            // Add event listener for opening the modal
+            img.onclick = function(event) {
+                event.preventDefault(); // Prevent the default anchor behavior
+                const modal = document.getElementById('imageModal');
+                const modalImg = document.getElementById('modalImage');
+                const captionText = document.getElementById('caption');
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = img.alt; // Assuming you might use the alt attribute as caption
+            };
+        } else {
+            console.log('No Blob URL found for:', originalSrc);
+        }
+    });
+
+    // Close the image modal that was just created
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        var modal = document.getElementById('imageModal');
+        modal.style.display = "none";
+    }
+    document.addEventListener('keydown', function(event) {
+        if (event.key === "Escape") {  // Check if the key pressed is 'Escape'
+            var modal = document.getElementById('imageModal');
+            if (modal.style.display === "block") {  // Check if the modal is currently displayed
+                modal.style.display = "none";  // Hide the modal
+            }
+        }
+});
         
     });
     
@@ -476,44 +579,42 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     function setTitle() {
-        if (currentBookMetadata && currentBookMetadata.Title) {
-            let headTitle = document.getElementById('headTitle');
+        if (!currentBookMetadata?.Title) return;
 
-            let wholeTitle = currentBookMetadata.Title;
-            wholeTitle = wholeTitle.replace(/\"\"/g, '"'); // Remove weird PG tic: double-double quotes in titles
-            let truncatedTitle = wholeTitle;
-            let more = document.createElement('a');
-            more.classList.add("more");
-            const space = document.createTextNode(" ");
-    
-            // Determine truncation length based on viewport width
-            const viewportWidth = window.innerWidth;
-            let truncationLength = 65; // Default truncation length for large screens
-            if (viewportWidth > 675 && viewportWidth <= 850) {
-                truncationLength = 55; // Truncate more for middle-sized viewports
-            } else if (viewportWidth > 530 && viewportWidth <= 675) {
-                truncationLength = 45;
-            } else if (viewportWidth <= 530) {
-                truncationLength = 37;
-            }
-    
-            // Adjust the title display based on actual length
-            if (wholeTitle.length > truncationLength) {
-                truncatedTitle = wholeTitle.substring(0, truncationLength) + "…";
-                more.textContent = "more";
-                more.href = "#";
-                setMoretext(more, headTitle, wholeTitle, truncatedTitle, space);
-            } else {
-                truncatedTitle = wholeTitle; // Use the full title if no truncation is needed
-                more.style.display = 'none'; // Optionally hide the 'more' link if not needed
-            }
+        let headTitle = document.getElementById('headTitle');
 
-            headTitle.textContent = truncatedTitle;
-            headTitle.appendChild(space);
-            headTitle.appendChild(more);
-        } else {
-            headTitle.textContent = wholeTitle;
+        let wholeTitle = currentBookMetadata.Title;
+        wholeTitle = wholeTitle.replace(/\"\"/g, '"'); // Remove weird PG tic: double-double quotes in titles
+        let truncatedTitle = wholeTitle;
+        let more = document.createElement('a');
+        more.classList.add("more");
+        const space = document.createTextNode(" ");
+
+        // Determine truncation length based on viewport width
+        const viewportWidth = window.innerWidth;
+        let truncationLength = 65; // Default truncation length for large screens
+        if (viewportWidth > 675 && viewportWidth <= 850) {
+            truncationLength = 55; // Truncate more for middle-sized viewports
+        } else if (viewportWidth > 530 && viewportWidth <= 675) {
+            truncationLength = 45;
+        } else if (viewportWidth <= 530) {
+            truncationLength = 37;
         }
+
+        // Adjust the title display based on actual length
+        if (wholeTitle.length > truncationLength) {
+            truncatedTitle = wholeTitle.substring(0, truncationLength) + "…";
+            more.textContent = "more";
+            more.href = "#";
+            setMoretext(more, headTitle, wholeTitle, truncatedTitle, space);
+        } else {
+            truncatedTitle = wholeTitle; // Use the full title if no truncation is needed
+            more.style.display = 'none'; // Optionally hide the 'more' link if not needed
+        }
+
+        headTitle.textContent = truncatedTitle;
+        headTitle.appendChild(space);
+        headTitle.appendChild(more);
     }
 
     setTitle();
@@ -677,6 +778,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             console.error("Error updating Books Viewed: ", e);
         }
     }
+
     
     updateBooksViewed();
     

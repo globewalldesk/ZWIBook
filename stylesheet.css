@@ -8,8 +8,12 @@ body > #header {
     z-index: 1000;
     background-color: #007BFF;
     /* Background color extends across the full width */
-    color: white;
+    color: white !important;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1#headTitle {
+    color: white !important;
 }
 
 #header-content {
@@ -51,7 +55,12 @@ body {
     padding-top: 100px !important;
     /* Adjust based on the header's height to ensure content starts below the header */
     font-family: Arial, sans-serif;
+    color: black !important;
     background:#fff !important;
+}
+
+h2, h3, h4, h5, h6, p, td {
+    color: black !important;
 }
 
 .dropdown {
@@ -177,8 +186,8 @@ body {
         background: white !important;
     }
 
-    header {
-
+    .poetrySwitch {
+        display: none;
     }
 }
 
@@ -516,12 +525,10 @@ a.more:hover {
 .h3.paragraph p,
 .volumedate.paragraph,
 .volumedate.paragraph p,
+p.by, p.author, p.transl, p.co, p.year,
+p.by p, p.author p, p.transl p, p.co p, p.year p,
 h1.center, h2.center {
     text-align: center !important;
-}
-
-p.author, p.author p {
-    text-align: right;
 }
 
 #book-content img {
@@ -574,7 +581,7 @@ pre {
     cursor: pointer;
 }
 
-p .pagenum, .xxpn, .stpagenum {
+p .pagenum, .xxpn, .stpagenum, .pb {
     position: unset !important;
     float: right;
     clear: right;
@@ -896,4 +903,93 @@ a:has(> sup) {
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
+}
+
+/* poetrySwitch */
+/* Container for the switch, adding padding */
+.switchContainer {
+    text-align: right; /* Ensure it stays to the right */
+    height: 80px;
+}
+
+.poetrySwitch {
+    position: relative;
+    float: right;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    float: right;
+    border: 4px solid lightgrey;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.poetrySwitch span.switchLabel {
+    display: inline-block;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 0.9em;
+}
+
+.poetrySwitch span.leftLabel {
+    padding-right: 3px;
+    text-align: right;
+}
+
+.poetrySwitch span.rightLabel {
+    padding-left: 10px;
+    text-align: left;
+}
+  
+  /* Hide default HTML checkbox */
+  .poetrySwitch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+/* The slider */
+.slider {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    width: 60px;
+    height: 34px;
+    background-color: #139901;
+    -webkit-transition: .2s;
+    transition: .2s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .2s;
+    transition: .2s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
 }

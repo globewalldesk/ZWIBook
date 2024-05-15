@@ -58,6 +58,7 @@ function refreshBookshelfUI() {
 
 function populateDivWithBooks(divElement, books, listType) {
     books.forEach(book => {
+        console.log("book =", book);
         divElement.appendChild(createBookDiv(book, listType));
     });
     appendRemoveAllButtonContainer(divElement, listType);
@@ -98,7 +99,7 @@ function handleRemoveAll(button, listType) {
 function checkAndDisplayButtons() {
     const viewedItems = document.querySelectorAll('#viewed .searchResultItem');
     const savedItems = document.querySelectorAll('#saved .searchResultItem');
-    
+
     const removeAllViewedBtn = document.getElementById('removeAllViewedButton');
     const removeAllSavedBtn = document.getElementById('removeAllSavedButton');
 
@@ -109,7 +110,7 @@ function checkAndDisplayButtons() {
 function checkAndDisplayButtons() {
     const viewedItems = document.querySelectorAll('#viewed .searchResultItem');
     const savedItems = document.querySelectorAll('#saved .searchResultItem');
-    
+
     const removeAllViewedBtn = document.getElementById('removeAllViewedButton');
     const removeAllSavedBtn = document.getElementById('removeAllSavedButton');
 
@@ -138,7 +139,7 @@ function createBookDiv(book, listType) {
     const titleElement = document.createElement('a');
     titleElement.className = 'title';
     titleElement.innerHTML = formatTitle(book.Title);
-    titleElement.onclick = function() {
+    titleElement.onclick = function () {
         onBookClick(book.PG_ID);
     };
     titleElement.href = "javascript:void(0);";
@@ -150,7 +151,7 @@ function createBookDiv(book, listType) {
     const trashIcon = document.createElement('img');
     trashIcon.src = 'images/icons/trash.svg';
     trashIcon.className = 'trashIcon';
-    trashIcon.onclick = function() {
+    trashIcon.onclick = function () {
         removeBook(book.PG_ID, listType);
     };
 
@@ -164,19 +165,19 @@ function createBookDiv(book, listType) {
 function showTab(tabName) {
     const tabs = document.getElementsByClassName('tab');
     const tabContents = document.getElementsByClassName('tabContent');
-    
+
     // Hide all tab contents and remove active class from all tabs
     for (let i = 0; i < tabContents.length; i++) {
         tabContents[i].style.display = 'none';
         tabs[i].classList.remove('active');
     }
-    
+
     // Retrieve the selected tab content
     const selectedTabContent = document.getElementById(tabName);
 
     // Check if the content of the selected tab is empty
     if (!selectedTabContent.innerHTML.trim()) {
-        selectedTabContent.innerHTML = '<h4 style="color:#007BFF">Nothing to show here yet. Start viewing, or saving, some books! To save one, open it and press this button:</h4><p><span style="background-color:#007BFF; height: 32px; display: inline-block; padding: 5px"><img src="./images/icons/add-book.svg"></span></p>';
+        selectedTabContent.innerHTML = '<p style="color:#007BFF">Nothing to show here yet.<br/>Start viewing and saving books!<br/>To save one, open it and press this button:</p><p><span style="background-color:#007BFF; height: 32px; display: inline-block; padding: 5px"><img src="./images/icons/add-book.svg"></span></p>';
     }
 
     // Show the selected tab content and add active class to the clicked tab
@@ -204,7 +205,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // Back button logic
     function manageNavigationOnLoad() {
-        if (history.length > 1 && localStorage.getItem('lastAddress') && 
+        if (history.length > 1 && localStorage.getItem('lastAddress') &&
             localStorage.getItem('lastAddress') == window.location.pathname) {
             console.log(window.location.pathname);
             return;
@@ -212,7 +213,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             localStorage.removeItem('navCounter');
         }
         localStorage.setItem('lastAddress', window.location.pathname);
-        if (history.length == 1) {localStorage.removeItem('navCounter')};
+        if (history.length == 1) { localStorage.removeItem('navCounter') };
         let navCounter = parseInt(localStorage.getItem('navCounter'), 10);
         if (isNaN(navCounter)) { // Case 1: navCounter empty
             localStorage.setItem('navCounter', '2'); // Initial setting
@@ -226,7 +227,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             localStorage.setItem('navCounter', navCounter.toString());
             displayBackButton(true);
         }
-    }    
+    }
     function displayBackButton(shouldDisplay) {
         const backBtn = document.getElementById('backBtn');
         if (shouldDisplay) {
@@ -237,16 +238,17 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
     manageNavigationOnLoad();
     // Event listener for the back button
-    document.getElementById('backBtn').addEventListener('click', function(event) {
+    document.getElementById('backBtn').addEventListener('click', function (event) {
         event.preventDefault();
         let navCounter = parseInt(localStorage.getItem('navCounter'), 10);
         navCounter -= 2;
         localStorage.setItem('navCounter', navCounter.toString());
+        localStorage.setItem('backBtnInvoked', true);
         history.back();
     });
     // End back button block
-    
-    
+
+
     try {
         const data = await window.electronAPI.requestBookshelfData();
         if (data) {
@@ -301,6 +303,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Clear existing content and populate tabs
     document.getElementById('viewed').innerHTML = '';
     document.getElementById('saved').innerHTML = '';
+    
     bookshelfData.viewedBooks.forEach(book => {
         document.getElementById('viewed').appendChild(createBookDiv(book, 'Viewed')); // Pass 'Viewed'
     });
@@ -311,7 +314,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Retrieve the last viewed tab from localStorage or default to 'viewed'
     const lastViewedTab = localStorage.getItem('lastViewedTab') || 'viewed';
     showTab(lastViewedTab);
-        
+
     /////////////////////////////
     // Find on page functionality
     const inputField = document.getElementById('searchText');
@@ -321,9 +324,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     const performSearch = () => window.electronAPI.performFind(inputField.value.trim());
 
     const realText = "";
-    
+
     // Modify the keypress listener to use the search counter
-    inputField.addEventListener('keypress', function(event) {
+    inputField.addEventListener('keypress', function (event) {
         if (event.key === 'Enter') {
             event.preventDefault();  // Prevent form submission
             inputField.setAttribute("inert", "");
@@ -334,7 +337,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             }, 100); // Refocus after a delay
         }
     });
-    
+
     // Reset the search counter explicitly when the "Find" button is clicked
     findButton.addEventListener('click', performSearch);
 
@@ -347,19 +350,19 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
 
     // Handling closing modal when clicking outside the modal
-    window.onclick = function(event) {
+    window.onclick = function (event) {
         if (event.target === modal) {
             modal.style.display = 'none';
         }
     };
 
     // Handling closing modal on pressing the 'Escape' key
-    document.onkeydown = function(event) {
+    document.onkeydown = function (event) {
         if (event.key === 'Escape') {
             modal.style.display = 'none';
         }
     };
-   
+
 });
 
 
@@ -380,7 +383,6 @@ function applySavedSorting() {
             sortByDate();
             break;
         default:
-            sortByDefault();
             break;
     }
     highlightCurrentSortButton();
@@ -440,7 +442,6 @@ function getVisibleTabContent() {
 function moveRemoveAllButtonToBottom() {
     const container = Array.from(document.querySelectorAll('div#saved, div#viewed')).find(div => getComputedStyle(div).display === 'block');
     const buttonContainer = container.querySelector('.remove-all-button-container');
-    console.log(container, buttonContainer);
 
     if (buttonContainer) {
         container.appendChild(buttonContainer); // This moves it to the bottom
