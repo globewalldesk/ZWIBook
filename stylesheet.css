@@ -1,3 +1,14 @@
+body {
+    overflow-y: scroll; /* always show scrollbar to prevent lateral shifting */
+    margin-top: unset !important;
+    padding-top: 100px !important;
+    /* Adjust based on the header's height to ensure content starts below the header */
+    font-family: Arial, sans-serif;
+    font-size: unset !important;
+    color: black !important;
+    background-color: white !important;
+}
+
 /* Ensure the header stays fixed at the top of the viewport with original styling */
 body > #header {
     position: fixed;
@@ -18,6 +29,7 @@ h1#headTitle {
 
 #header-content {
     max-width: 800px;
+    min-height: 56px;
     margin: 0 auto;
     /* Centers the content within the header */
     display: flex;
@@ -37,7 +49,7 @@ h1#headTitle {
     font-variant: normal !important;
     padding: 0px !important;
     max-width: 60%;
-    text-align: center !important;
+    text-align: left !important;
     /* Adjust based on your header's layout and size */
     margin: 0 auto !important;
     /* Center the title if there's space */
@@ -47,16 +59,6 @@ h1#headTitle {
 #header a img {
     margin-top: 0 !important;
     margin-bottom: 0 !important;
-}
-
-/* Adjust the body padding-top to prevent content from being hidden behind the fixed header */
-body {
-    margin-top: unset !important;
-    padding-top: 100px !important;
-    /* Adjust based on the header's height to ensure content starts below the header */
-    font-family: Arial, sans-serif;
-    color: black !important;
-    background:#fff !important;
 }
 
 h2, h3, h4, h5, h6, p, td {
@@ -95,7 +97,8 @@ h2, h3, h4, h5, h6, p, td {
     background-color: lightgray;
     padding: 4px 8px;
     border-radius: 3px;
-    font-size: 0.8em;
+    font-size: 12px !important;
+    line-height: normal !important;
     overflow: hidden;
     /* Hide overflow to maintain the shape of buttons */
 }
@@ -476,9 +479,10 @@ header {
 }
 
 
-a.more {
-    font-size: 16px;
-    vertical-align: middle;
+#headTitle a.more {
+    font-size: 16px !important;
+    vertical-align: middle !important;
+    background-color: unset !important;
 }
 
 a.more:visited,
@@ -509,6 +513,29 @@ a.more:hover {
     margin-bottom: 10px;
 }
 
+.word-count {
+    display: block;
+    text-align: right;
+    position:inherit;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    font-size: 1.2em;
+    color: black;
+}
+
+.count-popup {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    font-size: 16px;
+    border-radius: 5px;
+    white-space: nowrap;
+}
+
 #book-content p.titlepage,
 #book-content p.titlepage p,
 #book-content p.center,
@@ -527,7 +554,8 @@ a.more:hover {
 .volumedate.paragraph p,
 p.by, p.author, p.transl, p.co, p.year,
 p.by p, p.author p, p.transl p, p.co p, p.year p,
-h1.center, h2.center {
+h1.center, h2.center, .ctr, .ctr p,
+.title p, p.bold, .bold2 p {
     text-align: center !important;
 }
 
@@ -548,7 +576,7 @@ h1.center, h2.center {
 
 pre {
     text-wrap: wrap;
-    margin: 0 10px !important;
+    margin: 10px 30px !important;
 }
 
 .single-spaced p, p.single-spaced {
@@ -560,10 +588,11 @@ pre {
     position: relative;
     display: block;
     /* Ensure block-level element behavior */
-    margin-left: 20px;
+    margin-left: 20px !important;
     /* Reduced left margin */
-    margin-right: 20px;
+    margin-right: 20px !important;
     /* New right margin for symmetry */
+    text-indent: unset !important;
 }
 
 /* Extend the clickable area using ::before pseudo-element */
@@ -581,7 +610,7 @@ pre {
     cursor: pointer;
 }
 
-p .pagenum, .xxpn, .stpagenum, .pb {
+.pagenum:not(p .pagenum), p .pagenum, .xxpn, .stpagenum, .pb {
     position: unset !important;
     float: right;
     clear: right;
@@ -598,10 +627,11 @@ p .pagenum, .xxpn, .stpagenum, .pb {
 /* weird pagenums in "Institutes of the Christian Religion */
 .tei-pb {
     position: unset !important;
-    float: right;
-    padding: 13px 0 0 10px;
-    color: gray;
+    float: right !important;
+    padding: 13px 0 0 10px !important;
+    color: gray !important;
     border: none !important;
+    width: unset !important;
 }
 
 .sidenote, .fn {
@@ -611,6 +641,11 @@ p .pagenum, .xxpn, .stpagenum, .pb {
     width: 100px !important;
     margin: 10px 10px 10px 0 !important;
     padding: 3px !important;
+}
+
+.verse .sidenote {
+    float: right !important;
+    padding: 5px !important;
 }
 
 .footnote .label {
@@ -658,6 +693,7 @@ a:has(> sup) {
 
 #bookmarksDropdown {
     color: black;
+    max-height: unset !important;
 }
 
 .bookmark-item {
@@ -767,6 +803,10 @@ a:has(> sup) {
     /* Optional: adds a subtle shadow for better visibility */
 }
 
+.modal-content hr {
+    margin: 10px !important;
+}
+
 /* The input field and button inside the modal */
 #searchText,
 #findButton {
@@ -820,15 +860,74 @@ a:has(> sup) {
     color: red;
 }
 
+.label-serif {
+    font-family: 'Liberation Serif', 'Times New Roman', Times, serif; 
+}
+
+.label-sansserif {
+    font-family: Arial, Helvetica, sans-serif;   
+}
+
+.label-monospace {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+@font-face {
+    font-family: 'Liberation Serif';
+    src: url('fonts/LiberationSerif-Regular.ttf') format('truetype'),
+         url('fonts/LiberationSerif-Bold.ttf') format('truetype'),
+         url('fonts/LiberationSerif-Italic.ttf') format('truetype'),
+         url('fonts/LiberationSerif-BoldItalic.ttf') format('truetype');
+}
+
+/* Default Cambria font */
+@font-face {
+    font-family: 'Cambria';
+    src: url('fonts/Cambria-Font-For-Windows.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/* Cambria Windows */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    @font-face {
+        font-family: 'Cambria';
+        src: url('fonts/Cambria-Font-For-Windows.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+}
+/* Cambria macOS */
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+    @font-face {
+        font-family: 'Cambria';
+        src: url('fonts/Cambria-Font-For-MAC.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+}
+/* Cambria Linux */
+@media all and (min--moz-device-pixel-ratio:0) {
+    @font-face {
+        font-family: 'Cambria';
+        src: url('fonts/Cambria-Font-For-Linux.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+}
+
 /* Serif Fonts */
+#LiberationSerif {
+    font-family: 'Liberation Serif', 'Times New Roman', Times, serif; 
+}
 #TimesNewRoman {
-    font-family: 'Times New Roman', Times, serif; 
+    font-family: 'Times New Roman', 'Liberation Serif', Times, serif; 
 }
 #Georgia {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Georgia, 'Liberation Serif', 'Times New Roman', Times, serif;
 }
 #Cambria {
-    font-family: Cambria, 'Times New Roman', Georgia, Times, serif;
+    font-family: Cambria, 'Liberation Serif', 'Times New Roman', Georgia, Times, serif;
 }
 
 /* Sans-Serif Fonts */

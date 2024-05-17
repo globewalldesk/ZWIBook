@@ -58,7 +58,6 @@ function refreshBookshelfUI() {
 
 function populateDivWithBooks(divElement, books, listType) {
     books.forEach(book => {
-        console.log("book =", book);
         divElement.appendChild(createBookDiv(book, listType));
     });
     appendRemoveAllButtonContainer(divElement, listType);

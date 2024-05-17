@@ -741,19 +741,20 @@ function searchDatabase(query, searchType) {
 
     let results = [];
     const orSplit = query.split(/\s+OR\s+/);
+    let searchTerms = [];
 
     console.log("Split queries: ", orSplit); // Debug: Log split queries
 
     orSplit.forEach(subQuery => {
         subQuery = subQuery.trim(); // Trim spaces from each sub-query
         const keywords = subQuery.split(/\s+/);
+        searchTerms.push(...keywords);
         console.log("Keywords for sub-query '" + subQuery + "':", keywords); // Debug: Log keywords
 
+        // Collect initial results for the first keyword
         let subResults = metadatabase.filter(book => {
-            let titleMatch = keywords.every(keyword => book.Title.toLowerCase().includes(keyword));
-            let authorMatch = Array.isArray(book.CreatorNames) && keywords.every(keyword =>
-                book.CreatorNames.some(author => author.toLowerCase().includes(keyword))
-            );
+            let titleMatch = book.Title.toLowerCase().includes(keywords[0].toLowerCase());
+            let authorMatch = Array.isArray(book.CreatorNames) && book.CreatorNames.some(author => author.toLowerCase().includes(keywords[0].toLowerCase()));
 
             switch (searchType) {
                 case 'title':
@@ -766,12 +767,40 @@ function searchDatabase(query, searchType) {
             }
         });
 
+        // For each additional keyword, filter the existing subResults
+        for (let i = 1; i < keywords.length; i++) {
+            const keyword = keywords[i].toLowerCase();
+            subResults = subResults.filter(book => {
+                let titleMatch = book.Title.toLowerCase().includes(keyword);
+                let authorMatch = Array.isArray(book.CreatorNames) && book.CreatorNames.some(author => author.toLowerCase().includes(keyword));
+
+                switch (searchType) {
+                    case 'title':
+                        return titleMatch;
+                    case 'author':
+                        return authorMatch;
+                    case 'both':
+                    default:
+                        return titleMatch || authorMatch;
+                }
+            });
+        }
+
         console.log("Results for sub-query '" + subQuery + "':", subResults.length); // Debug: Log results count for each sub-query
         results = results.concat(subResults);
     });
 
     // Remove duplicates
     results = results.filter((value, index, self) => self.findIndex(v => v.PG_ID === value.PG_ID) === index);
+
+    // Throttle search when too much
+    console.log("searchTerms:", searchTerms);
+    const stopWords = ['the', 'of', 'in', 'on', 'at', 'for', 'with', 'a', 'an', 'and', 'or', 'but', 'is', 'if', 'it', 'as', 'to', 'that', 'which', 'by', 'from', 'up', 'out', 'off', 'this', 'all'];
+    const searches = searchTerms.filter(term => !stopWords.includes(term.toLowerCase()));
+    console.log("searchCount", searches.length);
+    if (results.length > 5000 || searches.length > 3) {
+        return "TOOMANYRESULTS";
+    }
 
     return results;
 }

@@ -156,21 +156,21 @@ document.addEventListener('DOMContentLoaded', async () => {
     function processText(text) {
         // Split the text into parts by HTML tags
         const parts = text.split(/(<[^>]*>)/);
-        return parts.map(part => {
+        
+        // Process the parts without HTML tags
+        const processedParts = parts.map(part => {
             // If the part is an HTML tag, return it as is
             if (part.startsWith('<') && part.endsWith('>')) {
                 return part;
             }
-            // Otherwise, process the text to replace underscores
-            return part.replace(/_(.+?)_/g, (match, p1) => {
-                if (p1.length <= 100) {
-                    return `<i>${p1}</i>`;
-                }
-                return match; // Return the original text if it's too long
-            });
-        }).join('');
-    }
+            // Otherwise, process the text to replace underscores, allowing multi-line processing
+            return part.replace(/_([^_]{1,100}?)_/gs, '<i>$1</i>');
+        });
     
+        // Join the processed parts back together
+        return processedParts.join('');
+    }
+                
     function extractAuthor() {
         let creatorNames = currentBookMetadata.CreatorNames;
         console.log(creatorNames);
@@ -222,10 +222,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         switchElement.innerHTML = `
             <div class="switchContainer">
                 <label class="poetrySwitch">
-                    <span class="switchLabel leftLabel">Merged lines<br/>(prose)</span>
+                    <span class="switchLabel leftLabel">Merge<br/>lines</span>
                     <input type="checkbox" id="separateLinesSwitch">
                     <span class="slider round"></span>
-                    <span class="switchLabel rightLabel">Separated lines<br/>(poetry)</span>
+                    <span class="switchLabel rightLabel">Separate<br/>lines</span>
                 </label>
             </div>
         `;
@@ -257,8 +257,10 @@ document.addEventListener('DOMContentLoaded', async () => {
                 tempParagraph = [];
             }
         }
-    
-        // Process each line individually
+        
+        // PREPROCESS LINES INDIVIDUALLY
+        let titleProcessed = false;
+        let authorProcessed = false;            
         lines.forEach((line, index) => {
             // Replace leading spaces and tabs with `&nbsp;`
             const modifiedLine = line.replace(/^(\s+)/, function(match) {
@@ -266,10 +268,12 @@ document.addEventListener('DOMContentLoaded', async () => {
             });
     
             // Check for title or author in the line
-            if (line.toLowerCase() === title.toLowerCase()) {
-                paragraphs.push(`<h1 class="center">${title}</h1>`); 
-            } else if (line.toLowerCase().startsWith('by') && percentageMatch(line.substring(3).toLowerCase(), formattedAuthorName.toLowerCase()) >= 50) {
-                paragraphs.push(`<h2 class="center">By ${formattedAuthorName}</h2>`);
+            if (!titleProcessed && line.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, '') === title.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, '')) {
+                paragraphs.push(`<h1 class="center">${line}</h1>`); 
+                titleProcessed = true;
+            } else if (!authorProcessed && line.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, '').startsWith('by') && percentageMatch(line.substring(3).toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, ''), formattedAuthorName.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, '')) >= 50) {
+                paragraphs.push(`<h2 class="center">${line}</h2>`);
+                authorProcessed = true;
             } else if (isPoetry || /^\s+/.test(line)) {
                 if (modifiedLine.trim() === '') {
                     paragraphs.push('<p class="single-spaced">&nbsp;</p>');
@@ -295,7 +299,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
     
         flushParagraph();  // Ensure the last paragraph is flushed if not already
-        const separateSwitch = addSwitch();  // Prepand the poetrySwitch
+        const separateSwitch = addSwitch();  // Prepend the poetrySwitch
         paragraphs.unshift(separateSwitch);
         return paragraphs.join('');
     }
@@ -310,254 +314,315 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     fflate.unzip(zwiData, async (err, unzipped) => {
         if (err) {
-        bookContentDiv.textContent = 'Failed to unzip book. Error: ' + err.message;
-        console.error('Unzip error:', err);
-        return;
-    }
+            bookContentDiv.textContent = 'Failed to unzip book. Error: ' + err.message;
+            console.error('Unzip error:', err);
+            return;
+        }
 
-    const primaryFilename = currentBookMetadata.Primary;
-    if (!primaryFilename || !unzipped[primaryFilename]) {
-        bookContentDiv.textContent = 'Error loading book. Try again.';
-        console.error('Error: Primary file missing or not found in unzipped content.', primaryFilename);
-        return;
-    }
+        const primaryFilename = currentBookMetadata.Primary;
+        if (!primaryFilename || !unzipped[primaryFilename]) {
+            bookContentDiv.textContent = 'Error loading book. Try again.';
+            console.error('Error: Primary file missing or not found in unzipped content.', primaryFilename);
+            return;
+        }
 
-    const rawContent = unzipped[primaryFilename];
-    const preliminaryContent = new TextDecoder("utf-8").decode(rawContent).substring(0, 5000);
+        const rawContent = unzipped[primaryFilename];
+        const preliminaryContent = new TextDecoder("utf-8").decode(rawContent).substring(0, 5000);
 
-    let decoder;  
-    if (preliminaryContent.toLowerCase().includes("utf-8")) {
-        decoder = new TextDecoder("utf-8");
-    } else if (preliminaryContent.toLowerCase().includes("language: serbian")) {
-        decoder = new TextDecoder("cp1251");
-    } else if (preliminaryContent.toLowerCase().includes("iso-8859-1")) {
-        decoder = new TextDecoder("iso88591");
-    } else if (preliminaryContent.toLowerCase().includes("iso-8859-2")) {
-        decoder = new TextDecoder("iso88592");
-    } else if (preliminaryContent.toLowerCase().includes("unicode")) {
-        decoder = new TextDecoder("utf-8");
-    } else if (preliminaryContent.toLowerCase().includes("language: chinese")) {
-        decoder = new TextDecoder("utf-8");
-    } else {
-        decoder = new TextDecoder("iso88591");
-    }
+        let decoder;  
+        if (preliminaryContent.toLowerCase().includes("utf-8")) {
+            decoder = new TextDecoder("utf-8");
+        } else if (preliminaryContent.toLowerCase().includes("language: russian")) {
+            decoder = new TextDecoder("cp1251");
+        } else if (preliminaryContent.toLowerCase().includes("language: serbian")) {
+            decoder = new TextDecoder("cp1251");
+        } else if (preliminaryContent.toLowerCase().includes("iso-8859-1")) {
+            decoder = new TextDecoder("iso88591");
+        } else if (preliminaryContent.toLowerCase().includes("iso-8859-2")) {
+            decoder = new TextDecoder("iso88592");
+        } else if (preliminaryContent.toLowerCase().includes("unicode")) {
+            decoder = new TextDecoder("utf-8");
+        } else if (preliminaryContent.toLowerCase().includes("language: chinese")) {
+            decoder = new TextDecoder("utf-8");
+        } else {
+            decoder = new TextDecoder("iso88591");
+        }
 
-    let bookContent = decoder.decode(rawContent);
+        let bookContent = decoder.decode(rawContent);
 
-    // Remove weird PG tic: double-double quotes in titles
-    bookContent = bookContent.replace(/(?<!=[ ]?)""/g, '"');
-    bookContent = processText(bookContent);
+        // Remove weird PG tic: double-double quotes in titles
+        bookContent = bookContent.replace(/(?<!=[ ]?)""/g, '"');
+        bookContent = processText(bookContent);
 
-    // Define a regular expression that includes the root words for "poet" or "poem" in various languages
-    // Words: poet, poem, poète, poème, dichter, gedicht, poeta, poema, poet, dikt, поэт, стих, 诗人, 诗
-    const pattern = /poet|poem|poète|poème|dichter|gedicht|poeta|poema|dikt|поэт|стих|诗人|诗/i;
+        // Define a regular expression that includes the root words for "poet" or "poem" in various languages
+        // Words: poet, poem, poète, poème, dichter, gedicht, poeta, poema, poet, dikt, поэт, стих, 诗人, 诗
+        const pattern = /poet(?:s)?|poem(?:s)?|poète(?:s)?|poème(?:s)?|dichter(?:s)?|gedicht(?:e|er)?|poeta(?:s)?|poema(?:s)?|dikt(?:er)?|поэт(?:ы|ов)?|стих(?:и|ов)?|诗人|诗|song(?:s)?|canzone(?:i)?|lied(?:er|je)?|canción(?:es)?|canto(?:s)?|sång(?:er)?|песня(?:и|ей)?|歌|lyric(?:s)?|lyrique(?:s)?|lyrik(?:en)?|lirica(?:s)?|lyrik(?:er)?|лир(?:ика|ы)?|诗歌/i;
 
-    // Fetch the title from the metadata and test it against the regular expression
-    let isPoetry = pattern.test(currentBookMetadata.Title);
 
-    // Override isPoetry based on the separateLines setting from localStorage
-    const settingKey = `separateLines_${bookId}`;
-    let separateLinesSetting = localStorage.getItem(settingKey);
-    if (separateLinesSetting !== null) {
-        isPoetry = separateLinesSetting === 'true';
-    }
+        // Fetch the title from the metadata and test it against the regular expression
+        let isPoetry = pattern.test(currentBookMetadata.Title);
 
-    // Set content in the appropriate format
-    // Call prepPlainText with the isPoetry flag to adjust processing accordingly
-    bookContentDiv.innerHTML = primaryFilename.endsWith(".txt") ? prepPlainText(bookContent, isPoetry) : bookContent;
-
-        
-    // Check if the switch exists
-    const poetrySwitch = document.querySelector('.poetrySwitch input');
-    if (poetrySwitch) {
-        // Adding event listener to the switch
-        poetrySwitch.addEventListener('change', function() {
-            const settingKey = `separateLines_${bookId}`;
-            if (this.checked) {
-                localStorage.setItem(settingKey, 'true');
-                setTimeout(() => {
-                    location.reload();
-                }, 800);
-            } else {
-                localStorage.setItem(settingKey, 'false');
-                setTimeout(() => {
-                    location.reload();
-                }, 800);            
-            }
-        });
-
-        // Set the switch position based on the latest setting
+        // Override isPoetry based on the separateLines setting from localStorage
         const settingKey = `separateLines_${bookId}`;
-        const separateLinesSetting = localStorage.getItem(settingKey);
-        if (separateLinesSetting === 'true') {
-            poetrySwitch.checked = true;
-        } else {
-            poetrySwitch.checked = false;
+        let separateLinesSetting = localStorage.getItem(settingKey);
+        if (separateLinesSetting !== null) {
+            isPoetry = separateLinesSetting === 'true';
+        } else if (isPoetry) {
+            localStorage.setItem(settingKey, 'true');
         }
-    }
 
-    function addBookmarkIcon(element, index) {
-        // Ensure the inner HTML of the element wraps its current content with a paragraph and includes the bookmark icon
-        element.innerHTML = `<img src="images/icons/bookmark.svg" class="bookmark-icon" id="bookmark-${index}" onclick="toggleBookmark(${index})">${element.tagName === 'P' ? '<p>' + element.innerHTML + '</p>' : element.innerHTML}`;
-        element.classList.add("paragraph"); // Ensure it has the 'paragraph' class for consistent styling and behavior
-    }
+        // Set content in the appropriate format
+        // Call prepPlainText with the isPoetry flag to adjust processing accordingly
+        bookContentDiv.innerHTML = primaryFilename.endsWith(".txt") ? prepPlainText(bookContent, isPoetry) : bookContent;
 
-    function assignIDsToContentElements(content) {
-        let paragraphIndex = 0;
-        // Target both <p> and <div> tags
-        let elements = content.querySelectorAll('p, div');
-    
-        elements.forEach(element => {
-            // Process div tags that do not contain <p> tags and have non-empty text content
-            // and p tags that do not already have an ID
-            if (!element.id && ((element.tagName === 'DIV' && !element.querySelector('p') && element.textContent.trim().length > 0) || element.tagName === 'P')) {
-                element.id = `p${paragraphIndex}`; // Assign ID
-                addBookmarkIcon(element, paragraphIndex); // Add bookmark icon and other necessary HTML modifications
-                paragraphIndex++;
-            }
+        // WORD COUNT LOGIC
+        // Function to strip HTML tags and get plain text content
+        function getTextContent(htmlContent) {
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = htmlContent;
+            return tempDiv.textContent || tempDiv.innerText || '';
+        }
+
+        // Function to count words in a given text
+        function countWords(text) {
+            // Match words using a regex pattern
+            const words = text.match(/\b\w+\b/g) || [];
+            return words.length;
+        }
+
+        // Get the plain text content
+        const plainTextContent = getTextContent(bookContentDiv.innerHTML);
+
+        // Count the words
+        const wordCount = countWords(plainTextContent);
+        const pageCount = Math.ceil(wordCount / 300);
+
+        console.log(`Word count: ${wordCount}`);
+
+        // Move inline centering to class.
+        let paragraphs = bookContentDiv.querySelectorAll('p[style*="text-align: center;"]');
+        paragraphs.forEach(p => {
+            p.style.textAlign = ''; // Remove the inline style
+            p.classList.add('center'); // Add the center class
         });
-        return content;
-    }
             
-    // Usage after setting the innerHTML for bookContentDiv
-    if (primaryFilename.endsWith(".html") || primaryFilename.endsWith(".htm")) {
-        bookContentDiv.innerHTML = bookContent;
-        console.time("foo");
-        assignIDsToContentElements(bookContentDiv);
-        console.timeEnd("foo");
-    }
-
-    async function applyBookmarks() {
-        try {
-            const bookmarks = await window.electronAPI.requestBookmarks(currentBookId);
-            bookmarks.forEach(bookmarkId => {
-                const elem = document.getElementById(bookmarkId);
-                if (elem) {
-                    const icon = elem.querySelector('.bookmark-icon');
-                    if (icon) {
-                        icon.classList.add('filled');
-                        icon.src = 'images/icons/bookmark-fill.svg';
-                        icon.style.visibility = 'visible'; // Ensure it is always visible
-                    } else {
-                        console.log('Bookmark icon not found for:', bookmarkId);
-                    }
+        // Check if the switch exists
+        const poetrySwitch = document.querySelector('.poetrySwitch input');
+        if (poetrySwitch) {
+            // Adding event listener to the switch
+            poetrySwitch.addEventListener('change', function() {
+                const settingKey = `separateLines_${bookId}`;
+                if (this.checked) {
+                    localStorage.setItem(settingKey, 'true');
+                    setTimeout(() => {
+                        location.reload();
+                    }, 800);
                 } else {
-                    console.log('Element not found for bookmark:', bookmarkId); // Log missing elements
+                    localStorage.setItem(settingKey, 'false');
+                    setTimeout(() => {
+                        location.reload();
+                    }, 800);            
                 }
             });
-        } catch (error) {
-            console.error('Error fetching bookmarks:', error);
+
+            // Set the switch position based on the latest setting
+            const settingKey = `separateLines_${bookId}`;
+            const separateLinesSetting = localStorage.getItem(settingKey);
+            if (separateLinesSetting === 'true') {
+                poetrySwitch.checked = true;
+            } else {
+                poetrySwitch.checked = false;
+            }
         }
-    }
-            
-    applyBookmarks();
-    
-    // Function to preprocess <a> and <img> tags by removing <i>, </i> and updating refs
-    function preprocessDocumentElements() {
-        // Process anchor tags
-        document.querySelectorAll('a').forEach(anchor => {
-            ['name', 'id', 'href'].forEach(attr => {
-                if (anchor.hasAttribute(attr)) {
-                    let value = anchor.getAttribute(attr);
-                    // Remove <i> and </i> tags
-                    value = value.replace(/<\/?i>/g, '_');
-                    value = value.replace(/(noteref|note|page|fnote|fnanchor)(\d+)/ig, (match, p1, p2) => {
-                        return `${p1}_${p2}`;
-                    });
-    
-                    // Correct href formatting for references
-                    if (attr === 'href' && value.startsWith('#')) {
-                        value = value.replace(/#(noteref|note|page)(\d+)/ig, (match, p1, p2) => {
-                            return `#${p1}_${p2}`;
-                        });
+
+        function addBookmarkIcon(element, index) {
+            // Ensure the inner HTML of the element wraps its current content with a paragraph and includes the bookmark icon
+            element.innerHTML = `<img src="images/icons/bookmark.svg" class="bookmark-icon" id="bookmark-${index}" onclick="toggleBookmark(${index})">${element.tagName === 'P' ? '<p>' + element.innerHTML + '</p>' : element.innerHTML}`;
+            element.classList.add("paragraph"); // Ensure it has the 'paragraph' class for consistent styling and behavior
+        }
+
+        function assignIDsToContentElements(content) {
+            let paragraphIndex = 0;
+            // Target both <p> and <div> tags
+            let elements = content.querySelectorAll('p, div');
+        
+            elements.forEach(element => {
+                // Process div tags that do not contain <p> tags and have non-empty text content
+                // and p tags that do not already have an ID
+                if (!element.id && ((element.tagName === 'DIV' && !element.querySelector('p') && element.textContent.trim().length > 0) || element.tagName === 'P')) {
+                    element.id = `p${paragraphIndex}`; // Assign ID
+                    addBookmarkIcon(element, paragraphIndex); // Add bookmark icon and other necessary HTML modifications
+                    paragraphIndex++;
+                }
+            });
+            return content;
+        }
+                
+        // Usage after setting the innerHTML for bookContentDiv
+        if (primaryFilename.endsWith(".html") || primaryFilename.endsWith(".htm")) {
+            // bookContentDiv.innerHTML = bookContent;   // No idea why this was there
+            assignIDsToContentElements(bookContentDiv);
+        }
+
+        async function applyBookmarks() {
+            try {
+                const bookmarks = await window.electronAPI.requestBookmarks(currentBookId);
+                bookmarks.forEach(bookmarkId => {
+                    const elem = document.getElementById(bookmarkId);
+                    if (elem) {
+                        const icon = elem.querySelector('.bookmark-icon');
+                        if (icon) {
+                            icon.classList.add('filled');
+                            icon.src = 'images/icons/bookmark-fill.svg';
+                            icon.style.visibility = 'visible'; // Ensure it is always visible
+                        } else {
+                            console.log('Bookmark icon not found for:', bookmarkId);
+                        }
+                    } else {
+                        console.log('Element not found for bookmark:', bookmarkId); // Log missing elements
                     }
-                    anchor.setAttribute(attr, value);
+                });
+            } catch (error) {
+                console.error('Error fetching bookmarks:', error);
+            }
+        }
+                
+        applyBookmarks();
+        
+        // Function to preprocess <a> and <img> tags by removing <i>, </i> and updating refs
+        function preprocessDocumentElements() {
+            // Process anchor tags
+            document.querySelectorAll('a').forEach(anchor => {
+                ['name', 'id', 'href'].forEach(attr => {
+                    if (anchor.hasAttribute(attr)) {
+                        let value = anchor.getAttribute(attr);
+                        // Remove <i> and </i> tags
+                        value = value.replace(/<\/?i>/g, '_');
+                        value = value.replace(/(noteref|note|page|fnote|fnanchor)(\d+)/ig, (match, p1, p2) => {
+                            return `${p1}_${p2}`;
+                        });
+        
+                        // Correct href formatting for references
+                        if (attr === 'href' && value.startsWith('#')) {
+                            value = value.replace(/#(noteref|note|page)(\d+)/ig, (match, p1, p2) => {
+                                return `#${p1}_${p2}`;
+                            });
+                        }
+                        anchor.setAttribute(attr, value);
+                    }
+                });
+        
+                // Check if there is a 'name' attribute without a corresponding 'id'
+                if (anchor.hasAttribute('name') && !anchor.hasAttribute('id')) {
+                    // Set 'id' to the value of 'name'
+                    anchor.setAttribute('id', anchor.getAttribute('name'));
                 }
             });
-    
-            // Check if there is a 'name' attribute without a corresponding 'id'
-            if (anchor.hasAttribute('name') && !anchor.hasAttribute('id')) {
-                // Set 'id' to the value of 'name'
-                anchor.setAttribute('id', anchor.getAttribute('name'));
-            }
-        });
-    
-        // Process image tags (removes restores '_' where needed)
-        document.querySelectorAll('img').forEach(img => {
-            if (img.hasAttribute('src')) {
-                let src = img.getAttribute('src');
-                // Remove <i> and </i> tags from src
-                src = src.replace(/<\/?i>/g, '_');
-                img.setAttribute('src', src);
-            }
-        });
-    }
-    
-    console.time('Preprocess Document Elements');
-    preprocessDocumentElements(); // Preprocessing anchor and image elements
-    console.timeEnd('Preprocess Document Elements');
         
-    // Function to clean up file paths
-    function cleanPath(path) {
-        return path.replace(/<\/?[^>]+>/gi, ''); // Strip out HTML tags
-    }
-
-    // When creating Blob URLs and storing them in the resourceMap:
-    Object.keys(unzipped).forEach(filename => {
-        if (filename !== primaryFilename && (filename.endsWith('.png') || filename.endsWith('.jpg') || filename.endsWith('.gif'))) {
-            const fileBlob = new Blob([unzipped[filename]], {type: 'image/' + filename.split('.').pop()});
-            const fileUrl = URL.createObjectURL(fileBlob);
-            // Normalize and clean filename to match the expected src format in HTML
-            const normalizedFilename = cleanPath(filename.replace('data/media/images/', ''));
-            resourceMap[normalizedFilename] = fileUrl;
+            // Process image tags (removes restores '_' where needed)
+            document.querySelectorAll('img').forEach(img => {
+                if (img.hasAttribute('src')) {
+                    let src = img.getAttribute('src');
+                    // Remove <i> and </i> tags from src
+                    src = src.replace(/<\/?i>/g, '_');
+                    img.setAttribute('src', src);
+                }
+            });
         }
-    });
-
-    // When replacing src in HTML:
-    document.querySelectorAll('#book-content img').forEach(img => {
-        const originalSrc = img.getAttribute('src');
-    
-        // Skip processing for known static assets to avoid unnecessary errors
-        if (originalSrc.startsWith('images/icons/')) {
-            return; // Skip this image as it's a static asset
+        
+        preprocessDocumentElements(); // Preprocessing anchor and image elements
+            
+        // Function to clean up file paths
+        function cleanPath(path) {
+            return path.replace(/<\/?[^>]+>/gi, ''); // Strip out HTML tags
         }
-    
-        const normalizedSrc = cleanPath(originalSrc.replace('data/media/images/', ''));
-        if (resourceMap[normalizedSrc]) {
-            img.setAttribute('src', resourceMap[normalizedSrc]);
-    
-            // Add event listener for opening the modal
-            img.onclick = function(event) {
-                event.preventDefault(); // Prevent the default anchor behavior
-                const modal = document.getElementById('imageModal');
-                const modalImg = document.getElementById('modalImage');
-                const captionText = document.getElementById('caption');
-                modal.style.display = "block";
-                modalImg.src = this.src;
-                captionText.innerHTML = img.alt; // Assuming you might use the alt attribute as caption
-            };
-        } else {
-            console.log('No Blob URL found for:', originalSrc);
-        }
-    });
 
-    // Close the image modal that was just created
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-        var modal = document.getElementById('imageModal');
-        modal.style.display = "none";
-    }
-    document.addEventListener('keydown', function(event) {
-        if (event.key === "Escape") {  // Check if the key pressed is 'Escape'
+        // When creating Blob URLs and storing them in the resourceMap:
+        Object.keys(unzipped).forEach(filename => {
+            if (filename !== primaryFilename && (filename.endsWith('.png') || filename.endsWith('.jpg') || filename.endsWith('.gif'))) {
+                const fileBlob = new Blob([unzipped[filename]], {type: 'image/' + filename.split('.').pop()});
+                const fileUrl = URL.createObjectURL(fileBlob);
+                // Normalize and clean filename to match the expected src format in HTML
+                const normalizedFilename = cleanPath(filename.replace('data/media/images/', ''));
+                resourceMap[normalizedFilename] = fileUrl;
+            }
+        });
+
+        // Replace <img src> with blob link
+        document.querySelectorAll('#book-content img').forEach(img => {
+            const originalSrc = img.getAttribute('src');
+        
+            // Skip processing for known static assets to avoid unnecessary errors
+            if (originalSrc.startsWith('images/icons/')) {
+                return; // Skip this image as it's a static asset
+            }
+        
+            const normalizedSrc = cleanPath(originalSrc.replace('data/media/images/', ''));
+            if (resourceMap[normalizedSrc]) {
+                img.setAttribute('src', resourceMap[normalizedSrc]);
+        
+                // Add event listener for opening the modal
+                img.onclick = function(event) {
+                    event.preventDefault(); // Prevent the default anchor behavior
+                    const modal = document.getElementById('imageModal');
+                    const modalImg = document.getElementById('modalImage');
+                    const captionText = document.getElementById('caption');
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                    captionText.innerHTML = img.alt; // Assuming you might use the alt attribute as caption
+                };
+            } else {
+                console.log('No Blob URL found for:', originalSrc);
+            }
+        });
+
+        // Close the image modal that was just created
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
             var modal = document.getElementById('imageModal');
-            if (modal.style.display === "block") {  // Check if the modal is currently displayed
-                modal.style.display = "none";  // Hide the modal
-            }
+            modal.style.display = "none";
         }
-});
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") {  // Check if the key pressed is 'Escape'
+                var modal = document.getElementById('imageModal');
+                if (modal.style.display === "block") {  // Check if the modal is currently displayed
+                    modal.style.display = "none";  // Hide the modal
+                }
+            }
+        });
+
+        // WORD COUNT DISPLAY
+        // Append the word count to the bottom of #book-content
+        const wordCountDiv = document.createElement('div');
+        wordCountDiv.classList.add('word-count');
+        wordCountDiv.innerHTML = `<i>Word count: ${wordCount.toLocaleString()}<br>(${pageCount.toLocaleString()} average pages)</i>`;
+        document.getElementById('book-content').appendChild(wordCountDiv);
         
+        // Create the word count hover-over popup
+        const countPopup = document.createElement('div');
+        countPopup.classList.add('count-popup');
+        countPopup.innerHTML = `<i>Word count: ${wordCount.toLocaleString()}<br>(${pageCount.toLocaleString()} average pages)</i>`;
+        document.body.appendChild(countPopup);
+
+        // Add event listeners to #headTitle
+        const headTitle = document.getElementById('headTitle');
+        headTitle.addEventListener('mouseover', function(event) {
+            countPopup.style.display = 'block';
+            countPopup.style.left = event.pageX + 'px';
+            countPopup.style.top = event.pageY + 'px';
+        });
+
+        headTitle.addEventListener('mousemove', function(event) {
+            countPopup.style.left = event.pageX + 'px';
+            countPopup.style.top = event.pageY + 'px';
+        });
+
+        headTitle.addEventListener('mouseout', function() {
+            countPopup.style.display = 'none';
+        });
+
     });
     
     // Helper for title-setter
@@ -580,16 +645,16 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     function setTitle() {
         if (!currentBookMetadata?.Title) return;
-
+    
         let headTitle = document.getElementById('headTitle');
-
+    
         let wholeTitle = currentBookMetadata.Title;
         wholeTitle = wholeTitle.replace(/\"\"/g, '"'); // Remove weird PG tic: double-double quotes in titles
         let truncatedTitle = wholeTitle;
         let more = document.createElement('a');
         more.classList.add("more");
         const space = document.createTextNode(" ");
-
+    
         // Determine truncation length based on viewport width
         const viewportWidth = window.innerWidth;
         let truncationLength = 65; // Default truncation length for large screens
@@ -600,10 +665,11 @@ document.addEventListener('DOMContentLoaded', async () => {
         } else if (viewportWidth <= 530) {
             truncationLength = 37;
         }
-
+    
         // Adjust the title display based on actual length
+        const moreText = "… more";
         if (wholeTitle.length > truncationLength) {
-            truncatedTitle = wholeTitle.substring(0, truncationLength) + "…";
+            truncatedTitle = wholeTitle.substring(0, truncationLength - moreText.length) + "…";
             more.textContent = "more";
             more.href = "#";
             setMoretext(more, headTitle, wholeTitle, truncatedTitle, space);
@@ -611,12 +677,12 @@ document.addEventListener('DOMContentLoaded', async () => {
             truncatedTitle = wholeTitle; // Use the full title if no truncation is needed
             more.style.display = 'none'; // Optionally hide the 'more' link if not needed
         }
-
+    
         headTitle.textContent = truncatedTitle;
         headTitle.appendChild(space);
         headTitle.appendChild(more);
     }
-
+    
     setTitle();
     window.addEventListener('resize', setTitle);
 
@@ -812,7 +878,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     
             if (targetElement) {
                 // Calculate the corrected scroll position considering the fixed header
-                const headerHeight = 80; // Adjust if your header height changes
+                const headerHeight = 100; // Adjust if your header height changes
                 const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
                 const offsetPosition = elementPosition - headerHeight;
     
@@ -833,7 +899,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         let percentageThrough = (scrollPosition / totalHeight) * 100;
         percentageThrough = isNaN(percentageThrough) ? 0 : percentageThrough; // Default to 0 if calculation fails
     
-        console.log(`Attempting to save position: ${percentageThrough.toFixed(2)}% for bookId: ${currentBookId}`);
+        // console.log(`Attempting to save position: ${percentageThrough.toFixed(2)}% for bookId: ${currentBookId}`);
     
         if (percentageThrough >= 0 && percentageThrough <= 100) {
             window.electronAPI.sendLastReadPosition({ 
@@ -986,7 +1052,7 @@ function restoreScrollPosition() {
         if (lastReadPercentage) {
             const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
             const scrollPosition = (lastReadPercentage / 100) * totalHeight;
-            console.log(`Restoring to position: ${scrollPosition}px out of ${totalHeight}px total height`);
+            // console.log(`Restoring to position: ${scrollPosition}px out of ${totalHeight}px total height`);
     
             window.scrollTo(0, scrollPosition);
         }
