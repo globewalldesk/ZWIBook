@@ -14,6 +14,8 @@ console.log = function (message) {
 
 let mainWindow; // Declare mainWindow globally
 let dataDir, latestUrlPath, bookshelfPath; // Declare these globally to use in createWindow()
+let currentBookTitle = ""; // For Copilot inquiries
+let currentBookAuthor = "";
 
 const configFilePath = path.join(app.getPath('userData'), 'config.json'); // Default path for config file
 
@@ -145,6 +147,9 @@ let zwiDirectoryPath = getZwiDirectoryPath();
 console.log('ZWI Directory Path:', zwiDirectoryPath);
 
 function selectZwiDirectory() {
+    if (mainWindow) {
+        mainWindow.focus();
+    }
     return dialog.showOpenDialog({
         properties: ['openDirectory']
     }).then(result => {
@@ -164,7 +169,7 @@ function createWindow() {
         webPreferences: {
             preload: path.join(__dirname, 'preload.js'),
             nodeIntegration: false,
-            contextIsolation: true,
+            contextIsolation: true
         },
     });
 
@@ -172,7 +177,9 @@ function createWindow() {
     let initialUrl = `file://${path.join(__dirname, 'search.html')}`; // Default URL
     if (fs.existsSync(latestUrlPath)) {
         try {
-            initialUrl = fs.readFileSync(latestUrlPath, 'utf8');
+            const relativeUrl = fs.readFileSync(latestUrlPath, 'utf8');
+            initialUrl = `file://${path.join(__dirname, relativeUrl)}`;
+            console.log("initialUrl:", initialUrl);
         } catch (error) {
             console.error('Error reading the last visited URL:', error);
         }
@@ -183,12 +190,12 @@ function createWindow() {
 
     // Set up event listeners for URL changes
     mainWindow.webContents.on('did-navigate', (event, url) => {
-        fs.writeFileSync(latestUrlPath, url, 'utf8');
+        saveRelativeUrl(url);
     });
 
     mainWindow.webContents.on('did-navigate-in-page', (event, url, isMainFrame) => {
         if (isMainFrame) {
-            fs.writeFileSync(latestUrlPath, url, 'utf8');
+            saveRelativeUrl(url);
         }
     });
 
@@ -364,7 +371,15 @@ function createWindow() {
             label: 'Help',
             submenu: [
                 {
-                    label: 'Learn More',
+                    label: 'About ZWIBook',
+                    click: () => {
+                        if (mainWindow) {
+                            mainWindow.loadFile('about.html');
+                        }
+                    }
+                },        
+                {
+                    label: 'KSF Website (Encyclosphere.org)',
                     click: async () => {
                         const { shell } = require('electron');
                         await shell.openExternal('https://encyclosphere.org');
@@ -447,6 +462,16 @@ function createWindow() {
                     shell.openExternal(`https://www.bing.com/translator/?text=${selectedText}`);
                 }
             }));
+            contextMenu.append(new MenuItem({
+                label: 'Ask Bing Copilot (AI) to explain',
+                click: () => {
+                    const selectedText = params.selectionText.slice(0,200);
+                    const prompt = `Please explain the following quotation from "${currentBookTitle}" by ${currentBookAuthor}: "${selectedText}"`;
+                    const formattedPrompt = encodeURIComponent(prompt);
+                    const bingUrl = `https://www.bing.com/search?showconv=1&sendquery=1&q=${formattedPrompt}`;
+                    shell.openExternal(bingUrl);
+                }
+            }));                                
         }
 
         contextMenu.popup(mainWindow);
@@ -469,6 +494,12 @@ function createWindow() {
             mainWindow.webContents.findInPage(text);
         }
     });
+}
+
+// Used to load latest.txt path
+function saveRelativeUrl(absoluteUrl) {
+    const relativeUrl = path.relative(__dirname, absoluteUrl.replace('file://', ''));
+    fs.writeFileSync(latestUrlPath, relativeUrl, 'utf8');
 }
 
 // This method will be called when Electron has finished
@@ -906,13 +937,17 @@ ipcMain.on('refresh-menu', () => {
 ipcMain.on('finish-export-zwi', async (event, bookId) => {
     console.log(`Received export request for book ID: ${bookId}`);
 
+    // Ensure the main window is focused before opening dialog
+    mainWindow.focus();
+
     // Construct the path to the ZWI file
     let zwiFilePath = path.join(zwiDirectoryPath, `${bookId}.zwi`);
-    
+
     // Check if the file exists
     if (fs.existsSync(zwiFilePath)) {
         // Prompt the user to select a save location
-        const { canceled, filePath } = await dialog.showSaveDialog(mainWindow, { // Specify mainWindow as parent
+        const { canceled, filePath } = await dialog.showSaveDialog({
+            parent: mainWindow,
             title: 'Save ZWI File',
             defaultPath: path.join(app.getPath('downloads'), `${bookId}.zwi`),
             buttonLabel: 'Save ZWI',
@@ -938,4 +973,25 @@ ipcMain.on('finish-export-zwi', async (event, bookId) => {
         console.log(`ZWI file does not exist: ${zwiFilePath}`);
         event.reply('zwi-export-status', 'ZWI file not found.');
     }
+});
+
+ipcMain.handle('download-image', async (event, imagePath) => {
+    const absolutePath = path.resolve(__dirname, imagePath);
+
+    try {
+        // Ensure the main window is focused before opening dialog
+        mainWindow.focus();
+
+        const data = await fs.promises.readFile(absolutePath);
+        return data.toString('base64'); // Return the image data as a base64 string
+    } catch (error) {
+        throw error; // Rethrow the error to be caught by the renderer process
+    }
+});
+
+// Listen for the book info from the renderer process (Copilot inquiries)
+ipcMain.on('send-book-info', (event, bookInfo) => {
+    console.log("Setting title and author.");
+    currentBookTitle = bookInfo.title;
+    currentBookAuthor = bookInfo.author;
 });

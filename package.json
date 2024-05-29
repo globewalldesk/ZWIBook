@@ -13,24 +13,28 @@
     "pack": "electron-builder --dir",
     "dist": "electron-builder",
     "build": "electron-builder",
-    "rebuild": "electron-rebuild"
+    "rebuild": "electron-rebuild",
+    "postinstall": "electron-builder install-app-deps"
   },
   "license": "Copyright 2024. All rights reserved.",
   "devDependencies": {
-    "@electron/rebuild": "^3.6.0",
     "electron": "^30.0.2",
     "electron-builder": "^24.13.3"
   },
   "build": {
     "appId": "com.knowledgestandardsfoundation.pgreader",
+    "productName": "ZWIBook",
     "linux": {
-      "maintainer": "Larry Sanger/KSF <larry@encyclosphere.org>",
       "target": [
         "AppImage",
         "deb"
-      ]
+      ],
+      "artifactName": "${productName}.${ext}",
+      "maintainer": "Larry Sanger/KSF <larry@encyclosphere.org>",
+      "category": "Education"
     },
     "files": [
+      "about.html",
       "bookshelf.html",
       "bookshelf.js",
       "categories.js",

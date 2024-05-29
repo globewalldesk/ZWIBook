@@ -13,7 +13,7 @@ let buffer;
 
 function loadFont() {
     // Load the font choice from local storage
-    const selectedFont = localStorage.getItem('selectedFont') || 'Arial';  // Default font
+    const selectedFont = localStorage.getItem('selectedFont') || 'Liberation Serif';  // Default font
     
     // If there's a font saved, apply it
     document.body.style.fontFamily = selectedFont;
@@ -45,9 +45,6 @@ async function fetchData() {
                     console.error("Book metadata not found for ID:", bookId);
                 }
                 resolve();
-            //} else {
-            //    currentBookMetadata = JSON.parse(localStorage.getItem('currentBookMetadata'));
-            //}
         } catch (error) {
             console.error('Failed to fetch book data:', error);
             reject(error);
@@ -60,6 +57,13 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // Fetch data
     await fetchData();
+
+    // Send the current book title and author to the main process
+    // Used when asking Bing Copilot to comment on selection
+    window.electronAPI.sendBookInfo({
+        title: currentBookMetadata.Title,
+        author: currentBookMetadata.CreatorNames[0]
+    });
     
     // Now the DOM is fully loaded and we can safely interact with it
     bookContentDiv = document.getElementById('book-content');
@@ -92,7 +96,8 @@ document.addEventListener('DOMContentLoaded', async () => {
             localStorage.setItem('navCounter', navCounter.toString());
             displayBackButton(true);
         }
-    }    
+    }
+
     function displayBackButton(shouldDisplay) {
         const backBtn = document.getElementById('backBtn');
         if (shouldDisplay) {
@@ -102,6 +107,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }
     manageNavigationOnLoad();
+
     // Event listener for the back button
     document.getElementById('backBtn').addEventListener('click', function(event) {
         event.preventDefault();
@@ -150,7 +156,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         // Show the updated saved state based on the newly fetched data
         showSavedState(currentBookId);
-
     });
 
     function processText(text) {
@@ -179,8 +184,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         // Clean creator names by removing square brackets and anything inside them
         let cleanedNames = creatorNames.map(name => name.replace(/\s*\[.*?\]\s*/g, '').trim());
     
-        console.log("Cleaned Creator Names:", cleanedNames);
-    
         // Continue with extracting the first author's formatted name
         if (cleanedNames.length > 0) {
             const firstAuthorRegex = /^([^,]+),\s*([^,]+)/;
@@ -201,16 +204,12 @@ document.addEventListener('DOMContentLoaded', async () => {
     
                 if (suffix) {
                     formattedName += `, ${suffix}`; // Append suffix if present
-                }
-    
-                console.log(`Extracted Author: ${formattedName}`);
+                }    
                 return formattedName;
             } else {
-                console.log("No valid author data found.");
                 return "No valid author data found.";
             }
         } else {
-            console.log("No creator names available.");
             return "No creator names available.";
         }
     }
@@ -241,7 +240,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         // Extract and format author name
         const formattedAuthorName = extractAuthor(); // Assuming extractAuthor() is available globally and returns a formatted name
         const title = currentBookMetadata.Title; // Assuming title is stored in currentBookMetadata
-    
+            
         let tempParagraph = [];
         function flushParagraph() {
             if (tempParagraph.length > 0) {
@@ -271,7 +270,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             if (!titleProcessed && line.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, '') === title.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, '')) {
                 paragraphs.push(`<h1 class="center">${line}</h1>`); 
                 titleProcessed = true;
-            } else if (!authorProcessed && line.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, '').startsWith('by') && percentageMatch(line.substring(3).toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, ''), formattedAuthorName.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, '')) >= 50) {
+            } else if (titleProcessed && !authorProcessed && line.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, '').startsWith('by') && percentageMatch(line.substring(3).toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, ''), formattedAuthorName.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, '')) >= 50) {
                 paragraphs.push(`<h2 class="center">${line}</h2>`);
                 authorProcessed = true;
             } else if (isPoetry || /^\s+/.test(line)) {
@@ -397,8 +396,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         const wordCount = countWords(plainTextContent);
         const pageCount = Math.ceil(wordCount / 300);
 
-        console.log(`Word count: ${wordCount}`);
-
         // Move inline centering to class.
         let paragraphs = bookContentDiv.querySelectorAll('p[style*="text-align: center;"]');
         paragraphs.forEach(p => {
@@ -436,34 +433,59 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
 
         function addBookmarkIcon(element, index) {
-            // Ensure the inner HTML of the element wraps its current content with a paragraph and includes the bookmark icon
-            element.innerHTML = `<img src="images/icons/bookmark.svg" class="bookmark-icon" id="bookmark-${index}" onclick="toggleBookmark(${index})">${element.tagName === 'P' ? '<p>' + element.innerHTML + '</p>' : element.innerHTML}`;
+            // Create a new wrapper element
+            const wrapper = document.createElement('div');
+            // Add bookmark icon
+            const bookmarkIcon = document.createElement('img');
+            bookmarkIcon.src = "images/icons/bookmark.svg";
+            bookmarkIcon.className = "bookmark-icon";
+            bookmarkIcon.id = `bookmark-${index}`;
+            bookmarkIcon.onclick = () => toggleBookmark(index);
+        
+            // Wrap the element's content with a paragraph if it's not a paragraph
+            if (element.tagName !== 'P') {
+                const paragraph = document.createElement('p');
+                paragraph.innerHTML = element.innerHTML;
+                wrapper.appendChild(bookmarkIcon);
+                wrapper.appendChild(paragraph);
+            } else {
+                wrapper.appendChild(bookmarkIcon);
+                wrapper.appendChild(element.cloneNode(true));
+            }
+        
+            // Replace the element's content
+            element.innerHTML = '';
+            while (wrapper.firstChild) {
+                element.appendChild(wrapper.firstChild);
+            }
             element.classList.add("paragraph"); // Ensure it has the 'paragraph' class for consistent styling and behavior
         }
-
+        
         function assignIDsToContentElements(content) {
             let paragraphIndex = 0;
-            // Target both <p> and <div> tags
-            let elements = content.querySelectorAll('p, div');
+            const elements = content.querySelectorAll('p, div');
+            const updates = [];
         
             elements.forEach(element => {
-                // Process div tags that do not contain <p> tags and have non-empty text content
-                // and p tags that do not already have an ID
                 if (!element.id && ((element.tagName === 'DIV' && !element.querySelector('p') && element.textContent.trim().length > 0) || element.tagName === 'P')) {
-                    element.id = `p${paragraphIndex}`; // Assign ID
-                    addBookmarkIcon(element, paragraphIndex); // Add bookmark icon and other necessary HTML modifications
+                    element.id = `p${paragraphIndex}`;
+                    updates.push({ element, index: paragraphIndex });
                     paragraphIndex++;
                 }
             });
+        
+            updates.forEach(({ element, index }) => {
+                addBookmarkIcon(element, index);
+            });
+        
             return content;
         }
-                
+        
         // Usage after setting the innerHTML for bookContentDiv
         if (primaryFilename.endsWith(".html") || primaryFilename.endsWith(".htm")) {
-            // bookContentDiv.innerHTML = bookContent;   // No idea why this was there
             assignIDsToContentElements(bookContentDiv);
         }
-
+        
         async function applyBookmarks() {
             try {
                 const bookmarks = await window.electronAPI.requestBookmarks(currentBookId);
@@ -482,6 +504,8 @@ document.addEventListener('DOMContentLoaded', async () => {
                         console.log('Element not found for bookmark:', bookmarkId); // Log missing elements
                     }
                 });
+                // This is placed here simply because this function takes longest.
+                setTimeout(restoreScrollPosition, 250);
             } catch (error) {
                 console.error('Error fetching bookmarks:', error);
             }
@@ -491,36 +515,43 @@ document.addEventListener('DOMContentLoaded', async () => {
         
         // Function to preprocess <a> and <img> tags by removing <i>, </i> and updating refs
         function preprocessDocumentElements() {
-            // Process anchor tags
-            document.querySelectorAll('a').forEach(anchor => {
+            const anchors = document.querySelectorAll('a');
+            const images = document.querySelectorAll('img');
+
+            anchors.forEach(anchor => {
                 ['name', 'id', 'href'].forEach(attr => {
                     if (anchor.hasAttribute(attr)) {
                         let value = anchor.getAttribute(attr);
                         // Remove <i> and </i> tags
                         value = value.replace(/<\/?i>/g, '_');
-                        value = value.replace(/(noteref|note|page|fnote|fnanchor)(\d+)/ig, (match, p1, p2) => {
-                            return `${p1}_${p2}`;
-                        });
-        
-                        // Correct href formatting for references
-                        if (attr === 'href' && value.startsWith('#')) {
-                            value = value.replace(/#(noteref|note|page)(\d+)/ig, (match, p1, p2) => {
-                                return `#${p1}_${p2}`;
-                            });
+                        value = value.replace(/(noteref|note|page|fnote|fnanchor)(\d+)/ig, (_, p1, p2) => `${p1}_${p2}`);
+
+                        // Ensure IDs and hrefs do not start with a digit
+                        if ((attr === 'id' || attr === 'name') && /^\d/.test(value)) {
+                            value = `id_${value}`;
+                        } else if (attr === 'href' && value.startsWith('#')) {
+                            value = value.replace(/#(noteref|note|page)(\d+)/ig, (_, p1, p2) => `#${p1}_${p2}`);
+                            if (/^#\d/.test(value)) {
+                                value = `#id_${value.slice(1)}`;
+                            }
                         }
+
                         anchor.setAttribute(attr, value);
                     }
                 });
-        
+
                 // Check if there is a 'name' attribute without a corresponding 'id'
                 if (anchor.hasAttribute('name') && !anchor.hasAttribute('id')) {
-                    // Set 'id' to the value of 'name'
-                    anchor.setAttribute('id', anchor.getAttribute('name'));
+                    let nameValue = anchor.getAttribute('name');
+                    // Ensure 'id' does not start with a digit
+                    if (/^\d/.test(nameValue)) {
+                        nameValue = `id_${nameValue}`;
+                    }
+                    anchor.setAttribute('id', nameValue);
                 }
             });
-        
-            // Process image tags (removes restores '_' where needed)
-            document.querySelectorAll('img').forEach(img => {
+
+            images.forEach(img => {
                 if (img.hasAttribute('src')) {
                     let src = img.getAttribute('src');
                     // Remove <i> and </i> tags from src
@@ -529,8 +560,6 @@ document.addEventListener('DOMContentLoaded', async () => {
                 }
             });
         }
-        
-        preprocessDocumentElements(); // Preprocessing anchor and image elements
             
         // Function to clean up file paths
         function cleanPath(path) {
@@ -593,6 +622,38 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
         });
 
+        // Utility function to get the basename from a path or URL
+        function getBasename(url) {
+            return url.split('/').pop().split('#')[0].split('?')[0];
+        }
+
+        // Support direct <a href> links to images (for direct download)
+        function handleImageDownload(event) {
+            const anchor = event.target.closest('a');
+            if (anchor && anchor.getAttribute('href').endsWith('.jpg')) { // Adjust as needed for other image types
+                event.preventDefault();
+                const imagePath = anchor.getAttribute('href').replace('data/media/images/', '');
+
+                if (resourceMap[imagePath]) {
+                    const blobUrl = resourceMap[imagePath];
+                    const downloadAnchor = document.createElement('a');
+                    downloadAnchor.href = blobUrl;
+                    downloadAnchor.download = getBasename(imagePath); // Use the custom function to get the image file name for downloading
+                    downloadAnchor.click();
+                    URL.revokeObjectURL(blobUrl); // Clean up the URL object
+                } else {
+                    console.error('Blob URL not found for:', imagePath);
+                }
+            }
+        }
+
+        // Add event listener to the document for intercepting link clicks
+        document.addEventListener('click', handleImageDownload);
+
+        // Existing code for preprocessing document elements and handling modals
+        preprocessDocumentElements();
+
+
         // WORD COUNT DISPLAY
         // Append the word count to the bottom of #book-content
         const wordCountDiv = document.createElement('div');
@@ -622,7 +683,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         headTitle.addEventListener('mouseout', function() {
             countPopup.style.display = 'none';
         });
-
     });
     
     // Helper for title-setter
@@ -716,6 +776,15 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     });
 
+    // Ensure bookmark modal is closed on 'Escape' key press
+    document.addEventListener('keydown', function(event) {
+        if (event.key === "Escape") {
+            if (bookmarksDropdown && bookmarksDropdown.style.display === 'flex') {
+                bookmarksDropdown.style.display = 'none';
+            }
+        }
+    });
+
     document.addEventListener('click', function(event) {
         if (!bookmarksDropdown.contains(event.target) && !bookmarksBtn.contains(event.target)) {
             bookmarksDropdown.style.display = 'none';
@@ -739,11 +808,11 @@ document.addEventListener('DOMContentLoaded', async () => {
                     position = position.toFixed(0); // Format to 2 decimal places
                     return `
                     <div class="dropdown-btn bookmark-item" data-bookmark-id="${id}">
-                        <div class="bookmark-column" onclick='goToBookmark(${id});'">
+                        <div class="bookmark-column" onclick='goToBookmark("${id}");'">
                             <img src="images/icons/bookmark-fill.svg">
                             <div class="bookmark-percentage">${position}%</div>
                         </div>
-                        <span class="bookmark-snippet" onclick='goToBookmark(${id});'>${snippet}</span>
+                        <span class="bookmark-snippet" onclick='goToBookmark("${id}");'>${snippet}</span>
                         <img src="images/icons/trash.svg" class="delete-bookmark" onclick="deleteBookmark('${id}')" title="Delete">
                     </div>
                     `;
@@ -944,7 +1013,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Menu management
     window.electronAPI.updateGutenbergMenu(currentBookId);
     window.electronAPI.refreshMenu();
-
 });
 
 async function deleteBookmark(bookmarkId) {
@@ -967,7 +1035,6 @@ async function deleteBookmark(bookmarkId) {
         bookmarkId: bookmarkId,
         isAdd: false // Set to false to indicate removal
     });
-
 }
 
 function toggleBookmark(index) {
@@ -991,7 +1058,8 @@ function toggleBookmark(index) {
 
 // This function might be defined to scroll to the specific paragraph
 function goToBookmark(paragraphId) {
-    const element = document.getElementById(paragraphId.id);
+    const element = document.getElementById(paragraphId);
+    console.log("element:", element);
     if (element) {
         element.scrollIntoView({ behavior: 'auto', block: 'start' });
         window.scrollBy(0,-120);
@@ -1052,18 +1120,9 @@ function restoreScrollPosition() {
         if (lastReadPercentage) {
             const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
             const scrollPosition = (lastReadPercentage / 100) * totalHeight;
-            // console.log(`Restoring to position: ${scrollPosition}px out of ${totalHeight}px total height`);
-    
             window.scrollTo(0, scrollPosition);
         }
     } else {
         console.log("bookshelfData is not loaded yet");
     }
 }
-
-// Load last read position with a delay to ensure complete page load
-window.onload = function() {
-    setTimeout(() => {
-        restoreScrollPosition();
-    }, 250); // Adjust the timing as necessary based on your application's needs
-};

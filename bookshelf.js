@@ -44,8 +44,19 @@ function refreshBookshelfUI() {
         viewedDiv.innerHTML = '';
         savedDiv.innerHTML = '';
 
-        populateDivWithBooks(viewedDiv, bookshelfData.viewedBooks, 'Viewed');
-        populateDivWithBooks(savedDiv, bookshelfData.savedBooks, 'Saved');
+        if (bookshelfData.viewedBooks.length === 0) {
+            viewedDiv.innerHTML = '<p style="color:#007BFF">Nothing to show here yet.<br/>Start <a href="search.html">searching</a> or <a href="html/categories.html">browsing</a>, and saving books!<br/>To save one, open it and press this button:</p><p><span style="background-color:#007BFF; height: 32px; display: inline-block; padding: 5px"><img src="./images/icons/add-book.svg"></span></p>';
+        } else {
+            viewedDiv.innerHTML = '';
+            populateDivWithBooks(viewedDiv, bookshelfData.viewedBooks, 'Viewed');
+        }
+
+        if (bookshelfData.savedBooks.length === 0) {
+            savedDiv.innerHTML = '<p style="color:#007BFF">Nothing to show here yet.<br/>Start <a href="search.html">searching</a> or <a href="html/categories.html">browsing</a>, and saving books!<br/>To save one, open it and press this button:</p><p><span style="background-color:#007BFF; height: 32px; display: inline-block; padding: 5px"><img src="./images/icons/add-book.svg"></span></p>';
+        } else {
+            savedDiv.innerHTML = '';
+            populateDivWithBooks(savedDiv, bookshelfData.savedBooks, 'Saved');
+        }
 
         appendRemoveAllButton(viewedDiv, 'Viewed');
         appendRemoveAllButton(savedDiv, 'Saved');
@@ -173,11 +184,6 @@ function showTab(tabName) {
 
     // Retrieve the selected tab content
     const selectedTabContent = document.getElementById(tabName);
-
-    // Check if the content of the selected tab is empty
-    if (!selectedTabContent.innerHTML.trim()) {
-        selectedTabContent.innerHTML = '<p style="color:#007BFF">Nothing to show here yet.<br/>Start viewing and saving books!<br/>To save one, open it and press this button:</p><p><span style="background-color:#007BFF; height: 32px; display: inline-block; padding: 5px"><img src="./images/icons/add-book.svg"></span></p>';
-    }
 
     // Show the selected tab content and add active class to the clicked tab
     selectedTabContent.style.display = 'block';

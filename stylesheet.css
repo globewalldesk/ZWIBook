@@ -7,6 +7,7 @@ body {
     font-size: unset !important;
     color: black !important;
     background-color: white !important;
+    width: unset !important;
 }
 
 /* Ensure the header stays fixed at the top of the viewport with original styling */
@@ -21,6 +22,12 @@ body > #header {
     /* Background color extends across the full width */
     color: white !important;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: unset !important;
+}
+
+/* Category page titles */
+body > div#body > h1 {
+    margin-left: 10px;
 }
 
 h1#headTitle {
@@ -120,12 +127,10 @@ h2, h3, h4, h5, h6, p, td {
 
 /* Loading message animation */
 @keyframes fadeInOut {
-
     0%,
     100% {
-        opacity: 0;
+        opacity: 0.1;
     }
-
     50% {
         opacity: 1;
     }
@@ -135,7 +140,7 @@ h2, h3, h4, h5, h6, p, td {
     animation: fadeInOut 750ms infinite;
     text-align: left;
     margin: 10px 0px 20px 20px;
-    color: green;
+    color: black;
 }
 
 .header-btn {
@@ -261,9 +266,9 @@ header {
 
 
 #body {
-    margin: 0 auto;
+    margin: 0 auto !important;
     /* Center the content */
-    max-width: 800px;
+    max-width: 800px !important;
     /* Max content width */
 }
 
@@ -554,9 +559,18 @@ a.more:hover {
 .volumedate.paragraph p,
 p.by, p.author, p.transl, p.co, p.year,
 p.by p, p.author p, p.transl p, p.co p, p.year p,
-h1.center, h2.center, .ctr, .ctr p,
-.title p, p.bold, .bold2 p {
+h1.center, h2.center, .ctr, .ctr p, .cen,
+.cen p, .title p, p.bold, .bold2 p,
+.cbig250 p, p.toc p {
     text-align: center !important;
+}
+
+.blk .toc {
+    margin: 1em auto !important;
+}
+
+.letra {
+    padding-right: 10px;
 }
 
 #book-content img {
@@ -637,10 +651,46 @@ pre {
 .sidenote, .fn {
     display: inline-block !important;
     position: unset !important;
-    float: left !important;
     width: 100px !important;
-    margin: 10px 10px 10px 0 !important;
     padding: 3px !important;
+}
+
+.sidenote {
+    float: right !important;
+    margin: 10px 0px 10px 10px !important;
+}
+
+.chapnum {
+    position: unset !important;
+}
+
+.linenum {
+    position: unset !important;
+    float: right !important;
+    margin: 0px 0px 0px 10px !important;
+    left: unset !important;
+    color: gray !important;
+}
+
+.fn {
+    float: right !important;
+    margin: 10px 10px 10px 0 !important;
+}
+
+.poem .sidenote {
+    width: 20% !important;
+    padding-bottom: .5em !important;
+    padding-top: .5em !important;
+    padding-left: .5em !important;
+    padding-right: .5em !important;
+    margin-left: 1em !important;
+    float: right !important;
+    clear: right !important;
+    margin-top: 1em !important;
+    font-size: smaller !important;
+    color: black !important;
+    background: #eeeeee !important;
+    border: dashed 1px !important;
 }
 
 .verse .sidenote {
@@ -1091,4 +1141,76 @@ input:checked + .slider:before {
 
 .slider.round:before {
     border-radius: 50%;
+}
+
+
+
+/* ABOUT PAGE */
+
+/* Table of Contents Styles */
+.abtoc {
+    margin: 20px 0;
+    font-size: 1.1em;
+}
+
+.abfeature {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.abfeature h2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5em;
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ddd;
+}
+
+.abfeature h2 a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.abfeature h2 a:hover {
+    text-decoration: underline;
+}
+
+.abfeature ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+
+.abfeature ul li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.abfeature ul li:before {
+    content: '\2022';
+    color: #007bff;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.abfeature p {
+    margin: 10px 0;
+}
+
+pre.ab {
+    background: #f4f4f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    overflow-x: auto;
+    font-family: 'Courier New', Courier, monospace;
 }

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About ZWIBook</title>
+    <link rel="stylesheet" href="stylesheet.css">
+
+</head>
+<body>
+    <!-- The Find on Page Modal -->
+    <div id="findOnPage" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+            <button id="findButton">Find</button>
+        </div>
+    </div>
+    <div id="header">
+        <div id="header-content">
+            <div class="header-container">
+                <a id="backBtn" class="header-btn" href="#">
+                    <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+                </a>
+                <a id="search" class="header-btn" href="search.html">
+                    <img src="images/icons/search.svg" title="Search book titles">
+                </a>
+            </div>
+            <h1 id="headTitle">About ZWIBook</h1>
+            <div id="tagline">Built by the Knowledge<br>Standards Foundation</div>
+            <div class="header-container">
+                <a class="header-btn" href="html/categories.html">
+                    <img src="images/icons/categories.svg" title="Browse categories">
+                </a>
+                <a id="savedBooksLink" class="header-btn" href="bookshelf.html">
+                    <img src="images/icons/bookshelf.svg" title="Viewed/saved books">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="body">
+        <p id="abtoc">This app, which we call "ZWIBook," is a versatile and user-friendly digital library application that allows users to access a vast collection of texts from Project Gutenberg. With over 69,000 texts, primarily books published before 1920, ZWIBook showcases the functionality of the ZWI file format. The application aims to demonstrate the capabilities of the ZWI format and to provide donors of the Knowledge Standards Foundation a compelling reason to support our efforts. Distributed on a 128MB thumb drive, ZWIBook is a bespoke software solution created by Larry Sanger with the help of AI tools, with assistance from Henry Sanger.</p>
+
+        <div class="abtoc">
+            <h2>Table of Contents</h2>
+            <ul>
+                <li><a href="#book-reader">Book Reader</a></li>
+                <li><a href="#search">Search: find books</a></li>
+                <li><a href="#book-categories">Book Categories</a></li>
+                <li><a href="#bookshelf">Bookshelf: manage your selections</a></li>
+                <li><a href="#verify-zwi">To Verify a ZWI File</a></li>
+                <li><a href="#notes-disclaimers">Notes and Disclaimers</a></li>
+            </ul>
+        </div>        
+
+        <div class="abfeature">
+            <h2 id="book-reader"><a href="#abtoc">↑</a> <a href="search.html">The Reader</a>: read a book</h2>
+            <ul>
+                <li>Click any search result title to go to the book.</li>
+                <li>Change font size and style under the "Text and View" menu. These choices will be saved.</li>
+                <li>Your last-read location is automatically saved.</li>
+                <li>Images are clickable and saveable.</li>
+                <li>To add bookmarks, hover over a paragraph. Click on the outlined bookmark in the upper left.</li>
+                <li>To return to a bookmark, click on the bookmarks icon <span class="image-placeholder">[image]</span> in the header.</li>
+                <li>All books opened are added to the "Books Viewed" tab in the Bookshelf (see below).</li>
+                <li>If you specially want to save a particular book (because you're reading it, for example), click the "save book" button <span class="image-placeholder">[image]</span>.</li>
+            </ul>
+            <p>Special and unexpected features:</p>
+            <ul>
+                <li>Long books, like the Bible, and those with many pictures, like <i>Pride and Prejudice,</i> can take a few seconds to load, due to processing. (This is not done in advance, in order to preserve your copy of each file without any changes.)</li>
+                <li>Merge lines/Separate lines switch <span class="image-placeholder">[image]</span>. Plaintext books (that is, where Project Gutenberg doesn't have HTML) were rendered into nicely-formatted text as well as we could manage, by combining lines. Most of these should look rather good. For some, however, you might want to use the original line breaks. Poetry and song should preserve line breaks by default.</li>
+            </ul>
+        </div>
+
+        <div class="abfeature">
+            <h2 id="search"><a href="#abtoc">↑</a> <a href="search.html">Search</a>: find books</h2>
+            <ul>
+                <li>Search title, author, or both; does not search text, but you can search on the page (see below).</li>
+                <li>Results are by relevance, but if you press the <span class="image-placeholder">[sorting: image]</span> button, you can re-sort the results by Author, Title, and Date.</li>
+                <li>All results are shown on the same page.</li>
+            </ul>
+            <p>Special and unexpected features:</p>
+            <ul>
+                <li>If there are too many results or search terms, you will be asked to refine the search.</li>
+                <li>Old-fashioned uppercase "OR" searches are supported. For example, the title search "Hume OR Kant" results in all books by Hume plus all books by Kant. ("AND" is the default, i.e., usually, results must include all search terms.)</li>
+            </ul>
+        </div>
+
+        <div class="abfeature">
+            <h2 id="book-categories"><a href="#abtoc">↑</a> <a href="html/categories.html">Book Categories</a></h2>
+            <ul>
+                <li>Organized by Library of Congress codes, making it easy to browse through a vast array of subjects systematically.</li>
+                <li>Each primary category links to subcategories, helping you narrow down to specific topics of interest.</li>
+                <li>Each category and subcategory page displays the number of books available, giving a clear indication of the library size in each section.</li>
+                <li>Books within each category and subcategory can be sorted by author, title, or date. A default sort option is available to revert to the initial order.</li>
+                <li>Users can easily search within category and subcategory pages using 'Find on Page', helping to quickly locate specific books or authors within large categories.</li>
+            </ul>
+        </div>
+
+        <div class="abfeature">
+            <h2 id="bookshelf"><a href="#abtoc">↑</a> <a href="bookshelf.html">Bookshelf</a>: manage your selections</h2>
+            <ul>
+                <li>Opening any book automatically appends it to the top of the "viewed" list, ensuring easy access to recently read materials.</li>
+                <li>Users can switch between tabs to see books they have viewed and books they have saved for future reading.</li>
+                <li>Each tab has a "Remove All" button that allows users to clear all books from the respective list with a single click. The button is displayed when the number of books in the list reaches 20 or more.</li>
+                <li>Books can be sorted by author, title, or date. The sorting preference is saved and applied automatically on page load. The sort dropdown can be accessed from the header, and the sorting type is highlighted in the dropdown menu.</li>
+                <li>Users can delete individual books from the "viewed" or "saved" list by clicking the trash icon next to each book entry.</li>
+            </ul>
+            
+        </div>
+
+        <div class="abfeature">
+            <h2 id="verify-zwi"><a href="#abtoc">↑</a> To Verify a ZWI File</h2>
+            <p>To ensure the integrity and authenticity of a ZWI file, follow these steps:</p>
+            <ul>
+                <li>Grab the `token` from the signature.json file within the ZWI.</li>
+                <li>Visit <a href="https://did.dara.global/gutenberg/#publish" target="_blank">https://did.dara.global/gutenberg/#publish</a> and copy the `publicKeys`, which is:</li>
+            </ul>
+            <pre class="ab">
+{
+    "kty":"EC",
+    "crv":"P-384",
+    "x":"1beexcFBjN6FXYN6Q5mqeOI3N4D2BH3SbP3_81kALR9kW2ZbE5QJ4yCcjE0OcXWy",
+    "y":"-jMdfTnpnCCNBrtgFwrluaH5Pz3v0YYNzucC0aezTdxaUrLriisYUAHZrx_b5CD4",
+    "alg":"ES384",
+    "kid":"did:psqr:did.dara.global/gutenberg#publish"
+}
+            </pre>
+            <ul>
+                <li>On <a href="https://jwt.io/" target="_blank">JWT.io</a>, drop the `token` into the "Encoded" field on the left.</li>
+                <li>Drop the `publicKeys` into the "verify signature" area on the lower right.</li>
+                <li>This process establishes that, according to the DID:PSQR and JSON Web Token protocols, only the private key that matches dara.global's public key (at the above address) could have generated that particular token.</li>
+                <li>Some further steps can, in a similarly rigorous way, establish that only the same private key could take all the content of the ZWI file as input and generate that token as output.</li>
+            </ul>
+        </div>
+
+
+        <h2 id="notes-disclaimers"><a href="#abtoc">↑</a> Notes and Disclaimers</h2>
+        <p>We took great care to craft the ZWIBook software, which you using now, to render the books in a fairly standardized, readable format, while retaining most of the original design of the book files. Standardizing did involve actually overriding some of the CSS of the original files. It should not have touched the content, but we have not confirmed that this is the case with every file. Some design errors might still remain, but they should be relatively few. If you come across a book with moderate or serious design errors, especially if it is entirely unreadable, please email larry@encyclosphere.org with details.</p>
+
+        <p>We guarantee that the book ZWI files were included in the <code>/book_zwis</code> directory shipped out on the original Knowledge Standards Foundation thumb drives.</p>
+
+        <p>We do not make any specific guarantees about the ZWIBook software, which you are presently using. It is offered as a "thank-you" gift for contributions to the Knowledge Standards Foundation. ZWIBook is presented "as-is" and is not guaranteed to be free of defects or to be fit for any particular purpose. Although it was thoroughly tested on Linux, Windows, and Mac, we cannot guarantee it to work properly on every system. We also cannot guarantee that it will continue to work forever, as operating systems are updated.</p>
+
+        <p>The <a href="https://encyclosphere.org">Knowledge Standards Foundation</a> does not have any relationship with Project Gutenberg. We have distributed versions of the Project Gutenberg files in the ZWI format in the belief that our doing so satisfies the Project Gutenberg license, which we have carefully read, and which is to be found at the bottom of every Project Gutenberg file (and as can be found in our copies of these files).</p>
+
+        <p>To adapt the Project Gutenberg summary license: "The eBooks in this collection are for the use of anyone anywhere in the United States and most other parts of the world at no cost and with almost no restrictions whatsoever. You may copy them, give them away or re-use them under the terms of the Project Gutenberg License included with each eBook or online at www.gutenberg.org. If you are not located in the United States, you will have to check the laws of the country where you are located before using these eBooks."</p>
+    </div>
+    <script>
+        const { shell } = require('electron');
+
+        // Add event listener to open links in the default browser
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('a[href^="http"]').forEach(link => {
+                link.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    shell.openExternal(link.href);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

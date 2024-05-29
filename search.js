@@ -490,8 +490,16 @@ function setupEventListeners() {
             initiateSearch(query, searchType);
         }
     });
-}
 
+    // Add event listeners for search option radio buttons
+    document.querySelectorAll('input[name="searchOption"]').forEach(radio => {
+        radio.addEventListener('change', function() {
+            const query = document.getElementById('searchBox').value;
+            const searchType = document.querySelector('input[name="searchOption"]:checked').value;
+            initiateSearch(query, searchType);
+        });
+    });
+}
 // Save scroll position before leaving the page
 window.addEventListener('beforeunload', () => {
     sessionStorage.setItem('scrollPosition', window.scrollY.toString());

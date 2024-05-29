@@ -24,5 +24,7 @@ contextBridge.exposeInMainWorld('electronAPI', {
     sendNavigate: (url) => {
         console.log(`sendNavigate called with URL: ${url}`);
         ipcRenderer.send('navigate', url);
-    }
+    },
+    downloadImage: (imagePath) => ipcRenderer.invoke('download-image', imagePath),
+    sendBookInfo: (bookInfo) => ipcRenderer.send('send-book-info', bookInfo)
 });
