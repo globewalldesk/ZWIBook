@@ -1,0 +1,234 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Economic history and conditions (HC)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15229, {&quot;Title&quot;:&quot;A Review of the Resources and Industries of the State of Washington, 1909&quot;,&quot;Topics&quot;:[&quot;Natural resources -- Washington (State)&quot;,&quot;Washington (State) -- Industries&quot;],&quot;Primary&quot;:&quot;15229.htm&quot;,&quot;CreatorNames&quot;:[&quot;Howell, Ithamar M. (Ithamar Martindale), 1866-1920&quot;],&quot;LoCC&quot;:[&quot;HC&quot;],&quot;PG_ID&quot;:&quot;15229&quot;});" class='title'>A Review of the Resources and Industries of the State of Washington, 1909</a>
+<div class='author'>Howell, Ithamar M. (Ithamar Martindale), 1866-1920</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15776, {&quot;Title&quot;:&quot;The Economic Consequences of the Peace&quot;,&quot;Topics&quot;:[&quot;World War, 1914-1918 -- Economic aspects&quot;,&quot;Treaty of Versailles (1919 June 28)&quot;,&quot;Economic history -- 1918-1945&quot;],&quot;Primary&quot;:&quot;15776.htm&quot;,&quot;CreatorNames&quot;:[&quot;Keynes, John Maynard, 1883-1946&quot;],&quot;LoCC&quot;:[&quot;HC&quot;],&quot;PG_ID&quot;:&quot;15776&quot;});" class='title'>The Economic Consequences of the Peace</a>
+<div class='author'>Keynes, John Maynard, 1883-1946</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16575, {&quot;Title&quot;:&quot;An Inquiry into the Permanent Causes of the Decline and Fall of Powerful and Wealthy Nations. - Designed To Shew How The Prosperity Of The British Empire - May Be Prolonged&quot;,&quot;Topics&quot;:[&quot;Economics&quot;,&quot;History -- Philosophy&quot;,&quot;Great Britain -- Economic conditions&quot;],&quot;Primary&quot;:&quot;16575.htm&quot;,&quot;CreatorNames&quot;:[&quot;Playfair, William, 1759-1823&quot;],&quot;LoCC&quot;:[&quot;HC&quot;],&quot;PG_ID&quot;:&quot;16575&quot;});" class='title'>An Inquiry into the Permanent Causes of the Decline and Fall of Powerful and Wealthy Nations. -<br><span class='subtitle'>Designed To Shew How The Prosperity Of The British Empire - May Be Prolonged</span></a>
+<div class='author'>Playfair, William, 1759-1823</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18032, {&quot;Title&quot;:&quot;The Canadian Commonwealth&quot;,&quot;Topics&quot;:[&quot;Canada -- Economic conditions&quot;],&quot;Primary&quot;:&quot;18032.txt&quot;,&quot;CreatorNames&quot;:[&quot;Laut, Agnes C., 1871-1936&quot;],&quot;LoCC&quot;:[&quot;HC&quot;,&quot;F&quot;],&quot;PG_ID&quot;:&quot;18032&quot;});" class='title'>The Canadian Commonwealth</a>
+<div class='author'>Laut, Agnes C., 1871-1936</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20653, {&quot;Title&quot;:&quot;Checking the Waste: A Study in Conservation&quot;,&quot;Topics&quot;:[&quot;United States -- Economic conditions&quot;,&quot;Conservation of natural resources&quot;],&quot;Primary&quot;:&quot;20653.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gregory, Mary Huston&quot;],&quot;LoCC&quot;:[&quot;HC&quot;],&quot;PG_ID&quot;:&quot;20653&quot;});" class='title'>Checking the Waste:<br><span class='subtitle'>A Study in Conservation</span></a>
+<div class='author'>Gregory, Mary Huston</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(21031, {&quot;Title&quot;:&quot;Die Organisation der Rohstoffversorgung&quot;,&quot;Topics&quot;:[&quot;Speeches, addresses, etc.&quot;,&quot;World War, 1914-1918 -- Economic aspects -- Germany&quot;,&quot;Industries -- Germany (West)&quot;],&quot;Primary&quot;:&quot;21031.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rathenau, Walther, 1867-1922&quot;],&quot;LoCC&quot;:[&quot;DD&quot;,&quot;HC&quot;],&quot;PG_ID&quot;:&quot;21031&quot;});" class='title'>Die Organisation der Rohstoffversorgung</a>
+<div class='author'>Rathenau, Walther, 1867-1922</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(21660, {&quot;Title&quot;:&quot;An Introduction to the Industrial and Social History of England&quot;,&quot;Topics&quot;:[&quot;Great Britain -- Economic conditions&quot;,&quot;Great Britain -- Maps&quot;,&quot;Industries -- Great Britain&quot;],&quot;Primary&quot;:&quot;21660.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cheyney, Edward Potts, 1861-1947&quot;],&quot;LoCC&quot;:[&quot;HC&quot;],&quot;PG_ID&quot;:&quot;21660&quot;});" class='title'>An Introduction to the Industrial and Social History of England</a>
+<div class='author'>Cheyney, Edward Potts, 1861-1947</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23546, {&quot;Title&quot;:&quot;Wealth of the World&#39;s Waste Places and Oceania&quot;,&quot;Topics&quot;:[&quot;Waste lands&quot;,&quot;Oceania -- Economic conditions&quot;],&quot;Primary&quot;:&quot;23546.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gilson, Jewett C. (Jewett Castello), 1844-1926&quot;],&quot;LoCC&quot;:[&quot;HC&quot;],&quot;PG_ID&quot;:&quot;23546&quot;});" class='title'>Wealth of the World's Waste Places and Oceania</a>
+<div class='author'>Gilson, Jewett C. (Jewett Castello), 1844-1926</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26935, {&quot;Title&quot;:&quot;Conservation Reader&quot;,&quot;Topics&quot;:[&quot;Natural resources&quot;,&quot;Forests and forestry -- United States&quot;],&quot;Primary&quot;:&quot;26935.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fairbanks, Harold W. (Harold Wellman), 1860-&quot;],&quot;LoCC&quot;:[&quot;HC&quot;],&quot;PG_ID&quot;:&quot;26935&quot;});" class='title'>Conservation Reader</a>
+<div class='author'>Fairbanks, Harold W. (Harold Wellman), 1860-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27647, {&quot;Title&quot;:&quot;The Economist, Volume 1, No. 3&quot;,&quot;Topics&quot;:[&quot;Economic history -- Periodicals&quot;,&quot;Finance -- Periodicals&quot;,&quot;Securities -- Great Britain -- Periodicals&quot;,&quot;Commerce -- Periodicals&quot;,&quot;Economics -- Periodicals&quot;,&quot;Great Britain -- Commerce -- Periodicals&quot;],&quot;Primary&quot;:&quot;27647.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;,&quot;Wilson, James, 1805-1860 [Editor]&quot;],&quot;LoCC&quot;:[&quot;HC&quot;],&quot;PG_ID&quot;:&quot;27647&quot;});" class='title'>The Economist, Volume 1, No. 3</a>
+<div class='author'>Various, Wilson, James, 1805-1860 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27787, {&quot;Title&quot;:&quot;The American Empire&quot;,&quot;Topics&quot;:[&quot;United States -- History&quot;,&quot;United States -- Economic conditions -- 1918-1945&quot;],&quot;Primary&quot;:&quot;27787.htm&quot;,&quot;CreatorNames&quot;:[&quot;Nearing, Scott, 1883-1983&quot;],&quot;LoCC&quot;:[&quot;HC&quot;],&quot;PG_ID&quot;:&quot;27787&quot;});" class='title'>The American Empire</a>
+<div class='author'>Nearing, Scott, 1883-1983</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29881, {&quot;Title&quot;:&quot;Morals of Economic Internationalism&quot;,&quot;Topics&quot;:[&quot;International cooperation&quot;,&quot;Reconstruction (1914-1939)&quot;],&quot;Primary&quot;:&quot;29881.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hobson, J. A. (John Atkinson), 1858-1940&quot;],&quot;LoCC&quot;:[&quot;HC&quot;],&quot;PG_ID&quot;:&quot;29881&quot;});" class='title'>Morals of Economic Internationalism</a>
+<div class='author'>Hobson, J. A. (John Atkinson), 1858-1940</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3037, {&quot;Title&quot;:&quot;The Age of Big Business: A Chronicle of the Captains of Industry&quot;,&quot;Topics&quot;:[&quot;Industries -- United States -- History&quot;,&quot;Big business -- United States -- History&quot;],&quot;Primary&quot;:&quot;3037.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hendrick, Burton Jesse, 1870-1949&quot;],&quot;LoCC&quot;:[&quot;E&quot;,&quot;HC&quot;],&quot;PG_ID&quot;:&quot;3037&quot;});" class='title'>The Age of Big Business:<br><span class='subtitle'>A Chronicle of the Captains of Industry</span></a>
+<div class='author'>Hendrick, Burton Jesse, 1870-1949</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30375, {&quot;Title&quot;:&quot;The Conflict between Private Monopoly and Good Citizenship&quot;,&quot;Topics&quot;:[&quot;Business ethics&quot;,&quot;Monopolies -- United States&quot;,&quot;United States -- Economic conditions&quot;],&quot;Primary&quot;:&quot;30375.htm&quot;,&quot;CreatorNames&quot;:[&quot;Brooks, John Graham, 1846-1938&quot;],&quot;LoCC&quot;:[&quot;HC&quot;],&quot;PG_ID&quot;:&quot;30375&quot;});" class='title'>The Conflict between Private Monopoly and Good Citizenship</a>
+<div class='author'>Brooks, John Graham, 1846-1938</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30956, {&quot;Title&quot;:&quot;History of the Great American Fortunes, Vol. I - Conditions in Settlement and Colonial Times&quot;,&quot;Topics&quot;:[&quot;United States -- Economic conditions&quot;,&quot;Wealth -- United States&quot;],&quot;Primary&quot;:&quot;30956.htm&quot;,&quot;CreatorNames&quot;:[&quot;Myers, Gustavus, 1872-1942&quot;],&quot;LoCC&quot;:[&quot;HC&quot;],&quot;PG_ID&quot;:&quot;30956&quot;});" class='title'>History of the Great American Fortunes, Vol. I -<br><span class='subtitle'>Conditions in Settlement and Colonial Times</span></a>
+<div class='author'>Myers, Gustavus, 1872-1942</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31531, {&quot;Title&quot;:&quot;O Sprawie Glodowej W Galicyi 1866 - Luzne Uwagi&quot;,&quot;Topics&quot;:[&quot;Famines -- Galicia (Poland and Ukraine)&quot;,&quot;Galicia (Poland and Ukraine) -- Economic conditions -- 19th century&quot;,&quot;Natural disasters -- Galicia (Poland and Ukraine)&quot;],&quot;Primary&quot;:&quot;31531.htm&quot;,&quot;CreatorNames&quot;:[&quot;Langie, Karol, 1814-1889&quot;],&quot;LoCC&quot;:[&quot;HC&quot;],&quot;PG_ID&quot;:&quot;31531&quot;});" class='title'>O Sprawie Glodowej W Galicyi 1866 -<br><span class='subtitle'>Luzne Uwagi</span></a>
+<div class='author'>Langie, Karol, 1814-1889</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35439, {&quot;Title&quot;:&quot;Canada West&quot;,&quot;Topics&quot;:[&quot;Agriculture -- Prairie Provinces&quot;,&quot;Northwest, Canadian -- Economic conditions&quot;],&quot;Primary&quot;:&quot;35439.htm&quot;,&quot;CreatorNames&quot;:[&quot;Canada. Department of the Interior&quot;],&quot;LoCC&quot;:[&quot;HC&quot;,&quot;F&quot;],&quot;PG_ID&quot;:&quot;35439&quot;});" class='title'>Canada West</a>
+<div class='author'>Canada. Department of the Interior</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36031, {&quot;Title&quot;:&quot;Proceedings of the second National Conservation Congress at Saint Paul, September 5-8, 1910&quot;,&quot;Topics&quot;:[&quot;Natural resources -- Congresses&quot;,&quot;United States -- Economic conditions -- Congresses&quot;,&quot;Conference papers and proceedings&quot;],&quot;Primary&quot;:&quot;36031.htm&quot;,&quot;CreatorNames&quot;:[&quot;United States. National Conservation Congress&quot;],&quot;LoCC&quot;:[&quot;HC&quot;],&quot;PG_ID&quot;:&quot;36031&quot;});" class='title'>Proceedings of the second National Conservation Congress at Saint Paul, September 5-8, 1910</a>
+<div class='author'>United States. National Conservation Congress</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38841, {&quot;Title&quot;:&quot;The Commercial Restraints of Ireland&quot;,&quot;Topics&quot;:[&quot;Great Britain -- Commercial policy&quot;,&quot;Ireland -- Economic conditions -- Early works to 1800&quot;,&quot;Ireland -- Commerce -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;38841.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hely-Hutchinson, John, 1724-1794&quot;,&quot;Carroll, W. G. [Editor]&quot;],&quot;LoCC&quot;:[&quot;HC&quot;],&quot;PG_ID&quot;:&quot;38841&quot;});" class='title'>The Commercial Restraints of Ireland</a>
+<div class='author'>Hely-Hutchinson, John, 1724-1794, Carroll, W. G. [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39715, {&quot;Title&quot;:&quot;The Argentine as a Market&quot;,&quot;Topics&quot;:[&quot;Argentina -- Economic conditions&quot;,&quot;Argentina -- Commerce&quot;],&quot;Primary&quot;:&quot;39715.htm&quot;,&quot;CreatorNames&quot;:[&quot;Watson, Nowell Lake, 1883-&quot;],&quot;LoCC&quot;:[&quot;HC&quot;],&quot;PG_ID&quot;:&quot;39715&quot;});" class='title'>The Argentine as a Market</a>
+<div class='author'>Watson, Nowell Lake, 1883-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41068, {&quot;Title&quot;:&quot;Syndicalism in France&quot;,&quot;Topics&quot;:[&quot;Labor unions -- France -- History&quot;,&quot;Syndicalism -- France&quot;],&quot;Primary&quot;:&quot;41068.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lorwin, Lewis L. (Lewis Levitzki), 1883-1970&quot;,&quot;Giddings, Franklin Henry, 1855-1931 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;HC&quot;,&quot;HD&quot;],&quot;PG_ID&quot;:&quot;41068&quot;});" class='title'>Syndicalism in France</a>
+<div class='author'>Lorwin, Lewis L. (Lewis Levitzki), 1883-1970, Giddings, Franklin Henry, 1855-1931 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41463, {&quot;Title&quot;:&quot;Industrial Cuba - Being a Study of Present Commercial and Industrial Conditions, with Suggestions as to the Opportunities Presented in the Island for American Capital, Enterprise, and Labour&quot;,&quot;Topics&quot;:[&quot;Cuba -- Description and travel&quot;,&quot;Cuba -- Economic conditions&quot;],&quot;Primary&quot;:&quot;41463.htm&quot;,&quot;CreatorNames&quot;:[&quot;Porter, Robert P. (Robert Percival), 1852-1917&quot;],&quot;LoCC&quot;:[&quot;HC&quot;],&quot;PG_ID&quot;:&quot;41463&quot;});" class='title'>Industrial Cuba -<br><span class='subtitle'>Being a Study of Present Commercial and Industrial Conditions, with Suggestions as to the Opportunities Presented in the Island for American Capital, Enterprise, and Labour</span></a>
+<div class='author'>Porter, Robert P. (Robert Percival), 1852-1917</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41954, {&quot;Title&quot;:&quot;The Wheel of Fortune&quot;,&quot;Topics&quot;:[&quot;Manufactures -- India&quot;,&quot;Hand spinning -- India&quot;,&quot;India -- Economic conditions&quot;],&quot;Primary&quot;:&quot;41954.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gandhi, Mahatma, 1869-1948&quot;,&quot;Thakura, Dvijendranatha, 1840-1926 [Commentator]&quot;],&quot;LoCC&quot;:[&quot;HC&quot;],&quot;PG_ID&quot;:&quot;41954&quot;});" class='title'>The Wheel of Fortune</a>
+<div class='author'>Gandhi, Mahatma, 1869-1948, Thakura, Dvijendranatha, 1840-1926 [Commentator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43211, {&quot;Title&quot;:&quot;English Economic History: Select Documents&quot;,&quot;Topics&quot;:[&quot;Great Britain -- Social conditions&quot;,&quot;Great Britain -- Economic conditions&quot;],&quot;Primary&quot;:&quot;43211.htm&quot;,&quot;CreatorNames&quot;:[&quot;Brown, Philip Anthony, 1886-1915 [Compiler]&quot;,&quot;Tawney, R. H. (Richard Henry), 1880-1962 [Compiler]&quot;,&quot;Bland, Alfred Edward [Editor]&quot;],&quot;LoCC&quot;:[&quot;HC&quot;],&quot;PG_ID&quot;:&quot;43211&quot;});" class='title'>English Economic History:<br><span class='subtitle'>Select Documents</span></a>
+<div class='author'>Brown, Philip Anthony, 1886-1915 [Compiler], Tawney, R. H. (Richard Henry), 1880-1962 [Compiler], Bland, Alfred Edward [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43598, {&quot;Title&quot;:&quot;The Fruits of Victory - A Sequel to The Great Illusion&quot;,&quot;Topics&quot;:[&quot;Economic history -- 1918-1945&quot;,&quot;World War, 1914-1918 -- Influence&quot;],&quot;Primary&quot;:&quot;43598.htm&quot;,&quot;CreatorNames&quot;:[&quot;Angell, Norman, 1874-1967&quot;],&quot;LoCC&quot;:[&quot;HC&quot;],&quot;PG_ID&quot;:&quot;43598&quot;});" class='title'>The Fruits of Victory -<br><span class='subtitle'>A Sequel to The Great Illusion</span></a>
+<div class='author'>Angell, Norman, 1874-1967</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45188, {&quot;Title&quot;:&quot;The International Development of China&quot;,&quot;Topics&quot;:[&quot;Railroads -- China&quot;,&quot;China -- Economic conditions -- 1912-1949&quot;],&quot;Primary&quot;:&quot;45188.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sun, Yat-sen, 1866-1925&quot;],&quot;LoCC&quot;:[&quot;HC&quot;],&quot;PG_ID&quot;:&quot;45188&quot;});" class='title'>The International Development of China</a>
+<div class='author'>Sun, Yat-sen, 1866-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45261, {&quot;Title&quot;:&quot;The Argentine in the Twentieth Century&quot;,&quot;Topics&quot;:[&quot;Argentina -- Economic conditions&quot;,&quot;Argentina -- Commerce&quot;,&quot;Finance -- Argentina&quot;],&quot;Primary&quot;:&quot;45261.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lewandowski, Maurice&quot;,&quot;Martínez, Alberto B.&quot;,&quot;Miall, Bernard, 1876-1953 [Translator]&quot;],&quot;LoCC&quot;:[&quot;HC&quot;],&quot;PG_ID&quot;:&quot;45261&quot;});" class='title'>The Argentine in the Twentieth Century</a>
+<div class='author'>Lewandowski, Maurice, Martínez, Alberto B., Miall, Bernard, 1876-1953 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4543, {&quot;Title&quot;:&quot;The Querist - Containing Several Queries Proposed to the Consideration of the Public&quot;,&quot;Topics&quot;:[&quot;Great Britain -- Economic policy&quot;,&quot;Wealth&quot;,&quot;Great Britain -- Economic conditions -- 18th century&quot;],&quot;Primary&quot;:&quot;4543.htm&quot;,&quot;CreatorNames&quot;:[&quot;Berkeley, George, 1685-1753&quot;],&quot;LoCC&quot;:[&quot;HB&quot;,&quot;HC&quot;],&quot;PG_ID&quot;:&quot;4543&quot;});" class='title'>The Querist -<br><span class='subtitle'>Containing Several Queries Proposed to the Consideration of the Public</span></a>
+<div class='author'>Berkeley, George, 1685-1753</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47264, {&quot;Title&quot;:&quot;The Argentine Republic: Its Development and Progress&quot;,&quot;Topics&quot;:[&quot;Argentina -- Description and travel&quot;,&quot;Agriculture -- Argentina&quot;,&quot;Argentina -- Economic conditions -- 1918-&quot;],&quot;Primary&quot;:&quot;47264.htm&quot;,&quot;CreatorNames&quot;:[&quot;Denis, Pierre, 1883-1951&quot;],&quot;LoCC&quot;:[&quot;HC&quot;,&quot;F&quot;],&quot;PG_ID&quot;:&quot;47264&quot;});" class='title'>The Argentine Republic:<br><span class='subtitle'>Its Development and Progress</span></a>
+<div class='author'>Denis, Pierre, 1883-1951</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48588, {&quot;Title&quot;:&quot;English Industries of the Middle Ages - Being an Introduction to the Industrial History of Medieval England&quot;,&quot;Topics&quot;:[&quot;Industries -- Great Britain -- History -- To 1500&quot;,&quot;Mineral industries -- England -- History -- To 1500&quot;,&quot;England -- Economic conditions -- 1066-1485&quot;],&quot;Primary&quot;:&quot;48588.htm&quot;,&quot;CreatorNames&quot;:[&quot;Salzman, L. F. (Louis Francis), 1878-1971&quot;],&quot;LoCC&quot;:[&quot;HC&quot;],&quot;PG_ID&quot;:&quot;48588&quot;});" class='title'>English Industries of the Middle Ages -<br><span class='subtitle'>Being an Introduction to the Industrial History of Medieval England</span></a>
+<div class='author'>Salzman, L. F. (Louis Francis), 1878-1971</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49073, {&quot;Title&quot;:&quot;Venezuela, an economic report - Presented by students of the School of Foreign Service, as an aid to the foreign trade of the United States&quot;,&quot;Topics&quot;:[&quot;Venezuela -- Economic conditions&quot;,&quot;Venezuela -- Commerce -- United States&quot;,&quot;United States -- Commerce -- Venezuela&quot;],&quot;Primary&quot;:&quot;49073.htm&quot;,&quot;CreatorNames&quot;:[&quot;Georgetown University. School of Foreign Service&quot;],&quot;LoCC&quot;:[&quot;HC&quot;],&quot;PG_ID&quot;:&quot;49073&quot;});" class='title'>Venezuela, an economic report -<br><span class='subtitle'>Presented by students of the School of Foreign Service, as an aid to the foreign trade of the United States</span></a>
+<div class='author'>Georgetown University. School of Foreign Service</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49245, {&quot;Title&quot;:&quot;The Unexploited West - A Compilation of all of the authentic information available at the present time as to the Natural Resources of the Unexploited Regions of Northern Canada&quot;,&quot;Topics&quot;:[&quot;Canada -- Economic conditions&quot;,&quot;Northwest, Canadian -- Economic conditions&quot;],&quot;Primary&quot;:&quot;49245.htm&quot;,&quot;CreatorNames&quot;:[&quot;Chambers, Ernest J., 1862-1925&quot;],&quot;LoCC&quot;:[&quot;HC&quot;,&quot;F&quot;],&quot;PG_ID&quot;:&quot;49245&quot;});" class='title'>The Unexploited West -<br><span class='subtitle'>A Compilation of all of the authentic information available at the present time as to the Natural Resources of the Unexploited Regions of Northern Canada</span></a>
+<div class='author'>Chambers, Ernest J., 1862-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49419, {&quot;Title&quot;:&quot;English Interference with Irish Industries&quot;,&quot;Topics&quot;:[&quot;Ireland -- Economic conditions&quot;,&quot;Law -- Ireland&quot;],&quot;Primary&quot;:&quot;49419.htm&quot;,&quot;CreatorNames&quot;:[&quot;MacNeill, J. G. Swift (John Gordon Swift), 1849-1926&quot;],&quot;LoCC&quot;:[&quot;HC&quot;],&quot;PG_ID&quot;:&quot;49419&quot;});" class='title'>English Interference with Irish Industries</a>
+<div class='author'>MacNeill, J. G. Swift (John Gordon Swift), 1849-1926</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49566, {&quot;Title&quot;:&quot;Canada and the British immigrant&quot;,&quot;Topics&quot;:[&quot;Canada -- Description and travel&quot;,&quot;Canada -- Economic conditions&quot;],&quot;Primary&quot;:&quot;49566.htm&quot;,&quot;CreatorNames&quot;:[&quot;Weaver, Emily P. (Emily Poynton), 1865-1943&quot;],&quot;LoCC&quot;:[&quot;HC&quot;,&quot;F&quot;],&quot;PG_ID&quot;:&quot;49566&quot;});" class='title'>Canada and the British immigrant</a>
+<div class='author'>Weaver, Emily P. (Emily Poynton), 1865-1943</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55862, {&quot;Title&quot;:&quot;The Industrial History of England&quot;,&quot;Topics&quot;:[&quot;Great Britain -- Economic conditions&quot;,&quot;Industries -- Great Britain -- History&quot;],&quot;Primary&quot;:&quot;55862.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gibbins, Henry de Beltgens, 1865-1907&quot;],&quot;LoCC&quot;:[&quot;HC&quot;],&quot;PG_ID&quot;:&quot;55862&quot;});" class='title'>The Industrial History of England</a>
+<div class='author'>Gibbins, Henry de Beltgens, 1865-1907</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57563, {&quot;Title&quot;:&quot;Queensland, the Rich but Sparsely Peopled Country, a Paradise for Willing Workers&quot;,&quot;Topics&quot;:[&quot;Queensland -- Economic conditions&quot;],&quot;Primary&quot;:&quot;57563.htm&quot;,&quot;CreatorNames&quot;:[&quot;Queensland Government Intelligence and Tourist Bureau&quot;],&quot;LoCC&quot;:[&quot;DU&quot;,&quot;HC&quot;],&quot;PG_ID&quot;:&quot;57563&quot;});" class='title'>Queensland, the Rich but Sparsely Peopled Country, a Paradise for Willing Workers</a>
+<div class='author'>Queensland Government Intelligence and Tourist Bureau</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59365, {&quot;Title&quot;:&quot;Études sur l&#39;industrie et la classe industrielle à Paris au XIIIe et au XIVe siècle&quot;,&quot;Topics&quot;:[&quot;Industries -- France -- Paris -- History -- To 1500&quot;,&quot;Working class -- France -- Paris -- History -- To 1500&quot;,&quot;Guilds -- France -- Paris -- History -- To 1500&quot;],&quot;Primary&quot;:&quot;59365.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fagniez, Gustave, 1842-1927&quot;],&quot;LoCC&quot;:[&quot;HC&quot;],&quot;PG_ID&quot;:&quot;59365&quot;});" class='title'>Études sur l'industrie et la classe industrielle à Paris au XIIIe et au XIVe siècle</a>
+<div class='author'>Fagniez, Gustave, 1842-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62268, {&quot;Title&quot;:&quot;Money-making men; or, how to grow rich&quot;,&quot;Topics&quot;:[&quot;Rich people -- Biography&quot;],&quot;Primary&quot;:&quot;62268.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ritchie, J. Ewing (James Ewing), 1820-1898&quot;],&quot;LoCC&quot;:[&quot;HC&quot;],&quot;PG_ID&quot;:&quot;62268&quot;});" class='title'>Money-making men;<br><span class='subtitle'>or, how to grow rich</span></a>
+<div class='author'>Ritchie, J. Ewing (James Ewing), 1820-1898</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64616, {&quot;Title&quot;:&quot;Riches and Poverty (1910)&quot;,&quot;Topics&quot;:[&quot;Great Britain -- Economic conditions -- 19th century&quot;,&quot;Working class -- Great Britain -- History&quot;,&quot;Finance -- Great Britain -- History&quot;,&quot;Poor -- Great Britain -- History&quot;],&quot;Primary&quot;:&quot;64616.htm&quot;,&quot;CreatorNames&quot;:[&quot;Money, L. G. Chiozza (Leo George Chiozza), 1870-1944&quot;],&quot;LoCC&quot;:[&quot;HC&quot;],&quot;PG_ID&quot;:&quot;64616&quot;});" class='title'>Riches and Poverty (1910)</a>
+<div class='author'>Money, L. G. Chiozza (Leo George Chiozza), 1870-1944</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64882, {&quot;Title&quot;:&quot;The Servile State&quot;,&quot;Topics&quot;:[&quot;Socialism&quot;,&quot;Great Britain -- Economic policy&quot;,&quot;Social history&quot;,&quot;Economic history&quot;,&quot;Industrial policy&quot;,&quot;Collectivism&quot;],&quot;Primary&quot;:&quot;64882.htm&quot;,&quot;CreatorNames&quot;:[&quot;Belloc, Hilaire, 1870-1953&quot;],&quot;LoCC&quot;:[&quot;HC&quot;],&quot;PG_ID&quot;:&quot;64882&quot;});" class='title'>The Servile State</a>
+<div class='author'>Belloc, Hilaire, 1870-1953</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6495, {&quot;Title&quot;:&quot;Great Fortunes from Railroads&quot;,&quot;Topics&quot;:[&quot;Wealth -- United States -- History -- 19th century&quot;,&quot;United States -- Economic conditions -- 19th century&quot;,&quot;Businessmen -- United States -- History -- 19th century&quot;,&quot;Railroads -- United States -- History -- 19th century&quot;],&quot;Primary&quot;:&quot;6495.txt&quot;,&quot;CreatorNames&quot;:[&quot;Myers, Gustavus, 1872-1942&quot;],&quot;LoCC&quot;:[&quot;HC&quot;],&quot;PG_ID&quot;:&quot;6495&quot;});" class='title'>Great Fortunes from Railroads</a>
+<div class='author'>Myers, Gustavus, 1872-1942</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64972, {&quot;Title&quot;:&quot;A lecture by Victoria Claflin Woodhull ...: The review of a century; or, the fruit of five thousand years&quot;,&quot;Topics&quot;:[&quot;United States -- Social conditions -- 1865-1918&quot;,&quot;United States -- Economic conditions -- 1865-1918&quot;],&quot;Primary&quot;:&quot;64972.htm&quot;,&quot;CreatorNames&quot;:[&quot;Woodhull, Victoria C. (Victoria Claflin), 1838-1927&quot;],&quot;LoCC&quot;:[&quot;HC&quot;],&quot;PG_ID&quot;:&quot;64972&quot;});" class='title'>A lecture by Victoria Claflin Woodhull ...:<br><span class='subtitle'>The review of a century; or, the fruit of five thousand years</span></a>
+<div class='author'>Woodhull, Victoria C. (Victoria Claflin), 1838-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67860, {&quot;Title&quot;:&quot;L&#39;Empire Japonais et sa vie économique&quot;,&quot;Topics&quot;:[&quot;Japan -- Description and travel&quot;,&quot;Japan -- Economic conditions&quot;],&quot;Primary&quot;:&quot;67860.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dautremer, Joseph, 1860-1946&quot;],&quot;LoCC&quot;:[&quot;DS&quot;,&quot;HC&quot;],&quot;PG_ID&quot;:&quot;67860&quot;});" class='title'>L'Empire Japonais et sa vie économique</a>
+<div class='author'>Dautremer, Joseph, 1860-1946</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6876, {&quot;Title&quot;:&quot;The British Association&#39;s Visit to Montreal, 1884 : Letters&quot;,&quot;Topics&quot;:[&quot;United States -- Description and travel&quot;,&quot;Canada -- Description and travel&quot;],&quot;Primary&quot;:&quot;6876.txt&quot;,&quot;CreatorNames&quot;:[&quot;Rayleigh, Clara, Lady, -1900&quot;],&quot;LoCC&quot;:[&quot;HC&quot;],&quot;PG_ID&quot;:&quot;6876&quot;});" class='title'>The British Association's Visit to Montreal, 1884 :<br><span class='subtitle'>Letters</span></a>
+<div class='author'>Rayleigh, Clara, Lady, -1900</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6907, {&quot;Title&quot;:&quot;From Wealth to Poverty; Or, the Tricks of the Traffic. A Story of the Drink Curse&quot;,&quot;Topics&quot;:[&quot;Temperance -- Fiction&quot;],&quot;Primary&quot;:&quot;6907.txt&quot;,&quot;CreatorNames&quot;:[&quot;Potter, Austin, 1842-1913&quot;],&quot;LoCC&quot;:[&quot;HC&quot;,&quot;PS&quot;],&quot;PG_ID&quot;:&quot;6907&quot;});" class='title'>From Wealth to Poverty;<br><span class='subtitle'>Or, the Tricks of the Traffic. A Story of the Drink Curse</span></a>
+<div class='author'>Potter, Austin, 1842-1913</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69706, {&quot;Title&quot;:&quot;Proceedings [of the] fourth National Conservation Congress [at] Indianapolis, October 1-4, 1912&quot;,&quot;Topics&quot;:[&quot;Natural resources -- Congresses&quot;,&quot;United States -- Economic conditions -- Congresses&quot;,&quot;Conference papers and proceedings&quot;],&quot;Primary&quot;:&quot;69706.htm&quot;,&quot;CreatorNames&quot;:[&quot;United States. National Conservation Congress&quot;],&quot;LoCC&quot;:[&quot;HC&quot;],&quot;PG_ID&quot;:&quot;69706&quot;});" class='title'>Proceedings [of the] fourth National Conservation Congress [at] Indianapolis, October 1-4, 1912</a>
+<div class='author'>United States. National Conservation Congress</div>
+</div>
+</ul></div>
+</body></html>

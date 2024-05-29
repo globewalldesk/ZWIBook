@@ -1,0 +1,154 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Environmental technology, Sanitary engineering (TD)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37389, {&quot;Title&quot;:&quot;Chlorination of Water&quot;,&quot;Topics&quot;:[&quot;Water -- Purification -- Chlorination&quot;],&quot;Primary&quot;:&quot;37389.htm&quot;,&quot;CreatorNames&quot;:[&quot;Race, Joseph&quot;],&quot;LoCC&quot;:[&quot;TD&quot;],&quot;PG_ID&quot;:&quot;37389&quot;});" class='title'>Chlorination of Water</a>
+<div class='author'>Race, Joseph</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38455, {&quot;Title&quot;:&quot;ASCE 1193: The Water-Works and Sewerage of Monterrey, N. L., Mexico - The 4th article from the June, 1911, Volume LXXII, Transactions of the American Society of Civil Engineers. Paper No. 1193, Feb. 1, 1911.&quot;,&quot;Topics&quot;:[&quot;Water-supply engineering -- Mexico -- Monterrey&quot;,&quot;Sewerage -- Mexico -- Monterrey&quot;],&quot;Primary&quot;:&quot;38455.htm&quot;,&quot;CreatorNames&quot;:[&quot;Conway, G. R. G. (George Robert Graham), 1873-1951&quot;],&quot;LoCC&quot;:[&quot;TD&quot;],&quot;PG_ID&quot;:&quot;38455&quot;});" class='title'>ASCE 1193:<br><span class='subtitle'>The Water-Works and Sewerage of Monterrey, N. L., Mexico - The 4th article from the June, 1911, Volume LXXII, Transactions of the American Society of Civil Engineers. Paper No. 1193, Feb. 1, 1911.</span></a>
+<div class='author'>Conway, G. R. G. (George Robert Graham), 1873-1951</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45703, {&quot;Title&quot;:&quot;Water Supply: the Present Practice of Sinking and Boring Wells - With Geological Considerations and Examples of Wells Executed&quot;,&quot;Topics&quot;:[&quot;Water-supply&quot;,&quot;Wells&quot;,&quot;Boring&quot;],&quot;Primary&quot;:&quot;45703.htm&quot;,&quot;CreatorNames&quot;:[&quot;Spon, Ernest&quot;],&quot;LoCC&quot;:[&quot;TD&quot;],&quot;PG_ID&quot;:&quot;45703&quot;});" class='title'>Water Supply:<br><span class='subtitle'>the Present Practice of Sinking and Boring Wells - With Geological Considerations and Examples of Wells Executed</span></a>
+<div class='author'>Spon, Ernest</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47970, {&quot;Title&quot;:&quot;The Dwelling House&quot;,&quot;Topics&quot;:[&quot;Sanitary engineering&quot;,&quot;Plumbing&quot;],&quot;Primary&quot;:&quot;47970.htm&quot;,&quot;CreatorNames&quot;:[&quot;Poore, George Vivian, 1843-1904&quot;],&quot;LoCC&quot;:[&quot;TD&quot;],&quot;PG_ID&quot;:&quot;47970&quot;});" class='title'>The Dwelling House</a>
+<div class='author'>Poore, George Vivian, 1843-1904</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54244, {&quot;Title&quot;:&quot;Practical Methods of Sewage Disposal for Residences, Hotels and Institutions&quot;,&quot;Topics&quot;:[&quot;Sewage disposal&quot;],&quot;Primary&quot;:&quot;54244.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cleveland, H. Burdett (Henry Burdett), 1877-&quot;,&quot;Ogden, Henry N. (Henry Neely), 1868-&quot;],&quot;LoCC&quot;:[&quot;TD&quot;],&quot;PG_ID&quot;:&quot;54244&quot;});" class='title'>Practical Methods of Sewage Disposal for Residences, Hotels and Institutions</a>
+<div class='author'>Cleveland, H. Burdett (Henry Burdett), 1877-, Ogden, Henry N. (Henry Neely), 1868-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54454, {&quot;Title&quot;:&quot;Dirty Dustbins and Sloppy Streets - A Practical Treatise on the Scavenging and Cleansing of Cities and Towns&quot;,&quot;Topics&quot;:[&quot;Public health -- England -- History -- 19th century&quot;,&quot;Refuse and refuse disposal -- History -- 19th century&quot;,&quot;Sanitation -- History -- 19th century&quot;],&quot;Primary&quot;:&quot;54454.htm&quot;,&quot;CreatorNames&quot;:[&quot;Boulnois, H. Percy (Henry Percy), 1846-&quot;],&quot;LoCC&quot;:[&quot;TD&quot;],&quot;PG_ID&quot;:&quot;54454&quot;});" class='title'>Dirty Dustbins and Sloppy Streets -<br><span class='subtitle'>A Practical Treatise on the Scavenging and Cleansing of Cities and Towns</span></a>
+<div class='author'>Boulnois, H. Percy (Henry Percy), 1846-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55935, {&quot;Title&quot;:&quot;The Municipal and Sanitary Engineer&#39;s Handbook&quot;,&quot;Topics&quot;:[&quot;Sanitary engineering&quot;,&quot;Municipal engineering&quot;],&quot;Primary&quot;:&quot;55935.htm&quot;,&quot;CreatorNames&quot;:[&quot;Boulnois, H. Percy (Henry Percy), 1846-&quot;],&quot;LoCC&quot;:[&quot;TD&quot;],&quot;PG_ID&quot;:&quot;55935&quot;});" class='title'>The Municipal and Sanitary Engineer's Handbook</a>
+<div class='author'>Boulnois, H. Percy (Henry Percy), 1846-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56271, {&quot;Title&quot;:&quot;Municipal Housecleaning - The Methods and Experiences of American Cities in Collecting and Disposing of Their Municipal Wastes—Ashes, Rubbish, Garbage, Manure, Sewage, and Street Refuse&quot;,&quot;Topics&quot;:[&quot;Refuse and refuse disposal&quot;],&quot;Primary&quot;:&quot;56271.htm&quot;,&quot;CreatorNames&quot;:[&quot;Capes, William Parr, 1881-1946&quot;,&quot;Carpenter, Jeanne Daniels&quot;,&quot;Burns, Cornelius F. [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;TD&quot;],&quot;PG_ID&quot;:&quot;56271&quot;});" class='title'>Municipal Housecleaning -<br><span class='subtitle'>The Methods and Experiences of American Cities in Collecting and Disposing of Their Municipal Wastes—Ashes, Rubbish, Garbage, Manure, Sewage, and Street Refuse</span></a>
+<div class='author'>Capes, William Parr, 1881-1946, Carpenter, Jeanne Daniels, Burns, Cornelius F. [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56637, {&quot;Title&quot;:&quot;Natural &amp; Artificial Sewage Treatment&quot;,&quot;Topics&quot;:[&quot;Sewage&quot;],&quot;Primary&quot;:&quot;56637.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jones, Alfred Stowell, 1832-1920&quot;,&quot;Roechling, H. Alfred&quot;],&quot;LoCC&quot;:[&quot;TD&quot;],&quot;PG_ID&quot;:&quot;56637&quot;});" class='title'>Natural & Artificial Sewage Treatment</a>
+<div class='author'>Jones, Alfred Stowell, 1832-1920, Roechling, H. Alfred</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56735, {&quot;Title&quot;:&quot;Sewage Disposal Works: Their Design and Construction&quot;,&quot;Topics&quot;:[&quot;Sewage disposal plants -- Design and construction&quot;],&quot;Primary&quot;:&quot;56735.htm&quot;,&quot;CreatorNames&quot;:[&quot;Easdale, William Charles&quot;],&quot;LoCC&quot;:[&quot;TD&quot;],&quot;PG_ID&quot;:&quot;56735&quot;});" class='title'>Sewage Disposal Works:<br><span class='subtitle'>Their Design and Construction</span></a>
+<div class='author'>Easdale, William Charles</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57972, {&quot;Title&quot;:&quot;Acid Rain and Our Nation&#39;s Capital: A Guide to Effects on Buildings and Monuments&quot;,&quot;Topics&quot;:[&quot;Acid rain -- Environmental aspects -- Washington (D.C.)&quot;,&quot;Building stones -- Deterioration -- Washington (D.C.)&quot;],&quot;Primary&quot;:&quot;57972.htm&quot;,&quot;CreatorNames&quot;:[&quot;McGee, E. S.&quot;],&quot;LoCC&quot;:[&quot;TD&quot;],&quot;PG_ID&quot;:&quot;57972&quot;});" class='title'>Acid Rain and Our Nation's Capital:<br><span class='subtitle'>A Guide to Effects on Buildings and Monuments</span></a>
+<div class='author'>McGee, E. S.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59980, {&quot;Title&quot;:&quot;Comparison of Methods of Sewage Purification&quot;,&quot;Topics&quot;:[&quot;Sewage -- Purification&quot;],&quot;Primary&quot;:&quot;59980.htm&quot;,&quot;CreatorNames&quot;:[&quot;Phillips, Theodore Clifford&quot;,&quot;Schneider, Edward John&quot;],&quot;LoCC&quot;:[&quot;TD&quot;],&quot;PG_ID&quot;:&quot;59980&quot;});" class='title'>Comparison of Methods of Sewage Purification</a>
+<div class='author'>Phillips, Theodore Clifford, Schneider, Edward John</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60721, {&quot;Title&quot;:&quot;Bad Drains; and How to Test Them - With notes on the ventilation of sewers, drains, and sanitary fittings, and the origin and transmission of zymotic disease&quot;,&quot;Topics&quot;:[&quot;Sewerage&quot;],&quot;Primary&quot;:&quot;60721.htm&quot;,&quot;CreatorNames&quot;:[&quot;Reeves, R. Harris&quot;],&quot;LoCC&quot;:[&quot;TD&quot;],&quot;PG_ID&quot;:&quot;60721&quot;});" class='title'>Bad Drains;<br><span class='subtitle'>and How to Test Them - With notes on the ventilation of sewers, drains, and sanitary fittings, and the origin and transmission of zymotic disease</span></a>
+<div class='author'>Reeves, R. Harris</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61773, {&quot;Title&quot;:&quot;Sewerage and Sewage Treatment&quot;,&quot;Topics&quot;:[&quot;Sewerage&quot;,&quot;Sewage disposal&quot;],&quot;Primary&quot;:&quot;61773.htm&quot;,&quot;CreatorNames&quot;:[&quot;Babbitt, Harold E. (Harold Eaton), 1888-1970&quot;],&quot;LoCC&quot;:[&quot;TD&quot;],&quot;PG_ID&quot;:&quot;61773&quot;});" class='title'>Sewerage and Sewage Treatment</a>
+<div class='author'>Babbitt, Harold E. (Harold Eaton), 1888-1970</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62174, {&quot;Title&quot;:&quot;Water pollution—Wells&quot;,&quot;Topics&quot;:[&quot;Wells&quot;,&quot;Water -- Pollution&quot;,&quot;Drinking water&quot;],&quot;Primary&quot;:&quot;62174.htm&quot;,&quot;CreatorNames&quot;:[&quot;Watson, Irving A. (Irving Allison), 1849-1918&quot;],&quot;LoCC&quot;:[&quot;RA&quot;,&quot;TD&quot;],&quot;PG_ID&quot;:&quot;62174&quot;});" class='title'>Water pollution—Wells</a>
+<div class='author'>Watson, Irving A. (Irving Allison), 1849-1918</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62605, {&quot;Title&quot;:&quot;Sewage and Garbage Disposal on the Farm&quot;,&quot;Topics&quot;:[&quot;Sewage disposal, Rural&quot;,&quot;Sanitation, Rural&quot;],&quot;Primary&quot;:&quot;62605.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rockey, J. W. (John Wesley), 1909-&quot;,&quot;Simons, Joseph Winslow, 1908-&quot;],&quot;LoCC&quot;:[&quot;S&quot;,&quot;TD&quot;],&quot;PG_ID&quot;:&quot;62605&quot;});" class='title'>Sewage and Garbage Disposal on the Farm</a>
+<div class='author'>Rockey, J. W. (John Wesley), 1909-, Simons, Joseph Winslow, 1908-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62676, {&quot;Title&quot;:&quot;Sewage Disposal on the Farm, and Protection of Drinking Water&quot;,&quot;Topics&quot;:[&quot;Drinking water&quot;,&quot;Sewage disposal, Rural&quot;],&quot;Primary&quot;:&quot;62676.htm&quot;,&quot;CreatorNames&quot;:[&quot;Smith, Theobald, 1859-1934&quot;],&quot;LoCC&quot;:[&quot;S&quot;,&quot;TD&quot;],&quot;PG_ID&quot;:&quot;62676&quot;});" class='title'>Sewage Disposal on the Farm, and Protection of Drinking Water</a>
+<div class='author'>Smith, Theobald, 1859-1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63094, {&quot;Title&quot;:&quot;Sewage and sewerage of farm homes [1922]&quot;,&quot;Topics&quot;:[&quot;Sewage disposal, Rural&quot;,&quot;Sewerage, Rural&quot;],&quot;Primary&quot;:&quot;63094.htm&quot;,&quot;CreatorNames&quot;:[&quot;Warren, George M. (George Milton)&quot;],&quot;LoCC&quot;:[&quot;S&quot;,&quot;TD&quot;],&quot;PG_ID&quot;:&quot;63094&quot;});" class='title'>Sewage and sewerage of farm homes [1922]</a>
+<div class='author'>Warren, George M. (George Milton)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63131, {&quot;Title&quot;:&quot;Sewage and sewerage of farm homes [1928]&quot;,&quot;Topics&quot;:[&quot;Sewage disposal, Rural&quot;,&quot;Sewerage, Rural&quot;],&quot;Primary&quot;:&quot;63131.htm&quot;,&quot;CreatorNames&quot;:[&quot;Warren, George M. (George Milton)&quot;],&quot;LoCC&quot;:[&quot;S&quot;,&quot;TD&quot;],&quot;PG_ID&quot;:&quot;63131&quot;});" class='title'>Sewage and sewerage of farm homes [1928]</a>
+<div class='author'>Warren, George M. (George Milton)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64143, {&quot;Title&quot;:&quot;Soil and Water Pollution : Presented to the American Public Health Association at New Orleans, Dec. 1880&quot;,&quot;Topics&quot;:[&quot;Water -- Pollution&quot;,&quot;Water-supply -- Indiana -- Indianapolis&quot;],&quot;Primary&quot;:&quot;64143.htm&quot;,&quot;CreatorNames&quot;:[&quot;Runnels, M. T. (Moses Thurston), 1830-1902&quot;],&quot;LoCC&quot;:[&quot;RA&quot;,&quot;TD&quot;],&quot;PG_ID&quot;:&quot;64143&quot;});" class='title'>Soil and Water Pollution :<br><span class='subtitle'>Presented to the American Public Health Association at New Orleans, Dec. 1880</span></a>
+<div class='author'>Runnels, M. T. (Moses Thurston), 1830-1902</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66130, {&quot;Title&quot;:&quot;History of the Water Supply of the World - arranged in a comprehensive form from eminent authorities, containing a description of the various methods of water supply, pollution and purification of waters, and sanitary effects, with analyses of potable waters, also geology and water strata of Hamilton county, Ohio, statistics of the Ohio river, proposed water supply of Cincinnati.&quot;,&quot;Topics&quot;:[&quot;Water-supply -- History&quot;,&quot;Water-supply -- Ohio -- Hamilton County&quot;],&quot;Primary&quot;:&quot;66130.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bell, Thomas J. (Thomas Jefferson), 1852-&quot;],&quot;LoCC&quot;:[&quot;TD&quot;],&quot;PG_ID&quot;:&quot;66130&quot;});" class='title'>History of the Water Supply of the World -<br><span class='subtitle'>arranged in a comprehensive form from eminent authorities, containing a description of the various methods of water supply, pollution and purification of waters, and sanitary effects, with analyses of potable waters, also geology and water strata of Hamilton county, Ohio, statistics of the Ohio river, proposed water supply of Cincinnati.</span></a>
+<div class='author'>Bell, Thomas J. (Thomas Jefferson), 1852-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66640, {&quot;Title&quot;:&quot;Illustrations of the Croton Aqueduct&quot;,&quot;Topics&quot;:[&quot;Croton Aqueduct (N.Y.)&quot;],&quot;Primary&quot;:&quot;66640.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tower, F. B. (Fayette Bartholomew), 1817-1857&quot;],&quot;LoCC&quot;:[&quot;TD&quot;],&quot;PG_ID&quot;:&quot;66640&quot;});" class='title'>Illustrations of the Croton Aqueduct</a>
+<div class='author'>Tower, F. B. (Fayette Bartholomew), 1817-1857</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67675, {&quot;Title&quot;:&quot;Psychological Aspects of the Problem of Atmospheric Smoke Pollution&quot;,&quot;Topics&quot;:[&quot;Human beings -- Effect of environment on&quot;,&quot;Smoke&quot;],&quot;Primary&quot;:&quot;67675.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wallin, J. E. Wallace (John Edward Wallace), 1876-1969&quot;],&quot;LoCC&quot;:[&quot;TD&quot;],&quot;PG_ID&quot;:&quot;67675&quot;});" class='title'>Psychological Aspects of the Problem of Atmospheric Smoke Pollution</a>
+<div class='author'>Wallin, J. E. Wallace (John Edward Wallace), 1876-1969</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68805, {&quot;Title&quot;:&quot;Water and power for San Francisco from Hetch-Hetchy Valley in Yosemite National Park&quot;,&quot;Topics&quot;:[&quot;Water-supply -- California -- San Francisco&quot;,&quot;Hetch Hetchy Valley (Calif.)&quot;],&quot;Primary&quot;:&quot;68805.htm&quot;,&quot;CreatorNames&quot;:[&quot;Vilas, Martin Samuel, 1870-1953&quot;],&quot;LoCC&quot;:[&quot;TD&quot;],&quot;PG_ID&quot;:&quot;68805&quot;});" class='title'>Water and power for San Francisco from Hetch-Hetchy Valley in Yosemite National Park</a>
+<div class='author'>Vilas, Martin Samuel, 1870-1953</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69025, {&quot;Title&quot;:&quot;The filtration of public water-supplies - Third edition, revised and enlarged.&quot;,&quot;Topics&quot;:[&quot;Water-supply&quot;,&quot;Filters and filtration&quot;],&quot;Primary&quot;:&quot;69025.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hazen, Allen, 1869-1930&quot;],&quot;LoCC&quot;:[&quot;TD&quot;],&quot;PG_ID&quot;:&quot;69025&quot;});" class='title'>The filtration of public water-supplies -<br><span class='subtitle'>Third edition, revised and enlarged.</span></a>
+<div class='author'>Hazen, Allen, 1869-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7980, {&quot;Title&quot;:&quot;The Sewerage of Sea Coast Towns&quot;,&quot;Topics&quot;:[&quot;Sewerage&quot;],&quot;Primary&quot;:&quot;7980.txt&quot;,&quot;CreatorNames&quot;:[&quot;Adams, Henry Charles, 1873-1952&quot;],&quot;LoCC&quot;:[&quot;TD&quot;],&quot;PG_ID&quot;:&quot;7980&quot;});" class='title'>The Sewerage of Sea Coast Towns</a>
+<div class='author'>Adams, Henry Charles, 1873-1952</div>
+</div>
+</ul></div>
+</body></html>

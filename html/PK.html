@@ -1,0 +1,458 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Indo-Iranian languages and literatures (PK)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(11310, {&quot;Title&quot;:&quot;Hindu Tales from the Sanskrit&quot;,&quot;Topics&quot;:[&quot;Tales -- India&quot;,&quot;Sanskrit literature -- Translations into English&quot;],&quot;Primary&quot;:&quot;11310.htm&quot;,&quot;CreatorNames&quot;:[&quot;D&#39;Anvers, N., -1933 [Editor]&quot;,&quot;Mitra, Siddha Mohana, 1856-1925 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;11310&quot;});" class='title'>Hindu Tales from the Sanskrit</a>
+<div class='author'>D'Anvers, N., -1933 [Editor], Mitra, Siddha Mohana, 1856-1925 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(11738, {&quot;Title&quot;:&quot;Hindoo Tales; Or, the Adventures of Ten Princes&quot;,&quot;Topics&quot;:[&quot;Tales -- India&quot;,&quot;Sanskrit literature -- Translations into English&quot;],&quot;Primary&quot;:&quot;11738.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dandin, active 7th century&quot;,&quot;Jacob, Philip Whittington, 1805-1889 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;11738&quot;});" class='title'>Hindoo Tales;<br><span class='subtitle'>Or, the Adventures of Ten Princes</span></a>
+<div class='author'>Dandin, active 7th century, Jacob, Philip Whittington, 1805-1889 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(11894, {&quot;Title&quot;:&quot;The Mahabharata of Krishna-Dwaipayana Vyasa Translated into English Prose  - Vana Parva, Part 1&quot;,&quot;Topics&quot;:[&quot;Epic literature, Sanskrit&quot;],&quot;Primary&quot;:&quot;11894.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ganguli, Kisari Mohan [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;11894&quot;});" class='title'>The Mahabharata of Krishna-Dwaipayana Vyasa Translated into English Prose  -<br><span class='subtitle'>Vana Parva, Part 1</span></a>
+<div class='author'>Ganguli, Kisari Mohan [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12058, {&quot;Title&quot;:&quot;The Mahabharata of Krishna-Dwaipayana Vyasa Translated into English Prose  - Virata Parva&quot;,&quot;Topics&quot;:[&quot;Epic literature, Sanskrit&quot;],&quot;Primary&quot;:&quot;12058.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ganguli, Kisari Mohan [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;12058&quot;});" class='title'>The Mahabharata of Krishna-Dwaipayana Vyasa Translated into English Prose  -<br><span class='subtitle'>Virata Parva</span></a>
+<div class='author'>Ganguli, Kisari Mohan [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12169, {&quot;Title&quot;:&quot;Sakoontala; Or, The Lost Ring: An Indian Drama&quot;,&quot;Topics&quot;:[&quot;Sanskrit drama -- Translations into English&quot;,&quot;Indic drama&quot;],&quot;Primary&quot;:&quot;12169.txt&quot;,&quot;CreatorNames&quot;:[&quot;Kalidasa&quot;,&quot;Monier-Williams, Monier, Sir, 1819-1899 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;12169&quot;});" class='title'>Sakoontala;<br><span class='subtitle'>Or, The Lost Ring: An Indian Drama</span></a>
+<div class='author'>Kalidasa, Monier-Williams, Monier, Sir, 1819-1899 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12333, {&quot;Title&quot;:&quot;The Mahabharata of Krishna-Dwaipayana Vyasa Translated into English Prose  - Vana Parva, Part 2&quot;,&quot;Topics&quot;:[&quot;Epic literature, Sanskrit&quot;],&quot;Primary&quot;:&quot;12333.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ganguli, Kisari Mohan [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;12333&quot;});" class='title'>The Mahabharata of Krishna-Dwaipayana Vyasa Translated into English Prose  -<br><span class='subtitle'>Vana Parva, Part 2</span></a>
+<div class='author'>Ganguli, Kisari Mohan [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12370, {&quot;Title&quot;:&quot;Bagh O Bahar, or Tales of the Four Darweshes&quot;,&quot;Topics&quot;:[&quot;Hindus -- Folklore&quot;],&quot;Primary&quot;:&quot;12370.txt&quot;,&quot;CreatorNames&quot;:[&quot;Mir Amman Dihlavi, active 1801-1806 [Adapter]&quot;,&quot;Amir Khusraw Dihlavi, 1253?-1325&quot;,&quot;Forbes, Duncan, 1798-1868 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;12370&quot;});" class='title'>Bagh O Bahar, or Tales of the Four Darweshes</a>
+<div class='author'>Mir Amman Dihlavi, active 1801-1806 [Adapter], Amir Khusraw Dihlavi, 1253?-1325, Forbes, Duncan, 1798-1868 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12918, {&quot;Title&quot;:&quot;Iranian Influence on Moslem Literature, Part I&quot;,&quot;Topics&quot;:[&quot;Persian literature&quot;,&quot;Arabic literature&quot;],&quot;Primary&quot;:&quot;12918.txt&quot;,&quot;CreatorNames&quot;:[&quot;Inostrantzev, Konstantin Aleksandrovich, 1876-1941&quot;,&quot;Nariman, G. K. (Gushtaspshah Kaikhushro), 1873-1933 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;,&quot;PK&quot;],&quot;PG_ID&quot;:&quot;12918&quot;});" class='title'>Iranian Influence on Moslem Literature, Part I</a>
+<div class='author'>Inostrantzev, Konstantin Aleksandrovich, 1876-1941, Nariman, G. K. (Gushtaspshah Kaikhushro), 1873-1933 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13268, {&quot;Title&quot;:&quot;Hindu literature : Comprising The Book of good counsels, Nala and Damayanti, The Ramayana, and Sakoontala&quot;,&quot;Topics&quot;:[&quot;Sanskrit literature -- Translations into English&quot;],&quot;Primary&quot;:&quot;13268.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dutt, Toru, 1856-1877&quot;,&quot;Kalidasa&quot;,&quot;Valmiki&quot;,&quot;Wilson, Epiphanius, 1845-1916 [Commentator]&quot;,&quot;Arnold, Edwin, Sir, 1832-1904 [Translator]&quot;,&quot;Griffith, Ralph T. H. (Ralph Thomas Hotchkin), 1826-1906 [Translator]&quot;,&quot;Monier-Williams, Monier, Sir, 1819-1899 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;13268&quot;});" class='title'>Hindu literature :<br><span class='subtitle'>Comprising The Book of good counsels, Nala and Damayanti, The Ramayana, and Sakoontala</span></a>
+<div class='author'>Dutt, Toru, 1856-1877, Kalidasa, Valmiki, Wilson, Epiphanius, 1845-1916 [Commentator], Arnold, Edwin, Sir, 1832-1904 [Translator], Griffith, Ralph T. H. (Ralph Thomas Hotchkin), 1826-1906 [Translator], Monier-Williams, Monier, Sir, 1819-1899 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15474, {&quot;Title&quot;:&quot;The Mahabharata of Krishna-Dwaipayana Vyasa, Volume 1 - Books 1, 2 and 3&quot;,&quot;Topics&quot;:[&quot;Epic literature, Sanskrit&quot;],&quot;Primary&quot;:&quot;15474.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ganguli, Kisari Mohan [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;15474&quot;});" class='title'>The Mahabharata of Krishna-Dwaipayana Vyasa, Volume 1 -<br><span class='subtitle'>Books 1, 2 and 3</span></a>
+<div class='author'>Ganguli, Kisari Mohan [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15475, {&quot;Title&quot;:&quot;The Mahabharata of Krishna-Dwaipayana Vyasa, Volume 2 - Books 4, 5, 6 and 7&quot;,&quot;Topics&quot;:[&quot;Epic literature, Sanskrit&quot;],&quot;Primary&quot;:&quot;15475.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ganguli, Kisari Mohan [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;15475&quot;});" class='title'>The Mahabharata of Krishna-Dwaipayana Vyasa, Volume 2 -<br><span class='subtitle'>Books 4, 5, 6 and 7</span></a>
+<div class='author'>Ganguli, Kisari Mohan [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15476, {&quot;Title&quot;:&quot;The Mahabharata of Krishna-Dwaipayana Vyasa, Volume 3 - Books 8, 9, 10, 11 and 12&quot;,&quot;Topics&quot;:[&quot;Epic literature, Sanskrit&quot;],&quot;Primary&quot;:&quot;15476.txt&quot;,&quot;CreatorNames&quot;:[&quot;Ganguli, Kisari Mohan [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;15476&quot;});" class='title'>The Mahabharata of Krishna-Dwaipayana Vyasa, Volume 3 -<br><span class='subtitle'>Books 8, 9, 10, 11 and 12</span></a>
+<div class='author'>Ganguli, Kisari Mohan [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15477, {&quot;Title&quot;:&quot;The Mahabharata of Krishna-Dwaipayana Vyasa, Volume 4 - Books 13, 14, 15, 16, 17 and 18&quot;,&quot;Topics&quot;:[&quot;Epic literature, Sanskrit&quot;],&quot;Primary&quot;:&quot;15477.txt&quot;,&quot;CreatorNames&quot;:[&quot;Ganguli, Kisari Mohan [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;15477&quot;});" class='title'>The Mahabharata of Krishna-Dwaipayana Vyasa, Volume 4 -<br><span class='subtitle'>Books 13, 14, 15, 16, 17 and 18</span></a>
+<div class='author'>Ganguli, Kisari Mohan [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16659, {&quot;Title&quot;:&quot;Translations of Shakuntala and Other Works&quot;,&quot;Topics&quot;:[&quot;Sanskrit drama -- Translations into English&quot;,&quot;Sanskrit poetry -- Translations into English&quot;],&quot;Primary&quot;:&quot;16659.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kalidasa&quot;,&quot;Ryder, Arthur W. (Arthur William), 1877-1938 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;16659&quot;});" class='title'>Translations of Shakuntala and Other Works</a>
+<div class='author'>Kalidasa, Ryder, Arthur W. (Arthur William), 1877-1938 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17455, {&quot;Title&quot;:&quot;The Poison Tree: A Tale of Hindu Life in Bengal&quot;,&quot;Topics&quot;:[&quot;Triangles (Interpersonal relations) -- Fiction&quot;,&quot;India -- Social life and customs -- Fiction&quot;],&quot;Primary&quot;:&quot;17455.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cattopadhyaya, Bankimacandra, 1838-1894&quot;,&quot;Knight, Miriam S. [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;17455&quot;});" class='title'>The Poison Tree:<br><span class='subtitle'>A Tale of Hindu Life in Bengal</span></a>
+<div class='author'>Cattopadhyaya, Bankimacandra, 1838-1894, Knight, Miriam S. [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17711, {&quot;Title&quot;:&quot;Hindustani Lyrics&quot;,&quot;Topics&quot;:[&quot;Urdu poetry -- Translations into English&quot;],&quot;Primary&quot;:&quot;17711.htm&quot;,&quot;CreatorNames&quot;:[&quot;Inayat Khan, 1882-1927 [Translator]&quot;,&quot;Westbrook, Jessie Duncan [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;17711&quot;});" class='title'>Hindustani Lyrics</a>
+<div class='author'>Inayat Khan, 1882-1927 [Translator], Westbrook, Jessie Duncan [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18285, {&quot;Title&quot;:&quot;Tales from the Hindu Dramatists&quot;,&quot;Topics&quot;:[&quot;Sanskrit drama -- Adaptations&quot;],&quot;Primary&quot;:&quot;18285.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dutta, R. N.&quot;,&quot;Zemin, J. S. [Editor]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;18285&quot;});" class='title'>Tales from the Hindu Dramatists</a>
+<div class='author'>Dutta, R. N., Zemin, J. S. [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19529, {&quot;Title&quot;:&quot;Nala and Damayanti and Other Poems&quot;,&quot;Topics&quot;:[&quot;Sanskrit poetry -- Translations into English&quot;],&quot;Primary&quot;:&quot;19529.htm&quot;,&quot;CreatorNames&quot;:[&quot;Milman, Henry Hart, 1791-1868&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;19529&quot;});" class='title'>Nala and Damayanti and Other Poems</a>
+<div class='author'>Milman, Henry Hart, 1791-1868</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19630, {&quot;Title&quot;:&quot;Maha-bharata - The Epic of Ancient India Condensed into English Verse&quot;,&quot;Topics&quot;:[&quot;Epic poetry, Sanskrit -- Translations into English&quot;],&quot;Primary&quot;:&quot;19630.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dutt, Romesh Chunder, 1848-1909 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;19630&quot;});" class='title'>Maha-bharata -<br><span class='subtitle'>The Epic of Ancient India Condensed into English Verse</span></a>
+<div class='author'>Dutt, Romesh Chunder, 1848-1909 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20479, {&quot;Title&quot;:&quot;Le Râmâyana - tome premier - Poème sanscrit de Valmiky&quot;,&quot;Topics&quot;:[&quot;Folklore -- India&quot;,&quot;Rama (Hindu deity) -- Fiction&quot;,&quot;Epic poetry, Sanskrit -- Translations into French&quot;],&quot;Primary&quot;:&quot;20479.htm&quot;,&quot;CreatorNames&quot;:[&quot;Valmiki&quot;,&quot;Fauche, Hippolyte, 1797-1869 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;20479&quot;});" class='title'>Le Râmâyana -<br><span class='subtitle'>tome premier - Poème sanscrit de Valmiky</span></a>
+<div class='author'>Valmiki, Fauche, Hippolyte, 1797-1869 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20640, {&quot;Title&quot;:&quot;Le Râmâyana - tome second - Poème sanscrit de Valmiky&quot;,&quot;Topics&quot;:[&quot;Folklore -- India&quot;,&quot;Rama (Hindu deity) -- Fiction&quot;,&quot;Epic poetry, Sanskrit -- Translations into French&quot;],&quot;Primary&quot;:&quot;20640.htm&quot;,&quot;CreatorNames&quot;:[&quot;Valmiki&quot;,&quot;Fauche, Hippolyte, 1797-1869 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;20640&quot;});" class='title'>Le Râmâyana -<br><span class='subtitle'>tome second - Poème sanscrit de Valmiky</span></a>
+<div class='author'>Valmiki, Fauche, Hippolyte, 1797-1869 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(21020, {&quot;Title&quot;:&quot;The Little Clay Cart [Mṛcchakaṭika]&quot;,&quot;Topics&quot;:[&quot;Sanskrit drama -- Translations into English&quot;,&quot;Indic drama&quot;],&quot;Primary&quot;:&quot;21020.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sūdraka&quot;,&quot;Ryder, Arthur W. (Arthur William), 1877-1938 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;21020&quot;});" class='title'>The Little Clay Cart [Mṛcchakaṭika]</a>
+<div class='author'>Sūdraka, Ryder, Arthur W. (Arthur William), 1877-1938 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22217, {&quot;Title&quot;:&quot;My Reminiscences&quot;,&quot;Topics&quot;:[&quot;Tagore, Rabindranath, 1861-1941&quot;,&quot;Authors, Bengali -- 20th century -- Biography&quot;],&quot;Primary&quot;:&quot;22217.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tagore, Rabindranath, 1861-1941&quot;,&quot;Hesh, Sasi Kumar [Illustrator]&quot;,&quot;Tagore, Surendranath, 1872-1940 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;22217&quot;});" class='title'>My Reminiscences</a>
+<div class='author'>Tagore, Rabindranath, 1861-1941, Hesh, Sasi Kumar [Illustrator], Tagore, Surendranath, 1872-1940 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22535, {&quot;Title&quot;:&quot;Rubáiyát of Omar Khayyám, and Salámán and Absál - Together with a Life of Edward Fitzgerald and an Essay on Persian Poetry by Ralph Waldo Emerson&quot;,&quot;Topics&quot;:[&quot;Persian poetry -- Translations into English&quot;],&quot;Primary&quot;:&quot;22535.htm&quot;,&quot;CreatorNames&quot;:[&quot;Emerson, Ralph Waldo, 1803-1882&quot;,&quot;Jami, 1414-1492&quot;,&quot;Omar Khayyam, 1048-1122&quot;,&quot;FitzGerald, Edward, 1809-1883 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;22535&quot;});" class='title'>Rubáiyát of Omar Khayyám, and Salámán and Absál -<br><span class='subtitle'>Together with a Life of Edward Fitzgerald and an Essay on Persian Poetry by Ralph Waldo Emerson</span></a>
+<div class='author'>Emerson, Ralph Waldo, 1803-1882, Jami, 1414-1492, Omar Khayyam, 1048-1122, FitzGerald, Edward, 1809-1883 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2290, {&quot;Title&quot;:&quot;Twenty-Two Goblins&quot;,&quot;Topics&quot;:[&quot;Tales -- India&quot;,&quot;Fairy tales -- India&quot;],&quot;Primary&quot;:&quot;2290.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ryder, Arthur W. (Arthur William), 1877-1938 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;2290&quot;});" class='title'>Twenty-Two Goblins</a>
+<div class='author'>Ryder, Arthur W. (Arthur William), 1877-1938 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2388, {&quot;Title&quot;:&quot;The Song Celestial; Or, Bhagavad-Gîtâ (from the Mahâbhârata) - Being a discourse between Arjuna, Prince of India, and the Supreme Being under the form of Krishna&quot;,&quot;Topics&quot;:[&quot;Epic poetry&quot;,&quot;Sanskrit poetry -- Translations into English&quot;,&quot;Hinduism -- Sacred books&quot;],&quot;Primary&quot;:&quot;2388.htm&quot;,&quot;CreatorNames&quot;:[&quot;Arnold, Edwin, Sir, 1832-1904 [Translator]&quot;],&quot;LoCC&quot;:[&quot;BL&quot;,&quot;PK&quot;],&quot;PG_ID&quot;:&quot;2388&quot;});" class='title'>The Song Celestial;<br><span class='subtitle'>Or, Bhagavad-Gîtâ (from the Mahâbhârata) - Being a discourse between Arjuna, Prince of India, and the Supreme Being under the form of Krishna</span></a>
+<div class='author'>Arnold, Edwin, Sir, 1832-1904 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(246, {&quot;Title&quot;:&quot;The Rubaiyat of Omar Khayyam&quot;,&quot;Topics&quot;:[&quot;Persian poetry -- Translations into English&quot;],&quot;Primary&quot;:&quot;246.htm&quot;,&quot;CreatorNames&quot;:[&quot;Omar Khayyam, 1048-1122&quot;,&quot;FitzGerald, Edward, 1809-1883 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;246&quot;});" class='title'>The Rubaiyat of Omar Khayyam</a>
+<div class='author'>Omar Khayyam, 1048-1122, FitzGerald, Edward, 1809-1883 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24607, {&quot;Title&quot;:&quot;The Cycle of Spring&quot;,&quot;Topics&quot;:[&quot;Indic drama -- Translations into English&quot;,&quot;Bengali drama -- Translations into English&quot;],&quot;Primary&quot;:&quot;24607.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tagore, Rabindranath, 1861-1941&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;24607&quot;});" class='title'>The Cycle of Spring</a>
+<div class='author'>Tagore, Rabindranath, 1861-1941</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24869, {&quot;Title&quot;:&quot;The Rámáyan of Válmíki, translated into English verse&quot;,&quot;Topics&quot;:[&quot;Folklore -- India&quot;,&quot;Epic poetry, Sanskrit -- Translations into English&quot;,&quot;Rama (Hindu deity) -- Poetry&quot;],&quot;Primary&quot;:&quot;24869.htm&quot;,&quot;CreatorNames&quot;:[&quot;Valmiki&quot;,&quot;Griffith, Ralph T. H. (Ralph Thomas Hotchkin), 1826-1906 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;24869&quot;});" class='title'>The Rámáyan of Válmíki, translated into English verse</a>
+<div class='author'>Valmiki, Griffith, Ralph T. H. (Ralph Thomas Hotchkin), 1826-1906 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2502, {&quot;Title&quot;:&quot;Chitra, a Play in One Act&quot;,&quot;Topics&quot;:[&quot;Indic drama&quot;],&quot;Primary&quot;:&quot;2502.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tagore, Rabindranath, 1861-1941&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;2502&quot;});" class='title'>Chitra, a Play in One Act</a>
+<div class='author'>Tagore, Rabindranath, 1861-1941</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2518, {&quot;Title&quot;:&quot;The Hungry Stones, and Other Stories&quot;,&quot;Topics&quot;:[&quot;India -- Social life and customs -- Fiction&quot;,&quot;Short stories, Bengali -- Translations into English&quot;,&quot;Tagore, Rabindranath, 1861-1941 -- Translations into English&quot;],&quot;Primary&quot;:&quot;2518.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tagore, Rabindranath, 1861-1941&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;2518&quot;});" class='title'>The Hungry Stones, and Other Stories</a>
+<div class='author'>Tagore, Rabindranath, 1861-1941</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25965, {&quot;Title&quot;:&quot;Indian Poetry - Containing \&quot;\&quot;The Indian Song of Songs,\&quot;\&quot; from the Sanskrit of the Gîta Govinda of Jayadeva, Two books from \&quot;\&quot;The Iliad Of India\&quot;\&quot; (Mahábhárata), \&quot;\&quot;Proverbial Wisdom\&quot;\&quot; from the Shlokas of the Hitopadesa, and other Oriental Poems.&quot;,&quot;Topics&quot;:[&quot;Sanskrit poetry -- Translations into English&quot;],&quot;Primary&quot;:&quot;25965.htm&quot;,&quot;CreatorNames&quot;:[&quot;Arnold, Edwin, Sir, 1832-1904&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;25965&quot;});" class='title'>Indian Poetry -<br><span class='subtitle'>Containing "The Indian Song of Songs," from the Sanskrit of the Gîta Govinda of Jayadeva, Two books from "The Iliad Of India" (Mahábhárata), "Proverbial Wisdom" from the Shlokas of the Hitopadesa, and other Oriental Poems.</span></a>
+<div class='author'>Arnold, Edwin, Sir, 1832-1904</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31696, {&quot;Title&quot;:&quot;Morte de Yaginadatta - Episodio do poema epico - O Ramayana&quot;,&quot;Topics&quot;:[&quot;Rama (Hindu deity) -- Poetry&quot;],&quot;Primary&quot;:&quot;31696.htm&quot;,&quot;CreatorNames&quot;:[&quot;Figueiredo, Cândido de, 1846-1925&quot;,&quot;Valmiki&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;31696&quot;});" class='title'>Morte de Yaginadatta -<br><span class='subtitle'>Episodio do poema epico - O Ramayana</span></a>
+<div class='author'>Figueiredo, Cândido de, 1846-1925, Valmiki</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31968, {&quot;Title&quot;:&quot;The Birth of the War-God: A Poem by Kálidása&quot;,&quot;Topics&quot;:[&quot;Sanskrit poetry -- Translations into English&quot;],&quot;Primary&quot;:&quot;31968.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kalidasa&quot;,&quot;Griffith, Ralph T. H. (Ralph Thomas Hotchkin), 1826-1906 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;31968&quot;});" class='title'>The Birth of the War-God:<br><span class='subtitle'>A Poem by Kálidása</span></a>
+<div class='author'>Kalidasa, Griffith, Ralph T. H. (Ralph Thomas Hotchkin), 1826-1906 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32763, {&quot;Title&quot;:&quot;Die Nacht der Erfüllung: Erzählungen&quot;,&quot;Topics&quot;:[&quot;Fiction&quot;,&quot;Tagore, Rabindranath, 1861-1941 -- Translations into German&quot;,&quot;Short stories, Bengali -- Translations into German&quot;],&quot;Primary&quot;:&quot;32763.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tagore, Rabindranath, 1861-1941&quot;,&quot;Meyer-Franck, Helene, 1873-1946 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;32763&quot;});" class='title'>Die Nacht der Erfüllung:<br><span class='subtitle'>Erzählungen</span></a>
+<div class='author'>Tagore, Rabindranath, 1861-1941, Meyer-Franck, Helene, 1873-1946 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33186, {&quot;Title&quot;:&quot;Bhagavadgita — Des Erhabenen Sang - Religiöse Stimmen der Völker: Die Religion des alten Indien II&quot;,&quot;Topics&quot;:[&quot;Epic poetry&quot;,&quot;Hinduism -- Sacred books&quot;,&quot;Sanskrit poetry -- Translations into German&quot;],&quot;Primary&quot;:&quot;33186.htm&quot;,&quot;CreatorNames&quot;:[&quot;Schroeder, Leopold von, 1851-1920 [Translator]&quot;],&quot;LoCC&quot;:[&quot;BL&quot;,&quot;PK&quot;],&quot;PG_ID&quot;:&quot;33186&quot;});" class='title'>Bhagavadgita — Des Erhabenen Sang -<br><span class='subtitle'>Religiöse Stimmen der Völker: Die Religion des alten Indien II</span></a>
+<div class='author'>Schroeder, Leopold von, 1851-1920 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33525, {&quot;Title&quot;:&quot;Stories from Tagore&quot;,&quot;Topics&quot;:[&quot;India -- Social life and customs -- Fiction&quot;,&quot;Short stories, Bengali -- Translations into English&quot;,&quot;Tagore, Rabindranath, 1861-1941 -- Translations into English&quot;,&quot;English language -- Textbooks for foreign speakers -- Indic&quot;],&quot;Primary&quot;:&quot;33525.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tagore, Rabindranath, 1861-1941&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;33525&quot;});" class='title'>Stories from Tagore</a>
+<div class='author'>Tagore, Rabindranath, 1861-1941</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34757, {&quot;Title&quot;:&quot;Mashi, and Other Stories&quot;,&quot;Topics&quot;:[&quot;India -- Social life and customs -- Fiction&quot;,&quot;Short stories, Bengali -- Translations into English&quot;,&quot;Tagore, Rabindranath, 1861-1941 -- Translations into English&quot;],&quot;Primary&quot;:&quot;34757.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tagore, Rabindranath, 1861-1941&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;34757&quot;});" class='title'>Mashi, and Other Stories</a>
+<div class='author'>Tagore, Rabindranath, 1861-1941</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35260, {&quot;Title&quot;:&quot;Rubáiyát of Omar Khayyam, Rendered into English Verse&quot;,&quot;Topics&quot;:[&quot;Persian poetry -- Translations into English&quot;],&quot;Primary&quot;:&quot;35260.htm&quot;,&quot;CreatorNames&quot;:[&quot;Omar Khayyam, 1048-1122&quot;,&quot;Dulac, Edmund, 1882-1953 [Illustrator]&quot;,&quot;FitzGerald, Edward, 1809-1883 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;35260&quot;});" class='title'>Rubáiyát of Omar Khayyam, Rendered into English Verse</a>
+<div class='author'>Omar Khayyam, 1048-1122, Dulac, Edmund, 1882-1953 [Illustrator], FitzGerald, Edward, 1809-1883 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36301, {&quot;Title&quot;:&quot;The Thousand and One Days: A Companion to the \&quot;Arabian Nights\&quot;&quot;,&quot;Topics&quot;:[&quot;Tales -- Arab countries&quot;,&quot;Tales -- Iran&quot;],&quot;Primary&quot;:&quot;36301.txt&quot;,&quot;CreatorNames&quot;:[&quot;Pardoe, Miss (Julia), 1804?-1862&quot;],&quot;LoCC&quot;:[&quot;GR&quot;,&quot;PJ&quot;,&quot;PK&quot;],&quot;PG_ID&quot;:&quot;36301&quot;});" class='title'>The Thousand and One Days:<br><span class='subtitle'>A Companion to the "Arabian Nights"</span></a>
+<div class='author'>Pardoe, Miss (Julia), 1804?-1862</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38125, {&quot;Title&quot;:&quot;Der zunehmende Mond&quot;,&quot;Topics&quot;:[&quot;Tagore, Rabindranath, 1861-1941 -- Translations into German&quot;,&quot;Bengali poetry -- Translations into German&quot;,&quot;Indic poetry -- Translations into German&quot;],&quot;Primary&quot;:&quot;38125.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tagore, Rabindranath, 1861-1941&quot;,&quot;Effenberger, Hans [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;38125&quot;});" class='title'>Der zunehmende Mond</a>
+<div class='author'>Tagore, Rabindranath, 1861-1941, Effenberger, Hans [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38174, {&quot;Title&quot;:&quot;Vidyāpati: Bangīya padābali; songs of the love of Rādhā and Krishna&quot;,&quot;Topics&quot;:[&quot;Krishna (Hindu deity) -- Poetry&quot;,&quot;Radha (Hindu deity) -- Poetry&quot;],&quot;Primary&quot;:&quot;38174.htm&quot;,&quot;CreatorNames&quot;:[&quot;Vidyāpati Thākura, active 15th century&quot;,&quot;Coomaraswamy, Ananda K. (Ananda Kentish), 1877-1947 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;38174&quot;});" class='title'>Vidyāpati:<br><span class='subtitle'>Bangīya padābali; songs of the love of Rādhā and Krishna</span></a>
+<div class='author'>Vidyāpati Thākura, active 15th century, Coomaraswamy, Ananda K. (Ananda Kentish), 1877-1947 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38511, {&quot;Title&quot;:&quot;The Sufistic Quatrains of Omar Khayyam&quot;,&quot;Topics&quot;:[&quot;FitzGerald, Edward, 1809-1883&quot;,&quot;Sufi poetry&quot;],&quot;Primary&quot;:&quot;38511.htm&quot;,&quot;CreatorNames&quot;:[&quot;Omar Khayyam, 1048-1122&quot;,&quot;Heron-Allen, Edward, 1861-1943 [Commentator]&quot;,&quot;Arnot, Robert, 1860- [Editor]&quot;,&quot;FitzGerald, Edward, 1809-1883 [Translator]&quot;,&quot;Nicolas, J. B. (Jean Baptiste), 1814-1875 [Translator]&quot;,&quot;Whinfield, E. H. (Edward Henry), 1836-1922 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;38511&quot;});" class='title'>The Sufistic Quatrains of Omar Khayyam</a>
+<div class='author'>Omar Khayyam, 1048-1122, Heron-Allen, Edward, 1861-1943 [Commentator], Arnot, Robert, 1860- [Editor], FitzGerald, Edward, 1809-1883 [Translator], Nicolas, J. B. (Jean Baptiste), 1814-1875 [Translator], Whinfield, E. H. (Edward Henry), 1836-1922 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39601, {&quot;Title&quot;:&quot;Λυρικά αφιερώματα (Γιταντζάλι)&quot;,&quot;Topics&quot;:[&quot;Indic poetry -- Translations into Greek&quot;,&quot;Bengali poetry -- Translations into Greek&quot;,&quot;Tagore, Rabindranath, 1861-1941 -- Translations into Greek&quot;],&quot;Primary&quot;:&quot;39601.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tagore, Rabindranath, 1861-1941&quot;,&quot;Trikoglides, K. [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;39601&quot;});" class='title'>Λυρικά αφιερώματα (Γιταντζάλι)</a>
+<div class='author'>Tagore, Rabindranath, 1861-1941, Trikoglides, K. [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40588, {&quot;Title&quot;:&quot;The Kathá Sarit Ságara; or, Ocean of the Streams of Story&quot;,&quot;Topics&quot;:[&quot;Tales -- India&quot;,&quot;India -- Social life and customs&quot;,&quot;Hindu mythology&quot;,&quot;Folk literature -- Themes, motives&quot;],&quot;Primary&quot;:&quot;40588.htm&quot;,&quot;CreatorNames&quot;:[&quot;Somadeva Bhatta, active 11th century&quot;,&quot;Tawney, C. H. (Charles Henry), 1838-1922 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;40588&quot;});" class='title'>The Kathá Sarit Ságara;<br><span class='subtitle'>or, Ocean of the Streams of Story</span></a>
+<div class='author'>Somadeva Bhatta, active 11th century, Tawney, C. H. (Charles Henry), 1838-1922 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41128, {&quot;Title&quot;:&quot;The Kādambarī of Bāṇa&quot;,&quot;Topics&quot;:[&quot;Reincarnation -- Fiction&quot;,&quot;Sanskrit fiction -- Translations into English&quot;],&quot;Primary&quot;:&quot;41128.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bāṇa‏&quot;,&quot;Bhūṣaṇabhaṭṭa&quot;,&quot;Ridding, C. M. (Caroline Mary), 1862-1941 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;41128&quot;});" class='title'>The Kādambarī of Bāṇa</a>
+<div class='author'>Bāṇa‏, Bhūṣaṇabhaṭṭa, Ridding, C. M. (Caroline Mary), 1862-1941 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41563, {&quot;Title&quot;:&quot;A History of Sanskrit Literature&quot;,&quot;Topics&quot;:[&quot;Sanskrit literature -- History and criticism&quot;],&quot;Primary&quot;:&quot;41563.htm&quot;,&quot;CreatorNames&quot;:[&quot;Macdonell, Arthur Anthony, 1854-1930&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;41563&quot;});" class='title'>A History of Sanskrit Literature</a>
+<div class='author'>Macdonell, Arthur Anthony, 1854-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44246, {&quot;Title&quot;:&quot;Chitra: Ein Spiel in einem Aufzug&quot;,&quot;Topics&quot;:[&quot;Indic drama -- Translations into German&quot;],&quot;Primary&quot;:&quot;44246.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tagore, Rabindranath, 1861-1941&quot;,&quot;Wolff-Merck, Elisabeth, 1890-1970 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;44246&quot;});" class='title'>Chitra:<br><span class='subtitle'>Ein Spiel in einem Aufzug</span></a>
+<div class='author'>Tagore, Rabindranath, 1861-1941, Wolff-Merck, Elisabeth, 1890-1970 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44250, {&quot;Title&quot;:&quot;Der König der dunklen Kammer&quot;,&quot;Topics&quot;:[&quot;Tagore, Rabindranath, 1861-1941 -- Translations into German&quot;,&quot;Indic drama -- Translations into German&quot;,&quot;Bengali drama -- Translations into German&quot;],&quot;Primary&quot;:&quot;44250.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tagore, Rabindranath, 1861-1941&quot;,&quot;Lachmann, Hedwig, 1865-1918 [Translator]&quot;,&quot;Landauer, Gustav, 1870-1919 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;44250&quot;});" class='title'>Der König der dunklen Kammer</a>
+<div class='author'>Tagore, Rabindranath, 1861-1941, Lachmann, Hedwig, 1865-1918 [Translator], Landauer, Gustav, 1870-1919 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44259, {&quot;Title&quot;:&quot;William Dwight Whitney&quot;,&quot;Topics&quot;:[&quot;Whitney, William Dwight, 1827-1894&quot;],&quot;Primary&quot;:&quot;44259.htm&quot;,&quot;CreatorNames&quot;:[&quot;Seymour, Thomas D. (Thomas Day), 1848-1907&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;44259&quot;});" class='title'>William Dwight Whitney</a>
+<div class='author'>Seymour, Thomas D. (Thomas Day), 1848-1907</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44424, {&quot;Title&quot;:&quot;Der Gärtner&quot;,&quot;Topics&quot;:[&quot;Tagore, Rabindranath, 1861-1941 -- Translations into German&quot;,&quot;Bengali poetry -- Translations into German&quot;,&quot;Indic poetry -- Translations into German&quot;],&quot;Primary&quot;:&quot;44424.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tagore, Rabindranath, 1861-1941&quot;,&quot;Effenberger, Hans [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;44424&quot;});" class='title'>Der Gärtner</a>
+<div class='author'>Tagore, Rabindranath, 1861-1941, Effenberger, Hans [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45158, {&quot;Title&quot;:&quot;The Persian Mystics: Jámí&quot;,&quot;Topics&quot;:[&quot;Persian literature -- Translations into English&quot;,&quot;Jami, 1414-1492&quot;,&quot;Persian literature -- History and criticism&quot;],&quot;Primary&quot;:&quot;45158.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jami, 1414-1492&quot;,&quot;Davis, F. Hadland (Frederick Hadland) [Editor]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;45158&quot;});" class='title'>The Persian Mystics:<br><span class='subtitle'>Jámí</span></a>
+<div class='author'>Jami, 1414-1492, Davis, F. Hadland (Frederick Hadland) [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45159, {&quot;Title&quot;:&quot;The Persian Mystics: Jalálu&#39;d-dín Rúmí&quot;,&quot;Topics&quot;:[&quot;Sufism&quot;,&quot;Persian literature -- Translations into English&quot;,&quot;Mysticism in literature&quot;,&quot;Persian literature -- History and criticism&quot;,&quot;Jalal al-Din Rumi, Maulana, 1207-1273&quot;,&quot;Mysticism -- Iran&quot;],&quot;Primary&quot;:&quot;45159.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jalal al-Din Rumi, Maulana, 1207-1273&quot;,&quot;Davis, F. Hadland (Frederick Hadland) [Editor]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;45159&quot;});" class='title'>The Persian Mystics:<br><span class='subtitle'>Jalálu'd-dín Rúmí</span></a>
+<div class='author'>Jalal al-Din Rumi, Maulana, 1207-1273, Davis, F. Hadland (Frederick Hadland) [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46531, {&quot;Title&quot;:&quot;The Yoga-Vasishtha Maharamayana of Valmiki, vol. 3 (of 4) part 2 (of 2)&quot;,&quot;Topics&quot;:[&quot;Vedanta -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;46531.htm&quot;,&quot;CreatorNames&quot;:[&quot;Valmiki&quot;,&quot;Mitra, Viharilala [Translator]&quot;],&quot;LoCC&quot;:[&quot;BL&quot;,&quot;PK&quot;],&quot;PG_ID&quot;:&quot;46531&quot;});" class='title'>The Yoga-Vasishtha Maharamayana of Valmiki, vol. 3 (of 4) part 2 (of 2)</a>
+<div class='author'>Valmiki, Mitra, Viharilala [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48854, {&quot;Title&quot;:&quot;Bhagavad-Gita: Herrens Sång&quot;,&quot;Topics&quot;:[&quot;Epic poetry&quot;,&quot;Hinduism -- Sacred books&quot;,&quot;Sanskrit poetry -- Translations into Swedish&quot;],&quot;Primary&quot;:&quot;48854.txt&quot;,&quot;CreatorNames&quot;:[&quot;Runeberg, Hjalmar Johannes, 1874-1934 [Translator]&quot;],&quot;LoCC&quot;:[&quot;BL&quot;,&quot;PK&quot;],&quot;PG_ID&quot;:&quot;48854&quot;});" class='title'>Bhagavad-Gita:<br><span class='subtitle'>Herrens Sång</span></a>
+<div class='author'>Runeberg, Hjalmar Johannes, 1874-1934 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50619, {&quot;Title&quot;:&quot;The Sufism of the Rubáiyát, or, the Secret of the Great Paradox&quot;,&quot;Topics&quot;:[&quot;Sufism&quot;,&quot;Persian poetry -- Translations into English&quot;,&quot;Omar Khayyam. Rubaiyat&quot;],&quot;Primary&quot;:&quot;50619.htm&quot;,&quot;CreatorNames&quot;:[&quot;Omar Khayyam, 1048-1122&quot;,&quot;Hazeldine, Norton F. W., 1856- [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;50619&quot;});" class='title'>The Sufism of the Rubáiyát, or, the Secret of the Great Paradox</a>
+<div class='author'>Omar Khayyam, 1048-1122, Hazeldine, Norton F. W., 1856- [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52309, {&quot;Title&quot;:&quot;Twenty-Two Goblins. Translated from the Sanskrit&quot;,&quot;Topics&quot;:[&quot;Tales -- India&quot;,&quot;Fairy tales -- India&quot;],&quot;Primary&quot;:&quot;52309.htm&quot;,&quot;CreatorNames&quot;:[&quot;Nahl, Perham Wilhelm, 1869- [Illustrator]&quot;,&quot;Ryder, Arthur W. (Arthur William), 1877-1938 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;52309&quot;});" class='title'>Twenty-Two Goblins. Translated from the Sanskrit</a>
+<div class='author'>Nahl, Perham Wilhelm, 1869- [Illustrator], Ryder, Arthur W. (Arthur William), 1877-1938 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52643, {&quot;Title&quot;:&quot;Das Heim und die Welt&quot;,&quot;Topics&quot;:[&quot;India -- History -- Autonomy and independence movements -- Fiction&quot;],&quot;Primary&quot;:&quot;52643.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tagore, Rabindranath, 1861-1941&quot;,&quot;Meyer-Franck, Helene, 1873-1946 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;52643&quot;});" class='title'>Das Heim und die Welt</a>
+<div class='author'>Tagore, Rabindranath, 1861-1941, Meyer-Franck, Helene, 1873-1946 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52994, {&quot;Title&quot;:&quot;Uhrilauluja&quot;,&quot;Topics&quot;:[&quot;Indic poetry -- Translations into Finnish&quot;,&quot;Tagore, Rabindranath, 1861-1941 -- Translations into Finnish&quot;,&quot;Bengali poetry -- Translations into Finnish&quot;,&quot;Prose poems, Bengali -- Translations into Finnish&quot;],&quot;Primary&quot;:&quot;52994.txt&quot;,&quot;CreatorNames&quot;:[&quot;Tagore, Rabindranath, 1861-1941&quot;,&quot;Yeats, W. B. (William Butler), 1865-1939 [Author of introduction, etc.]&quot;,&quot;Iisalo, Osmo [Translator]&quot;,&quot;Leino, Eino, 1878-1926 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;52994&quot;});" class='title'>Uhrilauluja</a>
+<div class='author'>Tagore, Rabindranath, 1861-1941, Yeats, W. B. (William Butler), 1865-1939 [Author of introduction, etc.], Iisalo, Osmo [Translator], Leino, Eino, 1878-1926 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54027, {&quot;Title&quot;:&quot;Nil Darpan; or, The Indigo Planting Mirror, A Drama. - Translated from the Bengali by a Native.&quot;,&quot;Topics&quot;:[&quot;Indigo industry -- India -- Bengal -- Drama&quot;],&quot;Primary&quot;:&quot;54027.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mitra, Dinabandhu, 1829-1874&quot;,&quot;Dutt, Michael Madhusudan, 1824-1873 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;54027&quot;});" class='title'>Nil Darpan;<br><span class='subtitle'>or, The Indigo Planting Mirror, A Drama. - Translated from the Bengali by a Native.</span></a>
+<div class='author'>Mitra, Dinabandhu, 1829-1874, Dutt, Michael Madhusudan, 1824-1873 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54036, {&quot;Title&quot;:&quot;Armenian Legends and Poems&quot;,&quot;Topics&quot;:[&quot;Armenian literature&quot;,&quot;Armenian literature -- History and criticism&quot;],&quot;Primary&quot;:&quot;54036.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bryce, James Bryce, Viscount, 1838-1922 [Author of introduction, etc.]&quot;,&quot;Boyajian, Zabelle C. [Compiler]&quot;,&quot;Raffi, Aram [Contributor]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;54036&quot;});" class='title'>Armenian Legends and Poems</a>
+<div class='author'>Bryce, James Bryce, Viscount, 1838-1922 [Author of introduction, etc.], Boyajian, Zabelle C. [Compiler], Raffi, Aram [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56248, {&quot;Title&quot;:&quot;Persian Literature, Ancient and Modern&quot;,&quot;Topics&quot;:[&quot;Persian literature -- History and criticism&quot;],&quot;Primary&quot;:&quot;56248.htm&quot;,&quot;CreatorNames&quot;:[&quot;Reed, Elizabeth A. (Elizabeth Armstrong), 1842-1915&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;56248&quot;});" class='title'>Persian Literature, Ancient and Modern</a>
+<div class='author'>Reed, Elizabeth A. (Elizabeth Armstrong), 1842-1915</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57068, {&quot;Title&quot;:&quot;The Festival of Spring, from the Díván of Jeláleddín - Rendered in English Gazels after Rückert&#39;s Versions, with an Introduction and a Criticism of the Rubáiyát of Omar Khayyám&quot;,&quot;Topics&quot;:[&quot;Omar Khayyam. Rubaiyat&quot;,&quot;Sufi poetry, Persian&quot;],&quot;Primary&quot;:&quot;57068.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jalal al-Din Rumi, Maulana, 1207-1273&quot;,&quot;Hastie, W. (William), 1842-1903 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;57068&quot;});" class='title'>The Festival of Spring, from the Díván of Jeláleddín -<br><span class='subtitle'>Rendered in English Gazels after Rückert's Versions, with an Introduction and a Criticism of the Rubáiyát of Omar Khayyám</span></a>
+<div class='author'>Jalal al-Din Rumi, Maulana, 1207-1273, Hastie, W. (William), 1842-1903 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57265, {&quot;Title&quot;:&quot;The Rāmāyana, Volume 1. Bālakāndam and Ayodhyākāndam&quot;,&quot;Topics&quot;:[&quot;Folklore -- India&quot;,&quot;Rama (Hindu deity) -- Fiction&quot;,&quot;Epic poetry, Sanskrit -- Translations into English&quot;,&quot;Valmiki -- Adaptations&quot;],&quot;Primary&quot;:&quot;57265.htm&quot;,&quot;CreatorNames&quot;:[&quot;Valmiki&quot;,&quot;Dutt, Manmatha Nath [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;57265&quot;});" class='title'>The Rāmāyana, Volume 1. Bālakāndam and Ayodhyākāndam</a>
+<div class='author'>Valmiki, Dutt, Manmatha Nath [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57317, {&quot;Title&quot;:&quot;The Secrets of the Self (Asrar-i Khudi) — A Philosophical Poem&quot;,&quot;Topics&quot;:[&quot;Islamic poetry, Persian -- Translations into English&quot;],&quot;Primary&quot;:&quot;57317.htm&quot;,&quot;CreatorNames&quot;:[&quot;Iqbal, Muhammad, Sir, 1877-1938&quot;,&quot;Nicholson, Reynold Alleyne, 1868-1945 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;57317&quot;});" class='title'>The Secrets of the Self (Asrar-i Khudi) — A Philosophical Poem</a>
+<div class='author'>Iqbal, Muhammad, Sir, 1877-1938, Nicholson, Reynold Alleyne, 1868-1945 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57772, {&quot;Title&quot;:&quot;De Hoovenier&quot;,&quot;Topics&quot;:[&quot;Tagore, Rabindranath, 1861-1941 -- Translations into Dutch&quot;,&quot;Bengali poetry -- Translations into Dutch&quot;,&quot;Indic poetry -- Translations into Dutch&quot;],&quot;Primary&quot;:&quot;57772.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tagore, Rabindranath, 1861-1941&quot;,&quot;Eeden, Frederik van, 1860-1932 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;57772&quot;});" class='title'>De Hoovenier</a>
+<div class='author'>Tagore, Rabindranath, 1861-1941, Eeden, Frederik van, 1860-1932 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57826, {&quot;Title&quot;:&quot;The Rāmāyana, Volume 2. Āranya, Kishkindhā, and Sundara Kāndam&quot;,&quot;Topics&quot;:[&quot;Folklore -- India&quot;,&quot;Rama (Hindu deity) -- Fiction&quot;,&quot;Epic poetry, Sanskrit -- Translations into English&quot;,&quot;Valmiki -- Adaptations&quot;],&quot;Primary&quot;:&quot;57826.htm&quot;,&quot;CreatorNames&quot;:[&quot;Valmiki&quot;,&quot;Dutt, Manmatha Nath [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;57826&quot;});" class='title'>The Rāmāyana, Volume 2. Āranya, Kishkindhā, and Sundara Kāndam</a>
+<div class='author'>Valmiki, Dutt, Manmatha Nath [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59350, {&quot;Title&quot;:&quot;Rabindranath Tagore: Een biografische Schets&quot;,&quot;Topics&quot;:[&quot;Tagore, Rabindranath, 1861-1941&quot;],&quot;Primary&quot;:&quot;59350.htm&quot;,&quot;CreatorNames&quot;:[&quot;Noto Soeroto, 1888-1951&quot;,&quot;Eeden, Frederik van, 1860-1932 [Contributor]&quot;,&quot;Mangkoenegoro VII, Prince of Surakarta, 1885-1944 [Contributor]&quot;,&quot;Tagore, Rabindranath, 1861-1941 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;59350&quot;});" class='title'>Rabindranath Tagore:<br><span class='subtitle'>Een biografische Schets</span></a>
+<div class='author'>Noto Soeroto, 1888-1951, Eeden, Frederik van, 1860-1932 [Contributor], Mangkoenegoro VII, Prince of Surakarta, 1885-1944 [Contributor], Tagore, Rabindranath, 1861-1941 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59389, {&quot;Title&quot;:&quot;Ahnaat paadet ynnä muita kertomuksia&quot;,&quot;Topics&quot;:[&quot;India -- Social life and customs -- Fiction&quot;,&quot;Tagore, Rabindranath, 1861-1941 -- Translations into Finnish&quot;,&quot;Short stories, Bengali -- Translations into Finnish&quot;],&quot;Primary&quot;:&quot;59389.txt&quot;,&quot;CreatorNames&quot;:[&quot;Tagore, Rabindranath, 1861-1941&quot;,&quot;Hollo, J. [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;59389&quot;});" class='title'>Ahnaat paadet ynnä muita kertomuksia</a>
+<div class='author'>Tagore, Rabindranath, 1861-1941, Hollo, J. [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59471, {&quot;Title&quot;:&quot;Haaksirikko&quot;,&quot;Topics&quot;:[&quot;India -- Fiction&quot;],&quot;Primary&quot;:&quot;59471.txt&quot;,&quot;CreatorNames&quot;:[&quot;Tagore, Rabindranath, 1861-1941&quot;,&quot;Hollo, J. [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;59471&quot;});" class='title'>Haaksirikko</a>
+<div class='author'>Tagore, Rabindranath, 1861-1941, Hollo, J. [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59487, {&quot;Title&quot;:&quot;Elämäni muistoja&quot;,&quot;Topics&quot;:[&quot;Tagore, Rabindranath, 1861-1941&quot;,&quot;Authors, Bengali -- 20th century -- Biography&quot;],&quot;Primary&quot;:&quot;59487.txt&quot;,&quot;CreatorNames&quot;:[&quot;Tagore, Rabindranath, 1861-1941&quot;,&quot;Hollo, J. [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;59487&quot;});" class='title'>Elämäni muistoja</a>
+<div class='author'>Tagore, Rabindranath, 1861-1941, Hollo, J. [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60111, {&quot;Title&quot;:&quot;Nala och Dayamanti: En indisk dikt ur Mahabharata&quot;,&quot;Topics&quot;:[&quot;Nala (Hindu mythology) -- Poetry&quot;,&quot;Damayanti (Hindu mythology) -- Poetry&quot;],&quot;Primary&quot;:&quot;60111.txt&quot;,&quot;CreatorNames&quot;:[&quot;Sriharsa, active 12th century&quot;,&quot;Kellgren, Abraham Herman August, 1822-1856 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;60111&quot;});" class='title'>Nala och Dayamanti:<br><span class='subtitle'>En indisk dikt ur Mahabharata</span></a>
+<div class='author'>Sriharsa, active 12th century, Kellgren, Abraham Herman August, 1822-1856 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60316, {&quot;Title&quot;:&quot;The Bakhtyār Nāma: A Persian Romance&quot;,&quot;Topics&quot;:[&quot;Persian poetry -- Translations into English&quot;],&quot;Primary&quot;:&quot;60316.htm&quot;,&quot;CreatorNames&quot;:[&quot;Clouston, W. A. (William Alexander), 1843-1896 [Editor]&quot;,&quot;Ouseley, William, 1767-1842 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;60316&quot;});" class='title'>The Bakhtyār Nāma:<br><span class='subtitle'>A Persian Romance</span></a>
+<div class='author'>Clouston, W. A. (William Alexander), 1843-1896 [Editor], Ouseley, William, 1767-1842 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60471, {&quot;Title&quot;:&quot;The Bustan of Sadi - Translated from the Persian with an introduction&quot;,&quot;Topics&quot;:[&quot;Persian poetry -- Translations into English&quot;],&quot;Primary&quot;:&quot;60471.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sadi&quot;,&quot;Edwards, A. Hart [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;60471&quot;});" class='title'>The Bustan of Sadi -<br><span class='subtitle'>Translated from the Persian with an introduction</span></a>
+<div class='author'>Sadi, Edwards, A. Hart [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61724, {&quot;Title&quot;:&quot;The Mesnevi&quot;,&quot;Topics&quot;:[&quot;Jalal al-Din Rumi, Maulana, 1207-1273&quot;,&quot;Mevleviyeh&quot;,&quot;Sufi literature&quot;],&quot;Primary&quot;:&quot;61724.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jalal al-Din Rumi, Maulana, 1207-1273&quot;,&quot;Redhouse, James W. (James William), Sir, 1811-1892 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;61724&quot;});" class='title'>The Mesnevi</a>
+<div class='author'>Jalal al-Din Rumi, Maulana, 1207-1273, Redhouse, James W. (James William), Sir, 1811-1892 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61937, {&quot;Title&quot;:&quot;A Prose English Translation of Harivamsha&quot;,&quot;Topics&quot;:[&quot;Mahabharata. Harivamsa -- Adaptations&quot;],&quot;Primary&quot;:&quot;61937.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dutt, Manmatha Nath [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;61937&quot;});" class='title'>A Prose English Translation of Harivamsha</a>
+<div class='author'>Dutt, Manmatha Nath [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62496, {&quot;Title&quot;:&quot;The Rāmāyana, Volume 4. Uttara Kānda&quot;,&quot;Topics&quot;:[&quot;Folklore -- India&quot;,&quot;Rama (Hindu deity) -- Fiction&quot;,&quot;Epic poetry, Sanskrit -- Translations into English&quot;,&quot;Valmiki -- Adaptations&quot;],&quot;Primary&quot;:&quot;62496.htm&quot;,&quot;CreatorNames&quot;:[&quot;Valmiki&quot;,&quot;Dutt, Manmatha Nath [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;62496&quot;});" class='title'>The Rāmāyana, Volume 4. Uttara Kānda</a>
+<div class='author'>Valmiki, Dutt, Manmatha Nath [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62508, {&quot;Title&quot;:&quot;Le jardinier d&#39;amour&quot;,&quot;Topics&quot;:[&quot;Bengali poetry -- Translations into French&quot;,&quot;Indic poetry -- Translations into French&quot;,&quot;Tagore, Rabindranath, 1861-1941 -- Translations into French&quot;],&quot;Primary&quot;:&quot;62508.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tagore, Rabindranath, 1861-1941&quot;,&quot;Mirabaud-Thorens, H. (Henriette), 1881-1943 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;62508&quot;});" class='title'>Le jardinier d'amour</a>
+<div class='author'>Tagore, Rabindranath, 1861-1941, Mirabaud-Thorens, H. (Henriette), 1881-1943 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64622, {&quot;Title&quot;:&quot;Vajra-chhediká, the \&quot;\&quot;Kin Kong King,\&quot;\&quot; or Diamond Sútra&quot;,&quot;Topics&quot;:[&quot;Buddhism -- Sacred books&quot;],&quot;Primary&quot;:&quot;64622.htm&quot;,&quot;CreatorNames&quot;:[&quot;Unknown&quot;,&quot;Beal, Samuel, 1825-1889 [Translator]&quot;,&quot;Kumarajiva, -412? [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;64622&quot;});" class='title'>Vajra-chhediká, the "Kin Kong King," or Diamond Sútra</a>
+<div class='author'>Unknown, Beal, Samuel, 1825-1889 [Translator], Kumarajiva, -412? [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64623, {&quot;Title&quot;:&quot;The Diamond Sutra (Chin-Kang-Ching) or Prajna-Paramita&quot;,&quot;Topics&quot;:[&quot;Buddhism&quot;,&quot;Buddhism -- Sacred books&quot;],&quot;Primary&quot;:&quot;64623.htm&quot;,&quot;CreatorNames&quot;:[&quot;Unknown&quot;,&quot;Gemmell, William [Translator]&quot;,&quot;Kumarajiva, -412? [Translator]&quot;],&quot;LoCC&quot;:[&quot;BQ&quot;,&quot;PK&quot;],&quot;PG_ID&quot;:&quot;64623&quot;});" class='title'>The Diamond Sutra (Chin-Kang-Ching) or Prajna-Paramita</a>
+<div class='author'>Unknown, Gemmell, William [Translator], Kumarajiva, -412? [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6519, {&quot;Title&quot;:&quot;Songs of Kabir&quot;,&quot;Topics&quot;:[&quot;Indic poetry -- Translations into English&quot;,&quot;Hindi poetry -- Translations into English&quot;],&quot;Primary&quot;:&quot;6519.txt&quot;,&quot;CreatorNames&quot;:[&quot;Kabir, -1518&quot;,&quot;Underhill, Evelyn, 1875-1941 [Author of introduction, etc.]&quot;,&quot;Tagore, Rabindranath, 1861-1941 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;6519&quot;});" class='title'>Songs of Kabir</a>
+<div class='author'>Kabir, -1518, Underhill, Evelyn, 1875-1941 [Author of introduction, etc.], Tagore, Rabindranath, 1861-1941 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6520, {&quot;Title&quot;:&quot;The Crescent Moon&quot;,&quot;Topics&quot;:[&quot;Indic poetry -- Translations into English&quot;,&quot;Tagore, Rabindranath, 1861-1941 -- Translations into English&quot;,&quot;Bengali poetry -- Translations into English&quot;],&quot;Primary&quot;:&quot;6520.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tagore, Rabindranath, 1861-1941 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;6520&quot;});" class='title'>The Crescent Moon</a>
+<div class='author'>Tagore, Rabindranath, 1861-1941 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6521, {&quot;Title&quot;:&quot;The King of the Dark Chamber&quot;,&quot;Topics&quot;:[&quot;Tagore, Rabindranath, 1861-1941 -- Translations into English&quot;,&quot;Indic drama -- Translations into English&quot;,&quot;Bengali drama -- Translations into English&quot;],&quot;Primary&quot;:&quot;6521.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tagore, Rabindranath, 1861-1941&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;6521&quot;});" class='title'>The King of the Dark Chamber</a>
+<div class='author'>Tagore, Rabindranath, 1861-1941</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6522, {&quot;Title&quot;:&quot;Fruit-Gathering&quot;,&quot;Topics&quot;:[&quot;Indic poetry -- Translations into English&quot;,&quot;Tagore, Rabindranath, 1861-1941 -- Translations into English&quot;,&quot;Bengali poetry -- Translations into English&quot;],&quot;Primary&quot;:&quot;6522.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tagore, Rabindranath, 1861-1941&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;6522&quot;});" class='title'>Fruit-Gathering</a>
+<div class='author'>Tagore, Rabindranath, 1861-1941</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6523, {&quot;Title&quot;:&quot;The Post Office&quot;,&quot;Topics&quot;:[&quot;Tagore, Rabindranath, 1861-1941 -- Translations into English&quot;,&quot;Indic drama -- Translations into English&quot;,&quot;Bengali drama -- Translations into English&quot;],&quot;Primary&quot;:&quot;6523.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tagore, Rabindranath, 1861-1941&quot;,&quot;Mukherjee, Devabrata [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;6523&quot;});" class='title'>The Post Office</a>
+<div class='author'>Tagore, Rabindranath, 1861-1941, Mukherjee, Devabrata [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6524, {&quot;Title&quot;:&quot;Stray Birds&quot;,&quot;Topics&quot;:[&quot;Indic poetry -- Translations into English&quot;,&quot;Tagore, Rabindranath, 1861-1941 -- Translations into English&quot;,&quot;Bengali poetry -- Translations into English&quot;],&quot;Primary&quot;:&quot;6524.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tagore, Rabindranath, 1861-1941&quot;,&quot;Pogány, Willy, 1882-1955 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;6524&quot;});" class='title'>Stray Birds</a>
+<div class='author'>Tagore, Rabindranath, 1861-1941, Pogány, Willy, 1882-1955 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65541, {&quot;Title&quot;:&quot;Gitanjali (Sangesopfer)&quot;,&quot;Topics&quot;:[&quot;Tagore, Rabindranath, 1861-1941 -- Translations into German&quot;,&quot;Bengali poetry -- Translations into German&quot;,&quot;Indic poetry -- Translations into German&quot;,&quot;Prose poems, Bengali -- Translations into German&quot;],&quot;Primary&quot;:&quot;65541.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tagore, Rabindranath, 1861-1941&quot;,&quot;Gothein, Marie Luise Schroeter, 1863-1931 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;65541&quot;});" class='title'>Gitanjali (Sangesopfer)</a>
+<div class='author'>Tagore, Rabindranath, 1861-1941, Gothein, Marie Luise Schroeter, 1863-1931 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6686, {&quot;Title&quot;:&quot;The Gardener&quot;,&quot;Topics&quot;:[&quot;Indic poetry -- Translations into English&quot;,&quot;Tagore, Rabindranath, 1861-1941 -- Translations into English&quot;,&quot;Bengali poetry -- Translations into English&quot;],&quot;Primary&quot;:&quot;6686.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tagore, Rabindranath, 1861-1941&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;6686&quot;});" class='title'>The Gardener</a>
+<div class='author'>Tagore, Rabindranath, 1861-1941</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(680, {&quot;Title&quot;:&quot;The Golden Threshold&quot;,&quot;Topics&quot;:[&quot;Indic poetry (English)&quot;],&quot;Primary&quot;:&quot;680.txt&quot;,&quot;CreatorNames&quot;:[&quot;Naidu, Sarojini, 1879-1949&quot;,&quot;Symons, Arthur, 1865-1945 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;680&quot;});" class='title'>The Golden Threshold</a>
+<div class='author'>Naidu, Sarojini, 1879-1949, Symons, Arthur, 1865-1945 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68641, {&quot;Title&quot;:&quot;The descent of the sun: A cycle of birth&quot;,&quot;Topics&quot;:[&quot;Hindu legends&quot;],&quot;Primary&quot;:&quot;68641.htm&quot;,&quot;CreatorNames&quot;:[&quot;Unknown&quot;,&quot;Bain, F. W. (Francis William), 1863-1940 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;68641&quot;});" class='title'>The descent of the sun:<br><span class='subtitle'>A cycle of birth</span></a>
+<div class='author'>Unknown, Bain, F. W. (Francis William), 1863-1940 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68819, {&quot;Title&quot;:&quot;Het leemen wagentje: Indisch tooneelspel uit Sanskṛt en Prākṛt in het Nederlandsch vertaald&quot;,&quot;Topics&quot;:[&quot;Indic drama&quot;,&quot;Thesis (Ph. D.)&quot;,&quot;Sanskrit drama -- Translations into Dutch&quot;],&quot;Primary&quot;:&quot;68819.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sūdraka&quot;,&quot;Vogel, J. Ph. (Jean Philippe), 1871-1958 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;68819&quot;});" class='title'>Het leemen wagentje:<br><span class='subtitle'>Indisch tooneelspel uit Sanskṛt en Prākṛt in het Nederlandsch vertaald</span></a>
+<div class='author'>Sūdraka, Vogel, J. Ph. (Jean Philippe), 1871-1958 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69173, {&quot;Title&quot;:&quot;The Spoilt Child: A Tale of Hindu Domestic Life&quot;,&quot;Topics&quot;:[&quot;Hindus -- Social life and customs -- Fiction&quot;,&quot;Bengali fiction -- Translations into English&quot;],&quot;Primary&quot;:&quot;69173.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mitra, Peary Chand, 1814-1883&quot;,&quot;Oswell, G. D. (George Devereux), 1851-1910 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;69173&quot;});" class='title'>The Spoilt Child:<br><span class='subtitle'>A Tale of Hindu Domestic Life</span></a>
+<div class='author'>Mitra, Peary Chand, 1814-1883, Oswell, G. D. (George Devereux), 1851-1910 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70025, {&quot;Title&quot;:&quot;Gora I&quot;,&quot;Topics&quot;:[&quot;Man-woman relationships -- Fiction&quot;,&quot;India -- History -- 19th century -- Fiction&quot;,&quot;Bengali fiction -- Translations into Finnish&quot;,&quot;Hinduism and social problems -- Fiction&quot;,&quot;Social integration -- Religious aspects -- Hinduism -- Fiction&quot;,&quot;West Bengal (India) -- History -- Fiction&quot;],&quot;Primary&quot;:&quot;70025.txt&quot;,&quot;CreatorNames&quot;:[&quot;Tagore, Rabindranath, 1861-1941&quot;,&quot;Hollo, J. A. (Juho Aukusti), 1885-1967 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;70025&quot;});" class='title'>Gora I</a>
+<div class='author'>Tagore, Rabindranath, 1861-1941, Hollo, J. A. (Juho Aukusti), 1885-1967 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70043, {&quot;Title&quot;:&quot;Pimeän kammion kuningas ja muita draamoja&quot;,&quot;Topics&quot;:[&quot;Tagore, Rabindranath, 1861-1941 -- Translations into Finnish&quot;,&quot;Indic drama -- Translations into Finnish&quot;],&quot;Primary&quot;:&quot;70043.txt&quot;,&quot;CreatorNames&quot;:[&quot;Tagore, Rabindranath, 1861-1941&quot;,&quot;Hollo, J. A. (Juho Aukusti), 1885-1967 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;70043&quot;});" class='title'>Pimeän kammion kuningas ja muita draamoja</a>
+<div class='author'>Tagore, Rabindranath, 1861-1941, Hollo, J. A. (Juho Aukusti), 1885-1967 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70057, {&quot;Title&quot;:&quot;Koti ja maailma&quot;,&quot;Topics&quot;:[&quot;India -- History -- Autonomy and independence movements -- Fiction&quot;],&quot;Primary&quot;:&quot;70057.txt&quot;,&quot;CreatorNames&quot;:[&quot;Tagore, Rabindranath, 1861-1941&quot;,&quot;Hollo, J. A. (Juho Aukusti), 1885-1967 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;70057&quot;});" class='title'>Koti ja maailma</a>
+<div class='author'>Tagore, Rabindranath, 1861-1941, Hollo, J. A. (Juho Aukusti), 1885-1967 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70088, {&quot;Title&quot;:&quot;Le cycle du printemps&quot;,&quot;Topics&quot;:[&quot;Indic drama -- Translations into French&quot;,&quot;Bengali drama -- Translations into French&quot;],&quot;Primary&quot;:&quot;70088.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tagore, Rabindranath, 1861-1941&quot;,&quot;Mirabaud-Thorens, H. (Henriette), 1881-1943 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;70088&quot;});" class='title'>Le cycle du printemps</a>
+<div class='author'>Tagore, Rabindranath, 1861-1941, Mirabaud-Thorens, H. (Henriette), 1881-1943 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70177, {&quot;Title&quot;:&quot;Gora II&quot;,&quot;Topics&quot;:[&quot;Man-woman relationships -- Fiction&quot;,&quot;India -- History -- 19th century -- Fiction&quot;,&quot;Bengali fiction -- Translations into Finnish&quot;,&quot;Hinduism and social problems -- Fiction&quot;,&quot;Social integration -- Religious aspects -- Hinduism -- Fiction&quot;,&quot;West Bengal (India) -- History -- Fiction&quot;],&quot;Primary&quot;:&quot;70177.txt&quot;,&quot;CreatorNames&quot;:[&quot;Tagore, Rabindranath, 1861-1941&quot;,&quot;Hollo, J. A. (Juho Aukusti), 1885-1967 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;70177&quot;});" class='title'>Gora II</a>
+<div class='author'>Tagore, Rabindranath, 1861-1941, Hollo, J. A. (Juho Aukusti), 1885-1967 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7164, {&quot;Title&quot;:&quot;Gitanjali&quot;,&quot;Topics&quot;:[&quot;Indic poetry -- Translations into English&quot;,&quot;Tagore, Rabindranath, 1861-1941 -- Translations into English&quot;,&quot;Bengali poetry -- Translations into English&quot;,&quot;Prose poems, Bengali -- Translations into English&quot;],&quot;Primary&quot;:&quot;7164.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tagore, Rabindranath, 1861-1941&quot;,&quot;Yeats, W. B. (William Butler), 1865-1939 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;7164&quot;});" class='title'>Gitanjali</a>
+<div class='author'>Tagore, Rabindranath, 1861-1941, Yeats, W. B. (William Butler), 1865-1939 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7166, {&quot;Title&quot;:&quot;The Home and the World&quot;,&quot;Topics&quot;:[&quot;India -- History -- Autonomy and independence movements -- Fiction&quot;],&quot;Primary&quot;:&quot;7166.txt&quot;,&quot;CreatorNames&quot;:[&quot;Tagore, Rabindranath, 1861-1941&quot;,&quot;Tagore, Surendranath, 1872-1940 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;7166&quot;});" class='title'>The Home and the World</a>
+<div class='author'>Tagore, Rabindranath, 1861-1941, Tagore, Surendranath, 1872-1940 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7864, {&quot;Title&quot;:&quot;The Mahabharata of Krishna-Dwaipayana Vyasa Translated into English Prose - Adi Parva&quot;,&quot;Topics&quot;:[&quot;Epic literature, Sanskrit&quot;],&quot;Primary&quot;:&quot;7864.txt&quot;,&quot;CreatorNames&quot;:[&quot;Ganguli, Kisari Mohan [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;7864&quot;});" class='title'>The Mahabharata of Krishna-Dwaipayana Vyasa Translated into English Prose -<br><span class='subtitle'>Adi Parva</span></a>
+<div class='author'>Ganguli, Kisari Mohan [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7965, {&quot;Title&quot;:&quot;The Mahabharata of Krishna-Dwaipayana Vyasa Translated into English Prose - Sabha Parva&quot;,&quot;Topics&quot;:[&quot;Epic literature, Sanskrit&quot;],&quot;Primary&quot;:&quot;7965.txt&quot;,&quot;CreatorNames&quot;:[&quot;Ganguli, Kisari Mohan [Translator]&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;7965&quot;});" class='title'>The Mahabharata of Krishna-Dwaipayana Vyasa Translated into English Prose -<br><span class='subtitle'>Sabha Parva</span></a>
+<div class='author'>Ganguli, Kisari Mohan [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7971, {&quot;Title&quot;:&quot;The Fugitive&quot;,&quot;Topics&quot;:[&quot;Indic poetry -- Translations into English&quot;],&quot;Primary&quot;:&quot;7971.txt&quot;,&quot;CreatorNames&quot;:[&quot;Tagore, Rabindranath, 1861-1941&quot;],&quot;LoCC&quot;:[&quot;PK&quot;],&quot;PG_ID&quot;:&quot;7971&quot;});" class='title'>The Fugitive</a>
+<div class='author'>Tagore, Rabindranath, 1861-1941</div>
+</div>
+</ul></div>
+</body></html>

@@ -1,0 +1,670 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Decorative arts (NK)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12254, {&quot;Title&quot;:&quot;Illustrated History of Furniture: From the Earliest to the Present Time&quot;,&quot;Topics&quot;:[&quot;Furniture -- History&quot;],&quot;Primary&quot;:&quot;12254.htm&quot;,&quot;CreatorNames&quot;:[&quot;Litchfield, Frederick, 1850-1930&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;12254&quot;});" class='title'>Illustrated History of Furniture:<br><span class='subtitle'>From the Earliest to the Present Time</span></a>
+<div class='author'>Litchfield, Frederick, 1850-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14298, {&quot;Title&quot;:&quot;The Art of Interior Decoration&quot;,&quot;Topics&quot;:[&quot;Interior decoration&quot;,&quot;Furniture&quot;],&quot;Primary&quot;:&quot;14298.htm&quot;,&quot;CreatorNames&quot;:[&quot;Burbank, Emily&quot;,&quot;Wood, Grace&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;14298&quot;});" class='title'>The Art of Interior Decoration</a>
+<div class='author'>Burbank, Emily, Wood, Grace</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14302, {&quot;Title&quot;:&quot;Principles of Home Decoration, With Practical Examples&quot;,&quot;Topics&quot;:[&quot;Interior decoration&quot;],&quot;Primary&quot;:&quot;14302.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wheeler, Candace, 1827-1923&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;14302&quot;});" class='title'>Principles of Home Decoration, With Practical Examples</a>
+<div class='author'>Wheeler, Candace, 1827-1923</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14715, {&quot;Title&quot;:&quot;The House in Good Taste&quot;,&quot;Topics&quot;:[&quot;Interior decoration&quot;],&quot;Primary&quot;:&quot;14715.htm&quot;,&quot;CreatorNames&quot;:[&quot;De Wolfe, Elsie, 1865-1950&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;14715&quot;});" class='title'>The House in Good Taste</a>
+<div class='author'>De Wolfe, Elsie, 1865-1950</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14824, {&quot;Title&quot;:&quot;Furnishing the Home of Good Taste - A Brief Sketch of the Period Styles in Interior Decoration with Suggestions as to Their Employment in the Homes of Today&quot;,&quot;Topics&quot;:[&quot;Interior decoration&quot;],&quot;Primary&quot;:&quot;14824.htm&quot;,&quot;CreatorNames&quot;:[&quot;Throop, Lucy Abbot&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;14824&quot;});" class='title'>Furnishing the Home of Good Taste -<br><span class='subtitle'>A Brief Sketch of the Period Styles in Interior Decoration with Suggestions as to Their Employment in the Homes of Today</span></a>
+<div class='author'>Throop, Lucy Abbot</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18212, {&quot;Title&quot;:&quot;Arts and Crafts in the Middle Ages - A Description of Mediaeval Workmanship in Several of the Departments of Applied Art, Together with Some Account of Special Artisans in the Early Renaissance&quot;,&quot;Topics&quot;:[&quot;Illumination of books and manuscripts&quot;,&quot;Decorative arts -- History&quot;,&quot;Decoration and ornament, Medieval&quot;,&quot;Arts and crafts movement&quot;],&quot;Primary&quot;:&quot;18212.htm&quot;,&quot;CreatorNames&quot;:[&quot;Addison, Julia de Wolf Gibbs, 1866-&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;18212&quot;});" class='title'>Arts and Crafts in the Middle Ages -<br><span class='subtitle'>A Description of Mediaeval Workmanship in Several of the Departments of Applied Art, Together with Some Account of Special Artisans in the Early Renaissance</span></a>
+<div class='author'>Addison, Julia de Wolf Gibbs, 1866-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18971, {&quot;Title&quot;:&quot;Jacobean Embroidery: Its Forms and Fillings, Including Late Tudor&quot;,&quot;Topics&quot;:[&quot;Embroidery&quot;],&quot;Primary&quot;:&quot;18971.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fitzwilliam, Ada Wentworth&quot;,&quot;Hands, A. F. Morris&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;18971&quot;});" class='title'>Jacobean Embroidery:<br><span class='subtitle'>Its Forms and Fillings, Including Late Tudor</span></a>
+<div class='author'>Fitzwilliam, Ada Wentworth, Hands, A. F. Morris</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19953, {&quot;Title&quot;:&quot;Origin and Development of Form and Ornament in Ceramic Art. - Fourth Annual Report of the Bureau of Ethnology to the Secretary of the Smithsonian Institution, 1882-1883, Government Printing Office, Washington, 1886, pages 437-466.&quot;,&quot;Topics&quot;:[&quot;Pottery -- History&quot;,&quot;Decoration and ornament -- History&quot;,&quot;Indian art -- North America&quot;],&quot;Primary&quot;:&quot;19953.htm&quot;,&quot;CreatorNames&quot;:[&quot;Holmes, William Henry, 1846-1933&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;19953&quot;});" class='title'>Origin and Development of Form and Ornament in Ceramic Art. -<br><span class='subtitle'>Fourth Annual Report of the Bureau of Ethnology to the Secretary of the Smithsonian Institution, 1882-1883, Government Printing Office, Washington, 1886, pages 437-466.</span></a>
+<div class='author'>Holmes, William Henry, 1846-1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20590, {&quot;Title&quot;:&quot;Letters &amp; Lettering: A Treatise with 200 Examples&quot;,&quot;Topics&quot;:[&quot;Lettering&quot;,&quot;Alphabets&quot;],&quot;Primary&quot;:&quot;20590.htm&quot;,&quot;CreatorNames&quot;:[&quot;Brown, Frank Chouteau, 1876-1947&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;20590&quot;});" class='title'>Letters & Lettering:<br><span class='subtitle'>A Treatise with 200 Examples</span></a>
+<div class='author'>Brown, Frank Chouteau, 1876-1947</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22107, {&quot;Title&quot;:&quot;Wood-Carving: Design and Workmanship&quot;,&quot;Topics&quot;:[&quot;Wood-carving&quot;],&quot;Primary&quot;:&quot;22107.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jack, George&quot;,&quot;Lethaby, W. R. (William Richard), 1857-1931 [Editor]&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;22107&quot;});" class='title'>Wood-Carving:<br><span class='subtitle'>Design and Workmanship</span></a>
+<div class='author'>Jack, George, Lethaby, W. R. (William Richard), 1857-1931 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22427, {&quot;Title&quot;:&quot;One Thousand and One Initial Letters&quot;,&quot;Topics&quot;:[&quot;Alphabets&quot;,&quot;Illumination of books and manuscripts&quot;,&quot;Initials&quot;,&quot;Decoration and ornament -- Victorian style&quot;],&quot;Primary&quot;:&quot;22427.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jones, Owen, 1809-1874&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;22427&quot;});" class='title'>One Thousand and One Initial Letters</a>
+<div class='author'>Jones, Owen, 1809-1874</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23450, {&quot;Title&quot;:&quot;The Book of Ornamental Alphabets, Ancient and Medieval, from the Eighth Century - With Numerals, including Gothic; Church Text, Large and - Small; German Arabesque; Initials for Illumination, - Monograms, Crosses, &amp;c.&quot;,&quot;Topics&quot;:[&quot;Alphabets&quot;,&quot;Decoration and ornament&quot;],&quot;Primary&quot;:&quot;23450.htm&quot;,&quot;CreatorNames&quot;:[&quot;Delamotte, F. (Freeman), 1814-1862&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;23450&quot;});" class='title'>The Book of Ornamental Alphabets, Ancient and Medieval, from the Eighth Century -<br><span class='subtitle'>With Numerals, including Gothic; Church Text, Large and - Small; German Arabesque; Initials for Illumination, - Monograms, Crosses, &c.</span></a>
+<div class='author'>Delamotte, F. (Freeman), 1814-1862</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24165, {&quot;Title&quot;:&quot;The Development of Embroidery in America&quot;,&quot;Topics&quot;:[&quot;Bayeux tapestry&quot;,&quot;Embroidery -- United States&quot;,&quot;Tapestry -- United States&quot;],&quot;Primary&quot;:&quot;24165.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wheeler, Candace, 1827-1923&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;24165&quot;});" class='title'>The Development of Embroidery in America</a>
+<div class='author'>Wheeler, Candace, 1827-1923</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24568, {&quot;Title&quot;:&quot;Aboriginal American Weaving&quot;,&quot;Topics&quot;:[&quot;Indian textile fabrics -- North America&quot;,&quot;Weaving&quot;,&quot;Anthropology&quot;],&quot;Primary&quot;:&quot;24568.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kissell, Mary Lois&quot;],&quot;LoCC&quot;:[&quot;E&quot;,&quot;GN&quot;,&quot;NK&quot;],&quot;PG_ID&quot;:&quot;24568&quot;});" class='title'>Aboriginal American Weaving</a>
+<div class='author'>Kissell, Mary Lois</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24682, {&quot;Title&quot;:&quot;Quilts: Their Story and How to Make Them&quot;,&quot;Topics&quot;:[&quot;Quilts&quot;,&quot;Quilting&quot;,&quot;Coverlets&quot;],&quot;Primary&quot;:&quot;24682.htm&quot;,&quot;CreatorNames&quot;:[&quot;Webster, Marie D. (Marie Daugherty), 1859-1956&quot;],&quot;LoCC&quot;:[&quot;TT&quot;,&quot;NK&quot;],&quot;PG_ID&quot;:&quot;24682&quot;});" class='title'>Quilts:<br><span class='subtitle'>Their Story and How to Make Them</span></a>
+<div class='author'>Webster, Marie D. (Marie Daugherty), 1859-1956</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25042, {&quot;Title&quot;:&quot;Color Value&quot;,&quot;Topics&quot;:[&quot;Interior decoration&quot;,&quot;Color&quot;],&quot;Primary&quot;:&quot;25042.htm&quot;,&quot;CreatorNames&quot;:[&quot;Clifford, C. R. (Chandler Robbins), 1858-1935&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;25042&quot;});" class='title'>Color Value</a>
+<div class='author'>Clifford, C. R. (Chandler Robbins), 1858-1935</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25294, {&quot;Title&quot;:&quot;Chats on Household Curios&quot;,&quot;Topics&quot;:[&quot;Interior decoration&quot;,&quot;Antiques&quot;,&quot;Collectors and collecting&quot;],&quot;Primary&quot;:&quot;25294.htm&quot;,&quot;CreatorNames&quot;:[&quot;Burgess, Fred. W. (Frederick William), 1855-1945&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;25294&quot;});" class='title'>Chats on Household Curios</a>
+<div class='author'>Burgess, Fred. W. (Frederick William), 1855-1945</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26120, {&quot;Title&quot;:&quot;Chats on Old Lace and Needlework&quot;,&quot;Topics&quot;:[&quot;Lace and lace making&quot;,&quot;Needlework&quot;],&quot;Primary&quot;:&quot;26120.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lowes, Emily Leigh&quot;],&quot;LoCC&quot;:[&quot;TT&quot;,&quot;NK&quot;],&quot;PG_ID&quot;:&quot;26120&quot;});" class='title'>Chats on Old Lace and Needlework</a>
+<div class='author'>Lowes, Emily Leigh</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26151, {&quot;Title&quot;:&quot;The Tapestry Book&quot;,&quot;Topics&quot;:[&quot;Tapestry&quot;],&quot;Primary&quot;:&quot;26151.htm&quot;,&quot;CreatorNames&quot;:[&quot;Candee, Helen Churchill, 1861-1949&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;26151&quot;});" class='title'>The Tapestry Book</a>
+<div class='author'>Candee, Helen Churchill, 1861-1949</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29234, {&quot;Title&quot;:&quot;Presentation Pieces in the Museum of History and Technology - Contributions from the Museum of History and Technology, Paper No. 47 [Smithsonian Institution]&quot;,&quot;Topics&quot;:[&quot;Silverwork&quot;],&quot;Primary&quot;:&quot;29234.htm&quot;,&quot;CreatorNames&quot;:[&quot;Klapthor, Margaret Brown, 1922-1994&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;29234&quot;});" class='title'>Presentation Pieces in the Museum of History and Technology -<br><span class='subtitle'>Contributions from the Museum of History and Technology, Paper No. 47 [Smithsonian Institution]</span></a>
+<div class='author'>Klapthor, Margaret Brown, 1922-1994</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30025, {&quot;Title&quot;:&quot;Rugs: Oriental and Occidental, Antique &amp; Modern - A Handbook for Ready Reference&quot;,&quot;Topics&quot;:[&quot;Rugs&quot;,&quot;Rugs, Oriental&quot;],&quot;Primary&quot;:&quot;30025.htm&quot;,&quot;CreatorNames&quot;:[&quot;Holt, Rosa Belle&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;30025&quot;});" class='title'>Rugs:<br><span class='subtitle'>Oriental and Occidental, Antique & Modern - A Handbook for Ready Reference</span></a>
+<div class='author'>Holt, Rosa Belle</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30215, {&quot;Title&quot;:&quot;Intarsia and Marquetry&quot;,&quot;Topics&quot;:[&quot;Marquetry&quot;],&quot;Primary&quot;:&quot;30215.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jackson, F. Hamilton (Frederick Hamilton), 1848-1923&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;30215&quot;});" class='title'>Intarsia and Marquetry</a>
+<div class='author'>Jackson, F. Hamilton (Frederick Hamilton), 1848-1923</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30472, {&quot;Title&quot;:&quot;Needlework As Art&quot;,&quot;Topics&quot;:[&quot;Needlework&quot;],&quot;Primary&quot;:&quot;30472.htm&quot;,&quot;CreatorNames&quot;:[&quot;Alford, Marianne Margaret Compton Cust, Viscountess, 1817-1888&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;30472&quot;});" class='title'>Needlework As Art</a>
+<div class='author'>Alford, Marianne Margaret Compton Cust, Viscountess, 1817-1888</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31415, {&quot;Title&quot;:&quot;Stained Glass Work: A text-book for students and workers in glass&quot;,&quot;Topics&quot;:[&quot;Glass painting and staining&quot;],&quot;Primary&quot;:&quot;31415.htm&quot;,&quot;CreatorNames&quot;:[&quot;Whall, Christopher, 1849-1924&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;31415&quot;});" class='title'>Stained Glass Work:<br><span class='subtitle'>A text-book for students and workers in glass</span></a>
+<div class='author'>Whall, Christopher, 1849-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33144, {&quot;Title&quot;:&quot;The Oriental Rug - A Monograph on Eastern Rugs and Carpets, Saddle-Bags, Mats &amp; Pillows, with a Consideration of Kinds and Classes, Types, Borders, Figures, Dyes, Symbols, etc. Together with Some Practical Advice to Collectors.&quot;,&quot;Topics&quot;:[&quot;Collectors and collecting&quot;,&quot;Rugs, Oriental&quot;,&quot;Carpets&quot;],&quot;Primary&quot;:&quot;33144.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ellwanger, William De Lancey, 1854-1913&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;33144&quot;});" class='title'>The Oriental Rug -<br><span class='subtitle'>A Monograph on Eastern Rugs and Carpets, Saddle-Bags, Mats & Pillows, with a Consideration of Kinds and Classes, Types, Borders, Figures, Dyes, Symbols, etc. Together with Some Practical Advice to Collectors.</span></a>
+<div class='author'>Ellwanger, William De Lancey, 1854-1913</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33350, {&quot;Title&quot;:&quot;The Arts and Crafts Movement&quot;,&quot;Topics&quot;:[&quot;Arts and crafts movement&quot;],&quot;Primary&quot;:&quot;33350.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cobden-Sanderson, T. J. (Thomas James), 1840-1922&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;33350&quot;});" class='title'>The Arts and Crafts Movement</a>
+<div class='author'>Cobden-Sanderson, T. J. (Thomas James), 1840-1922</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34276, {&quot;Title&quot;:&quot;A Vista Alegre: apontamentos para a sua historia&quot;,&quot;Topics&quot;:[&quot;Fábrica de Porcelana da Vista Alegre -- History&quot;,&quot;Porcelain industry -- Portugal -- History&quot;],&quot;Primary&quot;:&quot;34276.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gomes, Marques, 1853-1931&quot;],&quot;LoCC&quot;:[&quot;HD&quot;,&quot;NK&quot;],&quot;PG_ID&quot;:&quot;34276&quot;});" class='title'>A Vista Alegre:<br><span class='subtitle'>apontamentos para a sua historia</span></a>
+<div class='author'>Gomes, Marques, 1853-1931</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34508, {&quot;Title&quot;:&quot;The Collector&#39;s Handbook to Keramics of the Renaissance and Modern Periods&quot;,&quot;Topics&quot;:[&quot;Pottery&quot;],&quot;Primary&quot;:&quot;34508.htm&quot;,&quot;CreatorNames&quot;:[&quot;Chaffers, William, 1811-1892&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;34508&quot;});" class='title'>The Collector's Handbook to Keramics of the Renaissance and Modern Periods</a>
+<div class='author'>Chaffers, William, 1811-1892</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34772, {&quot;Title&quot;:&quot;Stained Glass Tours in France&quot;,&quot;Topics&quot;:[&quot;France -- Description and travel&quot;,&quot;Architecture -- France&quot;,&quot;Glass painting and staining -- France&quot;,&quot;Churches -- France&quot;],&quot;Primary&quot;:&quot;34772.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sherrill, Charles Hitchcock, 1867-1936&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;34772&quot;});" class='title'>Stained Glass Tours in France</a>
+<div class='author'>Sherrill, Charles Hitchcock, 1867-1936</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34818, {&quot;Title&quot;:&quot;Stained Glass Tours in England&quot;,&quot;Topics&quot;:[&quot;England -- Description and travel&quot;,&quot;Cathedrals -- England&quot;,&quot;Glass painting and staining -- England&quot;],&quot;Primary&quot;:&quot;34818.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sherrill, Charles Hitchcock, 1867-1936&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;34818&quot;});" class='title'>Stained Glass Tours in England</a>
+<div class='author'>Sherrill, Charles Hitchcock, 1867-1936</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34877, {&quot;Title&quot;:&quot;Chats on Old Furniture: A Practical Guide for Collectors&quot;,&quot;Topics&quot;:[&quot;Collectors and collecting&quot;,&quot;Furniture -- History&quot;],&quot;Primary&quot;:&quot;34877.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hayden, Arthur, 1868-1946&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;34877&quot;});" class='title'>Chats on Old Furniture:<br><span class='subtitle'>A Practical Guide for Collectors</span></a>
+<div class='author'>Hayden, Arthur, 1868-1946</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36082, {&quot;Title&quot;:&quot;White House China of the Lincoln Administration in the Museum of History and Technology&quot;,&quot;Topics&quot;:[&quot;Washington (D.C.) -- Social life and customs&quot;,&quot;Porcelain -- Washington (D.C.)&quot;,&quot;Dinners and dining -- Washington (D.C.)&quot;],&quot;Primary&quot;:&quot;36082.htm&quot;,&quot;CreatorNames&quot;:[&quot;Klapthor, Margaret Brown, 1922-1994&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;36082&quot;});" class='title'>White House China of the Lincoln Administration in the Museum of History and Technology</a>
+<div class='author'>Klapthor, Margaret Brown, 1922-1994</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36092, {&quot;Title&quot;:&quot;North Devon Pottery and Its Export to America in the 17th Century&quot;,&quot;Topics&quot;:[&quot;Pottery -- England -- Devon&quot;,&quot;Pottery -- Atlantic States&quot;],&quot;Primary&quot;:&quot;36092.htm&quot;,&quot;CreatorNames&quot;:[&quot;Watkins, C. Malcolm&quot;],&quot;LoCC&quot;:[&quot;TS&quot;,&quot;NK&quot;],&quot;PG_ID&quot;:&quot;36092&quot;});" class='title'>North Devon Pottery and Its Export to America in the 17th Century</a>
+<div class='author'>Watkins, C. Malcolm</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36250, {&quot;Title&quot;:&quot;Arts and Crafts Essays - by Members of the Arts and Crafts Exhibition Society&quot;,&quot;Topics&quot;:[&quot;Arts and crafts movement&quot;,&quot;Decorative arts&quot;],&quot;Primary&quot;:&quot;36250.htm&quot;,&quot;CreatorNames&quot;:[&quot;Arts and Crafts Exhibition Society&quot;,&quot;Morris, William, 1834-1896 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;36250&quot;});" class='title'>Arts and Crafts Essays -<br><span class='subtitle'>by Members of the Arts and Crafts Exhibition Society</span></a>
+<div class='author'>Arts and Crafts Exhibition Society, Morris, William, 1834-1896 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37103, {&quot;Title&quot;:&quot;Of the Just Shaping of Letters&quot;,&quot;Topics&quot;:[&quot;Lettering&quot;,&quot;Alphabets&quot;,&quot;Roman capitals (Lettering)&quot;],&quot;Primary&quot;:&quot;37103.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dürer, Albrecht, 1471-1528&quot;,&quot;Nichol, R. T. [Translator]&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;37103&quot;});" class='title'>Of the Just Shaping of Letters</a>
+<div class='author'>Dürer, Albrecht, 1471-1528, Nichol, R. T. [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39398, {&quot;Title&quot;:&quot;A System of Easy Lettering&quot;,&quot;Topics&quot;:[&quot;Lettering&quot;,&quot;Alphabets&quot;],&quot;Primary&quot;:&quot;39398.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cromwell, John Howard, 1857-&quot;],&quot;LoCC&quot;:[&quot;T&quot;,&quot;NK&quot;],&quot;PG_ID&quot;:&quot;39398&quot;});" class='title'>A System of Easy Lettering</a>
+<div class='author'>Cromwell, John Howard, 1857-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39602, {&quot;Title&quot;:&quot;The Industrial Arts in Spain&quot;,&quot;Topics&quot;:[&quot;Decorative arts -- Spain -- History&quot;,&quot;Pottery -- Spain -- History&quot;],&quot;Primary&quot;:&quot;39602.htm&quot;,&quot;CreatorNames&quot;:[&quot;Riaño, Juan F. (Juan Facundo), 1829-1901&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;39602&quot;});" class='title'>The Industrial Arts in Spain</a>
+<div class='author'>Riaño, Juan F. (Juan Facundo), 1829-1901</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39740, {&quot;Title&quot;:&quot;Oriental Rugs, Antique and Modern&quot;,&quot;Topics&quot;:[&quot;Rugs, Oriental&quot;],&quot;Primary&quot;:&quot;39740.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hawley, W. A. (Walter Augustus), 1863-1920&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;39740&quot;});" class='title'>Oriental Rugs, Antique and Modern</a>
+<div class='author'>Hawley, W. A. (Walter Augustus), 1863-1920</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39749, {&quot;Title&quot;:&quot;Principles of Decorative Design - Fourth Edition&quot;,&quot;Topics&quot;:[&quot;Decoration and ornament&quot;,&quot;Decoration and ornament -- Victorian style&quot;],&quot;Primary&quot;:&quot;39749.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dresser, Christopher&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;39749&quot;});" class='title'>Principles of Decorative Design -<br><span class='subtitle'>Fourth Edition</span></a>
+<div class='author'>Dresser, Christopher</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40023, {&quot;Title&quot;:&quot;Monograms &amp; Ciphers&quot;,&quot;Topics&quot;:[&quot;Monograms&quot;],&quot;Primary&quot;:&quot;40023.htm&quot;,&quot;CreatorNames&quot;:[&quot;Carlton Studio&quot;,&quot;Turbayne, A. A. (Albert Angus), 1866-1940&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;40023&quot;});" class='title'>Monograms & Ciphers</a>
+<div class='author'>Carlton Studio, Turbayne, A. A. (Albert Angus), 1866-1940</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40039, {&quot;Title&quot;:&quot;A magyar nép művészete (1. kötet) - A kalotaszegi magyar nép művészete&quot;,&quot;Topics&quot;:[&quot;Folk art -- Hungary&quot;],&quot;Primary&quot;:&quot;40039.htm&quot;,&quot;CreatorNames&quot;:[&quot;Malonyay, Dezső, 1866-1916&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;40039&quot;});" class='title'>A magyar nép művészete (1. kötet) -<br><span class='subtitle'>A kalotaszegi magyar nép művészete</span></a>
+<div class='author'>Malonyay, Dezső, 1866-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40286, {&quot;Title&quot;:&quot;The Decoration of Leather - From the French of Georges de Récy&quot;,&quot;Topics&quot;:[&quot;Leatherwork&quot;],&quot;Primary&quot;:&quot;40286.htm&quot;,&quot;CreatorNames&quot;:[&quot;Récy, Georges de&quot;,&quot;Nathan, Maude [Translator]&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;40286&quot;});" class='title'>The Decoration of Leather -<br><span class='subtitle'>From the French of Georges de Récy</span></a>
+<div class='author'>Récy, Georges de, Nathan, Maude [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40311, {&quot;Title&quot;:&quot;China and Pottery Marks&quot;,&quot;Topics&quot;:[&quot;Pottery -- Marks&quot;],&quot;Primary&quot;:&quot;40311.htm&quot;,&quot;CreatorNames&quot;:[&quot;Unknown&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;40311&quot;});" class='title'>China and Pottery Marks</a>
+<div class='author'>Unknown</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40367, {&quot;Title&quot;:&quot;The Decoration of Houses&quot;,&quot;Topics&quot;:[&quot;Interior decoration&quot;],&quot;Primary&quot;:&quot;40367.htm&quot;,&quot;CreatorNames&quot;:[&quot;Codman, Ogden&quot;,&quot;Wharton, Edith, 1862-1937&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;40367&quot;});" class='title'>The Decoration of Houses</a>
+<div class='author'>Codman, Ogden, Wharton, Edith, 1862-1937</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41321, {&quot;Title&quot;:&quot;Japanese Swords&quot;,&quot;Topics&quot;:[&quot;Yamanaka &amp; Company -- Catalogs&quot;,&quot;Swords -- Japan -- Catalogs&quot;,&quot;Swords -- Collectors and collecting -- Catalogs&quot;],&quot;Primary&quot;:&quot;41321.htm&quot;,&quot;CreatorNames&quot;:[&quot;Yamanaka &amp; Company&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;41321&quot;});" class='title'>Japanese Swords</a>
+<div class='author'>Yamanaka & Company</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41370, {&quot;Title&quot;:&quot;Stained Glass of the Middle Ages in England and France&quot;,&quot;Topics&quot;:[&quot;Glass painting and staining -- France&quot;,&quot;Glass painting and staining -- England&quot;,&quot;Art, Medieval&quot;],&quot;Primary&quot;:&quot;41370.htm&quot;,&quot;CreatorNames&quot;:[&quot;Arnold, Hugh&quot;,&quot;Saint, Lawrence B. (Lawrence Bradford), 1885- [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;41370&quot;});" class='title'>Stained Glass of the Middle Ages in England and France</a>
+<div class='author'>Arnold, Hugh, Saint, Lawrence B. (Lawrence Bradford), 1885- [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41544, {&quot;Title&quot;:&quot;Leadwork, Old and Ornamental and for the most part English&quot;,&quot;Topics&quot;:[&quot;Leadwork&quot;],&quot;Primary&quot;:&quot;41544.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lethaby, W. R. (William Richard), 1857-1931&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;41544&quot;});" class='title'>Leadwork, Old and Ornamental and for the most part English</a>
+<div class='author'>Lethaby, W. R. (William Richard), 1857-1931</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41664, {&quot;Title&quot;:&quot;Old Time Wall Papers - An Account of the Pictorial Papers on Our Forefathers&#39; Walls with a Study of the Historical Development of Wall Paper Making and Decoration&quot;,&quot;Topics&quot;:[&quot;Wallpaper&quot;,&quot;Interior decoration -- History&quot;],&quot;Primary&quot;:&quot;41664.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sanborn, Kate, 1839-1917&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;41664&quot;});" class='title'>Old Time Wall Papers -<br><span class='subtitle'>An Account of the Pictorial Papers on Our Forefathers' Walls with a Study of the Historical Development of Wall Paper Making and Decoration</span></a>
+<div class='author'>Sanborn, Kate, 1839-1917</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41717, {&quot;Title&quot;:&quot;Samplers and Tapestry Embroideries - Second Edition&quot;,&quot;Topics&quot;:[&quot;Samplers -- England&quot;,&quot;Tapestry -- England&quot;,&quot;Embroidery -- England&quot;],&quot;Primary&quot;:&quot;41717.htm&quot;,&quot;CreatorNames&quot;:[&quot;Huish, Marcus B. (Marcus Bourne), 1845-1921&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;41717&quot;});" class='title'>Samplers and Tapestry Embroideries -<br><span class='subtitle'>Second Edition</span></a>
+<div class='author'>Huish, Marcus B. (Marcus Bourne), 1845-1921</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41922, {&quot;Title&quot;:&quot;The Bedroom and Boudoir&quot;,&quot;Topics&quot;:[&quot;Interior decoration&quot;],&quot;Primary&quot;:&quot;41922.htm&quot;,&quot;CreatorNames&quot;:[&quot;Barker, Lady (Mary Anne), 1831-1911&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;41922&quot;});" class='title'>The Bedroom and Boudoir</a>
+<div class='author'>Barker, Lady (Mary Anne), 1831-1911</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41927, {&quot;Title&quot;:&quot;A Complete Guide to the Ornamental Leather Work&quot;,&quot;Topics&quot;:[&quot;Leatherwork&quot;],&quot;Primary&quot;:&quot;41927.htm&quot;,&quot;CreatorNames&quot;:[&quot;Revell, James&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;41927&quot;});" class='title'>A Complete Guide to the Ornamental Leather Work</a>
+<div class='author'>Revell, James</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42098, {&quot;Title&quot;:&quot;Windows: A Book About Stained &amp; Painted Glass&quot;,&quot;Topics&quot;:[&quot;Glass painting and staining&quot;],&quot;Primary&quot;:&quot;42098.htm&quot;,&quot;CreatorNames&quot;:[&quot;Day, Lewis F. (Lewis Foreman), 1845-1910&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;42098&quot;});" class='title'>Windows:<br><span class='subtitle'>A Book About Stained & Painted Glass</span></a>
+<div class='author'>Day, Lewis F. (Lewis Foreman), 1845-1910</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42317, {&quot;Title&quot;:&quot;Industrial Arts Design - A Textbook of Practical Methods for Students, Teachers, and Craftsmen&quot;,&quot;Topics&quot;:[&quot;Decoration and ornament&quot;,&quot;Industrial arts&quot;],&quot;Primary&quot;:&quot;42317.htm&quot;,&quot;CreatorNames&quot;:[&quot;Varnum, William H. (William Harrison), 1878-1946&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;42317&quot;});" class='title'>Industrial Arts Design -<br><span class='subtitle'>A Textbook of Practical Methods for Students, Teachers, and Craftsmen</span></a>
+<div class='author'>Varnum, William H. (William Harrison), 1878-1946</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42949, {&quot;Title&quot;:&quot;A Manual of Wood Carving&quot;,&quot;Topics&quot;:[&quot;Wood-carving&quot;,&quot;Wood-carving -- Technique&quot;],&quot;Primary&quot;:&quot;42949.htm&quot;,&quot;CreatorNames&quot;:[&quot;Holtzapffel, John J. (John Jacob)&quot;,&quot;Leland, Charles Godfrey, 1824-1903&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;42949&quot;});" class='title'>A Manual of Wood Carving</a>
+<div class='author'>Holtzapffel, John J. (John Jacob), Leland, Charles Godfrey, 1824-1903</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43221, {&quot;Title&quot;:&quot;The Ceramic Art - A Compendium of The History and Manufacture of Pottery and Porcelain&quot;,&quot;Topics&quot;:[&quot;Pottery -- History&quot;],&quot;Primary&quot;:&quot;43221.htm&quot;,&quot;CreatorNames&quot;:[&quot;Young, Jennie J.&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;43221&quot;});" class='title'>The Ceramic Art -<br><span class='subtitle'>A Compendium of The History and Manufacture of Pottery and Porcelain</span></a>
+<div class='author'>Young, Jennie J.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43707, {&quot;Title&quot;:&quot;Finger-Ring Lore: Historical, Legendary, Anecdotal&quot;,&quot;Topics&quot;:[&quot;Rings&quot;],&quot;Primary&quot;:&quot;43707.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jones, William, F.S.A.&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;43707&quot;});" class='title'>Finger-Ring Lore:<br><span class='subtitle'>Historical, Legendary, Anecdotal</span></a>
+<div class='author'>Jones, William, F.S.A.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43805, {&quot;Title&quot;:&quot;Little Books About Old Furniture. Volume II. The Period of Queen Anne&quot;,&quot;Topics&quot;:[&quot;Furniture -- England -- History -- 18th century&quot;,&quot;Decoration and ornament -- Queen Anne style&quot;,&quot;Furniture, Queen Anne&quot;],&quot;Primary&quot;:&quot;43805.htm&quot;,&quot;CreatorNames&quot;:[&quot;Blake, J. P. (John Percy)&quot;,&quot;Reveirs-Hopkins, A. E. (Alfred Edward)&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;43805&quot;});" class='title'>Little Books About Old Furniture. Volume II. The Period of Queen Anne</a>
+<div class='author'>Blake, J. P. (John Percy), Reveirs-Hopkins, A. E. (Alfred Edward)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44014, {&quot;Title&quot;:&quot;Antique Works of Art from Benin - Collected by Lieutenant-General Pitt Rivers&quot;,&quot;Topics&quot;:[&quot;Art objects -- Nigeria -- Benin City -- Catalogs&quot;],&quot;Primary&quot;:&quot;44014.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pitt-Rivers, Augustus Henry Lane-Fox, 1827-1900&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;44014&quot;});" class='title'>Antique Works of Art from Benin -<br><span class='subtitle'>Collected by Lieutenant-General Pitt Rivers</span></a>
+<div class='author'>Pitt-Rivers, Augustus Henry Lane-Fox, 1827-1900</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44391, {&quot;Title&quot;:&quot;The Arts and Crafts of Older Spain, Volume 1 (of 3)&quot;,&quot;Topics&quot;:[&quot;Decorative arts -- Spain -- History&quot;],&quot;Primary&quot;:&quot;44391.htm&quot;,&quot;CreatorNames&quot;:[&quot;Williams, Leonard, 1871-&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;44391&quot;});" class='title'>The Arts and Crafts of Older Spain, Volume 1 (of 3)</a>
+<div class='author'>Williams, Leonard, 1871-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44392, {&quot;Title&quot;:&quot;The Arts and Crafts of Older Spain, Volume 2 (of 3)&quot;,&quot;Topics&quot;:[&quot;Decorative arts -- Spain -- History&quot;],&quot;Primary&quot;:&quot;44392.htm&quot;,&quot;CreatorNames&quot;:[&quot;Williams, Leonard, 1871-&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;44392&quot;});" class='title'>The Arts and Crafts of Older Spain, Volume 2 (of 3)</a>
+<div class='author'>Williams, Leonard, 1871-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44393, {&quot;Title&quot;:&quot;The Arts and Crafts of Older Spain, Volume 3 (of 3)&quot;,&quot;Topics&quot;:[&quot;Decorative arts -- Spain -- History&quot;],&quot;Primary&quot;:&quot;44393.htm&quot;,&quot;CreatorNames&quot;:[&quot;Williams, Leonard, 1871-&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;44393&quot;});" class='title'>The Arts and Crafts of Older Spain, Volume 3 (of 3)</a>
+<div class='author'>Williams, Leonard, 1871-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44538, {&quot;Title&quot;:&quot;Armour in England, from the Earliest Times to the Reign of James the First&quot;,&quot;Topics&quot;:[&quot;Armor -- England&quot;],&quot;Primary&quot;:&quot;44538.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gardner, John Starkie, 1844-1930&quot;,&quot;Farquharson, V. A. (Victor Alexander), 1853-1926 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;44538&quot;});" class='title'>Armour in England, from the Earliest Times to the Reign of James the First</a>
+<div class='author'>Gardner, John Starkie, 1844-1930, Farquharson, V. A. (Victor Alexander), 1853-1926 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44603, {&quot;Title&quot;:&quot;Chats on Cottage and Farmhouse Furniture&quot;,&quot;Topics&quot;:[&quot;Furniture -- England&quot;,&quot;Country furniture -- England&quot;,&quot;Textile fabrics -- England&quot;],&quot;Primary&quot;:&quot;44603.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hayden, Arthur, 1868-1946&quot;,&quot;Phillips, Hugh, 1886- [Contributor]&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;44603&quot;});" class='title'>Chats on Cottage and Farmhouse Furniture</a>
+<div class='author'>Hayden, Arthur, 1868-1946, Phillips, Hugh, 1886- [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44750, {&quot;Title&quot;:&quot;The Library of Work and Play: Home Decoration&quot;,&quot;Topics&quot;:[&quot;Interior decoration&quot;,&quot;Handicraft&quot;],&quot;Primary&quot;:&quot;44750.htm&quot;,&quot;CreatorNames&quot;:[&quot;Warner, Charles Franklin, 1857-&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;44750&quot;});" class='title'>The Library of Work and Play:<br><span class='subtitle'>Home Decoration</span></a>
+<div class='author'>Warner, Charles Franklin, 1857-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44930, {&quot;Title&quot;:&quot;Palissy the Huguenot Potter: A True Tale&quot;,&quot;Topics&quot;:[&quot;Palissy, Bernard, 1510?-1590&quot;],&quot;Primary&quot;:&quot;44930.htm&quot;,&quot;CreatorNames&quot;:[&quot;Brightwell, C. L. (Cecilia Lucy), 1811-1875&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;44930&quot;});" class='title'>Palissy the Huguenot Potter:<br><span class='subtitle'>A True Tale</span></a>
+<div class='author'>Brightwell, C. L. (Cecilia Lucy), 1811-1875</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45570, {&quot;Title&quot;:&quot;Old Irish Glass&quot;,&quot;Topics&quot;:[&quot;Glassware -- Ireland&quot;,&quot;Cut glass -- Ireland&quot;],&quot;Primary&quot;:&quot;45570.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stannus, Graydon, Mrs.&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;45570&quot;});" class='title'>Old Irish Glass</a>
+<div class='author'>Stannus, Graydon, Mrs.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45772, {&quot;Title&quot;:&quot;Chats on Old Clocks&quot;,&quot;Topics&quot;:[&quot;Clocks and watches&quot;],&quot;Primary&quot;:&quot;45772.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hayden, Arthur, 1868-1946&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;45772&quot;});" class='title'>Chats on Old Clocks</a>
+<div class='author'>Hayden, Arthur, 1868-1946</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46079, {&quot;Title&quot;:&quot;Evolution in Art: As Illustrated by the Life-histories of Designs&quot;,&quot;Topics&quot;:[&quot;Art, Primitive&quot;,&quot;Decoration and ornament&quot;,&quot;Decoration and ornament, Primitive&quot;],&quot;Primary&quot;:&quot;46079.htm&quot;,&quot;CreatorNames&quot;:[&quot;Haddon, Alfred C. (Alfred Cort), 1855-1940&quot;],&quot;LoCC&quot;:[&quot;N&quot;,&quot;NK&quot;],&quot;PG_ID&quot;:&quot;46079&quot;});" class='title'>Evolution in Art:<br><span class='subtitle'>As Illustrated by the Life-histories of Designs</span></a>
+<div class='author'>Haddon, Alfred C. (Alfred Cort), 1855-1940</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46779, {&quot;Title&quot;:&quot;Pottery and Porcelain, from early times down to the Philadelphia exhibition of 1876&quot;,&quot;Topics&quot;:[&quot;Pottery -- History&quot;,&quot;Pottery -- Marks&quot;],&quot;Primary&quot;:&quot;46779.htm&quot;,&quot;CreatorNames&quot;:[&quot;Elliott, Charles Wyllys, 1817-1883&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;46779&quot;});" class='title'>Pottery and Porcelain, from early times down to the Philadelphia exhibition of 1876</a>
+<div class='author'>Elliott, Charles Wyllys, 1817-1883</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46877, {&quot;Title&quot;:&quot;Glass&quot;,&quot;Topics&quot;:[&quot;Glass&quot;,&quot;Glassware&quot;],&quot;Primary&quot;:&quot;46877.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dillon, Edward, -1914&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;46877&quot;});" class='title'>Glass</a>
+<div class='author'>Dillon, Edward, -1914</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47040, {&quot;Title&quot;:&quot;Chats on Old Copper and Brass&quot;,&quot;Topics&quot;:[&quot;Copperwork&quot;,&quot;Brasswork&quot;,&quot;Metal-work -- Collectors and collecting&quot;,&quot;Brasses&quot;,&quot;Copper&quot;],&quot;Primary&quot;:&quot;47040.htm&quot;,&quot;CreatorNames&quot;:[&quot;Burgess, Fred. W. (Frederick William), 1855-1945&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;47040&quot;});" class='title'>Chats on Old Copper and Brass</a>
+<div class='author'>Burgess, Fred. W. (Frederick William), 1855-1945</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47089, {&quot;Title&quot;:&quot;Writing &amp; Illuminating, &amp; Lettering&quot;,&quot;Topics&quot;:[&quot;Lettering&quot;,&quot;Illumination of books and manuscripts&quot;],&quot;Primary&quot;:&quot;47089.htm&quot;,&quot;CreatorNames&quot;:[&quot;Johnston, Edward, 1872-1944&quot;,&quot;Gill, A. E. R. [Contributor]&quot;,&quot;Rooke, Noel, 1881- [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;47089&quot;});" class='title'>Writing & Illuminating, & Lettering</a>
+<div class='author'>Johnston, Edward, 1872-1944, Gill, A. E. R. [Contributor], Rooke, Noel, 1881- [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47823, {&quot;Title&quot;:&quot;Jewellery&quot;,&quot;Topics&quot;:[&quot;Jewelry&quot;],&quot;Primary&quot;:&quot;47823.htm&quot;,&quot;CreatorNames&quot;:[&quot;Smith, H. Clifford (Harold Clifford), 1876-1960&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;47823&quot;});" class='title'>Jewellery</a>
+<div class='author'>Smith, H. Clifford (Harold Clifford), 1876-1960</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47870, {&quot;Title&quot;:&quot;Chats on Old Earthenware&quot;,&quot;Topics&quot;:[&quot;Pottery&quot;],&quot;Primary&quot;:&quot;47870.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hayden, Arthur, 1868-1946&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;47870&quot;});" class='title'>Chats on Old Earthenware</a>
+<div class='author'>Hayden, Arthur, 1868-1946</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47917, {&quot;Title&quot;:&quot;The Old Furniture Book, with a Sketch of Past Days and Ways&quot;,&quot;Topics&quot;:[&quot;Furniture&quot;],&quot;Primary&quot;:&quot;47917.htm&quot;,&quot;CreatorNames&quot;:[&quot;Moore, N. Hudson, 1857-1927&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;47917&quot;});" class='title'>The Old Furniture Book, with a Sketch of Past Days and Ways</a>
+<div class='author'>Moore, N. Hudson, 1857-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47942, {&quot;Title&quot;:&quot;Chats on Oriental China&quot;,&quot;Topics&quot;:[&quot;Pottery -- Marks&quot;,&quot;Pottery, Chinese&quot;,&quot;Pottery, Japanese&quot;],&quot;Primary&quot;:&quot;47942.htm&quot;,&quot;CreatorNames&quot;:[&quot;Blacker, J. F.&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;47942&quot;});" class='title'>Chats on Oriental China</a>
+<div class='author'>Blacker, J. F.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47967, {&quot;Title&quot;:&quot;The Bases of Design&quot;,&quot;Topics&quot;:[&quot;Decoration and ornament&quot;,&quot;Design&quot;],&quot;Primary&quot;:&quot;47967.htm&quot;,&quot;CreatorNames&quot;:[&quot;Crane, Walter, 1845-1915&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;47967&quot;});" class='title'>The Bases of Design</a>
+<div class='author'>Crane, Walter, 1845-1915</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48154, {&quot;Title&quot;:&quot;History of Ancient Pottery: Greek, Etruscan, and Roman.  Volume 1 (of 2)&quot;,&quot;Topics&quot;:[&quot;Mythology, Classical, in art&quot;,&quot;Pottery, Greek&quot;,&quot;Pottery, Etruscan&quot;,&quot;Pottery, Roman&quot;,&quot;Pottery, Ancient&quot;],&quot;Primary&quot;:&quot;48154.htm&quot;,&quot;CreatorNames&quot;:[&quot;Birch, Samuel, 1813-1885&quot;,&quot;Walters, H. B. (Henry Beauchamp), 1867-1944&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;48154&quot;});" class='title'>History of Ancient Pottery:<br><span class='subtitle'>Greek, Etruscan, and Roman.  Volume 1 (of 2)</span></a>
+<div class='author'>Birch, Samuel, 1813-1885, Walters, H. B. (Henry Beauchamp), 1867-1944</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48155, {&quot;Title&quot;:&quot;History of Ancient Pottery: Greek, Etruscan, and Roman.  Volume 2 (of 2)&quot;,&quot;Topics&quot;:[&quot;Mythology, Classical, in art&quot;,&quot;Pottery, Greek&quot;,&quot;Pottery, Etruscan&quot;,&quot;Pottery, Roman&quot;,&quot;Pottery, Ancient&quot;],&quot;Primary&quot;:&quot;48155.htm&quot;,&quot;CreatorNames&quot;:[&quot;Birch, Samuel, 1813-1885&quot;,&quot;Walters, H. B. (Henry Beauchamp), 1867-1944&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;48155&quot;});" class='title'>History of Ancient Pottery:<br><span class='subtitle'>Greek, Etruscan, and Roman.  Volume 2 (of 2)</span></a>
+<div class='author'>Birch, Samuel, 1813-1885, Walters, H. B. (Henry Beauchamp), 1867-1944</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48281, {&quot;Title&quot;:&quot;The China Painter Instruction Book&quot;,&quot;Topics&quot;:[&quot;China painting&quot;],&quot;Primary&quot;:&quot;48281.htm&quot;,&quot;CreatorNames&quot;:[&quot;Balluff, George Erhart, 1864-&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;48281&quot;});" class='title'>The China Painter Instruction Book</a>
+<div class='author'>Balluff, George Erhart, 1864-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48391, {&quot;Title&quot;:&quot;Chats on Royal Copenhagen Porcelain&quot;,&quot;Topics&quot;:[&quot;Pottery -- Marks&quot;,&quot;Kongelige Porcelainsfabrik&quot;,&quot;Copenhagen porcelain&quot;,&quot;Pottery, Danish&quot;,&quot;Pottery -- Collectors and collecting&quot;],&quot;Primary&quot;:&quot;48391.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hayden, Arthur, 1868-1946&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;48391&quot;});" class='title'>Chats on Royal Copenhagen Porcelain</a>
+<div class='author'>Hayden, Arthur, 1868-1946</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48392, {&quot;Title&quot;:&quot;Chats on Old Sheffield Plate&quot;,&quot;Topics&quot;:[&quot;Sheffield plate&quot;,&quot;Plate -- Collectors and collecting&quot;,&quot;Hallmarks -- England&quot;],&quot;Primary&quot;:&quot;48392.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hayden, Arthur, 1868-1946&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;48392&quot;});" class='title'>Chats on Old Sheffield Plate</a>
+<div class='author'>Hayden, Arthur, 1868-1946</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49367, {&quot;Title&quot;:&quot;Os Cataventos&quot;,&quot;Topics&quot;:[&quot;Weather -- Folklore&quot;,&quot;Weather vanes -- Portugal&quot;],&quot;Primary&quot;:&quot;49367.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rocha Peixoto, 1866-1909&quot;],&quot;LoCC&quot;:[&quot;GR&quot;,&quot;NK&quot;],&quot;PG_ID&quot;:&quot;49367&quot;});" class='title'>Os Cataventos</a>
+<div class='author'>Rocha Peixoto, 1866-1909</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49439, {&quot;Title&quot;:&quot;A Book of Porcelain: Fine examples in the Victoria &amp; Albert Museum&quot;,&quot;Topics&quot;:[&quot;Victoria and Albert Museum&quot;,&quot;Pottery -- England&quot;],&quot;Primary&quot;:&quot;49439.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rackham, Bernard, 1876-1964&quot;,&quot;Gibb, William [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;49439&quot;});" class='title'>A Book of Porcelain:<br><span class='subtitle'>Fine examples in the Victoria & Albert Museum</span></a>
+<div class='author'>Rackham, Bernard, 1876-1964, Gibb, William [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49556, {&quot;Title&quot;:&quot;Collecting as a Pastime&quot;,&quot;Topics&quot;:[&quot;Collectors and collecting&quot;],&quot;Primary&quot;:&quot;49556.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rowed, Charles&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;49556&quot;});" class='title'>Collecting as a Pastime</a>
+<div class='author'>Rowed, Charles</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49559, {&quot;Title&quot;:&quot;Modern Design in Jewellery and Fans&quot;,&quot;Topics&quot;:[&quot;Jewelry&quot;,&quot;Fans&quot;,&quot;Decoration and ornament -- Art Nouveau&quot;],&quot;Primary&quot;:&quot;49559.htm&quot;,&quot;CreatorNames&quot;:[&quot;Holme, Charles, 1848-1923 [Editor]&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;49559&quot;});" class='title'>Modern Design in Jewellery and Fans</a>
+<div class='author'>Holme, Charles, 1848-1923 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49823, {&quot;Title&quot;:&quot;Batik and Other Pattern Dyeing&quot;,&quot;Topics&quot;:[&quot;Dyes and dyeing&quot;,&quot;Batik&quot;],&quot;Primary&quot;:&quot;49823.htm&quot;,&quot;CreatorNames&quot;:[&quot;Baker, Ida Strawn, 1876-&quot;,&quot;Baker, Walter Davis&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;49823&quot;});" class='title'>Batik and Other Pattern Dyeing</a>
+<div class='author'>Baker, Ida Strawn, 1876-, Baker, Walter Davis</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49904, {&quot;Title&quot;:&quot;The Mentor: Furniture and its Makers, Vol. 1, Num. 30, Serial No. 30&quot;,&quot;Topics&quot;:[&quot;Furniture&quot;],&quot;Primary&quot;:&quot;49904.htm&quot;,&quot;CreatorNames&quot;:[&quot;Richards, Charles R. (Charles Russell), 1865-1936&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;49904&quot;});" class='title'>The Mentor:<br><span class='subtitle'>Furniture and its Makers, Vol. 1, Num. 30, Serial No. 30</span></a>
+<div class='author'>Richards, Charles R. (Charles Russell), 1865-1936</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50221, {&quot;Title&quot;:&quot;Die moderne Wohnung und ihre Ausstattung&quot;,&quot;Topics&quot;:[&quot;Interior decoration&quot;,&quot;Furniture&quot;],&quot;Primary&quot;:&quot;50221.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lux, Joseph Aug. (Joseph August), 1871-1947&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;50221&quot;});" class='title'>Die moderne Wohnung und ihre Ausstattung</a>
+<div class='author'>Lux, Joseph Aug. (Joseph August), 1871-1947</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51626, {&quot;Title&quot;:&quot;Jacobean Furniture and English Styles in Oak and Walnut&quot;,&quot;Topics&quot;:[&quot;Furniture -- England -- History -- 17th century&quot;,&quot;Decoration and ornament, Jacobean&quot;,&quot;Furniture -- England -- Styles&quot;],&quot;Primary&quot;:&quot;51626.htm&quot;,&quot;CreatorNames&quot;:[&quot;Candee, Helen Churchill, 1861-1949&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;51626&quot;});" class='title'>Jacobean Furniture and English Styles in Oak and Walnut</a>
+<div class='author'>Candee, Helen Churchill, 1861-1949</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51670, {&quot;Title&quot;:&quot;The Mentor: Chinese Rugs, Vol. 4, Num. 2, Serial No. 102, March 1, 1916&quot;,&quot;Topics&quot;:[&quot;Rugs, Oriental&quot;],&quot;Primary&quot;:&quot;51670.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mumford, John Kimberly, 1863-1926&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;51670&quot;});" class='title'>The Mentor:<br><span class='subtitle'>Chinese Rugs, Vol. 4, Num. 2, Serial No. 102, March 1, 1916</span></a>
+<div class='author'>Mumford, John Kimberly, 1863-1926</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51863, {&quot;Title&quot;:&quot;Seven Centuries of Lace&quot;,&quot;Topics&quot;:[&quot;Lace and lace making -- History&quot;],&quot;Primary&quot;:&quot;51863.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pollen, Maria Margaret, -1919&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;51863&quot;});" class='title'>Seven Centuries of Lace</a>
+<div class='author'>Pollen, Maria Margaret, -1919</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52184, {&quot;Title&quot;:&quot;Sandwich Glass: A Technical Book for Collectors&quot;,&quot;Topics&quot;:[&quot;Boston and Sandwich Glass Company&quot;,&quot;Glassware -- Collectors and collecting&quot;],&quot;Primary&quot;:&quot;52184.htm&quot;,&quot;CreatorNames&quot;:[&quot;Williams, Lenore Wheeler&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;52184&quot;});" class='title'>Sandwich Glass:<br><span class='subtitle'>A Technical Book for Collectors</span></a>
+<div class='author'>Williams, Lenore Wheeler</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52738, {&quot;Title&quot;:&quot;Old Glass and How to Collect it&quot;,&quot;Topics&quot;:[&quot;Glassware -- Collectors and collecting&quot;,&quot;Glassware -- Great Britain&quot;,&quot;Glassware -- Prices&quot;],&quot;Primary&quot;:&quot;52738.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lewis, J. Sydney&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;52738&quot;});" class='title'>Old Glass and How to Collect it</a>
+<div class='author'>Lewis, J. Sydney</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53057, {&quot;Title&quot;:&quot;Furniture of the Olden Time&quot;,&quot;Topics&quot;:[&quot;Furniture&quot;],&quot;Primary&quot;:&quot;53057.htm&quot;,&quot;CreatorNames&quot;:[&quot;Morse, Frances Clary&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;53057&quot;});" class='title'>Furniture of the Olden Time</a>
+<div class='author'>Morse, Frances Clary</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53373, {&quot;Title&quot;:&quot;A Manual of Historic Ornament - Treating upon the evolution, tradition, and development of architecture and other applied arts. Prepared for the use of students and craftsmen&quot;,&quot;Topics&quot;:[&quot;Decoration and ornament -- History&quot;,&quot;Decorative arts -- History&quot;,&quot;Decoration and ornament, Architectural -- History&quot;],&quot;Primary&quot;:&quot;53373.htm&quot;,&quot;CreatorNames&quot;:[&quot;Glazier, Richard, 1851-1918&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;53373&quot;});" class='title'>A Manual of Historic Ornament -<br><span class='subtitle'>Treating upon the evolution, tradition, and development of architecture and other applied arts. Prepared for the use of students and craftsmen</span></a>
+<div class='author'>Glazier, Richard, 1851-1918</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53624, {&quot;Title&quot;:&quot;Art-Studies from Nature, as Applied to Design - For the use of architects, designers, and manufacturers&quot;,&quot;Topics&quot;:[&quot;Nature (Aesthetics)&quot;,&quot;Decoration and ornament -- Plant forms&quot;],&quot;Primary&quot;:&quot;53624.htm&quot;,&quot;CreatorNames&quot;:[&quot;Glaisher, James, 1809-1903&quot;,&quot;Hulme, F. Edward (Frederick Edward), 1841-1909&quot;,&quot;Hunt, Robert, 1807-1887&quot;,&quot;Mackie, Samuel Joseph, active 1851-1872&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;53624&quot;});" class='title'>Art-Studies from Nature, as Applied to Design -<br><span class='subtitle'>For the use of architects, designers, and manufacturers</span></a>
+<div class='author'>Glaisher, James, 1809-1903, Hulme, F. Edward (Frederick Edward), 1841-1909, Hunt, Robert, 1807-1887, Mackie, Samuel Joseph, active 1851-1872</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53806, {&quot;Title&quot;:&quot;Suburban Residences, and How to Circumvent Them&quot;,&quot;Topics&quot;:[&quot;Home economics&quot;,&quot;Interior decoration&quot;,&quot;Household employees&quot;,&quot;Suburban homes&quot;],&quot;Primary&quot;:&quot;53806.htm&quot;,&quot;CreatorNames&quot;:[&quot;Panton, J. E. (Jane Ellen), 1847-1923&quot;],&quot;LoCC&quot;:[&quot;TX&quot;,&quot;NK&quot;],&quot;PG_ID&quot;:&quot;53806&quot;});" class='title'>Suburban Residences, and How to Circumvent Them</a>
+<div class='author'>Panton, J. E. (Jane Ellen), 1847-1923</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53954, {&quot;Title&quot;:&quot;William Morris to Whistler - Papers and addresses on art and craft and the commonweal.&quot;,&quot;Topics&quot;:[&quot;Art&quot;,&quot;Arts and crafts movement -- Great Britain&quot;],&quot;Primary&quot;:&quot;53954.htm&quot;,&quot;CreatorNames&quot;:[&quot;Crane, Walter, 1845-1915&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;53954&quot;});" class='title'>William Morris to Whistler -<br><span class='subtitle'>Papers and addresses on art and craft and the commonweal.</span></a>
+<div class='author'>Crane, Walter, 1845-1915</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54196, {&quot;Title&quot;:&quot;The Practical Book of Oriental Rugs&quot;,&quot;Topics&quot;:[&quot;Rugs, Oriental&quot;],&quot;Primary&quot;:&quot;54196.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lewis, G. Griffin (George Griffin), 1865-1946&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;54196&quot;});" class='title'>The Practical Book of Oriental Rugs</a>
+<div class='author'>Lewis, G. Griffin (George Griffin), 1865-1946</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54381, {&quot;Title&quot;:&quot;Collecting Old Glass, English and Irish&quot;,&quot;Topics&quot;:[&quot;Glassware -- Collectors and collecting&quot;,&quot;Glassware -- Great Britain&quot;],&quot;Primary&quot;:&quot;54381.htm&quot;,&quot;CreatorNames&quot;:[&quot;Yoxall, J. H. (James Henry), Sir, 1857-1925&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;54381&quot;});" class='title'>Collecting Old Glass, English and Irish</a>
+<div class='author'>Yoxall, J. H. (James Henry), Sir, 1857-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54552, {&quot;Title&quot;:&quot;Dutch and Flemish Furniture&quot;,&quot;Topics&quot;:[&quot;Furniture -- Netherlands&quot;,&quot;Furniture -- Flanders&quot;],&quot;Primary&quot;:&quot;54552.htm&quot;,&quot;CreatorNames&quot;:[&quot;Singleton, Esther, 1865-1930&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;54552&quot;});" class='title'>Dutch and Flemish Furniture</a>
+<div class='author'>Singleton, Esther, 1865-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54602, {&quot;Title&quot;:&quot;Ancient and Modern Furniture and Woodwork&quot;,&quot;Topics&quot;:[&quot;Woodwork&quot;,&quot;Furniture&quot;],&quot;Primary&quot;:&quot;54602.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pollen, John Hungerford, 1820-1902&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;54602&quot;});" class='title'>Ancient and Modern Furniture and Woodwork</a>
+<div class='author'>Pollen, John Hungerford, 1820-1902</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54866, {&quot;Title&quot;:&quot;French and English furniture - distinctive styles and periods described and illustrated&quot;,&quot;Topics&quot;:[&quot;Furniture -- England&quot;,&quot;Furniture -- France&quot;],&quot;Primary&quot;:&quot;54866.htm&quot;,&quot;CreatorNames&quot;:[&quot;Singleton, Esther, 1865-1930&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;54866&quot;});" class='title'>French and English furniture -<br><span class='subtitle'>distinctive styles and periods described and illustrated</span></a>
+<div class='author'>Singleton, Esther, 1865-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55118, {&quot;Title&quot;:&quot;Porcelain&quot;,&quot;Topics&quot;:[&quot;Pottery&quot;],&quot;Primary&quot;:&quot;55118.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dillon, Edward, -1914&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;55118&quot;});" class='title'>Porcelain</a>
+<div class='author'>Dillon, Edward, -1914</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55614, {&quot;Title&quot;:&quot;The Bayeux Tapestry Elucidated&quot;,&quot;Topics&quot;:[&quot;Bayeux tapestry&quot;],&quot;Primary&quot;:&quot;55614.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bruce, J. Collingwood (John Collingwood), 1805-1892&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;55614&quot;});" class='title'>The Bayeux Tapestry Elucidated</a>
+<div class='author'>Bruce, J. Collingwood (John Collingwood), 1805-1892</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55894, {&quot;Title&quot;:&quot;The Pleasures of Collecting&quot;,&quot;Topics&quot;:[&quot;Collectors and collecting&quot;,&quot;Art objects -- Collectors and collecting&quot;],&quot;Primary&quot;:&quot;55894.htm&quot;,&quot;CreatorNames&quot;:[&quot;Teall, Gardner C.&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;55894&quot;});" class='title'>The Pleasures of Collecting</a>
+<div class='author'>Teall, Gardner C.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56467, {&quot;Title&quot;:&quot;A Book of Distinctive Interiors&quot;,&quot;Topics&quot;:[&quot;Interior decoration&quot;,&quot;Furniture&quot;],&quot;Primary&quot;:&quot;56467.htm&quot;,&quot;CreatorNames&quot;:[&quot;Vollmer, William Auerbach, 1886- [Editor]&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;56467&quot;});" class='title'>A Book of Distinctive Interiors</a>
+<div class='author'>Vollmer, William Auerbach, 1886- [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56927, {&quot;Title&quot;:&quot;The Spanish Armada, 1588 - The Tapestry Hangings of the House of Lords Representing the Several Engagements Between the English and Spanish Fleets.&quot;,&quot;Topics&quot;:[&quot;Armada, 1588&quot;,&quot;Tapestry -- England -- London&quot;,&quot;Westminster Palace (London, England) -- Lords&quot;],&quot;Primary&quot;:&quot;56927.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pine, John, 1690-1756&quot;],&quot;LoCC&quot;:[&quot;G&quot;,&quot;NK&quot;],&quot;PG_ID&quot;:&quot;56927&quot;});" class='title'>The Spanish Armada, 1588 -<br><span class='subtitle'>The Tapestry Hangings of the House of Lords Representing the Several Engagements Between the English and Spanish Fleets.</span></a>
+<div class='author'>Pine, John, 1690-1756</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57009, {&quot;Title&quot;:&quot;History of Lace&quot;,&quot;Topics&quot;:[&quot;Lace and lace making -- History&quot;],&quot;Primary&quot;:&quot;57009.htm&quot;,&quot;CreatorNames&quot;:[&quot;Palliser, Bury, Mrs., 1805-1878&quot;,&quot;Dryden, Alice, 1866-1956 [Editor]&quot;,&quot;Jourdain, Margaret, 1876-1951 [Editor]&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;57009&quot;});" class='title'>History of Lace</a>
+<div class='author'>Palliser, Bury, Mrs., 1805-1878, Dryden, Alice, 1866-1956 [Editor], Jourdain, Margaret, 1876-1951 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57124, {&quot;Title&quot;:&quot;Chats on English China&quot;,&quot;Topics&quot;:[&quot;Pottery -- Collectors and collecting&quot;,&quot;Porcelain, English&quot;,&quot;Pottery, English -- History&quot;,&quot;Porcelain -- Collectors and collecting&quot;],&quot;Primary&quot;:&quot;57124.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hayden, Arthur, 1868-1946&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;57124&quot;});" class='title'>Chats on English China</a>
+<div class='author'>Hayden, Arthur, 1868-1946</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57211, {&quot;Title&quot;:&quot;The Cabinetmaker in Eighteenth-Century Williamsburg - Giving Attention to the City&#39;s Chief Craftsmen in the Furniture Way; And to Their Tools &amp; Methods of Working&quot;,&quot;Topics&quot;:[&quot;Furniture, Colonial -- Virginia -- Williamsburg&quot;,&quot;Furniture workers -- Virginia -- Williamsburg&quot;,&quot;Furniture making&quot;],&quot;Primary&quot;:&quot;57211.htm&quot;,&quot;CreatorNames&quot;:[&quot;Heuvel, Johannes&quot;,&quot;Brown, Mills [Contributor]&quot;,&quot;Ford, Thomas K. [Editor]&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;57211&quot;});" class='title'>The Cabinetmaker in Eighteenth-Century Williamsburg -<br><span class='subtitle'>Giving Attention to the City's Chief Craftsmen in the Furniture Way; And to Their Tools & Methods of Working</span></a>
+<div class='author'>Heuvel, Johannes, Brown, Mills [Contributor], Ford, Thomas K. [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57492, {&quot;Title&quot;:&quot;Engraved Gems&quot;,&quot;Topics&quot;:[&quot;Gems&quot;],&quot;Primary&quot;:&quot;57492.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sommerville, Maxwell, 1829-1904&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;57492&quot;});" class='title'>Engraved Gems</a>
+<div class='author'>Sommerville, Maxwell, 1829-1904</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57518, {&quot;Title&quot;:&quot;Catalogue of the Retrospective Loan Exhibition of European Tapestries&quot;,&quot;Topics&quot;:[&quot;Tapestry -- Exhibitions&quot;],&quot;Primary&quot;:&quot;57518.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ackerman, Phyllis, 1893-1977&quot;,&quot;Laurvik, J. Nilsen (John Nilsen), 1877- [Author of introduction, etc.]&quot;,&quot;San Francisco Museum of Art&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;57518&quot;});" class='title'>Catalogue of the Retrospective Loan Exhibition of European Tapestries</a>
+<div class='author'>Ackerman, Phyllis, 1893-1977, Laurvik, J. Nilsen (John Nilsen), 1877- [Author of introduction, etc.], San Francisco Museum of Art</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57608, {&quot;Title&quot;:&quot;Church Needlework: A manual of practical instruction&quot;,&quot;Topics&quot;:[&quot;Embroidery&quot;,&quot;Needlework&quot;,&quot;Church vestments&quot;,&quot;Ecclesiastical embroidery&quot;],&quot;Primary&quot;:&quot;57608.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hands, Hinda M.&quot;,&quot;Deane, Anthony C. (Anthony Charles), 1870-1946 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;57608&quot;});" class='title'>Church Needlework:<br><span class='subtitle'>A manual of practical instruction</span></a>
+<div class='author'>Hands, Hinda M., Deane, Anthony C. (Anthony Charles), 1870-1946 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57612, {&quot;Title&quot;:&quot;Ladies&#39; manual of art; or, profit and pastime. - A self teacher in all branches of decorative art, embracing every variety of painting and drawing on china, glass, velvet, canvas, paper and wood the secret of all glass transparencies, sketching from nature. pastel and crayon drawing, taxidermy, etc.&quot;,&quot;Topics&quot;:[&quot;Taxidermy&quot;,&quot;Women -- Recreation&quot;,&quot;Art -- Technique&quot;,&quot;Handicraft -- Technique&quot;],&quot;Primary&quot;:&quot;57612.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;N&quot;,&quot;NK&quot;],&quot;PG_ID&quot;:&quot;57612&quot;});" class='title'>Ladies' manual of art;<br><span class='subtitle'>or, profit and pastime. - A self teacher in all branches of decorative art, embracing every variety of painting and drawing on china, glass, velvet, canvas, paper and wood the secret of all glass transparencies, sketching from nature. pastel and crayon drawing, taxidermy, etc.</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57806, {&quot;Title&quot;:&quot;Maiolica&quot;,&quot;Topics&quot;:[&quot;Majolica&quot;],&quot;Primary&quot;:&quot;57806.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fortnum, C. Drury E. (Charles Drury Edward), 1820-1899&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;57806&quot;});" class='title'>Maiolica</a>
+<div class='author'>Fortnum, C. Drury E. (Charles Drury Edward), 1820-1899</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58066, {&quot;Title&quot;:&quot;The Silversmith in Eighteenth-Century Williamsburg - An Account of His Life &amp; Times, &amp; of His Craft&quot;,&quot;Topics&quot;:[&quot;Silverwork, Colonial -- Virginia&quot;],&quot;Primary&quot;:&quot;58066.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ford, Thomas K.&quot;,&quot;Bullock, Thomas K. [Contributor]&quot;],&quot;LoCC&quot;:[&quot;TS&quot;,&quot;NK&quot;],&quot;PG_ID&quot;:&quot;58066&quot;});" class='title'>The Silversmith in Eighteenth-Century Williamsburg -<br><span class='subtitle'>An Account of His Life & Times, & of His Craft</span></a>
+<div class='author'>Ford, Thomas K., Bullock, Thomas K. [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58752, {&quot;Title&quot;:&quot;The Ivory Workers of the Middle Ages&quot;,&quot;Topics&quot;:[&quot;Ivories, Medieval&quot;,&quot;Ivories -- History&quot;],&quot;Primary&quot;:&quot;58752.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cust, Anna Maria Elizabeth&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;58752&quot;});" class='title'>The Ivory Workers of the Middle Ages</a>
+<div class='author'>Cust, Anna Maria Elizabeth</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58757, {&quot;Title&quot;:&quot;Chats on Old Silver&quot;,&quot;Topics&quot;:[&quot;Silverwork -- Great Britain&quot;],&quot;Primary&quot;:&quot;58757.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hayden, Arthur, 1868-1946&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;58757&quot;});" class='title'>Chats on Old Silver</a>
+<div class='author'>Hayden, Arthur, 1868-1946</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58840, {&quot;Title&quot;:&quot;Colour Decoration of Architecture&quot;,&quot;Topics&quot;:[&quot;Interior decoration&quot;,&quot;Decoration and ornament&quot;,&quot;Mural painting and decoration&quot;,&quot;Polychromy&quot;],&quot;Primary&quot;:&quot;58840.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ward, James, 1851-1924&quot;],&quot;LoCC&quot;:[&quot;ND&quot;,&quot;NK&quot;],&quot;PG_ID&quot;:&quot;58840&quot;});" class='title'>Colour Decoration of Architecture</a>
+<div class='author'>Ward, James, 1851-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59230, {&quot;Title&quot;:&quot;Ye Magick Mirrour of Old Japan&quot;,&quot;Topics&quot;:[&quot;Magic mirrors -- Japan&quot;],&quot;Primary&quot;:&quot;59230.htm&quot;,&quot;CreatorNames&quot;:[&quot;Thompson, Silvanus P. (Silvanus Phillips), 1851-1916&quot;],&quot;LoCC&quot;:[&quot;QC&quot;,&quot;NK&quot;],&quot;PG_ID&quot;:&quot;59230&quot;});" class='title'>Ye Magick Mirrour of Old Japan</a>
+<div class='author'>Thompson, Silvanus P. (Silvanus Phillips), 1851-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59233, {&quot;Title&quot;:&quot;Scarabs: An Introduction to the Study of Egyptian Seals and Signet Rings&quot;,&quot;Topics&quot;:[&quot;Egypt -- Antiquities&quot;,&quot;Rings&quot;,&quot;Scarabs -- Egypt&quot;,&quot;Seals (Numismatics) -- Egypt&quot;],&quot;Primary&quot;:&quot;59233.htm&quot;,&quot;CreatorNames&quot;:[&quot;Newberry, Percy E. (Percy Edward), 1869-1949&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;59233&quot;});" class='title'>Scarabs:<br><span class='subtitle'>An Introduction to the Study of Egyptian Seals and Signet Rings</span></a>
+<div class='author'>Newberry, Percy E. (Percy Edward), 1869-1949</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59372, {&quot;Title&quot;:&quot;The Alfred Jewel: An Historical Essay&quot;,&quot;Topics&quot;:[&quot;Alfred, King of England, 849-899&quot;,&quot;Great Britain -- History -- Alfred, 871-899&quot;,&quot;Enamel and enameling&quot;],&quot;Primary&quot;:&quot;59372.htm&quot;,&quot;CreatorNames&quot;:[&quot;Earle, John, 1824-1903&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;59372&quot;});" class='title'>The Alfred Jewel:<br><span class='subtitle'>An Historical Essay</span></a>
+<div class='author'>Earle, John, 1824-1903</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59746, {&quot;Title&quot;:&quot;Historic Ornament, Vol. 1 (of 2) - Treatise on decorative art and architectural ornament&quot;,&quot;Topics&quot;:[&quot;Decoration and ornament -- History&quot;,&quot;Architecture -- History&quot;,&quot;Decorative arts -- History&quot;],&quot;Primary&quot;:&quot;59746.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ward, James, 1851-1924&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;59746&quot;});" class='title'>Historic Ornament, Vol. 1 (of 2) -<br><span class='subtitle'>Treatise on decorative art and architectural ornament</span></a>
+<div class='author'>Ward, James, 1851-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59946, {&quot;Title&quot;:&quot;Shapes of Greek Vases&quot;,&quot;Topics&quot;:[&quot;Vases, Greek&quot;],&quot;Primary&quot;:&quot;59946.htm&quot;,&quot;CreatorNames&quot;:[&quot;Metropolitan Museum of Art (New York, N.Y.)&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;59946&quot;});" class='title'>Shapes of Greek Vases</a>
+<div class='author'>Metropolitan Museum of Art (New York, N.Y.)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59971, {&quot;Title&quot;:&quot;Historic Ornament, Vol. 2 (of 2) - Treatise on decorative art and architectural ornament&quot;,&quot;Topics&quot;:[&quot;Decoration and ornament -- History&quot;,&quot;Architecture -- History&quot;,&quot;Decorative arts -- History&quot;],&quot;Primary&quot;:&quot;59971.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ward, James, 1851-1924&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;59971&quot;});" class='title'>Historic Ornament, Vol. 2 (of 2) -<br><span class='subtitle'>Treatise on decorative art and architectural ornament</span></a>
+<div class='author'>Ward, James, 1851-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60034, {&quot;Title&quot;:&quot;The Principles of Ornament&quot;,&quot;Topics&quot;:[&quot;Decoration and ornament&quot;],&quot;Primary&quot;:&quot;60034.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ward, James, 1851-1924&quot;,&quot;Aitchison, George, 1825-1910 [Editor]&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;60034&quot;});" class='title'>The Principles of Ornament</a>
+<div class='author'>Ward, James, 1851-1924, Aitchison, George, 1825-1910 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60275, {&quot;Title&quot;:&quot;Bobbins of Belgium - A book of Belgian lace, lace-workers, lace-schools and lace-villages&quot;,&quot;Topics&quot;:[&quot;Brussels lace committee&quot;,&quot;Lace and lace making -- Belgium&quot;],&quot;Primary&quot;:&quot;60275.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kellogg, Charlotte, 1874-1960&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;60275&quot;});" class='title'>Bobbins of Belgium -<br><span class='subtitle'>A book of Belgian lace, lace-workers, lace-schools and lace-villages</span></a>
+<div class='author'>Kellogg, Charlotte, 1874-1960</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60369, {&quot;Title&quot;:&quot;Illustrated History of Furniture, fifth ed. - From the Earliest to the Present Time&quot;,&quot;Topics&quot;:[&quot;Furniture -- History&quot;],&quot;Primary&quot;:&quot;60369.htm&quot;,&quot;CreatorNames&quot;:[&quot;Litchfield, Frederick, 1850-1930&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;60369&quot;});" class='title'>Illustrated History of Furniture, fifth ed. -<br><span class='subtitle'>From the Earliest to the Present Time</span></a>
+<div class='author'>Litchfield, Frederick, 1850-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60727, {&quot;Title&quot;:&quot;The Book of the Bayeux Tapestry - Presenting the Complete Work in a Series of Colour Facsimiles&quot;,&quot;Topics&quot;:[&quot;Bayeux tapestry&quot;],&quot;Primary&quot;:&quot;60727.htm&quot;,&quot;CreatorNames&quot;:[&quot;Belloc, Hilaire, 1870-1953&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;60727&quot;});" class='title'>The Book of the Bayeux Tapestry -<br><span class='subtitle'>Presenting the Complete Work in a Series of Colour Facsimiles</span></a>
+<div class='author'>Belloc, Hilaire, 1870-1953</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60767, {&quot;Title&quot;:&quot;The armourer and his craft from the XIth to the XVIth century&quot;,&quot;Topics&quot;:[&quot;Weapons -- History&quot;,&quot;Armor -- History&quot;,&quot;Armorers&quot;],&quot;Primary&quot;:&quot;60767.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ffoulkes, Charles John, 1868-1947&quot;],&quot;LoCC&quot;:[&quot;U&quot;,&quot;NK&quot;],&quot;PG_ID&quot;:&quot;60767&quot;});" class='title'>The armourer and his craft from the XIth to the XVIth century</a>
+<div class='author'>Ffoulkes, Charles John, 1868-1947</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60790, {&quot;Title&quot;:&quot;The Spanish Royal Tapestries&quot;,&quot;Topics&quot;:[&quot;Tapestry -- Spain -- Madrid&quot;,&quot;Tapestry -- Spain -- History&quot;],&quot;Primary&quot;:&quot;60790.htm&quot;,&quot;CreatorNames&quot;:[&quot;Calvert, Albert Frederick, 1872-1946&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;60790&quot;});" class='title'>The Spanish Royal Tapestries</a>
+<div class='author'>Calvert, Albert Frederick, 1872-1946</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61034, {&quot;Title&quot;:&quot;Douris and the Painters of Greek Vases&quot;,&quot;Topics&quot;:[&quot;Douris, active 6th century B.C.-5th century B.C.&quot;,&quot;Vase-painting, Greek&quot;],&quot;Primary&quot;:&quot;61034.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pottier, Edmond, 1855-1934&quot;,&quot;Harrison, Jane Ellen, 1850-1928 [Author of introduction, etc.]&quot;,&quot;Kahnweiler, Bettina [Translator]&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;61034&quot;});" class='title'>Douris and the Painters of Greek Vases</a>
+<div class='author'>Pottier, Edmond, 1855-1934, Harrison, Jane Ellen, 1850-1928 [Author of introduction, etc.], Kahnweiler, Bettina [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61471, {&quot;Title&quot;:&quot;Ivories Ancient and Mediæval&quot;,&quot;Topics&quot;:[&quot;Ivories&quot;],&quot;Primary&quot;:&quot;61471.htm&quot;,&quot;CreatorNames&quot;:[&quot;Maskell, William, 1814?-1890&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;61471&quot;});" class='title'>Ivories Ancient and Mediæval</a>
+<div class='author'>Maskell, William, 1814?-1890</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61639, {&quot;Title&quot;:&quot;L&#39;Art du brodeur&quot;,&quot;Topics&quot;:[&quot;Embroidery -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;61639.htm&quot;,&quot;CreatorNames&quot;:[&quot;Saint-Aubin, Charles Germain de, 1721-1786&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;61639&quot;});" class='title'>L'Art du brodeur</a>
+<div class='author'>Saint-Aubin, Charles Germain de, 1721-1786</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61986, {&quot;Title&quot;:&quot;Greek vase-painting (Griechische Vasenmalerei)&quot;,&quot;Topics&quot;:[&quot;Vase-painting, Greek&quot;],&quot;Primary&quot;:&quot;61986.htm&quot;,&quot;CreatorNames&quot;:[&quot;Buschor, Ernst, 1886-1961&quot;,&quot;Gardner, Percy, 1846-1937 [Author of introduction, etc.]&quot;,&quot;Richards, G. C. (George Chatterton), 1867-1951 [Translator]&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;61986&quot;});" class='title'>Greek vase-painting (Griechische Vasenmalerei)</a>
+<div class='author'>Buschor, Ernst, 1886-1961, Gardner, Percy, 1846-1937 [Author of introduction, etc.], Richards, G. C. (George Chatterton), 1867-1951 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62818, {&quot;Title&quot;:&quot;Armor and Arms - An elementary handbook and guide to the collection in the City Art Museum of St. Louis, Missouri, U.S.A.&quot;,&quot;Topics&quot;:[&quot;Weapons -- Catalogs&quot;,&quot;Armor -- Catalogs&quot;],&quot;Primary&quot;:&quot;62818.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hoopes, Thomas T., 1898-1981&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;62818&quot;});" class='title'>Armor and Arms -<br><span class='subtitle'>An elementary handbook and guide to the collection in the City Art Museum of St. Louis, Missouri, U.S.A.</span></a>
+<div class='author'>Hoopes, Thomas T., 1898-1981</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62879, {&quot;Title&quot;:&quot;Gems in the Smithsonian Institution&quot;,&quot;Topics&quot;:[&quot;Precious stones&quot;,&quot;Gems&quot;,&quot;Smithsonian Institution&quot;],&quot;Primary&quot;:&quot;62879.htm&quot;,&quot;CreatorNames&quot;:[&quot;Desautels, Paul E., 1920-1991&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;62879&quot;});" class='title'>Gems in the Smithsonian Institution</a>
+<div class='author'>Desautels, Paul E., 1920-1991</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63091, {&quot;Title&quot;:&quot;The Craft of Athenian Pottery - An Investigation of the Technique of Black-Figured and Red-Figured Athenian Vases&quot;,&quot;Topics&quot;:[&quot;Vases, Greek&quot;],&quot;Primary&quot;:&quot;63091.htm&quot;,&quot;CreatorNames&quot;:[&quot;Richter, Gisela M. A. (Gisela Marie Augusta), 1882-1972&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;63091&quot;});" class='title'>The Craft of Athenian Pottery -<br><span class='subtitle'>An Investigation of the Technique of Black-Figured and Red-Figured Athenian Vases</span></a>
+<div class='author'>Richter, Gisela M. A. (Gisela Marie Augusta), 1882-1972</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63299, {&quot;Title&quot;:&quot;The Book of the Pearl - The history, art, science, and industry of the queen of gems&quot;,&quot;Topics&quot;:[&quot;Pearls&quot;],&quot;Primary&quot;:&quot;63299.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kunz, George Frederick, 1856-1932&quot;,&quot;Stevenson, Charles Hugh, 1869-1943&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;63299&quot;});" class='title'>The Book of the Pearl -<br><span class='subtitle'>The history, art, science, and industry of the queen of gems</span></a>
+<div class='author'>Kunz, George Frederick, 1856-1932, Stevenson, Charles Hugh, 1869-1943</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64054, {&quot;Title&quot;:&quot;Cameo Cutting&quot;,&quot;Topics&quot;:[&quot;Cameos&quot;,&quot;Shell engraving -- Handbooks, manuals, etc.&quot;,&quot;Carving (Decorative arts) -- Technique&quot;],&quot;Primary&quot;:&quot;64054.htm&quot;,&quot;CreatorNames&quot;:[&quot;Marsh, John B., 1835-1910&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;64054&quot;});" class='title'>Cameo Cutting</a>
+<div class='author'>Marsh, John B., 1835-1910</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65423, {&quot;Title&quot;:&quot;Hunting Indians in a Taxi-Cab&quot;,&quot;Topics&quot;:[&quot;Indians of North America -- Statues&quot;,&quot;Cigar-store Indians -- Pictorial works&quot;],&quot;Primary&quot;:&quot;65423.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sanborn, Kate, 1839-1917&quot;],&quot;LoCC&quot;:[&quot;E&quot;,&quot;NK&quot;],&quot;PG_ID&quot;:&quot;65423&quot;});" class='title'>Hunting Indians in a Taxi-Cab</a>
+<div class='author'>Sanborn, Kate, 1839-1917</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65461, {&quot;Title&quot;:&quot;Greek Tragedy in the Light of Vase Paintings&quot;,&quot;Topics&quot;:[&quot;Vase-painting, Greek&quot;,&quot;Greek drama (Tragedy)&quot;],&quot;Primary&quot;:&quot;65461.htm&quot;,&quot;CreatorNames&quot;:[&quot;Huddilston, John H. (John Homer), 1869-1956&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;65461&quot;});" class='title'>Greek Tragedy in the Light of Vase Paintings</a>
+<div class='author'>Huddilston, John H. (John Homer), 1869-1956</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65491, {&quot;Title&quot;:&quot;Le poison&quot;,&quot;Topics&quot;:[&quot;French fiction&quot;],&quot;Primary&quot;:&quot;65491.htm&quot;,&quot;CreatorNames&quot;:[&quot;Haraucourt, Edmond, 1856-1941&quot;,&quot;Simon, Lucien, 1861-1945 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;PQ&quot;,&quot;NK&quot;],&quot;PG_ID&quot;:&quot;65491&quot;});" class='title'>Le poison</a>
+<div class='author'>Haraucourt, Edmond, 1856-1941, Simon, Lucien, 1861-1945 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65918, {&quot;Title&quot;:&quot;Guide to the Bayeux tapestry&quot;,&quot;Topics&quot;:[&quot;Bayeux tapestry&quot;],&quot;Primary&quot;:&quot;65918.htm&quot;,&quot;CreatorNames&quot;:[&quot;Birrell, Francis, 1889-1935&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;65918&quot;});" class='title'>Guide to the Bayeux tapestry</a>
+<div class='author'>Birrell, Francis, 1889-1935</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66172, {&quot;Title&quot;:&quot;Textile Fabrics - A Descriptive Catalogue of the Collection of Church-vestments, Dresses, Silk Stuffs, Needlework and Tapestries, forming that Section of the Museum&quot;,&quot;Topics&quot;:[&quot;Textile fabrics&quot;,&quot;Art objects -- England -- London -- Catalogs&quot;],&quot;Primary&quot;:&quot;66172.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rock, Daniel, 1799-1871&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;66172&quot;});" class='title'>Textile Fabrics -<br><span class='subtitle'>A Descriptive Catalogue of the Collection of Church-vestments, Dresses, Silk Stuffs, Needlework and Tapestries, forming that Section of the Museum</span></a>
+<div class='author'>Rock, Daniel, 1799-1871</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66771, {&quot;Title&quot;:&quot;La Tapisserie de la Reine Mathilde dite La Tapisserie de Bayeux&quot;,&quot;Topics&quot;:[&quot;Bayeux tapestry&quot;],&quot;Primary&quot;:&quot;66771.htm&quot;,&quot;CreatorNames&quot;:[&quot;Levé, A. (Albert), 1843-1921&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;66771&quot;});" class='title'>La Tapisserie de la Reine Mathilde dite La Tapisserie de Bayeux</a>
+<div class='author'>Levé, A. (Albert), 1843-1921</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66850, {&quot;Title&quot;:&quot;A Lecture on Stained Glass&quot;,&quot;Topics&quot;:[&quot;Glass painting and staining&quot;],&quot;Primary&quot;:&quot;66850.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bell, Robert Anning, 1863-1933&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;66850&quot;});" class='title'>A Lecture on Stained Glass</a>
+<div class='author'>Bell, Robert Anning, 1863-1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67518, {&quot;Title&quot;:&quot;The Art of Home Furnishing and Decoration&quot;,&quot;Topics&quot;:[&quot;Interior decoration&quot;,&quot;Furniture&quot;,&quot;Linoleum&quot;],&quot;Primary&quot;:&quot;67518.htm&quot;,&quot;CreatorNames&quot;:[&quot;Calkins, Kathleen Clinch&quot;,&quot;Parsons, Frank Alvah, 1868-1930&quot;,&quot;Armstrong Cork Company&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;67518&quot;});" class='title'>The Art of Home Furnishing and Decoration</a>
+<div class='author'>Calkins, Kathleen Clinch, Parsons, Frank Alvah, 1868-1930, Armstrong Cork Company</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67970, {&quot;Title&quot;:&quot;Chinese pottery and porcelain; vol. 1. Pottery and early wares&quot;,&quot;Topics&quot;:[&quot;Pottery, Chinese&quot;,&quot;Porcelain, Chinese&quot;],&quot;Primary&quot;:&quot;67970.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hobson, R. L. (Robert Lockhart), 1872-1941&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;67970&quot;});" class='title'>Chinese pottery and porcelain;<br><span class='subtitle'>vol. 1. Pottery and early wares</span></a>
+<div class='author'>Hobson, R. L. (Robert Lockhart), 1872-1941</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68515, {&quot;Title&quot;:&quot;A concise account of the principal works in stained glass that have been executed by Thomas Willement of London, Fellow of the Society of Antiquaries&quot;,&quot;Topics&quot;:[&quot;Glass painting and staining -- Great Britain&quot;],&quot;Primary&quot;:&quot;68515.htm&quot;,&quot;CreatorNames&quot;:[&quot;Willement, Thomas, 1786-1871&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;68515&quot;});" class='title'>A concise account of the principal works in stained glass that have been executed by Thomas Willement of London, Fellow of the Society of Antiquaries</a>
+<div class='author'>Willement, Thomas, 1786-1871</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68762, {&quot;Title&quot;:&quot;Chinese pottery and porcelain; vol. 2. Ming and Ch&#39;ing Porcelain&quot;,&quot;Topics&quot;:[&quot;Pottery, Chinese&quot;,&quot;Porcelain, Chinese&quot;],&quot;Primary&quot;:&quot;68762.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hobson, R. L. (Robert Lockhart), 1872-1941&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;68762&quot;});" class='title'>Chinese pottery and porcelain;<br><span class='subtitle'>vol. 2. Ming and Ch'ing Porcelain</span></a>
+<div class='author'>Hobson, R. L. (Robert Lockhart), 1872-1941</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70049, {&quot;Title&quot;:&quot;Egyptian decorative art&quot;,&quot;Topics&quot;:[&quot;Decoration and ornament -- Egypt&quot;],&quot;Primary&quot;:&quot;70049.htm&quot;,&quot;CreatorNames&quot;:[&quot;Petrie, W. M. Flinders (William Matthew Flinders), 1853-1942&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;70049&quot;});" class='title'>Egyptian decorative art</a>
+<div class='author'>Petrie, W. M. Flinders (William Matthew Flinders), 1853-1942</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70276, {&quot;Title&quot;:&quot;Pottery decoration under the glaze&quot;,&quot;Topics&quot;:[&quot;Pottery&quot;,&quot;Glazing (Ceramics)&quot;],&quot;Primary&quot;:&quot;70276.htm&quot;,&quot;CreatorNames&quot;:[&quot;McLaughlin, M. Louise (Mary Louise), 1847-1939&quot;],&quot;LoCC&quot;:[&quot;NK&quot;],&quot;PG_ID&quot;:&quot;70276&quot;});" class='title'>Pottery decoration under the glaze</a>
+<div class='author'>McLaughlin, M. Louise (Mary Louise), 1847-1939</div>
+</div>
+</ul></div>
+</body></html>

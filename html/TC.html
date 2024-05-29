@@ -1,0 +1,214 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Hydraulic and ocean engineering. (TC)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12010, {&quot;Title&quot;:&quot;The Fourth-Dimensional Reaches of the Exposition: San Francisco, 1915&quot;,&quot;Topics&quot;:[&quot;Panama-Pacific International Exposition (1915 : San Francisco, Calif.)&quot;],&quot;Primary&quot;:&quot;12010.txt&quot;,&quot;CreatorNames&quot;:[&quot;Williams, Cora Lenore, 1865-1937&quot;],&quot;LoCC&quot;:[&quot;BP&quot;,&quot;TC&quot;],&quot;PG_ID&quot;:&quot;12010&quot;});" class='title'>The Fourth-Dimensional Reaches of the Exposition:<br><span class='subtitle'>San Francisco, 1915</span></a>
+<div class='author'>Williams, Cora Lenore, 1865-1937</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19465, {&quot;Title&quot;:&quot;Draining for Profit, and Draining for Health&quot;,&quot;Topics&quot;:[&quot;Drainage&quot;,&quot;Drain-tiles&quot;],&quot;Primary&quot;:&quot;19465.htm&quot;,&quot;CreatorNames&quot;:[&quot;Waring, George E. (George Edwin), 1833-1898&quot;],&quot;LoCC&quot;:[&quot;TC&quot;],&quot;PG_ID&quot;:&quot;19465&quot;});" class='title'>Draining for Profit, and Draining for Health</a>
+<div class='author'>Waring, George E. (George Edwin), 1833-1898</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23435, {&quot;Title&quot;:&quot;Farm drainage - The Principles, Processes, and Effects of Draining Land with Stones, Wood, Plows, and Open Ditches, and Especially with Tiles&quot;,&quot;Topics&quot;:[&quot;Drainage&quot;],&quot;Primary&quot;:&quot;23435.htm&quot;,&quot;CreatorNames&quot;:[&quot;French, Henry F. (Henry Flagg), 1813-1885&quot;],&quot;LoCC&quot;:[&quot;TC&quot;],&quot;PG_ID&quot;:&quot;23435&quot;});" class='title'>Farm drainage -<br><span class='subtitle'>The Principles, Processes, and Effects of Draining Land with Stones, Wood, Plows, and Open Ditches, and Especially with Tiles</span></a>
+<div class='author'>French, Henry F. (Henry Flagg), 1813-1885</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24442, {&quot;Title&quot;:&quot;Report on the Department of Ports and Harbours for the Year 1890-91&quot;,&quot;Topics&quot;:[&quot;Harbors -- Australia -- Queensland&quot;],&quot;Primary&quot;:&quot;24442.htm&quot;,&quot;CreatorNames&quot;:[&quot;Australia. Queensland. Department of Ports and Harbours&quot;],&quot;LoCC&quot;:[&quot;TC&quot;],&quot;PG_ID&quot;:&quot;24442&quot;});" class='title'>Report on the Department of Ports and Harbours for the Year 1890-91</a>
+<div class='author'>Australia. Queensland. Department of Ports and Harbours</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24901, {&quot;Title&quot;:&quot;The American Type of Isthmian Canal - Speech by Hon. John Fairfield Dryden in the Senate of the United States, June 14, 1906&quot;,&quot;Topics&quot;:[&quot;Panama Canal (Panama)&quot;,&quot;Speeches, addresses, etc., American&quot;],&quot;Primary&quot;:&quot;24901.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dryden, John F. (John Fairfield), 1839-1911&quot;],&quot;LoCC&quot;:[&quot;TC&quot;,&quot;F&quot;],&quot;PG_ID&quot;:&quot;24901&quot;});" class='title'>The American Type of Isthmian Canal -<br><span class='subtitle'>Speech by Hon. John Fairfield Dryden in the Senate of the United States, June 14, 1906</span></a>
+<div class='author'>Dryden, John F. (John Fairfield), 1839-1911</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26515, {&quot;Title&quot;:&quot;L&#39;isthme de Panama - Examen historique et géographique des différentes directions suivant lesquelles on pourrait le percer et des moyens à y employer; suivi d&#39;un aperçu sur l&#39;isthme de Suez.&quot;,&quot;Topics&quot;:[&quot;Canals, Interoceanic&quot;,&quot;Canals -- Panama&quot;,&quot;Canals -- Nicaragua&quot;,&quot;Canals -- Egypt&quot;],&quot;Primary&quot;:&quot;26515.htm&quot;,&quot;CreatorNames&quot;:[&quot;Chevalier, Michel, 1806-1879&quot;],&quot;LoCC&quot;:[&quot;TC&quot;],&quot;PG_ID&quot;:&quot;26515&quot;});" class='title'>L'isthme de Panama -<br><span class='subtitle'>Examen historique et géographique des différentes directions suivant lesquelles on pourrait le percer et des moyens à y employer; suivi d'un aperçu sur l'isthme de Suez.</span></a>
+<div class='author'>Chevalier, Michel, 1806-1879</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29269, {&quot;Title&quot;:&quot;A Succinct View of the Importance and Practicability of Forming a Ship Canal across the Isthmus of Panama&quot;,&quot;Topics&quot;:[&quot;Panama Canal (Panama)&quot;,&quot;Canals, Interoceanic&quot;],&quot;Primary&quot;:&quot;29269.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hill, H. R.&quot;],&quot;LoCC&quot;:[&quot;TC&quot;,&quot;F&quot;],&quot;PG_ID&quot;:&quot;29269&quot;});" class='title'>A Succinct View of the Importance and Practicability of Forming a Ship Canal across the Isthmus of Panama</a>
+<div class='author'>Hill, H. R.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29967, {&quot;Title&quot;:&quot;Het Haarlemmer-Meer-Boek&quot;,&quot;Topics&quot;:[&quot;Reclamation of land -- Netherlands&quot;,&quot;Haarlemmermeer (Netherlands)&quot;],&quot;Primary&quot;:&quot;29967.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hasselt, Willem Jan Cornelis van, 1795-1864&quot;,&quot;Leeghwater, Jan Adriaansz, 1575-1650&quot;],&quot;LoCC&quot;:[&quot;DJ&quot;,&quot;TC&quot;],&quot;PG_ID&quot;:&quot;29967&quot;});" class='title'>Het Haarlemmer-Meer-Boek</a>
+<div class='author'>Hasselt, Willem Jan Cornelis van, 1795-1864, Leeghwater, Jan Adriaansz, 1575-1650</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31383, {&quot;Title&quot;:&quot;The Industrial Canal and Inner Harbor of New Orleans - History, Description and Economic Aspects of Giant Facility Created to Encourage Industrial Expansion and Develop Commerce&quot;,&quot;Topics&quot;:[&quot;Canals -- Louisiana&quot;,&quot;New Orleans (La.) -- Harbor&quot;],&quot;Primary&quot;:&quot;31383.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dabney, Thomas Ewing&quot;],&quot;LoCC&quot;:[&quot;TC&quot;],&quot;PG_ID&quot;:&quot;31383&quot;});" class='title'>The Industrial Canal and Inner Harbor of New Orleans -<br><span class='subtitle'>History, Description and Economic Aspects of Giant Facility Created to Encourage Industrial Expansion and Develop Commerce</span></a>
+<div class='author'>Dabney, Thomas Ewing</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31482, {&quot;Title&quot;:&quot;Smeaton and Lighthouses - A Popular Biography, with an Historical Introduction and Sequel&quot;,&quot;Topics&quot;:[&quot;Smeaton, John, 1724-1792&quot;,&quot;Lighthouses&quot;],&quot;Primary&quot;:&quot;31482.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;TC&quot;],&quot;PG_ID&quot;:&quot;31482&quot;});" class='title'>Smeaton and Lighthouses -<br><span class='subtitle'>A Popular Biography, with an Historical Introduction and Sequel</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34124, {&quot;Title&quot;:&quot;The Panama Canal: A history and description of the enterprise&quot;,&quot;Topics&quot;:[&quot;Panama Canal (Panama)&quot;],&quot;Primary&quot;:&quot;34124.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mills, J. Saxon (John Saxon), -1929&quot;],&quot;LoCC&quot;:[&quot;TC&quot;],&quot;PG_ID&quot;:&quot;34124&quot;});" class='title'>The Panama Canal:<br><span class='subtitle'>A history and description of the enterprise</span></a>
+<div class='author'>Mills, J. Saxon (John Saxon), -1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36317, {&quot;Title&quot;:&quot;Ontwerp van wet tot afsluiting en droogmaking van de Zuiderzee met toelichtende memorie&quot;,&quot;Topics&quot;:[&quot;Reclamation of land -- Netherlands&quot;,&quot;IJssel Lake (Netherlands)&quot;],&quot;Primary&quot;:&quot;36317.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lely, Cornelis, 1854-1929&quot;],&quot;LoCC&quot;:[&quot;TC&quot;],&quot;PG_ID&quot;:&quot;36317&quot;});" class='title'>Ontwerp van wet tot afsluiting en droogmaking van de Zuiderzee met toelichtende memorie</a>
+<div class='author'>Lely, Cornelis, 1854-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36319, {&quot;Title&quot;:&quot;De drooglegging der Zuiderzee. Het plan J. Ulehake contra het plan C. Lely&quot;,&quot;Topics&quot;:[&quot;Reclamation of land -- Netherlands&quot;,&quot;IJssel Lake (Netherlands)&quot;],&quot;Primary&quot;:&quot;36319.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ulehake, J.&quot;],&quot;LoCC&quot;:[&quot;TC&quot;],&quot;PG_ID&quot;:&quot;36319&quot;});" class='title'>De drooglegging der Zuiderzee. Het plan J. Ulehake contra het plan C. Lely</a>
+<div class='author'>Ulehake, J.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37124, {&quot;Title&quot;:&quot;A Foreword to the Panama-Pacific International Exposition&quot;,&quot;Topics&quot;:[&quot;Panama-Pacific International Exposition (1915 : San Francisco, Calif.)&quot;],&quot;Primary&quot;:&quot;37124.htm&quot;,&quot;CreatorNames&quot;:[&quot;James, Juliet Helena Lumbard, 1864-&quot;],&quot;LoCC&quot;:[&quot;TC&quot;],&quot;PG_ID&quot;:&quot;37124&quot;});" class='title'>A Foreword to the Panama-Pacific International Exposition</a>
+<div class='author'>James, Juliet Helena Lumbard, 1864-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37671, {&quot;Title&quot;:&quot;The Panama Canal and Its Makers&quot;,&quot;Topics&quot;:[&quot;Panama Canal (Panama)&quot;],&quot;Primary&quot;:&quot;37671.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cornish, Vaughan, 1862-1948&quot;],&quot;LoCC&quot;:[&quot;TC&quot;],&quot;PG_ID&quot;:&quot;37671&quot;});" class='title'>The Panama Canal and Its Makers</a>
+<div class='author'>Cornish, Vaughan, 1862-1948</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38426, {&quot;Title&quot;:&quot;De afsluiting en droogmaking der Zuiderzee. Weerlegging van bezwaren. - uitgegeven door de Zuiderzee-Vereeniging&quot;,&quot;Topics&quot;:[&quot;Reclamation of land -- Netherlands&quot;,&quot;IJssel Lake (Netherlands)&quot;],&quot;Primary&quot;:&quot;38426.txt&quot;,&quot;CreatorNames&quot;:[&quot;Beekman, A. A. (Anton Albert), 1854-1947&quot;],&quot;LoCC&quot;:[&quot;TC&quot;],&quot;PG_ID&quot;:&quot;38426&quot;});" class='title'>De afsluiting en droogmaking der Zuiderzee. Weerlegging van bezwaren. -<br><span class='subtitle'>uitgegeven door de Zuiderzee-Vereeniging</span></a>
+<div class='author'>Beekman, A. A. (Anton Albert), 1854-1947</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41807, {&quot;Title&quot;:&quot;The Panama Canal&quot;,&quot;Topics&quot;:[&quot;Panama Canal (Panama)&quot;],&quot;Primary&quot;:&quot;41807.htm&quot;,&quot;CreatorNames&quot;:[&quot;Haskin, Frederic J. (Frederic Jennings), 1872-1944&quot;],&quot;LoCC&quot;:[&quot;TC&quot;],&quot;PG_ID&quot;:&quot;41807&quot;});" class='title'>The Panama Canal</a>
+<div class='author'>Haskin, Frederic J. (Frederic Jennings), 1872-1944</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41987, {&quot;Title&quot;:&quot;\&quot;\&quot;The United Seas\&quot;\&quot;&quot;,&quot;Topics&quot;:[&quot;Panama Canal (Panama)&quot;],&quot;Primary&quot;:&quot;41987.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rogers, Robert W. (Robert Wells), 1873-&quot;],&quot;LoCC&quot;:[&quot;TC&quot;],&quot;PG_ID&quot;:&quot;41987&quot;});" class='title'>"The United Seas"</a>
+<div class='author'>Rogers, Robert W. (Robert Wells), 1873-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42603, {&quot;Title&quot;:&quot;San Francisco and the Nicaragua Canal&quot;,&quot;Topics&quot;:[&quot;Nicaragua Canal (Nicaragua)&quot;],&quot;Primary&quot;:&quot;42603.htm&quot;,&quot;CreatorNames&quot;:[&quot;Merry, William L. (William Lawrence), 1842-1911&quot;],&quot;LoCC&quot;:[&quot;TC&quot;],&quot;PG_ID&quot;:&quot;42603&quot;});" class='title'>San Francisco and the Nicaragua Canal</a>
+<div class='author'>Merry, William L. (William Lawrence), 1842-1911</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42903, {&quot;Title&quot;:&quot;Het eerste ontwerp voor de bedijking der Zuiderzee, 1848&quot;,&quot;Topics&quot;:[&quot;Reclamation of land -- Netherlands&quot;,&quot;IJssel Lake (Netherlands)&quot;],&quot;Primary&quot;:&quot;42903.htm&quot;,&quot;CreatorNames&quot;:[&quot;Faddegon, Pieter&quot;,&quot;Kloppenburg, Jakob&quot;],&quot;LoCC&quot;:[&quot;TC&quot;],&quot;PG_ID&quot;:&quot;42903&quot;});" class='title'>Het eerste ontwerp voor de bedijking der Zuiderzee, 1848</a>
+<div class='author'>Faddegon, Pieter, Kloppenburg, Jakob</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47452, {&quot;Title&quot;:&quot;The Panama Canal&quot;,&quot;Topics&quot;:[&quot;Panama Canal (Panama)&quot;],&quot;Primary&quot;:&quot;47452.htm&quot;,&quot;CreatorNames&quot;:[&quot;McKinlay, Duncan E., 1862-&quot;],&quot;LoCC&quot;:[&quot;TC&quot;,&quot;F&quot;],&quot;PG_ID&quot;:&quot;47452&quot;});" class='title'>The Panama Canal</a>
+<div class='author'>McKinlay, Duncan E., 1862-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48414, {&quot;Title&quot;:&quot;An Account of the Bell Rock Light-House - Including the Details of the Erection and Peculiar Structure of That Edifice; to Which Is Prefixed a Historical View of the Institution and Progress of the Northern Light-Houses&quot;,&quot;Topics&quot;:[&quot;Bell Rock Lighthouse (Scotland)&quot;,&quot;Lighthouses -- Scotland&quot;],&quot;Primary&quot;:&quot;48414.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stevenson, Robert, 1772-1850&quot;],&quot;LoCC&quot;:[&quot;TC&quot;],&quot;PG_ID&quot;:&quot;48414&quot;});" class='title'>An Account of the Bell Rock Light-House -<br><span class='subtitle'>Including the Details of the Erection and Peculiar Structure of That Edifice; to Which Is Prefixed a Historical View of the Institution and Progress of the Northern Light-Houses</span></a>
+<div class='author'>Stevenson, Robert, 1772-1850</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48924, {&quot;Title&quot;:&quot;Joseph Pennell&#39;s pictures of the Panama Canal - Reproductions of a series of lithographs made by him on the Isthmus of Panama, January—March 1912, together with impressions and notes by the artist&quot;,&quot;Topics&quot;:[&quot;Lithography, American&quot;,&quot;Pennell, Joseph, 1857-1926&quot;,&quot;Panama Canal (Panama) -- Pictorial works&quot;],&quot;Primary&quot;:&quot;48924.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pennell, Joseph, 1857-1926&quot;],&quot;LoCC&quot;:[&quot;NE&quot;,&quot;TC&quot;],&quot;PG_ID&quot;:&quot;48924&quot;});" class='title'>Joseph Pennell's pictures of the Panama Canal -<br><span class='subtitle'>Reproductions of a series of lithographs made by him on the Isthmus of Panama, January—March 1912, together with impressions and notes by the artist</span></a>
+<div class='author'>Pennell, Joseph, 1857-1926</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51599, {&quot;Title&quot;:&quot;What We Saw at Madame World&#39;s Fair - Being a Series of Letters from the Twins at the Panama-Pacific International Exposition to Their Cousins at Home&quot;,&quot;Topics&quot;:[&quot;Panama-Pacific International Exposition (1915 : San Francisco, Calif.)&quot;],&quot;Primary&quot;:&quot;51599.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gordon, Elizabeth, 1866-1922&quot;,&quot;Melcher, Bertha Corbett [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;TC&quot;],&quot;PG_ID&quot;:&quot;51599&quot;});" class='title'>What We Saw at Madame World's Fair -<br><span class='subtitle'>Being a Series of Letters from the Twins at the Panama-Pacific International Exposition to Their Cousins at Home</span></a>
+<div class='author'>Gordon, Elizabeth, 1866-1922, Melcher, Bertha Corbett [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52817, {&quot;Title&quot;:&quot;Lightships and Lighthouses&quot;,&quot;Topics&quot;:[&quot;Lighthouses&quot;],&quot;Primary&quot;:&quot;52817.htm&quot;,&quot;CreatorNames&quot;:[&quot;Talbot, Frederick Arthur Ambrose, 1880-1924&quot;],&quot;LoCC&quot;:[&quot;TC&quot;],&quot;PG_ID&quot;:&quot;52817&quot;});" class='title'>Lightships and Lighthouses</a>
+<div class='author'>Talbot, Frederick Arthur Ambrose, 1880-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55970, {&quot;Title&quot;:&quot;The Panama Canal&quot;,&quot;Topics&quot;:[&quot;Panama Canal (Panama)&quot;],&quot;Primary&quot;:&quot;55970.htm&quot;,&quot;CreatorNames&quot;:[&quot;Boardman, Harry Clow, 1887-1956&quot;],&quot;LoCC&quot;:[&quot;TC&quot;],&quot;PG_ID&quot;:&quot;55970&quot;});" class='title'>The Panama Canal</a>
+<div class='author'>Boardman, Harry Clow, 1887-1956</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56113, {&quot;Title&quot;:&quot;Irrigation Works - The Principles on Which Their Design and Working Should Be Based, with Special Details Relating to Indian Canals and Some Proposed Improvements&quot;,&quot;Topics&quot;:[&quot;Canals&quot;,&quot;Irrigation&quot;],&quot;Primary&quot;:&quot;56113.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bellasis, E. S. (Edward Skelton), 1855-1945&quot;],&quot;LoCC&quot;:[&quot;TC&quot;],&quot;PG_ID&quot;:&quot;56113&quot;});" class='title'>Irrigation Works -<br><span class='subtitle'>The Principles on Which Their Design and Working Should Be Based, with Special Details Relating to Indian Canals and Some Proposed Improvements</span></a>
+<div class='author'>Bellasis, E. S. (Edward Skelton), 1855-1945</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56560, {&quot;Title&quot;:&quot;Waterways and Water Transport in Different Countries - With a description of the Panama, Suez, Manchester, Nicaraguan, and other canals.&quot;,&quot;Topics&quot;:[&quot;Canals&quot;],&quot;Primary&quot;:&quot;56560.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jeans, J. Stephen (James Stephen), 1846-1913&quot;],&quot;LoCC&quot;:[&quot;HE&quot;,&quot;TC&quot;],&quot;PG_ID&quot;:&quot;56560&quot;});" class='title'>Waterways and Water Transport in Different Countries -<br><span class='subtitle'>With a description of the Panama, Suez, Manchester, Nicaraguan, and other canals.</span></a>
+<div class='author'>Jeans, J. Stephen (James Stephen), 1846-1913</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56909, {&quot;Title&quot;:&quot;River and Canal Engineering, the characteristics of open flowing streams, and the principles and methods to be followed in dealing with them.&quot;,&quot;Topics&quot;:[&quot;Rivers&quot;,&quot;Canals&quot;,&quot;Hydraulic engineering&quot;],&quot;Primary&quot;:&quot;56909.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bellasis, E. S. (Edward Skelton), 1855-1945&quot;],&quot;LoCC&quot;:[&quot;TC&quot;],&quot;PG_ID&quot;:&quot;56909&quot;});" class='title'>River and Canal Engineering, the characteristics of open flowing streams, and the principles and methods to be followed in dealing with them.</a>
+<div class='author'>Bellasis, E. S. (Edward Skelton), 1855-1945</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56990, {&quot;Title&quot;:&quot;Un grand français du XVIIme siècle : Pierre Paul Riquet et le canal du Midi&quot;,&quot;Topics&quot;:[&quot;Riquet de Bonrepos, Pierre-Paul, 1604-1680&quot;,&quot;Canal du Midi (France) -- History&quot;],&quot;Primary&quot;:&quot;56990.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fernay, Jacques, 1849-&quot;],&quot;LoCC&quot;:[&quot;TC&quot;],&quot;PG_ID&quot;:&quot;56990&quot;});" class='title'>Un grand français du XVIIme siècle :<br><span class='subtitle'>Pierre Paul Riquet et le canal du Midi</span></a>
+<div class='author'>Fernay, Jacques, 1849-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57900, {&quot;Title&quot;:&quot;Lighthouses and Lightships - A Descriptive and Historical Account of Their Mode of Construction and Organization&quot;,&quot;Topics&quot;:[&quot;Lighthouses&quot;,&quot;Lightships&quot;],&quot;Primary&quot;:&quot;57900.htm&quot;,&quot;CreatorNames&quot;:[&quot;Adams, W. H. Davenport (William Henry Davenport), 1828-1891&quot;],&quot;LoCC&quot;:[&quot;TC&quot;],&quot;PG_ID&quot;:&quot;57900&quot;});" class='title'>Lighthouses and Lightships -<br><span class='subtitle'>A Descriptive and Historical Account of Their Mode of Construction and Organization</span></a>
+<div class='author'>Adams, W. H. Davenport (William Henry Davenport), 1828-1891</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58151, {&quot;Title&quot;:&quot;An Essay on the Encroachments of the German Ocean Along the Norfolk Coast - With a Design to Arrest Its Further Depredations&quot;,&quot;Topics&quot;:[&quot;Norfolk (England) -- Description and travel&quot;,&quot;Tides -- England -- Norfolk&quot;,&quot;North Sea&quot;],&quot;Primary&quot;:&quot;58151.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hewitt, William, -1876&quot;],&quot;LoCC&quot;:[&quot;GB&quot;,&quot;TC&quot;],&quot;PG_ID&quot;:&quot;58151&quot;});" class='title'>An Essay on the Encroachments of the German Ocean Along the Norfolk Coast -<br><span class='subtitle'>With a Design to Arrest Its Further Depredations</span></a>
+<div class='author'>Hewitt, William, -1876</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61473, {&quot;Title&quot;:&quot;Is a Ship Canal Practicable? - Notes, Historical and Statistical, Upon the Projected Routes for an Interoceanic Ship Canal Between the Atlantic and Pacific Oceans, in Which is Included a Short Account of the Character and Influence of the Canal of Suez, and the Probable Effects Upon the Commerce of the World of the Two Canals, Regarded Either as Rivals, or as Parts of One System of Interoceanic Navigation&quot;,&quot;Topics&quot;:[&quot;Canals, Interoceanic&quot;],&quot;Primary&quot;:&quot;61473.htm&quot;,&quot;CreatorNames&quot;:[&quot;Abert, S. T. (Silvanus Thayer), 1828-1903&quot;],&quot;LoCC&quot;:[&quot;TC&quot;],&quot;PG_ID&quot;:&quot;61473&quot;});" class='title'>Is a Ship Canal Practicable? -<br><span class='subtitle'>Notes, Historical and Statistical, Upon the Projected Routes for an Interoceanic Ship Canal Between the Atlantic and Pacific Oceans, in Which is Included a Short Account of the Character and Influence of the Canal of Suez, and the Probable Effects Upon the Commerce of the World of the Two Canals, Regarded Either as Rivals, or as Parts of One System of Interoceanic Navigation</span></a>
+<div class='author'>Abert, S. T. (Silvanus Thayer), 1828-1903</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62224, {&quot;Title&quot;:&quot;The Great Thames Barrage&quot;,&quot;Topics&quot;:[&quot;Thames River (England)&quot;,&quot;Barrages -- England -- Thames River&quot;,&quot;River engineering&quot;],&quot;Primary&quot;:&quot;62224.htm&quot;,&quot;CreatorNames&quot;:[&quot;Barber, Thomas Walter, -1917&quot;],&quot;LoCC&quot;:[&quot;TC&quot;],&quot;PG_ID&quot;:&quot;62224&quot;});" class='title'>The Great Thames Barrage</a>
+<div class='author'>Barber, Thomas Walter, -1917</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62708, {&quot;Title&quot;:&quot;Canal Reminiscences - Recollections of Travel in the Old Days on the James River &amp; Kanawha Canal&quot;,&quot;Topics&quot;:[&quot;Virginia -- Description and travel&quot;,&quot;Bagby, George William, 1828-1883&quot;,&quot;Inland navigation -- Virginia&quot;,&quot;Canal-boats -- Virginia&quot;,&quot;James River and Kanawha Canal (Va.) -- Navigation&quot;],&quot;Primary&quot;:&quot;62708.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bagby, George William, 1828-1883&quot;],&quot;LoCC&quot;:[&quot;TC&quot;],&quot;PG_ID&quot;:&quot;62708&quot;});" class='title'>Canal Reminiscences -<br><span class='subtitle'>Recollections of Travel in the Old Days on the James River & Kanawha Canal</span></a>
+<div class='author'>Bagby, George William, 1828-1883</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64476, {&quot;Title&quot;:&quot;Panama and the Canal in Picture and Prose&quot;,&quot;Topics&quot;:[&quot;Panama Canal (Panama) -- History&quot;],&quot;Primary&quot;:&quot;64476.htm&quot;,&quot;CreatorNames&quot;:[&quot;Abbot, Willis J. (Willis John), 1863-1934&quot;],&quot;LoCC&quot;:[&quot;TC&quot;],&quot;PG_ID&quot;:&quot;64476&quot;});" class='title'>Panama and the Canal in Picture and Prose</a>
+<div class='author'>Abbot, Willis J. (Willis John), 1863-1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68463, {&quot;Title&quot;:&quot;The Salton Sea: An account of Harriman&#39;s fight with the Colorado River&quot;,&quot;Topics&quot;:[&quot;Harriman, Edward Henry, 1848-1909&quot;,&quot;Salton Sea (Calif.)&quot;,&quot;Imperial Valley (Calif. and Mexico)&quot;],&quot;Primary&quot;:&quot;68463.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kennan, George, 1845-1924&quot;],&quot;LoCC&quot;:[&quot;TC&quot;],&quot;PG_ID&quot;:&quot;68463&quot;});" class='title'>The Salton Sea:<br><span class='subtitle'>An account of Harriman's fight with the Colorado River</span></a>
+<div class='author'>Kennan, George, 1845-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68721, {&quot;Title&quot;:&quot;Earth dams, a study&quot;,&quot;Topics&quot;:[&quot;Earthwork&quot;,&quot;Earth dams&quot;],&quot;Primary&quot;:&quot;68721.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bassell, Burr&quot;],&quot;LoCC&quot;:[&quot;TC&quot;],&quot;PG_ID&quot;:&quot;68721&quot;});" class='title'>Earth dams, a study</a>
+<div class='author'>Bassell, Burr</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69995, {&quot;Title&quot;:&quot;Report on the lands of the arid region of the United States, with a more detailed account of the lands of Utah&quot;,&quot;Topics&quot;:[&quot;Public lands -- United States&quot;,&quot;Irrigation -- West (U.S.)&quot;,&quot;Irrigation -- Utah&quot;,&quot;Rain and rainfall -- West (U.S.)&quot;],&quot;Primary&quot;:&quot;69995.htm&quot;,&quot;CreatorNames&quot;:[&quot;Drummond, Willis, 1808-1879&quot;,&quot;Dutton, Clarence E. (Clarence Edward), 1841-1912&quot;,&quot;Gilbert, Grove Karl, 1843-1918&quot;,&quot;Powell, John Wesley, 1834-1902&quot;,&quot;Thompson, A. H. (Almon Harris), 1839-1906&quot;],&quot;LoCC&quot;:[&quot;F&quot;,&quot;HD&quot;,&quot;TC&quot;],&quot;PG_ID&quot;:&quot;69995&quot;});" class='title'>Report on the lands of the arid region of the United States, with a more detailed account of the lands of Utah</a>
+<div class='author'>Drummond, Willis, 1808-1879, Dutton, Clarence E. (Clarence Edward), 1841-1912, Gilbert, Grove Karl, 1843-1918, Powell, John Wesley, 1834-1902, Thompson, A. H. (Almon Harris), 1839-1906</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7348, {&quot;Title&quot;:&quot;The Jewel City&quot;,&quot;Topics&quot;:[&quot;Panama-Pacific International Exposition (1915 : San Francisco, Calif.)&quot;],&quot;Primary&quot;:&quot;7348.txt&quot;,&quot;CreatorNames&quot;:[&quot;Macomber, Ben, 1876-&quot;],&quot;LoCC&quot;:[&quot;TC&quot;],&quot;PG_ID&quot;:&quot;7348&quot;});" class='title'>The Jewel City</a>
+<div class='author'>Macomber, Ben, 1876-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(9647, {&quot;Title&quot;:&quot;The Architecture and Landscape Gardening of the Exposition - A Pictorial Survey of the Most Beautiful Achitectural Compositions of the Panama-Pacific International Exposition&quot;,&quot;Topics&quot;:[&quot;Panama-Pacific International Exposition (1915 : San Francisco, Calif.)&quot;,&quot;Architecture -- Exhibitions&quot;,&quot;Landscape architecture -- Exhibitions&quot;],&quot;Primary&quot;:&quot;9647.txt&quot;,&quot;CreatorNames&quot;:[&quot;Mullgardt, Louis Christian, 1866-1942&quot;],&quot;LoCC&quot;:[&quot;TC&quot;],&quot;PG_ID&quot;:&quot;9647&quot;});" class='title'>The Architecture and Landscape Gardening of the Exposition -<br><span class='subtitle'>A Pictorial Survey of the Most Beautiful Achitectural Compositions of the Panama-Pacific International Exposition</span></a>
+<div class='author'>Mullgardt, Louis Christian, 1866-1942</div>
+</div>
+</ul></div>
+</body></html>

@@ -1,0 +1,662 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Astronomy (QB)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(10202, {&quot;Title&quot;:&quot;Maria Mitchell: Life, Letters, and Journals&quot;,&quot;Topics&quot;:[&quot;Astronomers -- United States -- Biography&quot;,&quot;Mitchell, Maria, 1818-1889&quot;,&quot;Women astronomers -- United States -- Biography&quot;],&quot;Primary&quot;:&quot;10202.txt&quot;,&quot;CreatorNames&quot;:[&quot;Mitchell, Maria, 1818-1889&quot;,&quot;Kendall, Phebe Mitchell [Compiler]&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;10202&quot;});" class='title'>Maria Mitchell:<br><span class='subtitle'>Life, Letters, and Journals</span></a>
+<div class='author'>Mitchell, Maria, 1818-1889, Kendall, Phebe Mitchell [Compiler]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(10655, {&quot;Title&quot;:&quot;Autobiography of Sir George Biddell Airy&quot;,&quot;Topics&quot;:[&quot;Autobiographies&quot;,&quot;Astronomers -- Great Britain -- Biography&quot;,&quot;Airy, George Biddell, 1801-1892&quot;,&quot;Royal Greenwich Observatory&quot;],&quot;Primary&quot;:&quot;10655.txt&quot;,&quot;CreatorNames&quot;:[&quot;Airy, George Biddell, 1801-1892&quot;,&quot;Airy, Wilfrid [Editor]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;QB&quot;],&quot;PG_ID&quot;:&quot;10655&quot;});" class='title'>Autobiography of Sir George Biddell Airy</a>
+<div class='author'>Airy, George Biddell, 1801-1892, Airy, Wilfrid [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(10855, {&quot;Title&quot;:&quot;Is Mars habitable? A critical examination of Professor Percival Lowell&#39;s book \&quot;\&quot;Mars and its canals,\&quot;\&quot; with an alternative explanation&quot;,&quot;Topics&quot;:[&quot;Lowell, Percival, 1855-1916. Mars and its canals&quot;,&quot;Mars (Planet)&quot;],&quot;Primary&quot;:&quot;10855.txt&quot;,&quot;CreatorNames&quot;:[&quot;Wallace, Alfred Russel, 1823-1913&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;10855&quot;});" class='title'>Is Mars habitable? A critical examination of Professor Percival Lowell's book "Mars and its canals," with an alternative explanation</a>
+<div class='author'>Wallace, Alfred Russel, 1823-1913</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12082, {&quot;Title&quot;:&quot;Color Images from Mars Rovers - Spirit and Opportunity&quot;,&quot;Topics&quot;:[&quot;Mars (Planet) -- Pictorial works&quot;],&quot;Primary&quot;:&quot;12082.htm&quot;,&quot;CreatorNames&quot;:[&quot;Webster, Bob&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;12082&quot;});" class='title'>Color Images from Mars Rovers -<br><span class='subtitle'>Spirit and Opportunity</span></a>
+<div class='author'>Webster, Bob</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12340, {&quot;Title&quot;:&quot;The Story of the Herschels, a Family of Astronomers - Sir William Herschel, Sir John Herschel, Caroline Herschel&quot;,&quot;Topics&quot;:[&quot;Herschel, William, 1738-1822&quot;,&quot;Herschel, John F. W. (John Frederick William), 1792-1871&quot;,&quot;Herschel, Caroline Lucretia, 1750-1848&quot;,&quot;Astronomers -- England -- Biography -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;12340.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;12340&quot;});" class='title'>The Story of the Herschels, a Family of Astronomers -<br><span class='subtitle'>Sir William Herschel, Sir John Herschel, Caroline Herschel</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12406, {&quot;Title&quot;:&quot;Kepler&quot;,&quot;Topics&quot;:[&quot;Kepler, Johannes, 1571-1630&quot;],&quot;Primary&quot;:&quot;12406.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bryant, Walter W. (Walter William)&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;12406&quot;});" class='title'>Kepler</a>
+<div class='author'>Bryant, Walter W. (Walter William)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15620, {&quot;Title&quot;:&quot;Recreations in Astronomy - With Directions for Practical Experiments and Telescopic Work&quot;,&quot;Topics&quot;:[&quot;Astronomy&quot;],&quot;Primary&quot;:&quot;15620.htm&quot;,&quot;CreatorNames&quot;:[&quot;Warren, Henry White, 1831-1912&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;15620&quot;});" class='title'>Recreations in Astronomy -<br><span class='subtitle'>With Directions for Practical Experiments and Telescopic Work</span></a>
+<div class='author'>Warren, Henry White, 1831-1912</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15636, {&quot;Title&quot;:&quot;The Future of Astronomy&quot;,&quot;Topics&quot;:[&quot;Astronomy&quot;],&quot;Primary&quot;:&quot;15636.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pickering, Edward C. (Edward Charles), 1846-1919&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;15636&quot;});" class='title'>The Future of Astronomy</a>
+<div class='author'>Pickering, Edward C. (Edward Charles), 1846-1919</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16227, {&quot;Title&quot;:&quot;The uses of astronomy&quot;,&quot;Topics&quot;:[&quot;Astronomy&quot;,&quot;Dudley Observatory&quot;],&quot;Primary&quot;:&quot;16227.htm&quot;,&quot;CreatorNames&quot;:[&quot;Everett, Edward, 1794-1865&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;16227&quot;});" class='title'>The uses of astronomy</a>
+<div class='author'>Everett, Edward, 1794-1865</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16767, {&quot;Title&quot;:&quot;Half-hours with the Telescope - Being a Popular Guide to the Use of the Telescope as a Means of Amusement and Instruction.&quot;,&quot;Topics&quot;:[&quot;Astronomy&quot;,&quot;Telescopes&quot;],&quot;Primary&quot;:&quot;16767.htm&quot;,&quot;CreatorNames&quot;:[&quot;Proctor, Richard A. (Richard Anthony), 1837-1888&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;16767&quot;});" class='title'>Half-hours with the Telescope -<br><span class='subtitle'>Being a Popular Guide to the Use of the Telescope as a Means of Amusement and Instruction.</span></a>
+<div class='author'>Proctor, Richard A. (Richard Anthony), 1837-1888</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17712, {&quot;Title&quot;:&quot;The moon&quot;,&quot;Topics&quot;:[&quot;Moon&quot;],&quot;Primary&quot;:&quot;17712.txt&quot;,&quot;CreatorNames&quot;:[&quot;Elger, Thomas Gwyn, 1836-1897&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;17712&quot;});" class='title'>The moon</a>
+<div class='author'>Elger, Thomas Gwyn, 1836-1897</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17759, {&quot;Title&quot;:&quot;International Conference Held at Washington for the Purpose of Fixing a Prime Meridian and a Universal Day. October, 1884. - Protocols of the Proceedings&quot;,&quot;Topics&quot;:[&quot;Time -- Systems and standards -- Congresses&quot;,&quot;Prime Meridian -- Congresses&quot;],&quot;Primary&quot;:&quot;17759.htm&quot;,&quot;CreatorNames&quot;:[&quot;International Meridian Conference (1884 : Washington, D.C.)&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;17759&quot;});" class='title'>International Conference Held at Washington for the Purpose of Fixing a Prime Meridian and a Universal Day. October, 1884. -<br><span class='subtitle'>Protocols of the Proceedings</span></a>
+<div class='author'>International Meridian Conference (1884 : Washington, D.C.)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18431, {&quot;Title&quot;:&quot;Other Worlds - Their Nature, Possibilities and Habitability in the Light of the Latest Discoveries&quot;,&quot;Topics&quot;:[&quot;Astronomy&quot;,&quot;Planets&quot;],&quot;Primary&quot;:&quot;18431.htm&quot;,&quot;CreatorNames&quot;:[&quot;Serviss, Garrett Putman, 1851-1929&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;18431&quot;});" class='title'>Other Worlds -<br><span class='subtitle'>Their Nature, Possibilities and Habitability in the Light of the Latest Discoveries</span></a>
+<div class='author'>Serviss, Garrett Putman, 1851-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18471, {&quot;Title&quot;:&quot;Ueber die schrecklichen Wirkungen des Aufsturzes eines Kometen auf die Erde - und über die vor fünftausend Jahren gehabte Erscheinung dieser Art&quot;,&quot;Topics&quot;:[&quot;Astronomy -- History&quot;],&quot;Primary&quot;:&quot;18471.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gelpke, August Heinrich Christian, 1769-1842&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;18471&quot;});" class='title'>Ueber die schrecklichen Wirkungen des Aufsturzes eines Kometen auf die Erde -<br><span class='subtitle'>und über die vor fünftausend Jahren gehabte Erscheinung dieser Art</span></a>
+<div class='author'>Gelpke, August Heinrich Christian, 1769-1842</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19103, {&quot;Title&quot;:&quot;The Discovery of a World in the Moone - Or, A Discovrse Tending To Prove That &#39;Tis Probable There May Be Another Habitable World In That Planet&quot;,&quot;Topics&quot;:[&quot;Astronomy -- Early works to 1800&quot;,&quot;Moon -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;19103.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wilkins, John, 1614-1672&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;19103&quot;});" class='title'>The Discovery of a World in the Moone -<br><span class='subtitle'>Or, A Discovrse Tending To Prove That 'Tis Probable There May Be Another Habitable World In That Planet</span></a>
+<div class='author'>Wilkins, John, 1614-1672</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19309, {&quot;Title&quot;:&quot;The Reminiscences of an Astronomer&quot;,&quot;Topics&quot;:[&quot;Newcomb, Simon, 1835-1909&quot;,&quot;Astronomers -- United States -- Biography&quot;],&quot;Primary&quot;:&quot;19309.txt&quot;,&quot;CreatorNames&quot;:[&quot;Newcomb, Simon, 1835-1909&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;19309&quot;});" class='title'>The Reminiscences of an Astronomer</a>
+<div class='author'>Newcomb, Simon, 1835-1909</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19395, {&quot;Title&quot;:&quot;The New Heavens&quot;,&quot;Topics&quot;:[&quot;Astronomy&quot;],&quot;Primary&quot;:&quot;19395.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hale, George Ellery, 1868-1938&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;19395&quot;});" class='title'>The New Heavens</a>
+<div class='author'>Hale, George Ellery, 1868-1938</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20769, {&quot;Title&quot;:&quot;A Field Book of the Stars&quot;,&quot;Topics&quot;:[&quot;Astronomy&quot;,&quot;Constellations&quot;],&quot;Primary&quot;:&quot;20769.htm&quot;,&quot;CreatorNames&quot;:[&quot;Olcott, William Tyler, 1873-1936&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;20769&quot;});" class='title'>A Field Book of the Stars</a>
+<div class='author'>Olcott, William Tyler, 1873-1936</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20930, {&quot;Title&quot;:&quot;Cosmografía&quot;,&quot;Topics&quot;:[&quot;Stars&quot;,&quot;Solar system&quot;],&quot;Primary&quot;:&quot;20930.htm&quot;,&quot;CreatorNames&quot;:[&quot;Guillemin, Amédée, 1826-1893&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;20930&quot;});" class='title'>Cosmografía</a>
+<div class='author'>Guillemin, Amédée, 1826-1893</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22157, {&quot;Title&quot;:&quot;Lectures on Stellar Statistics&quot;,&quot;Topics&quot;:[&quot;Astronomy&quot;,&quot;Stars&quot;,&quot;Milky Way&quot;],&quot;Primary&quot;:&quot;22157.htm&quot;,&quot;CreatorNames&quot;:[&quot;Charlier, C. V. L. (Carl Vilhelm Ludwig), 1862-1934&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;22157&quot;});" class='title'>Lectures on Stellar Statistics</a>
+<div class='author'>Charlier, C. V. L. (Carl Vilhelm Ludwig), 1862-1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22917, {&quot;Title&quot;:&quot;Leçons de cosmographie - à l&#39;usage des lycées et collèges et de tous les établissements d&#39;instruction publique&quot;,&quot;Topics&quot;:[&quot;Cosmography&quot;],&quot;Primary&quot;:&quot;22917.htm&quot;,&quot;CreatorNames&quot;:[&quot;Guilmin, A. (Adrien), 1812-1884&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;22917&quot;});" class='title'>Leçons de cosmographie -<br><span class='subtitle'>à l'usage des lycées et collèges et de tous les établissements d'instruction publique</span></a>
+<div class='author'>Guilmin, A. (Adrien), 1812-1884</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2298, {&quot;Title&quot;:&quot;Great Astronomers&quot;,&quot;Topics&quot;:[&quot;Astronomers&quot;,&quot;Astronomy -- History&quot;],&quot;Primary&quot;:&quot;2298.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ball, Robert S. (Robert Stawell), 1840-1913&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;2298&quot;});" class='title'>Great Astronomers</a>
+<div class='author'>Ball, Robert S. (Robert Stawell), 1840-1913</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23300, {&quot;Title&quot;:&quot;Half-Hours with the Stars - A Plain and Easy Guide to the Knowledge of the Constellations&quot;,&quot;Topics&quot;:[&quot;Stars -- Atlases&quot;],&quot;Primary&quot;:&quot;23300.htm&quot;,&quot;CreatorNames&quot;:[&quot;Proctor, Richard A. (Richard Anthony), 1837-1888&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;23300&quot;});" class='title'>Half-Hours with the Stars -<br><span class='subtitle'>A Plain and Easy Guide to the Knowledge of the Constellations</span></a>
+<div class='author'>Proctor, Richard A. (Richard Anthony), 1837-1888</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24222, {&quot;Title&quot;:&quot;The Story of Eclipses&quot;,&quot;Topics&quot;:[&quot;Eclipses&quot;],&quot;Primary&quot;:&quot;24222.htm&quot;,&quot;CreatorNames&quot;:[&quot;Chambers, George F. (George Frederick), 1841-1915&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;24222&quot;});" class='title'>The Story of Eclipses</a>
+<div class='author'>Chambers, George F. (George Frederick), 1841-1915</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24236, {&quot;Title&quot;:&quot;Time and Tide: A Romance of the Moon&quot;,&quot;Topics&quot;:[&quot;Tides&quot;,&quot;Satellites&quot;,&quot;Moon&quot;],&quot;Primary&quot;:&quot;24236.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ball, Robert S. (Robert Stawell), 1840-1913&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;24236&quot;});" class='title'>Time and Tide:<br><span class='subtitle'>A Romance of the Moon</span></a>
+<div class='author'>Ball, Robert S. (Robert Stawell), 1840-1913</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24883, {&quot;Title&quot;:&quot;New and Original Theories of the Great Physical Forces&quot;,&quot;Topics&quot;:[&quot;Astronomy&quot;,&quot;Physics&quot;],&quot;Primary&quot;:&quot;24883.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rogers, Henry Raymond, 1822-1901&quot;],&quot;LoCC&quot;:[&quot;QB&quot;,&quot;QC&quot;],&quot;PG_ID&quot;:&quot;24883&quot;});" class='title'>New and Original Theories of the Great Physical Forces</a>
+<div class='author'>Rogers, Henry Raymond, 1822-1901</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25267, {&quot;Title&quot;:&quot;Astronomy for Amateurs&quot;,&quot;Topics&quot;:[&quot;Astronomy&quot;],&quot;Primary&quot;:&quot;25267.htm&quot;,&quot;CreatorNames&quot;:[&quot;Flammarion, Camille, 1842-1925&quot;,&quot;Welby, Frances A. (Frances Alice) [Translator]&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;25267&quot;});" class='title'>Astronomy for Amateurs</a>
+<div class='author'>Flammarion, Camille, 1842-1925, Welby, Frances A. (Frances Alice) [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25992, {&quot;Title&quot;:&quot;The Martyrs of Science, or, The lives of Galileo, Tycho Brahe, and Kepler&quot;,&quot;Topics&quot;:[&quot;Scientists -- Biography&quot;,&quot;Kepler, Johannes, 1571-1630&quot;,&quot;Galilei, Galileo, 1564-1642&quot;,&quot;Brahe, Tycho, 1546-1601&quot;],&quot;Primary&quot;:&quot;25992.htm&quot;,&quot;CreatorNames&quot;:[&quot;Brewster, David, 1781-1868&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;25992&quot;});" class='title'>The Martyrs of Science, or, The lives of Galileo, Tycho Brahe, and Kepler</a>
+<div class='author'>Brewster, David, 1781-1868</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26556, {&quot;Title&quot;:&quot;Myths and Marvels of Astronomy&quot;,&quot;Topics&quot;:[&quot;Astronomy&quot;],&quot;Primary&quot;:&quot;26556.htm&quot;,&quot;CreatorNames&quot;:[&quot;Proctor, Richard A. (Richard Anthony), 1837-1888&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;26556&quot;});" class='title'>Myths and Marvels of Astronomy</a>
+<div class='author'>Proctor, Richard A. (Richard Anthony), 1837-1888</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27378, {&quot;Title&quot;:&quot;The Story of the Heavens&quot;,&quot;Topics&quot;:[&quot;Astronomy&quot;],&quot;Primary&quot;:&quot;27378.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ball, Robert S. (Robert Stawell), 1840-1913&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;27378&quot;});" class='title'>The Story of the Heavens</a>
+<div class='author'>Ball, Robert S. (Robert Stawell), 1840-1913</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27477, {&quot;Title&quot;:&quot;Astronomical Instruments and Accessories&quot;,&quot;Topics&quot;:[&quot;Astronomical instruments -- Catalogs&quot;],&quot;Primary&quot;:&quot;27477.htm&quot;,&quot;CreatorNames&quot;:[&quot;William Gaertner and Company&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;27477&quot;});" class='title'>Astronomical Instruments and Accessories</a>
+<div class='author'>William Gaertner and Company</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28247, {&quot;Title&quot;:&quot;A Popular History of Astronomy During the Nineteenth Century - Fourth Edition&quot;,&quot;Topics&quot;:[&quot;Astronomy -- History -- 19th century&quot;],&quot;Primary&quot;:&quot;28247.htm&quot;,&quot;CreatorNames&quot;:[&quot;Clerke, Agnes M. (Agnes Mary), 1842-1907&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;28247&quot;});" class='title'>A Popular History of Astronomy During the Nineteenth Century -<br><span class='subtitle'>Fourth Edition</span></a>
+<div class='author'>Clerke, Agnes M. (Agnes Mary), 1842-1907</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28536, {&quot;Title&quot;:&quot;The Astronomy of the Bible - An Elementary Commentary on the Astronomical References of Holy Scripture&quot;,&quot;Topics&quot;:[&quot;Astronomy in the Bible&quot;,&quot;Constellations&quot;],&quot;Primary&quot;:&quot;28536.htm&quot;,&quot;CreatorNames&quot;:[&quot;Maunder, E. Walter (Edward Walter), 1851-1928&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;28536&quot;});" class='title'>The Astronomy of the Bible -<br><span class='subtitle'>An Elementary Commentary on the Astronomical References of Holy Scripture</span></a>
+<div class='author'>Maunder, E. Walter (Edward Walter), 1851-1928</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28570, {&quot;Title&quot;:&quot;Astronomy of To-day: A Popular Introduction in Non-Technical Language&quot;,&quot;Topics&quot;:[&quot;Astronomy&quot;],&quot;Primary&quot;:&quot;28570.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dolmage, Cecil Goodrich Julius, -1908&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;28570&quot;});" class='title'>Astronomy of To-day:<br><span class='subtitle'>A Popular Introduction in Non-Technical Language</span></a>
+<div class='author'>Dolmage, Cecil Goodrich Julius, -1908</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28613, {&quot;Title&quot;:&quot;Pioneers of Science&quot;,&quot;Topics&quot;:[&quot;Astronomers&quot;,&quot;Astronomy -- History&quot;,&quot;Tides&quot;],&quot;Primary&quot;:&quot;28613.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lodge, Oliver, Sir, 1851-1940&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;28613&quot;});" class='title'>Pioneers of Science</a>
+<div class='author'>Lodge, Oliver, Sir, 1851-1940</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28752, {&quot;Title&quot;:&quot;Pleasures of the telescope - An Illustrated Guide for Amateur Astronomers and a Popular Description of the Chief Wonders of the Heavens for General Readers&quot;,&quot;Topics&quot;:[&quot;Telescopes&quot;,&quot;Astronomy -- Observers&#39; manuals&quot;,&quot;Astronomy -- Amateurs&#39; manuals&quot;],&quot;Primary&quot;:&quot;28752.htm&quot;,&quot;CreatorNames&quot;:[&quot;Serviss, Garrett Putman, 1851-1929&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;28752&quot;});" class='title'>Pleasures of the telescope -<br><span class='subtitle'>An Illustrated Guide for Amateur Astronomers and a Popular Description of the Chief Wonders of the Heavens for General Readers</span></a>
+<div class='author'>Serviss, Garrett Putman, 1851-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28853, {&quot;Title&quot;:&quot;The Children&#39;s Book of Stars&quot;,&quot;Topics&quot;:[&quot;Astronomy -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;28853.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mitton, G. E. (Geraldine Edith), 1868-1955&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;28853&quot;});" class='title'>The Children's Book of Stars</a>
+<div class='author'>Mitton, G. E. (Geraldine Edith), 1868-1955</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29031, {&quot;Title&quot;:&quot;Sir William Herschel: His Life and Works&quot;,&quot;Topics&quot;:[&quot;Herschel, William, 1738-1822&quot;,&quot;Astronomers -- Great Britain -- Biography&quot;,&quot;Astronomy -- Great Britain -- History -- 18th century&quot;,&quot;Astronomy -- Great Britain -- History -- 19th century&quot;],&quot;Primary&quot;:&quot;29031.htm&quot;,&quot;CreatorNames&quot;:[&quot;Holden, Edward S. (Edward Singleton), 1846-1914&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;29031&quot;});" class='title'>Sir William Herschel:<br><span class='subtitle'>His Life and Works</span></a>
+<div class='author'>Holden, Edward S. (Edward Singleton), 1846-1914</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29281, {&quot;Title&quot;:&quot;Remarks Concerning Stones Said to Have Fallen from the Clouds, Both in These Days, and in Antient Times&quot;,&quot;Topics&quot;:[&quot;Meteorites&quot;],&quot;Primary&quot;:&quot;29281.htm&quot;,&quot;CreatorNames&quot;:[&quot;King, Edward, 1735?-1807&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;29281&quot;});" class='title'>Remarks Concerning Stones Said to Have Fallen from the Clouds, Both in These Days, and in Antient Times</a>
+<div class='author'>King, Edward, 1735?-1807</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29397, {&quot;Title&quot;:&quot;La terre et la lune: forme extérieure et structure interne&quot;,&quot;Topics&quot;:[&quot;Moon&quot;,&quot;Earth (Planet)&quot;],&quot;Primary&quot;:&quot;29397.htm&quot;,&quot;CreatorNames&quot;:[&quot;Puiseux, P. (Pierre Henri), 1855-1928&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;29397&quot;});" class='title'>La terre et la lune:<br><span class='subtitle'>forme extérieure et structure interne</span></a>
+<div class='author'>Puiseux, P. (Pierre Henri), 1855-1928</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32598, {&quot;Title&quot;:&quot;Earth and Sky Every Child Should Know - Easy studies of the earth and the stars for any time and place&quot;,&quot;Topics&quot;:[&quot;Geology -- Juvenile literature&quot;,&quot;Astronomy -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;32598.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rogers, Julia Ellen, 1866-&quot;],&quot;LoCC&quot;:[&quot;QB&quot;,&quot;QE&quot;],&quot;PG_ID&quot;:&quot;32598&quot;});" class='title'>Earth and Sky Every Child Should Know -<br><span class='subtitle'>Easy studies of the earth and the stars for any time and place</span></a>
+<div class='author'>Rogers, Julia Ellen, 1866-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33337, {&quot;Title&quot;:&quot;Astronomical Discovery&quot;,&quot;Topics&quot;:[&quot;Astronomy -- History&quot;],&quot;Primary&quot;:&quot;33337.htm&quot;,&quot;CreatorNames&quot;:[&quot;Turner, H. H. (Herbert Hall), 1861-1930&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;33337&quot;});" class='title'>Astronomical Discovery</a>
+<div class='author'>Turner, H. H. (Herbert Hall), 1861-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34435, {&quot;Title&quot;:&quot;Le Système Solaire se mouvant&quot;,&quot;Topics&quot;:[&quot;Solar system -- Motion in space&quot;],&quot;Primary&quot;:&quot;34435.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tischner, August, 1819-&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;34435&quot;});" class='title'>Le Système Solaire se mouvant</a>
+<div class='author'>Tischner, August, 1819-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34711, {&quot;Title&quot;:&quot;The Life of Roger Langdon, Told by himself. With additions by his daughter Ellen.&quot;,&quot;Topics&quot;:[&quot;Langdon, Roger, 1825-1894&quot;],&quot;Primary&quot;:&quot;34711.htm&quot;,&quot;CreatorNames&quot;:[&quot;Langdon, Ellen&quot;,&quot;Langdon, Roger, 1825-1894&quot;,&quot;Lambert, Henry Clifton [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;QB&quot;],&quot;PG_ID&quot;:&quot;34711&quot;});" class='title'>The Life of Roger Langdon, Told by himself. With additions by his daughter Ellen.</a>
+<div class='author'>Langdon, Ellen, Langdon, Roger, 1825-1894, Lambert, Henry Clifton [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34834, {&quot;Title&quot;:&quot;A Text-Book of Astronomy&quot;,&quot;Topics&quot;:[&quot;Astronomy&quot;],&quot;Primary&quot;:&quot;34834.htm&quot;,&quot;CreatorNames&quot;:[&quot;Comstock, George C. (George Cary), 1855-1934&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;34834&quot;});" class='title'>A Text-Book of Astronomy</a>
+<div class='author'>Comstock, George C. (George Cary), 1855-1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35375, {&quot;Title&quot;:&quot;The proceedings of the Canadian Eclipse Party, 1869&quot;,&quot;Topics&quot;:[&quot;Solar eclipses -- 1869&quot;],&quot;Primary&quot;:&quot;35375.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ashe, E. D. (Edward David), 1813-1895&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;35375&quot;});" class='title'>The proceedings of the Canadian Eclipse Party, 1869</a>
+<div class='author'>Ashe, E. D. (Edward David), 1813-1895</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35613, {&quot;Title&quot;:&quot;A Plan for Securing Observations of the Variable Stars&quot;,&quot;Topics&quot;:[&quot;Variable stars&quot;],&quot;Primary&quot;:&quot;35613.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pickering, Edward C. (Edward Charles), 1846-1919&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;35613&quot;});" class='title'>A Plan for Securing Observations of the Variable Stars</a>
+<div class='author'>Pickering, Edward C. (Edward Charles), 1846-1919</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35744, {&quot;Title&quot;:&quot;The gradual acceptance of the Copernican theory of the universe&quot;,&quot;Topics&quot;:[&quot;Astronomy -- History&quot;,&quot;Solar system&quot;,&quot;Copernicus, Nicolaus, 1473-1543&quot;],&quot;Primary&quot;:&quot;35744.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stimson, Dorothy, 1890-1988&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;35744&quot;});" class='title'>The gradual acceptance of the Copernican theory of the universe</a>
+<div class='author'>Stimson, Dorothy, 1890-1988</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35937, {&quot;Title&quot;:&quot;Are the Planets Inhabited?&quot;,&quot;Topics&quot;:[&quot;Life on other planets&quot;],&quot;Primary&quot;:&quot;35937.htm&quot;,&quot;CreatorNames&quot;:[&quot;Maunder, E. Walter (Edward Walter), 1851-1928&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;35937&quot;});" class='title'>Are the Planets Inhabited?</a>
+<div class='author'>Maunder, E. Walter (Edward Walter), 1851-1928</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36288, {&quot;Title&quot;:&quot;The Plurality of Worlds&quot;,&quot;Topics&quot;:[&quot;Plurality of worlds&quot;],&quot;Primary&quot;:&quot;36288.htm&quot;,&quot;CreatorNames&quot;:[&quot;Whewell, William, 1794-1866&quot;,&quot;Hitchcock, Edward, 1793-1864 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;36288&quot;});" class='title'>The Plurality of Worlds</a>
+<div class='author'>Whewell, William, 1794-1866, Hitchcock, Edward, 1793-1864 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36470, {&quot;Title&quot;:&quot;Photographs of Nebulæ and Clusters, Made with the Crossley Reflector&quot;,&quot;Topics&quot;:[&quot;Nebulae&quot;,&quot;Stars -- Clusters&quot;,&quot;Astronomical photography&quot;,&quot;Crossley reflector&quot;],&quot;Primary&quot;:&quot;36470.htm&quot;,&quot;CreatorNames&quot;:[&quot;Keeler, James Edward, 1857-1900&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;36470&quot;});" class='title'>Photographs of Nebulæ and Clusters, Made with the Crossley Reflector</a>
+<div class='author'>Keeler, James Edward, 1857-1900</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36495, {&quot;Title&quot;:&quot;Astronomical Myths: Based on Flammarions&#39;s \&quot;\&quot;History of the Heavens\&quot;\&quot;&quot;,&quot;Topics&quot;:[&quot;Astronomy -- History&quot;,&quot;Cosmology&quot;,&quot;Constellations&quot;],&quot;Primary&quot;:&quot;36495.htm&quot;,&quot;CreatorNames&quot;:[&quot;Blake, J. F. (John Frederick), 1839-1906&quot;,&quot;Flammarion, Camille, 1842-1925&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;36495&quot;});" class='title'>Astronomical Myths:<br><span class='subtitle'>Based on Flammarions's "History of the Heavens"</span></a>
+<div class='author'>Blake, J. F. (John Frederick), 1839-1906, Flammarion, Camille, 1842-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36741, {&quot;Title&quot;:&quot;Astronomy with an Opera-glass - A Popular Introduction to the Study of the Starry Heavens with the Simplest of Optical Instruments&quot;,&quot;Topics&quot;:[&quot;Astronomy&quot;],&quot;Primary&quot;:&quot;36741.htm&quot;,&quot;CreatorNames&quot;:[&quot;Serviss, Garrett Putman, 1851-1929&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;36741&quot;});" class='title'>Astronomy with an Opera-glass -<br><span class='subtitle'>A Popular Introduction to the Study of the Starry Heavens with the Simplest of Optical Instruments</span></a>
+<div class='author'>Serviss, Garrett Putman, 1851-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37321, {&quot;Title&quot;:&quot;Remarks on a Pamphlet Lately published by the Rev. Mr. Maskelyne, Under the Authority of the Board of Longitude&quot;,&quot;Topics&quot;:[&quot;Maskelyne, Nevil, 1732-1811. Account of the going of Mr. John Harrison&#39;s watch&quot;,&quot;Longitude -- Early works to 1800&quot;,&quot;Chronometers -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;37321.htm&quot;,&quot;CreatorNames&quot;:[&quot;Harrison, John, 1693-1776&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;37321&quot;});" class='title'>Remarks on a Pamphlet Lately published by the Rev. Mr. Maskelyne, Under the Authority of the Board of Longitude</a>
+<div class='author'>Harrison, John, 1693-1776</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37916, {&quot;Title&quot;:&quot;The Star People&quot;,&quot;Topics&quot;:[&quot;Astronomy -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;37916.htm&quot;,&quot;CreatorNames&quot;:[&quot;Johnson, Gaylord&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;37916&quot;});" class='title'>The Star People</a>
+<div class='author'>Johnson, Gaylord</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38755, {&quot;Title&quot;:&quot;Über die Vulkane im Monde&quot;,&quot;Topics&quot;:[&quot;Moon&quot;],&quot;Primary&quot;:&quot;38755.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kant, Immanuel, 1724-1804&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;38755&quot;});" class='title'>Über die Vulkane im Monde</a>
+<div class='author'>Kant, Immanuel, 1724-1804</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39070, {&quot;Title&quot;:&quot;The Sun changes its position in space - therefore it cannot be regarded as being \&quot;\&quot;in a condition of rest\&quot;\&quot;&quot;,&quot;Topics&quot;:[&quot;Solar system -- Miscellanea&quot;],&quot;Primary&quot;:&quot;39070.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tischner, August, 1819-&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;39070&quot;});" class='title'>The Sun changes its position in space -<br><span class='subtitle'>therefore it cannot be regarded as being "in a condition of rest"</span></a>
+<div class='author'>Tischner, August, 1819-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39142, {&quot;Title&quot;:&quot;Astronomy: The Science of the Heavenly Bodies&quot;,&quot;Topics&quot;:[&quot;Astronomy&quot;],&quot;Primary&quot;:&quot;39142.htm&quot;,&quot;CreatorNames&quot;:[&quot;Todd, David P. (David Peck), 1855-1939&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;39142&quot;});" class='title'>Astronomy:<br><span class='subtitle'>The Science of the Heavenly Bodies</span></a>
+<div class='author'>Todd, David P. (David Peck), 1855-1939</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39263, {&quot;Title&quot;:&quot;Astronomical Curiosities: Facts and Fallacies&quot;,&quot;Topics&quot;:[&quot;Astronomy -- Miscellanea&quot;,&quot;Solar system -- Miscellanea&quot;],&quot;Primary&quot;:&quot;39263.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gore, J. Ellard (John Ellard), 1845-1910&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;39263&quot;});" class='title'>Astronomical Curiosities:<br><span class='subtitle'>Facts and Fallacies</span></a>
+<div class='author'>Gore, J. Ellard (John Ellard), 1845-1910</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39553, {&quot;Title&quot;:&quot;Einiges aus der Geschichte der Astronomie im Alterthum - Rede zur Feier des Geburtstags Sr. Maj. des Deutschen Kaisers Königs von Preussen Wilhelm I. gehalten an der Christian-Albrechts&quot;,&quot;Topics&quot;:[&quot;Astronomy -- History&quot;,&quot;Astronomy, Ancient&quot;],&quot;Primary&quot;:&quot;39553.htm&quot;,&quot;CreatorNames&quot;:[&quot;Blass, Friedrich, 1843-1907&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;39553&quot;});" class='title'>Einiges aus der Geschichte der Astronomie im Alterthum -<br><span class='subtitle'>Rede zur Feier des Geburtstags Sr. Maj. des Deutschen Kaisers Königs von Preussen Wilhelm I. gehalten an der Christian-Albrechts</span></a>
+<div class='author'>Blass, Friedrich, 1843-1907</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39928, {&quot;Title&quot;:&quot;Man&#39;s Place in the Universe - A Study of the Results of Scientific Research in Relation to the Unity or Plurality of Worlds, 3rd Edition&quot;,&quot;Topics&quot;:[&quot;Life&quot;,&quot;Stars&quot;,&quot;Plurality of worlds&quot;],&quot;Primary&quot;:&quot;39928.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wallace, Alfred Russel, 1823-1913&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;39928&quot;});" class='title'>Man's Place in the Universe -<br><span class='subtitle'>A Study of the Results of Scientific Research in Relation to the Unity or Plurality of Worlds, 3rd Edition</span></a>
+<div class='author'>Wallace, Alfred Russel, 1823-1913</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40240, {&quot;Title&quot;:&quot;Letters on Astronomy - in which the Elements of the Science are Familiarly Explained in Connection with Biographical Sketches of the Most Eminent Astronomers&quot;,&quot;Topics&quot;:[&quot;Astronomy&quot;],&quot;Primary&quot;:&quot;40240.htm&quot;,&quot;CreatorNames&quot;:[&quot;Olmsted, Denison, 1791-1859&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;40240&quot;});" class='title'>Letters on Astronomy -<br><span class='subtitle'>in which the Elements of the Science are Familiarly Explained in Connection with Biographical Sketches of the Most Eminent Astronomers</span></a>
+<div class='author'>Olmsted, Denison, 1791-1859</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40439, {&quot;Title&quot;:&quot;Plato&#39;s Doctrine Respecting the Rotation of the Earth and Aristotle&#39;s Comment Upon That Doctrine&quot;,&quot;Topics&quot;:[&quot;Aristotle, 384 BC-322 BC&quot;,&quot;Plato. Timaeus&quot;,&quot;Astronomy, Greek&quot;,&quot;Earth (Planet) -- Rotation&quot;],&quot;Primary&quot;:&quot;40439.htm&quot;,&quot;CreatorNames&quot;:[&quot;Grote, George, 1794-1871&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;40439&quot;});" class='title'>Plato's Doctrine Respecting the Rotation of the Earth and Aristotle's Comment Upon That Doctrine</a>
+<div class='author'>Grote, George, 1794-1871</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4065, {&quot;Title&quot;:&quot;Side-Lights on Astronomy and Kindred Fields of Popular Science&quot;,&quot;Topics&quot;:[&quot;Flying-machines&quot;,&quot;Astronomy&quot;,&quot;Compass&quot;,&quot;Hyperspace&quot;,&quot;Learning and scholarship&quot;,&quot;Rain-making&quot;],&quot;Primary&quot;:&quot;4065.htm&quot;,&quot;CreatorNames&quot;:[&quot;Newcomb, Simon, 1835-1909&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;4065&quot;});" class='title'>Side-Lights on Astronomy and Kindred Fields of Popular Science</a>
+<div class='author'>Newcomb, Simon, 1835-1909</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41570, {&quot;Title&quot;:&quot;The Asteroids; Or Minor Planets Between Mars and Jupiter.&quot;,&quot;Topics&quot;:[&quot;Asteroids&quot;],&quot;Primary&quot;:&quot;41570.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kirkwood, Daniel, 1814-1895&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;41570&quot;});" class='title'>The Asteroids;<br><span class='subtitle'>Or Minor Planets Between Mars and Jupiter.</span></a>
+<div class='author'>Kirkwood, Daniel, 1814-1895</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41606, {&quot;Title&quot;:&quot;Comets and Meteors - Their phenomena in all ages; their mutual relations; and the theory of their origin.&quot;,&quot;Topics&quot;:[&quot;Comets&quot;,&quot;Meteors&quot;],&quot;Primary&quot;:&quot;41606.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kirkwood, Daniel, 1814-1895&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;41606&quot;});" class='title'>Comets and Meteors -<br><span class='subtitle'>Their phenomena in all ages; their mutual relations; and the theory of their origin.</span></a>
+<div class='author'>Kirkwood, Daniel, 1814-1895</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43715, {&quot;Title&quot;:&quot;Meteoric astronomy: A treatise on shooting-stars, fire-balls, and aerolites&quot;,&quot;Topics&quot;:[&quot;Meteors&quot;],&quot;Primary&quot;:&quot;43715.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kirkwood, Daniel, 1814-1895&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;43715&quot;});" class='title'>Meteoric astronomy:<br><span class='subtitle'>A treatise on shooting-stars, fire-balls, and aerolites</span></a>
+<div class='author'>Kirkwood, Daniel, 1814-1895</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43877, {&quot;Title&quot;:&quot;The Life of Galileo Galilei, with Illustrations of the Advancement of Experimental Philosophy - Life of Kepler&quot;,&quot;Topics&quot;:[&quot;Kepler, Johannes, 1571-1630&quot;,&quot;Galilei, Galileo, 1564-1642&quot;],&quot;Primary&quot;:&quot;43877.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bethune, John Elliot Drinkwater, 1801-1851&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;43877&quot;});" class='title'>The Life of Galileo Galilei, with Illustrations of the Advancement of Experimental Philosophy -<br><span class='subtitle'>Life of Kepler</span></a>
+<div class='author'>Bethune, John Elliot Drinkwater, 1801-1851</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44167, {&quot;Title&quot;:&quot;The Royal Observatory, Greenwich: A Glance at Its History and Work&quot;,&quot;Topics&quot;:[&quot;Astronomy -- History&quot;,&quot;Royal Observatory, Greenwich&quot;],&quot;Primary&quot;:&quot;44167.htm&quot;,&quot;CreatorNames&quot;:[&quot;Maunder, E. Walter (Edward Walter), 1851-1928&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;44167&quot;});" class='title'>The Royal Observatory, Greenwich:<br><span class='subtitle'>A Glance at Its History and Work</span></a>
+<div class='author'>Maunder, E. Walter (Edward Walter), 1851-1928</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44270, {&quot;Title&quot;:&quot;Mars and Its Mystery&quot;,&quot;Topics&quot;:[&quot;Mars (Planet)&quot;],&quot;Primary&quot;:&quot;44270.htm&quot;,&quot;CreatorNames&quot;:[&quot;Morse, Edward Sylvester, 1838-1925&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;44270&quot;});" class='title'>Mars and Its Mystery</a>
+<div class='author'>Morse, Edward Sylvester, 1838-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45112, {&quot;Title&quot;:&quot;Astronomy for Young Folks&quot;,&quot;Topics&quot;:[&quot;Astronomy -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;45112.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lewis, Isabel Martin, 1881-&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;45112&quot;});" class='title'>Astronomy for Young Folks</a>
+<div class='author'>Lewis, Isabel Martin, 1881-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45356, {&quot;Title&quot;:&quot;New Theories in Astronomy&quot;,&quot;Topics&quot;:[&quot;Astronomy&quot;],&quot;Primary&quot;:&quot;45356.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stirling, William, -1900&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;45356&quot;});" class='title'>New Theories in Astronomy</a>
+<div class='author'>Stirling, William, -1900</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46036, {&quot;Title&quot;:&quot;The Sidereal Messenger of Galileo Galilei - and a Part of the Preface to Kepler&#39;s Dioptrics Containing the Original Account of Galileo&#39;s Astronomical Discoveries&quot;,&quot;Topics&quot;:[&quot;Astronomy -- Early works to 1800&quot;,&quot;Jupiter (Planet) -- Satellites&quot;],&quot;Primary&quot;:&quot;46036.htm&quot;,&quot;CreatorNames&quot;:[&quot;Galilei, Galileo, 1564-1642&quot;,&quot;Kepler, Johannes, 1571-1630&quot;,&quot;Carlos, Edward Stafford [Translator]&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;46036&quot;});" class='title'>The Sidereal Messenger of Galileo Galilei -<br><span class='subtitle'>and a Part of the Preface to Kepler's Dioptrics Containing the Original Account of Galileo's Astronomical Discoveries</span></a>
+<div class='author'>Galilei, Galileo, 1564-1642, Kepler, Johannes, 1571-1630, Carlos, Edward Stafford [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47015, {&quot;Title&quot;:&quot;Mars and Its Canals&quot;,&quot;Topics&quot;:[&quot;Mars (Planet)&quot;],&quot;Primary&quot;:&quot;47015.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lowell, Percival, 1855-1916&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;47015&quot;});" class='title'>Mars and Its Canals</a>
+<div class='author'>Lowell, Percival, 1855-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47021, {&quot;Title&quot;:&quot;The Story of the Solar System&quot;,&quot;Topics&quot;:[&quot;Solar system&quot;],&quot;Primary&quot;:&quot;47021.htm&quot;,&quot;CreatorNames&quot;:[&quot;Chambers, George F. (George Frederick), 1841-1915&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;47021&quot;});" class='title'>The Story of the Solar System</a>
+<div class='author'>Chambers, George F. (George Frederick), 1841-1915</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48218, {&quot;Title&quot;:&quot;The Science of the Stars&quot;,&quot;Topics&quot;:[&quot;Astronomy&quot;],&quot;Primary&quot;:&quot;48218.htm&quot;,&quot;CreatorNames&quot;:[&quot;Maunder, E. Walter (Edward Walter), 1851-1928&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;48218&quot;});" class='title'>The Science of the Stars</a>
+<div class='author'>Maunder, E. Walter (Edward Walter), 1851-1928</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49200, {&quot;Title&quot;:&quot;Stellar Evolution and Its Relations to Geological Time&quot;,&quot;Topics&quot;:[&quot;Cosmogony&quot;,&quot;Stars -- Evolution&quot;,&quot;Geological time&quot;],&quot;Primary&quot;:&quot;49200.htm&quot;,&quot;CreatorNames&quot;:[&quot;Croll, James, 1821-1890&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;49200&quot;});" class='title'>Stellar Evolution and Its Relations to Geological Time</a>
+<div class='author'>Croll, James, 1821-1890</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51284, {&quot;Title&quot;:&quot;The Ways of the Planets&quot;,&quot;Topics&quot;:[&quot;Planets&quot;],&quot;Primary&quot;:&quot;51284.htm&quot;,&quot;CreatorNames&quot;:[&quot;Martin, Martha Evans, -1925&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;51284&quot;});" class='title'>The Ways of the Planets</a>
+<div class='author'>Martin, Martha Evans, -1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51900, {&quot;Title&quot;:&quot;Biography of Percival Lowell&quot;,&quot;Topics&quot;:[&quot;Lowell, Percival, 1855-1916&quot;,&quot;Astronomy -- Observations&quot;],&quot;Primary&quot;:&quot;51900.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lowell, A. Lawrence (Abbott Lawrence), 1856-1943&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;51900&quot;});" class='title'>Biography of Percival Lowell</a>
+<div class='author'>Lowell, A. Lawrence (Abbott Lawrence), 1856-1943</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52373, {&quot;Title&quot;:&quot;Die Milchstraße&quot;,&quot;Topics&quot;:[&quot;Milky Way&quot;],&quot;Primary&quot;:&quot;52373.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kahn, Fritz, 1888-1968&quot;,&quot;Helbig, Georg [Illustrator]&quot;,&quot;Oeffinger, Rudolf, 1870-1952 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;52373&quot;});" class='title'>Die Milchstraße</a>
+<div class='author'>Kahn, Fritz, 1888-1968, Helbig, Georg [Illustrator], Oeffinger, Rudolf, 1870-1952 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52848, {&quot;Title&quot;:&quot;Space Nomads: Meteorites in Sky, Field, and Laboratory&quot;,&quot;Topics&quot;:[&quot;Meteorites&quot;],&quot;Primary&quot;:&quot;52848.htm&quot;,&quot;CreatorNames&quot;:[&quot;LaPaz, Jean&quot;,&quot;LaPaz, Lincoln, 1897-1985&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;52848&quot;});" class='title'>Space Nomads:<br><span class='subtitle'>Meteorites in Sky, Field, and Laboratory</span></a>
+<div class='author'>LaPaz, Jean, LaPaz, Lincoln, 1897-1985</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52923, {&quot;Title&quot;:&quot;Memoir and Correspondence of Caroline Herschel&quot;,&quot;Topics&quot;:[&quot;Herschel, Caroline Lucretia, 1750-1848&quot;],&quot;Primary&quot;:&quot;52923.htm&quot;,&quot;CreatorNames&quot;:[&quot;Herschel, John, Mrs., -1876&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;52923&quot;});" class='title'>Memoir and Correspondence of Caroline Herschel</a>
+<div class='author'>Herschel, John, Mrs., -1876</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53146, {&quot;Title&quot;:&quot;Jorden och solsystemet - Några blad ur historien om vetenskapens strider&quot;,&quot;Topics&quot;:[&quot;Astronomy -- History&quot;],&quot;Primary&quot;:&quot;53146.htm&quot;,&quot;CreatorNames&quot;:[&quot;Brohlin, Karl&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;53146&quot;});" class='title'>Jorden och solsystemet -<br><span class='subtitle'>Några blad ur historien om vetenskapens strider</span></a>
+<div class='author'>Brohlin, Karl</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53172, {&quot;Title&quot;:&quot;Stargazing: Past and Present&quot;,&quot;Topics&quot;:[&quot;Astronomy&quot;,&quot;Telescopes&quot;],&quot;Primary&quot;:&quot;53172.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lockyer, Norman, Sir, 1836-1920&quot;,&quot;Seabroke, G. M. (George Mitchell), 1848-1918 [Editor]&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;53172&quot;});" class='title'>Stargazing:<br><span class='subtitle'>Past and Present</span></a>
+<div class='author'>Lockyer, Norman, Sir, 1836-1920, Seabroke, G. M. (George Mitchell), 1848-1918 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53396, {&quot;Title&quot;:&quot;Practical Talks by an Astronomer&quot;,&quot;Topics&quot;:[&quot;Astronomy&quot;],&quot;Primary&quot;:&quot;53396.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jacoby, Harold, 1865-1932&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;53396&quot;});" class='title'>Practical Talks by an Astronomer</a>
+<div class='author'>Jacoby, Harold, 1865-1932</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53494, {&quot;Title&quot;:&quot;New Edition of Hints on Silver-Glass Reflecting Telescopes Manufactured by Mr. G. Calver, F.R.A.S. - with Directions for Silvering, Adjusting, &amp;c.&quot;,&quot;Topics&quot;:[&quot;Scientific apparatus and instruments&quot;,&quot;Reflecting telescopes&quot;],&quot;Primary&quot;:&quot;53494.htm&quot;,&quot;CreatorNames&quot;:[&quot;Calver, George&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;53494&quot;});" class='title'>New Edition of Hints on Silver-Glass Reflecting Telescopes Manufactured by Mr. G. Calver, F.R.A.S. -<br><span class='subtitle'>with Directions for Silvering, Adjusting, &c.</span></a>
+<div class='author'>Calver, George</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53542, {&quot;Title&quot;:&quot;On the Construction of a Silvered Glass Telescope - Fifteen and a half inches in aperture, and its use in celestial photography&quot;,&quot;Topics&quot;:[&quot;Astronomy&quot;,&quot;Astronomical photography&quot;,&quot;Reflecting telescopes&quot;],&quot;Primary&quot;:&quot;53542.htm&quot;,&quot;CreatorNames&quot;:[&quot;Draper, Henry, 1837-1882&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;53542&quot;});" class='title'>On the Construction of a Silvered Glass Telescope -<br><span class='subtitle'>Fifteen and a half inches in aperture, and its use in celestial photography</span></a>
+<div class='author'>Draper, Henry, 1837-1882</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53740, {&quot;Title&quot;:&quot;The Telescope&quot;,&quot;Topics&quot;:[&quot;Telescopes&quot;],&quot;Primary&quot;:&quot;53740.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bell, Louis, 1864-1923&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;53740&quot;});" class='title'>The Telescope</a>
+<div class='author'>Bell, Louis, 1864-1923</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54329, {&quot;Title&quot;:&quot;Symmes&#39;s Theory of Concentric Spheres - Demonstrating that the Earth is hollow, habitable within, and widely open about the poles&quot;,&quot;Topics&quot;:[&quot;Earth (Planet) -- Miscellanea&quot;,&quot;Symmes, John Cleves, 1780-1829&quot;],&quot;Primary&quot;:&quot;54329.htm&quot;,&quot;CreatorNames&quot;:[&quot;McBride, James, 1788-1859&quot;,&quot;Symmes, John Cleves, 1780-1829&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;54329&quot;});" class='title'>Symmes's Theory of Concentric Spheres -<br><span class='subtitle'>Demonstrating that the Earth is hollow, habitable within, and widely open about the poles</span></a>
+<div class='author'>McBride, James, 1788-1859, Symmes, John Cleves, 1780-1829</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54378, {&quot;Title&quot;:&quot;Through the Telescope&quot;,&quot;Topics&quot;:[&quot;Astronomy&quot;],&quot;Primary&quot;:&quot;54378.htm&quot;,&quot;CreatorNames&quot;:[&quot;Baikie, James, 1866-1931&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;54378&quot;});" class='title'>Through the Telescope</a>
+<div class='author'>Baikie, James, 1866-1931</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54420, {&quot;Title&quot;:&quot;The Practical Astronomer - Comprising illustrations of light and colours--practical descriptions of all kinds of telescopes--the use of the equatorial-transit--circular, and other astronomical instruments, a particular account of the Earl of Rosse&#39;s large telescopes, and other topics connected with astronomy&quot;,&quot;Topics&quot;:[&quot;Astronomy&quot;,&quot;Telescopes&quot;,&quot;Astronomical instruments&quot;],&quot;Primary&quot;:&quot;54420.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dick, Thomas, 1774-1857&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;54420&quot;});" class='title'>The Practical Astronomer -<br><span class='subtitle'>Comprising illustrations of light and colours--practical descriptions of all kinds of telescopes--the use of the equatorial-transit--circular, and other astronomical instruments, a particular account of the Earl of Rosse's large telescopes, and other topics connected with astronomy</span></a>
+<div class='author'>Dick, Thomas, 1774-1857</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54913, {&quot;Title&quot;:&quot;Stories of Starland&quot;,&quot;Topics&quot;:[&quot;Astronomy -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;54913.htm&quot;,&quot;CreatorNames&quot;:[&quot;Proctor, Mary, 1862-1957&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;54913&quot;});" class='title'>Stories of Starland</a>
+<div class='author'>Proctor, Mary, 1862-1957</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55387, {&quot;Title&quot;:&quot;One Hundred Proofs That the Earth Is Not a Globe&quot;,&quot;Topics&quot;:[&quot;Earth (Planet) -- Miscellanea&quot;],&quot;Primary&quot;:&quot;55387.htm&quot;,&quot;CreatorNames&quot;:[&quot;Carpenter, William, 1830-1896&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;55387&quot;});" class='title'>One Hundred Proofs That the Earth Is Not a Globe</a>
+<div class='author'>Carpenter, William, 1830-1896</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55695, {&quot;Title&quot;:&quot;Pioneer Saturn Encounter&quot;,&quot;Topics&quot;:[&quot;Saturn probes&quot;,&quot;Pioneer (Space probes)&quot;],&quot;Primary&quot;:&quot;55695.htm&quot;,&quot;CreatorNames&quot;:[&quot;United States. National Aeronautics and Space Administration&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;55695&quot;});" class='title'>Pioneer Saturn Encounter</a>
+<div class='author'>United States. National Aeronautics and Space Administration</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55975, {&quot;Title&quot;:&quot;Voyager Encounters Jupiter&quot;,&quot;Topics&quot;:[&quot;Voyager Project&quot;,&quot;Jupiter (Planet) -- Pictorial works&quot;],&quot;Primary&quot;:&quot;55975.htm&quot;,&quot;CreatorNames&quot;:[&quot;United States. National Aeronautics and Space Administration&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;55975&quot;});" class='title'>Voyager Encounters Jupiter</a>
+<div class='author'>United States. National Aeronautics and Space Administration</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56133, {&quot;Title&quot;:&quot;Flowers of the Sky&quot;,&quot;Topics&quot;:[&quot;Astronomy&quot;],&quot;Primary&quot;:&quot;56133.htm&quot;,&quot;CreatorNames&quot;:[&quot;Proctor, Richard A. (Richard Anthony), 1837-1888&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;56133&quot;});" class='title'>Flowers of the Sky</a>
+<div class='author'>Proctor, Richard A. (Richard Anthony), 1837-1888</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56205, {&quot;Title&quot;:&quot;Voyager 1 Encounters Saturn&quot;,&quot;Topics&quot;:[&quot;Saturn probes&quot;,&quot;Voyager Project&quot;,&quot;Saturn (Planet) -- Photographs from space&quot;],&quot;Primary&quot;:&quot;56205.htm&quot;,&quot;CreatorNames&quot;:[&quot;United States. National Aeronautics and Space Administration&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;56205&quot;});" class='title'>Voyager 1 Encounters Saturn</a>
+<div class='author'>United States. National Aeronautics and Space Administration</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56289, {&quot;Title&quot;:&quot;The Study of Astronomy, adapted to the capacities of youth - In twelve familiar dialogues, between a tutor and his pupil: explaining the general phænomena of the heavenly bodies, the theory of the tides, &amp;c.&quot;,&quot;Topics&quot;:[&quot;Astronomy -- Juvenile literature -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;56289.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stedman, John, teacher of astronomy&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;56289&quot;});" class='title'>The Study of Astronomy, adapted to the capacities of youth -<br><span class='subtitle'>In twelve familiar dialogues, between a tutor and his pupil: explaining the general phænomena of the heavenly bodies, the theory of the tides, &c.</span></a>
+<div class='author'>Stedman, John, teacher of astronomy</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56302, {&quot;Title&quot;:&quot;The Source and Mode of Solar Energy Throughout the Universe&quot;,&quot;Topics&quot;:[&quot;Bible and science&quot;,&quot;Solar system&quot;,&quot;Cosmogony&quot;],&quot;Primary&quot;:&quot;56302.htm&quot;,&quot;CreatorNames&quot;:[&quot;Heysinger, Isaac W. (Isaac Winter), 1842-&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;56302&quot;});" class='title'>The Source and Mode of Solar Energy Throughout the Universe</a>
+<div class='author'>Heysinger, Isaac W. (Isaac Winter), 1842-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56305, {&quot;Title&quot;:&quot;The Moon: considered as a planet, a world, and a satellite.&quot;,&quot;Topics&quot;:[&quot;Moon&quot;],&quot;Primary&quot;:&quot;56305.htm&quot;,&quot;CreatorNames&quot;:[&quot;Carpenter, James, 1840-1899&quot;,&quot;Nasmyth, James, 1808-1890&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;56305&quot;});" class='title'>The Moon:<br><span class='subtitle'>considered as a planet, a world, and a satellite.</span></a>
+<div class='author'>Carpenter, James, 1840-1899, Nasmyth, James, 1808-1890</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57091, {&quot;Title&quot;:&quot;Astronomy for Young Australians&quot;,&quot;Topics&quot;:[&quot;Astronomy -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;57091.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bonwick, James, 1817-1906&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;57091&quot;});" class='title'>Astronomy for Young Australians</a>
+<div class='author'>Bonwick, James, 1817-1906</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57320, {&quot;Title&quot;:&quot;Telescopic Work for Starlight Evenings&quot;,&quot;Topics&quot;:[&quot;Telescopes&quot;,&quot;Astronomy -- Observers&#39; manuals&quot;,&quot;Meteors&quot;],&quot;Primary&quot;:&quot;57320.htm&quot;,&quot;CreatorNames&quot;:[&quot;Denning, William F. (William Frederick), 1848-1931&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;57320&quot;});" class='title'>Telescopic Work for Starlight Evenings</a>
+<div class='author'>Denning, William F. (William Frederick), 1848-1931</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58222, {&quot;Title&quot;:&quot;The Destinies of the Stars&quot;,&quot;Topics&quot;:[&quot;Mars (Planet)&quot;,&quot;Milky Way&quot;,&quot;Cosmogony&quot;],&quot;Primary&quot;:&quot;58222.htm&quot;,&quot;CreatorNames&quot;:[&quot;Arrhenius, Svante, 1859-1927&quot;,&quot;Fries, Joens Elias, 1876-1932 [Translator]&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;58222&quot;});" class='title'>The Destinies of the Stars</a>
+<div class='author'>Arrhenius, Svante, 1859-1927, Fries, Joens Elias, 1876-1932 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58399, {&quot;Title&quot;:&quot;Die Welt der Planeten&quot;,&quot;Topics&quot;:[&quot;Planets&quot;],&quot;Primary&quot;:&quot;58399.htm&quot;,&quot;CreatorNames&quot;:[&quot;Meyer, M. W. (Max Wilhelm), 1853-1910&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;58399&quot;});" class='title'>Die Welt der Planeten</a>
+<div class='author'>Meyer, M. W. (Max Wilhelm), 1853-1910</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58498, {&quot;Title&quot;:&quot;The Copernicus of Antiquity (Aristarchus of Samos)&quot;,&quot;Topics&quot;:[&quot;Astronomy, Greek&quot;,&quot;Aristarchus, of Samos. On the sizes and distances of the sun and moon&quot;,&quot;Astronomers -- Greece -- Biography&quot;,&quot;Aristarchus, of Samos&quot;],&quot;Primary&quot;:&quot;58498.htm&quot;,&quot;CreatorNames&quot;:[&quot;Heath, Thomas Little, Sir, 1861-1940&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;58498&quot;});" class='title'>The Copernicus of Antiquity (Aristarchus of Samos)</a>
+<div class='author'>Heath, Thomas Little, Sir, 1861-1940</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58506, {&quot;Title&quot;:&quot;Was mir das Sternenlicht erzählt: Eine populäre Himmelskunde für die Jugend&quot;,&quot;Topics&quot;:[&quot;Astronomy -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;58506.htm&quot;,&quot;CreatorNames&quot;:[&quot;Erber, Felix&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;58506&quot;});" class='title'>Was mir das Sternenlicht erzählt:<br><span class='subtitle'>Eine populäre Himmelskunde für die Jugend</span></a>
+<div class='author'>Erber, Felix</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58747, {&quot;Title&quot;:&quot;Holcomb, Fitz, and Peate: Three 19th Century American Telescope Makers&quot;,&quot;Topics&quot;:[&quot;Holcomb, Amasa, 1787-1875&quot;,&quot;Fitz, Henry, 1808-1863&quot;,&quot;Peate, John, 1820-1903&quot;],&quot;Primary&quot;:&quot;58747.htm&quot;,&quot;CreatorNames&quot;:[&quot;Multhauf, Robert P., 1919-2004 [Author of introduction, etc.]&quot;,&quot;Holcomb, Amasa, 1787-1875 [Contributor]&quot;,&quot;Howell, Julia Fitz [Contributor]&quot;,&quot;McGrath, William J., Jr. [Contributor]&quot;,&quot;Preston, Frank W., 1896-1989 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;58747&quot;});" class='title'>Holcomb, Fitz, and Peate:<br><span class='subtitle'>Three 19th Century American Telescope Makers</span></a>
+<div class='author'>Multhauf, Robert P., 1919-2004 [Author of introduction, etc.], Holcomb, Amasa, 1787-1875 [Contributor], Howell, Julia Fitz [Contributor], McGrath, William J., Jr. [Contributor], Preston, Frank W., 1896-1989 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58810, {&quot;Title&quot;:&quot;The Heavens Above: A Popular Handbook of Astronomy&quot;,&quot;Topics&quot;:[&quot;Astronomy&quot;],&quot;Primary&quot;:&quot;58810.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gillet, J. A. (Joseph Anthony), 1837-1908&quot;,&quot;Rolfe, W. J. (William James), 1827-1910&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;58810&quot;});" class='title'>The Heavens Above:<br><span class='subtitle'>A Popular Handbook of Astronomy</span></a>
+<div class='author'>Gillet, J. A. (Joseph Anthony), 1837-1908, Rolfe, W. J. (William James), 1827-1910</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58915, {&quot;Title&quot;:&quot;Voyage to Jupiter&quot;,&quot;Topics&quot;:[&quot;Voyager Project&quot;,&quot;Jupiter probes&quot;,&quot;Jupiter (Planet) -- Photographs from space&quot;],&quot;Primary&quot;:&quot;58915.htm&quot;,&quot;CreatorNames&quot;:[&quot;Morrison, David, 1940-&quot;,&quot;Samz, Jane&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;58915&quot;});" class='title'>Voyage to Jupiter</a>
+<div class='author'>Morrison, David, 1940-, Samz, Jane</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59080, {&quot;Title&quot;:&quot;The Earth&#39;s Beginning&quot;,&quot;Topics&quot;:[&quot;Krakatoa (Indonesia)&quot;,&quot;Nebular hypothesis&quot;],&quot;Primary&quot;:&quot;59080.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ball, Robert S. (Robert Stawell), 1840-1913&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;59080&quot;});" class='title'>The Earth's Beginning</a>
+<div class='author'>Ball, Robert S. (Robert Stawell), 1840-1913</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59118, {&quot;Title&quot;:&quot;Ye Sundial Booke&quot;,&quot;Topics&quot;:[&quot;Sundials&quot;],&quot;Primary&quot;:&quot;59118.htm&quot;,&quot;CreatorNames&quot;:[&quot;Henslow, T. Geoffrey W. (Thomas Geoffrey Wall)&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;59118&quot;});" class='title'>Ye Sundial Booke</a>
+<div class='author'>Henslow, T. Geoffrey W. (Thomas Geoffrey Wall)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59212, {&quot;Title&quot;:&quot;A Short History of Astronomy&quot;,&quot;Topics&quot;:[&quot;Astronomy -- History&quot;],&quot;Primary&quot;:&quot;59212.htm&quot;,&quot;CreatorNames&quot;:[&quot;Berry, Arthur, 1862-&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;59212&quot;});" class='title'>A Short History of Astronomy</a>
+<div class='author'>Berry, Arthur, 1862-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59633, {&quot;Title&quot;:&quot;History of the Harvard College Observatory During the Period 1840-1890&quot;,&quot;Topics&quot;:[&quot;Harvard College Observatory&quot;],&quot;Primary&quot;:&quot;59633.htm&quot;,&quot;CreatorNames&quot;:[&quot;Baker, Daniel W.&quot;,&quot;Pickering, Edward C. (Edward Charles), 1846-1919 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;59633&quot;});" class='title'>History of the Harvard College Observatory During the Period 1840-1890</a>
+<div class='author'>Baker, Daniel W., Pickering, Edward C. (Edward Charles), 1846-1919 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59744, {&quot;Title&quot;:&quot;De Wonderbouw der Wereld - De Grondslagen van Ons Sterrekundig Wereldbeeld Populair Uiteengezet&quot;,&quot;Topics&quot;:[&quot;Astronomy -- History&quot;],&quot;Primary&quot;:&quot;59744.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pannekoek, Anton, 1873-1960&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;59744&quot;});" class='title'>De Wonderbouw der Wereld -<br><span class='subtitle'>De Grondslagen van Ons Sterrekundig Wereldbeeld Populair Uiteengezet</span></a>
+<div class='author'>Pannekoek, Anton, 1873-1960</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60215, {&quot;Title&quot;:&quot;Galileo Galilei and the Roman Curia - From Authentic Sources&quot;,&quot;Topics&quot;:[&quot;Religion and science -- History&quot;,&quot;Galilei, Galileo, 1564-1642&quot;,&quot;Catholic Church. Curia romana&quot;,&quot;Astronomers -- Italy -- Biography&quot;],&quot;Primary&quot;:&quot;60215.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gebler, Karl von, 1850-1878&quot;,&quot;Sturge, G. (George), Mrs. [Translator]&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;60215&quot;});" class='title'>Galileo Galilei and the Roman Curia -<br><span class='subtitle'>From Authentic Sources</span></a>
+<div class='author'>Gebler, Karl von, 1850-1878, Sturge, G. (George), Mrs. [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60318, {&quot;Title&quot;:&quot;Star-land: Being Talks With Young People About the Wonders of the Heavens&quot;,&quot;Topics&quot;:[&quot;Astronomy -- Juvenile literature&quot;,&quot;Cosmology -- Juvenile literature&quot;,&quot;Planets -- Juvenile literature&quot;,&quot;Meteors -- Juvenile literature&quot;,&quot;Comets -- Juvenile literature&quot;,&quot;Solar system -- Juvenile literature&quot;,&quot;Moon -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;60318.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ball, Robert S. (Robert Stawell), 1840-1913&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;60318&quot;});" class='title'>Star-land:<br><span class='subtitle'>Being Talks With Young People About the Wonders of the Heavens</span></a>
+<div class='author'>Ball, Robert S. (Robert Stawell), 1840-1913</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60619, {&quot;Title&quot;:&quot;Astronomy Explained Upon Sir Isaac Newton&#39;s Principles - And made easy to those who have not studied mathematics&quot;,&quot;Topics&quot;:[&quot;Astronomy -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;60619.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ferguson, James, 1710-1776&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;60619&quot;});" class='title'>Astronomy Explained Upon Sir Isaac Newton's Principles -<br><span class='subtitle'>And made easy to those who have not studied mathematics</span></a>
+<div class='author'>Ferguson, James, 1710-1776</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60930, {&quot;Title&quot;:&quot;Komet und Erde: Eine astronomische Erzählung&quot;,&quot;Topics&quot;:[&quot;Comets&quot;],&quot;Primary&quot;:&quot;60930.htm&quot;,&quot;CreatorNames&quot;:[&quot;Flammarion, Camille, 1842-1925&quot;,&quot;Cassirer, J. [Translator]&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;60930&quot;});" class='title'>Komet und Erde:<br><span class='subtitle'>Eine astronomische Erzählung</span></a>
+<div class='author'>Flammarion, Camille, 1842-1925, Cassirer, J. [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61092, {&quot;Title&quot;:&quot;Nat the Navigator. A Life of Nathaniel Bowditch. For Young Persons&quot;,&quot;Topics&quot;:[&quot;Bowditch, Nathaniel, 1773-1838&quot;],&quot;Primary&quot;:&quot;61092.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bowditch, Henry I. (Henry Ingersoll), 1808-1892&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;61092&quot;});" class='title'>Nat the Navigator. A Life of Nathaniel Bowditch. For Young Persons</a>
+<div class='author'>Bowditch, Henry I. (Henry Ingersoll), 1808-1892</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61683, {&quot;Title&quot;:&quot;The description and use of the globes and the orrery - To which is prefix&#39;d, by way of introduction, a brief account of the solar system&quot;,&quot;Topics&quot;:[&quot;Globes&quot;,&quot;Astronomical models&quot;],&quot;Primary&quot;:&quot;61683.htm&quot;,&quot;CreatorNames&quot;:[&quot;Harris, Joseph, 1704-1764&quot;],&quot;LoCC&quot;:[&quot;GA&quot;,&quot;QB&quot;],&quot;PG_ID&quot;:&quot;61683&quot;});" class='title'>The description and use of the globes and the orrery -<br><span class='subtitle'>To which is prefix'd, by way of introduction, a brief account of the solar system</span></a>
+<div class='author'>Harris, Joseph, 1704-1764</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61928, {&quot;Title&quot;:&quot;Komet und Weltuntergang&quot;,&quot;Topics&quot;:[&quot;Comets&quot;],&quot;Primary&quot;:&quot;61928.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bölsche, Wilhelm, 1861-1939&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;61928&quot;});" class='title'>Komet und Weltuntergang</a>
+<div class='author'>Bölsche, Wilhelm, 1861-1939</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62362, {&quot;Title&quot;:&quot;An epitome of astronomy, with the new discoveries - including an account of the eídouraníon, or transparent orrery&quot;,&quot;Topics&quot;:[&quot;Astronomy&quot;,&quot;Astronomical models&quot;],&quot;Primary&quot;:&quot;62362.htm&quot;,&quot;CreatorNames&quot;:[&quot;Walker, William, 1766?-1816&quot;,&quot;Walker, A. (Adam), 1731?-1821 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;62362&quot;});" class='title'>An epitome of astronomy, with the new discoveries -<br><span class='subtitle'>including an account of the eídouraníon, or transparent orrery</span></a>
+<div class='author'>Walker, William, 1766?-1816, Walker, A. (Adam), 1731?-1821 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62402, {&quot;Title&quot;:&quot;Galileo and His Judges&quot;,&quot;Topics&quot;:[&quot;Astronomers -- Italy -- Biography&quot;,&quot;Galilei, Galileo, 1564-1642 -- Trials, litigation, etc.&quot;,&quot;Astronomy -- Italy -- History -- 16th century&quot;],&quot;Primary&quot;:&quot;62402.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wegg-Prosser, F. R. (Francis Richard), 1824-&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;62402&quot;});" class='title'>Galileo and His Judges</a>
+<div class='author'>Wegg-Prosser, F. R. (Francis Richard), 1824-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62557, {&quot;Title&quot;:&quot;The Dominion Astrophysical Observatory, Victoria, B.C.&quot;,&quot;Topics&quot;:[&quot;Dominion Astrophysical Observatory&quot;],&quot;Primary&quot;:&quot;62557.htm&quot;,&quot;CreatorNames&quot;:[&quot;Plaskett, J. S. (John Stanley), 1865-1941&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;62557&quot;});" class='title'>The Dominion Astrophysical Observatory, Victoria, B.C.</a>
+<div class='author'>Plaskett, J. S. (John Stanley), 1865-1941</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62755, {&quot;Title&quot;:&quot;Beschrijving van het Rijks-Planetarium te Franeker - Van 1772 tot 1780 uitgedacht en vervaardigd door Eise Eisinga&quot;,&quot;Topics&quot;:[&quot;Eisinga, Eise, 1744-1828&quot;,&quot;Rijks-Planetarium (Franeker, Netherlands) -- History&quot;],&quot;Primary&quot;:&quot;62755.htm&quot;,&quot;CreatorNames&quot;:[&quot;Eekhoff, W. (Wopke), 1809-1880&quot;,&quot;Swinden, Jan Hendrik van, 1746-1823&quot;,&quot;Sannes, K. J. (Klaas Joh.), 1763?-1830 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;62755&quot;});" class='title'>Beschrijving van het Rijks-Planetarium te Franeker -<br><span class='subtitle'>Van 1772 tot 1780 uitgedacht en vervaardigd door Eise Eisinga</span></a>
+<div class='author'>Eekhoff, W. (Wopke), 1809-1880, Swinden, Jan Hendrik van, 1746-1823, Sannes, K. J. (Klaas Joh.), 1763?-1830 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62992, {&quot;Title&quot;:&quot;The Evolution of Worlds&quot;,&quot;Topics&quot;:[&quot;Cosmogony&quot;],&quot;Primary&quot;:&quot;62992.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lowell, Percival, 1855-1916&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;62992&quot;});" class='title'>The Evolution of Worlds</a>
+<div class='author'>Lowell, Percival, 1855-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63615, {&quot;Title&quot;:&quot;A Century&#39;s Progress in Astronomy&quot;,&quot;Topics&quot;:[&quot;Astronomy -- History&quot;],&quot;Primary&quot;:&quot;63615.htm&quot;,&quot;CreatorNames&quot;:[&quot;Macpherson, Hector, 1888-1956&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;63615&quot;});" class='title'>A Century's Progress in Astronomy</a>
+<div class='author'>Macpherson, Hector, 1888-1956</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64057, {&quot;Title&quot;:&quot;Agnes Mary Clerke and Ellen Mary Clerke: An Appreciation&quot;,&quot;Topics&quot;:[&quot;Clerke, Agnes M. (Agnes Mary), 1842-1907&quot;,&quot;Clerke, Ellen Mary, 1840-1906&quot;,&quot;Astronomers -- Ireland -- Biography&quot;,&quot;Women astronomers -- Ireland -- Biography&quot;],&quot;Primary&quot;:&quot;64057.htm&quot;,&quot;CreatorNames&quot;:[&quot;Huggins, Lady, 1848-1915&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;64057&quot;});" class='title'>Agnes Mary Clerke and Ellen Mary Clerke:<br><span class='subtitle'>An Appreciation</span></a>
+<div class='author'>Huggins, Lady, 1848-1915</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64085, {&quot;Title&quot;:&quot;Mathematische Geographie für Lehrerbildungsanstalten&quot;,&quot;Topics&quot;:[&quot;Astronomy&quot;,&quot;Moon&quot;,&quot;Earth (Planet)&quot;,&quot;Solar system&quot;,&quot;Sun&quot;],&quot;Primary&quot;:&quot;64085.htm&quot;,&quot;CreatorNames&quot;:[&quot;Eggert, Erwin&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;64085&quot;});" class='title'>Mathematische Geographie für Lehrerbildungsanstalten</a>
+<div class='author'>Eggert, Erwin</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64537, {&quot;Title&quot;:&quot;Modern cosmogonies&quot;,&quot;Topics&quot;:[&quot;Cosmogony&quot;],&quot;Primary&quot;:&quot;64537.htm&quot;,&quot;CreatorNames&quot;:[&quot;Clerke, Agnes M. (Agnes Mary), 1842-1907&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;64537&quot;});" class='title'>Modern cosmogonies</a>
+<div class='author'>Clerke, Agnes M. (Agnes Mary), 1842-1907</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64577, {&quot;Title&quot;:&quot;The New Astronomy&quot;,&quot;Topics&quot;:[&quot;Astronomy&quot;],&quot;Primary&quot;:&quot;64577.htm&quot;,&quot;CreatorNames&quot;:[&quot;Langley, S. P. (Samuel Pierpont), 1834-1906&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;64577&quot;});" class='title'>The New Astronomy</a>
+<div class='author'>Langley, S. P. (Samuel Pierpont), 1834-1906</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64649, {&quot;Title&quot;:&quot;The Herschels and Modern Astronomy&quot;,&quot;Topics&quot;:[&quot;Astronomy -- History&quot;,&quot;Herschel, William, 1738-1822&quot;,&quot;Herschel, John F. W. (John Frederick William), 1792-1871&quot;,&quot;Herschel, Caroline Lucretia, 1750-1848&quot;],&quot;Primary&quot;:&quot;64649.htm&quot;,&quot;CreatorNames&quot;:[&quot;Clerke, Agnes M. (Agnes Mary), 1842-1907&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;64649&quot;});" class='title'>The Herschels and Modern Astronomy</a>
+<div class='author'>Clerke, Agnes M. (Agnes Mary), 1842-1907</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64849, {&quot;Title&quot;:&quot;The dawn of astronomy - A study of the temple-worship and mythology of the ancient Egyptians&quot;,&quot;Topics&quot;:[&quot;Sun worship&quot;,&quot;Astronomy, Egyptian&quot;,&quot;Temples -- Egypt&quot;,&quot;Sun -- Mythology&quot;],&quot;Primary&quot;:&quot;64849.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lockyer, Norman, Sir, 1836-1920&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;64849&quot;});" class='title'>The dawn of astronomy -<br><span class='subtitle'>A study of the temple-worship and mythology of the ancient Egyptians</span></a>
+<div class='author'>Lockyer, Norman, Sir, 1836-1920</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65211, {&quot;Title&quot;:&quot;Sonne und Sterne&quot;,&quot;Topics&quot;:[&quot;Stars&quot;,&quot;Sun&quot;],&quot;Primary&quot;:&quot;65211.htm&quot;,&quot;CreatorNames&quot;:[&quot;Meyer, M. W. (Max Wilhelm), 1853-1910&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;65211&quot;});" class='title'>Sonne und Sterne</a>
+<div class='author'>Meyer, M. W. (Max Wilhelm), 1853-1910</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6630, {&quot;Title&quot;:&quot;Curiosities of the Sky&quot;,&quot;Topics&quot;:[&quot;Astronomy&quot;],&quot;Primary&quot;:&quot;6630.htm&quot;,&quot;CreatorNames&quot;:[&quot;Serviss, Garrett Putman, 1851-1929&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;6630&quot;});" class='title'>Curiosities of the Sky</a>
+<div class='author'>Serviss, Garrett Putman, 1851-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66510, {&quot;Title&quot;:&quot;The Moon: A Popular Treatise&quot;,&quot;Topics&quot;:[&quot;Moon&quot;],&quot;Primary&quot;:&quot;66510.htm&quot;,&quot;CreatorNames&quot;:[&quot;Serviss, Garrett Putman, 1851-1929&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;66510&quot;});" class='title'>The Moon:<br><span class='subtitle'>A Popular Treatise</span></a>
+<div class='author'>Serviss, Garrett Putman, 1851-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66559, {&quot;Title&quot;:&quot;Conversations on the Plurality of Worlds&quot;,&quot;Topics&quot;:[&quot;Plurality of worlds&quot;],&quot;Primary&quot;:&quot;66559.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fontenelle, M. de (Bernard Le Bovier), 1657-1757&quot;,&quot;Lalande, Joseph Jérôme Le Français de, 1732-1807 [Contributor]&quot;,&quot;Gunning, Miss (Elizabeth), 1769-1823 [Translator]&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;66559&quot;});" class='title'>Conversations on the Plurality of Worlds</a>
+<div class='author'>Fontenelle, M. de (Bernard Le Bovier), 1657-1757, Lalande, Joseph Jérôme Le Français de, 1732-1807 [Contributor], Gunning, Miss (Elizabeth), 1769-1823 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66824, {&quot;Title&quot;:&quot;Comet Lore: Halley&#39;s Comet in History and Astronomy&quot;,&quot;Topics&quot;:[&quot;Comets&quot;,&quot;Halley&#39;s comet&quot;],&quot;Primary&quot;:&quot;66824.htm&quot;,&quot;CreatorNames&quot;:[&quot;Emerson, Edwin, 1869-1959&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;66824&quot;});" class='title'>Comet Lore:<br><span class='subtitle'>Halley's Comet in History and Astronomy</span></a>
+<div class='author'>Emerson, Edwin, 1869-1959</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67234, {&quot;Title&quot;:&quot;The Book of Stars: Being a Simple Explanation of the Stars and Their Uses to Boy Life&quot;,&quot;Topics&quot;:[&quot;Astronomy -- Juvenile literature&quot;,&quot;Stars -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;67234.htm&quot;,&quot;CreatorNames&quot;:[&quot;Collins, A. Frederick (Archie Frederick), 1869-1952&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;67234&quot;});" class='title'>The Book of Stars:<br><span class='subtitle'>Being a Simple Explanation of the Stars and Their Uses to Boy Life</span></a>
+<div class='author'>Collins, A. Frederick (Archie Frederick), 1869-1952</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67386, {&quot;Title&quot;:&quot;A Preliminary Dissertation on the Mechanisms of the Heavens&quot;,&quot;Topics&quot;:[&quot;Celestial mechanics&quot;],&quot;Primary&quot;:&quot;67386.htm&quot;,&quot;CreatorNames&quot;:[&quot;Somerville, Mary, 1780-1872&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;67386&quot;});" class='title'>A Preliminary Dissertation on the Mechanisms of the Heavens</a>
+<div class='author'>Somerville, Mary, 1780-1872</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68183, {&quot;Title&quot;:&quot;A világegyetem élete és megismerésének története a legrégibb időtől napjainkig&quot;,&quot;Topics&quot;:[&quot;Cosmogony&quot;],&quot;Primary&quot;:&quot;68183.htm&quot;,&quot;CreatorNames&quot;:[&quot;Arrhenius, Svante, 1859-1927&quot;,&quot;Polgár, Gyula [Translator]&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;68183&quot;});" class='title'>A világegyetem élete és megismerésének története a legrégibb időtől napjainkig</a>
+<div class='author'>Arrhenius, Svante, 1859-1927, Polgár, Gyula [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68391, {&quot;Title&quot;:&quot;Round the year with the stars - The chief beauties of the starry heavens as seen with the naked eye&quot;,&quot;Topics&quot;:[&quot;Astronomy -- Popular works&quot;],&quot;Primary&quot;:&quot;68391.htm&quot;,&quot;CreatorNames&quot;:[&quot;Serviss, Garrett Putman, 1851-1929&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;68391&quot;});" class='title'>Round the year with the stars -<br><span class='subtitle'>The chief beauties of the starry heavens as seen with the naked eye</span></a>
+<div class='author'>Serviss, Garrett Putman, 1851-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68394, {&quot;Title&quot;:&quot;The Trouvelot astronomical drawings manual&quot;,&quot;Topics&quot;:[&quot;Astronomy -- Pictorial works&quot;],&quot;Primary&quot;:&quot;68394.htm&quot;,&quot;CreatorNames&quot;:[&quot;Trouvelot, E. L. (Etienne Leopold), 1827-1895&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;68394&quot;});" class='title'>The Trouvelot astronomical drawings manual</a>
+<div class='author'>Trouvelot, E. L. (Etienne Leopold), 1827-1895</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68428, {&quot;Title&quot;:&quot;Extra-galactic nebulae&quot;,&quot;Topics&quot;:[&quot;Milky Way&quot;,&quot;Nebulae&quot;],&quot;Primary&quot;:&quot;68428.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hubble, Edwin, 1889-1953&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;68428&quot;});" class='title'>Extra-galactic nebulae</a>
+<div class='author'>Hubble, Edwin, 1889-1953</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68690, {&quot;Title&quot;:&quot;The Vailan or annular theory: A synopsis of Prof. I. N. Vail&#39;s argument in support of the claim that this Earth once possessed a Saturn-like system of rings&quot;,&quot;Topics&quot;:[&quot;Bible and geology&quot;,&quot;Earth (Planet) -- Crust&quot;],&quot;Primary&quot;:&quot;68690.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bowers, Stephen, 1832-1907&quot;,&quot;Vail, Isaac N. (Isaac Newton), 1840-1914 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;68690&quot;});" class='title'>The Vailan or annular theory:<br><span class='subtitle'>A synopsis of Prof. I. N. Vail's argument in support of the claim that this Earth once possessed a Saturn-like system of rings</span></a>
+<div class='author'>Bowers, Stephen, 1832-1907, Vail, Isaac N. (Isaac Newton), 1840-1914 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69022, {&quot;Title&quot;:&quot;Worlds in the making: The evolution of the universe&quot;,&quot;Topics&quot;:[&quot;Cosmogony&quot;],&quot;Primary&quot;:&quot;69022.htm&quot;,&quot;CreatorNames&quot;:[&quot;Arrhenius, Svante, 1859-1927&quot;,&quot;Borns, H. [Translator]&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;69022&quot;});" class='title'>Worlds in the making:<br><span class='subtitle'>The evolution of the universe</span></a>
+<div class='author'>Arrhenius, Svante, 1859-1927, Borns, H. [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69102, {&quot;Title&quot;:&quot;The Moon&quot;,&quot;Topics&quot;:[&quot;Moon&quot;,&quot;Lunar geology&quot;,&quot;Moon -- Surface&quot;],&quot;Primary&quot;:&quot;69102.htm&quot;,&quot;CreatorNames&quot;:[&quot;Farrington, Oliver C. (Oliver Cummings), 1864-1933&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;69102&quot;});" class='title'>The Moon</a>
+<div class='author'>Farrington, Oliver C. (Oliver Cummings), 1864-1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69892, {&quot;Title&quot;:&quot;Zetetic astronomy: Earth not a globe! - An experimental inquiry into the true figure of the earth etc.&quot;,&quot;Topics&quot;:[&quot;Earth (Planet) -- Miscellanea&quot;,&quot;Earth (Planet) -- Figure&quot;],&quot;Primary&quot;:&quot;69892.htm&quot;,&quot;CreatorNames&quot;:[&quot;Parallax, 1816-1884&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;69892&quot;});" class='title'>Zetetic astronomy:<br><span class='subtitle'>Earth not a globe! - An experimental inquiry into the true figure of the earth etc.</span></a>
+<div class='author'>Parallax, 1816-1884</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69983, {&quot;Title&quot;:&quot;An original theory or new hypothesis of the universe -&quot;,&quot;Topics&quot;:[&quot;Astronomy -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;69983.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wright, Thomas, 1711-1786&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;69983&quot;});" class='title'>An original theory or new hypothesis of the universe -<br><span class='subtitle'></span></a>
+<div class='author'>Wright, Thomas, 1711-1786</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70052, {&quot;Title&quot;:&quot;Ancient calendars and constellations&quot;,&quot;Topics&quot;:[&quot;Constellations&quot;,&quot;Astronomy, Ancient&quot;,&quot;Calendar&quot;],&quot;Primary&quot;:&quot;70052.htm&quot;,&quot;CreatorNames&quot;:[&quot;Plunket, Emmeline M. (Emmeline Mary), 1835-&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;70052&quot;});" class='title'>Ancient calendars and constellations</a>
+<div class='author'>Plunket, Emmeline M. (Emmeline Mary), 1835-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70382, {&quot;Title&quot;:&quot;The music of the spheres&quot;,&quot;Topics&quot;:[&quot;Astronomy&quot;],&quot;Primary&quot;:&quot;70382.htm&quot;,&quot;CreatorNames&quot;:[&quot;Grondal, Florence Armstrong&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;70382&quot;});" class='title'>The music of the spheres</a>
+<div class='author'>Grondal, Florence Armstrong</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7781, {&quot;Title&quot;:&quot;La Vita Sul Pianeta Marte&quot;,&quot;Topics&quot;:[&quot;Mars (Planet)&quot;,&quot;Life on other planets&quot;],&quot;Primary&quot;:&quot;7781.txt&quot;,&quot;CreatorNames&quot;:[&quot;Schiaparelli, G. V. (Giovanni Virginio), 1835-1910&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;7781&quot;});" class='title'>La Vita Sul Pianeta Marte</a>
+<div class='author'>Schiaparelli, G. V. (Giovanni Virginio), 1835-1910</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(8172, {&quot;Title&quot;:&quot;History of Astronomy&quot;,&quot;Topics&quot;:[&quot;Astronomy -- History&quot;],&quot;Primary&quot;:&quot;8172.htm&quot;,&quot;CreatorNames&quot;:[&quot;Forbes, George, 1849-1936&quot;],&quot;LoCC&quot;:[&quot;QB&quot;],&quot;PG_ID&quot;:&quot;8172&quot;});" class='title'>History of Astronomy</a>
+<div class='author'>Forbes, George, 1849-1936</div>
+</div>
+</ul></div>
+</body></html>

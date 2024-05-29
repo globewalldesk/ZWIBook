@@ -1,0 +1,138 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Europe (KJ)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14904, {&quot;Title&quot;:&quot;Constituição politica da Monarchia portugueza&quot;,&quot;Topics&quot;:[&quot;Constitutions -- Portugal&quot;],&quot;Primary&quot;:&quot;14904.txt&quot;,&quot;CreatorNames&quot;:[&quot;Portugal&quot;],&quot;LoCC&quot;:[&quot;KJ&quot;],&quot;PG_ID&quot;:&quot;14904&quot;});" class='title'>Constituição politica da Monarchia portugueza</a>
+<div class='author'>Portugal</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22894, {&quot;Title&quot;:&quot;Tratado do processo criminal preparatorio ou d&#39;instrucção e pronuncia&quot;,&quot;Topics&quot;:[&quot;Criminal law -- Portugal&quot;],&quot;Primary&quot;:&quot;22894.htm&quot;,&quot;CreatorNames&quot;:[&quot;Unknown&quot;],&quot;LoCC&quot;:[&quot;KJ&quot;],&quot;PG_ID&quot;:&quot;22894&quot;});" class='title'>Tratado do processo criminal preparatorio ou d'instrucção e pronuncia</a>
+<div class='author'>Unknown</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27361, {&quot;Title&quot;:&quot;As concessões de direitos magestaticos a emprezas mercantis para o ultramar - representações ao governo&quot;,&quot;Topics&quot;:[&quot;Maritime law -- Portugal&quot;,&quot;Merchant marine -- Portugal&quot;],&quot;Primary&quot;:&quot;27361.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sociedade de Geografia de Lisboa&quot;],&quot;LoCC&quot;:[&quot;KJ&quot;],&quot;PG_ID&quot;:&quot;27361&quot;});" class='title'>As concessões de direitos magestaticos a emprezas mercantis para o ultramar -<br><span class='subtitle'>representações ao governo</span></a>
+<div class='author'>Sociedade de Geografia de Lisboa</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28962, {&quot;Title&quot;:&quot;Tribunaes de Arbitros-Avindores&quot;,&quot;Topics&quot;:[&quot;Arbitration, Industrial -- Portugal&quot;],&quot;Primary&quot;:&quot;28962.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bastos, Teixeira, 1857-1902&quot;],&quot;LoCC&quot;:[&quot;KJ&quot;],&quot;PG_ID&quot;:&quot;28962&quot;});" class='title'>Tribunaes de Arbitros-Avindores</a>
+<div class='author'>Bastos, Teixeira, 1857-1902</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30633, {&quot;Title&quot;:&quot;Projet de la constitution française de 1791&quot;,&quot;Topics&quot;:[&quot;Constitutional history -- France -- Sources&quot;],&quot;Primary&quot;:&quot;30633.txt&quot;,&quot;CreatorNames&quot;:[&quot;Robespierre, Maximilien, 1758-1794&quot;,&quot;Tardif, Edmond [Editor]&quot;],&quot;LoCC&quot;:[&quot;KJ&quot;],&quot;PG_ID&quot;:&quot;30633&quot;});" class='title'>Projet de la constitution française de 1791</a>
+<div class='author'>Robespierre, Maximilien, 1758-1794, Tardif, Edmond [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32298, {&quot;Title&quot;:&quot;Anciennes loix des François conservées dans les coutumes angloises recueillies par Littleton, Vol. II&quot;,&quot;Topics&quot;:[&quot;Customary law -- France&quot;,&quot;Customary law -- Great Britain&quot;],&quot;Primary&quot;:&quot;32298.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hoüard, David, 1725-1802&quot;,&quot;Littleton, Thomas, Sir, -1481&quot;],&quot;LoCC&quot;:[&quot;KJ&quot;],&quot;PG_ID&quot;:&quot;32298&quot;});" class='title'>Anciennes loix des François conservées dans les coutumes angloises recueillies par Littleton, Vol. II</a>
+<div class='author'>Hoüard, David, 1725-1802, Littleton, Thomas, Sir, -1481</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37273, {&quot;Title&quot;:&quot;Plaidoyer de M. Freydier contre l&#39;introduction des cadenas et ceintures de chasteté, précédé d&#39;une notice historique.&quot;,&quot;Topics&quot;:[&quot;Chastity belts&quot;,&quot;Trials -- France&quot;,&quot;Women -- Legal status, laws, etc. -- France&quot;],&quot;Primary&quot;:&quot;37273.htm&quot;,&quot;CreatorNames&quot;:[&quot;Freydier, Monsieur&quot;],&quot;LoCC&quot;:[&quot;KJ&quot;],&quot;PG_ID&quot;:&quot;37273&quot;});" class='title'>Plaidoyer de M. Freydier contre l'introduction des cadenas et ceintures de chasteté, précédé d'une notice historique.</a>
+<div class='author'>Freydier, Monsieur</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38238, {&quot;Title&quot;:&quot;The Old Yellow Book: Source of Robert Browning&#39;s The Ring and the Book&quot;,&quot;Topics&quot;:[&quot;Browning, Robert, 1812-1889. Ring and the book -- Sources&quot;,&quot;Franceschini, Pompilia, 1680-1698&quot;,&quot;Trials (Murder) -- Italy -- Rome -- History -- 17th century -- Sources&quot;,&quot;Law -- Italy&quot;],&quot;Primary&quot;:&quot;38238.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hodell, Charles W. (Charles Wesley), 1872-1925 [Editor]&quot;],&quot;LoCC&quot;:[&quot;KJ&quot;,&quot;PR&quot;],&quot;PG_ID&quot;:&quot;38238&quot;});" class='title'>The Old Yellow Book:<br><span class='subtitle'>Source of Robert Browning's The Ring and the Book</span></a>
+<div class='author'>Hodell, Charles W. (Charles Wesley), 1872-1925 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41614, {&quot;Title&quot;:&quot;Nouveau Code du Duel: Histoire, Législation, Droit Contemporain&quot;,&quot;Topics&quot;:[&quot;Dueling&quot;],&quot;Primary&quot;:&quot;41614.htm&quot;,&quot;CreatorNames&quot;:[&quot;Du Verger de Saint-Thomas, Charles, comte&quot;],&quot;LoCC&quot;:[&quot;KJ&quot;],&quot;PG_ID&quot;:&quot;41614&quot;});" class='title'>Nouveau Code du Duel:<br><span class='subtitle'>Histoire, Législation, Droit Contemporain</span></a>
+<div class='author'>Du Verger de Saint-Thomas, Charles, comte</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42525, {&quot;Title&quot;:&quot;Anciennes loix des François, conservées dans les coutumes angloises, recueillies par Littleton, Vol. I&quot;,&quot;Topics&quot;:[&quot;Customary law -- France&quot;,&quot;Customary law -- Great Britain&quot;],&quot;Primary&quot;:&quot;42525.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hoüard, David, 1725-1802&quot;,&quot;Littleton, Thomas, Sir, -1481&quot;],&quot;LoCC&quot;:[&quot;KJ&quot;],&quot;PG_ID&quot;:&quot;42525&quot;});" class='title'>Anciennes loix des François, conservées dans les coutumes angloises, recueillies par Littleton, Vol. I</a>
+<div class='author'>Hoüard, David, 1725-1802, Littleton, Thomas, Sir, -1481</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43286, {&quot;Title&quot;:&quot;The Criminal Prosecution and Capital Punishment of Animals&quot;,&quot;Topics&quot;:[&quot;Animals, Prosecution and punishment of -- History&quot;,&quot;Animals -- Law and legislation -- History&quot;,&quot;Trials -- Europe&quot;],&quot;Primary&quot;:&quot;43286.htm&quot;,&quot;CreatorNames&quot;:[&quot;Evans, E. P. (Edward Payson), 1831-1917&quot;],&quot;LoCC&quot;:[&quot;KJ&quot;],&quot;PG_ID&quot;:&quot;43286&quot;});" class='title'>The Criminal Prosecution and Capital Punishment of Animals</a>
+<div class='author'>Evans, E. P. (Edward Payson), 1831-1917</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44565, {&quot;Title&quot;:&quot;Die Freigabe der Vernichtung lebensunwerten Lebens - Ihr Maß und ihre Form; Zweite Auflage&quot;,&quot;Topics&quot;:[&quot;Assisted suicide -- Law and legislation -- Germany&quot;,&quot;Euthanasia -- Law and legislation -- Germany&quot;,&quot;Suicide -- Germany&quot;],&quot;Primary&quot;:&quot;44565.htm&quot;,&quot;CreatorNames&quot;:[&quot;Binding, Karl, 1841-1920&quot;,&quot;Hoche, Alfred, 1865-1943&quot;],&quot;LoCC&quot;:[&quot;KJ&quot;],&quot;PG_ID&quot;:&quot;44565&quot;});" class='title'>Die Freigabe der Vernichtung lebensunwerten Lebens -<br><span class='subtitle'>Ihr Maß und ihre Form; Zweite Auflage</span></a>
+<div class='author'>Binding, Karl, 1841-1920, Hoche, Alfred, 1865-1943</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45176, {&quot;Title&quot;:&quot;L&#39;Assassinat de la Duchesse de Praslin&quot;,&quot;Topics&quot;:[&quot;Choiseul-Praslin, Fanny, duchesse de, 1807-1847&quot;,&quot;Choiseul-Praslin, Charles Laure Hugues Théobald, duc de, 1805-1847&quot;,&quot;Trials (Murder) -- France -- History -- 19th century&quot;],&quot;Primary&quot;:&quot;45176.htm&quot;,&quot;CreatorNames&quot;:[&quot;Savine, Albert, 1859-1927&quot;,&quot;Pasquier, Étienne-Denis, duc, 1767-1862 [Other]&quot;],&quot;LoCC&quot;:[&quot;DC&quot;,&quot;KJ&quot;],&quot;PG_ID&quot;:&quot;45176&quot;});" class='title'>L'Assassinat de la Duchesse de Praslin</a>
+<div class='author'>Savine, Albert, 1859-1927, Pasquier, Étienne-Denis, duc, 1767-1862 [Other]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46246, {&quot;Title&quot;:&quot;Historia General del Derecho Español, Tomo I&quot;,&quot;Topics&quot;:[&quot;Law -- Spain -- History&quot;],&quot;Primary&quot;:&quot;46246.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hinojosa, Eduardo de&quot;],&quot;LoCC&quot;:[&quot;KJ&quot;],&quot;PG_ID&quot;:&quot;46246&quot;});" class='title'>Historia General del Derecho Español, Tomo I</a>
+<div class='author'>Hinojosa, Eduardo de</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50813, {&quot;Title&quot;:&quot;Thibaut und Savigny - Zum 100jährigen Gedächtnis des Kampfes um ein einheitliches bürgerliches Recht für Deutschland&quot;,&quot;Topics&quot;:[&quot;Jurisprudence&quot;,&quot;Thibaut, Anton Friedrich Justus, 1772-1840&quot;,&quot;Savigny, Friedrich Karl von, 1779-1861&quot;,&quot;Law -- Germany -- Codification&quot;,&quot;Law reform -- Germany&quot;],&quot;Primary&quot;:&quot;50813.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stern, Jacques, 1876-1930 [Editor]&quot;],&quot;LoCC&quot;:[&quot;KJ&quot;],&quot;PG_ID&quot;:&quot;50813&quot;});" class='title'>Thibaut und Savigny -<br><span class='subtitle'>Zum 100jährigen Gedächtnis des Kampfes um ein einheitliches bürgerliches Recht für Deutschland</span></a>
+<div class='author'>Stern, Jacques, 1876-1930 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5983, {&quot;Title&quot;:&quot;The Institutes of Justinian&quot;,&quot;Topics&quot;:[&quot;Roman law&quot;],&quot;Primary&quot;:&quot;5983.htm&quot;,&quot;CreatorNames&quot;:[&quot;Moyle, John Baron, 1852-1930 [Translator]&quot;],&quot;LoCC&quot;:[&quot;KJ&quot;],&quot;PG_ID&quot;:&quot;5983&quot;});" class='title'>The Institutes of Justinian</a>
+<div class='author'>Moyle, John Baron, 1852-1930 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64899, {&quot;Title&quot;:&quot;La donna e i suoi rapporti sociali&quot;,&quot;Topics&quot;:[&quot;Women -- Legal status, laws, etc. -- Italy&quot;],&quot;Primary&quot;:&quot;64899.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mozzoni, Anna Maria, 1837-1920&quot;],&quot;LoCC&quot;:[&quot;KJ&quot;],&quot;PG_ID&quot;:&quot;64899&quot;});" class='title'>La donna e i suoi rapporti sociali</a>
+<div class='author'>Mozzoni, Anna Maria, 1837-1920</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66604, {&quot;Title&quot;:&quot;Der Fall Vukobrankovics&quot;,&quot;Topics&quot;:[&quot;Piffl, Antonie&quot;,&quot;Thury, Elisabeth, 1894-1973 -- Trials, litigation, etc.&quot;,&quot;Murder -- Austria -- Vienna -- Case studies&quot;,&quot;Trials (Murder) -- Austria -- Vienna&quot;],&quot;Primary&quot;:&quot;66604.htm&quot;,&quot;CreatorNames&quot;:[&quot;Weiss, Ernst, 1882-1940&quot;,&quot;Leonhard, Rudolf, 1889-1953 [Editor]&quot;],&quot;LoCC&quot;:[&quot;HV&quot;,&quot;KJ&quot;,&quot;PT&quot;],&quot;PG_ID&quot;:&quot;66604&quot;});" class='title'>Der Fall Vukobrankovics</a>
+<div class='author'>Weiss, Ernst, 1882-1940, Leonhard, Rudolf, 1889-1953 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67963, {&quot;Title&quot;:&quot;Loi du 29 juillet 1881 sur la Liberté de la Presse&quot;,&quot;Topics&quot;:[&quot;Freedom of the press -- France&quot;,&quot;Press law -- France&quot;],&quot;Primary&quot;:&quot;67963.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ferry, Jules, 1832-1893 [Other]&quot;,&quot;Grévy, Jules, 1807-1891 [Other]&quot;],&quot;LoCC&quot;:[&quot;KJ&quot;],&quot;PG_ID&quot;:&quot;67963&quot;});" class='title'>Loi du 29 juillet 1881 sur la Liberté de la Presse</a>
+<div class='author'>Ferry, Jules, 1832-1893 [Other], Grévy, Jules, 1807-1891 [Other]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68561, {&quot;Title&quot;:&quot;The trial of Emile Zola: containing M. Zola&#39;s letter to President Faure relating to the Dreyfus case, and a full report of the fifteen days&#39; proceedings in the Assize Court of the Seine, including testimony of witnesses and speeches of counsel&quot;,&quot;Topics&quot;:[&quot;Dreyfus, Alfred, 1859-1935&quot;,&quot;Zola, Émile, 1840-1902 -- Trials, litigation, etc.&quot;,&quot;Trials (Seditious libel) -- France -- History -- 19th century&quot;],&quot;Primary&quot;:&quot;68561.htm&quot;,&quot;CreatorNames&quot;:[&quot;Zola, Émile, 1840-1902&quot;],&quot;LoCC&quot;:[&quot;KJ&quot;],&quot;PG_ID&quot;:&quot;68561&quot;});" class='title'>The trial of Emile Zola:<br><span class='subtitle'>containing M. Zola's letter to President Faure relating to the Dreyfus case, and a full report of the fifteen days' proceedings in the Assize Court of the Seine, including testimony of witnesses and speeches of counsel</span></a>
+<div class='author'>Zola, Émile, 1840-1902</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(686, {&quot;Title&quot;:&quot;The Treaty of the European Union, Maastricht Treaty, 7th February, 1992&quot;,&quot;Topics&quot;:[&quot;European federation&quot;,&quot;Europe -- Economic integration&quot;,&quot;European Union&quot;],&quot;Primary&quot;:&quot;686.txt&quot;,&quot;CreatorNames&quot;:[&quot;European Union&quot;],&quot;LoCC&quot;:[&quot;KJ&quot;],&quot;PG_ID&quot;:&quot;686&quot;});" class='title'>The Treaty of the European Union, Maastricht Treaty, 7th February, 1992</a>
+<div class='author'>European Union</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69918, {&quot;Title&quot;:&quot;Souvenirs de la Cour d&#39;Assises&quot;,&quot;Topics&quot;:[&quot;Trials -- France&quot;,&quot;Crime -- France&quot;,&quot;Criminals -- France&quot;],&quot;Primary&quot;:&quot;69918.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gide, André, 1869-1951&quot;],&quot;LoCC&quot;:[&quot;KJ&quot;],&quot;PG_ID&quot;:&quot;69918&quot;});" class='title'>Souvenirs de la Cour d'Assises</a>
+<div class='author'>Gide, André, 1869-1951</div>
+</div>
+</ul></div>
+</body></html>

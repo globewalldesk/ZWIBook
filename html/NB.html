@@ -1,0 +1,182 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Sculpture (NB)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12978, {&quot;Title&quot;:&quot;In Search of Gravestones Old and Curious&quot;,&quot;Topics&quot;:[&quot;Sepulchral monuments&quot;],&quot;Primary&quot;:&quot;12978.htm&quot;,&quot;CreatorNames&quot;:[&quot;Vincent, W. T. (William Thomas), 1835-&quot;],&quot;LoCC&quot;:[&quot;NB&quot;],&quot;PG_ID&quot;:&quot;12978&quot;});" class='title'>In Search of Gravestones Old and Curious</a>
+<div class='author'>Vincent, W. T. (William Thomas), 1835-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18099, {&quot;Title&quot;:&quot;Donatello, by Lord Balcarres&quot;,&quot;Topics&quot;:[&quot;Sculptors -- Italy -- Biography&quot;,&quot;Donatello, 1386?-1466&quot;],&quot;Primary&quot;:&quot;18099.htm&quot;,&quot;CreatorNames&quot;:[&quot;Crawford, David Lindsay, Earl of, 1871-1940&quot;],&quot;LoCC&quot;:[&quot;NB&quot;],&quot;PG_ID&quot;:&quot;18099&quot;});" class='title'>Donatello, by Lord Balcarres</a>
+<div class='author'>Crawford, David Lindsay, Earl of, 1871-1940</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18733, {&quot;Title&quot;:&quot;Die Italienische Plastik&quot;,&quot;Topics&quot;:[&quot;Sculpture -- Italy -- History&quot;],&quot;Primary&quot;:&quot;18733.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bode, Wilhelm, 1845-1929&quot;],&quot;LoCC&quot;:[&quot;NB&quot;],&quot;PG_ID&quot;:&quot;18733&quot;});" class='title'>Die Italienische Plastik</a>
+<div class='author'>Bode, Wilhelm, 1845-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25897, {&quot;Title&quot;:&quot;Aratra Pentelici, Seven Lectures on the Elements of Sculpture - Given before the University of Oxford in Michaelmas Term, 1870&quot;,&quot;Topics&quot;:[&quot;Sculpture&quot;],&quot;Primary&quot;:&quot;25897.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ruskin, John, 1819-1900&quot;],&quot;LoCC&quot;:[&quot;NB&quot;],&quot;PG_ID&quot;:&quot;25897&quot;});" class='title'>Aratra Pentelici, Seven Lectures on the Elements of Sculpture -<br><span class='subtitle'>Given before the University of Oxford in Michaelmas Term, 1870</span></a>
+<div class='author'>Ruskin, John, 1819-1900</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30762, {&quot;Title&quot;:&quot;Der Moses des Michelangelo&quot;,&quot;Topics&quot;:[&quot;Michelangelo Buonarroti, 1475-1564. Moses&quot;,&quot;Freud, Sigmund, 1856-1939 -- Views on art&quot;,&quot;Psychoanalysis and art&quot;],&quot;Primary&quot;:&quot;30762.htm&quot;,&quot;CreatorNames&quot;:[&quot;Freud, Sigmund, 1856-1939&quot;],&quot;LoCC&quot;:[&quot;NB&quot;],&quot;PG_ID&quot;:&quot;30762&quot;});" class='title'>Der Moses des Michelangelo</a>
+<div class='author'>Freud, Sigmund, 1856-1939</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33252, {&quot;Title&quot;:&quot;Tuscan Sculpture of the Fifteenth Century - A Collection of Sixteen Pictures Reproducing Works by Donatello, the Della Robia, Mino da Fiesole, and Others, with Introduction&quot;,&quot;Topics&quot;:[&quot;Sculpture, Italian&quot;],&quot;Primary&quot;:&quot;33252.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hurll, Estelle M. (Estelle May), 1863-1924&quot;],&quot;LoCC&quot;:[&quot;NB&quot;],&quot;PG_ID&quot;:&quot;33252&quot;});" class='title'>Tuscan Sculpture of the Fifteenth Century -<br><span class='subtitle'>A Collection of Sixteen Pictures Reproducing Works by Donatello, the Della Robia, Mino da Fiesole, and Others, with Introduction</span></a>
+<div class='author'>Hurll, Estelle M. (Estelle May), 1863-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34842, {&quot;Title&quot;:&quot;Greek Sculpture - A collection of sixteen pictures of Greek marbles with introduction and interpretation&quot;,&quot;Topics&quot;:[&quot;Sculpture, Greek&quot;],&quot;Primary&quot;:&quot;34842.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hurll, Estelle M. (Estelle May), 1863-1924&quot;],&quot;LoCC&quot;:[&quot;NB&quot;],&quot;PG_ID&quot;:&quot;34842&quot;});" class='title'>Greek Sculpture -<br><span class='subtitle'>A collection of sixteen pictures of Greek marbles with introduction and interpretation</span></a>
+<div class='author'>Hurll, Estelle M. (Estelle May), 1863-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37558, {&quot;Title&quot;:&quot;A Catalogue of Sculpture in the Department of Greek and Roman Antiquities, British Museum, Volume 1 (of 2)&quot;,&quot;Topics&quot;:[&quot;Sculpture, Greek -- Catalogs&quot;,&quot;Sculpture, Greco-Roman -- Catalogs&quot;],&quot;Primary&quot;:&quot;37558.htm&quot;,&quot;CreatorNames&quot;:[&quot;Smith, A. H. (Arthur Hamilton), 1860-1941&quot;],&quot;LoCC&quot;:[&quot;NB&quot;],&quot;PG_ID&quot;:&quot;37558&quot;});" class='title'>A Catalogue of Sculpture in the Department of Greek and Roman Antiquities, British Museum, Volume 1 (of 2)</a>
+<div class='author'>Smith, A. H. (Arthur Hamilton), 1860-1941</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4028, {&quot;Title&quot;:&quot;The Autobiography of Benvenuto Cellini&quot;,&quot;Topics&quot;:[&quot;Cellini, Benvenuto, 1500-1571&quot;,&quot;Sculptors -- Italy -- Biography&quot;],&quot;Primary&quot;:&quot;4028.txt&quot;,&quot;CreatorNames&quot;:[&quot;Cellini, Benvenuto, 1500-1571&quot;,&quot;Symonds, John Addington, 1840-1893 [Translator]&quot;],&quot;LoCC&quot;:[&quot;NB&quot;],&quot;PG_ID&quot;:&quot;4028&quot;});" class='title'>The Autobiography of Benvenuto Cellini</a>
+<div class='author'>Cellini, Benvenuto, 1500-1571, Symonds, John Addington, 1840-1893 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40870, {&quot;Title&quot;:&quot;Thoughts on Art and Autobiographical Memoirs of Giovanni Duprè&quot;,&quot;Topics&quot;:[&quot;Artists -- Italy -- Biography&quot;,&quot;Duprè, Giovanni, 1817-1882&quot;],&quot;Primary&quot;:&quot;40870.htm&quot;,&quot;CreatorNames&quot;:[&quot;Duprè, Giovanni, 1817-1882&quot;,&quot;Peruzzi, E. M. [Translator]&quot;],&quot;LoCC&quot;:[&quot;NB&quot;],&quot;PG_ID&quot;:&quot;40870&quot;});" class='title'>Thoughts on Art and Autobiographical Memoirs of Giovanni Duprè</a>
+<div class='author'>Duprè, Giovanni, 1817-1882, Peruzzi, E. M. [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42561, {&quot;Title&quot;:&quot;Rodin à l&#39;hotel de Biron et à Meudon&quot;,&quot;Topics&quot;:[&quot;Rodin, Auguste, 1840-1917&quot;],&quot;Primary&quot;:&quot;42561.htm&quot;,&quot;CreatorNames&quot;:[&quot;Coquiot, Gustave, 1865-1926&quot;],&quot;LoCC&quot;:[&quot;NB&quot;],&quot;PG_ID&quot;:&quot;42561&quot;});" class='title'>Rodin à l'hotel de Biron et à Meudon</a>
+<div class='author'>Coquiot, Gustave, 1865-1926</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43327, {&quot;Title&quot;:&quot;Rodin: The Man and His Art, with Leaves from His Note-book&quot;,&quot;Topics&quot;:[&quot;Rodin, Auguste, 1840-1917&quot;],&quot;Primary&quot;:&quot;43327.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cladel, Judith&quot;,&quot;Huneker, James, 1857-1921 [Commentator]&quot;,&quot;Star, S. K. [Translator]&quot;],&quot;LoCC&quot;:[&quot;NB&quot;],&quot;PG_ID&quot;:&quot;43327&quot;});" class='title'>Rodin:<br><span class='subtitle'>The Man and His Art, with Leaves from His Note-book</span></a>
+<div class='author'>Cladel, Judith, Huneker, James, 1857-1921 [Commentator], Star, S. K. [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45579, {&quot;Title&quot;:&quot;Auguste Rodin - Mit 96 Vollbildern&quot;,&quot;Topics&quot;:[&quot;Rodin, Auguste, 1840-1917&quot;],&quot;Primary&quot;:&quot;45579.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rilke, Rainer Maria, 1875-1926&quot;],&quot;LoCC&quot;:[&quot;NB&quot;],&quot;PG_ID&quot;:&quot;45579&quot;});" class='title'>Auguste Rodin -<br><span class='subtitle'>Mit 96 Vollbildern</span></a>
+<div class='author'>Rilke, Rainer Maria, 1875-1926</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45605, {&quot;Title&quot;:&quot;Auguste Rodin&quot;,&quot;Topics&quot;:[&quot;Rodin, Auguste, 1840-1917&quot;],&quot;Primary&quot;:&quot;45605.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rilke, Rainer Maria, 1875-1926&quot;,&quot;Lemont, Jessie [Translator]&quot;,&quot;Trausil, Hans, 1890- [Translator]&quot;],&quot;LoCC&quot;:[&quot;NB&quot;],&quot;PG_ID&quot;:&quot;45605&quot;});" class='title'>Auguste Rodin</a>
+<div class='author'>Rilke, Rainer Maria, 1875-1926, Lemont, Jessie [Translator], Trausil, Hans, 1890- [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49804, {&quot;Title&quot;:&quot;The Mentor: Famous American Sculptors, Vol. 1, Num. 36, Serial No. 36&quot;,&quot;Topics&quot;:[&quot;Sculpture, American&quot;,&quot;Sculptors -- United States&quot;],&quot;Primary&quot;:&quot;49804.htm&quot;,&quot;CreatorNames&quot;:[&quot;Taft, Lorado, 1860-1936&quot;],&quot;LoCC&quot;:[&quot;NB&quot;],&quot;PG_ID&quot;:&quot;49804&quot;});" class='title'>The Mentor:<br><span class='subtitle'>Famous American Sculptors, Vol. 1, Num. 36, Serial No. 36</span></a>
+<div class='author'>Taft, Lorado, 1860-1936</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50665, {&quot;Title&quot;:&quot;Auguste Rodin: The Man - His Ideas - His Works&quot;,&quot;Topics&quot;:[&quot;Rodin, Auguste, 1840-1917&quot;],&quot;Primary&quot;:&quot;50665.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mauclair, Camille, 1872-1945&quot;,&quot;Black, Clementina, 1853-1922 [Translator]&quot;],&quot;LoCC&quot;:[&quot;NB&quot;],&quot;PG_ID&quot;:&quot;50665&quot;});" class='title'>Auguste Rodin:<br><span class='subtitle'>The Man - His Ideas - His Works</span></a>
+<div class='author'>Mauclair, Camille, 1872-1945, Black, Clementina, 1853-1922 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51890, {&quot;Title&quot;:&quot;Browere&#39;s Life Masks of Great Americans&quot;,&quot;Topics&quot;:[&quot;Sculpture, American&quot;,&quot;Browere, John Henri Isaac, 1792-1834&quot;,&quot;Masks (Sculpture)&quot;,&quot;United States -- Biography -- Portraits&quot;],&quot;Primary&quot;:&quot;51890.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hart, Charles Henry, 1847-1918&quot;],&quot;LoCC&quot;:[&quot;NB&quot;],&quot;PG_ID&quot;:&quot;51890&quot;});" class='title'>Browere's Life Masks of Great Americans</a>
+<div class='author'>Hart, Charles Henry, 1847-1918</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52730, {&quot;Title&quot;:&quot;Portraits in Plaster, from the Collection of Laurence Hutton&quot;,&quot;Topics&quot;:[&quot;Portraits&quot;,&quot;Masks (Sculpture)&quot;],&quot;Primary&quot;:&quot;52730.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hutton, Laurence, 1843-1904&quot;],&quot;LoCC&quot;:[&quot;NB&quot;],&quot;PG_ID&quot;:&quot;52730&quot;});" class='title'>Portraits in Plaster, from the Collection of Laurence Hutton</a>
+<div class='author'>Hutton, Laurence, 1843-1904</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53451, {&quot;Title&quot;:&quot;Technik der Bronzeplastik&quot;,&quot;Topics&quot;:[&quot;Sculpture&quot;,&quot;Bronze&quot;],&quot;Primary&quot;:&quot;53451.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lüer, Hermann, 1870-1962&quot;],&quot;LoCC&quot;:[&quot;NB&quot;],&quot;PG_ID&quot;:&quot;53451&quot;});" class='title'>Technik der Bronzeplastik</a>
+<div class='author'>Lüer, Hermann, 1870-1962</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56934, {&quot;Title&quot;:&quot;The Venus of Milo: an archeological study of the goddess of womanhood&quot;,&quot;Topics&quot;:[&quot;Venus (Roman deity)&quot;,&quot;Venus de Milo&quot;],&quot;Primary&quot;:&quot;56934.htm&quot;,&quot;CreatorNames&quot;:[&quot;Carus, Paul, 1852-1919&quot;],&quot;LoCC&quot;:[&quot;NB&quot;],&quot;PG_ID&quot;:&quot;56934&quot;});" class='title'>The Venus of Milo:<br><span class='subtitle'>an archeological study of the goddess of womanhood</span></a>
+<div class='author'>Carus, Paul, 1852-1919</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5712, {&quot;Title&quot;:&quot;Sculpture of the Exposition Palaces and Courts - Descriptive Notes on the Art of the Statuary at the Panama-Pacific International Exposition, San Francisco&quot;,&quot;Topics&quot;:[&quot;Panama-Pacific International Exposition (1915 : San Francisco, Calif.)&quot;,&quot;Sculpture&quot;],&quot;Primary&quot;:&quot;5712.txt&quot;,&quot;CreatorNames&quot;:[&quot;James, Juliet Helena Lumbard, 1864-&quot;],&quot;LoCC&quot;:[&quot;NB&quot;],&quot;PG_ID&quot;:&quot;5712&quot;});" class='title'>Sculpture of the Exposition Palaces and Courts -<br><span class='subtitle'>Descriptive Notes on the Art of the Statuary at the Panama-Pacific International Exposition, San Francisco</span></a>
+<div class='author'>James, Juliet Helena Lumbard, 1864-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57428, {&quot;Title&quot;:&quot;Peter Vischer&quot;,&quot;Topics&quot;:[&quot;Vischer, Peter, approximately 1455-1529&quot;,&quot;Vischer, Peter, 1487-1528&quot;,&quot;Vischer family&quot;],&quot;Primary&quot;:&quot;57428.htm&quot;,&quot;CreatorNames&quot;:[&quot;Headlam, Cecil, 1872-1934&quot;],&quot;LoCC&quot;:[&quot;NB&quot;],&quot;PG_ID&quot;:&quot;57428&quot;});" class='title'>Peter Vischer</a>
+<div class='author'>Headlam, Cecil, 1872-1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59450, {&quot;Title&quot;:&quot;An Attempt to Explain the Origin and Meaning of the Early Interlaced Ornamentation Found on the Sculptured Stones of Scotland, Ireland, and the Isle of Man&quot;,&quot;Topics&quot;:[&quot;Great Britain -- Antiquities&quot;,&quot;Decoration and ornament, Celtic&quot;],&quot;Primary&quot;:&quot;59450.htm&quot;,&quot;CreatorNames&quot;:[&quot;French, Gilbert J. (Gilbert James), 1804-1866&quot;],&quot;LoCC&quot;:[&quot;NB&quot;],&quot;PG_ID&quot;:&quot;59450&quot;});" class='title'>An Attempt to Explain the Origin and Meaning of the Early Interlaced Ornamentation Found on the Sculptured Stones of Scotland, Ireland, and the Isle of Man</a>
+<div class='author'>French, Gilbert J. (Gilbert James), 1804-1866</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59680, {&quot;Title&quot;:&quot;Venus. To the Venus of Melos&quot;,&quot;Topics&quot;:[&quot;Venus de Milo&quot;],&quot;Primary&quot;:&quot;59680.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rodin, Auguste, 1840-1917&quot;,&quot;Dudley, Dorothy, 1884-1962 [Translator]&quot;],&quot;LoCC&quot;:[&quot;NB&quot;],&quot;PG_ID&quot;:&quot;59680&quot;});" class='title'>Venus. To the Venus of Melos</a>
+<div class='author'>Rodin, Auguste, 1840-1917, Dudley, Dorothy, 1884-1962 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59700, {&quot;Title&quot;:&quot;American Masters of Sculpture - Being Brief Appreciations of Some American Sculptors and of Some Phases of Sculpture in America&quot;,&quot;Topics&quot;:[&quot;Sculptors -- United States&quot;],&quot;Primary&quot;:&quot;59700.htm&quot;,&quot;CreatorNames&quot;:[&quot;Caffin, Charles H. (Charles Henry), 1854-1918&quot;],&quot;LoCC&quot;:[&quot;NB&quot;],&quot;PG_ID&quot;:&quot;59700&quot;});" class='title'>American Masters of Sculpture -<br><span class='subtitle'>Being Brief Appreciations of Some American Sculptors and of Some Phases of Sculpture in America</span></a>
+<div class='author'>Caffin, Charles H. (Charles Henry), 1854-1918</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60898, {&quot;Title&quot;:&quot;Sculpture in Spain&quot;,&quot;Topics&quot;:[&quot;Sculpture -- Spain -- History&quot;],&quot;Primary&quot;:&quot;60898.htm&quot;,&quot;CreatorNames&quot;:[&quot;Calvert, Albert Frederick, 1872-1946&quot;],&quot;LoCC&quot;:[&quot;NB&quot;],&quot;PG_ID&quot;:&quot;60898&quot;});" class='title'>Sculpture in Spain</a>
+<div class='author'>Calvert, Albert Frederick, 1872-1946</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61106, {&quot;Title&quot;:&quot;Mount Rushmore National Memorial - A monument commemorating the conception, preservation, and growth of the great American republic&quot;,&quot;Topics&quot;:[&quot;Borglum, Gutzon, 1867-1941&quot;,&quot;National parks and reserves -- South Dakota&quot;,&quot;Mount Rushmore National Memorial (S.D.)&quot;],&quot;Primary&quot;:&quot;61106.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mount Rushmore National Memorial Society of the Black Hills&quot;],&quot;LoCC&quot;:[&quot;F&quot;,&quot;NB&quot;],&quot;PG_ID&quot;:&quot;61106&quot;});" class='title'>Mount Rushmore National Memorial -<br><span class='subtitle'>A monument commemorating the conception, preservation, and growth of the great American republic</span></a>
+<div class='author'>Mount Rushmore National Memorial Society of the Black Hills</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61792, {&quot;Title&quot;:&quot;Olympic Victor Monuments and Greek Athletic Art&quot;,&quot;Topics&quot;:[&quot;Sculpture, Greek&quot;,&quot;Sports -- Greece&quot;,&quot;Olympics&quot;],&quot;Primary&quot;:&quot;61792.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hyde, Walter Woodburn, 1871-1966&quot;],&quot;LoCC&quot;:[&quot;NB&quot;],&quot;PG_ID&quot;:&quot;61792&quot;});" class='title'>Olympic Victor Monuments and Greek Athletic Art</a>
+<div class='author'>Hyde, Walter Woodburn, 1871-1966</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62843, {&quot;Title&quot;:&quot;Georgia&#39;s Stone Mountain&quot;,&quot;Topics&quot;:[&quot;Stone Mountain Memorial (Ga.)&quot;,&quot;Geology -- Georgia -- Stone Mountain&quot;,&quot;Stone Mountain (Ga.)&quot;],&quot;Primary&quot;:&quot;62843.htm&quot;,&quot;CreatorNames&quot;:[&quot;Neal, Willard&quot;],&quot;LoCC&quot;:[&quot;F&quot;,&quot;NB&quot;],&quot;PG_ID&quot;:&quot;62843&quot;});" class='title'>Georgia's Stone Mountain</a>
+<div class='author'>Neal, Willard</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63157, {&quot;Title&quot;:&quot;Mythology in Marble&quot;,&quot;Topics&quot;:[&quot;Mythology, Classical&quot;,&quot;Marble sculpture&quot;],&quot;Primary&quot;:&quot;63157.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bell, Louie M.&quot;],&quot;LoCC&quot;:[&quot;NB&quot;],&quot;PG_ID&quot;:&quot;63157&quot;});" class='title'>Mythology in Marble</a>
+<div class='author'>Bell, Louie M.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63242, {&quot;Title&quot;:&quot;Hellenistic Sculpture&quot;,&quot;Topics&quot;:[&quot;Sculpture, Greek&quot;,&quot;Sculpture, Hellenistic&quot;],&quot;Primary&quot;:&quot;63242.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dickins, Guy, 1881-1916&quot;,&quot;Gardner, Percy, 1846-1937 [Author of introduction, etc.]&quot;,&quot;Dickins, Mary [Editor]&quot;],&quot;LoCC&quot;:[&quot;NB&quot;],&quot;PG_ID&quot;:&quot;63242&quot;});" class='title'>Hellenistic Sculpture</a>
+<div class='author'>Dickins, Guy, 1881-1916, Gardner, Percy, 1846-1937 [Author of introduction, etc.], Dickins, Mary [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65276, {&quot;Title&quot;:&quot;A History of Sculpture&quot;,&quot;Topics&quot;:[&quot;Sculpture -- History&quot;],&quot;Primary&quot;:&quot;65276.htm&quot;,&quot;CreatorNames&quot;:[&quot;Short, Ernest Henry, 1875-1959&quot;],&quot;LoCC&quot;:[&quot;NB&quot;],&quot;PG_ID&quot;:&quot;65276&quot;});" class='title'>A History of Sculpture</a>
+<div class='author'>Short, Ernest Henry, 1875-1959</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69508, {&quot;Title&quot;:&quot;Sculptured tombs of Hellas&quot;,&quot;Topics&quot;:[&quot;Sculpture, Greek&quot;,&quot;Sepulchral monuments -- Greece&quot;,&quot;Funeral rites and ceremonies -- Greece&quot;],&quot;Primary&quot;:&quot;69508.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gardner, Percy, 1846-1937&quot;],&quot;LoCC&quot;:[&quot;NB&quot;],&quot;PG_ID&quot;:&quot;69508&quot;});" class='title'>Sculptured tombs of Hellas</a>
+<div class='author'>Gardner, Percy, 1846-1937</div>
+</div>
+</ul></div>
+</body></html>

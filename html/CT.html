@@ -1,0 +1,1186 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Biography (CT)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(10024, {&quot;Title&quot;:&quot;Beneath the Banner: Being Narratives of Noble Lives and Brave Deeds&quot;,&quot;Topics&quot;:[&quot;Biography -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;10024.txt&quot;,&quot;CreatorNames&quot;:[&quot;Cross, F. J. (Frederick J.)&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;10024&quot;});" class='title'>Beneath the Banner:<br><span class='subtitle'>Being Narratives of Noble Lives and Brave Deeds</span></a>
+<div class='author'>Cross, F. J. (Frederick J.)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(10655, {&quot;Title&quot;:&quot;Autobiography of Sir George Biddell Airy&quot;,&quot;Topics&quot;:[&quot;Autobiographies&quot;,&quot;Astronomers -- Great Britain -- Biography&quot;,&quot;Airy, George Biddell, 1801-1892&quot;,&quot;Royal Greenwich Observatory&quot;],&quot;Primary&quot;:&quot;10655.txt&quot;,&quot;CreatorNames&quot;:[&quot;Airy, George Biddell, 1801-1892&quot;,&quot;Airy, Wilfrid [Editor]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;QB&quot;],&quot;PG_ID&quot;:&quot;10655&quot;});" class='title'>Autobiography of Sir George Biddell Airy</a>
+<div class='author'>Airy, George Biddell, 1801-1892, Airy, Wilfrid [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(1085, {&quot;Title&quot;:&quot;Life of John Sterling&quot;,&quot;Topics&quot;:[&quot;Sterling, John, 1806-1844&quot;,&quot;Authors, English -- 19th century -- Biography&quot;],&quot;Primary&quot;:&quot;1085.htm&quot;,&quot;CreatorNames&quot;:[&quot;Carlyle, Thomas, 1795-1881&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;PR&quot;],&quot;PG_ID&quot;:&quot;1085&quot;});" class='title'>Life of John Sterling</a>
+<div class='author'>Carlyle, Thomas, 1795-1881</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(11962, {&quot;Title&quot;:&quot;A Mind That Found Itself: An Autobiography&quot;,&quot;Topics&quot;:[&quot;Autobiographies&quot;,&quot;Beers, Clifford Whittingham, 1876-1943&quot;,&quot;Psychiatric hospital care -- United States -- History&quot;,&quot;Mentally ill -- United States -- Biography&quot;],&quot;Primary&quot;:&quot;11962.htm&quot;,&quot;CreatorNames&quot;:[&quot;Beers, Clifford Whittingham, 1876-1943&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;RC&quot;],&quot;PG_ID&quot;:&quot;11962&quot;});" class='title'>A Mind That Found Itself:<br><span class='subtitle'>An Autobiography</span></a>
+<div class='author'>Beers, Clifford Whittingham, 1876-1943</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12059, {&quot;Title&quot;:&quot;The World&#39;s Greatest Books — Volume 09 — Lives and Letters&quot;,&quot;Topics&quot;:[&quot;Biography&quot;],&quot;Primary&quot;:&quot;12059.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hammerton, J. A. (John Alexander), 1871-1949 [Editor]&quot;,&quot;Mee, Arthur, 1875-1943 [Editor]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;12059&quot;});" class='title'>The World's Greatest Books — Volume 09 — Lives and Letters</a>
+<div class='author'>Hammerton, J. A. (John Alexander), 1871-1949 [Editor], Mee, Arthur, 1875-1943 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12081, {&quot;Title&quot;:&quot;Lives of Girls Who Became Famous&quot;,&quot;Topics&quot;:[&quot;Women -- Biography&quot;],&quot;Primary&quot;:&quot;12081.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bolton, Sarah Knowles, 1841-1916&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;12081&quot;});" class='title'>Lives of Girls Who Became Famous</a>
+<div class='author'>Bolton, Sarah Knowles, 1841-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12193, {&quot;Title&quot;:&quot;The Gentleman from Everywhere&quot;,&quot;Topics&quot;:[&quot;Autobiographies&quot;,&quot;Foss, James Henry, 1841-&quot;],&quot;Primary&quot;:&quot;12193.txt&quot;,&quot;CreatorNames&quot;:[&quot;Foss, James Henry, 1841-&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;12193&quot;});" class='title'>The Gentleman from Everywhere</a>
+<div class='author'>Foss, James Henry, 1841-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12267, {&quot;Title&quot;:&quot;Aus meinem Leben — Erster Teil&quot;,&quot;Topics&quot;:[&quot;Autobiographies&quot;,&quot;Politicians -- Germany -- Biography&quot;,&quot;Socialists -- Germany -- Biography&quot;,&quot;Bebel, August, 1840-1913&quot;],&quot;Primary&quot;:&quot;12267.txt&quot;,&quot;CreatorNames&quot;:[&quot;Bebel, August, 1840-1913&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;HX&quot;],&quot;PG_ID&quot;:&quot;12267&quot;});" class='title'>Aus meinem Leben — Erster Teil</a>
+<div class='author'>Bebel, August, 1840-1913</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12491, {&quot;Title&quot;:&quot;Twelve Types&quot;,&quot;Topics&quot;:[&quot;Biography&quot;,&quot;English literature -- History and criticism&quot;,&quot;Character sketches&quot;],&quot;Primary&quot;:&quot;12491.htm&quot;,&quot;CreatorNames&quot;:[&quot;Chesterton, G. K. (Gilbert Keith), 1874-1936&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;PR&quot;],&quot;PG_ID&quot;:&quot;12491&quot;});" class='title'>Twelve Types</a>
+<div class='author'>Chesterton, G. K. (Gilbert Keith), 1874-1936</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12572, {&quot;Title&quot;:&quot;The World&#39;s Greatest Books — Volume 10 — Lives and Letters&quot;,&quot;Topics&quot;:[&quot;Biography&quot;],&quot;Primary&quot;:&quot;12572.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hammerton, J. A. (John Alexander), 1871-1949 [Editor]&quot;,&quot;Mee, Arthur, 1875-1943 [Editor]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;12572&quot;});" class='title'>The World's Greatest Books — Volume 10 — Lives and Letters</a>
+<div class='author'>Hammerton, J. A. (John Alexander), 1871-1949 [Editor], Mee, Arthur, 1875-1943 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12636, {&quot;Title&quot;:&quot;Katharina von Bora: Geschichtliches Lebensbild&quot;,&quot;Topics&quot;:[&quot;Luther, Katharina von Bora, 1499-1552&quot;,&quot;Luther, Martin, 1483-1546&quot;,&quot;Reformation -- Germany -- Biography&quot;],&quot;Primary&quot;:&quot;12636.txt&quot;,&quot;CreatorNames&quot;:[&quot;Thoma, Albrecht, 1844-1915&quot;],&quot;LoCC&quot;:[&quot;BR&quot;,&quot;CT&quot;],&quot;PG_ID&quot;:&quot;12636&quot;});" class='title'>Katharina von Bora:<br><span class='subtitle'>Geschichtliches Lebensbild</span></a>
+<div class='author'>Thoma, Albrecht, 1844-1915</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12933, {&quot;Title&quot;:&quot;Little Journeys to the Homes of the Great - Volume 01 - Little Journeys to the Homes of Good Men and Great&quot;,&quot;Topics&quot;:[&quot;Shakespeare, William, 1564-1616 -- Homes and haunts&quot;,&quot;Eliot, George, 1819-1880 -- Homes and haunts&quot;,&quot;Carlyle, Thomas, 1795-1881 -- Homes and haunts&quot;,&quot;Ruskin, John, 1819-1900 -- Homes and haunts&quot;,&quot;Gladstone, W. E. (William Ewart), 1809-1898 -- Homes and haunts&quot;,&quot;Turner, J. M. W. (Joseph Mallord William), 1775-1851 -- Homes and haunts&quot;,&quot;Swift, Jonathan, 1667-1745 -- Homes and haunts&quot;,&quot;Whitman, Walt, 1819-1892 -- Homes and haunts&quot;,&quot;Hugo, Victor, 1802-1885 -- Homes and haunts&quot;,&quot;Wordsworth, William, 1770-1850 -- Homes and haunts&quot;,&quot;Thackeray, William Makepeace, 1811-1863 -- Homes and haunts&quot;,&quot;Dickens, Charles, 1812-1870 -- Homes and haunts&quot;,&quot;Goldsmith, Oliver, 1730?-1774 -- Homes and haunts&quot;,&quot;Edison, Thomas A. (Thomas Alva), 1847-1931 -- Homes and haunts&quot;],&quot;Primary&quot;:&quot;12933.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hubbard, Elbert, 1856-1915&quot;,&quot;Bann, Fred [Editor]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;12933&quot;});" class='title'>Little Journeys to the Homes of the Great -<br><span class='subtitle'>Volume 01 - Little Journeys to the Homes of Good Men and Great</span></a>
+<div class='author'>Hubbard, Elbert, 1856-1915, Bann, Fred [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13690, {&quot;Title&quot;:&quot;Aus meinem Leben — Zweiter Teil&quot;,&quot;Topics&quot;:[&quot;Autobiographies&quot;,&quot;Politicians -- Germany -- Biography&quot;,&quot;Socialists -- Germany -- Biography&quot;,&quot;Bebel, August, 1840-1913&quot;],&quot;Primary&quot;:&quot;13690.txt&quot;,&quot;CreatorNames&quot;:[&quot;Bebel, August, 1840-1913&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;HX&quot;],&quot;PG_ID&quot;:&quot;13690&quot;});" class='title'>Aus meinem Leben — Zweiter Teil</a>
+<div class='author'>Bebel, August, 1840-1913</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13778, {&quot;Title&quot;:&quot;Little Journeys to the Homes of the Great - Volume 02 - Little Journeys To the Homes of Famous Women&quot;,&quot;Topics&quot;:[&quot;Women -- Biography&quot;],&quot;Primary&quot;:&quot;13778.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hubbard, Elbert, 1856-1915&quot;,&quot;Hubbard, Bert, 1882- [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;13778&quot;});" class='title'>Little Journeys to the Homes of the Great -<br><span class='subtitle'>Volume 02 - Little Journeys To the Homes of Famous Women</span></a>
+<div class='author'>Hubbard, Elbert, 1856-1915, Hubbard, Bert, 1882- [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13916, {&quot;Title&quot;:&quot;Marie Bashkirtseff (From Childhood to Girlhood)&quot;,&quot;Topics&quot;:[&quot;Bashkirtseff, Marie, 1860-1884&quot;],&quot;Primary&quot;:&quot;13916.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bashkirtseff, Marie, 1860?-1884&quot;,&quot;Safford, Mary J. [Translator]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;13916&quot;});" class='title'>Marie Bashkirtseff (From Childhood to Girlhood)</a>
+<div class='author'>Bashkirtseff, Marie, 1860?-1884, Safford, Mary J. [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13942, {&quot;Title&quot;:&quot;Brave Men and Women: Their Struggles, Failures, And Triumphs&quot;,&quot;Topics&quot;:[&quot;Biography&quot;],&quot;Primary&quot;:&quot;13942.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fuller, Osgood E. (Osgood Eaton), 1835-1900&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;13942&quot;});" class='title'>Brave Men and Women:<br><span class='subtitle'>Their Struggles, Failures, And Triumphs</span></a>
+<div class='author'>Fuller, Osgood E. (Osgood Eaton), 1835-1900</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13953, {&quot;Title&quot;:&quot;Celsissimus: Salzburger Roman&quot;,&quot;Topics&quot;:[&quot;Biographical fiction&quot;,&quot;Raitenau, Wolf Dietrich von, 1559-1617&quot;,&quot;Austria -- History -- Habsburg dynasty (1273-1740) -- Fiction&quot;],&quot;Primary&quot;:&quot;13953.txt&quot;,&quot;CreatorNames&quot;:[&quot;Achleitner, Arthur, 1858-1927&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;DB&quot;,&quot;PT&quot;],&quot;PG_ID&quot;:&quot;13953&quot;});" class='title'>Celsissimus:<br><span class='subtitle'>Salzburger Roman</span></a>
+<div class='author'>Achleitner, Arthur, 1858-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14492, {&quot;Title&quot;:&quot;Notable Women of Modern China&quot;,&quot;Topics&quot;:[&quot;Women -- Biography&quot;,&quot;China -- Biography&quot;],&quot;Primary&quot;:&quot;14492.htm&quot;,&quot;CreatorNames&quot;:[&quot;Burton, Margaret E. (Margaret Ernestine), 1885-1969&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;14492&quot;});" class='title'>Notable Women of Modern China</a>
+<div class='author'>Burton, Margaret E. (Margaret Ernestine), 1885-1969</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14541, {&quot;Title&quot;:&quot;Séance De L&#39;académie Française Du 2 Mai 1901 - Discours De Réception De M. Berthelot; Réponse De M. Jules Lemaître&quot;,&quot;Topics&quot;:[&quot;Bertrand, Joseph, 1822-1900&quot;],&quot;Primary&quot;:&quot;14541.txt&quot;,&quot;CreatorNames&quot;:[&quot;Berthelot, M. (Marcellin), 1827-1907&quot;,&quot;Lemaître, Jules, 1853-1914&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;14541&quot;});" class='title'>Séance De L'académie Française Du 2 Mai 1901 -<br><span class='subtitle'>Discours De Réception De M. Berthelot; Réponse De M. Jules Lemaître</span></a>
+<div class='author'>Berthelot, M. (Marcellin), 1827-1907, Lemaître, Jules, 1853-1914</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14997, {&quot;Title&quot;:&quot;Friedrich v. Schiller&#39;s Biographie&quot;,&quot;Topics&quot;:[&quot;Authors, German -- 18th century -- Biography&quot;,&quot;Schiller, Friedrich, 1759-1805&quot;],&quot;Primary&quot;:&quot;14997.txt&quot;,&quot;CreatorNames&quot;:[&quot;Döring, Heinrich, 1789-1862&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;PT&quot;],&quot;PG_ID&quot;:&quot;14997&quot;});" class='title'>Friedrich v. Schiller's Biographie</a>
+<div class='author'>Döring, Heinrich, 1789-1862</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15161, {&quot;Title&quot;:&quot;Great Fortunes, and How They Were Made&quot;,&quot;Topics&quot;:[&quot;United States -- Biography&quot;],&quot;Primary&quot;:&quot;15161.htm&quot;,&quot;CreatorNames&quot;:[&quot;McCabe, James Dabney, 1842-1883&quot;,&quot;Bensell, Edmund Birckhead, 1842- [Illustrator]&quot;,&quot;Bensell, George F. (George Frederick), 1837-1879 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;15161&quot;});" class='title'>Great Fortunes, and How They Were Made</a>
+<div class='author'>McCabe, James Dabney, 1842-1883, Bensell, Edmund Birckhead, 1842- [Illustrator], Bensell, George F. (George Frederick), 1837-1879 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15213, {&quot;Title&quot;:&quot;J. W. v. Goethe&#39;s Biographie&quot;,&quot;Topics&quot;:[&quot;Authors, German -- 18th century -- Biography&quot;,&quot;Goethe, Johann Wolfgang von, 1749-1832&quot;,&quot;Authors, German -- 19th century -- Biography&quot;],&quot;Primary&quot;:&quot;15213.htm&quot;,&quot;CreatorNames&quot;:[&quot;Döring, Heinrich, 1789-1862&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;PT&quot;],&quot;PG_ID&quot;:&quot;15213&quot;});" class='title'>J. W. v. Goethe's Biographie</a>
+<div class='author'>Döring, Heinrich, 1789-1862</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15547, {&quot;Title&quot;:&quot;The Life of Robert Louis Stevenson for Boys and Girls&quot;,&quot;Topics&quot;:[&quot;Stevenson, Robert Louis, 1850-1894&quot;],&quot;Primary&quot;:&quot;15547.htm&quot;,&quot;CreatorNames&quot;:[&quot;Overton, Jacqueline, 1887-1954&quot;,&quot;Stevenson, Robert Louis, 1850-1894 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;PR&quot;],&quot;PG_ID&quot;:&quot;15547&quot;});" class='title'>The Life of Robert Louis Stevenson for Boys and Girls</a>
+<div class='author'>Overton, Jacqueline, 1887-1954, Stevenson, Robert Louis, 1850-1894 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(1564, {&quot;Title&quot;:&quot;Boswell&#39;s Life of Johnson - Abridged and edited, with an introduction by Charles Grosvenor Osgood&quot;,&quot;Topics&quot;:[&quot;Johnson, Samuel, 1709-1784&quot;,&quot;Authors, English -- 18th century -- Biography&quot;,&quot;Lexicographers -- Great Britain -- Biography&quot;,&quot;Critics -- Great Britain -- Biography&quot;],&quot;Primary&quot;:&quot;1564.htm&quot;,&quot;CreatorNames&quot;:[&quot;Boswell, James, 1740-1795&quot;,&quot;Osgood, Charles Grosvenor, 1871-1964 [Editor]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;PR&quot;],&quot;PG_ID&quot;:&quot;1564&quot;});" class='title'>Boswell's Life of Johnson -<br><span class='subtitle'>Abridged and edited, with an introduction by Charles Grosvenor Osgood</span></a>
+<div class='author'>Boswell, James, 1740-1795, Osgood, Charles Grosvenor, 1871-1964 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(1574, {&quot;Title&quot;:&quot;Historic Girls: Stories Of Girls Who Have Influenced The History Of Their Times&quot;,&quot;Topics&quot;:[&quot;Biography -- Juvenile literature&quot;,&quot;Girls -- Biography&quot;],&quot;Primary&quot;:&quot;1574.htm&quot;,&quot;CreatorNames&quot;:[&quot;Brooks, Elbridge S. (Elbridge Streeter), 1846-1902&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;PZ&quot;],&quot;PG_ID&quot;:&quot;1574&quot;});" class='title'>Historic Girls:<br><span class='subtitle'>Stories Of Girls Who Have Influenced The History Of Their Times</span></a>
+<div class='author'>Brooks, Elbridge S. (Elbridge Streeter), 1846-1902</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16072, {&quot;Title&quot;:&quot;Kuuluisia naisia 1 - Maria Teresia - Johanna d&#39;Arc&quot;,&quot;Topics&quot;:[&quot;Maria Theresa, Empress of Austria, 1717-1780&quot;,&quot;Joan, of Arc, Saint, 1412-1431&quot;,&quot;Women -- Biography&quot;],&quot;Primary&quot;:&quot;16072.txt&quot;,&quot;CreatorNames&quot;:[&quot;Fries, Ellen, 1855-1900&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;16072&quot;});" class='title'>Kuuluisia naisia 1 -<br><span class='subtitle'>Maria Teresia - Johanna d'Arc</span></a>
+<div class='author'>Fries, Ellen, 1855-1900</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16278, {&quot;Title&quot;:&quot;Zuchthausgeschichten von einem ehemaligen Züchtling - Erster Theil&quot;,&quot;Topics&quot;:[&quot;Autobiographies&quot;,&quot;Christian life -- Catholic authors&quot;,&quot;Authors, German -- 19th century&quot;,&quot;Prisoners -- Biography&quot;],&quot;Primary&quot;:&quot;16278.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hägele, Joseph M., 1823-1892&quot;,&quot;Stolz, Alban, 1808-1883 [Commentator]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;16278&quot;});" class='title'>Zuchthausgeschichten von einem ehemaligen Züchtling -<br><span class='subtitle'>Erster Theil</span></a>
+<div class='author'>Hägele, Joseph M., 1823-1892, Stolz, Alban, 1808-1883 [Commentator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16279, {&quot;Title&quot;:&quot;Zuchthausgeschichten von einem ehemaligen Züchtling - Zweiter Theil&quot;,&quot;Topics&quot;:[&quot;Autobiographies&quot;,&quot;Christian life -- Catholic authors&quot;,&quot;Authors, German -- 19th century&quot;,&quot;Prisoners -- Biography&quot;],&quot;Primary&quot;:&quot;16279.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hägele, Joseph M., 1823-1892&quot;,&quot;Stolz, Alban, 1808-1883 [Commentator]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;16279&quot;});" class='title'>Zuchthausgeschichten von einem ehemaligen Züchtling -<br><span class='subtitle'>Zweiter Theil</span></a>
+<div class='author'>Hägele, Joseph M., 1823-1892, Stolz, Alban, 1808-1883 [Commentator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16301, {&quot;Title&quot;:&quot;Memoiren einer Sozialistin: Lehrjahre&quot;,&quot;Topics&quot;:[&quot;Socialism&quot;,&quot;Autobiographies&quot;,&quot;Women authors, German -- Biography&quot;],&quot;Primary&quot;:&quot;16301.htm&quot;,&quot;CreatorNames&quot;:[&quot;Braun, Lily, 1865-1916&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;16301&quot;});" class='title'>Memoiren einer Sozialistin:<br><span class='subtitle'>Lehrjahre</span></a>
+<div class='author'>Braun, Lily, 1865-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16302, {&quot;Title&quot;:&quot;Memoiren einer Sozialistin: Kampfjahre&quot;,&quot;Topics&quot;:[&quot;Socialism&quot;,&quot;Autobiographies&quot;,&quot;Women authors, German -- Biography&quot;],&quot;Primary&quot;:&quot;16302.htm&quot;,&quot;CreatorNames&quot;:[&quot;Braun, Lily, 1865-1916&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;16302&quot;});" class='title'>Memoiren einer Sozialistin:<br><span class='subtitle'>Kampfjahre</span></a>
+<div class='author'>Braun, Lily, 1865-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16486, {&quot;Title&quot;:&quot;Celebrated Claimants from Perkin Warbeck to Arthur Orton&quot;,&quot;Topics&quot;:[&quot;Impostors and imposture -- Biography&quot;],&quot;Primary&quot;:&quot;16486.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;16486&quot;});" class='title'>Celebrated Claimants from Perkin Warbeck to Arthur Orton</a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16508, {&quot;Title&quot;:&quot;American Men of Action&quot;,&quot;Topics&quot;:[&quot;United States -- Biography&quot;],&quot;Primary&quot;:&quot;16508.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stevenson, Burton Egbert, 1872-1962&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;16508&quot;});" class='title'>American Men of Action</a>
+<div class='author'>Stevenson, Burton Egbert, 1872-1962</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16678, {&quot;Title&quot;:&quot;Tieni varrella tapaamia 1&quot;,&quot;Topics&quot;:[&quot;Biography -- 19th century&quot;],&quot;Primary&quot;:&quot;16678.htm&quot;,&quot;CreatorNames&quot;:[&quot;Friberg, Maikki, 1861-1927&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;16678&quot;});" class='title'>Tieni varrella tapaamia 1</a>
+<div class='author'>Friberg, Maikki, 1861-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(1702, {&quot;Title&quot;:&quot;Little Masterpieces of Autobiography: Actors&quot;,&quot;Topics&quot;:[&quot;Autobiographies&quot;,&quot;Actors -- Biography&quot;],&quot;Primary&quot;:&quot;1702.txt&quot;,&quot;CreatorNames&quot;:[&quot;Iles, George, 1852-1942&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;1702&quot;});" class='title'>Little Masterpieces of Autobiography:<br><span class='subtitle'>Actors</span></a>
+<div class='author'>Iles, George, 1852-1942</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17090, {&quot;Title&quot;:&quot;Random Reminiscences of Men and Events&quot;,&quot;Topics&quot;:[&quot;Standard Oil Company&quot;,&quot;Capitalists and financiers -- United States&quot;,&quot;Rockefeller, John D. (John Davison), 1839-1937&quot;,&quot;Charity&quot;],&quot;Primary&quot;:&quot;17090.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rockefeller, John D. (John Davison), 1839-1937&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;HD&quot;],&quot;PG_ID&quot;:&quot;17090&quot;});" class='title'>Random Reminiscences of Men and Events</a>
+<div class='author'>Rockefeller, John D. (John Davison), 1839-1937</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17114, {&quot;Title&quot;:&quot;Tieni varrella tapaamia 2&quot;,&quot;Topics&quot;:[&quot;Biography -- 19th century&quot;],&quot;Primary&quot;:&quot;17114.htm&quot;,&quot;CreatorNames&quot;:[&quot;Friberg, Maikki, 1861-1927&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;17114&quot;});" class='title'>Tieni varrella tapaamia 2</a>
+<div class='author'>Friberg, Maikki, 1861-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17454, {&quot;Title&quot;:&quot;Chr. M. Wieland&#39;s Biographie&quot;,&quot;Topics&quot;:[&quot;Biography&quot;,&quot;Authors, German -- 18th century -- Biography&quot;,&quot;Poets, German&quot;,&quot;Wieland, Christoph Martin, 1733-1813&quot;],&quot;Primary&quot;:&quot;17454.htm&quot;,&quot;CreatorNames&quot;:[&quot;Döring, Heinrich, 1789-1862&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;PT&quot;],&quot;PG_ID&quot;:&quot;17454&quot;});" class='title'>Chr. M. Wieland's Biographie</a>
+<div class='author'>Döring, Heinrich, 1789-1862</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17664, {&quot;Title&quot;:&quot;Kampagne in Frankreich&quot;,&quot;Topics&quot;:[&quot;Autobiographies&quot;,&quot;France -- History -- Revolution, 1789-1799&quot;,&quot;Mainz (Rhineland-Palatinate, Germany) -- History -- Siege, 1793&quot;],&quot;Primary&quot;:&quot;17664.txt&quot;,&quot;CreatorNames&quot;:[&quot;Goethe, Johann Wolfgang von, 1749-1832&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;DC&quot;,&quot;DD&quot;],&quot;PG_ID&quot;:&quot;17664&quot;});" class='title'>Kampagne in Frankreich</a>
+<div class='author'>Goethe, Johann Wolfgang von, 1749-1832</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17976, {&quot;Title&quot;:&quot;Autobiography of Andrew Carnegie&quot;,&quot;Topics&quot;:[&quot;Carnegie, Andrew, 1835-1919&quot;,&quot;Industrialists -- United States -- Biography&quot;,&quot;Philanthropists -- United States -- Biography&quot;],&quot;Primary&quot;:&quot;17976.htm&quot;,&quot;CreatorNames&quot;:[&quot;Carnegie, Andrew, 1835-1919&quot;,&quot;Van Dyke, John Charles, 1856-1932 [Editor]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;17976&quot;});" class='title'>Autobiography of Andrew Carnegie</a>
+<div class='author'>Carnegie, Andrew, 1835-1919, Van Dyke, John Charles, 1856-1932 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18106, {&quot;Title&quot;:&quot;Lettres de Marie Bashkirtseff - Préface de François Coppée&quot;,&quot;Topics&quot;:[&quot;Bashkirtseff, Marie, 1860-1884 -- Correspondence&quot;,&quot;Artists -- Russia -- Correspondence&quot;],&quot;Primary&quot;:&quot;18106.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bashkirtseff, Marie, 1860?-1884&quot;,&quot;Coppée, François, 1842-1908 [Commentator]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;18106&quot;});" class='title'>Lettres de Marie Bashkirtseff -<br><span class='subtitle'>Préface de François Coppée</span></a>
+<div class='author'>Bashkirtseff, Marie, 1860?-1884, Coppée, François, 1842-1908 [Commentator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18258, {&quot;Title&quot;:&quot;Deutsche Charaktere und Begebenheiten&quot;,&quot;Topics&quot;:[&quot;Böttcher, Johann Friedrich, 1682-1719&quot;,&quot;Maurice, Elector of Saxony, 1521-1553&quot;,&quot;Thurneysser, Leonhard, 1531-1595&quot;,&quot;Danckelman, Eberhard Christoph Balthasar Freiherr von, 1643-1722&quot;,&quot;Rudolf II, Holy Roman Emperor, 1552-1612&quot;,&quot;Frederick William I of Prussia, 1688-1740&quot;,&quot;Nettelbeck, Joachim Christian, 1738-1824&quot;,&quot;Charles Augustus, Grand Duke of Saxe-Weimar-Eisenach, 1757-1828&quot;,&quot;Germany -- Biography&quot;,&quot;Wallenstein, Albrecht Wenzel Eusebius von, Herzog von Friedland, 1583-1634&quot;],&quot;Primary&quot;:&quot;18258.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wassermann, Jakob, 1873-1934&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;DD&quot;],&quot;PG_ID&quot;:&quot;18258&quot;});" class='title'>Deutsche Charaktere und Begebenheiten</a>
+<div class='author'>Wassermann, Jakob, 1873-1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18436, {&quot;Title&quot;:&quot;Arnold Böcklin&quot;,&quot;Topics&quot;:[&quot;Biography&quot;,&quot;Painters -- Switzerland&quot;],&quot;Primary&quot;:&quot;18436.htm&quot;,&quot;CreatorNames&quot;:[&quot;Schmid, Heinrich Alfred, 1863-1951&quot;,&quot;Böcklin, Arnold, 1827-1901 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;N&quot;],&quot;PG_ID&quot;:&quot;18436&quot;});" class='title'>Arnold Böcklin</a>
+<div class='author'>Schmid, Heinrich Alfred, 1863-1951, Böcklin, Arnold, 1827-1901 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18597, {&quot;Title&quot;:&quot;Stories of Achievement, Volume III, Orators and Reformers&quot;,&quot;Topics&quot;:[&quot;Biography&quot;,&quot;Success&quot;],&quot;Primary&quot;:&quot;18597.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dickinson, Asa Don, 1876-1960 [Editor]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;18597&quot;});" class='title'>Stories of Achievement, Volume III, Orators and Reformers</a>
+<div class='author'>Dickinson, Asa Don, 1876-1960 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18598, {&quot;Title&quot;:&quot;Stories of Achievement, Volume IV, Authors and Journalists&quot;,&quot;Topics&quot;:[&quot;Biography&quot;,&quot;Success&quot;],&quot;Primary&quot;:&quot;18598.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dickinson, Asa Don, 1876-1960 [Editor]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;18598&quot;});" class='title'>Stories of Achievement, Volume IV, Authors and Journalists</a>
+<div class='author'>Dickinson, Asa Don, 1876-1960 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18936, {&quot;Title&quot;:&quot;Little Journeys to the Homes of the Great - Volume 10 - Little Journeys To The Homes Of Great Teachers&quot;,&quot;Topics&quot;:[&quot;Washington, Booker T., 1856-1915&quot;,&quot;Arnold, Thomas, 1795-1842&quot;,&quot;Eddy, Mary Baker, 1821-1910&quot;,&quot;Plato&quot;,&quot;Confucius&quot;,&quot;Erasmus, Desiderius, -1536&quot;,&quot;Moses (Biblical leader)&quot;,&quot;Alfred, King of England, 849-899&quot;,&quot;Fröbel, Friedrich, 1782-1852&quot;,&quot;Hypatia, -415&quot;,&quot;Benedict, Saint, Abbot of Monte Cassino&quot;,&quot;Pythagoras and Pythagorean school&quot;,&quot;Teachers -- Biography&quot;],&quot;Primary&quot;:&quot;18936.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hubbard, Elbert, 1856-1915&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;18936&quot;});" class='title'>Little Journeys to the Homes of the Great -<br><span class='subtitle'>Volume 10 - Little Journeys To The Homes Of Great Teachers</span></a>
+<div class='author'>Hubbard, Elbert, 1856-1915</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19078, {&quot;Title&quot;:&quot;The Red Book of Heroes&quot;,&quot;Topics&quot;:[&quot;Biography -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;19078.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lang, Mrs.&quot;,&quot;Lang, Andrew, 1844-1912 [Editor]&quot;,&quot;Mills, Arthur Wallis, 1878-1940 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;19078&quot;});" class='title'>The Red Book of Heroes</a>
+<div class='author'>Lang, Mrs., Lang, Andrew, 1844-1912 [Editor], Mills, Arthur Wallis, 1878-1940 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19088, {&quot;Title&quot;:&quot;Maksimilian Aukusti Myhrberg&quot;,&quot;Topics&quot;:[&quot;Myhrberg, August Maximilian, 1797-1867&quot;],&quot;Primary&quot;:&quot;19088.txt&quot;,&quot;CreatorNames&quot;:[&quot;Krohn, Julius, 1835-1888&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;19088&quot;});" class='title'>Maksimilian Aukusti Myhrberg</a>
+<div class='author'>Krohn, Julius, 1835-1888</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19434, {&quot;Title&quot;:&quot;Western Worthies - A Gallery of Biographical and Critical Sketches of West of Scotland Celebrities&quot;,&quot;Topics&quot;:[&quot;Scotland -- Biography&quot;],&quot;Primary&quot;:&quot;19434.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jeans, J. Stephen (James Stephen), 1846-1913&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;DA&quot;],&quot;PG_ID&quot;:&quot;19434&quot;});" class='title'>Western Worthies -<br><span class='subtitle'>A Gallery of Biographical and Critical Sketches of West of Scotland Celebrities</span></a>
+<div class='author'>Jeans, J. Stephen (James Stephen), 1846-1913</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19547, {&quot;Title&quot;:&quot;Obed Hussey, Who, of All Inventors, Made Bread Cheap&quot;,&quot;Topics&quot;:[&quot;Hussey, Obed, 1792-1860&quot;,&quot;Harvesting machinery&quot;],&quot;Primary&quot;:&quot;19547.htm&quot;,&quot;CreatorNames&quot;:[&quot;Greeno, Follett L. (Follett Lamberton), 1889- [Editor]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;HD&quot;],&quot;PG_ID&quot;:&quot;19547&quot;});" class='title'>Obed Hussey, Who, of All Inventors, Made Bread Cheap</a>
+<div class='author'>Greeno, Follett L. (Follett Lamberton), 1889- [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19596, {&quot;Title&quot;:&quot;Charles Fourier: Sein Leben und seine Theorien.&quot;,&quot;Topics&quot;:[&quot;Socialism&quot;,&quot;Socialists -- France -- Biography&quot;,&quot;Fourier, Charles, 1772-1837&quot;],&quot;Primary&quot;:&quot;19596.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bebel, August, 1840-1913&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;HX&quot;],&quot;PG_ID&quot;:&quot;19596&quot;});" class='title'>Charles Fourier:<br><span class='subtitle'>Sein Leben und seine Theorien.</span></a>
+<div class='author'>Bebel, August, 1840-1913</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19653, {&quot;Title&quot;:&quot;Im Schatten der Titanen: Erinnerungen an Baronin Jenny von Gustedt&quot;,&quot;Topics&quot;:[&quot;Biography&quot;,&quot;Women authors, German -- Biography&quot;,&quot;Gustedt, Jenny (von Papenheim) freiin von, 1811-1890&quot;],&quot;Primary&quot;:&quot;19653.htm&quot;,&quot;CreatorNames&quot;:[&quot;Braun, Lily, 1865-1916&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;19653&quot;});" class='title'>Im Schatten der Titanen:<br><span class='subtitle'>Erinnerungen an Baronin Jenny von Gustedt</span></a>
+<div class='author'>Braun, Lily, 1865-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19910, {&quot;Title&quot;:&quot;Boys&#39; Book of Famous Soldiers&quot;,&quot;Topics&quot;:[&quot;Soldiers -- Biography&quot;,&quot;Generals&quot;],&quot;Primary&quot;:&quot;19910.txt&quot;,&quot;CreatorNames&quot;:[&quot;McSpadden, J. Walker (Joseph Walker), 1874-1960&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;19910&quot;});" class='title'>Boys' Book of Famous Soldiers</a>
+<div class='author'>McSpadden, J. Walker (Joseph Walker), 1874-1960</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20196, {&quot;Title&quot;:&quot;Victorian Worthies: Sixteen Biographies&quot;,&quot;Topics&quot;:[&quot;Great Britain -- Biography&quot;,&quot;Great Britain -- History -- Victoria, 1837-1901 -- Biography&quot;,&quot;Great Britain -- Intellectual life -- 19th century&quot;],&quot;Primary&quot;:&quot;20196.htm&quot;,&quot;CreatorNames&quot;:[&quot;Blore, George Henry, 1870-&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;20196&quot;});" class='title'>Victorian Worthies:<br><span class='subtitle'>Sixteen Biographies</span></a>
+<div class='author'>Blore, George Henry, 1870-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20703, {&quot;Title&quot;:&quot;Enfances célèbres&quot;,&quot;Topics&quot;:[&quot;Biography -- Juvenile literature&quot;,&quot;Children -- Biography&quot;],&quot;Primary&quot;:&quot;20703.htm&quot;,&quot;CreatorNames&quot;:[&quot;Colet, Louise, 1810-1876&quot;,&quot;Foulquier, Jean Antoine Valentin, 1822-1896 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;20703&quot;});" class='title'>Enfances célèbres</a>
+<div class='author'>Colet, Louise, 1810-1876, Foulquier, Jean Antoine Valentin, 1822-1896 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20733, {&quot;Title&quot;:&quot;Critical Miscellanies (Vol. 1 of 3), Essay 1: Robespierre&quot;,&quot;Topics&quot;:[&quot;Robespierre, Maximilien, 1758-1794&quot;],&quot;Primary&quot;:&quot;20733.htm&quot;,&quot;CreatorNames&quot;:[&quot;Morley, John, 1838-1923&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;DC&quot;],&quot;PG_ID&quot;:&quot;20733&quot;});" class='title'>Critical Miscellanies (Vol. 1 of 3), Essay 1:<br><span class='subtitle'>Robespierre</span></a>
+<div class='author'>Morley, John, 1838-1923</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20810, {&quot;Title&quot;:&quot;The \&quot;\&quot;Ladies of Llangollen\&quot;\&quot; - as Sketched by Many Hands; with Notices of Other Objects of Interest in \&quot;\&quot;That Sweetest of Vales\&quot;\&quot;&quot;,&quot;Topics&quot;:[&quot;Butler, Eleanor, Lady, 1739-1829&quot;,&quot;Ponsonby, Sarah, 1755-1831&quot;,&quot;Llangollen (Wales)&quot;],&quot;Primary&quot;:&quot;20810.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hicklin, John&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;20810&quot;});" class='title'>The "Ladies of Llangollen" -<br><span class='subtitle'>as Sketched by Many Hands; with Notices of Other Objects of Interest in "That Sweetest of Vales"</span></a>
+<div class='author'>Hicklin, John</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22077, {&quot;Title&quot;:&quot;Les Origines et la Jeunesse de Lamartine 1790-1812&quot;,&quot;Topics&quot;:[&quot;Biography&quot;,&quot;Lamartine, Alphonse de, 1790-1869&quot;],&quot;Primary&quot;:&quot;22077.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lacretelle, Pierre de, 1886-1969&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;PQ&quot;],&quot;PG_ID&quot;:&quot;22077&quot;});" class='title'>Les Origines et la Jeunesse de Lamartine 1790-1812</a>
+<div class='author'>Lacretelle, Pierre de, 1886-1969</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22630, {&quot;Title&quot;:&quot;Der Roman eines geborenen Verbrechers - Selbstbiographie des Strafgefangenen Antonino M...&quot;,&quot;Topics&quot;:[&quot;Criminals -- Biography&quot;,&quot;Autobiographies&quot;,&quot;Psychology&quot;],&quot;Primary&quot;:&quot;22630.htm&quot;,&quot;CreatorNames&quot;:[&quot;M., Antonino&quot;,&quot;Bianchi, Augusto Guido, 1868- [Editor]&quot;,&quot;Ramhorst, Friedrich Wilhelm, 1863-1929 [Translator]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;22630&quot;});" class='title'>Der Roman eines geborenen Verbrechers -<br><span class='subtitle'>Selbstbiographie des Strafgefangenen Antonino M...</span></a>
+<div class='author'>M., Antonino, Bianchi, Augusto Guido, 1868- [Editor], Ramhorst, Friedrich Wilhelm, 1863-1929 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22800, {&quot;Title&quot;:&quot;Mary Wollstonecraft&quot;,&quot;Topics&quot;:[&quot;Wollstonecraft, Mary, 1759-1797&quot;,&quot;Women -- Biography&quot;],&quot;Primary&quot;:&quot;22800.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pennell, Elizabeth Robins, 1855-1936&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;22800&quot;});" class='title'>Mary Wollstonecraft</a>
+<div class='author'>Pennell, Elizabeth Robins, 1855-1936</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23134, {&quot;Title&quot;:&quot;Frau Pauline Brater: Lebensbild einer deutschen Frau&quot;,&quot;Topics&quot;:[&quot;Women -- Biography&quot;],&quot;Primary&quot;:&quot;23134.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sapper, Agnes, 1852-1929&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;23134&quot;});" class='title'>Frau Pauline Brater:<br><span class='subtitle'>Lebensbild einer deutschen Frau</span></a>
+<div class='author'>Sapper, Agnes, 1852-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23273, {&quot;Title&quot;:&quot;John Deane of Nottingham: Historic Adventures by Land and Sea&quot;,&quot;Topics&quot;:[&quot;Dean, John, 1679-1761&quot;],&quot;Primary&quot;:&quot;23273.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kingston, William Henry Giles, 1814-1880&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;23273&quot;});" class='title'>John Deane of Nottingham:<br><span class='subtitle'>Historic Adventures by Land and Sea</span></a>
+<div class='author'>Kingston, William Henry Giles, 1814-1880</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23295, {&quot;Title&quot;:&quot;Grace Darling, Heroine of the Farne Islands&quot;,&quot;Topics&quot;:[&quot;Darling, Grace, 1815-1842&quot;,&quot;Women heroes -- England -- Northumberland -- Biography&quot;],&quot;Primary&quot;:&quot;23295.htm&quot;,&quot;CreatorNames&quot;:[&quot;Farningham, Marianne, 1834-1909&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;G&quot;],&quot;PG_ID&quot;:&quot;23295&quot;});" class='title'>Grace Darling, Heroine of the Farne Islands</a>
+<div class='author'>Farningham, Marianne, 1834-1909</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23333, {&quot;Title&quot;:&quot;Ein Mann - Des Seefahrers und aufrechten Bürgers Joachim Nettelbeck wundersame Lebensgeschichte von ihm selbst erzählt&quot;,&quot;Topics&quot;:[&quot;Autobiographies&quot;,&quot;Seafaring life&quot;,&quot;Slave trade -- Africa&quot;,&quot;Napoleonic Wars, 1800-1815 -- Campaigns -- Germany -- Prussia&quot;,&quot;Nettelbeck, Joachim Christian, 1738-1824&quot;],&quot;Primary&quot;:&quot;23333.htm&quot;,&quot;CreatorNames&quot;:[&quot;Nettelbeck, Joachim, 1738-1824&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;DD&quot;],&quot;PG_ID&quot;:&quot;23333&quot;});" class='title'>Ein Mann -<br><span class='subtitle'>Des Seefahrers und aufrechten Bürgers Joachim Nettelbeck wundersame Lebensgeschichte von ihm selbst erzählt</span></a>
+<div class='author'>Nettelbeck, Joachim, 1738-1824</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23458, {&quot;Title&quot;:&quot;Little Journeys to the Homes of the Great - Volume 13 - Little Journeys to the Homes of Great Lovers&quot;,&quot;Topics&quot;:[&quot;Biography&quot;],&quot;Primary&quot;:&quot;23458.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hubbard, Elbert, 1856-1915&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;23458&quot;});" class='title'>Little Journeys to the Homes of the Great -<br><span class='subtitle'>Volume 13 - Little Journeys to the Homes of Great Lovers</span></a>
+<div class='author'>Hubbard, Elbert, 1856-1915</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23595, {&quot;Title&quot;:&quot;Little Journeys to the Homes of the Great - Volume 11 - Little Journeys to the Homes of Great Businessmen&quot;,&quot;Topics&quot;:[&quot;Great Britain -- Biography&quot;,&quot;United States -- Biography&quot;,&quot;Businessmen -- Biography&quot;,&quot;France -- Biography&quot;],&quot;Primary&quot;:&quot;23595.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hubbard, Elbert, 1856-1915&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;23595&quot;});" class='title'>Little Journeys to the Homes of the Great -<br><span class='subtitle'>Volume 11 - Little Journeys to the Homes of Great Businessmen</span></a>
+<div class='author'>Hubbard, Elbert, 1856-1915</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23650, {&quot;Title&quot;:&quot;Ten Boys from History&quot;,&quot;Topics&quot;:[&quot;Boys -- Biography&quot;],&quot;Primary&quot;:&quot;23650.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sweetser, Kate Dickinson, 1870-1939&quot;,&quot;Williams, George Alfred, 1875-1932 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;23650&quot;});" class='title'>Ten Boys from History</a>
+<div class='author'>Sweetser, Kate Dickinson, 1870-1939, Williams, George Alfred, 1875-1932 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23756, {&quot;Title&quot;:&quot;Geschichte Alexanders des Grossen&quot;,&quot;Topics&quot;:[&quot;Alexander, the Great, 356 B.C.-323 B.C.&quot;,&quot;Generals -- Greece -- Biography&quot;,&quot;Statesmen -- Greece -- Biography&quot;,&quot;Greece -- History -- Macedonian Expansion, 359-323 B.C.&quot;],&quot;Primary&quot;:&quot;23756.htm&quot;,&quot;CreatorNames&quot;:[&quot;Droysen, Johann Gustav, 1808-1884&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;DF&quot;],&quot;PG_ID&quot;:&quot;23756&quot;});" class='title'>Geschichte Alexanders des Grossen</a>
+<div class='author'>Droysen, Johann Gustav, 1808-1884</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24066, {&quot;Title&quot;:&quot;Dr. Johnson and His Circle&quot;,&quot;Topics&quot;:[&quot;Authors, English -- 18th century -- Biography&quot;,&quot;Johnson, Samuel, 1709-1784 -- Friends and associates&quot;,&quot;Boswell, James, 1740-1795 -- Friends and associates&quot;,&quot;Lexicographers -- Great Britain -- Biography&quot;,&quot;Great Britain -- Intellectual life -- 18th century&quot;],&quot;Primary&quot;:&quot;24066.txt&quot;,&quot;CreatorNames&quot;:[&quot;Bailey, John Cann, 1864-1931&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;PR&quot;],&quot;PG_ID&quot;:&quot;24066&quot;});" class='title'>Dr. Johnson and His Circle</a>
+<div class='author'>Bailey, John Cann, 1864-1931</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24092, {&quot;Title&quot;:&quot;Critical Miscellanies (Vol. 3 of 3), Essay 7: W.R. Greg: A Sketch&quot;,&quot;Topics&quot;:[&quot;Greg, William R. (William Rathbone), 1809-1881&quot;],&quot;Primary&quot;:&quot;24092.htm&quot;,&quot;CreatorNames&quot;:[&quot;Morley, John, 1838-1923&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;24092&quot;});" class='title'>Critical Miscellanies (Vol. 3 of 3), Essay 7:<br><span class='subtitle'>W.R. Greg: A Sketch</span></a>
+<div class='author'>Morley, John, 1838-1923</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24200, {&quot;Title&quot;:&quot;American Men of Mind&quot;,&quot;Topics&quot;:[&quot;United States -- Biography&quot;],&quot;Primary&quot;:&quot;24200.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stevenson, Burton Egbert, 1872-1962&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;24200&quot;});" class='title'>American Men of Mind</a>
+<div class='author'>Stevenson, Burton Egbert, 1872-1962</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24228, {&quot;Title&quot;:&quot;列女傳&quot;,&quot;Topics&quot;:[&quot;China -- Social life and customs&quot;,&quot;Women -- China -- Biography&quot;,&quot;Women -- China -- Conduct of life&quot;],&quot;Primary&quot;:&quot;24228.txt&quot;,&quot;CreatorNames&quot;:[&quot;Liu, Xiang, 77? BCE-6? BCE&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;24228&quot;});" class='title'>列女傳</a>
+<div class='author'>Liu, Xiang, 77? BCE-6? BCE</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24317, {&quot;Title&quot;:&quot;Roosevelt in the Bad Lands&quot;,&quot;Topics&quot;:[&quot;Biography&quot;,&quot;Roosevelt, Theodore, 1858-1919&quot;,&quot;Frontier and pioneer life -- Dakota Territory&quot;],&quot;Primary&quot;:&quot;24317.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hagedorn, Hermann, 1882-1964&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;E&quot;],&quot;PG_ID&quot;:&quot;24317&quot;});" class='title'>Roosevelt in the Bad Lands</a>
+<div class='author'>Hagedorn, Hermann, 1882-1964</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24325, {&quot;Title&quot;:&quot;Mémoires d&#39;un artiste&quot;,&quot;Topics&quot;:[&quot;Autobiographies&quot;,&quot;Composers -- France -- Biography&quot;,&quot;Gounod, Charles, 1818-1893&quot;],&quot;Primary&quot;:&quot;24325.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gounod, Charles, 1818-1893&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;ML&quot;],&quot;PG_ID&quot;:&quot;24325&quot;});" class='title'>Mémoires d'un artiste</a>
+<div class='author'>Gounod, Charles, 1818-1893</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24332, {&quot;Title&quot;:&quot;The Life of Mrs. Robert Louis Stevenson&quot;,&quot;Topics&quot;:[&quot;Biography&quot;,&quot;Stevenson, Fanny Van de Grift, 1840-1914&quot;,&quot;Stevenson, Robert Louis, 1850-1894 -- Marriage&quot;,&quot;Authors&#39; spouses -- Biography&quot;],&quot;Primary&quot;:&quot;24332.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sanchez, Nellie Van de Grift, 1856-1935&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;24332&quot;});" class='title'>The Life of Mrs. Robert Louis Stevenson</a>
+<div class='author'>Sanchez, Nellie Van de Grift, 1856-1935</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24339, {&quot;Title&quot;:&quot;Suicida&quot;,&quot;Topics&quot;:[&quot;Loève-Veimars, Elisa, 1805-1875&quot;],&quot;Primary&quot;:&quot;24339.htm&quot;,&quot;CreatorNames&quot;:[&quot;Castelo Branco, Camilo, 1825-1890&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;24339&quot;});" class='title'>Suicida</a>
+<div class='author'>Castelo Branco, Camilo, 1825-1890</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24354, {&quot;Title&quot;:&quot;Historic Boyhoods&quot;,&quot;Topics&quot;:[&quot;Boys&quot;,&quot;Biography -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;24354.htm&quot;,&quot;CreatorNames&quot;:[&quot;Holland, Rupert Sargent, 1878-1952&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;24354&quot;});" class='title'>Historic Boyhoods</a>
+<div class='author'>Holland, Rupert Sargent, 1878-1952</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24439, {&quot;Title&quot;:&quot;Pirates&quot;,&quot;Topics&quot;:[&quot;Pirates -- Biography&quot;,&quot;Pirates -- History -- 17th century&quot;],&quot;Primary&quot;:&quot;24439.htm&quot;,&quot;CreatorNames&quot;:[&quot;Johnson, Charles, active 1724-1731&quot;,&quot;Fraser, Claud Lovat, 1890-1921 [Commentator]&quot;,&quot;Fraser, Claud Lovat, 1890-1921 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;F&quot;],&quot;PG_ID&quot;:&quot;24439&quot;});" class='title'>Pirates</a>
+<div class='author'>Johnson, Charles, active 1724-1731, Fraser, Claud Lovat, 1890-1921 [Commentator], Fraser, Claud Lovat, 1890-1921 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24456, {&quot;Title&quot;:&quot;Fathers of Biology&quot;,&quot;Topics&quot;:[&quot;Biography&quot;,&quot;Harvey, William, 1578-1657&quot;,&quot;Physicians&quot;,&quot;Aristotle, 384 BC-322 BC&quot;,&quot;Biology -- History&quot;,&quot;Biologists&quot;,&quot;Hippocrates&quot;,&quot;Galen&quot;,&quot;Vesalius, Andreas, 1514-1564&quot;],&quot;Primary&quot;:&quot;24456.htm&quot;,&quot;CreatorNames&quot;:[&quot;McRae, Charles&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;QH&quot;],&quot;PG_ID&quot;:&quot;24456&quot;});" class='title'>Fathers of Biology</a>
+<div class='author'>McRae, Charles</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24492, {&quot;Title&quot;:&quot;Critical Miscellanies (Vol. 2 of 3), Essay 3: Condorcet&quot;,&quot;Topics&quot;:[&quot;Condorcet, Jean-Antoine-Nicolas de Caritat, marquis de, 1743-1794&quot;],&quot;Primary&quot;:&quot;24492.htm&quot;,&quot;CreatorNames&quot;:[&quot;Morley, John, 1838-1923&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;24492&quot;});" class='title'>Critical Miscellanies (Vol. 2 of 3), Essay 3:<br><span class='subtitle'>Condorcet</span></a>
+<div class='author'>Morley, John, 1838-1923</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24508, {&quot;Title&quot;:&quot;Chronica de el-rei D. Affonso V (Vol. III)&quot;,&quot;Topics&quot;:[&quot;Biography&quot;,&quot;Afonso V, King of Portugal, 1432-1481&quot;,&quot;Portugal -- History -- Alfonso V, 1438-1481&quot;],&quot;Primary&quot;:&quot;24508.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pina, Rui de, 1440-1521&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;DP&quot;],&quot;PG_ID&quot;:&quot;24508&quot;});" class='title'>Chronica de el-rei D. Affonso V (Vol. III)</a>
+<div class='author'>Pina, Rui de, 1440-1521</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24514, {&quot;Title&quot;:&quot;Luiz de Camões: notas biograficas - Prefacio da setima edição do Camões de Garrett&quot;,&quot;Topics&quot;:[&quot;Biography&quot;,&quot;Camões, Luís de, 1524?-1580&quot;],&quot;Primary&quot;:&quot;24514.htm&quot;,&quot;CreatorNames&quot;:[&quot;Castelo Branco, Camilo, 1825-1890&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;DP&quot;],&quot;PG_ID&quot;:&quot;24514&quot;});" class='title'>Luiz de Camões:<br><span class='subtitle'>notas biograficas - Prefacio da setima edição do Camões de Garrett</span></a>
+<div class='author'>Castelo Branco, Camilo, 1825-1890</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24533, {&quot;Title&quot;:&quot;O Infante D. Henrique e a arte de navegar dos portuguezes&quot;,&quot;Topics&quot;:[&quot;Biography&quot;,&quot;Henry, Infante of Portugal, 1394-1460&quot;,&quot;Explorers&quot;,&quot;Portugal -- History&quot;,&quot;Navigation&quot;],&quot;Primary&quot;:&quot;24533.htm&quot;,&quot;CreatorNames&quot;:[&quot;Eça, Vicente de Almeida de, 1852-1929&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;DP&quot;,&quot;G&quot;],&quot;PG_ID&quot;:&quot;24533&quot;});" class='title'>O Infante D. Henrique e a arte de navegar dos portuguezes</a>
+<div class='author'>Eça, Vicente de Almeida de, 1852-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24534, {&quot;Title&quot;:&quot;The Autobiography of St. Ignatius&quot;,&quot;Topics&quot;:[&quot;Ignatius, of Loyola, Saint, 1491-1556&quot;,&quot;Christian saints -- Spain -- Biography&quot;],&quot;Primary&quot;:&quot;24534.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ignatius, of Loyola, Saint, 1491-1556&quot;,&quot;O&#39;Conor, J. F. X. (John Francis Xavier), 1852-1920 [Editor]&quot;],&quot;LoCC&quot;:[&quot;BX&quot;,&quot;CT&quot;],&quot;PG_ID&quot;:&quot;24534&quot;});" class='title'>The Autobiography of St. Ignatius</a>
+<div class='author'>Ignatius, of Loyola, Saint, 1491-1556, O'Conor, J. F. X. (John Francis Xavier), 1852-1920 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24553, {&quot;Title&quot;:&quot;Critical Miscellanies (Vol. 2 of 3), Essay 4: Joseph de Maistre&quot;,&quot;Topics&quot;:[&quot;Maistre, Joseph Marie, comte de, 1753-1821&quot;,&quot;Authors, French -- 19th century -- Biography&quot;,&quot;Philosophers -- France -- Biography&quot;,&quot;Theologians -- France -- Biography&quot;,&quot;Diplomats -- France -- Biography&quot;],&quot;Primary&quot;:&quot;24553.htm&quot;,&quot;CreatorNames&quot;:[&quot;Morley, John, 1838-1923&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;24553&quot;});" class='title'>Critical Miscellanies (Vol. 2 of 3), Essay 4:<br><span class='subtitle'>Joseph de Maistre</span></a>
+<div class='author'>Morley, John, 1838-1923</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24563, {&quot;Title&quot;:&quot;The Best of the World&#39;s Classics, Restricted to Prose, Vol. VII (of X)—Continental Europe I&quot;,&quot;Topics&quot;:[&quot;Authors -- Biography&quot;,&quot;Literature -- Collections&quot;],&quot;Primary&quot;:&quot;24563.htm&quot;,&quot;CreatorNames&quot;:[&quot;Halsey, Francis W. (Francis Whiting), 1851-1919 [Editor]&quot;,&quot;Lodge, Henry Cabot, 1850-1924 [Editor]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;PN&quot;,&quot;PQ&quot;],&quot;PG_ID&quot;:&quot;24563&quot;});" class='title'>The Best of the World's Classics, Restricted to Prose, Vol. VII (of X)—Continental Europe I</a>
+<div class='author'>Halsey, Francis W. (Francis Whiting), 1851-1919 [Editor], Lodge, Henry Cabot, 1850-1924 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24585, {&quot;Title&quot;:&quot;The Story of Cole Younger, by Himself&quot;,&quot;Topics&quot;:[&quot;West (U.S.) -- Biography&quot;,&quot;Frontier and pioneer life -- West (U.S.)&quot;,&quot;United States -- History -- Civil War, 1861-1865 -- Personal narratives&quot;,&quot;Bank robberies -- Minnesota -- Northfield -- History -- 19th century&quot;,&quot;Younger, Cole, 1844-1916&quot;,&quot;Outlaws -- West (U.S.) -- Biography&quot;,&quot;Guerrillas -- West (U.S.) -- Biography&quot;,&quot;West (U.S.) -- History -- 1860-1890&quot;,&quot;West (U.S.) -- History -- Civil War, 1861-1865 -- Underground movements&quot;,&quot;United States -- History -- Civil War, 1861-1865 -- Underground movements&quot;],&quot;Primary&quot;:&quot;24585.htm&quot;,&quot;CreatorNames&quot;:[&quot;Younger, Cole, 1844-1916&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;F&quot;],&quot;PG_ID&quot;:&quot;24585&quot;});" class='title'>The Story of Cole Younger, by Himself</a>
+<div class='author'>Younger, Cole, 1844-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24586, {&quot;Title&quot;:&quot;The Story of My Life - Being Reminiscences of Sixty Years&#39; Public Service in Canada&quot;,&quot;Topics&quot;:[&quot;Canada -- History -- 1763-&quot;,&quot;Ryerson, Egerton, 1803-1882&quot;,&quot;Educators -- Canada -- Biography&quot;,&quot;Ontario -- Politics and government -- 19th century&quot;],&quot;Primary&quot;:&quot;24586.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ryerson, Egerton, 1803-1882&quot;,&quot;Hodgins, J. George (John George), 1821-1912 [Editor]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;F&quot;],&quot;PG_ID&quot;:&quot;24586&quot;});" class='title'>The Story of My Life -<br><span class='subtitle'>Being Reminiscences of Sixty Years' Public Service in Canada</span></a>
+<div class='author'>Ryerson, Egerton, 1803-1882, Hodgins, J. George (John George), 1821-1912 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24627, {&quot;Title&quot;:&quot;Booker T. Washington, Builder of a Civilization&quot;,&quot;Topics&quot;:[&quot;Washington, Booker T., 1856-1915&quot;,&quot;African Americans -- Biography&quot;,&quot;Educators -- United States -- Biography&quot;],&quot;Primary&quot;:&quot;24627.htm&quot;,&quot;CreatorNames&quot;:[&quot;Scott, Emmett J. (Emmett Jay), 1873-1957&quot;,&quot;Stowe, Lyman Beecher, 1880-1963&quot;,&quot;Roosevelt, Theodore, 1858-1919 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;E&quot;,&quot;LA&quot;],&quot;PG_ID&quot;:&quot;24627&quot;});" class='title'>Booker T. Washington, Builder of a Civilization</a>
+<div class='author'>Scott, Emmett J. (Emmett Jay), 1873-1957, Stowe, Lyman Beecher, 1880-1963, Roosevelt, Theodore, 1858-1919 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24634, {&quot;Title&quot;:&quot;Reminiscences of the Military Life and Sufferings of Col. Timothy Bigelow, Commander of the Fifteenth Regiment of the Massachusetts Line in the Continental Army, during the War of the Revolution&quot;,&quot;Topics&quot;:[&quot;United States -- History -- Revolution, 1775-1783&quot;,&quot;Bigelow, Timothy, 1739-1790&quot;,&quot;United States. Continental Army -- Military life&quot;],&quot;Primary&quot;:&quot;24634.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hersey, Charles&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;E&quot;],&quot;PG_ID&quot;:&quot;24634&quot;});" class='title'>Reminiscences of the Military Life and Sufferings of Col. Timothy Bigelow, Commander of the Fifteenth Regiment of the Massachusetts Line in the Continental Army, during the War of the Revolution</a>
+<div class='author'>Hersey, Charles</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24659, {&quot;Title&quot;:&quot;Hortense - Makers of History Series&quot;,&quot;Topics&quot;:[&quot;Biography&quot;,&quot;France -- History -- Revolution, 1789-1799&quot;,&quot;France -- History -- Consulate and First Empire, 1799-1815&quot;,&quot;Hortense, Queen, consort of Louis Bonaparte, King of Holland, 1783-1837&quot;,&quot;France -- History -- Restoration, 1814-1830&quot;,&quot;France -- History -- Louis Philippe, 1830-1848&quot;],&quot;Primary&quot;:&quot;24659.htm&quot;,&quot;CreatorNames&quot;:[&quot;Abbott, John S. C. (John Stevens Cabot), 1805-1877&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;DC&quot;],&quot;PG_ID&quot;:&quot;24659&quot;});" class='title'>Hortense -<br><span class='subtitle'>Makers of History Series</span></a>
+<div class='author'>Abbott, John S. C. (John Stevens Cabot), 1805-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24665, {&quot;Title&quot;:&quot;A Soldier&#39;s Life: Being the Personal Reminiscences of Edwin G. Rundle&quot;,&quot;Topics&quot;:[&quot;Autobiographies&quot;,&quot;Canada -- Description and travel&quot;,&quot;Great Britain. Army -- Military life&quot;,&quot;Canada -- History -- Fenian Invasions, 1866-1870&quot;,&quot;Canada -- History, Military&quot;],&quot;Primary&quot;:&quot;24665.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rundle, Edwin George, 1838-&quot;,&quot;Woodside, Henry J. [Commentator]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;U&quot;,&quot;F&quot;],&quot;PG_ID&quot;:&quot;24665&quot;});" class='title'>A Soldier's Life:<br><span class='subtitle'>Being the Personal Reminiscences of Edwin G. Rundle</span></a>
+<div class='author'>Rundle, Edwin George, 1838-, Woodside, Henry J. [Commentator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24693, {&quot;Title&quot;:&quot;William Black: The Apostle of Methodism in the Maritime Provinces of Canada&quot;,&quot;Topics&quot;:[&quot;Wesleyan Methodist Church -- Clergy -- Biography&quot;,&quot;Black, William, 1760-1834&quot;],&quot;Primary&quot;:&quot;24693.htm&quot;,&quot;CreatorNames&quot;:[&quot;MacLean, John, 1851-1928&quot;],&quot;LoCC&quot;:[&quot;BX&quot;,&quot;CT&quot;],&quot;PG_ID&quot;:&quot;24693&quot;});" class='title'>William Black:<br><span class='subtitle'>The Apostle of Methodism in the Maritime Provinces of Canada</span></a>
+<div class='author'>MacLean, John, 1851-1928</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24699, {&quot;Title&quot;:&quot;Some Personal Recollections of Dr. Janeway&quot;,&quot;Topics&quot;:[&quot;Physicians -- United States -- Biography&quot;,&quot;Janeway, Edward Gamaliel, 1841-1911&quot;],&quot;Primary&quot;:&quot;24699.htm&quot;,&quot;CreatorNames&quot;:[&quot;Clark, James Bayard, 1869-&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;R&quot;],&quot;PG_ID&quot;:&quot;24699&quot;});" class='title'>Some Personal Recollections of Dr. Janeway</a>
+<div class='author'>Clark, James Bayard, 1869-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24706, {&quot;Title&quot;:&quot;James Cutbush, an American Chemist, 1788-1823&quot;,&quot;Topics&quot;:[&quot;Chemists -- United States -- Biography&quot;,&quot;Cutbush, James, 1788-1823&quot;],&quot;Primary&quot;:&quot;24706.htm&quot;,&quot;CreatorNames&quot;:[&quot;Smith, Edgar Fahs, 1854-1928&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;QD&quot;],&quot;PG_ID&quot;:&quot;24706&quot;});" class='title'>James Cutbush, an American Chemist, 1788-1823</a>
+<div class='author'>Smith, Edgar Fahs, 1854-1928</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24718, {&quot;Title&quot;:&quot;Memoirs of the Private Life, Return, and Reign of Napoleon in 1815, Vol. II&quot;,&quot;Topics&quot;:[&quot;Biography&quot;,&quot;France -- History -- Consulate and First Empire, 1799-1815&quot;,&quot;Napoleon I, Emperor of the French, 1769-1821 -- Elba and the Hundred Days, 1814-1815&quot;],&quot;Primary&quot;:&quot;24718.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fleury de Chaboulon, Pierre Alexandre Édouard, baron, 1779-1835&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;DC&quot;],&quot;PG_ID&quot;:&quot;24718&quot;});" class='title'>Memoirs of the Private Life, Return, and Reign of Napoleon in 1815, Vol. II</a>
+<div class='author'>Fleury de Chaboulon, Pierre Alexandre Édouard, baron, 1779-1835</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24739, {&quot;Title&quot;:&quot;Bidwell&#39;s Travels, from Wall Street to London Prison: Fifteen Years in Solitude&quot;,&quot;Topics&quot;:[&quot;Criminals -- Biography&quot;,&quot;Bidwell, Austin&quot;,&quot;Bank fraud -- England&quot;,&quot;Bank of England&quot;],&quot;Primary&quot;:&quot;24739.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bidwell, Austin&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;HV&quot;],&quot;PG_ID&quot;:&quot;24739&quot;});" class='title'>Bidwell's Travels, from Wall Street to London Prison:<br><span class='subtitle'>Fifteen Years in Solitude</span></a>
+<div class='author'>Bidwell, Austin</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24755, {&quot;Title&quot;:&quot;Captain Cook: His Life, Voyages, and Discoveries&quot;,&quot;Topics&quot;:[&quot;Biography&quot;,&quot;Voyages around the world&quot;,&quot;Cook, James, 1728-1779&quot;,&quot;Oceania -- Discovery and exploration&quot;,&quot;Australasia -- Discovery and exploration&quot;,&quot;Missions -- Oceania&quot;],&quot;Primary&quot;:&quot;24755.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kingston, William Henry Giles, 1814-1880&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;DU&quot;,&quot;G&quot;],&quot;PG_ID&quot;:&quot;24755&quot;});" class='title'>Captain Cook:<br><span class='subtitle'>His Life, Voyages, and Discoveries</span></a>
+<div class='author'>Kingston, William Henry Giles, 1814-1880</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24756, {&quot;Title&quot;:&quot;The Story of General Gordon&quot;,&quot;Topics&quot;:[&quot;Gordon, Charles George, 1833-1885&quot;,&quot;Generals -- Great Britain -- Biography&quot;],&quot;Primary&quot;:&quot;24756.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lang, Jean, 1867-1932&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;DA&quot;],&quot;PG_ID&quot;:&quot;24756&quot;});" class='title'>The Story of General Gordon</a>
+<div class='author'>Lang, Jean, 1867-1932</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2484, {&quot;Title&quot;:&quot;The Boys&#39; and Girls&#39; Plutarch - Being Parts of the \&quot;\&quot;Lives\&quot;\&quot; of Plutarch, Edited for Boys and Girls&quot;,&quot;Topics&quot;:[&quot;Greece -- Biography -- Juvenile literature&quot;,&quot;Rome -- Biography -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;2484.htm&quot;,&quot;CreatorNames&quot;:[&quot;Plutarch, 46-120?&quot;,&quot;White, John S. (John Stuart), 1847-1922 [Editor]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;DE&quot;,&quot;PZ&quot;],&quot;PG_ID&quot;:&quot;2484&quot;});" class='title'>The Boys' and Girls' Plutarch -<br><span class='subtitle'>Being Parts of the "Lives" of Plutarch, Edited for Boys and Girls</span></a>
+<div class='author'>Plutarch, 46-120?, White, John S. (John Stuart), 1847-1922 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24887, {&quot;Title&quot;:&quot;Ulrich Schmidel - Der erste Geschichtschreiber der La Plata-Länder (1535-1555)&quot;,&quot;Topics&quot;:[&quot;Biography&quot;,&quot;Explorers&quot;,&quot;Argentina -- History -- 1535-1617 -- Sources&quot;,&quot;Rio de la Plata (Argentina and Uruguay) -- Discovery and exploration&quot;,&quot;Mendoza, Pedro de, 1487?-1537&quot;,&quot;Schmidel, Ulrich, 1510?-1579?&quot;,&quot;First contact of aboriginal peoples with Westerners -- Personal narratives&quot;],&quot;Primary&quot;:&quot;24887.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lehmann-Nitsche, Robert, 1872-1938&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;Z&quot;,&quot;F&quot;],&quot;PG_ID&quot;:&quot;24887&quot;});" class='title'>Ulrich Schmidel -<br><span class='subtitle'>Der erste Geschichtschreiber der La Plata-Länder (1535-1555)</span></a>
+<div class='author'>Lehmann-Nitsche, Robert, 1872-1938</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24968, {&quot;Title&quot;:&quot;Behind the Scenes; or, Thirty years a slave, and Four Years in the White House&quot;,&quot;Topics&quot;:[&quot;Lincoln, Abraham, 1809-1865&quot;,&quot;Slavery -- United States&quot;,&quot;Lincoln, Mary Todd, 1818-1882&quot;,&quot;Keckley, Elizabeth, approximately 1818-1907&quot;,&quot;Women slaves -- United States -- Biography&quot;,&quot;African American women -- Biography&quot;],&quot;Primary&quot;:&quot;24968.htm&quot;,&quot;CreatorNames&quot;:[&quot;Keckley, Elizabeth, 1818-1907&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;E&quot;],&quot;PG_ID&quot;:&quot;24968&quot;});" class='title'>Behind the Scenes;<br><span class='subtitle'>or, Thirty years a slave, and Four Years in the White House</span></a>
+<div class='author'>Keckley, Elizabeth, 1818-1907</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25029, {&quot;Title&quot;:&quot;Sir Walter Ralegh: A Biography&quot;,&quot;Topics&quot;:[&quot;Biography&quot;,&quot;Raleigh, Walter, Sir, 1552?-1618&quot;],&quot;Primary&quot;:&quot;25029.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stebbing, W. (William), 1832-1926&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;DA&quot;],&quot;PG_ID&quot;:&quot;25029&quot;});" class='title'>Sir Walter Ralegh:<br><span class='subtitle'>A Biography</span></a>
+<div class='author'>Stebbing, W. (William), 1832-1926</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25039, {&quot;Title&quot;:&quot;Mémoires de Mademoiselle Mars (volume I) - (de la Comédie Française)&quot;,&quot;Topics&quot;:[&quot;Mars, Mademoiselle, 1779-1847&quot;],&quot;Primary&quot;:&quot;25039.txt&quot;,&quot;CreatorNames&quot;:[&quot;Mars, Mademoiselle, 1779-1847&quot;,&quot;Beauvoir, Roger de, 1806-1866 [Editor]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;PN&quot;],&quot;PG_ID&quot;:&quot;25039&quot;});" class='title'>Mémoires de Mademoiselle Mars (volume I) -<br><span class='subtitle'>(de la Comédie Française)</span></a>
+<div class='author'>Mars, Mademoiselle, 1779-1847, Beauvoir, Roger de, 1806-1866 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2523, {&quot;Title&quot;:&quot;The Memoirs of Victor Hugo&quot;,&quot;Topics&quot;:[&quot;Autobiographies&quot;,&quot;Authors, French -- 19th century -- Biography&quot;,&quot;Hugo, Victor, 1802-1885&quot;],&quot;Primary&quot;:&quot;2523.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hugo, Victor, 1802-1885&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;PQ&quot;],&quot;PG_ID&quot;:&quot;2523&quot;});" class='title'>The Memoirs of Victor Hugo</a>
+<div class='author'>Hugo, Victor, 1802-1885</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25526, {&quot;Title&quot;:&quot;Mémoires de Mademoiselle Mars (volume II) - (de la Comédie Française)&quot;,&quot;Topics&quot;:[&quot;Mars, Mademoiselle, 1779-1847&quot;],&quot;Primary&quot;:&quot;25526.txt&quot;,&quot;CreatorNames&quot;:[&quot;Mars, Mademoiselle, 1779-1847&quot;,&quot;Beauvoir, Roger de, 1806-1866 [Editor]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;PN&quot;],&quot;PG_ID&quot;:&quot;25526&quot;});" class='title'>Mémoires de Mademoiselle Mars (volume II) -<br><span class='subtitle'>(de la Comédie Française)</span></a>
+<div class='author'>Mars, Mademoiselle, 1779-1847, Beauvoir, Roger de, 1806-1866 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25582, {&quot;Title&quot;:&quot;Daughters of the Puritans: A Group of Brief Biographies&quot;,&quot;Topics&quot;:[&quot;Sedgwick, Catharine Maria, 1789-1867&quot;,&quot;Ware, Mary L. (Mary Lovell), 1798-1849&quot;,&quot;Child, Lydia Maria Francis, 1802-1880&quot;,&quot;Dix, Dorothea Lynde, 1802-1887&quot;,&quot;Fuller, Margaret, 1810-1850&quot;,&quot;Stowe, Harriet Beecher, 1811-1896&quot;,&quot;Alcott, Louisa May, 1832-1888&quot;,&quot;Women -- New England -- Biography&quot;],&quot;Primary&quot;:&quot;25582.htm&quot;,&quot;CreatorNames&quot;:[&quot;Beach, Seth Curtis, 1837-1932&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;25582&quot;});" class='title'>Daughters of the Puritans:<br><span class='subtitle'>A Group of Brief Biographies</span></a>
+<div class='author'>Beach, Seth Curtis, 1837-1932</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25622, {&quot;Title&quot;:&quot;Beatrice d&#39;Este, Duchess of Milan, 1475-1497&quot;,&quot;Topics&quot;:[&quot;Women -- Biography&quot;,&quot;Beatrice, consort of Lodovico Sforza il Moro, Duke of Milan, 1475-1497&quot;,&quot;Italy -- History -- 1268-1492&quot;,&quot;Nobility -- Italy -- Milan -- History -- To 1500&quot;,&quot;Nobility -- Italy -- Milan -- Biography&quot;,&quot;Renaissance -- Italy -- Milan&quot;],&quot;Primary&quot;:&quot;25622.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cartwright, Julia, 1851-1924&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;DG&quot;],&quot;PG_ID&quot;:&quot;25622&quot;});" class='title'>Beatrice d'Este, Duchess of Milan, 1475-1497</a>
+<div class='author'>Cartwright, Julia, 1851-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25652, {&quot;Title&quot;:&quot;A Treasury of Heroes and Heroines - A Record of High Endeavour and Strange Adventure from 500 B.C. to 1920 A.D.&quot;,&quot;Topics&quot;:[&quot;Heroes&quot;],&quot;Primary&quot;:&quot;25652.htm&quot;,&quot;CreatorNames&quot;:[&quot;Edwards, Clayton&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;25652&quot;});" class='title'>A Treasury of Heroes and Heroines -<br><span class='subtitle'>A Record of High Endeavour and Strange Adventure from 500 B.C. to 1920 A.D.</span></a>
+<div class='author'>Edwards, Clayton</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25752, {&quot;Title&quot;:&quot;Souvenirs de la duchesse de Dino - publiés par sa petite fille, la Comtesse Jean de Castellane.&quot;,&quot;Topics&quot;:[&quot;Autobiographies&quot;,&quot;Dino, Dorothée, duchesse de, 1793-1862&quot;],&quot;Primary&quot;:&quot;25752.txt&quot;,&quot;CreatorNames&quot;:[&quot;Lamy, Etienne, 1845-1919 [Annotator]&quot;,&quot;Dino, Dorothée, duchesse de, 1793-1862&quot;,&quot;Radziwill, Marie Dorothea Elisabeth de Castellane, Fürstin, 1840-1915 [Editor]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;DC&quot;],&quot;PG_ID&quot;:&quot;25752&quot;});" class='title'>Souvenirs de la duchesse de Dino -<br><span class='subtitle'>publiés par sa petite fille, la Comtesse Jean de Castellane.</span></a>
+<div class='author'>Lamy, Etienne, 1845-1919 [Annotator], Dino, Dorothée, duchesse de, 1793-1862, Radziwill, Marie Dorothea Elisabeth de Castellane, Fürstin, 1840-1915 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25793, {&quot;Title&quot;:&quot;Critical Miscellanies (Vol. 3 of 3), Essay 6: Harriet Martineau&quot;,&quot;Topics&quot;:[&quot;Essays&quot;,&quot;Martineau, Harriet, 1802-1876&quot;],&quot;Primary&quot;:&quot;25793.htm&quot;,&quot;CreatorNames&quot;:[&quot;Morley, John, 1838-1923&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;PR&quot;],&quot;PG_ID&quot;:&quot;25793&quot;});" class='title'>Critical Miscellanies (Vol. 3 of 3), Essay 6:<br><span class='subtitle'>Harriet Martineau</span></a>
+<div class='author'>Morley, John, 1838-1923</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25915, {&quot;Title&quot;:&quot;James Lane Allen: A Sketch of his Life and Work&quot;,&quot;Topics&quot;:[&quot;Allen, James Lane, 1849-1925&quot;,&quot;Authors, American -- 19th century -- Biography&quot;],&quot;Primary&quot;:&quot;25915.htm&quot;,&quot;CreatorNames&quot;:[&quot;Unknown&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;25915&quot;});" class='title'>James Lane Allen:<br><span class='subtitle'>A Sketch of his Life and Work</span></a>
+<div class='author'>Unknown</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25941, {&quot;Title&quot;:&quot;Autobiography of Frank G. Allen, Minister of the Gospel - and Selections from his Writings&quot;,&quot;Topics&quot;:[&quot;Autobiographies&quot;,&quot;Clergy -- Kentucky -- Biography&quot;],&quot;Primary&quot;:&quot;25941.htm&quot;,&quot;CreatorNames&quot;:[&quot;Allen, F. G. (Frank Gibbs), 1836-1887&quot;,&quot;Graham, Robert, 1822-1901 [Editor]&quot;],&quot;LoCC&quot;:[&quot;BX&quot;,&quot;CT&quot;],&quot;PG_ID&quot;:&quot;25941&quot;});" class='title'>Autobiography of Frank G. Allen, Minister of the Gospel -<br><span class='subtitle'>and Selections from his Writings</span></a>
+<div class='author'>Allen, F. G. (Frank Gibbs), 1836-1887, Graham, Robert, 1822-1901 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25977, {&quot;Title&quot;:&quot;My Recollections of Lord Byron&quot;,&quot;Topics&quot;:[&quot;Poets, English -- 19th century -- Biography&quot;,&quot;Byron, George Gordon Byron, Baron, 1788-1824&quot;],&quot;Primary&quot;:&quot;25977.htm&quot;,&quot;CreatorNames&quot;:[&quot;Guiccioli, Teresa, contessa di, 1800-1873&quot;,&quot;Jerningham, Hubert E. H. (Hubert Edward Henry), Sir, 1842-1914 [Translator]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;PR&quot;],&quot;PG_ID&quot;:&quot;25977&quot;});" class='title'>My Recollections of Lord Byron</a>
+<div class='author'>Guiccioli, Teresa, contessa di, 1800-1873, Jerningham, Hubert E. H. (Hubert Edward Henry), Sir, 1842-1914 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26129, {&quot;Title&quot;:&quot;John Hus: A brief story of the life of a martyr&quot;,&quot;Topics&quot;:[&quot;Biography&quot;,&quot;Hus, Jan, 1369?-1415&quot;],&quot;Primary&quot;:&quot;26129.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dallmann, William, 1862-1952&quot;],&quot;LoCC&quot;:[&quot;BX&quot;,&quot;CT&quot;],&quot;PG_ID&quot;:&quot;26129&quot;});" class='title'>John Hus:<br><span class='subtitle'>A brief story of the life of a martyr</span></a>
+<div class='author'>Dallmann, William, 1862-1952</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26131, {&quot;Title&quot;:&quot;James Watt&quot;,&quot;Topics&quot;:[&quot;Biography&quot;,&quot;Watt, James, 1736-1819&quot;],&quot;Primary&quot;:&quot;26131.htm&quot;,&quot;CreatorNames&quot;:[&quot;Carnegie, Andrew, 1835-1919&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;TA&quot;],&quot;PG_ID&quot;:&quot;26131&quot;});" class='title'>James Watt</a>
+<div class='author'>Carnegie, Andrew, 1835-1919</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26146, {&quot;Title&quot;:&quot;Charles Frohman: Manager and Man&quot;,&quot;Topics&quot;:[&quot;Theater -- United States&quot;,&quot;Frohman, Charles, 1860-1915&quot;],&quot;Primary&quot;:&quot;26146.htm&quot;,&quot;CreatorNames&quot;:[&quot;Frohman, Daniel, 1851-1940&quot;,&quot;Marcosson, Isaac Frederick, 1876-1961&quot;,&quot;Barrie, J. M. (James Matthew), 1860-1937 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;PN&quot;],&quot;PG_ID&quot;:&quot;26146&quot;});" class='title'>Charles Frohman:<br><span class='subtitle'>Manager and Man</span></a>
+<div class='author'>Frohman, Daniel, 1851-1940, Marcosson, Isaac Frederick, 1876-1961, Barrie, J. M. (James Matthew), 1860-1937 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26295, {&quot;Title&quot;:&quot;The Printer Boy; Or, How Benjamin Franklin Made His Mark - An Example for Youth.&quot;,&quot;Topics&quot;:[&quot;Franklin, Benjamin, 1706-1790&quot;],&quot;Primary&quot;:&quot;26295.htm&quot;,&quot;CreatorNames&quot;:[&quot;Thayer, William Makepeace, 1820-1898&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;E&quot;],&quot;PG_ID&quot;:&quot;26295&quot;});" class='title'>The Printer Boy;<br><span class='subtitle'>Or, How Benjamin Franklin Made His Mark - An Example for Youth.</span></a>
+<div class='author'>Thayer, William Makepeace, 1820-1898</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26363, {&quot;Title&quot;:&quot;Arago et sa vie scientifique&quot;,&quot;Topics&quot;:[&quot;Arago, F. (François), 1786-1853&quot;,&quot;Physicists -- France -- Biography&quot;],&quot;Primary&quot;:&quot;26363.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bertrand, Joseph, 1822-1900&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;QC&quot;],&quot;PG_ID&quot;:&quot;26363&quot;});" class='title'>Arago et sa vie scientifique</a>
+<div class='author'>Bertrand, Joseph, 1822-1900</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26370, {&quot;Title&quot;:&quot;Mémoires de Hector Berlioz - comprenant ses voyages en Italie, en Allemagne, en Russie et en Angleterre, 1803-1865&quot;,&quot;Topics&quot;:[&quot;Autobiographies&quot;,&quot;Italy -- Description and travel&quot;,&quot;Germany -- Description and travel&quot;,&quot;England -- Description and travel&quot;,&quot;Composers -- France -- Biography&quot;,&quot;Russia -- Description and travel&quot;,&quot;Berlioz, Hector, 1803-1869&quot;,&quot;Music -- 19th century -- History and criticism&quot;],&quot;Primary&quot;:&quot;26370.htm&quot;,&quot;CreatorNames&quot;:[&quot;Berlioz, Hector, 1803-1869&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;D&quot;,&quot;ML&quot;],&quot;PG_ID&quot;:&quot;26370&quot;});" class='title'>Mémoires de Hector Berlioz -<br><span class='subtitle'>comprenant ses voyages en Italie, en Allemagne, en Russie et en Angleterre, 1803-1865</span></a>
+<div class='author'>Berlioz, Hector, 1803-1869</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26383, {&quot;Title&quot;:&quot;Anna Seward, and Classic Lichfield&quot;,&quot;Topics&quot;:[&quot;English poetry -- 18th century -- History and criticism&quot;,&quot;Women poets -- Biography&quot;,&quot;Seward, Anna, 1742-1809&quot;],&quot;Primary&quot;:&quot;26383.htm&quot;,&quot;CreatorNames&quot;:[&quot;Martin, Stapleton, 1846-1922&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;PR&quot;],&quot;PG_ID&quot;:&quot;26383&quot;});" class='title'>Anna Seward, and Classic Lichfield</a>
+<div class='author'>Martin, Stapleton, 1846-1922</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26421, {&quot;Title&quot;:&quot;Great Men and Famous Women. Vol. 1 - A series of pen and pencil sketches of the lives of more than 200 of the most prominent personages in History&quot;,&quot;Topics&quot;:[&quot;Biography&quot;],&quot;Primary&quot;:&quot;26421.htm&quot;,&quot;CreatorNames&quot;:[&quot;Horne, Charles F. (Charles Francis), 1870-1942 [Editor]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;26421&quot;});" class='title'>Great Men and Famous Women. Vol. 1 -<br><span class='subtitle'>A series of pen and pencil sketches of the lives of more than 200 of the most prominent personages in History</span></a>
+<div class='author'>Horne, Charles F. (Charles Francis), 1870-1942 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26422, {&quot;Title&quot;:&quot;Great Men and Famous Women. Vol. 2 - A series of pen and pencil sketches of the lives of more than 200 of the most prominent personages in History&quot;,&quot;Topics&quot;:[&quot;Biography&quot;],&quot;Primary&quot;:&quot;26422.htm&quot;,&quot;CreatorNames&quot;:[&quot;Horne, Charles F. (Charles Francis), 1870-1942 [Editor]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;26422&quot;});" class='title'>Great Men and Famous Women. Vol. 2 -<br><span class='subtitle'>A series of pen and pencil sketches of the lives of more than 200 of the most prominent personages in History</span></a>
+<div class='author'>Horne, Charles F. (Charles Francis), 1870-1942 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26423, {&quot;Title&quot;:&quot;Great Men and Famous Women. Vol. 3 - A series of pen and pencil sketches of the lives of more than 200 of the most prominent personages in History&quot;,&quot;Topics&quot;:[&quot;Biography&quot;],&quot;Primary&quot;:&quot;26423.htm&quot;,&quot;CreatorNames&quot;:[&quot;Horne, Charles F. (Charles Francis), 1870-1942 [Editor]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;26423&quot;});" class='title'>Great Men and Famous Women. Vol. 3 -<br><span class='subtitle'>A series of pen and pencil sketches of the lives of more than 200 of the most prominent personages in History</span></a>
+<div class='author'>Horne, Charles F. (Charles Francis), 1870-1942 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26424, {&quot;Title&quot;:&quot;Great Men and Famous Women. Vol. 4 - A series of pen and pencil sketches of the lives of more than 200 of the most prominent personages in History&quot;,&quot;Topics&quot;:[&quot;Biography&quot;],&quot;Primary&quot;:&quot;26424.htm&quot;,&quot;CreatorNames&quot;:[&quot;Horne, Charles F. (Charles Francis), 1870-1942 [Editor]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;26424&quot;});" class='title'>Great Men and Famous Women. Vol. 4 -<br><span class='subtitle'>A series of pen and pencil sketches of the lives of more than 200 of the most prominent personages in History</span></a>
+<div class='author'>Horne, Charles F. (Charles Francis), 1870-1942 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27157, {&quot;Title&quot;:&quot;Historic Boys: Their Endeavours, Their Achievements, and Their Times&quot;,&quot;Topics&quot;:[&quot;Boys -- Biography&quot;,&quot;Biography -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;27157.htm&quot;,&quot;CreatorNames&quot;:[&quot;Brooks, Elbridge S. (Elbridge Streeter), 1846-1902&quot;,&quot;Birch, Reginald Bathurst, 1856-1943 [Illustrator]&quot;,&quot;Schönberg, John [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;PZ&quot;],&quot;PG_ID&quot;:&quot;27157&quot;});" class='title'>Historic Boys:<br><span class='subtitle'>Their Endeavours, Their Achievements, and Their Times</span></a>
+<div class='author'>Brooks, Elbridge S. (Elbridge Streeter), 1846-1902, Birch, Reginald Bathurst, 1856-1943 [Illustrator], Schönberg, John [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27234, {&quot;Title&quot;:&quot;My Father as I Recall Him&quot;,&quot;Topics&quot;:[&quot;Dickens, Charles, 1812-1870 -- Family&quot;,&quot;Novelists, English -- 19th century -- Family relationships&quot;,&quot;Fathers -- England -- Biography&quot;],&quot;Primary&quot;:&quot;27234.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dickens, Mamie, 1838-1896&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;PR&quot;],&quot;PG_ID&quot;:&quot;27234&quot;});" class='title'>My Father as I Recall Him</a>
+<div class='author'>Dickens, Mamie, 1838-1896</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27258, {&quot;Title&quot;:&quot;From Slave to College President: Being the Life Story of Booker T. Washington&quot;,&quot;Topics&quot;:[&quot;Washington, Booker T., 1856-1915&quot;],&quot;Primary&quot;:&quot;27258.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pike, G. Holden (Godfrey Holden), 1836-&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;E&quot;],&quot;PG_ID&quot;:&quot;27258&quot;});" class='title'>From Slave to College President:<br><span class='subtitle'>Being the Life Story of Booker T. Washington</span></a>
+<div class='author'>Pike, G. Holden (Godfrey Holden), 1836-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27362, {&quot;Title&quot;:&quot;The Chronicles of a Gay Gordon&quot;,&quot;Topics&quot;:[&quot;Gordon, J. M. (Joseph Maria), 1856-1929&quot;,&quot;Generals -- England -- Biography&quot;],&quot;Primary&quot;:&quot;27362.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gordon, J. M. (Joseph Maria), 1856-1929&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;27362&quot;});" class='title'>The Chronicles of a Gay Gordon</a>
+<div class='author'>Gordon, J. M. (Joseph Maria), 1856-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27502, {&quot;Title&quot;:&quot;Sketch of Handel and Beethoven - Two Lectures, Delivered in the Lecture Hall of the Wimbledon Village Club, on Monday Evening, Dec. 14, 1863; and Monday Evening, Jan. 11, 1864&quot;,&quot;Topics&quot;:[&quot;Beethoven, Ludwig van, 1770-1827&quot;,&quot;Handel, George Frideric, 1685-1759&quot;,&quot;Composers -- Germany -- Biography&quot;],&quot;Primary&quot;:&quot;27502.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ball, Thomas Hanly&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;ML&quot;],&quot;PG_ID&quot;:&quot;27502&quot;});" class='title'>Sketch of Handel and Beethoven -<br><span class='subtitle'>Two Lectures, Delivered in the Lecture Hall of the Wimbledon Village Club, on Monday Evening, Dec. 14, 1863; and Monday Evening, Jan. 11, 1864</span></a>
+<div class='author'>Ball, Thomas Hanly</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27689, {&quot;Title&quot;:&quot;Jaime de Magalhães Lima&quot;,&quot;Topics&quot;:[&quot;Lima, Jaime de Magalhães, 1859-1936&quot;],&quot;Primary&quot;:&quot;27689.htm&quot;,&quot;CreatorNames&quot;:[&quot;Agostinho, José, 1866-1938&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;PQ&quot;],&quot;PG_ID&quot;:&quot;27689&quot;});" class='title'>Jaime de Magalhães Lima</a>
+<div class='author'>Agostinho, José, 1866-1938</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2779, {&quot;Title&quot;:&quot;Mein Leben und Streben&quot;,&quot;Topics&quot;:[&quot;Autobiographies&quot;,&quot;May, Karl Friedrich, 1842-1912&quot;,&quot;Authors, German -- 19th century -- Biography&quot;],&quot;Primary&quot;:&quot;2779.htm&quot;,&quot;CreatorNames&quot;:[&quot;May, Karl, 1842-1912&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;PT&quot;],&quot;PG_ID&quot;:&quot;2779&quot;});" class='title'>Mein Leben und Streben</a>
+<div class='author'>May, Karl, 1842-1912</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2780, {&quot;Title&quot;:&quot;My Life and My Efforts&quot;,&quot;Topics&quot;:[&quot;May, Karl Friedrich, 1842-1912&quot;,&quot;Authors, German -- 19th century -- Biography&quot;],&quot;Primary&quot;:&quot;2780.htm&quot;,&quot;CreatorNames&quot;:[&quot;May, Karl, 1842-1912&quot;,&quot;Olesch, Gunther [Translator]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;PT&quot;],&quot;PG_ID&quot;:&quot;2780&quot;});" class='title'>My Life and My Efforts</a>
+<div class='author'>May, Karl, 1842-1912, Olesch, Gunther [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28200, {&quot;Title&quot;:&quot;Renan, Taine, Michelet: Les maîtres de l&#39;histoire&quot;,&quot;Topics&quot;:[&quot;Renan, Ernest, 1823-1892&quot;,&quot;Taine, Hippolyte, 1828-1893&quot;,&quot;Michelet, Jules, 1798-1874&quot;,&quot;Historians -- France&quot;],&quot;Primary&quot;:&quot;28200.txt&quot;,&quot;CreatorNames&quot;:[&quot;Monod, Gabriel, 1844-1912&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;DC&quot;],&quot;PG_ID&quot;:&quot;28200&quot;});" class='title'>Renan, Taine, Michelet:<br><span class='subtitle'>Les maîtres de l'histoire</span></a>
+<div class='author'>Monod, Gabriel, 1844-1912</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28272, {&quot;Title&quot;:&quot;Biographia Scoticana (Scots Worthies) - A Brief Historical Account of the Lives, Characters, and Memorable Transactions of the Most Eminent Scots Worthies&quot;,&quot;Topics&quot;:[&quot;Church of Scotland -- Biography&quot;,&quot;Scotland -- Biography&quot;],&quot;Primary&quot;:&quot;28272.htm&quot;,&quot;CreatorNames&quot;:[&quot;Howie, John, 1735-1793&quot;],&quot;LoCC&quot;:[&quot;BX&quot;,&quot;CT&quot;],&quot;PG_ID&quot;:&quot;28272&quot;});" class='title'>Biographia Scoticana (Scots Worthies) -<br><span class='subtitle'>A Brief Historical Account of the Lives, Characters, and Memorable Transactions of the Most Eminent Scots Worthies</span></a>
+<div class='author'>Howie, John, 1735-1793</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28455, {&quot;Title&quot;:&quot;Great Men and Famous Women. Vol. 5 - A series of pen and pencil sketches of the lives of more than 200 of the most prominent personages in History&quot;,&quot;Topics&quot;:[&quot;Biography&quot;],&quot;Primary&quot;:&quot;28455.htm&quot;,&quot;CreatorNames&quot;:[&quot;Horne, Charles F. (Charles Francis), 1870-1942 [Editor]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;28455&quot;});" class='title'>Great Men and Famous Women. Vol. 5 -<br><span class='subtitle'>A series of pen and pencil sketches of the lives of more than 200 of the most prominent personages in History</span></a>
+<div class='author'>Horne, Charles F. (Charles Francis), 1870-1942 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28456, {&quot;Title&quot;:&quot;Great Men and Famous Women. Vol. 6 - A series of pen and pencil sketches of the lives of more than 200 of the most prominent personages in History&quot;,&quot;Topics&quot;:[&quot;Biography&quot;],&quot;Primary&quot;:&quot;28456.htm&quot;,&quot;CreatorNames&quot;:[&quot;Horne, Charles F. (Charles Francis), 1870-1942 [Editor]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;28456&quot;});" class='title'>Great Men and Famous Women. Vol. 6 -<br><span class='subtitle'>A series of pen and pencil sketches of the lives of more than 200 of the most prominent personages in History</span></a>
+<div class='author'>Horne, Charles F. (Charles Francis), 1870-1942 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2846, {&quot;Title&quot;:&quot;The Life of Flavius Josephus&quot;,&quot;Topics&quot;:[&quot;Autobiographies&quot;,&quot;Jews -- History -- Rebellion, 66-73&quot;,&quot;Rome -- History -- Empire, 30 B.C.-284 A.D.&quot;,&quot;Jews -- Biography&quot;,&quot;Josephus, Flavius&quot;,&quot;Jewish historians -- Biography&quot;],&quot;Primary&quot;:&quot;2846.htm&quot;,&quot;CreatorNames&quot;:[&quot;Josephus, Flavius, 38?-100?&quot;,&quot;Whiston, William, 1667-1752 [Translator]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;DS&quot;],&quot;PG_ID&quot;:&quot;2846&quot;});" class='title'>The Life of Flavius Josephus</a>
+<div class='author'>Josephus, Flavius, 38?-100?, Whiston, William, 1667-1752 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28997, {&quot;Title&quot;:&quot;Great Men and Famous Women, Vol. 7 - A series of pen and pencil sketches of the lives of more than 200 of the most prominent personages in History&quot;,&quot;Topics&quot;:[&quot;Biography&quot;],&quot;Primary&quot;:&quot;28997.htm&quot;,&quot;CreatorNames&quot;:[&quot;Horne, Charles F. (Charles Francis), 1870-1942 [Editor]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;28997&quot;});" class='title'>Great Men and Famous Women, Vol. 7 -<br><span class='subtitle'>A series of pen and pencil sketches of the lives of more than 200 of the most prominent personages in History</span></a>
+<div class='author'>Horne, Charles F. (Charles Francis), 1870-1942 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29033, {&quot;Title&quot;:&quot;Critical Miscellanies (Vol. 3 of 3), Essay 10: Auguste Comte&quot;,&quot;Topics&quot;:[&quot;Comte, Auguste, 1798-1857&quot;],&quot;Primary&quot;:&quot;29033.htm&quot;,&quot;CreatorNames&quot;:[&quot;Morley, John, 1838-1923&quot;],&quot;LoCC&quot;:[&quot;B&quot;,&quot;CT&quot;],&quot;PG_ID&quot;:&quot;29033&quot;});" class='title'>Critical Miscellanies (Vol. 3 of 3), Essay 10:<br><span class='subtitle'>Auguste Comte</span></a>
+<div class='author'>Morley, John, 1838-1923</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29286, {&quot;Title&quot;:&quot;Noble Deeds of the World&#39;s Heroines&quot;,&quot;Topics&quot;:[&quot;Women heroes -- Biography&quot;],&quot;Primary&quot;:&quot;29286.htm&quot;,&quot;CreatorNames&quot;:[&quot;Moore, Henry Charles&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;29286&quot;});" class='title'>Noble Deeds of the World's Heroines</a>
+<div class='author'>Moore, Henry Charles</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29352, {&quot;Title&quot;:&quot;Great Men and Famous Women, Vol. 8 - A series of pen and pencil sketches of the lives of more than 200 of the most prominent personages in History&quot;,&quot;Topics&quot;:[&quot;Biography&quot;],&quot;Primary&quot;:&quot;29352.htm&quot;,&quot;CreatorNames&quot;:[&quot;Horne, Charles F. (Charles Francis), 1870-1942 [Editor]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;29352&quot;});" class='title'>Great Men and Famous Women, Vol. 8 -<br><span class='subtitle'>A series of pen and pencil sketches of the lives of more than 200 of the most prominent personages in History</span></a>
+<div class='author'>Horne, Charles F. (Charles Francis), 1870-1942 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3029, {&quot;Title&quot;:&quot;Real Soldiers of Fortune&quot;,&quot;Topics&quot;:[&quot;Soldiers of fortune&quot;,&quot;MacIver, Henry Ronald&quot;,&quot;Harden-Hickey, James Aloysius, 1854-1898&quot;,&quot;Churchill, Winston, 1874-1965&quot;,&quot;McGiffin, Philo Norton, 1863-1897&quot;,&quot;Walker, William, 1824-1860&quot;],&quot;Primary&quot;:&quot;3029.htm&quot;,&quot;CreatorNames&quot;:[&quot;Davis, Richard Harding, 1864-1916&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;3029&quot;});" class='title'>Real Soldiers of Fortune</a>
+<div class='author'>Davis, Richard Harding, 1864-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3127, {&quot;Title&quot;:&quot;Being a Boy&quot;,&quot;Topics&quot;:[&quot;Autobiographies&quot;,&quot;Country life&quot;,&quot;Boys -- Biography&quot;,&quot;New England&quot;],&quot;Primary&quot;:&quot;3127.htm&quot;,&quot;CreatorNames&quot;:[&quot;Warner, Charles Dudley, 1829-1900&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;PS&quot;],&quot;PG_ID&quot;:&quot;3127&quot;});" class='title'>Being a Boy</a>
+<div class='author'>Warner, Charles Dudley, 1829-1900</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31479, {&quot;Title&quot;:&quot;Celebrated Women Travellers of the Nineteenth Century&quot;,&quot;Topics&quot;:[&quot;Women travelers -- Biography&quot;],&quot;Primary&quot;:&quot;31479.htm&quot;,&quot;CreatorNames&quot;:[&quot;Adams, W. H. Davenport (William Henry Davenport), 1828-1891&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;31479&quot;});" class='title'>Celebrated Women Travellers of the Nineteenth Century</a>
+<div class='author'>Adams, W. H. Davenport (William Henry Davenport), 1828-1891</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31843, {&quot;Title&quot;:&quot;Of Six Mediæval Women; To Which Is Added A Note on Mediæval Gardens&quot;,&quot;Topics&quot;:[&quot;Gardens&quot;,&quot;Hrotsvitha, approximately 935-approximately 975&quot;,&quot;Marie, de France, active 12th century&quot;,&quot;Mechthild, of Magdeburg, approximately 1212-approximately 1282&quot;,&quot;Mahaut, d&#39;Artois, 1268-1329&quot;,&quot;Christine, de Pisan, approximately 1364-approximately 1431&quot;,&quot;Sorel, Agnès, approximately 1422-1450&quot;,&quot;Women -- History -- Middle Ages, 500-1500&quot;],&quot;Primary&quot;:&quot;31843.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kemp-Welch, Alice&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;31843&quot;});" class='title'>Of Six Mediæval Women;<br><span class='subtitle'>To Which Is Added A Note on Mediæval Gardens</span></a>
+<div class='author'>Kemp-Welch, Alice</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32363, {&quot;Title&quot;:&quot;Ten Girls from History&quot;,&quot;Topics&quot;:[&quot;Women -- Biography&quot;,&quot;Girls -- Biography&quot;],&quot;Primary&quot;:&quot;32363.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sweetser, Kate Dickinson, 1870-1939&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;32363&quot;});" class='title'>Ten Girls from History</a>
+<div class='author'>Sweetser, Kate Dickinson, 1870-1939</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3267, {&quot;Title&quot;:&quot;Old Love Stories Retold&quot;,&quot;Topics&quot;:[&quot;Biography&quot;,&quot;Love stories&quot;,&quot;Heine, Heinrich, 1797-1856&quot;,&quot;Authors, German -- 19th century -- Biography&quot;],&quot;Primary&quot;:&quot;3267.txt&quot;,&quot;CreatorNames&quot;:[&quot;Le Gallienne, Richard, 1866-1947&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;PR&quot;],&quot;PG_ID&quot;:&quot;3267&quot;});" class='title'>Old Love Stories Retold</a>
+<div class='author'>Le Gallienne, Richard, 1866-1947</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33273, {&quot;Title&quot;:&quot;Lives of Celebrated Women&quot;,&quot;Topics&quot;:[&quot;Women -- Biography&quot;],&quot;Primary&quot;:&quot;33273.htm&quot;,&quot;CreatorNames&quot;:[&quot;Goodrich, Samuel G. (Samuel Griswold), 1793-1860&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;33273&quot;});" class='title'>Lives of Celebrated Women</a>
+<div class='author'>Goodrich, Samuel G. (Samuel Griswold), 1793-1860</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33992, {&quot;Title&quot;:&quot;Autobiography of Z. S. Hastings&quot;,&quot;Topics&quot;:[&quot;United States -- Biography&quot;],&quot;Primary&quot;:&quot;33992.txt&quot;,&quot;CreatorNames&quot;:[&quot;Hastings, Z. S. (Zachariah Simpson)&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;33992&quot;});" class='title'>Autobiography of Z. S. Hastings</a>
+<div class='author'>Hastings, Z. S. (Zachariah Simpson)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34711, {&quot;Title&quot;:&quot;The Life of Roger Langdon, Told by himself. With additions by his daughter Ellen.&quot;,&quot;Topics&quot;:[&quot;Langdon, Roger, 1825-1894&quot;],&quot;Primary&quot;:&quot;34711.htm&quot;,&quot;CreatorNames&quot;:[&quot;Langdon, Ellen&quot;,&quot;Langdon, Roger, 1825-1894&quot;,&quot;Lambert, Henry Clifton [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;QB&quot;],&quot;PG_ID&quot;:&quot;34711&quot;});" class='title'>The Life of Roger Langdon, Told by himself. With additions by his daughter Ellen.</a>
+<div class='author'>Langdon, Ellen, Langdon, Roger, 1825-1894, Lambert, Henry Clifton [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35331, {&quot;Title&quot;:&quot;Stories of Great Men&quot;,&quot;Topics&quot;:[&quot;Soldiers -- Juvenile literature&quot;,&quot;Kings and rulers -- Juvenile literature&quot;,&quot;Inventors -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;35331.htm&quot;,&quot;CreatorNames&quot;:[&quot;Huntington, Faye, 1838-1923&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;35331&quot;});" class='title'>Stories of Great Men</a>
+<div class='author'>Huntington, Faye, 1838-1923</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35544, {&quot;Title&quot;:&quot;Cabinet Portrait Gallery of British Worthies. Volume I&quot;,&quot;Topics&quot;:[&quot;Great Britain -- Biography&quot;],&quot;Primary&quot;:&quot;35544.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;35544&quot;});" class='title'>Cabinet Portrait Gallery of British Worthies. Volume I</a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35586, {&quot;Title&quot;:&quot;Reminiscences of a Canadian Pioneer for the last Fifty Years: An Autobiography&quot;,&quot;Topics&quot;:[&quot;Frontier and pioneer life -- Ontario&quot;,&quot;Toronto (Ont.) -- History&quot;,&quot;Thompson, Samuel, 1810-1886&quot;,&quot;Toronto (Ont.) -- Biography&quot;],&quot;Primary&quot;:&quot;35586.htm&quot;,&quot;CreatorNames&quot;:[&quot;Thompson, Samuel, 1810-1886&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;F&quot;],&quot;PG_ID&quot;:&quot;35586&quot;});" class='title'>Reminiscences of a Canadian Pioneer for the last Fifty Years:<br><span class='subtitle'>An Autobiography</span></a>
+<div class='author'>Thompson, Samuel, 1810-1886</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35841, {&quot;Title&quot;:&quot;The Last Laird of MacNab - An Episode in the Settlement of MacNab Township, Upper Canada&quot;,&quot;Topics&quot;:[&quot;MacNab, Archibald, 1778?-1860&quot;],&quot;Primary&quot;:&quot;35841.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fraser, Alexander, 1860-1936 [Editor]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;F&quot;],&quot;PG_ID&quot;:&quot;35841&quot;});" class='title'>The Last Laird of MacNab -<br><span class='subtitle'>An Episode in the Settlement of MacNab Township, Upper Canada</span></a>
+<div class='author'>Fraser, Alexander, 1860-1936 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35950, {&quot;Title&quot;:&quot;Lives of Poor Boys Who Became Famous&quot;,&quot;Topics&quot;:[&quot;Biography&quot;],&quot;Primary&quot;:&quot;35950.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bolton, Sarah Knowles, 1841-1916&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;35950&quot;});" class='title'>Lives of Poor Boys Who Became Famous</a>
+<div class='author'>Bolton, Sarah Knowles, 1841-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36062, {&quot;Title&quot;:&quot;Orazioni&quot;,&quot;Topics&quot;:[&quot;Sarfatti, Roberto, 1900-1917&quot;,&quot;Majno, Luigi, 1852-1915&quot;,&quot;Ravizza, Alessandrina, 1846-1915&quot;],&quot;Primary&quot;:&quot;36062.htm&quot;,&quot;CreatorNames&quot;:[&quot;Negri, Ada, 1870-1945&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;DG&quot;],&quot;PG_ID&quot;:&quot;36062&quot;});" class='title'>Orazioni</a>
+<div class='author'>Negri, Ada, 1870-1945</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36430, {&quot;Title&quot;:&quot;Af mit Levned&quot;,&quot;Topics&quot;:[&quot;Ussing, Johan Louis, 1820-1905&quot;],&quot;Primary&quot;:&quot;36430.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ussing, Johan Louis, 1820-1905&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;DL&quot;],&quot;PG_ID&quot;:&quot;36430&quot;});" class='title'>Af mit Levned</a>
+<div class='author'>Ussing, Johan Louis, 1820-1905</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36519, {&quot;Title&quot;:&quot;The Childhood of Distinguished Women&quot;,&quot;Topics&quot;:[&quot;Women -- Biography&quot;],&quot;Primary&quot;:&quot;36519.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bower, Selina A.&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;36519&quot;});" class='title'>The Childhood of Distinguished Women</a>
+<div class='author'>Bower, Selina A.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3680, {&quot;Title&quot;:&quot;Cartrefi Cymru&quot;,&quot;Topics&quot;:[&quot;Historic buildings -- Wales&quot;,&quot;Literary landmarks -- Wales&quot;,&quot;Wales -- Biography&quot;],&quot;Primary&quot;:&quot;3680.htm&quot;,&quot;CreatorNames&quot;:[&quot;Edwards, Owen Morgan, Sir, 1858-1920&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;DA&quot;],&quot;PG_ID&quot;:&quot;3680&quot;});" class='title'>Cartrefi Cymru</a>
+<div class='author'>Edwards, Owen Morgan, Sir, 1858-1920</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3725, {&quot;Title&quot;:&quot;Famous Men of the Middle Ages&quot;,&quot;Topics&quot;:[&quot;Europe -- Biography&quot;,&quot;Europe -- History -- 476-1492&quot;],&quot;Primary&quot;:&quot;3725.htm&quot;,&quot;CreatorNames&quot;:[&quot;Haaren, John H. (John Henry), 1855-1916&quot;,&quot;Poland, Addison B.&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;3725&quot;});" class='title'>Famous Men of the Middle Ages</a>
+<div class='author'>Haaren, John H. (John Henry), 1855-1916, Poland, Addison B.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38265, {&quot;Title&quot;:&quot;My Life in Many States and in Foreign Lands, Dictated in My Seventy-Fourth Year&quot;,&quot;Topics&quot;:[&quot;Train, George Francis, 1829-1904&quot;],&quot;Primary&quot;:&quot;38265.htm&quot;,&quot;CreatorNames&quot;:[&quot;Train, George Francis, 1829-1904&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;38265&quot;});" class='title'>My Life in Many States and in Foreign Lands, Dictated in My Seventy-Fourth Year</a>
+<div class='author'>Train, George Francis, 1829-1904</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39079, {&quot;Title&quot;:&quot;Noble Deeds of American Women - With Biographical Sketches of Some of the More Prominent&quot;,&quot;Topics&quot;:[&quot;Women -- United States -- Biography&quot;],&quot;Primary&quot;:&quot;39079.htm&quot;,&quot;CreatorNames&quot;:[&quot;Clement, J. (Jesse), 1815-1883 [Editor]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;39079&quot;});" class='title'>Noble Deeds of American Women -<br><span class='subtitle'>With Biographical Sketches of Some of the More Prominent</span></a>
+<div class='author'>Clement, J. (Jesse), 1815-1883 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39298, {&quot;Title&quot;:&quot;Modern Leaders: Being a Series of Biographical Sketches&quot;,&quot;Topics&quot;:[&quot;Biography&quot;],&quot;Primary&quot;:&quot;39298.htm&quot;,&quot;CreatorNames&quot;:[&quot;McCarthy, Justin, 1830-1912&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;39298&quot;});" class='title'>Modern Leaders:<br><span class='subtitle'>Being a Series of Biographical Sketches</span></a>
+<div class='author'>McCarthy, Justin, 1830-1912</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39333, {&quot;Title&quot;:&quot;Curiosities of Human Nature&quot;,&quot;Topics&quot;:[&quot;Biography&quot;,&quot;Characters and characteristics&quot;],&quot;Primary&quot;:&quot;39333.htm&quot;,&quot;CreatorNames&quot;:[&quot;Goodrich, Samuel G. (Samuel Griswold), 1793-1860&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;39333&quot;});" class='title'>Curiosities of Human Nature</a>
+<div class='author'>Goodrich, Samuel G. (Samuel Griswold), 1793-1860</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39339, {&quot;Title&quot;:&quot;Superwomen&quot;,&quot;Topics&quot;:[&quot;Women -- Biography&quot;],&quot;Primary&quot;:&quot;39339.htm&quot;,&quot;CreatorNames&quot;:[&quot;Terhune, Albert Payson, 1872-1942&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;39339&quot;});" class='title'>Superwomen</a>
+<div class='author'>Terhune, Albert Payson, 1872-1942</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39843, {&quot;Title&quot;:&quot;Women of History: Selected from the Writings of Standard Authors&quot;,&quot;Topics&quot;:[&quot;Women -- Biography&quot;],&quot;Primary&quot;:&quot;39843.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;39843&quot;});" class='title'>Women of History:<br><span class='subtitle'>Selected from the Writings of Standard Authors</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40508, {&quot;Title&quot;:&quot;True Stories of Girl Heroines&quot;,&quot;Topics&quot;:[&quot;Women -- Biography&quot;,&quot;Girls -- Biography&quot;],&quot;Primary&quot;:&quot;40508.htm&quot;,&quot;CreatorNames&quot;:[&quot;Everett-Green, Evelyn, 1856-1932&quot;,&quot;Sherie, E. F. [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;40508&quot;});" class='title'>True Stories of Girl Heroines</a>
+<div class='author'>Everett-Green, Evelyn, 1856-1932, Sherie, E. F. [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40677, {&quot;Title&quot;:&quot;Lives of Illustrious Shoemakers&quot;,&quot;Topics&quot;:[&quot;Shoemakers -- Biography&quot;],&quot;Primary&quot;:&quot;40677.htm&quot;,&quot;CreatorNames&quot;:[&quot;Winks, W. E. (William Edward), 1842-1926&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;40677&quot;});" class='title'>Lives of Illustrious Shoemakers</a>
+<div class='author'>Winks, W. E. (William Edward), 1842-1926</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(412, {&quot;Title&quot;:&quot;John Jacob Astor&quot;,&quot;Topics&quot;:[&quot;Astor, John Jacob, 1763-1848&quot;,&quot;Businessmen -- United States -- Biography&quot;],&quot;Primary&quot;:&quot;412.txt&quot;,&quot;CreatorNames&quot;:[&quot;Hubbard, Elbert, 1856-1915&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;412&quot;});" class='title'>John Jacob Astor</a>
+<div class='author'>Hubbard, Elbert, 1856-1915</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41756, {&quot;Title&quot;:&quot;Against the Current: Simple Chapters from a Complex Life&quot;,&quot;Topics&quot;:[&quot;Steiner, Edward Alfred, 1866-1956&quot;],&quot;Primary&quot;:&quot;41756.htm&quot;,&quot;CreatorNames&quot;:[&quot;Steiner, Edward Alfred, 1866-1956&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;41756&quot;});" class='title'>Against the Current:<br><span class='subtitle'>Simple Chapters from a Complex Life</span></a>
+<div class='author'>Steiner, Edward Alfred, 1866-1956</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42120, {&quot;Title&quot;:&quot;Biographical Outlines: British History&quot;,&quot;Topics&quot;:[&quot;Great Britain -- Biography&quot;],&quot;Primary&quot;:&quot;42120.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;DA&quot;],&quot;PG_ID&quot;:&quot;42120&quot;});" class='title'>Biographical Outlines:<br><span class='subtitle'>British History</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42451, {&quot;Title&quot;:&quot;Heroines of Service - Mary Lyon, Alice Freeman Palmer, Clara Barton, Frances Willard, Julia Ward Howe, Anna Shaw, Mary Antin, Alice C. Fletcher, Mary Slessor of Calabar, Madame Curie, Jane Addams&quot;,&quot;Topics&quot;:[&quot;Women -- United States -- Biography&quot;],&quot;Primary&quot;:&quot;42451.htm&quot;,&quot;CreatorNames&quot;:[&quot;Parkman, Mary Rosetta, 1875-1941&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;42451&quot;});" class='title'>Heroines of Service -<br><span class='subtitle'>Mary Lyon, Alice Freeman Palmer, Clara Barton, Frances Willard, Julia Ward Howe, Anna Shaw, Mary Antin, Alice C. Fletcher, Mary Slessor of Calabar, Madame Curie, Jane Addams</span></a>
+<div class='author'>Parkman, Mary Rosetta, 1875-1941</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43058, {&quot;Title&quot;:&quot;Marie Tarnowska&quot;,&quot;Topics&quot;:[&quot;Tarnowska, Marie, Countess&quot;],&quot;Primary&quot;:&quot;43058.htm&quot;,&quot;CreatorNames&quot;:[&quot;Vivanti, Annie, 1866-1942&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;43058&quot;});" class='title'>Marie Tarnowska</a>
+<div class='author'>Vivanti, Annie, 1866-1942</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4321, {&quot;Title&quot;:&quot;Margot Asquith, an Autobiography - Two Volumes in One&quot;,&quot;Topics&quot;:[&quot;Autobiographies&quot;,&quot;Asquith, Margot, 1864-1945&quot;],&quot;Primary&quot;:&quot;4321.txt&quot;,&quot;CreatorNames&quot;:[&quot;Asquith, Margot, 1864-1945&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;DA&quot;],&quot;PG_ID&quot;:&quot;4321&quot;});" class='title'>Margot Asquith, an Autobiography -<br><span class='subtitle'>Two Volumes in One</span></a>
+<div class='author'>Asquith, Margot, 1864-1945</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43538, {&quot;Title&quot;:&quot;Historic Girlhoods, Part One&quot;,&quot;Topics&quot;:[&quot;Women -- Biography -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;43538.htm&quot;,&quot;CreatorNames&quot;:[&quot;Holland, Rupert Sargent, 1878-1952&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;43538&quot;});" class='title'>Historic Girlhoods, Part One</a>
+<div class='author'>Holland, Rupert Sargent, 1878-1952</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43646, {&quot;Title&quot;:&quot;Female Warriors, Vol. 1 (of 2) - Memorials of Female Valour and Heroism, from the Mythological Ages to the Present Era.&quot;,&quot;Topics&quot;:[&quot;Women -- Biography&quot;,&quot;Women soldiers&quot;,&quot;Amazons&quot;],&quot;Primary&quot;:&quot;43646.htm&quot;,&quot;CreatorNames&quot;:[&quot;Clayton, Ellen C. (Ellen Creathorne), 1834-1900&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;43646&quot;});" class='title'>Female Warriors, Vol. 1 (of 2) -<br><span class='subtitle'>Memorials of Female Valour and Heroism, from the Mythological Ages to the Present Era.</span></a>
+<div class='author'>Clayton, Ellen C. (Ellen Creathorne), 1834-1900</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43647, {&quot;Title&quot;:&quot;Female Warriors, Vol. 2 (of 2) - Memorials of Female Valour and Heroism, from the Mythological Ages to the Present Era.&quot;,&quot;Topics&quot;:[&quot;Women -- Biography&quot;,&quot;Women soldiers&quot;,&quot;Amazons&quot;],&quot;Primary&quot;:&quot;43647.htm&quot;,&quot;CreatorNames&quot;:[&quot;Clayton, Ellen C. (Ellen Creathorne), 1834-1900&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;43647&quot;});" class='title'>Female Warriors, Vol. 2 (of 2) -<br><span class='subtitle'>Memorials of Female Valour and Heroism, from the Mythological Ages to the Present Era.</span></a>
+<div class='author'>Clayton, Ellen C. (Ellen Creathorne), 1834-1900</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44064, {&quot;Title&quot;:&quot;An Apology for the Life of Mr. Colley Cibber, Volume 1 (of 2) - Written by Himself. A New Edition with Notes and Supplement&quot;,&quot;Topics&quot;:[&quot;Theater -- Great Britain -- History -- 18th century&quot;,&quot;Dramatists, English -- 18th century -- Biography&quot;,&quot;Theatrical managers -- Great Britain -- Biography&quot;,&quot;Cibber, Colley, 1671-1757&quot;,&quot;Actors -- Great Britain -- Biography&quot;],&quot;Primary&quot;:&quot;44064.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cibber, Colley, 1671-1757&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;PR&quot;],&quot;PG_ID&quot;:&quot;44064&quot;});" class='title'>An Apology for the Life of Mr. Colley Cibber, Volume 1 (of 2) -<br><span class='subtitle'>Written by Himself. A New Edition with Notes and Supplement</span></a>
+<div class='author'>Cibber, Colley, 1671-1757</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44065, {&quot;Title&quot;:&quot;An Apology for the Life of Mr. Colley Cibber, Volume 2 (of 2) - Written by Himself. A New Edition with Notes and Supplement&quot;,&quot;Topics&quot;:[&quot;Theater -- Great Britain -- History -- 18th century&quot;,&quot;Dramatists, English -- 18th century -- Biography&quot;,&quot;Theatrical managers -- Great Britain -- Biography&quot;,&quot;Cibber, Colley, 1671-1757&quot;,&quot;Actors -- Great Britain -- Biography&quot;],&quot;Primary&quot;:&quot;44065.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cibber, Colley, 1671-1757&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;PR&quot;],&quot;PG_ID&quot;:&quot;44065&quot;});" class='title'>An Apology for the Life of Mr. Colley Cibber, Volume 2 (of 2) -<br><span class='subtitle'>Written by Himself. A New Edition with Notes and Supplement</span></a>
+<div class='author'>Cibber, Colley, 1671-1757</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4529, {&quot;Title&quot;:&quot;Biographies of Working Men&quot;,&quot;Topics&quot;:[&quot;Labor -- Biography&quot;,&quot;Biography -- 19th century&quot;,&quot;Working class -- Biography&quot;],&quot;Primary&quot;:&quot;4529.htm&quot;,&quot;CreatorNames&quot;:[&quot;Allen, Grant, 1848-1899&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;HD&quot;],&quot;PG_ID&quot;:&quot;4529&quot;});" class='title'>Biographies of Working Men</a>
+<div class='author'>Allen, Grant, 1848-1899</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45314, {&quot;Title&quot;:&quot;Portraits of Curious Characters in London, &amp;c. &amp;c. - With Descriptive and Entertaining Ancedotes.&quot;,&quot;Topics&quot;:[&quot;London (England) -- Biography&quot;],&quot;Primary&quot;:&quot;45314.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;DA&quot;],&quot;PG_ID&quot;:&quot;45314&quot;});" class='title'>Portraits of Curious Characters in London, &c. &c. -<br><span class='subtitle'>With Descriptive and Entertaining Ancedotes.</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45317, {&quot;Title&quot;:&quot;A Memorial of Mrs. Margaret Breckinridge&quot;,&quot;Topics&quot;:[&quot;Breckinridge, Margaret (Miller), Mrs., 1802-1838&quot;],&quot;Primary&quot;:&quot;45317.htm&quot;,&quot;CreatorNames&quot;:[&quot;Breckinridge, John, 1797-1841&quot;,&quot;Miller, Samuel, 1769-1850&quot;,&quot;Alexander, Archibald, 1772-1851 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;45317&quot;});" class='title'>A Memorial of Mrs. Margaret Breckinridge</a>
+<div class='author'>Breckinridge, John, 1797-1841, Miller, Samuel, 1769-1850, Alexander, Archibald, 1772-1851 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45890, {&quot;Title&quot;:&quot;A Decade of Italian Women, vol. 1 (of 2)&quot;,&quot;Topics&quot;:[&quot;Women -- Biography&quot;,&quot;Italy -- Biography&quot;],&quot;Primary&quot;:&quot;45890.htm&quot;,&quot;CreatorNames&quot;:[&quot;Trollope, Thomas Adolphus, 1810-1892&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;DG&quot;],&quot;PG_ID&quot;:&quot;45890&quot;});" class='title'>A Decade of Italian Women, vol. 1 (of 2)</a>
+<div class='author'>Trollope, Thomas Adolphus, 1810-1892</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45891, {&quot;Title&quot;:&quot;A Decade of Italian Women, vol. 2 (of 2)&quot;,&quot;Topics&quot;:[&quot;Women -- Biography&quot;,&quot;Italy -- Biography&quot;],&quot;Primary&quot;:&quot;45891.htm&quot;,&quot;CreatorNames&quot;:[&quot;Trollope, Thomas Adolphus, 1810-1892&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;DG&quot;],&quot;PG_ID&quot;:&quot;45891&quot;});" class='title'>A Decade of Italian Women, vol. 2 (of 2)</a>
+<div class='author'>Trollope, Thomas Adolphus, 1810-1892</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46013, {&quot;Title&quot;:&quot;Famous American Belles of the Nineteenth Century&quot;,&quot;Topics&quot;:[&quot;Women -- United States -- Biography&quot;],&quot;Primary&quot;:&quot;46013.htm&quot;,&quot;CreatorNames&quot;:[&quot;Peacock, Virginia Tatnall, 1873-1918&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;46013&quot;});" class='title'>Famous American Belles of the Nineteenth Century</a>
+<div class='author'>Peacock, Virginia Tatnall, 1873-1918</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46286, {&quot;Title&quot;:&quot;Looking Back: An Autobiography&quot;,&quot;Topics&quot;:[&quot;Richardson, Merrick Abner, 1841-&quot;],&quot;Primary&quot;:&quot;46286.htm&quot;,&quot;CreatorNames&quot;:[&quot;Richardson, Merrick Abner, 1841-&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;46286&quot;});" class='title'>Looking Back:<br><span class='subtitle'>An Autobiography</span></a>
+<div class='author'>Richardson, Merrick Abner, 1841-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46335, {&quot;Title&quot;:&quot;Mit liv og levned som jeg selv har forstaaet det&quot;,&quot;Topics&quot;:[&quot;Fibiger, J. (Johannes), 1821-1897&quot;],&quot;Primary&quot;:&quot;46335.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fibiger, J. (Johannes), 1821-1897&quot;,&quot;Gjellerup, Karl, 1857-1919 [Editor]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;46335&quot;});" class='title'>Mit liv og levned som jeg selv har forstaaet det</a>
+<div class='author'>Fibiger, J. (Johannes), 1821-1897, Gjellerup, Karl, 1857-1919 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4667, {&quot;Title&quot;:&quot;Seven Wives and Seven Prisons - Or, Experiences in the Life of a Matrimonial Monomaniac. A True Story&quot;,&quot;Topics&quot;:[&quot;Marriage customs and rites -- United States&quot;,&quot;Divorce -- United States&quot;],&quot;Primary&quot;:&quot;4667.htm&quot;,&quot;CreatorNames&quot;:[&quot;Abbott, L. A., 1813-&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;HQ&quot;],&quot;PG_ID&quot;:&quot;4667&quot;});" class='title'>Seven Wives and Seven Prisons -<br><span class='subtitle'>Or, Experiences in the Life of a Matrimonial Monomaniac. A True Story</span></a>
+<div class='author'>Abbott, L. A., 1813-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46698, {&quot;Title&quot;:&quot;Some Noble Sisters&quot;,&quot;Topics&quot;:[&quot;Women -- Biography&quot;,&quot;Sisters -- Biography&quot;],&quot;Primary&quot;:&quot;46698.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lee, Edmund&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;46698&quot;});" class='title'>Some Noble Sisters</a>
+<div class='author'>Lee, Edmund</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46809, {&quot;Title&quot;:&quot;Six Major Prophets&quot;,&quot;Topics&quot;:[&quot;Chesterton, G. K. (Gilbert Keith), 1874-1936&quot;,&quot;Wells, H. G. (Herbert George), 1866-1946&quot;,&quot;Eucken, Rudolf, 1846-1926&quot;,&quot;Dewey, John, 1859-1952&quot;,&quot;Shaw, Bernard, 1856-1950&quot;,&quot;Schiller, F. C. S. (Ferdinand Canning Scott), 1864-1937&quot;],&quot;Primary&quot;:&quot;46809.htm&quot;,&quot;CreatorNames&quot;:[&quot;Slosson, Edwin E. (Edwin Emery), 1865-1929&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;46809&quot;});" class='title'>Six Major Prophets</a>
+<div class='author'>Slosson, Edwin E. (Edwin Emery), 1865-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4689, {&quot;Title&quot;:&quot;Famous Affinities of History: The Romance of Devotion. Volume 1&quot;,&quot;Topics&quot;:[&quot;Biography&quot;,&quot;Love&quot;,&quot;Women -- Biography&quot;],&quot;Primary&quot;:&quot;4689.htm&quot;,&quot;CreatorNames&quot;:[&quot;Orr, Lyndon&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;4689&quot;});" class='title'>Famous Affinities of History:<br><span class='subtitle'>The Romance of Devotion. Volume 1</span></a>
+<div class='author'>Orr, Lyndon</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4690, {&quot;Title&quot;:&quot;Famous Affinities of History: The Romance of Devotion. Volume 2&quot;,&quot;Topics&quot;:[&quot;Biography&quot;,&quot;Love&quot;,&quot;Women -- Biography&quot;],&quot;Primary&quot;:&quot;4690.htm&quot;,&quot;CreatorNames&quot;:[&quot;Orr, Lyndon&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;4690&quot;});" class='title'>Famous Affinities of History:<br><span class='subtitle'>The Romance of Devotion. Volume 2</span></a>
+<div class='author'>Orr, Lyndon</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4691, {&quot;Title&quot;:&quot;Famous Affinities of History: The Romance of Devotion. Volume 3&quot;,&quot;Topics&quot;:[&quot;Biography&quot;,&quot;Love&quot;,&quot;Women -- Biography&quot;],&quot;Primary&quot;:&quot;4691.htm&quot;,&quot;CreatorNames&quot;:[&quot;Orr, Lyndon&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;4691&quot;});" class='title'>Famous Affinities of History:<br><span class='subtitle'>The Romance of Devotion. Volume 3</span></a>
+<div class='author'>Orr, Lyndon</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4692, {&quot;Title&quot;:&quot;Famous Affinities of History: The Romance of Devotion. Volume 4&quot;,&quot;Topics&quot;:[&quot;Biography&quot;,&quot;Love&quot;,&quot;Women -- Biography&quot;],&quot;Primary&quot;:&quot;4692.htm&quot;,&quot;CreatorNames&quot;:[&quot;Orr, Lyndon&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;4692&quot;});" class='title'>Famous Affinities of History:<br><span class='subtitle'>The Romance of Devotion. Volume 4</span></a>
+<div class='author'>Orr, Lyndon</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4693, {&quot;Title&quot;:&quot;Famous Affinities of History: The Romance of Devotion. Vol 1-4, Complete&quot;,&quot;Topics&quot;:[&quot;Biography&quot;,&quot;Love&quot;,&quot;Women -- Biography&quot;],&quot;Primary&quot;:&quot;4693.htm&quot;,&quot;CreatorNames&quot;:[&quot;Orr, Lyndon&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;4693&quot;});" class='title'>Famous Affinities of History:<br><span class='subtitle'>The Romance of Devotion. Vol 1-4, Complete</span></a>
+<div class='author'>Orr, Lyndon</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47186, {&quot;Title&quot;:&quot;Model Women&quot;,&quot;Topics&quot;:[&quot;Women -- Social and moral questions&quot;,&quot;Women -- Biography&quot;],&quot;Primary&quot;:&quot;47186.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anderson, William&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;47186&quot;});" class='title'>Model Women</a>
+<div class='author'>Anderson, William</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47750, {&quot;Title&quot;:&quot;Wanderlust&quot;,&quot;Topics&quot;:[&quot;Reynolds, Robert Rice, 1884-1963 -- Travel&quot;],&quot;Primary&quot;:&quot;47750.htm&quot;,&quot;CreatorNames&quot;:[&quot;Reynolds, Robert Rice, 1884-1963&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;47750&quot;});" class='title'>Wanderlust</a>
+<div class='author'>Reynolds, Robert Rice, 1884-1963</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47988, {&quot;Title&quot;:&quot;Heroes of To-Day&quot;,&quot;Topics&quot;:[&quot;Great Britain -- Biography&quot;,&quot;United States -- Biography&quot;],&quot;Primary&quot;:&quot;47988.htm&quot;,&quot;CreatorNames&quot;:[&quot;Parkman, Mary Rosetta, 1875-1941&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;47988&quot;});" class='title'>Heroes of To-Day</a>
+<div class='author'>Parkman, Mary Rosetta, 1875-1941</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48180, {&quot;Title&quot;:&quot;Major Prophets of To-Day&quot;,&quot;Topics&quot;:[&quot;Bergson, Henri, 1859-1941&quot;,&quot;Poincaré, Henri, 1854-1912&quot;,&quot;Maeterlinck, Maurice, 1862-1949&quot;,&quot;Metchnikoff, Elie, 1845-1916&quot;,&quot;Ostwald, Wilhelm, 1853-1932&quot;,&quot;Haeckel, Ernst, 1834-1919&quot;],&quot;Primary&quot;:&quot;48180.htm&quot;,&quot;CreatorNames&quot;:[&quot;Slosson, Edwin E. (Edwin Emery), 1865-1929&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;48180&quot;});" class='title'>Major Prophets of To-Day</a>
+<div class='author'>Slosson, Edwin E. (Edwin Emery), 1865-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48192, {&quot;Title&quot;:&quot;Gräfin Elisa von Ahlefeldt, die Gattin Adolphs von Lützow, die Freundin Karl Immermann&#39;s&quot;,&quot;Topics&quot;:[&quot;Ahlefeldt, Elise von, 1788-1855&quot;],&quot;Primary&quot;:&quot;48192.htm&quot;,&quot;CreatorNames&quot;:[&quot;Assing, Ludmilla, 1821-1880&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;48192&quot;});" class='title'>Gräfin Elisa von Ahlefeldt, die Gattin Adolphs von Lützow, die Freundin Karl Immermann's</a>
+<div class='author'>Assing, Ludmilla, 1821-1880</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49356, {&quot;Title&quot;:&quot;Hero Tales from History&quot;,&quot;Topics&quot;:[&quot;Heroes&quot;],&quot;Primary&quot;:&quot;49356.htm&quot;,&quot;CreatorNames&quot;:[&quot;Burnham, Smith, 1866-1947&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;49356&quot;});" class='title'>Hero Tales from History</a>
+<div class='author'>Burnham, Smith, 1866-1947</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49765, {&quot;Title&quot;:&quot;Some Eminent Women of Our Times: Short Biographical Sketches&quot;,&quot;Topics&quot;:[&quot;Women -- Biography&quot;,&quot;Women -- Great Britain -- Biography&quot;],&quot;Primary&quot;:&quot;49765.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fawcett, Millicent Garrett, Dame, 1847-1929&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;49765&quot;});" class='title'>Some Eminent Women of Our Times:<br><span class='subtitle'>Short Biographical Sketches</span></a>
+<div class='author'>Fawcett, Millicent Garrett, Dame, 1847-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49766, {&quot;Title&quot;:&quot;Some Famous Women&quot;,&quot;Topics&quot;:[&quot;Women -- Biography -- Juvenile literature&quot;,&quot;Christian women -- Biography -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;49766.htm&quot;,&quot;CreatorNames&quot;:[&quot;Creighton, Louise, 1850-1936&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;49766&quot;});" class='title'>Some Famous Women</a>
+<div class='author'>Creighton, Louise, 1850-1936</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49867, {&quot;Title&quot;:&quot;The Learned Lady in England, 1650-1760&quot;,&quot;Topics&quot;:[&quot;Women -- Education -- Great Britain&quot;,&quot;Women -- Great Britain&quot;,&quot;Women authors, English&quot;],&quot;Primary&quot;:&quot;49867.htm&quot;,&quot;CreatorNames&quot;:[&quot;Reynolds, Myra&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;49867&quot;});" class='title'>The Learned Lady in England, 1650-1760</a>
+<div class='author'>Reynolds, Myra</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50439, {&quot;Title&quot;:&quot;English Eccentrics and Eccentricities&quot;,&quot;Topics&quot;:[&quot;Eccentrics and eccentricities -- England&quot;],&quot;Primary&quot;:&quot;50439.htm&quot;,&quot;CreatorNames&quot;:[&quot;Timbs, John, 1801-1875&quot;],&quot;LoCC&quot;:[&quot;AG&quot;,&quot;CT&quot;],&quot;PG_ID&quot;:&quot;50439&quot;});" class='title'>English Eccentrics and Eccentricities</a>
+<div class='author'>Timbs, John, 1801-1875</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50452, {&quot;Title&quot;:&quot;Viestini menneiltä sukupolvilta&quot;,&quot;Topics&quot;:[&quot;Finland -- Biography&quot;,&quot;Roslin-Kalliola, Matilda, 1837-1923&quot;],&quot;Primary&quot;:&quot;50452.txt&quot;,&quot;CreatorNames&quot;:[&quot;Roslin-Kalliola, Matilda, 1837-1923&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;50452&quot;});" class='title'>Viestini menneiltä sukupolvilta</a>
+<div class='author'>Roslin-Kalliola, Matilda, 1837-1923</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51154, {&quot;Title&quot;:&quot;Fairlop and Its Founder; or, Facts and Fun for the Forest Frolickers.&quot;,&quot;Topics&quot;:[&quot;Day, Daniel, 1683-1767&quot;,&quot;Fairlop Fair&quot;],&quot;Primary&quot;:&quot;51154.htm&quot;,&quot;CreatorNames&quot;:[&quot;Famed First Friday Fairgoer&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;51154&quot;});" class='title'>Fairlop and Its Founder;<br><span class='subtitle'>or, Facts and Fun for the Forest Frolickers.</span></a>
+<div class='author'>Famed First Friday Fairgoer</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51391, {&quot;Title&quot;:&quot;Famous Impostors&quot;,&quot;Topics&quot;:[&quot;Impostors and imposture&quot;,&quot;Hoaxes&quot;],&quot;Primary&quot;:&quot;51391.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stoker, Bram, 1847-1912&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;HV&quot;],&quot;PG_ID&quot;:&quot;51391&quot;});" class='title'>Famous Impostors</a>
+<div class='author'>Stoker, Bram, 1847-1912</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51572, {&quot;Title&quot;:&quot;In Good Company - Some personal recollections of Swinburne, Lord Roberts, Watts-Dunton, Oscar Wilde Edward Whymper, S. J. Stone, Stephen Phillips&quot;,&quot;Topics&quot;:[&quot;Roberts, Frederick Sleigh Roberts, Earl, 1832-1914&quot;,&quot;Whymper, Edward, 1840-1911&quot;,&quot;Watts-Dunton, Theodore, 1832-1914&quot;,&quot;Swinburne, Algernon Charles, 1837-1909 -- Friends and associates&quot;,&quot;Wilde, Oscar, 1854-1900 -- Friends and associates&quot;,&quot;Stone, S. J. (Samuel John), 1839-1900&quot;,&quot;Phillips, Stephen, 1864-1915&quot;],&quot;Primary&quot;:&quot;51572.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kernahan, Coulson, 1858-1943&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;51572&quot;});" class='title'>In Good Company -<br><span class='subtitle'>Some personal recollections of Swinburne, Lord Roberts, Watts-Dunton, Oscar Wilde Edward Whymper, S. J. Stone, Stephen Phillips</span></a>
+<div class='author'>Kernahan, Coulson, 1858-1943</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51633, {&quot;Title&quot;:&quot;A Schoolmaster&#39;s Diary - Being Extracts from the Journal of Patrick Traherne, M.A., Sometime Assistant Master at Radchester and Marlton.&quot;,&quot;Topics&quot;:[&quot;Traherne, Patrick, 1885-1917&quot;],&quot;Primary&quot;:&quot;51633.htm&quot;,&quot;CreatorNames&quot;:[&quot;Traherne, Patrick, 1885-1917&quot;,&quot;Mais, S. P. B. (Stuart Petre Brodie), 1885-1975 [Editor]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;51633&quot;});" class='title'>A Schoolmaster's Diary -<br><span class='subtitle'>Being Extracts from the Journal of Patrick Traherne, M.A., Sometime Assistant Master at Radchester and Marlton.</span></a>
+<div class='author'>Traherne, Patrick, 1885-1917, Mais, S. P. B. (Stuart Petre Brodie), 1885-1975 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52398, {&quot;Title&quot;:&quot;Silver Queen: The Fabulous Story of Baby Doe Tabor&quot;,&quot;Topics&quot;:[&quot;Baby Doe, -1935&quot;],&quot;Primary&quot;:&quot;52398.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bancroft, Caroline&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;52398&quot;});" class='title'>Silver Queen:<br><span class='subtitle'>The Fabulous Story of Baby Doe Tabor</span></a>
+<div class='author'>Bancroft, Caroline</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52400, {&quot;Title&quot;:&quot;Famous Men of Ancient Times&quot;,&quot;Topics&quot;:[&quot;Biography -- Juvenile literature&quot;,&quot;Men -- Biography -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;52400.htm&quot;,&quot;CreatorNames&quot;:[&quot;Goodrich, Samuel G. (Samuel Griswold), 1793-1860&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;52400&quot;});" class='title'>Famous Men of Ancient Times</a>
+<div class='author'>Goodrich, Samuel G. (Samuel Griswold), 1793-1860</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52846, {&quot;Title&quot;:&quot;Old Friends at Cambridge and Elsewhere&quot;,&quot;Topics&quot;:[&quot;University of Cambridge -- History&quot;],&quot;Primary&quot;:&quot;52846.htm&quot;,&quot;CreatorNames&quot;:[&quot;Clark, John Willis, 1833-1910&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;52846&quot;});" class='title'>Old Friends at Cambridge and Elsewhere</a>
+<div class='author'>Clark, John Willis, 1833-1910</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53285, {&quot;Title&quot;:&quot;Historical Characters: Mackintosh, Talleyrand, Canning, Cobbett, Peel&quot;,&quot;Topics&quot;:[&quot;Talleyrand-Périgord, Charles Maurice de, prince de Bénévent, 1754-1838&quot;,&quot;Cobbett, William 1763-1835&quot;,&quot;Mackintosh, James, Sir, 1765-1832&quot;,&quot;Canning, George, 1770-1827&quot;,&quot;Peel, Robert, 1788-1850&quot;],&quot;Primary&quot;:&quot;53285.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dalling and Bulwer, Henry Lytton Bulwer, Baron, 1801-1872&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;53285&quot;});" class='title'>Historical Characters:<br><span class='subtitle'>Mackintosh, Talleyrand, Canning, Cobbett, Peel</span></a>
+<div class='author'>Dalling and Bulwer, Henry Lytton Bulwer, Baron, 1801-1872</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(542, {&quot;Title&quot;:&quot;The Life of Me: An Autobiography&quot;,&quot;Topics&quot;:[&quot;Johnson, Clarence Edgar, 1906-1994&quot;,&quot;Johnson family&quot;,&quot;Fisher County (Tex.) -- History&quot;,&quot;Fisher County (Tex.) -- Biography&quot;],&quot;Primary&quot;:&quot;542.txt&quot;,&quot;CreatorNames&quot;:[&quot;Johnson, Clarence Edgar, 1906-1994&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;F&quot;],&quot;PG_ID&quot;:&quot;542&quot;});" class='title'>The Life of Me:<br><span class='subtitle'>An Autobiography</span></a>
+<div class='author'>Johnson, Clarence Edgar, 1906-1994</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5420, {&quot;Title&quot;:&quot;Rab and His Friends&quot;,&quot;Topics&quot;:[&quot;Dogs -- Folklore&quot;,&quot;Brown, John, 1810-1882 -- Childhood and youth&quot;,&quot;Authors, English -- 19th century -- Biography&quot;],&quot;Primary&quot;:&quot;5420.htm&quot;,&quot;CreatorNames&quot;:[&quot;Brown, John, 1810-1882&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;PR&quot;],&quot;PG_ID&quot;:&quot;5420&quot;});" class='title'>Rab and His Friends</a>
+<div class='author'>Brown, John, 1810-1882</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54558, {&quot;Title&quot;:&quot;The Life of Henry Bradley Plant - Founder and President of the Plant System of Railroads and Steamships and Also of the Southern Express Company&quot;,&quot;Topics&quot;:[&quot;Plant, Henry Bradley, 1819-1899&quot;,&quot;Plant family&quot;],&quot;Primary&quot;:&quot;54558.htm&quot;,&quot;CreatorNames&quot;:[&quot;Smyth, G. Hutchinson (George Hutchinson), 1837-&quot;,&quot;Dickerman, George Sherwood, 1843-1937 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;54558&quot;});" class='title'>The Life of Henry Bradley Plant -<br><span class='subtitle'>Founder and President of the Plant System of Railroads and Steamships and Also of the Southern Express Company</span></a>
+<div class='author'>Smyth, G. Hutchinson (George Hutchinson), 1837-, Dickerman, George Sherwood, 1843-1937 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55047, {&quot;Title&quot;:&quot;The Gallery of Portraits: with Memoirs. Volume 1 (of 7)&quot;,&quot;Topics&quot;:[&quot;Biography&quot;],&quot;Primary&quot;:&quot;55047.htm&quot;,&quot;CreatorNames&quot;:[&quot;Malkin, Arthur Thomas&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;55047&quot;});" class='title'>The Gallery of Portraits:<br><span class='subtitle'>with Memoirs. Volume 1 (of 7)</span></a>
+<div class='author'>Malkin, Arthur Thomas</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55059, {&quot;Title&quot;:&quot;Modern English Biography (volume 1 of 4) A-H&quot;,&quot;Topics&quot;:[&quot;Great Britain -- Biography -- Dictionaries&quot;],&quot;Primary&quot;:&quot;55059.htm&quot;,&quot;CreatorNames&quot;:[&quot;Boase, Frederic, 1843-1916&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;55059&quot;});" class='title'>Modern English Biography (volume 1 of 4) A-H</a>
+<div class='author'>Boase, Frederic, 1843-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55092, {&quot;Title&quot;:&quot;The Gallery of Portraits: with Memoirs. Volume 2 (of 7)&quot;,&quot;Topics&quot;:[&quot;Biography&quot;],&quot;Primary&quot;:&quot;55092.htm&quot;,&quot;CreatorNames&quot;:[&quot;Malkin, Arthur Thomas&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;55092&quot;});" class='title'>The Gallery of Portraits:<br><span class='subtitle'>with Memoirs. Volume 2 (of 7)</span></a>
+<div class='author'>Malkin, Arthur Thomas</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55248, {&quot;Title&quot;:&quot;Aatteiden mies: Piirteitä August Fredrik Soldanin elämästä&quot;,&quot;Topics&quot;:[&quot;Soldan, August Fredrik, 1817-1885&quot;],&quot;Primary&quot;:&quot;55248.txt&quot;,&quot;CreatorNames&quot;:[&quot;Aho, Juhani, 1861-1921&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;DK&quot;],&quot;PG_ID&quot;:&quot;55248&quot;});" class='title'>Aatteiden mies:<br><span class='subtitle'>Piirteitä August Fredrik Soldanin elämästä</span></a>
+<div class='author'>Aho, Juhani, 1861-1921</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55277, {&quot;Title&quot;:&quot;The Gallery of Portraits: with Memoirs. Volume 3 (of 7)&quot;,&quot;Topics&quot;:[&quot;Biography&quot;],&quot;Primary&quot;:&quot;55277.htm&quot;,&quot;CreatorNames&quot;:[&quot;Malkin, Arthur Thomas&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;55277&quot;});" class='title'>The Gallery of Portraits:<br><span class='subtitle'>with Memoirs. Volume 3 (of 7)</span></a>
+<div class='author'>Malkin, Arthur Thomas</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55300, {&quot;Title&quot;:&quot;Society as I Have Found It&quot;,&quot;Topics&quot;:[&quot;McAllister, Ward, 1827-1895&quot;,&quot;Socialites -- New York (State) -- New York -- Biography&quot;],&quot;Primary&quot;:&quot;55300.htm&quot;,&quot;CreatorNames&quot;:[&quot;McAllister, Ward, 1827-1895&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;55300&quot;});" class='title'>Society as I Have Found It</a>
+<div class='author'>McAllister, Ward, 1827-1895</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55353, {&quot;Title&quot;:&quot;Boys Who Became Famous Men - Stories of the Childhood of Poets, Artists, and Musicians&quot;,&quot;Topics&quot;:[&quot;Boys -- Biography&quot;,&quot;Biography -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;55353.htm&quot;,&quot;CreatorNames&quot;:[&quot;Skinner, Harriet Pearl&quot;,&quot;Gallagher, Sears, 1869-1955 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;55353&quot;});" class='title'>Boys Who Became Famous Men -<br><span class='subtitle'>Stories of the Childhood of Poets, Artists, and Musicians</span></a>
+<div class='author'>Skinner, Harriet Pearl, Gallagher, Sears, 1869-1955 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55358, {&quot;Title&quot;:&quot;The Gallery of Portraits: with Memoirs. Volume 5 (of 7)&quot;,&quot;Topics&quot;:[&quot;Biography&quot;],&quot;Primary&quot;:&quot;55358.htm&quot;,&quot;CreatorNames&quot;:[&quot;Malkin, Arthur Thomas&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;55358&quot;});" class='title'>The Gallery of Portraits:<br><span class='subtitle'>with Memoirs. Volume 5 (of 7)</span></a>
+<div class='author'>Malkin, Arthur Thomas</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55379, {&quot;Title&quot;:&quot;The Gallery of Portraits: with Memoirs. Volume 6 (of 7)&quot;,&quot;Topics&quot;:[&quot;Biography&quot;],&quot;Primary&quot;:&quot;55379.htm&quot;,&quot;CreatorNames&quot;:[&quot;Malkin, Arthur Thomas&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;55379&quot;});" class='title'>The Gallery of Portraits:<br><span class='subtitle'>with Memoirs. Volume 6 (of 7)</span></a>
+<div class='author'>Malkin, Arthur Thomas</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55424, {&quot;Title&quot;:&quot;Francis Parkman.&quot;,&quot;Topics&quot;:[&quot;Parkman, Francis, 1823-1893&quot;],&quot;Primary&quot;:&quot;55424.htm&quot;,&quot;CreatorNames&quot;:[&quot;Little, Brown and Company [Publisher]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;55424&quot;});" class='title'>Francis Parkman.</a>
+<div class='author'>Little, Brown and Company [Publisher]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55688, {&quot;Title&quot;:&quot;The Gallery of Portraits: with Memoirs. Volume 4 (of 7)&quot;,&quot;Topics&quot;:[&quot;Biography&quot;],&quot;Primary&quot;:&quot;55688.htm&quot;,&quot;CreatorNames&quot;:[&quot;Malkin, Arthur Thomas&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;55688&quot;});" class='title'>The Gallery of Portraits:<br><span class='subtitle'>with Memoirs. Volume 4 (of 7)</span></a>
+<div class='author'>Malkin, Arthur Thomas</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56096, {&quot;Title&quot;:&quot;The Gallery of Portraits: with Memoirs. Volume 7 (of 7)&quot;,&quot;Topics&quot;:[&quot;Biography&quot;],&quot;Primary&quot;:&quot;56096.htm&quot;,&quot;CreatorNames&quot;:[&quot;Malkin, Arthur Thomas&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;56096&quot;});" class='title'>The Gallery of Portraits:<br><span class='subtitle'>with Memoirs. Volume 7 (of 7)</span></a>
+<div class='author'>Malkin, Arthur Thomas</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56618, {&quot;Title&quot;:&quot;The Friends of Voltaire&quot;,&quot;Topics&quot;:[&quot;France -- Biography&quot;,&quot;Voltaire, 1694-1778 -- Friends and associates&quot;],&quot;Primary&quot;:&quot;56618.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hall, Evelyn Beatrice, 1868-1956&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;PQ&quot;],&quot;PG_ID&quot;:&quot;56618&quot;});" class='title'>The Friends of Voltaire</a>
+<div class='author'>Hall, Evelyn Beatrice, 1868-1956</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56942, {&quot;Title&quot;:&quot;Ancient, Curious, and Famous Wills&quot;,&quot;Topics&quot;:[&quot;Wills&quot;],&quot;Primary&quot;:&quot;56942.htm&quot;,&quot;CreatorNames&quot;:[&quot;Harris, Virgil M. (Virgil McClure), 1862-1924?&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;K&quot;],&quot;PG_ID&quot;:&quot;56942&quot;});" class='title'>Ancient, Curious, and Famous Wills</a>
+<div class='author'>Harris, Virgil M. (Virgil McClure), 1862-1924?</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57117, {&quot;Title&quot;:&quot;Henry Ford: Highlights of His Life&quot;,&quot;Topics&quot;:[&quot;Ford, Henry, 1863-1947&quot;],&quot;Primary&quot;:&quot;57117.htm&quot;,&quot;CreatorNames&quot;:[&quot;Henry Ford Museum and Greenfield Village&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;57117&quot;});" class='title'>Henry Ford:<br><span class='subtitle'>Highlights of His Life</span></a>
+<div class='author'>Henry Ford Museum and Greenfield Village</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5733, {&quot;Title&quot;:&quot;Autobiography: Truth and Fiction Relating to My Life&quot;,&quot;Topics&quot;:[&quot;Autobiographies&quot;,&quot;Authors, German -- 18th century -- Biography&quot;,&quot;Goethe, Johann Wolfgang von, 1749-1832&quot;,&quot;Authors, German -- 19th century -- Biography&quot;],&quot;Primary&quot;:&quot;5733.txt&quot;,&quot;CreatorNames&quot;:[&quot;Goethe, Johann Wolfgang von, 1749-1832&quot;,&quot;Oxenford, John, 1812-1877 [Translator]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;PT&quot;],&quot;PG_ID&quot;:&quot;5733&quot;});" class='title'>Autobiography:<br><span class='subtitle'>Truth and Fiction Relating to My Life</span></a>
+<div class='author'>Goethe, Johann Wolfgang von, 1749-1832, Oxenford, John, 1812-1877 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57382, {&quot;Title&quot;:&quot;My Chinese Marriage&quot;,&quot;Topics&quot;:[&quot;China -- Social life and customs -- 1912-1949&quot;,&quot;Franking, Mae M.&quot;,&quot;Americans -- China -- Biography&quot;],&quot;Primary&quot;:&quot;57382.htm&quot;,&quot;CreatorNames&quot;:[&quot;Franking, Mae M., 1890-&quot;,&quot;Porter, Katherine Anne, 1890-1980&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;DS&quot;],&quot;PG_ID&quot;:&quot;57382&quot;});" class='title'>My Chinese Marriage</a>
+<div class='author'>Franking, Mae M., 1890-, Porter, Katherine Anne, 1890-1980</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57482, {&quot;Title&quot;:&quot;The Picture Gallery Explored - Or, an account of various ancient customs and manners: interspersed with anecdotes and biographical sketches of eminent persons&quot;,&quot;Topics&quot;:[&quot;Biography -- Juvenile literature&quot;,&quot;Manners and customs -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;57482.htm&quot;,&quot;CreatorNames&quot;:[&quot;Unknown&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;D&quot;],&quot;PG_ID&quot;:&quot;57482&quot;});" class='title'>The Picture Gallery Explored -<br><span class='subtitle'>Or, an account of various ancient customs and manners: interspersed with anecdotes and biographical sketches of eminent persons</span></a>
+<div class='author'>Unknown</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57588, {&quot;Title&quot;:&quot;Index for the Project Gutenberg Series \&quot;\&quot;American Pioneers and Patriots\&quot;\&quot;&quot;,&quot;Topics&quot;:[&quot;United States -- History&quot;,&quot;United States -- Biography&quot;,&quot;Indexes&quot;],&quot;Primary&quot;:&quot;57588.htm&quot;,&quot;CreatorNames&quot;:[&quot;Abbott, John S. C. (John Stevens Cabot), 1805-1877&quot;,&quot;Widger, David, 1932-2021? [Editor]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;E&quot;],&quot;PG_ID&quot;:&quot;57588&quot;});" class='title'>Index for the Project Gutenberg Series "American Pioneers and Patriots"</a>
+<div class='author'>Abbott, John S. C. (John Stevens Cabot), 1805-1877, Widger, David, 1932-2021? [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57666, {&quot;Title&quot;:&quot;Famous leaders among men&quot;,&quot;Topics&quot;:[&quot;Biography&quot;],&quot;Primary&quot;:&quot;57666.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bolton, Sarah Knowles, 1841-1916&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;57666&quot;});" class='title'>Famous leaders among men</a>
+<div class='author'>Bolton, Sarah Knowles, 1841-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57914, {&quot;Title&quot;:&quot;The Romance of Wills and Testaments&quot;,&quot;Topics&quot;:[&quot;Wills -- Great Britain -- Miscellanea&quot;],&quot;Primary&quot;:&quot;57914.htm&quot;,&quot;CreatorNames&quot;:[&quot;Vine Hall, Edgar, -1938&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;K&quot;],&quot;PG_ID&quot;:&quot;57914&quot;});" class='title'>The Romance of Wills and Testaments</a>
+<div class='author'>Vine Hall, Edgar, -1938</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58553, {&quot;Title&quot;:&quot;An Astronomer&#39;s Wife: The Biography of Angeline Hall&quot;,&quot;Topics&quot;:[&quot;Hall, Angeline (Stickney) 1830-1892&quot;],&quot;Primary&quot;:&quot;58553.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hall, Angelo, 1868-1922&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;58553&quot;});" class='title'>An Astronomer's Wife:<br><span class='subtitle'>The Biography of Angeline Hall</span></a>
+<div class='author'>Hall, Angelo, 1868-1922</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58795, {&quot;Title&quot;:&quot;Memoir of a Brother&quot;,&quot;Topics&quot;:[&quot;Hughes, George E., 1821-1872&quot;],&quot;Primary&quot;:&quot;58795.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hughes, Thomas, 1822-1896&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;PR&quot;],&quot;PG_ID&quot;:&quot;58795&quot;});" class='title'>Memoir of a Brother</a>
+<div class='author'>Hughes, Thomas, 1822-1896</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58856, {&quot;Title&quot;:&quot;Throne-Makers&quot;,&quot;Topics&quot;:[&quot;Europe -- Biography&quot;],&quot;Primary&quot;:&quot;58856.htm&quot;,&quot;CreatorNames&quot;:[&quot;Thayer, William Roscoe, 1859-1923&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;58856&quot;});" class='title'>Throne-Makers</a>
+<div class='author'>Thayer, William Roscoe, 1859-1923</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58982, {&quot;Title&quot;:&quot;Vagabond Adventures&quot;,&quot;Topics&quot;:[&quot;Keeler, Ralph, 1840-1873&quot;,&quot;Minstrel shows&quot;],&quot;Primary&quot;:&quot;58982.htm&quot;,&quot;CreatorNames&quot;:[&quot;Keeler, Ralph, 1840-1873&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;58982&quot;});" class='title'>Vagabond Adventures</a>
+<div class='author'>Keeler, Ralph, 1840-1873</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(590, {&quot;Title&quot;:&quot;Robert Louis Stevenson: A Record, an Estimate, and a Memorial&quot;,&quot;Topics&quot;:[&quot;Stevenson, Robert Louis, 1850-1894&quot;,&quot;Authors, Scottish -- 19th century -- Biography&quot;],&quot;Primary&quot;:&quot;590.htm&quot;,&quot;CreatorNames&quot;:[&quot;Japp, Alexander H. (Alexander Hay), 1839-1905&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;PR&quot;],&quot;PG_ID&quot;:&quot;590&quot;});" class='title'>Robert Louis Stevenson:<br><span class='subtitle'>A Record, an Estimate, and a Memorial</span></a>
+<div class='author'>Japp, Alexander H. (Alexander Hay), 1839-1905</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59510, {&quot;Title&quot;:&quot;Dr. Southwood Smith: A Retrospect&quot;,&quot;Topics&quot;:[&quot;Physicians -- Great Britain -- Biography&quot;,&quot;Smith, Southwood, 1788-1861&quot;],&quot;Primary&quot;:&quot;59510.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lewes, Gertrude Hill&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;59510&quot;});" class='title'>Dr. Southwood Smith:<br><span class='subtitle'>A Retrospect</span></a>
+<div class='author'>Lewes, Gertrude Hill</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59538, {&quot;Title&quot;:&quot;Portraits of the Nineties&quot;,&quot;Topics&quot;:[&quot;Great Britain -- Biography&quot;,&quot;Great Britain -- History -- Victoria, 1837-1901 -- Biography&quot;,&quot;Great Britain -- Intellectual life -- 19th century&quot;],&quot;Primary&quot;:&quot;59538.htm&quot;,&quot;CreatorNames&quot;:[&quot;Raymond, E. T., 1872-1928&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;DA&quot;],&quot;PG_ID&quot;:&quot;59538&quot;});" class='title'>Portraits of the Nineties</a>
+<div class='author'>Raymond, E. T., 1872-1928</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60038, {&quot;Title&quot;:&quot;Great Men as Prophets of a New Era&quot;,&quot;Topics&quot;:[&quot;Biography&quot;,&quot;Milton, John, 1608-1674&quot;,&quot;Dante Alighieri, 1265-1321&quot;,&quot;William I, Prince of Orange, 1533-1584&quot;,&quot;Garibaldi, Giuseppe, 1807-1882&quot;,&quot;Ruskin, John, 1819-1900&quot;,&quot;Wesley, John, 1703-1791&quot;,&quot;Cromwell, Oliver, 1599-1658&quot;,&quot;Savonarola, Girolamo, 1452-1498&quot;],&quot;Primary&quot;:&quot;60038.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hillis, Newell Dwight, 1858-1929&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;60038&quot;});" class='title'>Great Men as Prophets of a New Era</a>
+<div class='author'>Hillis, Newell Dwight, 1858-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60039, {&quot;Title&quot;:&quot;The Secret of Heroism: A Memoir of Henry Albert Harper&quot;,&quot;Topics&quot;:[&quot;Harper, Henry Albert, 1873-1901&quot;],&quot;Primary&quot;:&quot;60039.htm&quot;,&quot;CreatorNames&quot;:[&quot;King, William Lyon Mackenzie, 1874-1950&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;60039&quot;});" class='title'>The Secret of Heroism:<br><span class='subtitle'>A Memoir of Henry Albert Harper</span></a>
+<div class='author'>King, William Lyon Mackenzie, 1874-1950</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60571, {&quot;Title&quot;:&quot;Visages d&#39;hier et d&#39;aujourd&#39;hui&quot;,&quot;Topics&quot;:[&quot;France -- Biography&quot;],&quot;Primary&quot;:&quot;60571.htm&quot;,&quot;CreatorNames&quot;:[&quot;Beaunier, André, 1869-1925&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;60571&quot;});" class='title'>Visages d'hier et d'aujourd'hui</a>
+<div class='author'>Beaunier, André, 1869-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60992, {&quot;Title&quot;:&quot;The letters of Richard Ford, 1797-1858&quot;,&quot;Topics&quot;:[&quot;Authors, English -- 19th century -- Correspondence&quot;,&quot;Ford, Richard, 1796-1858 -- Correspondence&quot;],&quot;Primary&quot;:&quot;60992.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ford, Richard, 1796-1858&quot;,&quot;Prothero, Rowland E. (Rowland Edmund), Baron Ernle, 1851-1937 [Editor]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;PR&quot;],&quot;PG_ID&quot;:&quot;60992&quot;});" class='title'>The letters of Richard Ford, 1797-1858</a>
+<div class='author'>Ford, Richard, 1796-1858, Prothero, Rowland E. (Rowland Edmund), Baron Ernle, 1851-1937 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61153, {&quot;Title&quot;:&quot;Footprints of Famous Men: Designed as Incitements to Intellectual Industry&quot;,&quot;Topics&quot;:[&quot;Biography&quot;,&quot;Biography -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;61153.htm&quot;,&quot;CreatorNames&quot;:[&quot;Edgar, John G. (John George), 1834-1864&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;61153&quot;});" class='title'>Footprints of Famous Men:<br><span class='subtitle'>Designed as Incitements to Intellectual Industry</span></a>
+<div class='author'>Edgar, John G. (John George), 1834-1864</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6125, {&quot;Title&quot;:&quot;The Making of an American&quot;,&quot;Topics&quot;:[&quot;Riis, Jacob A. (Jacob August), 1849-1914&quot;],&quot;Primary&quot;:&quot;6125.txt&quot;,&quot;CreatorNames&quot;:[&quot;Riis, Jacob A. (Jacob August), 1849-1914&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;6125&quot;});" class='title'>The Making of an American</a>
+<div class='author'>Riis, Jacob A. (Jacob August), 1849-1914</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61336, {&quot;Title&quot;:&quot;Irish Memories&quot;,&quot;Topics&quot;:[&quot;Ireland -- Social life and customs&quot;,&quot;Ross, Martin, 1862-1915&quot;],&quot;Primary&quot;:&quot;61336.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ross, Martin, 1862-1915&quot;,&quot;Somerville, E. Oe. (Edith Oenone), 1858-1949&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;PR&quot;],&quot;PG_ID&quot;:&quot;61336&quot;});" class='title'>Irish Memories</a>
+<div class='author'>Ross, Martin, 1862-1915, Somerville, E. Oe. (Edith Oenone), 1858-1949</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61568, {&quot;Title&quot;:&quot;When They Were Girls&quot;,&quot;Topics&quot;:[&quot;Girls -- United States -- Biography -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;61568.htm&quot;,&quot;CreatorNames&quot;:[&quot;Moore, Rebecca Deming, 1877-&quot;,&quot;Owen, Helen Mildred, 1894-1946 [Editor]&quot;,&quot;Hill, Mabel Betsy, 1877-1971 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;61568&quot;});" class='title'>When They Were Girls</a>
+<div class='author'>Moore, Rebecca Deming, 1877-, Owen, Helen Mildred, 1894-1946 [Editor], Hill, Mabel Betsy, 1877-1971 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6163, {&quot;Title&quot;:&quot;The Romance and Tragedy of a Widely Known Business Man of New York&quot;,&quot;Topics&quot;:[&quot;Russell, William Ingraham&quot;,&quot;Businessmen -- New York (State) -- New York -- Biography&quot;],&quot;Primary&quot;:&quot;6163.txt&quot;,&quot;CreatorNames&quot;:[&quot;Russell, William Ingraham&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;6163&quot;});" class='title'>The Romance and Tragedy of a Widely Known Business Man of New York</a>
+<div class='author'>Russell, William Ingraham</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62005, {&quot;Title&quot;:&quot;An Account of the Ladies of Llangollen&quot;,&quot;Topics&quot;:[&quot;Butler, Eleanor, Lady, 1739-1829&quot;,&quot;Ponsonby, Sarah, 1755-1831&quot;,&quot;Women -- Wales -- Biography&quot;,&quot;Lesbians -- Wales -- Biography&quot;,&quot;Llangollen (Wales) -- History&quot;],&quot;Primary&quot;:&quot;62005.htm&quot;,&quot;CreatorNames&quot;:[&quot;Prichard, J. (John), 1796-1875&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;62005&quot;});" class='title'>An Account of the Ladies of Llangollen</a>
+<div class='author'>Prichard, J. (John), 1796-1875</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62216, {&quot;Title&quot;:&quot;La Nonne Alferez&quot;,&quot;Topics&quot;:[&quot;Latin America -- Biography&quot;,&quot;Spain -- Biography&quot;,&quot;Erauso, Catalina de, approximately 1592-&quot;],&quot;Primary&quot;:&quot;62216.htm&quot;,&quot;CreatorNames&quot;:[&quot;Erauso, Catalina de, 1592?-1650?&quot;,&quot;Vierge, Daniel, 1851-1904 [Illustrator]&quot;,&quot;Heredia, José-Maria de, 1842-1905 [Translator]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;62216&quot;});" class='title'>La Nonne Alferez</a>
+<div class='author'>Erauso, Catalina de, 1592?-1650?, Vierge, Daniel, 1851-1904 [Illustrator], Heredia, José-Maria de, 1842-1905 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63354, {&quot;Title&quot;:&quot;A Garden of Girls; Or, Famous Schoolgirls of Former Days&quot;,&quot;Topics&quot;:[&quot;Girls -- Biography&quot;,&quot;Catholic Church -- Education&quot;,&quot;Women -- Education -- History&quot;],&quot;Primary&quot;:&quot;63354.htm&quot;,&quot;CreatorNames&quot;:[&quot;Concannon, Thomas, Mrs., 1878-1952&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;63354&quot;});" class='title'>A Garden of Girls;<br><span class='subtitle'>Or, Famous Schoolgirls of Former Days</span></a>
+<div class='author'>Concannon, Thomas, Mrs., 1878-1952</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63748, {&quot;Title&quot;:&quot;Mary Boyle, Her Book&quot;,&quot;Topics&quot;:[&quot;Boyle, Mary Louisa, 1810-1890&quot;],&quot;Primary&quot;:&quot;63748.htm&quot;,&quot;CreatorNames&quot;:[&quot;Boyle, Mary Louisa, 1810-1890&quot;,&quot;Boyle, Courtenay, Sir, 1845-1901 [Editor]&quot;,&quot;Boyle, Muriel S. [Editor]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;63748&quot;});" class='title'>Mary Boyle, Her Book</a>
+<div class='author'>Boyle, Mary Louisa, 1810-1890, Boyle, Courtenay, Sir, 1845-1901 [Editor], Boyle, Muriel S. [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63781, {&quot;Title&quot;:&quot;A Group of Famous Women: stories of their lives&quot;,&quot;Topics&quot;:[&quot;Women -- Biography&quot;],&quot;Primary&quot;:&quot;63781.htm&quot;,&quot;CreatorNames&quot;:[&quot;Horton, Edith&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;63781&quot;});" class='title'>A Group of Famous Women:<br><span class='subtitle'>stories of their lives</span></a>
+<div class='author'>Horton, Edith</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6449, {&quot;Title&quot;:&quot;Little Journeys to the Homes of the Great - Volume 09 - Little Journeys to the Homes of Great Reformers&quot;,&quot;Topics&quot;:[&quot;Reformers&quot;],&quot;Primary&quot;:&quot;6449.txt&quot;,&quot;CreatorNames&quot;:[&quot;Hubbard, Elbert, 1856-1915&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;6449&quot;});" class='title'>Little Journeys to the Homes of the Great -<br><span class='subtitle'>Volume 09 - Little Journeys to the Homes of Great Reformers</span></a>
+<div class='author'>Hubbard, Elbert, 1856-1915</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6492, {&quot;Title&quot;:&quot;Biographies of Working Men&quot;,&quot;Topics&quot;:[&quot;Labor -- Biography&quot;,&quot;Biography -- 19th century&quot;,&quot;Working class -- Biography&quot;],&quot;Primary&quot;:&quot;6492.htm&quot;,&quot;CreatorNames&quot;:[&quot;Allen, Grant, 1848-1899&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;HD&quot;],&quot;PG_ID&quot;:&quot;6492&quot;});" class='title'>Biographies of Working Men</a>
+<div class='author'>Allen, Grant, 1848-1899</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6500, {&quot;Title&quot;:&quot;The Log-Cabin Lady — An Anonymous Autobiography&quot;,&quot;Topics&quot;:[&quot;Women -- United States -- Biography&quot;,&quot;Americans -- Great Britain -- Biography&quot;,&quot;United States -- History -- 1901-1953&quot;,&quot;Great Britain -- History -- George V, 1910-1936&quot;,&quot;Great Britain -- History -- Edward VII, 1901-1910&quot;],&quot;Primary&quot;:&quot;6500.htm&quot;,&quot;CreatorNames&quot;:[&quot;Meloney, Marie Mattingly, 1883-1943 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;6500&quot;});" class='title'>The Log-Cabin Lady — An Anonymous Autobiography</a>
+<div class='author'>Meloney, Marie Mattingly, 1883-1943 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65030, {&quot;Title&quot;:&quot;Eminent literary and scientific men of Italy, Spain, and Portugal. Vol. 1 (of 3)&quot;,&quot;Topics&quot;:[&quot;Authors -- Biography&quot;,&quot;Scientists -- Biography&quot;],&quot;Primary&quot;:&quot;65030.htm&quot;,&quot;CreatorNames&quot;:[&quot;Montgomery, James&quot;,&quot;Shelley, Mary Wollstonecraft, 1797-1851&quot;,&quot;Lardner, Dionysius, 1793-1859 [Editor]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;65030&quot;});" class='title'>Eminent literary and scientific men of Italy, Spain, and Portugal. Vol. 1 (of 3)</a>
+<div class='author'>Montgomery, James, Shelley, Mary Wollstonecraft, 1797-1851, Lardner, Dionysius, 1793-1859 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65110, {&quot;Title&quot;:&quot;Eminent literary and scientific men of Italy, Spain, and Portugal. Vol. 2 (of 3)&quot;,&quot;Topics&quot;:[&quot;Authors -- Biography&quot;,&quot;Scientists -- Biography&quot;],&quot;Primary&quot;:&quot;65110.htm&quot;,&quot;CreatorNames&quot;:[&quot;Montgomery, James&quot;,&quot;Shelley, Mary Wollstonecraft, 1797-1851&quot;,&quot;Lardner, Dionysius, 1793-1859 [Editor]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;65110&quot;});" class='title'>Eminent literary and scientific men of Italy, Spain, and Portugal. Vol. 2 (of 3)</a>
+<div class='author'>Montgomery, James, Shelley, Mary Wollstonecraft, 1797-1851, Lardner, Dionysius, 1793-1859 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65228, {&quot;Title&quot;:&quot;Eminent literary and scientific men of Italy, Spain, and Portugal. Vol. 3 (of 3)&quot;,&quot;Topics&quot;:[&quot;Authors -- Biography&quot;,&quot;Scientists -- Biography&quot;],&quot;Primary&quot;:&quot;65228.htm&quot;,&quot;CreatorNames&quot;:[&quot;Montgomery, James&quot;,&quot;Shelley, Mary Wollstonecraft, 1797-1851&quot;,&quot;Lardner, Dionysius, 1793-1859 [Editor]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;65228&quot;});" class='title'>Eminent literary and scientific men of Italy, Spain, and Portugal. Vol. 3 (of 3)</a>
+<div class='author'>Montgomery, James, Shelley, Mary Wollstonecraft, 1797-1851, Lardner, Dionysius, 1793-1859 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65267, {&quot;Title&quot;:&quot;Rebels and Reformers: Biographies for Young People&quot;,&quot;Topics&quot;:[&quot;Reformers&quot;],&quot;Primary&quot;:&quot;65267.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ponsonby, Arthur Ponsonby, Baron, 1871-1946&quot;,&quot;Ponsonby, Dorothea, 1876-1963&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;65267&quot;});" class='title'>Rebels and Reformers:<br><span class='subtitle'>Biographies for Young People</span></a>
+<div class='author'>Ponsonby, Arthur Ponsonby, Baron, 1871-1946, Ponsonby, Dorothea, 1876-1963</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65815, {&quot;Title&quot;:&quot;Vidas Ejemplares: Beethoven—Miguel Ángel—Tolstoi&quot;,&quot;Topics&quot;:[&quot;Tolstoy, Leo, graf, 1828-1910&quot;,&quot;Beethoven, Ludwig van, 1770-1827&quot;,&quot;Michelangelo Buonarroti, 1475-1564&quot;],&quot;Primary&quot;:&quot;65815.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rolland, Romain, 1866-1944&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;65815&quot;});" class='title'>Vidas Ejemplares:<br><span class='subtitle'>Beethoven—Miguel Ángel—Tolstoi</span></a>
+<div class='author'>Rolland, Romain, 1866-1944</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65940, {&quot;Title&quot;:&quot;Colonel Sion S. Bass, 1827-1862&quot;,&quot;Topics&quot;:[&quot;Bass, Sion St. Clair, 1827-1862&quot;],&quot;Primary&quot;:&quot;65940.htm&quot;,&quot;CreatorNames&quot;:[&quot;Public Library of Fort Wayne and Allen County&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;E&quot;],&quot;PG_ID&quot;:&quot;65940&quot;});" class='title'>Colonel Sion S. Bass, 1827-1862</a>
+<div class='author'>Public Library of Fort Wayne and Allen County</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66117, {&quot;Title&quot;:&quot;Trois hommes: Pascal, Ibsen, Dostoïevski&quot;,&quot;Topics&quot;:[&quot;Pascal, Blaise, 1623-1662&quot;,&quot;Ibsen, Henrik, 1828-1906&quot;,&quot;Dostoyevsky, Fyodor, 1821-1881&quot;],&quot;Primary&quot;:&quot;66117.htm&quot;,&quot;CreatorNames&quot;:[&quot;Suarès, André, 1868-1948&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;66117&quot;});" class='title'>Trois hommes:<br><span class='subtitle'>Pascal, Ibsen, Dostoïevski</span></a>
+<div class='author'>Suarès, André, 1868-1948</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66148, {&quot;Title&quot;:&quot;The Wizard of Wall Street and His Wealth; or, The Life and Deeds of Jay Gould&quot;,&quot;Topics&quot;:[&quot;Businessmen -- United States -- Biography&quot;,&quot;Gould, Jay, 1836-1892&quot;,&quot;Capitalists and financiers -- United States -- Biography&quot;],&quot;Primary&quot;:&quot;66148.htm&quot;,&quot;CreatorNames&quot;:[&quot;White, Trumbull, 1868-1941&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;66148&quot;});" class='title'>The Wizard of Wall Street and His Wealth;<br><span class='subtitle'>or, The Life and Deeds of Jay Gould</span></a>
+<div class='author'>White, Trumbull, 1868-1941</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66460, {&quot;Title&quot;:&quot;The Book of Gallant Vagabonds&quot;,&quot;Topics&quot;:[&quot;Bruce, James, 1730-1794&quot;,&quot;Adventure and adventurers -- Biography&quot;,&quot;Ledyard, John, 1751-1789&quot;,&quot;Belzoni, Giovanni Battista, 1778-1823&quot;,&quot;Trelawny, Edward John, 1792-1881&quot;,&quot;Morton, Thomas, 1575-1646&quot;,&quot;Rimbaud, Arthur, 1854-1891&quot;],&quot;Primary&quot;:&quot;66460.htm&quot;,&quot;CreatorNames&quot;:[&quot;Beston, Henry, 1888-1968&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;66460&quot;});" class='title'>The Book of Gallant Vagabonds</a>
+<div class='author'>Beston, Henry, 1888-1968</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66717, {&quot;Title&quot;:&quot;A Life Unveiled, by a Child of the Drumlins&quot;,&quot;Topics&quot;:[&quot;Girls -- Biography&quot;,&quot;Women physicians -- United States -- Biography&quot;,&quot;Young women -- Biography&quot;],&quot;Primary&quot;:&quot;66717.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;,&quot;Burroughs, John, 1837-1921 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;66717&quot;});" class='title'>A Life Unveiled, by a Child of the Drumlins</a>
+<div class='author'>Anonymous, Burroughs, John, 1837-1921 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66908, {&quot;Title&quot;:&quot;Letters of the Late Ignatius Sancho, an African - To Which Are Prefixed, Memoirs of His Life&quot;,&quot;Topics&quot;:[&quot;Sancho, Ignatius, 1729-1780 -- Correspondence&quot;,&quot;Sancho, Ignatius, 1729-1780&quot;,&quot;Composers, Black -- England -- London -- Correspondence&quot;,&quot;Africans -- England -- London -- History -- 18th century&quot;,&quot;Black people -- England -- London -- History -- 18th century&quot;,&quot;Grocers -- England -- London -- Correspondence&quot;,&quot;Westminster (London, England) -- Social life and customs&quot;,&quot;London (England) -- Race relations -- History -- 18th century&quot;],&quot;Primary&quot;:&quot;66908.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sancho, Ignatius, 1729-1780&quot;,&quot;Jekyll, Joseph, 1754-1837 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;66908&quot;});" class='title'>Letters of the Late Ignatius Sancho, an African -<br><span class='subtitle'>To Which Are Prefixed, Memoirs of His Life</span></a>
+<div class='author'>Sancho, Ignatius, 1729-1780, Jekyll, Joseph, 1754-1837 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67328, {&quot;Title&quot;:&quot;The Life of That Wonderful and Extraordinarily Heavy Man, Daniel Lambert - From His Birth to the Moment of His Dissolution; With an Account of Men Noted for Their Corpulency, and Other Interesting Matter&quot;,&quot;Topics&quot;:[&quot;Obesity&quot;,&quot;Chapbooks&quot;,&quot;Lambert, Daniel, 1770-1809&quot;],&quot;Primary&quot;:&quot;67328.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;67328&quot;});" class='title'>The Life of That Wonderful and Extraordinarily Heavy Man, Daniel Lambert -<br><span class='subtitle'>From His Birth to the Moment of His Dissolution; With an Account of Men Noted for Their Corpulency, and Other Interesting Matter</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68655, {&quot;Title&quot;:&quot;Six modern women: Psychological sketches&quot;,&quot;Topics&quot;:[&quot;Bashkirtseff, Marie, 1860-1884&quot;,&quot;Women -- Biography&quot;,&quot;Kovalevskaia, S. V. (Sofia Vasilevna), 1850-1891&quot;,&quot;Egerton, George, 1859-1945&quot;,&quot;Duse, Eleonora, 1858-1924&quot;,&quot;Skram, Amalie, 1846-1905&quot;,&quot;Leffler, Anne Charlotte, 1849-1892&quot;],&quot;Primary&quot;:&quot;68655.htm&quot;,&quot;CreatorNames&quot;:[&quot;Marholm, Laura, 1854-1928&quot;,&quot;Ramsden, Hermione Charlotte, 1867-1951 [Translator]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;68655&quot;});" class='title'>Six modern women:<br><span class='subtitle'>Psychological sketches</span></a>
+<div class='author'>Marholm, Laura, 1854-1928, Ramsden, Hermione Charlotte, 1867-1951 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69595, {&quot;Title&quot;:&quot;The life of John Metcalf, commonly called Blind Jack of Knaresborough - with ... anecdotes of his exploits in hunting, card-playing, &amp;c., some particulars relative to the expedition against the rebels in 1745 ...; and also a succinct account of his various contracts for making roads, erecting bridges ... in Yorkshire, Lancashire, Derbyshire, and Cheshire ...&quot;,&quot;Topics&quot;:[&quot;Jacobite Rebellion, 1745-1746&quot;,&quot;Metcalf, John, 1717-1810&quot;,&quot;Highway engineers -- England -- Biography&quot;,&quot;Blind -- England -- Biography&quot;],&quot;Primary&quot;:&quot;69595.htm&quot;,&quot;CreatorNames&quot;:[&quot;Metcalf, John, 1717-1810&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;69595&quot;});" class='title'>The life of John Metcalf, commonly called Blind Jack of Knaresborough -<br><span class='subtitle'>with ... anecdotes of his exploits in hunting, card-playing, &c., some particulars relative to the expedition against the rebels in 1745 ...; and also a succinct account of his various contracts for making roads, erecting bridges ... in Yorkshire, Lancashire, Derbyshire, and Cheshire ...</span></a>
+<div class='author'>Metcalf, John, 1717-1810</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69994, {&quot;Title&quot;:&quot;The triumphs of perseverance and enterprise, recorded as examples for the young&quot;,&quot;Topics&quot;:[&quot;Biography&quot;],&quot;Primary&quot;:&quot;69994.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cooper, Thomas, 1805-1892&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;69994&quot;});" class='title'>The triumphs of perseverance and enterprise, recorded as examples for the young</a>
+<div class='author'>Cooper, Thomas, 1805-1892</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7049, {&quot;Title&quot;:&quot;Rückblicke&quot;,&quot;Topics&quot;:[&quot;Autobiographies&quot;,&quot;Authors, German -- 20th century&quot;,&quot;Jews -- Biography&quot;,&quot;Germany -- Emigration and immigration&quot;],&quot;Primary&quot;:&quot;7049.txt&quot;,&quot;CreatorNames&quot;:[&quot;Grünfeld, Walter, 1908-1988&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;PT&quot;],&quot;PG_ID&quot;:&quot;7049&quot;});" class='title'>Rückblicke</a>
+<div class='author'>Grünfeld, Walter, 1908-1988</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7202, {&quot;Title&quot;:&quot;Ecce homo, Wie man wird, was man ist&quot;,&quot;Topics&quot;:[&quot;Autobiographies&quot;,&quot;Philosophy, German&quot;,&quot;Nietzsche, Friedrich Wilhelm, 1844-1900&quot;,&quot;Philosophers -- Germany -- Biography&quot;],&quot;Primary&quot;:&quot;7202.txt&quot;,&quot;CreatorNames&quot;:[&quot;Nietzsche, Friedrich Wilhelm, 1844-1900&quot;],&quot;LoCC&quot;:[&quot;B&quot;,&quot;CT&quot;],&quot;PG_ID&quot;:&quot;7202&quot;});" class='title'>Ecce homo, Wie man wird, was man ist</a>
+<div class='author'>Nietzsche, Friedrich Wilhelm, 1844-1900</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7305, {&quot;Title&quot;:&quot;Memoir and Letters of Francis W. Newman&quot;,&quot;Topics&quot;:[&quot;Newman, Francis William, 1805-1897&quot;],&quot;Primary&quot;:&quot;7305.txt&quot;,&quot;CreatorNames&quot;:[&quot;Sieveking, I. Giberne (Isabel Giberne)&quot;,&quot;Newman, Francis William, 1805-1897 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;],&quot;PG_ID&quot;:&quot;7305&quot;});" class='title'>Memoir and Letters of Francis W. Newman</a>
+<div class='author'>Sieveking, I. Giberne (Isabel Giberne), Newman, Francis William, 1805-1897 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(8160, {&quot;Title&quot;:&quot;Recollections of My Childhood and Youth&quot;,&quot;Topics&quot;:[&quot;Autobiographies&quot;,&quot;Brandes, Georg, 1842-1927 -- Childhood and youth&quot;],&quot;Primary&quot;:&quot;8160.htm&quot;,&quot;CreatorNames&quot;:[&quot;Brandes, Georg, 1842-1927&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;PT&quot;],&quot;PG_ID&quot;:&quot;8160&quot;});" class='title'>Recollections of My Childhood and Youth</a>
+<div class='author'>Brandes, Georg, 1842-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(9548, {&quot;Title&quot;:&quot;Honore de Balzac, His Life and Writings&quot;,&quot;Topics&quot;:[&quot;Balzac, Honoré de, 1799-1850&quot;,&quot;Novelists, French -- 19th century -- Biography&quot;],&quot;Primary&quot;:&quot;9548.txt&quot;,&quot;CreatorNames&quot;:[&quot;Sandars, Mary Frances, 1864-&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;PQ&quot;],&quot;PG_ID&quot;:&quot;9548&quot;});" class='title'>Honore de Balzac, His Life and Writings</a>
+<div class='author'>Sandars, Mary Frances, 1864-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(9591, {&quot;Title&quot;:&quot;Old Portraits and Modern Sketches - Part 1 from Volume VI of The Works of John Greenleaf Whittier&quot;,&quot;Topics&quot;:[&quot;Biography&quot;],&quot;Primary&quot;:&quot;9591.txt&quot;,&quot;CreatorNames&quot;:[&quot;Whittier, John Greenleaf, 1807-1892&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;PS&quot;],&quot;PG_ID&quot;:&quot;9591&quot;});" class='title'>Old Portraits and Modern Sketches -<br><span class='subtitle'>Part 1 from Volume VI of The Works of John Greenleaf Whittier</span></a>
+<div class='author'>Whittier, John Greenleaf, 1807-1892</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(9592, {&quot;Title&quot;:&quot;Personal Sketches and Tributes - Part 2 from Volume VI of The Works of John Greenleaf Whittier&quot;,&quot;Topics&quot;:[&quot;Biography&quot;],&quot;Primary&quot;:&quot;9592.txt&quot;,&quot;CreatorNames&quot;:[&quot;Whittier, John Greenleaf, 1807-1892&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;PS&quot;],&quot;PG_ID&quot;:&quot;9592&quot;});" class='title'>Personal Sketches and Tributes -<br><span class='subtitle'>Part 2 from Volume VI of The Works of John Greenleaf Whittier</span></a>
+<div class='author'>Whittier, John Greenleaf, 1807-1892</div>
+</div>
+</ul></div>
+</body></html>

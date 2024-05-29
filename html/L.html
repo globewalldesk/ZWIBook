@@ -1,0 +1,90 @@
+<html>
+<head>
+<title>Category</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+<!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+      <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+      <button id="findButton">Find</button>
+  </div>
+</div>
+<div id="header">
+  <div id="header-content">
+    <div class="header-container">
+      <a id="backBtn" class="header-btn" href="#">
+          <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+      </a>
+      <a id="search" class="header-btn" href="../search.html">
+          <img src="../images/icons/search.svg" title="Search book titles">
+      </a>
+    </div>
+    <h1 id="headTitle">Category: Education (L)</h1>
+    <div class="header-container">
+      <a id="sortBtn" class="header-btn" href="#">
+        <img src="../images/icons/sort.svg" title="Re-sort books">
+      </a>
+      <div id="sortDropdown" class="dropdown" style="display: none">
+        <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+        <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+        <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+        <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+      </div>
+      <a class="header-btn" href="categories.html">
+        <img src="../images/icons/categories.svg" title="Browse categories">
+      </a>
+      <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+          <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+      </a>
+    </div>
+  </div>
+</div>
+<div id="body">
+<ul>
+<li><a href='LA.html'>History of Education (LA)</a> <span class='count'>60</span></li>
+<li><a href='LB.html'>Theory and practice of education (LB)</a> <span class='count'>167</span></li>
+<li><a href='LC.html'>Special aspects of education (LC)</a> <span class='count'>53</span></li>
+<li><a href='LD.html'>Individual institutions - United States (LD)</a> <span class='count'>17</span></li>
+<li><a href='LE.html'>Individual institutions - America outside of U.S. (LE)</a> <span class='count'>1</span></li>
+<li><a href='LF.html'>Individual institutions - Europe (LF)</a> <span class='count'>35</span></li>
+<li><a href='LH.html'>College and school magazines and papers (LH)</a> <span class='count'>7</span></li>
+<li><a href='LT.html'>Textbooks (LT)</a> <span class='count'>10</span></li>
+<p>&nbsp;</p>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22578, {&quot;Title&quot;:&quot;The Girl and the Kingdom - Learning to Teach&quot;,&quot;Topics&quot;:[&quot;Kindergarten -- California -- San Francisco&quot;],&quot;Primary&quot;:&quot;22578.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wiggin, Kate Douglas Smith, 1856-1923&quot;],&quot;LoCC&quot;:[&quot;L&quot;],&quot;PG_ID&quot;:&quot;22578&quot;});" class='title'>The Girl and the Kingdom -<br><span class='subtitle'>Learning to Teach</span></a>
+<div class='author'>Wiggin, Kate Douglas Smith, 1856-1923</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26336, {&quot;Title&quot;:&quot;Rapport sur l&#39;Instruction Publique, les 10, 11 et 19 Septembre 1791 - fait au nom du Comité de Constitution à l&#39;Assemblée Nationale&quot;,&quot;Topics&quot;:[&quot;France -- Politics and government -- 1789-1900&quot;,&quot;Education -- France&quot;,&quot;Educational law and legislation -- France&quot;],&quot;Primary&quot;:&quot;26336.htm&quot;,&quot;CreatorNames&quot;:[&quot;Talleyrand-Périgord, Charles Maurice de, prince de Bénévent, 1754-1838&quot;],&quot;LoCC&quot;:[&quot;L&quot;],&quot;PG_ID&quot;:&quot;26336&quot;});" class='title'>Rapport sur l'Instruction Publique, les 10, 11 et 19 Septembre 1791 -<br><span class='subtitle'>fait au nom du Comité de Constitution à l'Assemblée Nationale</span></a>
+<div class='author'>Talleyrand-Périgord, Charles Maurice de, prince de Bénévent, 1754-1838</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27833, {&quot;Title&quot;:&quot;Paedagogische Overwegingen&quot;,&quot;Topics&quot;:[&quot;Education&quot;],&quot;Primary&quot;:&quot;27833.htm&quot;,&quot;CreatorNames&quot;:[&quot;Asscher, Eva Wilhelmina, 1867-1940&quot;,&quot;Gunning, J. H., 1859-1951 [Commentator]&quot;],&quot;LoCC&quot;:[&quot;L&quot;],&quot;PG_ID&quot;:&quot;27833&quot;});" class='title'>Paedagogische Overwegingen</a>
+<div class='author'>Asscher, Eva Wilhelmina, 1867-1940, Gunning, J. H., 1859-1951 [Commentator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29147, {&quot;Title&quot;:&quot;Educational Work of the Boy Scouts&quot;,&quot;Topics&quot;:[&quot;Boy Scouts -- United States&quot;],&quot;Primary&quot;:&quot;29147.htm&quot;,&quot;CreatorNames&quot;:[&quot;Barclay, Lorne W. (Lorne Webster), 1885-&quot;],&quot;LoCC&quot;:[&quot;L&quot;,&quot;HS&quot;],&quot;PG_ID&quot;:&quot;29147&quot;});" class='title'>Educational Work of the Boy Scouts</a>
+<div class='author'>Barclay, Lorne W. (Lorne Webster), 1885-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33817, {&quot;Title&quot;:&quot;Ensino intuitivo - livro destinado às mães e paes de familia e às professoras e professores de instrucção primária&quot;,&quot;Topics&quot;:[&quot;Education&quot;],&quot;Primary&quot;:&quot;33817.htm&quot;,&quot;CreatorNames&quot;:[&quot;Telles, João José de Sousa, 1826-1903&quot;],&quot;LoCC&quot;:[&quot;L&quot;],&quot;PG_ID&quot;:&quot;33817&quot;});" class='title'>Ensino intuitivo -<br><span class='subtitle'>livro destinado às mães e paes de familia e às professoras e professores de instrucção primária</span></a>
+<div class='author'>Telles, João José de Sousa, 1826-1903</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67803, {&quot;Title&quot;:&quot;A List of Philippine Baptismal Names&quot;,&quot;Topics&quot;:[&quot;Names, Personal -- Philippine&quot;],&quot;Primary&quot;:&quot;67803.htm&quot;,&quot;CreatorNames&quot;:[&quot;Barrows, David P., 1873-1954 [Author of introduction, etc.]&quot;,&quot;Schneider, Edwin Emil, 1870- [Compiler]&quot;,&quot;Christie, Emerson Brewer [Editor]&quot;],&quot;LoCC&quot;:[&quot;L&quot;],&quot;PG_ID&quot;:&quot;67803&quot;});" class='title'>A List of Philippine Baptismal Names</a>
+<div class='author'>Barrows, David P., 1873-1954 [Author of introduction, etc.], Schneider, Edwin Emil, 1870- [Compiler], Christie, Emerson Brewer [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68716, {&quot;Title&quot;:&quot;Some phases of educational progress in Latin America&quot;,&quot;Topics&quot;:[&quot;Education -- Latin America&quot;],&quot;Primary&quot;:&quot;68716.htm&quot;,&quot;CreatorNames&quot;:[&quot;Montgomery, Walter A. (Walter Alexander), 1872-1949&quot;],&quot;LoCC&quot;:[&quot;L&quot;],&quot;PG_ID&quot;:&quot;68716&quot;});" class='title'>Some phases of educational progress in Latin America</a>
+<div class='author'>Montgomery, Walter A. (Walter Alexander), 1872-1949</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(9160, {&quot;Title&quot;:&quot;Die Erziehung des Menschengeschlechts&quot;,&quot;Topics&quot;:[&quot;Education -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;9160.txt&quot;,&quot;CreatorNames&quot;:[&quot;Lessing, Gotthold Ephraim, 1729-1781&quot;],&quot;LoCC&quot;:[&quot;BD&quot;,&quot;L&quot;],&quot;PG_ID&quot;:&quot;9160&quot;});" class='title'>Die Erziehung des Menschengeschlechts</a>
+<div class='author'>Lessing, Gotthold Ephraim, 1729-1781</div>
+</div>
+</ul></div>
+</body></html>

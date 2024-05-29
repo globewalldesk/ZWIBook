@@ -1,0 +1,914 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Oceania (South Seas - Australia, New Zealand, Polynesia) (DU)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(10461, {&quot;Title&quot;:&quot;Journals of Australian Explorations&quot;,&quot;Topics&quot;:[&quot;Australia -- Discovery and exploration&quot;],&quot;Primary&quot;:&quot;10461.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gregory, Augustus Charles, 1819-1905&quot;,&quot;Gregory, Francis Thomas, 1821-1888&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;10461&quot;});" class='title'>Journals of Australian Explorations</a>
+<div class='author'>Gregory, Augustus Charles, 1819-1905, Gregory, Francis Thomas, 1821-1888</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(10840, {&quot;Title&quot;:&quot;The Explorers of Australia and their Life-work&quot;,&quot;Topics&quot;:[&quot;Australia -- Discovery and exploration&quot;,&quot;Explorers&quot;],&quot;Primary&quot;:&quot;10840.htm&quot;,&quot;CreatorNames&quot;:[&quot;Favenc, Ernest, 1846-1908&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;10840&quot;});" class='title'>The Explorers of Australia and their Life-work</a>
+<div class='author'>Favenc, Ernest, 1846-1908</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(11203, {&quot;Title&quot;:&quot;Narrative of a Survey of the Intertropical and Western Coasts of Australia — Vol. 1 - Performed between the years 1818 and 1822&quot;,&quot;Topics&quot;:[&quot;Australia -- Description and travel&quot;,&quot;Natural history -- Australia&quot;],&quot;Primary&quot;:&quot;11203.htm&quot;,&quot;CreatorNames&quot;:[&quot;King, Philip Parker, 1793-1856&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;11203&quot;});" class='title'>Narrative of a Survey of the Intertropical and Western Coasts of Australia — Vol. 1 -<br><span class='subtitle'>Performed between the years 1818 and 1822</span></a>
+<div class='author'>King, Philip Parker, 1793-1856</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(11400, {&quot;Title&quot;:&quot;Mystic Isles of the South Seas.&quot;,&quot;Topics&quot;:[&quot;Tahiti (French Polynesia : Island) -- Description and travel&quot;],&quot;Primary&quot;:&quot;11400.htm&quot;,&quot;CreatorNames&quot;:[&quot;O&#39;Brien, Frederick, 1869-1932&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;11400&quot;});" class='title'>Mystic Isles of the South Seas.</a>
+<div class='author'>O'Brien, Frederick, 1869-1932</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(11933, {&quot;Title&quot;:&quot;A Narrative of a Nine Months&#39; Residence in New Zealand in 1827&quot;,&quot;Topics&quot;:[&quot;New Zealand -- Description and travel&quot;],&quot;Primary&quot;:&quot;11933.htm&quot;,&quot;CreatorNames&quot;:[&quot;Earle, Augustus, 1793-1838&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;11933&quot;});" class='title'>A Narrative of a Nine Months' Residence in New Zealand in 1827</a>
+<div class='author'>Earle, Augustus, 1793-1838</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12046, {&quot;Title&quot;:&quot;Narrative of a Survey of the Intertropical and Western Coasts of Australia — Vol. 2 - Performed between the years 1818 and 1822&quot;,&quot;Topics&quot;:[&quot;Australia -- Description and travel&quot;,&quot;Natural history -- Australia&quot;],&quot;Primary&quot;:&quot;12046.htm&quot;,&quot;CreatorNames&quot;:[&quot;King, Philip Parker, 1793-1856&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;12046&quot;});" class='title'>Narrative of a Survey of the Intertropical and Western Coasts of Australia — Vol. 2 -<br><span class='subtitle'>Performed between the years 1818 and 1822</span></a>
+<div class='author'>King, Philip Parker, 1793-1856</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12115, {&quot;Title&quot;:&quot;Discoveries in Australia, Volume 1. - With an Account of the Coasts and Rivers Explored and Surveyed During - The Voyage of H.M.S. Beagle, in the Years 1837-38-39-40-41-42-43. - By Command of the Lords Commissioners of the Admiralty. Also a Narrative - Of Captain Owen Stanley&#39;s Visits to the Islands in the Arafura Sea.&quot;,&quot;Topics&quot;:[&quot;Australia -- Description and travel&quot;,&quot;Australia -- Discovery and exploration&quot;,&quot;Natural history -- Australia&quot;],&quot;Primary&quot;:&quot;12115.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stokes, John Lort, 1811-1885&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;12115&quot;});" class='title'>Discoveries in Australia, Volume 1. -<br><span class='subtitle'>With an Account of the Coasts and Rivers Explored and Surveyed During - The Voyage of H.M.S. Beagle, in the Years 1837-38-39-40-41-42-43. - By Command of the Lords Commissioners of the Admiralty. Also a Narrative - Of Captain Owen Stanley's Visits to the Islands in the Arafura Sea.</span></a>
+<div class='author'>Stokes, John Lort, 1811-1885</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12146, {&quot;Title&quot;:&quot;Discoveries in Australia, Volume 2 - Discoveries in Australia; with an Account of the Coasts and Rivers - Explored and Surveyed During the Voyage of H.M.S. Beagle, in The - Years 1837-38-39-40-41-42-43. By Command of the Lords Commissioners - Of the Admiralty. Also a Narrative of Captain Owen Stanley&#39;s Visits - To the Islands in the Arafura Sea&quot;,&quot;Topics&quot;:[&quot;Australia -- Description and travel&quot;,&quot;Australia -- Discovery and exploration&quot;,&quot;Natural history -- Australia&quot;],&quot;Primary&quot;:&quot;12146.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stokes, John Lort, 1811-1885&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;12146&quot;});" class='title'>Discoveries in Australia, Volume 2 -<br><span class='subtitle'>Discoveries in Australia; with an Account of the Coasts and Rivers - Explored and Surveyed During the Voyage of H.M.S. Beagle, in The - Years 1837-38-39-40-41-42-43. By Command of the Lords Commissioners - Of the Admiralty. Also a Narrative of Captain Owen Stanley's Visits - To the Islands in the Arafura Sea</span></a>
+<div class='author'>Stokes, John Lort, 1811-1885</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12411, {&quot;Title&quot;:&quot;The Long White Cloud: \&quot;\&quot;Ao Tea Roa\&quot;\&quot;&quot;,&quot;Topics&quot;:[&quot;Ethnology -- New Zealand&quot;,&quot;New Zealand&quot;],&quot;Primary&quot;:&quot;12411.htm&quot;,&quot;CreatorNames&quot;:[&quot;Reeves, William Pember, 1857-1932&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;12411&quot;});" class='title'>The Long White Cloud:<br><span class='subtitle'>"Ao Tea Roa"</span></a>
+<div class='author'>Reeves, William Pember, 1857-1932</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12433, {&quot;Title&quot;:&quot;Narrative of the Voyage of H.M.S. Rattlesnake, Commanded By the Late Captain Owen Stanley, R.N., F.R.S. Etc. During the Years 1846-1850. — Volume 1 - Including Discoveries and Surveys in New Guinea, the Louisiade Archipelago, Etc. to Which Is Added the Account of Mr. E.B. Kennedy&#39;s Expedition for the Exploration of the Cape York Peninsula. By John Macgillivray, F.R.G.S. Naturalist to the Expedition.&quot;,&quot;Topics&quot;:[&quot;Oceania -- Description and travel&quot;,&quot;Kennedy, Edmund Besley Court, 1818-1848&quot;,&quot;Stanley, Owen&quot;,&quot;Rattlesnake (Ship)&quot;,&quot;Natural history -- Oceania&quot;],&quot;Primary&quot;:&quot;12433.htm&quot;,&quot;CreatorNames&quot;:[&quot;MacGillivray, John, 1822-1867&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;12433&quot;});" class='title'>Narrative of the Voyage of H.M.S. Rattlesnake, Commanded By the Late Captain Owen Stanley, R.N., F.R.S. Etc. During the Years 1846-1850. — Volume 1 -<br><span class='subtitle'>Including Discoveries and Surveys in New Guinea, the Louisiade Archipelago, Etc. to Which Is Added the Account of Mr. E.B. Kennedy's Expedition for the Exploration of the Cape York Peninsula. By John Macgillivray, F.R.G.S. Naturalist to the Expedition.</span></a>
+<div class='author'>MacGillivray, John, 1822-1867</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12525, {&quot;Title&quot;:&quot;Narrative of the Voyage of H.M.S. Rattlesnake, Commanded By the Late Captain Owen Stanley, R.N., F.R.S. Etc. During the Years 1846-1850. — Volume 2 - Including Discoveries and Surveys in New Guinea, the Louisiade Archipelago, Etc. to Which Is Added the Account of Mr. E.B. Kennedy&#39;s Expedition for the Exploration of the Cape York Peninsula. By John Macgillivray, F.R.G.S. Naturalist to the Expedition.&quot;,&quot;Topics&quot;:[&quot;Oceania -- Description and travel&quot;,&quot;Kennedy, Edmund Besley Court, 1818-1848&quot;,&quot;Stanley, Owen&quot;,&quot;Rattlesnake (Ship)&quot;,&quot;Natural history -- Oceania&quot;],&quot;Primary&quot;:&quot;12525.htm&quot;,&quot;CreatorNames&quot;:[&quot;MacGillivray, John, 1822-1867&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;12525&quot;});" class='title'>Narrative of the Voyage of H.M.S. Rattlesnake, Commanded By the Late Captain Owen Stanley, R.N., F.R.S. Etc. During the Years 1846-1850. — Volume 2 -<br><span class='subtitle'>Including Discoveries and Surveys in New Guinea, the Louisiade Archipelago, Etc. to Which Is Added the Account of Mr. E.B. Kennedy's Expedition for the Exploration of the Cape York Peninsula. By John Macgillivray, F.R.G.S. Naturalist to the Expedition.</span></a>
+<div class='author'>MacGillivray, John, 1822-1867</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12565, {&quot;Title&quot;:&quot;An Account of the English Colony in New South Wales, Volume 1 - With Remarks on the Dispositions, Customs, Manners, Etc. of The - Native Inhabitants of That Country. to Which Are Added, Some - Particulars of New Zealand; Compiled, By Permission, From - The Mss.         of Lieutenant-Governor King.&quot;,&quot;Topics&quot;:[&quot;New South Wales -- Description and travel&quot;],&quot;Primary&quot;:&quot;12565.htm&quot;,&quot;CreatorNames&quot;:[&quot;Collins, David, 1756-1810&quot;,&quot;King, Philip Gidley, 1758-1808&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;12565&quot;});" class='title'>An Account of the English Colony in New South Wales, Volume 1 -<br><span class='subtitle'>With Remarks on the Dispositions, Customs, Manners, Etc. of The - Native Inhabitants of That Country. to Which Are Added, Some - Particulars of New Zealand; Compiled, By Permission, From - The Mss.         of Lieutenant-Governor King.</span></a>
+<div class='author'>Collins, David, 1756-1810, King, Philip Gidley, 1758-1808</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12668, {&quot;Title&quot;:&quot;An Account of the English Colony in New South Wales, Volume 2 - An Account Of The English Colony In New South Wales, From Its First Settlement In 1788, To August 1801: With Remarks On The Dispositions, Customs, Manners, Etc. Of The Native Inhabitants Of That Country. To Which Are Added, Some Particulars Of New Zealand; Compiled, By Permission, From The Mss. Of Lieutenant-Governor King; And An Account Of The Voyage Performed By Captain Flinders And Mr. Bass.&quot;,&quot;Topics&quot;:[&quot;New South Wales -- Description and travel&quot;],&quot;Primary&quot;:&quot;12668.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bass, George, 1771-1803&quot;,&quot;Collins, David, 1756-1810&quot;,&quot;King, Philip Gidley, 1758-1808&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;12668&quot;});" class='title'>An Account of the English Colony in New South Wales, Volume 2 -<br><span class='subtitle'>An Account Of The English Colony In New South Wales, From Its First Settlement In 1788, To August 1801: With Remarks On The Dispositions, Customs, Manners, Etc. Of The Native Inhabitants Of That Country. To Which Are Added, Some Particulars Of New Zealand; Compiled, By Permission, From The Mss. Of Lieutenant-Governor King; And An Account Of The Voyage Performed By Captain Flinders And Mr. Bass.</span></a>
+<div class='author'>Bass, George, 1771-1803, Collins, David, 1756-1810, King, Philip Gidley, 1758-1808</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12928, {&quot;Title&quot;:&quot;Three Expeditions into the Interior of Eastern Australia, Volume 1 - With Descriptions of the Recently Explored Region of Australia Felix, and of the Present Colony of New South Wales&quot;,&quot;Topics&quot;:[&quot;Australia -- Discovery and exploration&quot;,&quot;Mitchell, T. L. (Thomas Livingstone), 1792-1855&quot;],&quot;Primary&quot;:&quot;12928.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mitchell, T. L. (Thomas Livingstone), 1792-1855&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;12928&quot;});" class='title'>Three Expeditions into the Interior of Eastern Australia, Volume 1 -<br><span class='subtitle'>With Descriptions of the Recently Explored Region of Australia Felix, and of the Present Colony of New South Wales</span></a>
+<div class='author'>Mitchell, T. L. (Thomas Livingstone), 1792-1855</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12929, {&quot;Title&quot;:&quot;A Voyage to Terra Australis — Volume 1 - Undertaken for the purpose of completing the discovery of that vast country, and prosecuted in the years 1801, 1802 and 1803, in His Majesty&#39;s ship the Investigator, and subsequently in the armed vessel Porpoise and Cumberland schooner&quot;,&quot;Topics&quot;:[&quot;Voyages and travels&quot;,&quot;Australia -- Discovery and exploration&quot;],&quot;Primary&quot;:&quot;12929.htm&quot;,&quot;CreatorNames&quot;:[&quot;Flinders, Matthew, 1774-1814&quot;],&quot;LoCC&quot;:[&quot;DU&quot;,&quot;G&quot;],&quot;PG_ID&quot;:&quot;12929&quot;});" class='title'>A Voyage to Terra Australis — Volume 1 -<br><span class='subtitle'>Undertaken for the purpose of completing the discovery of that vast country, and prosecuted in the years 1801, 1802 and 1803, in His Majesty's ship the Investigator, and subsequently in the armed vessel Porpoise and Cumberland schooner</span></a>
+<div class='author'>Flinders, Matthew, 1774-1814</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12992, {&quot;Title&quot;:&quot;The Naval Pioneers of Australia&quot;,&quot;Topics&quot;:[&quot;Australia -- Discovery and exploration&quot;],&quot;Primary&quot;:&quot;12992.htm&quot;,&quot;CreatorNames&quot;:[&quot;Becke, Louis, 1855-1913&quot;,&quot;Jeffery, Walter, 1861-1922&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;12992&quot;});" class='title'>The Naval Pioneers of Australia</a>
+<div class='author'>Becke, Louis, 1855-1913, Jeffery, Walter, 1861-1922</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13011, {&quot;Title&quot;:&quot;Far Off; Or, Asia and Australia Described - With Anecdotes and Illustrations&quot;,&quot;Topics&quot;:[&quot;Australia -- Description and travel&quot;,&quot;Asia -- Description and travel&quot;],&quot;Primary&quot;:&quot;13011.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mortimer, Favell Lee, 1802-1878&quot;],&quot;LoCC&quot;:[&quot;DS&quot;,&quot;DU&quot;,&quot;PZ&quot;],&quot;PG_ID&quot;:&quot;13011&quot;});" class='title'>Far Off;<br><span class='subtitle'>Or, Asia and Australia Described - With Anecdotes and Illustrations</span></a>
+<div class='author'>Mortimer, Favell Lee, 1802-1878</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13033, {&quot;Title&quot;:&quot;Three Expeditions into the Interior of Eastern Australia, Volume 2 - With Descriptions of the Recently Explored Region of Australia Felix, and of the Present Colony of New South Wales&quot;,&quot;Topics&quot;:[&quot;Australia -- Discovery and exploration&quot;,&quot;Mitchell, T. L. (Thomas Livingstone), 1792-1855&quot;],&quot;Primary&quot;:&quot;13033.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mitchell, T. L. (Thomas Livingstone), 1792-1855&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;13033&quot;});" class='title'>Three Expeditions into the Interior of Eastern Australia, Volume 2 -<br><span class='subtitle'>With Descriptions of the Recently Explored Region of Australia Felix, and of the Present Colony of New South Wales</span></a>
+<div class='author'>Mitchell, T. L. (Thomas Livingstone), 1792-1855</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13121, {&quot;Title&quot;:&quot;A Voyage to Terra Australis — Volume 2 - Undertaken for the purpose of completing the discovery of that vast country, and prosecuted in the years 1801, 1802 and 1803, in His Majesty&#39;s ship the Investigator, and subsequently in the armed vessel Porpoise and Cumberland schooner&quot;,&quot;Topics&quot;:[&quot;Voyages and travels&quot;,&quot;Australia -- Discovery and exploration&quot;],&quot;Primary&quot;:&quot;13121.htm&quot;,&quot;CreatorNames&quot;:[&quot;Flinders, Matthew, 1774-1814&quot;],&quot;LoCC&quot;:[&quot;DU&quot;,&quot;G&quot;],&quot;PG_ID&quot;:&quot;13121&quot;});" class='title'>A Voyage to Terra Australis — Volume 2 -<br><span class='subtitle'>Undertaken for the purpose of completing the discovery of that vast country, and prosecuted in the years 1801, 1802 and 1803, in His Majesty's ship the Investigator, and subsequently in the armed vessel Porpoise and Cumberland schooner</span></a>
+<div class='author'>Flinders, Matthew, 1774-1814</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13222, {&quot;Title&quot;:&quot;Northern California, Oregon, and the Sandwich Islands&quot;,&quot;Topics&quot;:[&quot;California -- Description and travel&quot;,&quot;Hawaii -- Description and travel&quot;,&quot;Oregon -- Description and travel&quot;],&quot;Primary&quot;:&quot;13222.htm&quot;,&quot;CreatorNames&quot;:[&quot;Nordhoff, Charles, 1830-1901&quot;,&quot;Remy, Jules, 1826-1893 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;DU&quot;,&quot;F&quot;],&quot;PG_ID&quot;:&quot;13222&quot;});" class='title'>Northern California, Oregon, and the Sandwich Islands</a>
+<div class='author'>Nordhoff, Charles, 1830-1901, Remy, Jules, 1826-1893 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13248, {&quot;Title&quot;:&quot;McKinlay&#39;s Journal of Exploration in the Interior of Australia&quot;,&quot;Topics&quot;:[&quot;Australia -- Discovery and exploration&quot;,&quot;McKinlay, John, 1819-1872&quot;],&quot;Primary&quot;:&quot;13248.txt&quot;,&quot;CreatorNames&quot;:[&quot;McKinlay, John, 1819-1872&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;13248&quot;});" class='title'>McKinlay's Journal of Exploration in the Interior of Australia</a>
+<div class='author'>McKinlay, John, 1819-1872</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13760, {&quot;Title&quot;:&quot;John Rutherford, the White Chief: A Story of Adventure in New Zealand&quot;,&quot;Topics&quot;:[&quot;New Zealand -- Description and travel&quot;,&quot;Rutherford, John, 1796-&quot;],&quot;Primary&quot;:&quot;13760.htm&quot;,&quot;CreatorNames&quot;:[&quot;Craik, George L. (George Lillie), 1798-1866&quot;,&quot;Drummond, James, 1869-1940 [Editor]&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;13760&quot;});" class='title'>John Rutherford, the White Chief:<br><span class='subtitle'>A Story of Adventure in New Zealand</span></a>
+<div class='author'>Craik, George L. (George Lillie), 1798-1866, Drummond, James, 1869-1940 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14063, {&quot;Title&quot;:&quot;Reis naar de Nieuwe Hebriden en de Salomons-eilanden - De Aarde en haar Volken, 1906&quot;,&quot;Topics&quot;:[&quot;Vanuatu -- Description and travel&quot;,&quot;Solomon Islands -- Description and travel&quot;],&quot;Primary&quot;:&quot;14063.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hagen, Alfred&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;14063&quot;});" class='title'>Reis naar de Nieuwe Hebriden en de Salomons-eilanden -<br><span class='subtitle'>De Aarde en haar Volken, 1906</span></a>
+<div class='author'>Hagen, Alfred</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14224, {&quot;Title&quot;:&quot;Samoa, A Hundred Years Ago And Long Before&quot;,&quot;Topics&quot;:[&quot;Samoan Islands&quot;,&quot;Islands of the Pacific -- Social life and customs&quot;],&quot;Primary&quot;:&quot;14224.htm&quot;,&quot;CreatorNames&quot;:[&quot;Turner, George, 1818?-1891&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;14224&quot;});" class='title'>Samoa, A Hundred Years Ago And Long Before</a>
+<div class='author'>Turner, George, 1818?-1891</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14384, {&quot;Title&quot;:&quot;White Shadows in the South Seas&quot;,&quot;Topics&quot;:[&quot;O&#39;Brien, Frederick, 1869-1932 -- Travel -- French Polynesia -- Marquesas Islands&quot;,&quot;O&#39;Brien, Frederick, 1869-1932 -- Diaries&quot;,&quot;Hiva Oa (French Polynesia) -- Discovery and exploration&quot;,&quot;Hiva Oa (French Polynesia) -- Description and travel&quot;,&quot;Hiva Oa (French Polynesia) -- Civilization&quot;,&quot;Marquesas Islands (French Polynesia) -- Discovery and exploration&quot;,&quot;Marquesas Islands (French Polynesia) -- Description and travel&quot;,&quot;Marquesas Islands (French Polynesia) -- Civilization&quot;],&quot;Primary&quot;:&quot;14384.htm&quot;,&quot;CreatorNames&quot;:[&quot;O&#39;Brien, Frederick, 1869-1932&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;14384&quot;});" class='title'>White Shadows in the South Seas</a>
+<div class='author'>O'Brien, Frederick, 1869-1932</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14424, {&quot;Title&quot;:&quot;The Eventful History of the Mutiny and Piratical Seizure of H.M.S. Bounty: Its Cause and Consequences&quot;,&quot;Topics&quot;:[&quot;Bligh, William, 1754-1817&quot;,&quot;Bounty Mutiny, 1789&quot;,&quot;Christian, Fletcher, 1764-1793&quot;,&quot;Pitcairn Island&quot;],&quot;Primary&quot;:&quot;14424.htm&quot;,&quot;CreatorNames&quot;:[&quot;Barrow, John, Sir, 1764-1848&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;14424&quot;});" class='title'>The Eventful History of the Mutiny and Piratical Seizure of H.M.S. Bounty:<br><span class='subtitle'>Its Cause and Consequences</span></a>
+<div class='author'>Barrow, John, Sir, 1764-1848</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14559, {&quot;Title&quot;:&quot;Omzwervingen door de eilandenwereld van den Grooten-oceaan - De Aarde en haar Volken, 1887&quot;,&quot;Topics&quot;:[&quot;Polynesia -- Description and travel&quot;],&quot;Primary&quot;:&quot;14559.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;14559&quot;});" class='title'>Omzwervingen door de eilandenwereld van den Grooten-oceaan -<br><span class='subtitle'>De Aarde en haar Volken, 1887</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14560, {&quot;Title&quot;:&quot;Omzwervingen door de eilandenwereld van den Grooten Oceaan: De Fidji-eilanden - De Aarde en haar Volken, 1888&quot;,&quot;Topics&quot;:[&quot;Fiji -- Description and travel&quot;],&quot;Primary&quot;:&quot;14560.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;14560&quot;});" class='title'>Omzwervingen door de eilandenwereld van den Grooten Oceaan:<br><span class='subtitle'>De Fidji-eilanden - De Aarde en haar Volken, 1888</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14561, {&quot;Title&quot;:&quot;Reis naar de Fidsji-eilanden - De Aarde en haar Volken, 1892&quot;,&quot;Topics&quot;:[&quot;Fiji -- Description and travel&quot;],&quot;Primary&quot;:&quot;14561.htm&quot;,&quot;CreatorNames&quot;:[&quot;Verschuur, Gerrit&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;14561&quot;});" class='title'>Reis naar de Fidsji-eilanden -<br><span class='subtitle'>De Aarde en haar Volken, 1892</span></a>
+<div class='author'>Verschuur, Gerrit</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14666, {&quot;Title&quot;:&quot;Op Samoa&quot;,&quot;Topics&quot;:[&quot;Barfus, E. von (Eginhard), 1825-1909 -- Travel&quot;,&quot;Samoa -- Description and travel&quot;],&quot;Primary&quot;:&quot;14666.htm&quot;,&quot;CreatorNames&quot;:[&quot;Barfus, E. von (Eginhard), 1825-1909&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;14666&quot;});" class='title'>Op Samoa</a>
+<div class='author'>Barfus, E. von (Eginhard), 1825-1909</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15056, {&quot;Title&quot;:&quot;De Wallis-eilanden - De Aarde en haar Volken, 1886&quot;,&quot;Topics&quot;:[&quot;Wallis Islands (Wallis and Futuna Islands) -- Description and travel&quot;],&quot;Primary&quot;:&quot;15056.htm&quot;,&quot;CreatorNames&quot;:[&quot;Deschamps, Émile, 1857-&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;15056&quot;});" class='title'>De Wallis-eilanden -<br><span class='subtitle'>De Aarde en haar Volken, 1886</span></a>
+<div class='author'>Deschamps, Émile, 1857-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15100, {&quot;Title&quot;:&quot;The Voyage of Governor Phillip to Botany Bay - With an Account of the Establishment of the Colonies of Port Jackson and Norfolk Island (1789)&quot;,&quot;Topics&quot;:[&quot;New South Wales -- Discovery and exploration&quot;,&quot;Natural history -- Australia -- New South Wales&quot;,&quot;Norfolk Island&quot;],&quot;Primary&quot;:&quot;15100.htm&quot;,&quot;CreatorNames&quot;:[&quot;Phillip, Arthur, 1738-1814&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;15100&quot;});" class='title'>The Voyage of Governor Phillip to Botany Bay -<br><span class='subtitle'>With an Account of the Establishment of the Colonies of Port Jackson and Norfolk Island (1789)</span></a>
+<div class='author'>Phillip, Arthur, 1738-1814</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15337, {&quot;Title&quot;:&quot;A Source Book of Australian History&quot;,&quot;Topics&quot;:[&quot;Australia -- History -- Sources&quot;],&quot;Primary&quot;:&quot;15337.htm&quot;,&quot;CreatorNames&quot;:[&quot;Swinburne, Gwendolen H. [Compiler]&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;15337&quot;});" class='title'>A Source Book of Australian History</a>
+<div class='author'>Swinburne, Gwendolen H. [Compiler]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15411, {&quot;Title&quot;:&quot;A Voyage to the South Sea - Undertaken by command of His Majesty for the purpose of conveying the bread-fruit tree to the West Indies in His Majesty&#39;s ship the Bounty commanded by Lieutenant William Bligh; including an account of the mutiny on board the said ship and the subsequent voyage of part of the crew in the ship&#39;s boat from Tofoa, one of the Friendly Islands, to Timor, a Dutch settlement in the East Indies&quot;,&quot;Topics&quot;:[&quot;Voyages and travels&quot;,&quot;Bounty (Ship)&quot;,&quot;Bounty Mutiny, 1789&quot;,&quot;Oceania -- Description and travel -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;15411.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bligh, William, 1754-1817&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;15411&quot;});" class='title'>A Voyage to the South Sea -<br><span class='subtitle'>Undertaken by command of His Majesty for the purpose of conveying the bread-fruit tree to the West Indies in His Majesty's ship the Bounty commanded by Lieutenant William Bligh; including an account of the mutiny on board the said ship and the subsequent voyage of part of the crew in the ship's boat from Tofoa, one of the Friendly Islands, to Timor, a Dutch settlement in the East Indies</span></a>
+<div class='author'>Bligh, William, 1754-1817</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15533, {&quot;Title&quot;:&quot;The Present Picture of New South Wales (1811)&quot;,&quot;Topics&quot;:[&quot;New South Wales -- History&quot;,&quot;New South Wales -- Social life and customs&quot;],&quot;Primary&quot;:&quot;15533.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mann, D. D. (David Dickinson), 1775?-&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;15533&quot;});" class='title'>The Present Picture of New South Wales (1811)</a>
+<div class='author'>Mann, D. D. (David Dickinson), 1775?-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15602, {&quot;Title&quot;:&quot;Statistical, Historical and Political Description of the Colony of New South Wales and its Dependent Settlements in Van Diemen&#39;s Land - With a Particular Enumeration of the Advantages Which These Colonies Offer for Emigration, and Their Superiority in Many Respects Over Those Possessed by the United States of America&quot;,&quot;Topics&quot;:[&quot;New South Wales -- Description and travel&quot;,&quot;Wentworth, W. C. (William Charles), 1790-1872&quot;,&quot;New South Wales -- Politics and government&quot;,&quot;Tasmania -- Description and travel&quot;],&quot;Primary&quot;:&quot;15602.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wentworth, W. C. (William Charles), 1790-1872&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;15602&quot;});" class='title'>Statistical, Historical and Political Description of the Colony of New South Wales and its Dependent Settlements in Van Diemen's Land -<br><span class='subtitle'>With a Particular Enumeration of the Advantages Which These Colonies Offer for Emigration, and Their Superiority in Many Respects Over Those Possessed by the United States of America</span></a>
+<div class='author'>Wentworth, W. C. (William Charles), 1790-1872</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15662, {&quot;Title&quot;:&quot;An Historical Journal of the Transactions at Port Jackson and Norfolk Island&quot;,&quot;Topics&quot;:[&quot;New South Wales -- History -- Sources&quot;],&quot;Primary&quot;:&quot;15662.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hunter, John, 1738-1821&quot;,&quot;King, Philip Gidley, 1758-1808 [Contributor]&quot;,&quot;Phillip, Arthur, 1738-1814 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;15662&quot;});" class='title'>An Historical Journal of the Transactions at Port Jackson and Norfolk Island</a>
+<div class='author'>Hunter, John, 1738-1821, King, Philip Gidley, 1758-1808 [Contributor], Phillip, Arthur, 1738-1814 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16027, {&quot;Title&quot;:&quot;Journals of Two Expeditions of Discovery in North-West and Western Australia, Volume 1&quot;,&quot;Topics&quot;:[&quot;Natural history -- Australia -- Western Australia&quot;,&quot;Western Australia -- Discovery and exploration&quot;],&quot;Primary&quot;:&quot;16027.htm&quot;,&quot;CreatorNames&quot;:[&quot;Grey, George, Sir, 1812-1898&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;16027&quot;});" class='title'>Journals of Two Expeditions of Discovery in North-West and Western Australia, Volume 1</a>
+<div class='author'>Grey, George, Sir, 1812-1898</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16145, {&quot;Title&quot;:&quot;Journals of Two Expeditions of Discovery in North-West and Western Australia, Volume 2&quot;,&quot;Topics&quot;:[&quot;Natural history -- Australia -- Western Australia&quot;,&quot;Western Australia -- Discovery and exploration&quot;],&quot;Primary&quot;:&quot;16145.htm&quot;,&quot;CreatorNames&quot;:[&quot;Grey, George, Sir, 1812-1898&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;16145&quot;});" class='title'>Journals of Two Expeditions of Discovery in North-West and Western Australia, Volume 2</a>
+<div class='author'>Grey, George, Sir, 1812-1898</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16243, {&quot;Title&quot;:&quot;Journal of Landsborough&#39;s Expedition from Carpentaria - In search of Burke and Wills&quot;,&quot;Topics&quot;:[&quot;Australia -- Discovery and exploration&quot;,&quot;Explorers -- Australia&quot;,&quot;Burke and Wills Expedition, (1860-1861)&quot;,&quot;Landsborough Expedition, (1861-1862)&quot;],&quot;Primary&quot;:&quot;16243.htm&quot;,&quot;CreatorNames&quot;:[&quot;Landsborough, William, 1825-1886&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;16243&quot;});" class='title'>Journal of Landsborough's Expedition from Carpentaria -<br><span class='subtitle'>In search of Burke and Wills</span></a>
+<div class='author'>Landsborough, William, 1825-1886</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16349, {&quot;Title&quot;:&quot;The Book of the Bush - Containing Many Truthful Sketches of the Early Colonial Life of Squatters, Whalers, Convicts, Diggers, and Others Who Left Their Native Land and Never Returned&quot;,&quot;Topics&quot;:[&quot;Australia -- Description and travel&quot;,&quot;Frontier and pioneer life -- Australia&quot;,&quot;Australia -- History -- Anecdotes&quot;,&quot;Australia -- History -- 1788-1900&quot;],&quot;Primary&quot;:&quot;16349.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dunderdale, George, 1822-1903&quot;,&quot;Macfarlane, J. [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;16349&quot;});" class='title'>The Book of the Bush -<br><span class='subtitle'>Containing Many Truthful Sketches of the Early Colonial Life of Squatters, Whalers, Convicts, Diggers, and Others Who Left Their Native Land and Never Returned</span></a>
+<div class='author'>Dunderdale, George, 1822-1903, Macfarlane, J. [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16664, {&quot;Title&quot;:&quot;Town Life in Australia&quot;,&quot;Topics&quot;:[&quot;Melbourne (Vic.) -- Social life and customs&quot;,&quot;Sydney (N.S.W.) -- Social life and customs&quot;,&quot;Adelaide (S. Aust.) -- Social life and customs&quot;],&quot;Primary&quot;:&quot;16664.htm&quot;,&quot;CreatorNames&quot;:[&quot;Twopeny, Richard Ernest Nowell, 1857-1915&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;16664&quot;});" class='title'>Town Life in Australia</a>
+<div class='author'>Twopeny, Richard Ernest Nowell, 1857-1915</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17022, {&quot;Title&quot;:&quot;The First Discovery of Australia and New Guinea - Being The Narrative of Portuguese and Spanish Discoveries in the Australasian Regions, between the Years 1492-1606, with Descriptions of their Old Charts.&quot;,&quot;Topics&quot;:[&quot;Australia -- Discovery and exploration -- Spanish&quot;,&quot;Australia -- Discovery and exploration -- Portuguese&quot;,&quot;Oceania -- Discovery and exploration -- Spanish&quot;,&quot;Oceania -- Discovery and exploration -- Portuguese&quot;],&quot;Primary&quot;:&quot;17022.htm&quot;,&quot;CreatorNames&quot;:[&quot;Collingridge, George, 1847-1931&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;17022&quot;});" class='title'>The First Discovery of Australia and New Guinea -<br><span class='subtitle'>Being The Narrative of Portuguese and Spanish Discoveries in the Australasian Regions, between the Years 1492-1606, with Descriptions of their Old Charts.</span></a>
+<div class='author'>Collingridge, George, 1847-1931</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17305, {&quot;Title&quot;:&quot;Door Centraal-Oceanië - De Aarde en haar Volken, 1908&quot;,&quot;Topics&quot;:[&quot;Fiji -- Description and travel&quot;,&quot;Fiji -- Social life and customs&quot;,&quot;Wallis and Futuna Islands -- Description and travel&quot;,&quot;Wallis and Futuna Islands -- Social life and customs&quot;],&quot;Primary&quot;:&quot;17305.htm&quot;,&quot;CreatorNames&quot;:[&quot;Myrica, Pierre de, 1875-1951&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;17305&quot;});" class='title'>Door Centraal-Oceanië -<br><span class='subtitle'>De Aarde en haar Volken, 1908</span></a>
+<div class='author'>Myrica, Pierre de, 1875-1951</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17450, {&quot;Title&quot;:&quot;The Part Borne by the Dutch in the Discovery of Australia 1606-1765&quot;,&quot;Topics&quot;:[&quot;Australia -- Discovery and exploration&quot;,&quot;Dutch -- Australia&quot;],&quot;Primary&quot;:&quot;17450.htm&quot;,&quot;CreatorNames&quot;:[&quot;Heeres, J. E. (Jan Ernst), 1858-1932&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;17450&quot;});" class='title'>The Part Borne by the Dutch in the Discovery of Australia 1606-1765</a>
+<div class='author'>Heeres, J. E. (Jan Ernst), 1858-1932</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17694, {&quot;Title&quot;:&quot;Adventures in New Guinea&quot;,&quot;Topics&quot;:[&quot;New Guinea -- Description and travel&quot;,&quot;Missions -- New Guinea&quot;],&quot;Primary&quot;:&quot;17694.htm&quot;,&quot;CreatorNames&quot;:[&quot;Chalmers, James, 1841-1901&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;17694&quot;});" class='title'>Adventures in New Guinea</a>
+<div class='author'>Chalmers, James, 1841-1901</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18023, {&quot;Title&quot;:&quot;In het Oerwoud en bij de Kannibalen op de Nieuwe Hebriden - De Aarde en haar Volken, 1918&quot;,&quot;Topics&quot;:[&quot;Oceania -- Description and travel&quot;],&quot;Primary&quot;:&quot;18023.htm&quot;,&quot;CreatorNames&quot;:[&quot;Speiser, Felix, 1880-1949&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;18023&quot;});" class='title'>In het Oerwoud en bij de Kannibalen op de Nieuwe Hebriden -<br><span class='subtitle'>De Aarde en haar Volken, 1918</span></a>
+<div class='author'>Speiser, Felix, 1880-1949</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18068, {&quot;Title&quot;:&quot;Five Years in New Zealand - 1859 to 1864&quot;,&quot;Topics&quot;:[&quot;New Zealand -- Description and travel&quot;],&quot;Primary&quot;:&quot;18068.htm&quot;,&quot;CreatorNames&quot;:[&quot;Booth, Robert B., 1843?-&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;18068&quot;});" class='title'>Five Years in New Zealand -<br><span class='subtitle'>1859 to 1864</span></a>
+<div class='author'>Booth, Robert B., 1843?-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20167, {&quot;Title&quot;:&quot;Nieuw-Guinee en de exploratie der \&quot;\&quot;Meervlakte\&quot;\&quot; - De Aarde en haar Volken, 1918&quot;,&quot;Topics&quot;:[&quot;Papua (Indonesia) -- Discovery and exploration&quot;],&quot;Primary&quot;:&quot;20167.htm&quot;,&quot;CreatorNames&quot;:[&quot;Doorman, L. A. C. M.&quot;,&quot;Langeler, J. W.&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;20167&quot;});" class='title'>Nieuw-Guinee en de exploratie der "Meervlakte" -<br><span class='subtitle'>De Aarde en haar Volken, 1918</span></a>
+<div class='author'>Doorman, L. A. C. M., Langeler, J. W.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20337, {&quot;Title&quot;:&quot;A Narrative Of The Mutiny, On Board His Majesty&#39;s Ship Bounty; And The Subsequent Voyage Of Part Of The Crew, In The Ship&#39;s Boat&quot;,&quot;Topics&quot;:[&quot;Bounty (Ship)&quot;,&quot;Bligh, William, 1754-1817&quot;,&quot;Bounty Mutiny, 1789&quot;],&quot;Primary&quot;:&quot;20337.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bligh, William, 1754-1817&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;20337&quot;});" class='title'>A Narrative Of The Mutiny, On Board His Majesty's Ship Bounty;<br><span class='subtitle'>And The Subsequent Voyage Of Part Of The Crew, In The Ship's Boat</span></a>
+<div class='author'>Bligh, William, 1754-1817</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22849, {&quot;Title&quot;:&quot;The History of Tasmania , Volume II&quot;,&quot;Topics&quot;:[&quot;Tasmania -- History&quot;],&quot;Primary&quot;:&quot;22849.htm&quot;,&quot;CreatorNames&quot;:[&quot;West, John, 1809-1873&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;22849&quot;});" class='title'>The History of Tasmania , Volume II</a>
+<div class='author'>West, John, 1809-1873</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23862, {&quot;Title&quot;:&quot;Merauke, en wat daaraan voorafging - De Aarde en haar Volken, 1908&quot;,&quot;Topics&quot;:[&quot;Papua (Indonesia) -- Discovery and exploration&quot;],&quot;Primary&quot;:&quot;23862.htm&quot;,&quot;CreatorNames&quot;:[&quot;Snelleman, Johannes François, 1852-1938&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;23862&quot;});" class='title'>Merauke, en wat daaraan voorafging -<br><span class='subtitle'>De Aarde en haar Volken, 1908</span></a>
+<div class='author'>Snelleman, Johannes François, 1852-1938</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24362, {&quot;Title&quot;:&quot;The History of Tasmania, Volume I&quot;,&quot;Topics&quot;:[&quot;Tasmania -- History&quot;],&quot;Primary&quot;:&quot;24362.htm&quot;,&quot;CreatorNames&quot;:[&quot;West, John, 1809-1873&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;24362&quot;});" class='title'>The History of Tasmania, Volume I</a>
+<div class='author'>West, John, 1809-1873</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24649, {&quot;Title&quot;:&quot;In het Oerwoud en bij de Kannibalen op de Nieuwe Hebriden (deel 1 van 2) - De Aarde en haar Volken, 1917&quot;,&quot;Topics&quot;:[&quot;Oceania -- Description and travel&quot;],&quot;Primary&quot;:&quot;24649.htm&quot;,&quot;CreatorNames&quot;:[&quot;Speiser, Felix, 1880-1949&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;24649&quot;});" class='title'>In het Oerwoud en bij de Kannibalen op de Nieuwe Hebriden (deel 1 van 2) -<br><span class='subtitle'>De Aarde en haar Volken, 1917</span></a>
+<div class='author'>Speiser, Felix, 1880-1949</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24755, {&quot;Title&quot;:&quot;Captain Cook: His Life, Voyages, and Discoveries&quot;,&quot;Topics&quot;:[&quot;Biography&quot;,&quot;Voyages around the world&quot;,&quot;Cook, James, 1728-1779&quot;,&quot;Oceania -- Discovery and exploration&quot;,&quot;Australasia -- Discovery and exploration&quot;,&quot;Missions -- Oceania&quot;],&quot;Primary&quot;:&quot;24755.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kingston, William Henry Giles, 1814-1880&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;DU&quot;,&quot;G&quot;],&quot;PG_ID&quot;:&quot;24755&quot;});" class='title'>Captain Cook:<br><span class='subtitle'>His Life, Voyages, and Discoveries</span></a>
+<div class='author'>Kingston, William Henry Giles, 1814-1880</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25106, {&quot;Title&quot;:&quot;\&quot;\&quot;The Gallant, Good Riou\&quot;\&quot;, and Jack Renton - 1901&quot;,&quot;Topics&quot;:[&quot;Sea stories&quot;],&quot;Primary&quot;:&quot;25106.htm&quot;,&quot;CreatorNames&quot;:[&quot;Becke, Louis, 1855-1913&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;25106&quot;});" class='title'>"The Gallant, Good Riou", and Jack Renton -<br><span class='subtitle'>1901</span></a>
+<div class='author'>Becke, Louis, 1855-1913</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25108, {&quot;Title&quot;:&quot;The South Seaman: An Incident in the Sea Story of Australia - 1901&quot;,&quot;Topics&quot;:[&quot;Essays&quot;,&quot;Mutiny&quot;],&quot;Primary&quot;:&quot;25108.htm&quot;,&quot;CreatorNames&quot;:[&quot;Becke, Louis, 1855-1913&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;25108&quot;});" class='title'>The South Seaman:<br><span class='subtitle'>An Incident in the Sea Story of Australia - 1901</span></a>
+<div class='author'>Becke, Louis, 1855-1913</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2564, {&quot;Title&quot;:&quot;Wanderings among South Sea Savages and in Borneo and the Philippines&quot;,&quot;Topics&quot;:[&quot;Oceania -- Description and travel&quot;,&quot;Ethnology -- Oceania&quot;,&quot;Philippines -- Description and travel&quot;,&quot;Borneo -- Description and travel&quot;],&quot;Primary&quot;:&quot;2564.htm&quot;,&quot;CreatorNames&quot;:[&quot;Walker, H. Wilfrid&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;2564&quot;});" class='title'>Wanderings among South Sea Savages and in Borneo and the Philippines</a>
+<div class='author'>Walker, H. Wilfrid</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25828, {&quot;Title&quot;:&quot;History of Australia and New Zealand - From 1606 to 1890&quot;,&quot;Topics&quot;:[&quot;Australia -- History&quot;,&quot;New Zealand -- History&quot;],&quot;Primary&quot;:&quot;25828.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sutherland, Alexander, 1852-1902&quot;,&quot;Sutherland, George, 1855-1905&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;25828&quot;});" class='title'>History of Australia and New Zealand -<br><span class='subtitle'>From 1606 to 1890</span></a>
+<div class='author'>Sutherland, Alexander, 1852-1902, Sutherland, George, 1855-1905</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25976, {&quot;Title&quot;:&quot;Peeps At Many Lands: Australia&quot;,&quot;Topics&quot;:[&quot;Australia -- Description and travel&quot;,&quot;Australia -- History&quot;],&quot;Primary&quot;:&quot;25976.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fox, Frank, 1874-1960&quot;,&quot;Spence, Percy F. S. (Percy Frederick Seaton), 1868-1933 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;25976&quot;});" class='title'>Peeps At Many Lands:<br><span class='subtitle'>Australia</span></a>
+<div class='author'>Fox, Frank, 1874-1960, Spence, Percy F. S. (Percy Frederick Seaton), 1868-1933 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26501, {&quot;Title&quot;:&quot;Speeches of His Majesty Kamehameha IV. To the Hawaiian Legislature&quot;,&quot;Topics&quot;:[&quot;Hawaii -- Politics and government -- To 1893&quot;],&quot;Primary&quot;:&quot;26501.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kamehameha IV, King of the Hawaiian Islands, 1834-1863&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;26501&quot;});" class='title'>Speeches of His Majesty Kamehameha IV. To the Hawaiian Legislature</a>
+<div class='author'>Kamehameha IV, King of the Hawaiian Islands, 1834-1863</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2660, {&quot;Title&quot;:&quot;Early Australian Voyages: Pelsart, Tasman, Dampier&quot;,&quot;Topics&quot;:[&quot;Voyages and travels&quot;,&quot;Pelsaert, Francisco, -1630&quot;,&quot;Australia -- Discovery and exploration&quot;,&quot;Tasman, Abel Janszoon, 1603?-1659&quot;,&quot;Dampier, William, 1652-1715&quot;],&quot;Primary&quot;:&quot;2660.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pinkerton, John, 1758-1826&quot;,&quot;Morley, Henry, 1822-1894 [Editor]&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;2660&quot;});" class='title'>Early Australian Voyages:<br><span class='subtitle'>Pelsart, Tasman, Dampier</span></a>
+<div class='author'>Pinkerton, John, 1758-1826, Morley, Henry, 1822-1894 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27099, {&quot;Title&quot;:&quot;Reminiscences of Queensland, 1862-1869&quot;,&quot;Topics&quot;:[&quot;Frontier and pioneer life -- Australia -- Queensland&quot;,&quot;Queensland -- History&quot;],&quot;Primary&quot;:&quot;27099.htm&quot;,&quot;CreatorNames&quot;:[&quot;Corfield, W. H. (William Henry), 1843-1903&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;27099&quot;});" class='title'>Reminiscences of Queensland, 1862-1869</a>
+<div class='author'>Corfield, W. H. (William Henry), 1843-1903</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27578, {&quot;Title&quot;:&quot;Two Years with the Natives in the Western Pacific&quot;,&quot;Topics&quot;:[&quot;Ethnology -- Vanuatu&quot;,&quot;Vanuatu -- Description and travel&quot;],&quot;Primary&quot;:&quot;27578.htm&quot;,&quot;CreatorNames&quot;:[&quot;Speiser, Felix, 1880-1949&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;27578&quot;});" class='title'>Two Years with the Natives in the Western Pacific</a>
+<div class='author'>Speiser, Felix, 1880-1949</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28034, {&quot;Title&quot;:&quot;Scenes in the Hawaiian Islands and California&quot;,&quot;Topics&quot;:[&quot;California -- Description and travel&quot;,&quot;Hawaii -- Description and travel&quot;],&quot;Primary&quot;:&quot;28034.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anderson, Mary E. (Mary Evarts), 1838-1905&quot;],&quot;LoCC&quot;:[&quot;DU&quot;,&quot;F&quot;],&quot;PG_ID&quot;:&quot;28034&quot;});" class='title'>Scenes in the Hawaiian Islands and California</a>
+<div class='author'>Anderson, Mary E. (Mary Evarts), 1838-1905</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28955, {&quot;Title&quot;:&quot;A Narrative of the Mutiny, on Board the Ship Globe, of Nantucket, in the Pacific Ocean, Jan. 1824 - And the journal of a residence of two years on the Mulgrave - Islands; with observations on the manners and customs of - the inhabitants&quot;,&quot;Topics&quot;:[&quot;Globe Mutiny, 1824&quot;,&quot;Mili Atoll (Marshall Islands)&quot;],&quot;Primary&quot;:&quot;28955.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hussey, Cyrus M.&quot;,&quot;Lay, William&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;28955&quot;});" class='title'>A Narrative of the Mutiny, on Board the Ship Globe, of Nantucket, in the Pacific Ocean, Jan. 1824 -<br><span class='subtitle'>And the journal of a residence of two years on the Mulgrave - Islands; with observations on the manners and customs of - the inhabitants</span></a>
+<div class='author'>Hussey, Cyrus M., Lay, William</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29070, {&quot;Title&quot;:&quot;Brighter Britain! (Volume 1 of 2) - or Settler and Maori in Northern New Zealand&quot;,&quot;Topics&quot;:[&quot;New Zealand -- Description and travel&quot;,&quot;Ethnology -- New Zealand&quot;,&quot;Maori (New Zealand people)&quot;],&quot;Primary&quot;:&quot;29070.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hay, W. Delisle (William Delisle), 1851-&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;29070&quot;});" class='title'>Brighter Britain! (Volume 1 of 2) -<br><span class='subtitle'>or Settler and Maori in Northern New Zealand</span></a>
+<div class='author'>Hay, W. Delisle (William Delisle), 1851-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29383, {&quot;Title&quot;:&quot;The Hawaiian Islands - Their Resources, Agricultural, Commercial and Financial&quot;,&quot;Topics&quot;:[&quot;Hawaii&quot;,&quot;Hawaii -- Economic conditions&quot;],&quot;Primary&quot;:&quot;29383.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hawaii. Department of Foreign Affairs&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;29383&quot;});" class='title'>The Hawaiian Islands -<br><span class='subtitle'>Their Resources, Agricultural, Commercial and Financial</span></a>
+<div class='author'>Hawaii. Department of Foreign Affairs</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29428, {&quot;Title&quot;:&quot;O descobrimento da Australia pelos portuguezes em 1601&quot;,&quot;Topics&quot;:[&quot;Australia -- Discovery and exploration&quot;],&quot;Primary&quot;:&quot;29428.htm&quot;,&quot;CreatorNames&quot;:[&quot;Major, Richard Henry, 1818-1891&quot;,&quot;Lacerda, José Maria Almeida e Araújo de Portugal Correia de, 1802-1877 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;29428&quot;});" class='title'>O descobrimento da Australia pelos portuguezes em 1601</a>
+<div class='author'>Major, Richard Henry, 1818-1891, Lacerda, José Maria Almeida e Araújo de Portugal Correia de, 1802-1877 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29609, {&quot;Title&quot;:&quot;Six Letters From the Colonies&quot;,&quot;Topics&quot;:[&quot;Australia -- Description and travel&quot;],&quot;Primary&quot;:&quot;29609.htm&quot;,&quot;CreatorNames&quot;:[&quot;Seaton, R. C. (Robert Cooper), 1853-1915&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;29609&quot;});" class='title'>Six Letters From the Colonies</a>
+<div class='author'>Seaton, R. C. (Robert Cooper), 1853-1915</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30607, {&quot;Title&quot;:&quot;Australia, its history and present condition - containing an account both of the bush and of the colonies, - with their respective inhabitants&quot;,&quot;Topics&quot;:[&quot;Australia -- Description and travel&quot;],&quot;Primary&quot;:&quot;30607.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pridden, W. (William), 1810-&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;30607&quot;});" class='title'>Australia, its history and present condition -<br><span class='subtitle'>containing an account both of the bush and of the colonies, - with their respective inhabitants</span></a>
+<div class='author'>Pridden, W. (William), 1810-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31012, {&quot;Title&quot;:&quot;The Works of Robert Louis Stevenson - Swanston Edition, Vol. 17&quot;,&quot;Topics&quot;:[&quot;Short stories&quot;,&quot;Islands of the Pacific -- Fiction&quot;,&quot;Samoan Islands -- History&quot;],&quot;Primary&quot;:&quot;31012.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stevenson, Robert Louis, 1850-1894&quot;,&quot;Lang, Andrew, 1844-1912 [Other]&quot;],&quot;LoCC&quot;:[&quot;DU&quot;,&quot;PR&quot;],&quot;PG_ID&quot;:&quot;31012&quot;});" class='title'>The Works of Robert Louis Stevenson -<br><span class='subtitle'>Swanston Edition, Vol. 17</span></a>
+<div class='author'>Stevenson, Robert Louis, 1850-1894, Lang, Andrew, 1844-1912 [Other]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31557, {&quot;Title&quot;:&quot;The Works of Robert Louis Stevenson - Swanston Edition, Vol. 18&quot;,&quot;Topics&quot;:[&quot;Authors, Scottish -- 19th century -- Biography&quot;,&quot;Polynesia -- Description and travel&quot;,&quot;Stevenson, Robert Louis, 1850-1894 -- Travel -- Polynesia&quot;],&quot;Primary&quot;:&quot;31557.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stevenson, Robert Louis, 1850-1894&quot;,&quot;Lang, Andrew, 1844-1912 [Other]&quot;],&quot;LoCC&quot;:[&quot;DU&quot;,&quot;PR&quot;],&quot;PG_ID&quot;:&quot;31557&quot;});" class='title'>The Works of Robert Louis Stevenson -<br><span class='subtitle'>Swanston Edition, Vol. 18</span></a>
+<div class='author'>Stevenson, Robert Louis, 1850-1894, Lang, Andrew, 1844-1912 [Other]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33342, {&quot;Title&quot;:&quot;Old New Zealand: Being Incidents of Native Customs and Character in the Old Times&quot;,&quot;Topics&quot;:[&quot;New Zealand -- Description and travel&quot;,&quot;Maori (New Zealand people)&quot;],&quot;Primary&quot;:&quot;33342.htm&quot;,&quot;CreatorNames&quot;:[&quot;Maning, Frederick Edward, 1812-1883&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;33342&quot;});" class='title'>Old New Zealand:<br><span class='subtitle'>Being Incidents of Native Customs and Character in the Old Times</span></a>
+<div class='author'>Maning, Frederick Edward, 1812-1883</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33355, {&quot;Title&quot;:&quot;Oahu Traveler&#39;s guide&quot;,&quot;Topics&quot;:[&quot;Oahu (Hawaii) -- Guidebooks&quot;],&quot;Primary&quot;:&quot;33355.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gleasner, Bill&quot;,&quot;Gleasner, Diana C.&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;33355&quot;});" class='title'>Oahu Traveler's guide</a>
+<div class='author'>Gleasner, Bill, Gleasner, Diana C.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34037, {&quot;Title&quot;:&quot;Under the Southern Cross - Or Travels in Australia, Tasmania, New Zealand, Samoa, and Other Pacific Islands&quot;,&quot;Topics&quot;:[&quot;Oceania -- Description and travel&quot;,&quot;Australia -- Description and travel&quot;],&quot;Primary&quot;:&quot;34037.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ballou, Maturin M. (Maturin Murray), 1820-1895&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;34037&quot;});" class='title'>Under the Southern Cross -<br><span class='subtitle'>Or Travels in Australia, Tasmania, New Zealand, Samoa, and Other Pacific Islands</span></a>
+<div class='author'>Ballou, Maturin M. (Maturin Murray), 1820-1895</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3534, {&quot;Title&quot;:&quot;A Complete Account of the Settlement at Port Jackson&quot;,&quot;Topics&quot;:[&quot;New South Wales -- Description and travel -- Early works to 1800&quot;,&quot;New South Wales -- Discovery and exploration -- Early works to 1800&quot;,&quot;Port Jackson (N.S.W.) -- History&quot;,&quot;Penal colonies -- Australia -- New South Wales&quot;],&quot;Primary&quot;:&quot;3534.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tench, Watkin, 1759?-1833&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;3534&quot;});" class='title'>A Complete Account of the Settlement at Port Jackson</a>
+<div class='author'>Tench, Watkin, 1759?-1833</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3535, {&quot;Title&quot;:&quot;A Narrative of the Expedition to Botany-Bay&quot;,&quot;Topics&quot;:[&quot;Voyages and travels&quot;,&quot;Tench, Watkin, 1759?-1833 -- Diaries&quot;,&quot;Explorers -- Australia -- New South Wales -- Diaries&quot;,&quot;Botany Bay region (Australia) -- Description and travel&quot;,&quot;New South Wales -- Description and travel&quot;,&quot;Australia -- Discovery and exploration&quot;],&quot;Primary&quot;:&quot;3535.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tench, Watkin, 1759?-1833&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;3535&quot;});" class='title'>A Narrative of the Expedition to Botany-Bay</a>
+<div class='author'>Tench, Watkin, 1759?-1833</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3546, {&quot;Title&quot;:&quot;The Eureka Stockade&quot;,&quot;Topics&quot;:[&quot;Eureka Stockade (Ballarat, Vic.) -- History&quot;,&quot;Carboni, Raffaello, 1817-1875&quot;,&quot;Revolutions -- Australia -- Ballarat (Vic.) -- History -- 19th century&quot;,&quot;Gold miners -- Australia -- Ballarat (Vic.) -- Social conditions -- 19th century&quot;,&quot;Gold mines and mining -- Australia -- Ballarat (Vic.) -- History -- 19th century&quot;,&quot;Italians -- Australia -- Ballarat (Vic.) -- Biography&quot;,&quot;Ballarat (Vic.) -- History -- 19th century&quot;,&quot;Ballarat (Vic.) -- Social conditions -- 19th century&quot;,&quot;Victoria -- Gold discoveries&quot;,&quot;Ballarat (Vic.) -- Biography&quot;],&quot;Primary&quot;:&quot;3546.txt&quot;,&quot;CreatorNames&quot;:[&quot;Carboni, Raffaello, 1817-1875&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;3546&quot;});" class='title'>The Eureka Stockade</a>
+<div class='author'>Carboni, Raffaello, 1817-1875</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35583, {&quot;Title&quot;:&quot;Two Years Among the Savages of New Guinea. - With Introductory Notes on North Queensland.&quot;,&quot;Topics&quot;:[&quot;New Guinea -- Description and travel&quot;],&quot;Primary&quot;:&quot;35583.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pitcairn, W. D.&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;35583&quot;});" class='title'>Two Years Among the Savages of New Guinea. -<br><span class='subtitle'>With Introductory Notes on North Queensland.</span></a>
+<div class='author'>Pitcairn, W. D.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36399, {&quot;Title&quot;:&quot;Missing Friends - Being the Adventures of a Danish Emigrant in Queensland (1871-1880)&quot;,&quot;Topics&quot;:[&quot;Queensland -- Description and travel&quot;],&quot;Primary&quot;:&quot;36399.htm&quot;,&quot;CreatorNames&quot;:[&quot;Weitemeyer, Thorvald Peter Ludwig, 1850-&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;36399&quot;});" class='title'>Missing Friends -<br><span class='subtitle'>Being the Adventures of a Danish Emigrant in Queensland (1871-1880)</span></a>
+<div class='author'>Weitemeyer, Thorvald Peter Ludwig, 1850-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36763, {&quot;Title&quot;:&quot;Stevenson&#39;s Shrine: The Record of a Pilgrimage&quot;,&quot;Topics&quot;:[&quot;Stevenson, Robert Louis, 1850-1894 -- Travel -- Samoan Islands&quot;,&quot;Stubbs, Laura--Travel -- Samoan Islands&quot;,&quot;Samoan Islands -- Description and travel&quot;],&quot;Primary&quot;:&quot;36763.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stubbs, Laura&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;36763&quot;});" class='title'>Stevenson's Shrine:<br><span class='subtitle'>The Record of a Pilgrimage</span></a>
+<div class='author'>Stubbs, Laura</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37022, {&quot;Title&quot;:&quot;The Awful Australian&quot;,&quot;Topics&quot;:[&quot;Australia -- Social life and customs&quot;,&quot;National characteristics, Australian&quot;],&quot;Primary&quot;:&quot;37022.htm&quot;,&quot;CreatorNames&quot;:[&quot;Desmond, Valerie&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;37022&quot;});" class='title'>The Awful Australian</a>
+<div class='author'>Desmond, Valerie</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37825, {&quot;Title&quot;:&quot;Thirty Years in Australia&quot;,&quot;Topics&quot;:[&quot;Australia -- Social life and customs&quot;,&quot;Cambridge, Ada, 1844-1926&quot;,&quot;Authors, Australian -- 19th century -- Biography&quot;],&quot;Primary&quot;:&quot;37825.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cambridge, Ada, 1844-1926&quot;],&quot;LoCC&quot;:[&quot;DU&quot;,&quot;PR&quot;],&quot;PG_ID&quot;:&quot;37825&quot;});" class='title'>Thirty Years in Australia</a>
+<div class='author'>Cambridge, Ada, 1844-1926</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38432, {&quot;Title&quot;:&quot;The Fijians: A Study of the Decay of Custom&quot;,&quot;Topics&quot;:[&quot;Fijians&quot;,&quot;Ethnology -- Fiji&quot;],&quot;Primary&quot;:&quot;38432.htm&quot;,&quot;CreatorNames&quot;:[&quot;Thomson, Basil, 1861-1939&quot;,&quot;Corney, Bolton Glanvill, 1851-1924 [Contributor]&quot;,&quot;Stewart, James, 1812?-1900 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;38432&quot;});" class='title'>The Fijians:<br><span class='subtitle'>A Study of the Decay of Custom</span></a>
+<div class='author'>Thomson, Basil, 1861-1939, Corney, Bolton Glanvill, 1851-1924 [Contributor], Stewart, James, 1812?-1900 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38649, {&quot;Title&quot;:&quot;Early Days in North Queensland&quot;,&quot;Topics&quot;:[&quot;Frontier and pioneer life -- Australia -- Queensland&quot;],&quot;Primary&quot;:&quot;38649.htm&quot;,&quot;CreatorNames&quot;:[&quot;Palmer, Edward, 1842-1899&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;38649&quot;});" class='title'>Early Days in North Queensland</a>
+<div class='author'>Palmer, Edward, 1842-1899</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38691, {&quot;Title&quot;:&quot;Down Under with the Prince&quot;,&quot;Topics&quot;:[&quot;New Zealand -- Description and travel&quot;,&quot;Australia -- Description and travel&quot;,&quot;Windsor, Edward, Duke of, 1894-1972&quot;],&quot;Primary&quot;:&quot;38691.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cotes, Everard&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;38691&quot;});" class='title'>Down Under with the Prince</a>
+<div class='author'>Cotes, Everard</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39322, {&quot;Title&quot;:&quot;Australian Pictures, Drawn with Pen and Pencil&quot;,&quot;Topics&quot;:[&quot;Australia -- Description and travel&quot;,&quot;Natural history -- Australia&quot;],&quot;Primary&quot;:&quot;39322.htm&quot;,&quot;CreatorNames&quot;:[&quot;Willoughby, Howard, 1839-1908&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;39322&quot;});" class='title'>Australian Pictures, Drawn with Pen and Pencil</a>
+<div class='author'>Willoughby, Howard, 1839-1908</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39361, {&quot;Title&quot;:&quot;Old New Zealand: A Tale of the Good Old Times - And a History of the War in the North against the Chief Heke, in the Year 1845&quot;,&quot;Topics&quot;:[&quot;New Zealand -- Description and travel&quot;,&quot;Maori (New Zealand people) -- Social life and customs&quot;],&quot;Primary&quot;:&quot;39361.htm&quot;,&quot;CreatorNames&quot;:[&quot;Maning, Frederick Edward, 1812-1883&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;39361&quot;});" class='title'>Old New Zealand:<br><span class='subtitle'>A Tale of the Good Old Times - And a History of the War in the North against the Chief Heke, in the Year 1845</span></a>
+<div class='author'>Maning, Frederick Edward, 1812-1883</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39495, {&quot;Title&quot;:&quot;Our First Half-Century: A Review of Queensland Progress Based Upon Official Information&quot;,&quot;Topics&quot;:[&quot;Queensland -- History&quot;],&quot;Primary&quot;:&quot;39495.htm&quot;,&quot;CreatorNames&quot;:[&quot;Queensland&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;39495&quot;});" class='title'>Our First Half-Century:<br><span class='subtitle'>A Review of Queensland Progress Based Upon Official Information</span></a>
+<div class='author'>Queensland</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39621, {&quot;Title&quot;:&quot;The Jenolan Caves: An Excursion in Australian Wonderland&quot;,&quot;Topics&quot;:[&quot;Australia -- Description and travel&quot;,&quot;Caves&quot;,&quot;Jenolan Caves (N.S.W.)&quot;],&quot;Primary&quot;:&quot;39621.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cook, Samuel&quot;],&quot;LoCC&quot;:[&quot;DU&quot;,&quot;GB&quot;],&quot;PG_ID&quot;:&quot;39621&quot;});" class='title'>The Jenolan Caves:<br><span class='subtitle'>An Excursion in Australian Wonderland</span></a>
+<div class='author'>Cook, Samuel</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40003, {&quot;Title&quot;:&quot;Australian Heroes and Adventurers&quot;,&quot;Topics&quot;:[&quot;Gold mines and mining -- Australia&quot;,&quot;Australia -- History -- 1788-1900&quot;,&quot;Burke and Wills Expedition, (1860-1861)&quot;],&quot;Primary&quot;:&quot;40003.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pyke, William T. (William Thomas)&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;40003&quot;});" class='title'>Australian Heroes and Adventurers</a>
+<div class='author'>Pyke, William T. (William Thomas)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40010, {&quot;Title&quot;:&quot;Summer Cruising in the South Seas&quot;,&quot;Topics&quot;:[&quot;Oceania -- Description and travel&quot;],&quot;Primary&quot;:&quot;40010.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stoddard, Charles Warren, 1843-1909&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;40010&quot;});" class='title'>Summer Cruising in the South Seas</a>
+<div class='author'>Stoddard, Charles Warren, 1843-1909</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40305, {&quot;Title&quot;:&quot;Problems of the Pacific&quot;,&quot;Topics&quot;:[&quot;Eastern question (Far East)&quot;,&quot;Pacific Ocean&quot;,&quot;Competition, International&quot;],&quot;Primary&quot;:&quot;40305.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fox, Frank, 1874-1960&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;40305&quot;});" class='title'>Problems of the Pacific</a>
+<div class='author'>Fox, Frank, 1874-1960</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4052, {&quot;Title&quot;:&quot;Address to the Inhabitants of the Colonies, established in New South Wales And Norfolk Island&quot;,&quot;Topics&quot;:[&quot;Speeches, addresses, etc.&quot;,&quot;Prisoners -- Australia&quot;,&quot;Sermons -- Australia -- 18th century&quot;],&quot;Primary&quot;:&quot;4052.htm&quot;,&quot;CreatorNames&quot;:[&quot;Johnson, Richard, 1755-1827&quot;],&quot;LoCC&quot;:[&quot;BV&quot;,&quot;DU&quot;],&quot;PG_ID&quot;:&quot;4052&quot;});" class='title'>Address to the Inhabitants of the Colonies, established in New South Wales And Norfolk Island</a>
+<div class='author'>Johnson, Richard, 1755-1827</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4054, {&quot;Title&quot;:&quot;A Lady&#39;s Visit to the Gold Diggings of Australia in 1852-53&quot;,&quot;Topics&quot;:[&quot;Gold mines and mining -- Australia&quot;,&quot;Australia -- Description and travel&quot;],&quot;Primary&quot;:&quot;4054.htm&quot;,&quot;CreatorNames&quot;:[&quot;Clacy, Charles, Mrs., 1830-1901&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;4054&quot;});" class='title'>A Lady's Visit to the Gold Diggings of Australia in 1852-53</a>
+<div class='author'>Clacy, Charles, Mrs., 1830-1901</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41258, {&quot;Title&quot;:&quot;Memoirs of the Life and Labours of the Rev. Samuel Marsden, of Paramatta, Senior Chaplain of New South Wales; and of His Early Connexion with the Missions to New Zealand and Tahiti&quot;,&quot;Topics&quot;:[&quot;Maori (New Zealand people)&quot;,&quot;Marsden, Samuel, 1765-1838&quot;,&quot;Missions -- New Zealand&quot;,&quot;Missions -- French Polynesia -- Tahiti (Island)&quot;],&quot;Primary&quot;:&quot;41258.htm&quot;,&quot;CreatorNames&quot;:[&quot;Marsden, Samuel, 1765-1838&quot;,&quot;Marsden, J. B. (John Buxton), 1803-1870 [Editor]&quot;],&quot;LoCC&quot;:[&quot;BV&quot;,&quot;DU&quot;],&quot;PG_ID&quot;:&quot;41258&quot;});" class='title'>Memoirs of the Life and Labours of the Rev. Samuel Marsden, of Paramatta, Senior Chaplain of New South Wales;<br><span class='subtitle'>and of His Early Connexion with the Missions to New Zealand and Tahiti</span></a>
+<div class='author'>Marsden, Samuel, 1765-1838, Marsden, J. B. (John Buxton), 1803-1870 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41270, {&quot;Title&quot;:&quot;The Australian Explorers: Their Labours, Perils, and Achievements - Being a Narrative of Discovery from the Landing of Captain Cook to the Centennial Year&quot;,&quot;Topics&quot;:[&quot;Australia -- Discovery and exploration&quot;,&quot;Explorers -- Australia&quot;],&quot;Primary&quot;:&quot;41270.htm&quot;,&quot;CreatorNames&quot;:[&quot;Grimm, George&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;41270&quot;});" class='title'>The Australian Explorers:<br><span class='subtitle'>Their Labours, Perils, and Achievements - Being a Narrative of Discovery from the Landing of Captain Cook to the Centennial Year</span></a>
+<div class='author'>Grimm, George</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41451, {&quot;Title&quot;:&quot;The Spell of the Hawaiian Islands and the Philippines&quot;,&quot;Topics&quot;:[&quot;Hawaii&quot;,&quot;Philippines&quot;],&quot;Primary&quot;:&quot;41451.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anderson, Isabel, 1876-1948&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;41451&quot;});" class='title'>The Spell of the Hawaiian Islands and the Philippines</a>
+<div class='author'>Anderson, Isabel, 1876-1948</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41716, {&quot;Title&quot;:&quot;The Pacific Triangle&quot;,&quot;Topics&quot;:[&quot;Eastern question (Far East)&quot;,&quot;Pacific Ocean&quot;],&quot;Primary&quot;:&quot;41716.htm&quot;,&quot;CreatorNames&quot;:[&quot;Greenbie, Sydney, 1889-1960&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;41716&quot;});" class='title'>The Pacific Triangle</a>
+<div class='author'>Greenbie, Sydney, 1889-1960</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41800, {&quot;Title&quot;:&quot;The Treaty of Waitangi; or, how New Zealand became a British Colony&quot;,&quot;Topics&quot;:[&quot;Treaty of Waitangi (1840)&quot;,&quot;New Zealand -- Politics and government&quot;],&quot;Primary&quot;:&quot;41800.htm&quot;,&quot;CreatorNames&quot;:[&quot;Buick, Thomas Lindsay, 1866-1938&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;41800&quot;});" class='title'>The Treaty of Waitangi;<br><span class='subtitle'>or, how New Zealand became a British Colony</span></a>
+<div class='author'>Buick, Thomas Lindsay, 1866-1938</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42228, {&quot;Title&quot;:&quot;Camp Fire Yarns of the Lost Legion&quot;,&quot;Topics&quot;:[&quot;Zulu War, 1879&quot;,&quot;Maori (New Zealand people) -- Warfare&quot;,&quot;New Zealand -- History -- Anecdotes&quot;],&quot;Primary&quot;:&quot;42228.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hamilton-Browne, G.&quot;],&quot;LoCC&quot;:[&quot;DT&quot;,&quot;DU&quot;],&quot;PG_ID&quot;:&quot;42228&quot;});" class='title'>Camp Fire Yarns of the Lost Legion</a>
+<div class='author'>Hamilton-Browne, G.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4237, {&quot;Title&quot;:&quot;Australian Search Party&quot;,&quot;Topics&quot;:[&quot;Australia -- Discovery and exploration&quot;],&quot;Primary&quot;:&quot;4237.htm&quot;,&quot;CreatorNames&quot;:[&quot;Eden, Charles H. (Charles Henry), 1839-1900&quot;,&quot;Bates, Henry Walter, 1825-1892 [Editor]&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;4237&quot;});" class='title'>Australian Search Party</a>
+<div class='author'>Eden, Charles H. (Charles Henry), 1839-1900, Bates, Henry Walter, 1825-1892 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42388, {&quot;Title&quot;:&quot;The Solomon Islands and Their Natives&quot;,&quot;Topics&quot;:[&quot;Solomon Islands&quot;],&quot;Primary&quot;:&quot;42388.htm&quot;,&quot;CreatorNames&quot;:[&quot;Guppy, H. B. (Henry Brougham), 1854-1926&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;42388&quot;});" class='title'>The Solomon Islands and Their Natives</a>
+<div class='author'>Guppy, H. B. (Henry Brougham), 1854-1926</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4328, {&quot;Title&quot;:&quot;Two Expeditions into the Interior of Southern Australia — Volume I&quot;,&quot;Topics&quot;:[&quot;Sturt, Charles, 1795-1869&quot;,&quot;New South Wales -- Discovery and exploration&quot;],&quot;Primary&quot;:&quot;4328.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sturt, Charles, 1795-1869&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;4328&quot;});" class='title'>Two Expeditions into the Interior of Southern Australia — Volume I</a>
+<div class='author'>Sturt, Charles, 1795-1869</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4329, {&quot;Title&quot;:&quot;Two Expeditions into the Interior of Southern Australia — Volume 2&quot;,&quot;Topics&quot;:[&quot;Sturt, Charles, 1795-1869&quot;,&quot;New South Wales -- Discovery and exploration&quot;],&quot;Primary&quot;:&quot;4329.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sturt, Charles, 1795-1869&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;4329&quot;});" class='title'>Two Expeditions into the Interior of Southern Australia — Volume 2</a>
+<div class='author'>Sturt, Charles, 1795-1869</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4330, {&quot;Title&quot;:&quot;Two Expeditions into the Interior of Southern Australia — Complete&quot;,&quot;Topics&quot;:[&quot;Sturt, Charles, 1795-1869&quot;,&quot;New South Wales -- Discovery and exploration&quot;],&quot;Primary&quot;:&quot;4330.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sturt, Charles, 1795-1869&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;4330&quot;});" class='title'>Two Expeditions into the Interior of Southern Australia — Complete</a>
+<div class='author'>Sturt, Charles, 1795-1869</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43425, {&quot;Title&quot;:&quot;Jean, Our Little Australian Cousin&quot;,&quot;Topics&quot;:[&quot;Children -- Australia -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;43425.htm&quot;,&quot;CreatorNames&quot;:[&quot;Nixon-Roulet, Mary F., -1930&quot;,&quot;Horne, Diantha W. [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DU&quot;,&quot;PZ&quot;],&quot;PG_ID&quot;:&quot;43425&quot;});" class='title'>Jean, Our Little Australian Cousin</a>
+<div class='author'>Nixon-Roulet, Mary F., -1930, Horne, Diantha W. [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43462, {&quot;Title&quot;:&quot;Our Little Hawaiian Cousin&quot;,&quot;Topics&quot;:[&quot;Children -- Hawaii --Juvenile literature&quot;,&quot;Hawaii -- Social life and customs -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;43462.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wade, Mary Hazelton Blanchard, 1860-1936&quot;,&quot;Bridgman, L. J. (Lewis Jesse), 1857-1931 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DU&quot;,&quot;PZ&quot;],&quot;PG_ID&quot;:&quot;43462&quot;});" class='title'>Our Little Hawaiian Cousin</a>
+<div class='author'>Wade, Mary Hazelton Blanchard, 1860-1936, Bridgman, L. J. (Lewis Jesse), 1857-1931 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43573, {&quot;Title&quot;:&quot;Savage Island: An Account of a Sojourn in Niué and Tonga&quot;,&quot;Topics&quot;:[&quot;Niue&quot;,&quot;Tonga&quot;],&quot;Primary&quot;:&quot;43573.htm&quot;,&quot;CreatorNames&quot;:[&quot;Thomson, Basil, 1861-1939&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;43573&quot;});" class='title'>Savage Island:<br><span class='subtitle'>An Account of a Sojourn in Niué and Tonga</span></a>
+<div class='author'>Thomson, Basil, 1861-1939</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43812, {&quot;Title&quot;:&quot;Through the South Seas with Jack London&quot;,&quot;Topics&quot;:[&quot;Authors, American -- 20th century -- Biography&quot;,&quot;Oceania -- Description and travel&quot;,&quot;London, Jack, 1876-1916 -- Travel -- Oceania&quot;,&quot;Americans -- Oceania -- History -- 20th century&quot;,&quot;Johnson, Martin, 1884-1937&quot;],&quot;Primary&quot;:&quot;43812.htm&quot;,&quot;CreatorNames&quot;:[&quot;Johnson, Martin, 1884-1937&quot;,&quot;Harrison, Ralph D. [Commentator]&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;43812&quot;});" class='title'>Through the South Seas with Jack London</a>
+<div class='author'>Johnson, Martin, 1884-1937, Harrison, Ralph D. [Commentator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43824, {&quot;Title&quot;:&quot;In the Track of the Trades - The Account of a Fourteen Thousand Mile Yachting Cruise to the Hawaiis, Marquesas, Societies, Samoas and Fijis&quot;,&quot;Topics&quot;:[&quot;Polynesia -- Description and travel&quot;],&quot;Primary&quot;:&quot;43824.htm&quot;,&quot;CreatorNames&quot;:[&quot;Freeman, Lewis R. (Lewis Ransome), 1878-1960&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;43824&quot;});" class='title'>In the Track of the Trades -<br><span class='subtitle'>The Account of a Fourteen Thousand Mile Yachting Cruise to the Hawaiis, Marquesas, Societies, Samoas and Fijis</span></a>
+<div class='author'>Freeman, Lewis R. (Lewis Ransome), 1878-1960</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44726, {&quot;Title&quot;:&quot;An Old New Zealander; or, Te Rauparaha, the Napoleon of the South.&quot;,&quot;Topics&quot;:[&quot;New Zealand&quot;,&quot;Te Rauparaha, 1770?-1849&quot;,&quot;Ngati Toa (New Zealand people) -- Kings and rulers -- Biography&quot;,&quot;Ngati Toa (New Zealand people) -- Biography&quot;,&quot;Ngati Toa (New Zealand people) -- History&quot;,&quot;Maori (New Zealand people) -- Biography&quot;,&quot;Maori (New Zealand people) -- History&quot;],&quot;Primary&quot;:&quot;44726.htm&quot;,&quot;CreatorNames&quot;:[&quot;Buick, Thomas Lindsay, 1866-1938&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;44726&quot;});" class='title'>An Old New Zealander;<br><span class='subtitle'>or, Te Rauparaha, the Napoleon of the South.</span></a>
+<div class='author'>Buick, Thomas Lindsay, 1866-1938</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4521, {&quot;Title&quot;:&quot;Narrative of the Overland Expedition of the Messrs. Jardine from Rockhampton to Cape York, Northern Queensland&quot;,&quot;Topics&quot;:[&quot;Queensland -- Discovery and exploration&quot;,&quot;Jardine, Frank Lascelles -- Travel -- Australia -- Queensland&quot;,&quot;Jardine, Alexander -- Travel -- Australia -- Queensland&quot;,&quot;Queensland -- Description and travel&quot;],&quot;Primary&quot;:&quot;4521.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jardine, Alexander&quot;,&quot;Jardine, Frank Lascelles, 1841-1919&quot;,&quot;Byerley, Frederick J. [Editor]&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;4521&quot;});" class='title'>Narrative of the Overland Expedition of the Messrs. Jardine from Rockhampton to Cape York, Northern Queensland</a>
+<div class='author'>Jardine, Alexander, Jardine, Frank Lascelles, 1841-1919, Byerley, Frederick J. [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45688, {&quot;Title&quot;:&quot;The adventures of Kimble Bent: A story of wild life in the New Zealand bush&quot;,&quot;Topics&quot;:[&quot;New Zealand -- Description and travel&quot;,&quot;Bent, Kimble, 1837-1916&quot;],&quot;Primary&quot;:&quot;45688.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cowan, James, 1870-1943&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;45688&quot;});" class='title'>The adventures of Kimble Bent:<br><span class='subtitle'>A story of wild life in the New Zealand bush</span></a>
+<div class='author'>Cowan, James, 1870-1943</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46161, {&quot;Title&quot;:&quot;By Forest Ways in New Zealand&quot;,&quot;Topics&quot;:[&quot;New Zealand -- Description and travel&quot;,&quot;Roberts, F. A. -- Travel -- New Zealand&quot;],&quot;Primary&quot;:&quot;46161.htm&quot;,&quot;CreatorNames&quot;:[&quot;Roberts, F. A.&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;46161&quot;});" class='title'>By Forest Ways in New Zealand</a>
+<div class='author'>Roberts, F. A.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46468, {&quot;Title&quot;:&quot;A Voyage Round the World, from 1806 to 1812 - In Which Japan, Kamschatka, the Aleutian islands, and the Sandwich Islands were Visited; Including a Narrative of the Author&#39;s Shipwreck on the Island of Sannack, and His Subsequent Wreck in the Ship&#39;s Long-Boat; with an Account of the Present State of the Sandwich Islands, and a Vocabulary of Their Language.&quot;,&quot;Topics&quot;:[&quot;Hawaii -- Description and travel&quot;,&quot;Voyages around the world -- History -- 19th century&quot;,&quot;Campbell, Archibald, 1787- -- Travel&quot;,&quot;Hawaiian language&quot;],&quot;Primary&quot;:&quot;46468.htm&quot;,&quot;CreatorNames&quot;:[&quot;Campbell, Archibald, 1787-&quot;,&quot;Smith, James, 1782-1867 [Editor]&quot;],&quot;LoCC&quot;:[&quot;DU&quot;,&quot;G&quot;],&quot;PG_ID&quot;:&quot;46468&quot;});" class='title'>A Voyage Round the World, from 1806 to 1812 -<br><span class='subtitle'>In Which Japan, Kamschatka, the Aleutian islands, and the Sandwich Islands were Visited; Including a Narrative of the Author's Shipwreck on the Island of Sannack, and His Subsequent Wreck in the Ship's Long-Boat; with an Account of the Present State of the Sandwich Islands, and a Vocabulary of Their Language.</span></a>
+<div class='author'>Campbell, Archibald, 1787-, Smith, James, 1782-1867 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46925, {&quot;Title&quot;:&quot;The City of Auckland, New Zealand, 1840-1920&quot;,&quot;Topics&quot;:[&quot;Auckland (N.Z.) -- History&quot;],&quot;Primary&quot;:&quot;46925.htm&quot;,&quot;CreatorNames&quot;:[&quot;Barr, John, 1887-1971&quot;,&quot;Graham, George, 1874-1952 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;46925&quot;});" class='title'>The City of Auckland, New Zealand, 1840-1920</a>
+<div class='author'>Barr, John, 1887-1971, Graham, George, 1874-1952 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4699, {&quot;Title&quot;:&quot;We of the Never-Never&quot;,&quot;Topics&quot;:[&quot;Northern Territory -- Description and travel&quot;,&quot;Frontier and pioneer life -- Australia -- Northern Territory&quot;],&quot;Primary&quot;:&quot;4699.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gunn, Jeannie, 1870-1961&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;4699&quot;});" class='title'>We of the Never-Never</a>
+<div class='author'>Gunn, Jeannie, 1870-1961</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47064, {&quot;Title&quot;:&quot;Bekentenissen van een strandvonder: Het leven op mijn tropisch eiland&quot;,&quot;Topics&quot;:[&quot;Dunk Island (Qld.)&quot;,&quot;Natural history -- Australia -- Queensland&quot;],&quot;Primary&quot;:&quot;47064.htm&quot;,&quot;CreatorNames&quot;:[&quot;Banfield, E. J. (Edmund James), 1852-1923&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;47064&quot;});" class='title'>Bekentenissen van een strandvonder:<br><span class='subtitle'>Het leven op mijn tropisch eiland</span></a>
+<div class='author'>Banfield, E. J. (Edmund James), 1852-1923</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47663, {&quot;Title&quot;:&quot;Mr. Oseba&#39;s Last Discovery&quot;,&quot;Topics&quot;:[&quot;Voyages and travels&quot;,&quot;New Zealand -- Description and travel&quot;],&quot;Primary&quot;:&quot;47663.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bell, George W. (George William), 1840?-1907&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;47663&quot;});" class='title'>Mr. Oseba's Last Discovery</a>
+<div class='author'>Bell, George W. (George William), 1840?-1907</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48541, {&quot;Title&quot;:&quot;Robinson in Australien: Ein Lehr- und Lesebuch für gute Kinder&quot;,&quot;Topics&quot;:[&quot;Voyages, Imaginary&quot;],&quot;Primary&quot;:&quot;48541.htm&quot;,&quot;CreatorNames&quot;:[&quot;Schoppe, Amalie, 1791-1858&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;48541&quot;});" class='title'>Robinson in Australien:<br><span class='subtitle'>Ein Lehr- und Lesebuch für gute Kinder</span></a>
+<div class='author'>Schoppe, Amalie, 1791-1858</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48634, {&quot;Title&quot;:&quot;Pioneers in Australasia&quot;,&quot;Topics&quot;:[&quot;Australasia -- Discovery and exploration&quot;,&quot;Explorers -- Australasia&quot;,&quot;Australasia -- Description and travel&quot;],&quot;Primary&quot;:&quot;48634.htm&quot;,&quot;CreatorNames&quot;:[&quot;Johnston, Harry, 1858-1927&quot;,&quot;Ball, Alec [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;48634&quot;});" class='title'>Pioneers in Australasia</a>
+<div class='author'>Johnston, Harry, 1858-1927, Ball, Alec [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4974, {&quot;Title&quot;:&quot;Australia Twice Traversed - The Romance of Exploration, Being a Narrative Compiled from the Journals of Five Exploring Expeditions into and Through Central South Australia and Western Australia, from 1872 to 1876&quot;,&quot;Topics&quot;:[&quot;Australia -- Discovery and exploration&quot;],&quot;Primary&quot;:&quot;4974.htm&quot;,&quot;CreatorNames&quot;:[&quot;Giles, Ernest, 1835-1897&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;4974&quot;});" class='title'>Australia Twice Traversed -<br><span class='subtitle'>The Romance of Exploration, Being a Narrative Compiled from the Journals of Five Exploring Expeditions into and Through Central South Australia and Western Australia, from 1872 to 1876</span></a>
+<div class='author'>Giles, Ernest, 1835-1897</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4975, {&quot;Title&quot;:&quot;Spinifex and Sand - A Narrative of Five Years&#39; Pioneering and Exploration in Western Ausralia&quot;,&quot;Topics&quot;:[&quot;Western Australia -- Description and travel&quot;,&quot;Gold mines and mining -- Australia -- Western Australia&quot;,&quot;Carnegie, David Wynford, 1871-1900&quot;],&quot;Primary&quot;:&quot;4975.htm&quot;,&quot;CreatorNames&quot;:[&quot;Carnegie, David Wynford, 1871-1900&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;4975&quot;});" class='title'>Spinifex and Sand -<br><span class='subtitle'>A Narrative of Five Years' Pioneering and Exploration in Western Ausralia</span></a>
+<div class='author'>Carnegie, David Wynford, 1871-1900</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4976, {&quot;Title&quot;:&quot;Narrative of an Expedition into Central Australia - Performed Under the Authority of Her Majesty&#39;s Government, During the Years 1844, 5, and 6, Together With A Notice of the Province of South Australia in 1847&quot;,&quot;Topics&quot;:[&quot;Central Australia -- Discovery and exploration&quot;,&quot;Natural history -- Australia -- Central Australia&quot;,&quot;South Australia -- Description and travel&quot;],&quot;Primary&quot;:&quot;4976.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sturt, Charles, 1795-1869&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;4976&quot;});" class='title'>Narrative of an Expedition into Central Australia -<br><span class='subtitle'>Performed Under the Authority of Her Majesty's Government, During the Years 1844, 5, and 6, Together With A Notice of the Province of South Australia in 1847</span></a>
+<div class='author'>Sturt, Charles, 1795-1869</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49896, {&quot;Title&quot;:&quot;Die Sandwich-Inseln, oder das Inselreich von Hawaii.&quot;,&quot;Topics&quot;:[&quot;Hawaii -- Description and travel&quot;],&quot;Primary&quot;:&quot;49896.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anrep-Elmpt, Reinhold, 1834-1888&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;49896&quot;});" class='title'>Die Sandwich-Inseln, oder das Inselreich von Hawaii.</a>
+<div class='author'>Anrep-Elmpt, Reinhold, 1834-1888</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5005, {&quot;Title&quot;:&quot;Journal of an Overland Expedition in Australia - From Moreton Bay to Port Essington, a distance of upwards of 3000 miles, during the years 1844-1845&quot;,&quot;Topics&quot;:[&quot;Australia -- Description and travel&quot;,&quot;Australia -- Discovery and exploration&quot;],&quot;Primary&quot;:&quot;5005.htm&quot;,&quot;CreatorNames&quot;:[&quot;Leichhardt, Ludwig, 1813-1848&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;5005&quot;});" class='title'>Journal of an Overland Expedition in Australia -<br><span class='subtitle'>From Moreton Bay to Port Essington, a distance of upwards of 3000 miles, during the years 1844-1845</span></a>
+<div class='author'>Leichhardt, Ludwig, 1813-1848</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50962, {&quot;Title&quot;:&quot;Brighter Britain! (Volume 2 of 2) - or Settler and Maori in Northern New Zealand&quot;,&quot;Topics&quot;:[&quot;New Zealand -- Description and travel&quot;,&quot;Ethnology -- New Zealand&quot;,&quot;Maori (New Zealand people)&quot;],&quot;Primary&quot;:&quot;50962.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hay, W. Delisle (William Delisle), 1851-&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;50962&quot;});" class='title'>Brighter Britain! (Volume 2 of 2) -<br><span class='subtitle'>or Settler and Maori in Northern New Zealand</span></a>
+<div class='author'>Hay, W. Delisle (William Delisle), 1851-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5113, {&quot;Title&quot;:&quot;The Confessions of a Beachcomber&quot;,&quot;Topics&quot;:[&quot;Dunk Island (Qld.)&quot;,&quot;Natural history -- Australia -- Queensland&quot;],&quot;Primary&quot;:&quot;5113.txt&quot;,&quot;CreatorNames&quot;:[&quot;Banfield, E. J. (Edmund James), 1852-1923&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;5113&quot;});" class='title'>The Confessions of a Beachcomber</a>
+<div class='author'>Banfield, E. J. (Edmund James), 1852-1923</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52528, {&quot;Title&quot;:&quot;The Cruise of the \&quot;\&quot;Janet Nichol\&quot;\&quot; Among the South Sea Islands: A Diary&quot;,&quot;Topics&quot;:[&quot;Oceania -- Description and travel&quot;,&quot;Stevenson, Robert Louis, 1850-1894 -- Travel -- Oceania&quot;,&quot;Stevenson, Fanny Van de Grift, 1840-1914 -- Travel -- Oceania&quot;,&quot;Janet Nichol (Ship)&quot;],&quot;Primary&quot;:&quot;52528.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stevenson, Fanny Van de Grift, 1840-1914&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;52528&quot;});" class='title'>The Cruise of the "Janet Nichol" Among the South Sea Islands:<br><span class='subtitle'>A Diary</span></a>
+<div class='author'>Stevenson, Fanny Van de Grift, 1840-1914</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52813, {&quot;Title&quot;:&quot;On the Wallaby Through Victoria&quot;,&quot;Topics&quot;:[&quot;Victoria -- Social life and customs&quot;],&quot;Primary&quot;:&quot;52813.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mordaunt, Elinor, 1877?-1942&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;52813&quot;});" class='title'>On the Wallaby Through Victoria</a>
+<div class='author'>Mordaunt, Elinor, 1877?-1942</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53244, {&quot;Title&quot;:&quot;The King Country; or, Explorations in New Zealand - A Narrative of 600 Miles of Travel Through Maoriland.&quot;,&quot;Topics&quot;:[&quot;New Zealand -- Description and travel&quot;],&quot;Primary&quot;:&quot;53244.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kerry-Nicholls, J. H. (James Henry), -1888&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;53244&quot;});" class='title'>The King Country;<br><span class='subtitle'>or, Explorations in New Zealand - A Narrative of 600 Miles of Travel Through Maoriland.</span></a>
+<div class='author'>Kerry-Nicholls, J. H. (James Henry), -1888</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5334, {&quot;Title&quot;:&quot;Journals of Two Expeditions into the Interior of New South Wales&quot;,&quot;Topics&quot;:[&quot;New South Wales -- Discovery and exploration&quot;,&quot;Oxley, John, 1783-1828&quot;],&quot;Primary&quot;:&quot;5334.txt&quot;,&quot;CreatorNames&quot;:[&quot;Oxley, John, 1783-1828&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;5334&quot;});" class='title'>Journals of Two Expeditions into the Interior of New South Wales</a>
+<div class='author'>Oxley, John, 1783-1828</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53384, {&quot;Title&quot;:&quot;Pygmies &amp; Papuans: The Stone Age To-day in Dutch New Guinea&quot;,&quot;Topics&quot;:[&quot;British Ornithologists&#39; Union Expedition -- 1909-1911&quot;,&quot;Ethnology -- Indonesia -- Papua&quot;,&quot;Birds -- Indonesia -- Papua&quot;,&quot;Papua (Indonesia)&quot;],&quot;Primary&quot;:&quot;53384.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wollaston, A. F. R. (Alexander Frederick Richmond), 1875-1930&quot;,&quot;Haddon, Alfred C. (Alfred Cort), 1855-1940 [Contributor]&quot;,&quot;Ogilvie-Grant, W. R. (William Robert), 1863-1924 [Contributor]&quot;,&quot;Ray, Sidney Herbert, 1858-1939 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;53384&quot;});" class='title'>Pygmies & Papuans:<br><span class='subtitle'>The Stone Age To-day in Dutch New Guinea</span></a>
+<div class='author'>Wollaston, A. F. R. (Alexander Frederick Richmond), 1875-1930, Haddon, Alfred C. (Alfred Cort), 1855-1940 [Contributor], Ogilvie-Grant, W. R. (William Robert), 1863-1924 [Contributor], Ray, Sidney Herbert, 1858-1939 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5344, {&quot;Title&quot;:&quot;Journals of Expeditions of Discovery into Central Australia and Overland from Adelaide to King George&#39;s Sound in the Years 1840-1: Sent By the Colonists of South Australia, with the Sanction and Support of the Government: Including an Account of the Manners and Customs of the Aborigines and the State of Their Relations with Europeans — Volume 01&quot;,&quot;Topics&quot;:[&quot;Australia -- Discovery and exploration&quot;,&quot;Ethnology -- Australia&quot;],&quot;Primary&quot;:&quot;5344.htm&quot;,&quot;CreatorNames&quot;:[&quot;Eyre, Edward John, 1815-1901&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;5344&quot;});" class='title'>Journals of Expeditions of Discovery into Central Australia and Overland from Adelaide to King George's Sound in the Years 1840-1:<br><span class='subtitle'>Sent By the Colonists of South Australia, with the Sanction and Support of the Government: Including an Account of the Manners and Customs of the Aborigines and the State of Their Relations with Europeans — Volume 01</span></a>
+<div class='author'>Eyre, Edward John, 1815-1901</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5345, {&quot;Title&quot;:&quot;Journals of Expeditions of Discovery into Central Australia and Overland from Adelaide to King George&#39;s Sound in the Years 1840-1: Sent By the Colonists of South Australia, with the Sanction and Support of the Government: Including an Account of the Manners and Customs of the Aborigines and the State of Their Relations with Europeans — Volume 02&quot;,&quot;Topics&quot;:[&quot;Australia -- Discovery and exploration&quot;,&quot;Ethnology -- Australia&quot;],&quot;Primary&quot;:&quot;5345.htm&quot;,&quot;CreatorNames&quot;:[&quot;Eyre, Edward John, 1815-1901&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;5345&quot;});" class='title'>Journals of Expeditions of Discovery into Central Australia and Overland from Adelaide to King George's Sound in the Years 1840-1:<br><span class='subtitle'>Sent By the Colonists of South Australia, with the Sanction and Support of the Government: Including an Account of the Manners and Customs of the Aborigines and the State of Their Relations with Europeans — Volume 02</span></a>
+<div class='author'>Eyre, Edward John, 1815-1901</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5346, {&quot;Title&quot;:&quot;Journals of Expeditions of Discovery into Central Australia and Overland from Adelaide to King George&#39;s Sound in the Years 1840-1: Sent By the Colonists of South Australia, with the Sanction and Support of the Government: Including an Account of the Manners and Customs of the Aborigines and the State of Their Relations with Europeans — Complete&quot;,&quot;Topics&quot;:[&quot;Australia -- Discovery and exploration&quot;,&quot;Ethnology -- Australia&quot;],&quot;Primary&quot;:&quot;5346.txt&quot;,&quot;CreatorNames&quot;:[&quot;Eyre, Edward John, 1815-1901&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;5346&quot;});" class='title'>Journals of Expeditions of Discovery into Central Australia and Overland from Adelaide to King George's Sound in the Years 1840-1:<br><span class='subtitle'>Sent By the Colonists of South Australia, with the Sanction and Support of the Government: Including an Account of the Manners and Customs of the Aborigines and the State of Their Relations with Europeans — Complete</span></a>
+<div class='author'>Eyre, Edward John, 1815-1901</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(536, {&quot;Title&quot;:&quot;A Footnote to History: Eight Years of Trouble in Samoa&quot;,&quot;Topics&quot;:[&quot;Samoan Islands -- History&quot;],&quot;Primary&quot;:&quot;536.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stevenson, Robert Louis, 1850-1894&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;536&quot;});" class='title'>A Footnote to History:<br><span class='subtitle'>Eight Years of Trouble in Samoa</span></a>
+<div class='author'>Stevenson, Robert Louis, 1850-1894</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53784, {&quot;Title&quot;:&quot;Old Melbourne Memories - Second Edition, Revised&quot;,&quot;Topics&quot;:[&quot;Victoria -- Description and travel&quot;,&quot;Victoria -- Social life and customs&quot;,&quot;Frontier and pioneer life -- Australia -- Melbourne (Vic.)&quot;],&quot;Primary&quot;:&quot;53784.htm&quot;,&quot;CreatorNames&quot;:[&quot;Boldrewood, Rolf, 1826-1915&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;53784&quot;});" class='title'>Old Melbourne Memories -<br><span class='subtitle'>Second Edition, Revised</span></a>
+<div class='author'>Boldrewood, Rolf, 1826-1915</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53946, {&quot;Title&quot;:&quot;Ein deutsches Kriegsschiff in der Südsee&quot;,&quot;Topics&quot;:[&quot;Voyages and travels&quot;,&quot;Oceania -- Description and travel&quot;,&quot;Ariadne (Ship)&quot;],&quot;Primary&quot;:&quot;53946.htm&quot;,&quot;CreatorNames&quot;:[&quot;Werner, Bartholomäus von, 1842-1924&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;53946&quot;});" class='title'>Ein deutsches Kriegsschiff in der Südsee</a>
+<div class='author'>Werner, Bartholomäus von, 1842-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54428, {&quot;Title&quot;:&quot;Samoafahrten&quot;,&quot;Topics&quot;:[&quot;Ethnology -- New Guinea&quot;,&quot;Stone age -- New Guinea&quot;],&quot;Primary&quot;:&quot;54428.htm&quot;,&quot;CreatorNames&quot;:[&quot;Finsch, O. (Otto), 1839-1917&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;54428&quot;});" class='title'>Samoafahrten</a>
+<div class='author'>Finsch, O. (Otto), 1839-1917</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54474, {&quot;Title&quot;:&quot;New Zealand&quot;,&quot;Topics&quot;:[&quot;New Zealand -- History&quot;],&quot;Primary&quot;:&quot;54474.htm&quot;,&quot;CreatorNames&quot;:[&quot;Horsley, Reginald, 1863-1926&quot;,&quot;McCormick, A. D. (Arthur David), 1860-1943 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;54474&quot;});" class='title'>New Zealand</a>
+<div class='author'>Horsley, Reginald, 1863-1926, McCormick, A. D. (Arthur David), 1860-1943 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54479, {&quot;Title&quot;:&quot;Faery Lands of the South Seas&quot;,&quot;Topics&quot;:[&quot;Polynesia -- Description and travel&quot;,&quot;Polynesia -- Social life and customs&quot;],&quot;Primary&quot;:&quot;54479.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hall, James Norman, 1887-1951&quot;,&quot;Nordhoff, Charles, 1887-1947&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;54479&quot;});" class='title'>Faery Lands of the South Seas</a>
+<div class='author'>Hall, James Norman, 1887-1951, Nordhoff, Charles, 1887-1947</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54499, {&quot;Title&quot;:&quot;In the Strange South Seas&quot;,&quot;Topics&quot;:[&quot;Oceania -- Description and travel&quot;,&quot;Islands of the Pacific -- Description and travel&quot;],&quot;Primary&quot;:&quot;54499.htm&quot;,&quot;CreatorNames&quot;:[&quot;Grimshaw, Beatrice, 1871-1953&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;54499&quot;});" class='title'>In the Strange South Seas</a>
+<div class='author'>Grimshaw, Beatrice, 1871-1953</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54533, {&quot;Title&quot;:&quot;The Cruise of the Dream Ship&quot;,&quot;Topics&quot;:[&quot;Voyages and travels&quot;,&quot;Polynesia -- Description and travel&quot;],&quot;Primary&quot;:&quot;54533.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stock, Ralph, 1881-1962&quot;,&quot;Hunt, Lynn Bogue [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;54533&quot;});" class='title'>The Cruise of the Dream Ship</a>
+<div class='author'>Stock, Ralph, 1881-1962, Hunt, Lynn Bogue [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56359, {&quot;Title&quot;:&quot;A Dark Chapter from New Zealand History&quot;,&quot;Topics&quot;:[&quot;Poverty Bay, N.Z., Massacre, 1868&quot;,&quot;Te Kooti, 1830?-1893&quot;,&quot;New Zealand -- History -- New Zealand Wars, 1860-1872&quot;,&quot;Maori (New Zealand people) -- New Zealand -- Gisborne District -- History&quot;],&quot;Primary&quot;:&quot;56359.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hawthorne, James&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;56359&quot;});" class='title'>A Dark Chapter from New Zealand History</a>
+<div class='author'>Hawthorne, James</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56457, {&quot;Title&quot;:&quot;Faery Lands of the South Seas&quot;,&quot;Topics&quot;:[&quot;Polynesia -- Description and travel&quot;,&quot;Polynesia -- Social life and customs&quot;],&quot;Primary&quot;:&quot;56457.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hall, James Norman, 1887-1951&quot;,&quot;Nordhoff, Charles, 1887-1947&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;56457&quot;});" class='title'>Faery Lands of the South Seas</a>
+<div class='author'>Hall, James Norman, 1887-1951, Nordhoff, Charles, 1887-1947</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56937, {&quot;Title&quot;:&quot;Christmas on the Briny, The Innocents Abroad - Or, A Holiday Trip to the Abrolhos Islands&quot;,&quot;Topics&quot;:[&quot;Houtman Abrolhos (W.A.) -- Description and travel&quot;],&quot;Primary&quot;:&quot;56937.htm&quot;,&quot;CreatorNames&quot;:[&quot;Christie, W. Bede (William Bede)&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;56937&quot;});" class='title'>Christmas on the Briny, The Innocents Abroad -<br><span class='subtitle'>Or, A Holiday Trip to the Abrolhos Islands</span></a>
+<div class='author'>Christie, W. Bede (William Bede)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57026, {&quot;Title&quot;:&quot;The Last of the Bushrangers: An Account of the Capture of the Kelly Gang&quot;,&quot;Topics&quot;:[&quot;Kelly, Ned, 1855-1880&quot;,&quot;Brigands and robbers -- Australia&quot;],&quot;Primary&quot;:&quot;57026.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hare, Francis Augustus&quot;],&quot;LoCC&quot;:[&quot;DU&quot;,&quot;HV&quot;],&quot;PG_ID&quot;:&quot;57026&quot;});" class='title'>The Last of the Bushrangers:<br><span class='subtitle'>An Account of the Capture of the Kelly Gang</span></a>
+<div class='author'>Hare, Francis Augustus</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57235, {&quot;Title&quot;:&quot;Prospectus of the Scots New Zealand Land Company&quot;,&quot;Topics&quot;:[&quot;Scots New Zealand Land Company&quot;,&quot;New Zealand -- Emigration and immigration&quot;],&quot;Primary&quot;:&quot;57235.htm&quot;,&quot;CreatorNames&quot;:[&quot;Matthew, Patrick, 1790-1874&quot;,&quot;Scots New Zealand Land Company&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;57235&quot;});" class='title'>Prospectus of the Scots New Zealand Land Company</a>
+<div class='author'>Matthew, Patrick, 1790-1874, Scots New Zealand Land Company</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57258, {&quot;Title&quot;:&quot;Hawaii National Park: A Guide for the Haleakala Section, Island of Maui, Hawaii&quot;,&quot;Topics&quot;:[&quot;Hawaii Volcanoes National Park (Hawaii)&quot;],&quot;Primary&quot;:&quot;57258.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ruhle, George Cornelius, 1900-&quot;,&quot;Black, Donald M. [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;57258&quot;});" class='title'>Hawaii National Park:<br><span class='subtitle'>A Guide for the Haleakala Section, Island of Maui, Hawaii</span></a>
+<div class='author'>Ruhle, George Cornelius, 1900-, Black, Donald M. [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57269, {&quot;Title&quot;:&quot;Terra Australis Incognita; Or, A New Southern Discovery, containing A Fifth Part of the World&quot;,&quot;Topics&quot;:[&quot;Voyages and travels&quot;,&quot;Discoveries in geography&quot;,&quot;Oceania -- Discovery and exploration&quot;],&quot;Primary&quot;:&quot;57269.htm&quot;,&quot;CreatorNames&quot;:[&quot;Queirós, Pedro Fernandes de, -1615&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;57269&quot;});" class='title'>Terra Australis Incognita;<br><span class='subtitle'>Or, A New Southern Discovery, containing A Fifth Part of the World</span></a>
+<div class='author'>Queirós, Pedro Fernandes de, -1615</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57344, {&quot;Title&quot;:&quot;Captain Cook in New South Wales; Or, The Mystery of Naming Botany Bay&quot;,&quot;Topics&quot;:[&quot;Cook, James, 1728-1779&quot;,&quot;Botany Bay (N.S.W.) -- History&quot;,&quot;New South Wales -- History -- To 1788&quot;],&quot;Primary&quot;:&quot;57344.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bonwick, James, 1817-1906&quot;],&quot;LoCC&quot;:[&quot;DU&quot;,&quot;G&quot;],&quot;PG_ID&quot;:&quot;57344&quot;});" class='title'>Captain Cook in New South Wales;<br><span class='subtitle'>Or, The Mystery of Naming Botany Bay</span></a>
+<div class='author'>Bonwick, James, 1817-1906</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57437, {&quot;Title&quot;:&quot;Sydney to Croydon (Northern Queensland) - An Interesting Account of a Journey to the Gulf Country with a Member of Parliament&quot;,&quot;Topics&quot;:[&quot;New South Wales -- Description and travel&quot;,&quot;Queensland -- Description and travel&quot;,&quot;Gold mines and mining -- Australia -- Croydon (Qld.)&quot;],&quot;Primary&quot;:&quot;57437.htm&quot;,&quot;CreatorNames&quot;:[&quot;Saltbush&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;57437&quot;});" class='title'>Sydney to Croydon (Northern Queensland) -<br><span class='subtitle'>An Interesting Account of a Journey to the Gulf Country with a Member of Parliament</span></a>
+<div class='author'>Saltbush</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57452, {&quot;Title&quot;:&quot;Five Years Under the Southern Cross: Experiences and Impressions&quot;,&quot;Topics&quot;:[&quot;Australia -- Description and travel&quot;],&quot;Primary&quot;:&quot;57452.htm&quot;,&quot;CreatorNames&quot;:[&quot;Spurr, Frederic C. (Frederic Chambers), 1862-1942&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;57452&quot;});" class='title'>Five Years Under the Southern Cross:<br><span class='subtitle'>Experiences and Impressions</span></a>
+<div class='author'>Spurr, Frederic C. (Frederic Chambers), 1862-1942</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57471, {&quot;Title&quot;:&quot;A Settler&#39;s 35 Years&#39; Experience in Victoria, Australia - And how £6 8s. became £8,000&quot;,&quot;Topics&quot;:[&quot;Hulme, E. (Edward), 1818-1904&quot;,&quot;Immigrants -- Australia -- Biography&quot;,&quot;Victoria -- Biography&quot;],&quot;Primary&quot;:&quot;57471.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hulme, E. (Edward), 1818-1904&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;57471&quot;});" class='title'>A Settler's 35 Years' Experience in Victoria, Australia -<br><span class='subtitle'>And how £6 8s. became £8,000</span></a>
+<div class='author'>Hulme, E. (Edward), 1818-1904</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57484, {&quot;Title&quot;:&quot;The Golden South: Memories of Australian Home Life from 1843 to 1888&quot;,&quot;Topics&quot;:[&quot;New South Wales -- Description and travel&quot;,&quot;Lambert, Kathleen&quot;,&quot;Australia -- Social conditions -- 1788-1900&quot;,&quot;Australia -- Social life and customs -- 1788-1900&quot;],&quot;Primary&quot;:&quot;57484.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lambert, Kathleen&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;57484&quot;});" class='title'>The Golden South:<br><span class='subtitle'>Memories of Australian Home Life from 1843 to 1888</span></a>
+<div class='author'>Lambert, Kathleen</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57498, {&quot;Title&quot;:&quot;The Diggings, the Bush, and Melbourne - or, Reminiscences of Three Years&#39; Wanderings in Victoria&quot;,&quot;Topics&quot;:[&quot;Victoria -- Description and travel&quot;],&quot;Primary&quot;:&quot;57498.htm&quot;,&quot;CreatorNames&quot;:[&quot;Armour, James&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;57498&quot;});" class='title'>The Diggings, the Bush, and Melbourne -<br><span class='subtitle'>or, Reminiscences of Three Years' Wanderings in Victoria</span></a>
+<div class='author'>Armour, James</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57563, {&quot;Title&quot;:&quot;Queensland, the Rich but Sparsely Peopled Country, a Paradise for Willing Workers&quot;,&quot;Topics&quot;:[&quot;Queensland -- Economic conditions&quot;],&quot;Primary&quot;:&quot;57563.htm&quot;,&quot;CreatorNames&quot;:[&quot;Queensland Government Intelligence and Tourist Bureau&quot;],&quot;LoCC&quot;:[&quot;DU&quot;,&quot;HC&quot;],&quot;PG_ID&quot;:&quot;57563&quot;});" class='title'>Queensland, the Rich but Sparsely Peopled Country, a Paradise for Willing Workers</a>
+<div class='author'>Queensland Government Intelligence and Tourist Bureau</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57618, {&quot;Title&quot;:&quot;The Murray River - Being a Journal of the Voyage of the \&quot;\&quot;Lady Augusta\&quot;\&quot; Steamer from the Goolwa, in South Australia, to Gannewarra, above Swan Hill, Victoria, a Distance from the Sea Mouth of 1400 Miles&quot;,&quot;Topics&quot;:[&quot;South Australia -- Description and travel&quot;,&quot;Victoria -- Description and travel&quot;,&quot;Kinloch, Arthur, active 19th century -- Travel -- Australia -- Murray River (N.S.W.-S.A.)&quot;,&quot;Kinloch, Arthur, active 19th century -- Diaries&quot;,&quot;Lady Augusta (Ship)&quot;,&quot;Murray River (N.S.W.-S.A.) -- Description and travel&quot;,&quot;Murray River Region (N.S.W.-S.A.) -- Description and travel&quot;],&quot;Primary&quot;:&quot;57618.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kinloch, Arthur, active 19th century&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;57618&quot;});" class='title'>The Murray River -<br><span class='subtitle'>Being a Journal of the Voyage of the "Lady Augusta" Steamer from the Goolwa, in South Australia, to Gannewarra, above Swan Hill, Victoria, a Distance from the Sea Mouth of 1400 Miles</span></a>
+<div class='author'>Kinloch, Arthur, active 19th century</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57635, {&quot;Title&quot;:&quot;A Brief Sketch of the Long and Varied Career of Marshall MacDermott, Esq., J.P. of Adelaide, South Australia&quot;,&quot;Topics&quot;:[&quot;Soldiers -- Great Britain -- Biography&quot;,&quot;Immigrants -- Australia -- Biography&quot;,&quot;MacDermott, Marshall, -1877&quot;],&quot;Primary&quot;:&quot;57635.htm&quot;,&quot;CreatorNames&quot;:[&quot;MacDermott, Marshall, -1877&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;57635&quot;});" class='title'>A Brief Sketch of the Long and Varied Career of Marshall MacDermott, Esq., J.P. of Adelaide, South Australia</a>
+<div class='author'>MacDermott, Marshall, -1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57695, {&quot;Title&quot;:&quot;The Savage South Seas&quot;,&quot;Topics&quot;:[&quot;Oceania -- Social life and customs.&quot;],&quot;Primary&quot;:&quot;57695.htm&quot;,&quot;CreatorNames&quot;:[&quot;Elkington, E. Way (Ernest Way), 1872-&quot;,&quot;Hardy, Norman H., 1863-1914 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;57695&quot;});" class='title'>The Savage South Seas</a>
+<div class='author'>Elkington, E. Way (Ernest Way), 1872-, Hardy, Norman H., 1863-1914 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57881, {&quot;Title&quot;:&quot;The Isle of Vanishing Men: A Narrative of Adventure in Cannibal-land&quot;,&quot;Topics&quot;:[&quot;New Guinea -- Description and travel&quot;,&quot;Ethnology -- New Guinea&quot;],&quot;Primary&quot;:&quot;57881.htm&quot;,&quot;CreatorNames&quot;:[&quot;Alder, William Fisher&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;57881&quot;});" class='title'>The Isle of Vanishing Men:<br><span class='subtitle'>A Narrative of Adventure in Cannibal-land</span></a>
+<div class='author'>Alder, William Fisher</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5789, {&quot;Title&quot;:&quot;Personal Recollections of Early Melbourne and Victoria&quot;,&quot;Topics&quot;:[&quot;Victoria -- Description and travel&quot;],&quot;Primary&quot;:&quot;5789.txt&quot;,&quot;CreatorNames&quot;:[&quot;Westgarth, William, 1815-1889&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;5789&quot;});" class='title'>Personal Recollections of Early Melbourne and Victoria</a>
+<div class='author'>Westgarth, William, 1815-1889</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58098, {&quot;Title&quot;:&quot;Children of Wild Australia&quot;,&quot;Topics&quot;:[&quot;Aboriginal Australians -- Childhood and youth -- Juvenile literature&quot;,&quot;Aboriginal Australians -- Juvenile literature&quot;,&quot;Australia -- Juveile literature&quot;],&quot;Primary&quot;:&quot;58098.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pitts, Herbert&quot;],&quot;LoCC&quot;:[&quot;DU&quot;,&quot;GN&quot;],&quot;PG_ID&quot;:&quot;58098&quot;});" class='title'>Children of Wild Australia</a>
+<div class='author'>Pitts, Herbert</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5816, {&quot;Title&quot;:&quot;Successful Exploration Through the Interior of Australia - From Melbourne to the Gulf of Carpentaria&quot;,&quot;Topics&quot;:[&quot;Australia -- Description and travel&quot;,&quot;Australia -- Discovery and exploration&quot;,&quot;Burke and Wills Expedition, (1860-1861)&quot;,&quot;Wills, William John, 1834-1861&quot;,&quot;Burke, Robert O&#39;Hara, 1821-1861&quot;],&quot;Primary&quot;:&quot;5816.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wills, William John, 1834-1861&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;5816&quot;});" class='title'>Successful Exploration Through the Interior of Australia -<br><span class='subtitle'>From Melbourne to the Gulf of Carpentaria</span></a>
+<div class='author'>Wills, William John, 1834-1861</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58206, {&quot;Title&quot;:&quot;From Ocean to Ocean: Across a Continent on a Bicycle - An Account of a Solitary Ride From Adelaide to Port Darwin&quot;,&quot;Topics&quot;:[&quot;Northern Territory -- Description and travel&quot;,&quot;South Australia -- Description and travel&quot;,&quot;Cycling -- Northern Territory&quot;,&quot;Cycling -- South Australia&quot;],&quot;Primary&quot;:&quot;58206.htm&quot;,&quot;CreatorNames&quot;:[&quot;Murif, Jerome J., 1863-1926&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;58206&quot;});" class='title'>From Ocean to Ocean:<br><span class='subtitle'>Across a Continent on a Bicycle - An Account of a Solitary Ride From Adelaide to Port Darwin</span></a>
+<div class='author'>Murif, Jerome J., 1863-1926</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58230, {&quot;Title&quot;:&quot;Shavings &amp; Scrapes from many parts&quot;,&quot;Topics&quot;:[&quot;Pacific Area -- Description and travel&quot;,&quot;Joubert, Jules, 1824-1907 -- Travel -- Pacific Area&quot;,&quot;Pacific Area -- Social life and customs&quot;],&quot;Primary&quot;:&quot;58230.htm&quot;,&quot;CreatorNames&quot;:[&quot;Joubert, Jules, 1824-1907&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;58230&quot;});" class='title'>Shavings & Scrapes from many parts</a>
+<div class='author'>Joubert, Jules, 1824-1907</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58239, {&quot;Title&quot;:&quot;Memories of My Life - From My Early Days in Scotland Till the Present Day in Adelaide&quot;,&quot;Topics&quot;:[&quot;Allen, J. S. O., Mrs&quot;,&quot;Women household employees -- Australia -- Biography&quot;],&quot;Primary&quot;:&quot;58239.htm&quot;,&quot;CreatorNames&quot;:[&quot;Allen, J. S. O., Mrs.&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;58239&quot;});" class='title'>Memories of My Life -<br><span class='subtitle'>From My Early Days in Scotland Till the Present Day in Adelaide</span></a>
+<div class='author'>Allen, J. S. O., Mrs.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58500, {&quot;Title&quot;:&quot;Some Experiences of a New Guinea Resident Magistrate&quot;,&quot;Topics&quot;:[&quot;Papuans&quot;,&quot;Monckton, C. A. W. (Charles Arthur Whitmore), 1872-1936 -- Travel -- Papua New Guinea&quot;,&quot;Judges -- Papua New Guinea -- Biography&quot;,&quot;Papua New Guinea -- Social life and customs&quot;,&quot;Papua New Guinea -- Description and travel&quot;,&quot;Monckton, C. A. W. (Charles Arthur Whitmore), 1872-1936&quot;],&quot;Primary&quot;:&quot;58500.htm&quot;,&quot;CreatorNames&quot;:[&quot;Monckton, C. A. W. (Charles Arthur Whitmore), 1872-1936&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;58500&quot;});" class='title'>Some Experiences of a New Guinea Resident Magistrate</a>
+<div class='author'>Monckton, C. A. W. (Charles Arthur Whitmore), 1872-1936</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58624, {&quot;Title&quot;:&quot;Sailor and beachcomber - Confessions of a life at sea, in Australia, and amid the islands of the Pacific&quot;,&quot;Topics&quot;:[&quot;Voyages and travels&quot;,&quot;Oceania -- Description and travel&quot;,&quot;Safroni-Middleton, A. (Arnold), 1873-1950&quot;],&quot;Primary&quot;:&quot;58624.htm&quot;,&quot;CreatorNames&quot;:[&quot;Safroni-Middleton, A. (Arnold), 1873-1950&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;58624&quot;});" class='title'>Sailor and beachcomber -<br><span class='subtitle'>Confessions of a life at sea, in Australia, and amid the islands of the Pacific</span></a>
+<div class='author'>Safroni-Middleton, A. (Arnold), 1873-1950</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58799, {&quot;Title&quot;:&quot;History of the Australian Bushrangers&quot;,&quot;Topics&quot;:[&quot;Bushrangers -- Australia&quot;],&quot;Primary&quot;:&quot;58799.htm&quot;,&quot;CreatorNames&quot;:[&quot;Boxall, George&quot;],&quot;LoCC&quot;:[&quot;DU&quot;,&quot;HV&quot;],&quot;PG_ID&quot;:&quot;58799&quot;});" class='title'>History of the Australian Bushrangers</a>
+<div class='author'>Boxall, George</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59303, {&quot;Title&quot;:&quot;A Vagabond&#39;s Odyssey - being further reminiscences of a wandering sailor-troubadour in many lands&quot;,&quot;Topics&quot;:[&quot;Voyages and travels&quot;,&quot;Oceania -- Description and travel&quot;,&quot;Safroni-Middleton, A. (Arnold), 1873-1950&quot;],&quot;Primary&quot;:&quot;59303.htm&quot;,&quot;CreatorNames&quot;:[&quot;Safroni-Middleton, A. (Arnold), 1873-1950&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;59303&quot;});" class='title'>A Vagabond's Odyssey -<br><span class='subtitle'>being further reminiscences of a wandering sailor-troubadour in many lands</span></a>
+<div class='author'>Safroni-Middleton, A. (Arnold), 1873-1950</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59530, {&quot;Title&quot;:&quot;Wine-Dark Seas and Tropic Skies: Reminiscences and a Romance of the South Seas&quot;,&quot;Topics&quot;:[&quot;Polynesia&quot;,&quot;Marquesas Islands (French Polynesia)&quot;],&quot;Primary&quot;:&quot;59530.htm&quot;,&quot;CreatorNames&quot;:[&quot;Safroni-Middleton, A. (Arnold), 1873-1950&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;59530&quot;});" class='title'>Wine-Dark Seas and Tropic Skies:<br><span class='subtitle'>Reminiscences and a Romance of the South Seas</span></a>
+<div class='author'>Safroni-Middleton, A. (Arnold), 1873-1950</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59684, {&quot;Title&quot;:&quot;Life and Adventure in the South Pacific&quot;,&quot;Topics&quot;:[&quot;Oceania -- Description and travel&quot;,&quot;Whaling&quot;,&quot;Emily Morgan (Ship)&quot;],&quot;Primary&quot;:&quot;59684.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jones, John D.&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;59684&quot;});" class='title'>Life and Adventure in the South Pacific</a>
+<div class='author'>Jones, John D.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59714, {&quot;Title&quot;:&quot;Blacks and Bushrangers: Adventures in Queensland&quot;,&quot;Topics&quot;:[&quot;Queensland -- Description and travel&quot;,&quot;Aboriginal Australians -- Australia -- Queensland&quot;,&quot;Bushrangers -- Australia -- Queensland&quot;],&quot;Primary&quot;:&quot;59714.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kennedy, E. B.&quot;,&quot;Berkeley, Stanley, 1855-1909 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;59714&quot;});" class='title'>Blacks and Bushrangers:<br><span class='subtitle'>Adventures in Queensland</span></a>
+<div class='author'>Kennedy, E. B., Berkeley, Stanley, 1855-1909 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5992, {&quot;Title&quot;:&quot;Station Amusements in New Zealand&quot;,&quot;Topics&quot;:[&quot;New Zealand -- Description and travel&quot;,&quot;Country life -- New Zealand&quot;],&quot;Primary&quot;:&quot;5992.htm&quot;,&quot;CreatorNames&quot;:[&quot;Barker, Lady (Mary Anne), 1831-1911&quot;],&quot;LoCC&quot;:[&quot;DU&quot;,&quot;S&quot;],&quot;PG_ID&quot;:&quot;5992&quot;});" class='title'>Station Amusements in New Zealand</a>
+<div class='author'>Barker, Lady (Mary Anne), 1831-1911</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60385, {&quot;Title&quot;:&quot;South Sea Foam - The romantic adventures of a modern Don Quixote in the southern seas&quot;,&quot;Topics&quot;:[&quot;Polynesia&quot;,&quot;Folklore -- Polynesia&quot;],&quot;Primary&quot;:&quot;60385.htm&quot;,&quot;CreatorNames&quot;:[&quot;Safroni-Middleton, A. (Arnold), 1873-1950&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;60385&quot;});" class='title'>South Sea Foam -<br><span class='subtitle'>The romantic adventures of a modern Don Quixote in the southern seas</span></a>
+<div class='author'>Safroni-Middleton, A. (Arnold), 1873-1950</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60645, {&quot;Title&quot;:&quot;New Zealand&quot;,&quot;Topics&quot;:[&quot;New Zealand -- Description and travel&quot;,&quot;New Zealand -- History&quot;],&quot;Primary&quot;:&quot;60645.htm&quot;,&quot;CreatorNames&quot;:[&quot;Reeves, William Pember, 1857-1932&quot;,&quot;Wright, F. (Frank), 1860-1923 [Illustrator]&quot;,&quot;Wright, Walter, 1866-1933 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;60645&quot;});" class='title'>New Zealand</a>
+<div class='author'>Reeves, William Pember, 1857-1932, Wright, F. (Frank), 1860-1923 [Illustrator], Wright, Walter, 1866-1933 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60696, {&quot;Title&quot;:&quot;The Boy Travellers in Australasia - Adventures of Two Youths in a Journey to the Sandwich, Marquesas, Society, Samoan, and Feejee Islands&quot;,&quot;Topics&quot;:[&quot;Oceania -- Description and travel&quot;],&quot;Primary&quot;:&quot;60696.htm&quot;,&quot;CreatorNames&quot;:[&quot;Knox, Thomas Wallace, 1835-1896&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;60696&quot;});" class='title'>The Boy Travellers in Australasia -<br><span class='subtitle'>Adventures of Two Youths in a Journey to the Sandwich, Marquesas, Society, Samoan, and Feejee Islands</span></a>
+<div class='author'>Knox, Thomas Wallace, 1835-1896</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60919, {&quot;Title&quot;:&quot;With Axe and Rope in the New Zealand Alps&quot;,&quot;Topics&quot;:[&quot;New Zealand -- Description and travel&quot;,&quot;Mountaineering&quot;],&quot;Primary&quot;:&quot;60919.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mannering, George Edward, 1862-1947&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;60919&quot;});" class='title'>With Axe and Rope in the New Zealand Alps</a>
+<div class='author'>Mannering, George Edward, 1862-1947</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6104, {&quot;Title&quot;:&quot;Station Life in New Zealand&quot;,&quot;Topics&quot;:[&quot;Barker, Lady (Mary Anne), 1831-1911 -- Correspondence&quot;,&quot;Sheep ranches -- New Zealand&quot;,&quot;Governors&#39; spouses -- New Zealand -- Correspondence&quot;,&quot;Country life -- New Zealand -- History&quot;,&quot;New Zealand -- Biography&quot;,&quot;New Zealand -- Social life and customs&quot;],&quot;Primary&quot;:&quot;6104.htm&quot;,&quot;CreatorNames&quot;:[&quot;Barker, Lady (Mary Anne), 1831-1911&quot;],&quot;LoCC&quot;:[&quot;DU&quot;,&quot;S&quot;],&quot;PG_ID&quot;:&quot;6104&quot;});" class='title'>Station Life in New Zealand</a>
+<div class='author'>Barker, Lady (Mary Anne), 1831-1911</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61268, {&quot;Title&quot;:&quot;Australasia - Eight Lectures Prepared for the Visual Instruction Committee of the Colonial Office&quot;,&quot;Topics&quot;:[&quot;Australasia -- Description and travel&quot;],&quot;Primary&quot;:&quot;61268.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sargent, A. J. (Arthur John), 1871-1947&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;61268&quot;});" class='title'>Australasia -<br><span class='subtitle'>Eight Lectures Prepared for the Visual Instruction Committee of the Colonial Office</span></a>
+<div class='author'>Sargent, A. J. (Arthur John), 1871-1947</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62069, {&quot;Title&quot;:&quot;An Australian Ramble; Or, A Summer in Australia&quot;,&quot;Topics&quot;:[&quot;Australia -- Description and travel&quot;],&quot;Primary&quot;:&quot;62069.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ritchie, J. Ewing (James Ewing), 1820-1898&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;62069&quot;});" class='title'>An Australian Ramble;<br><span class='subtitle'>Or, A Summer in Australia</span></a>
+<div class='author'>Ritchie, J. Ewing (James Ewing), 1820-1898</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62138, {&quot;Title&quot;:&quot;Cannibal-land: Adventures with a camera in the New Hebrides&quot;,&quot;Topics&quot;:[&quot;Vanuatu -- Description and travel&quot;],&quot;Primary&quot;:&quot;62138.htm&quot;,&quot;CreatorNames&quot;:[&quot;Johnson, Martin, 1884-1937&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;62138&quot;});" class='title'>Cannibal-land:<br><span class='subtitle'>Adventures with a camera in the New Hebrides</span></a>
+<div class='author'>Johnson, Martin, 1884-1937</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62697, {&quot;Title&quot;:&quot;Atolls of the Sun&quot;,&quot;Topics&quot;:[&quot;Oceania -- Description and travel&quot;],&quot;Primary&quot;:&quot;62697.htm&quot;,&quot;CreatorNames&quot;:[&quot;O&#39;Brien, Frederick, 1869-1932&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;62697&quot;});" class='title'>Atolls of the Sun</a>
+<div class='author'>O'Brien, Frederick, 1869-1932</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64060, {&quot;Title&quot;:&quot;Advance Australasia: A Day-to-Day Record of a Recent Visit to Australasia. - Second Edition.&quot;,&quot;Topics&quot;:[&quot;New Zealand -- Description and travel&quot;,&quot;Australia -- Description and travel&quot;,&quot;Australasia -- Description and travel&quot;,&quot;Australasia -- Economic conditions&quot;],&quot;Primary&quot;:&quot;64060.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bullen, Frank Thomas, 1857-1915&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;64060&quot;});" class='title'>Advance Australasia:<br><span class='subtitle'>A Day-to-Day Record of a Recent Visit to Australasia. - Second Edition.</span></a>
+<div class='author'>Bullen, Frank Thomas, 1857-1915</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64112, {&quot;Title&quot;:&quot;Kaipara; or, experiences of a settler in North New Zealand&quot;,&quot;Topics&quot;:[&quot;Barlow, P. W. (Peter William), 1847-1890&quot;,&quot;Pioneers -- New Zealand -- Kaipara District&quot;,&quot;Frontier and pioneer life -- New Zealand -- Kaipara District&quot;,&quot;Kaipara District (N.Z.) -- Description and travel&quot;,&quot;Kaipara District (N.Z.) -- History&quot;,&quot;Kaipara District (N.Z.) -- Social life and customs&quot;],&quot;Primary&quot;:&quot;64112.htm&quot;,&quot;CreatorNames&quot;:[&quot;Barlow, P. W. (Peter William), 1847-1890&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;64112&quot;});" class='title'>Kaipara;<br><span class='subtitle'>or, experiences of a settler in North New Zealand</span></a>
+<div class='author'>Barlow, P. W. (Peter William), 1847-1890</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65166, {&quot;Title&quot;:&quot;Rambles in Australia&quot;,&quot;Topics&quot;:[&quot;Australia -- Description and travel&quot;],&quot;Primary&quot;:&quot;65166.htm&quot;,&quot;CreatorNames&quot;:[&quot;Grew, Edwin Sharpe, 1867-1950&quot;,&quot;Grew, Marion Sharpe, 1866-1942&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;65166&quot;});" class='title'>Rambles in Australia</a>
+<div class='author'>Grew, Edwin Sharpe, 1867-1950, Grew, Marion Sharpe, 1866-1942</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66275, {&quot;Title&quot;:&quot;Wayside Sketches in Tasmania&quot;,&quot;Topics&quot;:[&quot;Tasmania -- Description and travel&quot;],&quot;Primary&quot;:&quot;66275.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wintle, S. H. (Samuel Henry), 1830-1909&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;66275&quot;});" class='title'>Wayside Sketches in Tasmania</a>
+<div class='author'>Wintle, S. H. (Samuel Henry), 1830-1909</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66299, {&quot;Title&quot;:&quot;Among Cannibals: An Account of Four Years&#39; Travels in Australia and of Camp Life With the Aborigines of Queensland&quot;,&quot;Topics&quot;:[&quot;Ethnology -- Australia&quot;,&quot;Natural history -- Australia&quot;,&quot;Queensland -- Description and travel&quot;,&quot;Aboriginal Australians -- Australia -- Queensland&quot;],&quot;Primary&quot;:&quot;66299.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lumholtz, Carl, 1851-1922&quot;,&quot;Anderson, Rasmus Björn, 1846-1936 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DU&quot;,&quot;GN&quot;],&quot;PG_ID&quot;:&quot;66299&quot;});" class='title'>Among Cannibals:<br><span class='subtitle'>An Account of Four Years' Travels in Australia and of Camp Life With the Aborigines of Queensland</span></a>
+<div class='author'>Lumholtz, Carl, 1851-1922, Anderson, Rasmus Björn, 1846-1936 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66773, {&quot;Title&quot;:&quot;Two Years Among New Guinea Cannibals - A Naturalist&#39;s Sojourn Among the Aborigines of Unexplored New Guinea&quot;,&quot;Topics&quot;:[&quot;New Guinea -- Description and travel&quot;,&quot;Ethnology -- New Guinea&quot;,&quot;Natural history -- New Guinea&quot;],&quot;Primary&quot;:&quot;66773.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pratt, Henry [Annotator]&quot;,&quot;Pratt, A. E. (Antwerp Edgar), 1852-1924&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;66773&quot;});" class='title'>Two Years Among New Guinea Cannibals -<br><span class='subtitle'>A Naturalist's Sojourn Among the Aborigines of Unexplored New Guinea</span></a>
+<div class='author'>Pratt, Henry [Annotator], Pratt, A. E. (Antwerp Edgar), 1852-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67490, {&quot;Title&quot;:&quot;The old frontier: Te Awamutu, the story of the Waipa Valley - The missionary, the soldier, the pioneer farmer, early colonization, the war in Waikato, life on the Maori border and later-day settlement&quot;,&quot;Topics&quot;:[&quot;Te Awamutu (N.Z.) -- History&quot;,&quot;Waipa District (N.Z.) -- History&quot;],&quot;Primary&quot;:&quot;67490.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cowan, James, 1870-1943&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;67490&quot;});" class='title'>The old frontier:<br><span class='subtitle'>Te Awamutu, the story of the Waipa Valley - The missionary, the soldier, the pioneer farmer, early colonization, the war in Waikato, life on the Maori border and later-day settlement</span></a>
+<div class='author'>Cowan, James, 1870-1943</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6750, {&quot;Title&quot;:&quot;The Hawaiian Archipelago&quot;,&quot;Topics&quot;:[&quot;Hawaii -- Description and travel&quot;],&quot;Primary&quot;:&quot;6750.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bird, Isabella L. (Isabella Lucy), 1831-1904&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;6750&quot;});" class='title'>The Hawaiian Archipelago</a>
+<div class='author'>Bird, Isabella L. (Isabella Lucy), 1831-1904</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67536, {&quot;Title&quot;:&quot;Letters from Australia&quot;,&quot;Topics&quot;:[&quot;Australia -- Description and travel&quot;],&quot;Primary&quot;:&quot;67536.htm&quot;,&quot;CreatorNames&quot;:[&quot;Martineau, John, 1834-1910&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;67536&quot;});" class='title'>Letters from Australia</a>
+<div class='author'>Martineau, John, 1834-1910</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67613, {&quot;Title&quot;:&quot;The Story of Chalmers of New Guinea&quot;,&quot;Topics&quot;:[&quot;Voyages and travels -- Juvenile literature&quot;,&quot;Shipwrecks -- Juvenile literature&quot;,&quot;Chalmers, James, 1841-1901 -- Juvenile literature&quot;,&quot;Missionaries -- Scotland -- Biography -- Juvenile literature&quot;,&quot;Sailing -- Juvenile literature&quot;,&quot;Islands -- Juvenile literature&quot;,&quot;New Guinea -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;67613.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kelman, Janet Harvey&quot;,&quot;Robinson, W. Heath (William Heath), 1872-1944 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;67613&quot;});" class='title'>The Story of Chalmers of New Guinea</a>
+<div class='author'>Kelman, Janet Harvey, Robinson, W. Heath (William Heath), 1872-1944 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68221, {&quot;Title&quot;:&quot;Reisen durch die Inselwelt der Südsee&quot;,&quot;Topics&quot;:[&quot;Oceania -- Description and travel&quot;],&quot;Primary&quot;:&quot;68221.htm&quot;,&quot;CreatorNames&quot;:[&quot;Prager, Max, 1854-1910&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;68221&quot;});" class='title'>Reisen durch die Inselwelt der Südsee</a>
+<div class='author'>Prager, Max, 1854-1910</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68737, {&quot;Title&quot;:&quot;A climber in New Zealand&quot;,&quot;Topics&quot;:[&quot;New Zealand -- Description and travel&quot;,&quot;Mountaineering&quot;],&quot;Primary&quot;:&quot;68737.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ross, Malcolm, 1862-1930&quot;,&quot;Bryce, James Bryce, Viscount, 1838-1922 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;DU&quot;,&quot;GV&quot;],&quot;PG_ID&quot;:&quot;68737&quot;});" class='title'>A climber in New Zealand</a>
+<div class='author'>Ross, Malcolm, 1862-1930, Bryce, James Bryce, Viscount, 1838-1922 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69184, {&quot;Title&quot;:&quot;Travels in Western Australia - being a description of the various cities and towns, goldfields, and agricultural districts of that state&quot;,&quot;Topics&quot;:[&quot;Western Australia -- Description and travel&quot;],&quot;Primary&quot;:&quot;69184.htm&quot;,&quot;CreatorNames&quot;:[&quot;Vivienne, May, 1856?-1929&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;69184&quot;});" class='title'>Travels in Western Australia -<br><span class='subtitle'>being a description of the various cities and towns, goldfields, and agricultural districts of that state</span></a>
+<div class='author'>Vivienne, May, 1856?-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69363, {&quot;Title&quot;:&quot;Mutiny of the Bounty and story of Pitcairn Island, 1790-1894&quot;,&quot;Topics&quot;:[&quot;Bounty Mutiny, 1789&quot;,&quot;Pitcairn Island&quot;],&quot;Primary&quot;:&quot;69363.htm&quot;,&quot;CreatorNames&quot;:[&quot;Young, Rosalind Amelia, 1853-1924&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;69363&quot;});" class='title'>Mutiny of the Bounty and story of Pitcairn Island, 1790-1894</a>
+<div class='author'>Young, Rosalind Amelia, 1853-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69529, {&quot;Title&quot;:&quot;The Aborigines of Australia&quot;,&quot;Topics&quot;:[&quot;Ethnology -- Australia&quot;,&quot;Australia -- History&quot;,&quot;Aboriginal Australians -- Social life and customs&quot;,&quot;Aboriginal Australians&quot;,&quot;Aboriginal Australians -- Missions&quot;,&quot;Aboriginal Australians, Treatment of -- History -- Sources&quot;],&quot;Primary&quot;:&quot;69529.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sadleir, Richard, R.N., 1794-1889&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;69529&quot;});" class='title'>The Aborigines of Australia</a>
+<div class='author'>Sadleir, Richard, R.N., 1794-1889</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69580, {&quot;Title&quot;:&quot;Colonial facts and fictions: Humorous sketches&quot;,&quot;Topics&quot;:[&quot;New Zealand -- Description and travel&quot;,&quot;Australia -- Description and travel&quot;],&quot;Primary&quot;:&quot;69580.htm&quot;,&quot;CreatorNames&quot;:[&quot;Milne, John, 1850-1913&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;69580&quot;});" class='title'>Colonial facts and fictions:<br><span class='subtitle'>Humorous sketches</span></a>
+<div class='author'>Milne, John, 1850-1913</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69803, {&quot;Title&quot;:&quot;Australia—Fortune land&quot;,&quot;Topics&quot;:[&quot;Australia -- Gold discoveries&quot;],&quot;Primary&quot;:&quot;69803.htm&quot;,&quot;CreatorNames&quot;:[&quot;O&#39;Hargan, Roderick&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;69803&quot;});" class='title'>Australia—Fortune land</a>
+<div class='author'>O'Hargan, Roderick</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69945, {&quot;Title&quot;:&quot;Tahiti, the island paradise&quot;,&quot;Topics&quot;:[&quot;Tahiti (French Polynesia : Island) -- Description and travel&quot;],&quot;Primary&quot;:&quot;69945.htm&quot;,&quot;CreatorNames&quot;:[&quot;Senn, Nicholas, 1844-1908&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;69945&quot;});" class='title'>Tahiti, the island paradise</a>
+<div class='author'>Senn, Nicholas, 1844-1908</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70385, {&quot;Title&quot;:&quot;South Australia and Western Australia&quot;,&quot;Topics&quot;:[&quot;South Australia&quot;,&quot;Western Australia&quot;],&quot;Primary&quot;:&quot;70385.htm&quot;,&quot;CreatorNames&quot;:[&quot;Trollope, Anthony, 1815-1882&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;70385&quot;});" class='title'>South Australia and Western Australia</a>
+<div class='author'>Trollope, Anthony, 1815-1882</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7163, {&quot;Title&quot;:&quot;The History of Australian Exploration from 1788 to 1888&quot;,&quot;Topics&quot;:[&quot;Australia -- Discovery and exploration&quot;],&quot;Primary&quot;:&quot;7163.txt&quot;,&quot;CreatorNames&quot;:[&quot;Favenc, Ernest, 1846-1908&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;7163&quot;});" class='title'>The History of Australian Exploration from 1788 to 1888</a>
+<div class='author'>Favenc, Ernest, 1846-1908</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7177, {&quot;Title&quot;:&quot;My Tropic Isle&quot;,&quot;Topics&quot;:[&quot;Dunk Island (Qld.)&quot;,&quot;Natural history -- Australia -- Dunk Island (Qld.)&quot;],&quot;Primary&quot;:&quot;7177.txt&quot;,&quot;CreatorNames&quot;:[&quot;Banfield, E. J. (Edmund James), 1852-1923&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;7177&quot;});" class='title'>My Tropic Isle</a>
+<div class='author'>Banfield, E. J. (Edmund James), 1852-1923</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7181, {&quot;Title&quot;:&quot;The Bushman — Life in a New Country&quot;,&quot;Topics&quot;:[&quot;Western Australia -- Description and travel&quot;],&quot;Primary&quot;:&quot;7181.htm&quot;,&quot;CreatorNames&quot;:[&quot;Landor, Edward Wilson, 1811-1878&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;7181&quot;});" class='title'>The Bushman — Life in a New Country</a>
+<div class='author'>Landor, Edward Wilson, 1811-1878</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7304, {&quot;Title&quot;:&quot;The Life of Captain Matthew Flinders&quot;,&quot;Topics&quot;:[&quot;Australia -- Discovery and exploration&quot;,&quot;Flinders, Matthew, 1774-1814&quot;],&quot;Primary&quot;:&quot;7304.htm&quot;,&quot;CreatorNames&quot;:[&quot;Scott, Ernest, Sir, 1868-1939&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;7304&quot;});" class='title'>The Life of Captain Matthew Flinders</a>
+<div class='author'>Scott, Ernest, Sir, 1868-1939</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7324, {&quot;Title&quot;:&quot;Tropic Days&quot;,&quot;Topics&quot;:[&quot;Dunk Island (Qld.)&quot;,&quot;Natural history -- Australia -- Queensland&quot;,&quot;Aboriginal Australians -- Government relations&quot;],&quot;Primary&quot;:&quot;7324.htm&quot;,&quot;CreatorNames&quot;:[&quot;Banfield, E. J. (Edmund James), 1852-1923&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;7324&quot;});" class='title'>Tropic Days</a>
+<div class='author'>Banfield, E. J. (Edmund James), 1852-1923</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7450, {&quot;Title&quot;:&quot;Terre Napoleón; a History of French Explorations and Projects in Australia&quot;,&quot;Topics&quot;:[&quot;Napoleon I, Emperor of the French, 1769-1821&quot;,&quot;Australia -- Discovery and exploration&quot;,&quot;Baudin, Nicolas, 1754-1803&quot;],&quot;Primary&quot;:&quot;7450.htm&quot;,&quot;CreatorNames&quot;:[&quot;Scott, Ernest, Sir, 1868-1939&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;7450&quot;});" class='title'>Terre Napoleón;<br><span class='subtitle'>a History of French Explorations and Projects in Australia</span></a>
+<div class='author'>Scott, Ernest, Sir, 1868-1939</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7509, {&quot;Title&quot;:&quot;The Logbooks of the Lady Nelson - With the journal of her first commander Lieutenant James Grant&quot;,&quot;Topics&quot;:[&quot;Australia -- Discovery and exploration&quot;,&quot;Grant, James, 1771 or 2-1833&quot;,&quot;Lady Nelson (Ship)&quot;],&quot;Primary&quot;:&quot;7509.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lee, Ida, 1865-1943&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;7509&quot;});" class='title'>The Logbooks of the Lady Nelson -<br><span class='subtitle'>With the journal of her first commander Lieutenant James Grant</span></a>
+<div class='author'>Lee, Ida, 1865-1943</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(8911, {&quot;Title&quot;:&quot;Explorations in Australia - The Journals of John McDouall Stuart During the Years 1858, 1859, 1860, 1861, and 1862, When He Fixed the Centre of the Continent and Successfully Crossed It from Sea to Sea&quot;,&quot;Topics&quot;:[&quot;Australia -- Discovery and exploration&quot;,&quot;Stuart, John McDouall, 1815-1866&quot;],&quot;Primary&quot;:&quot;8911.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stuart, John McDouall, 1815-1866&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;8911&quot;});" class='title'>Explorations in Australia -<br><span class='subtitle'>The Journals of John McDouall Stuart During the Years 1858, 1859, 1860, 1861, and 1862, When He Fixed the Centre of the Continent and Successfully Crossed It from Sea to Sea</span></a>
+<div class='author'>Stuart, John McDouall, 1815-1866</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(9943, {&quot;Title&quot;:&quot;Journal of an Expedition into the Interior of Tropical Australia, in Search of a Route from Sydney to the Gulf of Carpentaria (1848)&quot;,&quot;Topics&quot;:[&quot;New South Wales -- Discovery and exploration&quot;,&quot;Queensland -- Discovery and exploration&quot;],&quot;Primary&quot;:&quot;9943.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mitchell, T. L. (Thomas Livingstone), 1792-1855&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;9943&quot;});" class='title'>Journal of an Expedition into the Interior of Tropical Australia, in Search of a Route from Sydney to the Gulf of Carpentaria (1848)</a>
+<div class='author'>Mitchell, T. L. (Thomas Livingstone), 1792-1855</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(9958, {&quot;Title&quot;:&quot;Explorations in Australia - 1.-Explorations in search of Dr. Leichardt and party. 2.-From Perth to Adelaide, around the great Australian bight. 3.-From Champion Bay, across the desert to the telegraph and to Adelaide. With an appendix on the condition of Western Australia.&quot;,&quot;Topics&quot;:[&quot;Australia -- Description and travel&quot;,&quot;Australia -- Discovery and exploration&quot;],&quot;Primary&quot;:&quot;9958.htm&quot;,&quot;CreatorNames&quot;:[&quot;Forrest, John Forrest, Baron, 1847-1918&quot;],&quot;LoCC&quot;:[&quot;DU&quot;],&quot;PG_ID&quot;:&quot;9958&quot;});" class='title'>Explorations in Australia -<br><span class='subtitle'>1.-Explorations in search of Dr. Leichardt and party. 2.-From Perth to Adelaide, around the great Australian bight. 3.-From Champion Bay, across the desert to the telegraph and to Adelaide. With an appendix on the condition of Western Australia.</span></a>
+<div class='author'>Forrest, John Forrest, Baron, 1847-1918</div>
+</div>
+</ul></div>
+</body></html>

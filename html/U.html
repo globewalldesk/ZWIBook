@@ -1,0 +1,398 @@
+<html>
+<head>
+<title>Category</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+<!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+      <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+      <button id="findButton">Find</button>
+  </div>
+</div>
+<div id="header">
+  <div id="header-content">
+    <div class="header-container">
+      <a id="backBtn" class="header-btn" href="#">
+          <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+      </a>
+      <a id="search" class="header-btn" href="../search.html">
+          <img src="../images/icons/search.svg" title="Search book titles">
+      </a>
+    </div>
+    <h1 id="headTitle">Category: Military Science (U)</h1>
+    <div class="header-container">
+      <a id="sortBtn" class="header-btn" href="#">
+        <img src="../images/icons/sort.svg" title="Re-sort books">
+      </a>
+      <div id="sortDropdown" class="dropdown" style="display: none">
+        <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+        <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+        <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+        <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+      </div>
+      <a class="header-btn" href="categories.html">
+        <img src="../images/icons/categories.svg" title="Browse categories">
+      </a>
+      <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+          <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+      </a>
+    </div>
+  </div>
+</div>
+<div id="body">
+<ul>
+<li><a href='UA.html'>Organization, distrubution, military situation (UA)</a> <span class='count'>87</span></li>
+<li><a href='UB.html'>Military administration (UB)</a> <span class='count'>8</span></li>
+<li><a href='UC.html'>Maintenance and transporation (UC)</a> <span class='count'>9</span></li>
+<li><a href='UD.html'>Infantry (UD)</a> <span class='count'>12</span></li>
+<li><a href='UE.html'>Cavalry, Armor (UE)</a> <span class='count'>8</span></li>
+<li><a href='UF.html'>Artillery (UF)</a> <span class='count'>11</span></li>
+<li><a href='UG.html'>Military engineering (UG)</a> <span class='count'>30</span></li>
+<li><a href='UH.html'>Other military services (UH)</a> <span class='count'>13</span></li>
+<p>&nbsp;</p>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12135, {&quot;Title&quot;:&quot;The Art of Fencing; Or, The Use of the Small Sword&quot;,&quot;Topics&quot;:[&quot;Fencing&quot;,&quot;Swords&quot;],&quot;Primary&quot;:&quot;12135.htm&quot;,&quot;CreatorNames&quot;:[&quot;Labat, maître d&#39;armes&quot;,&quot;Mahon, Andrew [Translator]&quot;],&quot;LoCC&quot;:[&quot;U&quot;],&quot;PG_ID&quot;:&quot;12135&quot;});" class='title'>The Art of Fencing;<br><span class='subtitle'>Or, The Use of the Small Sword</span></a>
+<div class='author'>Labat, maître d'armes, Mahon, Andrew [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12407, {&quot;Title&quot;:&quot;兵法 (Bīng Fǎ)&quot;,&quot;Topics&quot;:[&quot;Military art and science -- Early works to 1800&quot;,&quot;War -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;12407.txt&quot;,&quot;CreatorNames&quot;:[&quot;Sunzi, active 6th century B.C.&quot;],&quot;LoCC&quot;:[&quot;U&quot;],&quot;PG_ID&quot;:&quot;12407&quot;});" class='title'>兵法 (Bīng Fǎ)</a>
+<div class='author'>Sunzi, active 6th century B.C.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(132, {&quot;Title&quot;:&quot;The Art of War&quot;,&quot;Topics&quot;:[&quot;Military art and science -- Early works to 1800&quot;,&quot;War -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;132.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sunzi, active 6th century B.C.&quot;,&quot;Giles, Lionel, 1875-1958 [Translator]&quot;],&quot;LoCC&quot;:[&quot;U&quot;],&quot;PG_ID&quot;:&quot;132&quot;});" class='title'>The Art of War</a>
+<div class='author'>Sunzi, active 6th century B.C., Giles, Lionel, 1875-1958 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13549, {&quot;Title&quot;:&quot;The Art of War&quot;,&quot;Topics&quot;:[&quot;Military art and science&quot;],&quot;Primary&quot;:&quot;13549.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jomini, Antoine Henri, baron de, 1779-1869&quot;,&quot;Craighill, Wm. P. (William Price), 1833-1909 [Translator]&quot;,&quot;Mendell, George H. (George Henry), 1831-1902 [Translator]&quot;],&quot;LoCC&quot;:[&quot;U&quot;],&quot;PG_ID&quot;:&quot;13549&quot;});" class='title'>The Art of War</a>
+<div class='author'>Jomini, Antoine Henri, baron de, 1779-1869, Craighill, Wm. P. (William Price), 1833-1909 [Translator], Mendell, George H. (George Henry), 1831-1902 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14625, {&quot;Title&quot;:&quot;Military Instructors Manual&quot;,&quot;Topics&quot;:[&quot;Military art and science&quot;,&quot;United States. Army -- Military life&quot;,&quot;United States. Army -- Officers&#39; handbooks&quot;],&quot;Primary&quot;:&quot;14625.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cole, J. P. (James Perry), 1889-&quot;,&quot;Schoonmaker, Oliver, 1882-1968&quot;],&quot;LoCC&quot;:[&quot;U&quot;],&quot;PG_ID&quot;:&quot;14625&quot;});" class='title'>Military Instructors Manual</a>
+<div class='author'>Cole, J. P. (James Perry), 1889-, Schoonmaker, Oliver, 1882-1968</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15772, {&quot;Title&quot;:&quot;Machiavelli, Volume I&quot;,&quot;Topics&quot;:[&quot;Florence (Italy) -- History&quot;,&quot;Military art and science -- Early works to 1800&quot;,&quot;Political science -- Early works to 1800&quot;,&quot;Political ethics&quot;,&quot;War -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;15772.htm&quot;,&quot;CreatorNames&quot;:[&quot;Machiavelli, Niccolò, 1469-1527&quot;,&quot;Cust, Henry John Cockayne, 1861-1917 [Author of introduction, etc.]&quot;,&quot;Dacres, Edward [Translator]&quot;,&quot;Whitehorne, Peter [Translator]&quot;],&quot;LoCC&quot;:[&quot;JC&quot;,&quot;U&quot;],&quot;PG_ID&quot;:&quot;15772&quot;});" class='title'>Machiavelli, Volume I</a>
+<div class='author'>Machiavelli, Niccolò, 1469-1527, Cust, Henry John Cockayne, 1861-1917 [Author of introduction, etc.], Dacres, Edward [Translator], Whitehorne, Peter [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16170, {&quot;Title&quot;:&quot;Elements of Military Art and Science - Or, Course Of Instruction In Strategy, Fortification, Tactics Of Battles, &amp;C.; Embracing The Duties Of Staff, Infantry, Cavalry, Artillery, And Engineers; Adapted To The Use Of Volunteers And Militia; Third Edition; With Critical Notes On The Mexican And Crimean Wars.&quot;,&quot;Topics&quot;:[&quot;Military art and science&quot;],&quot;Primary&quot;:&quot;16170.htm&quot;,&quot;CreatorNames&quot;:[&quot;Halleck, H. W. (Henry Wager), 1815-1872&quot;],&quot;LoCC&quot;:[&quot;U&quot;],&quot;PG_ID&quot;:&quot;16170&quot;});" class='title'>Elements of Military Art and Science -<br><span class='subtitle'>Or, Course Of Instruction In Strategy, Fortification, Tactics Of Battles, &C.; Embracing The Duties Of Staff, Infantry, Cavalry, Artillery, And Engineers; Adapted To The Use Of Volunteers And Militia; Third Edition; With Critical Notes On The Mexican And Crimean Wars.</span></a>
+<div class='author'>Halleck, H. W. (Henry Wager), 1815-1872</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16237, {&quot;Title&quot;:&quot;Les stratagèmes&quot;,&quot;Topics&quot;:[&quot;Military art and science -- Rome -- Early works to 1800&quot;,&quot;Deception (Military science) -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;16237.txt&quot;,&quot;CreatorNames&quot;:[&quot;Frontinus, Sextus Julius, 30?-104&quot;,&quot;Bailly, C. (Charles), 1800-1862 [Translator]&quot;],&quot;LoCC&quot;:[&quot;U&quot;],&quot;PG_ID&quot;:&quot;16237&quot;});" class='title'>Les stratagèmes</a>
+<div class='author'>Frontinus, Sextus Julius, 30?-104, Bailly, C. (Charles), 1800-1862 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17405, {&quot;Title&quot;:&quot;The Art of War&quot;,&quot;Topics&quot;:[&quot;Military art and science -- Early works to 1800&quot;,&quot;War -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;17405.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sunzi, active 6th century B.C.&quot;,&quot;Giles, Lionel, 1875-1958 [Translator]&quot;],&quot;LoCC&quot;:[&quot;U&quot;],&quot;PG_ID&quot;:&quot;17405&quot;});" class='title'>The Art of War</a>
+<div class='author'>Sunzi, active 6th century B.C., Giles, Lionel, 1875-1958 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(1946, {&quot;Title&quot;:&quot;On War&quot;,&quot;Topics&quot;:[&quot;Military art and science&quot;,&quot;War&quot;],&quot;Primary&quot;:&quot;1946.htm&quot;,&quot;CreatorNames&quot;:[&quot;Clausewitz, Carl von, 1780-1831&quot;,&quot;Graham, J. J. (James John) [Translator]&quot;],&quot;LoCC&quot;:[&quot;U&quot;],&quot;PG_ID&quot;:&quot;1946&quot;});" class='title'>On War</a>
+<div class='author'>Clausewitz, Carl von, 1780-1831, Graham, J. J. (James John) [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19552, {&quot;Title&quot;:&quot;The Plattsburg Manual: A Handbook for Military Training&quot;,&quot;Topics&quot;:[&quot;United States. Army -- Handbooks, manuals, etc.&quot;,&quot;Military training camps -- United States&quot;],&quot;Primary&quot;:&quot;19552.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ellis, O. O. (Olin Oglesby), 1886-&quot;,&quot;Garey, E. B. (Enoch Barton), 1883-1957&quot;],&quot;LoCC&quot;:[&quot;U&quot;],&quot;PG_ID&quot;:&quot;19552&quot;});" class='title'>The Plattsburg Manual:<br><span class='subtitle'>A Handbook for Military Training</span></a>
+<div class='author'>Ellis, O. O. (Olin Oglesby), 1886-, Garey, E. B. (Enoch Barton), 1883-1957</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19854, {&quot;Title&quot;:&quot;Expéditions autour de ma tente: Boutades militaires&quot;,&quot;Topics&quot;:[&quot;France. Armée -- Military life&quot;],&quot;Primary&quot;:&quot;19854.txt&quot;,&quot;CreatorNames&quot;:[&quot;Chartrand, Joseph Damase, 1852-1905&quot;],&quot;LoCC&quot;:[&quot;U&quot;],&quot;PG_ID&quot;:&quot;19854&quot;});" class='title'>Expéditions autour de ma tente:<br><span class='subtitle'>Boutades militaires</span></a>
+<div class='author'>Chartrand, Joseph Damase, 1852-1905</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20442, {&quot;Title&quot;:&quot;A Catalogue of Early Pennsylvania and Other Firearms and Edged Weapons at \&quot;\&quot;Restless Oaks\&quot;\&quot;, McElhattan, Pa.&quot;,&quot;Topics&quot;:[&quot;Weapons -- Catalogs&quot;,&quot;Firearms -- Catalogs&quot;],&quot;Primary&quot;:&quot;20442.htm&quot;,&quot;CreatorNames&quot;:[&quot;Shoemaker, Henry W., 1880-1958&quot;,&quot;Piper, H. Beam, 1904-1964 [Compiler]&quot;],&quot;LoCC&quot;:[&quot;U&quot;],&quot;PG_ID&quot;:&quot;20442&quot;});" class='title'>A Catalogue of Early Pennsylvania and Other Firearms and Edged Weapons at "Restless Oaks", McElhattan, Pa.</a>
+<div class='author'>Shoemaker, Henry W., 1880-1958, Piper, H. Beam, 1904-1964 [Compiler]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23473, {&quot;Title&quot;:&quot;Lectures on Land Warfare; A tactical Manual for the Use of Infantry Officers - An Examination of the Principles Which Underlie the Art of Warfare, with Illustrations of the Principles by Examples Taken from Military History, from the Battle of Thermopylae, B.C. 480, to the Battle of the Sambre, November 1-11, 1918&quot;,&quot;Topics&quot;:[&quot;Military art and science&quot;,&quot;Tactics&quot;],&quot;Primary&quot;:&quot;23473.txt&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;U&quot;],&quot;PG_ID&quot;:&quot;23473&quot;});" class='title'>Lectures on Land Warfare;<br><span class='subtitle'>A tactical Manual for the Use of Infantry Officers - An Examination of the Principles Which Underlie the Art of Warfare, with Illustrations of the Principles by Examples Taken from Military History, from the Battle of Thermopylae, B.C. 480, to the Battle of the Sambre, November 1-11, 1918</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23864, {&quot;Title&quot;:&quot;孫子兵法&quot;,&quot;Topics&quot;:[&quot;Military art and science -- Early works to 1800&quot;,&quot;War -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;23864.txt&quot;,&quot;CreatorNames&quot;:[&quot;Sunzi, active 6th century B.C.&quot;],&quot;LoCC&quot;:[&quot;U&quot;],&quot;PG_ID&quot;:&quot;23864&quot;});" class='title'>孫子兵法</a>
+<div class='author'>Sunzi, active 6th century B.C.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2448, {&quot;Title&quot;:&quot;Henry Ossian Flipper, the Colored Cadet at West Point - Autobiography of Lieut. Henry Ossian Flipper, U.S.A., First Graduate of Color from the U.S. Military Academy&quot;,&quot;Topics&quot;:[&quot;United States Military Academy&quot;,&quot;Soldiers -- United States -- Biography&quot;,&quot;Flipper, Henry Ossian, 1856-1940&quot;,&quot;African American military cadets -- New York (State) -- West Point -- Biography&quot;,&quot;Military cadets -- United States -- Biography&quot;,&quot;African American soldiers -- Biography&quot;],&quot;Primary&quot;:&quot;2448.txt&quot;,&quot;CreatorNames&quot;:[&quot;Flipper, Henry Ossian, 1856-1940&quot;],&quot;LoCC&quot;:[&quot;U&quot;],&quot;PG_ID&quot;:&quot;2448&quot;});" class='title'>Henry Ossian Flipper, the Colored Cadet at West Point -<br><span class='subtitle'>Autobiography of Lieut. Henry Ossian Flipper, U.S.A., First Graduate of Color from the U.S. Military Academy</span></a>
+<div class='author'>Flipper, Henry Ossian, 1856-1940</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24570, {&quot;Title&quot;:&quot;High Adventure: A Narrative of Air Fighting in France&quot;,&quot;Topics&quot;:[&quot;Aeronautics, Military&quot;,&quot;Hall, James Norman, 1887-1951&quot;,&quot;Fighter pilots -- United States -- Biography&quot;,&quot;World War, 1914-1918 -- Personal narratives, American&quot;,&quot;World War, 1914-1918 -- Aerial operations, French&quot;,&quot;France. Armée. Escadrille Lafayette -- Biography&quot;,&quot;Fighter pilots -- France -- Biography&quot;],&quot;Primary&quot;:&quot;24570.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hall, James Norman, 1887-1951&quot;],&quot;LoCC&quot;:[&quot;DC&quot;,&quot;TL&quot;,&quot;U&quot;],&quot;PG_ID&quot;:&quot;24570&quot;});" class='title'>High Adventure:<br><span class='subtitle'>A Narrative of Air Fighting in France</span></a>
+<div class='author'>Hall, James Norman, 1887-1951</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24665, {&quot;Title&quot;:&quot;A Soldier&#39;s Life: Being the Personal Reminiscences of Edwin G. Rundle&quot;,&quot;Topics&quot;:[&quot;Autobiographies&quot;,&quot;Canada -- Description and travel&quot;,&quot;Great Britain. Army -- Military life&quot;,&quot;Canada -- History -- Fenian Invasions, 1866-1870&quot;,&quot;Canada -- History, Military&quot;],&quot;Primary&quot;:&quot;24665.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rundle, Edwin George, 1838-&quot;,&quot;Woodside, Henry J. [Commentator]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;U&quot;,&quot;F&quot;],&quot;PG_ID&quot;:&quot;24665&quot;});" class='title'>A Soldier's Life:<br><span class='subtitle'>Being the Personal Reminiscences of Edwin G. Rundle</span></a>
+<div class='author'>Rundle, Edwin George, 1838-, Woodside, Henry J. [Commentator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24765, {&quot;Title&quot;:&quot;A Treatise on the Tactical Use of the Three Arms: Infantry, Artillery, and Cavalry&quot;,&quot;Topics&quot;:[&quot;United States -- History -- Civil War, 1861-1865 -- Campaigns&quot;,&quot;Tactics&quot;],&quot;Primary&quot;:&quot;24765.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lippitt, Francis J. (Francis James), 1812-1902&quot;],&quot;LoCC&quot;:[&quot;U&quot;],&quot;PG_ID&quot;:&quot;24765&quot;});" class='title'>A Treatise on the Tactical Use of the Three Arms:<br><span class='subtitle'>Infantry, Artillery, and Cavalry</span></a>
+<div class='author'>Lippitt, Francis J. (Francis James), 1812-1902</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24842, {&quot;Title&quot;:&quot;The Defence of Duffer&#39;s Drift&quot;,&quot;Topics&quot;:[&quot;Military art and science&quot;,&quot;South African War, 1899-1902&quot;,&quot;Tactics&quot;,&quot;Guerrilla warfare&quot;],&quot;Primary&quot;:&quot;24842.htm&quot;,&quot;CreatorNames&quot;:[&quot;Swinton, E. D. (Ernest Dunlop), 1868-1951&quot;],&quot;LoCC&quot;:[&quot;U&quot;],&quot;PG_ID&quot;:&quot;24842&quot;});" class='title'>The Defence of Duffer's Drift</a>
+<div class='author'>Swinton, E. D. (Ernest Dunlop), 1868-1951</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25482, {&quot;Title&quot;:&quot;The Armed Forces Officer - Department of the Army Pamphlet 600-2&quot;,&quot;Topics&quot;:[&quot;United States -- Armed Forces -- Officers&#39; handbooks&quot;],&quot;Primary&quot;:&quot;25482.htm&quot;,&quot;CreatorNames&quot;:[&quot;United States. Department of Defense&quot;],&quot;LoCC&quot;:[&quot;U&quot;],&quot;PG_ID&quot;:&quot;25482&quot;});" class='title'>The Armed Forces Officer -<br><span class='subtitle'>Department of the Army Pamphlet 600-2</span></a>
+<div class='author'>United States. Department of Defense</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25825, {&quot;Title&quot;:&quot;At Plattsburg&quot;,&quot;Topics&quot;:[&quot;New York (State) -- Fiction&quot;,&quot;Military education -- Fiction&quot;,&quot;Plattsburgh Barracks (N.Y.)&quot;],&quot;Primary&quot;:&quot;25825.htm&quot;,&quot;CreatorNames&quot;:[&quot;French, Allen, 1870-1946&quot;],&quot;LoCC&quot;:[&quot;U&quot;,&quot;PS&quot;],&quot;PG_ID&quot;:&quot;25825&quot;});" class='title'>At Plattsburg</a>
+<div class='author'>French, Allen, 1870-1946</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26706, {&quot;Title&quot;:&quot;Manual of Military Training - Second, Revised Edition&quot;,&quot;Topics&quot;:[&quot;United States. Army -- Handbooks, manuals, etc.&quot;],&quot;Primary&quot;:&quot;26706.htm&quot;,&quot;CreatorNames&quot;:[&quot;Moss, James A. (James Alfred), 1872-1941&quot;],&quot;LoCC&quot;:[&quot;U&quot;],&quot;PG_ID&quot;:&quot;26706&quot;});" class='title'>Manual of Military Training -<br><span class='subtitle'>Second, Revised Edition</span></a>
+<div class='author'>Moss, James A. (James Alfred), 1872-1941</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(277, {&quot;Title&quot;:&quot;Trinity Site&quot;,&quot;Topics&quot;:[&quot;Manhattan Project (U.S.)&quot;,&quot;Atomic bomb -- New Mexico -- Testing -- History&quot;],&quot;Primary&quot;:&quot;277.htm&quot;,&quot;CreatorNames&quot;:[&quot;National Atomic Museum (U.S.)&quot;],&quot;LoCC&quot;:[&quot;QC&quot;,&quot;U&quot;,&quot;D&quot;],&quot;PG_ID&quot;:&quot;277&quot;});" class='title'>Trinity Site</a>
+<div class='author'>National Atomic Museum (U.S.)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(278, {&quot;Title&quot;:&quot;Trinity Site: 1945-1995. - A National Historic Landmark, White Sands Missile Range, New Mexico&quot;,&quot;Topics&quot;:[&quot;Manhattan Project (U.S.)&quot;,&quot;Atomic bomb -- New Mexico -- Los Alamos -- Testing -- History&quot;],&quot;Primary&quot;:&quot;278.htm&quot;,&quot;CreatorNames&quot;:[&quot;White Sands Missile Range (N.M.). Public Affairs Office&quot;],&quot;LoCC&quot;:[&quot;QC&quot;,&quot;U&quot;,&quot;D&quot;],&quot;PG_ID&quot;:&quot;278&quot;});" class='title'>Trinity Site:<br><span class='subtitle'>1945-1995. - A National Historic Landmark, White Sands Missile Range, New Mexico</span></a>
+<div class='author'>White Sands Missile Range (N.M.). Public Affairs Office</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(279, {&quot;Title&quot;:&quot;Photos and Maps of Trinity (Atomic Test) Site&quot;,&quot;Topics&quot;:[&quot;Manhattan Project (U.S.)&quot;,&quot;Atomic bomb -- New Mexico -- Los Alamos -- Testing -- History&quot;],&quot;Primary&quot;:&quot;279.htm&quot;,&quot;CreatorNames&quot;:[&quot;White Sands Missile Range (N.M.). Public Affairs Office [Contributor]&quot;],&quot;LoCC&quot;:[&quot;QC&quot;,&quot;U&quot;,&quot;D&quot;],&quot;PG_ID&quot;:&quot;279&quot;});" class='title'>Photos and Maps of Trinity (Atomic Test) Site</a>
+<div class='author'>White Sands Missile Range (N.M.). Public Affairs Office [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34115, {&quot;Title&quot;:&quot;Our Battalion - Being Some Slight Impressions of His Majesty&#39;s Auxiliary Forces, in Camp and Elsewhere&quot;,&quot;Topics&quot;:[&quot;Caricatures and cartoons -- Great Britain&quot;,&quot;Armies -- Caricatures and cartoons&quot;],&quot;Primary&quot;:&quot;34115.htm&quot;,&quot;CreatorNames&quot;:[&quot;Raven-Hill, L. (Leonard), 1867-1942&quot;],&quot;LoCC&quot;:[&quot;NC&quot;,&quot;U&quot;],&quot;PG_ID&quot;:&quot;34115&quot;});" class='title'>Our Battalion -<br><span class='subtitle'>Being Some Slight Impressions of His Majesty's Auxiliary Forces, in Camp and Elsewhere</span></a>
+<div class='author'>Raven-Hill, L. (Leonard), 1867-1942</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34269, {&quot;Title&quot;:&quot;Rookie rhymes, by the men of the 1st and 2nd provisional training regiments, Plattsburg, New York&quot;,&quot;Topics&quot;:[&quot;World War, 1914-1918 -- Poetry&quot;,&quot;American poetry -- Collections&quot;],&quot;Primary&quot;:&quot;34269.htm&quot;,&quot;CreatorNames&quot;:[&quot;Plattsburgh Barracks (N.Y.)&quot;],&quot;LoCC&quot;:[&quot;U&quot;,&quot;PS&quot;],&quot;PG_ID&quot;:&quot;34269&quot;});" class='title'>Rookie rhymes, by the men of the 1st and 2nd provisional training regiments, Plattsburg, New York</a>
+<div class='author'>Plattsburgh Barracks (N.Y.)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36693, {&quot;Title&quot;:&quot;Grundgedanken über Krieg und Kriegführung&quot;,&quot;Topics&quot;:[&quot;Military art and science&quot;,&quot;War&quot;],&quot;Primary&quot;:&quot;36693.htm&quot;,&quot;CreatorNames&quot;:[&quot;Clausewitz, Carl von, 1780-1831&quot;],&quot;LoCC&quot;:[&quot;U&quot;],&quot;PG_ID&quot;:&quot;36693&quot;});" class='title'>Grundgedanken über Krieg und Kriegführung</a>
+<div class='author'>Clausewitz, Carl von, 1780-1831</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36778, {&quot;Title&quot;:&quot;Twenty-Five Years in the Rifle Brigade&quot;,&quot;Topics&quot;:[&quot;Napoleon I, Emperor of the French, 1769-1821 -- Contemporaries&quot;,&quot;Great Britain. Army. Rifle Brigade (Prince Consort&#39;s Own) -- Biography&quot;,&quot;Peninsular War, 1807-1814 -- Personal narratives, British&quot;,&quot;Napoleonic Wars, 1800-1815 -- Personal narratives, British&quot;,&quot;Surtees, William, 1781-1830&quot;,&quot;United States -- History -- War of 1812 -- Personal narratives, British&quot;],&quot;Primary&quot;:&quot;36778.htm&quot;,&quot;CreatorNames&quot;:[&quot;Surtees, William, 1781-1830&quot;],&quot;LoCC&quot;:[&quot;U&quot;,&quot;UA&quot;],&quot;PG_ID&quot;:&quot;36778&quot;});" class='title'>Twenty-Five Years in the Rifle Brigade</a>
+<div class='author'>Surtees, William, 1781-1830</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3691, {&quot;Title&quot;:&quot;Little Wars; a game for boys from twelve years of age to one hundred and fifty and for that more intelligent sort of girl who likes boys&#39; games and books.&quot;,&quot;Topics&quot;:[&quot;War games&quot;],&quot;Primary&quot;:&quot;3691.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wells, H. G. (Herbert George), 1866-1946&quot;],&quot;LoCC&quot;:[&quot;U&quot;],&quot;PG_ID&quot;:&quot;3691&quot;});" class='title'>Little Wars;<br><span class='subtitle'>a game for boys from twelve years of age to one hundred and fifty and for that more intelligent sort of girl who likes boys' games and books.</span></a>
+<div class='author'>Wells, H. G. (Herbert George), 1866-1946</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37053, {&quot;Title&quot;:&quot;Insurrections et guerre des barricades dans les grandes villes - par le général de brigade Roguet&quot;,&quot;Topics&quot;:[&quot;Riots&quot;],&quot;Primary&quot;:&quot;37053.txt&quot;,&quot;CreatorNames&quot;:[&quot;Roguet, Christophe-Michel, comte, 1800-1877&quot;],&quot;LoCC&quot;:[&quot;U&quot;],&quot;PG_ID&quot;:&quot;37053&quot;});" class='title'>Insurrections et guerre des barricades dans les grandes villes -<br><span class='subtitle'>par le général de brigade Roguet</span></a>
+<div class='author'>Roguet, Christophe-Michel, comte, 1800-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38738, {&quot;Title&quot;:&quot;American Military Insignia, 1800-1851&quot;,&quot;Topics&quot;:[&quot;United States. Army -- Insignia&quot;,&quot;United States -- Militia -- Insignia&quot;],&quot;Primary&quot;:&quot;38738.htm&quot;,&quot;CreatorNames&quot;:[&quot;Campbell, J. Duncan, (James Duncan), 1916-&quot;],&quot;LoCC&quot;:[&quot;U&quot;],&quot;PG_ID&quot;:&quot;38738&quot;});" class='title'>American Military Insignia, 1800-1851</a>
+<div class='author'>Campbell, J. Duncan, (James Duncan), 1916-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39884, {&quot;Title&quot;:&quot;L&#39;Instruction Théorique du Soldat par lui-même (1914)&quot;,&quot;Topics&quot;:[&quot;France. Armée -- Handbooks, manuals, etc.&quot;,&quot;France. Armée -- Infantry -- Drill and tactics&quot;],&quot;Primary&quot;:&quot;39884.htm&quot;,&quot;CreatorNames&quot;:[&quot;Chapuis, Félix, 1853-&quot;],&quot;LoCC&quot;:[&quot;U&quot;],&quot;PG_ID&quot;:&quot;39884&quot;});" class='title'>L'Instruction Théorique du Soldat par lui-même (1914)</a>
+<div class='author'>Chapuis, Félix, 1853-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41527, {&quot;Title&quot;:&quot;Highland Targets and Other Shields&quot;,&quot;Topics&quot;:[&quot;Scotland -- Antiquities&quot;,&quot;Armor -- Scotland -- History&quot;,&quot;Weapons -- Scotland -- History&quot;],&quot;Primary&quot;:&quot;41527.htm&quot;,&quot;CreatorNames&quot;:[&quot;Drummond, James, 1816-1877&quot;],&quot;LoCC&quot;:[&quot;U&quot;],&quot;PG_ID&quot;:&quot;41527&quot;});" class='title'>Highland Targets and Other Shields</a>
+<div class='author'>Drummond, James, 1816-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41676, {&quot;Title&quot;:&quot;Armour &amp; Weapons&quot;,&quot;Topics&quot;:[&quot;Weapons&quot;,&quot;Armor&quot;],&quot;Primary&quot;:&quot;41676.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ffoulkes, Charles John, 1868-1947&quot;],&quot;LoCC&quot;:[&quot;U&quot;],&quot;PG_ID&quot;:&quot;41676&quot;});" class='title'>Armour & Weapons</a>
+<div class='author'>Ffoulkes, Charles John, 1868-1947</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42106, {&quot;Title&quot;:&quot;How to Fence - Containing Full Instruction for Fencing and the Use of the Broadsword; Also Instruction in Archery&quot;,&quot;Topics&quot;:[&quot;Fencing&quot;],&quot;Primary&quot;:&quot;42106.htm&quot;,&quot;CreatorNames&quot;:[&quot;Warford, Aaron A.&quot;],&quot;LoCC&quot;:[&quot;U&quot;],&quot;PG_ID&quot;:&quot;42106&quot;});" class='title'>How to Fence -<br><span class='subtitle'>Containing Full Instruction for Fencing and the Use of the Broadsword; Also Instruction in Archery</span></a>
+<div class='author'>Warford, Aaron A.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44024, {&quot;Title&quot;:&quot;The Book of War: The Military Classic of the Far East - The Articles of Suntzu; The Sayings of Wutzu&quot;,&quot;Topics&quot;:[&quot;Military art and science -- Early works to 1800&quot;,&quot;War -- Early works to 1800&quot;,&quot;Strategy -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;44024.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sunzi, active 6th century B.C.&quot;,&quot;Wu, Qi, 440 BCE-381 BCE&quot;,&quot;Calthrop, Everard Ferguson, 1876-1915 [Translator]&quot;],&quot;LoCC&quot;:[&quot;U&quot;],&quot;PG_ID&quot;:&quot;44024&quot;});" class='title'>The Book of War:<br><span class='subtitle'>The Military Classic of the Far East - The Articles of Suntzu; The Sayings of Wutzu</span></a>
+<div class='author'>Sunzi, active 6th century B.C., Wu, Qi, 440 BCE-381 BCE, Calthrop, Everard Ferguson, 1876-1915 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44200, {&quot;Title&quot;:&quot;The Reality of War: A Companion to Clausewitz&quot;,&quot;Topics&quot;:[&quot;Military art and science&quot;,&quot;War&quot;,&quot;Clausewitz, Carl von, 1780-1831. Vom Kriege&quot;],&quot;Primary&quot;:&quot;44200.htm&quot;,&quot;CreatorNames&quot;:[&quot;Murray, Stewart Lygon, 1863-1930&quot;,&quot;Atteridge, A. Hilliard (Andrew Hilliard), -1941 [Editor]&quot;],&quot;LoCC&quot;:[&quot;U&quot;],&quot;PG_ID&quot;:&quot;44200&quot;});" class='title'>The Reality of War:<br><span class='subtitle'>A Companion to Clausewitz</span></a>
+<div class='author'>Murray, Stewart Lygon, 1863-1930, Atteridge, A. Hilliard (Andrew Hilliard), -1941 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44308, {&quot;Title&quot;:&quot;The Art of War in the Middle Ages A.D. 378-1515&quot;,&quot;Topics&quot;:[&quot;Military history, Medieval&quot;,&quot;Military art and science -- History -- Medieval, 500-1500&quot;],&quot;Primary&quot;:&quot;44308.htm&quot;,&quot;CreatorNames&quot;:[&quot;Oman, Charles, 1860-1946&quot;],&quot;LoCC&quot;:[&quot;U&quot;],&quot;PG_ID&quot;:&quot;44308&quot;});" class='title'>The Art of War in the Middle Ages A.D. 378-1515</a>
+<div class='author'>Oman, Charles, 1860-1946</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44443, {&quot;Title&quot;:&quot;Military schools and courses of instruction in the science and art of war, - in France, Prussia, Austria, Russia, Sweden, Switzerland, Sardinia, England, and the United States. Drawn from recent official reports and documents. Revised Edition&quot;,&quot;Topics&quot;:[&quot;Military education&quot;],&quot;Primary&quot;:&quot;44443.htm&quot;,&quot;CreatorNames&quot;:[&quot;Barnard, Henry, 1811-1900 [Compiler]&quot;],&quot;LoCC&quot;:[&quot;U&quot;],&quot;PG_ID&quot;:&quot;44443&quot;});" class='title'>Military schools and courses of instruction in the science and art of war, -<br><span class='subtitle'>in France, Prussia, Austria, Russia, Sweden, Switzerland, Sardinia, England, and the United States. Drawn from recent official reports and documents. Revised Edition</span></a>
+<div class='author'>Barnard, Henry, 1811-1900 [Compiler]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44470, {&quot;Title&quot;:&quot;Trooper 3809: A Private Soldier of the Third Republic&quot;,&quot;Topics&quot;:[&quot;France. Armée -- Military life&quot;],&quot;Primary&quot;:&quot;44470.htm&quot;,&quot;CreatorNames&quot;:[&quot;Decle, Lionel, 1859-1907&quot;],&quot;LoCC&quot;:[&quot;U&quot;],&quot;PG_ID&quot;:&quot;44470&quot;});" class='title'>Trooper 3809:<br><span class='subtitle'>A Private Soldier of the Third Republic</span></a>
+<div class='author'>Decle, Lionel, 1859-1907</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44635, {&quot;Title&quot;:&quot;Military Manners and Customs&quot;,&quot;Topics&quot;:[&quot;Military art and science&quot;,&quot;War&quot;,&quot;Soldiers&quot;],&quot;Primary&quot;:&quot;44635.htm&quot;,&quot;CreatorNames&quot;:[&quot;Farrer, James Anson, 1849-1925&quot;],&quot;LoCC&quot;:[&quot;U&quot;],&quot;PG_ID&quot;:&quot;44635&quot;});" class='title'>Military Manners and Customs</a>
+<div class='author'>Farrer, James Anson, 1849-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46093, {&quot;Title&quot;:&quot;Secrets of the Sword&quot;,&quot;Topics&quot;:[&quot;Fencing&quot;],&quot;Primary&quot;:&quot;46093.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bazancourt, César Lecat, baron de, 1810-1865&quot;,&quot;Townsend, F. H. (Frederick Henry), 1868-1920 [Illustrator]&quot;,&quot;Clay, Charles Felix, 1861-1947 [Translator]&quot;],&quot;LoCC&quot;:[&quot;GV&quot;,&quot;U&quot;],&quot;PG_ID&quot;:&quot;46093&quot;});" class='title'>Secrets of the Sword</a>
+<div class='author'>Bazancourt, César Lecat, baron de, 1810-1865, Townsend, F. H. (Frederick Henry), 1868-1920 [Illustrator], Clay, Charles Felix, 1861-1947 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46342, {&quot;Title&quot;:&quot;Ancient Armour and Weapons in Europe - From the Iron Period of the Northern Nations to the End of the Thirteenth Century&quot;,&quot;Topics&quot;:[&quot;Weapons&quot;,&quot;Armor&quot;],&quot;Primary&quot;:&quot;46342.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hewitt, John, 1807-1878&quot;],&quot;LoCC&quot;:[&quot;U&quot;],&quot;PG_ID&quot;:&quot;46342&quot;});" class='title'>Ancient Armour and Weapons in Europe -<br><span class='subtitle'>From the Iron Period of the Northern Nations to the End of the Thirteenth Century</span></a>
+<div class='author'>Hewitt, John, 1807-1878</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47878, {&quot;Title&quot;:&quot;Spanish Arms and Armour - Being a Historical and Descriptive Account of the Royal Armoury of Madrid&quot;,&quot;Topics&quot;:[&quot;Real Armería de Madrid&quot;,&quot;Arms and armor -- Spain&quot;],&quot;Primary&quot;:&quot;47878.htm&quot;,&quot;CreatorNames&quot;:[&quot;Calvert, Albert Frederick, 1872-1946&quot;],&quot;LoCC&quot;:[&quot;U&quot;],&quot;PG_ID&quot;:&quot;47878&quot;});" class='title'>Spanish Arms and Armour -<br><span class='subtitle'>Being a Historical and Descriptive Account of the Royal Armoury of Madrid</span></a>
+<div class='author'>Calvert, Albert Frederick, 1872-1946</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48088, {&quot;Title&quot;:&quot;Oorlogsfilosofie&quot;,&quot;Topics&quot;:[&quot;World War, 1914-1918&quot;,&quot;War&quot;,&quot;Steinmetz, Sebald Rudolf, 1862-1940&quot;],&quot;Primary&quot;:&quot;48088.htm&quot;,&quot;CreatorNames&quot;:[&quot;Polak, Leo, 1880-1941&quot;],&quot;LoCC&quot;:[&quot;U&quot;],&quot;PG_ID&quot;:&quot;48088&quot;});" class='title'>Oorlogsfilosofie</a>
+<div class='author'>Polak, Leo, 1880-1941</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48366, {&quot;Title&quot;:&quot;Chats on Military Curios&quot;,&quot;Topics&quot;:[&quot;Military art and science&quot;],&quot;Primary&quot;:&quot;48366.htm&quot;,&quot;CreatorNames&quot;:[&quot;Johnson, Stanley C. (Stanley Currie), 1878-&quot;],&quot;LoCC&quot;:[&quot;U&quot;],&quot;PG_ID&quot;:&quot;48366&quot;});" class='title'>Chats on Military Curios</a>
+<div class='author'>Johnson, Stanley C. (Stanley Currie), 1878-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48512, {&quot;Title&quot;:&quot;Della scienza militare&quot;,&quot;Topics&quot;:[&quot;Military art and science&quot;],&quot;Primary&quot;:&quot;48512.htm&quot;,&quot;CreatorNames&quot;:[&quot;Blanch, Luigi, 1784-1872&quot;],&quot;LoCC&quot;:[&quot;U&quot;],&quot;PG_ID&quot;:&quot;48512&quot;});" class='title'>Della scienza militare</a>
+<div class='author'>Blanch, Luigi, 1784-1872</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48573, {&quot;Title&quot;:&quot;British and Foreign Arms &amp; Armour&quot;,&quot;Topics&quot;:[&quot;Armor -- England&quot;,&quot;Weapons -- Europe&quot;,&quot;Armor -- Europe&quot;,&quot;Weapons -- England&quot;],&quot;Primary&quot;:&quot;48573.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ashdown, Charles Henry&quot;],&quot;LoCC&quot;:[&quot;U&quot;],&quot;PG_ID&quot;:&quot;48573&quot;});" class='title'>British and Foreign Arms & Armour</a>
+<div class='author'>Ashdown, Charles Henry</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48624, {&quot;Title&quot;:&quot;Della guerra nazionale d&#39;insurrezione per bande, applicata all&#39;Italia - Trattato dedicato ai buoni Italiani da un amico del Paese&quot;,&quot;Topics&quot;:[&quot;Nationalism -- Italy&quot;,&quot;Italy -- History -- 1789-1870&quot;],&quot;Primary&quot;:&quot;48624.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bianco, Carlo, 1795-1843&quot;],&quot;LoCC&quot;:[&quot;DG&quot;,&quot;U&quot;],&quot;PG_ID&quot;:&quot;48624&quot;});" class='title'>Della guerra nazionale d'insurrezione per bande, applicata all'Italia -<br><span class='subtitle'>Trattato dedicato ai buoni Italiani da un amico del Paese</span></a>
+<div class='author'>Bianco, Carlo, 1795-1843</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48666, {&quot;Title&quot;:&quot;The Sepoy&quot;,&quot;Topics&quot;:[&quot;Soldiers -- India -- Conduct of life&quot;],&quot;Primary&quot;:&quot;48666.htm&quot;,&quot;CreatorNames&quot;:[&quot;Candler, Edmund, 1874-1926&quot;],&quot;LoCC&quot;:[&quot;U&quot;],&quot;PG_ID&quot;:&quot;48666&quot;});" class='title'>The Sepoy</a>
+<div class='author'>Candler, Edmund, 1874-1926</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49995, {&quot;Title&quot;:&quot;»1906«. Der Zusammenbruch der alten Welt&quot;,&quot;Topics&quot;:[&quot;Imaginary wars and battles&quot;],&quot;Primary&quot;:&quot;49995.htm&quot;,&quot;CreatorNames&quot;:[&quot;Grautoff, Ferdinand Heinrich, 1871-1935&quot;],&quot;LoCC&quot;:[&quot;PT&quot;,&quot;U&quot;],&quot;PG_ID&quot;:&quot;49995&quot;});" class='title'>»1906«. Der Zusammenbruch der alten Welt</a>
+<div class='author'>Grautoff, Ferdinand Heinrich, 1871-1935</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50750, {&quot;Title&quot;:&quot;The Officer&#39;s Manual: Napoleon&#39;s Maxims of War&quot;,&quot;Topics&quot;:[&quot;Military art and science&quot;,&quot;Napoleon I, Emperor of the French, 1769-1821 -- Knowledge -- Military art and science&quot;,&quot;Napoleon I, Emperor of the French, 1769-1821 -- Quotations&quot;,&quot;Military art and science -- Quotations, maxims, etc.&quot;],&quot;Primary&quot;:&quot;50750.htm&quot;,&quot;CreatorNames&quot;:[&quot;Napoleon I, Emperor of the French, 1769-1821&quot;,&quot;D&#39;Aguilar, G. C. (George Charles), Sir, 1784-1855 [Translator]&quot;],&quot;LoCC&quot;:[&quot;U&quot;],&quot;PG_ID&quot;:&quot;50750&quot;});" class='title'>The Officer's Manual:<br><span class='subtitle'>Napoleon's Maxims of War</span></a>
+<div class='author'>Napoleon I, Emperor of the French, 1769-1821, D'Aguilar, G. C. (George Charles), Sir, 1784-1855 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51769, {&quot;Title&quot;:&quot;The Auxilia of the Roman Imperial Army&quot;,&quot;Topics&quot;:[&quot;Rome -- Army&quot;,&quot;Rome -- Colonies&quot;],&quot;Primary&quot;:&quot;51769.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cheesman, George Leonard, -1915&quot;],&quot;LoCC&quot;:[&quot;DG&quot;,&quot;U&quot;],&quot;PG_ID&quot;:&quot;51769&quot;});" class='title'>The Auxilia of the Roman Imperial Army</a>
+<div class='author'>Cheesman, George Leonard, -1915</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51851, {&quot;Title&quot;:&quot;Modernste Kriegswaffen - alte Erfindungen&quot;,&quot;Topics&quot;:[&quot;Military art and science -- History&quot;],&quot;Primary&quot;:&quot;51851.htm&quot;,&quot;CreatorNames&quot;:[&quot;Feldhaus, Franz M. (Franz Maria), 1874-1959?&quot;],&quot;LoCC&quot;:[&quot;U&quot;],&quot;PG_ID&quot;:&quot;51851&quot;});" class='title'>Modernste Kriegswaffen -<br><span class='subtitle'>alte Erfindungen</span></a>
+<div class='author'>Feldhaus, Franz M. (Franz Maria), 1874-1959?</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52640, {&quot;Title&quot;:&quot;A General&#39;s Letters to His Son on Minor Tactics&quot;,&quot;Topics&quot;:[&quot;Tactics&quot;,&quot;Military education&quot;,&quot;Drill and minor tactics&quot;,&quot;Tactics -- Problems, exercises, etc.&quot;],&quot;Primary&quot;:&quot;52640.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;U&quot;],&quot;PG_ID&quot;:&quot;52640&quot;});" class='title'>A General's Letters to His Son on Minor Tactics</a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(548, {&quot;Title&quot;:&quot;Project Trinity, 1945-1946&quot;,&quot;Topics&quot;:[&quot;Nuclear weapons -- Testing&quot;,&quot;Atomic bomb -- New Mexico -- Testing&quot;,&quot;Radioactive fallout -- New Mexico&quot;],&quot;Primary&quot;:&quot;548.txt&quot;,&quot;CreatorNames&quot;:[&quot;Maag, Carl R.&quot;,&quot;Rohrer, Steve&quot;],&quot;LoCC&quot;:[&quot;QC&quot;,&quot;U&quot;],&quot;PG_ID&quot;:&quot;548&quot;});" class='title'>Project Trinity, 1945-1946</a>
+<div class='author'>Maag, Carl R., Rohrer, Steve</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56612, {&quot;Title&quot;:&quot;My Story&quot;,&quot;Topics&quot;:[&quot;Generals -- United States -- Biography&quot;,&quot;United States. Army -- Military life&quot;,&quot;Businessmen -- United States -- Biography&quot;,&quot;United States. Army -- Officers -- Biography&quot;,&quot;Mills, Anson, 1834-1924&quot;,&quot;Millionaires -- United States -- Biography&quot;],&quot;Primary&quot;:&quot;56612.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mills, Anson, 1834-1924&quot;,&quot;Claudy, C. H. (Carl Harry), 1879-1957 [Editor]&quot;],&quot;LoCC&quot;:[&quot;E&quot;,&quot;U&quot;],&quot;PG_ID&quot;:&quot;56612&quot;});" class='title'>My Story</a>
+<div class='author'>Mills, Anson, 1834-1924, Claudy, C. H. (Carl Harry), 1879-1957 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57316, {&quot;Title&quot;:&quot;West Point - An Intimate Picture of the National Military Academy and of the Life of the Cadet&quot;,&quot;Topics&quot;:[&quot;United States Military Academy&quot;],&quot;Primary&quot;:&quot;57316.htm&quot;,&quot;CreatorNames&quot;:[&quot;Richardson, Robert C. (Robert Charlwood), 1882-1954&quot;,&quot;Scott, Hugh Lenox, 1853-1934 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;U&quot;],&quot;PG_ID&quot;:&quot;57316&quot;});" class='title'>West Point -<br><span class='subtitle'>An Intimate Picture of the National Military Academy and of the Life of the Cadet</span></a>
+<div class='author'>Richardson, Robert C. (Robert Charlwood), 1882-1954, Scott, Hugh Lenox, 1853-1934 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57707, {&quot;Title&quot;:&quot;The Great War of 189-: A Forecast&quot;,&quot;Topics&quot;:[&quot;Science fiction&quot;,&quot;Imaginary wars and battles&quot;],&quot;Primary&quot;:&quot;57707.htm&quot;,&quot;CreatorNames&quot;:[&quot;Colomb, P. H. (Philip Howard), 1831-1899&quot;,&quot;Forbes, Archibald, 1838-1900&quot;,&quot;Lowe, Charles, 1848-1931&quot;,&quot;Maude, F. N. (Frederic Natusch), 1854-1933&quot;,&quot;Maurice, John Frederick, 1841-1912&quot;,&quot;Murray, David Christie, 1847-1907&quot;,&quot;Scudamore, Frank, 1859-1939&quot;],&quot;LoCC&quot;:[&quot;PR&quot;,&quot;U&quot;],&quot;PG_ID&quot;:&quot;57707&quot;});" class='title'>The Great War of 189-<br><span class='subtitle'>: A Forecast</span></a>
+<div class='author'>Colomb, P. H. (Philip Howard), 1831-1899, Forbes, Archibald, 1838-1900, Lowe, Charles, 1848-1931, Maude, F. N. (Frederic Natusch), 1854-1933, Maurice, John Frederick, 1841-1912, Murray, David Christie, 1847-1907, Scudamore, Frank, 1859-1939</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57848, {&quot;Title&quot;:&quot;The Essentials of Good Skirmishing - To which are added a brief system of common light infantry drill&quot;,&quot;Topics&quot;:[&quot;Infantry drill and tactics&quot;,&quot;Skirmishing&quot;],&quot;Primary&quot;:&quot;57848.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gawler, George, 1796-1869&quot;],&quot;LoCC&quot;:[&quot;U&quot;],&quot;PG_ID&quot;:&quot;57848&quot;});" class='title'>The Essentials of Good Skirmishing -<br><span class='subtitle'>To which are added a brief system of common light infantry drill</span></a>
+<div class='author'>Gawler, George, 1796-1869</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57903, {&quot;Title&quot;:&quot;Soldiers and Sailors - or, Anecdotes, Details, and Recollections of Naval and Military Life, as Related to His Nephews, by an Old Officer.&quot;,&quot;Topics&quot;:[&quot;Great Britain. Army -- Military life&quot;,&quot;Great Britain. Royal Navy -- Anecdotes&quot;,&quot;Great Britain. Army -- Anecdotes&quot;,&quot;Great Britain. Royal Navy -- Sea life&quot;,&quot;Soldiers -- Anecdotes&quot;,&quot;Sailors -- Anecdotes&quot;],&quot;Primary&quot;:&quot;57903.htm&quot;,&quot;CreatorNames&quot;:[&quot;Old Humphrey, 1787-1854&quot;,&quot;Gilbert, John, 1817-1897 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;U&quot;],&quot;PG_ID&quot;:&quot;57903&quot;});" class='title'>Soldiers and Sailors -<br><span class='subtitle'>or, Anecdotes, Details, and Recollections of Naval and Military Life, as Related to His Nephews, by an Old Officer.</span></a>
+<div class='author'>Old Humphrey, 1787-1854, Gilbert, John, 1817-1897 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59209, {&quot;Title&quot;:&quot;The Defensive Armour and the Weapons and Engines of War of Mediæval Times, and of the \&quot;\&quot;Renaissance.\&quot;\&quot;&quot;,&quot;Topics&quot;:[&quot;Weapons&quot;,&quot;Armor&quot;],&quot;Primary&quot;:&quot;59209.htm&quot;,&quot;CreatorNames&quot;:[&quot;Clephan, R. Coltman (Robert Coltman)&quot;],&quot;LoCC&quot;:[&quot;U&quot;],&quot;PG_ID&quot;:&quot;59209&quot;});" class='title'>The Defensive Armour and the Weapons and Engines of War of Mediæval Times, and of the "Renaissance."</a>
+<div class='author'>Clephan, R. Coltman (Robert Coltman)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59563, {&quot;Title&quot;:&quot;A Military Dictionary and Gazetteer - Comprising ancient and modern military technical terms, historical accounts of all North American Indians, as well as ancient warlike tribes; also notices of battles from the earliest period to the present time, with a concise explanation of terms used in heraldry and the offices thereof. The work also gives valuable geographical information. Compiled from the best authorities of all nations. With an appendix containing the Articles of war, etc.&quot;,&quot;Topics&quot;:[&quot;Naval art and science -- Dictionaries&quot;,&quot;Military art and science -- Dictionaries&quot;,&quot;English language -- Terms and phrases&quot;,&quot;Naval biography&quot;,&quot;Military biography&quot;],&quot;Primary&quot;:&quot;59563.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wilhelm, Thomas&quot;],&quot;LoCC&quot;:[&quot;U&quot;],&quot;PG_ID&quot;:&quot;59563&quot;});" class='title'>A Military Dictionary and Gazetteer -<br><span class='subtitle'>Comprising ancient and modern military technical terms, historical accounts of all North American Indians, as well as ancient warlike tribes; also notices of battles from the earliest period to the present time, with a concise explanation of terms used in heraldry and the offices thereof. The work also gives valuable geographical information. Compiled from the best authorities of all nations. With an appendix containing the Articles of war, etc.</span></a>
+<div class='author'>Wilhelm, Thomas</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59804, {&quot;Title&quot;:&quot;The Making of a Modern Army and its Operations in the Field - A study based on the experience of three years on the French front (1914-1917)&quot;,&quot;Topics&quot;:[&quot;Military art and science&quot;,&quot;World War, 1914-1918&quot;,&quot;Armies&quot;],&quot;Primary&quot;:&quot;59804.htm&quot;,&quot;CreatorNames&quot;:[&quot;Radiguet, René-Louis-Jules, 1852-1937&quot;,&quot;Du Bellet, Henry P. [Translator]&quot;],&quot;LoCC&quot;:[&quot;U&quot;],&quot;PG_ID&quot;:&quot;59804&quot;});" class='title'>The Making of a Modern Army and its Operations in the Field -<br><span class='subtitle'>A study based on the experience of three years on the French front (1914-1917)</span></a>
+<div class='author'>Radiguet, René-Louis-Jules, 1852-1937, Du Bellet, Henry P. [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60767, {&quot;Title&quot;:&quot;The armourer and his craft from the XIth to the XVIth century&quot;,&quot;Topics&quot;:[&quot;Weapons -- History&quot;,&quot;Armor -- History&quot;,&quot;Armorers&quot;],&quot;Primary&quot;:&quot;60767.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ffoulkes, Charles John, 1868-1947&quot;],&quot;LoCC&quot;:[&quot;U&quot;,&quot;NK&quot;],&quot;PG_ID&quot;:&quot;60767&quot;});" class='title'>The armourer and his craft from the XIth to the XVIth century</a>
+<div class='author'>Ffoulkes, Charles John, 1868-1947</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61751, {&quot;Title&quot;:&quot;The Book of the Sword&quot;,&quot;Topics&quot;:[&quot;Swords&quot;],&quot;Primary&quot;:&quot;61751.htm&quot;,&quot;CreatorNames&quot;:[&quot;Burton, Richard Francis, Sir, 1821-1890&quot;],&quot;LoCC&quot;:[&quot;U&quot;],&quot;PG_ID&quot;:&quot;61751&quot;});" class='title'>The Book of the Sword</a>
+<div class='author'>Burton, Richard Francis, Sir, 1821-1890</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62552, {&quot;Title&quot;:&quot;Terrain Exercises&quot;,&quot;Topics&quot;:[&quot;Tactics&quot;],&quot;Primary&quot;:&quot;62552.htm&quot;,&quot;CreatorNames&quot;:[&quot;Waldron, William H. (William Henry), 1877-1947&quot;],&quot;LoCC&quot;:[&quot;U&quot;],&quot;PG_ID&quot;:&quot;62552&quot;});" class='title'>Terrain Exercises</a>
+<div class='author'>Waldron, William H. (William Henry), 1877-1947</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62909, {&quot;Title&quot;:&quot;Army and Navy Uniforms and Insignia - How to Know Rank, Corps and Service in the Military and Naval Forces of the United States and Foreign Countries&quot;,&quot;Topics&quot;:[&quot;United States. Army -- Insignia&quot;,&quot;United States. Navy -- Insignia&quot;,&quot;Armies -- Insignia&quot;,&quot;Military uniforms&quot;,&quot;Navies -- Insignia&quot;],&quot;Primary&quot;:&quot;62909.htm&quot;,&quot;CreatorNames&quot;:[&quot;Williams, Dion, 1869-1952&quot;],&quot;LoCC&quot;:[&quot;U&quot;],&quot;PG_ID&quot;:&quot;62909&quot;});" class='title'>Army and Navy Uniforms and Insignia -<br><span class='subtitle'>How to Know Rank, Corps and Service in the Military and Naval Forces of the United States and Foreign Countries</span></a>
+<div class='author'>Williams, Dion, 1869-1952</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63571, {&quot;Title&quot;:&quot;Exploits and Adventures of a Soldier Ashore and Afloat&quot;,&quot;Topics&quot;:[&quot;United States. Army -- Military life&quot;,&quot;Americans -- Foreign countries&quot;,&quot;Adams, William Llewellyn&quot;],&quot;Primary&quot;:&quot;63571.htm&quot;,&quot;CreatorNames&quot;:[&quot;Adams, William Llewellyn&quot;],&quot;LoCC&quot;:[&quot;U&quot;],&quot;PG_ID&quot;:&quot;63571&quot;});" class='title'>Exploits and Adventures of a Soldier Ashore and Afloat</a>
+<div class='author'>Adams, William Llewellyn</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64925, {&quot;Title&quot;:&quot;Cadet Life at West Point&quot;,&quot;Topics&quot;:[&quot;United States Military Academy&quot;],&quot;Primary&quot;:&quot;64925.htm&quot;,&quot;CreatorNames&quot;:[&quot;Reed, Hugh T., 1850-1934&quot;],&quot;LoCC&quot;:[&quot;U&quot;],&quot;PG_ID&quot;:&quot;64925&quot;});" class='title'>Cadet Life at West Point</a>
+<div class='author'>Reed, Hugh T., 1850-1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64927, {&quot;Title&quot;:&quot;Tactics, Volume 1 (of 2). Introduction and Formal Tactics of Infantry&quot;,&quot;Topics&quot;:[&quot;Military art and science&quot;,&quot;Tactics&quot;],&quot;Primary&quot;:&quot;64927.htm&quot;,&quot;CreatorNames&quot;:[&quot;Balck, W. (William), 1859-1924&quot;,&quot;Krueger, Walter, 1881-1967 [Translator]&quot;],&quot;LoCC&quot;:[&quot;U&quot;],&quot;PG_ID&quot;:&quot;64927&quot;});" class='title'>Tactics, Volume 1 (of 2). Introduction and Formal Tactics of Infantry</a>
+<div class='author'>Balck, W. (William), 1859-1924, Krueger, Walter, 1881-1967 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65335, {&quot;Title&quot;:&quot;Arms and Armor of the Pilgrims, 1620-1692&quot;,&quot;Topics&quot;:[&quot;Pilgrims (New Plymouth Colony)&quot;,&quot;Weapons -- United States -- History&quot;,&quot;Armor -- United States -- History&quot;],&quot;Primary&quot;:&quot;65335.htm&quot;,&quot;CreatorNames&quot;:[&quot;Peterson, Harold L. (Harold Leslie), 1922-1978&quot;],&quot;LoCC&quot;:[&quot;U&quot;],&quot;PG_ID&quot;:&quot;65335&quot;});" class='title'>Arms and Armor of the Pilgrims, 1620-1692</a>
+<div class='author'>Peterson, Harold L. (Harold Leslie), 1922-1978</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65611, {&quot;Title&quot;:&quot;Reservikasarmista: Muistoja sotamiesajoiltani&quot;,&quot;Topics&quot;:[&quot;Armed Forces -- Military life&quot;,&quot;Finland. Maavoimat -- Military life&quot;],&quot;Primary&quot;:&quot;65611.txt&quot;,&quot;CreatorNames&quot;:[&quot;Ivalo, Santeri, 1866-1937&quot;],&quot;LoCC&quot;:[&quot;PH&quot;,&quot;U&quot;],&quot;PG_ID&quot;:&quot;65611&quot;});" class='title'>Reservikasarmista:<br><span class='subtitle'>Muistoja sotamiesajoiltani</span></a>
+<div class='author'>Ivalo, Santeri, 1866-1937</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66706, {&quot;Title&quot;:&quot;Sun Tzŭ on the Art of War: The Oldest Military Treatise in the World&quot;,&quot;Topics&quot;:[&quot;Military art and science -- Early works to 1800&quot;,&quot;War -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;66706.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sunzi, active 6th century B.C.&quot;,&quot;Giles, Lionel, 1875-1958 [Translator]&quot;],&quot;LoCC&quot;:[&quot;U&quot;],&quot;PG_ID&quot;:&quot;66706&quot;});" class='title'>Sun Tzŭ on the Art of War:<br><span class='subtitle'>The Oldest Military Treatise in the World</span></a>
+<div class='author'>Sunzi, active 6th century B.C., Giles, Lionel, 1875-1958 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67013, {&quot;Title&quot;:&quot;Ge-eft Acht! Schetsen uit het Indische soldatenleven&quot;,&quot;Topics&quot;:[&quot;Soldiers -- Netherlands -- Biography&quot;,&quot;Dutch -- Indonesia -- Biography&quot;],&quot;Primary&quot;:&quot;67013.htm&quot;,&quot;CreatorNames&quot;:[&quot;Prell, August, 1856-1926&quot;],&quot;LoCC&quot;:[&quot;PT&quot;,&quot;U&quot;],&quot;PG_ID&quot;:&quot;67013&quot;});" class='title'>Ge-eft Acht! Schetsen uit het Indische soldatenleven</a>
+<div class='author'>Prell, August, 1856-1926</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67257, {&quot;Title&quot;:&quot;Lessons in Sabre, Singlestick, Sabre &amp; Bayonet, and Sword Feats - or, How to use a cut and thrust sword&quot;,&quot;Topics&quot;:[&quot;Fencing&quot;,&quot;Sabers&quot;,&quot;Single-stick&quot;],&quot;Primary&quot;:&quot;67257.htm&quot;,&quot;CreatorNames&quot;:[&quot;Waite, J. M. (John Musgrave), 1820?-1884&quot;],&quot;LoCC&quot;:[&quot;GV&quot;,&quot;U&quot;],&quot;PG_ID&quot;:&quot;67257&quot;});" class='title'>Lessons in Sabre, Singlestick, Sabre & Bayonet, and Sword Feats -<br><span class='subtitle'>or, How to use a cut and thrust sword</span></a>
+<div class='author'>Waite, J. M. (John Musgrave), 1820?-1884</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70383, {&quot;Title&quot;:&quot;Combat lessons, no. 1, rank and file in combat&quot;,&quot;Topics&quot;:[&quot;Combat -- Periodicals&quot;,&quot;Tactics -- Periodicals&quot;,&quot;Leadership -- Periodicals&quot;,&quot;Command of troops -- Periodicals&quot;,&quot;World War, 1939-1945 -- Campaigns -- Periodicals&quot;,&quot;World War, 1939-1945 -- Personal narratives, American -- Periodicals&quot;],&quot;Primary&quot;:&quot;70383.htm&quot;,&quot;CreatorNames&quot;:[&quot;United States. War Department&quot;],&quot;LoCC&quot;:[&quot;U&quot;],&quot;PG_ID&quot;:&quot;70383&quot;});" class='title'>Combat lessons, no. 1, rank and file in combat</a>
+<div class='author'>United States. War Department</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7218, {&quot;Title&quot;:&quot;三略&quot;,&quot;Topics&quot;:[&quot;Military art and science -- China -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;7218.txt&quot;,&quot;CreatorNames&quot;:[&quot;Huang, Shigong, active 3rd century B.C.&quot;],&quot;LoCC&quot;:[&quot;U&quot;],&quot;PG_ID&quot;:&quot;7218&quot;});" class='title'>三略</a>
+<div class='author'>Huang, Shigong, active 3rd century B.C.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7219, {&quot;Title&quot;:&quot;尉繚子&quot;,&quot;Topics&quot;:[&quot;Military art and science -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;7219.txt&quot;,&quot;CreatorNames&quot;:[&quot;Wei, Liao, active 4th century B.C.&quot;],&quot;LoCC&quot;:[&quot;U&quot;],&quot;PG_ID&quot;:&quot;7219&quot;});" class='title'>尉繚子</a>
+<div class='author'>Wei, Liao, active 4th century B.C.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7259, {&quot;Title&quot;:&quot;Shock and Awe — Achieving Rapid Dominance&quot;,&quot;Topics&quot;:[&quot;Rapid dominance (Military science)&quot;],&quot;Primary&quot;:&quot;7259.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ullman, Harlan, 1941-&quot;,&quot;Wade, James P., 1930-&quot;],&quot;LoCC&quot;:[&quot;U&quot;],&quot;PG_ID&quot;:&quot;7259&quot;});" class='title'>Shock and Awe — Achieving Rapid Dominance</a>
+<div class='author'>Ullman, Harlan, 1941-, Wade, James P., 1930-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7294, {&quot;Title&quot;:&quot;Battle Studies; Ancient and Modern Battle&quot;,&quot;Topics&quot;:[&quot;Military art and science&quot;,&quot;Battles&quot;],&quot;Primary&quot;:&quot;7294.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ardant du Picq, Charles Jean Jacques Joseph, 1821-1870&quot;,&quot;Cotton, Robert Christie, 1885-1952 [Translator]&quot;,&quot;Greely, John N. (John Nesmith), 1885-1965 [Translator]&quot;],&quot;LoCC&quot;:[&quot;U&quot;],&quot;PG_ID&quot;:&quot;7294&quot;});" class='title'>Battle Studies;<br><span class='subtitle'>Ancient and Modern Battle</span></a>
+<div class='author'>Ardant du Picq, Charles Jean Jacques Joseph, 1821-1870, Cotton, Robert Christie, 1885-1952 [Translator], Greely, John N. (John Nesmith), 1885-1965 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7340, {&quot;Title&quot;:&quot;六韜&quot;,&quot;Topics&quot;:[&quot;Military art and science -- China -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;7340.txt&quot;,&quot;CreatorNames&quot;:[&quot;Lü, Shang&quot;],&quot;LoCC&quot;:[&quot;AC&quot;,&quot;U&quot;],&quot;PG_ID&quot;:&quot;7340&quot;});" class='title'>六韜</a>
+<div class='author'>Lü, Shang</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7349, {&quot;Title&quot;:&quot;孫子兵法道家新註解&quot;,&quot;Topics&quot;:[&quot;Sunzi, 6th century B. C. Sunzi bing fa&quot;,&quot;Military art and science -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;7349.txt&quot;,&quot;CreatorNames&quot;:[&quot;Tang, Jingwu&quot;],&quot;LoCC&quot;:[&quot;U&quot;],&quot;PG_ID&quot;:&quot;7349&quot;});" class='title'>孫子兵法道家新註解</a>
+<div class='author'>Tang, Jingwu</div>
+</div>
+</ul></div>
+</body></html>

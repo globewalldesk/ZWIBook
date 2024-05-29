@@ -1,0 +1,234 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Judaism (BM)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(11701, {&quot;Title&quot;:&quot;The Makers and Teachers of Judaism - From the Fall of Jerusalem to the Death of Herod the Great&quot;,&quot;Topics&quot;:[&quot;Bible -- History of Biblical events&quot;,&quot;Jews -- History -- 586 B.C.-70 A.D.&quot;],&quot;Primary&quot;:&quot;11701.txt&quot;,&quot;CreatorNames&quot;:[&quot;Kent, Charles Foster, 1867-1925&quot;],&quot;LoCC&quot;:[&quot;BM&quot;],&quot;PG_ID&quot;:&quot;11701&quot;});" class='title'>The Makers and Teachers of Judaism -<br><span class='subtitle'>From the Fall of Jerusalem to the Death of Herod the Great</span></a>
+<div class='author'>Kent, Charles Foster, 1867-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14368, {&quot;Title&quot;:&quot;Hebraic Literature; Translations from the Talmud, Midrashim and Kabbala&quot;,&quot;Topics&quot;:[&quot;Hebrew literature -- Translations into English&quot;],&quot;Primary&quot;:&quot;14368.htm&quot;,&quot;CreatorNames&quot;:[&quot;Harris, Maurice H. (Maurice Henry), 1859-1930 [Editor]&quot;],&quot;LoCC&quot;:[&quot;BM&quot;],&quot;PG_ID&quot;:&quot;14368&quot;});" class='title'>Hebraic Literature;<br><span class='subtitle'>Translations from the Talmud, Midrashim and Kabbala</span></a>
+<div class='author'>Harris, Maurice H. (Maurice Henry), 1859-1930 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14764, {&quot;Title&quot;:&quot;The Grey Book - A collection of protests against anti-semitism and the persecution of Jews issued by non-Roman Catholic churches and church leaders during Hitlers rule&quot;,&quot;Topics&quot;:[&quot;Antisemitism&quot;,&quot;Protestant churches -- Europe&quot;,&quot;Judaism -- Relations -- Christianity&quot;,&quot;Christianity and other religions -- Judaism&quot;],&quot;Primary&quot;:&quot;14764.txt&quot;,&quot;CreatorNames&quot;:[&quot;Snoek, Johan M., 1920-2012&quot;],&quot;LoCC&quot;:[&quot;BM&quot;],&quot;PG_ID&quot;:&quot;14764&quot;});" class='title'>The Grey Book -<br><span class='subtitle'>A collection of protests against anti-semitism and the persecution of Jews issued by non-Roman Catholic churches and church leaders during Hitlers rule</span></a>
+<div class='author'>Snoek, Johan M., 1920-2012</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(1493, {&quot;Title&quot;:&quot;The Legends of the Jews — Volume 1&quot;,&quot;Topics&quot;:[&quot;Jewish legends&quot;,&quot;Bible. Old Testament -- Legends&quot;,&quot;Midrash -- Translations into English&quot;,&quot;Aggada -- Translations into English&quot;],&quot;Primary&quot;:&quot;1493.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ginzberg, Louis, 1873-1953&quot;,&quot;Szold, Henrietta, 1860-1945 [Translator]&quot;],&quot;LoCC&quot;:[&quot;BM&quot;],&quot;PG_ID&quot;:&quot;1493&quot;});" class='title'>The Legends of the Jews — Volume 1</a>
+<div class='author'>Ginzberg, Louis, 1873-1953, Szold, Henrietta, 1860-1945 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(1494, {&quot;Title&quot;:&quot;The Legends of the Jews — Volume 2&quot;,&quot;Topics&quot;:[&quot;Jewish legends&quot;,&quot;Bible. Old Testament -- Legends&quot;,&quot;Midrash -- Translations into English&quot;,&quot;Aggada -- Translations into English&quot;],&quot;Primary&quot;:&quot;1494.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ginzberg, Louis, 1873-1953&quot;,&quot;Szold, Henrietta, 1860-1945 [Translator]&quot;],&quot;LoCC&quot;:[&quot;BM&quot;],&quot;PG_ID&quot;:&quot;1494&quot;});" class='title'>The Legends of the Jews — Volume 2</a>
+<div class='author'>Ginzberg, Louis, 1873-1953, Szold, Henrietta, 1860-1945 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15173, {&quot;Title&quot;:&quot;Pictures of Jewish Home-Life Fifty Years Ago&quot;,&quot;Topics&quot;:[&quot;Jews -- Social life and customs&quot;,&quot;Children -- Palestine&quot;,&quot;Jerusalem -- Social life and customs&quot;],&quot;Primary&quot;:&quot;15173.htm&quot;,&quot;CreatorNames&quot;:[&quot;Trager, Hannah, 1870-1943&quot;],&quot;LoCC&quot;:[&quot;BM&quot;],&quot;PG_ID&quot;:&quot;15173&quot;});" class='title'>Pictures of Jewish Home-Life Fifty Years Ago</a>
+<div class='author'>Trager, Hannah, 1870-1943</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19823, {&quot;Title&quot;:&quot;Gebete für Israeliten&quot;,&quot;Topics&quot;:[&quot;Reform Judaism&quot;,&quot;Jews -- Prayer-books and devotions -- German&quot;],&quot;Primary&quot;:&quot;19823.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wolff, A. A. (Abraham Alexander), 1801-1891&quot;],&quot;LoCC&quot;:[&quot;BM&quot;],&quot;PG_ID&quot;:&quot;19823&quot;});" class='title'>Gebete für Israeliten</a>
+<div class='author'>Wolff, A. A. (Abraham Alexander), 1801-1891</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2030, {&quot;Title&quot;:&quot;Legends of Babylon and Egypt in Relation to Hebrew Tradition&quot;,&quot;Topics&quot;:[&quot;Deluge&quot;,&quot;Creation&quot;,&quot;Cosmogony, Babylonian&quot;,&quot;Babylonia -- Antiquities&quot;,&quot;Egypt -- Antiquities&quot;,&quot;Bible. Old Testament -- Evidences, authority, etc.&quot;,&quot;Bible -- Evidences, authority, etc.&quot;],&quot;Primary&quot;:&quot;2030.htm&quot;,&quot;CreatorNames&quot;:[&quot;King, L. W. (Leonard William), 1869-1919&quot;],&quot;LoCC&quot;:[&quot;BM&quot;],&quot;PG_ID&quot;:&quot;2030&quot;});" class='title'>Legends of Babylon and Egypt in Relation to Hebrew Tradition</a>
+<div class='author'>King, L. W. (Leonard William), 1869-1919</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(21905, {&quot;Title&quot;:&quot;A Guide for the Religious Instruction of Jewish Youth&quot;,&quot;Topics&quot;:[&quot;Judaism -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;21905.htm&quot;,&quot;CreatorNames&quot;:[&quot;Reggio, Isaac Samuel, 1784-1855&quot;,&quot;Picciotto, M. H. [Translator]&quot;],&quot;LoCC&quot;:[&quot;BM&quot;],&quot;PG_ID&quot;:&quot;21905&quot;});" class='title'>A Guide for the Religious Instruction of Jewish Youth</a>
+<div class='author'>Reggio, Isaac Samuel, 1784-1855, Picciotto, M. H. [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26094, {&quot;Title&quot;:&quot;Hebrew Heroes: A Tale Founded on Jewish History&quot;,&quot;Topics&quot;:[&quot;Biographical fiction&quot;,&quot;Bible. Old Testament -- Fiction&quot;,&quot;Judas Maccabaeus (Judah Maccabee, יהודה המכבי)&quot;,&quot;Jews -- History -- Fiction&quot;],&quot;Primary&quot;:&quot;26094.txt&quot;,&quot;CreatorNames&quot;:[&quot;A. L. O. E., 1821-1893&quot;],&quot;LoCC&quot;:[&quot;BM&quot;,&quot;BS&quot;,&quot;PR&quot;],&quot;PG_ID&quot;:&quot;26094&quot;});" class='title'>Hebrew Heroes:<br><span class='subtitle'>A Tale Founded on Jewish History</span></a>
+<div class='author'>A. L. O. E., 1821-1893</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26328, {&quot;Title&quot;:&quot;Intercession: A Sermon Preached by the Rev. B. N. Michelson, B.A.&quot;,&quot;Topics&quot;:[&quot;Jewish sermons -- Great Britain&quot;,&quot;World War, 1914-1918 -- Religious aspects&quot;],&quot;Primary&quot;:&quot;26328.htm&quot;,&quot;CreatorNames&quot;:[&quot;Michelson, B. N.&quot;],&quot;LoCC&quot;:[&quot;BM&quot;],&quot;PG_ID&quot;:&quot;26328&quot;});" class='title'>Intercession:<br><span class='subtitle'>A Sermon Preached by the Rev. B. N. Michelson, B.A.</span></a>
+<div class='author'>Michelson, B. N.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2849, {&quot;Title&quot;:&quot;Against Apion&quot;,&quot;Topics&quot;:[&quot;Judaism -- Apologetic works&quot;],&quot;Primary&quot;:&quot;2849.htm&quot;,&quot;CreatorNames&quot;:[&quot;Josephus, Flavius, 38?-100?&quot;,&quot;Whiston, William, 1667-1752 [Translator]&quot;],&quot;LoCC&quot;:[&quot;BM&quot;],&quot;PG_ID&quot;:&quot;2849&quot;});" class='title'>Against Apion</a>
+<div class='author'>Josephus, Flavius, 38?-100?, Whiston, William, 1667-1752 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2881, {&quot;Title&quot;:&quot;The Legends of the Jews — Volume 3&quot;,&quot;Topics&quot;:[&quot;Jewish legends&quot;,&quot;Bible. Old Testament -- Legends&quot;,&quot;Midrash -- Translations into English&quot;,&quot;Aggada -- Translations into English&quot;],&quot;Primary&quot;:&quot;2881.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ginzberg, Louis, 1873-1953&quot;,&quot;Radin, Paul, 1883-1959 [Translator]&quot;],&quot;LoCC&quot;:[&quot;BM&quot;],&quot;PG_ID&quot;:&quot;2881&quot;});" class='title'>The Legends of the Jews — Volume 3</a>
+<div class='author'>Ginzberg, Louis, 1873-1953, Radin, Paul, 1883-1959 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2882, {&quot;Title&quot;:&quot;The Legends of the Jews — Volume 4&quot;,&quot;Topics&quot;:[&quot;Jewish legends&quot;,&quot;Bible. Old Testament -- Legends&quot;,&quot;Midrash -- Translations into English&quot;,&quot;Aggada -- Translations into English&quot;],&quot;Primary&quot;:&quot;2882.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ginzberg, Louis, 1873-1953&quot;,&quot;Radin, Paul, 1883-1959 [Translator]&quot;,&quot;Szold, Henrietta, 1860-1945 [Translator]&quot;],&quot;LoCC&quot;:[&quot;BM&quot;],&quot;PG_ID&quot;:&quot;2882&quot;});" class='title'>The Legends of the Jews — Volume 4</a>
+<div class='author'>Ginzberg, Louis, 1873-1953, Radin, Paul, 1883-1959 [Translator], Szold, Henrietta, 1860-1945 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3165, {&quot;Title&quot;:&quot;Rashi&quot;,&quot;Topics&quot;:[&quot;Rashi, 1040-1105&quot;,&quot;Jewish scholars -- France -- Troyes -- Biography&quot;,&quot;Rabbis -- France -- Troyes -- Biography&quot;],&quot;Primary&quot;:&quot;3165.txt&quot;,&quot;CreatorNames&quot;:[&quot;Liber, Maurice, 1884-1956&quot;,&quot;Seltzer, Adele Szold, 1876-1940 [Translator]&quot;],&quot;LoCC&quot;:[&quot;BM&quot;],&quot;PG_ID&quot;:&quot;3165&quot;});" class='title'>Rashi</a>
+<div class='author'>Liber, Maurice, 1884-1956, Seltzer, Adele Szold, 1876-1940 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31960, {&quot;Title&quot;:&quot;The Covenanters of Damascus; A Hitherto Unknown Jewish Sect&quot;,&quot;Topics&quot;:[&quot;Judaism -- History -- To 70 A.D.&quot;,&quot;Jewish sects -- Syria -- Damascus&quot;],&quot;Primary&quot;:&quot;31960.htm&quot;,&quot;CreatorNames&quot;:[&quot;Moore, George Foot, 1851-1931&quot;],&quot;LoCC&quot;:[&quot;BM&quot;],&quot;PG_ID&quot;:&quot;31960&quot;});" class='title'>The Covenanters of Damascus;<br><span class='subtitle'>A Hitherto Unknown Jewish Sect</span></a>
+<div class='author'>Moore, George Foot, 1851-1931</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32722, {&quot;Title&quot;:&quot;Jewish Theology, Systematically and Historically Considered&quot;,&quot;Topics&quot;:[&quot;Judaism -- Doctrines&quot;],&quot;Primary&quot;:&quot;32722.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kohler, Kaufmann, 1843-1926&quot;],&quot;LoCC&quot;:[&quot;BM&quot;],&quot;PG_ID&quot;:&quot;32722&quot;});" class='title'>Jewish Theology, Systematically and Historically Considered</a>
+<div class='author'>Kohler, Kaufmann, 1843-1926</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38327, {&quot;Title&quot;:&quot;The History of Sabatai Sevi, the Suppos&#39;d Messiah of the Jews&quot;,&quot;Topics&quot;:[&quot;Shabbethai Tzevi, 1626-1676&quot;,&quot;Impostors and imposture -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;38327.htm&quot;,&quot;CreatorNames&quot;:[&quot;Evelyn, John, 1620-1706&quot;,&quot;Grose, Christopher, 1939- [Editor]&quot;],&quot;LoCC&quot;:[&quot;BM&quot;],&quot;PG_ID&quot;:&quot;38327&quot;});" class='title'>The History of Sabatai Sevi, the Suppos'd Messiah of the Jews</a>
+<div class='author'>Evelyn, John, 1620-1706, Grose, Christopher, 1939- [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40671, {&quot;Title&quot;:&quot;Synopsis of Jewish History - From the Return of the Jews from the Babylonish Captivity, to the Days of Herod the Great&quot;,&quot;Topics&quot;:[&quot;Jews -- History -- 586 B.C.-70 A.D.&quot;],&quot;Primary&quot;:&quot;40671.htm&quot;,&quot;CreatorNames&quot;:[&quot;Henry, H. A. (Henry Abraham), 1800-1879&quot;],&quot;LoCC&quot;:[&quot;BM&quot;],&quot;PG_ID&quot;:&quot;40671&quot;});" class='title'>Synopsis of Jewish History -<br><span class='subtitle'>From the Return of the Jews from the Babylonish Captivity, to the Days of Herod the Great</span></a>
+<div class='author'>Henry, H. A. (Henry Abraham), 1800-1879</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42211, {&quot;Title&quot;:&quot;Histoire Sainte; ou, Histoire des Israélites - Depuis La Création, Jusqu&#39;a La Dernière Destruction De Jérusalem&quot;,&quot;Topics&quot;:[&quot;Jews -- History -- To 70 A.D.&quot;,&quot;Judaism&quot;],&quot;Primary&quot;:&quot;42211.htm&quot;,&quot;CreatorNames&quot;:[&quot;Loeb, Henri, 1885-&quot;],&quot;LoCC&quot;:[&quot;BM&quot;,&quot;DS&quot;],&quot;PG_ID&quot;:&quot;42211&quot;});" class='title'>Histoire Sainte;<br><span class='subtitle'>ou, Histoire des Israélites - Depuis La Création, Jusqu'a La Dernière Destruction De Jérusalem</span></a>
+<div class='author'>Loeb, Henri, 1885-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42670, {&quot;Title&quot;:&quot;Hanna: Gebet- und Andachtsbuch für israelitische Frauen und Mädchen&quot;,&quot;Topics&quot;:[&quot;Judaism -- Prayers and devotions&quot;],&quot;Primary&quot;:&quot;42670.htm&quot;,&quot;CreatorNames&quot;:[&quot;Freund, Jacob, 1827-1877&quot;],&quot;LoCC&quot;:[&quot;BM&quot;],&quot;PG_ID&quot;:&quot;42670&quot;});" class='title'>Hanna:<br><span class='subtitle'>Gebet- und Andachtsbuch für israelitische Frauen und Mädchen</span></a>
+<div class='author'>Freund, Jacob, 1827-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43740, {&quot;Title&quot;:&quot;בית נכות ההלכות - או תורתן של ראשונים, חלק ראשון&quot;,&quot;Topics&quot;:[&quot;Geonic literature&quot;,&quot;Jewish law&quot;],&quot;Primary&quot;:&quot;43740.htm&quot;,&quot;CreatorNames&quot;:[&quot;Horowitz, Chaim M., 1855?-1905 [Compiler]&quot;],&quot;LoCC&quot;:[&quot;BM&quot;],&quot;PG_ID&quot;:&quot;43740&quot;});" class='title'>בית נכות ההלכות -<br><span class='subtitle'>או תורתן של ראשונים, חלק ראשון</span></a>
+<div class='author'>Horowitz, Chaim M., 1855?-1905 [Compiler]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44754, {&quot;Title&quot;:&quot;A Manual for Teaching Biblical History&quot;,&quot;Topics&quot;:[&quot;Jewish religious education of children -- United States&quot;],&quot;Primary&quot;:&quot;44754.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kohn, Eugene, 1887-&quot;],&quot;LoCC&quot;:[&quot;BM&quot;],&quot;PG_ID&quot;:&quot;44754&quot;});" class='title'>A Manual for Teaching Biblical History</a>
+<div class='author'>Kohn, Eugene, 1887-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45148, {&quot;Title&quot;:&quot;Pharisaism, Its Aim and Its Method&quot;,&quot;Topics&quot;:[&quot;Pharisees&quot;],&quot;Primary&quot;:&quot;45148.htm&quot;,&quot;CreatorNames&quot;:[&quot;Herford, R. Travers (Robert Travers), 1860-1950&quot;],&quot;LoCC&quot;:[&quot;BM&quot;],&quot;PG_ID&quot;:&quot;45148&quot;});" class='title'>Pharisaism, Its Aim and Its Method</a>
+<div class='author'>Herford, R. Travers (Robert Travers), 1860-1950</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48890, {&quot;Title&quot;:&quot;Studies in Judaism, First Series&quot;,&quot;Topics&quot;:[&quot;Jews&quot;],&quot;Primary&quot;:&quot;48890.htm&quot;,&quot;CreatorNames&quot;:[&quot;Schechter, S. (Solomon), 1847-1915&quot;],&quot;LoCC&quot;:[&quot;BM&quot;],&quot;PG_ID&quot;:&quot;48890&quot;});" class='title'>Studies in Judaism, First Series</a>
+<div class='author'>Schechter, S. (Solomon), 1847-1915</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48967, {&quot;Title&quot;:&quot;Mythology among the Hebrews and Its Historical Development&quot;,&quot;Topics&quot;:[&quot;Judaism -- History -- To 70 A.D.&quot;,&quot;Jewish mythology&quot;],&quot;Primary&quot;:&quot;48967.htm&quot;,&quot;CreatorNames&quot;:[&quot;Goldziher, Ignác, 1850-1921&quot;,&quot;Steinthal, Heymann, 1823-1899 [Contributor]&quot;,&quot;Martineau, R. (Russell), 1831-1898 [Translator]&quot;],&quot;LoCC&quot;:[&quot;BM&quot;],&quot;PG_ID&quot;:&quot;48967&quot;});" class='title'>Mythology among the Hebrews and Its Historical Development</a>
+<div class='author'>Goldziher, Ignác, 1850-1921, Steinthal, Heymann, 1823-1899 [Contributor], Martineau, R. (Russell), 1831-1898 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49079, {&quot;Title&quot;:&quot;Storia degli Esseni: Lezioni&quot;,&quot;Topics&quot;:[&quot;Essenes&quot;],&quot;Primary&quot;:&quot;49079.htm&quot;,&quot;CreatorNames&quot;:[&quot;Benamozegh, Elia, 1823-1900&quot;],&quot;LoCC&quot;:[&quot;BM&quot;],&quot;PG_ID&quot;:&quot;49079&quot;});" class='title'>Storia degli Esseni:<br><span class='subtitle'>Lezioni</span></a>
+<div class='author'>Benamozegh, Elia, 1823-1900</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50683, {&quot;Title&quot;:&quot;Chad Gadja: Das Peßachbuch&quot;,&quot;Topics&quot;:[&quot;Passover&quot;,&quot;Fasts and feasts -- Judaism&quot;],&quot;Primary&quot;:&quot;50683.htm&quot;,&quot;CreatorNames&quot;:[&quot;Herrmann, Hugo, 1887-1940 [Editor]&quot;],&quot;LoCC&quot;:[&quot;BM&quot;],&quot;PG_ID&quot;:&quot;50683&quot;});" class='title'>Chad Gadja:<br><span class='subtitle'>Das Peßachbuch</span></a>
+<div class='author'>Herrmann, Hugo, 1887-1940 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52639, {&quot;Title&quot;:&quot;Moses and Aaron: Civil and Ecclesiastical Rites, Used by the Ancient Hebrews&quot;,&quot;Topics&quot;:[&quot;Worship in the Bible -- Early works to 1800&quot;,&quot;Judaism -- Early works to 1800&quot;,&quot;Judaism -- Customs and practices -- Early works to 1800&quot;,&quot;Rites and ceremonies in the Bible -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;52639.htm&quot;,&quot;CreatorNames&quot;:[&quot;Goodwin, Thomas, 1587?-1642&quot;],&quot;LoCC&quot;:[&quot;BM&quot;],&quot;PG_ID&quot;:&quot;52639&quot;});" class='title'>Moses and Aaron:<br><span class='subtitle'>Civil and Ecclesiastical Rites, Used by the Ancient Hebrews</span></a>
+<div class='author'>Goodwin, Thomas, 1587?-1642</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53768, {&quot;Title&quot;:&quot;Progetto filosofico di una completa riforma del culto e dell&#39;educazione politico-morale del popolo ebreo, Tomo I&quot;,&quot;Topics&quot;:[&quot;Judaism&quot;],&quot;Primary&quot;:&quot;53768.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fernando, Aron, 1761-1830&quot;],&quot;LoCC&quot;:[&quot;BM&quot;],&quot;PG_ID&quot;:&quot;53768&quot;});" class='title'>Progetto filosofico di una completa riforma del culto e dell'educazione politico-morale del popolo ebreo, Tomo I</a>
+<div class='author'>Fernando, Aron, 1761-1830</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55692, {&quot;Title&quot;:&quot;The Surgery of Ritual Circumcision&quot;,&quot;Topics&quot;:[&quot;Circumcision&quot;],&quot;Primary&quot;:&quot;55692.htm&quot;,&quot;CreatorNames&quot;:[&quot;Snowman, Jacob, 1871-&quot;],&quot;LoCC&quot;:[&quot;BM&quot;,&quot;RJ&quot;],&quot;PG_ID&quot;:&quot;55692&quot;});" class='title'>The Surgery of Ritual Circumcision</a>
+<div class='author'>Snowman, Jacob, 1871-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57218, {&quot;Title&quot;:&quot;A Book of Jewish Thoughts&quot;,&quot;Topics&quot;:[&quot;Judaism -- Prayers and devotions&quot;,&quot;Jewish literature&quot;,&quot;Judaism -- Quotations, maxims, etc.&quot;,&quot;Jews -- Quotations&quot;,&quot;Jews -- Public opinion&quot;,&quot;Fasts and feasts -- Judaism -- Meditations&quot;,&quot;Jewish ethics&quot;,&quot;Jews -- Civilization&quot;],&quot;Primary&quot;:&quot;57218.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hertz, Joseph H. (Joseph Herman), 1872-1946 [Editor]&quot;],&quot;LoCC&quot;:[&quot;BM&quot;,&quot;DS&quot;],&quot;PG_ID&quot;:&quot;57218&quot;});" class='title'>A Book of Jewish Thoughts</a>
+<div class='author'>Hertz, Joseph H. (Joseph Herman), 1872-1946 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57516, {&quot;Title&quot;:&quot;Die Pharisäer - Ein Beitrag zum leichern Verstehen der Evangelien und zur Selbstprüfung&quot;,&quot;Topics&quot;:[&quot;Pharisees&quot;],&quot;Primary&quot;:&quot;57516.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wirth, Michael, 1788-1832&quot;],&quot;LoCC&quot;:[&quot;BM&quot;],&quot;PG_ID&quot;:&quot;57516&quot;});" class='title'>Die Pharisäer -<br><span class='subtitle'>Ein Beitrag zum leichern Verstehen der Evangelien und zur Selbstprüfung</span></a>
+<div class='author'>Wirth, Michael, 1788-1832</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59583, {&quot;Title&quot;:&quot;Progetto filosofico di una completa riforma del culto e dell&#39;educazione politico-morale del popolo ebreo, Tomo II&quot;,&quot;Topics&quot;:[&quot;Judaism&quot;],&quot;Primary&quot;:&quot;59583.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fernando, Aron, 1761-1830&quot;],&quot;LoCC&quot;:[&quot;BM&quot;],&quot;PG_ID&quot;:&quot;59583&quot;});" class='title'>Progetto filosofico di una completa riforma del culto e dell'educazione politico-morale del popolo ebreo, Tomo II</a>
+<div class='author'>Fernando, Aron, 1761-1830</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63563, {&quot;Title&quot;:&quot;A nagy per, mely ezer éve folyik s még sincs vége (1. kötet)&quot;,&quot;Topics&quot;:[&quot;Blood accusation&quot;,&quot;Jews -- Persecutions -- Hungary -- Tiszaeszlár&quot;,&quot;Tiszaeszlár (Hungary) -- Ethnic relations&quot;],&quot;Primary&quot;:&quot;63563.htm&quot;,&quot;CreatorNames&quot;:[&quot;Eötvös, Károly, 1842-1916&quot;],&quot;LoCC&quot;:[&quot;BM&quot;],&quot;PG_ID&quot;:&quot;63563&quot;});" class='title'>A nagy per, mely ezer éve folyik s még sincs vége (1. kötet)</a>
+<div class='author'>Eötvös, Károly, 1842-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63564, {&quot;Title&quot;:&quot;A nagy per, mely ezer éve folyik s még sincs vége (2. kötet)&quot;,&quot;Topics&quot;:[&quot;Blood accusation&quot;,&quot;Jews -- Persecutions -- Hungary -- Tiszaeszlár&quot;,&quot;Tiszaeszlár (Hungary) -- Ethnic relations&quot;],&quot;Primary&quot;:&quot;63564.htm&quot;,&quot;CreatorNames&quot;:[&quot;Eötvös, Károly, 1842-1916&quot;],&quot;LoCC&quot;:[&quot;BM&quot;],&quot;PG_ID&quot;:&quot;63564&quot;});" class='title'>A nagy per, mely ezer éve folyik s még sincs vége (2. kötet)</a>
+<div class='author'>Eötvös, Károly, 1842-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63565, {&quot;Title&quot;:&quot;A nagy per, mely ezer éve folyik s még sincs vége (3. kötet)&quot;,&quot;Topics&quot;:[&quot;Blood accusation&quot;,&quot;Jews -- Persecutions -- Hungary -- Tiszaeszlár&quot;,&quot;Tiszaeszlár (Hungary) -- Ethnic relations&quot;],&quot;Primary&quot;:&quot;63565.htm&quot;,&quot;CreatorNames&quot;:[&quot;Eötvös, Károly, 1842-1916&quot;],&quot;LoCC&quot;:[&quot;BM&quot;],&quot;PG_ID&quot;:&quot;63565&quot;});" class='title'>A nagy per, mely ezer éve folyik s még sincs vége (3. kötet)</a>
+<div class='author'>Eötvös, Károly, 1842-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63689, {&quot;Title&quot;:&quot;On the Eve of Redemption&quot;,&quot;Topics&quot;:[&quot;Zionism&quot;,&quot;Jews&quot;,&quot;Judaism&quot;],&quot;Primary&quot;:&quot;63689.htm&quot;,&quot;CreatorNames&quot;:[&quot;Melamed, S. M., 1885-1938&quot;,&quot;Friedenwald, Harry, 1864-1950 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;BM&quot;],&quot;PG_ID&quot;:&quot;63689&quot;});" class='title'>On the Eve of Redemption</a>
+<div class='author'>Melamed, S. M., 1885-1938, Friedenwald, Harry, 1864-1950 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64760, {&quot;Title&quot;:&quot;Le Salut par les Juifs - Édition nouvelle revue et modifiée par l&#39;auteur&quot;,&quot;Topics&quot;:[&quot;Christianity and other religions -- Judaism&quot;],&quot;Primary&quot;:&quot;64760.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bloy, Léon, 1846-1917&quot;],&quot;LoCC&quot;:[&quot;BM&quot;],&quot;PG_ID&quot;:&quot;64760&quot;});" class='title'>Le Salut par les Juifs -<br><span class='subtitle'>Édition nouvelle revue et modifiée par l'auteur</span></a>
+<div class='author'>Bloy, Léon, 1846-1917</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68214, {&quot;Title&quot;:&quot;The old paths, or the Talmud tested by Scripture - Being a comparison of the principles and doctrines of modern Judaism with the religion of Moses and the prophets&quot;,&quot;Topics&quot;:[&quot;Judaism -- Works to 1900&quot;],&quot;Primary&quot;:&quot;68214.htm&quot;,&quot;CreatorNames&quot;:[&quot;McCaul, Alexander, 1799-1863&quot;],&quot;LoCC&quot;:[&quot;BM&quot;],&quot;PG_ID&quot;:&quot;68214&quot;});" class='title'>The old paths, or the Talmud tested by Scripture -<br><span class='subtitle'>Being a comparison of the principles and doctrines of modern Judaism with the religion of Moses and the prophets</span></a>
+<div class='author'>McCaul, Alexander, 1799-1863</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69170, {&quot;Title&quot;:&quot;The Essenes: Their history and doctrines&quot;,&quot;Topics&quot;:[&quot;Essenes&quot;],&quot;Primary&quot;:&quot;69170.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ginsburg, Christian D. (Christian David), 1831-1914&quot;],&quot;LoCC&quot;:[&quot;BM&quot;],&quot;PG_ID&quot;:&quot;69170&quot;});" class='title'>The Essenes:<br><span class='subtitle'>Their history and doctrines</span></a>
+<div class='author'>Ginsburg, Christian D. (Christian David), 1831-1914</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69243, {&quot;Title&quot;:&quot;The Kabbalah: its doctrines, development, and literature&quot;,&quot;Topics&quot;:[&quot;Cabala&quot;],&quot;Primary&quot;:&quot;69243.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ginsburg, Christian D. (Christian David), 1831-1914&quot;],&quot;LoCC&quot;:[&quot;BM&quot;],&quot;PG_ID&quot;:&quot;69243&quot;});" class='title'>The Kabbalah:<br><span class='subtitle'>its doctrines, development, and literature</span></a>
+<div class='author'>Ginsburg, Christian D. (Christian David), 1831-1914</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6971, {&quot;Title&quot;:&quot;Judaism&quot;,&quot;Topics&quot;:[&quot;Judaism&quot;],&quot;Primary&quot;:&quot;6971.txt&quot;,&quot;CreatorNames&quot;:[&quot;Abrahams, Israel, 1858-1925&quot;],&quot;LoCC&quot;:[&quot;BM&quot;],&quot;PG_ID&quot;:&quot;6971&quot;});" class='title'>Judaism</a>
+<div class='author'>Abrahams, Israel, 1858-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7482, {&quot;Title&quot;:&quot;Stories of the Prophets (Before the Exile)&quot;,&quot;Topics&quot;:[&quot;Bible. Prophets&quot;],&quot;Primary&quot;:&quot;7482.txt&quot;,&quot;CreatorNames&quot;:[&quot;Landman, Isaac, 1880-1946&quot;],&quot;LoCC&quot;:[&quot;BM&quot;],&quot;PG_ID&quot;:&quot;7482&quot;});" class='title'>Stories of the Prophets (Before the Exile)</a>
+<div class='author'>Landman, Isaac, 1880-1946</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(8547, {&quot;Title&quot;:&quot;Pirke Avot: The Sayings of the Jewish Fathers&quot;,&quot;Topics&quot;:[&quot;Mishnah. Avot&quot;,&quot;Mishnah. Avot -- Commentaries&quot;],&quot;Primary&quot;:&quot;8547.txt&quot;,&quot;CreatorNames&quot;:[&quot;Gorfinkle, Joseph I. (Joseph Isaac), 1880- [Translator]&quot;],&quot;LoCC&quot;:[&quot;BM&quot;],&quot;PG_ID&quot;:&quot;8547&quot;});" class='title'>Pirke Avot:<br><span class='subtitle'>The Sayings of the Jewish Fathers</span></a>
+<div class='author'>Gorfinkle, Joseph I. (Joseph Isaac), 1880- [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(8548, {&quot;Title&quot;:&quot;Pirke Avot: The Sayings of the Jewish Fathers&quot;,&quot;Topics&quot;:[&quot;Mishnah. Avot&quot;],&quot;Primary&quot;:&quot;8548.txt&quot;,&quot;CreatorNames&quot;:[&quot;Gorfinkle, Joseph I. (Joseph Isaac), 1880- [Translator]&quot;],&quot;LoCC&quot;:[&quot;BM&quot;],&quot;PG_ID&quot;:&quot;8548&quot;});" class='title'>Pirke Avot:<br><span class='subtitle'>The Sayings of the Jewish Fathers</span></a>
+<div class='author'>Gorfinkle, Joseph I. (Joseph Isaac), 1880- [Translator]</div>
+</div>
+</ul></div>
+</body></html>

@@ -1,0 +1,826 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Industries, Land use, Labor (HD)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(10126, {&quot;Title&quot;:&quot;Home-Life of the Lancashire Factory Folk during the Cotton Famine&quot;,&quot;Topics&quot;:[&quot;Cotton famine, 1861-1864&quot;,&quot;Labor -- England -- Lancashire&quot;,&quot;Working class -- England -- Lancashire&quot;],&quot;Primary&quot;:&quot;10126.htm&quot;,&quot;CreatorNames&quot;:[&quot;Waugh, Edwin, 1817-1890&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;10126&quot;});" class='title'>Home-Life of the Lancashire Factory Folk during the Cotton Famine</a>
+<div class='author'>Waugh, Edwin, 1817-1890</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(10710, {&quot;Title&quot;:&quot;Problems of Poverty: An Inquiry into the Industrial Condition of the Poor&quot;,&quot;Topics&quot;:[&quot;Poor -- Great Britain&quot;,&quot;Working class -- Great Britain&quot;,&quot;Sweatshops -- Great Britain&quot;],&quot;Primary&quot;:&quot;10710.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hobson, J. A. (John Atkinson), 1858-1940&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;10710&quot;});" class='title'>Problems of Poverty:<br><span class='subtitle'>An Inquiry into the Industrial Condition of the Poor</span></a>
+<div class='author'>Hobson, J. A. (John Atkinson), 1858-1940</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(10725, {&quot;Title&quot;:&quot;The Centralia Conspiracy&quot;,&quot;Topics&quot;:[&quot;Industrial Workers of the World&quot;,&quot;Lumber trade -- Washington (State)&quot;,&quot;Centralia Massacre, Centralia, Wash., 1919&quot;],&quot;Primary&quot;:&quot;10725.htm&quot;,&quot;CreatorNames&quot;:[&quot;Chaplin, Ralph, 1887-1961&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;10725&quot;});" class='title'>The Centralia Conspiracy</a>
+<div class='author'>Chaplin, Ralph, 1887-1961</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(10808, {&quot;Title&quot;:&quot;Consumers&#39; Cooperative Societies in New York State&quot;,&quot;Topics&quot;:[&quot;Consumer cooperatives --New York (State)&quot;],&quot;Primary&quot;:&quot;10808.htm&quot;,&quot;CreatorNames&quot;:[&quot;Consumers&#39; League of New York City&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;10808&quot;});" class='title'>Consumers' Cooperative Societies in New York State</a>
+<div class='author'>Consumers' League of New York City</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(11270, {&quot;Title&quot;:&quot;A Practical Illustration of \&quot;\&quot;Woman&#39;s Right to Labor\&quot;\&quot; - A Letter from Marie E. Zakrzewska, M.D. Late of Berlin, Prussia&quot;,&quot;Topics&quot;:[&quot;Women -- Employment&quot;],&quot;Primary&quot;:&quot;11270.htm&quot;,&quot;CreatorNames&quot;:[&quot;Zakrzewska, Marie E. (Marie Elizabeth), 1829-1902&quot;,&quot;Dall, Caroline Wells Healey, 1822-1912 [Editor]&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;11270&quot;});" class='title'>A Practical Illustration of "Woman's Right to Labor" -<br><span class='subtitle'>A Letter from Marie E. Zakrzewska, M.D. Late of Berlin, Prussia</span></a>
+<div class='author'>Zakrzewska, Marie E. (Marie Elizabeth), 1829-1902, Dall, Caroline Wells Healey, 1822-1912 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(11424, {&quot;Title&quot;:&quot;The Trade Union Woman&quot;,&quot;Topics&quot;:[&quot;Women labor union members&quot;,&quot;Women labor union members -- United States&quot;],&quot;Primary&quot;:&quot;11424.txt&quot;,&quot;CreatorNames&quot;:[&quot;Henry, Alice, 1857-1943&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;11424&quot;});" class='title'>The Trade Union Woman</a>
+<div class='author'>Henry, Alice, 1857-1943</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(11874, {&quot;Title&quot;:&quot;Hodge and His Masters&quot;,&quot;Topics&quot;:[&quot;England -- Rural conditions&quot;,&quot;Agricultural laborers -- England&quot;,&quot;Country life -- England&quot;],&quot;Primary&quot;:&quot;11874.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jefferies, Richard, 1848-1887&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;11874&quot;});" class='title'>Hodge and His Masters</a>
+<div class='author'>Jefferies, Richard, 1848-1887</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12171, {&quot;Title&quot;:&quot;Women Workers in Seven Professions - A Survey of Their Economic Conditions and Prospects&quot;,&quot;Topics&quot;:[&quot;Vocational guidance&quot;,&quot;Women -- Employment -- Great Britain&quot;],&quot;Primary&quot;:&quot;12171.txt&quot;,&quot;CreatorNames&quot;:[&quot;Morley, Edith J. (Edith Julia), 1875-1964 [Editor]&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;12171&quot;});" class='title'>Women Workers in Seven Professions -<br><span class='subtitle'>A Survey of Their Economic Conditions and Prospects</span></a>
+<div class='author'>Morley, Edith J. (Edith Julia), 1875-1964 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(1297, {&quot;Title&quot;:&quot;The Iron Puddler: My Life in the Rolling Mills and What Came of It&quot;,&quot;Topics&quot;:[&quot;Blue collar workers -- United States -- Biography&quot;,&quot;Labor unions -- United States&quot;,&quot;Davis, James J. (James John), 1873-1947&quot;],&quot;Primary&quot;:&quot;1297.htm&quot;,&quot;CreatorNames&quot;:[&quot;Davis, James J. (James John), 1873-1947&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;1297&quot;});" class='title'>The Iron Puddler:<br><span class='subtitle'>My Life in the Rolling Mills and What Came of It</span></a>
+<div class='author'>Davis, James J. (James John), 1873-1947</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13397, {&quot;Title&quot;:&quot;History of the Comstock Patent Medicine Business and Dr. Morse&#39;s Indian Root Pills&quot;,&quot;Topics&quot;:[&quot;W.H. Comstock Co.&quot;,&quot;Patent medicines -- United States&quot;],&quot;Primary&quot;:&quot;13397.htm&quot;,&quot;CreatorNames&quot;:[&quot;Shaw, Robert B.&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;13397&quot;});" class='title'>History of the Comstock Patent Medicine Business and Dr. Morse's Indian Root Pills</a>
+<div class='author'>Shaw, Robert B.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14055, {&quot;Title&quot;:&quot;Food Guide for War Service at Home - Prepared under the direction of the United States Food Administration in co-operation with the United States Department of Agriculture and the Bureau of Education, with a preface by Herbert Hoover&quot;,&quot;Topics&quot;:[&quot;World War, 1914-1918 -- Food supply -- United States&quot;],&quot;Primary&quot;:&quot;14055.htm&quot;,&quot;CreatorNames&quot;:[&quot;Blunt, Katharine, 1876-1954&quot;,&quot;Powdermaker, Florence, 1894-1966&quot;,&quot;Swain, Frances Lucy&quot;,&quot;United States Food Administration&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;14055&quot;});" class='title'>Food Guide for War Service at Home -<br><span class='subtitle'>Prepared under the direction of the United States Food Administration in co-operation with the United States Department of Agriculture and the Bureau of Education, with a preface by Herbert Hoover</span></a>
+<div class='author'>Blunt, Katharine, 1876-1954, Powdermaker, Florence, 1894-1966, Swain, Frances Lucy, United States Food Administration</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14117, {&quot;Title&quot;:&quot;Wanted, a Young Woman to Do Housework: Business principles applied to housework&quot;,&quot;Topics&quot;:[&quot;Home economics&quot;,&quot;Household employees&quot;],&quot;Primary&quot;:&quot;14117.htm&quot;,&quot;CreatorNames&quot;:[&quot;Barker, C. Hélène, 1868-&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;14117&quot;});" class='title'>Wanted, a Young Woman to Do Housework:<br><span class='subtitle'>Business principles applied to housework</span></a>
+<div class='author'>Barker, C. Hélène, 1868-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14458, {&quot;Title&quot;:&quot;A History of Trade Unionism in the United States&quot;,&quot;Topics&quot;:[&quot;Labor unions -- United States -- History&quot;],&quot;Primary&quot;:&quot;14458.htm&quot;,&quot;CreatorNames&quot;:[&quot;Perlman, Selig, 1888-1959&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;14458&quot;});" class='title'>A History of Trade Unionism in the United States</a>
+<div class='author'>Perlman, Selig, 1888-1959</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14562, {&quot;Title&quot;:&quot;The Land-War in Ireland: A History for the Times&quot;,&quot;Topics&quot;:[&quot;Ireland -- Economic conditions&quot;,&quot;Land tenure -- Ireland&quot;],&quot;Primary&quot;:&quot;14562.htm&quot;,&quot;CreatorNames&quot;:[&quot;Godkin, James, 1806-1879&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;14562&quot;});" class='title'>The Land-War in Ireland:<br><span class='subtitle'>A History for the Times</span></a>
+<div class='author'>Godkin, James, 1806-1879</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14798, {&quot;Title&quot;:&quot;Making Both Ends Meet: The income and outlay of New York working girls&quot;,&quot;Topics&quot;:[&quot;Women -- Employment -- New York (State) -- New York&quot;,&quot;Wages -- New York (State) -- New York&quot;,&quot;Cost and standard of living -- New York (State) -- New York&quot;],&quot;Primary&quot;:&quot;14798.htm&quot;,&quot;CreatorNames&quot;:[&quot;Clark, Sue Ainslie&quot;,&quot;Wyatt, Edith, 1873-1958&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;14798&quot;});" class='title'>Making Both Ends Meet:<br><span class='subtitle'>The income and outlay of New York working girls</span></a>
+<div class='author'>Clark, Sue Ainslie, Wyatt, Edith, 1873-1958</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15204, {&quot;Title&quot;:&quot;Women Wage-Earners: Their Past, Their Present, and Their Future&quot;,&quot;Topics&quot;:[&quot;Women -- Employment -- United States&quot;],&quot;Primary&quot;:&quot;15204.htm&quot;,&quot;CreatorNames&quot;:[&quot;Campbell, Helen, 1839-1918&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;15204&quot;});" class='title'>Women Wage-Earners:<br><span class='subtitle'>Their Past, Their Present, and Their Future</span></a>
+<div class='author'>Campbell, Helen, 1839-1918</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15218, {&quot;Title&quot;:&quot;The Woman Who Toils - Being the Experiences of Two Gentlewomen as Factory Girls&quot;,&quot;Topics&quot;:[&quot;Women -- Employment -- United States&quot;,&quot;Working class -- United States&quot;,&quot;Child labor -- United States&quot;],&quot;Primary&quot;:&quot;15218.htm&quot;,&quot;CreatorNames&quot;:[&quot;Van Vorst, John, Mrs., 1873-1928&quot;,&quot;Van Vorst, Marie, 1867-1936&quot;,&quot;Roosevelt, Theodore, 1858-1919 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;15218&quot;});" class='title'>The Woman Who Toils -<br><span class='subtitle'>Being the Experiences of Two Gentlewomen as Factory Girls</span></a>
+<div class='author'>Van Vorst, John, Mrs., 1873-1928, Van Vorst, Marie, 1867-1936, Roosevelt, Theodore, 1858-1919 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15595, {&quot;Title&quot;:&quot;Vocational Guidance for Girls&quot;,&quot;Topics&quot;:[&quot;Women -- Employment&quot;,&quot;Young women&quot;,&quot;Vocational guidance&quot;],&quot;Primary&quot;:&quot;15595.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dickson, Marguerite&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;15595&quot;});" class='title'>Vocational Guidance for Girls</a>
+<div class='author'>Dickson, Marguerite</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17090, {&quot;Title&quot;:&quot;Random Reminiscences of Men and Events&quot;,&quot;Topics&quot;:[&quot;Standard Oil Company&quot;,&quot;Capitalists and financiers -- United States&quot;,&quot;Rockefeller, John D. (John Davison), 1839-1937&quot;,&quot;Charity&quot;],&quot;Primary&quot;:&quot;17090.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rockefeller, John D. (John Davison), 1839-1937&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;HD&quot;],&quot;PG_ID&quot;:&quot;17090&quot;});" class='title'>Random Reminiscences of Men and Events</a>
+<div class='author'>Rockefeller, John D. (John Davison), 1839-1937</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17257, {&quot;Title&quot;:&quot;Isa Pang Bayani&quot;,&quot;Topics&quot;:[&quot;Labor -- Philippines&quot;,&quot;Labor movement -- Philippines&quot;,&quot;Working class -- Philippines&quot;],&quot;Primary&quot;:&quot;17257.htm&quot;,&quot;CreatorNames&quot;:[&quot;Arsciwals, Juan Lauro&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;17257&quot;});" class='title'>Isa Pang Bayani</a>
+<div class='author'>Arsciwals, Juan Lauro</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17306, {&quot;Title&quot;:&quot;The Condition of the Working-Class in England in 1844 - with a Preface written in 1892&quot;,&quot;Topics&quot;:[&quot;Great Britain -- Economic conditions&quot;,&quot;Working class -- Great Britain&quot;],&quot;Primary&quot;:&quot;17306.htm&quot;,&quot;CreatorNames&quot;:[&quot;Engels, Friedrich, 1820-1895&quot;,&quot;Kelley, Florence, 1859-1932 [Translator]&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;17306&quot;});" class='title'>The Condition of the Working-Class in England in 1844 -<br><span class='subtitle'>with a Preface written in 1892</span></a>
+<div class='author'>Engels, Friedrich, 1820-1895, Kelley, Florence, 1859-1932 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19547, {&quot;Title&quot;:&quot;Obed Hussey, Who, of All Inventors, Made Bread Cheap&quot;,&quot;Topics&quot;:[&quot;Hussey, Obed, 1792-1860&quot;,&quot;Harvesting machinery&quot;],&quot;Primary&quot;:&quot;19547.htm&quot;,&quot;CreatorNames&quot;:[&quot;Greeno, Follett L. (Follett Lamberton), 1889- [Editor]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;HD&quot;],&quot;PG_ID&quot;:&quot;19547&quot;});" class='title'>Obed Hussey, Who, of All Inventors, Made Bread Cheap</a>
+<div class='author'>Greeno, Follett L. (Follett Lamberton), 1889- [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20041, {&quot;Title&quot;:&quot;Men&#39;s Sewed Straw Hats - Report of the United Stated Tariff Commission to the President of the United States (1926)&quot;,&quot;Topics&quot;:[&quot;Hats&quot;,&quot;Straw industries&quot;],&quot;Primary&quot;:&quot;20041.htm&quot;,&quot;CreatorNames&quot;:[&quot;United States Tariff Commission&quot;,&quot;Coolidge, Calvin, 1872-1933 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;20041&quot;});" class='title'>Men's Sewed Straw Hats -<br><span class='subtitle'>Report of the United Stated Tariff Commission to the President of the United States (1926)</span></a>
+<div class='author'>United States Tariff Commission, Coolidge, Calvin, 1872-1933 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2052, {&quot;Title&quot;:&quot;Everybody&#39;s Business Is Nobody&#39;s Business - Or, Private Abuses, Public Grievances; Exemplified in the Pride, Insolence, and Exorbitant Wages of Our Women, Servants, Footmen, &amp;c.&quot;,&quot;Topics&quot;:[&quot;Working class&quot;],&quot;Primary&quot;:&quot;2052.htm&quot;,&quot;CreatorNames&quot;:[&quot;Defoe, Daniel, 1661?-1731&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;2052&quot;});" class='title'>Everybody's Business Is Nobody's Business -<br><span class='subtitle'>Or, Private Abuses, Public Grievances; Exemplified in the Pride, Insolence, and Exorbitant Wages of Our Women, Servants, Footmen, &c.</span></a>
+<div class='author'>Defoe, Daniel, 1661?-1731</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(21657, {&quot;Title&quot;:&quot;Deep Furrows&quot;,&quot;Topics&quot;:[&quot;Agriculture -- Canada -- Societies, etc.&quot;,&quot;Agriculture -- Canada&quot;],&quot;Primary&quot;:&quot;21657.txt&quot;,&quot;CreatorNames&quot;:[&quot;Moorhouse, Herbert Joseph, 1882-&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;21657&quot;});" class='title'>Deep Furrows</a>
+<div class='author'>Moorhouse, Herbert Joseph, 1882-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(21837, {&quot;Title&quot;:&quot;Monopolies and the People&quot;,&quot;Topics&quot;:[&quot;Monopolies -- United States&quot;,&quot;Trusts, Industrial&quot;,&quot;Competition&quot;],&quot;Primary&quot;:&quot;21837.htm&quot;,&quot;CreatorNames&quot;:[&quot;Baker, Charles Whiting, 1865-1941&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;21837&quot;});" class='title'>Monopolies and the People</a>
+<div class='author'>Baker, Charles Whiting, 1865-1941</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(21916, {&quot;Title&quot;:&quot;Villkor och möjligheter för kemisk storindustri i Sverige&quot;,&quot;Topics&quot;:[&quot;Chemical industry -- Sweden&quot;],&quot;Primary&quot;:&quot;21916.htm&quot;,&quot;CreatorNames&quot;:[&quot;Larsson, Ernst&quot;],&quot;LoCC&quot;:[&quot;HD&quot;,&quot;QD&quot;],&quot;PG_ID&quot;:&quot;21916&quot;});" class='title'>Villkor och möjligheter för kemisk storindustri i Sverige</a>
+<div class='author'>Larsson, Ernst</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24423, {&quot;Title&quot;:&quot;Fifty years with the Revere Copper Co. - A Paper Read at the Stockholders&#39; Meeting held on Monday 24 March 1890&quot;,&quot;Topics&quot;:[&quot;Speeches, addresses, etc.&quot;,&quot;Revere Copper Company&quot;,&quot;Copper industry and trade -- United States -- History&quot;],&quot;Primary&quot;:&quot;24423.htm&quot;,&quot;CreatorNames&quot;:[&quot;Snow, S. T.&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;24423&quot;});" class='title'>Fifty years with the Revere Copper Co. -<br><span class='subtitle'>A Paper Read at the Stockholders' Meeting held on Monday 24 March 1890</span></a>
+<div class='author'>Snow, S. T.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24853, {&quot;Title&quot;:&quot;Habitações Operarias&quot;,&quot;Topics&quot;:[&quot;Housing&quot;],&quot;Primary&quot;:&quot;24853.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bastos, Teixeira, 1857-1902&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;24853&quot;});" class='title'>Habitações Operarias</a>
+<div class='author'>Bastos, Teixeira, 1857-1902</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24868, {&quot;Title&quot;:&quot;The Cost of Living Among Wage-Earners - Fall River, Massachusetts, October, 1919, Research Report Number 22, November, 1919&quot;,&quot;Topics&quot;:[&quot;Cost and standard of living -- Massachusetts -- Fall River&quot;],&quot;Primary&quot;:&quot;24868.htm&quot;,&quot;CreatorNames&quot;:[&quot;National Industrial Conference Board&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;24868&quot;});" class='title'>The Cost of Living Among Wage-Earners -<br><span class='subtitle'>Fall River, Massachusetts, October, 1919, Research Report Number 22, November, 1919</span></a>
+<div class='author'>National Industrial Conference Board</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24959, {&quot;Title&quot;:&quot;Working With the Working Woman&quot;,&quot;Topics&quot;:[&quot;United States -- Social conditions&quot;,&quot;Women -- Employment -- United States&quot;,&quot;Working class -- United States&quot;],&quot;Primary&quot;:&quot;24959.htm&quot;,&quot;CreatorNames&quot;:[&quot;Parker, Cornelia Stratton, 1885-1972&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;24959&quot;});" class='title'>Working With the Working Woman</a>
+<div class='author'>Parker, Cornelia Stratton, 1885-1972</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25046, {&quot;Title&quot;:&quot;The Canadian Girl at Work: A Book of Vocational Guidance&quot;,&quot;Topics&quot;:[&quot;Women -- Employment -- Canada&quot;,&quot;Women -- Vocational guidance -- Canada&quot;],&quot;Primary&quot;:&quot;25046.htm&quot;,&quot;CreatorNames&quot;:[&quot;Willison, Marjory MacMurchy, Lady, -1938&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;25046&quot;});" class='title'>The Canadian Girl at Work:<br><span class='subtitle'>A Book of Vocational Guidance</span></a>
+<div class='author'>Willison, Marjory MacMurchy, Lady, -1938</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25115, {&quot;Title&quot;:&quot;A Journal of a Visit of Three Days to Skibbereen, and Its Neighbourhood&quot;,&quot;Topics&quot;:[&quot;Famines -- Ireland -- Skibbereen&quot;,&quot;Skibbereen (Ireland) -- Economic conditions&quot;],&quot;Primary&quot;:&quot;25115.htm&quot;,&quot;CreatorNames&quot;:[&quot;Burritt, Elihu, 1810-1879&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;25115&quot;});" class='title'>A Journal of a Visit of Three Days to Skibbereen, and Its Neighbourhood</a>
+<div class='author'>Burritt, Elihu, 1810-1879</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25170, {&quot;Title&quot;:&quot;Facts for the Kind-Hearted of England! - As to the Wretchedness of the Irish Peasantry, and the Means for their Regeneration&quot;,&quot;Topics&quot;:[&quot;Ireland -- Rural conditions&quot;,&quot;Poor -- Ireland&quot;,&quot;Irish -- England -- Economic conditions&quot;],&quot;Primary&quot;:&quot;25170.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rogers, Jasper W.&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;25170&quot;});" class='title'>Facts for the Kind-Hearted of England! -<br><span class='subtitle'>As to the Wretchedness of the Irish Peasantry, and the Means for their Regeneration</span></a>
+<div class='author'>Rogers, Jasper W.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26920, {&quot;Title&quot;:&quot;鹽鐵論&quot;,&quot;Topics&quot;:[&quot;Government monopolies -- China&quot;,&quot;Salt industry and trade -- China&quot;,&quot;Iron industry and trade -- China&quot;],&quot;Primary&quot;:&quot;26920.txt&quot;,&quot;CreatorNames&quot;:[&quot;Huan, Kuan, active 1st century B.C.&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;26920&quot;});" class='title'>鹽鐵論</a>
+<div class='author'>Huan, Kuan, active 1st century B.C.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27516, {&quot;Title&quot;:&quot;The Toilers of the Field&quot;,&quot;Topics&quot;:[&quot;Agricultural laborers -- England&quot;,&quot;Country life -- England&quot;],&quot;Primary&quot;:&quot;27516.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jefferies, Richard, 1848-1887&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;27516&quot;});" class='title'>The Toilers of the Field</a>
+<div class='author'>Jefferies, Richard, 1848-1887</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27519, {&quot;Title&quot;:&quot;The Settlement of Wage Disputes&quot;,&quot;Topics&quot;:[&quot;Economics&quot;,&quot;Wages -- United States&quot;],&quot;Primary&quot;:&quot;27519.htm&quot;,&quot;CreatorNames&quot;:[&quot;Feis, Herbert, 1893-1972&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;27519&quot;});" class='title'>The Settlement of Wage Disputes</a>
+<div class='author'>Feis, Herbert, 1893-1972</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28245, {&quot;Title&quot;:&quot;Prisoners of Poverty Abroad&quot;,&quot;Topics&quot;:[&quot;Women -- Employment&quot;],&quot;Primary&quot;:&quot;28245.htm&quot;,&quot;CreatorNames&quot;:[&quot;Campbell, Helen, 1839-1918&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;28245&quot;});" class='title'>Prisoners of Poverty Abroad</a>
+<div class='author'>Campbell, Helen, 1839-1918</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28284, {&quot;Title&quot;:&quot;The Evolution of Modern Capitalism: A Study of Machine Production&quot;,&quot;Topics&quot;:[&quot;Industries -- History&quot;,&quot;Capitalism&quot;,&quot;Machinery in the workplace&quot;],&quot;Primary&quot;:&quot;28284.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hobson, J. A. (John Atkinson), 1858-1940&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;28284&quot;});" class='title'>The Evolution of Modern Capitalism:<br><span class='subtitle'>A Study of Machine Production</span></a>
+<div class='author'>Hobson, J. A. (John Atkinson), 1858-1940</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28499, {&quot;Title&quot;:&quot;Mother Earth: Land Grants in Virginia, 1607-1699&quot;,&quot;Topics&quot;:[&quot;Virginia -- History -- Colonial period, ca. 1600-1775&quot;,&quot;Land grants -- Virginia -- History&quot;],&quot;Primary&quot;:&quot;28499.htm&quot;,&quot;CreatorNames&quot;:[&quot;Robinson, Walter Stitt&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;28499&quot;});" class='title'>Mother Earth:<br><span class='subtitle'>Land Grants in Virginia, 1607-1699</span></a>
+<div class='author'>Robinson, Walter Stitt</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28991, {&quot;Title&quot;:&quot;The Next Step: A Plan for Economic World Federation&quot;,&quot;Topics&quot;:[&quot;Economic history&quot;],&quot;Primary&quot;:&quot;28991.htm&quot;,&quot;CreatorNames&quot;:[&quot;Nearing, Scott, 1883-1983&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;28991&quot;});" class='title'>The Next Step:<br><span class='subtitle'>A Plan for Economic World Federation</span></a>
+<div class='author'>Nearing, Scott, 1883-1983</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29048, {&quot;Title&quot;:&quot;The Fabric of Civilization - A Short Survey of the Cotton Industry in the United States&quot;,&quot;Topics&quot;:[&quot;Cotton manufacture -- United States&quot;],&quot;Primary&quot;:&quot;29048.htm&quot;,&quot;CreatorNames&quot;:[&quot;Guaranty Trust Company of New York&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;29048&quot;});" class='title'>The Fabric of Civilization -<br><span class='subtitle'>A Short Survey of the Cotton Industry in the United States</span></a>
+<div class='author'>Guaranty Trust Company of New York</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29065, {&quot;Title&quot;:&quot;Bremen Cotton Exchange, 1872/1922&quot;,&quot;Topics&quot;:[&quot;Bremen (Germany). Baumwollbörse&quot;,&quot;Cotton trade&quot;],&quot;Primary&quot;:&quot;29065.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cramer, Andreas Wilhelm, 1855-&quot;,&quot;Uhte, Ch. F. C. [Translator]&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;29065&quot;});" class='title'>Bremen Cotton Exchange, 1872/1922</a>
+<div class='author'>Cramer, Andreas Wilhelm, 1855-, Uhte, Ch. F. C. [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29258, {&quot;Title&quot;:&quot;The Enclosures in England: An Economic Reconstruction&quot;,&quot;Topics&quot;:[&quot;Agriculture -- England -- History&quot;,&quot;Inclosures&quot;,&quot;Agriculture -- Economic aspects -- England&quot;],&quot;Primary&quot;:&quot;29258.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bradley, Harriett, 1892-&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;29258&quot;});" class='title'>The Enclosures in England:<br><span class='subtitle'>An Economic Reconstruction</span></a>
+<div class='author'>Bradley, Harriett, 1892-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29714, {&quot;Title&quot;:&quot;The Negro Farmer&quot;,&quot;Topics&quot;:[&quot;African American farmers -- Southern States&quot;,&quot;Agriculture -- Economic aspects -- Southern States&quot;],&quot;Primary&quot;:&quot;29714.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kelsey, Carl, 1870-1953&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;29714&quot;});" class='title'>The Negro Farmer</a>
+<div class='author'>Kelsey, Carl, 1870-1953</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29915, {&quot;Title&quot;:&quot;About sugar buying for jobbers - How you can lessen business risks by trading in refined sugar futures&quot;,&quot;Topics&quot;:[&quot;Sugar&quot;],&quot;Primary&quot;:&quot;29915.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dyer, B. W. (Benjamin Wheeler), 1887-&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;29915&quot;});" class='title'>About sugar buying for jobbers -<br><span class='subtitle'>How you can lessen business risks by trading in refined sugar futures</span></a>
+<div class='author'>Dyer, B. W. (Benjamin Wheeler), 1887-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30238, {&quot;Title&quot;:&quot;The Claims of Labour: An essay on the duties of the employers to the employed&quot;,&quot;Topics&quot;:[&quot;Industrial relations&quot;,&quot;Working class&quot;],&quot;Primary&quot;:&quot;30238.htm&quot;,&quot;CreatorNames&quot;:[&quot;Helps, Arthur, Sir, 1813-1875&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;30238&quot;});" class='title'>The Claims of Labour:<br><span class='subtitle'>An essay on the duties of the employers to the employed</span></a>
+<div class='author'>Helps, Arthur, Sir, 1813-1875</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3038, {&quot;Title&quot;:&quot;The Armies of Labor: A Chronicle of the Organized Wage-Earners&quot;,&quot;Topics&quot;:[&quot;Labor unions -- United States -- History&quot;],&quot;Primary&quot;:&quot;3038.htm&quot;,&quot;CreatorNames&quot;:[&quot;Orth, Samuel Peter, 1873-1922&quot;],&quot;LoCC&quot;:[&quot;E&quot;,&quot;HD&quot;],&quot;PG_ID&quot;:&quot;3038&quot;});" class='title'>The Armies of Labor:<br><span class='subtitle'>A Chronicle of the Organized Wage-Earners</span></a>
+<div class='author'>Orth, Samuel Peter, 1873-1922</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30529, {&quot;Title&quot;:&quot;A Stake in the Land&quot;,&quot;Topics&quot;:[&quot;Land tenure -- United States&quot;,&quot;Agricultural colonies -- United States&quot;,&quot;Immigrants -- United States&quot;,&quot;Rural schools -- United States&quot;,&quot;Americanization&quot;],&quot;Primary&quot;:&quot;30529.htm&quot;,&quot;CreatorNames&quot;:[&quot;Speek, Peter A. (Peter Alexander), 1873-&quot;],&quot;LoCC&quot;:[&quot;HD&quot;,&quot;JV&quot;],&quot;PG_ID&quot;:&quot;30529&quot;});" class='title'>A Stake in the Land</a>
+<div class='author'>Speek, Peter A. (Peter Alexander), 1873-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30731, {&quot;Title&quot;:&quot;Industrial Conspiracies&quot;,&quot;Topics&quot;:[&quot;Justice, Administration of -- United States&quot;,&quot;Working class -- United States&quot;],&quot;Primary&quot;:&quot;30731.htm&quot;,&quot;CreatorNames&quot;:[&quot;Darrow, Clarence, 1857-1938&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;30731&quot;});" class='title'>Industrial Conspiracies</a>
+<div class='author'>Darrow, Clarence, 1857-1938</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30850, {&quot;Title&quot;:&quot;Philippine Mats - Philippine Craftsman Reprint Series No. 1&quot;,&quot;Topics&quot;:[&quot;Weaving&quot;,&quot;Mat industry -- Philippines&quot;],&quot;Primary&quot;:&quot;30850.htm&quot;,&quot;CreatorNames&quot;:[&quot;Philippines. Bureau of Education&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;30850&quot;});" class='title'>Philippine Mats -<br><span class='subtitle'>Philippine Craftsman Reprint Series No. 1</span></a>
+<div class='author'>Philippines. Bureau of Education</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31118, {&quot;Title&quot;:&quot;The Long Day: The Story of a New York Working Girl, as Told by Herself&quot;,&quot;Topics&quot;:[&quot;Women -- Employment -- New York (State) -- New York -- History -- Sources&quot;],&quot;Primary&quot;:&quot;31118.htm&quot;,&quot;CreatorNames&quot;:[&quot;Richardson, Dorothy, 1882-&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;31118&quot;});" class='title'>The Long Day:<br><span class='subtitle'>The Story of a New York Working Girl, as Told by Herself</span></a>
+<div class='author'>Richardson, Dorothy, 1882-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31196, {&quot;Title&quot;:&quot;Time and Tide by Weare and Tyne - Twenty-five Letters to a Working Man of Sunderland on the Laws of Work&quot;,&quot;Topics&quot;:[&quot;Social sciences&quot;,&quot;Working class -- Great Britain&quot;],&quot;Primary&quot;:&quot;31196.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ruskin, John, 1819-1900&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;31196&quot;});" class='title'>Time and Tide by Weare and Tyne -<br><span class='subtitle'>Twenty-five Letters to a Working Man of Sunderland on the Laws of Work</span></a>
+<div class='author'>Ruskin, John, 1819-1900</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31614, {&quot;Title&quot;:&quot;Massenstreik, Partei und Gewerkschaften&quot;,&quot;Topics&quot;:[&quot;Socialism&quot;,&quot;General strikes&quot;,&quot;Strikes and lockouts&quot;,&quot;Labor unions&quot;],&quot;Primary&quot;:&quot;31614.htm&quot;,&quot;CreatorNames&quot;:[&quot;Luxemburg, Rosa, 1871-1919&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;31614&quot;});" class='title'>Massenstreik, Partei und Gewerkschaften</a>
+<div class='author'>Luxemburg, Rosa, 1871-1919</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31810, {&quot;Title&quot;:&quot;The Everett Massacre: A history of the class struggle in the lumber industry&quot;,&quot;Topics&quot;:[&quot;Industrial Workers of the World&quot;,&quot;Lumbermen -- Washington (State)&quot;,&quot;Lumbering -- Washington (State)&quot;],&quot;Primary&quot;:&quot;31810.htm&quot;,&quot;CreatorNames&quot;:[&quot;Smith, Walker C.&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;31810&quot;});" class='title'>The Everett Massacre:<br><span class='subtitle'>A history of the class struggle in the lumber industry</span></a>
+<div class='author'>Smith, Walker C.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32702, {&quot;Title&quot;:&quot;The Romance of the Reaper&quot;,&quot;Topics&quot;:[&quot;Harvesting machinery&quot;],&quot;Primary&quot;:&quot;32702.htm&quot;,&quot;CreatorNames&quot;:[&quot;Casson, Herbert Newton, 1869-1951&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;32702&quot;});" class='title'>The Romance of the Reaper</a>
+<div class='author'>Casson, Herbert Newton, 1869-1951</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32725, {&quot;Title&quot;:&quot;Work for Women&quot;,&quot;Topics&quot;:[&quot;Women -- Employment&quot;,&quot;Occupations&quot;],&quot;Primary&quot;:&quot;32725.htm&quot;,&quot;CreatorNames&quot;:[&quot;Manson, George J.&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;32725&quot;});" class='title'>Work for Women</a>
+<div class='author'>Manson, George J.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33170, {&quot;Title&quot;:&quot;The Itching Palm: A Study of the Habit of Tipping in America&quot;,&quot;Topics&quot;:[&quot;Tipping&quot;],&quot;Primary&quot;:&quot;33170.htm&quot;,&quot;CreatorNames&quot;:[&quot;Scott, William R. (William Rufus), 1886-&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;33170&quot;});" class='title'>The Itching Palm:<br><span class='subtitle'>A Study of the Habit of Tipping in America</span></a>
+<div class='author'>Scott, William R. (William Rufus), 1886-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33418, {&quot;Title&quot;:&quot;Die Entwicklung des Berliner Flaschenbiergeschäfts&quot;,&quot;Topics&quot;:[&quot;Brewing industry -- Germany -- Berlin -- History&quot;],&quot;Primary&quot;:&quot;33418.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stresemann, Gustav, 1878-1929&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;33418&quot;});" class='title'>Die Entwicklung des Berliner Flaschenbiergeschäfts</a>
+<div class='author'>Stresemann, Gustav, 1878-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34012, {&quot;Title&quot;:&quot;Labor and Freedom: The Voice and Pen of Eugene V. Debs&quot;,&quot;Topics&quot;:[&quot;Socialism -- United States&quot;,&quot;Working class -- United States&quot;,&quot;Socialist Party (U.S.)&quot;,&quot;Labor -- United States&quot;],&quot;Primary&quot;:&quot;34012.htm&quot;,&quot;CreatorNames&quot;:[&quot;Debs, Eugene V. (Eugene Victor), 1855-1926&quot;],&quot;LoCC&quot;:[&quot;HD&quot;,&quot;HX&quot;],&quot;PG_ID&quot;:&quot;34012&quot;});" class='title'>Labor and Freedom:<br><span class='subtitle'>The Voice and Pen of Eugene V. Debs</span></a>
+<div class='author'>Debs, Eugene V. (Eugene Victor), 1855-1926</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34060, {&quot;Title&quot;:&quot;Prisoners of Poverty: Women Wage-Workers, Their Trades and Their Lives&quot;,&quot;Topics&quot;:[&quot;Women -- Employment&quot;,&quot;Women -- Employment -- United States&quot;],&quot;Primary&quot;:&quot;34060.htm&quot;,&quot;CreatorNames&quot;:[&quot;Campbell, Helen, 1839-1918&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;34060&quot;});" class='title'>Prisoners of Poverty:<br><span class='subtitle'>Women Wage-Workers, Their Trades and Their Lives</span></a>
+<div class='author'>Campbell, Helen, 1839-1918</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34276, {&quot;Title&quot;:&quot;A Vista Alegre: apontamentos para a sua historia&quot;,&quot;Topics&quot;:[&quot;Fábrica de Porcelana da Vista Alegre -- History&quot;,&quot;Porcelain industry -- Portugal -- History&quot;],&quot;Primary&quot;:&quot;34276.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gomes, Marques, 1853-1931&quot;],&quot;LoCC&quot;:[&quot;HD&quot;,&quot;NK&quot;],&quot;PG_ID&quot;:&quot;34276&quot;});" class='title'>A Vista Alegre:<br><span class='subtitle'>apontamentos para a sua historia</span></a>
+<div class='author'>Gomes, Marques, 1853-1931</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34379, {&quot;Title&quot;:&quot;The Theory and Policy of Labour Protection&quot;,&quot;Topics&quot;:[&quot;Labor laws and legislation -- Germany&quot;],&quot;Primary&quot;:&quot;34379.htm&quot;,&quot;CreatorNames&quot;:[&quot;Germany. Laws, statutes, etc.&quot;,&quot;Schäffle, A. (Albert), 1831-1903&quot;,&quot;Morant, A. C. [Editor]&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;34379&quot;});" class='title'>The Theory and Policy of Labour Protection</a>
+<div class='author'>Germany. Laws, statutes, etc., Schäffle, A. (Albert), 1831-1903, Morant, A. C. [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35121, {&quot;Title&quot;:&quot;Asbestos, Its production and use - With some account of the asbestos mines of Canada&quot;,&quot;Topics&quot;:[&quot;Asbestos&quot;,&quot;Asbestos mines and mining -- Québec (Province)&quot;],&quot;Primary&quot;:&quot;35121.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jones, Robert H.&quot;],&quot;LoCC&quot;:[&quot;HD&quot;,&quot;TN&quot;],&quot;PG_ID&quot;:&quot;35121&quot;});" class='title'>Asbestos, Its production and use -<br><span class='subtitle'>With some account of the asbestos mines of Canada</span></a>
+<div class='author'>Jones, Robert H.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35275, {&quot;Title&quot;:&quot;30,000 Locked Out: The Great Strike of the Building Trades in Chicago&quot;,&quot;Topics&quot;:[&quot;Strikes and lockouts -- Building trades -- Illinois -- Chicago&quot;,&quot;Strikes and lockouts -- Illinois -- Chicago&quot;,&quot;Building trades -- Employees -- Labor unions -- Illinois -- Chicago&quot;],&quot;Primary&quot;:&quot;35275.htm&quot;,&quot;CreatorNames&quot;:[&quot;Beeks, James C.&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;35275&quot;});" class='title'>30,000 Locked Out:<br><span class='subtitle'>The Great Strike of the Building Trades in Chicago</span></a>
+<div class='author'>Beeks, James C.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35511, {&quot;Title&quot;:&quot;Working Women of Japan&quot;,&quot;Topics&quot;:[&quot;Japan -- Social life and customs&quot;,&quot;Women -- Japan&quot;,&quot;Women -- Employment -- Japan&quot;],&quot;Primary&quot;:&quot;35511.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gulick, Sidney Lewis, 1860-1945&quot;],&quot;LoCC&quot;:[&quot;DS&quot;,&quot;HD&quot;],&quot;PG_ID&quot;:&quot;35511&quot;});" class='title'>Working Women of Japan</a>
+<div class='author'>Gulick, Sidney Lewis, 1860-1945</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36004, {&quot;Title&quot;:&quot;The Pullman Boycott: A Complete History of the R.R. Strike&quot;,&quot;Topics&quot;:[&quot;Pullman Strike, 1894&quot;],&quot;Primary&quot;:&quot;36004.htm&quot;,&quot;CreatorNames&quot;:[&quot;Burns, W. F.&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;36004&quot;});" class='title'>The Pullman Boycott:<br><span class='subtitle'>A Complete History of the R.R. Strike</span></a>
+<div class='author'>Burns, W. F.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36032, {&quot;Title&quot;:&quot;The Great Steel Strike and its Lessons&quot;,&quot;Topics&quot;:[&quot;Steel Strike, U.S., 1919-1920&quot;,&quot;United States Steel Corporation&quot;],&quot;Primary&quot;:&quot;36032.htm&quot;,&quot;CreatorNames&quot;:[&quot;Foster, William Z., 1881-1961&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;36032&quot;});" class='title'>The Great Steel Strike and its Lessons</a>
+<div class='author'>Foster, William Z., 1881-1961</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3611, {&quot;Title&quot;:&quot;Second Shetland Truck System Report&quot;,&quot;Topics&quot;:[&quot;Labor law -- Truck system -- History -- England&quot;,&quot;Shetland (Scotland) -- History&quot;],&quot;Primary&quot;:&quot;3611.txt&quot;,&quot;CreatorNames&quot;:[&quot;Guthrie, William, 1835-1908&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;3611&quot;});" class='title'>Second Shetland Truck System Report</a>
+<div class='author'>Guthrie, William, 1835-1908</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36432, {&quot;Title&quot;:&quot;The Coming of Coal&quot;,&quot;Topics&quot;:[&quot;Coal&quot;,&quot;Coal trade -- United States&quot;],&quot;Primary&quot;:&quot;36432.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bruère, Robert W. (Robert Walter), 1876-1964&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;36432&quot;});" class='title'>The Coming of Coal</a>
+<div class='author'>Bruère, Robert W. (Robert Walter), 1876-1964</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36560, {&quot;Title&quot;:&quot;Memoria sobre as diversas salgas da sardinha - com o methodo de aproveitar as enxovas, e sobre a salga dos peixes grossos, como atum, corvinas, pescadas, gorazes, ruivos, e outros semelhantes etc&quot;,&quot;Topics&quot;:[&quot;Fishery products -- Preservation&quot;,&quot;Salted fish&quot;],&quot;Primary&quot;:&quot;36560.htm&quot;,&quot;CreatorNames&quot;:[&quot;França, Clemente Ferreira&quot;],&quot;LoCC&quot;:[&quot;HD&quot;,&quot;SH&quot;],&quot;PG_ID&quot;:&quot;36560&quot;});" class='title'>Memoria sobre as diversas salgas da sardinha -<br><span class='subtitle'>com o methodo de aproveitar as enxovas, e sobre a salga dos peixes grossos, como atum, corvinas, pescadas, gorazes, ruivos, e outros semelhantes etc</span></a>
+<div class='author'>França, Clemente Ferreira</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36870, {&quot;Title&quot;:&quot;Cotton, Its Progress from the Field to the Needle - Being a brief sketch of the culture of the plant, its picking, cleaning, packing, shipment, and manufacture&quot;,&quot;Topics&quot;:[&quot;Cotton growing&quot;,&quot;Cotton manufacture&quot;],&quot;Primary&quot;:&quot;36870.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;HD&quot;,&quot;SB&quot;],&quot;PG_ID&quot;:&quot;36870&quot;});" class='title'>Cotton, Its Progress from the Field to the Needle -<br><span class='subtitle'>Being a brief sketch of the culture of the plant, its picking, cleaning, packing, shipment, and manufacture</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37084, {&quot;Title&quot;:&quot;L&#39;organisation de l&#39;industrie et les conditions du travail dans la Russie des Soviets&quot;,&quot;Topics&quot;:[&quot;Industrial policy -- Soviet Union&quot;,&quot;Working class -- Soviet Union&quot;,&quot;Industries -- Soviet Union&quot;],&quot;Primary&quot;:&quot;37084.htm&quot;,&quot;CreatorNames&quot;:[&quot;International Labour Office&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;37084&quot;});" class='title'>L'organisation de l'industrie et les conditions du travail dans la Russie des Soviets</a>
+<div class='author'>International Labour Office</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37666, {&quot;Title&quot;:&quot;Report on the Cost of Living in Ireland, June 1922&quot;,&quot;Topics&quot;:[&quot;Cost and standard of living -- Ireland&quot;],&quot;Primary&quot;:&quot;37666.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ireland. Ministry of Economic Affairs&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;37666&quot;});" class='title'>Report on the Cost of Living in Ireland, June 1922</a>
+<div class='author'>Ireland. Ministry of Economic Affairs</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37784, {&quot;Title&quot;:&quot;The Rise of Cotton Mills in the South&quot;,&quot;Topics&quot;:[&quot;Southern States -- Economic conditions&quot;,&quot;Cotton textile industry -- Southern States&quot;,&quot;Cotton manufacture -- Southern States&quot;,&quot;Textile workers -- Southern States&quot;,&quot;Working class -- Southern States&quot;],&quot;Primary&quot;:&quot;37784.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mitchell, Broadus, 1892-1988&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;37784&quot;});" class='title'>The Rise of Cotton Mills in the South</a>
+<div class='author'>Mitchell, Broadus, 1892-1988</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3799, {&quot;Title&quot;:&quot;Landholding in England&quot;,&quot;Topics&quot;:[&quot;Land tenure -- Great Britain&quot;],&quot;Primary&quot;:&quot;3799.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fisher, Joseph, F.R.H.S.&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;3799&quot;});" class='title'>Landholding in England</a>
+<div class='author'>Fisher, Joseph, F.R.H.S.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38437, {&quot;Title&quot;:&quot;The Woman&#39;s Part: A Record of Munitions Work&quot;,&quot;Topics&quot;:[&quot;World War, 1914-1918 -- Women&quot;,&quot;Great Britain. Army -- Ordnance facilities&quot;,&quot;Weapons industry -- Employees&quot;],&quot;Primary&quot;:&quot;38437.htm&quot;,&quot;CreatorNames&quot;:[&quot;Yates, L. K.&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;38437&quot;});" class='title'>The Woman's Part:<br><span class='subtitle'>A Record of Munitions Work</span></a>
+<div class='author'>Yates, L. K.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38932, {&quot;Title&quot;:&quot;Steel: The Diary of a Furnace Worker&quot;,&quot;Topics&quot;:[&quot;Iron and steel workers -- United States&quot;],&quot;Primary&quot;:&quot;38932.htm&quot;,&quot;CreatorNames&quot;:[&quot;Walker, Charles R. (Charles Rumford), 1893-1974&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;38932&quot;});" class='title'>Steel:<br><span class='subtitle'>The Diary of a Furnace Worker</span></a>
+<div class='author'>Walker, Charles R. (Charles Rumford), 1893-1974</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39030, {&quot;Title&quot;:&quot;The Influence and Development of English Gilds - As Illustrated by the History of the Craft Gilds of Shrewsbury&quot;,&quot;Topics&quot;:[&quot;Guilds -- England -- History&quot;,&quot;Guilds -- England -- Shrewsbury (England) -- History&quot;],&quot;Primary&quot;:&quot;39030.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hibbert, Francis Aiden, 1866-1933&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;39030&quot;});" class='title'>The Influence and Development of English Gilds -<br><span class='subtitle'>As Illustrated by the History of the Craft Gilds of Shrewsbury</span></a>
+<div class='author'>Hibbert, Francis Aiden, 1866-1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39095, {&quot;Title&quot;:&quot;Monopolies and the People&quot;,&quot;Topics&quot;:[&quot;Railroads and state -- United States&quot;,&quot;Monopolies -- United States&quot;],&quot;Primary&quot;:&quot;39095.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cloud, D. C.&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;39095&quot;});" class='title'>Monopolies and the People</a>
+<div class='author'>Cloud, D. C.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39291, {&quot;Title&quot;:&quot;Boy Labour and Apprenticeship&quot;,&quot;Topics&quot;:[&quot;Working class -- Great Britain&quot;,&quot;Apprenticeship programs -- Great Britain&quot;,&quot;Child labor -- Great Britain&quot;,&quot;Youth -- Employment -- Great Britain&quot;,&quot;Teenage boys -- Great Britain&quot;],&quot;Primary&quot;:&quot;39291.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bray, Reginald Arthur&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;39291&quot;});" class='title'>Boy Labour and Apprenticeship</a>
+<div class='author'>Bray, Reginald Arthur</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39312, {&quot;Title&quot;:&quot;Los ingenios: - colección de vistas de los principles ingenios de azúcar de la isla de Cuba&quot;,&quot;Topics&quot;:[&quot;Sugar trade -- Cuba -- History -- 19th century&quot;,&quot;Plantations -- Cuba -- History -- 19th century&quot;],&quot;Primary&quot;:&quot;39312.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cantero, J. G. (Justo Germán), 1815-1871&quot;,&quot;Laplante, E. (Eduardo) [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;39312&quot;});" class='title'>Los ingenios:<br><span class='subtitle'>- colección de vistas de los principles ingenios de azúcar de la isla de Cuba</span></a>
+<div class='author'>Cantero, J. G. (Justo Germán), 1815-1871, Laplante, E. (Eduardo) [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40336, {&quot;Title&quot;:&quot;The Agrarian Problem in the Sixteenth Century&quot;,&quot;Topics&quot;:[&quot;Land tenure -- Great Britain -- History -- 16th century&quot;,&quot;Agriculture -- England -- History -- 16th century&quot;,&quot;Peasants -- England -- History -- 16th century&quot;,&quot;England -- Social conditions -- 16th century&quot;],&quot;Primary&quot;:&quot;40336.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tawney, R. H. (Richard Henry), 1880-1962&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;40336&quot;});" class='title'>The Agrarian Problem in the Sixteenth Century</a>
+<div class='author'>Tawney, R. H. (Richard Henry), 1880-1962</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40376, {&quot;Title&quot;:&quot;Cork: Its Origin and Industrial Uses&quot;,&quot;Topics&quot;:[&quot;Cork&quot;],&quot;Primary&quot;:&quot;40376.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stecher, Gilbert Erwin, 1883-&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;40376&quot;});" class='title'>Cork:<br><span class='subtitle'>Its Origin and Industrial Uses</span></a>
+<div class='author'>Stecher, Gilbert Erwin, 1883-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40628, {&quot;Title&quot;:&quot;The Iron Ration: Three Years in Warring Central Europe&quot;,&quot;Topics&quot;:[&quot;World War, 1914-1918 -- Economic aspects -- Germany&quot;,&quot;World War, 1914-1918 -- Food supply -- Germany&quot;,&quot;World War, 1914-1918 -- Austria&quot;,&quot;World War, 1914-1918 -- Economic aspects -- Austria&quot;],&quot;Primary&quot;:&quot;40628.htm&quot;,&quot;CreatorNames&quot;:[&quot;Schreiner, George Abel&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;40628&quot;});" class='title'>The Iron Ration:<br><span class='subtitle'>Three Years in Warring Central Europe</span></a>
+<div class='author'>Schreiner, George Abel</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40975, {&quot;Title&quot;:&quot;Life in a Railway Factory&quot;,&quot;Topics&quot;:[&quot;Working class -- Great Britain&quot;,&quot;Great Western Railway (Great Britain) -- Employees&quot;,&quot;Railroads -- Employees&quot;,&quot;Railroads -- Great Britain -- Employees&quot;],&quot;Primary&quot;:&quot;40975.htm&quot;,&quot;CreatorNames&quot;:[&quot;Williams, Alfred, 1877-1930&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;40975&quot;});" class='title'>Life in a Railway Factory</a>
+<div class='author'>Williams, Alfred, 1877-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41068, {&quot;Title&quot;:&quot;Syndicalism in France&quot;,&quot;Topics&quot;:[&quot;Labor unions -- France -- History&quot;,&quot;Syndicalism -- France&quot;],&quot;Primary&quot;:&quot;41068.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lorwin, Lewis L. (Lewis Levitzki), 1883-1970&quot;,&quot;Giddings, Franklin Henry, 1855-1931 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;HC&quot;,&quot;HD&quot;],&quot;PG_ID&quot;:&quot;41068&quot;});" class='title'>Syndicalism in France</a>
+<div class='author'>Lorwin, Lewis L. (Lewis Levitzki), 1883-1970, Giddings, Franklin Henry, 1855-1931 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41181, {&quot;Title&quot;:&quot;The Great Strike on the \&quot;\&quot;Q\&quot;\&quot;&quot;,&quot;Topics&quot;:[&quot;Labor unions -- United States&quot;,&quot;Railroads -- United States -- Employees&quot;,&quot;Burlington Strike, 1888&quot;],&quot;Primary&quot;:&quot;41181.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hall, John A.&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;41181&quot;});" class='title'>The Great Strike on the "Q"</a>
+<div class='author'>Hall, John A.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41703, {&quot;Title&quot;:&quot;Women in Modern Industry&quot;,&quot;Topics&quot;:[&quot;Women -- Employment -- Great Britain&quot;,&quot;Women labor union members -- Great Britain&quot;,&quot;Working class women -- Great Britain&quot;],&quot;Primary&quot;:&quot;41703.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hutchins, B. L., 1858-1935&quot;,&quot;Mallon, J. J. (James Joseph), 1880- [Contributor]&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;41703&quot;});" class='title'>Women in Modern Industry</a>
+<div class='author'>Hutchins, B. L., 1858-1935, Mallon, J. J. (James Joseph), 1880- [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41953, {&quot;Title&quot;:&quot;Cyrus Hall McCormick: His Life and Work&quot;,&quot;Topics&quot;:[&quot;Harvesting machinery&quot;,&quot;McCormick, Cyrus Hall, 1809-1884&quot;],&quot;Primary&quot;:&quot;41953.htm&quot;,&quot;CreatorNames&quot;:[&quot;Casson, Herbert Newton, 1869-1951&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;41953&quot;});" class='title'>Cyrus Hall McCormick:<br><span class='subtitle'>His Life and Work</span></a>
+<div class='author'>Casson, Herbert Newton, 1869-1951</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42187, {&quot;Title&quot;:&quot;Catholic Colonization in Minnesota - Revised Edition&quot;,&quot;Topics&quot;:[&quot;Agriculture -- Minnesota&quot;,&quot;Catholics -- Minnesota&quot;],&quot;Primary&quot;:&quot;42187.htm&quot;,&quot;CreatorNames&quot;:[&quot;Catholic Colonization Bureau&quot;,&quot;Ireland, John, 1838-1918 [Other]&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;42187&quot;});" class='title'>Catholic Colonization in Minnesota -<br><span class='subtitle'>Revised Edition</span></a>
+<div class='author'>Catholic Colonization Bureau, Ireland, John, 1838-1918 [Other]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42275, {&quot;Title&quot;:&quot;Women in the Printing Trades: A Sociological Study.&quot;,&quot;Topics&quot;:[&quot;Women -- Employment -- Great Britain&quot;,&quot;Working class women -- Great Britain&quot;,&quot;Women printers -- Great Britain&quot;,&quot;Printing industry -- Great Britain&quot;],&quot;Primary&quot;:&quot;42275.htm&quot;,&quot;CreatorNames&quot;:[&quot;MacDonald, James Ramsay, 1866-1937 [Editor]&quot;],&quot;LoCC&quot;:[&quot;HD&quot;,&quot;Z&quot;],&quot;PG_ID&quot;:&quot;42275&quot;});" class='title'>Women in the Printing Trades:<br><span class='subtitle'>A Sociological Study.</span></a>
+<div class='author'>MacDonald, James Ramsay, 1866-1937 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42589, {&quot;Title&quot;:&quot;Homestead - A Complete History of the Struggle of July, 1892, between the Carnegie-Steel Company, Limited, and the Amalgamated Association of Iron and Steel Workers&quot;,&quot;Topics&quot;:[&quot;Homestead Strike, Homestead, Pa., 1892&quot;],&quot;Primary&quot;:&quot;42589.htm&quot;,&quot;CreatorNames&quot;:[&quot;Burgoyne, Arthur Gordon, -1914&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;42589&quot;});" class='title'>Homestead -<br><span class='subtitle'>A Complete History of the Struggle of July, 1892, between the Carnegie-Steel Company, Limited, and the Amalgamated Association of Iron and Steel Workers</span></a>
+<div class='author'>Burgoyne, Arthur Gordon, -1914</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42766, {&quot;Title&quot;:&quot;Report of the Committee Appointed to Investigate the Railroad Riots in July, 1877 - Read in the Senate and House of Representatives May 23, 1878&quot;,&quot;Topics&quot;:[&quot;Pennsylvania Railroad&quot;,&quot;Railroad Strike, U.S., 1877&quot;],&quot;Primary&quot;:&quot;42766.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pennsylvania. General Assembly. Committee Appointed to Investigate the Railroad Riots in July, 1877&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;42766&quot;});" class='title'>Report of the Committee Appointed to Investigate the Railroad Riots in July, 1877 -<br><span class='subtitle'>Read in the Senate and House of Representatives May 23, 1878</span></a>
+<div class='author'>Pennsylvania. General Assembly. Committee Appointed to Investigate the Railroad Riots in July, 1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43040, {&quot;Title&quot;:&quot;Consumers and Wage-Earners: The Ethics of Buying Cheap&quot;,&quot;Topics&quot;:[&quot;Wages -- United States&quot;,&quot;Wages&quot;,&quot;Consumers -- United States&quot;],&quot;Primary&quot;:&quot;43040.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ross, J. Elliot (John Elliot), 1884-1946&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;43040&quot;});" class='title'>Consumers and Wage-Earners:<br><span class='subtitle'>The Ethics of Buying Cheap</span></a>
+<div class='author'>Ross, J. Elliot (John Elliot), 1884-1946</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43377, {&quot;Title&quot;:&quot;Leather: From the Raw Material to the Finished Product&quot;,&quot;Topics&quot;:[&quot;Leather&quot;],&quot;Primary&quot;:&quot;43377.htm&quot;,&quot;CreatorNames&quot;:[&quot;Adcock, K. J.&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;43377&quot;});" class='title'>Leather:<br><span class='subtitle'>From the Raw Material to the Finished Product</span></a>
+<div class='author'>Adcock, K. J.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43664, {&quot;Title&quot;:&quot;Theorie und Praxis des Generalstreiks in der modernen Arbeiterbewegung - Inauguraldissertation&quot;,&quot;Topics&quot;:[&quot;General strikes&quot;],&quot;Primary&quot;:&quot;43664.htm&quot;,&quot;CreatorNames&quot;:[&quot;Georgi, Elsbeth, 1882-1975&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;43664&quot;});" class='title'>Theorie und Praxis des Generalstreiks in der modernen Arbeiterbewegung -<br><span class='subtitle'>Inauguraldissertation</span></a>
+<div class='author'>Georgi, Elsbeth, 1882-1975</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43783, {&quot;Title&quot;:&quot;Kaffe ja Tupakki&quot;,&quot;Topics&quot;:[&quot;Coffee&quot;,&quot;Tobacco&quot;],&quot;Primary&quot;:&quot;43783.txt&quot;,&quot;CreatorNames&quot;:[&quot;Eurén, Gustaf Erik, 1818-1872&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;43783&quot;});" class='title'>Kaffe ja Tupakki</a>
+<div class='author'>Eurén, Gustaf Erik, 1818-1872</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44036, {&quot;Title&quot;:&quot;J. C. Lavater&#39;s Sittenbüchlein für das Gesinde&quot;,&quot;Topics&quot;:[&quot;Household employees -- Conduct of life&quot;],&quot;Primary&quot;:&quot;44036.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lavater, Johann Caspar, 1741-1801&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;44036&quot;});" class='title'>J. C. Lavater's Sittenbüchlein für das Gesinde</a>
+<div class='author'>Lavater, Johann Caspar, 1741-1801</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44214, {&quot;Title&quot;:&quot;Proceedings, Third National Conference Workmen&#39;s Compensation for Industrial Accidents&quot;,&quot;Topics&quot;:[&quot;Accident insurance&quot;,&quot;Industrial accidents&quot;,&quot;Employers&#39; liability -- Congresses&quot;,&quot;Employers&#39; liability -- United States&quot;],&quot;Primary&quot;:&quot;44214.htm&quot;,&quot;CreatorNames&quot;:[&quot;National Conference on Workmen&#39;s Compensation for Industrial Accidents&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;44214&quot;});" class='title'>Proceedings, Third National Conference Workmen's Compensation for Industrial Accidents</a>
+<div class='author'>National Conference on Workmen's Compensation for Industrial Accidents</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44396, {&quot;Title&quot;:&quot;Child Labor in City Streets&quot;,&quot;Topics&quot;:[&quot;Child labor&quot;],&quot;Primary&quot;:&quot;44396.htm&quot;,&quot;CreatorNames&quot;:[&quot;Clopper, Edward Nicholas, 1879-1953&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;44396&quot;});" class='title'>Child Labor in City Streets</a>
+<div class='author'>Clopper, Edward Nicholas, 1879-1953</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44966, {&quot;Title&quot;:&quot;Craft Gilds&quot;,&quot;Topics&quot;:[&quot;Guilds&quot;],&quot;Primary&quot;:&quot;44966.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cunningham, W. (William), 1849-1919&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;44966&quot;});" class='title'>Craft Gilds</a>
+<div class='author'>Cunningham, W. (William), 1849-1919</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4529, {&quot;Title&quot;:&quot;Biographies of Working Men&quot;,&quot;Topics&quot;:[&quot;Labor -- Biography&quot;,&quot;Biography -- 19th century&quot;,&quot;Working class -- Biography&quot;],&quot;Primary&quot;:&quot;4529.htm&quot;,&quot;CreatorNames&quot;:[&quot;Allen, Grant, 1848-1899&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;HD&quot;],&quot;PG_ID&quot;:&quot;4529&quot;});" class='title'>Biographies of Working Men</a>
+<div class='author'>Allen, Grant, 1848-1899</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45425, {&quot;Title&quot;:&quot;Guilds in the Middle Ages&quot;,&quot;Topics&quot;:[&quot;Guilds -- History&quot;],&quot;Primary&quot;:&quot;45425.htm&quot;,&quot;CreatorNames&quot;:[&quot;Renard, Georges François, 1847-1930&quot;,&quot;Cole, G. D. H. (George Douglas Howard), 1889-1959 [Editor]&quot;,&quot;Terry, Dorothy [Translator]&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;45425&quot;});" class='title'>Guilds in the Middle Ages</a>
+<div class='author'>Renard, Georges François, 1847-1930, Cole, G. D. H. (George Douglas Howard), 1889-1959 [Editor], Terry, Dorothy [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46104, {&quot;Title&quot;:&quot;The Girl in Industry&quot;,&quot;Topics&quot;:[&quot;Women -- Employment -- Great Britain&quot;],&quot;Primary&quot;:&quot;46104.htm&quot;,&quot;CreatorNames&quot;:[&quot;Collier, Dorothy Josephine, 1894-1972&quot;,&quot;Hutchins, B. L., 1858-1935 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;46104&quot;});" class='title'>The Girl in Industry</a>
+<div class='author'>Collier, Dorothy Josephine, 1894-1972, Hutchins, B. L., 1858-1935 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46121, {&quot;Title&quot;:&quot;Henry Ford&#39;s Own Story - How a Farmer Boy Rose to the Power that goes with Many Millions, Yet Never Lost Touch with Humanity&quot;,&quot;Topics&quot;:[&quot;Ford, Henry, 1863-1947&quot;,&quot;Automobile industry and trade -- United States -- History&quot;,&quot;Businesspeople -- United States -- Biography&quot;],&quot;Primary&quot;:&quot;46121.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lane, Rose Wilder, 1886-1968&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;46121&quot;});" class='title'>Henry Ford's Own Story -<br><span class='subtitle'>How a Farmer Boy Rose to the Power that goes with Many Millions, Yet Never Lost Touch with Humanity</span></a>
+<div class='author'>Lane, Rose Wilder, 1886-1968</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46259, {&quot;Title&quot;:&quot;Die Gewerkschaftsbewegung - Darstellung der gewerkschaftlichen Organisation der Arbeiter und der Arbeitgeber aller Länder.&quot;,&quot;Topics&quot;:[&quot;Labor unions&quot;],&quot;Primary&quot;:&quot;46259.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kulemann, Wilhelm, 1851-1926&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;46259&quot;});" class='title'>Die Gewerkschaftsbewegung -<br><span class='subtitle'>Darstellung der gewerkschaftlichen Organisation der Arbeiter und der Arbeitgeber aller Länder.</span></a>
+<div class='author'>Kulemann, Wilhelm, 1851-1926</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46789, {&quot;Title&quot;:&quot;Rubber&quot;,&quot;Topics&quot;:[&quot;Rubber&quot;],&quot;Primary&quot;:&quot;46789.htm&quot;,&quot;CreatorNames&quot;:[&quot;Browne, Edith A., 1874-1963&quot;],&quot;LoCC&quot;:[&quot;HD&quot;,&quot;SB&quot;],&quot;PG_ID&quot;:&quot;46789&quot;});" class='title'>Rubber</a>
+<div class='author'>Browne, Edith A., 1874-1963</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46977, {&quot;Title&quot;:&quot;A Rational Wages System - Some Notes on the Method of Paying the Worker a Reward for Efficiency in Addition to Wages&quot;,&quot;Topics&quot;:[&quot;Wages -- Great Britain&quot;,&quot;Incentives in industry -- Great Britain&quot;],&quot;Primary&quot;:&quot;46977.htm&quot;,&quot;CreatorNames&quot;:[&quot;Atkinson, Henry&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;46977&quot;});" class='title'>A Rational Wages System -<br><span class='subtitle'>Some Notes on the Method of Paying the Worker a Reward for Efficiency in Addition to Wages</span></a>
+<div class='author'>Atkinson, Henry</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47035, {&quot;Title&quot;:&quot;The History of Salt - With Observations on the Geographical Distribution, Geological Formation, and Medicinal and Dietetic Properties&quot;,&quot;Topics&quot;:[&quot;Salt&quot;,&quot;Salt -- Physiological effect&quot;,&quot;Salt -- History&quot;],&quot;Primary&quot;:&quot;47035.htm&quot;,&quot;CreatorNames&quot;:[&quot;Boddy, Evan Marlett, -1934&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;47035&quot;});" class='title'>The History of Salt -<br><span class='subtitle'>With Observations on the Geographical Distribution, Geological Formation, and Medicinal and Dietetic Properties</span></a>
+<div class='author'>Boddy, Evan Marlett, -1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48465, {&quot;Title&quot;:&quot;United States Steel: A Corporation with a Soul&quot;,&quot;Topics&quot;:[&quot;United States Steel Corporation&quot;],&quot;Primary&quot;:&quot;48465.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cotter, Arundel, 1883-1952&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;48465&quot;});" class='title'>United States Steel:<br><span class='subtitle'>A Corporation with a Soul</span></a>
+<div class='author'>Cotter, Arundel, 1883-1952</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49912, {&quot;Title&quot;:&quot;The Employments of Women: A Cyclopædia of Woman&#39;s Work&quot;,&quot;Topics&quot;:[&quot;Women -- Employment&quot;],&quot;Primary&quot;:&quot;49912.htm&quot;,&quot;CreatorNames&quot;:[&quot;Penny, Virginia, 1826-&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;49912&quot;});" class='title'>The Employments of Women:<br><span class='subtitle'>A Cyclopædia of Woman's Work</span></a>
+<div class='author'>Penny, Virginia, 1826-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50023, {&quot;Title&quot;:&quot;The Economics of the Russian Village&quot;,&quot;Topics&quot;:[&quot;Thesis (Ph. D.)&quot;,&quot;Peasants&quot;,&quot;Land tenure -- Russia&quot;,&quot;Mir&quot;,&quot;Agricultural laborers -- Russia&quot;],&quot;Primary&quot;:&quot;50023.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hourwich, Isaac A. (Isaac Aaronovich), 1860-1924&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;50023&quot;});" class='title'>The Economics of the Russian Village</a>
+<div class='author'>Hourwich, Isaac A. (Isaac Aaronovich), 1860-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51244, {&quot;Title&quot;:&quot;The Livestock Producer and Armour&quot;,&quot;Topics&quot;:[&quot;Animal industry -- United States&quot;,&quot;Packing-house products&quot;],&quot;Primary&quot;:&quot;51244.htm&quot;,&quot;CreatorNames&quot;:[&quot;Armour and Company [Publisher]&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;51244&quot;});" class='title'>The Livestock Producer and Armour</a>
+<div class='author'>Armour and Company [Publisher]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51271, {&quot;Title&quot;:&quot;The History of the Highland Clearances - Second Edition, Altered and Revised&quot;,&quot;Topics&quot;:[&quot;Highlands (Scotland) -- History&quot;,&quot;Land tenure -- Scotland -- Highlands -- History -- 19th century&quot;,&quot;Crofters -- Scotland -- Highlands&quot;,&quot;Crofters -- Scotland -- Skye, Island of&quot;,&quot;Land tenure -- Scotland -- Skye, Island of -- History -- 19th century&quot;,&quot;Eviction -- Scotland -- Highlands -- History -- 19th century&quot;,&quot;Eviction -- Scotland -- Skye, Island of -- History -- 19th century&quot;],&quot;Primary&quot;:&quot;51271.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mackenzie, Alexander, 1838-1898&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;51271&quot;});" class='title'>The History of the Highland Clearances -<br><span class='subtitle'>Second Edition, Altered and Revised</span></a>
+<div class='author'>Mackenzie, Alexander, 1838-1898</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52256, {&quot;Title&quot;:&quot;The Lead Pencil Manufactory of A. W. Faber at Stein near Nürnberg, Bavaria - An Historical Sketch&quot;,&quot;Topics&quot;:[&quot;Faber-Castell (Firm) -- History&quot;,&quot;Pencil industry -- Germany -- History&quot;],&quot;Primary&quot;:&quot;52256.htm&quot;,&quot;CreatorNames&quot;:[&quot;Faber-Castell (Firm)&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;52256&quot;});" class='title'>The Lead Pencil Manufactory of A. W. Faber at Stein near Nürnberg, Bavaria -<br><span class='subtitle'>An Historical Sketch</span></a>
+<div class='author'>Faber-Castell (Firm)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52423, {&quot;Title&quot;:&quot;The White Slaves of England&quot;,&quot;Topics&quot;:[&quot;Working class -- England&quot;],&quot;Primary&quot;:&quot;52423.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cobden, John C.&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;52423&quot;});" class='title'>The White Slaves of England</a>
+<div class='author'>Cobden, John C.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52547, {&quot;Title&quot;:&quot;Normalarbetsdagen&quot;,&quot;Topics&quot;:[&quot;Eight-hour movement&quot;],&quot;Primary&quot;:&quot;52547.htm&quot;,&quot;CreatorNames&quot;:[&quot;Steffen, Gustaf Fredrik, 1864-1929&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;52547&quot;});" class='title'>Normalarbetsdagen</a>
+<div class='author'>Steffen, Gustaf Fredrik, 1864-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52634, {&quot;Title&quot;:&quot;Women&#39;s Work&quot;,&quot;Topics&quot;:[&quot;Women -- Employment&quot;],&quot;Primary&quot;:&quot;52634.htm&quot;,&quot;CreatorNames&quot;:[&quot;Brooke, A. A. (Agnes Amy), 1852-1939&quot;,&quot;Whitley, Margaret&quot;,&quot;Dilke, Emilia Francis Strong, Lady, 1840-1904 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;HD&quot;,&quot;JK&quot;],&quot;PG_ID&quot;:&quot;52634&quot;});" class='title'>Women's Work</a>
+<div class='author'>Brooke, A. A. (Agnes Amy), 1852-1939, Whitley, Margaret, Dilke, Emilia Francis Strong, Lady, 1840-1904 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52732, {&quot;Title&quot;:&quot;Den svenska Arbetareskyddslagstiftningen och Yrkesinspektionen&quot;,&quot;Topics&quot;:[&quot;Labor inspection -- Sweden&quot;,&quot;Industrial safety -- Sweden&quot;],&quot;Primary&quot;:&quot;52732.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stjernstedt, Georg, 1876-1963&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;52732&quot;});" class='title'>Den svenska Arbetareskyddslagstiftningen och Yrkesinspektionen</a>
+<div class='author'>Stjernstedt, Georg, 1876-1963</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52820, {&quot;Title&quot;:&quot;Thoughts on Slavery and Cheap Sugar - A Letter to the Members and Friends of the British and Foreign Anti-Slavery Society&quot;,&quot;Topics&quot;:[&quot;Slavery&quot;,&quot;Slave trade&quot;,&quot;Sugar trade&quot;],&quot;Primary&quot;:&quot;52820.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ritchie, J. Ewing (James Ewing), 1820-1898&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;52820&quot;});" class='title'>Thoughts on Slavery and Cheap Sugar -<br><span class='subtitle'>A Letter to the Members and Friends of the British and Foreign Anti-Slavery Society</span></a>
+<div class='author'>Ritchie, J. Ewing (James Ewing), 1820-1898</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52959, {&quot;Title&quot;:&quot;Women&#39;s Wages&quot;,&quot;Topics&quot;:[&quot;Wages -- Women&quot;,&quot;Sex discrimination against women&quot;,&quot;Equal pay for equal work&quot;],&quot;Primary&quot;:&quot;52959.htm&quot;,&quot;CreatorNames&quot;:[&quot;Smart, William, 1853-1915&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;52959&quot;});" class='title'>Women's Wages</a>
+<div class='author'>Smart, William, 1853-1915</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52984, {&quot;Title&quot;:&quot;The Right to Be Lazy, and Other Studies&quot;,&quot;Topics&quot;:[&quot;Socialism&quot;,&quot;Social problems&quot;,&quot;Working class&quot;,&quot;Hours of labor&quot;],&quot;Primary&quot;:&quot;52984.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lafargue, Paul, 1842-1911&quot;,&quot;Kerr, Charles H., 1860-1944 [Translator]&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;52984&quot;});" class='title'>The Right to Be Lazy, and Other Studies</a>
+<div class='author'>Lafargue, Paul, 1842-1911, Kerr, Charles H., 1860-1944 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53488, {&quot;Title&quot;:&quot;Statement of Facts, on the Injurious Treatment of J. Elsee, Esq. - Late Tenant of a Considerable Portion of Havering Park Farm, in the Forest of Hainault, in Certain Transactions with the Commissioners of Woods and Forests, and Their Agents; To Which Are Added Notes in Illustration of the Gross Abuses of the Forest Laws.&quot;,&quot;Topics&quot;:[&quot;Land tenure -- Great Britain&quot;,&quot;Elsee, John -- Trials, litigation, etc.&quot;],&quot;Primary&quot;:&quot;53488.htm&quot;,&quot;CreatorNames&quot;:[&quot;Elsee, John&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;53488&quot;});" class='title'>Statement of Facts, on the Injurious Treatment of J. Elsee, Esq. -<br><span class='subtitle'>Late Tenant of a Considerable Portion of Havering Park Farm, in the Forest of Hainault, in Certain Transactions with the Commissioners of Woods and Forests, and Their Agents; To Which Are Added Notes in Illustration of the Gross Abuses of the Forest Laws.</span></a>
+<div class='author'>Elsee, John</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53820, {&quot;Title&quot;:&quot;A Short History of the Worshipful Company of Horners&quot;,&quot;Topics&quot;:[&quot;Horners&#39; Company (London, England)&quot;,&quot;Guilds -- England -- London -- History&quot;],&quot;Primary&quot;:&quot;53820.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rosedale, H. G. (Honyel Gough), 1863-1928&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;53820&quot;});" class='title'>A Short History of the Worshipful Company of Horners</a>
+<div class='author'>Rosedale, H. G. (Honyel Gough), 1863-1928</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55188, {&quot;Title&quot;:&quot;Emil Rathenau und das elektrische Zeitalter&quot;,&quot;Topics&quot;:[&quot;Rathenau, Emil, 1838-1915&quot;,&quot;Allgemeine Elektricitäts-Gesellschaft (Germany) -- History&quot;,&quot;Electric industries -- Germany -- History&quot;],&quot;Primary&quot;:&quot;55188.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pinner, Felix, 1880-1942&quot;,&quot;Ostwald, Wilhelm, 1853-1932 [Editor]&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;55188&quot;});" class='title'>Emil Rathenau und das elektrische Zeitalter</a>
+<div class='author'>Pinner, Felix, 1880-1942, Ostwald, Wilhelm, 1853-1932 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55643, {&quot;Title&quot;:&quot;The English Peasantry and the Enclosure of Common Fields&quot;,&quot;Topics&quot;:[&quot;Inclosures&quot;,&quot;Village communities -- Great Britain&quot;,&quot;Peasants -- England&quot;,&quot;Agriculture -- England&quot;],&quot;Primary&quot;:&quot;55643.htm&quot;,&quot;CreatorNames&quot;:[&quot;Slater, Gilbert, 1864-1938&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;55643&quot;});" class='title'>The English Peasantry and the Enclosure of Common Fields</a>
+<div class='author'>Slater, Gilbert, 1864-1938</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56655, {&quot;Title&quot;:&quot;Guida per la costituzione e per l&#39;impianto di latterie sociali cooperative&quot;,&quot;Topics&quot;:[&quot;Dairying, Cooperative&quot;],&quot;Primary&quot;:&quot;56655.htm&quot;,&quot;CreatorNames&quot;:[&quot;Besana, Carlo, 1849-&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;56655&quot;});" class='title'>Guida per la costituzione e per l'impianto di latterie sociali cooperative</a>
+<div class='author'>Besana, Carlo, 1849-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57480, {&quot;Title&quot;:&quot;Four Years in the Underbrush: Adventures as a Working Woman in New York&quot;,&quot;Topics&quot;:[&quot;Women employees -- New York (State) -- New York&quot;],&quot;Primary&quot;:&quot;57480.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;57480&quot;});" class='title'>Four Years in the Underbrush:<br><span class='subtitle'>Adventures as a Working Woman in New York</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57544, {&quot;Title&quot;:&quot;History of Texas Land&quot;,&quot;Topics&quot;:[&quot;Public lands -- Texas&quot;],&quot;Primary&quot;:&quot;57544.htm&quot;,&quot;CreatorNames&quot;:[&quot;Texas. General Land Office&quot;,&quot;Allcorn, Bill [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;57544&quot;});" class='title'>History of Texas Land</a>
+<div class='author'>Texas. General Land Office, Allcorn, Bill [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57766, {&quot;Title&quot;:&quot;Le Sabotage&quot;,&quot;Topics&quot;:[&quot;Sabotage&quot;,&quot;Working class&quot;,&quot;Labor&quot;,&quot;Labor movement&quot;],&quot;Primary&quot;:&quot;57766.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pouget, Emile, 1860-1931&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;57766&quot;});" class='title'>Le Sabotage</a>
+<div class='author'>Pouget, Emile, 1860-1931</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58445, {&quot;Title&quot;:&quot;The Market Reporter, Vol. 4, No. 15&quot;,&quot;Topics&quot;:[&quot;Agriculture -- United States -- Statistics -- Periodicals&quot;,&quot;Farm produce -- Marketing -- Statistics -- Periodicals&quot;],&quot;Primary&quot;:&quot;58445.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;58445&quot;});" class='title'>The Market Reporter, Vol. 4, No. 15</a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58691, {&quot;Title&quot;:&quot;Round about a Pound a Week&quot;,&quot;Topics&quot;:[&quot;Working class -- England -- London&quot;,&quot;Cost and standard of living -- England -- London&quot;,&quot;London (England) -- Economic conditions&quot;],&quot;Primary&quot;:&quot;58691.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pember Reeves, Mrs., 1865-1953&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;58691&quot;});" class='title'>Round about a Pound a Week</a>
+<div class='author'>Pember Reeves, Mrs., 1865-1953</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5887, {&quot;Title&quot;:&quot;The Labor Divide&quot;,&quot;Topics&quot;:[&quot;Labor&quot;],&quot;Primary&quot;:null,&quot;CreatorNames&quot;:[&quot;Vaknin, Samuel, 1961-&quot;,&quot;Rangelovska, Lidija [Editor]&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;5887&quot;});" class='title'>The Labor Divide</a>
+<div class='author'>Vaknin, Samuel, 1961-, Rangelovska, Lidija [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59127, {&quot;Title&quot;:&quot;A Memoir of Robert Blincoe, an Orphan Boy - Sent from the workhouse of St. Pancras, London, at seven years of age, to endure the horrors of a cotton-mill, through his infancy and youth, with a minute detail of his sufferings, being the first memoir of the kind published.&quot;,&quot;Topics&quot;:[&quot;Blincoe, Robert, approximately 1792-&quot;,&quot;Textile workers -- England -- Derbyshire -- Biography&quot;,&quot;Cotton manufacture -- England -- Derbyshire&quot;,&quot;Child labor -- England -- Derbyshire&quot;,&quot;Derbyshire (England) -- Biography&quot;],&quot;Primary&quot;:&quot;59127.htm&quot;,&quot;CreatorNames&quot;:[&quot;Brown, John, -1829&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;59127&quot;});" class='title'>A Memoir of Robert Blincoe, an Orphan Boy -<br><span class='subtitle'>Sent from the workhouse of St. Pancras, London, at seven years of age, to endure the horrors of a cotton-mill, through his infancy and youth, with a minute detail of his sufferings, being the first memoir of the kind published.</span></a>
+<div class='author'>Brown, John, -1829</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59362, {&quot;Title&quot;:&quot;Weather, Crops, and Markets. Vol. 2, No. 6&quot;,&quot;Topics&quot;:[&quot;Agriculture -- United States -- Statistics -- Periodicals&quot;,&quot;Agriculture -- Statistics -- Periodicals&quot;,&quot;Crops and climate -- United States -- Periodicals&quot;,&quot;Farm produce -- United States -- Marketing -- Statistics -- Periodicals&quot;],&quot;Primary&quot;:&quot;59362.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;HD&quot;,&quot;S&quot;],&quot;PG_ID&quot;:&quot;59362&quot;});" class='title'>Weather, Crops, and Markets. Vol. 2, No. 6</a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59443, {&quot;Title&quot;:&quot;A Day with a Tramp, and Other Days&quot;,&quot;Topics&quot;:[&quot;Working class -- United States&quot;,&quot;Tramps -- United States&quot;],&quot;Primary&quot;:&quot;59443.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wyckoff, Walter A. (Walter Augustus), 1865-1908&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;59443&quot;});" class='title'>A Day with a Tramp, and Other Days</a>
+<div class='author'>Wyckoff, Walter A. (Walter Augustus), 1865-1908</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59456, {&quot;Title&quot;:&quot;Fors Clavigera (Volume 1 of 8) - Letters to the workmen and labourers of Great Britain&quot;,&quot;Topics&quot;:[&quot;Conduct of life&quot;,&quot;Social problems&quot;,&quot;Aesthetics&quot;,&quot;Great Britain -- Social conditions -- 19th century&quot;,&quot;Working class -- Great Britain&quot;],&quot;Primary&quot;:&quot;59456.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ruskin, John, 1819-1900&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;59456&quot;});" class='title'>Fors Clavigera (Volume 1 of 8) -<br><span class='subtitle'>Letters to the workmen and labourers of Great Britain</span></a>
+<div class='author'>Ruskin, John, 1819-1900</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59674, {&quot;Title&quot;:&quot;Homes of the London Poor&quot;,&quot;Topics&quot;:[&quot;Poor -- England -- London&quot;,&quot;Charity organization&quot;,&quot;Working class -- Dwellings&quot;,&quot;Housing -- England -- London&quot;],&quot;Primary&quot;:&quot;59674.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hill, Octavia, 1838-1912&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;59674&quot;});" class='title'>Homes of the London Poor</a>
+<div class='author'>Hill, Octavia, 1838-1912</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59727, {&quot;Title&quot;:&quot;An Old City Company: A Sketch of the History and Conditions of the Skinners&#39; Company of London&quot;,&quot;Topics&quot;:[&quot;Worshipful Company of Skinners&quot;],&quot;Primary&quot;:&quot;59727.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sebastian, Lewis Boyd, 1852-1926&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;59727&quot;});" class='title'>An Old City Company:<br><span class='subtitle'>A Sketch of the History and Conditions of the Skinners' Company of London</span></a>
+<div class='author'>Sebastian, Lewis Boyd, 1852-1926</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60091, {&quot;Title&quot;:&quot;A Brief History of the Worshipful Company of Ironmongers, London A.D. 1351-1889 - With an Appendix Containing Some Account of the Blacksmiths&#39; Company&quot;,&quot;Topics&quot;:[&quot;Worshipful Company of Ironmongers (London, England) -- History&quot;],&quot;Primary&quot;:&quot;60091.htm&quot;,&quot;CreatorNames&quot;:[&quot;Noble, T. C. (Theophilus Charles)&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;60091&quot;});" class='title'>A Brief History of the Worshipful Company of Ironmongers, London A.D. 1351-1889 -<br><span class='subtitle'>With an Appendix Containing Some Account of the Blacksmiths' Company</span></a>
+<div class='author'>Noble, T. C. (Theophilus Charles)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60357, {&quot;Title&quot;:&quot;Drei Monate Fabrikarbeiter und Handwerksbursche - Eine praktische Studie&quot;,&quot;Topics&quot;:[&quot;Machinists -- Germany -- Chemnitz&quot;,&quot;Working class -- Germany&quot;],&quot;Primary&quot;:&quot;60357.htm&quot;,&quot;CreatorNames&quot;:[&quot;Göhre, Paul, 1864-1928&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;60357&quot;});" class='title'>Drei Monate Fabrikarbeiter und Handwerksbursche -<br><span class='subtitle'>Eine praktische Studie</span></a>
+<div class='author'>Göhre, Paul, 1864-1928</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60473, {&quot;Title&quot;:&quot;Wealth against commonwealth&quot;,&quot;Topics&quot;:[&quot;Standard Oil Company&quot;,&quot;Trusts, Industrial -- United States&quot;],&quot;Primary&quot;:&quot;60473.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lloyd, Henry Demarest, 1847-1903&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;60473&quot;});" class='title'>Wealth against commonwealth</a>
+<div class='author'>Lloyd, Henry Demarest, 1847-1903</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60605, {&quot;Title&quot;:&quot;Industrial Poisoning from Fumes, Gases and Poisons of Manufacturing Processes&quot;,&quot;Topics&quot;:[&quot;Poisons&quot;,&quot;Hazardous occupations&quot;,&quot;Occupational diseases&quot;],&quot;Primary&quot;:&quot;60605.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rambousek, Josef, 1874-1917&quot;,&quot;Legge, Thomas Morison, Sir, 1863-1932 [Translator]&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;60605&quot;});" class='title'>Industrial Poisoning from Fumes, Gases and Poisons of Manufacturing Processes</a>
+<div class='author'>Rambousek, Josef, 1874-1917, Legge, Thomas Morison, Sir, 1863-1932 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60692, {&quot;Title&quot;:&quot;The History of the Standard Oil Company&quot;,&quot;Topics&quot;:[&quot;Standard Oil Company -- History&quot;,&quot;Petroleum industry and trade -- United States -- History&quot;],&quot;Primary&quot;:&quot;60692.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tarbell, Ida M. (Ida Minerva), 1857-1944&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;60692&quot;});" class='title'>The History of the Standard Oil Company</a>
+<div class='author'>Tarbell, Ida M. (Ida Minerva), 1857-1944</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60735, {&quot;Title&quot;:&quot;The Industrial Condition of Women and Girls in Honolulu: A Social Study&quot;,&quot;Topics&quot;:[&quot;Women -- Employment -- Hawaii -- Honolulu&quot;,&quot;Child labor -- Hawaii -- Honolulu&quot;,&quot;Honolulu (Hawaii) -- Social conditions&quot;],&quot;Primary&quot;:&quot;60735.htm&quot;,&quot;CreatorNames&quot;:[&quot;Blascoer, Frances&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;60735&quot;});" class='title'>The Industrial Condition of Women and Girls in Honolulu:<br><span class='subtitle'>A Social Study</span></a>
+<div class='author'>Blascoer, Frances</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60959, {&quot;Title&quot;:&quot;John Chinaman on the Rand&quot;,&quot;Topics&quot;:[&quot;Chinese -- South Africa&quot;,&quot;China -- Emigration and immigration&quot;],&quot;Primary&quot;:&quot;60959.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;60959&quot;});" class='title'>John Chinaman on the Rand</a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61159, {&quot;Title&quot;:&quot;Life of Octavia Hill as Told in Her Letters&quot;,&quot;Topics&quot;:[&quot;Working class -- England -- London&quot;,&quot;Working class -- Dwellings&quot;,&quot;Hill, Octavia, 1838-1912&quot;],&quot;Primary&quot;:&quot;61159.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hill, Octavia, 1838-1912&quot;,&quot;Maurice, C. Edmund (Charles Edmund), 1843-1927 [Editor]&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;61159&quot;});" class='title'>Life of Octavia Hill as Told in Her Letters</a>
+<div class='author'>Hill, Octavia, 1838-1912, Maurice, C. Edmund (Charles Edmund), 1843-1927 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61223, {&quot;Title&quot;:&quot;The Man Farthest Down: A Record of Observation and Study in Europe&quot;,&quot;Topics&quot;:[&quot;Poor -- Europe&quot;,&quot;Working class -- Europe&quot;],&quot;Primary&quot;:&quot;61223.htm&quot;,&quot;CreatorNames&quot;:[&quot;Park, Robert Ezra, 1864-1944&quot;,&quot;Washington, Booker T., 1856-1915&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;61223&quot;});" class='title'>The Man Farthest Down:<br><span class='subtitle'>A Record of Observation and Study in Europe</span></a>
+<div class='author'>Park, Robert Ezra, 1864-1944, Washington, Booker T., 1856-1915</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61302, {&quot;Title&quot;:&quot;Elämäni ja työni&quot;,&quot;Topics&quot;:[&quot;Industrialists -- United States -- Biography&quot;,&quot;Ford, Henry, 1863-1947&quot;,&quot;Ford Motor Company -- History&quot;,&quot;Automobile industry and trade -- United States -- History&quot;,&quot;Automobiles -- History&quot;,&quot;Businesspeople -- United States -- Biography&quot;],&quot;Primary&quot;:&quot;61302.txt&quot;,&quot;CreatorNames&quot;:[&quot;Crowther, Samuel, 1880-1947&quot;,&quot;Ford, Henry, 1863-1947&quot;,&quot;Voionmaa, Eino, 1872-1928 [Translator]&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;61302&quot;});" class='title'>Elämäni ja työni</a>
+<div class='author'>Crowther, Samuel, 1880-1947, Ford, Henry, 1863-1947, Voionmaa, Eino, 1872-1928 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61591, {&quot;Title&quot;:&quot;Fors Clavigera (Volume 2 of 8) - Letters to the workmen and labourers of Great Britain&quot;,&quot;Topics&quot;:[&quot;Conduct of life&quot;,&quot;Social problems&quot;,&quot;Aesthetics&quot;,&quot;Great Britain -- Social conditions -- 19th century&quot;,&quot;Working class -- Great Britain&quot;],&quot;Primary&quot;:&quot;61591.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ruskin, John, 1819-1900&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;61591&quot;});" class='title'>Fors Clavigera (Volume 2 of 8) -<br><span class='subtitle'>Letters to the workmen and labourers of Great Britain</span></a>
+<div class='author'>Ruskin, John, 1819-1900</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61634, {&quot;Title&quot;:&quot;Fors Clavigera (Volume 3 of 8) - Letters to the workmen and labourers of Great Britain&quot;,&quot;Topics&quot;:[&quot;Conduct of life&quot;,&quot;Social problems&quot;,&quot;Aesthetics&quot;,&quot;Great Britain -- Social conditions -- 19th century&quot;,&quot;Working class -- Great Britain&quot;],&quot;Primary&quot;:&quot;61634.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ruskin, John, 1819-1900&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;61634&quot;});" class='title'>Fors Clavigera (Volume 3 of 8) -<br><span class='subtitle'>Letters to the workmen and labourers of Great Britain</span></a>
+<div class='author'>Ruskin, John, 1819-1900</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61894, {&quot;Title&quot;:&quot;The World-Struggle for Oil&quot;,&quot;Topics&quot;:[&quot;War -- Economic aspects&quot;,&quot;Petroleum&quot;,&quot;Petroleum industry and trade&quot;],&quot;Primary&quot;:&quot;61894.htm&quot;,&quot;CreatorNames&quot;:[&quot;L&#39;Espagnol de la Tramerye, Pierre Paul Ernest, 1899-&quot;,&quot;Leese, Charles Leonard, 1895- [Translator]&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;61894&quot;});" class='title'>The World-Struggle for Oil</a>
+<div class='author'>L'Espagnol de la Tramerye, Pierre Paul Ernest, 1899-, Leese, Charles Leonard, 1895- [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62115, {&quot;Title&quot;:&quot;Arte de louceiro: Tratado sobre o modo de fazer as louças de barro mais grossas&quot;,&quot;Topics&quot;:[&quot;Porcelain -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;62115.htm&quot;,&quot;CreatorNames&quot;:[&quot;Milly, Nicolas-Christiern de Thy, comte de, 1728-1784&quot;,&quot;Silva, José Ferreira da, active 1801-1804 [Translator]&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;62115&quot;});" class='title'>Arte de louceiro:<br><span class='subtitle'>Tratado sobre o modo de fazer as louças de barro mais grossas</span></a>
+<div class='author'>Milly, Nicolas-Christiern de Thy, comte de, 1728-1784, Silva, José Ferreira da, active 1801-1804 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62292, {&quot;Title&quot;:&quot;The Dogs and the Fleas - By One of the Dogs&quot;,&quot;Topics&quot;:[&quot;Working class -- United States&quot;,&quot;Labor -- United States&quot;],&quot;Primary&quot;:&quot;62292.htm&quot;,&quot;CreatorNames&quot;:[&quot;Scrimshaw, Frederic&quot;],&quot;LoCC&quot;:[&quot;HD&quot;,&quot;PS&quot;],&quot;PG_ID&quot;:&quot;62292&quot;});" class='title'>The Dogs and the Fleas -<br><span class='subtitle'>By One of the Dogs</span></a>
+<div class='author'>Scrimshaw, Frederic</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62762, {&quot;Title&quot;:&quot;American Beer: Glimpses of Its History and Description of Its Manufacture&quot;,&quot;Topics&quot;:[&quot;Brewing industry -- United States&quot;,&quot;Beer&quot;],&quot;Primary&quot;:&quot;62762.htm&quot;,&quot;CreatorNames&quot;:[&quot;Thomann, G. (Gallus), 1887-&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;62762&quot;});" class='title'>American Beer:<br><span class='subtitle'>Glimpses of Its History and Description of Its Manufacture</span></a>
+<div class='author'>Thomann, G. (Gallus), 1887-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63117, {&quot;Title&quot;:&quot;Description of the Process of Manufacturing Coal Gas, for the Lighting of Streets Houses, and Public Buildings - With Elevations, Sections, and Plans of the Most Improved Sorts of Apparatus Now Employed at the Gas Works in London and the Principal Provincial Towns of Great Britain; Accompanied With Comparative Estimates, Exhibiting the Most Economical Mode of Procuring This Species of Light&quot;,&quot;Topics&quot;:[&quot;Gas-lighting&quot;,&quot;Gas manufacture and works -- Great Britain&quot;],&quot;Primary&quot;:&quot;63117.htm&quot;,&quot;CreatorNames&quot;:[&quot;Accum, Friedrich Christian, 1769-1838&quot;],&quot;LoCC&quot;:[&quot;HD&quot;,&quot;TP&quot;],&quot;PG_ID&quot;:&quot;63117&quot;});" class='title'>Description of the Process of Manufacturing Coal Gas, for the Lighting of Streets Houses, and Public Buildings -<br><span class='subtitle'>With Elevations, Sections, and Plans of the Most Improved Sorts of Apparatus Now Employed at the Gas Works in London and the Principal Provincial Towns of Great Britain; Accompanied With Comparative Estimates, Exhibiting the Most Economical Mode of Procuring This Species of Light</span></a>
+<div class='author'>Accum, Friedrich Christian, 1769-1838</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64056, {&quot;Title&quot;:&quot;The Peril and the Preservation of the Home - Being the William L. Bull Lectures for the Year 1903&quot;,&quot;Topics&quot;:[&quot;Tenement houses&quot;],&quot;Primary&quot;:&quot;64056.htm&quot;,&quot;CreatorNames&quot;:[&quot;Riis, Jacob A. (Jacob August), 1849-1914&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;64056&quot;});" class='title'>The Peril and the Preservation of the Home -<br><span class='subtitle'>Being the William L. Bull Lectures for the Year 1903</span></a>
+<div class='author'>Riis, Jacob A. (Jacob August), 1849-1914</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64098, {&quot;Title&quot;:&quot;Human Work&quot;,&quot;Topics&quot;:[&quot;Social problems&quot;,&quot;Work&quot;,&quot;Social evolution&quot;,&quot;Economic development -- Social aspects&quot;],&quot;Primary&quot;:&quot;64098.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gilman, Charlotte Perkins, 1860-1935&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;64098&quot;});" class='title'>Human Work</a>
+<div class='author'>Gilman, Charlotte Perkins, 1860-1935</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64353, {&quot;Title&quot;:&quot;Fields, Factories, and Workshops - Or, Industry Combined with Agriculture and Brain Work with Manual Work&quot;,&quot;Topics&quot;:[&quot;Economics&quot;,&quot;Agriculture -- Economic aspects&quot;,&quot;Industries&quot;,&quot;Technical education&quot;],&quot;Primary&quot;:&quot;64353.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kropotkin, Petr Alekseevich, kniaz, 1842-1921&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;64353&quot;});" class='title'>Fields, Factories, and Workshops -<br><span class='subtitle'>Or, Industry Combined with Agriculture and Brain Work with Manual Work</span></a>
+<div class='author'>Kropotkin, Petr Alekseevich, kniaz, 1842-1921</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64400, {&quot;Title&quot;:&quot;The Workers: An Experiment in Reality. The East&quot;,&quot;Topics&quot;:[&quot;Working class -- United States&quot;,&quot;Unemployed -- United States&quot;],&quot;Primary&quot;:&quot;64400.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wyckoff, Walter A. (Walter Augustus), 1865-1908&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;64400&quot;});" class='title'>The Workers:<br><span class='subtitle'>An Experiment in Reality. The East</span></a>
+<div class='author'>Wyckoff, Walter A. (Walter Augustus), 1865-1908</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64469, {&quot;Title&quot;:&quot;Wages in 1873: Address read before the Social Science Association at Norwich&quot;,&quot;Topics&quot;:[&quot;Great Britain -- Economic conditions -- 19th century&quot;,&quot;Wages -- Great Britain -- History&quot;,&quot;Labor movement -- Great Britain -- History&quot;,&quot;Working class -- Great Britain -- History&quot;,&quot;Labor -- Great Britain -- History&quot;],&quot;Primary&quot;:&quot;64469.htm&quot;,&quot;CreatorNames&quot;:[&quot;Brassey, Thomas Brassey, Earl, 1836-1918&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;64469&quot;});" class='title'>Wages in 1873:<br><span class='subtitle'>Address read before the Social Science Association at Norwich</span></a>
+<div class='author'>Brassey, Thomas Brassey, Earl, 1836-1918</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64493, {&quot;Title&quot;:&quot;The Workers: An Experiment in Reality. The West&quot;,&quot;Topics&quot;:[&quot;Working class -- United States&quot;,&quot;Unemployed -- United States&quot;],&quot;Primary&quot;:&quot;64493.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wyckoff, Walter A. (Walter Augustus), 1865-1908&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;64493&quot;});" class='title'>The Workers:<br><span class='subtitle'>An Experiment in Reality. The West</span></a>
+<div class='author'>Wyckoff, Walter A. (Walter Augustus), 1865-1908</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6492, {&quot;Title&quot;:&quot;Biographies of Working Men&quot;,&quot;Topics&quot;:[&quot;Labor -- Biography&quot;,&quot;Biography -- 19th century&quot;,&quot;Working class -- Biography&quot;],&quot;Primary&quot;:&quot;6492.htm&quot;,&quot;CreatorNames&quot;:[&quot;Allen, Grant, 1848-1899&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;HD&quot;],&quot;PG_ID&quot;:&quot;6492&quot;});" class='title'>Biographies of Working Men</a>
+<div class='author'>Allen, Grant, 1848-1899</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65079, {&quot;Title&quot;:&quot;Autobiography of Mother Jones&quot;,&quot;Topics&quot;:[&quot;Jones, Mother, 1837-1930&quot;,&quot;Women labor union members -- United States -- Biography&quot;,&quot;Working class women -- United States -- Biography&quot;,&quot;Women labor leaders -- United States -- Biography&quot;,&quot;United Mine Workers of America -- History&quot;],&quot;Primary&quot;:&quot;65079.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jones, Mother, 1837-1930&quot;,&quot;Darrow, Clarence, 1857-1938 [Author of introduction, etc.]&quot;,&quot;Parton, Mary Field [Editor]&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;65079&quot;});" class='title'>Autobiography of Mother Jones</a>
+<div class='author'>Jones, Mother, 1837-1930, Darrow, Clarence, 1857-1938 [Author of introduction, etc.], Parton, Mary Field [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65336, {&quot;Title&quot;:&quot;The Personal Relation in Industry&quot;,&quot;Topics&quot;:[&quot;Working class&quot;,&quot;Industries&quot;,&quot;Colorado Fuel and Iron Company&quot;,&quot;Management -- Employee participation&quot;,&quot;Industrial relations -- Colorado&quot;],&quot;Primary&quot;:&quot;65336.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rockefeller, John D., Jr. (John Davison), 1874-1960&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;65336&quot;});" class='title'>The Personal Relation in Industry</a>
+<div class='author'>Rockefeller, John D., Jr. (John Davison), 1874-1960</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65443, {&quot;Title&quot;:&quot;Behind the Scenes in a Hotel&quot;,&quot;Topics&quot;:[&quot;Women -- Employment -- New York (State)&quot;,&quot;Hotels -- Employees&quot;],&quot;Primary&quot;:&quot;65443.htm&quot;,&quot;CreatorNames&quot;:[&quot;Consumers&#39; League of New York City&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;65443&quot;});" class='title'>Behind the Scenes in a Hotel</a>
+<div class='author'>Consumers' League of New York City</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65660, {&quot;Title&quot;:&quot;De millioenen uit Deli&quot;,&quot;Topics&quot;:[&quot;Labor laws and legislation -- Indonesia&quot;,&quot;Contract labor -- Indonesia -- Sumatra&quot;,&quot;Agricultural laborers -- Indonesia -- Sumatra&quot;,&quot;Plantations -- Indonesia -- Sumatra&quot;,&quot;Dutch -- Indonesia -- Sumatra&quot;],&quot;Primary&quot;:&quot;65660.htm&quot;,&quot;CreatorNames&quot;:[&quot;Brand, J. van den, -1921&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;65660&quot;});" class='title'>De millioenen uit Deli</a>
+<div class='author'>Brand, J. van den, -1921</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65681, {&quot;Title&quot;:&quot;Nog eens: de millioenen uit Deli&quot;,&quot;Topics&quot;:[&quot;Labor laws and legislation -- Indonesia&quot;,&quot;Contract labor -- Indonesia -- Sumatra&quot;,&quot;Agricultural laborers -- Indonesia -- Sumatra&quot;,&quot;Plantations -- Indonesia -- Sumatra&quot;,&quot;Dutch -- Indonesia -- Sumatra&quot;],&quot;Primary&quot;:&quot;65681.htm&quot;,&quot;CreatorNames&quot;:[&quot;Brand, J. van den, -1921&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;65681&quot;});" class='title'>Nog eens:<br><span class='subtitle'>de millioenen uit Deli</span></a>
+<div class='author'>Brand, J. van den, -1921</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66518, {&quot;Title&quot;:&quot;Labour and the Popular Welfare&quot;,&quot;Topics&quot;:[&quot;Socialism&quot;,&quot;Working class&quot;,&quot;Labor&quot;,&quot;Labor movement&quot;],&quot;Primary&quot;:&quot;66518.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mallock, W. H. (William Hurrell), 1849-1923&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;66518&quot;});" class='title'>Labour and the Popular Welfare</a>
+<div class='author'>Mallock, W. H. (William Hurrell), 1849-1923</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66573, {&quot;Title&quot;:&quot;3½ Monate Fabrik-Arbeiterin&quot;,&quot;Topics&quot;:[&quot;Women -- Employment&quot;,&quot;Women -- Employment -- Germany -- Saxony&quot;,&quot;Women&#39;s rights -- Germany&quot;,&quot;Factories -- Employees&quot;],&quot;Primary&quot;:&quot;66573.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wettstein-Adelt, Minna, 1869-1908?&quot;],&quot;LoCC&quot;:[&quot;HD&quot;,&quot;HQ&quot;],&quot;PG_ID&quot;:&quot;66573&quot;});" class='title'>3½ Monate Fabrik-Arbeiterin</a>
+<div class='author'>Wettstein-Adelt, Minna, 1869-1908?</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66705, {&quot;Title&quot;:&quot;Valuation of Real Estate in the Town of Acton. November 2, 1850.&quot;,&quot;Topics&quot;:[&quot;Real property -- Valuation -- Massachusetts -- Acton -- History&quot;],&quot;Primary&quot;:&quot;66705.htm&quot;,&quot;CreatorNames&quot;:[&quot;Brooks, Nathan, 1785-1863&quot;,&quot;Conant, Abraham, 1783-1861&quot;,&quot;Davis, Jonathan B. (Jonathan Billings), 1790-1868&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;66705&quot;});" class='title'>Valuation of Real Estate in the Town of Acton. November 2, 1850.</a>
+<div class='author'>Brooks, Nathan, 1785-1863, Conant, Abraham, 1783-1861, Davis, Jonathan B. (Jonathan Billings), 1790-1868</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66887, {&quot;Title&quot;:&quot;The History of Trade Unionism - (Revised edition, extended to 1920)&quot;,&quot;Topics&quot;:[&quot;Labor unions -- Great Britain -- History&quot;],&quot;Primary&quot;:&quot;66887.htm&quot;,&quot;CreatorNames&quot;:[&quot;Webb, Beatrice, 1858-1943&quot;,&quot;Webb, Sidney, 1859-1947&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;66887&quot;});" class='title'>The History of Trade Unionism -<br><span class='subtitle'>(Revised edition, extended to 1920)</span></a>
+<div class='author'>Webb, Beatrice, 1858-1943, Webb, Sidney, 1859-1947</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67132, {&quot;Title&quot;:&quot;Society for Superseding the Necessity of Climbing Boys, by Encouraging a New Method of Sweeping Chimneys: Twenty-First Report, May 1, 1837&quot;,&quot;Topics&quot;:[&quot;Child labor -- Great Britain&quot;,&quot;Chimney sweeps -- Great Britain&quot;],&quot;Primary&quot;:&quot;67132.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;67132&quot;});" class='title'>Society for Superseding the Necessity of Climbing Boys, by Encouraging a New Method of Sweeping Chimneys:<br><span class='subtitle'>Twenty-First Report, May 1, 1837</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67544, {&quot;Title&quot;:&quot;Fors Clavigera (Volume 4 of 8) - Letters to the workmen and labourers of Great Britain&quot;,&quot;Topics&quot;:[&quot;Conduct of life&quot;,&quot;Social problems&quot;,&quot;Aesthetics&quot;,&quot;Great Britain -- Social conditions -- 19th century&quot;,&quot;Working class -- Great Britain&quot;],&quot;Primary&quot;:&quot;67544.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ruskin, John, 1819-1900&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;67544&quot;});" class='title'>Fors Clavigera (Volume 4 of 8) -<br><span class='subtitle'>Letters to the workmen and labourers of Great Britain</span></a>
+<div class='author'>Ruskin, John, 1819-1900</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6766, {&quot;Title&quot;:&quot;The Press-Gang Afloat and Ashore&quot;,&quot;Topics&quot;:[&quot;Impressment&quot;,&quot;Great Britain -- History, Naval&quot;],&quot;Primary&quot;:&quot;6766.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hutchinson, J. R. (John Robert), 1858-1921&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;6766&quot;});" class='title'>The Press-Gang Afloat and Ashore</a>
+<div class='author'>Hutchinson, J. R. (John Robert), 1858-1921</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67904, {&quot;Title&quot;:&quot;The \&quot;\&quot;City Guard\&quot;\&quot;: A History of Company \&quot;\&quot;B\&quot;\&quot; First Regiment Infantry, N. G. C. During the Sacremento Campaign, July 3 to 26, 1894 - Including a Brief History of the Company Since Its Organization March 31, 1854, to July 3, 1894&quot;,&quot;Topics&quot;:[&quot;Railroads -- United States -- Employees&quot;,&quot;Railroad Strike, Calif., 1894&quot;,&quot;California. Infantry. First Regiment. Company B&quot;,&quot;California -- History -- 1850-1950&quot;],&quot;Primary&quot;:&quot;67904.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cook, Irving B.&quot;,&quot;Filmer, George&quot;,&quot;Hayes, W. J.&quot;,&quot;McCulloch, A.&quot;,&quot;O&#39;Brien, William D.&quot;,&quot;California. Infantry. First Regiment. Company B&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;67904&quot;});" class='title'>The "City Guard":<br><span class='subtitle'>A History of Company "B" First Regiment Infantry, N. G. C. During the Sacremento Campaign, July 3 to 26, 1894 - Including a Brief History of the Company Since Its Organization March 31, 1854, to July 3, 1894</span></a>
+<div class='author'>Cook, Irving B., Filmer, George, Hayes, W. J., McCulloch, A., O'Brien, William D., California. Infantry. First Regiment. Company B</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67936, {&quot;Title&quot;:&quot;Working Life of Women in the Seventeenth Century&quot;,&quot;Topics&quot;:[&quot;Women -- Great Britain -- History -- 17th century&quot;,&quot;Women -- Employment -- Great Britain -- History -- 17th century&quot;],&quot;Primary&quot;:&quot;67936.htm&quot;,&quot;CreatorNames&quot;:[&quot;Clark, Alice, 1874-1934&quot;],&quot;LoCC&quot;:[&quot;HD&quot;,&quot;HQ&quot;],&quot;PG_ID&quot;:&quot;67936&quot;});" class='title'>Working Life of Women in the Seventeenth Century</a>
+<div class='author'>Clark, Alice, 1874-1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68013, {&quot;Title&quot;:&quot;Fors Clavigera (Volume 5 of 8) - Letters to the workmen and labourers of Great Britain&quot;,&quot;Topics&quot;:[&quot;Conduct of life&quot;,&quot;Social problems&quot;,&quot;Aesthetics&quot;,&quot;Great Britain -- Social conditions -- 19th century&quot;,&quot;Working class -- Great Britain&quot;],&quot;Primary&quot;:&quot;68013.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ruskin, John, 1819-1900&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;68013&quot;});" class='title'>Fors Clavigera (Volume 5 of 8) -<br><span class='subtitle'>Letters to the workmen and labourers of Great Britain</span></a>
+<div class='author'>Ruskin, John, 1819-1900</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68224, {&quot;Title&quot;:&quot;Synthetic resins and their raw materials - A survey of the types and uses of synthetic resins, the organization of the industry, and the trade in resins and raw materials, with particular references to factors essential to tariff consideration. Under the general provisions of section 332, title III, part II, Tariff act of 1930.&quot;,&quot;Topics&quot;:[&quot;Plastics&quot;,&quot;Gums and resins industry&quot;],&quot;Primary&quot;:&quot;68224.htm&quot;,&quot;CreatorNames&quot;:[&quot;United States Tariff Commission&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;68224&quot;});" class='title'>Synthetic resins and their raw materials -<br><span class='subtitle'>A survey of the types and uses of synthetic resins, the organization of the industry, and the trade in resins and raw materials, with particular references to factors essential to tariff consideration. Under the general provisions of section 332, title III, part II, Tariff act of 1930.</span></a>
+<div class='author'>United States Tariff Commission</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68521, {&quot;Title&quot;:&quot;Through the mill: The life of a mill-boy&quot;,&quot;Topics&quot;:[&quot;Cotton manufacture -- United States&quot;,&quot;Child labor -- United States&quot;,&quot;Textile workers -- United States&quot;],&quot;Primary&quot;:&quot;68521.htm&quot;,&quot;CreatorNames&quot;:[&quot;Brown, Frederic Kenyon, 1882-&quot;,&quot;Benda, Wladyslaw T. (Wladyslaw Theodore), 1873-1948 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;68521&quot;});" class='title'>Through the mill:<br><span class='subtitle'>The life of a mill-boy</span></a>
+<div class='author'>Brown, Frederic Kenyon, 1882-, Benda, Wladyslaw T. (Wladyslaw Theodore), 1873-1948 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68623, {&quot;Title&quot;:&quot;Educated working women: Essays on the economic position of women workers in the middle classes&quot;,&quot;Topics&quot;:[&quot;Women -- Employment&quot;,&quot;Women -- Education&quot;],&quot;Primary&quot;:&quot;68623.htm&quot;,&quot;CreatorNames&quot;:[&quot;Collet, Clara E. (Clara Elizabeth), 1860-1948&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;68623&quot;});" class='title'>Educated working women:<br><span class='subtitle'>Essays on the economic position of women workers in the middle classes</span></a>
+<div class='author'>Collet, Clara E. (Clara Elizabeth), 1860-1948</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68759, {&quot;Title&quot;:&quot;The economic position of women&quot;,&quot;Topics&quot;:[&quot;Women -- Employment -- United States&quot;,&quot;Women -- United States -- Economic conditions&quot;],&quot;Primary&quot;:&quot;68759.htm&quot;,&quot;CreatorNames&quot;:[&quot;Academy of Political Science in the City of New York&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;68759&quot;});" class='title'>The economic position of women</a>
+<div class='author'>Academy of Political Science in the City of New York</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69002, {&quot;Title&quot;:&quot;The village labourer, 1760-1832 - A study in the government of England before the Reform Bill&quot;,&quot;Topics&quot;:[&quot;Great Britain -- Politics and government -- 1760-1820&quot;,&quot;Great Britain -- Politics and government -- 1800-1837&quot;,&quot;Inclosures&quot;,&quot;Agricultural laborers -- England -- History -- 18th century&quot;,&quot;Agricultural laborers -- England -- History -- 19th century&quot;,&quot;Villages -- England -- History&quot;],&quot;Primary&quot;:&quot;69002.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hammond, Barbara Bradby, 1873-1961&quot;,&quot;Hammond, J. L. (John Lawrence), 1872-1949&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;69002&quot;});" class='title'>The village labourer, 1760-1832 -<br><span class='subtitle'>A study in the government of England before the Reform Bill</span></a>
+<div class='author'>Hammond, Barbara Bradby, 1873-1961, Hammond, J. L. (John Lawrence), 1872-1949</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69451, {&quot;Title&quot;:&quot;Behind the scenes in a restaurant: A study of 1017 women restaurant employees&quot;,&quot;Topics&quot;:[&quot;Women -- Employment -- New York (State)&quot;,&quot;Restaurants -- Employees&quot;],&quot;Primary&quot;:&quot;69451.htm&quot;,&quot;CreatorNames&quot;:[&quot;Consumers&#39; League of New York City&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;69451&quot;});" class='title'>Behind the scenes in a restaurant:<br><span class='subtitle'>A study of 1017 women restaurant employees</span></a>
+<div class='author'>Consumers' League of New York City</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69958, {&quot;Title&quot;:&quot;The factory&quot;,&quot;Topics&quot;:[&quot;Factory system&quot;],&quot;Primary&quot;:&quot;69958.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lincoln, Jonathan Thayer, 1869-1942&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;69958&quot;});" class='title'>The factory</a>
+<div class='author'>Lincoln, Jonathan Thayer, 1869-1942</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69995, {&quot;Title&quot;:&quot;Report on the lands of the arid region of the United States, with a more detailed account of the lands of Utah&quot;,&quot;Topics&quot;:[&quot;Public lands -- United States&quot;,&quot;Irrigation -- West (U.S.)&quot;,&quot;Irrigation -- Utah&quot;,&quot;Rain and rainfall -- West (U.S.)&quot;],&quot;Primary&quot;:&quot;69995.htm&quot;,&quot;CreatorNames&quot;:[&quot;Drummond, Willis, 1808-1879&quot;,&quot;Dutton, Clarence E. (Clarence Edward), 1841-1912&quot;,&quot;Gilbert, Grove Karl, 1843-1918&quot;,&quot;Powell, John Wesley, 1834-1902&quot;,&quot;Thompson, A. H. (Almon Harris), 1839-1906&quot;],&quot;LoCC&quot;:[&quot;F&quot;,&quot;HD&quot;,&quot;TC&quot;],&quot;PG_ID&quot;:&quot;69995&quot;});" class='title'>Report on the lands of the arid region of the United States, with a more detailed account of the lands of Utah</a>
+<div class='author'>Drummond, Willis, 1808-1879, Dutton, Clarence E. (Clarence Edward), 1841-1912, Gilbert, Grove Karl, 1843-1918, Powell, John Wesley, 1834-1902, Thompson, A. H. (Almon Harris), 1839-1906</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70068, {&quot;Title&quot;:&quot;Good housing that pays -&quot;,&quot;Topics&quot;:[&quot;Working class -- Dwellings&quot;,&quot;Octavia Hill Association&quot;,&quot;Tenement-houses -- Pennsylvania -- Philadelphia&quot;,&quot;Housing -- Pennsylvania -- Philadelphia&quot;],&quot;Primary&quot;:&quot;70068.htm&quot;,&quot;CreatorNames&quot;:[&quot;Waldo, Fullerton L. (Fullerton Leonard), 1877-1933&quot;,&quot;Sargent, John Singer, 1856-1925 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;70068&quot;});" class='title'>Good housing that pays -<br><span class='subtitle'></span></a>
+<div class='author'>Waldo, Fullerton L. (Fullerton Leonard), 1877-1933, Sargent, John Singer, 1856-1925 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70140, {&quot;Title&quot;:&quot;The early English cotton industry&quot;,&quot;Topics&quot;:[&quot;Cotton machinery&quot;,&quot;Cotton trade -- Great Britain&quot;],&quot;Primary&quot;:&quot;70140.htm&quot;,&quot;CreatorNames&quot;:[&quot;Daniels, George W. (George William), 1878-1937&quot;,&quot;Unwin, George, 1870-1925 [Author of introduction, etc.]&quot;,&quot;Crompton, Samuel, 1753-1827 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;70140&quot;});" class='title'>The early English cotton industry</a>
+<div class='author'>Daniels, George W. (George William), 1878-1937, Unwin, George, 1870-1925 [Author of introduction, etc.], Crompton, Samuel, 1753-1827 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70181, {&quot;Title&quot;:&quot;Fors Clavigera (Volume 6 of 8) -&quot;,&quot;Topics&quot;:[&quot;Conduct of life&quot;,&quot;Social problems&quot;,&quot;Aesthetics&quot;,&quot;Great Britain -- Social conditions -- 19th century&quot;,&quot;Working class -- Great Britain&quot;],&quot;Primary&quot;:&quot;70181.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ruskin, John, 1819-1900&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;70181&quot;});" class='title'>Fors Clavigera (Volume 6 of 8) -<br><span class='subtitle'></span></a>
+<div class='author'>Ruskin, John, 1819-1900</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70243, {&quot;Title&quot;:&quot;Labour policy—false and true&quot;,&quot;Topics&quot;:[&quot;Labour Party (Great Britain)&quot;,&quot;Labor economics -- Great Britain&quot;,&quot;Industrial policy -- Great Britain&quot;],&quot;Primary&quot;:&quot;70243.htm&quot;,&quot;CreatorNames&quot;:[&quot;Macassey, Lynden Livingston, 1876-1963&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;70243&quot;});" class='title'>Labour policy—false and true</a>
+<div class='author'>Macassey, Lynden Livingston, 1876-1963</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7213, {&quot;Title&quot;:&quot;My Life and Work&quot;,&quot;Topics&quot;:[&quot;Industrialists -- United States -- Biography&quot;,&quot;Ford, Henry, 1863-1947&quot;,&quot;Ford Motor Company -- History&quot;,&quot;Automobile industry and trade -- United States -- History&quot;,&quot;Automobiles -- History&quot;,&quot;Businesspeople -- United States -- Biography&quot;],&quot;Primary&quot;:&quot;7213.txt&quot;,&quot;CreatorNames&quot;:[&quot;Crowther, Samuel, 1880-1947&quot;,&quot;Ford, Henry, 1863-1947&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;7213&quot;});" class='title'>My Life and Work</a>
+<div class='author'>Crowther, Samuel, 1880-1947, Ford, Henry, 1863-1947</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7992, {&quot;Title&quot;:&quot;Better Homes in America: Plan Book for Demonstration Week October 9 to 14, 1922&quot;,&quot;Topics&quot;:[&quot;United States -- Social conditions&quot;,&quot;Home ownership -- United States&quot;,&quot;Housing -- United States&quot;,&quot;Cities and towns -- United States&quot;],&quot;Primary&quot;:&quot;7992.txt&quot;,&quot;CreatorNames&quot;:[&quot;Meloney, Marie Mattingly, 1883-1943&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;7992&quot;});" class='title'>Better Homes in America:<br><span class='subtitle'>Plan Book for Demonstration Week October 9 to 14, 1922</span></a>
+<div class='author'>Meloney, Marie Mattingly, 1883-1943</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(8666, {&quot;Title&quot;:&quot;Security in Your Old Age - To Employees of Industrial and Business Establishments, Factories, Shops, Mines, Mills, Stores, Offices and Other Places of Business&quot;,&quot;Topics&quot;:[&quot;United States. Social Security Act&quot;,&quot;Social security -- United States&quot;],&quot;Primary&quot;:&quot;8666.htm&quot;,&quot;CreatorNames&quot;:[&quot;United States. Social Security Board&quot;],&quot;LoCC&quot;:[&quot;HD&quot;],&quot;PG_ID&quot;:&quot;8666&quot;});" class='title'>Security in Your Old Age -<br><span class='subtitle'>To Employees of Industrial and Business Establishments, Factories, Shops, Mines, Mills, Stores, Offices and Other Places of Business</span></a>
+<div class='author'>United States. Social Security Board</div>
+</div>
+</ul></div>
+</body></html>

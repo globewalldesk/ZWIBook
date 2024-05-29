@@ -1,0 +1,694 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Low countries, Benelux Countries (Belgium, Luxembourg) (DH)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(11048, {&quot;Title&quot;:&quot;La Presse Clandestine dans la Belgique Occupée&quot;,&quot;Topics&quot;:[&quot;Belgium -- History -- German occupation, 1914-1918&quot;,&quot;Press -- Belgium&quot;],&quot;Primary&quot;:&quot;11048.htm&quot;,&quot;CreatorNames&quot;:[&quot;Massart, Jean, 1865-1925&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;11048&quot;});" class='title'>La Presse Clandestine dans la Belgique Occupée</a>
+<div class='author'>Massart, Jean, 1865-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(11287, {&quot;Title&quot;:&quot;De omwenteling van 1830&quot;,&quot;Topics&quot;:[&quot;Belgium -- History -- Revolution, 1830-1839&quot;],&quot;Primary&quot;:&quot;11287.htm&quot;,&quot;CreatorNames&quot;:[&quot;Conscience, Hendrik, 1812-1883&quot;],&quot;LoCC&quot;:[&quot;DH&quot;,&quot;PT&quot;],&quot;PG_ID&quot;:&quot;11287&quot;});" class='title'>De omwenteling van 1830</a>
+<div class='author'>Conscience, Hendrik, 1812-1883</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(11288, {&quot;Title&quot;:&quot;Ons Vaderland van de vroegste tijden tot de 15de eeuw&quot;,&quot;Topics&quot;:[&quot;Belgium -- History&quot;],&quot;Primary&quot;:&quot;11288.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lievevrouw-Coopman, M., 1857-1916&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;11288&quot;});" class='title'>Ons Vaderland van de vroegste tijden tot de 15de eeuw</a>
+<div class='author'>Lievevrouw-Coopman, M., 1857-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(11500, {&quot;Title&quot;:&quot;De val van Antwerpen (october 1914)&quot;,&quot;Topics&quot;:[&quot;World War, 1914-1918 -- Belgium -- Antwerp&quot;],&quot;Primary&quot;:&quot;11500.txt&quot;,&quot;CreatorNames&quot;:[&quot;Muls, Jozef, 1882-1961&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;11500&quot;});" class='title'>De val van Antwerpen (october 1914)</a>
+<div class='author'>Muls, Jozef, 1882-1961</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(11586, {&quot;Title&quot;:&quot;L&#39;Ameublement de l&#39;Hôtel de Pitsembourg au milieu du XVIIe siècle - Communication faite en séance du 26 avril 1901&quot;,&quot;Topics&quot;:[&quot;Furniture -- Private collections -- Belgium -- Inventories&quot;],&quot;Primary&quot;:&quot;11586.txt&quot;,&quot;CreatorNames&quot;:[&quot;D&#39;Awans, Robert&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;11586&quot;});" class='title'>L'Ameublement de l'Hôtel de Pitsembourg au milieu du XVIIe siècle -<br><span class='subtitle'>Communication faite en séance du 26 avril 1901</span></a>
+<div class='author'>D'Awans, Robert</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14037, {&quot;Title&quot;:&quot;The Life of Hugo Grotius - With Brief Minutes of the Civil, Ecclesiastical, and Literary History of the Netherlands&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History&quot;,&quot;Grotius, Hugo, 1583-1645&quot;],&quot;Primary&quot;:&quot;14037.htm&quot;,&quot;CreatorNames&quot;:[&quot;Butler, Charles, 1750-1832&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;14037&quot;});" class='title'>The Life of Hugo Grotius -<br><span class='subtitle'>With Brief Minutes of the Civil, Ecclesiastical, and Literary History of the Netherlands</span></a>
+<div class='author'>Butler, Charles, 1750-1832</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15403, {&quot;Title&quot;:&quot;Wandelingen door België - De Aarde en haar Volken, 1886&quot;,&quot;Topics&quot;:[&quot;Belgium -- Description and travel&quot;],&quot;Primary&quot;:&quot;15403.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;15403&quot;});" class='title'>Wandelingen door België -<br><span class='subtitle'>De Aarde en haar Volken, 1886</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15606, {&quot;Title&quot;:&quot;The Life of the Truly Eminent and Learned Hugo Grotius - Containing a Copious and Circumstantial History of the Several Important and Honourable Negotiations in Which He Was Employed; together with a Critical Account of His Works&quot;,&quot;Topics&quot;:[&quot;Grotius, Hugo, 1583-1645&quot;],&quot;Primary&quot;:&quot;15606.htm&quot;,&quot;CreatorNames&quot;:[&quot;Burigny, M. de (Jean Lévesque), 1692-1785&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;15606&quot;});" class='title'>The Life of the Truly Eminent and Learned Hugo Grotius -<br><span class='subtitle'>Containing a Copious and Circumstantial History of the Several Important and Honourable Negotiations in Which He Was Employed; together with a Critical Account of His Works</span></a>
+<div class='author'>Burigny, M. de (Jean Lévesque), 1692-1785</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16518, {&quot;Title&quot;:&quot;A Day&#39;s Tour - A Journey through France and Belgium by Calais, Tournay, Orchies, Douai, Arras, Béthune, Lille, Comines, Ypres, Hazebrouck, Berg&quot;,&quot;Topics&quot;:[&quot;Voyages and travels&quot;,&quot;France -- Description and travel&quot;,&quot;Belgium -- Description and travel&quot;],&quot;Primary&quot;:&quot;16518.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fitzgerald, Percy, 1834-1925&quot;],&quot;LoCC&quot;:[&quot;DC&quot;,&quot;DH&quot;],&quot;PG_ID&quot;:&quot;16518&quot;});" class='title'>A Day's Tour -<br><span class='subtitle'>A Journey through France and Belgium by Calais, Tournay, Orchies, Douai, Arras, Béthune, Lille, Comines, Ypres, Hazebrouck, Berg</span></a>
+<div class='author'>Fitzgerald, Percy, 1834-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17082, {&quot;Title&quot;:&quot;Wandelingen door België - De Aarde en haar Volken, 1886&quot;,&quot;Topics&quot;:[&quot;Belgium -- Description and travel&quot;],&quot;Primary&quot;:&quot;17082.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;17082&quot;});" class='title'>Wandelingen door België -<br><span class='subtitle'>De Aarde en haar Volken, 1886</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18235, {&quot;Title&quot;:&quot;Het Geuldal - De Aarde en haar Volken, 1907&quot;,&quot;Topics&quot;:[&quot;Geul River Valley (Belgium and Netherlands) -- Description and travel&quot;],&quot;Primary&quot;:&quot;18235.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lamberts Hurrelbrinck, L. H. J., 1856-1941&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;18235&quot;});" class='title'>Het Geuldal -<br><span class='subtitle'>De Aarde en haar Volken, 1907</span></a>
+<div class='author'>Lamberts Hurrelbrinck, L. H. J., 1856-1941</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18319, {&quot;Title&quot;:&quot;In Luxemburg&#39;s Gutland - De Aarde en haar Volken, 1907&quot;,&quot;Topics&quot;:[&quot;Luxembourg -- Description and travel&quot;],&quot;Primary&quot;:&quot;18319.htm&quot;,&quot;CreatorNames&quot;:[&quot;Perk, M. A.&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;18319&quot;});" class='title'>In Luxemburg's Gutland -<br><span class='subtitle'>De Aarde en haar Volken, 1907</span></a>
+<div class='author'>Perk, M. A.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18670, {&quot;Title&quot;:&quot;Bruges and West Flanders&quot;,&quot;Topics&quot;:[&quot;Flanders -- Description and travel&quot;,&quot;Bruges (Belgium) -- Description and travel&quot;],&quot;Primary&quot;:&quot;18670.htm&quot;,&quot;CreatorNames&quot;:[&quot;Omond, George W. T. (George William Thomson), 1846-1929&quot;,&quot;Forestier, A. (Amédée), 1854-1930 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;18670&quot;});" class='title'>Bruges and West Flanders</a>
+<div class='author'>Omond, George W. T. (George William Thomson), 1846-1929, Forestier, A. (Amédée), 1854-1930 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18959, {&quot;Title&quot;:&quot;A Journal From Our Legation in Belgium&quot;,&quot;Topics&quot;:[&quot;Belgium -- History -- German occupation, 1914-1918&quot;],&quot;Primary&quot;:&quot;18959.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gibson, Hugh, 1883-1954&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;18959&quot;});" class='title'>A Journal From Our Legation in Belgium</a>
+<div class='author'>Gibson, Hugh, 1883-1954</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19692, {&quot;Title&quot;:&quot;Peeps at Many Lands: Belgium&quot;,&quot;Topics&quot;:[&quot;Belgium -- Description and travel&quot;],&quot;Primary&quot;:&quot;19692.htm&quot;,&quot;CreatorNames&quot;:[&quot;Omond, George W. T. (George William Thomson), 1846-1929&quot;,&quot;Forestier, A. (Amédée), 1854-1930 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;19692&quot;});" class='title'>Peeps at Many Lands:<br><span class='subtitle'>Belgium</span></a>
+<div class='author'>Omond, George W. T. (George William Thomson), 1846-1929, Forestier, A. (Amédée), 1854-1930 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(21269, {&quot;Title&quot;:&quot;Het leven van Hugo de Groot&quot;,&quot;Topics&quot;:[&quot;Grotius, Hugo, 1583-1645&quot;],&quot;Primary&quot;:&quot;21269.htm&quot;,&quot;CreatorNames&quot;:[&quot;Klinkhamer, Jacob, 1738-1817&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;21269&quot;});" class='title'>Het leven van Hugo de Groot</a>
+<div class='author'>Klinkhamer, Jacob, 1738-1817</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26148, {&quot;Title&quot;:&quot;De vrouw en de vredesbeweging in verband met het vrouwenkiesrecht&quot;,&quot;Topics&quot;:[&quot;Women -- Suffrage -- Netherlands&quot;],&quot;Primary&quot;:&quot;26148.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jacobs, Aletta H. (Aletta Henriette), 1854-1929&quot;],&quot;LoCC&quot;:[&quot;DH&quot;,&quot;HQ&quot;,&quot;JN&quot;],&quot;PG_ID&quot;:&quot;26148&quot;});" class='title'>De vrouw en de vredesbeweging in verband met het vrouwenkiesrecht</a>
+<div class='author'>Jacobs, Aletta H. (Aletta Henriette), 1854-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26349, {&quot;Title&quot;:&quot;Vlaamsch Belgie sedert 1830 - Eerste Deel&quot;,&quot;Topics&quot;:[&quot;Flanders (Belgium : Province) -- Description and travel&quot;,&quot;Flanders (Belgium : Province) -- History&quot;],&quot;Primary&quot;:&quot;26349.htm&quot;,&quot;CreatorNames&quot;:[&quot;Frédéricq, Paul, 1850-1920 [Contributor]&quot;,&quot;Willemsfonds [Editor]&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;26349&quot;});" class='title'>Vlaamsch Belgie sedert 1830 -<br><span class='subtitle'>Eerste Deel</span></a>
+<div class='author'>Frédéricq, Paul, 1850-1920 [Contributor], Willemsfonds [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27442, {&quot;Title&quot;:&quot;Belgium: From the Roman Invasion to the Present Day&quot;,&quot;Topics&quot;:[&quot;Belgium -- History&quot;],&quot;Primary&quot;:&quot;27442.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cammaerts, Emile, 1878-1953&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;27442&quot;});" class='title'>Belgium:<br><span class='subtitle'>From the Roman Invasion to the Present Day</span></a>
+<div class='author'>Cammaerts, Emile, 1878-1953</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28288, {&quot;Title&quot;:&quot;Vanished towers and chimes of Flanders&quot;,&quot;Topics&quot;:[&quot;Church buildings -- Flanders&quot;,&quot;Chimes&quot;,&quot;Change ringing&quot;,&quot;Flanders -- Description and travel&quot;],&quot;Primary&quot;:&quot;28288.htm&quot;,&quot;CreatorNames&quot;:[&quot;Edwards, George Wharton, 1859-1950&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;28288&quot;});" class='title'>Vanished towers and chimes of Flanders</a>
+<div class='author'>Edwards, George Wharton, 1859-1950</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28850, {&quot;Title&quot;:&quot;The Project Gutenberg Works of John Lothrop Motley - A Linked Index for: The Rise of the Dutch Republic; The History of the United Netherlands; The Life and Death of John of Barneveld&quot;,&quot;Topics&quot;:[&quot;Indexes&quot;],&quot;Primary&quot;:&quot;28850.htm&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;,&quot;Widger, David, 1932-2021? [Editor]&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;28850&quot;});" class='title'>The Project Gutenberg Works of John Lothrop Motley -<br><span class='subtitle'>A Linked Index for: The Rise of the Dutch Republic; The History of the United Netherlands; The Life and Death of John of Barneveld</span></a>
+<div class='author'>Motley, John Lothrop, 1814-1877, Widger, David, 1932-2021? [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28868, {&quot;Title&quot;:&quot;Willem de Zwijger, Prins van Oranje&quot;,&quot;Topics&quot;:[&quot;William I, Prince of Orange, 1533-1584&quot;],&quot;Primary&quot;:&quot;28868.htm&quot;,&quot;CreatorNames&quot;:[&quot;Putnam, Ruth, 1856-1931&quot;,&quot;Blaauw, August Hendrik Pieter [Editor]&quot;,&quot;Isings, J. H., 1884-1977 [Illustrator]&quot;,&quot;Nijhoff, D. C. (Dirk Christiaan), 1838-1902 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;28868&quot;});" class='title'>Willem de Zwijger, Prins van Oranje</a>
+<div class='author'>Putnam, Ruth, 1856-1931, Blaauw, August Hendrik Pieter [Editor], Isings, J. H., 1884-1977 [Illustrator], Nijhoff, D. C. (Dirk Christiaan), 1838-1902 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33640, {&quot;Title&quot;:&quot;De Wedergeboorte van Nederland&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- 19th century&quot;,&quot;Belgium -- History -- 1794-1814&quot;,&quot;Belgium -- History -- 1814-1830&quot;],&quot;Primary&quot;:&quot;33640.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tellegen, B. D. H. (Bernard Dominicus Hubertus), 1823-1885&quot;,&quot;Colenbrander, H. T. (Herman Theodoor), 1871-1945 [Commentator]&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;33640&quot;});" class='title'>De Wedergeboorte van Nederland</a>
+<div class='author'>Tellegen, B. D. H. (Bernard Dominicus Hubertus), 1823-1885, Colenbrander, H. T. (Herman Theodoor), 1871-1945 [Commentator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34644, {&quot;Title&quot;:&quot;De Dageraad der Volksvrijheid - Geschiedenis van de wording der Nederlandsche Republiek&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;],&quot;Primary&quot;:&quot;34644.htm&quot;,&quot;CreatorNames&quot;:[&quot;Streckfuss, Adolf, 1823-1895&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;34644&quot;});" class='title'>De Dageraad der Volksvrijheid -<br><span class='subtitle'>Geschiedenis van de wording der Nederlandsche Republiek</span></a>
+<div class='author'>Streckfuss, Adolf, 1823-1895</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35525, {&quot;Title&quot;:&quot;Charlotte de Bourbon, princesse d&#39;Orange&quot;,&quot;Topics&quot;:[&quot;Charlotte, of Bourbon, consort of William I, Prince of Orange, 1548?-1582&quot;],&quot;Primary&quot;:&quot;35525.htm&quot;,&quot;CreatorNames&quot;:[&quot;Delaborde, Jules, comte, 1806-1889&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;35525&quot;});" class='title'>Charlotte de Bourbon, princesse d'Orange</a>
+<div class='author'>Delaborde, Jules, comte, 1806-1889</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38528, {&quot;Title&quot;:&quot;The First Governess of the Netherlands, Margaret of Austria&quot;,&quot;Topics&quot;:[&quot;Margaret, of Austria, Regent of the Netherlands, 1480-1530&quot;,&quot;Netherlands -- History -- Charles V, 1506-1555&quot;],&quot;Primary&quot;:&quot;38528.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tremayne, Eleanor E.&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;38528&quot;});" class='title'>The First Governess of the Netherlands, Margaret of Austria</a>
+<div class='author'>Tremayne, Eleanor E.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40713, {&quot;Title&quot;:&quot;The Spell of Belgium&quot;,&quot;Topics&quot;:[&quot;Belgium&quot;],&quot;Primary&quot;:&quot;40713.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anderson, Isabel, 1876-1948&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;40713&quot;});" class='title'>The Spell of Belgium</a>
+<div class='author'>Anderson, Isabel, 1876-1948</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41312, {&quot;Title&quot;:&quot;Het beleg en de verdediging van Haarlem, in 1572-1573 (deel 1 van 3)&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;,&quot;Haarlem (Netherlands) -- Siege, 1572-1573&quot;],&quot;Primary&quot;:&quot;41312.htm&quot;,&quot;CreatorNames&quot;:[&quot;Capelle, J. van de, 1812-1850&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;41312&quot;});" class='title'>Het beleg en de verdediging van Haarlem, in 1572-1573 (deel 1 van 3)</a>
+<div class='author'>Capelle, J. van de, 1812-1850</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41830, {&quot;Title&quot;:&quot;The Spell of Flanders - An Outline of the History, Legends and Art of Belgium&#39;s Famous Northern Provinces&quot;,&quot;Topics&quot;:[&quot;Flanders -- Description and travel&quot;],&quot;Primary&quot;:&quot;41830.htm&quot;,&quot;CreatorNames&quot;:[&quot;Vose, Edward Neville, 1870-1949&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;41830&quot;});" class='title'>The Spell of Flanders -<br><span class='subtitle'>An Outline of the History, Legends and Art of Belgium's Famous Northern Provinces</span></a>
+<div class='author'>Vose, Edward Neville, 1870-1949</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42177, {&quot;Title&quot;:&quot;Histoire de Flandre (T. 3/4)&quot;,&quot;Topics&quot;:[&quot;Flanders (Belgium) -- History&quot;],&quot;Primary&quot;:&quot;42177.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kervyn de Lettenhove, Joseph Marie Bruno Constantin, Baron, 1817-1891&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;42177&quot;});" class='title'>Histoire de Flandre (T. 3/4)</a>
+<div class='author'>Kervyn de Lettenhove, Joseph Marie Bruno Constantin, Baron, 1817-1891</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4242, {&quot;Title&quot;:&quot;Belgium&quot;,&quot;Topics&quot;:[&quot;Belgium -- Description and travel&quot;],&quot;Primary&quot;:&quot;4242.htm&quot;,&quot;CreatorNames&quot;:[&quot;Morris, Joseph E. (Joseph Ernest)&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4242&quot;});" class='title'>Belgium</a>
+<div class='author'>Morris, Joseph E. (Joseph Ernest)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43086, {&quot;Title&quot;:&quot;My Own Affairs&quot;,&quot;Topics&quot;:[&quot;Courts and courtiers&quot;],&quot;Primary&quot;:&quot;43086.htm&quot;,&quot;CreatorNames&quot;:[&quot;Louise, Princess of Belgium, 1858-1924&quot;,&quot;Ffoulkes, Maude M. C. [Translator]&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;43086&quot;});" class='title'>My Own Affairs</a>
+<div class='author'>Louise, Princess of Belgium, 1858-1924, Ffoulkes, Maude M. C. [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44156, {&quot;Title&quot;:&quot;Histoire de Flandre (T. 1/4)&quot;,&quot;Topics&quot;:[&quot;Flanders (Belgium) -- History&quot;],&quot;Primary&quot;:&quot;44156.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kervyn de Lettenhove, Joseph Marie Bruno Constantin, Baron, 1817-1891&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;44156&quot;});" class='title'>Histoire de Flandre (T. 1/4)</a>
+<div class='author'>Kervyn de Lettenhove, Joseph Marie Bruno Constantin, Baron, 1817-1891</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44314, {&quot;Title&quot;:&quot;The Story of Brussels&quot;,&quot;Topics&quot;:[&quot;Brussels (Belgium)&quot;],&quot;Primary&quot;:&quot;44314.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gilliat-Smith, Ernest&quot;,&quot;Gilliat-Smith, Guy [Illustrator]&quot;,&quot;Kimball, Katharine, 1866-1949 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;44314&quot;});" class='title'>The Story of Brussels</a>
+<div class='author'>Gilliat-Smith, Ernest, Gilliat-Smith, Guy [Illustrator], Kimball, Katharine, 1866-1949 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44697, {&quot;Title&quot;:&quot;Histoire de Flandre (T. 4/4)&quot;,&quot;Topics&quot;:[&quot;Flanders (Belgium) -- History&quot;],&quot;Primary&quot;:&quot;44697.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kervyn de Lettenhove, Joseph Marie Bruno Constantin, Baron, 1817-1891&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;44697&quot;});" class='title'>Histoire de Flandre (T. 4/4)</a>
+<div class='author'>Kervyn de Lettenhove, Joseph Marie Bruno Constantin, Baron, 1817-1891</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44931, {&quot;Title&quot;:&quot;Les vieilles villes des Flandres: Belgique et Flandre française&quot;,&quot;Topics&quot;:[&quot;Flanders -- Description and travel&quot;],&quot;Primary&quot;:&quot;44931.htm&quot;,&quot;CreatorNames&quot;:[&quot;Robida, Albert, 1848-1926&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;44931&quot;});" class='title'>Les vieilles villes des Flandres:<br><span class='subtitle'>Belgique et Flandre française</span></a>
+<div class='author'>Robida, Albert, 1848-1926</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45392, {&quot;Title&quot;:&quot;De Belgische omwenteling&quot;,&quot;Topics&quot;:[&quot;Belgium -- History&quot;,&quot;Netherlands -- History -- 1815-1830&quot;],&quot;Primary&quot;:&quot;45392.htm&quot;,&quot;CreatorNames&quot;:[&quot;Colenbrander, H. T. (Herman Theodoor), 1871-1945&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;45392&quot;});" class='title'>De Belgische omwenteling</a>
+<div class='author'>Colenbrander, H. T. (Herman Theodoor), 1871-1945</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46033, {&quot;Title&quot;:&quot;La Flandre pendant des trois derniers siècles&quot;,&quot;Topics&quot;:[&quot;Flanders -- History&quot;],&quot;Primary&quot;:&quot;46033.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kervyn de Lettenhove, Joseph Marie Bruno Constantin, Baron, 1817-1891&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;46033&quot;});" class='title'>La Flandre pendant des trois derniers siècles</a>
+<div class='author'>Kervyn de Lettenhove, Joseph Marie Bruno Constantin, Baron, 1817-1891</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46224, {&quot;Title&quot;:&quot;Histoire de Flandre (T. 2/4)&quot;,&quot;Topics&quot;:[&quot;Flanders (Belgium) -- History&quot;],&quot;Primary&quot;:&quot;46224.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kervyn de Lettenhove, Joseph Marie Bruno Constantin, Baron, 1817-1891&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;46224&quot;});" class='title'>Histoire de Flandre (T. 2/4)</a>
+<div class='author'>Kervyn de Lettenhove, Joseph Marie Bruno Constantin, Baron, 1817-1891</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46248, {&quot;Title&quot;:&quot;Belgium&quot;,&quot;Topics&quot;:[&quot;Belgium -- Description and travel&quot;],&quot;Primary&quot;:&quot;46248.htm&quot;,&quot;CreatorNames&quot;:[&quot;Omond, George W. T. (George William Thomson), 1846-1929&quot;,&quot;Forestier, A. (Amédée), 1854-1930 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;46248&quot;});" class='title'>Belgium</a>
+<div class='author'>Omond, George W. T. (George William Thomson), 1846-1929, Forestier, A. (Amédée), 1854-1930 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46552, {&quot;Title&quot;:&quot;The Story of Bruges&quot;,&quot;Topics&quot;:[&quot;Bruges (Belgium)&quot;],&quot;Primary&quot;:&quot;46552.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gilliat-Smith, Ernest&quot;,&quot;Calvert, Edith [Illustrator]&quot;,&quot;Railton, Herbert, 1857-1910 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;46552&quot;});" class='title'>The Story of Bruges</a>
+<div class='author'>Gilliat-Smith, Ernest, Calvert, Edith [Illustrator], Railton, Herbert, 1857-1910 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46715, {&quot;Title&quot;:&quot;Het beleg en de verdediging van Haarlem, in 1572-1573 (deel 2 van 3)&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;,&quot;Haarlem (Netherlands) -- Siege, 1572-1573&quot;],&quot;Primary&quot;:&quot;46715.htm&quot;,&quot;CreatorNames&quot;:[&quot;Capelle, J. van de, 1812-1850&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;46715&quot;});" class='title'>Het beleg en de verdediging van Haarlem, in 1572-1573 (deel 2 van 3)</a>
+<div class='author'>Capelle, J. van de, 1812-1850</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46719, {&quot;Title&quot;:&quot;Het beleg en de verdediging van Haarlem, in 1572-1573 (deel 3 van 3)&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;,&quot;Haarlem (Netherlands) -- Siege, 1572-1573&quot;],&quot;Primary&quot;:&quot;46719.htm&quot;,&quot;CreatorNames&quot;:[&quot;Capelle, J. van de, 1812-1850&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;46719&quot;});" class='title'>Het beleg en de verdediging van Haarlem, in 1572-1573 (deel 3 van 3)</a>
+<div class='author'>Capelle, J. van de, 1812-1850</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4801, {&quot;Title&quot;:&quot;The Rise of the Dutch Republic — Volume 01: Introduction I&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;,&quot;Netherlands -- Church history&quot;],&quot;Primary&quot;:&quot;4801.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4801&quot;});" class='title'>The Rise of the Dutch Republic — Volume 01:<br><span class='subtitle'>Introduction I</span></a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4802, {&quot;Title&quot;:&quot;The Rise of the Dutch Republic — Volume 02: Introduction II&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;,&quot;Netherlands -- Church history&quot;],&quot;Primary&quot;:&quot;4802.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4802&quot;});" class='title'>The Rise of the Dutch Republic — Volume 02:<br><span class='subtitle'>Introduction II</span></a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4803, {&quot;Title&quot;:&quot;The Rise of the Dutch Republic — Volume 03: 1555&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;,&quot;Netherlands -- Church history&quot;],&quot;Primary&quot;:&quot;4803.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4803&quot;});" class='title'>The Rise of the Dutch Republic — Volume 03:<br><span class='subtitle'>1555</span></a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4804, {&quot;Title&quot;:&quot;The Rise of the Dutch Republic — Volume 04: 1555-59&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;,&quot;Netherlands -- Church history&quot;],&quot;Primary&quot;:&quot;4804.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4804&quot;});" class='title'>The Rise of the Dutch Republic — Volume 04:<br><span class='subtitle'>1555-59</span></a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4805, {&quot;Title&quot;:&quot;The Rise of the Dutch Republic — Volume 05: 1559-60&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;,&quot;Netherlands -- Church history&quot;],&quot;Primary&quot;:&quot;4805.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4805&quot;});" class='title'>The Rise of the Dutch Republic — Volume 05:<br><span class='subtitle'>1559-60</span></a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4806, {&quot;Title&quot;:&quot;The Rise of the Dutch Republic — Volume 06: 1560-61&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;,&quot;Netherlands -- Church history&quot;],&quot;Primary&quot;:&quot;4806.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4806&quot;});" class='title'>The Rise of the Dutch Republic — Volume 06:<br><span class='subtitle'>1560-61</span></a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4807, {&quot;Title&quot;:&quot;The Rise of the Dutch Republic — Volume 07: 1561-62&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;,&quot;Netherlands -- Church history&quot;],&quot;Primary&quot;:&quot;4807.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4807&quot;});" class='title'>The Rise of the Dutch Republic — Volume 07:<br><span class='subtitle'>1561-62</span></a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4808, {&quot;Title&quot;:&quot;The Rise of the Dutch Republic — Volume 08: 1563-64&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;,&quot;Netherlands -- Church history&quot;],&quot;Primary&quot;:&quot;4808.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4808&quot;});" class='title'>The Rise of the Dutch Republic — Volume 08:<br><span class='subtitle'>1563-64</span></a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4809, {&quot;Title&quot;:&quot;The Rise of the Dutch Republic — Volume 09: 1564-65&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;,&quot;Netherlands -- Church history&quot;],&quot;Primary&quot;:&quot;4809.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4809&quot;});" class='title'>The Rise of the Dutch Republic — Volume 09:<br><span class='subtitle'>1564-65</span></a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4810, {&quot;Title&quot;:&quot;The Rise of the Dutch Republic — Volume 10: 1566, part I&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;,&quot;Netherlands -- Church history&quot;],&quot;Primary&quot;:&quot;4810.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4810&quot;});" class='title'>The Rise of the Dutch Republic — Volume 10:<br><span class='subtitle'>1566, part I</span></a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4811, {&quot;Title&quot;:&quot;The Rise of the Dutch Republic — Complete (1555-66)&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;,&quot;Netherlands -- Church history&quot;],&quot;Primary&quot;:&quot;4811.htm&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4811&quot;});" class='title'>The Rise of the Dutch Republic — Complete (1555-66)</a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4812, {&quot;Title&quot;:&quot;The Rise of the Dutch Republic — Volume 11: 1566, part II&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;,&quot;Netherlands -- Church history&quot;],&quot;Primary&quot;:&quot;4812.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4812&quot;});" class='title'>The Rise of the Dutch Republic — Volume 11:<br><span class='subtitle'>1566, part II</span></a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4813, {&quot;Title&quot;:&quot;The Rise of the Dutch Republic — Volume 12: 1567, part I&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;,&quot;Netherlands -- Church history&quot;],&quot;Primary&quot;:&quot;4813.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4813&quot;});" class='title'>The Rise of the Dutch Republic — Volume 12:<br><span class='subtitle'>1567, part I</span></a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4814, {&quot;Title&quot;:&quot;The Rise of the Dutch Republic — Volume 13: 1567, part II&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;,&quot;Netherlands -- Church history&quot;],&quot;Primary&quot;:&quot;4814.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4814&quot;});" class='title'>The Rise of the Dutch Republic — Volume 13:<br><span class='subtitle'>1567, part II</span></a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4815, {&quot;Title&quot;:&quot;The Rise of the Dutch Republic — Volume 14: 1568, part I&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;,&quot;Netherlands -- Church history&quot;],&quot;Primary&quot;:&quot;4815.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4815&quot;});" class='title'>The Rise of the Dutch Republic — Volume 14:<br><span class='subtitle'>1568, part I</span></a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4816, {&quot;Title&quot;:&quot;The Rise of the Dutch Republic — Volume 15: 1568, part II&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;,&quot;Netherlands -- Church history&quot;],&quot;Primary&quot;:&quot;4816.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4816&quot;});" class='title'>The Rise of the Dutch Republic — Volume 15:<br><span class='subtitle'>1568, part II</span></a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4817, {&quot;Title&quot;:&quot;The Rise of the Dutch Republic — Volume 16: 1569-70&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;,&quot;Netherlands -- Church history&quot;],&quot;Primary&quot;:&quot;4817.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4817&quot;});" class='title'>The Rise of the Dutch Republic — Volume 16:<br><span class='subtitle'>1569-70</span></a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4818, {&quot;Title&quot;:&quot;The Rise of the Dutch Republic — Volume 17: 1570-72&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;,&quot;Netherlands -- Church history&quot;],&quot;Primary&quot;:&quot;4818.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4818&quot;});" class='title'>The Rise of the Dutch Republic — Volume 17:<br><span class='subtitle'>1570-72</span></a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4819, {&quot;Title&quot;:&quot;The Rise of the Dutch Republic — Volume 18: 1572&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;,&quot;Netherlands -- Church history&quot;],&quot;Primary&quot;:&quot;4819.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4819&quot;});" class='title'>The Rise of the Dutch Republic — Volume 18:<br><span class='subtitle'>1572</span></a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4820, {&quot;Title&quot;:&quot;The Rise of the Dutch Republic — Volume 19: 1572-73&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;,&quot;Netherlands -- Church history&quot;],&quot;Primary&quot;:&quot;4820.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4820&quot;});" class='title'>The Rise of the Dutch Republic — Volume 19:<br><span class='subtitle'>1572-73</span></a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4821, {&quot;Title&quot;:&quot;The Rise of the Dutch Republic — Volume 20: 1573&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;,&quot;Netherlands -- Church history&quot;],&quot;Primary&quot;:&quot;4821.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4821&quot;});" class='title'>The Rise of the Dutch Republic — Volume 20:<br><span class='subtitle'>1573</span></a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4822, {&quot;Title&quot;:&quot;The Rise of the Dutch Republic — Volume 21: 1573-74&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;,&quot;Netherlands -- Church history&quot;],&quot;Primary&quot;:&quot;4822.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4822&quot;});" class='title'>The Rise of the Dutch Republic — Volume 21:<br><span class='subtitle'>1573-74</span></a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4823, {&quot;Title&quot;:&quot;The Rise of the Dutch Republic — Complete (1566-74)&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;,&quot;Netherlands -- Church history&quot;],&quot;Primary&quot;:&quot;4823.htm&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4823&quot;});" class='title'>The Rise of the Dutch Republic — Complete (1566-74)</a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48238, {&quot;Title&quot;:&quot;Het geval België&quot;,&quot;Topics&quot;:[&quot;World War, 1914-1918 -- Belgium&quot;],&quot;Primary&quot;:&quot;48238.htm&quot;,&quot;CreatorNames&quot;:[&quot;Beck, James M. (James Montgomery), 1861-1936&quot;,&quot;Veer, W. de (Willem), 1865- [Translator]&quot;],&quot;LoCC&quot;:[&quot;DH&quot;,&quot;D&quot;],&quot;PG_ID&quot;:&quot;48238&quot;});" class='title'>Het geval België</a>
+<div class='author'>Beck, James M. (James Montgomery), 1861-1936, Veer, W. de (Willem), 1865- [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4824, {&quot;Title&quot;:&quot;The Rise of the Dutch Republic — Volume 22: 1574-76&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;,&quot;Netherlands -- Church history&quot;],&quot;Primary&quot;:&quot;4824.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4824&quot;});" class='title'>The Rise of the Dutch Republic — Volume 22:<br><span class='subtitle'>1574-76</span></a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4825, {&quot;Title&quot;:&quot;The Rise of the Dutch Republic — Volume 23: 1576&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;,&quot;Netherlands -- Church history&quot;],&quot;Primary&quot;:&quot;4825.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4825&quot;});" class='title'>The Rise of the Dutch Republic — Volume 23:<br><span class='subtitle'>1576</span></a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4826, {&quot;Title&quot;:&quot;The Rise of the Dutch Republic — Volume 24: 1576-77&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;,&quot;Netherlands -- Church history&quot;],&quot;Primary&quot;:&quot;4826.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4826&quot;});" class='title'>The Rise of the Dutch Republic — Volume 24:<br><span class='subtitle'>1576-77</span></a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4827, {&quot;Title&quot;:&quot;The Rise of the Dutch Republic — Volume 25: 1577, part II&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;,&quot;Netherlands -- Church history&quot;],&quot;Primary&quot;:&quot;4827.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4827&quot;});" class='title'>The Rise of the Dutch Republic — Volume 25:<br><span class='subtitle'>1577, part II</span></a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4828, {&quot;Title&quot;:&quot;The Rise of the Dutch Republic — Volume 26: 1577, part III&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;,&quot;Netherlands -- Church history&quot;],&quot;Primary&quot;:&quot;4828.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4828&quot;});" class='title'>The Rise of the Dutch Republic — Volume 26:<br><span class='subtitle'>1577, part III</span></a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4829, {&quot;Title&quot;:&quot;The Rise of the Dutch Republic — Volume 27: 1577-78&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;,&quot;Netherlands -- Church history&quot;],&quot;Primary&quot;:&quot;4829.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4829&quot;});" class='title'>The Rise of the Dutch Republic — Volume 27:<br><span class='subtitle'>1577-78</span></a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4830, {&quot;Title&quot;:&quot;The Rise of the Dutch Republic — Volume 28: 1578, part II&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;,&quot;Netherlands -- Church history&quot;],&quot;Primary&quot;:&quot;4830.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4830&quot;});" class='title'>The Rise of the Dutch Republic — Volume 28:<br><span class='subtitle'>1578, part II</span></a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4831, {&quot;Title&quot;:&quot;The Rise of the Dutch Republic — Volume 29: 1578, part III&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;,&quot;Netherlands -- Church history&quot;],&quot;Primary&quot;:&quot;4831.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4831&quot;});" class='title'>The Rise of the Dutch Republic — Volume 29:<br><span class='subtitle'>1578, part III</span></a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4832, {&quot;Title&quot;:&quot;The Rise of the Dutch Republic — Volume 30: 1579-80&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;,&quot;Netherlands -- Church history&quot;],&quot;Primary&quot;:&quot;4832.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4832&quot;});" class='title'>The Rise of the Dutch Republic — Volume 30:<br><span class='subtitle'>1579-80</span></a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4833, {&quot;Title&quot;:&quot;The Rise of the Dutch Republic — Volume 31: 1580-82&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;,&quot;Netherlands -- Church history&quot;],&quot;Primary&quot;:&quot;4833.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4833&quot;});" class='title'>The Rise of the Dutch Republic — Volume 31:<br><span class='subtitle'>1580-82</span></a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4834, {&quot;Title&quot;:&quot;The Rise of the Dutch Republic — Volume 32: 1582-84&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;,&quot;Netherlands -- Church history&quot;],&quot;Primary&quot;:&quot;4834.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4834&quot;});" class='title'>The Rise of the Dutch Republic — Volume 32:<br><span class='subtitle'>1582-84</span></a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4835, {&quot;Title&quot;:&quot;The Rise of the Dutch Republic — Complete (1574-84)&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;,&quot;Netherlands -- Church history&quot;],&quot;Primary&quot;:&quot;4835.htm&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4835&quot;});" class='title'>The Rise of the Dutch Republic — Complete (1574-84)</a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4836, {&quot;Title&quot;:&quot;The Rise of the Dutch Republic — Complete (1555-84)&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;,&quot;Netherlands -- Church history&quot;],&quot;Primary&quot;:&quot;4836.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4836&quot;});" class='title'>The Rise of the Dutch Republic — Complete (1555-84)</a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4837, {&quot;Title&quot;:&quot;History of the United Netherlands from the Death of William the Silent to the Twelve Year&#39;s Truce, 1584&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;],&quot;Primary&quot;:&quot;4837.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4837&quot;});" class='title'>History of the United Netherlands from the Death of William the Silent to the Twelve Year's Truce, 1584</a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4838, {&quot;Title&quot;:&quot;History of the United Netherlands from the Death of William the Silent to the Twelve Year&#39;s Truce, 1584-85a&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;],&quot;Primary&quot;:&quot;4838.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4838&quot;});" class='title'>History of the United Netherlands from the Death of William the Silent to the Twelve Year's Truce, 1584-85a</a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4839, {&quot;Title&quot;:&quot;History of the United Netherlands from the Death of William the Silent to the Twelve Year&#39;s Truce, 1585b&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;],&quot;Primary&quot;:&quot;4839.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4839&quot;});" class='title'>History of the United Netherlands from the Death of William the Silent to the Twelve Year's Truce, 1585b</a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4840, {&quot;Title&quot;:&quot;History of the United Netherlands from the Death of William the Silent to the Twelve Year&#39;s Truce, 1585c&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;],&quot;Primary&quot;:&quot;4840.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4840&quot;});" class='title'>History of the United Netherlands from the Death of William the Silent to the Twelve Year's Truce, 1585c</a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4841, {&quot;Title&quot;:&quot;History of the United Netherlands from the Death of William the Silent to the Twelve Year&#39;s Truce, 1585d&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;],&quot;Primary&quot;:&quot;4841.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4841&quot;});" class='title'>History of the United Netherlands from the Death of William the Silent to the Twelve Year's Truce, 1585d</a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4842, {&quot;Title&quot;:&quot;History of the United Netherlands from the Death of William the Silent to the Twelve Year&#39;s Truce, 1585e&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;],&quot;Primary&quot;:&quot;4842.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4842&quot;});" class='title'>History of the United Netherlands from the Death of William the Silent to the Twelve Year's Truce, 1585e</a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4843, {&quot;Title&quot;:&quot;History of the United Netherlands from the Death of William the Silent to the Twelve Year&#39;s Truce, 1585f&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;],&quot;Primary&quot;:&quot;4843.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4843&quot;});" class='title'>History of the United Netherlands from the Death of William the Silent to the Twelve Year's Truce, 1585f</a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4844, {&quot;Title&quot;:&quot;History of the United Netherlands from the Death of William the Silent to the Twelve Year&#39;s Truce, 1585e-86a&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;],&quot;Primary&quot;:&quot;4844.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4844&quot;});" class='title'>History of the United Netherlands from the Death of William the Silent to the Twelve Year's Truce, 1585e-86a</a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4845, {&quot;Title&quot;:&quot;History of the United Netherlands from the Death of William the Silent to the Twelve Year&#39;s Truce, 1586b&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;],&quot;Primary&quot;:&quot;4845.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4845&quot;});" class='title'>History of the United Netherlands from the Death of William the Silent to the Twelve Year's Truce, 1586b</a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4846, {&quot;Title&quot;:&quot;History of the United Netherlands from the Death of William the Silent to the Twelve Year&#39;s Truce, 1586c&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;],&quot;Primary&quot;:&quot;4846.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4846&quot;});" class='title'>History of the United Netherlands from the Death of William the Silent to the Twelve Year's Truce, 1586c</a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4847, {&quot;Title&quot;:&quot;History of the United Netherlands from the Death of William the Silent to the Twelve Year&#39;s Truce — Complete (1584-86)&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;],&quot;Primary&quot;:&quot;4847.htm&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4847&quot;});" class='title'>History of the United Netherlands from the Death of William the Silent to the Twelve Year's Truce — Complete (1584-86)</a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4848, {&quot;Title&quot;:&quot;History of the United Netherlands, 1586c&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;],&quot;Primary&quot;:&quot;4848.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4848&quot;});" class='title'>History of the United Netherlands, 1586c</a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4849, {&quot;Title&quot;:&quot;History of the United Netherlands, 1586d&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;],&quot;Primary&quot;:&quot;4849.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4849&quot;});" class='title'>History of the United Netherlands, 1586d</a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4850, {&quot;Title&quot;:&quot;History of the United Netherlands, 1586e&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;],&quot;Primary&quot;:&quot;4850.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4850&quot;});" class='title'>History of the United Netherlands, 1586e</a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4851, {&quot;Title&quot;:&quot;History of the United Netherlands, 1587a&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;],&quot;Primary&quot;:&quot;4851.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4851&quot;});" class='title'>History of the United Netherlands, 1587a</a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4852, {&quot;Title&quot;:&quot;History of the United Netherlands, 1587b&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;],&quot;Primary&quot;:&quot;4852.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4852&quot;});" class='title'>History of the United Netherlands, 1587b</a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4853, {&quot;Title&quot;:&quot;History of the United Netherlands, 1587c&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;],&quot;Primary&quot;:&quot;4853.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4853&quot;});" class='title'>History of the United Netherlands, 1587c</a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4854, {&quot;Title&quot;:&quot;History of the United Netherlands, 1587d&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;],&quot;Primary&quot;:&quot;4854.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4854&quot;});" class='title'>History of the United Netherlands, 1587d</a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4855, {&quot;Title&quot;:&quot;History of the United Netherlands, 1588a&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;],&quot;Primary&quot;:&quot;4855.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4855&quot;});" class='title'>History of the United Netherlands, 1588a</a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4856, {&quot;Title&quot;:&quot;History of the United Netherlands, 1588b&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;],&quot;Primary&quot;:&quot;4856.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4856&quot;});" class='title'>History of the United Netherlands, 1588b</a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4857, {&quot;Title&quot;:&quot;History of the United Netherlands, 1588c&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;],&quot;Primary&quot;:&quot;4857.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4857&quot;});" class='title'>History of the United Netherlands, 1588c</a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4858, {&quot;Title&quot;:&quot;History of the United Netherlands, 1588d&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;],&quot;Primary&quot;:&quot;4858.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4858&quot;});" class='title'>History of the United Netherlands, 1588d</a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4859, {&quot;Title&quot;:&quot;History of the United Netherlands, 1588-89&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;],&quot;Primary&quot;:&quot;4859.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4859&quot;});" class='title'>History of the United Netherlands, 1588-89</a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4860, {&quot;Title&quot;:&quot;History of the United Netherlands, 1586-89 — Complete&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;],&quot;Primary&quot;:&quot;4860.htm&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4860&quot;});" class='title'>History of the United Netherlands, 1586-89 — Complete</a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4861, {&quot;Title&quot;:&quot;History of the United Netherlands, 1590a&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;],&quot;Primary&quot;:&quot;4861.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4861&quot;});" class='title'>History of the United Netherlands, 1590a</a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4862, {&quot;Title&quot;:&quot;History of the United Netherlands, 1590b&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;],&quot;Primary&quot;:&quot;4862.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4862&quot;});" class='title'>History of the United Netherlands, 1590b</a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4863, {&quot;Title&quot;:&quot;History of the United Netherlands, 1590-92&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;],&quot;Primary&quot;:&quot;4863.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4863&quot;});" class='title'>History of the United Netherlands, 1590-92</a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4864, {&quot;Title&quot;:&quot;History of the United Netherlands, 1592&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;],&quot;Primary&quot;:&quot;4864.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4864&quot;});" class='title'>History of the United Netherlands, 1592</a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4865, {&quot;Title&quot;:&quot;History of the United Netherlands, 1592-94&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;],&quot;Primary&quot;:&quot;4865.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4865&quot;});" class='title'>History of the United Netherlands, 1592-94</a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4866, {&quot;Title&quot;:&quot;History of the United Netherlands, 1594&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;],&quot;Primary&quot;:&quot;4866.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4866&quot;});" class='title'>History of the United Netherlands, 1594</a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4867, {&quot;Title&quot;:&quot;History of the United Netherlands, 1595&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;],&quot;Primary&quot;:&quot;4867.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4867&quot;});" class='title'>History of the United Netherlands, 1595</a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4868, {&quot;Title&quot;:&quot;History of the United Netherlands, 1595-96&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;],&quot;Primary&quot;:&quot;4868.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4868&quot;});" class='title'>History of the United Netherlands, 1595-96</a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4869, {&quot;Title&quot;:&quot;History of the United Netherlands, 1597-98&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;],&quot;Primary&quot;:&quot;4869.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4869&quot;});" class='title'>History of the United Netherlands, 1597-98</a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4870, {&quot;Title&quot;:&quot;History of the United Netherlands, 1598&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;],&quot;Primary&quot;:&quot;4870.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4870&quot;});" class='title'>History of the United Netherlands, 1598</a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4871, {&quot;Title&quot;:&quot;History of the United Netherlands, 1598-99&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;],&quot;Primary&quot;:&quot;4871.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4871&quot;});" class='title'>History of the United Netherlands, 1598-99</a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4872, {&quot;Title&quot;:&quot;History of the United Netherlands, 1590-99 — Complete&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;],&quot;Primary&quot;:&quot;4872.htm&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4872&quot;});" class='title'>History of the United Netherlands, 1590-99 — Complete</a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4873, {&quot;Title&quot;:&quot;History of the United Netherlands from the Death of William the Silent to the Twelve Year&#39;s Truce, 1600&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;],&quot;Primary&quot;:&quot;4873.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4873&quot;});" class='title'>History of the United Netherlands from the Death of William the Silent to the Twelve Year's Truce, 1600</a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4874, {&quot;Title&quot;:&quot;History of the United Netherlands from the Death of William the Silent to the Twelve Year&#39;s Truce, 1600-02&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;],&quot;Primary&quot;:&quot;4874.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4874&quot;});" class='title'>History of the United Netherlands from the Death of William the Silent to the Twelve Year's Truce, 1600-02</a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4875, {&quot;Title&quot;:&quot;History of the United Netherlands from the Death of William the Silent to the Twelve Year&#39;s Truce, 1602-03&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;],&quot;Primary&quot;:&quot;4875.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4875&quot;});" class='title'>History of the United Netherlands from the Death of William the Silent to the Twelve Year's Truce, 1602-03</a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4876, {&quot;Title&quot;:&quot;History of the United Netherlands from the Death of William the Silent to the Twelve Year&#39;s Truce, 1603-04&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;],&quot;Primary&quot;:&quot;4876.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4876&quot;});" class='title'>History of the United Netherlands from the Death of William the Silent to the Twelve Year's Truce, 1603-04</a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4877, {&quot;Title&quot;:&quot;History of the United Netherlands from the Death of William the Silent to the Twelve Year&#39;s Truce, 1604-05&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;],&quot;Primary&quot;:&quot;4877.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4877&quot;});" class='title'>History of the United Netherlands from the Death of William the Silent to the Twelve Year's Truce, 1604-05</a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4878, {&quot;Title&quot;:&quot;History of the United Netherlands from the Death of William the Silent to the Twelve Year&#39;s Truce, 1605-07&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;],&quot;Primary&quot;:&quot;4878.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4878&quot;});" class='title'>History of the United Netherlands from the Death of William the Silent to the Twelve Year's Truce, 1605-07</a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4879, {&quot;Title&quot;:&quot;History of the United Netherlands from the Death of William the Silent to the Twelve Year&#39;s Truce, 1607a&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;],&quot;Primary&quot;:&quot;4879.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4879&quot;});" class='title'>History of the United Netherlands from the Death of William the Silent to the Twelve Year's Truce, 1607a</a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4880, {&quot;Title&quot;:&quot;History of the United Netherlands from the Death of William the Silent to the Twelve Year&#39;s Truce, 1607b&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;],&quot;Primary&quot;:&quot;4880.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4880&quot;});" class='title'>History of the United Netherlands from the Death of William the Silent to the Twelve Year's Truce, 1607b</a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4881, {&quot;Title&quot;:&quot;History of the United Netherlands from the Death of William the Silent to the Twelve Year&#39;s Truce, 1608a&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;],&quot;Primary&quot;:&quot;4881.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4881&quot;});" class='title'>History of the United Netherlands from the Death of William the Silent to the Twelve Year's Truce, 1608a</a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4882, {&quot;Title&quot;:&quot;History of the United Netherlands from the Death of William the Silent to the Twelve Year&#39;s Truce, 1608b&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;],&quot;Primary&quot;:&quot;4882.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4882&quot;});" class='title'>History of the United Netherlands from the Death of William the Silent to the Twelve Year's Truce, 1608b</a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4883, {&quot;Title&quot;:&quot;History of the United Netherlands from the Death of William the Silent to the Twelve Year&#39;s Truce, 1609&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;],&quot;Primary&quot;:&quot;4883.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4883&quot;});" class='title'>History of the United Netherlands from the Death of William the Silent to the Twelve Year's Truce, 1609</a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4884, {&quot;Title&quot;:&quot;History of the United Netherlands from the Death of William the Silent to the Twelve Year&#39;s Truce — Complete (1600-1609)&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;],&quot;Primary&quot;:&quot;4884.htm&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4884&quot;});" class='title'>History of the United Netherlands from the Death of William the Silent to the Twelve Year's Truce — Complete (1600-1609)</a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4885, {&quot;Title&quot;:&quot;History of the United Netherlands from the Death of William the Silent to the Twelve Year&#39;s Truce — Complete (1584-1609)&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;],&quot;Primary&quot;:&quot;4885.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4885&quot;});" class='title'>History of the United Netherlands from the Death of William the Silent to the Twelve Year's Truce — Complete (1584-1609)</a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4886, {&quot;Title&quot;:&quot;Life and Death of John of Barneveld, Advocate of Holland : with a view of the primary causes and movements of the Thirty Years&#39; War, 1609-10&quot;,&quot;Topics&quot;:[&quot;Oldenbarnevelt, Johan van, 1547-1619&quot;,&quot;Thirty Years&#39; War, 1618-1648&quot;],&quot;Primary&quot;:&quot;4886.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4886&quot;});" class='title'>Life and Death of John of Barneveld, Advocate of Holland :<br><span class='subtitle'>with a view of the primary causes and movements of the Thirty Years' War, 1609-10</span></a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4887, {&quot;Title&quot;:&quot;Life and Death of John of Barneveld, Advocate of Holland : with a view of the primary causes and movements of the Thirty Years&#39; War, 1610a&quot;,&quot;Topics&quot;:[&quot;Oldenbarnevelt, Johan van, 1547-1619&quot;,&quot;Thirty Years&#39; War, 1618-1648&quot;],&quot;Primary&quot;:&quot;4887.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4887&quot;});" class='title'>Life and Death of John of Barneveld, Advocate of Holland :<br><span class='subtitle'>with a view of the primary causes and movements of the Thirty Years' War, 1610a</span></a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4888, {&quot;Title&quot;:&quot;Life and Death of John of Barneveld, Advocate of Holland : with a view of the primary causes and movements of the Thirty Years&#39; War, 1610b&quot;,&quot;Topics&quot;:[&quot;Oldenbarnevelt, Johan van, 1547-1619&quot;,&quot;Thirty Years&#39; War, 1618-1648&quot;],&quot;Primary&quot;:&quot;4888.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4888&quot;});" class='title'>Life and Death of John of Barneveld, Advocate of Holland :<br><span class='subtitle'>with a view of the primary causes and movements of the Thirty Years' War, 1610b</span></a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4889, {&quot;Title&quot;:&quot;Life and Death of John of Barneveld, Advocate of Holland : with a view of the primary causes and movements of the Thirty Years&#39; War, 1610c-12&quot;,&quot;Topics&quot;:[&quot;Oldenbarnevelt, Johan van, 1547-1619&quot;,&quot;Thirty Years&#39; War, 1618-1648&quot;],&quot;Primary&quot;:&quot;4889.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4889&quot;});" class='title'>Life and Death of John of Barneveld, Advocate of Holland :<br><span class='subtitle'>with a view of the primary causes and movements of the Thirty Years' War, 1610c-12</span></a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4890, {&quot;Title&quot;:&quot;Life and Death of John of Barneveld, Advocate of Holland : with a view of the primary causes and movements of the Thirty Years&#39; War, 1609-14&quot;,&quot;Topics&quot;:[&quot;Oldenbarnevelt, Johan van, 1547-1619&quot;,&quot;Thirty Years&#39; War, 1618-1648&quot;],&quot;Primary&quot;:&quot;4890.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4890&quot;});" class='title'>Life and Death of John of Barneveld, Advocate of Holland :<br><span class='subtitle'>with a view of the primary causes and movements of the Thirty Years' War, 1609-14</span></a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4891, {&quot;Title&quot;:&quot;Life and Death of John of Barneveld, Advocate of Holland : with a view of the primary causes and movements of the Thirty Years&#39; War, 1613-15&quot;,&quot;Topics&quot;:[&quot;Oldenbarnevelt, Johan van, 1547-1619&quot;,&quot;Thirty Years&#39; War, 1618-1648&quot;],&quot;Primary&quot;:&quot;4891.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4891&quot;});" class='title'>Life and Death of John of Barneveld, Advocate of Holland :<br><span class='subtitle'>with a view of the primary causes and movements of the Thirty Years' War, 1613-15</span></a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4892, {&quot;Title&quot;:&quot;Life and Death of John of Barneveld, Advocate of Holland : with a view of the primary causes and movements of the Thirty Years&#39; War — Complete (1609-15)&quot;,&quot;Topics&quot;:[&quot;Oldenbarnevelt, Johan van, 1547-1619&quot;,&quot;Thirty Years&#39; War, 1618-1648&quot;],&quot;Primary&quot;:&quot;4892.htm&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4892&quot;});" class='title'>Life and Death of John of Barneveld, Advocate of Holland :<br><span class='subtitle'>with a view of the primary causes and movements of the Thirty Years' War — Complete (1609-15)</span></a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4893, {&quot;Title&quot;:&quot;Life and Death of John of Barneveld, Advocate of Holland : with a view of the primary causes and movements of the Thirty Years&#39; War, 1614-17&quot;,&quot;Topics&quot;:[&quot;Oldenbarnevelt, Johan van, 1547-1619&quot;,&quot;Thirty Years&#39; War, 1618-1648&quot;],&quot;Primary&quot;:&quot;4893.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4893&quot;});" class='title'>Life and Death of John of Barneveld, Advocate of Holland :<br><span class='subtitle'>with a view of the primary causes and movements of the Thirty Years' War, 1614-17</span></a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4894, {&quot;Title&quot;:&quot;Life and Death of John of Barneveld, Advocate of Holland : with a view of the primary causes and movements of the Thirty Years&#39; War, 1617&quot;,&quot;Topics&quot;:[&quot;Oldenbarnevelt, Johan van, 1547-1619&quot;,&quot;Thirty Years&#39; War, 1618-1648&quot;],&quot;Primary&quot;:&quot;4894.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4894&quot;});" class='title'>Life and Death of John of Barneveld, Advocate of Holland :<br><span class='subtitle'>with a view of the primary causes and movements of the Thirty Years' War, 1617</span></a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4895, {&quot;Title&quot;:&quot;Life and Death of John of Barneveld, Advocate of Holland : with a view of the primary causes and movements of the Thirty Years&#39; War, 1618&quot;,&quot;Topics&quot;:[&quot;Oldenbarnevelt, Johan van, 1547-1619&quot;,&quot;Thirty Years&#39; War, 1618-1648&quot;],&quot;Primary&quot;:&quot;4895.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4895&quot;});" class='title'>Life and Death of John of Barneveld, Advocate of Holland :<br><span class='subtitle'>with a view of the primary causes and movements of the Thirty Years' War, 1618</span></a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4896, {&quot;Title&quot;:&quot;Life and Death of John of Barneveld, Advocate of Holland : with a view of the primary causes and movements of the Thirty Years&#39; War, 1618-19&quot;,&quot;Topics&quot;:[&quot;Oldenbarnevelt, Johan van, 1547-1619&quot;,&quot;Thirty Years&#39; War, 1618-1648&quot;],&quot;Primary&quot;:&quot;4896.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4896&quot;});" class='title'>Life and Death of John of Barneveld, Advocate of Holland :<br><span class='subtitle'>with a view of the primary causes and movements of the Thirty Years' War, 1618-19</span></a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4897, {&quot;Title&quot;:&quot;Life and Death of John of Barneveld, Advocate of Holland : with a view of the primary causes and movements of the Thirty Years&#39; War, 1619-23&quot;,&quot;Topics&quot;:[&quot;Oldenbarnevelt, Johan van, 1547-1619&quot;,&quot;Thirty Years&#39; War, 1618-1648&quot;],&quot;Primary&quot;:&quot;4897.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4897&quot;});" class='title'>Life and Death of John of Barneveld, Advocate of Holland :<br><span class='subtitle'>with a view of the primary causes and movements of the Thirty Years' War, 1619-23</span></a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4898, {&quot;Title&quot;:&quot;Life and Death of John of Barneveld, Advocate of Holland : with a view of the primary causes and movements of the Thirty Years&#39; War — Complete (1614-23)&quot;,&quot;Topics&quot;:[&quot;Oldenbarnevelt, Johan van, 1547-1619&quot;,&quot;Thirty Years&#39; War, 1618-1648&quot;],&quot;Primary&quot;:&quot;4898.htm&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4898&quot;});" class='title'>Life and Death of John of Barneveld, Advocate of Holland :<br><span class='subtitle'>with a view of the primary causes and movements of the Thirty Years' War — Complete (1614-23)</span></a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4899, {&quot;Title&quot;:&quot;Life and Death of John of Barneveld — Complete (1609-1623)&quot;,&quot;Topics&quot;:[&quot;Oldenbarnevelt, Johan van, 1547-1619&quot;,&quot;Thirty Years&#39; War, 1618-1648&quot;],&quot;Primary&quot;:&quot;4899.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4899&quot;});" class='title'>Life and Death of John of Barneveld — Complete (1609-1623)</a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4900, {&quot;Title&quot;:&quot;PG Edition of Netherlands series — Complete&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History&quot;],&quot;Primary&quot;:&quot;4900.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;4900&quot;});" class='title'>PG Edition of Netherlands series — Complete</a>
+<div class='author'>Motley, John Lothrop, 1814-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49072, {&quot;Title&quot;:&quot;The Yser and the Belgian Coast: An Illustrated History and Guide&quot;,&quot;Topics&quot;:[&quot;Yser, Battle of the, Belgium, 1914&quot;,&quot;Belgium -- Guidebooks&quot;,&quot;World War, 1914-1918 -- Battlefields -- Guidebooks&quot;],&quot;Primary&quot;:&quot;49072.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pneu Michelin (Firm)&quot;],&quot;LoCC&quot;:[&quot;DH&quot;,&quot;D&quot;],&quot;PG_ID&quot;:&quot;49072&quot;});" class='title'>The Yser and the Belgian Coast:<br><span class='subtitle'>An Illustrated History and Guide</span></a>
+<div class='author'>Pneu Michelin (Firm)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49645, {&quot;Title&quot;:&quot;The Mentor: Belgium the Brave, Vol. 8, Num. 3, Serial No. 199, March 15, 1920&quot;,&quot;Topics&quot;:[&quot;Belgium -- Description and travel&quot;],&quot;Primary&quot;:&quot;49645.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wood, Ruth Kedzie&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;49645&quot;});" class='title'>The Mentor:<br><span class='subtitle'>Belgium the Brave, Vol. 8, Num. 3, Serial No. 199, March 15, 1920</span></a>
+<div class='author'>Wood, Ruth Kedzie</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49690, {&quot;Title&quot;:&quot;Cities of Belgium - Grant Allen&#39;s Historical Guides&quot;,&quot;Topics&quot;:[&quot;Belgium -- Guidebooks&quot;],&quot;Primary&quot;:&quot;49690.htm&quot;,&quot;CreatorNames&quot;:[&quot;Allen, Grant, 1848-1899&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;49690&quot;});" class='title'>Cities of Belgium -<br><span class='subtitle'>Grant Allen's Historical Guides</span></a>
+<div class='author'>Allen, Grant, 1848-1899</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50526, {&quot;Title&quot;:&quot;Comentario del coronel Francisco Verdugo, de la guerra de Frisia, - en xiv años que fue gobernador y capitan general de aquel estado y ejercito por el rey don Felipe II, nuestro señor&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;],&quot;Primary&quot;:&quot;50526.htm&quot;,&quot;CreatorNames&quot;:[&quot;Verdugo, Francisco, 1537-1595&quot;,&quot;Fuensanta del Valle, Feliciano Ramírez de Arellano, marqués de la, 1826-1896 [Editor]&quot;,&quot;Sancho Rayón, José León, 1830-1900 [Editor]&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;50526&quot;});" class='title'>Comentario del coronel Francisco Verdugo, de la guerra de Frisia, -<br><span class='subtitle'>en xiv años que fue gobernador y capitan general de aquel estado y ejercito por el rey don Felipe II, nuestro señor</span></a>
+<div class='author'>Verdugo, Francisco, 1537-1595, Fuensanta del Valle, Feliciano Ramírez de Arellano, marqués de la, 1826-1896 [Editor], Sancho Rayón, José León, 1830-1900 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51312, {&quot;Title&quot;:&quot;Jeanne de Constantinople: Comtesse de Flandre et de Hainaut&quot;,&quot;Topics&quot;:[&quot;Jeanne, of Constantinople, approximately 1200-1244&quot;],&quot;Primary&quot;:&quot;51312.htm&quot;,&quot;CreatorNames&quot;:[&quot;Le Glay, Edward, 1814-1894&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;51312&quot;});" class='title'>Jeanne de Constantinople:<br><span class='subtitle'>Comtesse de Flandre et de Hainaut</span></a>
+<div class='author'>Le Glay, Edward, 1814-1894</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5133, {&quot;Title&quot;:&quot;Quotations from John L. Motley Works&quot;,&quot;Topics&quot;:[&quot;Quotations&quot;],&quot;Primary&quot;:&quot;5133.txt&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;,&quot;Widger, David, 1932-2021? [Editor]&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;5133&quot;});" class='title'>Quotations from John L. Motley Works</a>
+<div class='author'>Motley, John Lothrop, 1814-1877, Widger, David, 1932-2021? [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51716, {&quot;Title&quot;:&quot;Belgians Under the German Eagle&quot;,&quot;Topics&quot;:[&quot;Belgium -- History -- German occupation, 1914-1918&quot;],&quot;Primary&quot;:&quot;51716.htm&quot;,&quot;CreatorNames&quot;:[&quot;Massart, Jean, 1865-1925&quot;,&quot;Miall, Bernard, 1876-1953 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;51716&quot;});" class='title'>Belgians Under the German Eagle</a>
+<div class='author'>Massart, Jean, 1865-1925, Miall, Bernard, 1876-1953 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53383, {&quot;Title&quot;:&quot;The Story of Don John of Austria&quot;,&quot;Topics&quot;:[&quot;Spain -- History -- Philip II, 1556-1598&quot;,&quot;John, of Austria, 1547-1578&quot;],&quot;Primary&quot;:&quot;53383.htm&quot;,&quot;CreatorNames&quot;:[&quot;Coloma, Luis, 1851-1915&quot;,&quot;Moreton, Lady, 1863?-1944 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;53383&quot;});" class='title'>The Story of Don John of Austria</a>
+<div class='author'>Coloma, Luis, 1851-1915, Moreton, Lady, 1863?-1944 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54314, {&quot;Title&quot;:&quot;Bruges: A Sketch-Book&quot;,&quot;Topics&quot;:[&quot;Bruges (Belgium) -- Pictorial works&quot;],&quot;Primary&quot;:&quot;54314.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pike, Joseph, 1883-1956&quot;],&quot;LoCC&quot;:[&quot;DH&quot;,&quot;NC&quot;],&quot;PG_ID&quot;:&quot;54314&quot;});" class='title'>Bruges:<br><span class='subtitle'>A Sketch-Book</span></a>
+<div class='author'>Pike, Joseph, 1883-1956</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63161, {&quot;Title&quot;:&quot;Autour des trônes que j&#39;ai vu tomber&quot;,&quot;Topics&quot;:[&quot;Courts and courtiers&quot;],&quot;Primary&quot;:&quot;63161.htm&quot;,&quot;CreatorNames&quot;:[&quot;Louise, Princess of Belgium, 1858-1924&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;63161&quot;});" class='title'>Autour des trônes que j'ai vu tomber</a>
+<div class='author'>Louise, Princess of Belgium, 1858-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67440, {&quot;Title&quot;:&quot;Was der schwarze Hans erlebte: Kindererzählung aus der Heimat&quot;,&quot;Topics&quot;:[&quot;Luxembourg -- History -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;67440.htm&quot;,&quot;CreatorNames&quot;:[&quot;Zenner, Theodor, 1890-1948&quot;],&quot;LoCC&quot;:[&quot;DH&quot;,&quot;PZ&quot;],&quot;PG_ID&quot;:&quot;67440&quot;});" class='title'>Was der schwarze Hans erlebte:<br><span class='subtitle'>Kindererzählung aus der Heimat</span></a>
+<div class='author'>Zenner, Theodor, 1890-1948</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6776, {&quot;Title&quot;:&quot;History of the Revolt of the Netherlands — Volume 01&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;,&quot;Huguenots&quot;],&quot;Primary&quot;:&quot;6776.txt&quot;,&quot;CreatorNames&quot;:[&quot;Schiller, Friedrich, 1759-1805&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;6776&quot;});" class='title'>History of the Revolt of the Netherlands — Volume 01</a>
+<div class='author'>Schiller, Friedrich, 1759-1805</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6777, {&quot;Title&quot;:&quot;History of the Revolt of the Netherlands — Volume 02&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;,&quot;Huguenots&quot;],&quot;Primary&quot;:&quot;6777.txt&quot;,&quot;CreatorNames&quot;:[&quot;Schiller, Friedrich, 1759-1805&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;6777&quot;});" class='title'>History of the Revolt of the Netherlands — Volume 02</a>
+<div class='author'>Schiller, Friedrich, 1759-1805</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6778, {&quot;Title&quot;:&quot;History of the Revolt of the Netherlands — Volume 03&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;,&quot;Huguenots&quot;],&quot;Primary&quot;:&quot;6778.txt&quot;,&quot;CreatorNames&quot;:[&quot;Schiller, Friedrich, 1759-1805&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;6778&quot;});" class='title'>History of the Revolt of the Netherlands — Volume 03</a>
+<div class='author'>Schiller, Friedrich, 1759-1805</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6779, {&quot;Title&quot;:&quot;History of the Revolt of the Netherlands — Volume 04&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;,&quot;Huguenots&quot;],&quot;Primary&quot;:&quot;6779.txt&quot;,&quot;CreatorNames&quot;:[&quot;Schiller, Friedrich, 1759-1805&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;6779&quot;});" class='title'>History of the Revolt of the Netherlands — Volume 04</a>
+<div class='author'>Schiller, Friedrich, 1759-1805</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6780, {&quot;Title&quot;:&quot;History of the Revolt of the Netherlands — Complete&quot;,&quot;Topics&quot;:[&quot;Netherlands -- History -- Eighty Years&#39; War, 1568-1648&quot;,&quot;Huguenots&quot;],&quot;Primary&quot;:&quot;6780.htm&quot;,&quot;CreatorNames&quot;:[&quot;Schiller, Friedrich, 1759-1805&quot;,&quot;Eastwick, Edward Backhouse, 1814-1883 [Translator]&quot;,&quot;Morrison, A. J. W. (Alexander James William), 1806-1865 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;6780&quot;});" class='title'>History of the Revolt of the Netherlands — Complete</a>
+<div class='author'>Schiller, Friedrich, 1759-1805, Eastwick, Edward Backhouse, 1814-1883 [Translator], Morrison, A. J. W. (Alexander James William), 1806-1865 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7552, {&quot;Title&quot;:&quot;Quotes and Images From Motley&#39;s History of the Netherlands&quot;,&quot;Topics&quot;:[&quot;Quotations&quot;],&quot;Primary&quot;:&quot;7552.htm&quot;,&quot;CreatorNames&quot;:[&quot;Motley, John Lothrop, 1814-1877&quot;,&quot;Widger, David, 1932-2021? [Editor]&quot;],&quot;LoCC&quot;:[&quot;DH&quot;],&quot;PG_ID&quot;:&quot;7552&quot;});" class='title'>Quotes and Images From Motley's History of the Netherlands</a>
+<div class='author'>Motley, John Lothrop, 1814-1877, Widger, David, 1932-2021? [Editor]</div>
+</div>
+</ul></div>
+</body></html>

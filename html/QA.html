@@ -1,0 +1,374 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Mathematics (QA)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(11899, {&quot;Title&quot;:&quot;Meetkundig Schoolboek&quot;,&quot;Topics&quot;:[&quot;Geometry&quot;],&quot;Primary&quot;:&quot;11899.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sluijters, Hendrik, 1807-1859&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;11899&quot;});" class='title'>Meetkundig Schoolboek</a>
+<div class='author'>Sluijters, Hendrik, 1807-1859</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12408, {&quot;Title&quot;:&quot;周髀算經&quot;,&quot;Topics&quot;:[&quot;Mathematics, Chinese -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;12408.htm&quot;,&quot;CreatorNames&quot;:[&quot;Unknown&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;12408&quot;});" class='title'>周髀算經</a>
+<div class='author'>Unknown</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16449, {&quot;Title&quot;:&quot;The Number Concept: Its Origin and Development&quot;,&quot;Topics&quot;:[&quot;Number concept&quot;],&quot;Primary&quot;:&quot;16449.htm&quot;,&quot;CreatorNames&quot;:[&quot;Conant, Levi L. (Levi Leonard), 1857-1916&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;16449&quot;});" class='title'>The Number Concept:<br><span class='subtitle'>Its Origin and Development</span></a>
+<div class='author'>Conant, Levi L. (Levi Leonard), 1857-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16527, {&quot;Title&quot;:&quot;1001 задача для умственного счета&quot;,&quot;Topics&quot;:[&quot;Word problems (Mathematics)&quot;,&quot;Mathematics -- Problems, exercises, etc.&quot;],&quot;Primary&quot;:&quot;16527.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rachinskii, Sergei Aleksandrovich, 1836-1902&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;16527&quot;});" class='title'>1001 задача для умственного счета</a>
+<div class='author'>Rachinskii, Sergei Aleksandrovich, 1836-1902</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16713, {&quot;Title&quot;:&quot;Amusements in Mathematics&quot;,&quot;Topics&quot;:[&quot;Mathematical recreations&quot;,&quot;Puzzles&quot;],&quot;Primary&quot;:&quot;16713.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dudeney, Henry Ernest, 1857-1930&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;16713&quot;});" class='title'>Amusements in Mathematics</a>
+<div class='author'>Dudeney, Henry Ernest, 1857-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17001, {&quot;Title&quot;:&quot;An Elementary Course in Synthetic Projective Geometry&quot;,&quot;Topics&quot;:[&quot;Geometry, Projective&quot;],&quot;Primary&quot;:&quot;17001.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lehmer, Derrick Norman, 1868-1938&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;17001&quot;});" class='title'>An Elementary Course in Synthetic Projective Geometry</a>
+<div class='author'>Lehmer, Derrick Norman, 1868-1938</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19600, {&quot;Title&quot;:&quot;Jerome Cardan: A Biographical Study&quot;,&quot;Topics&quot;:[&quot;Cardano, Girolamo, 1501-1576&quot;,&quot;Mathematicians -- Biography&quot;],&quot;Primary&quot;:&quot;19600.htm&quot;,&quot;CreatorNames&quot;:[&quot;Waters, W. G. (William George), 1844-1928&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;19600&quot;});" class='title'>Jerome Cardan:<br><span class='subtitle'>A Biographical Study</span></a>
+<div class='author'>Waters, W. G. (William George), 1844-1928</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(201, {&quot;Title&quot;:&quot;Flatland: A Romance of Many Dimensions&quot;,&quot;Topics&quot;:[&quot;Fourth dimension&quot;],&quot;Primary&quot;:&quot;201.htm&quot;,&quot;CreatorNames&quot;:[&quot;Abbott, Edwin Abbott, 1838-1926&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;201&quot;});" class='title'>Flatland:<br><span class='subtitle'>A Romance of Many Dimensions</span></a>
+<div class='author'>Abbott, Edwin Abbott, 1838-1926</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20214, {&quot;Title&quot;:&quot;Instruction for Using a Slide Rule&quot;,&quot;Topics&quot;:[&quot;Slide-rule -- Handbooks, manuals, etc.&quot;],&quot;Primary&quot;:&quot;20214.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stanley, W.&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;20214&quot;});" class='title'>Instruction for Using a Slide Rule</a>
+<div class='author'>Stanley, W.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20313, {&quot;Title&quot;:&quot;Ueber Riemann&#39;s Theorie der Algebraischen Functionen&quot;,&quot;Topics&quot;:[&quot;Algebraic functions&quot;],&quot;Primary&quot;:&quot;20313.txt&quot;,&quot;CreatorNames&quot;:[&quot;Klein, Felix, 1849-1925&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;20313&quot;});" class='title'>Ueber Riemann's Theorie der Algebraischen Functionen</a>
+<div class='author'>Klein, Felix, 1849-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(212, {&quot;Title&quot;:&quot;A List of Factorial Math Constants&quot;,&quot;Topics&quot;:[&quot;Mathematics&quot;,&quot;Factorials&quot;],&quot;Primary&quot;:&quot;212.txt&quot;,&quot;CreatorNames&quot;:[&quot;Unknown&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;212&quot;});" class='title'>A List of Factorial Math Constants</a>
+<div class='author'>Unknown</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22062, {&quot;Title&quot;:&quot;The Mathematicall Praeface to Elements of Geometrie of Euclid of Megara&quot;,&quot;Topics&quot;:[&quot;Geometry -- Early works to 1800&quot;,&quot;Philosophy -- Early works to 1800&quot;,&quot;Mathematics -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;22062.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dee, John, 1527-1608&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;22062&quot;});" class='title'>The Mathematicall Praeface to Elements of Geometrie of Euclid of Megara</a>
+<div class='author'>Dee, John, 1527-1608</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22599, {&quot;Title&quot;:&quot;The Hindu-Arabic Numerals&quot;,&quot;Topics&quot;:[&quot;Numerals&quot;],&quot;Primary&quot;:&quot;22599.htm&quot;,&quot;CreatorNames&quot;:[&quot;Karpinski, Louis Charles, 1878-1956&quot;,&quot;Smith, David Eugene, 1860-1944&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;22599&quot;});" class='title'>The Hindu-Arabic Numerals</a>
+<div class='author'>Karpinski, Louis Charles, 1878-1956, Smith, David Eugene, 1860-1944</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24038, {&quot;Title&quot;:&quot;孫子算經&quot;,&quot;Topics&quot;:[&quot;Mathematics, Chinese -- Early works to 1800&quot;,&quot;Arithmetic -- Early works to 1900&quot;],&quot;Primary&quot;:&quot;24038.txt&quot;,&quot;CreatorNames&quot;:[&quot;Sunzi, approximately 5th century&quot;,&quot;Li, Chunfeng, 602-670 [Translator]&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;24038&quot;});" class='title'>孫子算經</a>
+<div class='author'>Sunzi, approximately 5th century, Li, Chunfeng, 602-670 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24817, {&quot;Title&quot;:&quot;Über die Geometrie der alten Aegypter. - Vortrag, gehalten in der feierlichen Sitzung der Kaiserlichen Akademie der Wissenschaften am 29. Mai 1884.&quot;,&quot;Topics&quot;:[&quot;Geometry -- History&quot;,&quot;Egypt -- History -- To 332 B.C.&quot;],&quot;Primary&quot;:&quot;24817.htm&quot;,&quot;CreatorNames&quot;:[&quot;Weyr, Emil, 1848-1894&quot;],&quot;LoCC&quot;:[&quot;CB&quot;,&quot;QA&quot;],&quot;PG_ID&quot;:&quot;24817&quot;});" class='title'>Über die Geometrie der alten Aegypter. -<br><span class='subtitle'>Vortrag, gehalten in der feierlichen Sitzung der Kaiserlichen Akademie der Wissenschaften am 29. Mai 1884.</span></a>
+<div class='author'>Weyr, Emil, 1848-1894</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(254, {&quot;Title&quot;:&quot;The Second Story of Meno - A Continuation of Socrates&#39; Dialogue with Meno in Which the Boy Proves Root 2 is Irrational&quot;,&quot;Topics&quot;:[&quot;Mathematics&quot;],&quot;Primary&quot;:&quot;254.txt&quot;,&quot;CreatorNames&quot;:[&quot;Unknown&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;254&quot;});" class='title'>The Second Story of Meno -<br><span class='subtitle'>A Continuation of Socrates' Dialogue with Meno in Which the Boy Proves Root 2 is Irrational</span></a>
+<div class='author'>Unknown</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25664, {&quot;Title&quot;:&quot;The Earliest Arithmetics in English&quot;,&quot;Topics&quot;:[&quot;Mathematics -- History&quot;,&quot;Arithmetic -- Early works to 1900&quot;,&quot;Algorithms&quot;],&quot;Primary&quot;:&quot;25664.htm&quot;,&quot;CreatorNames&quot;:[&quot;Alexander, de Villa Dei [Contributor]&quot;,&quot;Record, Robert, 1510?-1558 [Contributor]&quot;,&quot;Sacro Bosco, Joannes de, active 1230 [Contributor]&quot;,&quot;Steele, Robert, 1860-1944 [Editor]&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;25664&quot;});" class='title'>The Earliest Arithmetics in English</a>
+<div class='author'>Alexander, de Villa Dei [Contributor], Record, Robert, 1510?-1558 [Contributor], Sacro Bosco, Joannes de, active 1230 [Contributor], Steele, Robert, 1860-1944 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2583, {&quot;Title&quot;:&quot;The Value of Zeta(3) to 1,000,000 places&quot;,&quot;Topics&quot;:[&quot;Mathematics&quot;],&quot;Primary&quot;:&quot;2583.txt&quot;,&quot;CreatorNames&quot;:[&quot;Plouffe, Simon, 1956- [Editor]&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;2583&quot;});" class='title'>The Value of Zeta(3) to 1,000,000 places</a>
+<div class='author'>Plouffe, Simon, 1956- [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2584, {&quot;Title&quot;:&quot;The First 1000 Euler Numbers&quot;,&quot;Topics&quot;:[&quot;Mathematics&quot;],&quot;Primary&quot;:&quot;2584.txt&quot;,&quot;CreatorNames&quot;:[&quot;Plouffe, Simon, 1956- [Editor]&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;2584&quot;});" class='title'>The First 1000 Euler Numbers</a>
+<div class='author'>Plouffe, Simon, 1956- [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2585, {&quot;Title&quot;:&quot;The First 1001 Fibonacci Numbers&quot;,&quot;Topics&quot;:[&quot;Mathematics&quot;,&quot;Fibonacci numbers&quot;],&quot;Primary&quot;:&quot;2585.txt&quot;,&quot;CreatorNames&quot;:[&quot;Plouffe, Simon, 1956- [Editor]&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;2585&quot;});" class='title'>The First 1001 Fibonacci Numbers</a>
+<div class='author'>Plouffe, Simon, 1956- [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2586, {&quot;Title&quot;:&quot;The First 498 Bernoulli Numbers&quot;,&quot;Topics&quot;:[&quot;Mathematics&quot;,&quot;Bernoulli numbers&quot;],&quot;Primary&quot;:&quot;2586.txt&quot;,&quot;CreatorNames&quot;:[&quot;Plouffe, Simon, 1956- [Editor]&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;2586&quot;});" class='title'>The First 498 Bernoulli Numbers</a>
+<div class='author'>Plouffe, Simon, 1956- [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26566, {&quot;Title&quot;:&quot;La géométrie en vers techniques&quot;,&quot;Topics&quot;:[&quot;Geometry&quot;],&quot;Primary&quot;:&quot;26566.htm&quot;,&quot;CreatorNames&quot;:[&quot;Roys, Lyon Des&quot;],&quot;LoCC&quot;:[&quot;PQ&quot;,&quot;QA&quot;],&quot;PG_ID&quot;:&quot;26566&quot;});" class='title'>La géométrie en vers techniques</a>
+<div class='author'>Roys, Lyon Des</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26752, {&quot;Title&quot;:&quot;The Way To Geometry&quot;,&quot;Topics&quot;:[&quot;Geometry -- Early works to 1800&quot;,&quot;Mathematics -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;26752.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ramus, Petrus, 1515-1572&quot;,&quot;Bedwell, William, 1561?-1632 [Translator]&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;26752&quot;});" class='title'>The Way To Geometry</a>
+<div class='author'>Ramus, Petrus, 1515-1572, Bedwell, William, 1561?-1632 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26979, {&quot;Title&quot;:&quot;海島算經&quot;,&quot;Topics&quot;:[&quot;Arithmetic -- Early works to 1900&quot;],&quot;Primary&quot;:&quot;26979.txt&quot;,&quot;CreatorNames&quot;:[&quot;Liu, Hui, active 3rd century-4th century&quot;],&quot;LoCC&quot;:[&quot;AC&quot;,&quot;QA&quot;],&quot;PG_ID&quot;:&quot;26979&quot;});" class='title'>海島算經</a>
+<div class='author'>Liu, Hui, active 3rd century-4th century</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27468, {&quot;Title&quot;:&quot;IBM 1401 Programming Systems&quot;,&quot;Topics&quot;:[&quot;IBM 1401 (Computer) -- Programming&quot;],&quot;Primary&quot;:&quot;27468.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;27468&quot;});" class='title'>IBM 1401 Programming Systems</a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27936, {&quot;Title&quot;:&quot;Histoire des nombres et de la numération mécanique&quot;,&quot;Topics&quot;:[&quot;Calculators&quot;,&quot;Mathematical instruments&quot;],&quot;Primary&quot;:&quot;27936.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jacomy-Régnier&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;27936&quot;});" class='title'>Histoire des nombres et de la numération mécanique</a>
+<div class='author'>Jacomy-Régnier</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28233, {&quot;Title&quot;:&quot;Philosophiae Naturalis Principia Mathematica&quot;,&quot;Topics&quot;:[&quot;Mechanics -- Early works to 1800&quot;,&quot;Celestial mechanics -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;28233.htm&quot;,&quot;CreatorNames&quot;:[&quot;Newton, Isaac, 1642-1727&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;28233&quot;});" class='title'>Philosophiae Naturalis Principia Mathematica</a>
+<div class='author'>Newton, Isaac, 1642-1727</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29042, {&quot;Title&quot;:&quot;A Tangled Tale&quot;,&quot;Topics&quot;:[&quot;Mathematical recreations&quot;],&quot;Primary&quot;:&quot;29042.htm&quot;,&quot;CreatorNames&quot;:[&quot;Carroll, Lewis, 1832-1898&quot;,&quot;Frost, A. B. (Arthur Burdett), 1851-1928 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;PR&quot;,&quot;PZ&quot;,&quot;QA&quot;],&quot;PG_ID&quot;:&quot;29042&quot;});" class='title'>A Tangled Tale</a>
+<div class='author'>Carroll, Lewis, 1832-1898, Frost, A. B. (Arthur Burdett), 1851-1928 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(302, {&quot;Title&quot;:&quot;The Fibonacci Number Series&quot;,&quot;Topics&quot;:[&quot;Mathematics&quot;,&quot;Fibonacci numbers&quot;],&quot;Primary&quot;:&quot;302.txt&quot;,&quot;CreatorNames&quot;:[&quot;Husted, Michael&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;302&quot;});" class='title'>The Fibonacci Number Series</a>
+<div class='author'>Husted, Michael</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33093, {&quot;Title&quot;:&quot;The Path-Way to Knowledg, Containing the First Principles of Geometrie&quot;,&quot;Topics&quot;:[&quot;Geometry -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;33093.htm&quot;,&quot;CreatorNames&quot;:[&quot;Record, Robert, 1510?-1558&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;33093&quot;});" class='title'>The Path-Way to Knowledg, Containing the First Principles of Geometrie</a>
+<div class='author'>Record, Robert, 1510?-1558</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33726, {&quot;Title&quot;:&quot;Die hauptsächlichsten Theorien der Geometrie&quot;,&quot;Topics&quot;:[&quot;Geometry -- History&quot;],&quot;Primary&quot;:&quot;33726.htm&quot;,&quot;CreatorNames&quot;:[&quot;Loria, Gino, 1862-1954&quot;,&quot;Schütte, Fritz, 1864- [Translator]&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;33726&quot;});" class='title'>Die hauptsächlichsten Theorien der Geometrie</a>
+<div class='author'>Loria, Gino, 1862-1954, Schütte, Fritz, 1864- [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34268, {&quot;Title&quot;:&quot;Spinning Tops - The \&quot;\&quot;Operatives&#39; Lecture\&quot;\&quot; of the British Association Meeting at Leeds, 6th September, 1890&quot;,&quot;Topics&quot;:[&quot;Tops&quot;,&quot;Gyroscopes&quot;,&quot;Gyro compass&quot;],&quot;Primary&quot;:&quot;34268.htm&quot;,&quot;CreatorNames&quot;:[&quot;Perry, John, 1850-1920&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;34268&quot;});" class='title'>Spinning Tops -<br><span class='subtitle'>The "Operatives' Lecture" of the British Association Meeting at Leeds, 6th September, 1890</span></a>
+<div class='author'>Perry, John, 1850-1920</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35550, {&quot;Title&quot;:&quot;Archimedes&quot;,&quot;Topics&quot;:[&quot;Archimedes&quot;],&quot;Primary&quot;:&quot;35550.htm&quot;,&quot;CreatorNames&quot;:[&quot;Heath, Thomas Little, Sir, 1861-1940&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;35550&quot;});" class='title'>Archimedes</a>
+<div class='author'>Heath, Thomas Little, Sir, 1861-1940</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37681, {&quot;Title&quot;:&quot;The Teaching of Geometry&quot;,&quot;Topics&quot;:[&quot;Geometry -- Study and teaching&quot;],&quot;Primary&quot;:&quot;37681.htm&quot;,&quot;CreatorNames&quot;:[&quot;Smith, David Eugene, 1860-1944&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;37681&quot;});" class='title'>The Teaching of Geometry</a>
+<div class='author'>Smith, David Eugene, 1860-1944</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38033, {&quot;Title&quot;:&quot;Vergleichende Betrachtungen über neuere geometrische Forschungen&quot;,&quot;Topics&quot;:[&quot;Transformations (Mathematics)&quot;,&quot;Continuous groups&quot;],&quot;Primary&quot;:&quot;38033.htm&quot;,&quot;CreatorNames&quot;:[&quot;Klein, Felix, 1849-1925&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;38033&quot;});" class='title'>Vergleichende Betrachtungen über neuere geometrische Forschungen</a>
+<div class='author'>Klein, Felix, 1849-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38034, {&quot;Title&quot;:&quot;Paul Appell: Biographie, Bibliographie Analytique des Écrits&quot;,&quot;Topics&quot;:[&quot;Mathematicians -- Biography&quot;,&quot;Appell, Paul, 1855-1930&quot;,&quot;Appell, Paul, 1855-1930 -- Bibliography&quot;],&quot;Primary&quot;:&quot;38034.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lebon, Ernest, 1846-1922&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;38034&quot;});" class='title'>Paul Appell:<br><span class='subtitle'>Biographie, Bibliographie Analytique des Écrits</span></a>
+<div class='author'>Lebon, Ernest, 1846-1922</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38536, {&quot;Title&quot;:&quot;A Review of Algebra&quot;,&quot;Topics&quot;:[&quot;Algebra -- Problems, exercises, etc.&quot;],&quot;Primary&quot;:&quot;38536.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rivenburg, Romeyn Henry&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;38536&quot;});" class='title'>A Review of Algebra</a>
+<div class='author'>Rivenburg, Romeyn Henry</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39300, {&quot;Title&quot;:&quot;The Psychology of Arithmetic&quot;,&quot;Topics&quot;:[&quot;Arithmetic -- Study and teaching&quot;],&quot;Primary&quot;:&quot;39300.htm&quot;,&quot;CreatorNames&quot;:[&quot;Thorndike, Edward L. (Edward Lee), 1874-1949&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;39300&quot;});" class='title'>The Psychology of Arithmetic</a>
+<div class='author'>Thorndike, Edward L. (Edward Lee), 1874-1949</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39702, {&quot;Title&quot;:&quot;The philosophy of mathematics&quot;,&quot;Topics&quot;:[&quot;Mathematics -- Philosophy&quot;],&quot;Primary&quot;:&quot;39702.htm&quot;,&quot;CreatorNames&quot;:[&quot;Comte, Auguste, 1798-1857&quot;,&quot;Gillespie, W. M. (William Mitchell), 1816-1868 [Translator]&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;39702&quot;});" class='title'>The philosophy of mathematics</a>
+<div class='author'>Comte, Auguste, 1798-1857, Gillespie, W. M. (William Mitchell), 1816-1868 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41991, {&quot;Title&quot;:&quot;Mathématiques et Mathématiciens: Pensées et Curiosités&quot;,&quot;Topics&quot;:[&quot;Quotations&quot;,&quot;Quotations, French&quot;,&quot;Mathematicians&quot;,&quot;Mathematicians -- France&quot;,&quot;Mathematics -- France -- Quotations, maxims, etc.&quot;,&quot;Mathematics -- Quotations, maxims, etc.&quot;],&quot;Primary&quot;:&quot;41991.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rebière, A. (Alphonse), 1842-1901 [Compiler]&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;41991&quot;});" class='title'>Mathématiques et Mathématiciens:<br><span class='subtitle'>Pensées et Curiosités</span></a>
+<div class='author'>Rebière, A. (Alphonse), 1842-1901 [Compiler]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42216, {&quot;Title&quot;:&quot;On the History of Gunter&#39;s Scale and the Slide Rule During the Seventeenth Century&quot;,&quot;Topics&quot;:[&quot;Slide-rule&quot;],&quot;Primary&quot;:&quot;42216.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cajori, Florian, 1859-1930&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;42216&quot;});" class='title'>On the History of Gunter's Scale and the Slide Rule During the Seventeenth Century</a>
+<div class='author'>Cajori, Florian, 1859-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42310, {&quot;Title&quot;:&quot;Gaston Darboux: Biographie, Bibliographie analytique des écrits&quot;,&quot;Topics&quot;:[&quot;Mathematicians -- Biography&quot;,&quot;Darboux, Gaston, 1842-1917&quot;],&quot;Primary&quot;:&quot;42310.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lebon, Ernest, 1846-1922&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;42310&quot;});" class='title'>Gaston Darboux:<br><span class='subtitle'>Biographie, Bibliographie analytique des écrits</span></a>
+<div class='author'>Lebon, Ernest, 1846-1922</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42745, {&quot;Title&quot;:&quot;Gauss, ein Umriss seines Lebens und Wirkens&quot;,&quot;Topics&quot;:[&quot;Gauss, Carl Friedrich, 1777-1855&quot;],&quot;Primary&quot;:&quot;42745.htm&quot;,&quot;CreatorNames&quot;:[&quot;Winnecke, Friedrich August Theodor, 1835-1897&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;42745&quot;});" class='title'>Gauss, ein Umriss seines Lebens und Wirkens</a>
+<div class='author'>Winnecke, Friedrich August Theodor, 1835-1897</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44730, {&quot;Title&quot;:&quot;Memorabilia Mathematica; or, the Philomath&#39;s Quotation-Book&quot;,&quot;Topics&quot;:[&quot;Mathematics&quot;,&quot;Mathematics -- Quotations, maxims, etc.&quot;],&quot;Primary&quot;:&quot;44730.htm&quot;,&quot;CreatorNames&quot;:[&quot;Moritz, Robert Édouard, 1868-1940 [Compiler]&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;44730&quot;});" class='title'>Memorabilia Mathematica;<br><span class='subtitle'>or, the Philomath's Quotation-Book</span></a>
+<div class='author'>Moritz, Robert Édouard, 1868-1940 [Compiler]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45506, {&quot;Title&quot;:&quot;Flatland: A Romance of Many Dimensions&quot;,&quot;Topics&quot;:[&quot;Fourth dimension&quot;],&quot;Primary&quot;:&quot;45506.htm&quot;,&quot;CreatorNames&quot;:[&quot;Abbott, Edwin Abbott, 1838-1926&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;45506&quot;});" class='title'>Flatland:<br><span class='subtitle'>A Romance of Many Dimensions</span></a>
+<div class='author'>Abbott, Edwin Abbott, 1838-1926</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45691, {&quot;Title&quot;:&quot;The Mystery of Space - A Study of the Hyperspace Movement in the Light of the Evolution of New Psychic Faculties and an Inquiry into the Genesis and Essential Nature of Space&quot;,&quot;Topics&quot;:[&quot;Hyperspace&quot;],&quot;Primary&quot;:&quot;45691.htm&quot;,&quot;CreatorNames&quot;:[&quot;Browne, Robert T.&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;45691&quot;});" class='title'>The Mystery of Space -<br><span class='subtitle'>A Study of the Hyperspace Movement in the Light of the Evolution of New Psychic Faculties and an Inquiry into the Genesis and Essential Nature of Space</span></a>
+<div class='author'>Browne, Robert T.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46815, {&quot;Title&quot;:&quot;William Oughtred: A Great Seventeenth-Century Teacher of Mathematics&quot;,&quot;Topics&quot;:[&quot;Mathematicians -- Biography&quot;,&quot;Oughtred, William, 1575-1660&quot;,&quot;Mathematics -- Study and teaching -- History -- 17th century&quot;],&quot;Primary&quot;:&quot;46815.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cajori, Florian, 1859-1930&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;46815&quot;});" class='title'>William Oughtred:<br><span class='subtitle'>A Great Seventeenth-Century Teacher of Mathematics</span></a>
+<div class='author'>Cajori, Florian, 1859-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48312, {&quot;Title&quot;:&quot;Die Grundlagen der Arithmetik - Eine logische mathematische Untersuchung über den Begriff der Zahl&quot;,&quot;Topics&quot;:[&quot;Number concept&quot;,&quot;Arithmetic -- Foundations&quot;],&quot;Primary&quot;:&quot;48312.htm&quot;,&quot;CreatorNames&quot;:[&quot;Frege, Gottlob, 1848-1925&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;48312&quot;});" class='title'>Die Grundlagen der Arithmetik -<br><span class='subtitle'>Eine logische mathematische Untersuchung über den Begriff der Zahl</span></a>
+<div class='author'>Frege, Gottlob, 1848-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49289, {&quot;Title&quot;:&quot;Scientific Romances (First Series)&quot;,&quot;Topics&quot;:[&quot;Fourth dimension&quot;],&quot;Primary&quot;:&quot;49289.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hinton, Charles Howard, 1853-1907&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;49289&quot;});" class='title'>Scientific Romances (First Series)</a>
+<div class='author'>Hinton, Charles Howard, 1853-1907</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50340, {&quot;Title&quot;:&quot;Elémens de la philosophie de Neuton: Mis à la portée de tout le monde&quot;,&quot;Topics&quot;:[&quot;Mathematics -- Early works to 1800&quot;,&quot;Science -- Early works to 1800&quot;,&quot;Physics -- Early works to 1800&quot;,&quot;Newton, Isaac, Sir, 1642-1727&quot;],&quot;Primary&quot;:&quot;50340.htm&quot;,&quot;CreatorNames&quot;:[&quot;Voltaire, 1694-1778&quot;],&quot;LoCC&quot;:[&quot;QA&quot;,&quot;QC&quot;],&quot;PG_ID&quot;:&quot;50340&quot;});" class='title'>Elémens de la philosophie de Neuton:<br><span class='subtitle'>Mis à la portée de tout le monde</span></a>
+<div class='author'>Voltaire, 1694-1778</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50468, {&quot;Title&quot;:&quot;The Oak Ridge ALGOL Compiler for the Control Data Corporation 1604 - Preliminary Programmer&#39;s Manual&quot;,&quot;Topics&quot;:[&quot;ALGOL (Computer program language)&quot;],&quot;Primary&quot;:&quot;50468.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bumgarner, L. L.&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;50468&quot;});" class='title'>The Oak Ridge ALGOL Compiler for the Control Data Corporation 1604 -<br><span class='subtitle'>Preliminary Programmer's Manual</span></a>
+<div class='author'>Bumgarner, L. L.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5192, {&quot;Title&quot;:&quot;On a Dynamical Top, for exhibiting the phenomena of the motion of a system of invariable form about a fixed point, with some suggestions as to the Earth&#39;s motion&quot;,&quot;Topics&quot;:[&quot;Force and energy&quot;,&quot;Motion&quot;],&quot;Primary&quot;:&quot;5192.htm&quot;,&quot;CreatorNames&quot;:[&quot;Maxwell, James Clerk, 1831-1879&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;5192&quot;});" class='title'>On a Dynamical Top, for exhibiting the phenomena of the motion of a system of invariable form about a fixed point, with some suggestions as to the Earth's motion</a>
+<div class='author'>Maxwell, James Clerk, 1831-1879</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52052, {&quot;Title&quot;:&quot;The Puzzle King - Amusing arithmetic, book-keeping blunders, commercial comicalities, curious \&quot;catches\&quot;, peculiar problems, perplexing paradoxes, quaint questions, queer quibbles, school stories, interesting items, tricks with figures, cards, draughts, dice, dominoes, etc., etc., etc.&quot;,&quot;Topics&quot;:[&quot;Amusements&quot;,&quot;Mathematical recreations&quot;,&quot;Puzzles&quot;],&quot;Primary&quot;:&quot;52052.htm&quot;,&quot;CreatorNames&quot;:[&quot;Scott, John&quot;],&quot;LoCC&quot;:[&quot;GV&quot;,&quot;QA&quot;],&quot;PG_ID&quot;:&quot;52052&quot;});" class='title'>The Puzzle King -<br><span class='subtitle'>Amusing arithmetic, book-keeping blunders, commercial comicalities, curious "catches", peculiar problems, perplexing paradoxes, quaint questions, queer quibbles, school stories, interesting items, tricks with figures, cards, draughts, dice, dominoes, etc., etc., etc.</span></a>
+<div class='author'>Scott, John</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52091, {&quot;Title&quot;:&quot;An essay on the foundations of geometry&quot;,&quot;Topics&quot;:[&quot;Geometry -- Foundations&quot;],&quot;Primary&quot;:&quot;52091.htm&quot;,&quot;CreatorNames&quot;:[&quot;Russell, Bertrand, 1872-1970&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;52091&quot;});" class='title'>An essay on the foundations of geometry</a>
+<div class='author'>Russell, Bertrand, 1872-1970</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53161, {&quot;Title&quot;:&quot;A View of Sir Isaac Newton&#39;s Philosophy&quot;,&quot;Topics&quot;:[&quot;Newton, Isaac, 1642-1727. Principia&quot;],&quot;Primary&quot;:&quot;53161.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pemberton, Henry, 1694-1771&quot;,&quot;Glover, Richard, 1712-1785 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;53161&quot;});" class='title'>A View of Sir Isaac Newton's Philosophy</a>
+<div class='author'>Pemberton, Henry, 1694-1771, Glover, Richard, 1712-1785 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54300, {&quot;Title&quot;:&quot;Marks&#39; first lessons in geometry - In two parts. Objectively presented, and designed for the use of primary classes in grammar schools, academies, etc.&quot;,&quot;Topics&quot;:[&quot;Geometry -- Study and teaching&quot;],&quot;Primary&quot;:&quot;54300.htm&quot;,&quot;CreatorNames&quot;:[&quot;Marks, Bernhard, 1832-1913&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;54300&quot;});" class='title'>Marks' first lessons in geometry -<br><span class='subtitle'>In two parts. Objectively presented, and designed for the use of primary classes in grammar schools, academies, etc.</span></a>
+<div class='author'>Marks, Bernhard, 1832-1913</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54360, {&quot;Title&quot;:&quot;The Silicon Jungle&quot;,&quot;Topics&quot;:[&quot;Computers -- Miscellanea&quot;],&quot;Primary&quot;:&quot;54360.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rothman, David H.&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;54360&quot;});" class='title'>The Silicon Jungle</a>
+<div class='author'>Rothman, David H.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57359, {&quot;Title&quot;:&quot;The Logic of Chance, 3rd edition - An Essay on the Foundations and Province of the Theory of Probability, With Especial Reference to Its Logical Bearings and Its Application to Moral and Social Science and to Statistics&quot;,&quot;Topics&quot;:[&quot;Science -- Methodology&quot;,&quot;Logic, Symbolic and mathematical&quot;,&quot;Probabilities&quot;,&quot;Chance&quot;],&quot;Primary&quot;:&quot;57359.htm&quot;,&quot;CreatorNames&quot;:[&quot;Venn, John, 1834-1923&quot;],&quot;LoCC&quot;:[&quot;BC&quot;,&quot;QA&quot;],&quot;PG_ID&quot;:&quot;57359&quot;});" class='title'>The Logic of Chance, 3rd edition -<br><span class='subtitle'>An Essay on the Foundations and Province of the Theory of Probability, With Especial Reference to Its Logical Bearings and Its Application to Moral and Social Science and to Statistics</span></a>
+<div class='author'>Venn, John, 1834-1923</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57532, {&quot;Title&quot;:&quot;Passages from the Life of a Philosopher&quot;,&quot;Topics&quot;:[&quot;Mathematicians -- Great Britain -- Biography&quot;,&quot;Babbage, Charles, 1791-1871&quot;],&quot;Primary&quot;:&quot;57532.htm&quot;,&quot;CreatorNames&quot;:[&quot;Babbage, Charles, 1791-1871&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;57532&quot;});" class='title'>Passages from the Life of a Philosopher</a>
+<div class='author'>Babbage, Charles, 1791-1871</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5768, {&quot;Title&quot;:&quot;Free as in Freedom: Richard Stallman&#39;s Crusade for Free Software&quot;,&quot;Topics&quot;:[&quot;Stallman, Richard&quot;,&quot;Free Software Foundation (Cambridge, Mass.)&quot;,&quot;Computer programmers -- United States -- Biography&quot;,&quot;Computer hackers -- United States -- Biography&quot;,&quot;Open source software&quot;],&quot;Primary&quot;:&quot;5768.txt&quot;,&quot;CreatorNames&quot;:[&quot;Williams, Sam, 1969-&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;5768&quot;});" class='title'>Free as in Freedom:<br><span class='subtitle'>Richard Stallman's Crusade for Free Software</span></a>
+<div class='author'>Williams, Sam, 1969-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58881, {&quot;Title&quot;:&quot;A Philosophical Essay on Probabilities&quot;,&quot;Topics&quot;:[&quot;Probabilities&quot;],&quot;Primary&quot;:&quot;58881.htm&quot;,&quot;CreatorNames&quot;:[&quot;Laplace, Pierre Simon, marquis de, 1749-1827&quot;,&quot;Emory, Frederick Lincoln, 1867- [Translator]&quot;,&quot;Truscott, Frederick Wilson, 1870- [Translator]&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;58881&quot;});" class='title'>A Philosophical Essay on Probabilities</a>
+<div class='author'>Laplace, Pierre Simon, marquis de, 1749-1827, Emory, Frederick Lincoln, 1867- [Translator], Truscott, Frederick Wilson, 1870- [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60607, {&quot;Title&quot;:&quot;A New Era of Thought&quot;,&quot;Topics&quot;:[&quot;Fourth dimension&quot;],&quot;Primary&quot;:&quot;60607.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hinton, Charles Howard, 1853-1907&quot;,&quot;Falk, H. John [Author of introduction, etc.]&quot;,&quot;Stott, Alicia Boole, 1860-1940 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;60607&quot;});" class='title'>A New Era of Thought</a>
+<div class='author'>Hinton, Charles Howard, 1853-1907, Falk, H. John [Author of introduction, etc.], Stott, Alicia Boole, 1860-1940 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62131, {&quot;Title&quot;:&quot;Geschichte der Mathematik im Altertum in Verbindung mit antiker Kulturgeschichte&quot;,&quot;Topics&quot;:[&quot;Mathematics -- History&quot;,&quot;Civilization, Ancient&quot;,&quot;Mathematics, Ancient&quot;],&quot;Primary&quot;:&quot;62131.htm&quot;,&quot;CreatorNames&quot;:[&quot;Simon, Max, 1844-1918&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;62131&quot;});" class='title'>Geschichte der Mathematik im Altertum in Verbindung mit antiker Kulturgeschichte</a>
+<div class='author'>Simon, Max, 1844-1918</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63, {&quot;Title&quot;:&quot;The Number \&quot;\&quot;e\&quot;\&quot;&quot;,&quot;Topics&quot;:[&quot;Mathematics&quot;,&quot;Mathematical constants&quot;],&quot;Primary&quot;:&quot;63.txt&quot;,&quot;CreatorNames&quot;:[&quot;Unknown&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;63&quot;});" class='title'>The Number "e"</a>
+<div class='author'>Unknown</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(633, {&quot;Title&quot;:&quot;The Golden Mean or Ratio[(1+sqrt(5))/2] - To 20,000 places&quot;,&quot;Topics&quot;:[&quot;Mathematics&quot;,&quot;Mathematical constants&quot;,&quot;Golden section&quot;],&quot;Primary&quot;:&quot;633.txt&quot;,&quot;CreatorNames&quot;:&quot;&quot;,&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;633&quot;});" class='title'>The Golden Mean or Ratio[(1+sqrt(5))/2] -<br><span class='subtitle'>To 20,000 places</span></a>
+<div class='author'></div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(634, {&quot;Title&quot;:&quot;Miscellaneous Mathematical Constants&quot;,&quot;Topics&quot;:[&quot;Mathematical constants&quot;],&quot;Primary&quot;:&quot;634.txt&quot;,&quot;CreatorNames&quot;:[&quot;Plouffe, Simon, 1956- [Editor]&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;634&quot;});" class='title'>Miscellaneous Mathematical Constants</a>
+<div class='author'>Plouffe, Simon, 1956- [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65078, {&quot;Title&quot;:&quot;How to Become a Lightning Calculator&quot;,&quot;Topics&quot;:[&quot;Mental arithmetic&quot;],&quot;Primary&quot;:&quot;65078.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;65078&quot;});" class='title'>How to Become a Lightning Calculator</a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6527, {&quot;Title&quot;:&quot;Debian GNU/Linux : Guide to Installation and Usage&quot;,&quot;Topics&quot;:[&quot;Linux&quot;,&quot;Operating systems (Computers)&quot;],&quot;Primary&quot;:&quot;6527.htm&quot;,&quot;CreatorNames&quot;:[&quot;Goerzen, John&quot;,&quot;Othman, Ossama&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;6527&quot;});" class='title'>Debian GNU/Linux :<br><span class='subtitle'>Guide to Installation and Usage</span></a>
+<div class='author'>Goerzen, John, Othman, Ossama</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67153, {&quot;Title&quot;:&quot;The Fourth Dimension&quot;,&quot;Topics&quot;:[&quot;Fourth dimension&quot;],&quot;Primary&quot;:&quot;67153.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hinton, Charles Howard, 1853-1907&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;67153&quot;});" class='title'>The Fourth Dimension</a>
+<div class='author'>Hinton, Charles Howard, 1853-1907</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(672, {&quot;Title&quot;:&quot;The Secret Guide to Computers&quot;,&quot;Topics&quot;:[&quot;Microcomputers&quot;],&quot;Primary&quot;:&quot;672.txt&quot;,&quot;CreatorNames&quot;:[&quot;Walter, Russ, 1947-&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;672&quot;});" class='title'>The Secret Guide to Computers</a>
+<div class='author'>Walter, Russ, 1947-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(682, {&quot;Title&quot;:&quot;Catalan&#39;s Constant [Ramanujan&#39;s Formula]&quot;,&quot;Topics&quot;:[&quot;Mathematical constants&quot;],&quot;Primary&quot;:&quot;682.txt&quot;,&quot;CreatorNames&quot;:[&quot;Fee, Greg&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;682&quot;});" class='title'>Catalan's Constant [Ramanujan's Formula]</a>
+<div class='author'>Fee, Greg</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68662, {&quot;Title&quot;:&quot;Elements of arithmetic&quot;,&quot;Topics&quot;:[&quot;Algebra&quot;,&quot;Arithmetic -- Early works to 1900&quot;],&quot;Primary&quot;:&quot;68662.htm&quot;,&quot;CreatorNames&quot;:[&quot;De Morgan, Augustus, 1806-1871&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;68662&quot;});" class='title'>Elements of arithmetic</a>
+<div class='author'>De Morgan, Augustus, 1806-1871</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68991, {&quot;Title&quot;:&quot;Giant brains; or, Machines that think&quot;,&quot;Topics&quot;:[&quot;Computers -- Popular works&quot;],&quot;Primary&quot;:&quot;68991.htm&quot;,&quot;CreatorNames&quot;:[&quot;Berkeley, Edmund Callis, 1909-1988&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;68991&quot;});" class='title'>Giant brains;<br><span class='subtitle'>or, Machines that think</span></a>
+<div class='author'>Berkeley, Edmund Callis, 1909-1988</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69, {&quot;Title&quot;:&quot;The 32nd Mersenne Prime - Predicted by Mersenne&quot;,&quot;Topics&quot;:[&quot;Numbers, Prime&quot;,&quot;Number theory&quot;],&quot;Primary&quot;:&quot;69.txt&quot;,&quot;CreatorNames&quot;:[&quot;Slowinski, David&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;69&quot;});" class='title'>The 32nd Mersenne Prime -<br><span class='subtitle'>Predicted by Mersenne</span></a>
+<div class='author'>Slowinski, David</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69386, {&quot;Title&quot;:&quot;Origin of modern calculating machines&quot;,&quot;Topics&quot;:[&quot;Calculators&quot;],&quot;Primary&quot;:&quot;69386.htm&quot;,&quot;CreatorNames&quot;:[&quot;Turck, J. A. V.&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;69386&quot;});" class='title'>Origin of modern calculating machines</a>
+<div class='author'>Turck, J. A. V.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(729, {&quot;Title&quot;:&quot;Hackers, Heroes of the Computer Revolution. Chapters 1 and 2&quot;,&quot;Topics&quot;:[&quot;Computer hackers&quot;,&quot;Computer programming&quot;],&quot;Primary&quot;:&quot;729.txt&quot;,&quot;CreatorNames&quot;:[&quot;Levy, Steven, 1951-&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;729&quot;});" class='title'>Hackers, Heroes of the Computer Revolution. Chapters 1 and 2</a>
+<div class='author'>Levy, Steven, 1951-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(744, {&quot;Title&quot;:&quot;The Golden Mean&quot;,&quot;Topics&quot;:[&quot;Mathematics&quot;],&quot;Primary&quot;:&quot;744.txt&quot;,&quot;CreatorNames&quot;:[&quot;Bonnell, Jerry T.&quot;,&quot;Nemiroff, Robert J.&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;744&quot;});" class='title'>The Golden Mean</a>
+<div class='author'>Bonnell, Jerry T., Nemiroff, Robert J.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7818, {&quot;Title&quot;:&quot;Niels Henrik Abel&quot;,&quot;Topics&quot;:[&quot;Abel, Niels Henrik, 1802-1829&quot;,&quot;Mathematicians -- Biography&quot;],&quot;Primary&quot;:&quot;7818.txt&quot;,&quot;CreatorNames&quot;:[&quot;Mittag-Leffler, Magnus Gustaf, 1846-1927&quot;],&quot;LoCC&quot;:[&quot;AS&quot;,&quot;QA&quot;],&quot;PG_ID&quot;:&quot;7818&quot;});" class='title'>Niels Henrik Abel</a>
+<div class='author'>Mittag-Leffler, Magnus Gustaf, 1846-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(812, {&quot;Title&quot;:&quot;Catalan&#39;s Constant to 1,500,000 Places&quot;,&quot;Topics&quot;:[&quot;Mathematical constants&quot;],&quot;Primary&quot;:&quot;812.txt&quot;,&quot;CreatorNames&quot;:&quot;&quot;,&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;812&quot;});" class='title'>Catalan's Constant to 1,500,000 Places</a>
+<div class='author'></div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(929, {&quot;Title&quot;:&quot;The Real Cyberpunk Fakebook&quot;,&quot;Topics&quot;:[&quot;Computer hackers&quot;,&quot;Computers and civilization&quot;],&quot;Primary&quot;:&quot;929.txt&quot;,&quot;CreatorNames&quot;:[&quot;Nagel, Bart&quot;,&quot;Sirius, R. U., 1952-&quot;,&quot;St. Jude&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;929&quot;});" class='title'>The Real Cyberpunk Fakebook</a>
+<div class='author'>Nagel, Bart, Sirius, R. U., 1952-, St. Jude</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(97, {&quot;Title&quot;:&quot;Flatland: A Romance of Many Dimensions&quot;,&quot;Topics&quot;:[&quot;Fourth dimension&quot;],&quot;Primary&quot;:&quot;97.htm&quot;,&quot;CreatorNames&quot;:[&quot;Abbott, Edwin Abbott, 1838-1926&quot;],&quot;LoCC&quot;:[&quot;QA&quot;],&quot;PG_ID&quot;:&quot;97&quot;});" class='title'>Flatland:<br><span class='subtitle'>A Romance of Many Dimensions</span></a>
+<div class='author'>Abbott, Edwin Abbott, 1838-1926</div>
+</div>
+</ul></div>
+</body></html>

@@ -1,0 +1,330 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Social history and conditions, Social problems, Social reform (HN)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(1140, {&quot;Title&quot;:&quot;Latter-Day Pamphlets&quot;,&quot;Topics&quot;:[&quot;Social problems&quot;,&quot;Great Britain -- Social conditions -- 19th century&quot;],&quot;Primary&quot;:&quot;1140.htm&quot;,&quot;CreatorNames&quot;:[&quot;Carlyle, Thomas, 1795-1881&quot;],&quot;LoCC&quot;:[&quot;HN&quot;],&quot;PG_ID&quot;:&quot;1140&quot;});" class='title'>Latter-Day Pamphlets</a>
+<div class='author'>Carlyle, Thomas, 1795-1881</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(1187, {&quot;Title&quot;:&quot;War of the Classes&quot;,&quot;Topics&quot;:[&quot;Social problems&quot;,&quot;Socialism -- United States&quot;,&quot;Working class -- United States&quot;],&quot;Primary&quot;:&quot;1187.htm&quot;,&quot;CreatorNames&quot;:[&quot;London, Jack, 1876-1916&quot;],&quot;LoCC&quot;:[&quot;HN&quot;],&quot;PG_ID&quot;:&quot;1187&quot;});" class='title'>War of the Classes</a>
+<div class='author'>London, Jack, 1876-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15487, {&quot;Title&quot;:&quot;Democracy and Social Ethics&quot;,&quot;Topics&quot;:[&quot;Social sciences&quot;,&quot;United States -- Social conditions -- 1865-1918&quot;,&quot;Social ethics&quot;],&quot;Primary&quot;:&quot;15487.htm&quot;,&quot;CreatorNames&quot;:[&quot;Addams, Jane, 1860-1935&quot;],&quot;LoCC&quot;:[&quot;HN&quot;],&quot;PG_ID&quot;:&quot;15487&quot;});" class='title'>Democracy and Social Ethics</a>
+<div class='author'>Addams, Jane, 1860-1935</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15759, {&quot;Title&quot;:&quot;Crowds - A Moving-Picture of Democracy&quot;,&quot;Topics&quot;:[&quot;Crowds&quot;,&quot;Social problems&quot;],&quot;Primary&quot;:&quot;15759.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lee, Gerald Stanley, 1862-1944&quot;],&quot;LoCC&quot;:[&quot;HN&quot;],&quot;PG_ID&quot;:&quot;15759&quot;});" class='title'>Crowds -<br><span class='subtitle'>A Moving-Picture of Democracy</span></a>
+<div class='author'>Lee, Gerald Stanley, 1862-1944</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(1717, {&quot;Title&quot;:&quot;What&#39;s Wrong with the World&quot;,&quot;Topics&quot;:[&quot;Social problems&quot;],&quot;Primary&quot;:&quot;1717.htm&quot;,&quot;CreatorNames&quot;:[&quot;Chesterton, G. K. (Gilbert Keith), 1874-1936&quot;],&quot;LoCC&quot;:[&quot;HN&quot;],&quot;PG_ID&quot;:&quot;1717&quot;});" class='title'>What's Wrong with the World</a>
+<div class='author'>Chesterton, G. K. (Gilbert Keith), 1874-1936</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18603, {&quot;Title&quot;:&quot;What Social Classes Owe to Each Other&quot;,&quot;Topics&quot;:[&quot;Economics&quot;,&quot;Social ethics&quot;],&quot;Primary&quot;:&quot;18603.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sumner, William Graham, 1840-1910&quot;],&quot;LoCC&quot;:[&quot;HN&quot;],&quot;PG_ID&quot;:&quot;18603&quot;});" class='title'>What Social Classes Owe to Each Other</a>
+<div class='author'>Sumner, William Graham, 1840-1910</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19229, {&quot;Title&quot;:&quot;Anticipations - Of the Reaction of Mechanical and Scientific Progress upon Human life and Thought&quot;,&quot;Topics&quot;:[&quot;Civilization&quot;,&quot;Twentieth century -- Forecasts&quot;,&quot;Communication and traffic&quot;,&quot;Social prediction&quot;],&quot;Primary&quot;:&quot;19229.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wells, H. G. (Herbert George), 1866-1946&quot;],&quot;LoCC&quot;:[&quot;HN&quot;],&quot;PG_ID&quot;:&quot;19229&quot;});" class='title'>Anticipations -<br><span class='subtitle'>Of the Reaction of Mechanical and Scientific Progress upon Human life and Thought</span></a>
+<div class='author'>Wells, H. G. (Herbert George), 1866-1946</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19248, {&quot;Title&quot;:&quot;Opinions sociales&quot;,&quot;Topics&quot;:[&quot;Socialism&quot;,&quot;France -- Social conditions&quot;],&quot;Primary&quot;:&quot;19248.txt&quot;,&quot;CreatorNames&quot;:[&quot;France, Anatole, 1844-1924&quot;],&quot;LoCC&quot;:[&quot;HN&quot;,&quot;PQ&quot;],&quot;PG_ID&quot;:&quot;19248&quot;});" class='title'>Opinions sociales</a>
+<div class='author'>France, Anatole, 1844-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19755, {&quot;Title&quot;:&quot;Gesammelte Abhandlungen III - Vorträge, Reden und Schriften sozialpolitischen und verwandten Inhalts&quot;,&quot;Topics&quot;:[&quot;Germany -- Social policy -- History&quot;],&quot;Primary&quot;:&quot;19755.htm&quot;,&quot;CreatorNames&quot;:[&quot;Abbe, Ernst, 1840-1905&quot;],&quot;LoCC&quot;:[&quot;DD&quot;,&quot;HN&quot;],&quot;PG_ID&quot;:&quot;19755&quot;});" class='title'>Gesammelte Abhandlungen III -<br><span class='subtitle'>Vorträge, Reden und Schriften sozialpolitischen und verwandten Inhalts</span></a>
+<div class='author'>Abbe, Ernst, 1840-1905</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20125, {&quot;Title&quot;:&quot;A Preface to Politics&quot;,&quot;Topics&quot;:[&quot;United States -- Politics and government&quot;,&quot;Social problems -- United States&quot;],&quot;Primary&quot;:&quot;20125.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lippmann, Walter, 1889-1974&quot;],&quot;LoCC&quot;:[&quot;HN&quot;],&quot;PG_ID&quot;:&quot;20125&quot;});" class='title'>A Preface to Politics</a>
+<div class='author'>Lippmann, Walter, 1889-1974</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20936, {&quot;Title&quot;:&quot;The New Society&quot;,&quot;Topics&quot;:[&quot;Socialism&quot;,&quot;Reconstruction (1914-1939) -- Germany&quot;,&quot;Germany -- Social conditions&quot;],&quot;Primary&quot;:&quot;20936.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rathenau, Walther, 1867-1922&quot;,&quot;Windham, Arthur [Translator]&quot;],&quot;LoCC&quot;:[&quot;HN&quot;],&quot;PG_ID&quot;:&quot;20936&quot;});" class='title'>The New Society</a>
+<div class='author'>Rathenau, Walther, 1867-1922, Windham, Arthur [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2134, {&quot;Title&quot;:&quot;Utopia of Usurers and Other Essays&quot;,&quot;Topics&quot;:[&quot;Great Britain -- Social conditions&quot;,&quot;Great Britain -- Politics and government&quot;],&quot;Primary&quot;:&quot;2134.htm&quot;,&quot;CreatorNames&quot;:[&quot;Chesterton, G. K. (Gilbert Keith), 1874-1936&quot;],&quot;LoCC&quot;:[&quot;HN&quot;],&quot;PG_ID&quot;:&quot;2134&quot;});" class='title'>Utopia of Usurers and Other Essays</a>
+<div class='author'>Chesterton, G. K. (Gilbert Keith), 1874-1936</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(21413, {&quot;Title&quot;:&quot;Où va le monde? - Considérations philosophiques sur l&#39;organisation sociale de demain&quot;,&quot;Topics&quot;:[&quot;Social history -- 20th century&quot;],&quot;Primary&quot;:&quot;21413.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rathenau, Walther, 1867-1922&quot;,&quot;Jankélévitch, S. (Samuel), 1869-1951 [Translator]&quot;],&quot;LoCC&quot;:[&quot;HN&quot;],&quot;PG_ID&quot;:&quot;21413&quot;});" class='title'>Où va le monde? -<br><span class='subtitle'>Considérations philosophiques sur l'organisation sociale de demain</span></a>
+<div class='author'>Rathenau, Walther, 1867-1922, Jankélévitch, S. (Samuel), 1869-1951 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22241, {&quot;Title&quot;:&quot;The Ghost in the White House - Some suggestions as to how a hundred million people (who are supposed in a vague, helpless way to haunt the white house) can make themselves felt with a president, how they can back him up, express themselves to him, be expressed by him, and get what they want&quot;,&quot;Topics&quot;:[&quot;United States -- Politics and government&quot;,&quot;Democracy&quot;],&quot;Primary&quot;:&quot;22241.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lee, Gerald Stanley, 1862-1944&quot;],&quot;LoCC&quot;:[&quot;HN&quot;],&quot;PG_ID&quot;:&quot;22241&quot;});" class='title'>The Ghost in the White House -<br><span class='subtitle'>Some suggestions as to how a hundred million people (who are supposed in a vague, helpless way to haunt the white house) can make themselves felt with a president, how they can back him up, express themselves to him, be expressed by him, and get what they want</span></a>
+<div class='author'>Lee, Gerald Stanley, 1862-1944</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22651, {&quot;Title&quot;:&quot;The Unsolved Riddle of Social Justice&quot;,&quot;Topics&quot;:[&quot;Socialism&quot;,&quot;Social problems&quot;,&quot;Economics&quot;],&quot;Primary&quot;:&quot;22651.htm&quot;,&quot;CreatorNames&quot;:[&quot;Leacock, Stephen, 1869-1944&quot;],&quot;LoCC&quot;:[&quot;HN&quot;],&quot;PG_ID&quot;:&quot;22651&quot;});" class='title'>The Unsolved Riddle of Social Justice</a>
+<div class='author'>Leacock, Stephen, 1869-1944</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2611, {&quot;Title&quot;:&quot;Confiscation; An Outline&quot;,&quot;Topics&quot;:[&quot;United States -- Social conditions -- 1865-1918&quot;,&quot;Confiscations&quot;],&quot;Primary&quot;:&quot;2611.txt&quot;,&quot;CreatorNames&quot;:[&quot;Greenwood, William&quot;],&quot;LoCC&quot;:[&quot;HN&quot;],&quot;PG_ID&quot;:&quot;2611&quot;});" class='title'>Confiscation;<br><span class='subtitle'>An Outline</span></a>
+<div class='author'>Greenwood, William</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27518, {&quot;Title&quot;:&quot;Change in the Village&quot;,&quot;Topics&quot;:[&quot;Villages -- England -- History -- 19th century&quot;,&quot;Peasants -- England -- History -- 19th century&quot;,&quot;Working class -- England -- History -- 19th century&quot;,&quot;England -- Rural conditions&quot;],&quot;Primary&quot;:&quot;27518.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sturt, George, 1863-1927&quot;],&quot;LoCC&quot;:[&quot;HN&quot;],&quot;PG_ID&quot;:&quot;27518&quot;});" class='title'>Change in the Village</a>
+<div class='author'>Sturt, George, 1863-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28315, {&quot;Title&quot;:&quot;One Way Out: A Middle-class New-Englander Emigrates to America&quot;,&quot;Topics&quot;:[&quot;United States -- Social conditions -- 1865-1918&quot;],&quot;Primary&quot;:&quot;28315.htm&quot;,&quot;CreatorNames&quot;:[&quot;Carleton, William, 1876-1945&quot;],&quot;LoCC&quot;:[&quot;HN&quot;],&quot;PG_ID&quot;:&quot;28315&quot;});" class='title'>One Way Out:<br><span class='subtitle'>A Middle-class New-Englander Emigrates to America</span></a>
+<div class='author'>Carleton, William, 1876-1945</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28494, {&quot;Title&quot;:&quot;Die Kernpunkte der sozialen Frage in den Lebensnotwendigkeiten der Gegenwart und Zukunft&quot;,&quot;Topics&quot;:[&quot;Social sciences&quot;],&quot;Primary&quot;:&quot;28494.htm&quot;,&quot;CreatorNames&quot;:[&quot;Steiner, Rudolf, 1861-1925&quot;],&quot;LoCC&quot;:[&quot;HN&quot;],&quot;PG_ID&quot;:&quot;28494&quot;});" class='title'>Die Kernpunkte der sozialen Frage in den Lebensnotwendigkeiten der Gegenwart und Zukunft</a>
+<div class='author'>Steiner, Rudolf, 1861-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29393, {&quot;Title&quot;:&quot;Social Justice Without Socialism&quot;,&quot;Topics&quot;:[&quot;United States -- Social conditions -- 1865-1918&quot;,&quot;Industrial policy&quot;],&quot;Primary&quot;:&quot;29393.htm&quot;,&quot;CreatorNames&quot;:[&quot;Clark, John Bates, 1847-1938&quot;],&quot;LoCC&quot;:[&quot;HN&quot;],&quot;PG_ID&quot;:&quot;29393&quot;});" class='title'>Social Justice Without Socialism</a>
+<div class='author'>Clark, John Bates, 1847-1938</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30432, {&quot;Title&quot;:&quot;A Modern Symposium&quot;,&quot;Topics&quot;:[&quot;Social problems&quot;,&quot;Great Britain -- Social conditions&quot;],&quot;Primary&quot;:&quot;30432.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dickinson, G. Lowes (Goldsworthy Lowes), 1862-1932&quot;],&quot;LoCC&quot;:[&quot;HN&quot;],&quot;PG_ID&quot;:&quot;30432&quot;});" class='title'>A Modern Symposium</a>
+<div class='author'>Dickinson, G. Lowes (Goldsworthy Lowes), 1862-1932</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31508, {&quot;Title&quot;:&quot;Euthenics, the science of controllable environment - A plea for better living conditions as a first step toward higher human efficiency&quot;,&quot;Topics&quot;:[&quot;Euthenics&quot;],&quot;Primary&quot;:&quot;31508.htm&quot;,&quot;CreatorNames&quot;:[&quot;Richards, Ellen H. (Ellen Henrietta), 1842-1911&quot;],&quot;LoCC&quot;:[&quot;HN&quot;],&quot;PG_ID&quot;:&quot;31508&quot;});" class='title'>Euthenics, the science of controllable environment -<br><span class='subtitle'>A plea for better living conditions as a first step toward higher human efficiency</span></a>
+<div class='author'>Richards, Ellen H. (Ellen Henrietta), 1842-1911</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32405, {&quot;Title&quot;:&quot;Augusta Triumphans - Or, the Way to Make London the Most Flourishing City in the Universe&quot;,&quot;Topics&quot;:[&quot;London (England) -- Social conditions&quot;,&quot;Social problems -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;32405.htm&quot;,&quot;CreatorNames&quot;:[&quot;Defoe, Daniel, 1661?-1731&quot;],&quot;LoCC&quot;:[&quot;DA&quot;,&quot;HN&quot;],&quot;PG_ID&quot;:&quot;32405&quot;});" class='title'>Augusta Triumphans -<br><span class='subtitle'>Or, the Way to Make London the Most Flourishing City in the Universe</span></a>
+<div class='author'>Defoe, Daniel, 1661?-1731</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3540, {&quot;Title&quot;:&quot;The Census in Moscow&quot;,&quot;Topics&quot;:[&quot;Social problems&quot;,&quot;Moscow (Russia) -- Social conditions&quot;],&quot;Primary&quot;:&quot;3540.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tolstoy, Leo, graf, 1828-1910&quot;,&quot;Hapgood, Isabel Florence, 1850-1928 [Translator]&quot;],&quot;LoCC&quot;:[&quot;HN&quot;],&quot;PG_ID&quot;:&quot;3540&quot;});" class='title'>The Census in Moscow</a>
+<div class='author'>Tolstoy, Leo, graf, 1828-1910, Hapgood, Isabel Florence, 1850-1928 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3541, {&quot;Title&quot;:&quot;What to Do? Thoughts Evoked By the Census of Moscow&quot;,&quot;Topics&quot;:[&quot;Social problems&quot;,&quot;Moscow (Russia) -- Social conditions&quot;],&quot;Primary&quot;:&quot;3541.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tolstoy, Leo, graf, 1828-1910&quot;,&quot;Hapgood, Isabel Florence, 1850-1928 [Translator]&quot;],&quot;LoCC&quot;:[&quot;HN&quot;],&quot;PG_ID&quot;:&quot;3541&quot;});" class='title'>What to Do? Thoughts Evoked By the Census of Moscow</a>
+<div class='author'>Tolstoy, Leo, graf, 1828-1910, Hapgood, Isabel Florence, 1850-1928 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36014, {&quot;Title&quot;:&quot;Notes on Old Edinburgh&quot;,&quot;Topics&quot;:[&quot;Housing and health -- Scotland -- Edinburgh -- History -- 19th century -- Sources&quot;,&quot;Housing -- Scotland -- Edinburgh -- History -- 19th century -- Sources&quot;,&quot;Edinburgh (Scotland) -- Social conditions -- 19th century&quot;,&quot;Slums -- Scotland -- Edinburgh&quot;,&quot;Poor -- Scotland -- Edinburgh&quot;],&quot;Primary&quot;:&quot;36014.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bird, Isabella L. (Isabella Lucy), 1831-1904&quot;],&quot;LoCC&quot;:[&quot;DA&quot;,&quot;HN&quot;],&quot;PG_ID&quot;:&quot;36014&quot;});" class='title'>Notes on Old Edinburgh</a>
+<div class='author'>Bird, Isabella L. (Isabella Lucy), 1831-1904</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3630, {&quot;Title&quot;:&quot;What to Do? Thoughts Evoked by the Census of Moscow&quot;,&quot;Topics&quot;:[&quot;Social problems&quot;,&quot;Moscow (Russia) -- Social conditions&quot;],&quot;Primary&quot;:&quot;3630.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tolstoy, Leo, graf, 1828-1910&quot;,&quot;Hapgood, Isabel Florence, 1850-1928 [Translator]&quot;],&quot;LoCC&quot;:[&quot;HN&quot;],&quot;PG_ID&quot;:&quot;3630&quot;});" class='title'>What to Do? Thoughts Evoked by the Census of Moscow</a>
+<div class='author'>Tolstoy, Leo, graf, 1828-1910, Hapgood, Isabel Florence, 1850-1928 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36489, {&quot;Title&quot;:&quot;Modern Society&quot;,&quot;Topics&quot;:[&quot;Social history&quot;,&quot;United States -- Social conditions -- 1865-1918&quot;],&quot;Primary&quot;:&quot;36489.htm&quot;,&quot;CreatorNames&quot;:[&quot;Howe, Julia Ward, 1819-1910&quot;],&quot;LoCC&quot;:[&quot;HN&quot;],&quot;PG_ID&quot;:&quot;36489&quot;});" class='title'>Modern Society</a>
+<div class='author'>Howe, Julia Ward, 1819-1910</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38022, {&quot;Title&quot;:&quot;Nature and Culture&quot;,&quot;Topics&quot;:[&quot;Social problems&quot;,&quot;United States -- Social conditions -- 1865-1918&quot;],&quot;Primary&quot;:&quot;38022.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rice, Harvey, 1800-1891&quot;],&quot;LoCC&quot;:[&quot;HN&quot;],&quot;PG_ID&quot;:&quot;38022&quot;});" class='title'>Nature and Culture</a>
+<div class='author'>Rice, Harvey, 1800-1891</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38086, {&quot;Title&quot;:&quot;The Social Evolution of the Argentine Republic&quot;,&quot;Topics&quot;:[&quot;Argentina -- Social conditions&quot;,&quot;Argentina -- Civilization&quot;],&quot;Primary&quot;:&quot;38086.htm&quot;,&quot;CreatorNames&quot;:[&quot;Quesada, Ernesto, 1858-1934&quot;,&quot;Gil, Enrique, 1890- [Translator]&quot;,&quot;Register, Layton B. (Layton Bartol), 1882- [Translator]&quot;],&quot;LoCC&quot;:[&quot;HN&quot;,&quot;F&quot;],&quot;PG_ID&quot;:&quot;38086&quot;});" class='title'>The Social Evolution of the Argentine Republic</a>
+<div class='author'>Quesada, Ernesto, 1858-1934, Gil, Enrique, 1890- [Translator], Register, Layton B. (Layton Bartol), 1882- [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41969, {&quot;Title&quot;:&quot;Le Peuple / Nos Fils&quot;,&quot;Topics&quot;:[&quot;France -- Social conditions&quot;],&quot;Primary&quot;:&quot;41969.htm&quot;,&quot;CreatorNames&quot;:[&quot;Michelet, Jules, 1798-1874&quot;],&quot;LoCC&quot;:[&quot;HN&quot;],&quot;PG_ID&quot;:&quot;41969&quot;});" class='title'>Le Peuple / Nos Fils</a>
+<div class='author'>Michelet, Jules, 1798-1874</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4212, {&quot;Title&quot;:&quot;Culture and Anarchy&quot;,&quot;Topics&quot;:[&quot;Great Britain -- Social conditions -- 19th century&quot;,&quot;Culture&quot;],&quot;Primary&quot;:&quot;4212.txt&quot;,&quot;CreatorNames&quot;:[&quot;Arnold, Matthew, 1822-1888&quot;],&quot;LoCC&quot;:[&quot;HN&quot;],&quot;PG_ID&quot;:&quot;4212&quot;});" class='title'>Culture and Anarchy</a>
+<div class='author'>Arnold, Matthew, 1822-1888</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42985, {&quot;Title&quot;:&quot;Social Problems in Porto Rico&quot;,&quot;Topics&quot;:[&quot;Puerto Rico -- Social conditions&quot;],&quot;Primary&quot;:&quot;42985.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fleagle, Fred K.&quot;],&quot;LoCC&quot;:[&quot;HN&quot;],&quot;PG_ID&quot;:&quot;42985&quot;});" class='title'>Social Problems in Porto Rico</a>
+<div class='author'>Fleagle, Fred K.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4371, {&quot;Title&quot;:&quot;Jenseits der Schriftkultur — Band 1&quot;,&quot;Topics&quot;:[&quot;Literacy -- Social aspects&quot;,&quot;Sociolinguistics&quot;,&quot;Technology and civilization&quot;,&quot;Technology -- Social aspects&quot;,&quot;Computers and literacy&quot;,&quot;Social history&quot;,&quot;Information society&quot;,&quot;Oral history&quot;],&quot;Primary&quot;:&quot;4371.txt&quot;,&quot;CreatorNames&quot;:[&quot;Nadin, Mihai, 1938-&quot;],&quot;LoCC&quot;:[&quot;HN&quot;,&quot;T&quot;],&quot;PG_ID&quot;:&quot;4371&quot;});" class='title'>Jenseits der Schriftkultur — Band 1</a>
+<div class='author'>Nadin, Mihai, 1938-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4372, {&quot;Title&quot;:&quot;Jenseits der Schriftkultur — Band 2&quot;,&quot;Topics&quot;:[&quot;Literacy -- Social aspects&quot;,&quot;Sociolinguistics&quot;,&quot;Technology and civilization&quot;,&quot;Technology -- Social aspects&quot;,&quot;Social history&quot;,&quot;Information society&quot;,&quot;Oral history&quot;],&quot;Primary&quot;:&quot;4372.txt&quot;,&quot;CreatorNames&quot;:[&quot;Nadin, Mihai, 1938-&quot;],&quot;LoCC&quot;:[&quot;HN&quot;,&quot;T&quot;],&quot;PG_ID&quot;:&quot;4372&quot;});" class='title'>Jenseits der Schriftkultur — Band 2</a>
+<div class='author'>Nadin, Mihai, 1938-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4373, {&quot;Title&quot;:&quot;Jenseits der Schriftkultur — Band 3&quot;,&quot;Topics&quot;:[&quot;Literacy -- Social aspects&quot;,&quot;Sociolinguistics&quot;,&quot;Technology and civilization&quot;,&quot;Technology -- Social aspects&quot;,&quot;Computers and literacy&quot;,&quot;Social history&quot;,&quot;Information society&quot;,&quot;Oral history&quot;],&quot;Primary&quot;:&quot;4373.txt&quot;,&quot;CreatorNames&quot;:[&quot;Nadin, Mihai, 1938-&quot;],&quot;LoCC&quot;:[&quot;HN&quot;,&quot;T&quot;],&quot;PG_ID&quot;:&quot;4373&quot;});" class='title'>Jenseits der Schriftkultur — Band 3</a>
+<div class='author'>Nadin, Mihai, 1938-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4374, {&quot;Title&quot;:&quot;Jenseits der Schriftkultur — Band 4&quot;,&quot;Topics&quot;:[&quot;Literacy -- Social aspects&quot;,&quot;Sociolinguistics&quot;,&quot;Technology and civilization&quot;,&quot;Technology -- Social aspects&quot;,&quot;Computers and literacy&quot;,&quot;Social history&quot;,&quot;Information society&quot;,&quot;Oral history&quot;],&quot;Primary&quot;:&quot;4374.txt&quot;,&quot;CreatorNames&quot;:[&quot;Nadin, Mihai, 1938-&quot;],&quot;LoCC&quot;:[&quot;HN&quot;,&quot;T&quot;],&quot;PG_ID&quot;:&quot;4374&quot;});" class='title'>Jenseits der Schriftkultur — Band 4</a>
+<div class='author'>Nadin, Mihai, 1938-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4375, {&quot;Title&quot;:&quot;Jenseits der Schriftkultur — Band 5&quot;,&quot;Topics&quot;:[&quot;Literacy -- Social aspects&quot;,&quot;Sociolinguistics&quot;,&quot;Technology and civilization&quot;,&quot;Technology -- Social aspects&quot;,&quot;Computers and literacy&quot;,&quot;Social history&quot;,&quot;Information society&quot;,&quot;Oral history&quot;],&quot;Primary&quot;:&quot;4375.txt&quot;,&quot;CreatorNames&quot;:[&quot;Nadin, Mihai, 1938-&quot;],&quot;LoCC&quot;:[&quot;HN&quot;,&quot;T&quot;],&quot;PG_ID&quot;:&quot;4375&quot;});" class='title'>Jenseits der Schriftkultur — Band 5</a>
+<div class='author'>Nadin, Mihai, 1938-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44821, {&quot;Title&quot;:&quot;Yhteiskunnallisen kysymyksen ydinkohdat - Nykyisyyden ja tulevaisuuden elämänvaatimuksena&quot;,&quot;Topics&quot;:[&quot;Social sciences&quot;],&quot;Primary&quot;:&quot;44821.htm&quot;,&quot;CreatorNames&quot;:[&quot;Steiner, Rudolf, 1861-1925&quot;],&quot;LoCC&quot;:[&quot;HN&quot;],&quot;PG_ID&quot;:&quot;44821&quot;});" class='title'>Yhteiskunnallisen kysymyksen ydinkohdat -<br><span class='subtitle'>Nykyisyyden ja tulevaisuuden elämänvaatimuksena</span></a>
+<div class='author'>Steiner, Rudolf, 1861-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45585, {&quot;Title&quot;:&quot;The Seven Curses of London&quot;,&quot;Topics&quot;:[&quot;London (England) -- Social conditions&quot;,&quot;Crime -- England -- London -- History -- 19th century&quot;,&quot;London (England) -- Moral conditions&quot;],&quot;Primary&quot;:&quot;45585.htm&quot;,&quot;CreatorNames&quot;:[&quot;Greenwood, James, 1832-1929&quot;],&quot;LoCC&quot;:[&quot;HN&quot;,&quot;HV&quot;],&quot;PG_ID&quot;:&quot;45585&quot;});" class='title'>The Seven Curses of London</a>
+<div class='author'>Greenwood, James, 1832-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46025, {&quot;Title&quot;:&quot;Charities and the Commons: The Pittsburgh Survey, Part II. The Place and Its Social Forces&quot;,&quot;Topics&quot;:[&quot;Pittsburgh (Pa.) -- Social conditions&quot;,&quot;Social surveys -- Pennsylvania -- Pittsburgh&quot;,&quot;Working class -- Pennsylvania -- Pittsburgh&quot;,&quot;Civic improvement -- Pennsylvania -- Pittsburgh&quot;],&quot;Primary&quot;:&quot;46025.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;HN&quot;],&quot;PG_ID&quot;:&quot;46025&quot;});" class='title'>Charities and the Commons:<br><span class='subtitle'>The Pittsburgh Survey, Part II. The Place and Its Social Forces</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46029, {&quot;Title&quot;:&quot;Charities and the Commons: The Pittsburgh Survey, Part I. The People&quot;,&quot;Topics&quot;:[&quot;Pittsburgh (Pa.) -- Social conditions&quot;,&quot;Social surveys -- Pennsylvania -- Pittsburgh&quot;,&quot;Working class -- Pennsylvania -- Pittsburgh&quot;,&quot;Civic improvement -- Pennsylvania -- Pittsburgh&quot;],&quot;Primary&quot;:&quot;46029.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;HN&quot;],&quot;PG_ID&quot;:&quot;46029&quot;});" class='title'>Charities and the Commons:<br><span class='subtitle'>The Pittsburgh Survey, Part I. The People</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46380, {&quot;Title&quot;:&quot;Vanishing Landmarks: The Trend Toward Bolshevism&quot;,&quot;Topics&quot;:[&quot;United States -- Politics and government&quot;,&quot;United States -- Social conditions&quot;],&quot;Primary&quot;:&quot;46380.htm&quot;,&quot;CreatorNames&quot;:[&quot;Shaw, Leslie M. (Leslie Mortier), 1848-1932&quot;],&quot;LoCC&quot;:[&quot;HN&quot;],&quot;PG_ID&quot;:&quot;46380&quot;});" class='title'>Vanishing Landmarks:<br><span class='subtitle'>The Trend Toward Bolshevism</span></a>
+<div class='author'>Shaw, Leslie M. (Leslie Mortier), 1848-1932</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52999, {&quot;Title&quot;:&quot;Lihan evankeliumi: Moraalin arvostelua&quot;,&quot;Topics&quot;:[&quot;Social history -- 20th century&quot;,&quot;Socialism -- Philosophy&quot;,&quot;Evolution -- Philosophy&quot;,&quot;Evolution -- Moral and ethical aspects&quot;],&quot;Primary&quot;:&quot;52999.txt&quot;,&quot;CreatorNames&quot;:[&quot;Hahl, M., 1879-1928&quot;],&quot;LoCC&quot;:[&quot;HN&quot;],&quot;PG_ID&quot;:&quot;52999&quot;});" class='title'>Lihan evankeliumi:<br><span class='subtitle'>Moraalin arvostelua</span></a>
+<div class='author'>Hahl, M., 1879-1928</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53018, {&quot;Title&quot;:&quot;Men and Things&quot;,&quot;Topics&quot;:[&quot;Working class -- United States&quot;,&quot;Christian sociology&quot;,&quot;Labor -- United States&quot;,&quot;Labor movement -- United States&quot;],&quot;Primary&quot;:&quot;53018.htm&quot;,&quot;CreatorNames&quot;:[&quot;Atkinson, Henry A., 1877-1960&quot;],&quot;LoCC&quot;:[&quot;HN&quot;],&quot;PG_ID&quot;:&quot;53018&quot;});" class='title'>Men and Things</a>
+<div class='author'>Atkinson, Henry A., 1877-1960</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53052, {&quot;Title&quot;:&quot;Our Benevolent Feudalism&quot;,&quot;Topics&quot;:[&quot;Working class -- United States&quot;,&quot;United States -- Social conditions -- 1865-1918&quot;,&quot;Trusts, Industrial&quot;,&quot;United States -- Economic conditions -- 1865-1918&quot;],&quot;Primary&quot;:&quot;53052.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ghent, William J. (William James), 1866-1942&quot;],&quot;LoCC&quot;:[&quot;HN&quot;],&quot;PG_ID&quot;:&quot;53052&quot;});" class='title'>Our Benevolent Feudalism</a>
+<div class='author'>Ghent, William J. (William James), 1866-1942</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54840, {&quot;Title&quot;:&quot;The New Optimism&quot;,&quot;Topics&quot;:[&quot;Social problems&quot;,&quot;Evolution&quot;,&quot;Faith&quot;,&quot;Stacpoole, H. De Vere (Henry De Vere), 1863-1951 -- Philosophy&quot;],&quot;Primary&quot;:&quot;54840.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stacpoole, H. De Vere (Henry De Vere), 1863-1951&quot;],&quot;LoCC&quot;:[&quot;HN&quot;],&quot;PG_ID&quot;:&quot;54840&quot;});" class='title'>The New Optimism</a>
+<div class='author'>Stacpoole, H. De Vere (Henry De Vere), 1863-1951</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55610, {&quot;Title&quot;:&quot;Why Men Fight: A method of abolishing the international duel&quot;,&quot;Topics&quot;:[&quot;Social problems&quot;,&quot;Property&quot;,&quot;War&quot;,&quot;Liberty&quot;,&quot;State, The&quot;],&quot;Primary&quot;:&quot;55610.htm&quot;,&quot;CreatorNames&quot;:[&quot;Russell, Bertrand, 1872-1970&quot;],&quot;LoCC&quot;:[&quot;HN&quot;,&quot;JC&quot;,&quot;JX&quot;],&quot;PG_ID&quot;:&quot;55610&quot;});" class='title'>Why Men Fight:<br><span class='subtitle'>A method of abolishing the international duel</span></a>
+<div class='author'>Russell, Bertrand, 1872-1970</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57441, {&quot;Title&quot;:&quot;The Underground World: A mirror of life below the surface&quot;,&quot;Topics&quot;:[&quot;Mines and mineral resources&quot;,&quot;Social history -- 19th century&quot;,&quot;Caves&quot;,&quot;Tunnels&quot;],&quot;Primary&quot;:&quot;57441.htm&quot;,&quot;CreatorNames&quot;:[&quot;Knox, Thomas Wallace, 1835-1896&quot;],&quot;LoCC&quot;:[&quot;HN&quot;,&quot;TN&quot;],&quot;PG_ID&quot;:&quot;57441&quot;});" class='title'>The Underground World:<br><span class='subtitle'>A mirror of life below the surface</span></a>
+<div class='author'>Knox, Thomas Wallace, 1835-1896</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58123, {&quot;Title&quot;:&quot;The Unfinished Programme of Democracy&quot;,&quot;Topics&quot;:[&quot;Democracy&quot;,&quot;Social history&quot;],&quot;Primary&quot;:&quot;58123.htm&quot;,&quot;CreatorNames&quot;:[&quot;Roberts, Richard, 1874-1945&quot;],&quot;LoCC&quot;:[&quot;HN&quot;],&quot;PG_ID&quot;:&quot;58123&quot;});" class='title'>The Unfinished Programme of Democracy</a>
+<div class='author'>Roberts, Richard, 1874-1945</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59257, {&quot;Title&quot;:&quot;The Threefold Commonwealth&quot;,&quot;Topics&quot;:[&quot;Social sciences -- Miscellanea&quot;],&quot;Primary&quot;:&quot;59257.htm&quot;,&quot;CreatorNames&quot;:[&quot;Steiner, Rudolf, 1861-1925&quot;,&quot;Bowen-Wedgwood, Ethel Kate, 1870- [Translator]&quot;],&quot;LoCC&quot;:[&quot;HN&quot;],&quot;PG_ID&quot;:&quot;59257&quot;});" class='title'>The Threefold Commonwealth</a>
+<div class='author'>Steiner, Rudolf, 1861-1925, Bowen-Wedgwood, Ethel Kate, 1870- [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60116, {&quot;Title&quot;:&quot;West Side Studies: Boyhood and Lawlessness; The Neglected Girl&quot;,&quot;Topics&quot;:[&quot;Girls&quot;,&quot;Boys&quot;,&quot;New York (N.Y.) -- Social conditions&quot;,&quot;Poor -- New York (State) -- New York&quot;,&quot;Women -- Employment -- New York (State) -- New York&quot;,&quot;Juvenile delinquency&quot;,&quot;Social surveys -- New York (State) -- New York&quot;,&quot;Juvenile courts -- New York (State) -- New York&quot;],&quot;Primary&quot;:&quot;60116.htm&quot;,&quot;CreatorNames&quot;:[&quot;True, Ruth S. (Ruth Smiley), 1886- [Contributor]&quot;,&quot;Goldmark, Pauline, 1874-1962 [Other]&quot;,&quot;Hine, Lewis Wickes, 1874-1940 [Photographer]&quot;],&quot;LoCC&quot;:[&quot;HN&quot;],&quot;PG_ID&quot;:&quot;60116&quot;});" class='title'>West Side Studies:<br><span class='subtitle'>Boyhood and Lawlessness; The Neglected Girl</span></a>
+<div class='author'>True, Ruth S. (Ruth Smiley), 1886- [Contributor], Goldmark, Pauline, 1874-1962 [Other], Hine, Lewis Wickes, 1874-1940 [Photographer]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62238, {&quot;Title&quot;:&quot;The Fashionable World Displayed&quot;,&quot;Topics&quot;:[&quot;Great Britain -- Social conditions -- 19th century&quot;],&quot;Primary&quot;:&quot;62238.htm&quot;,&quot;CreatorNames&quot;:[&quot;Owen, John, 1766-1822&quot;],&quot;LoCC&quot;:[&quot;HN&quot;],&quot;PG_ID&quot;:&quot;62238&quot;});" class='title'>The Fashionable World Displayed</a>
+<div class='author'>Owen, John, 1766-1822</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62961, {&quot;Title&quot;:&quot;The Tyranny of Shams&quot;,&quot;Topics&quot;:[&quot;Social problems&quot;,&quot;Great Britain -- Social conditions&quot;,&quot;Moral conditions&quot;],&quot;Primary&quot;:&quot;62961.htm&quot;,&quot;CreatorNames&quot;:[&quot;McCabe, Joseph, 1867-1955&quot;],&quot;LoCC&quot;:[&quot;HN&quot;],&quot;PG_ID&quot;:&quot;62961&quot;});" class='title'>The Tyranny of Shams</a>
+<div class='author'>McCabe, Joseph, 1867-1955</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63001, {&quot;Title&quot;:&quot;The Passing of the Idle Rich&quot;,&quot;Topics&quot;:[&quot;United States -- Social conditions -- 1865-1918&quot;,&quot;Wealth -- United States&quot;,&quot;Rich people -- United States&quot;],&quot;Primary&quot;:&quot;63001.htm&quot;,&quot;CreatorNames&quot;:[&quot;Martin, Frederick Townsend, 1849-1914&quot;],&quot;LoCC&quot;:[&quot;HN&quot;],&quot;PG_ID&quot;:&quot;63001&quot;});" class='title'>The Passing of the Idle Rich</a>
+<div class='author'>Martin, Frederick Townsend, 1849-1914</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64186, {&quot;Title&quot;:&quot;Social Forces in England and America&quot;,&quot;Topics&quot;:[&quot;Social problems&quot;,&quot;United States -- Social conditions -- 1865-1918&quot;,&quot;England -- Social conditions -- 20th century&quot;],&quot;Primary&quot;:&quot;64186.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wells, H. G. (Herbert George), 1866-1946&quot;],&quot;LoCC&quot;:[&quot;HN&quot;],&quot;PG_ID&quot;:&quot;64186&quot;});" class='title'>Social Forces in England and America</a>
+<div class='author'>Wells, H. G. (Herbert George), 1866-1946</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64263, {&quot;Title&quot;:&quot;Practicable Socialism: Essays on Social Reform&quot;,&quot;Topics&quot;:[&quot;Social problems&quot;,&quot;Great Britain -- Social conditions -- 19th century&quot;,&quot;Working class&quot;],&quot;Primary&quot;:&quot;64263.htm&quot;,&quot;CreatorNames&quot;:[&quot;Barnett, S. A., Mrs., 1851-1936&quot;,&quot;Barnett, S. A. (Samuel Augustus), 1844-1913&quot;],&quot;LoCC&quot;:[&quot;HN&quot;],&quot;PG_ID&quot;:&quot;64263&quot;});" class='title'>Practicable Socialism:<br><span class='subtitle'>Essays on Social Reform</span></a>
+<div class='author'>Barnett, S. A., Mrs., 1851-1936, Barnett, S. A. (Samuel Augustus), 1844-1913</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64402, {&quot;Title&quot;:&quot;The Reign of Gilt&quot;,&quot;Topics&quot;:[&quot;Social problems&quot;,&quot;United States -- Social conditions -- 1865-1918&quot;],&quot;Primary&quot;:&quot;64402.htm&quot;,&quot;CreatorNames&quot;:[&quot;Phillips, David Graham, 1867-1911&quot;],&quot;LoCC&quot;:[&quot;HN&quot;],&quot;PG_ID&quot;:&quot;64402&quot;});" class='title'>The Reign of Gilt</a>
+<div class='author'>Phillips, David Graham, 1867-1911</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64825, {&quot;Title&quot;:&quot;Practicable Socialism, New Series&quot;,&quot;Topics&quot;:[&quot;Social problems&quot;,&quot;Great Britain -- Social conditions -- 19th century&quot;,&quot;Working class&quot;],&quot;Primary&quot;:&quot;64825.htm&quot;,&quot;CreatorNames&quot;:[&quot;Barnett, S. A., Mrs., 1851-1936&quot;,&quot;Barnett, S. A. (Samuel Augustus), 1844-1913&quot;],&quot;LoCC&quot;:[&quot;HN&quot;],&quot;PG_ID&quot;:&quot;64825&quot;});" class='title'>Practicable Socialism, New Series</a>
+<div class='author'>Barnett, S. A., Mrs., 1851-1936, Barnett, S. A. (Samuel Augustus), 1844-1913</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65477, {&quot;Title&quot;:&quot;Freedom! Equality!! Justice!!! These Three; but the Greatest of These Is Justice - A Speech on the Impending Revolution, Delivered in Music Hall, Boston, Thursday, Feb. 1, 1872, and the Academy of Music, New York, Feb. 20, 1872&quot;,&quot;Topics&quot;:[&quot;Speeches, addresses, etc.&quot;,&quot;Social problems&quot;],&quot;Primary&quot;:&quot;65477.htm&quot;,&quot;CreatorNames&quot;:[&quot;Woodhull, Victoria C. (Victoria Claflin), 1838-1927&quot;],&quot;LoCC&quot;:[&quot;HN&quot;],&quot;PG_ID&quot;:&quot;65477&quot;});" class='title'>Freedom! Equality!! Justice!!! These Three;<br><span class='subtitle'>but the Greatest of These Is Justice - A Speech on the Impending Revolution, Delivered in Music Hall, Boston, Thursday, Feb. 1, 1872, and the Academy of Music, New York, Feb. 20, 1872</span></a>
+<div class='author'>Woodhull, Victoria C. (Victoria Claflin), 1838-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65582, {&quot;Title&quot;:&quot;Causes and Consequences&quot;,&quot;Topics&quot;:[&quot;United States -- Politics and government&quot;,&quot;Democracy&quot;,&quot;United States -- Social conditions -- 1865-1918&quot;,&quot;Fröbel, Friedrich, 1782-1852&quot;],&quot;Primary&quot;:&quot;65582.htm&quot;,&quot;CreatorNames&quot;:[&quot;Chapman, John Jay, 1862-1933&quot;],&quot;LoCC&quot;:[&quot;HN&quot;],&quot;PG_ID&quot;:&quot;65582&quot;});" class='title'>Causes and Consequences</a>
+<div class='author'>Chapman, John Jay, 1862-1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65707, {&quot;Title&quot;:&quot;The Crime of Caste in Our Country&quot;,&quot;Topics&quot;:[&quot;Social problems&quot;,&quot;United States -- Social conditions -- 1865-1918&quot;],&quot;Primary&quot;:&quot;65707.htm&quot;,&quot;CreatorNames&quot;:[&quot;Davenport, Benjamin Rush&quot;],&quot;LoCC&quot;:[&quot;HN&quot;],&quot;PG_ID&quot;:&quot;65707&quot;});" class='title'>The Crime of Caste in Our Country</a>
+<div class='author'>Davenport, Benjamin Rush</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65775, {&quot;Title&quot;:&quot;The Cry for Justice: An Anthology of the Literature of Social Protest - The writings of philosophers, poets, novelists, social reformers, and others who have voiced the struggle against social injustice; selected from twenty-five languages; covering a period of five thousand years&quot;,&quot;Topics&quot;:[&quot;Social problems&quot;,&quot;Social justice&quot;],&quot;Primary&quot;:&quot;65775.htm&quot;,&quot;CreatorNames&quot;:[&quot;London, Jack, 1876-1916 [Author of introduction, etc.]&quot;,&quot;Sinclair, Upton, 1878-1968 [Editor]&quot;],&quot;LoCC&quot;:[&quot;HN&quot;],&quot;PG_ID&quot;:&quot;65775&quot;});" class='title'>The Cry for Justice:<br><span class='subtitle'>An Anthology of the Literature of Social Protest - The writings of philosophers, poets, novelists, social reformers, and others who have voiced the struggle against social injustice; selected from twenty-five languages; covering a period of five thousand years</span></a>
+<div class='author'>London, Jack, 1876-1916 [Author of introduction, etc.], Sinclair, Upton, 1878-1968 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67031, {&quot;Title&quot;:&quot;A Letter to the Parishioners of Fulham&quot;,&quot;Topics&quot;:[&quot;Poor -- England -- London&quot;,&quot;Working class -- England -- London&quot;,&quot;Working class -- Dwellings&quot;,&quot;Housing -- England -- London&quot;,&quot;Cholera -- Prevention&quot;,&quot;Fulham (London, England)&quot;],&quot;Primary&quot;:&quot;67031.htm&quot;,&quot;CreatorNames&quot;:[&quot;Baker, R. G. (Robert George), 1788-1878&quot;],&quot;LoCC&quot;:[&quot;HN&quot;],&quot;PG_ID&quot;:&quot;67031&quot;});" class='title'>A Letter to the Parishioners of Fulham</a>
+<div class='author'>Baker, R. G. (Robert George), 1788-1878</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67648, {&quot;Title&quot;:&quot;Forty Years of It&quot;,&quot;Topics&quot;:[&quot;United States -- Social conditions -- 1865-1918&quot;],&quot;Primary&quot;:&quot;67648.htm&quot;,&quot;CreatorNames&quot;:[&quot;Whitlock, Brand, 1869-1934&quot;,&quot;Nock, Albert Jay, 1870-1945 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;HN&quot;],&quot;PG_ID&quot;:&quot;67648&quot;});" class='title'>Forty Years of It</a>
+<div class='author'>Whitlock, Brand, 1869-1934, Nock, Albert Jay, 1870-1945 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6885, {&quot;Title&quot;:&quot;The Indolence of the Filipino&quot;,&quot;Topics&quot;:[&quot;Philippines -- Social conditions&quot;],&quot;Primary&quot;:&quot;6885.txt&quot;,&quot;CreatorNames&quot;:[&quot;Rizal, José, 1861-1896&quot;,&quot;Derbyshire, Charles E. [Translator]&quot;],&quot;LoCC&quot;:[&quot;DS&quot;,&quot;HN&quot;],&quot;PG_ID&quot;:&quot;6885&quot;});" class='title'>The Indolence of the Filipino</a>
+<div class='author'>Rizal, José, 1861-1896, Derbyshire, Charles E. [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(690, {&quot;Title&quot;:&quot;Proposed Roads to Freedom&quot;,&quot;Topics&quot;:[&quot;Socialism&quot;,&quot;Anarchism&quot;,&quot;Syndicalism&quot;,&quot;Guild socialism&quot;],&quot;Primary&quot;:&quot;690.htm&quot;,&quot;CreatorNames&quot;:[&quot;Russell, Bertrand, 1872-1970&quot;],&quot;LoCC&quot;:[&quot;HN&quot;],&quot;PG_ID&quot;:&quot;690&quot;});" class='title'>Proposed Roads to Freedom</a>
+<div class='author'>Russell, Bertrand, 1872-1970</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69879, {&quot;Title&quot;:&quot;Newer ideals of peace&quot;,&quot;Topics&quot;:[&quot;Peace&quot;,&quot;Working class -- United States&quot;,&quot;Municipal government -- United States&quot;,&quot;Social justice&quot;,&quot;Political participation -- United States&quot;],&quot;Primary&quot;:&quot;69879.htm&quot;,&quot;CreatorNames&quot;:[&quot;Addams, Jane, 1860-1935&quot;],&quot;LoCC&quot;:[&quot;HN&quot;],&quot;PG_ID&quot;:&quot;69879&quot;});" class='title'>Newer ideals of peace</a>
+<div class='author'>Addams, Jane, 1860-1935</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70267, {&quot;Title&quot;:&quot;The condition of England&quot;,&quot;Topics&quot;:[&quot;Great Britain -- Social conditions&quot;,&quot;Great Britain -- Economic conditions&quot;],&quot;Primary&quot;:&quot;70267.htm&quot;,&quot;CreatorNames&quot;:[&quot;Masterman, Charles F. G. (Charles Frederick Gurney), 1873-1927&quot;],&quot;LoCC&quot;:[&quot;DA&quot;,&quot;HN&quot;],&quot;PG_ID&quot;:&quot;70267&quot;});" class='title'>The condition of England</a>
+<div class='author'>Masterman, Charles F. G. (Charles Frederick Gurney), 1873-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7058, {&quot;Title&quot;:&quot;Mankind in the Making&quot;,&quot;Topics&quot;:[&quot;Social problems&quot;,&quot;Social sciences&quot;],&quot;Primary&quot;:&quot;7058.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wells, H. G. (Herbert George), 1866-1946&quot;],&quot;LoCC&quot;:[&quot;HN&quot;],&quot;PG_ID&quot;:&quot;7058&quot;});" class='title'>Mankind in the Making</a>
+<div class='author'>Wells, H. G. (Herbert George), 1866-1946</div>
+</div>
+</ul></div>
+</body></html>

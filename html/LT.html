@@ -1,0 +1,90 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Textbooks (LT)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16728, {&quot;Title&quot;:&quot;A Catechism of Familiar Things; - Their History, and the Events Which Led to Their Discovery. - With a Short Explanation of Some of the Principal Natural Phenomena. For the Use of Schools and Families. Enlarged and Revised Edition.&quot;,&quot;Topics&quot;:[&quot;Science -- Popular works&quot;],&quot;Primary&quot;:&quot;16728.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;AG&quot;,&quot;LT&quot;],&quot;PG_ID&quot;:&quot;16728&quot;});" class='title'>A Catechism of Familiar Things;<br><span class='subtitle'>- Their History, and the Events Which Led to Their Discovery. - With a Short Explanation of Some of the Principal Natural Phenomena. For the Use of Schools and Families. Enlarged and Revised Edition.</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18561, {&quot;Title&quot;:&quot;The Ontario Readers: Third Book&quot;,&quot;Topics&quot;:[&quot;Readers&quot;],&quot;Primary&quot;:&quot;18561.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ontario. Department of Education&quot;],&quot;LoCC&quot;:[&quot;LT&quot;],&quot;PG_ID&quot;:&quot;18561&quot;});" class='title'>The Ontario Readers:<br><span class='subtitle'>Third Book</span></a>
+<div class='author'>Ontario. Department of Education</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18702, {&quot;Title&quot;:&quot;The Ontario Readers: Fourth Book&quot;,&quot;Topics&quot;:[&quot;Readers&quot;],&quot;Primary&quot;:&quot;18702.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ontario. Department of Education&quot;],&quot;LoCC&quot;:[&quot;LT&quot;],&quot;PG_ID&quot;:&quot;18702&quot;});" class='title'>The Ontario Readers:<br><span class='subtitle'>Fourth Book</span></a>
+<div class='author'>Ontario. Department of Education</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19923, {&quot;Title&quot;:&quot;The Ontario Readers: The High School Reader, 1886&quot;,&quot;Topics&quot;:[&quot;Readers (Secondary)&quot;],&quot;Primary&quot;:&quot;19923.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ontario. Department of Education&quot;],&quot;LoCC&quot;:[&quot;LT&quot;],&quot;PG_ID&quot;:&quot;19923&quot;});" class='title'>The Ontario Readers:<br><span class='subtitle'>The High School Reader, 1886</span></a>
+<div class='author'>Ontario. Department of Education</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20557, {&quot;Title&quot;:&quot;Ontario Teachers&#39; Manuals: Household Science in Rural Schools&quot;,&quot;Topics&quot;:[&quot;Cooking -- Study and teaching -- Ontario&quot;,&quot;Home economics -- Study and teaching -- Ontario&quot;],&quot;Primary&quot;:&quot;20557.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ontario. Department of Education&quot;],&quot;LoCC&quot;:[&quot;LT&quot;],&quot;PG_ID&quot;:&quot;20557&quot;});" class='title'>Ontario Teachers' Manuals:<br><span class='subtitle'>Household Science in Rural Schools</span></a>
+<div class='author'>Ontario. Department of Education</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24564, {&quot;Title&quot;:&quot;A Manual of the Operations of Surgery - For the Use of Senior Students, House Surgeons, and Junior Practitioners&quot;,&quot;Topics&quot;:[&quot;Surgery, Operative&quot;],&quot;Primary&quot;:&quot;24564.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bell, Joseph, 1837-1911&quot;],&quot;LoCC&quot;:[&quot;LT&quot;,&quot;RD&quot;],&quot;PG_ID&quot;:&quot;24564&quot;});" class='title'>A Manual of the Operations of Surgery -<br><span class='subtitle'>For the Use of Senior Students, House Surgeons, and Junior Practitioners</span></a>
+<div class='author'>Bell, Joseph, 1837-1911</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24583, {&quot;Title&quot;:&quot;Langstroth on the Hive and the Honey-Bee: A Bee Keeper&#39;s Manual&quot;,&quot;Topics&quot;:[&quot;Bees&quot;,&quot;Honey&quot;,&quot;Bee culture&quot;,&quot;Honeybee&quot;,&quot;Honeybee -- Diseases&quot;],&quot;Primary&quot;:&quot;24583.htm&quot;,&quot;CreatorNames&quot;:[&quot;Langstroth, L. L. (Lorenzo Lorraine), 1810-1895&quot;],&quot;LoCC&quot;:[&quot;LT&quot;,&quot;SF&quot;],&quot;PG_ID&quot;:&quot;24583&quot;});" class='title'>Langstroth on the Hive and the Honey-Bee:<br><span class='subtitle'>A Bee Keeper's Manual</span></a>
+<div class='author'>Langstroth, L. L. (Lorenzo Lorraine), 1810-1895</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24656, {&quot;Title&quot;:&quot;Ontario Teachers&#39; Manuals: Household Management&quot;,&quot;Topics&quot;:[&quot;Cooking&quot;,&quot;Home economics&quot;],&quot;Primary&quot;:&quot;24656.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ontario. Department of Education&quot;],&quot;LoCC&quot;:[&quot;LT&quot;,&quot;TX&quot;],&quot;PG_ID&quot;:&quot;24656&quot;});" class='title'>Ontario Teachers' Manuals:<br><span class='subtitle'>Household Management</span></a>
+<div class='author'>Ontario. Department of Education</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28299, {&quot;Title&quot;:&quot;The Orbis Pictus&quot;,&quot;Topics&quot;:[&quot;Natural history -- Juvenile literature&quot;,&quot;Picture books for children&quot;,&quot;Latin language -- Readers&quot;],&quot;Primary&quot;:&quot;28299.htm&quot;,&quot;CreatorNames&quot;:[&quot;Comenius, Johann Amos, 1592-1670&quot;,&quot;Bardeen, C. W. (Charles William), 1847-1924 [Editor]&quot;,&quot;Hoole, Charles, 1610-1667 [Translator]&quot;],&quot;LoCC&quot;:[&quot;LT&quot;],&quot;PG_ID&quot;:&quot;28299&quot;});" class='title'>The Orbis Pictus</a>
+<div class='author'>Comenius, Johann Amos, 1592-1670, Bardeen, C. W. (Charles William), 1847-1924 [Editor], Hoole, Charles, 1610-1667 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52429, {&quot;Title&quot;:&quot;Fifteen Institute Lessons in Language, Arithmetic, and U.S. History&quot;,&quot;Topics&quot;:[&quot;United States -- History -- Outlines, syllabi, etc.&quot;,&quot;Language arts -- Problems, exercises, etc.&quot;,&quot;Arithmetic -- Outlines, syllabi, etc.&quot;],&quot;Primary&quot;:&quot;52429.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sanders, William Francis Lewis, 1849-&quot;],&quot;LoCC&quot;:[&quot;LT&quot;],&quot;PG_ID&quot;:&quot;52429&quot;});" class='title'>Fifteen Institute Lessons in Language, Arithmetic, and U.S. History</a>
+<div class='author'>Sanders, William Francis Lewis, 1849-</div>
+</div>
+</ul></div>
+</body></html>

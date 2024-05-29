@@ -1,0 +1,422 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Northern Europe, Scandivavia (DL)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(10543, {&quot;Title&quot;:&quot;Norwegian Life - An Account of Past and Contemporary Conditions and Progress in Norway and Sweden&quot;,&quot;Topics&quot;:[&quot;Norway -- Social life and customs&quot;,&quot;Sweden -- Social life and customs&quot;],&quot;Primary&quot;:&quot;10543.txt&quot;,&quot;CreatorNames&quot;:[&quot;Clough, Ethlyn T., 1858-1936 [Editor]&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;10543&quot;});" class='title'>Norwegian Life -<br><span class='subtitle'>An Account of Past and Contemporary Conditions and Progress in Norway and Sweden</span></a>
+<div class='author'>Clough, Ethlyn T., 1858-1936 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(1150, {&quot;Title&quot;:&quot;The Danish History, Books I-IX&quot;,&quot;Topics&quot;:[&quot;Folklore -- Scandinavia&quot;,&quot;Denmark -- History -- To 1241&quot;],&quot;Primary&quot;:&quot;1150.htm&quot;,&quot;CreatorNames&quot;:[&quot;Saxo, Grammaticus, -1204?&quot;,&quot;Elton, Oliver, 1861-1945 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;1150&quot;});" class='title'>The Danish History, Books I-IX</a>
+<div class='author'>Saxo, Grammaticus, -1204?, Elton, Oliver, 1861-1945 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12266, {&quot;Title&quot;:&quot;Von Haparanda bis San Francisco: Reise-Erinnerungen&quot;,&quot;Topics&quot;:[&quot;Germany -- Description and travel&quot;,&quot;United States -- Description and travel&quot;,&quot;Denmark -- Description and travel&quot;,&quot;Sweden -- Description and travel&quot;,&quot;Latvia -- Description and travel&quot;],&quot;Primary&quot;:&quot;12266.txt&quot;,&quot;CreatorNames&quot;:[&quot;Wasserzieher, Ernst, 1860-1927&quot;],&quot;LoCC&quot;:[&quot;DD&quot;,&quot;DK&quot;,&quot;DL&quot;,&quot;E&quot;],&quot;PG_ID&quot;:&quot;12266&quot;});" class='title'>Von Haparanda bis San Francisco:<br><span class='subtitle'>Reise-Erinnerungen</span></a>
+<div class='author'>Wasserzieher, Ernst, 1860-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12481, {&quot;Title&quot;:&quot;Hero Tales of the Far North&quot;,&quot;Topics&quot;:[&quot;Scandinavia -- History&quot;],&quot;Primary&quot;:&quot;12481.htm&quot;,&quot;CreatorNames&quot;:[&quot;Riis, Jacob A. (Jacob August), 1849-1914&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;12481&quot;});" class='title'>Hero Tales of the Far North</a>
+<div class='author'>Riis, Jacob A. (Jacob August), 1849-1914</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15783, {&quot;Title&quot;:&quot;Utan anförare: Fem svenskors fjellvandring i Norge&quot;,&quot;Topics&quot;:[&quot;Norway -- Description and travel&quot;],&quot;Primary&quot;:&quot;15783.txt&quot;,&quot;CreatorNames&quot;:[&quot;Wigström, Eva, 1832-1901&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;15783&quot;});" class='title'>Utan anförare:<br><span class='subtitle'>Fem svenskors fjellvandring i Norge</span></a>
+<div class='author'>Wigström, Eva, 1832-1901</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17407, {&quot;Title&quot;:&quot;A Journal of the Swedish Embassy in the Years 1653 and 1654, Vol II.&quot;,&quot;Topics&quot;:[&quot;Sweden -- History -- Christina, 1632-1654&quot;,&quot;Great Britain -- Foreign relations -- Sweden&quot;,&quot;Sweden -- Foreign relations -- Great Britain&quot;],&quot;Primary&quot;:&quot;17407.htm&quot;,&quot;CreatorNames&quot;:[&quot;Whitlocke, Bulstrode, 1605-1676?&quot;,&quot;Morton, Charles, 1716-1799 [Editor]&quot;,&quot;Reeve, Henry, 1813-1895 [Editor]&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;17407&quot;});" class='title'>A Journal of the Swedish Embassy in the Years 1653 and 1654, Vol II.</a>
+<div class='author'>Whitlocke, Bulstrode, 1605-1676?, Morton, Charles, 1716-1799 [Editor], Reeve, Henry, 1813-1895 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(1894, {&quot;Title&quot;:&quot;Visit to Iceland and the Scandinavian North&quot;,&quot;Topics&quot;:[&quot;Iceland -- Description and travel&quot;,&quot;Scandinavia -- Description and travel&quot;,&quot;Old Norse poetry -- History and criticism&quot;],&quot;Primary&quot;:&quot;1894.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pfeiffer, Ida, 1797-1858&quot;,&quot;Bergmann, Frédéric Guillaume, 1812-1887 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;1894&quot;});" class='title'>Visit to Iceland and the Scandinavian North</a>
+<div class='author'>Pfeiffer, Ida, 1797-1858, Bergmann, Frédéric Guillaume, 1812-1887 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(1932, {&quot;Title&quot;:&quot;Early Kings of Norway&quot;,&quot;Topics&quot;:[&quot;Norway -- History -- To 1030&quot;,&quot;Norway -- History -- 1030-1397&quot;,&quot;Norway -- King and rulers&quot;],&quot;Primary&quot;:&quot;1932.htm&quot;,&quot;CreatorNames&quot;:[&quot;Carlyle, Thomas, 1795-1881&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;1932&quot;});" class='title'>Early Kings of Norway</a>
+<div class='author'>Carlyle, Thomas, 1795-1881</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19545, {&quot;Title&quot;:&quot;Op de Faröer - De Aarde en haar Volken, 1907&quot;,&quot;Topics&quot;:[&quot;Faroe Islands -- Description and travel&quot;],&quot;Primary&quot;:&quot;19545.htm&quot;,&quot;CreatorNames&quot;:[&quot;Seé, Anna&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;19545&quot;});" class='title'>Op de Faröer -<br><span class='subtitle'>De Aarde en haar Volken, 1907</span></a>
+<div class='author'>Seé, Anna</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19832, {&quot;Title&quot;:&quot;In en om Java&#39;s Paradijs - De Aarde en haar Volken, 1907&quot;,&quot;Topics&quot;:[&quot;Java (Indonesia) -- Description and travel&quot;,&quot;Copenhagen (Denmark) -- Description and travel&quot;],&quot;Primary&quot;:&quot;19832.htm&quot;,&quot;CreatorNames&quot;:[&quot;Koorevaar, A.&quot;],&quot;LoCC&quot;:[&quot;DL&quot;,&quot;DS&quot;],&quot;PG_ID&quot;:&quot;19832&quot;});" class='title'>In en om Java's Paradijs -<br><span class='subtitle'>De Aarde en haar Volken, 1907</span></a>
+<div class='author'>Koorevaar, A.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20107, {&quot;Title&quot;:&quot;Denmark&quot;,&quot;Topics&quot;:[&quot;Denmark -- Description and travel&quot;],&quot;Primary&quot;:&quot;20107.htm&quot;,&quot;CreatorNames&quot;:[&quot;Thomson, M. Pearson&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;20107&quot;});" class='title'>Denmark</a>
+<div class='author'>Thomson, M. Pearson</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20549, {&quot;Title&quot;:&quot;Historic Tales: The Romance of Reality. Vol. 09 (of 15), Scandinavian&quot;,&quot;Topics&quot;:[&quot;Scandinavia -- History&quot;],&quot;Primary&quot;:&quot;20549.htm&quot;,&quot;CreatorNames&quot;:[&quot;Morris, Charles, 1833-1922&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;20549&quot;});" class='title'>Historic Tales:<br><span class='subtitle'>The Romance of Reality. Vol. 09 (of 15), Scandinavian</span></a>
+<div class='author'>Morris, Charles, 1833-1922</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20876, {&quot;Title&quot;:&quot;Door Noorwegen - De Aarde en haar Volken, 1908&quot;,&quot;Topics&quot;:[&quot;Norway -- Description and travel&quot;],&quot;Primary&quot;:&quot;20876.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bosch, G.&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;20876&quot;});" class='title'>Door Noorwegen -<br><span class='subtitle'>De Aarde en haar Volken, 1908</span></a>
+<div class='author'>Bosch, G.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(21253, {&quot;Title&quot;:&quot;The Swedish-Norwegian Union Crisis - A History with Documents&quot;,&quot;Topics&quot;:[&quot;Sweden - -Politics and government -- 1814-1905&quot;,&quot;Norway -- Politics and government -- 1814-1905&quot;],&quot;Primary&quot;:&quot;21253.htm&quot;,&quot;CreatorNames&quot;:[&quot;Nordlund, Karl, 1871-&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;21253&quot;});" class='title'>The Swedish-Norwegian Union Crisis -<br><span class='subtitle'>A History with Documents</span></a>
+<div class='author'>Nordlund, Karl, 1871-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22011, {&quot;Title&quot;:&quot;Relation de l&#39;Islande&quot;,&quot;Topics&quot;:[&quot;Iceland -- Description and travel -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;22011.htm&quot;,&quot;CreatorNames&quot;:[&quot;La Peyrère, Isaac de, 1594-1676&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;22011&quot;});" class='title'>Relation de l'Islande</a>
+<div class='author'>La Peyrère, Isaac de, 1594-1676</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22458, {&quot;Title&quot;:&quot;The Swedish Revolution Under Gustavus Vasa&quot;,&quot;Topics&quot;:[&quot;Gustav I Vasa, King of Sweden, 1496-1560&quot;,&quot;Sweden -- History -- Gustav I Vasa, 1523-1560&quot;],&quot;Primary&quot;:&quot;22458.htm&quot;,&quot;CreatorNames&quot;:[&quot;Watson, Paul Barron, 1861-1948&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;22458&quot;});" class='title'>The Swedish Revolution Under Gustavus Vasa</a>
+<div class='author'>Watson, Paul Barron, 1861-1948</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22727, {&quot;Title&quot;:&quot;The Land of the Long Night&quot;,&quot;Topics&quot;:[&quot;Lapland -- Description and travel -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;22727.htm&quot;,&quot;CreatorNames&quot;:[&quot;Du Chaillu, Paul B. (Paul Belloni), 1835-1903&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;22727&quot;});" class='title'>The Land of the Long Night</a>
+<div class='author'>Du Chaillu, Paul B. (Paul Belloni), 1835-1903</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24676, {&quot;Title&quot;:&quot;Peeps at Many Lands: Norway&quot;,&quot;Topics&quot;:[&quot;Norway -- Description and travel&quot;],&quot;Primary&quot;:&quot;24676.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mockler-Ferryman, A. F. (Augustus Ferryman), 1856-1930&quot;,&quot;Cooper, A. Heaton (Alfred Heaton), 1863-1929 [Illustrator]&quot;,&quot;Jungmann, Nico, 1872-1935 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;24676&quot;});" class='title'>Peeps at Many Lands:<br><span class='subtitle'>Norway</span></a>
+<div class='author'>Mockler-Ferryman, A. F. (Augustus Ferryman), 1856-1930, Cooper, A. Heaton (Alfred Heaton), 1863-1929 [Illustrator], Jungmann, Nico, 1872-1935 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25371, {&quot;Title&quot;:&quot;Northern Travel: Summer and Winter Pictures of Sweden, Denmark and Lapland&quot;,&quot;Topics&quot;:[&quot;Scandinavia -- Description and travel&quot;],&quot;Primary&quot;:&quot;25371.htm&quot;,&quot;CreatorNames&quot;:[&quot;Taylor, Bayard, 1825-1878&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;25371&quot;});" class='title'>Northern Travel:<br><span class='subtitle'>Summer and Winter Pictures of Sweden, Denmark and Lapland</span></a>
+<div class='author'>Taylor, Bayard, 1825-1878</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28073, {&quot;Title&quot;:&quot;A Yacht Voyage to Norway, Denmark, and Sweden - 2nd edition&quot;,&quot;Topics&quot;:[&quot;Scandinavia -- Description and travel&quot;,&quot;Yachting&quot;],&quot;Primary&quot;:&quot;28073.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ross, William A.&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;28073&quot;});" class='title'>A Yacht Voyage to Norway, Denmark, and Sweden -<br><span class='subtitle'>2nd edition</span></a>
+<div class='author'>Ross, William A.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28195, {&quot;Title&quot;:&quot;De Ziel van het Noorden - De Aarde en haar Volken, 1917&quot;,&quot;Topics&quot;:[&quot;Scandinavia -- Description and travel&quot;],&quot;Primary&quot;:&quot;28195.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bertolini, Gino&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;28195&quot;});" class='title'>De Ziel van het Noorden -<br><span class='subtitle'>De Aarde en haar Volken, 1917</span></a>
+<div class='author'>Bertolini, Gino</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33791, {&quot;Title&quot;:&quot;Rättigheter och Skyldigheter gentemot Statskyrkan - En hjälpreda för svenska medborgare&quot;,&quot;Topics&quot;:[&quot;Church and state -- Sweden&quot;],&quot;Primary&quot;:&quot;33791.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stjernstedt, Georg, 1876-1963&quot;],&quot;LoCC&quot;:[&quot;BX&quot;,&quot;DL&quot;],&quot;PG_ID&quot;:&quot;33791&quot;});" class='title'>Rättigheter och Skyldigheter gentemot Statskyrkan -<br><span class='subtitle'>En hjälpreda för svenska medborgare</span></a>
+<div class='author'>Stjernstedt, Georg, 1876-1963</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34646, {&quot;Title&quot;:&quot;The Story of Norway&quot;,&quot;Topics&quot;:[&quot;Norway -- History&quot;],&quot;Primary&quot;:&quot;34646.htm&quot;,&quot;CreatorNames&quot;:[&quot;Boyesen, Hjalmar Hjorth, 1848-1895&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;34646&quot;});" class='title'>The Story of Norway</a>
+<div class='author'>Boyesen, Hjalmar Hjorth, 1848-1895</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34779, {&quot;Title&quot;:&quot;Lachesis Lapponica; Or, A Tour in Lapland, Volume 1&quot;,&quot;Topics&quot;:[&quot;Natural history -- Lapland&quot;,&quot;Lapland -- Description and travel&quot;],&quot;Primary&quot;:&quot;34779.htm&quot;,&quot;CreatorNames&quot;:[&quot;Linné, Carl von, 1707-1778&quot;,&quot;Smith, James Edward, 1759-1828 [Editor]&quot;,&quot;Troilius, Charles [Translator]&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;34779&quot;});" class='title'>Lachesis Lapponica;<br><span class='subtitle'>Or, A Tour in Lapland, Volume 1</span></a>
+<div class='author'>Linné, Carl von, 1707-1778, Smith, James Edward, 1759-1828 [Editor], Troilius, Charles [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36059, {&quot;Title&quot;:&quot;Lachesis Lapponica; Or, A Tour in Lapland, Volume 2&quot;,&quot;Topics&quot;:[&quot;Natural history -- Lapland&quot;,&quot;Lapland -- Description and travel&quot;],&quot;Primary&quot;:&quot;36059.htm&quot;,&quot;CreatorNames&quot;:[&quot;Linné, Carl von, 1707-1778&quot;,&quot;Smith, James Edward, 1759-1828 [Editor]&quot;,&quot;Troilius, Charles [Translator]&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;36059&quot;});" class='title'>Lachesis Lapponica;<br><span class='subtitle'>Or, A Tour in Lapland, Volume 2</span></a>
+<div class='author'>Linné, Carl von, 1707-1778, Smith, James Edward, 1759-1828 [Editor], Troilius, Charles [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36412, {&quot;Title&quot;:&quot;Ten Years Near the German Frontier: A Retrospect and a Warning&quot;,&quot;Topics&quot;:[&quot;Propaganda, German&quot;,&quot;Courts and courtiers&quot;,&quot;Denmark -- Foreign relations -- Germany&quot;,&quot;Germany -- Foreign relations -- Denmark&quot;,&quot;United States Virgin Islands&quot;],&quot;Primary&quot;:&quot;36412.htm&quot;,&quot;CreatorNames&quot;:[&quot;Egan, Maurice Francis, 1852-1924&quot;],&quot;LoCC&quot;:[&quot;DD&quot;,&quot;DL&quot;],&quot;PG_ID&quot;:&quot;36412&quot;});" class='title'>Ten Years Near the German Frontier:<br><span class='subtitle'>A Retrospect and a Warning</span></a>
+<div class='author'>Egan, Maurice Francis, 1852-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36430, {&quot;Title&quot;:&quot;Af mit Levned&quot;,&quot;Topics&quot;:[&quot;Ussing, Johan Louis, 1820-1905&quot;],&quot;Primary&quot;:&quot;36430.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ussing, Johan Louis, 1820-1905&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;DL&quot;],&quot;PG_ID&quot;:&quot;36430&quot;});" class='title'>Af mit Levned</a>
+<div class='author'>Ussing, Johan Louis, 1820-1905</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36597, {&quot;Title&quot;:&quot;Three in Norway, by Two of Them&quot;,&quot;Topics&quot;:[&quot;Norway -- Description and travel&quot;,&quot;Fishing -- Norway&quot;],&quot;Primary&quot;:&quot;36597.htm&quot;,&quot;CreatorNames&quot;:[&quot;Clutterbuck, Walter J., 1853-1937&quot;,&quot;Lees, J. A. (James Arthur), 1852-&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;36597&quot;});" class='title'>Three in Norway, by Two of Them</a>
+<div class='author'>Clutterbuck, Walter J., 1853-1937, Lees, J. A. (James Arthur), 1852-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3701, {&quot;Title&quot;:&quot;Letters from High Latitudes - Being Some Account of a Voyage in 1856 of the Schooner Yacht \&quot;\&quot;Foam\&quot;\&quot; to Iceland, Jan Meyen, and Spitzbergen&quot;,&quot;Topics&quot;:[&quot;Iceland -- Description and travel&quot;,&quot;Arctic regions&quot;],&quot;Primary&quot;:&quot;3701.txt&quot;,&quot;CreatorNames&quot;:[&quot;Dufferin and Ava, Frederick Temple Blackwood, Marquis of, 1826-1902&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;3701&quot;});" class='title'>Letters from High Latitudes -<br><span class='subtitle'>Being Some Account of a Voyage in 1856 of the Schooner Yacht "Foam" to Iceland, Jan Meyen, and Spitzbergen</span></a>
+<div class='author'>Dufferin and Ava, Frederick Temple Blackwood, Marquis of, 1826-1902</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38128, {&quot;Title&quot;:&quot;Memoirs of Leonora Christina, Daughter of Christian IV. of Denmark - Written During Her Imprisonment in the Blue Tower at Copenhagen 1663-1685&quot;,&quot;Topics&quot;:[&quot;Ulfeldt, Leonora Christina, grevinde, 1621-1698 -- Imprisonment&quot;,&quot;Princesses -- Denmark -- Biography&quot;,&quot;Women political prisoners -- Denmark -- Biography&quot;,&quot;Denmark -- History -- Frederick III, 1648-1670 -- Sources&quot;,&quot;Denmark -- History -- Christian V, 1670-1699 -- Sources&quot;],&quot;Primary&quot;:&quot;38128.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ulfeldt, Leonora Christina, grevinde, 1621-1698&quot;,&quot;Bunnett, F. E. (Fanny Elizabeth), 1833?-1875 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;38128&quot;});" class='title'>Memoirs of Leonora Christina, Daughter of Christian IV. of Denmark -<br><span class='subtitle'>Written During Her Imprisonment in the Blue Tower at Copenhagen 1663-1685</span></a>
+<div class='author'>Ulfeldt, Leonora Christina, grevinde, 1621-1698, Bunnett, F. E. (Fanny Elizabeth), 1833?-1875 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38155, {&quot;Title&quot;:&quot;Norway&quot;,&quot;Topics&quot;:[&quot;Norway -- Description and travel&quot;,&quot;Norway -- Social life and customs&quot;],&quot;Primary&quot;:&quot;38155.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jungman, Beatrix&quot;,&quot;Jungmann, Nico, 1872-1935 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;38155&quot;});" class='title'>Norway</a>
+<div class='author'>Jungman, Beatrix, Jungmann, Nico, 1872-1935 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38945, {&quot;Title&quot;:&quot;Canute the Great, 995 (circa)-1035, and the Rise of Danish Imperialism during the Viking Age&quot;,&quot;Topics&quot;:[&quot;Canute I, King of England, 995?-1035&quot;,&quot;Danes -- England -- Kings and rulers -- Biography&quot;,&quot;Northmen -- Great Britain&quot;,&quot;Vikings -- Great Britain&quot;,&quot;Great Britain -- Civilization -- Scandinavian influences&quot;,&quot;Denmark -- Kings and rulers -- Biography&quot;,&quot;Great Britain -- History -- Canute, 1017-1035&quot;],&quot;Primary&quot;:&quot;38945.htm&quot;,&quot;CreatorNames&quot;:[&quot;Larson, Laurence Marcellus, 1868-1938&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;38945&quot;});" class='title'>Canute the Great, 995 (circa)-1035, and the Rise of Danish Imperialism during the Viking Age</a>
+<div class='author'>Larson, Laurence Marcellus, 1868-1938</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41072, {&quot;Title&quot;:&quot;Leonora Christina Ulfeldt&#39;s \&quot;\&quot;Jammers-minde\&quot;\&quot;. En egenhændig skiedring of hendes fangenskab i Blaataarn i aarene 1663-1685&quot;,&quot;Topics&quot;:[&quot;Ulfeldt, Leonora Christina, grevinde, 1621-1698&quot;],&quot;Primary&quot;:&quot;41072.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ulfeldt, Leonora Christina, grevinde, 1621-1698&quot;,&quot;Smith, S. Birket (Sophus Birket), 1838-1919 [Editor]&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;41072&quot;});" class='title'>Leonora Christina Ulfeldt's "Jammers-minde". En egenhændig skiedring of hendes fangenskab i Blaataarn i aarene 1663-1685</a>
+<div class='author'>Ulfeldt, Leonora Christina, grevinde, 1621-1698, Smith, S. Birket (Sophus Birket), 1838-1919 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42079, {&quot;Title&quot;:&quot;Mari, Our Little Norwegian Cousin&quot;,&quot;Topics&quot;:[&quot;Norway -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;42079.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wade, Mary Hazelton Blanchard, 1860-1936&quot;,&quot;Bridgman, L. J. (Lewis Jesse), 1857-1931 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DL&quot;,&quot;PZ&quot;],&quot;PG_ID&quot;:&quot;42079&quot;});" class='title'>Mari, Our Little Norwegian Cousin</a>
+<div class='author'>Wade, Mary Hazelton Blanchard, 1860-1936, Bridgman, L. J. (Lewis Jesse), 1857-1931 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42132, {&quot;Title&quot;:&quot;Through Scandinavia to Moscow&quot;,&quot;Topics&quot;:[&quot;Scandinavia -- Description and travel&quot;,&quot;Russia -- Description and travel&quot;],&quot;Primary&quot;:&quot;42132.htm&quot;,&quot;CreatorNames&quot;:[&quot;Edwards, William Seymour, 1856-1915&quot;],&quot;LoCC&quot;:[&quot;DK&quot;,&quot;DL&quot;],&quot;PG_ID&quot;:&quot;42132&quot;});" class='title'>Through Scandinavia to Moscow</a>
+<div class='author'>Edwards, William Seymour, 1856-1915</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43454, {&quot;Title&quot;:&quot;Peeps at Many Lands: Sweden&quot;,&quot;Topics&quot;:[&quot;Sweden -- Description and travel&quot;,&quot;Sweden -- Social life and customs&quot;],&quot;Primary&quot;:&quot;43454.htm&quot;,&quot;CreatorNames&quot;:[&quot;Liddle, William&quot;,&quot;Liddle, William, Mrs.&quot;,&quot;Larsson, Carl, 1853-1919 [Illustrator]&quot;,&quot;Zorn, Anders, 1860-1920 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;43454&quot;});" class='title'>Peeps at Many Lands:<br><span class='subtitle'>Sweden</span></a>
+<div class='author'>Liddle, William, Liddle, William, Mrs., Larsson, Carl, 1853-1919 [Illustrator], Zorn, Anders, 1860-1920 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44030, {&quot;Title&quot;:&quot;Our Little Danish Cousin&quot;,&quot;Topics&quot;:[&quot;Children -- Denmark -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;44030.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ennis, Luna May&quot;,&quot;Otis, Elizabeth [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DL&quot;,&quot;PZ&quot;],&quot;PG_ID&quot;:&quot;44030&quot;});" class='title'>Our Little Danish Cousin</a>
+<div class='author'>Ennis, Luna May, Otis, Elizabeth [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44624, {&quot;Title&quot;:&quot;Sweden&quot;,&quot;Topics&quot;:[&quot;Sweden -- History&quot;],&quot;Primary&quot;:&quot;44624.htm&quot;,&quot;CreatorNames&quot;:[&quot;Nilsson, Victor Alfred, 1867-1942&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;44624&quot;});" class='title'>Sweden</a>
+<div class='author'>Nilsson, Victor Alfred, 1867-1942</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44967, {&quot;Title&quot;:&quot;Livserindringer&quot;,&quot;Topics&quot;:[&quot;Madvig, J. N. (Johan Nikolai), 1804-1886&quot;,&quot;Denmark -- Politics and government -- 19th century&quot;],&quot;Primary&quot;:&quot;44967.htm&quot;,&quot;CreatorNames&quot;:[&quot;Madvig, J. N. (Johan Nikolai), 1804-1886&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;44967&quot;});" class='title'>Livserindringer</a>
+<div class='author'>Madvig, J. N. (Johan Nikolai), 1804-1886</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44971, {&quot;Title&quot;:&quot;Briefe aus dem hohen Norden - Eine Fahrt nach Spitzbergen mit dem HAPAG-Dampfer \&quot;\&quot;Auguste Viktoria\&quot;\&quot; im Juli&quot;,&quot;Topics&quot;:[&quot;Arctic regions&quot;,&quot;Norway -- Description and travel&quot;,&quot;Spitsbergen Island (Norway) -- Description and travel&quot;,&quot;Svalbard (Norway) -- Description and travel&quot;],&quot;Primary&quot;:&quot;44971.htm&quot;,&quot;CreatorNames&quot;:[&quot;Haffter, Elias, 1803-1861&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;44971&quot;});" class='title'>Briefe aus dem hohen Norden -<br><span class='subtitle'>Eine Fahrt nach Spitzbergen mit dem HAPAG-Dampfer "Auguste Viktoria" im Juli</span></a>
+<div class='author'>Haffter, Elias, 1803-1861</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45311, {&quot;Title&quot;:&quot;The Norwegian Fjords&quot;,&quot;Topics&quot;:[&quot;Norway -- Description and travel&quot;],&quot;Primary&quot;:&quot;45311.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cooper, A. Heaton (Alfred Heaton), 1863-1929&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;45311&quot;});" class='title'>The Norwegian Fjords</a>
+<div class='author'>Cooper, A. Heaton (Alfred Heaton), 1863-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45862, {&quot;Title&quot;:&quot;Through Arctic Lapland&quot;,&quot;Topics&quot;:[&quot;Lapland -- Description and travel&quot;],&quot;Primary&quot;:&quot;45862.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hyne, Charles John Cutcliffe Wright, 1866-1944&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;45862&quot;});" class='title'>Through Arctic Lapland</a>
+<div class='author'>Hyne, Charles John Cutcliffe Wright, 1866-1944</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46772, {&quot;Title&quot;:&quot;Across Iceland&quot;,&quot;Topics&quot;:[&quot;Iceland -- Description and travel&quot;,&quot;Plants -- Iceland&quot;,&quot;Plants -- Faroe Islands&quot;],&quot;Primary&quot;:&quot;46772.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bisiker, W. (William)&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;46772&quot;});" class='title'>Across Iceland</a>
+<div class='author'>Bisiker, W. (William)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46868, {&quot;Title&quot;:&quot;Reise nach dem skandinavischen Norden und der Insel Island im Jahre 1845. Erster Band.&quot;,&quot;Topics&quot;:[&quot;Iceland -- Description and travel&quot;,&quot;Scandinavia -- Description and travel&quot;],&quot;Primary&quot;:&quot;46868.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pfeiffer, Ida, 1797-1858&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;46868&quot;});" class='title'>Reise nach dem skandinavischen Norden und der Insel Island im Jahre 1845. Erster Band.</a>
+<div class='author'>Pfeiffer, Ida, 1797-1858</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47193, {&quot;Title&quot;:&quot;Reise nach dem skandinavischen Norden und der Insel Island im Jahre 1845. Zweiter Band.&quot;,&quot;Topics&quot;:[&quot;Iceland -- Description and travel&quot;,&quot;Scandinavia -- Description and travel&quot;],&quot;Primary&quot;:&quot;47193.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pfeiffer, Ida, 1797-1858&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;47193&quot;});" class='title'>Reise nach dem skandinavischen Norden und der Insel Island im Jahre 1845. Zweiter Band.</a>
+<div class='author'>Pfeiffer, Ida, 1797-1858</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47521, {&quot;Title&quot;:&quot;Life and Times of Her Majesty Caroline Matilda, Vol. 1 (of 3) - Queen of Denmark and Norway, and Sister of H. M. George III. of England&quot;,&quot;Topics&quot;:[&quot;Caroline Mathilde, Queen, consort of Christian VII, King of Denmark, 1751-1775&quot;,&quot;Denmark -- History -- Christian VII, 1766-1808&quot;],&quot;Primary&quot;:&quot;47521.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wraxall, Lascelles, Sir, 1828-1865&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;47521&quot;});" class='title'>Life and Times of Her Majesty Caroline Matilda, Vol. 1 (of 3) -<br><span class='subtitle'>Queen of Denmark and Norway, and Sister of H. M. George III. of England</span></a>
+<div class='author'>Wraxall, Lascelles, Sir, 1828-1865</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48419, {&quot;Title&quot;:&quot;Kansantaruja Laatokan luoteis-rannikolta: kesällä 1879&quot;,&quot;Topics&quot;:[&quot;Folklore -- Finland&quot;],&quot;Primary&quot;:&quot;48419.txt&quot;,&quot;CreatorNames&quot;:[&quot;Schvindt, Theodor, 1851-1917&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;48419&quot;});" class='title'>Kansantaruja Laatokan luoteis-rannikolta:<br><span class='subtitle'>kesällä 1879</span></a>
+<div class='author'>Schvindt, Theodor, 1851-1917</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49583, {&quot;Title&quot;:&quot;Life and Times of Her Majesty Caroline Matilda, Vol. 2 (of 3) - Queen of Denmark and Norway, and Sister of H. M. George III. of England&quot;,&quot;Topics&quot;:[&quot;Caroline Mathilde, Queen, consort of Christian VII, King of Denmark, 1751-1775&quot;,&quot;Denmark -- History -- Christian VII, 1766-1808&quot;],&quot;Primary&quot;:&quot;49583.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wraxall, Lascelles, Sir, 1828-1865&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;49583&quot;});" class='title'>Life and Times of Her Majesty Caroline Matilda, Vol. 2 (of 3) -<br><span class='subtitle'>Queen of Denmark and Norway, and Sister of H. M. George III. of England</span></a>
+<div class='author'>Wraxall, Lascelles, Sir, 1828-1865</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50474, {&quot;Title&quot;:&quot;History of the Scottish expedition to Norway in 1612&quot;,&quot;Topics&quot;:[&quot;Norway -- History -- Scottish Expedition, 1612&quot;],&quot;Primary&quot;:&quot;50474.htm&quot;,&quot;CreatorNames&quot;:[&quot;Michell, Thomas, 1836-1899&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;50474&quot;});" class='title'>History of the Scottish expedition to Norway in 1612</a>
+<div class='author'>Michell, Thomas, 1836-1899</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50695, {&quot;Title&quot;:&quot;Muistelmia vuosien 1808-1809 sodasta: Kansan suusta kokoillut&quot;,&quot;Topics&quot;:[&quot;Finland -- History -- Russian Conquest, 1808-1809&quot;],&quot;Primary&quot;:&quot;50695.txt&quot;,&quot;CreatorNames&quot;:[&quot;Castrén, Kaarle Alfred, 1845-1873&quot;],&quot;LoCC&quot;:[&quot;DK&quot;,&quot;DL&quot;],&quot;PG_ID&quot;:&quot;50695&quot;});" class='title'>Muistelmia vuosien 1808-1809 sodasta:<br><span class='subtitle'>Kansan suusta kokoillut</span></a>
+<div class='author'>Castrén, Kaarle Alfred, 1845-1873</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51368, {&quot;Title&quot;:&quot;A Queen of Tears, vol. 1 of 2 - Caroline Matilda, Queen of Denmark and Norway and Princess of Great Britain and Ireland&quot;,&quot;Topics&quot;:[&quot;Caroline Mathilde, Queen, consort of Christian VII, King of Denmark, 1751-1775&quot;],&quot;Primary&quot;:&quot;51368.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wilkins, W. H. (William Henry), 1860-1905&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;51368&quot;});" class='title'>A Queen of Tears, vol. 1 of 2 -<br><span class='subtitle'>Caroline Matilda, Queen of Denmark and Norway and Princess of Great Britain and Ireland</span></a>
+<div class='author'>Wilkins, W. H. (William Henry), 1860-1905</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51369, {&quot;Title&quot;:&quot;A Queen of Tears, vol. 2 of 2 - Caroline Matilda, Queen of Denmark and Norway and Princess of Great Britain and Ireland&quot;,&quot;Topics&quot;:[&quot;Caroline Mathilde, Queen, consort of Christian VII, King of Denmark, 1751-1775&quot;],&quot;Primary&quot;:&quot;51369.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wilkins, W. H. (William Henry), 1860-1905&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;51369&quot;});" class='title'>A Queen of Tears, vol. 2 of 2 -<br><span class='subtitle'>Caroline Matilda, Queen of Denmark and Norway and Princess of Great Britain and Ireland</span></a>
+<div class='author'>Wilkins, W. H. (William Henry), 1860-1905</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51680, {&quot;Title&quot;:&quot;History of the Life of Gustavus Adolphus II., the Hero-General of the Reformation&quot;,&quot;Topics&quot;:[&quot;Gustav II Adolf, King of Sweden, 1594-1632&quot;],&quot;Primary&quot;:&quot;51680.htm&quot;,&quot;CreatorNames&quot;:[&quot;Monroe, Harriet Earhart, 1842-1927&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;51680&quot;});" class='title'>History of the Life of Gustavus Adolphus II., the Hero-General of the Reformation</a>
+<div class='author'>Monroe, Harriet Earhart, 1842-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51846, {&quot;Title&quot;:&quot;Kansa ja sen kuninkaat: Kertomuksia nuorten ja vanhain luettavaksi&quot;,&quot;Topics&quot;:[&quot;Sweden -- History&quot;],&quot;Primary&quot;:&quot;51846.txt&quot;,&quot;CreatorNames&quot;:[&quot;Heidenstam, Verner von, 1859-1940&quot;,&quot;Lehtonen, Vihtori [Translator]&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;51846&quot;});" class='title'>Kansa ja sen kuninkaat:<br><span class='subtitle'>Kertomuksia nuorten ja vanhain luettavaksi</span></a>
+<div class='author'>Heidenstam, Verner von, 1859-1940, Lehtonen, Vihtori [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52041, {&quot;Title&quot;:&quot;Scandinavian Relations with Ireland During the Viking Period&quot;,&quot;Topics&quot;:[&quot;Scandinavia -- History&quot;,&quot;Ireland -- History -- To 1603&quot;,&quot;Northmen&quot;],&quot;Primary&quot;:&quot;52041.htm&quot;,&quot;CreatorNames&quot;:[&quot;Walsh, A.&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;52041&quot;});" class='title'>Scandinavian Relations with Ireland During the Viking Period</a>
+<div class='author'>Walsh, A.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52195, {&quot;Title&quot;:&quot;The Oxonian in Thelemarken, volume 1 (of 2) - or, Notes of travel in south-western Norway in the summers of 1856 and 1857. With glances at the legendary lore of that district.&quot;,&quot;Topics&quot;:[&quot;Norway -- Description and travel&quot;,&quot;Folklore -- Norway&quot;],&quot;Primary&quot;:&quot;52195.htm&quot;,&quot;CreatorNames&quot;:[&quot;Metcalfe, Frederick, 1815-1885&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;52195&quot;});" class='title'>The Oxonian in Thelemarken, volume 1 (of 2) -<br><span class='subtitle'>or, Notes of travel in south-western Norway in the summers of 1856 and 1857. With glances at the legendary lore of that district.</span></a>
+<div class='author'>Metcalfe, Frederick, 1815-1885</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52196, {&quot;Title&quot;:&quot;The Oxonian in Thelemarken, volume 2 (of 2) - or, Notes of travel in south-western Norway in the summers of 1856 and 1857. With glances at the legendary lore of that district.&quot;,&quot;Topics&quot;:[&quot;Norway -- Description and travel&quot;,&quot;Folklore -- Norway&quot;],&quot;Primary&quot;:&quot;52196.htm&quot;,&quot;CreatorNames&quot;:[&quot;Metcalfe, Frederick, 1815-1885&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;52196&quot;});" class='title'>The Oxonian in Thelemarken, volume 2 (of 2) -<br><span class='subtitle'>or, Notes of travel in south-western Norway in the summers of 1856 and 1857. With glances at the legendary lore of that district.</span></a>
+<div class='author'>Metcalfe, Frederick, 1815-1885</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53106, {&quot;Title&quot;:&quot;The Vikings&quot;,&quot;Topics&quot;:[&quot;Vikings&quot;],&quot;Primary&quot;:&quot;53106.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mawer, A. (Allen), 1879-1942&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;53106&quot;});" class='title'>The Vikings</a>
+<div class='author'>Mawer, A. (Allen), 1879-1942</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53114, {&quot;Title&quot;:&quot;Om mordet på Karl XII: Historisk och juridisk undersökning&quot;,&quot;Topics&quot;:[&quot;Charles XII, King of Sweden, 1682-1718&quot;,&quot;Sweden -- History -- Charles XII, 1697-1718&quot;],&quot;Primary&quot;:&quot;53114.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hultgren, Olaf Johan, 1827-&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;53114&quot;});" class='title'>Om mordet på Karl XII:<br><span class='subtitle'>Historisk och juridisk undersökning</span></a>
+<div class='author'>Hultgren, Olaf Johan, 1827-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53454, {&quot;Title&quot;:&quot;Kaarle XII:n historia&quot;,&quot;Topics&quot;:[&quot;Charles XII, King of Sweden, 1682-1718&quot;,&quot;Sweden -- History -- Charles XII, 1697-1718&quot;,&quot;Sweden -- Kings and rulers -- Biography&quot;],&quot;Primary&quot;:&quot;53454.txt&quot;,&quot;CreatorNames&quot;:[&quot;Voltaire, 1694-1778&quot;,&quot;Kallio, O. A. (Oskar Albin), 1874-1940 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;53454&quot;});" class='title'>Kaarle XII:n historia</a>
+<div class='author'>Voltaire, 1694-1778, Kallio, O. A. (Oskar Albin), 1874-1940 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53971, {&quot;Title&quot;:&quot;Anmärkningar och nödvändiga Upplysningar vid Herr C. J. Holms Anteckningar öfver Fälttågen emot Ryssland åren 1808 och 1809&quot;,&quot;Topics&quot;:[&quot;Russo-Swedish War, 1808-1809&quot;,&quot;Holm, Carl Johan, 1781-1867. Anteckningar öfver fälttågen emot Ryssland åren 1808 och 1809&quot;],&quot;Primary&quot;:&quot;53971.htm&quot;,&quot;CreatorNames&quot;:[&quot;Adlercreutz, Gustav Magnus, 1775-1845&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;53971&quot;});" class='title'>Anmärkningar och nödvändiga Upplysningar vid Herr C. J. Holms Anteckningar öfver Fälttågen emot Ryssland åren 1808 och 1809</a>
+<div class='author'>Adlercreutz, Gustav Magnus, 1775-1845</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53972, {&quot;Title&quot;:&quot;Anteckningar öfver Fälttågen emot Ryssland åren 1808 och 1809&quot;,&quot;Topics&quot;:[&quot;Holm, Carl Johan, 1781-1867&quot;,&quot;Russo-Swedish War, 1808-1809 -- Personal narratives&quot;],&quot;Primary&quot;:&quot;53972.htm&quot;,&quot;CreatorNames&quot;:[&quot;Holm, Carl Johan, 1781-1867&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;53972&quot;});" class='title'>Anteckningar öfver Fälttågen emot Ryssland åren 1808 och 1809</a>
+<div class='author'>Holm, Carl Johan, 1781-1867</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54081, {&quot;Title&quot;:&quot;Lifvet på Island under sagotiden&quot;,&quot;Topics&quot;:[&quot;Iceland -- History&quot;,&quot;Iceland -- Social life and customs&quot;],&quot;Primary&quot;:&quot;54081.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hildebrand, Hans, 1842-1913&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;54081&quot;});" class='title'>Lifvet på Island under sagotiden</a>
+<div class='author'>Hildebrand, Hans, 1842-1913</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55369, {&quot;Title&quot;:&quot;Life and Times of Her Majesty Caroline Matilda, Vol. 3 (of 3) - Queen of Denmark and Norway, and Sister of H. M. George III. of England&quot;,&quot;Topics&quot;:[&quot;Caroline Mathilde, Queen, consort of Christian VII, King of Denmark, 1751-1775&quot;,&quot;Denmark -- History -- Christian VII, 1766-1808&quot;],&quot;Primary&quot;:&quot;55369.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wraxall, Lascelles, Sir, 1828-1865&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;55369&quot;});" class='title'>Life and Times of Her Majesty Caroline Matilda, Vol. 3 (of 3) -<br><span class='subtitle'>Queen of Denmark and Norway, and Sister of H. M. George III. of England</span></a>
+<div class='author'>Wraxall, Lascelles, Sir, 1828-1865</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55649, {&quot;Title&quot;:&quot;Matkustus Suomessa&quot;,&quot;Topics&quot;:[&quot;Finland -- Description and travel&quot;],&quot;Primary&quot;:&quot;55649.txt&quot;,&quot;CreatorNames&quot;:[&quot;Topelius, Zacharias, 1818-1898&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;55649&quot;});" class='title'>Matkustus Suomessa</a>
+<div class='author'>Topelius, Zacharias, 1818-1898</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56167, {&quot;Title&quot;:&quot;The Viking Age. Volume 1 (of 2) - The early history, manners, and customs of the ancestors of the English-speaking nations&quot;,&quot;Topics&quot;:[&quot;Vikings&quot;,&quot;Scandinavia -- Antiquities&quot;,&quot;Scandinavia -- Civilization&quot;],&quot;Primary&quot;:&quot;56167.htm&quot;,&quot;CreatorNames&quot;:[&quot;Du Chaillu, Paul B. (Paul Belloni), 1835-1903&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;56167&quot;});" class='title'>The Viking Age. Volume 1 (of 2) -<br><span class='subtitle'>The early history, manners, and customs of the ancestors of the English-speaking nations</span></a>
+<div class='author'>Du Chaillu, Paul B. (Paul Belloni), 1835-1903</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56168, {&quot;Title&quot;:&quot;The Viking Age. Volume 2 (of 2) - The early history, manners, and customs of the ancestors of the English-speaking nations&quot;,&quot;Topics&quot;:[&quot;Vikings&quot;,&quot;Scandinavia -- Antiquities&quot;,&quot;Scandinavia -- Civilization&quot;],&quot;Primary&quot;:&quot;56168.htm&quot;,&quot;CreatorNames&quot;:[&quot;Du Chaillu, Paul B. (Paul Belloni), 1835-1903&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;56168&quot;});" class='title'>The Viking Age. Volume 2 (of 2) -<br><span class='subtitle'>The early history, manners, and customs of the ancestors of the English-speaking nations</span></a>
+<div class='author'>Du Chaillu, Paul B. (Paul Belloni), 1835-1903</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56193, {&quot;Title&quot;:&quot;Suomalaisia sankareita I: Historiallisia kertomuksia&quot;,&quot;Topics&quot;:[&quot;Heroes&quot;,&quot;Finland -- Biography&quot;],&quot;Primary&quot;:&quot;56193.txt&quot;,&quot;CreatorNames&quot;:[&quot;Ivalo, Santeri, 1866-1937&quot;,&quot;Wilkuna, Kyösti, 1879-1922&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;56193&quot;});" class='title'>Suomalaisia sankareita I:<br><span class='subtitle'>Historiallisia kertomuksia</span></a>
+<div class='author'>Ivalo, Santeri, 1866-1937, Wilkuna, Kyösti, 1879-1922</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56194, {&quot;Title&quot;:&quot;Suomalaisia sankareita II: Historiallisia kertomuksia&quot;,&quot;Topics&quot;:[&quot;Heroes&quot;,&quot;Finland -- Biography&quot;],&quot;Primary&quot;:&quot;56194.txt&quot;,&quot;CreatorNames&quot;:[&quot;Ivalo, Santeri, 1866-1937&quot;,&quot;Wilkuna, Kyösti, 1879-1922&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;56194&quot;});" class='title'>Suomalaisia sankareita II:<br><span class='subtitle'>Historiallisia kertomuksia</span></a>
+<div class='author'>Ivalo, Santeri, 1866-1937, Wilkuna, Kyösti, 1879-1922</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56781, {&quot;Title&quot;:&quot;Midnight Sunbeams; or, Bits of Travel Through the Land of the Norseman&quot;,&quot;Topics&quot;:[&quot;Scandinavia -- Description and travel&quot;],&quot;Primary&quot;:&quot;56781.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kimball, Edwin Coolidge&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;56781&quot;});" class='title'>Midnight Sunbeams;<br><span class='subtitle'>or, Bits of Travel Through the Land of the Norseman</span></a>
+<div class='author'>Kimball, Edwin Coolidge</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57106, {&quot;Title&quot;:&quot;The Charm of Scandinavia&quot;,&quot;Topics&quot;:[&quot;Scandinavia -- Description and travel&quot;],&quot;Primary&quot;:&quot;57106.htm&quot;,&quot;CreatorNames&quot;:[&quot;Clark, Francis E. (Francis Edward), 1851-1927&quot;,&quot;Clark, Sydney, 1890-1975&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;57106&quot;});" class='title'>The Charm of Scandinavia</a>
+<div class='author'>Clark, Francis E. (Francis Edward), 1851-1927, Clark, Sydney, 1890-1975</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57659, {&quot;Title&quot;:&quot;Iceland: Horseback tours in saga land&quot;,&quot;Topics&quot;:[&quot;Iceland -- Description and travel&quot;,&quot;Sagas -- History and criticism&quot;],&quot;Primary&quot;:&quot;57659.htm&quot;,&quot;CreatorNames&quot;:[&quot;Russell, W. S. C. (Waterman Spaulding Chapman), 1871-1918&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;57659&quot;});" class='title'>Iceland:<br><span class='subtitle'>Horseback tours in saga land</span></a>
+<div class='author'>Russell, W. S. C. (Waterman Spaulding Chapman), 1871-1918</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57770, {&quot;Title&quot;:&quot;Lapin muisteluksia&quot;,&quot;Topics&quot;:[&quot;Lapland -- Description and travel&quot;],&quot;Primary&quot;:&quot;57770.txt&quot;,&quot;CreatorNames&quot;:[&quot;Paulaharju, Samuli, 1875-1944&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;57770&quot;});" class='title'>Lapin muisteluksia</a>
+<div class='author'>Paulaharju, Samuli, 1875-1944</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57942, {&quot;Title&quot;:&quot;Tent life with English Gipsies in Norway&quot;,&quot;Topics&quot;:[&quot;Norway -- Description and travel&quot;,&quot;Romanies&quot;],&quot;Primary&quot;:&quot;57942.htm&quot;,&quot;CreatorNames&quot;:[&quot;Smith, Hubert (Solicitor)&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;57942&quot;});" class='title'>Tent life with English Gipsies in Norway</a>
+<div class='author'>Smith, Hubert (Solicitor)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59531, {&quot;Title&quot;:&quot;Norway&quot;,&quot;Topics&quot;:[&quot;Norway -- History&quot;],&quot;Primary&quot;:&quot;59531.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sörensen, Sigvart, 1849-&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;59531&quot;});" class='title'>Norway</a>
+<div class='author'>Sörensen, Sigvart, 1849-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59584, {&quot;Title&quot;:&quot;Ultima Thule; or, A Summer in Iceland. vol. 1/2&quot;,&quot;Topics&quot;:[&quot;Iceland -- Description and travel&quot;,&quot;Sulfur&quot;,&quot;Iceland&quot;],&quot;Primary&quot;:&quot;59584.htm&quot;,&quot;CreatorNames&quot;:[&quot;Burton, Richard Francis, Sir, 1821-1890&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;59584&quot;});" class='title'>Ultima Thule;<br><span class='subtitle'>or, A Summer in Iceland. vol. 1/2</span></a>
+<div class='author'>Burton, Richard Francis, Sir, 1821-1890</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59585, {&quot;Title&quot;:&quot;Ultima Thule; or, A Summer in Iceland. vol. 2/2&quot;,&quot;Topics&quot;:[&quot;Iceland -- Description and travel&quot;,&quot;Sulfur&quot;,&quot;Iceland&quot;],&quot;Primary&quot;:&quot;59585.htm&quot;,&quot;CreatorNames&quot;:[&quot;Burton, Richard Francis, Sir, 1821-1890&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;59585&quot;});" class='title'>Ultima Thule;<br><span class='subtitle'>or, A Summer in Iceland. vol. 2/2</span></a>
+<div class='author'>Burton, Richard Francis, Sir, 1821-1890</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59593, {&quot;Title&quot;:&quot;History of Denmark, Sweden, and Norway, Vol. 1 (of 2)&quot;,&quot;Topics&quot;:[&quot;Scandinavia -- History&quot;],&quot;Primary&quot;:&quot;59593.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dunham, S. A. (Samuel Astley), 1796-1858&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;59593&quot;});" class='title'>History of Denmark, Sweden, and Norway, Vol. 1 (of 2)</a>
+<div class='author'>Dunham, S. A. (Samuel Astley), 1796-1858</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59657, {&quot;Title&quot;:&quot;History of Denmark, Sweden, and Norway, Vol. 2 (of 2)&quot;,&quot;Topics&quot;:[&quot;Scandinavia -- History&quot;],&quot;Primary&quot;:&quot;59657.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dunham, S. A. (Samuel Astley), 1796-1858&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;59657&quot;});" class='title'>History of Denmark, Sweden, and Norway, Vol. 2 (of 2)</a>
+<div class='author'>Dunham, S. A. (Samuel Astley), 1796-1858</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59695, {&quot;Title&quot;:&quot;The History of Lapland - Wherein Are Shewed the Original, Manners, Habits, Marriages, Conjurations, &amp;c. of That People&quot;,&quot;Topics&quot;:[&quot;Sami (European people)&quot;,&quot;Lapland -- Description and travel -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;59695.htm&quot;,&quot;CreatorNames&quot;:[&quot;Scheffer, Johannes, 1621-1679&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;59695&quot;});" class='title'>The History of Lapland -<br><span class='subtitle'>Wherein Are Shewed the Original, Manners, Habits, Marriages, Conjurations, &c. of That People</span></a>
+<div class='author'>Scheffer, Johannes, 1621-1679</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61328, {&quot;Title&quot;:&quot;Indtryk og Minder fra Dybbøl&quot;,&quot;Topics&quot;:[&quot;Dybbøl (Denmark) -- History&quot;,&quot;Schleswig-Holstein War, 1864&quot;],&quot;Primary&quot;:&quot;61328.htm&quot;,&quot;CreatorNames&quot;:[&quot;Castenschiold, Carl Vilhelm Behagen, 1837-1919&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;61328&quot;});" class='title'>Indtryk og Minder fra Dybbøl</a>
+<div class='author'>Castenschiold, Carl Vilhelm Behagen, 1837-1919</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61992, {&quot;Title&quot;:&quot;Norðurfari; or, Rambles in Iceland&quot;,&quot;Topics&quot;:[&quot;Iceland -- Description and travel&quot;],&quot;Primary&quot;:&quot;61992.htm&quot;,&quot;CreatorNames&quot;:[&quot;Miles, Pliny, 1818-1865&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;61992&quot;});" class='title'>Norðurfari;<br><span class='subtitle'>or, Rambles in Iceland</span></a>
+<div class='author'>Miles, Pliny, 1818-1865</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62282, {&quot;Title&quot;:&quot;Across the Vatna Jökull; or, Scenes in Iceland - Being a Description of Hitherto Unkown Regions&quot;,&quot;Topics&quot;:[&quot;Iceland -- Description and travel&quot;],&quot;Primary&quot;:&quot;62282.htm&quot;,&quot;CreatorNames&quot;:[&quot;Watts, William Lord, 1850-1921&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;62282&quot;});" class='title'>Across the Vatna Jökull;<br><span class='subtitle'>or, Scenes in Iceland - Being a Description of Hitherto Unkown Regions</span></a>
+<div class='author'>Watts, William Lord, 1850-1921</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62806, {&quot;Title&quot;:&quot;Kåtornas folk&quot;,&quot;Topics&quot;:[&quot;Lapland -- Description and travel&quot;,&quot;Sami (European people)&quot;],&quot;Primary&quot;:&quot;62806.htm&quot;,&quot;CreatorNames&quot;:[&quot;Nordström, Ester Blenda, 1891-1948&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;62806&quot;});" class='title'>Kåtornas folk</a>
+<div class='author'>Nordström, Ester Blenda, 1891-1948</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63447, {&quot;Title&quot;:&quot;Vanhaa Lappia ja Peräpohjaa&quot;,&quot;Topics&quot;:[&quot;Lapland -- Social life and customs&quot;],&quot;Primary&quot;:&quot;63447.txt&quot;,&quot;CreatorNames&quot;:[&quot;Paulaharju, Samuli, 1875-1944&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;63447&quot;});" class='title'>Vanhaa Lappia ja Peräpohjaa</a>
+<div class='author'>Paulaharju, Samuli, 1875-1944</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63851, {&quot;Title&quot;:&quot;\&quot;\&quot;Gamle Norge\&quot;\&quot;: Rambles and Scrambles in Norway&quot;,&quot;Topics&quot;:[&quot;Norway -- Description and travel&quot;],&quot;Primary&quot;:&quot;63851.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pritchett, R. T. (Robert Taylor), 1828-1907&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;63851&quot;});" class='title'>"Gamle Norge":<br><span class='subtitle'>Rambles and Scrambles in Norway</span></a>
+<div class='author'>Pritchett, R. T. (Robert Taylor), 1828-1907</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64487, {&quot;Title&quot;:&quot;De Danske paa Schelden (1808-1809) - Under Kapitainerne S. U. Rosenvinge og H. Baron Holsten.&quot;,&quot;Topics&quot;:[&quot;Denmark -- History, Naval -- 19th century&quot;,&quot;Rosenvinge, Sigvart Urne, 1758-1820&quot;,&quot;Holsten, Hans, Baron, 1758-1849&quot;],&quot;Primary&quot;:&quot;64487.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lütken, Otto George, 1849-1906&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;64487&quot;});" class='title'>De Danske paa Schelden (1808-1809) -<br><span class='subtitle'>Under Kapitainerne S. U. Rosenvinge og H. Baron Holsten.</span></a>
+<div class='author'>Lütken, Otto George, 1849-1906</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64897, {&quot;Title&quot;:&quot;De Danske paa Schelden (1809-1813)&quot;,&quot;Topics&quot;:[&quot;Denmark -- History, Naval -- 19th century&quot;],&quot;Primary&quot;:&quot;64897.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lütken, Otto George, 1849-1906&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;64897&quot;});" class='title'>De Danske paa Schelden (1809-1813)</a>
+<div class='author'>Lütken, Otto George, 1849-1906</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65602, {&quot;Title&quot;:&quot;Kuvauksia Hailuodosta&quot;,&quot;Topics&quot;:[&quot;Ethnology -- Finland -- Hailuoto Island&quot;,&quot;Hailuoto Island (Finland) -- Social life and customs&quot;,&quot;Hailuoto Island (Finland) -- History&quot;],&quot;Primary&quot;:&quot;65602.txt&quot;,&quot;CreatorNames&quot;:[&quot;Paulaharju, Samuli, 1875-1944&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;65602&quot;});" class='title'>Kuvauksia Hailuodosta</a>
+<div class='author'>Paulaharju, Samuli, 1875-1944</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66378, {&quot;Title&quot;:&quot;Viaggio al Capo Nord - fatto l&#39;anno 1799 dal Sig. cavaliere Giuseppe Acerbi&quot;,&quot;Topics&quot;:[&quot;Scandinavia -- Description and travel&quot;],&quot;Primary&quot;:&quot;66378.htm&quot;,&quot;CreatorNames&quot;:[&quot;Acerbi, Giuseppe, 1773-1846&quot;,&quot;Compagnoni, Giuseppe, 1754-1833 [Editor]&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;66378&quot;});" class='title'>Viaggio al Capo Nord -<br><span class='subtitle'>fatto l'anno 1799 dal Sig. cavaliere Giuseppe Acerbi</span></a>
+<div class='author'>Acerbi, Giuseppe, 1773-1846, Compagnoni, Giuseppe, 1754-1833 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67401, {&quot;Title&quot;:&quot;Forest Scenes in Norway and Sweden: Being Extracts from the Journal of a Fisherman&quot;,&quot;Topics&quot;:[&quot;Scandinavia -- Description and travel&quot;,&quot;Fishing -- Scandinavia&quot;],&quot;Primary&quot;:&quot;67401.htm&quot;,&quot;CreatorNames&quot;:[&quot;Newland, Henry, 1804-1860&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;67401&quot;});" class='title'>Forest Scenes in Norway and Sweden:<br><span class='subtitle'>Being Extracts from the Journal of a Fisherman</span></a>
+<div class='author'>Newland, Henry, 1804-1860</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69399, {&quot;Title&quot;:&quot;The old town&quot;,&quot;Topics&quot;:[&quot;Ribe (Denmark)&quot;,&quot;Denmark -- Social life and customs&quot;],&quot;Primary&quot;:&quot;69399.htm&quot;,&quot;CreatorNames&quot;:[&quot;Riis, Jacob A. (Jacob August), 1849-1914&quot;,&quot;Benda, Wladyslaw T. (Wladyslaw Theodore), 1873-1948 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;69399&quot;});" class='title'>The old town</a>
+<div class='author'>Riis, Jacob A. (Jacob August), 1849-1914, Benda, Wladyslaw T. (Wladyslaw Theodore), 1873-1948 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70423, {&quot;Title&quot;:&quot;L&#39;Ile d&#39;Enfer&quot;,&quot;Topics&quot;:[&quot;Iceland -- Description and travel&quot;],&quot;Primary&quot;:&quot;70423.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rouquette, Louis-Frédéric, 1884-1926&quot;],&quot;LoCC&quot;:[&quot;DL&quot;],&quot;PG_ID&quot;:&quot;70423&quot;});" class='title'>L'Ile d'Enfer</a>
+<div class='author'>Rouquette, Louis-Frédéric, 1884-1926</div>
+</div>
+</ul></div>
+</body></html>

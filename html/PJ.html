@@ -1,0 +1,606 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Oriental languages and literatures (PJ)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(10056, {&quot;Title&quot;:&quot;Chinese Literature - Comprising the Analects of Confucius, the Sayings of Mencius, the Shi-King, the Travels of Fâ-Hien, and the Sorrows of Han&quot;,&quot;Topics&quot;:[&quot;Chinese literature -- Translations into English&quot;,&quot;Chinese literature&quot;,&quot;China -- Literary collections&quot;],&quot;Primary&quot;:&quot;10056.txt&quot;,&quot;CreatorNames&quot;:[&quot;Confucius, 551 BCE-479 BCE&quot;,&quot;Faxian, 337?-422?&quot;,&quot;Mencius, 372? BCE-289? BCE&quot;,&quot;Wilson, Epiphanius, 1845-1916 [Editor]&quot;,&quot;Davis, John Francis, Sir, 1795-1890 [Translator]&quot;,&quot;Jennings, William, 1847-1927 [Translator]&quot;,&quot;Legge, James, 1815-1897 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;10056&quot;});" class='title'>Chinese Literature -<br><span class='subtitle'>Comprising the Analects of Confucius, the Sayings of Mencius, the Shi-King, the Travels of Fâ-Hien, and the Sorrows of Han</span></a>
+<div class='author'>Confucius, 551 BCE-479 BCE, Faxian, 337?-422?, Mencius, 372? BCE-289? BCE, Wilson, Epiphanius, 1845-1916 [Editor], Davis, John Francis, Sir, 1795-1890 [Translator], Jennings, William, 1847-1927 [Translator], Legge, James, 1815-1897 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(10121, {&quot;Title&quot;:&quot;The Literature of Arabia - With Critical and Biographical Sketches by Epiphanius Wilson&quot;,&quot;Topics&quot;:[&quot;Arabic literature&quot;],&quot;Primary&quot;:&quot;10121.txt&quot;,&quot;CreatorNames&quot;:[&quot;Wilson, Epiphanius, 1845-1916 [Editor]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;10121&quot;});" class='title'>The Literature of Arabia -<br><span class='subtitle'>With Critical and Biographical Sketches by Epiphanius Wilson</span></a>
+<div class='author'>Wilson, Epiphanius, 1845-1916 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(10315, {&quot;Title&quot;:&quot;The Persian Literature, Comprising The Shah Nameh, The Rubaiyat, The Divan, and The Gulistan, Volume 1&quot;,&quot;Topics&quot;:[&quot;Persian literature -- Translations into English&quot;],&quot;Primary&quot;:&quot;10315.txt&quot;,&quot;CreatorNames&quot;:[&quot;Firdawsi&quot;,&quot;Hafiz, active 14th century&quot;,&quot;Omar Khayyam, 1048-1122&quot;,&quot;Gottheil, Richard J. H. (Richard James Horatio), 1862-1936 [Contributor]&quot;,&quot;Atkinson, James, 1780-1852 [Translator]&quot;,&quot;Bicknell, Herman, 1830-1875 [Translator]&quot;,&quot;FitzGerald, Edward, 1809-1883 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;10315&quot;});" class='title'>The Persian Literature, Comprising The Shah Nameh, The Rubaiyat, The Divan, and The Gulistan, Volume 1</a>
+<div class='author'>Firdawsi, Hafiz, active 14th century, Omar Khayyam, 1048-1122, Gottheil, Richard J. H. (Richard James Horatio), 1862-1936 [Contributor], Atkinson, James, 1780-1852 [Translator], Bicknell, Herman, 1830-1875 [Translator], FitzGerald, Edward, 1809-1883 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(10764, {&quot;Title&quot;:&quot;Lettres écrites d&#39;Égypte et de Nubie en 1828 et 1829&quot;,&quot;Topics&quot;:[&quot;Egypt -- Antiquities&quot;,&quot;Egypt -- Description and travel&quot;,&quot;Champollion, Jean-François, 1790-1832&quot;],&quot;Primary&quot;:&quot;10764.htm&quot;,&quot;CreatorNames&quot;:[&quot;Champollion, Jean-François, 1790-1832&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;10764&quot;});" class='title'>Lettres écrites d'Égypte et de Nubie en 1828 et 1829</a>
+<div class='author'>Champollion, Jean-François, 1790-1832</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(10887, {&quot;Title&quot;:&quot;Babylonian and Assyrian Literature&quot;,&quot;Topics&quot;:[&quot;Assyro-Babylonian literature -- Translations into English&quot;],&quot;Primary&quot;:&quot;10887.txt&quot;,&quot;CreatorNames&quot;:[&quot;Wilson, Epiphanius, 1845-1916 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;10887&quot;});" class='title'>Babylonian and Assyrian Literature</a>
+<div class='author'>Wilson, Epiphanius, 1845-1916 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(11000, {&quot;Title&quot;:&quot;An Old Babylonian Version of the Gilgamesh Epic&quot;,&quot;Topics&quot;:[&quot;Epic poetry, Assyro-Babylonian&quot;],&quot;Primary&quot;:&quot;11000.txt&quot;,&quot;CreatorNames&quot;:[&quot;Clay, Albert Tobias, 1866-1925&quot;,&quot;Jastrow, Morris, 1861-1921&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;11000&quot;});" class='title'>An Old Babylonian Version of the Gilgamesh Epic</a>
+<div class='author'>Clay, Albert Tobias, 1866-1925, Jastrow, Morris, 1861-1921</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(11461, {&quot;Title&quot;:&quot;Armenian Literature: Comprising Poetry, Drama, Folk-lore and Classic Traditions; - Translated into English for the First Time&quot;,&quot;Topics&quot;:[&quot;Armenian literature -- Translations into English&quot;,&quot;Armenian literature&quot;],&quot;Primary&quot;:&quot;11461.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sundukyan, Gabriel, 1825-1912 [Contributor]&quot;,&quot;Arnot, Robert, 1860- [Translator]&quot;,&quot;Collins, F. B. [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;11461&quot;});" class='title'>Armenian Literature:<br><span class='subtitle'>Comprising Poetry, Drama, Folk-lore and Classic Traditions; - Translated into English for the First Time</span></a>
+<div class='author'>Sundukyan, Gabriel, 1825-1912 [Contributor], Arnot, Robert, 1860- [Translator], Collins, F. B. [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12701, {&quot;Title&quot;:&quot;The Suffering of Being Kafka&quot;,&quot;Topics&quot;:[&quot;Poetry&quot;,&quot;Short stories&quot;],&quot;Primary&quot;:&quot;12701.txt&quot;,&quot;CreatorNames&quot;:[&quot;Vaknin, Samuel, 1961-&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;12701&quot;});" class='title'>The Suffering of Being Kafka</a>
+<div class='author'>Vaknin, Samuel, 1961-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(128, {&quot;Title&quot;:&quot;The Arabian Nights Entertainments&quot;,&quot;Topics&quot;:[&quot;Fairy tales&quot;,&quot;Children&#39;s stories&quot;,&quot;Arabs -- Folklore&quot;,&quot;Folklore -- Arab countries&quot;,&quot;Tales -- Arab countries&quot;,&quot;Fairy tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;128.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lang, Andrew, 1844-1912&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;,&quot;PZ&quot;],&quot;PG_ID&quot;:&quot;128&quot;});" class='title'>The Arabian Nights Entertainments</a>
+<div class='author'>Lang, Andrew, 1844-1912</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12918, {&quot;Title&quot;:&quot;Iranian Influence on Moslem Literature, Part I&quot;,&quot;Topics&quot;:[&quot;Persian literature&quot;,&quot;Arabic literature&quot;],&quot;Primary&quot;:&quot;12918.txt&quot;,&quot;CreatorNames&quot;:[&quot;Inostrantzev, Konstantin Aleksandrovich, 1876-1941&quot;,&quot;Nariman, G. K. (Gushtaspshah Kaikhushro), 1873-1933 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;,&quot;PK&quot;],&quot;PG_ID&quot;:&quot;12918&quot;});" class='title'>Iranian Influence on Moslem Literature, Part I</a>
+<div class='author'>Inostrantzev, Konstantin Aleksandrovich, 1876-1941, Nariman, G. K. (Gushtaspshah Kaikhushro), 1873-1933 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13060, {&quot;Title&quot;:&quot;The Persian Literature, Comprising The Shah Nameh, The Rubaiyat, The Divan, and The Gulistan, Volume 2&quot;,&quot;Topics&quot;:[&quot;Persian literature -- Translations into English&quot;],&quot;Primary&quot;:&quot;13060.txt&quot;,&quot;CreatorNames&quot;:[&quot;Sadi&quot;,&quot;Ross, James, 1759-1831 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;13060&quot;});" class='title'>The Persian Literature, Comprising The Shah Nameh, The Rubaiyat, The Divan, and The Gulistan, Volume 2</a>
+<div class='author'>Sadi, Ross, James, 1759-1831 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13086, {&quot;Title&quot;:&quot;The Diwan of Abu&#39;l-Ala&quot;,&quot;Topics&quot;:[&quot;Arabic poetry -- Translations into English&quot;],&quot;Primary&quot;:&quot;13086.txt&quot;,&quot;CreatorNames&quot;:[&quot;Abu al-Ala al-Maarri, 973-1057&quot;,&quot;Baerlein, Henry, 1875-1960 [Editor]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;13086&quot;});" class='title'>The Diwan of Abu'l-Ala</a>
+<div class='author'>Abu al-Ala al-Maarri, 973-1057, Baerlein, Henry, 1875-1960 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13678, {&quot;Title&quot;:&quot;Chapters on Jewish literature&quot;,&quot;Topics&quot;:[&quot;Jewish literature -- History and criticism&quot;],&quot;Primary&quot;:&quot;13678.htm&quot;,&quot;CreatorNames&quot;:[&quot;Abrahams, Israel, 1858-1925&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;13678&quot;});" class='title'>Chapters on Jewish literature</a>
+<div class='author'>Abrahams, Israel, 1858-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15371, {&quot;Title&quot;:&quot;Les mille et une nuits - Tome premier&quot;,&quot;Topics&quot;:[&quot;Fairy tales&quot;,&quot;Tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;15371.txt&quot;,&quot;CreatorNames&quot;:[&quot;Galland, Antoine, 1646-1715 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;15371&quot;});" class='title'>Les mille et une nuits -<br><span class='subtitle'>Tome premier</span></a>
+<div class='author'>Galland, Antoine, 1646-1715 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15932, {&quot;Title&quot;:&quot;The Literature of the Ancient Egyptians&quot;,&quot;Topics&quot;:[&quot;Egyptian literature -- Translations into English&quot;,&quot;Egyptian literature -- History and criticism&quot;],&quot;Primary&quot;:&quot;15932.htm&quot;,&quot;CreatorNames&quot;:[&quot;Budge, E. A. Wallis (Ernest Alfred Wallis), Sir, 1857-1934&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;15932&quot;});" class='title'>The Literature of the Ancient Egyptians</a>
+<div class='author'>Budge, E. A. Wallis (Ernest Alfred Wallis), Sir, 1857-1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16949, {&quot;Title&quot;:&quot;Flowers from a Persian Garden and Other Papers&quot;,&quot;Topics&quot;:[&quot;Middle Eastern literature -- History and criticism&quot;],&quot;Primary&quot;:&quot;16949.htm&quot;,&quot;CreatorNames&quot;:[&quot;Clouston, W. A. (William Alexander), 1843-1896&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;16949&quot;});" class='title'>Flowers from a Persian Garden and Other Papers</a>
+<div class='author'>Clouston, W. A. (William Alexander), 1843-1896</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18897, {&quot;Title&quot;:&quot;The Epic of Gilgamish - A Fragment of the Gilgamish Legend in Old-Babylonian Cuneiform&quot;,&quot;Topics&quot;:[&quot;Epic poetry, Assyro-Babylonian -- Translations into English&quot;],&quot;Primary&quot;:&quot;18897.htm&quot;,&quot;CreatorNames&quot;:[&quot;Langdon, Stephen, 1876-1937&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;18897&quot;});" class='title'>The Epic of Gilgamish -<br><span class='subtitle'>A Fragment of the Gilgamish Legend in Old-Babylonian Cuneiform</span></a>
+<div class='author'>Langdon, Stephen, 1876-1937</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19914, {&quot;Title&quot;:&quot;Arabic Authors - A Manual of Arabian History and Literature&quot;,&quot;Topics&quot;:[&quot;Arabic literature -- History and criticism&quot;,&quot;Arabian Peninsula -- History&quot;],&quot;Primary&quot;:&quot;19914.txt&quot;,&quot;CreatorNames&quot;:[&quot;Arbuthnot, F. F., 1833-1901&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;19914&quot;});" class='title'>Arabic Authors -<br><span class='subtitle'>A Manual of Arabian History and Literature</span></a>
+<div class='author'>Arbuthnot, F. F., 1833-1901</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22413, {&quot;Title&quot;:&quot;Alaeddin und die Wunderlampe - aus Tausend und eine Nacht&quot;,&quot;Topics&quot;:[&quot;Fairy tales&quot;,&quot;Children&#39;s stories&quot;],&quot;Primary&quot;:&quot;22413.htm&quot;,&quot;CreatorNames&quot;:[&quot;Moreck, Curt, 1888-1957&quot;,&quot;Staeger, Ferdinand, 1880-1976 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;,&quot;PZ&quot;],&quot;PG_ID&quot;:&quot;22413&quot;});" class='title'>Alaeddin und die Wunderlampe -<br><span class='subtitle'>aus Tausend und eine Nacht</span></a>
+<div class='author'>Moreck, Curt, 1888-1957, Staeger, Ferdinand, 1880-1976 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23228, {&quot;Title&quot;:&quot;Arabische Nächte&quot;,&quot;Topics&quot;:[&quot;Arabic poetry -- Translations into German&quot;],&quot;Primary&quot;:&quot;23228.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bethge, Hans, 1876-1946&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;23228&quot;});" class='title'>Arabische Nächte</a>
+<div class='author'>Bethge, Hans, 1876-1946</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24109, {&quot;Title&quot;:&quot;The Capgras Shift&quot;,&quot;Topics&quot;:[&quot;Short stories&quot;,&quot;Psychological fiction&quot;,&quot;Capgras syndrome -- Fiction&quot;],&quot;Primary&quot;:&quot;24109.htm&quot;,&quot;CreatorNames&quot;:[&quot;Vaknin, Samuel, 1961-&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;24109&quot;});" class='title'>The Capgras Shift</a>
+<div class='author'>Vaknin, Samuel, 1961-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24424, {&quot;Title&quot;:&quot;La Renaissance de la littérature hébraïque (1743-1885)&quot;,&quot;Topics&quot;:[&quot;Hebrew literature, Modern -- History and criticism&quot;],&quot;Primary&quot;:&quot;24424.htm&quot;,&quot;CreatorNames&quot;:[&quot;Slouschz, Nahum, 1872-1966&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;,&quot;PN&quot;],&quot;PG_ID&quot;:&quot;24424&quot;});" class='title'>La Renaissance de la littérature hébraïque (1743-1885)</a>
+<div class='author'>Slouschz, Nahum, 1872-1966</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24686, {&quot;Title&quot;:&quot;Chips from a German Workshop, Volume 1 - Essays on the Science of Religion&quot;,&quot;Topics&quot;:[&quot;Folklore&quot;,&quot;Literature -- History and criticism&quot;,&quot;Mythology&quot;,&quot;Religions&quot;,&quot;Comparative linguistics&quot;],&quot;Primary&quot;:&quot;24686.htm&quot;,&quot;CreatorNames&quot;:[&quot;Müller, F. Max (Friedrich Max), 1823-1900&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;24686&quot;});" class='title'>Chips from a German Workshop, Volume 1 -<br><span class='subtitle'>Essays on the Science of Religion</span></a>
+<div class='author'>Müller, F. Max (Friedrich Max), 1823-1900</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25996, {&quot;Title&quot;:&quot;Tuhannen ja yhden yön tarinoita Suomen lapsille II&quot;,&quot;Topics&quot;:[&quot;Fairy tales&quot;,&quot;Tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;25996.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;,&quot;Krohn, Helmi, 1871-1967 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;,&quot;PZ&quot;],&quot;PG_ID&quot;:&quot;25996&quot;});" class='title'>Tuhannen ja yhden yön tarinoita Suomen lapsille II</a>
+<div class='author'>Anonymous, Krohn, Helmi, 1871-1967 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26096, {&quot;Title&quot;:&quot;Tuhannen ja yhden yön tarinoita III&quot;,&quot;Topics&quot;:[&quot;Fairy tales&quot;,&quot;Tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;26096.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;,&quot;Krohn, Helmi, 1871-1967 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;,&quot;PZ&quot;],&quot;PG_ID&quot;:&quot;26096&quot;});" class='title'>Tuhannen ja yhden yön tarinoita III</a>
+<div class='author'>Anonymous, Krohn, Helmi, 1871-1967 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26572, {&quot;Title&quot;:&quot;Chips from a German Workshop, Volume 3 - Essays on Literature, Biography, and Antiquities&quot;,&quot;Topics&quot;:[&quot;Folklore&quot;,&quot;Literature -- History and criticism&quot;,&quot;Mythology&quot;,&quot;Religions&quot;,&quot;Comparative linguistics&quot;],&quot;Primary&quot;:&quot;26572.htm&quot;,&quot;CreatorNames&quot;:[&quot;Müller, F. Max (Friedrich Max), 1823-1900&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;26572&quot;});" class='title'>Chips from a German Workshop, Volume 3 -<br><span class='subtitle'>Essays on Literature, Biography, and Antiquities</span></a>
+<div class='author'>Müller, F. Max (Friedrich Max), 1823-1900</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27001, {&quot;Title&quot;:&quot;Jewish Children&quot;,&quot;Topics&quot;:[&quot;Jews -- Fiction&quot;,&quot;Jewish fiction&quot;],&quot;Primary&quot;:&quot;27001.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sholem Aleichem, 1859-1916&quot;,&quot;Berman, Hannah [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;27001&quot;});" class='title'>Jewish Children</a>
+<div class='author'>Sholem Aleichem, 1859-1916, Berman, Hannah [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27810, {&quot;Title&quot;:&quot;Chips from a German Workshop, Volume 5 - Miscellaneous Later Essays&quot;,&quot;Topics&quot;:[&quot;Folklore&quot;,&quot;Literature -- History and criticism&quot;,&quot;Mythology&quot;,&quot;Religions&quot;,&quot;Comparative linguistics&quot;],&quot;Primary&quot;:&quot;27810.htm&quot;,&quot;CreatorNames&quot;:[&quot;Müller, F. Max (Friedrich Max), 1823-1900&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;27810&quot;});" class='title'>Chips from a German Workshop, Volume 5 -<br><span class='subtitle'>Miscellaneous Later Essays</span></a>
+<div class='author'>Müller, F. Max (Friedrich Max), 1823-1900</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28282, {&quot;Title&quot;:&quot;Egyptian Literature - Comprising Egyptian tales, hymns, litanies, invocations, the Book of the Dead, and cuneiform writings&quot;,&quot;Topics&quot;:[&quot;Egyptian literature -- Translations into English&quot;],&quot;Primary&quot;:&quot;28282.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wilson, Epiphanius, 1845-1916 [Editor]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;28282&quot;});" class='title'>Egyptian Literature -<br><span class='subtitle'>Comprising Egyptian tales, hymns, litanies, invocations, the Book of the Dead, and cuneiform writings</span></a>
+<div class='author'>Wilson, Epiphanius, 1845-1916 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28363, {&quot;Title&quot;:&quot;MindGames: Short Fiction about Bizarre Mental Health Disorders&quot;,&quot;Topics&quot;:[&quot;Short stories&quot;,&quot;Mental illness -- Fiction&quot;],&quot;Primary&quot;:null,&quot;CreatorNames&quot;:[&quot;Vaknin, Samuel, 1961-&quot;,&quot;Rangelovska, Lidija [Editor]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;28363&quot;});" class='title'>MindGames:<br><span class='subtitle'>Short Fiction about Bizarre Mental Health Disorders</span></a>
+<div class='author'>Vaknin, Samuel, 1961-, Rangelovska, Lidija [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28369, {&quot;Title&quot;:&quot;Hebrew Literature&quot;,&quot;Topics&quot;:[&quot;Hebrew literature -- Translations into English&quot;],&quot;Primary&quot;:&quot;28369.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wilson, Epiphanius, 1845-1916 [Editor]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;28369&quot;});" class='title'>Hebrew Literature</a>
+<div class='author'>Wilson, Epiphanius, 1845-1916 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30192, {&quot;Title&quot;:&quot;Chips from a German Workshop, Volume 4 - Essays Chiefly on the Science of Language&quot;,&quot;Topics&quot;:[&quot;Folklore&quot;,&quot;Literature -- History and criticism&quot;,&quot;Mythology&quot;,&quot;Religions&quot;,&quot;Comparative linguistics&quot;],&quot;Primary&quot;:&quot;30192.htm&quot;,&quot;CreatorNames&quot;:[&quot;Müller, F. Max (Friedrich Max), 1823-1900&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;30192&quot;});" class='title'>Chips from a German Workshop, Volume 4 -<br><span class='subtitle'>Essays Chiefly on the Science of Language</span></a>
+<div class='author'>Müller, F. Max (Friedrich Max), 1823-1900</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30269, {&quot;Title&quot;:&quot;My Autobiography: A Fragment&quot;,&quot;Topics&quot;:[&quot;Müller, F. Max (Friedrich Max), 1823-1900&quot;,&quot;Asianists -- Germany -- Biography&quot;],&quot;Primary&quot;:&quot;30269.htm&quot;,&quot;CreatorNames&quot;:[&quot;Müller, F. Max (Friedrich Max), 1823-1900&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;30269&quot;});" class='title'>My Autobiography:<br><span class='subtitle'>A Fragment</span></a>
+<div class='author'>Müller, F. Max (Friedrich Max), 1823-1900</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30508, {&quot;Title&quot;:&quot;The Instruction of Ptah-Hotep and the Instruction of Ke&#39;Gemni - The Oldest Books in the World&quot;,&quot;Topics&quot;:[&quot;Conduct of life -- Early works to 1800&quot;,&quot;Maxims -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;30508.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kagemna&quot;,&quot;Ptahhotep&quot;,&quot;Gunn, Battiscombe G. (Battiscombe George), 1883-1950 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;30508&quot;});" class='title'>The Instruction of Ptah-Hotep and the Instruction of Ke'Gemni -<br><span class='subtitle'>The Oldest Books in the World</span></a>
+<div class='author'>Kagemna, Ptahhotep, Gunn, Battiscombe G. (Battiscombe George), 1883-1950 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31935, {&quot;Title&quot;:&quot;Sumerian Liturgies and Psalms&quot;,&quot;Topics&quot;:[&quot;Sumerian language -- Texts&quot;,&quot;Hymns, Sumerian&quot;,&quot;Sumerians -- Religion&quot;],&quot;Primary&quot;:&quot;31935.htm&quot;,&quot;CreatorNames&quot;:[&quot;Langdon, Stephen, 1876-1937&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;31935&quot;});" class='title'>Sumerian Liturgies and Psalms</a>
+<div class='author'>Langdon, Stephen, 1876-1937</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33707, {&quot;Title&quot;:&quot;Yiddish Tales&quot;,&quot;Topics&quot;:[&quot;Jews -- Fiction&quot;,&quot;Jewish fiction&quot;,&quot;Short stories, Yiddish -- Translations into English&quot;],&quot;Primary&quot;:&quot;33707.htm&quot;,&quot;CreatorNames&quot;:[&quot;Frank, Helena [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;33707&quot;});" class='title'>Yiddish Tales</a>
+<div class='author'>Frank, Helena [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34206, {&quot;Title&quot;:&quot;The Thousand and One Nights, Vol. I. - Commonly Called the Arabian Nights&#39; Entertainments&quot;,&quot;Topics&quot;:[&quot;Fairy tales&quot;,&quot;Tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;34206.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lane-Poole, Stanley, 1854-1931 [Author of introduction, etc.]&quot;,&quot;Poole, Edward Stanley, 1830-1867 [Editor]&quot;,&quot;Harvey, William, 1796-1866 [Illustrator]&quot;,&quot;Lane, Edward William, 1801-1876 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;34206&quot;});" class='title'>The Thousand and One Nights, Vol. I. -<br><span class='subtitle'>Commonly Called the Arabian Nights' Entertainments</span></a>
+<div class='author'>Lane-Poole, Stanley, 1854-1931 [Author of introduction, etc.], Poole, Edward Stanley, 1830-1867 [Editor], Harvey, William, 1796-1866 [Illustrator], Lane, Edward William, 1801-1876 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3435, {&quot;Title&quot;:&quot;The Book of the Thousand Nights and a Night — Volume 01&quot;,&quot;Topics&quot;:[&quot;Fairy tales&quot;,&quot;Tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;3435.htm&quot;,&quot;CreatorNames&quot;:[&quot;Burton, Richard Francis, Sir, 1821-1890 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;3435&quot;});" class='title'>The Book of the Thousand Nights and a Night — Volume 01</a>
+<div class='author'>Burton, Richard Francis, Sir, 1821-1890 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3436, {&quot;Title&quot;:&quot;The Book of the Thousand Nights and a Night — Volume 02&quot;,&quot;Topics&quot;:[&quot;Fairy tales&quot;,&quot;Tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;3436.htm&quot;,&quot;CreatorNames&quot;:[&quot;Burton, Richard Francis, Sir, 1821-1890 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;3436&quot;});" class='title'>The Book of the Thousand Nights and a Night — Volume 02</a>
+<div class='author'>Burton, Richard Francis, Sir, 1821-1890 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3437, {&quot;Title&quot;:&quot;The Book of the Thousand Nights and a Night — Volume 03&quot;,&quot;Topics&quot;:[&quot;Fairy tales&quot;,&quot;Tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;3437.htm&quot;,&quot;CreatorNames&quot;:[&quot;Burton, Richard Francis, Sir, 1821-1890 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;3437&quot;});" class='title'>The Book of the Thousand Nights and a Night — Volume 03</a>
+<div class='author'>Burton, Richard Francis, Sir, 1821-1890 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3438, {&quot;Title&quot;:&quot;The Book of the Thousand Nights and a Night — Volume 04&quot;,&quot;Topics&quot;:[&quot;Fairy tales&quot;,&quot;Tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;3438.htm&quot;,&quot;CreatorNames&quot;:[&quot;Burton, Richard Francis, Sir, 1821-1890 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;3438&quot;});" class='title'>The Book of the Thousand Nights and a Night — Volume 04</a>
+<div class='author'>Burton, Richard Francis, Sir, 1821-1890 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3439, {&quot;Title&quot;:&quot;The Book of the Thousand Nights and a Night — Volume 05&quot;,&quot;Topics&quot;:[&quot;Fairy tales&quot;,&quot;Tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;3439.htm&quot;,&quot;CreatorNames&quot;:[&quot;Burton, Richard Francis, Sir, 1821-1890 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;3439&quot;});" class='title'>The Book of the Thousand Nights and a Night — Volume 05</a>
+<div class='author'>Burton, Richard Francis, Sir, 1821-1890 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3440, {&quot;Title&quot;:&quot;The Book of the Thousand Nights and a Night — Volume 06&quot;,&quot;Topics&quot;:[&quot;Fairy tales&quot;,&quot;Tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;3440.htm&quot;,&quot;CreatorNames&quot;:[&quot;Burton, Richard Francis, Sir, 1821-1890 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;3440&quot;});" class='title'>The Book of the Thousand Nights and a Night — Volume 06</a>
+<div class='author'>Burton, Richard Francis, Sir, 1821-1890 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3441, {&quot;Title&quot;:&quot;The Book of the Thousand Nights and a Night — Volume 07&quot;,&quot;Topics&quot;:[&quot;Fairy tales&quot;,&quot;Tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;3441.htm&quot;,&quot;CreatorNames&quot;:[&quot;Burton, Richard Francis, Sir, 1821-1890 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;3441&quot;});" class='title'>The Book of the Thousand Nights and a Night — Volume 07</a>
+<div class='author'>Burton, Richard Francis, Sir, 1821-1890 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3442, {&quot;Title&quot;:&quot;The Book of the Thousand Nights and a Night — Volume 08&quot;,&quot;Topics&quot;:[&quot;Fairy tales&quot;,&quot;Tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;3442.htm&quot;,&quot;CreatorNames&quot;:[&quot;Burton, Richard Francis, Sir, 1821-1890 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;3442&quot;});" class='title'>The Book of the Thousand Nights and a Night — Volume 08</a>
+<div class='author'>Burton, Richard Francis, Sir, 1821-1890 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3443, {&quot;Title&quot;:&quot;The Book of the Thousand Nights and a Night — Volume 09&quot;,&quot;Topics&quot;:[&quot;Fairy tales&quot;,&quot;Tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;3443.htm&quot;,&quot;CreatorNames&quot;:[&quot;Burton, Richard Francis, Sir, 1821-1890 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;3443&quot;});" class='title'>The Book of the Thousand Nights and a Night — Volume 09</a>
+<div class='author'>Burton, Richard Francis, Sir, 1821-1890 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3444, {&quot;Title&quot;:&quot;The Book of the Thousand Nights and a Night — Volume 10&quot;,&quot;Topics&quot;:[&quot;Fairy tales&quot;,&quot;Tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;3444.htm&quot;,&quot;CreatorNames&quot;:[&quot;Burton, Richard Francis, Sir, 1821-1890 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;3444&quot;});" class='title'>The Book of the Thousand Nights and a Night — Volume 10</a>
+<div class='author'>Burton, Richard Francis, Sir, 1821-1890 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3445, {&quot;Title&quot;:&quot;The Book of the Thousand Nights and a Night — Volume 11 [Supplement]&quot;,&quot;Topics&quot;:[&quot;Fairy tales&quot;,&quot;Tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;3445.htm&quot;,&quot;CreatorNames&quot;:[&quot;Burton, Richard Francis, Sir, 1821-1890 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;3445&quot;});" class='title'>The Book of the Thousand Nights and a Night — Volume 11 [Supplement]</a>
+<div class='author'>Burton, Richard Francis, Sir, 1821-1890 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3446, {&quot;Title&quot;:&quot;The Book of the Thousand Nights and a Night — Volume 12 [Supplement]&quot;,&quot;Topics&quot;:[&quot;Fairy tales&quot;,&quot;Tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;3446.htm&quot;,&quot;CreatorNames&quot;:[&quot;Burton, Richard Francis, Sir, 1821-1890 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;3446&quot;});" class='title'>The Book of the Thousand Nights and a Night — Volume 12 [Supplement]</a>
+<div class='author'>Burton, Richard Francis, Sir, 1821-1890 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3447, {&quot;Title&quot;:&quot;The Book of the Thousand Nights and a Night — Volume 13&quot;,&quot;Topics&quot;:[&quot;Fairy tales&quot;,&quot;Tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;3447.htm&quot;,&quot;CreatorNames&quot;:[&quot;Burton, Richard Francis, Sir, 1821-1890 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;3447&quot;});" class='title'>The Book of the Thousand Nights and a Night — Volume 13</a>
+<div class='author'>Burton, Richard Francis, Sir, 1821-1890 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3448, {&quot;Title&quot;:&quot;The Book of the Thousand Nights and a Night — Volume 14&quot;,&quot;Topics&quot;:[&quot;Fairy tales&quot;,&quot;Tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;3448.htm&quot;,&quot;CreatorNames&quot;:[&quot;Burton, Richard Francis, Sir, 1821-1890 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;3448&quot;});" class='title'>The Book of the Thousand Nights and a Night — Volume 14</a>
+<div class='author'>Burton, Richard Francis, Sir, 1821-1890 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3449, {&quot;Title&quot;:&quot;The Book of the Thousand Nights and a Night — Volume 15&quot;,&quot;Topics&quot;:[&quot;Fairy tales&quot;,&quot;Tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;3449.htm&quot;,&quot;CreatorNames&quot;:[&quot;Burton, Richard Francis, Sir, 1821-1890 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;3449&quot;});" class='title'>The Book of the Thousand Nights and a Night — Volume 15</a>
+<div class='author'>Burton, Richard Francis, Sir, 1821-1890 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3450, {&quot;Title&quot;:&quot;The Book of the Thousand Nights and a Night — Volume 16&quot;,&quot;Topics&quot;:[&quot;Fairy tales&quot;,&quot;Tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;3450.htm&quot;,&quot;CreatorNames&quot;:[&quot;Burton, Richard Francis, Sir, 1821-1890 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;3450&quot;});" class='title'>The Book of the Thousand Nights and a Night — Volume 16</a>
+<div class='author'>Burton, Richard Francis, Sir, 1821-1890 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35969, {&quot;Title&quot;:&quot;Les mille et une nuits: contes choisis&quot;,&quot;Topics&quot;:[&quot;Fairy tales&quot;,&quot;Tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;35969.htm&quot;,&quot;CreatorNames&quot;:[&quot;Durand, Godefroy, 1832-1896 [Illustrator]&quot;,&quot;Galland, Antoine, 1646-1715 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;35969&quot;});" class='title'>Les mille et une nuits:<br><span class='subtitle'>contes choisis</span></a>
+<div class='author'>Durand, Godefroy, 1832-1896 [Illustrator], Galland, Antoine, 1646-1715 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36301, {&quot;Title&quot;:&quot;The Thousand and One Days: A Companion to the \&quot;Arabian Nights\&quot;&quot;,&quot;Topics&quot;:[&quot;Tales -- Arab countries&quot;,&quot;Tales -- Iran&quot;],&quot;Primary&quot;:&quot;36301.txt&quot;,&quot;CreatorNames&quot;:[&quot;Pardoe, Miss (Julia), 1804?-1862&quot;],&quot;LoCC&quot;:[&quot;GR&quot;,&quot;PJ&quot;,&quot;PK&quot;],&quot;PG_ID&quot;:&quot;36301&quot;});" class='title'>The Thousand and One Days:<br><span class='subtitle'>A Companion to the "Arabian Nights"</span></a>
+<div class='author'>Pardoe, Miss (Julia), 1804?-1862</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36488, {&quot;Title&quot;:&quot;Jüdische Geschichten&quot;,&quot;Topics&quot;:[&quot;Fiction&quot;,&quot;Short stories, Yiddish -- Translations into German&quot;],&quot;Primary&quot;:&quot;36488.htm&quot;,&quot;CreatorNames&quot;:[&quot;Peretz, Isaac Loeb, 1852?-1915&quot;,&quot;Eliasberg, Alexander, 1878-1924 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;36488&quot;});" class='title'>Jüdische Geschichten</a>
+<div class='author'>Peretz, Isaac Loeb, 1852?-1915, Eliasberg, Alexander, 1878-1924 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36586, {&quot;Title&quot;:&quot;Παραμύθια της Χαλιμάς Τόμος 1 - Ήτοι Διηγήσεις και Συβεβηκότα λίαν περίεργα  και ωραία Συνταχθέντα εις την Αραβικήν υπό του πολυμαθούς Δερβίς Αμπου Mπεκήρ Κατά την έκδοσιν της Βενετίας&quot;,&quot;Topics&quot;:[&quot;Fairy tales&quot;,&quot;Tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;36586.htm&quot;,&quot;CreatorNames&quot;:&quot;&quot;,&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;36586&quot;});" class='title'>Παραμύθια της Χαλιμάς Τόμος 1 -<br><span class='subtitle'>Ήτοι Διηγήσεις και Συβεβηκότα λίαν περίεργα  και ωραία Συνταχθέντα εις την Αραβικήν υπό του πολυμαθούς Δερβίς Αμπου Mπεκήρ Κατά την έκδοσιν της Βενετίας</span></a>
+<div class='author'></div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36622, {&quot;Title&quot;:&quot;Χαλιμά, Τόμος 2 - Εξακολούθησις των ιστοριών&quot;,&quot;Topics&quot;:[&quot;Fairy tales&quot;,&quot;Tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;36622.htm&quot;,&quot;CreatorNames&quot;:&quot;&quot;,&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;36622&quot;});" class='title'>Χαλιμά, Τόμος 2 -<br><span class='subtitle'>Εξακολούθησις των ιστοριών</span></a>
+<div class='author'></div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36688, {&quot;Title&quot;:&quot;Χαλιμά, Τόμος 3 - Εξακολούθησις των ιστοριών&quot;,&quot;Topics&quot;:[&quot;Fairy tales&quot;,&quot;Tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;36688.htm&quot;,&quot;CreatorNames&quot;:&quot;&quot;,&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;36688&quot;});" class='title'>Χαλιμά, Τόμος 3 -<br><span class='subtitle'>Εξακολούθησις των ιστοριών</span></a>
+<div class='author'></div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36887, {&quot;Title&quot;:&quot;The Story of Nefrekepta, from a Demotic Papyrus&quot;,&quot;Topics&quot;:[&quot;Egyptian literature -- Translations into English&quot;,&quot;Egyptian language -- Demotic, ca. 650 B.C.-450 A.D. -- Texts -- Translations into English&quot;],&quot;Primary&quot;:&quot;36887.htm&quot;,&quot;CreatorNames&quot;:[&quot;Murray, Gilbert, 1866-1957&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;36887&quot;});" class='title'>The Story of Nefrekepta, from a Demotic Papyrus</a>
+<div class='author'>Murray, Gilbert, 1866-1957</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37242, {&quot;Title&quot;:&quot;Stories and Pictures&quot;,&quot;Topics&quot;:[&quot;Short stories&quot;,&quot;Jews -- Fiction&quot;,&quot;Jewish fiction&quot;,&quot;Peretz, Isaac Leib, 1851 or 1852-1915 -- Translations into English&quot;],&quot;Primary&quot;:&quot;37242.htm&quot;,&quot;CreatorNames&quot;:[&quot;Peretz, Isaac Loeb, 1852?-1915&quot;,&quot;Frank, Helena [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;37242&quot;});" class='title'>Stories and Pictures</a>
+<div class='author'>Peretz, Isaac Loeb, 1852?-1915, Frank, Helena [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37985, {&quot;Title&quot;:&quot;A Literary History of the Arabs&quot;,&quot;Topics&quot;:[&quot;Arabic literature -- History and criticism&quot;],&quot;Primary&quot;:&quot;37985.htm&quot;,&quot;CreatorNames&quot;:[&quot;Nicholson, Reynold Alleyne, 1868-1945&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;37985&quot;});" class='title'>A Literary History of the Arabs</a>
+<div class='author'>Nicholson, Reynold Alleyne, 1868-1945</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44105, {&quot;Title&quot;:&quot;The Arabian Nights, Volume 3 (of 4)&quot;,&quot;Topics&quot;:[&quot;Fairy tales&quot;,&quot;Arabs -- Folklore&quot;,&quot;Folklore -- Arab countries&quot;],&quot;Primary&quot;:&quot;44105.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;,&quot;Westall, Richard, 1765-1836 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;44105&quot;});" class='title'>The Arabian Nights, Volume 3 (of 4)</a>
+<div class='author'>Anonymous, Westall, Richard, 1765-1836 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45037, {&quot;Title&quot;:&quot;Hebrew Humor and Other Essays&quot;,&quot;Topics&quot;:[&quot;Hebrew wit and humor -- History and criticism&quot;],&quot;Primary&quot;:&quot;45037.htm&quot;,&quot;CreatorNames&quot;:[&quot;Chotzner, J. (Joseph), 1844-1914&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;45037&quot;});" class='title'>Hebrew Humor and Other Essays</a>
+<div class='author'>Chotzner, J. (Joseph), 1844-1914</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45874, {&quot;Title&quot;:&quot;Duizend en één Nacht. Arabische vertellingen. Eerste deel&quot;,&quot;Topics&quot;:[&quot;Fairy tales&quot;,&quot;Tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;45874.txt&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;45874&quot;});" class='title'>Duizend en één Nacht. Arabische vertellingen. Eerste deel</a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45875, {&quot;Title&quot;:&quot;Duizend en één Nacht. Arabische vertellingen. Tweede deel&quot;,&quot;Topics&quot;:[&quot;Fairy tales&quot;,&quot;Tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;45875.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;45875&quot;});" class='title'>Duizend en één Nacht. Arabische vertellingen. Tweede deel</a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45876, {&quot;Title&quot;:&quot;Duizend en één Nacht. Arabische vertellingen. Derde deel&quot;,&quot;Topics&quot;:[&quot;Fairy tales&quot;,&quot;Tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;45876.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;45876&quot;});" class='title'>Duizend en één Nacht. Arabische vertellingen. Derde deel</a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45877, {&quot;Title&quot;:&quot;Duizend en één Nacht. Arabische vertellingen. Vierde deel&quot;,&quot;Topics&quot;:[&quot;Fairy tales&quot;,&quot;Tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;45877.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;45877&quot;});" class='title'>Duizend en één Nacht. Arabische vertellingen. Vierde deel</a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46729, {&quot;Title&quot;:&quot;The History of Yiddish Literature in the Nineteenth Century&quot;,&quot;Topics&quot;:[&quot;Yiddish literature -- History and criticism&quot;],&quot;Primary&quot;:&quot;46729.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wiener, Leo, 1862-1939&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;46729&quot;});" class='title'>The History of Yiddish Literature in the Nineteenth Century</a>
+<div class='author'>Wiener, Leo, 1862-1939</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47287, {&quot;Title&quot;:&quot;El libro de las mil noches y una noche; t. 1&quot;,&quot;Topics&quot;:[&quot;Fairy tales&quot;,&quot;Arabs -- Folklore&quot;,&quot;Folklore -- Arab countries&quot;,&quot;Tales -- Arab countries&quot;,&quot;Fairy tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;47287.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;,&quot;Gómez Carrillo, Enrique, 1873-1927 [Author of introduction, etc.]&quot;,&quot;Blasco Ibáñez, Vicente, 1867-1928 [Translator]&quot;,&quot;Mardrus, J. C. (Joseph Charles), 1868-1949 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;47287&quot;});" class='title'>El libro de las mil noches y una noche;<br><span class='subtitle'>t. 1</span></a>
+<div class='author'>Anonymous, Gómez Carrillo, Enrique, 1873-1927 [Author of introduction, etc.], Blasco Ibáñez, Vicente, 1867-1928 [Translator], Mardrus, J. C. (Joseph Charles), 1868-1949 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47631, {&quot;Title&quot;:&quot;El libro de las mil noches y una noche; t. 2&quot;,&quot;Topics&quot;:[&quot;Fairy tales&quot;,&quot;Arabs -- Folklore&quot;,&quot;Folklore -- Arab countries&quot;,&quot;Tales -- Arab countries&quot;,&quot;Fairy tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;47631.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;,&quot;Blasco Ibáñez, Vicente, 1867-1928 [Translator]&quot;,&quot;Mardrus, J. C. (Joseph Charles), 1868-1949 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;47631&quot;});" class='title'>El libro de las mil noches y una noche;<br><span class='subtitle'>t. 2</span></a>
+<div class='author'>Anonymous, Blasco Ibáñez, Vicente, 1867-1928 [Translator], Mardrus, J. C. (Joseph Charles), 1868-1949 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4778, {&quot;Title&quot;:&quot;Sipurim (Stories)&quot;,&quot;Topics&quot;:[&quot;Fiction&quot;,&quot;Short stories&quot;],&quot;Primary&quot;:&quot;4778.htm&quot;,&quot;CreatorNames&quot;:[&quot;Vaknin, Samuel, 1961-&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;4778&quot;});" class='title'>Sipurim (Stories)</a>
+<div class='author'>Vaknin, Samuel, 1961-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48094, {&quot;Title&quot;:&quot;Sumerian Hymns from Cuneiform Texts in the British Museum&quot;,&quot;Topics&quot;:[&quot;Sumerian language -- Texts&quot;,&quot;Hymns, Sumerian&quot;],&quot;Primary&quot;:&quot;48094.htm&quot;,&quot;CreatorNames&quot;:[&quot;Vanderburgh, Frederick Augustus, 1847-1923 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;48094&quot;});" class='title'>Sumerian Hymns from Cuneiform Texts in the British Museum</a>
+<div class='author'>Vanderburgh, Frederick Augustus, 1847-1923 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48649, {&quot;Title&quot;:&quot;The Rosetta Stone&quot;,&quot;Topics&quot;:[&quot;Rosetta stone&quot;,&quot;Egyptian language -- Writing, Hieroglyphic&quot;],&quot;Primary&quot;:&quot;48649.htm&quot;,&quot;CreatorNames&quot;:[&quot;Budge, E. A. Wallis (Ernest Alfred Wallis), Sir, 1857-1934&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;48649&quot;});" class='title'>The Rosetta Stone</a>
+<div class='author'>Budge, E. A. Wallis (Ernest Alfred Wallis), Sir, 1857-1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48903, {&quot;Title&quot;:&quot;El libro de las mil noches y una noche; t. 3&quot;,&quot;Topics&quot;:[&quot;Fairy tales&quot;,&quot;Arabs -- Folklore&quot;,&quot;Folklore -- Arab countries&quot;,&quot;Tales -- Arab countries&quot;,&quot;Fairy tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;48903.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;,&quot;Blasco Ibáñez, Vicente, 1867-1928 [Translator]&quot;,&quot;Mardrus, J. C. (Joseph Charles), 1868-1949 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;48903&quot;});" class='title'>El libro de las mil noches y una noche;<br><span class='subtitle'>t. 3</span></a>
+<div class='author'>Anonymous, Blasco Ibáñez, Vicente, 1867-1928 [Translator], Mardrus, J. C. (Joseph Charles), 1868-1949 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50457, {&quot;Title&quot;:&quot;The Luzumiyat of Abu&#39;l-Ala - Selected from his Luzum ma la Yalzam and Suct us-Zand&quot;,&quot;Topics&quot;:[&quot;Arabic poetry -- Translations into English&quot;],&quot;Primary&quot;:&quot;50457.htm&quot;,&quot;CreatorNames&quot;:[&quot;Abu al-Ala al-Maarri, 973-1057&quot;,&quot;Rihani, Ameen Fares, 1876-1940 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;50457&quot;});" class='title'>The Luzumiyat of Abu'l-Ala -<br><span class='subtitle'>Selected from his Luzum ma la Yalzam and Suct us-Zand</span></a>
+<div class='author'>Abu al-Ala al-Maarri, 973-1057, Rihani, Ameen Fares, 1876-1940 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50754, {&quot;Title&quot;:&quot;Tuhat ja yksi yötä&quot;,&quot;Topics&quot;:[&quot;Fairy tales&quot;,&quot;Tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;50754.txt&quot;,&quot;CreatorNames&quot;:[&quot;Hedman, Valfrid, 1872-1939 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;50754&quot;});" class='title'>Tuhat ja yksi yötä</a>
+<div class='author'>Hedman, Valfrid, 1872-1939 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5100, {&quot;Title&quot;:&quot;Alaeddin and the Enchanted Lamp&quot;,&quot;Topics&quot;:[&quot;Folklore -- Arab countries&quot;,&quot;Tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;5100.htm&quot;,&quot;CreatorNames&quot;:[&quot;Payne, John, 1842-1916 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;5100&quot;});" class='title'>Alaeddin and the Enchanted Lamp</a>
+<div class='author'>Payne, John, 1842-1916 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51252, {&quot;Title&quot;:&quot;A Plain and Literal Translation of the Arabian Nights Entertainments, Now Entituled the Book of the Thousand Nights and a Night, Volume 01 (of 17)&quot;,&quot;Topics&quot;:[&quot;Folklore -- Arab countries&quot;,&quot;Fairy tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;51252.htm&quot;,&quot;CreatorNames&quot;:[&quot;Burton, Richard Francis, Sir, 1821-1890 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;51252&quot;});" class='title'>A Plain and Literal Translation of the Arabian Nights Entertainments, Now Entituled the Book of the Thousand Nights and a Night, Volume 01 (of 17)</a>
+<div class='author'>Burton, Richard Francis, Sir, 1821-1890 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51432, {&quot;Title&quot;:&quot;Stories from The Arabian Nights&quot;,&quot;Topics&quot;:[&quot;Fairy tales&quot;,&quot;Arabs -- Folklore&quot;,&quot;Tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;51432.htm&quot;,&quot;CreatorNames&quot;:[&quot;Housman, Laurence, 1865-1959&quot;,&quot;Dulac, Edmund, 1882-1953 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;,&quot;PZ&quot;],&quot;PG_ID&quot;:&quot;51432&quot;});" class='title'>Stories from The Arabian Nights</a>
+<div class='author'>Housman, Laurence, 1865-1959, Dulac, Edmund, 1882-1953 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51775, {&quot;Title&quot;:&quot;A Plain and Literal Translation of the Arabian Nights Entertainments, Now Entituled the Book of the Thousand Nights and a Night, Volume 02 (of 17)&quot;,&quot;Topics&quot;:[&quot;Folklore -- Arab countries&quot;,&quot;Fairy tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;51775.htm&quot;,&quot;CreatorNames&quot;:[&quot;Burton, Richard Francis, Sir, 1821-1890 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;51775&quot;});" class='title'>A Plain and Literal Translation of the Arabian Nights Entertainments, Now Entituled the Book of the Thousand Nights and a Night, Volume 02 (of 17)</a>
+<div class='author'>Burton, Richard Francis, Sir, 1821-1890 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5242, {&quot;Title&quot;:&quot;Tales from the Arabic — Volume 01&quot;,&quot;Topics&quot;:[&quot;Folklore -- Arab countries&quot;,&quot;Fairy tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;5242.txt&quot;,&quot;CreatorNames&quot;:[&quot;Payne, John, 1842-1916 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;5242&quot;});" class='title'>Tales from the Arabic — Volume 01</a>
+<div class='author'>Payne, John, 1842-1916 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5243, {&quot;Title&quot;:&quot;Tales from the Arabic — Volume 02&quot;,&quot;Topics&quot;:[&quot;Folklore -- Arab countries&quot;,&quot;Fairy tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;5243.txt&quot;,&quot;CreatorNames&quot;:[&quot;Payne, John, 1842-1916 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;5243&quot;});" class='title'>Tales from the Arabic — Volume 02</a>
+<div class='author'>Payne, John, 1842-1916 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5244, {&quot;Title&quot;:&quot;Tales from the Arabic — Volume 03&quot;,&quot;Topics&quot;:[&quot;Folklore -- Arab countries&quot;,&quot;Fairy tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;5244.txt&quot;,&quot;CreatorNames&quot;:[&quot;Payne, John, 1842-1916 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;5244&quot;});" class='title'>Tales from the Arabic — Volume 03</a>
+<div class='author'>Payne, John, 1842-1916 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5245, {&quot;Title&quot;:&quot;Tales from the Arabic — Complete&quot;,&quot;Topics&quot;:[&quot;Folklore -- Arab countries&quot;,&quot;Fairy tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;5245.txt&quot;,&quot;CreatorNames&quot;:[&quot;Payne, John, 1842-1916 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;5245&quot;});" class='title'>Tales from the Arabic — Complete</a>
+<div class='author'>Payne, John, 1842-1916 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52564, {&quot;Title&quot;:&quot;A Plain and Literal Translation of the Arabian Nights Entertainments, Now Entituled the Book of the Thousand Nights and a Night, Volume 03 (of 17)&quot;,&quot;Topics&quot;:[&quot;Folklore -- Arab countries&quot;,&quot;Fairy tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;52564.htm&quot;,&quot;CreatorNames&quot;:[&quot;Burton, Richard Francis, Sir, 1821-1890 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;52564&quot;});" class='title'>A Plain and Literal Translation of the Arabian Nights Entertainments, Now Entituled the Book of the Thousand Nights and a Night, Volume 03 (of 17)</a>
+<div class='author'>Burton, Richard Francis, Sir, 1821-1890 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53254, {&quot;Title&quot;:&quot;A Plain and Literal Translation of the Arabian Nights Entertainments, Now Entituled the Book of the Thousand Nights and a Night, Volume 04 (of 17)&quot;,&quot;Topics&quot;:[&quot;Folklore -- Arab countries&quot;,&quot;Fairy tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;53254.htm&quot;,&quot;CreatorNames&quot;:[&quot;Burton, Richard Francis, Sir, 1821-1890 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;53254&quot;});" class='title'>A Plain and Literal Translation of the Arabian Nights Entertainments, Now Entituled the Book of the Thousand Nights and a Night, Volume 04 (of 17)</a>
+<div class='author'>Burton, Richard Francis, Sir, 1821-1890 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53597, {&quot;Title&quot;:&quot;Narrative of Travels in Europe, Asia, and Africa, in the Seventeenth Century, Vol. I&quot;,&quot;Topics&quot;:[&quot;Istanbul (Turkey) -- Description and travel&quot;,&quot;Turkey -- History&quot;,&quot;Caucasus, South -- Description and travel&quot;],&quot;Primary&quot;:&quot;53597.htm&quot;,&quot;CreatorNames&quot;:[&quot;Evliya Çelebi, 1611?-1682?&quot;,&quot;Hammer-Purgstall, Joseph, Freiherr von, 1774-1856 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DR&quot;,&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;53597&quot;});" class='title'>Narrative of Travels in Europe, Asia, and Africa, in the Seventeenth Century, Vol. I</a>
+<div class='author'>Evliya Çelebi, 1611?-1682?, Hammer-Purgstall, Joseph, Freiherr von, 1774-1856 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54255, {&quot;Title&quot;:&quot;Narrative of Travels in Europe, Asia, and Africa, in the Seventeenth Century, Vol. II&quot;,&quot;Topics&quot;:[&quot;Istanbul (Turkey) -- Description and travel&quot;,&quot;Turkey -- History&quot;,&quot;Caucasus, South -- Description and travel&quot;],&quot;Primary&quot;:&quot;54255.htm&quot;,&quot;CreatorNames&quot;:[&quot;Evliya Çelebi, 1611?-1682?&quot;,&quot;Hammer-Purgstall, Joseph, Freiherr von, 1774-1856 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DR&quot;,&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;54255&quot;});" class='title'>Narrative of Travels in Europe, Asia, and Africa, in the Seventeenth Century, Vol. II</a>
+<div class='author'>Evliya Çelebi, 1611?-1682?, Hammer-Purgstall, Joseph, Freiherr von, 1774-1856 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54257, {&quot;Title&quot;:&quot;A Plain and Literal Translation of the Arabian Nights Entertainments, Now Entituled the Book of the Thousand Nights and a Night, Volume 05 (of 17)&quot;,&quot;Topics&quot;:[&quot;Folklore -- Arab countries&quot;,&quot;Fairy tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;54257.htm&quot;,&quot;CreatorNames&quot;:[&quot;Burton, Richard Francis, Sir, 1821-1890 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;54257&quot;});" class='title'>A Plain and Literal Translation of the Arabian Nights Entertainments, Now Entituled the Book of the Thousand Nights and a Night, Volume 05 (of 17)</a>
+<div class='author'>Burton, Richard Francis, Sir, 1821-1890 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54525, {&quot;Title&quot;:&quot;A Plain and Literal Translation of the Arabian Nights Entertainments, Now Entituled the Book of the Thousand Nights and a Night, Volume 06 (of 17)&quot;,&quot;Topics&quot;:[&quot;Folklore -- Arab countries&quot;,&quot;Fairy tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;54525.htm&quot;,&quot;CreatorNames&quot;:[&quot;Burton, Richard Francis, Sir, 1821-1890 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;54525&quot;});" class='title'>A Plain and Literal Translation of the Arabian Nights Entertainments, Now Entituled the Book of the Thousand Nights and a Night, Volume 06 (of 17)</a>
+<div class='author'>Burton, Richard Francis, Sir, 1821-1890 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54778, {&quot;Title&quot;:&quot;A Plain and Literal Translation of the Arabian Nights Entertainments, Now Entituled the Book of the Thousand Nights and a Night, Volume 07 (of 17)&quot;,&quot;Topics&quot;:[&quot;Folklore -- Arab countries&quot;,&quot;Fairy tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;54778.htm&quot;,&quot;CreatorNames&quot;:[&quot;Burton, Richard Francis, Sir, 1821-1890 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;54778&quot;});" class='title'>A Plain and Literal Translation of the Arabian Nights Entertainments, Now Entituled the Book of the Thousand Nights and a Night, Volume 07 (of 17)</a>
+<div class='author'>Burton, Richard Francis, Sir, 1821-1890 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55091, {&quot;Title&quot;:&quot;A Plain and Literal Translation of the Arabian Nights Entertainments, Now Entituled the Book of the Thousand Nights and a Night Volume 08 (of 17)&quot;,&quot;Topics&quot;:[&quot;Folklore -- Arab countries&quot;,&quot;Fairy tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;55091.htm&quot;,&quot;CreatorNames&quot;:[&quot;Burton, Richard Francis, Sir, 1821-1890 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;55091&quot;});" class='title'>A Plain and Literal Translation of the Arabian Nights Entertainments, Now Entituled the Book of the Thousand Nights and a Night Volume 08 (of 17)</a>
+<div class='author'>Burton, Richard Francis, Sir, 1821-1890 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55587, {&quot;Title&quot;:&quot;A Plain and Literal Translation of the Arabian Nights Entertainments, Now Entituled the Book of the Thousand Nights and a Night, Volume 09 (of 17)&quot;,&quot;Topics&quot;:[&quot;Folklore -- Arab countries&quot;,&quot;Fairy tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;55587.htm&quot;,&quot;CreatorNames&quot;:[&quot;Burton, Richard Francis, Sir, 1821-1890 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;55587&quot;});" class='title'>A Plain and Literal Translation of the Arabian Nights Entertainments, Now Entituled the Book of the Thousand Nights and a Night, Volume 09 (of 17)</a>
+<div class='author'>Burton, Richard Francis, Sir, 1821-1890 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55674, {&quot;Title&quot;:&quot;The Sacred Books and Early Literature of the East, Volume 6 (of 14) - Medieval Arabic, Moorish, and Turkish&quot;,&quot;Topics&quot;:[&quot;Oriental literature -- Translations into English&quot;],&quot;Primary&quot;:&quot;55674.htm&quot;,&quot;CreatorNames&quot;:[&quot;Horne, Charles F. (Charles Francis), 1870-1942 [Editor]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;55674&quot;});" class='title'>The Sacred Books and Early Literature of the East, Volume 6 (of 14) -<br><span class='subtitle'>Medieval Arabic, Moorish, and Turkish</span></a>
+<div class='author'>Horne, Charles F. (Charles Francis), 1870-1942 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5612, {&quot;Title&quot;:&quot;The Arabian Nights Entertainments - Volume 01&quot;,&quot;Topics&quot;:[&quot;Fairy tales&quot;,&quot;Arabs -- Folklore&quot;,&quot;Folklore -- Arab countries&quot;],&quot;Primary&quot;:&quot;5612.txt&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;5612&quot;});" class='title'>The Arabian Nights Entertainments -<br><span class='subtitle'>Volume 01</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5664, {&quot;Title&quot;:&quot;The Arabian Nights Entertainments — Volume 01&quot;,&quot;Topics&quot;:[&quot;Fairy tales&quot;,&quot;Tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;5664.txt&quot;,&quot;CreatorNames&quot;:[&quot;Scott, Jonathan, 1754-1829 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;5664&quot;});" class='title'>The Arabian Nights Entertainments — Volume 01</a>
+<div class='author'>Scott, Jonathan, 1754-1829 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5665, {&quot;Title&quot;:&quot;The Arabian Nights Entertainments — Volume 02&quot;,&quot;Topics&quot;:[&quot;Fairy tales&quot;,&quot;Tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;5665.txt&quot;,&quot;CreatorNames&quot;:[&quot;Scott, Jonathan, 1754-1829 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;5665&quot;});" class='title'>The Arabian Nights Entertainments — Volume 02</a>
+<div class='author'>Scott, Jonathan, 1754-1829 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5666, {&quot;Title&quot;:&quot;The Arabian Nights Entertainments — Volume 03&quot;,&quot;Topics&quot;:[&quot;Fairy tales&quot;,&quot;Tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;5666.txt&quot;,&quot;CreatorNames&quot;:[&quot;Scott, Jonathan, 1754-1829 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;5666&quot;});" class='title'>The Arabian Nights Entertainments — Volume 03</a>
+<div class='author'>Scott, Jonathan, 1754-1829 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5667, {&quot;Title&quot;:&quot;The Arabian Nights Entertainments — Volume 04&quot;,&quot;Topics&quot;:[&quot;Fairy tales&quot;,&quot;Tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;5667.txt&quot;,&quot;CreatorNames&quot;:[&quot;Scott, Jonathan, 1754-1829 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;5667&quot;});" class='title'>The Arabian Nights Entertainments — Volume 04</a>
+<div class='author'>Scott, Jonathan, 1754-1829 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5668, {&quot;Title&quot;:&quot;The Arabian Nights Entertainments - Complete&quot;,&quot;Topics&quot;:[&quot;Fairy tales&quot;,&quot;Tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;5668.txt&quot;,&quot;CreatorNames&quot;:[&quot;Scott, Jonathan, 1754-1829 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;5668&quot;});" class='title'>The Arabian Nights Entertainments -<br><span class='subtitle'>Complete</span></a>
+<div class='author'>Scott, Jonathan, 1754-1829 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57468, {&quot;Title&quot;:&quot;A Group of Eastern Romances and Stories from the Persian, Tamil and Urdu&quot;,&quot;Topics&quot;:[&quot;Tales -- Iran&quot;,&quot;Tales, Tamil&quot;,&quot;Tales, Urdu&quot;],&quot;Primary&quot;:&quot;57468.htm&quot;,&quot;CreatorNames&quot;:[&quot;Clouston, W. A. (William Alexander), 1843-1896 [Compiler]&quot;,&quot;Rehatsek, Edward, 1819-1891 [Translator]&quot;],&quot;LoCC&quot;:[&quot;GR&quot;,&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;57468&quot;});" class='title'>A Group of Eastern Romances and Stories from the Persian, Tamil and Urdu</a>
+<div class='author'>Clouston, W. A. (William Alexander), 1843-1896 [Compiler], Rehatsek, Edward, 1819-1891 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57857, {&quot;Title&quot;:&quot;Antar: A Bedoueen Romance&quot;,&quot;Topics&quot;:[&quot;Antarah ibn Shaddad, active 6th century -- Legends&quot;],&quot;Primary&quot;:&quot;57857.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hamilton, Terrick, 1781-1876 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;57857&quot;});" class='title'>Antar:<br><span class='subtitle'>A Bedoueen Romance</span></a>
+<div class='author'>Hamilton, Terrick, 1781-1876 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58360, {&quot;Title&quot;:&quot;A Plain and Literal Translation of the Arabian Nights Entertainments, Now Entituled the Book of the Thousand Nights and a Night, Volume 10 (of 17)&quot;,&quot;Topics&quot;:[&quot;Folklore -- Arab countries&quot;,&quot;Fairy tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;58360.htm&quot;,&quot;CreatorNames&quot;:[&quot;Burton, Richard Francis, Sir, 1821-1890 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;58360&quot;});" class='title'>A Plain and Literal Translation of the Arabian Nights Entertainments, Now Entituled the Book of the Thousand Nights and a Night, Volume 10 (of 17)</a>
+<div class='author'>Burton, Richard Francis, Sir, 1821-1890 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59156, {&quot;Title&quot;:&quot;The Book of the Thousand Nights and a Night — Volume 01 [Supplement]&quot;,&quot;Topics&quot;:[&quot;Folklore -- Arab countries&quot;,&quot;Fairy tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;59156.htm&quot;,&quot;CreatorNames&quot;:[&quot;Burton, Richard Francis, Sir, 1821-1890 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;59156&quot;});" class='title'>The Book of the Thousand Nights and a Night — Volume 01 [Supplement]</a>
+<div class='author'>Burton, Richard Francis, Sir, 1821-1890 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59953, {&quot;Title&quot;:&quot;The Book of the Thousand Nights and a Night — Volume 02 [Supplement]&quot;,&quot;Topics&quot;:[&quot;Fairy tales&quot;,&quot;Tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;59953.htm&quot;,&quot;CreatorNames&quot;:[&quot;Burton, Richard Francis, Sir, 1821-1890 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;59953&quot;});" class='title'>The Book of the Thousand Nights and a Night — Volume 02 [Supplement]</a>
+<div class='author'>Burton, Richard Francis, Sir, 1821-1890 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60889, {&quot;Title&quot;:&quot;The Book of the Thousand Nights and a Night — Volume 03 [Supplement]&quot;,&quot;Topics&quot;:[&quot;Fairy tales&quot;,&quot;Tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;60889.htm&quot;,&quot;CreatorNames&quot;:[&quot;Burton, Richard Francis, Sir, 1821-1890 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;60889&quot;});" class='title'>The Book of the Thousand Nights and a Night — Volume 03 [Supplement]</a>
+<div class='author'>Burton, Richard Francis, Sir, 1821-1890 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61327, {&quot;Title&quot;:&quot;Ein Diwan&quot;,&quot;Topics&quot;:[&quot;Hebrew poetry -- Translations into German&quot;,&quot;Judah, ha-Levi, active 12th century&quot;],&quot;Primary&quot;:&quot;61327.htm&quot;,&quot;CreatorNames&quot;:[&quot;Judah, ha-Levi, active 12th century&quot;,&quot;Bernhard, Emil, 1881-1948 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;61327&quot;});" class='title'>Ein Diwan</a>
+<div class='author'>Judah, ha-Levi, active 12th century, Bernhard, Emil, 1881-1948 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61386, {&quot;Title&quot;:&quot;Post-Biblical Hebrew Literature: An Anthology&quot;,&quot;Topics&quot;:[&quot;Hebrew literature -- Translations into English&quot;],&quot;Primary&quot;:&quot;61386.htm&quot;,&quot;CreatorNames&quot;:[&quot;Halper, B., 1884-1924 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;61386&quot;});" class='title'>Post-Biblical Hebrew Literature:<br><span class='subtitle'>An Anthology</span></a>
+<div class='author'>Halper, B., 1884-1924 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61974, {&quot;Title&quot;:&quot;The Book of the Thousand Nights and a Night — Volume 03 part 2 [Supplement]&quot;,&quot;Topics&quot;:[&quot;Fairy tales&quot;,&quot;Tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;61974.htm&quot;,&quot;CreatorNames&quot;:[&quot;Burton, Richard Francis, Sir, 1821-1890 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;61974&quot;});" class='title'>The Book of the Thousand Nights and a Night — Volume 03 part 2 [Supplement]</a>
+<div class='author'>Burton, Richard Francis, Sir, 1821-1890 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62140, {&quot;Title&quot;:&quot;The Book of the Thousand Nights and a Night—Volume 04 [Supplement]&quot;,&quot;Topics&quot;:[&quot;Fairy tales&quot;,&quot;Tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;62140.htm&quot;,&quot;CreatorNames&quot;:[&quot;Burton, Richard Francis, Sir, 1821-1890 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;62140&quot;});" class='title'>The Book of the Thousand Nights and a Night—Volume 04 [Supplement]</a>
+<div class='author'>Burton, Richard Francis, Sir, 1821-1890 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62379, {&quot;Title&quot;:&quot;Kelet tündér világa, vagy Szaif Züliázán szultán. (1. kötet) - Aráb rege&quot;,&quot;Topics&quot;:[&quot;Fairy tales&quot;,&quot;Tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;62379.txt&quot;,&quot;CreatorNames&quot;:[&quot;Ali Bey&quot;,&quot;Knapp, Samuel L. (Samuel Lorenzo), 1783-1838&quot;,&quot;Orbán, Balázs, 1830-1890 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;62379&quot;});" class='title'>Kelet tündér világa, vagy Szaif Züliázán szultán. (1. kötet) -<br><span class='subtitle'>Aráb rege</span></a>
+<div class='author'>Ali Bey, Knapp, Samuel L. (Samuel Lorenzo), 1783-1838, Orbán, Balázs, 1830-1890 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62381, {&quot;Title&quot;:&quot;Kelet tündér világa, vagy Szaif Züliázán szultán. (2. kötet) - Aráb rege&quot;,&quot;Topics&quot;:[&quot;Fairy tales&quot;,&quot;Tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;62381.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ali Bey&quot;,&quot;Knapp, Samuel L. (Samuel Lorenzo), 1783-1838&quot;,&quot;Orbán, Balázs, 1830-1890 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;62381&quot;});" class='title'>Kelet tündér világa, vagy Szaif Züliázán szultán. (2. kötet) -<br><span class='subtitle'>Aráb rege</span></a>
+<div class='author'>Ali Bey, Knapp, Samuel L. (Samuel Lorenzo), 1783-1838, Orbán, Balázs, 1830-1890 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62687, {&quot;Title&quot;:&quot;The Arabian Nights&#39; Entertainments&quot;,&quot;Topics&quot;:[&quot;Fairy tales&quot;,&quot;Tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;62687.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;62687&quot;});" class='title'>The Arabian Nights' Entertainments</a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62897, {&quot;Title&quot;:&quot;The Arabian Nights, Volume I of IV&quot;,&quot;Topics&quot;:[&quot;Arabs -- Folklore&quot;,&quot;Tales -- Arab countries&quot;,&quot;Fairy tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;62897.htm&quot;,&quot;CreatorNames&quot;:[&quot;Forster, Edward, 1769-1828 [Translator]&quot;,&quot;Galland, Antoine, 1646-1715 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;62897&quot;});" class='title'>The Arabian Nights, Volume I of IV</a>
+<div class='author'>Forster, Edward, 1769-1828 [Translator], Galland, Antoine, 1646-1715 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63069, {&quot;Title&quot;:&quot;Arab regék (1. kötet)&quot;,&quot;Topics&quot;:[&quot;Tales&quot;,&quot;Folk literature&quot;],&quot;Primary&quot;:&quot;63069.htm&quot;,&quot;CreatorNames&quot;:[&quot;Vörösmarty, Mihály, 1800-1855 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;63069&quot;});" class='title'>Arab regék (1. kötet)</a>
+<div class='author'>Vörösmarty, Mihály, 1800-1855 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63070, {&quot;Title&quot;:&quot;Arab regék (2. kötet)&quot;,&quot;Topics&quot;:[&quot;Tales&quot;,&quot;Folk literature&quot;],&quot;Primary&quot;:&quot;63070.htm&quot;,&quot;CreatorNames&quot;:[&quot;Vörösmarty, Mihály, 1800-1855 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;63070&quot;});" class='title'>Arab regék (2. kötet)</a>
+<div class='author'>Vörösmarty, Mihály, 1800-1855 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63266, {&quot;Title&quot;:&quot;The Book of the Thousand Nights and a Night—Volume 05 [Supplement]&quot;,&quot;Topics&quot;:[&quot;Fairy tales&quot;,&quot;Tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;63266.htm&quot;,&quot;CreatorNames&quot;:[&quot;Burton, Richard Francis, Sir, 1821-1890 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;63266&quot;});" class='title'>The Book of the Thousand Nights and a Night—Volume 05 [Supplement]</a>
+<div class='author'>Burton, Richard Francis, Sir, 1821-1890 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63306, {&quot;Title&quot;:&quot;The Arabian Nights, Volume II of IV&quot;,&quot;Topics&quot;:[&quot;Arabs -- Folklore&quot;,&quot;Tales -- Arab countries&quot;,&quot;Fairy tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;63306.htm&quot;,&quot;CreatorNames&quot;:[&quot;Forster, Edward, 1769-1828 [Translator]&quot;,&quot;Galland, Antoine, 1646-1715 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;63306&quot;});" class='title'>The Arabian Nights, Volume II of IV</a>
+<div class='author'>Forster, Edward, 1769-1828 [Translator], Galland, Antoine, 1646-1715 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64384, {&quot;Title&quot;:&quot;The Book of the Thousand Nights and a Night—Volume 06 [Supplement]&quot;,&quot;Topics&quot;:[&quot;Fairy tales&quot;,&quot;Tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;64384.htm&quot;,&quot;CreatorNames&quot;:[&quot;Burton, Richard Francis, Sir, 1821-1890 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;64384&quot;});" class='title'>The Book of the Thousand Nights and a Night—Volume 06 [Supplement]</a>
+<div class='author'>Burton, Richard Francis, Sir, 1821-1890 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68517, {&quot;Title&quot;:&quot;Auld lang syne&quot;,&quot;Topics&quot;:[&quot;Müller, F. Max (Friedrich Max), 1823-1900&quot;],&quot;Primary&quot;:&quot;68517.htm&quot;,&quot;CreatorNames&quot;:[&quot;Müller, F. Max (Friedrich Max), 1823-1900&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;68517&quot;});" class='title'>Auld lang syne</a>
+<div class='author'>Müller, F. Max (Friedrich Max), 1823-1900</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6859, {&quot;Title&quot;:&quot;Songs of Labor, and Other Poems&quot;,&quot;Topics&quot;:[&quot;Poetry&quot;],&quot;Primary&quot;:&quot;6859.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rosenfeld, Morris, 1862-1923&quot;,&quot;Frank, Helena [Translator]&quot;,&quot;Stokes, Rose Pastor, 1879-1933 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;6859&quot;});" class='title'>Songs of Labor, and Other Poems</a>
+<div class='author'>Rosenfeld, Morris, 1862-1923, Frank, Helena [Translator], Stokes, Rose Pastor, 1879-1933 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69275, {&quot;Title&quot;:&quot;Haririus latinus - sive Mohammedis Alcasemi, filius Alii, filius Mohammedis, filius Otmani, Hariri bazrensis, haramensis, narrationes consessuum nomine celebratae&quot;,&quot;Topics&quot;:[&quot;Arabic literature -- Translations into Latin&quot;],&quot;Primary&quot;:&quot;69275.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hariri, 1054-1122&quot;,&quot;Peiper, C. R. S. (Carl Rudolph Samuel), 1798-1879 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;69275&quot;});" class='title'>Haririus latinus -<br><span class='subtitle'>sive Mohammedis Alcasemi, filius Alii, filius Mohammedis, filius Otmani, Hariri bazrensis, haramensis, narrationes consessuum nomine celebratae</span></a>
+<div class='author'>Hariri, 1054-1122, Peiper, C. R. S. (Carl Rudolph Samuel), 1798-1879 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69566, {&quot;Title&quot;:&quot;The Egyptian Book of the dead&quot;,&quot;Topics&quot;:[&quot;Future life&quot;,&quot;Incantations, Egyptian&quot;],&quot;Primary&quot;:&quot;69566.htm&quot;,&quot;CreatorNames&quot;:[&quot;Naville, Edouard, 1844-1926 [Translator]&quot;,&quot;Renouf, P. Le Page (Peter Le Page), 1822-1897 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;69566&quot;});" class='title'>The Egyptian Book of the dead</a>
+<div class='author'>Naville, Edouard, 1844-1926 [Translator], Renouf, P. Le Page (Peter Le Page), 1822-1897 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70290, {&quot;Title&quot;:&quot;The adventures of Hatim Taï, a romance&quot;,&quot;Topics&quot;:[&quot;Voyages and travels -- Fiction&quot;,&quot;Romance fiction&quot;,&quot;Action and adventure fiction&quot;,&quot;Princes -- Yemen (Republic) -- Fiction&quot;],&quot;Primary&quot;:&quot;70290.htm&quot;,&quot;CreatorNames&quot;:[&quot;Alger, William Rounseville, 1822-1905 [Editor]&quot;,&quot;Forbes, Duncan, 1798-1868 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;70290&quot;});" class='title'>The adventures of Hatim Taï, a romance</a>
+<div class='author'>Alger, William Rounseville, 1822-1905 [Editor], Forbes, Duncan, 1798-1868 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70401, {&quot;Title&quot;:&quot;By-paths in Hebraic bookland&quot;,&quot;Topics&quot;:[&quot;Jewish literature -- History and criticism&quot;,&quot;Hebrew literature -- History and criticism&quot;,&quot;Jews in literature&quot;],&quot;Primary&quot;:&quot;70401.htm&quot;,&quot;CreatorNames&quot;:[&quot;Abrahams, Israel, 1858-1925&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;70401&quot;});" class='title'>By-paths in Hebraic bookland</a>
+<div class='author'>Abrahams, Israel, 1858-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7095, {&quot;Title&quot;:&quot;Malayan Literature: Comprising Romantic Tales, Epic Poetry and Royal Chronicles&quot;,&quot;Topics&quot;:[&quot;Malay literature -- Translations into English&quot;],&quot;Primary&quot;:&quot;7095.txt&quot;,&quot;CreatorNames&quot;:[&quot;Starkweather, Chauncey C. (Chauncey Clark), 1851-1922 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;,&quot;PL&quot;],&quot;PG_ID&quot;:&quot;7095&quot;});" class='title'>Malayan Literature:<br><span class='subtitle'>Comprising Romantic Tales, Epic Poetry and Royal Chronicles</span></a>
+<div class='author'>Starkweather, Chauncey C. (Chauncey Clark), 1851-1922 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7096, {&quot;Title&quot;:&quot;The Babylonian Story of the Deluge as Told by Assyrian Tablets from Nineveh - The Discovery of the Tablets at Nineveh by Layard, Rassam and Smith&quot;,&quot;Topics&quot;:[&quot;Deluge&quot;,&quot;Libraries -- Iraq -- Nineveh (Extinct city)&quot;],&quot;Primary&quot;:&quot;7096.htm&quot;,&quot;CreatorNames&quot;:[&quot;Budge, E. A. Wallis (Ernest Alfred Wallis), Sir, 1857-1934&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;7096&quot;});" class='title'>The Babylonian Story of the Deluge as Told by Assyrian Tablets from Nineveh -<br><span class='subtitle'>The Discovery of the Tablets at Nineveh by Layard, Rassam and Smith</span></a>
+<div class='author'>Budge, E. A. Wallis (Ernest Alfred Wallis), Sir, 1857-1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7145, {&quot;Title&quot;:&quot;The Book of the Dead&quot;,&quot;Topics&quot;:[&quot;Egypt -- Religion&quot;,&quot;Death&quot;,&quot;Future life&quot;,&quot;Book of the dead&quot;],&quot;Primary&quot;:&quot;7145.htm&quot;,&quot;CreatorNames&quot;:[&quot;Budge, E. A. Wallis (Ernest Alfred Wallis), Sir, 1857-1934&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;7145&quot;});" class='title'>The Book of the Dead</a>
+<div class='author'>Budge, E. A. Wallis (Ernest Alfred Wallis), Sir, 1857-1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7386, {&quot;Title&quot;:&quot;Egyptian Tales, Translated from the Papyri: First series, IVth to XIIth dynasty&quot;,&quot;Topics&quot;:[&quot;Egyptian literature -- Translations into English&quot;],&quot;Primary&quot;:&quot;7386.htm&quot;,&quot;CreatorNames&quot;:[&quot;Petrie, W. M. Flinders (William Matthew Flinders), 1853-1942&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;7386&quot;});" class='title'>Egyptian Tales, Translated from the Papyri:<br><span class='subtitle'>First series, IVth to XIIth dynasty</span></a>
+<div class='author'>Petrie, W. M. Flinders (William Matthew Flinders), 1853-1942</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7413, {&quot;Title&quot;:&quot;Egyptian Tales, Translated from the Papyri: Second series, XVIIIth to XIXth dynasty&quot;,&quot;Topics&quot;:[&quot;Egyptian literature -- Translations into English&quot;],&quot;Primary&quot;:&quot;7413.htm&quot;,&quot;CreatorNames&quot;:[&quot;Petrie, W. M. Flinders (William Matthew Flinders), 1853-1942&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;7413&quot;});" class='title'>Egyptian Tales, Translated from the Papyri:<br><span class='subtitle'>Second series, XVIIIth to XIXth dynasty</span></a>
+<div class='author'>Petrie, W. M. Flinders (William Matthew Flinders), 1853-1942</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7530, {&quot;Title&quot;:&quot;The Renascence of Hebrew Literature (1743-1885)&quot;,&quot;Topics&quot;:[&quot;Hebrew literature, Modern -- History and criticism&quot;],&quot;Primary&quot;:&quot;7530.txt&quot;,&quot;CreatorNames&quot;:[&quot;Slouschz, Nahum, 1872-1966&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;7530&quot;});" class='title'>The Renascence of Hebrew Literature (1743-1885)</a>
+<div class='author'>Slouschz, Nahum, 1872-1966</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(8539, {&quot;Title&quot;:&quot;In Those Days: The Story of an Old Man&quot;,&quot;Topics&quot;:[&quot;Jews -- Fiction&quot;],&quot;Primary&quot;:&quot;8539.txt&quot;,&quot;CreatorNames&quot;:[&quot;Steinberg, Judah, 1863-1908&quot;,&quot;Jeshurun, George [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;8539&quot;});" class='title'>In Those Days:<br><span class='subtitle'>The Story of an Old Man</span></a>
+<div class='author'>Steinberg, Judah, 1863-1908, Jeshurun, George [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(8655, {&quot;Title&quot;:&quot;The Book of the Thousand Nights and One Night, Volume I&quot;,&quot;Topics&quot;:[&quot;Fairy tales&quot;,&quot;Tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;8655.txt&quot;,&quot;CreatorNames&quot;:[&quot;Payne, John, 1842-1916 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;8655&quot;});" class='title'>The Book of the Thousand Nights and One Night, Volume I</a>
+<div class='author'>Payne, John, 1842-1916 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(8656, {&quot;Title&quot;:&quot;The Book of the Thousand Nights and One Night, Volume II&quot;,&quot;Topics&quot;:[&quot;Fairy tales&quot;,&quot;Tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;8656.txt&quot;,&quot;CreatorNames&quot;:[&quot;Payne, John, 1842-1916 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;8656&quot;});" class='title'>The Book of the Thousand Nights and One Night, Volume II</a>
+<div class='author'>Payne, John, 1842-1916 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(8657, {&quot;Title&quot;:&quot;The Book of the Thousand Nights and One Night, Volume III&quot;,&quot;Topics&quot;:[&quot;Fairy tales&quot;,&quot;Tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;8657.txt&quot;,&quot;CreatorNames&quot;:[&quot;Payne, John, 1842-1916 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;8657&quot;});" class='title'>The Book of the Thousand Nights and One Night, Volume III</a>
+<div class='author'>Payne, John, 1842-1916 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(8658, {&quot;Title&quot;:&quot;The Book of the Thousand Nights and One Night, Volume IV&quot;,&quot;Topics&quot;:[&quot;Fairy tales&quot;,&quot;Tales -- Arab countries&quot;],&quot;Primary&quot;:&quot;8658.txt&quot;,&quot;CreatorNames&quot;:[&quot;Payne, John, 1842-1916 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;8658&quot;});" class='title'>The Book of the Thousand Nights and One Night, Volume IV</a>
+<div class='author'>Payne, John, 1842-1916 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(9886, {&quot;Title&quot;:&quot;The Book of Delight, and other papers&quot;,&quot;Topics&quot;:[&quot;Ibn Zabara, Joseph ben Meir, 1140?- Sefer sha&#39;ashu&#39;im&quot;,&quot;Jews -- Intellectual life&quot;,&quot;Love poetry, Hebrew -- History and criticism&quot;],&quot;Primary&quot;:&quot;9886.txt&quot;,&quot;CreatorNames&quot;:[&quot;Abrahams, Israel, 1858-1925&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;9886&quot;});" class='title'>The Book of Delight, and other papers</a>
+<div class='author'>Abrahams, Israel, 1858-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(9920, {&quot;Title&quot;:&quot;The Garden of Bright Waters - One Hundred and Twenty Asiatic Love Poems&quot;,&quot;Topics&quot;:[&quot;Love poetry&quot;,&quot;Oriental poetry -- Translations into English&quot;],&quot;Primary&quot;:&quot;9920.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mathers, E. Powys (Edward Powys), 1892-1939 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;9920&quot;});" class='title'>The Garden of Bright Waters -<br><span class='subtitle'>One Hundred and Twenty Asiatic Love Poems</span></a>
+<div class='author'>Mathers, E. Powys (Edward Powys), 1892-1939 [Translator]</div>
+</div>
+</ul></div>
+</body></html>

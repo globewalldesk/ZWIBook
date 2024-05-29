@@ -1,0 +1,478 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Manners and customs (general) (GT)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(10115, {&quot;Title&quot;:&quot;Two Centuries of Costume in America, Volume 1 (1620-1820)&quot;,&quot;Topics&quot;:[&quot;Clothing and dress -- United States -- History&quot;],&quot;Primary&quot;:&quot;10115.htm&quot;,&quot;CreatorNames&quot;:[&quot;Earle, Alice Morse, 1851-1911&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;10115&quot;});" class='title'>Two Centuries of Costume in America, Volume 1 (1620-1820)</a>
+<div class='author'>Earle, Alice Morse, 1851-1911</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(10940, {&quot;Title&quot;:&quot;Manners, Customs, and Dress During the Middle Ages and During the Renaissance Period&quot;,&quot;Topics&quot;:[&quot;Renaissance&quot;,&quot;Manners and customs&quot;,&quot;Middle Ages&quot;,&quot;Clothing and dress&quot;],&quot;Primary&quot;:&quot;10940.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jacob, P. L., 1806-1884&quot;],&quot;LoCC&quot;:[&quot;D&quot;,&quot;GT&quot;],&quot;PG_ID&quot;:&quot;10940&quot;});" class='title'>Manners, Customs, and Dress During the Middle Ages and During the Renaissance Period</a>
+<div class='author'>Jacob, P. L., 1806-1884</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12885, {&quot;Title&quot;:&quot;Bundling; Its Origin, Progress and Decline in America&quot;,&quot;Topics&quot;:[&quot;New England -- Social life and customs&quot;,&quot;Bundling (Courtship)&quot;],&quot;Primary&quot;:&quot;12885.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stiles, Henry Reed, 1832-1909&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;12885&quot;});" class='title'>Bundling;<br><span class='subtitle'>Its Origin, Progress and Decline in America</span></a>
+<div class='author'>Stiles, Henry Reed, 1832-1909</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14713, {&quot;Title&quot;:&quot;Noël dans les pays étrangers&quot;,&quot;Topics&quot;:[&quot;Christmas&quot;],&quot;Primary&quot;:&quot;14713.htm&quot;,&quot;CreatorNames&quot;:[&quot;Chabot, Alphonse, 1841-1921?&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;14713&quot;});" class='title'>Noël dans les pays étrangers</a>
+<div class='author'>Chabot, Alphonse, 1841-1921?</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14788, {&quot;Title&quot;:&quot;La nuit de Noël dans tous les pays&quot;,&quot;Topics&quot;:[&quot;Christmas&quot;],&quot;Primary&quot;:&quot;14788.htm&quot;,&quot;CreatorNames&quot;:[&quot;Chabot, Alphonse, 1841-1921?&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;14788&quot;});" class='title'>La nuit de Noël dans tous les pays</a>
+<div class='author'>Chabot, Alphonse, 1841-1921?</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14887, {&quot;Title&quot;:&quot;Pipe and Pouch: The Smoker&#39;s Own Book of Poetry&quot;,&quot;Topics&quot;:[&quot;English poetry&quot;,&quot;Tobacco -- Poetry&quot;],&quot;Primary&quot;:&quot;14887.htm&quot;,&quot;CreatorNames&quot;:[&quot;Knight, Joseph, 1845- [Compiler]&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;14887&quot;});" class='title'>Pipe and Pouch:<br><span class='subtitle'>The Smoker's Own Book of Poetry</span></a>
+<div class='author'>Knight, Joseph, 1845- [Compiler]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17008, {&quot;Title&quot;:&quot;A Counter-Blaste to Tobacco&quot;,&quot;Topics&quot;:[&quot;Tobacco&quot;],&quot;Primary&quot;:&quot;17008.htm&quot;,&quot;CreatorNames&quot;:[&quot;James I, King of England, 1566-1625&quot;,&quot;Goldsmid, Edmund [Editor]&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;17008&quot;});" class='title'>A Counter-Blaste to Tobacco</a>
+<div class='author'>James I, King of England, 1566-1625, Goldsmid, Edmund [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18096, {&quot;Title&quot;:&quot;The Social History of Smoking&quot;,&quot;Topics&quot;:[&quot;Smoking&quot;],&quot;Primary&quot;:&quot;18096.htm&quot;,&quot;CreatorNames&quot;:[&quot;Apperson, George Latimer, 1857-1937&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;18096&quot;});" class='title'>The Social History of Smoking</a>
+<div class='author'>Apperson, George Latimer, 1857-1937</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18570, {&quot;Title&quot;:&quot;Yule-Tide in Many Lands&quot;,&quot;Topics&quot;:[&quot;Christmas&quot;],&quot;Primary&quot;:&quot;18570.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pringle, Mary Poague&quot;,&quot;Urann, Clara A.&quot;,&quot;Bridgman, L. J. (Lewis Jesse), 1857-1931 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;18570&quot;});" class='title'>Yule-Tide in Many Lands</a>
+<div class='author'>Pringle, Mary Poague, Urann, Clara A., Bridgman, L. J. (Lewis Jesse), 1857-1931 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19098, {&quot;Title&quot;:&quot;Christmas in Ritual and Tradition, Christian and Pagan&quot;,&quot;Topics&quot;:[&quot;Christmas&quot;,&quot;Christmas -- History&quot;,&quot;Fasts and feasts&quot;],&quot;Primary&quot;:&quot;19098.htm&quot;,&quot;CreatorNames&quot;:[&quot;Miles, Clement A.&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;19098&quot;});" class='title'>Christmas in Ritual and Tradition, Christian and Pagan</a>
+<div class='author'>Miles, Clement A.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19392, {&quot;Title&quot;:&quot;The Little Tea Book&quot;,&quot;Topics&quot;:[&quot;Tea&quot;],&quot;Primary&quot;:&quot;19392.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gray, Arthur, 1859- [Compiler]&quot;,&quot;Hood, George, 1869-1949 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;GT&quot;,&quot;SB&quot;],&quot;PG_ID&quot;:&quot;19392&quot;});" class='title'>The Little Tea Book</a>
+<div class='author'>Gray, Arthur, 1859- [Compiler], Hood, George, 1869-1949 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19587, {&quot;Title&quot;:&quot;The Christmas Kalends of Provence - And Some Other Provençal Festivals&quot;,&quot;Topics&quot;:[&quot;Festivals -- France -- Provence&quot;,&quot;Christmas -- France -- Provence&quot;,&quot;Provence (France) -- Social life and customs&quot;],&quot;Primary&quot;:&quot;19587.htm&quot;,&quot;CreatorNames&quot;:[&quot;Janvier, Thomas A. (Thomas Allibone), 1849-1913&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;19587&quot;});" class='title'>The Christmas Kalends of Provence -<br><span class='subtitle'>And Some Other Provençal Festivals</span></a>
+<div class='author'>Janvier, Thomas A. (Thomas Allibone), 1849-1913</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19925, {&quot;Title&quot;:&quot;At the Sign of the Barber&#39;s Pole: Studies In Hirsute History&quot;,&quot;Topics&quot;:[&quot;Hairdressing -- History&quot;,&quot;Barbers&quot;],&quot;Primary&quot;:&quot;19925.htm&quot;,&quot;CreatorNames&quot;:[&quot;Andrews, William, 1848-1908&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;19925&quot;});" class='title'>At the Sign of the Barber's Pole:<br><span class='subtitle'>Studies In Hirsute History</span></a>
+<div class='author'>Andrews, William, 1848-1908</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19979, {&quot;Title&quot;:&quot;A Righte Merrie Christmasse: The Story of Christ-Tide&quot;,&quot;Topics&quot;:[&quot;Christmas -- History&quot;],&quot;Primary&quot;:&quot;19979.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ashton, John, 1834-1911&quot;,&quot;Behrend, Arthur C. [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;19979&quot;});" class='title'>A Righte Merrie Christmasse:<br><span class='subtitle'>The Story of Christ-Tide</span></a>
+<div class='author'>Ashton, John, 1834-1911, Behrend, Arthur C. [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20535, {&quot;Title&quot;:&quot;The Merry-Thought: or the Glass-Window and Bog-House Miscellany - Parts 2, 3 and 4&quot;,&quot;Topics&quot;:[&quot;English poetry -- 18th century&quot;,&quot;Graffiti -- England -- History -- 18th century&quot;],&quot;Primary&quot;:&quot;20535.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hurlothrumbo&quot;,&quot;Novak, Maximillian E., 1930- [Commentator]&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;20535&quot;});" class='title'>The Merry-Thought:<br><span class='subtitle'>or the Glass-Window and Bog-House Miscellany - Parts 2, 3 and 4</span></a>
+<div class='author'>Hurlothrumbo, Novak, Maximillian E., 1930- [Commentator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20558, {&quot;Title&quot;:&quot;The Merry-Thought: or the Glass-Window and Bog-House Miscellany. Part 1&quot;,&quot;Topics&quot;:[&quot;English poetry -- 18th century&quot;,&quot;Graffiti -- England -- History -- 18th century&quot;],&quot;Primary&quot;:&quot;20558.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hurlothrumbo&quot;,&quot;Guffey, George Robert, 1932- [Commentator]&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;20558&quot;});" class='title'>The Merry-Thought:<br><span class='subtitle'>or the Glass-Window and Bog-House Miscellany. Part 1</span></a>
+<div class='author'>Hurlothrumbo, Guffey, George Robert, 1932- [Commentator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20644, {&quot;Title&quot;:&quot;The Book of Hallowe&#39;en&quot;,&quot;Topics&quot;:[&quot;Halloween&quot;],&quot;Primary&quot;:&quot;20644.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kelley, Ruth Edna&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;20644&quot;});" class='title'>The Book of Hallowe'en</a>
+<div class='author'>Kelley, Ruth Edna</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20665, {&quot;Title&quot;:&quot;De Nederlandsche Nationale Kleederdrachten&quot;,&quot;Topics&quot;:[&quot;Costume -- Netherlands -- History&quot;],&quot;Primary&quot;:&quot;20665.htm&quot;,&quot;CreatorNames&quot;:[&quot;Molkenboer, Theodoor, 1871-1920&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;20665&quot;});" class='title'>De Nederlandsche Nationale Kleederdrachten</a>
+<div class='author'>Molkenboer, Theodoor, 1871-1920</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(21352, {&quot;Title&quot;:&quot;Fragments of Two Centuries: Glimpses of Country Life when George III. was King&quot;,&quot;Topics&quot;:[&quot;Country life -- England&quot;],&quot;Primary&quot;:&quot;21352.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kingston, Alfred&quot;],&quot;LoCC&quot;:[&quot;DA&quot;,&quot;GT&quot;],&quot;PG_ID&quot;:&quot;21352&quot;});" class='title'>Fragments of Two Centuries:<br><span class='subtitle'>Glimpses of Country Life when George III. was King</span></a>
+<div class='author'>Kingston, Alfred</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22042, {&quot;Title&quot;:&quot;Christmas: Its Origin and Associations - Together with Its Historical Events and Festive Celebrations During Nineteen Centuries&quot;,&quot;Topics&quot;:[&quot;Christmas -- History&quot;],&quot;Primary&quot;:&quot;22042.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dawson, W. F. (William Francis)&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;22042&quot;});" class='title'>Christmas:<br><span class='subtitle'>Its Origin and Associations - Together with Its Historical Events and Festive Celebrations During Nineteen Centuries</span></a>
+<div class='author'>Dawson, W. F. (William Francis)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24044, {&quot;Title&quot;:&quot;Myths and Legends of Christmastide&quot;,&quot;Topics&quot;:[&quot;Christmas&quot;,&quot;Christmas -- History&quot;],&quot;Primary&quot;:&quot;24044.htm&quot;,&quot;CreatorNames&quot;:[&quot;Herrick, Bertha F.&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;24044&quot;});" class='title'>Myths and Legends of Christmastide</a>
+<div class='author'>Herrick, Bertha F.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24253, {&quot;Title&quot;:&quot;Folkways - A Study of the Sociological Importance of Usages, Manners, Customs, Mores, and Morals&quot;,&quot;Topics&quot;:[&quot;Manners and customs&quot;],&quot;Primary&quot;:&quot;24253.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sumner, William Graham, 1840-1910&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;24253&quot;});" class='title'>Folkways -<br><span class='subtitle'>A Study of the Sociological Importance of Usages, Manners, Customs, Mores, and Morals</span></a>
+<div class='author'>Sumner, William Graham, 1840-1910</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30522, {&quot;Title&quot;:&quot;The Etiquette of Engagement and Marriage - Describing Modern Manners and Customs of Courtship and Marriage, and giving Full Details regarding the Wedding Ceremony and Arrangements&quot;,&quot;Topics&quot;:[&quot;Courtship&quot;,&quot;Wedding etiquette&quot;],&quot;Primary&quot;:&quot;30522.htm&quot;,&quot;CreatorNames&quot;:[&quot;Devereux, G. R. M.&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;30522&quot;});" class='title'>The Etiquette of Engagement and Marriage -<br><span class='subtitle'>Describing Modern Manners and Customs of Courtship and Marriage, and giving Full Details regarding the Wedding Ceremony and Arrangements</span></a>
+<div class='author'>Devereux, G. R. M.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33020, {&quot;Title&quot;:&quot;English Costume&quot;,&quot;Topics&quot;:[&quot;Clothing and dress -- Great Britain&quot;],&quot;Primary&quot;:&quot;33020.htm&quot;,&quot;CreatorNames&quot;:[&quot;Calthrop, Dion Clayton, 1878-1937&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;33020&quot;});" class='title'>English Costume</a>
+<div class='author'>Calthrop, Dion Clayton, 1878-1937</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34179, {&quot;Title&quot;:&quot;A Cursory History of Swearing&quot;,&quot;Topics&quot;:[&quot;Swearing&quot;],&quot;Primary&quot;:&quot;34179.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sharman, Julian&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;34179&quot;});" class='title'>A Cursory History of Swearing</a>
+<div class='author'>Sharman, Julian</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34472, {&quot;Title&quot;:&quot;Origin and Early History of the Fashion Plate&quot;,&quot;Topics&quot;:[&quot;Fashion -- History&quot;],&quot;Primary&quot;:&quot;34472.htm&quot;,&quot;CreatorNames&quot;:[&quot;Nevinson, J. L. (John Lea)&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;34472&quot;});" class='title'>Origin and Early History of the Fashion Plate</a>
+<div class='author'>Nevinson, J. L. (John Lea)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34845, {&quot;Title&quot;:&quot;The Evolution of Fashion&quot;,&quot;Topics&quot;:[&quot;Fashion -- History&quot;,&quot;Costume -- History&quot;],&quot;Primary&quot;:&quot;34845.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gardiner, Florence Mary&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;34845&quot;});" class='title'>The Evolution of Fashion</a>
+<div class='author'>Gardiner, Florence Mary</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34903, {&quot;Title&quot;:&quot;Dress Design: An Account of Costume for Artists &amp; Dressmakers&quot;,&quot;Topics&quot;:[&quot;Clothing and dress&quot;,&quot;Clothing and dress -- Great Britain&quot;],&quot;Primary&quot;:&quot;34903.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hughes, Talbot, 1869-1942&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;34903&quot;});" class='title'>Dress Design:<br><span class='subtitle'>An Account of Costume for Artists & Dressmakers</span></a>
+<div class='author'>Hughes, Talbot, 1869-1942</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35881, {&quot;Title&quot;:&quot;Verloving en Huwelijk in vroeger dagen&quot;,&quot;Topics&quot;:[&quot;Marriage customs and rites -- Netherlands&quot;,&quot;Courtship -- Netherlands&quot;],&quot;Primary&quot;:&quot;35881.htm&quot;,&quot;CreatorNames&quot;:[&quot;Knappert, Laurentius, 1863-1943&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;35881&quot;});" class='title'>Verloving en Huwelijk in vroeger dagen</a>
+<div class='author'>Knappert, Laurentius, 1863-1943</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36879, {&quot;Title&quot;:&quot;Nicotiana; Or, The Smoker&#39;s and Snuff-Taker&#39;s Companion&quot;,&quot;Topics&quot;:[&quot;Tobacco -- History&quot;,&quot;Tobacco -- Anecdotes&quot;,&quot;Smoking&quot;],&quot;Primary&quot;:&quot;36879.htm&quot;,&quot;CreatorNames&quot;:[&quot;Meller, Henry James&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;36879&quot;});" class='title'>Nicotiana;<br><span class='subtitle'>Or, The Smoker's and Snuff-Taker's Companion</span></a>
+<div class='author'>Meller, Henry James</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37216, {&quot;Title&quot;:&quot;Holidays &amp; Happy-Days&quot;,&quot;Topics&quot;:[&quot;Holidays -- Great Britain -- Juvenile literature&quot;,&quot;Fasts and feasts -- Great Britain -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;37216.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hendry, Hamish&quot;,&quot;Mason, E. Florence [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DA&quot;,&quot;GT&quot;],&quot;PG_ID&quot;:&quot;37216&quot;});" class='title'>Holidays & Happy-Days</a>
+<div class='author'>Hendry, Hamish, Mason, E. Florence [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37586, {&quot;Title&quot;:&quot;Women&#39;s Bathing and Swimming Costume in the United States&quot;,&quot;Topics&quot;:[&quot;Bathing suits -- History&quot;],&quot;Primary&quot;:&quot;37586.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kidwell, Claudia Brush&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;37586&quot;});" class='title'>Women's Bathing and Swimming Costume in the United States</a>
+<div class='author'>Kidwell, Claudia Brush</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38211, {&quot;Title&quot;:&quot;De H. Nikolaas in het folklore&quot;,&quot;Topics&quot;:[&quot;Folklore -- Netherlands&quot;,&quot;Santa Claus -- Netherlands&quot;],&quot;Primary&quot;:&quot;38211.htm&quot;,&quot;CreatorNames&quot;:[&quot;Schrijnen, Jos., 1869-1937&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;38211&quot;});" class='title'>De H. Nikolaas in het folklore</a>
+<div class='author'>Schrijnen, Jos., 1869-1937</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38588, {&quot;Title&quot;:&quot;Dealings with the Dead, Volume 1 (of 2)&quot;,&quot;Topics&quot;:[&quot;Death&quot;,&quot;Funeral rites and ceremonies&quot;,&quot;Funeral rites and ceremonies -- United States&quot;],&quot;Primary&quot;:&quot;38588.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sargent, Lucius M. (Lucius Manlius), 1786-1867&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;38588&quot;});" class='title'>Dealings with the Dead, Volume 1 (of 2)</a>
+<div class='author'>Sargent, Lucius M. (Lucius Manlius), 1786-1867</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39675, {&quot;Title&quot;:&quot;Dealings with the Dead, Volume 2 (of 2)&quot;,&quot;Topics&quot;:[&quot;Death&quot;,&quot;Funeral rites and ceremonies&quot;,&quot;Funeral rites and ceremonies -- United States&quot;],&quot;Primary&quot;:&quot;39675.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sargent, Lucius M. (Lucius Manlius), 1786-1867&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;39675&quot;});" class='title'>Dealings with the Dead, Volume 2 (of 2)</a>
+<div class='author'>Sargent, Lucius M. (Lucius Manlius), 1786-1867</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41869, {&quot;Title&quot;:&quot;Old Tavern Signs: An Excursion in the History of Hospitality&quot;,&quot;Topics&quot;:[&quot;Inn signs&quot;,&quot;Taverns (Inns)&quot;],&quot;Primary&quot;:&quot;41869.htm&quot;,&quot;CreatorNames&quot;:[&quot;Endell, Fritz August Gottfried, 1873-1955&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;41869&quot;});" class='title'>Old Tavern Signs:<br><span class='subtitle'>An Excursion in the History of Hospitality</span></a>
+<div class='author'>Endell, Fritz August Gottfried, 1873-1955</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41961, {&quot;Title&quot;:&quot;The Old Showmen and the Old London Fairs&quot;,&quot;Topics&quot;:[&quot;London (England) -- Social life and customs&quot;,&quot;Fairs -- England -- London&quot;],&quot;Primary&quot;:&quot;41961.htm&quot;,&quot;CreatorNames&quot;:[&quot;Frost, Thomas, 1821-1908&quot;],&quot;LoCC&quot;:[&quot;GT&quot;,&quot;GV&quot;],&quot;PG_ID&quot;:&quot;41961&quot;});" class='title'>The Old Showmen and the Old London Fairs</a>
+<div class='author'>Frost, Thomas, 1821-1908</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42622, {&quot;Title&quot;:&quot;The Book of Christmas - Descriptive of the Customs, Ceremonies, Traditions, Superstitions, Fun, Feeling, and Festivities of the Christmas Season&quot;,&quot;Topics&quot;:[&quot;Christmas&quot;],&quot;Primary&quot;:&quot;42622.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hervey, Thomas K.&quot;,&quot;Seymour, R. [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;42622&quot;});" class='title'>The Book of Christmas -<br><span class='subtitle'>Descriptive of the Customs, Ceremonies, Traditions, Superstitions, Fun, Feeling, and Festivities of the Christmas Season</span></a>
+<div class='author'>Hervey, Thomas K., Seymour, R. [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42682, {&quot;Title&quot;:&quot;The Heritage of Dress: Being Notes on the History and Evolution of Clothes&quot;,&quot;Topics&quot;:[&quot;Clothing and dress&quot;,&quot;Clothing and dress -- History&quot;],&quot;Primary&quot;:&quot;42682.htm&quot;,&quot;CreatorNames&quot;:[&quot;Webb, Wilfred Mark, 1868-1952&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;42682&quot;});" class='title'>The Heritage of Dress:<br><span class='subtitle'>Being Notes on the History and Evolution of Clothes</span></a>
+<div class='author'>Webb, Wilfred Mark, 1868-1952</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44187, {&quot;Title&quot;:&quot;Mesdames Nos Aïeules: dix siècles d&#39;élégances&quot;,&quot;Topics&quot;:[&quot;Costume -- France -- History&quot;],&quot;Primary&quot;:&quot;44187.htm&quot;,&quot;CreatorNames&quot;:[&quot;Robida, Albert, 1848-1926&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;44187&quot;});" class='title'>Mesdames Nos Aïeules:<br><span class='subtitle'>dix siècles d'élégances</span></a>
+<div class='author'>Robida, Albert, 1848-1926</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44379, {&quot;Title&quot;:&quot;A History of Mourning&quot;,&quot;Topics&quot;:[&quot;Funeral rites and ceremonies&quot;,&quot;Mourning customs&quot;],&quot;Primary&quot;:&quot;44379.htm&quot;,&quot;CreatorNames&quot;:[&quot;Davey, Richard, 1848-1915&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;44379&quot;});" class='title'>A History of Mourning</a>
+<div class='author'>Davey, Richard, 1848-1915</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44570, {&quot;Title&quot;:&quot;The Sunshade, the Glove, the Muff&quot;,&quot;Topics&quot;:[&quot;Parasols&quot;,&quot;Gloves&quot;,&quot;Muffs&quot;],&quot;Primary&quot;:&quot;44570.htm&quot;,&quot;CreatorNames&quot;:[&quot;Uzanne, Octave, 1851-1931&quot;,&quot;Avril, Paul, 1849-1928 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;44570&quot;});" class='title'>The Sunshade, the Glove, the Muff</a>
+<div class='author'>Uzanne, Octave, 1851-1931, Avril, Paul, 1849-1928 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44779, {&quot;Title&quot;:&quot;Strange Teas, Dinners, Weddings and Fetes&quot;,&quot;Topics&quot;:[&quot;Manners and customs&quot;],&quot;Primary&quot;:&quot;44779.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;44779&quot;});" class='title'>Strange Teas, Dinners, Weddings and Fetes</a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45077, {&quot;Title&quot;:&quot;Pubs: A Collection of Hotel, Inn, and Tavern Signs in Great Britain and Ireland - to Which Are Added a Few Foreign Café Signs&quot;,&quot;Topics&quot;:[&quot;Inn signs -- Great Britain&quot;],&quot;Primary&quot;:&quot;45077.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tomlin, G. A. [Compiler]&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;45077&quot;});" class='title'>Pubs:<br><span class='subtitle'>A Collection of Hotel, Inn, and Tavern Signs in Great Britain and Ireland - to Which Are Added a Few Foreign Café Signs</span></a>
+<div class='author'>Tomlin, G. A. [Compiler]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45177, {&quot;Title&quot;:&quot;Americana Ebrietatis - The Favorite Tipple of our Forefathers and the Laws and Customs Relating Thereto&quot;,&quot;Topics&quot;:[&quot;Drinking customs -- United States&quot;],&quot;Primary&quot;:&quot;45177.htm&quot;,&quot;CreatorNames&quot;:[&quot;Peeke, Hewson L. (Hewson Lindsley), 1861-1942&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;45177&quot;});" class='title'>Americana Ebrietatis -<br><span class='subtitle'>The Favorite Tipple of our Forefathers and the Laws and Customs Relating Thereto</span></a>
+<div class='author'>Peeke, Hewson L. (Hewson Lindsley), 1861-1942</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45249, {&quot;Title&quot;:&quot;The History of Signboards, from the Earliest times to the Present Day&quot;,&quot;Topics&quot;:[&quot;Inn signs -- England -- History&quot;,&quot;Signs and signboards -- History&quot;],&quot;Primary&quot;:&quot;45249.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hotten, John Camden, 1832-1873&quot;,&quot;Larwood, Jacob, 1827-1918&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;45249&quot;});" class='title'>The History of Signboards, from the Earliest times to the Present Day</a>
+<div class='author'>Hotten, John Camden, 1832-1873, Larwood, Jacob, 1827-1918</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46136, {&quot;Title&quot;:&quot;History of the Fan&quot;,&quot;Topics&quot;:[&quot;Fans&quot;],&quot;Primary&quot;:&quot;46136.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rhead, G. Woolliscroft (George Woolliscroft), 1854-1920&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;46136&quot;});" class='title'>History of the Fan</a>
+<div class='author'>Rhead, G. Woolliscroft (George Woolliscroft), 1854-1920</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46216, {&quot;Title&quot;:&quot;Carriages &amp; Coaches: Their History &amp; Their Evolution&quot;,&quot;Topics&quot;:[&quot;Carriages and carts&quot;],&quot;Primary&quot;:&quot;46216.htm&quot;,&quot;CreatorNames&quot;:[&quot;Straus, Ralph, 1882-1950&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;46216&quot;});" class='title'>Carriages & Coaches:<br><span class='subtitle'>Their History & Their Evolution</span></a>
+<div class='author'>Straus, Ralph, 1882-1950</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46433, {&quot;Title&quot;:&quot;A Handbook of Pictorial History&quot;,&quot;Topics&quot;:[&quot;Great Britain -- History&quot;,&quot;Great Britain -- History -- Pictorial works&quot;,&quot;Costume -- Great Britain -- History&quot;],&quot;Primary&quot;:&quot;46433.htm&quot;,&quot;CreatorNames&quot;:[&quot;Donald, Henry W.&quot;],&quot;LoCC&quot;:[&quot;DA&quot;,&quot;GT&quot;],&quot;PG_ID&quot;:&quot;46433&quot;});" class='title'>A Handbook of Pictorial History</a>
+<div class='author'>Donald, Henry W.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46474, {&quot;Title&quot;:&quot;The Historical Child - Paidology; The Science of the Child&quot;,&quot;Topics&quot;:[&quot;Manners and customs&quot;,&quot;Children&quot;],&quot;Primary&quot;:&quot;46474.htm&quot;,&quot;CreatorNames&quot;:[&quot;Chrisman, Oscar, 1855-1929&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;46474&quot;});" class='title'>The Historical Child -<br><span class='subtitle'>Paidology; The Science of the Child</span></a>
+<div class='author'>Chrisman, Oscar, 1855-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46775, {&quot;Title&quot;:&quot;Tea Drinking in 18th-Century America: Its Etiquette and Equipage - United States National Museum Bulletin 225, Contributions from the Museum of History and Technology Paper 14, pages 61-91,  Smithsonian Institution, Washington, DC, 1961&quot;,&quot;Topics&quot;:[&quot;Tea -- United States&quot;,&quot;United States -- Social life and customs -- 18th century&quot;],&quot;Primary&quot;:&quot;46775.htm&quot;,&quot;CreatorNames&quot;:[&quot;Roth, Rodris&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;46775&quot;});" class='title'>Tea Drinking in 18th-Century America:<br><span class='subtitle'>Its Etiquette and Equipage - United States National Museum Bulletin 225, Contributions from the Museum of History and Technology Paper 14, pages 61-91,  Smithsonian Institution, Washington, DC, 1961</span></a>
+<div class='author'>Roth, Rodris</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46949, {&quot;Title&quot;:&quot;Chats on Costume&quot;,&quot;Topics&quot;:[&quot;Clothing and dress&quot;],&quot;Primary&quot;:&quot;46949.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rhead, G. Woolliscroft (George Woolliscroft), 1854-1920&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;46949&quot;});" class='title'>Chats on Costume</a>
+<div class='author'>Rhead, G. Woolliscroft (George Woolliscroft), 1854-1920</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47076, {&quot;Title&quot;:&quot;The Art of Drinking: A Historical Sketch&quot;,&quot;Topics&quot;:[&quot;Wine and wine making&quot;,&quot;Drinking customs&quot;,&quot;Beer&quot;],&quot;Primary&quot;:&quot;47076.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gervinus, Georg Gottfried, 1805-1871&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;47076&quot;});" class='title'>The Art of Drinking:<br><span class='subtitle'>A Historical Sketch</span></a>
+<div class='author'>Gervinus, Georg Gottfried, 1805-1871</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47206, {&quot;Title&quot;:&quot;Nineteen Centuries of Drink in England: A History&quot;,&quot;Topics&quot;:[&quot;England -- Social life and customs&quot;,&quot;Drinking customs -- England&quot;,&quot;Drinking of alcoholic beverages -- Great Britain&quot;],&quot;Primary&quot;:&quot;47206.htm&quot;,&quot;CreatorNames&quot;:[&quot;French, Richard Valpy&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;47206&quot;});" class='title'>Nineteen Centuries of Drink in England:<br><span class='subtitle'>A History</span></a>
+<div class='author'>French, Richard Valpy</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47457, {&quot;Title&quot;:&quot;Jaros Hygienic Wear: The therapeutic and prophylactic application.&quot;,&quot;Topics&quot;:[&quot;Underwear -- Catalogs&quot;],&quot;Primary&quot;:&quot;47457.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jaros, I.&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;47457&quot;});" class='title'>Jaros Hygienic Wear:<br><span class='subtitle'>The therapeutic and prophylactic application.</span></a>
+<div class='author'>Jaros, I.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47956, {&quot;Title&quot;:&quot;Christmastide: Its History, Festivities, and Carols&quot;,&quot;Topics&quot;:[&quot;Christmas&quot;],&quot;Primary&quot;:&quot;47956.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sandys, William, 1792-1874&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;47956&quot;});" class='title'>Christmastide:<br><span class='subtitle'>Its History, Festivities, and Carols</span></a>
+<div class='author'>Sandys, William, 1792-1874</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48065, {&quot;Title&quot;:&quot;Anecdotes of the Manners and Customs of London during the Eighteenth Century; Vol. 1 (of 2) - Including the Charities, Depravities, Dresses, and Amusements etc.&quot;,&quot;Topics&quot;:[&quot;London (England) -- Social life and customs -- 18th century&quot;],&quot;Primary&quot;:&quot;48065.htm&quot;,&quot;CreatorNames&quot;:[&quot;Malcolm, James Peller, 1767-1815&quot;],&quot;LoCC&quot;:[&quot;DA&quot;,&quot;GT&quot;],&quot;PG_ID&quot;:&quot;48065&quot;});" class='title'>Anecdotes of the Manners and Customs of London during the Eighteenth Century;<br><span class='subtitle'>Vol. 1 (of 2) - Including the Charities, Depravities, Dresses, and Amusements etc.</span></a>
+<div class='author'>Malcolm, James Peller, 1767-1815</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48066, {&quot;Title&quot;:&quot;Anecdotes of the Manners and Customs of London during the Eighteenth Century; Vol. 2 (of 2) - Including the Charities, Depravities, Dresses, and Amusements etc.&quot;,&quot;Topics&quot;:[&quot;London (England) -- Social life and customs -- 18th century&quot;],&quot;Primary&quot;:&quot;48066.htm&quot;,&quot;CreatorNames&quot;:[&quot;Malcolm, James Peller, 1767-1815&quot;],&quot;LoCC&quot;:[&quot;DA&quot;,&quot;GT&quot;],&quot;PG_ID&quot;:&quot;48066&quot;});" class='title'>Anecdotes of the Manners and Customs of London during the Eighteenth Century;<br><span class='subtitle'>Vol. 2 (of 2) - Including the Charities, Depravities, Dresses, and Amusements etc.</span></a>
+<div class='author'>Malcolm, James Peller, 1767-1815</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48551, {&quot;Title&quot;:&quot;Costume: Fanciful, Historical and Theatrical&quot;,&quot;Topics&quot;:[&quot;Costume -- History&quot;],&quot;Primary&quot;:&quot;48551.htm&quot;,&quot;CreatorNames&quot;:[&quot;Aria, Mrs. (Eliza Davis), 1866-1931&quot;,&quot;Anderson, Percy, -1928 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;48551&quot;});" class='title'>Costume:<br><span class='subtitle'>Fanciful, Historical and Theatrical</span></a>
+<div class='author'>Aria, Mrs. (Eliza Davis), 1866-1931, Anderson, Percy, -1928 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49706, {&quot;Title&quot;:&quot;Smokiana: Historical; Ethnographical&quot;,&quot;Topics&quot;:[&quot;Smoking&quot;,&quot;Tobacco pipes&quot;],&quot;Primary&quot;:&quot;49706.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pritchett, R. T. (Robert Taylor), 1828-1907&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;49706&quot;});" class='title'>Smokiana:<br><span class='subtitle'>Historical; Ethnographical</span></a>
+<div class='author'>Pritchett, R. T. (Robert Taylor), 1828-1907</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50147, {&quot;Title&quot;:&quot;Beaver: An Alphabet of Typical Specimens - Together with Notes and a Terminal Essay on the Manners and Customs of Beavering Men&quot;,&quot;Topics&quot;:[&quot;Beards&quot;],&quot;Primary&quot;:&quot;50147.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kettelwell, John&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;50147&quot;});" class='title'>Beaver:<br><span class='subtitle'>An Alphabet of Typical Specimens - Together with Notes and a Terminal Essay on the Manners and Customs of Beavering Men</span></a>
+<div class='author'>Kettelwell, John</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51128, {&quot;Title&quot;:&quot;Greek Dress - A Study of the Costumes Worn in Ancient Greece, from Pre-Hellenic Times to the Hellenistic Age&quot;,&quot;Topics&quot;:[&quot;Clothing and dress -- Greece&quot;],&quot;Primary&quot;:&quot;51128.htm&quot;,&quot;CreatorNames&quot;:[&quot;Abrahams, Ethel Beatrice&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;51128&quot;});" class='title'>Greek Dress -<br><span class='subtitle'>A Study of the Costumes Worn in Ancient Greece, from Pre-Hellenic Times to the Hellenistic Age</span></a>
+<div class='author'>Abrahams, Ethel Beatrice</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51856, {&quot;Title&quot;:&quot;The kiss and its history&quot;,&quot;Topics&quot;:[&quot;Kissing&quot;],&quot;Primary&quot;:&quot;51856.htm&quot;,&quot;CreatorNames&quot;:[&quot;Nyrop, Kristoffer, 1858-1931&quot;,&quot;Harvey, William Frederick, 1853- [Translator]&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;51856&quot;});" class='title'>The kiss and its history</a>
+<div class='author'>Nyrop, Kristoffer, 1858-1931, Harvey, William Frederick, 1853- [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51885, {&quot;Title&quot;:&quot;The Trade Signs of Essex - A popular account of the origin and meanings of the public houses &amp; other signs&quot;,&quot;Topics&quot;:[&quot;Signs and signboards -- England -- Essex&quot;,&quot;Hotels -- England -- Essex&quot;,&quot;Essex (England) -- Social life and customs&quot;],&quot;Primary&quot;:&quot;51885.htm&quot;,&quot;CreatorNames&quot;:[&quot;Christy, Miller, 1861-&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;51885&quot;});" class='title'>The Trade Signs of Essex -<br><span class='subtitle'>A popular account of the origin and meanings of the public houses & other signs</span></a>
+<div class='author'>Christy, Miller, 1861-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52024, {&quot;Title&quot;:&quot;Strange Survivals: Some Chapters in the History of Man&quot;,&quot;Topics&quot;:[&quot;Superstition&quot;,&quot;Manners and customs -- Origin&quot;],&quot;Primary&quot;:&quot;52024.htm&quot;,&quot;CreatorNames&quot;:[&quot;Baring-Gould, S. (Sabine), 1834-1924&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;52024&quot;});" class='title'>Strange Survivals:<br><span class='subtitle'>Some Chapters in the History of Man</span></a>
+<div class='author'>Baring-Gould, S. (Sabine), 1834-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53267, {&quot;Title&quot;:&quot;The Corset and the Crinoline - A Book of Modes and Costumes from Remote Periods to the Present Time&quot;,&quot;Topics&quot;:[&quot;Clothing and dress -- History&quot;,&quot;Corsets&quot;,&quot;Corsets -- Pictorial works&quot;,&quot;Crinolines&quot;,&quot;Crinolines -- Pictorial works&quot;,&quot;Clothing and dress -- History -- Pictorial works&quot;],&quot;Primary&quot;:&quot;53267.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lord, William Barry&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;53267&quot;});" class='title'>The Corset and the Crinoline -<br><span class='subtitle'>A Book of Modes and Costumes from Remote Periods to the Present Time</span></a>
+<div class='author'>Lord, William Barry</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54280, {&quot;Title&quot;:&quot;Ancient Egyptian, Assyrian, and Persian costumes and decorations&quot;,&quot;Topics&quot;:[&quot;Clothing and dress -- Egypt&quot;,&quot;Clothing and dress -- Assyria&quot;,&quot;Clothing and dress -- Iran&quot;],&quot;Primary&quot;:&quot;54280.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hornblower, Florence S.&quot;,&quot;Houston, Mary G. (Mary Galway), 1871-&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;54280&quot;});" class='title'>Ancient Egyptian, Assyrian, and Persian costumes and decorations</a>
+<div class='author'>Hornblower, Florence S., Houston, Mary G. (Mary Galway), 1871-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55602, {&quot;Title&quot;:&quot;The Curiosities of Ale &amp; Beer: An Entertaining History - (Illustrated with over Fifty Quaint Cuts)&quot;,&quot;Topics&quot;:[&quot;Drinking customs&quot;,&quot;Drinking songs&quot;],&quot;Primary&quot;:&quot;55602.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bickerdyke, John, 1858-1933&quot;,&quot;Dixon, J. M., English writer [Contributor]&quot;,&quot;Fennell, J. G. (John Greville), 1807-1885 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;55602&quot;});" class='title'>The Curiosities of Ale & Beer:<br><span class='subtitle'>An Entertaining History - (Illustrated with over Fifty Quaint Cuts)</span></a>
+<div class='author'>Bickerdyke, John, 1858-1933, Dixon, J. M., English writer [Contributor], Fennell, J. G. (John Greville), 1807-1885 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55699, {&quot;Title&quot;:&quot;Allgemeiner deutscher Bier-Comment&quot;,&quot;Topics&quot;:[&quot;Drinking customs -- Germany&quot;,&quot;Beer -- Germany&quot;],&quot;Primary&quot;:&quot;55699.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gerlach, A. (Adolf) [Editor]&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;55699&quot;});" class='title'>Allgemeiner deutscher Bier-Comment</a>
+<div class='author'>Gerlach, A. (Adolf) [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56946, {&quot;Title&quot;:&quot;St Nicotine of the Peace Pipe&quot;,&quot;Topics&quot;:[&quot;Smoking&quot;,&quot;Tobacco&quot;],&quot;Primary&quot;:&quot;56946.htm&quot;,&quot;CreatorNames&quot;:[&quot;Heward, Edward Vincent&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;56946&quot;});" class='title'>St Nicotine of the Peace Pipe</a>
+<div class='author'>Heward, Edward Vincent</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58166, {&quot;Title&quot;:&quot;The Art of Tying the Cravat; Demonstrated in sixteen lessons&quot;,&quot;Topics&quot;:[&quot;Neckties&quot;],&quot;Primary&quot;:&quot;58166.htm&quot;,&quot;CreatorNames&quot;:[&quot;Le Blanc, H., -1887&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;58166&quot;});" class='title'>The Art of Tying the Cravat;<br><span class='subtitle'>Demonstrated in sixteen lessons</span></a>
+<div class='author'>Le Blanc, H., -1887</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58312, {&quot;Title&quot;:&quot;London Cries &amp; Public Edifices&quot;,&quot;Topics&quot;:[&quot;Cries -- England -- London&quot;,&quot;Architecture -- England -- London&quot;,&quot;London (England) -- Buildings, structures, etc.&quot;],&quot;Primary&quot;:&quot;58312.htm&quot;,&quot;CreatorNames&quot;:[&quot;Leighton, John, 1822-1912&quot;],&quot;LoCC&quot;:[&quot;DA&quot;,&quot;GT&quot;],&quot;PG_ID&quot;:&quot;58312&quot;});" class='title'>London Cries & Public Edifices</a>
+<div class='author'>Leighton, John, 1822-1912</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58384, {&quot;Title&quot;:&quot;The Wigmaker in Eighteenth-Century Williamsburg - An Account of His Barbering, Hair-dressing, &amp; Peruke-Making Services, &amp; Some Remarks on Wigs of Various Styles.&quot;,&quot;Topics&quot;:[&quot;Wigmakers&quot;,&quot;Wigs -- History&quot;],&quot;Primary&quot;:&quot;58384.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bullock, Thomas K.&quot;,&quot;Tonkin, Maurice B.&quot;,&quot;Townsend, Raymond R. [Contributor]&quot;,&quot;Ford, Thomas K. [Editor]&quot;],&quot;LoCC&quot;:[&quot;GT&quot;,&quot;TT&quot;],&quot;PG_ID&quot;:&quot;58384&quot;});" class='title'>The Wigmaker in Eighteenth-Century Williamsburg -<br><span class='subtitle'>An Account of His Barbering, Hair-dressing, & Peruke-Making Services, & Some Remarks on Wigs of Various Styles.</span></a>
+<div class='author'>Bullock, Thomas K., Tonkin, Maurice B., Townsend, Raymond R. [Contributor], Ford, Thomas K. [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58662, {&quot;Title&quot;:&quot;Gloves, Past and Present&quot;,&quot;Topics&quot;:[&quot;Gloves&quot;],&quot;Primary&quot;:&quot;58662.htm&quot;,&quot;CreatorNames&quot;:[&quot;Smith, Willard M.&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;58662&quot;});" class='title'>Gloves, Past and Present</a>
+<div class='author'>Smith, Willard M.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58750, {&quot;Title&quot;:&quot;Superstition and Force - Essays on the Wager of Law, the Wager of Battle, the Ordeal, Torture&quot;,&quot;Topics&quot;:[&quot;Torture&quot;,&quot;Wager of law&quot;,&quot;Wager of battle&quot;,&quot;Ordeal&quot;],&quot;Primary&quot;:&quot;58750.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lea, Henry Charles, 1825-1909&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;58750&quot;});" class='title'>Superstition and Force -<br><span class='subtitle'>Essays on the Wager of Law, the Wager of Battle, the Ordeal, Torture</span></a>
+<div class='author'>Lea, Henry Charles, 1825-1909</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5890, {&quot;Title&quot;:&quot;Games for Hallow-e&#39;en&quot;,&quot;Topics&quot;:[&quot;Games&quot;,&quot;Halloween&quot;],&quot;Primary&quot;:&quot;5890.txt&quot;,&quot;CreatorNames&quot;:[&quot;Blain, Mary E., 1872-&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;5890&quot;});" class='title'>Games for Hallow-e'en</a>
+<div class='author'>Blain, Mary E., 1872-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59006, {&quot;Title&quot;:&quot;Pogonologia; Or, A Philosophical and Historical Essay on Beards&quot;,&quot;Topics&quot;:[&quot;Beards&quot;],&quot;Primary&quot;:&quot;59006.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dulaure, J.-A. (Jacques-Antoine), 1755-1835&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;59006&quot;});" class='title'>Pogonologia;<br><span class='subtitle'>Or, A Philosophical and Historical Essay on Beards</span></a>
+<div class='author'>Dulaure, J.-A. (Jacques-Antoine), 1755-1835</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59170, {&quot;Title&quot;:&quot;Tea, Its Mystery and History&quot;,&quot;Topics&quot;:[&quot;Tea&quot;],&quot;Primary&quot;:&quot;59170.htm&quot;,&quot;CreatorNames&quot;:[&quot;Day, Samuel Phillips&quot;,&quot;Loh, Lo Fong [Contributor]&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;59170&quot;});" class='title'>Tea, Its Mystery and History</a>
+<div class='author'>Day, Samuel Phillips, Loh, Lo Fong [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59618, {&quot;Title&quot;:&quot;The History of Court Fools&quot;,&quot;Topics&quot;:[&quot;Fools and jesters&quot;],&quot;Primary&quot;:&quot;59618.htm&quot;,&quot;CreatorNames&quot;:[&quot;Doran, Dr. (John), 1807-1878&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;59618&quot;});" class='title'>The History of Court Fools</a>
+<div class='author'>Doran, Dr. (John), 1807-1878</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59677, {&quot;Title&quot;:&quot;The Costume of China - Picturesque Representations of the Dress and Manners of the Chinese&quot;,&quot;Topics&quot;:[&quot;China -- Social life and customs&quot;,&quot;Costume -- China&quot;],&quot;Primary&quot;:&quot;59677.htm&quot;,&quot;CreatorNames&quot;:[&quot;Alexander, William, 1767-1816&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;59677&quot;});" class='title'>The Costume of China -<br><span class='subtitle'>Picturesque Representations of the Dress and Manners of the Chinese</span></a>
+<div class='author'>Alexander, William, 1767-1816</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60009, {&quot;Title&quot;:&quot;The Philosophy of Beards - A Lecture Physiological, Artistic &amp; Historical&quot;,&quot;Topics&quot;:[&quot;Beards&quot;],&quot;Primary&quot;:&quot;60009.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gowing, Thomas S.&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;60009&quot;});" class='title'>The Philosophy of Beards -<br><span class='subtitle'>A Lecture Physiological, Artistic & Historical</span></a>
+<div class='author'>Gowing, Thomas S.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60210, {&quot;Title&quot;:&quot;Las fiestas de San Juan - Reseña histórica de lo que han sido y de lo que son relación verídica de las que se celebran en este año de 1868&quot;,&quot;Topics&quot;:[&quot;Festivals -- Puerto Rico -- San Juan&quot;,&quot;San Juan (P.R.) -- Social life and customs&quot;,&quot;San Juan (P.R.) -- History&quot;],&quot;Primary&quot;:&quot;60210.htm&quot;,&quot;CreatorNames&quot;:[&quot;Asenjo y Arteaga, Federico, 1831-1893&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;60210&quot;});" class='title'>Las fiestas de San Juan -<br><span class='subtitle'>Reseña histórica de lo que han sido y de lo que son relación verídica de las que se celebran en este año de 1868</span></a>
+<div class='author'>Asenjo y Arteaga, Federico, 1831-1893</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60589, {&quot;Title&quot;:&quot;Le Pantalon Féminin&quot;,&quot;Topics&quot;:[&quot;Clothing and dress&quot;,&quot;Underwear -- History&quot;,&quot;Lingerie -- History&quot;],&quot;Primary&quot;:&quot;60589.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dufay, Pierre, 1864-1942&quot;,&quot;Silvestre, Armand, 1837-1901 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;60589&quot;});" class='title'>Le Pantalon Féminin</a>
+<div class='author'>Dufay, Pierre, 1864-1942, Silvestre, Armand, 1837-1901 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60805, {&quot;Title&quot;:&quot;The Seven Sisters of Sleep - Popular History of the Seven Prevailing Narcotics of the World&quot;,&quot;Topics&quot;:[&quot;Narcotics&quot;,&quot;Tobacco use&quot;,&quot;Psychotropic drugs&quot;,&quot;Psychotropic plants&quot;,&quot;Drug abuse&quot;],&quot;Primary&quot;:&quot;60805.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cooke, M. C. (Mordecai Cubitt), 1825-1914&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;60805&quot;});" class='title'>The Seven Sisters of Sleep -<br><span class='subtitle'>Popular History of the Seven Prevailing Narcotics of the World</span></a>
+<div class='author'>Cooke, M. C. (Mordecai Cubitt), 1825-1914</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62164, {&quot;Title&quot;:&quot;The migrations of early culture - A study of the significance of the geographical distribution of the practice of mummification as evidence of the migrations of peoples and the spread of certain customs and beliefs&quot;,&quot;Topics&quot;:[&quot;Ethnology&quot;,&quot;Human beings -- Migrations&quot;,&quot;Mummies&quot;],&quot;Primary&quot;:&quot;62164.htm&quot;,&quot;CreatorNames&quot;:[&quot;Smith, Grafton Elliot, 1871-1937&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;62164&quot;});" class='title'>The migrations of early culture -<br><span class='subtitle'>A study of the significance of the geographical distribution of the practice of mummification as evidence of the migrations of peoples and the spread of certain customs and beliefs</span></a>
+<div class='author'>Smith, Grafton Elliot, 1871-1937</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62537, {&quot;Title&quot;:&quot;Home Life in All Lands—Book III—Animal Friends and Helpers&quot;,&quot;Topics&quot;:[&quot;Domestic animals&quot;,&quot;Manners and customs&quot;],&quot;Primary&quot;:&quot;62537.htm&quot;,&quot;CreatorNames&quot;:[&quot;Morris, Charles, 1833-1922&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;62537&quot;});" class='title'>Home Life in All Lands—Book III—Animal Friends and Helpers</a>
+<div class='author'>Morris, Charles, 1833-1922</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63316, {&quot;Title&quot;:&quot;Mordvalaisten, tsheremissien ja votjakkien kosinta- ja häätavoista - Vertaileva tutkimus&quot;,&quot;Topics&quot;:[&quot;Thesis (Ph. D.)&quot;,&quot;Finno-Ugrians -- Folklore&quot;,&quot;Finno-Ugrians -- Marriage customs and rites&quot;],&quot;Primary&quot;:&quot;63316.txt&quot;,&quot;CreatorNames&quot;:[&quot;Hämäläinen, Albert, 1881-1949&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;63316&quot;});" class='title'>Mordvalaisten, tsheremissien ja votjakkien kosinta-<br><span class='subtitle'>ja häätavoista - Vertaileva tutkimus</span></a>
+<div class='author'>Hämäläinen, Albert, 1881-1949</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63800, {&quot;Title&quot;:&quot;Kultur-Kuriosa, Erster Band&quot;,&quot;Topics&quot;:[&quot;Manners and customs&quot;,&quot;Civilization -- History&quot;],&quot;Primary&quot;:&quot;63800.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kemmerich, Max, 1876-1932&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;63800&quot;});" class='title'>Kultur-Kuriosa, Erster Band</a>
+<div class='author'>Kemmerich, Max, 1876-1932</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63801, {&quot;Title&quot;:&quot;Kultur-Kuriosa, Zweiter Band&quot;,&quot;Topics&quot;:[&quot;Manners and customs&quot;,&quot;Civilization -- History&quot;],&quot;Primary&quot;:&quot;63801.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kemmerich, Max, 1876-1932&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;63801&quot;});" class='title'>Kultur-Kuriosa, Zweiter Band</a>
+<div class='author'>Kemmerich, Max, 1876-1932</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63969, {&quot;Title&quot;:&quot;The History and Poetry of Finger-rings&quot;,&quot;Topics&quot;:[&quot;Rings&quot;],&quot;Primary&quot;:&quot;63969.htm&quot;,&quot;CreatorNames&quot;:[&quot;Edwards, Charles, 1797-1868&quot;,&quot;Stoddard, Richard Henry, 1825-1903 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;63969&quot;});" class='title'>The History and Poetry of Finger-rings</a>
+<div class='author'>Edwards, Charles, 1797-1868, Stoddard, Richard Henry, 1825-1903 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65295, {&quot;Title&quot;:&quot;Scatalogic Rites of All Nations - A dissertation upon the employment of excrementitious remedial agents in religion, therapeutics, divination, witchcraft, love-philters, etc., in all parts of the globe&quot;,&quot;Topics&quot;:[&quot;Scatology&quot;],&quot;Primary&quot;:&quot;65295.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bourke, John Gregory, 1846-1896&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;65295&quot;});" class='title'>Scatalogic Rites of All Nations -<br><span class='subtitle'>A dissertation upon the employment of excrementitious remedial agents in religion, therapeutics, divination, witchcraft, love-philters, etc., in all parts of the globe</span></a>
+<div class='author'>Bourke, John Gregory, 1846-1896</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65316, {&quot;Title&quot;:&quot;Head-Gear, Antique and Modern&quot;,&quot;Topics&quot;:[&quot;Hats&quot;,&quot;Millinery&quot;,&quot;Hats -- History&quot;,&quot;Headgear&quot;],&quot;Primary&quot;:&quot;65316.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wadleigh, R. H. [Editor]&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;65316&quot;});" class='title'>Head-Gear, Antique and Modern</a>
+<div class='author'>Wadleigh, R. H. [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65856, {&quot;Title&quot;:&quot;Cincinnati&#39;s \&quot;\&quot;Old Cunny\&quot;\&quot;: A Notorious Purveyor of Human Flesh&quot;,&quot;Topics&quot;:[&quot;Medicine -- History&quot;,&quot;Body snatching&quot;,&quot;Cunningham, William, 1807-1871&quot;,&quot;Dissection -- History&quot;],&quot;Primary&quot;:&quot;65856.htm&quot;,&quot;CreatorNames&quot;:[&quot;Edwards, Linden F. (Linden Forest), 1899-1970&quot;,&quot;Public Library of Fort Wayne and Allen County&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;65856&quot;});" class='title'>Cincinnati's "Old Cunny":<br><span class='subtitle'>A Notorious Purveyor of Human Flesh</span></a>
+<div class='author'>Edwards, Linden F. (Linden Forest), 1899-1970, Public Library of Fort Wayne and Allen County</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66735, {&quot;Title&quot;:&quot;Drinks of the World&quot;,&quot;Topics&quot;:[&quot;Drinking customs&quot;,&quot;Beverages&quot;],&quot;Primary&quot;:&quot;66735.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ashton, John, 1834-1911&quot;,&quot;Mew, James, 1837-1913&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;66735&quot;});" class='title'>Drinks of the World</a>
+<div class='author'>Ashton, John, 1834-1911, Mew, James, 1837-1913</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6674, {&quot;Title&quot;:&quot;Umbrellas and Their History&quot;,&quot;Topics&quot;:[&quot;Umbrellas&quot;],&quot;Primary&quot;:&quot;6674.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sangster, William, 1808-1888&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;6674&quot;});" class='title'>Umbrellas and Their History</a>
+<div class='author'>Sangster, William, 1808-1888</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67084, {&quot;Title&quot;:&quot;To the American Indian&quot;,&quot;Topics&quot;:[&quot;Yurok Indians&quot;,&quot;Klamath Indians&quot;],&quot;Primary&quot;:&quot;67084.htm&quot;,&quot;CreatorNames&quot;:[&quot;Thompson, Lucy, 1856-1932&quot;],&quot;LoCC&quot;:[&quot;E&quot;,&quot;GT&quot;],&quot;PG_ID&quot;:&quot;67084&quot;});" class='title'>To the American Indian</a>
+<div class='author'>Thompson, Lucy, 1856-1932</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67262, {&quot;Title&quot;:&quot;Die Sitten der Völker, Erster Band - Liebe, Ehe, Heirat, Geburt, Religion, Aberglaube, Lebensgewohnheiten, Kultureigentümlichkeiten, Tod und Bestattung bei allen Völkern der Erde&quot;,&quot;Topics&quot;:[&quot;Ethnology&quot;,&quot;Manners and customs&quot;],&quot;Primary&quot;:&quot;67262.htm&quot;,&quot;CreatorNames&quot;:[&quot;Buschan, Georg, 1863-1942 [Editor]&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;67262&quot;});" class='title'>Die Sitten der Völker, Erster Band -<br><span class='subtitle'>Liebe, Ehe, Heirat, Geburt, Religion, Aberglaube, Lebensgewohnheiten, Kultureigentümlichkeiten, Tod und Bestattung bei allen Völkern der Erde</span></a>
+<div class='author'>Buschan, Georg, 1863-1942 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67289, {&quot;Title&quot;:&quot;Die Sitten der Völker, Zweiter Band - Liebe, Ehe, Heirat, Geburt, Religion, Aberglaube, Lebensgewohnheiten, Kultureigentümlichkeiten, Tod und Bestattung bei allen Völkern der Erde&quot;,&quot;Topics&quot;:[&quot;Ethnology&quot;,&quot;Manners and customs&quot;],&quot;Primary&quot;:&quot;67289.htm&quot;,&quot;CreatorNames&quot;:[&quot;Buschan, Georg, 1863-1942 [Editor]&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;67289&quot;});" class='title'>Die Sitten der Völker, Zweiter Band -<br><span class='subtitle'>Liebe, Ehe, Heirat, Geburt, Religion, Aberglaube, Lebensgewohnheiten, Kultureigentümlichkeiten, Tod und Bestattung bei allen Völkern der Erde</span></a>
+<div class='author'>Buschan, Georg, 1863-1942 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67666, {&quot;Title&quot;:&quot;Die Sitten der Völker, Dritter Band - Liebe, Ehe, Heirat, Geburt, Religion, Aberglaube, Lebensgewohnheiten, Kultureigentümlichkeiten, Tod und Bestattung bei allen Völkern der Erde&quot;,&quot;Topics&quot;:[&quot;Ethnology&quot;,&quot;Manners and customs&quot;],&quot;Primary&quot;:&quot;67666.htm&quot;,&quot;CreatorNames&quot;:[&quot;Buschan, Georg, 1863-1942&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;67666&quot;});" class='title'>Die Sitten der Völker, Dritter Band -<br><span class='subtitle'>Liebe, Ehe, Heirat, Geburt, Religion, Aberglaube, Lebensgewohnheiten, Kultureigentümlichkeiten, Tod und Bestattung bei allen Völkern der Erde</span></a>
+<div class='author'>Buschan, Georg, 1863-1942</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68781, {&quot;Title&quot;:&quot;Trichocosmos: Notes historical, æsthetical, ethnological, physiological, anecdotal and tonsorial, on the hair &amp; beard&quot;,&quot;Topics&quot;:[&quot;Hairdressing&quot;,&quot;Barbering&quot;,&quot;Beards&quot;,&quot;Hair&quot;,&quot;Wigs&quot;],&quot;Primary&quot;:&quot;68781.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;GT&quot;,&quot;TT&quot;],&quot;PG_ID&quot;:&quot;68781&quot;});" class='title'>Trichocosmos:<br><span class='subtitle'>Notes historical, æsthetical, ethnological, physiological, anecdotal and tonsorial, on the hair & beard</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68823, {&quot;Title&quot;:&quot;Habits and men, with remnants of record touching the makers of both&quot;,&quot;Topics&quot;:[&quot;Manners and customs&quot;],&quot;Primary&quot;:&quot;68823.htm&quot;,&quot;CreatorNames&quot;:[&quot;Doran, Dr. (John), 1807-1878&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;68823&quot;});" class='title'>Habits and men, with remnants of record touching the makers of both</a>
+<div class='author'>Doran, Dr. (John), 1807-1878</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69046, {&quot;Title&quot;:&quot;Jewels and the woman: The romance, magic and art of feminine adornment&quot;,&quot;Topics&quot;:[&quot;Jewelry&quot;],&quot;Primary&quot;:&quot;69046.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ostier, Marianne, 1902-1976&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;69046&quot;});" class='title'>Jewels and the woman:<br><span class='subtitle'>The romance, magic and art of feminine adornment</span></a>
+<div class='author'>Ostier, Marianne, 1902-1976</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69120, {&quot;Title&quot;:&quot;Naar den equator, met een voorspel: van pastoor soldaat&quot;,&quot;Topics&quot;:[&quot;Ethnology&quot;,&quot;Brazil -- Description and travel&quot;,&quot;Java (Indonesia) -- Description and travel&quot;,&quot;Canary Islands -- Description and travel&quot;,&quot;Netherlands -- Colonies -- East Indies -- Description and travel&quot;],&quot;Primary&quot;:&quot;69120.htm&quot;,&quot;CreatorNames&quot;:[&quot;Perelaer, M. T. H. (Michael Theophile Hubert), 1831-1901&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;69120&quot;});" class='title'>Naar den equator, met een voorspel:<br><span class='subtitle'>van pastoor soldaat</span></a>
+<div class='author'>Perelaer, M. T. H. (Michael Theophile Hubert), 1831-1901</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69328, {&quot;Title&quot;:&quot;The nightless city; or, The \&quot;\&quot;history of the Yoshiwara Yūkwaku\&quot;\&quot;&quot;,&quot;Topics&quot;:[&quot;Tokyo (Japan) -- Social life and customs&quot;,&quot;Geishas -- Japan -- Tokyo -- History&quot;,&quot;Prostitution -- Japan -- Tokyo -- History&quot;,&quot;Yoshiwara (Tokyo, Japan) -- History&quot;],&quot;Primary&quot;:&quot;69328.htm&quot;,&quot;CreatorNames&quot;:[&quot;De Becker, J. E. (Joseph Ernest), 1863-1929&quot;],&quot;LoCC&quot;:[&quot;GT&quot;,&quot;HQ&quot;],&quot;PG_ID&quot;:&quot;69328&quot;});" class='title'>The nightless city;<br><span class='subtitle'>or, The "history of the Yoshiwara Yūkwaku"</span></a>
+<div class='author'>De Becker, J. E. (Joseph Ernest), 1863-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70142, {&quot;Title&quot;:&quot;The story of Santa Klaus&quot;,&quot;Topics&quot;:[&quot;Christmas -- Juvenile literature&quot;,&quot;Santa Claus -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;70142.htm&quot;,&quot;CreatorNames&quot;:[&quot;Walsh, William S., 1854-1919&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;70142&quot;});" class='title'>The story of Santa Klaus</a>
+<div class='author'>Walsh, William S., 1854-1919</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(769, {&quot;Title&quot;:&quot;The Book of Tea&quot;,&quot;Topics&quot;:[&quot;Tea&quot;,&quot;Japan -- Social life and customs&quot;,&quot;Japanese tea ceremony&quot;],&quot;Primary&quot;:&quot;769.htm&quot;,&quot;CreatorNames&quot;:[&quot;Okakura, Kakuzo, 1862-1913&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;769&quot;});" class='title'>The Book of Tea</a>
+<div class='author'>Okakura, Kakuzo, 1862-1913</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(8898, {&quot;Title&quot;:&quot;Cliff Castles and Cave Dwellings of Europe&quot;,&quot;Topics&quot;:[&quot;Cliff-dwellings -- Europe&quot;,&quot;Cave dwellings -- Europe&quot;,&quot;Troglodytes&quot;],&quot;Primary&quot;:&quot;8898.txt&quot;,&quot;CreatorNames&quot;:[&quot;Baring-Gould, S. (Sabine), 1834-1924&quot;],&quot;LoCC&quot;:[&quot;GT&quot;],&quot;PG_ID&quot;:&quot;8898&quot;});" class='title'>Cliff Castles and Cave Dwellings of Europe</a>
+<div class='author'>Baring-Gould, S. (Sabine), 1834-1924</div>
+</div>
+</ul></div>
+</body></html>

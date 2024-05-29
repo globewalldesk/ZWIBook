@@ -1,0 +1,182 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Surgery (RD)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17921, {&quot;Title&quot;:&quot;Manual of Surgery Volume First: General Surgery. Sixth Edition.&quot;,&quot;Topics&quot;:[&quot;Surgery&quot;],&quot;Primary&quot;:&quot;17921.htm&quot;,&quot;CreatorNames&quot;:[&quot;Miles, Alexander&quot;,&quot;Thomson, Alexis, 1863-1924&quot;],&quot;LoCC&quot;:[&quot;RD&quot;],&quot;PG_ID&quot;:&quot;17921&quot;});" class='title'>Manual of Surgery Volume First:<br><span class='subtitle'>General Surgery. Sixth Edition.</span></a>
+<div class='author'>Miles, Alexander, Thomson, Alexis, 1863-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19933, {&quot;Title&quot;:&quot;Cluthe&#39;s Advice to the Ruptured&quot;,&quot;Topics&quot;:[&quot;Hernia&quot;,&quot;Trusses (Surgery)&quot;],&quot;Primary&quot;:&quot;19933.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cluthe Rupture Institute&quot;],&quot;LoCC&quot;:[&quot;RD&quot;],&quot;PG_ID&quot;:&quot;19933&quot;});" class='title'>Cluthe's Advice to the Ruptured</a>
+<div class='author'>Cluthe Rupture Institute</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(21280, {&quot;Title&quot;:&quot;Surgical Experiences in South Africa, 1899-1900 - Being Mainly a Clinical Study of the Nature and Effects of Injuries Produced by Bullets of Small Calibre&quot;,&quot;Topics&quot;:[&quot;South African War, 1899-1902&quot;,&quot;Surgery, Military&quot;,&quot;Gunshot wounds&quot;],&quot;Primary&quot;:&quot;21280.htm&quot;,&quot;CreatorNames&quot;:[&quot;Makins, George Henry, 1853-&quot;],&quot;LoCC&quot;:[&quot;DT&quot;,&quot;RD&quot;],&quot;PG_ID&quot;:&quot;21280&quot;});" class='title'>Surgical Experiences in South Africa, 1899-1900 -<br><span class='subtitle'>Being Mainly a Clinical Study of the Nature and Effects of Injuries Produced by Bullets of Small Calibre</span></a>
+<div class='author'>Makins, George Henry, 1853-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23769, {&quot;Title&quot;:&quot;Report on Surgery to the Santa Clara County Medical Society&quot;,&quot;Topics&quot;:[&quot;Surgery -- Case studies&quot;,&quot;Medicine -- California -- Santa Clara County&quot;],&quot;Primary&quot;:&quot;23769.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cox, Joseph Bradford, 1840-&quot;],&quot;LoCC&quot;:[&quot;RD&quot;],&quot;PG_ID&quot;:&quot;23769&quot;});" class='title'>Report on Surgery to the Santa Clara County Medical Society</a>
+<div class='author'>Cox, Joseph Bradford, 1840-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24440, {&quot;Title&quot;:&quot;Surgical Anatomy&quot;,&quot;Topics&quot;:[&quot;Anatomy, Surgical and topographical -- Atlases&quot;,&quot;Surgery -- Atlases&quot;,&quot;Surgery, Operative -- Atlases&quot;],&quot;Primary&quot;:&quot;24440.htm&quot;,&quot;CreatorNames&quot;:[&quot;Maclise, Joseph&quot;],&quot;LoCC&quot;:[&quot;QM&quot;,&quot;RD&quot;],&quot;PG_ID&quot;:&quot;24440&quot;});" class='title'>Surgical Anatomy</a>
+<div class='author'>Maclise, Joseph</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24564, {&quot;Title&quot;:&quot;A Manual of the Operations of Surgery - For the Use of Senior Students, House Surgeons, and Junior Practitioners&quot;,&quot;Topics&quot;:[&quot;Surgery, Operative&quot;],&quot;Primary&quot;:&quot;24564.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bell, Joseph, 1837-1911&quot;],&quot;LoCC&quot;:[&quot;LT&quot;,&quot;RD&quot;],&quot;PG_ID&quot;:&quot;24564&quot;});" class='title'>A Manual of the Operations of Surgery -<br><span class='subtitle'>For the Use of Senior Students, House Surgeons, and Junior Practitioners</span></a>
+<div class='author'>Bell, Joseph, 1837-1911</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28428, {&quot;Title&quot;:&quot;Manual of Surgery Volume Second: Extremities—Head—Neck. Sixth Edition.&quot;,&quot;Topics&quot;:[&quot;Surgery&quot;],&quot;Primary&quot;:&quot;28428.htm&quot;,&quot;CreatorNames&quot;:[&quot;Miles, Alexander&quot;,&quot;Thomson, Alexis, 1863-1924&quot;],&quot;LoCC&quot;:[&quot;RD&quot;],&quot;PG_ID&quot;:&quot;28428&quot;});" class='title'>Manual of Surgery Volume Second:<br><span class='subtitle'>Extremities—Head—Neck. Sixth Edition.</span></a>
+<div class='author'>Miles, Alexander, Thomson, Alexis, 1863-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34157, {&quot;Title&quot;:&quot;The Compleat Surgeon - or, the whole Art of Surgery explain&#39;d in a most familiar Method.&quot;,&quot;Topics&quot;:[&quot;Surgery -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;34157.htm&quot;,&quot;CreatorNames&quot;:[&quot;Le Clerc, M. (Charles Gabriel), 1644-&quot;],&quot;LoCC&quot;:[&quot;RD&quot;],&quot;PG_ID&quot;:&quot;34157&quot;});" class='title'>The Compleat Surgeon -<br><span class='subtitle'>or, the whole Art of Surgery explain'd in a most familiar Method.</span></a>
+<div class='author'>Le Clerc, M. (Charles Gabriel), 1644-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39529, {&quot;Title&quot;:&quot;Geschichte der Neueren Deutschen Chirurgie&quot;,&quot;Topics&quot;:[&quot;Surgery -- Germany -- History&quot;],&quot;Primary&quot;:&quot;39529.htm&quot;,&quot;CreatorNames&quot;:[&quot;Küster, Ernst Georg Ferdinand, 1839-1930&quot;],&quot;LoCC&quot;:[&quot;RD&quot;],&quot;PG_ID&quot;:&quot;39529&quot;});" class='title'>Geschichte der Neueren Deutschen Chirurgie</a>
+<div class='author'>Küster, Ernst Georg Ferdinand, 1839-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40424, {&quot;Title&quot;:&quot;Surgical Instruments in Greek and Roman Times&quot;,&quot;Topics&quot;:[&quot;Surgery -- History&quot;,&quot;Surgical instruments and apparatus&quot;],&quot;Primary&quot;:&quot;40424.htm&quot;,&quot;CreatorNames&quot;:[&quot;Milne, John Stewart, 1871-1913&quot;],&quot;LoCC&quot;:[&quot;RD&quot;],&quot;PG_ID&quot;:&quot;40424&quot;});" class='title'>Surgical Instruments in Greek and Roman Times</a>
+<div class='author'>Milne, John Stewart, 1871-1913</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41710, {&quot;Title&quot;:&quot;A System of Operative Surgery, Volume 4 (of 4)&quot;,&quot;Topics&quot;:[&quot;Surgery, Operative&quot;],&quot;Primary&quot;:&quot;41710.htm&quot;,&quot;CreatorNames&quot;:[&quot;Burghard, Frederic Francis, 1864- [Editor]&quot;],&quot;LoCC&quot;:[&quot;RD&quot;],&quot;PG_ID&quot;:&quot;41710&quot;});" class='title'>A System of Operative Surgery, Volume 4 (of 4)</a>
+<div class='author'>Burghard, Frederic Francis, 1864- [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41725, {&quot;Title&quot;:&quot;Surgery, with Special Reference to Podiatry&quot;,&quot;Topics&quot;:[&quot;Surgery&quot;,&quot;Foot -- Surgery&quot;],&quot;Primary&quot;:&quot;41725.htm&quot;,&quot;CreatorNames&quot;:[&quot;Adams, Edward, 1877-&quot;,&quot;Stern, Maximilian, 1878-&quot;,&quot;Lewi, Maurice J., 1857- [Editor]&quot;],&quot;LoCC&quot;:[&quot;RD&quot;],&quot;PG_ID&quot;:&quot;41725&quot;});" class='title'>Surgery, with Special Reference to Podiatry</a>
+<div class='author'>Adams, Edward, 1877-, Stern, Maximilian, 1878-, Lewi, Maurice J., 1857- [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44089, {&quot;Title&quot;:&quot;A dissertation on the inutility of the amputation of limbs&quot;,&quot;Topics&quot;:[&quot;Amputation -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;44089.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bilguer, Johann Ulrich, 1720-1796&quot;,&quot;Tissot, S. A. D. (Samuel Auguste David), 1728-1797 [Translator]&quot;],&quot;LoCC&quot;:[&quot;RD&quot;],&quot;PG_ID&quot;:&quot;44089&quot;});" class='title'>A dissertation on the inutility of the amputation of limbs</a>
+<div class='author'>Bilguer, Johann Ulrich, 1720-1796, Tissot, S. A. D. (Samuel Auguste David), 1728-1797 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45996, {&quot;Title&quot;:&quot;Der Aether gegen den Schmerz&quot;,&quot;Topics&quot;:[&quot;Ether&quot;],&quot;Primary&quot;:&quot;45996.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dieffenbach, Johann Friedrich, 1792-1847&quot;],&quot;LoCC&quot;:[&quot;RD&quot;],&quot;PG_ID&quot;:&quot;45996&quot;});" class='title'>Der Aether gegen den Schmerz</a>
+<div class='author'>Dieffenbach, Johann Friedrich, 1792-1847</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47310, {&quot;Title&quot;:&quot;A Treatise on Gunshot Wounds&quot;,&quot;Topics&quot;:[&quot;Gunshot wounds&quot;],&quot;Primary&quot;:&quot;47310.htm&quot;,&quot;CreatorNames&quot;:[&quot;Longmore, T. (Thomas), Sir, 1816-1895&quot;],&quot;LoCC&quot;:[&quot;RD&quot;],&quot;PG_ID&quot;:&quot;47310&quot;});" class='title'>A Treatise on Gunshot Wounds</a>
+<div class='author'>Longmore, T. (Thomas), Sir, 1816-1895</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49011, {&quot;Title&quot;:&quot;The Annals of the Barber-Surgeons of London&quot;,&quot;Topics&quot;:[&quot;Barbers&#39; Company (London, England) -- History&quot;,&quot;Surgery -- England -- London -- History -- Sources&quot;,&quot;Barbers -- England -- London -- History -- Sources&quot;],&quot;Primary&quot;:&quot;49011.htm&quot;,&quot;CreatorNames&quot;:[&quot;Young, Sidney, 1843- [Compiler]&quot;,&quot;Young, Austin T. [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;RD&quot;],&quot;PG_ID&quot;:&quot;49011&quot;});" class='title'>The Annals of the Barber-Surgeons of London</a>
+<div class='author'>Young, Sidney, 1843- [Compiler], Young, Austin T. [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49662, {&quot;Title&quot;:&quot;The Cure of Rupture by Paraffin Injections&quot;,&quot;Topics&quot;:[&quot;Paraffin injections&quot;,&quot;Hernia&quot;],&quot;Primary&quot;:&quot;49662.htm&quot;,&quot;CreatorNames&quot;:[&quot;Miller, Charles Conrad, 1880-1950&quot;],&quot;LoCC&quot;:[&quot;RD&quot;],&quot;PG_ID&quot;:&quot;49662&quot;});" class='title'>The Cure of Rupture by Paraffin Injections</a>
+<div class='author'>Miller, Charles Conrad, 1880-1950</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50568, {&quot;Title&quot;:&quot;The Art of the Bone-Setter: A Testimony and a Vindication&quot;,&quot;Topics&quot;:[&quot;Fractures&quot;,&quot;Bonesetters&quot;,&quot;Bones -- Surgery&quot;,&quot;Fractures -- Treatment&quot;,&quot;Dislocations&quot;],&quot;Primary&quot;:&quot;50568.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bennett, George Matthews&quot;],&quot;LoCC&quot;:[&quot;RD&quot;],&quot;PG_ID&quot;:&quot;50568&quot;});" class='title'>The Art of the Bone-Setter:<br><span class='subtitle'>A Testimony and a Vindication</span></a>
+<div class='author'>Bennett, George Matthews</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50640, {&quot;Title&quot;:&quot;Elements of Surgery&quot;,&quot;Topics&quot;:[&quot;Surgery&quot;],&quot;Primary&quot;:&quot;50640.htm&quot;,&quot;CreatorNames&quot;:[&quot;Liston, Robert, 1794-1847&quot;,&quot;Gross, Samuel D. (Samuel David), 1805-1884 [Editor]&quot;],&quot;LoCC&quot;:[&quot;RD&quot;],&quot;PG_ID&quot;:&quot;50640&quot;});" class='title'>Elements of Surgery</a>
+<div class='author'>Liston, Robert, 1794-1847, Gross, Samuel D. (Samuel David), 1805-1884 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52993, {&quot;Title&quot;:&quot;A Collection of Chirurgical Tracts&quot;,&quot;Topics&quot;:[&quot;Surgery&quot;],&quot;Primary&quot;:&quot;52993.htm&quot;,&quot;CreatorNames&quot;:[&quot;Beckett, William, 1684-1738&quot;],&quot;LoCC&quot;:[&quot;RD&quot;],&quot;PG_ID&quot;:&quot;52993&quot;});" class='title'>A Collection of Chirurgical Tracts</a>
+<div class='author'>Beckett, William, 1684-1738</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53199, {&quot;Title&quot;:&quot;Practical Points in Anesthesia&quot;,&quot;Topics&quot;:[&quot;Anesthetics&quot;],&quot;Primary&quot;:&quot;53199.htm&quot;,&quot;CreatorNames&quot;:[&quot;Neef, Frederick-Emil&quot;],&quot;LoCC&quot;:[&quot;RD&quot;],&quot;PG_ID&quot;:&quot;53199&quot;});" class='title'>Practical Points in Anesthesia</a>
+<div class='author'>Neef, Frederick-Emil</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55739, {&quot;Title&quot;:&quot;Artificial Limbs&quot;,&quot;Topics&quot;:[&quot;Surgery, Military&quot;,&quot;Amputation&quot;,&quot;Artificial limbs&quot;,&quot;Orthopedics&quot;],&quot;Primary&quot;:&quot;55739.htm&quot;,&quot;CreatorNames&quot;:[&quot;Broca, Auguste, 1859-1924&quot;,&quot;Ducroquet, Charles, 1872-1929&quot;,&quot;Elmslie, Reginald Cheyne, 1878-1940 [Translator]&quot;],&quot;LoCC&quot;:[&quot;RD&quot;],&quot;PG_ID&quot;:&quot;55739&quot;});" class='title'>Artificial Limbs</a>
+<div class='author'>Broca, Auguste, 1859-1924, Ducroquet, Charles, 1872-1929, Elmslie, Reginald Cheyne, 1878-1940 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57083, {&quot;Title&quot;:&quot;The Barbarity of Circumcision as a Remedy for Congenital Abnormality&quot;,&quot;Topics&quot;:[&quot;Circumcision&quot;,&quot;Penis -- Abnormalities&quot;],&quot;Primary&quot;:&quot;57083.htm&quot;,&quot;CreatorNames&quot;:[&quot;Snow, Herbert, 1847-1930&quot;],&quot;LoCC&quot;:[&quot;RD&quot;],&quot;PG_ID&quot;:&quot;57083&quot;});" class='title'>The Barbarity of Circumcision as a Remedy for Congenital Abnormality</a>
+<div class='author'>Snow, Herbert, 1847-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58071, {&quot;Title&quot;:&quot;A Letter on Suspended Animation - containing experiments shewing that it may be safely employed during operations on animals&quot;,&quot;Topics&quot;:[&quot;Carbon dioxide&quot;,&quot;Anesthesia&quot;],&quot;Primary&quot;:&quot;58071.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hickman, Henry Hill, 1800-1830&quot;],&quot;LoCC&quot;:[&quot;RD&quot;],&quot;PG_ID&quot;:&quot;58071&quot;});" class='title'>A Letter on Suspended Animation -<br><span class='subtitle'>containing experiments shewing that it may be safely employed during operations on animals</span></a>
+<div class='author'>Hickman, Henry Hill, 1800-1830</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58602, {&quot;Title&quot;:&quot;A Treatise on Fractures, Luxations, and Other Affections of the Bones&quot;,&quot;Topics&quot;:[&quot;Surgery&quot;,&quot;Fractures&quot;,&quot;Dislocations&quot;],&quot;Primary&quot;:&quot;58602.htm&quot;,&quot;CreatorNames&quot;:[&quot;Desault, P.-J. (Pierre-Joseph), 1738-1795&quot;,&quot;Bichat, Xavier, 1771-1802 [Editor]&quot;,&quot;Caldwell, Charles, 1772-1853 [Translator]&quot;],&quot;LoCC&quot;:[&quot;RD&quot;],&quot;PG_ID&quot;:&quot;58602&quot;});" class='title'>A Treatise on Fractures, Luxations, and Other Affections of the Bones</a>
+<div class='author'>Desault, P.-J. (Pierre-Joseph), 1738-1795, Bichat, Xavier, 1771-1802 [Editor], Caldwell, Charles, 1772-1853 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60489, {&quot;Title&quot;:&quot;A Short Treatise on the Section of the Prostate Gland in Lithotomy - With an Explanation of a Safe and Easy Method of Conducting the Operation on the Principles of Cheselden&quot;,&quot;Topics&quot;:[&quot;Calculi -- Surgery -- 19th century&quot;,&quot;Prostate -- Surgery -- 19th century&quot;,&quot;Lithotomy -- 19th century&quot;,&quot;Surgical instruments and apparatus -- 19th century&quot;],&quot;Primary&quot;:&quot;60489.htm&quot;,&quot;CreatorNames&quot;:[&quot;Key, C. Aston (Charles Aston), 1793-1849&quot;],&quot;LoCC&quot;:[&quot;RD&quot;],&quot;PG_ID&quot;:&quot;60489&quot;});" class='title'>A Short Treatise on the Section of the Prostate Gland in Lithotomy -<br><span class='subtitle'>With an Explanation of a Safe and Easy Method of Conducting the Operation on the Principles of Cheselden</span></a>
+<div class='author'>Key, C. Aston (Charles Aston), 1793-1849</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61267, {&quot;Title&quot;:&quot;The Surgery of the Skull and Brain&quot;,&quot;Topics&quot;:[&quot;Brain -- Surgery&quot;,&quot;Skull -- Surgery&quot;],&quot;Primary&quot;:&quot;61267.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rawling, Louis Bathe&quot;],&quot;LoCC&quot;:[&quot;RD&quot;],&quot;PG_ID&quot;:&quot;61267&quot;});" class='title'>The Surgery of the Skull and Brain</a>
+<div class='author'>Rawling, Louis Bathe</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64909, {&quot;Title&quot;:&quot;Les caravanes d&#39;un chirurgien d&#39;ambulances pendant le siége de Paris et sous la commune&quot;,&quot;Topics&quot;:[&quot;Medicine, Military -- France&quot;,&quot;Paris (France) -- History -- Commune, 1871&quot;,&quot;Paris (France) -- History -- Siege, 1870-1871&quot;,&quot;Franco-Prussian War, 1870-1871 -- Personal narratives&quot;,&quot;Ambulance service -- France&quot;],&quot;Primary&quot;:&quot;64909.htm&quot;,&quot;CreatorNames&quot;:[&quot;Joulin, Désiré Joseph, 1821-1874&quot;],&quot;LoCC&quot;:[&quot;RD&quot;],&quot;PG_ID&quot;:&quot;64909&quot;});" class='title'>Les caravanes d'un chirurgien d'ambulances pendant le siége de Paris et sous la commune</a>
+<div class='author'>Joulin, Désiré Joseph, 1821-1874</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65622, {&quot;Title&quot;:&quot;Commentaries on the Surgery of the War in Portugal, Spain, France, and the Netherlands - from the battle of Roliça, in 1808, to that of Waterloo, in 1815; with additions relating to those in the Crimea in 1854-55, showing the improvements made during and since that period in the great art and science of surgery on all the subjects to which they relate.&quot;,&quot;Topics&quot;:[&quot;Surgery, Military -- Europe -- History&quot;,&quot;Napoleonic Wars, 1800-1815 -- Medical care&quot;,&quot;Crimean War, 1853-1856 -- Medical care&quot;,&quot;War wounds -- Europe -- History&quot;],&quot;Primary&quot;:&quot;65622.htm&quot;,&quot;CreatorNames&quot;:[&quot;Guthrie, G. J. (George James), 1785-1856&quot;],&quot;LoCC&quot;:[&quot;RD&quot;],&quot;PG_ID&quot;:&quot;65622&quot;});" class='title'>Commentaries on the Surgery of the War in Portugal, Spain, France, and the Netherlands -<br><span class='subtitle'>from the battle of Roliça, in 1808, to that of Waterloo, in 1815; with additions relating to those in the Crimea in 1854-55, showing the improvements made during and since that period in the great art and science of surgery on all the subjects to which they relate.</span></a>
+<div class='author'>Guthrie, G. J. (George James), 1785-1856</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65975, {&quot;Title&quot;:&quot;The Making of a Man: Being a Description of Artificial Limbs and How They May Be Adopted by Those Who Have Suffered Loss of Their Natural Limbs&quot;,&quot;Topics&quot;:[&quot;Artificial limbs -- Catalogs&quot;,&quot;Prosthesis -- Catalogs&quot;],&quot;Primary&quot;:&quot;65975.htm&quot;,&quot;CreatorNames&quot;:[&quot;George R. Fuller Co. (Rochester, N.Y.)&quot;],&quot;LoCC&quot;:[&quot;RD&quot;],&quot;PG_ID&quot;:&quot;65975&quot;});" class='title'>The Making of a Man:<br><span class='subtitle'>Being a Description of Artificial Limbs and How They May Be Adopted by Those Who Have Suffered Loss of Their Natural Limbs</span></a>
+<div class='author'>George R. Fuller Co. (Rochester, N.Y.)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68315, {&quot;Title&quot;:&quot;On chloroform and other anæsthetics: their action and administration&quot;,&quot;Topics&quot;:[&quot;Chloroform&quot;,&quot;Anesthetics&quot;,&quot;Snow, John, 1813-1858&quot;],&quot;Primary&quot;:&quot;68315.htm&quot;,&quot;CreatorNames&quot;:[&quot;Snow, John, 1813-1858&quot;,&quot;Richardson, Benjamin Ward, 1828-1896 [Editor]&quot;],&quot;LoCC&quot;:[&quot;RD&quot;],&quot;PG_ID&quot;:&quot;68315&quot;});" class='title'>On chloroform and other anæsthetics:<br><span class='subtitle'>their action and administration</span></a>
+<div class='author'>Snow, John, 1813-1858, Richardson, Benjamin Ward, 1828-1896 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69222, {&quot;Title&quot;:&quot;The apparatus used by the Greeks and Romans in the setting of fractures and the reduction of dislocations&quot;,&quot;Topics&quot;:[&quot;Fractures -- Treatment -- History&quot;,&quot;Dislocations -- Treatment -- History&quot;,&quot;Surgical instruments and apparatus -- Rome&quot;,&quot;Surgical instruments and apparatus -- Greece&quot;],&quot;Primary&quot;:&quot;69222.htm&quot;,&quot;CreatorNames&quot;:[&quot;Milne, John Stewart, 1871-1913&quot;],&quot;LoCC&quot;:[&quot;RD&quot;],&quot;PG_ID&quot;:&quot;69222&quot;});" class='title'>The apparatus used by the Greeks and Romans in the setting of fractures and the reduction of dislocations</a>
+<div class='author'>Milne, John Stewart, 1871-1913</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70330, {&quot;Title&quot;:&quot;The essentials of bandaging -&quot;,&quot;Topics&quot;:[&quot;Fractures -- Treatment&quot;,&quot;Bandages and bandaging&quot;,&quot;Surgery, Minor&quot;,&quot;Dislocations -- Treatment&quot;],&quot;Primary&quot;:&quot;70330.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hill, Berkeley, 1834-1892&quot;],&quot;LoCC&quot;:[&quot;RD&quot;],&quot;PG_ID&quot;:&quot;70330&quot;});" class='title'>The essentials of bandaging -<br><span class='subtitle'></span></a>
+<div class='author'>Hill, Berkeley, 1834-1892</div>
+</div>
+</ul></div>
+</body></html>

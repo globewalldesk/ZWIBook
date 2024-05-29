@@ -1,0 +1,530 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Romantic languages (PC)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(10069, {&quot;Title&quot;:&quot;Account of the Romansh Language - In a Letter to Sir John Pringle, Bart. P. R. S.&quot;,&quot;Topics&quot;:[&quot;Raeto-Romance language -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;10069.txt&quot;,&quot;CreatorNames&quot;:[&quot;Planta, Joseph, 1744-1827&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;10069&quot;});" class='title'>Account of the Romansh Language -<br><span class='subtitle'>In a Letter to Sir John Pringle, Bart. P. R. S.</span></a>
+<div class='author'>Planta, Joseph, 1744-1827</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(11047, {&quot;Title&quot;:&quot;Libro segundo de lectura&quot;,&quot;Topics&quot;:[&quot;Spanish language -- Readers&quot;],&quot;Primary&quot;:&quot;11047.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cyr, Ellen M., 1860-1920&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;11047&quot;});" class='title'>Libro segundo de lectura</a>
+<div class='author'>Cyr, Ellen M., 1860-1920</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(11306, {&quot;Title&quot;:&quot;Catalanisches Streitgedicht zwischen En Buc und seinem Pferd&quot;,&quot;Topics&quot;:[&quot;Poetry&quot;,&quot;Catalan language -- Texts&quot;],&quot;Primary&quot;:&quot;11306.txt&quot;,&quot;CreatorNames&quot;:[&quot;Foerster, Wendelin, 1844-1915 [Editor]&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;11306&quot;});" class='title'>Catalanisches Streitgedicht zwischen En Buc und seinem Pferd</a>
+<div class='author'>Foerster, Wendelin, 1844-1915 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(11748, {&quot;Title&quot;:&quot;French Conversation and Composition&quot;,&quot;Topics&quot;:[&quot;French language -- Composition and exercises&quot;],&quot;Primary&quot;:&quot;11748.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wann, Harry Vincent, 1887-&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;11748&quot;});" class='title'>French Conversation and Composition</a>
+<div class='author'>Wann, Harry Vincent, 1887-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12368, {&quot;Title&quot;:&quot;Contigo Pan y Cebolla&quot;,&quot;Topics&quot;:[&quot;Spanish language -- Readers&quot;],&quot;Primary&quot;:&quot;12368.txt&quot;,&quot;CreatorNames&quot;:[&quot;Gorostiza, Manuel Eduardo de, 1789-1851&quot;,&quot;McGuire, Elizabeth, 1879- [Editor]&quot;],&quot;LoCC&quot;:[&quot;PC&quot;,&quot;PQ&quot;],&quot;PG_ID&quot;:&quot;12368&quot;});" class='title'>Contigo Pan y Cebolla</a>
+<div class='author'>Gorostiza, Manuel Eduardo de, 1789-1851, McGuire, Elizabeth, 1879- [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12435, {&quot;Title&quot;:&quot;Paginas Sudamericanas&quot;,&quot;Topics&quot;:[&quot;Spanish language -- Readers&quot;],&quot;Primary&quot;:&quot;12435.htm&quot;,&quot;CreatorNames&quot;:[&quot;Phipps, Helen&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;12435&quot;});" class='title'>Paginas Sudamericanas</a>
+<div class='author'>Phipps, Helen</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12456, {&quot;Title&quot;:&quot;The Troubadours&quot;,&quot;Topics&quot;:[&quot;Civilization, Medieval, in literature&quot;,&quot;Troubadours&quot;,&quot;Provençal poetry -- History and criticism&quot;],&quot;Primary&quot;:&quot;12456.htm&quot;,&quot;CreatorNames&quot;:[&quot;Chaytor, H. J. (Henry John), 1871-1954&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;12456&quot;});" class='title'>The Troubadours</a>
+<div class='author'>Chaytor, H. J. (Henry John), 1871-1954</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13230, {&quot;Title&quot;:&quot;Glossaire franco-canadien et vocabulaire de locutions vicieuses usitées au Canada&quot;,&quot;Topics&quot;:[&quot;Canadianisms, French -- Dictionaries&quot;,&quot;French language -- Canada -- Dictionaries&quot;],&quot;Primary&quot;:&quot;13230.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dunn, Oscar, 1845-1885&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;13230&quot;});" class='title'>Glossaire franco-canadien et vocabulaire de locutions vicieuses usitées au Canada</a>
+<div class='author'>Dunn, Oscar, 1845-1885</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14768, {&quot;Title&quot;:&quot;La Parada&quot;,&quot;Topics&quot;:[&quot;Fiction&quot;],&quot;Primary&quot;:&quot;14768.txt&quot;,&quot;CreatorNames&quot;:[&quot;Ruyra, Joaquín, 1858-1939&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;14768&quot;});" class='title'>La Parada</a>
+<div class='author'>Ruyra, Joaquín, 1858-1939</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14816, {&quot;Title&quot;:&quot;La Mare-Balena&quot;,&quot;Topics&quot;:[&quot;Short stories&quot;],&quot;Primary&quot;:&quot;14816.txt&quot;,&quot;CreatorNames&quot;:[&quot;Català, Víctor, 1869-1966&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;14816&quot;});" class='title'>La Mare-Balena</a>
+<div class='author'>Català, Víctor, 1869-1966</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15047, {&quot;Title&quot;:&quot;Bases da ortografia portuguesa&quot;,&quot;Topics&quot;:[&quot;Portuguese language -- Orthography and spelling&quot;],&quot;Primary&quot;:&quot;15047.txt&quot;,&quot;CreatorNames&quot;:[&quot;Abreu, G. de Vasconcellos (Guilherme), 1842-1907&quot;,&quot;Gonçalves Viana, A. R. (Aniceto Reis), 1840-1914&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;15047&quot;});" class='title'>Bases da ortografia portuguesa</a>
+<div class='author'>Abreu, G. de Vasconcellos (Guilherme), 1842-1907, Gonçalves Viana, A. R. (Aniceto Reis), 1840-1914</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15127, {&quot;Title&quot;:&quot;Pitman&#39;s Commercial Spanish Grammar (2nd ed.)&quot;,&quot;Topics&quot;:[&quot;Spanish language -- Grammar&quot;,&quot;Commercial correspondence, Spanish&quot;,&quot;Spanish language -- Textbooks for foreign speakers -- English&quot;],&quot;Primary&quot;:&quot;15127.txt&quot;,&quot;CreatorNames&quot;:[&quot;Toledano, C. A.&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;15127&quot;});" class='title'>Pitman's Commercial Spanish Grammar (2nd ed.)</a>
+<div class='author'>Toledano, C. A.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15346, {&quot;Title&quot;:&quot;Pinya de Rosa. Volume 1, Books 1-3&quot;,&quot;Topics&quot;:[&quot;Fiction&quot;],&quot;Primary&quot;:&quot;15346.txt&quot;,&quot;CreatorNames&quot;:[&quot;Ruyra, Joaquín, 1858-1939&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;15346&quot;});" class='title'>Pinya de Rosa. Volume 1, Books 1-3</a>
+<div class='author'>Ruyra, Joaquín, 1858-1939</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15347, {&quot;Title&quot;:&quot;Pinya de Rosa. Volume 2, Book 4&quot;,&quot;Topics&quot;:[&quot;Fiction&quot;],&quot;Primary&quot;:&quot;15347.txt&quot;,&quot;CreatorNames&quot;:[&quot;Ruyra, Joaquín, 1858-1939&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;15347&quot;});" class='title'>Pinya de Rosa. Volume 2, Book 4</a>
+<div class='author'>Ruyra, Joaquín, 1858-1939</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15353, {&quot;Title&quot;:&quot;A First Spanish Reader&quot;,&quot;Topics&quot;:[&quot;Spanish language -- Readers&quot;,&quot;Spanish language -- Textbooks for foreign speakers -- English&quot;],&quot;Primary&quot;:&quot;15353.htm&quot;,&quot;CreatorNames&quot;:[&quot;Remy, Alfred, 1870-1937&quot;,&quot;Roessler, Erwin W. (Erwin William), 1880-1926&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;15353&quot;});" class='title'>A First Spanish Reader</a>
+<div class='author'>Remy, Alfred, 1870-1937, Roessler, Erwin W. (Erwin William), 1880-1926</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15626, {&quot;Title&quot;:&quot;Contes et historiettes à l&#39;usage des jeunes enfants - Qui commencent à savoir lire&quot;,&quot;Topics&quot;:[&quot;French language -- Readers&quot;,&quot;Readers (Primary)&quot;],&quot;Primary&quot;:&quot;15626.htm&quot;,&quot;CreatorNames&quot;:[&quot;Carraud, Zulma, 1796-1889&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;15626&quot;});" class='title'>Contes et historiettes à l'usage des jeunes enfants -<br><span class='subtitle'>Qui commencent à savoir lire</span></a>
+<div class='author'>Carraud, Zulma, 1796-1889</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16429, {&quot;Title&quot;:&quot;Contos para a infância - Escolhidos dos melhores auctores por Guerra Junqueiro&quot;,&quot;Topics&quot;:[&quot;Portuguese language -- Readers&quot;,&quot;Children&#39;s literature, Portuguese&quot;],&quot;Primary&quot;:&quot;16429.htm&quot;,&quot;CreatorNames&quot;:[&quot;Junqueiro, Abílio Manuel Guerra, 1850-1923&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;16429&quot;});" class='title'>Contos para a infância -<br><span class='subtitle'>Escolhidos dos melhores auctores por Guerra Junqueiro</span></a>
+<div class='author'>Junqueiro, Abílio Manuel Guerra, 1850-1923</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17219, {&quot;Title&quot;:&quot;La creació d&#39;Eva i altres contes&quot;,&quot;Topics&quot;:[&quot;Fiction&quot;],&quot;Primary&quot;:&quot;17219.txt&quot;,&quot;CreatorNames&quot;:[&quot;Carner, Josep, 1884-1971&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;17219&quot;});" class='title'>La creació d'Eva i altres contes</a>
+<div class='author'>Carner, Josep, 1884-1971</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17293, {&quot;Title&quot;:&quot;Frédéric Mistral - Poet and Leader in Provence&quot;,&quot;Topics&quot;:[&quot;Mistral, Frédéric, 1830-1914&quot;,&quot;Poets, Occitan -- 19th century -- Biography&quot;,&quot;Lexicographers -- France -- Biography&quot;,&quot;Provence (France) -- Biography&quot;],&quot;Primary&quot;:&quot;17293.htm&quot;,&quot;CreatorNames&quot;:[&quot;Downer, Charles Alfred, 1866-1930&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;17293&quot;});" class='title'>Frédéric Mistral -<br><span class='subtitle'>Poet and Leader in Provence</span></a>
+<div class='author'>Downer, Charles Alfred, 1866-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17583, {&quot;Title&quot;:&quot;Els Herois&quot;,&quot;Topics&quot;:[&quot;Fiction&quot;],&quot;Primary&quot;:&quot;17583.txt&quot;,&quot;CreatorNames&quot;:[&quot;Bertrana, Prudenci, 1867-1941&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;17583&quot;});" class='title'>Els Herois</a>
+<div class='author'>Bertrana, Prudenci, 1867-1941</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18024, {&quot;Title&quot;:&quot;Dictionnaire Argot-Français&quot;,&quot;Topics&quot;:[&quot;French language -- Slang -- Dictionaries&quot;],&quot;Primary&quot;:&quot;18024.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hayard, Napoléon, 1851-1903&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;18024&quot;});" class='title'>Dictionnaire Argot-Français</a>
+<div class='author'>Hayard, Napoléon, 1851-1903</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18198, {&quot;Title&quot;:&quot;Els camins del paradís perdut&quot;,&quot;Topics&quot;:[&quot;Fiction&quot;],&quot;Primary&quot;:&quot;18198.txt&quot;,&quot;CreatorNames&quot;:[&quot;Riber, Llorenç, 1881-1958&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;18198&quot;});" class='title'>Els camins del paradís perdut</a>
+<div class='author'>Riber, Llorenç, 1881-1958</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18873, {&quot;Title&quot;:&quot;Contes et légendes. 1re Partie&quot;,&quot;Topics&quot;:[&quot;Fairy tales -- France&quot;,&quot;French language -- Readers&quot;,&quot;Legends -- France&quot;],&quot;Primary&quot;:&quot;18873.htm&quot;,&quot;CreatorNames&quot;:[&quot;Guerber, H. A. (Hélène Adeline), 1859-1929&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;18873&quot;});" class='title'>Contes et légendes. 1re Partie</a>
+<div class='author'>Guerber, H. A. (Hélène Adeline), 1859-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19483, {&quot;Title&quot;:&quot;La manière de bien traduire d&#39;une langue en aultre&quot;,&quot;Topics&quot;:[&quot;French language -- Middle French, 1300-1600&quot;],&quot;Primary&quot;:&quot;19483.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dolet, Etienne, 1509-1546&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;19483&quot;});" class='title'>La manière de bien traduire d'une langue en aultre</a>
+<div class='author'>Dolet, Etienne, 1509-1546</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19663, {&quot;Title&quot;:&quot;Reprezentação à Academia Real das Ciências sobre a refórma da ortografia&quot;,&quot;Topics&quot;:[&quot;Portuguese language -- Orthography and spelling&quot;],&quot;Primary&quot;:&quot;19663.txt&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;19663&quot;});" class='title'>Reprezentação à Academia Real das Ciências sobre a refórma da ortografia</a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20013, {&quot;Title&quot;:&quot;Formules pour l&#39;esprit&quot;,&quot;Topics&quot;:[&quot;Romanian poetry -- Translations into French&quot;],&quot;Primary&quot;:&quot;20013.htm&quot;,&quot;CreatorNames&quot;:[&quot;Smarandache, Florentin, 1954-&quot;,&quot;Signoret, Chantal [Translator]&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;20013&quot;});" class='title'>Formules pour l'esprit</a>
+<div class='author'>Smarandache, Florentin, 1954-, Signoret, Chantal [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20253, {&quot;Title&quot;:&quot;Llibre D&#39;històries&quot;,&quot;Topics&quot;:[&quot;Catalan literature&quot;],&quot;Primary&quot;:&quot;20253.txt&quot;,&quot;CreatorNames&quot;:[&quot;Casellas, Raimón, 1855-1910&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;20253&quot;});" class='title'>Llibre D'històries</a>
+<div class='author'>Casellas, Raimón, 1855-1910</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20949, {&quot;Title&quot;:&quot;L&#39;art et science de rhethorique pour faire rigmes et ballades&quot;,&quot;Topics&quot;:[&quot;French language -- Versification&quot;],&quot;Primary&quot;:&quot;20949.htm&quot;,&quot;CreatorNames&quot;:[&quot;Croy, Henri de&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;20949&quot;});" class='title'>L'art et science de rhethorique pour faire rigmes et ballades</a>
+<div class='author'>Croy, Henri de</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22065, {&quot;Title&quot;:&quot;An Elementary Spanish Reader&quot;,&quot;Topics&quot;:[&quot;Spanish language -- Readers&quot;],&quot;Primary&quot;:&quot;22065.htm&quot;,&quot;CreatorNames&quot;:[&quot;Harrison, Earl Stanley, 1871-&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;22065&quot;});" class='title'>An Elementary Spanish Reader</a>
+<div class='author'>Harrison, Earl Stanley, 1871-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22296, {&quot;Title&quot;:&quot;Un tros de paper - Two Volumes&quot;,&quot;Topics&quot;:[&quot;Catalan language -- Texts&quot;],&quot;Primary&quot;:&quot;22296.txt&quot;,&quot;CreatorNames&quot;:[&quot;Roure, Conrad, 1841-1928 [Author of introduction, etc.]&quot;,&quot;Riba, Carles, 1893-1959 [Editor]&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;22296&quot;});" class='title'>Un tros de paper -<br><span class='subtitle'>Two Volumes</span></a>
+<div class='author'>Roure, Conrad, 1841-1928 [Author of introduction, etc.], Riba, Carles, 1893-1959 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22368, {&quot;Title&quot;:&quot;De francicae linguae recta pronuntiatione&quot;,&quot;Topics&quot;:[&quot;French language -- Pronunciation&quot;],&quot;Primary&quot;:&quot;22368.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bèze, Théodore de, 1519-1605&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;22368&quot;});" class='title'>De francicae linguae recta pronuntiatione</a>
+<div class='author'>Bèze, Théodore de, 1519-1605</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23021, {&quot;Title&quot;:&quot;Sang Nova - Novel, la muntanyenca (Volumes 1 and 2)&quot;,&quot;Topics&quot;:[&quot;Fiction&quot;],&quot;Primary&quot;:&quot;23021.txt&quot;,&quot;CreatorNames&quot;:[&quot;Vayreda, Marià, 1853-1903&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;23021&quot;});" class='title'>Sang Nova -<br><span class='subtitle'>Novel, la muntanyenca (Volumes 1 and 2)</span></a>
+<div class='author'>Vayreda, Marià, 1853-1903</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23596, {&quot;Title&quot;:&quot;Dictionnaire grammatical du mauvais langage - ou, Recueil des expressions et des phrases vicieuses usitées en France, et notamment à Lyon&quot;,&quot;Topics&quot;:[&quot;French language -- Dialects -- France -- Lyonnais&quot;,&quot;Franco-Provençal dialects&quot;,&quot;French language -- Dialects -- Dictionaries&quot;],&quot;Primary&quot;:&quot;23596.htm&quot;,&quot;CreatorNames&quot;:[&quot;Molard, Étienne, 1760?-1825&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;23596&quot;});" class='title'>Dictionnaire grammatical du mauvais langage -<br><span class='subtitle'>ou, Recueil des expressions et des phrases vicieuses usitées en France, et notamment à Lyon</span></a>
+<div class='author'>Molard, Étienne, 1760?-1825</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24045, {&quot;Title&quot;:&quot;Recueil des expressions vicieuses et des anglicismes les plus fréquents&quot;,&quot;Topics&quot;:[&quot;French language -- Canada -- Foreign words and phrases -- English&quot;,&quot;French language -- Canada -- Errors of usage&quot;],&quot;Primary&quot;:&quot;24045.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gingras, Jules Fabien, 1826-1884&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;24045&quot;});" class='title'>Recueil des expressions vicieuses et des anglicismes les plus fréquents</a>
+<div class='author'>Gingras, Jules Fabien, 1826-1884</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24072, {&quot;Title&quot;:&quot;First Italian Readings&quot;,&quot;Topics&quot;:[&quot;Italian language -- Readers&quot;],&quot;Primary&quot;:&quot;24072.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;,&quot;Bowen, Benjamin Lester, 1860-1920 [Editor]&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;24072&quot;});" class='title'>First Italian Readings</a>
+<div class='author'>Various, Bowen, Benjamin Lester, 1860-1920 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24250, {&quot;Title&quot;:&quot;Lecturas fáciles con ejercicios&quot;,&quot;Topics&quot;:[&quot;Spanish language -- Readers&quot;,&quot;Spanish language -- Composition and exercises&quot;],&quot;Primary&quot;:&quot;24250.htm&quot;,&quot;CreatorNames&quot;:[&quot;Luria, Max Aaron, 1891-&quot;,&quot;Wilkins, Lawrence A. (Lawrence Augustus), 1878-&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;24250&quot;});" class='title'>Lecturas fáciles con ejercicios</a>
+<div class='author'>Luria, Max Aaron, 1891-, Wilkins, Lawrence A. (Lawrence Augustus), 1878-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24729, {&quot;Title&quot;:&quot;Paulina Buxareu&quot;,&quot;Topics&quot;:[&quot;Fiction&quot;],&quot;Primary&quot;:&quot;24729.txt&quot;,&quot;CreatorNames&quot;:[&quot;Sagarra, Josep Maria de, 1894-1961&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;24729&quot;});" class='title'>Paulina Buxareu</a>
+<div class='author'>Sagarra, Josep Maria de, 1894-1961</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24867, {&quot;Title&quot;:&quot;Dictionnaire complet de l&#39;argot employé dans les Mystères de Paris&quot;,&quot;Topics&quot;:[&quot;French language -- Slang -- Dictionaries&quot;],&quot;Primary&quot;:&quot;24867.txt&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;AG&quot;,&quot;PC&quot;],&quot;PG_ID&quot;:&quot;24867&quot;});" class='title'>Dictionnaire complet de l'argot employé dans les Mystères de Paris</a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25949, {&quot;Title&quot;:&quot;Le nouveau dictionnaire complet du jargon de l&#39;argot - ou, Le langage des voleurs dévoilé&quot;,&quot;Topics&quot;:[&quot;French language -- Slang&quot;],&quot;Primary&quot;:&quot;25949.htm&quot;,&quot;CreatorNames&quot;:[&quot;Halbert, Arthur&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;25949&quot;});" class='title'>Le nouveau dictionnaire complet du jargon de l'argot -<br><span class='subtitle'>ou, Le langage des voleurs dévoilé</span></a>
+<div class='author'>Halbert, Arthur</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27326, {&quot;Title&quot;:&quot;Diccionario Bagobo-Español&quot;,&quot;Topics&quot;:[&quot;Bagobo language -- Dictionaries -- Spanish&quot;,&quot;Spanish language -- Dictionaries -- Bagobo&quot;],&quot;Primary&quot;:&quot;27326.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gisbert, Mateo&quot;],&quot;LoCC&quot;:[&quot;PC&quot;,&quot;PL&quot;],&quot;PG_ID&quot;:&quot;27326&quot;});" class='title'>Diccionario Bagobo-Español</a>
+<div class='author'>Gisbert, Mateo</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27782, {&quot;Title&quot;:&quot;Le tour de la France par deux enfants - Devoir et Patrie&quot;,&quot;Topics&quot;:[&quot;France -- Description and travel&quot;,&quot;French language -- Readers&quot;],&quot;Primary&quot;:&quot;27782.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bruno, G., 1833-1923&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;27782&quot;});" class='title'>Le tour de la France par deux enfants -<br><span class='subtitle'>Devoir et Patrie</span></a>
+<div class='author'>Bruno, G., 1833-1923</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28364, {&quot;Title&quot;:&quot;Bases para a unificação da ortografia que deve ser adoptada nas escolas e publicações oficiais&quot;,&quot;Topics&quot;:[&quot;Portuguese language -- Orthography and spelling&quot;],&quot;Primary&quot;:&quot;28364.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;28364&quot;});" class='title'>Bases para a unificação da ortografia que deve ser adoptada nas escolas e publicações oficiais</a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28578, {&quot;Title&quot;:&quot;Dictionnaire des barbarismes et des solécismes&quot;,&quot;Topics&quot;:[&quot;Canadianisms, French -- Dictionaries&quot;,&quot;French language -- Usage -- Dictionaries&quot;],&quot;Primary&quot;:&quot;28578.htm&quot;,&quot;CreatorNames&quot;:[&quot;Boucher-Belleville, Jean-Philippe&quot;,&quot;Cyr, Narcisse, 1823?-1894&quot;],&quot;LoCC&quot;:[&quot;PC&quot;,&quot;F&quot;],&quot;PG_ID&quot;:&quot;28578&quot;});" class='title'>Dictionnaire des barbarismes et des solécismes</a>
+<div class='author'>Boucher-Belleville, Jean-Philippe, Cyr, Narcisse, 1823?-1894</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28891, {&quot;Title&quot;:&quot;Le Cabinet des Fées - Or Recreative Readings Arranged for the Express Use of Students in French&quot;,&quot;Topics&quot;:[&quot;Fairy tales&quot;,&quot;French language -- Readers&quot;],&quot;Primary&quot;:&quot;28891.htm&quot;,&quot;CreatorNames&quot;:[&quot;Leprince de Beaumont, Jeanne-Marie, 1711-1780 [Contributor]&quot;,&quot;Perrault, Charles, 1628-1703 [Contributor]&quot;,&quot;Gérard, Georges [Editor]&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;28891&quot;});" class='title'>Le Cabinet des Fées -<br><span class='subtitle'>Or Recreative Readings Arranged for the Express Use of Students in French</span></a>
+<div class='author'>Leprince de Beaumont, Jeanne-Marie, 1711-1780 [Contributor], Perrault, Charles, 1628-1703 [Contributor], Gérard, Georges [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29068, {&quot;Title&quot;:&quot;An Introductorie for to Lerne to Read, To Pronounce, and to Speke French Trewly&quot;,&quot;Topics&quot;:[&quot;French language -- Grammar -- Early works to 1800&quot;,&quot;French language -- Textbooks for foreign speakers -- English&quot;],&quot;Primary&quot;:&quot;29068.htm&quot;,&quot;CreatorNames&quot;:[&quot;Du Wés, Giles, -1535&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;29068&quot;});" class='title'>An Introductorie for to Lerne to Read, To Pronounce, and to Speke French Trewly</a>
+<div class='author'>Du Wés, Giles, -1535</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29398, {&quot;Title&quot;:&quot;French Reader on the Cumulative Method - The story of Rodolphe and Coco the Chimpanzee&quot;,&quot;Topics&quot;:[&quot;French language -- Readers&quot;],&quot;Primary&quot;:&quot;29398.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dreyspring, Adolphe, 1835-1906&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;29398&quot;});" class='title'>French Reader on the Cumulative Method -<br><span class='subtitle'>The story of Rodolphe and Coco the Chimpanzee</span></a>
+<div class='author'>Dreyspring, Adolphe, 1835-1906</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30117, {&quot;Title&quot;:&quot;ABC: Petits Contes&quot;,&quot;Topics&quot;:[&quot;Children&#39;s stories, French&quot;,&quot;French language -- Alphabet -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;30117.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lemaître, Jules, 1853-1914&quot;,&quot;Job, 1858-1931 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;PC&quot;,&quot;PZ&quot;],&quot;PG_ID&quot;:&quot;30117&quot;});" class='title'>ABC:<br><span class='subtitle'>Petits Contes</span></a>
+<div class='author'>Lemaître, Jules, 1853-1914, Job, 1858-1931 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30904, {&quot;Title&quot;:&quot;Glossaire du patois normand&quot;,&quot;Topics&quot;:[&quot;French language -- Dialects -- Dictionaries&quot;,&quot;French language -- Dialects -- France -- Normandy&quot;],&quot;Primary&quot;:&quot;30904.htm&quot;,&quot;CreatorNames&quot;:[&quot;Du Bois, Louis, 1773-1855&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;30904&quot;});" class='title'>Glossaire du patois normand</a>
+<div class='author'>Du Bois, Louis, 1773-1855</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31552, {&quot;Title&quot;:&quot;Novo dicionário da língua portuguesa&quot;,&quot;Topics&quot;:[&quot;Portuguese language -- Dictionaries&quot;],&quot;Primary&quot;:&quot;31552.txt&quot;,&quot;CreatorNames&quot;:[&quot;Figueiredo, Cândido de, 1846-1925&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;31552&quot;});" class='title'>Novo dicionário da língua portuguesa</a>
+<div class='author'>Figueiredo, Cândido de, 1846-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33159, {&quot;Title&quot;:&quot;Os dialectos romanicos ou neo-latinos na África, Ásia e América&quot;,&quot;Topics&quot;:[&quot;Romance languages -- Dialects&quot;,&quot;Creole dialects&quot;],&quot;Primary&quot;:&quot;33159.htm&quot;,&quot;CreatorNames&quot;:[&quot;Coelho, Adolfo, 1847-1919&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;33159&quot;});" class='title'>Os dialectos romanicos ou neo-latinos na África, Ásia e América</a>
+<div class='author'>Coelho, Adolfo, 1847-1919</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33564, {&quot;Title&quot;:&quot;John Bull, Junior; or, French as She is Traduced&quot;,&quot;Topics&quot;:[&quot;French language -- Study and teaching&quot;],&quot;Primary&quot;:&quot;33564.htm&quot;,&quot;CreatorNames&quot;:[&quot;O&#39;Rell, Max, 1848-1903&quot;,&quot;Eggleston, George Cary, 1839-1911 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;33564&quot;});" class='title'>John Bull, Junior;<br><span class='subtitle'>or, French as She is Traduced</span></a>
+<div class='author'>O'Rell, Max, 1848-1903, Eggleston, George Cary, 1839-1911 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34287, {&quot;Title&quot;:&quot;Crates Mallotes ou Critica Dialogistica dos Grammaticos Defuntos contra a pedantaria do tempo&quot;,&quot;Topics&quot;:[&quot;Portuguese language&quot;],&quot;Primary&quot;:&quot;34287.htm&quot;,&quot;CreatorNames&quot;:[&quot;Guliver, Robert&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;34287&quot;});" class='title'>Crates Mallotes ou Critica Dialogistica dos Grammaticos Defuntos contra a pedantaria do tempo</a>
+<div class='author'>Guliver, Robert</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34718, {&quot;Title&quot;:&quot;Diccionario de João Fernandes - Lições de lingua portugueza pelos processos novos ao alcance de todas as classes de Portugal e Brazil&quot;,&quot;Topics&quot;:[&quot;Portuguese language -- Dictionaries&quot;,&quot;Portuguese language -- Slang -- Dictionaries&quot;],&quot;Primary&quot;:&quot;34718.htm&quot;,&quot;CreatorNames&quot;:[&quot;Amorim, Francisco Gomes de, 1827-1891&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;34718&quot;});" class='title'>Diccionario de João Fernandes -<br><span class='subtitle'>Lições de lingua portugueza pelos processos novos ao alcance de todas as classes de Portugal e Brazil</span></a>
+<div class='author'>Amorim, Francisco Gomes de, 1827-1891</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35323, {&quot;Title&quot;:&quot;Poezii&quot;,&quot;Topics&quot;:[&quot;Romanian poetry&quot;],&quot;Primary&quot;:&quot;35323.txt&quot;,&quot;CreatorNames&quot;:[&quot;Eminescu, Mihai, 1850-1889&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;35323&quot;});" class='title'>Poezii</a>
+<div class='author'>Eminescu, Mihai, 1850-1889</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35878, {&quot;Title&quot;:&quot;Les Troubadours: Leurs vies — leurs oeuvres — leur influence&quot;,&quot;Topics&quot;:[&quot;Civilization, Medieval, in literature&quot;,&quot;Troubadours&quot;,&quot;Provençal poetry -- History and criticism&quot;,&quot;Poets, Provençal -- Biography&quot;],&quot;Primary&quot;:&quot;35878.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anglade, Joseph, 1868-1930&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;35878&quot;});" class='title'>Les Troubadours:<br><span class='subtitle'>Leurs vies — leurs oeuvres — leur influence</span></a>
+<div class='author'>Anglade, Joseph, 1868-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36231, {&quot;Title&quot;:&quot;L&#39;Abrandament&quot;,&quot;Topics&quot;:[&quot;Fiction&quot;],&quot;Primary&quot;:&quot;36231.txt&quot;,&quot;CreatorNames&quot;:[&quot;Soldevila, Carles, 1891-1967&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;36231&quot;});" class='title'>L'Abrandament</a>
+<div class='author'>Soldevila, Carles, 1891-1967</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36805, {&quot;Title&quot;:&quot;Spanish Tales for Beginners&quot;,&quot;Topics&quot;:[&quot;Spanish language -- Readers&quot;],&quot;Primary&quot;:&quot;36805.htm&quot;,&quot;CreatorNames&quot;:[&quot;Reinhardt, Louise, 1866- [Contributor]&quot;,&quot;Hills, E. C. (Elijah Clarence), 1867-1932 [Editor]&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;36805&quot;});" class='title'>Spanish Tales for Beginners</a>
+<div class='author'>Reinhardt, Louise, 1866- [Contributor], Hills, E. C. (Elijah Clarence), 1867-1932 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(378, {&quot;Title&quot;:&quot;The White Knight: Tirant Lo Blanc&quot;,&quot;Topics&quot;:[&quot;Knights and knighthood -- Fiction&quot;,&quot;Adventure and adventurers -- Fiction&quot;,&quot;Adventure stories&quot;],&quot;Primary&quot;:&quot;378.txt&quot;,&quot;CreatorNames&quot;:[&quot;Galba, Martí Joan de, -1490&quot;,&quot;Martorell, Joanot, -1468&quot;,&quot;Rudder, Robert S. [Translator]&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;378&quot;});" class='title'>The White Knight:<br><span class='subtitle'>Tirant Lo Blanc</span></a>
+<div class='author'>Galba, Martí Joan de, -1490, Martorell, Joanot, -1468, Rudder, Robert S. [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37854, {&quot;Title&quot;:&quot;Le Poème du Rhône, en XII chants. Texte Provençal et Traduction Française&quot;,&quot;Topics&quot;:[&quot;Occitan poetry&quot;,&quot;Rhône River (Switzerland and France) -- Poetry&quot;,&quot;Occitan poetry -- Translations into French&quot;],&quot;Primary&quot;:&quot;37854.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mistral, Frédéric, 1830-1914&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;37854&quot;});" class='title'>Le Poème du Rhône, en XII chants. Texte Provençal et Traduction Française</a>
+<div class='author'>Mistral, Frédéric, 1830-1914</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38124, {&quot;Title&quot;:&quot;Spanish Composition&quot;,&quot;Topics&quot;:[&quot;Spanish language -- Composition and exercises&quot;,&quot;Spanish language -- Grammar&quot;],&quot;Primary&quot;:&quot;38124.htm&quot;,&quot;CreatorNames&quot;:[&quot;Broomhall, Edith J.&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;38124&quot;});" class='title'>Spanish Composition</a>
+<div class='author'>Broomhall, Edith J.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38660, {&quot;Title&quot;:&quot;Observations grammaticales sur quelques articles du Dictionnaire du mauvais langage&quot;,&quot;Topics&quot;:[&quot;French language -- Grammar&quot;,&quot;Molard, Etienne, approximately 1760-1825. Dictionnaire grammatical du mauvais langage&quot;,&quot;Molard, Etienne, approximately 1760-1825. Mauvais Langage corrigé&quot;,&quot;French language -- Usage&quot;],&quot;Primary&quot;:&quot;38660.htm&quot;,&quot;CreatorNames&quot;:[&quot;Deplace, Guy-Marie, 1772-1843&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;38660&quot;});" class='title'>Observations grammaticales sur quelques articles du Dictionnaire du mauvais langage</a>
+<div class='author'>Deplace, Guy-Marie, 1772-1843</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38913, {&quot;Title&quot;:&quot;Manuel des difficultés les plus communes de la langue française, adapté au jeune âge et suivi d&#39;un recueil de locutions vicieuses&quot;,&quot;Topics&quot;:[&quot;French language -- Idioms -- Dictionaries&quot;],&quot;Primary&quot;:&quot;38913.htm&quot;,&quot;CreatorNames&quot;:[&quot;Maguire, Thomas, 1776-1854&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;38913&quot;});" class='title'>Manuel des difficultés les plus communes de la langue française, adapté au jeune âge et suivi d'un recueil de locutions vicieuses</a>
+<div class='author'>Maguire, Thomas, 1776-1854</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38991, {&quot;Title&quot;:&quot;Roumanian Stories, Translated from the Original Roumanian&quot;,&quot;Topics&quot;:[&quot;Short stories, Romanian -- Translations into English&quot;,&quot;Romania -- Social life and customs -- Fiction&quot;],&quot;Primary&quot;:&quot;38991.htm&quot;,&quot;CreatorNames&quot;:[&quot;Beza, Marcu, 1882-1949 [Contributor]&quot;,&quot;Brătescu-Voinești, I. Al. (Ioan Al.), 1868-1946 [Contributor]&quot;,&quot;Caragiale, I. L. (Ion Luca), 1852-1912 [Contributor]&quot;,&quot;Creangă, Ion, 1839-1889 [Contributor]&quot;,&quot;Delavrancea, Barbu, 1858-1918 [Contributor]&quot;,&quot;Negruzzi, Leon C., 1840-1890 [Contributor]&quot;,&quot;Popovici-Bănățeanu, Ion, 1869-1893 [Contributor]&quot;,&quot;Sadoveanu, Mihail, 1880-1961 [Contributor]&quot;,&quot;Slavici, Ioan, 1848-1925 [Contributor]&quot;,&quot;Byng, Lucy [Translator]&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;38991&quot;});" class='title'>Roumanian Stories, Translated from the Original Roumanian</a>
+<div class='author'>Beza, Marcu, 1882-1949 [Contributor], Brătescu-Voinești, I. Al. (Ioan Al.), 1868-1946 [Contributor], Caragiale, I. L. (Ion Luca), 1852-1912 [Contributor], Creangă, Ion, 1839-1889 [Contributor], Delavrancea, Barbu, 1858-1918 [Contributor], Negruzzi, Leon C., 1840-1890 [Contributor], Popovici-Bănățeanu, Ion, 1869-1893 [Contributor], Sadoveanu, Mihail, 1880-1961 [Contributor], Slavici, Ioan, 1848-1925 [Contributor], Byng, Lucy [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39647, {&quot;Title&quot;:&quot;Heath&#39;s Modern Language Series: The Spanish American Reader&quot;,&quot;Topics&quot;:[&quot;Spanish language -- Readers&quot;],&quot;Primary&quot;:&quot;39647.htm&quot;,&quot;CreatorNames&quot;:[&quot;Nelson, Ernesto&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;39647&quot;});" class='title'>Heath's Modern Language Series:<br><span class='subtitle'>The Spanish American Reader</span></a>
+<div class='author'>Nelson, Ernesto</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40617, {&quot;Title&quot;:&quot;The Teaching and Cultivation of the French Language in England during Tudor and Stuart Times - With an Introductory Chapter on the Preceding Period&quot;,&quot;Topics&quot;:[&quot;French language -- Study and teaching&quot;,&quot;Learning and scholarship -- England&quot;,&quot;French language -- Study and teaching -- Bibliography&quot;],&quot;Primary&quot;:&quot;40617.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lambley, K. Rebillon (Kathleen Rebillon)&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;40617&quot;});" class='title'>The Teaching and Cultivation of the French Language in England during Tudor and Stuart Times -<br><span class='subtitle'>With an Introductory Chapter on the Preceding Period</span></a>
+<div class='author'>Lambley, K. Rebillon (Kathleen Rebillon)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41099, {&quot;Title&quot;:&quot;Traité touchant le commun usage de l&#39;escriture françoise&quot;,&quot;Topics&quot;:[&quot;French language -- Orthography and spelling&quot;],&quot;Primary&quot;:&quot;41099.htm&quot;,&quot;CreatorNames&quot;:[&quot;Meigret, Louis, active 16th century&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;41099&quot;});" class='title'>Traité touchant le commun usage de l'escriture françoise</a>
+<div class='author'>Meigret, Louis, active 16th century</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41577, {&quot;Title&quot;:&quot;Dictionnaire raisonné des onomatopées françaises&quot;,&quot;Topics&quot;:[&quot;French language -- Onomatopoeic words -- Dictionaries&quot;],&quot;Primary&quot;:&quot;41577.htm&quot;,&quot;CreatorNames&quot;:[&quot;Nodier, Charles, 1780-1844&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;41577&quot;});" class='title'>Dictionnaire raisonné des onomatopées françaises</a>
+<div class='author'>Nodier, Charles, 1780-1844</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41843, {&quot;Title&quot;:&quot;Nouveau Glossaire Genevois, tome 1/2&quot;,&quot;Topics&quot;:[&quot;French language -- Dialects -- Dictionaries&quot;,&quot;French language -- Dialects -- Switzerland&quot;],&quot;Primary&quot;:&quot;41843.htm&quot;,&quot;CreatorNames&quot;:[&quot;Humbert, Jean, 1792-1851&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;41843&quot;});" class='title'>Nouveau Glossaire Genevois, tome 1/2</a>
+<div class='author'>Humbert, Jean, 1792-1851</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41915, {&quot;Title&quot;:&quot;Hossfeld&#39;s Spanish Dialogues, and Idiomatic Phrases Indispensible for a Rapid Acquisition of the Spanish Language&quot;,&quot;Topics&quot;:[&quot;Spanish language -- Textbooks for foreign speakers -- English&quot;,&quot;Spanish language -- Terms and phrases&quot;],&quot;Primary&quot;:&quot;41915.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cornett, W. N. (William N.)&quot;,&quot;Hossfeld, C.&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;41915&quot;});" class='title'>Hossfeld's Spanish Dialogues, and Idiomatic Phrases Indispensible for a Rapid Acquisition of the Spanish Language</a>
+<div class='author'>Cornett, W. N. (William N.), Hossfeld, C.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42088, {&quot;Title&quot;:&quot;Nouveau Glossaire Genevois, tome 2/2&quot;,&quot;Topics&quot;:[&quot;French language -- Dialects -- Dictionaries&quot;,&quot;French language -- Dialects -- Switzerland&quot;],&quot;Primary&quot;:&quot;42088.htm&quot;,&quot;CreatorNames&quot;:[&quot;Humbert, Jean, 1792-1851&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;42088&quot;});" class='title'>Nouveau Glossaire Genevois, tome 2/2</a>
+<div class='author'>Humbert, Jean, 1792-1851</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43926, {&quot;Title&quot;:&quot;Dictionnaire du bon langage - Contenant les difficultés de la langue française, les règles et les fautes de prononciation, les locutions vicieuses, les wallonnismes, les flandricismes, etc.&quot;,&quot;Topics&quot;:[&quot;French language -- Terms and phrases&quot;,&quot;French language -- Glossaries, vocabularies, etc.&quot;,&quot;French language -- Dictionaries&quot;],&quot;Primary&quot;:&quot;43926.htm&quot;,&quot;CreatorNames&quot;:[&quot;Carpentier, N.-J., 1824-&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;43926&quot;});" class='title'>Dictionnaire du bon langage -<br><span class='subtitle'>Contenant les difficultés de la langue française, les règles et les fautes de prononciation, les locutions vicieuses, les wallonnismes, les flandricismes, etc.</span></a>
+<div class='author'>Carpentier, N.-J., 1824-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44112, {&quot;Title&quot;:&quot;Argentina, Legend and History&quot;,&quot;Topics&quot;:[&quot;Spanish language -- Readers&quot;,&quot;Argentina&quot;,&quot;Argentina -- History&quot;],&quot;Primary&quot;:&quot;44112.htm&quot;,&quot;CreatorNames&quot;:[&quot;Blasco Ibáñez, Vicente, 1867-1928&quot;,&quot;Bunge, Carlos O. (Carlos Octavio), 1875-1918&quot;,&quot;Drago, Luis María, 1859-1921&quot;,&quot;Gorriti, Juana Manuela, 1818-1892&quot;,&quot;Goyena, Pedro, 1843-1892&quot;,&quot;Gutiérrez, Juan María, 1809-1878&quot;,&quot;Lacasa, Pedro, 1810-1869&quot;,&quot;López, Lucio Vicente, 1848-1894&quot;,&quot;López, Vicente Fidel, 1815-1903&quot;,&quot;López y Planes, Vicente, 1784-1856&quot;,&quot;Mitre, Bartolomé, 1821-1906&quot;,&quot;Sarmiento, Domingo Faustino, 1811-1888&quot;,&quot;Sastre, Marcos, 1808-1887&quot;,&quot;Laguardia, Cincinato G. B. [Editor]&quot;,&quot;Laguardia, Garibaldi G. B. [Editor]&quot;],&quot;LoCC&quot;:[&quot;PC&quot;,&quot;F&quot;],&quot;PG_ID&quot;:&quot;44112&quot;});" class='title'>Argentina, Legend and History</a>
+<div class='author'>Blasco Ibáñez, Vicente, 1867-1928, Bunge, Carlos O. (Carlos Octavio), 1875-1918, Drago, Luis María, 1859-1921, Gorriti, Juana Manuela, 1818-1892, Goyena, Pedro, 1843-1892, Gutiérrez, Juan María, 1809-1878, Lacasa, Pedro, 1810-1869, López, Lucio Vicente, 1848-1894, López, Vicente Fidel, 1815-1903, López y Planes, Vicente, 1784-1856, Mitre, Bartolomé, 1821-1906, Sarmiento, Domingo Faustino, 1811-1888, Sastre, Marcos, 1808-1887, Laguardia, Cincinato G. B. [Editor], Laguardia, Garibaldi G. B. [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44157, {&quot;Title&quot;:&quot;Entre Nous: Lectures françaises à l&#39;usage des écoles primaires - I&quot;,&quot;Topics&quot;:[&quot;French language -- Readers&quot;],&quot;Primary&quot;:&quot;44157.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ligthart, Jan, 1859-1916&quot;,&quot;Scheepstra, H. (Hendericus), 1859-1913&quot;,&quot;Vos, Lucie&quot;,&quot;Bokhorst, Johanna Berhardina, 1880-1972 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;44157&quot;});" class='title'>Entre Nous:<br><span class='subtitle'>Lectures françaises à l'usage des écoles primaires - I</span></a>
+<div class='author'>Ligthart, Jan, 1859-1916, Scheepstra, H. (Hendericus), 1859-1913, Vos, Lucie, Bokhorst, Johanna Berhardina, 1880-1972 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44354, {&quot;Title&quot;:&quot;Dictionnaire de nos fautes contre la langue française&quot;,&quot;Topics&quot;:[&quot;French language -- Canada -- Dictionaries&quot;],&quot;Primary&quot;:&quot;44354.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rinfret, Raoul&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;44354&quot;});" class='title'>Dictionnaire de nos fautes contre la langue française</a>
+<div class='author'>Rinfret, Raoul</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44433, {&quot;Title&quot;:&quot;Jaufry the Knight and the Fair Brunissende: A Tale of the Times of King Arthur&quot;,&quot;Topics&quot;:[&quot;Fantasy fiction&quot;,&quot;Arthurian romances&quot;],&quot;Primary&quot;:&quot;44433.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mary-Lafon, Jean Bernard Lafon, called, 1812-1884&quot;,&quot;Doré, Gustave, 1832-1883 [Illustrator]&quot;,&quot;Elwes, Alfred, 1819?-1888 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;44433&quot;});" class='title'>Jaufry the Knight and the Fair Brunissende:<br><span class='subtitle'>A Tale of the Times of King Arthur</span></a>
+<div class='author'>Mary-Lafon, Jean Bernard Lafon, called, 1812-1884, Doré, Gustave, 1832-1883 [Illustrator], Elwes, Alfred, 1819?-1888 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45150, {&quot;Title&quot;:&quot;Dictionnaire érotique moderne&quot;,&quot;Topics&quot;:[&quot;Erotic literature&quot;,&quot;French language -- Slang&quot;,&quot;French language -- Terms and phrases&quot;,&quot;French language -- Glossaries, vocabularies, etc.&quot;],&quot;Primary&quot;:&quot;45150.htm&quot;,&quot;CreatorNames&quot;:[&quot;Delvau, Alfred, 1825-1867&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;45150&quot;});" class='title'>Dictionnaire érotique moderne</a>
+<div class='author'>Delvau, Alfred, 1825-1867</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46262, {&quot;Title&quot;:&quot;Pilgrim Sorrow: A Cycle of Tales&quot;,&quot;Topics&quot;:[&quot;Fiction&quot;,&quot;Short stories&quot;],&quot;Primary&quot;:&quot;46262.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sylva, Carmen, 1843-1916&quot;,&quot;Zimmern, Helen, 1846-1934 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;46262&quot;});" class='title'>Pilgrim Sorrow:<br><span class='subtitle'>A Cycle of Tales</span></a>
+<div class='author'>Sylva, Carmen, 1843-1916, Zimmern, Helen, 1846-1934 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46334, {&quot;Title&quot;:&quot;Cartilha Maternal; ou, Arte de Leitura&quot;,&quot;Topics&quot;:[&quot;Portuguese language -- Orthography and spelling&quot;,&quot;Portuguese language -- Orthography and spelling -- Handbooks, manuals, etc.&quot;,&quot;Portuguese language -- Study and teaching&quot;],&quot;Primary&quot;:&quot;46334.htm&quot;,&quot;CreatorNames&quot;:[&quot;Deus, João de, 1830-1896&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;46334&quot;});" class='title'>Cartilha Maternal;<br><span class='subtitle'>ou, Arte de Leitura</span></a>
+<div class='author'>Deus, João de, 1830-1896</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47163, {&quot;Title&quot;:&quot;Origine della lingua italiana: dissertazione&quot;,&quot;Topics&quot;:[&quot;Italian language -- History&quot;],&quot;Primary&quot;:&quot;47163.htm&quot;,&quot;CreatorNames&quot;:[&quot;Morandi, Luigi, 1844-1922&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;47163&quot;});" class='title'>Origine della lingua italiana:<br><span class='subtitle'>dissertazione</span></a>
+<div class='author'>Morandi, Luigi, 1844-1922</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47459, {&quot;Title&quot;:&quot;Essais d&#39;un dictionnaire universel - contenant généralement tous les mots François tant vieux que modernes, &amp; les termes de toutes les Sciences &amp; des Arts&quot;,&quot;Topics&quot;:[&quot;French language -- Dictionaries&quot;],&quot;Primary&quot;:&quot;47459.htm&quot;,&quot;CreatorNames&quot;:[&quot;Furetière, Antoine, 1619-1688&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;47459&quot;});" class='title'>Essais d'un dictionnaire universel -<br><span class='subtitle'>contenant généralement tous les mots François tant vieux que modernes, & les termes de toutes les Sciences & des Arts</span></a>
+<div class='author'>Furetière, Antoine, 1619-1688</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48011, {&quot;Title&quot;:&quot;Le Premier Livre&quot;,&quot;Topics&quot;:[&quot;French language -- Readers&quot;,&quot;French language -- Grammar&quot;],&quot;Primary&quot;:&quot;48011.htm&quot;,&quot;CreatorNames&quot;:[&quot;Méras, Albert A. (Albert Amedeé), 1880-1926&quot;,&quot;Méras, B. (Baptiste)&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;48011&quot;});" class='title'>Le Premier Livre</a>
+<div class='author'>Méras, Albert A. (Albert Amedeé), 1880-1926, Méras, B. (Baptiste)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48070, {&quot;Title&quot;:&quot;Linguaggio e proverbi marinareschi&quot;,&quot;Topics&quot;:[&quot;Sailors -- Italy -- Language&quot;,&quot;Italian language -- Idioms&quot;,&quot;Proverbs, Italian&quot;],&quot;Primary&quot;:&quot;48070.htm&quot;,&quot;CreatorNames&quot;:[&quot;Celesia, Emanuele, 1821-1889&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;48070&quot;});" class='title'>Linguaggio e proverbi marinareschi</a>
+<div class='author'>Celesia, Emanuele, 1821-1889</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48130, {&quot;Title&quot;:&quot;French Idioms and Proverbs - A Companion to Deshumbert&#39;s \&quot;\&quot;Dictionary of Difficulties\&quot;\&quot;&quot;,&quot;Topics&quot;:[&quot;French language -- Terms and phrases&quot;,&quot;French language -- Conversation and phrase books&quot;,&quot;French language -- Idioms&quot;],&quot;Primary&quot;:&quot;48130.htm&quot;,&quot;CreatorNames&quot;:[&quot;V. Payen-Payne, de (Vinchelés Payen-Payne), 1866-1945&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;48130&quot;});" class='title'>French Idioms and Proverbs -<br><span class='subtitle'>A Companion to Deshumbert's "Dictionary of Difficulties"</span></a>
+<div class='author'>V. Payen-Payne, de (Vinchelés Payen-Payne), 1866-1945</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48530, {&quot;Title&quot;:&quot;Giardino di Ricreatione&quot;,&quot;Topics&quot;:[&quot;Proverbs, Italian&quot;],&quot;Primary&quot;:&quot;48530.htm&quot;,&quot;CreatorNames&quot;:[&quot;Florio, John, 1553?-1625&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;48530&quot;});" class='title'>Giardino di Ricreatione</a>
+<div class='author'>Florio, John, 1553?-1625</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48852, {&quot;Title&quot;:&quot;Le parler populaire des Canadiens français - ou, Lexique des canadianismes, acadianismes, anglicismes, américanismes, mots anglais les plus en usage au sein des familles canadiennes et acadiennes françaises&quot;,&quot;Topics&quot;:[&quot;Canadianisms, French -- Québec (Province)&quot;,&quot;French language -- Québec (Province) -- Glossaries, vocabularies, etc.&quot;,&quot;Popular culture -- Québec (Province)&quot;],&quot;Primary&quot;:&quot;48852.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dionne, N.-E. (Narcisse-Eutrope), 1848-1917&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;48852&quot;});" class='title'>Le parler populaire des Canadiens français -<br><span class='subtitle'>ou, Lexique des canadianismes, acadianismes, anglicismes, américanismes, mots anglais les plus en usage au sein des familles canadiennes et acadiennes françaises</span></a>
+<div class='author'>Dionne, N.-E. (Narcisse-Eutrope), 1848-1917</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4935, {&quot;Title&quot;:&quot;Pathologie Verbale, ou Lésions de certains mots dans le cours de l&#39;usage&quot;,&quot;Topics&quot;:[&quot;French language -- Paronyms -- Dictionaries&quot;,&quot;French language -- Errors of usage&quot;,&quot;French language -- Etymology&quot;],&quot;Primary&quot;:&quot;4935.txt&quot;,&quot;CreatorNames&quot;:[&quot;Littré, Emile, 1801-1881&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;4935&quot;});" class='title'>Pathologie Verbale, ou Lésions de certains mots dans le cours de l'usage</a>
+<div class='author'>Littré, Emile, 1801-1881</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49692, {&quot;Title&quot;:&quot;An Outline of the Phonology and Morphology of Old Provençal&quot;,&quot;Topics&quot;:[&quot;Provençal language -- Grammar&quot;],&quot;Primary&quot;:&quot;49692.htm&quot;,&quot;CreatorNames&quot;:[&quot;Grandgent, C. H. (Charles Hall), 1862-1939&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;49692&quot;});" class='title'>An Outline of the Phonology and Morphology of Old Provençal</a>
+<div class='author'>Grandgent, C. H. (Charles Hall), 1862-1939</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50354, {&quot;Title&quot;:&quot;Argot and Slang - A New French and English Dictionary of the Cant Words, Quaint Expressions, Slang Terms and Flash Phrases Used in the High and Low Life of Old and New Paris&quot;,&quot;Topics&quot;:[&quot;French language -- Slang -- Dictionaries&quot;,&quot;French language -- Dictionaries -- English&quot;],&quot;Primary&quot;:&quot;50354.htm&quot;,&quot;CreatorNames&quot;:[&quot;Barrère, Albert&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;50354&quot;});" class='title'>Argot and Slang -<br><span class='subtitle'>A New French and English Dictionary of the Cant Words, Quaint Expressions, Slang Terms and Flash Phrases Used in the High and Low Life of Old and New Paris</span></a>
+<div class='author'>Barrère, Albert</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50419, {&quot;Title&quot;:&quot;Exercises upon the Different Parts of Italian Speech, with References to Veneroni&#39;s Grammar - to which is added an abridgement of the Roman history, intended at once to make the learner acquainted with history, and the idiom of the Italian language&quot;,&quot;Topics&quot;:[&quot;Italian language -- Grammar&quot;,&quot;Italian language -- Textbooks for foreign speakers -- English&quot;],&quot;Primary&quot;:&quot;50419.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bottarelli, Ferdinando&quot;,&quot;Rolandi, Giambattista, 1787-1825 [Editor]&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;50419&quot;});" class='title'>Exercises upon the Different Parts of Italian Speech, with References to Veneroni's Grammar -<br><span class='subtitle'>to which is added an abridgement of the Roman history, intended at once to make the learner acquainted with history, and the idiom of the Italian language</span></a>
+<div class='author'>Bottarelli, Ferdinando, Rolandi, Giambattista, 1787-1825 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51005, {&quot;Title&quot;:&quot;Dictionnaire du patois du pays de Bray&quot;,&quot;Topics&quot;:[&quot;French language -- Dialects -- France -- Bray (Region)&quot;,&quot;French language -- Dialects -- France -- Bray (Region) -- Dictionaries&quot;],&quot;Primary&quot;:&quot;51005.htm&quot;,&quot;CreatorNames&quot;:[&quot;Decorde, J.-E. (Jean-Eugène), 1811-1881&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;51005&quot;});" class='title'>Dictionnaire du patois du pays de Bray</a>
+<div class='author'>Decorde, J.-E. (Jean-Eugène), 1811-1881</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52409, {&quot;Title&quot;:&quot;Visions &amp; Cants&quot;,&quot;Topics&quot;:[&quot;Catalan poetry&quot;],&quot;Primary&quot;:&quot;52409.htm&quot;,&quot;CreatorNames&quot;:[&quot;Maragall, Joan, 1860-1911&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;52409&quot;});" class='title'>Visions & Cants</a>
+<div class='author'>Maragall, Joan, 1860-1911</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54482, {&quot;Title&quot;:&quot;Dictionnaire de la langue verte&quot;,&quot;Topics&quot;:[&quot;French language -- Slang -- Dictionaries&quot;],&quot;Primary&quot;:&quot;54482.htm&quot;,&quot;CreatorNames&quot;:[&quot;Delvau, Alfred, 1825-1867&quot;,&quot;Fustier, Gustave [Contributor]&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;54482&quot;});" class='title'>Dictionnaire de la langue verte</a>
+<div class='author'>Delvau, Alfred, 1825-1867, Fustier, Gustave [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56008, {&quot;Title&quot;:&quot;Mirèio, a Provençal Poem&quot;,&quot;Topics&quot;:[&quot;Occitan poetry -- Translations into English&quot;],&quot;Primary&quot;:&quot;56008.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mistral, Frédéric, 1830-1914&quot;,&quot;Preston, H. W. (Harriet Waters), 1836-1911 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;56008&quot;});" class='title'>Mirèio, a Provençal Poem</a>
+<div class='author'>Mistral, Frédéric, 1830-1914, Preston, H. W. (Harriet Waters), 1836-1911 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56040, {&quot;Title&quot;:&quot;Memoirs of Mistral&quot;,&quot;Topics&quot;:[&quot;Mistral, Frédéric, 1830-1914&quot;],&quot;Primary&quot;:&quot;56040.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mistral, Frédéric, 1830-1914&quot;,&quot;Maud, Constance Elizabeth, 1860?-1929 [Translator]&quot;,&quot;Strettell, Alma, 1856?-1939 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;56040&quot;});" class='title'>Memoirs of Mistral</a>
+<div class='author'>Mistral, Frédéric, 1830-1914, Maud, Constance Elizabeth, 1860?-1929 [Translator], Strettell, Alma, 1856?-1939 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56200, {&quot;Title&quot;:&quot;Queen Anna&#39;s New World of Words; or, Dictionarie of the Italian and English Tongues&quot;,&quot;Topics&quot;:[&quot;Italian language -- Dictionaries -- English -- Early works to 1800&quot;,&quot;English language -- Dictionaries -- Italian -- Early works to 1800&quot;,&quot;Italian language -- Grammar -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;56200.htm&quot;,&quot;CreatorNames&quot;:[&quot;Florio, John, 1553?-1625&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;56200&quot;});" class='title'>Queen Anna's New World of Words;<br><span class='subtitle'>or, Dictionarie of the Italian and English Tongues</span></a>
+<div class='author'>Florio, John, 1553?-1625</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56856, {&quot;Title&quot;:&quot;L&#39;auca del senyor Esteve - ab redolins dibuixats per en Ramón Casas; escrits per en Gabriel Alomar&quot;,&quot;Topics&quot;:[&quot;Catalan fiction&quot;],&quot;Primary&quot;:&quot;56856.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rusiñol, Santiago, 1861-1931&quot;,&quot;Alomar, Gabriel, 1873-1941 [Contributor]&quot;,&quot;Casas, Ramón, 1866-1932 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;56856&quot;});" class='title'>L'auca del senyor Esteve -<br><span class='subtitle'>ab redolins dibuixats per en Ramón Casas; escrits per en Gabriel Alomar</span></a>
+<div class='author'>Rusiñol, Santiago, 1861-1931, Alomar, Gabriel, 1873-1941 [Contributor], Casas, Ramón, 1866-1932 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56866, {&quot;Title&quot;:&quot;Enllà: Poesies&quot;,&quot;Topics&quot;:[&quot;Catalan poetry&quot;],&quot;Primary&quot;:&quot;56866.htm&quot;,&quot;CreatorNames&quot;:[&quot;Maragall, Joan, 1860-1911&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;56866&quot;});" class='title'>Enllà:<br><span class='subtitle'>Poesies</span></a>
+<div class='author'>Maragall, Joan, 1860-1911</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57656, {&quot;Title&quot;:&quot;Dictionnaire d&#39;argot fin-de-siècle&quot;,&quot;Topics&quot;:[&quot;French language -- Slang -- Dictionaries&quot;],&quot;Primary&quot;:&quot;57656.htm&quot;,&quot;CreatorNames&quot;:[&quot;Virmaître, Charles, 1835-1903&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;57656&quot;});" class='title'>Dictionnaire d'argot fin-de-siècle</a>
+<div class='author'>Virmaître, Charles, 1835-1903</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57919, {&quot;Title&quot;:&quot;Dictionnaire critique et raisonné du langage vicieux ou réputé vicieux&quot;,&quot;Topics&quot;:[&quot;French language -- Errors of usage&quot;,&quot;French language -- Idioms&quot;],&quot;Primary&quot;:&quot;57919.htm&quot;,&quot;CreatorNames&quot;:[&quot;Platt, de Cancarnaux&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;57919&quot;});" class='title'>Dictionnaire critique et raisonné du langage vicieux ou réputé vicieux</a>
+<div class='author'>Platt, de Cancarnaux</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57992, {&quot;Title&quot;:&quot;Des variations du langage français depuis le XIIe siècle - ou recherche des principes qui devraient régler l&#39;orthographe et la prononciation&quot;,&quot;Topics&quot;:[&quot;French language -- Etymology&quot;],&quot;Primary&quot;:&quot;57992.htm&quot;,&quot;CreatorNames&quot;:[&quot;Génin, F. (François), 1803-1856&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;57992&quot;});" class='title'>Des variations du langage français depuis le XIIe siècle -<br><span class='subtitle'>ou recherche des principes qui devraient régler l'orthographe et la prononciation</span></a>
+<div class='author'>Génin, F. (François), 1803-1856</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58782, {&quot;Title&quot;:&quot;Neues Spanisch-Deutsches Wörterbuch - Auf Grund des Wörterbuches der Königlich spanischen Akademie&quot;,&quot;Topics&quot;:[&quot;Spanish language -- Dictionaries -- German&quot;],&quot;Primary&quot;:&quot;58782.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stromer, Theodor, 1844-&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;58782&quot;});" class='title'>Neues Spanisch-Deutsches Wörterbuch -<br><span class='subtitle'>Auf Grund des Wörterbuches der Königlich spanischen Akademie</span></a>
+<div class='author'>Stromer, Theodor, 1844-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59238, {&quot;Title&quot;:&quot;An Easy Introduction to Spanish Conversation - Containing all that is necessary to make a rapid progress in it&quot;,&quot;Topics&quot;:[&quot;Spanish language -- Study and teaching&quot;,&quot;Spanish language -- Programmed instruction&quot;],&quot;Primary&quot;:&quot;59238.htm&quot;,&quot;CreatorNames&quot;:[&quot;Velázquez de la Cadena, Mariano, 1778-1860&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;59238&quot;});" class='title'>An Easy Introduction to Spanish Conversation -<br><span class='subtitle'>Containing all that is necessary to make a rapid progress in it</span></a>
+<div class='author'>Velázquez de la Cadena, Mariano, 1778-1860</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60052, {&quot;Title&quot;:&quot;Comment on Prononce le Français - Traité complet de prononciation pratique avec le noms propres et les mots étrangers&quot;,&quot;Topics&quot;:[&quot;French language -- Pronunciation&quot;],&quot;Primary&quot;:&quot;60052.htm&quot;,&quot;CreatorNames&quot;:[&quot;Martinon, Philippe, 1859-1917&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;60052&quot;});" class='title'>Comment on Prononce le Français -<br><span class='subtitle'>Traité complet de prononciation pratique avec le noms propres et les mots étrangers</span></a>
+<div class='author'>Martinon, Philippe, 1859-1917</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61465, {&quot;Title&quot;:&quot;Apuntes para una Gramática Valenciana Popular&quot;,&quot;Topics&quot;:[&quot;Catalan language -- Grammar&quot;,&quot;Catalan language -- Dialects -- Spain -- Valencia (Region)&quot;],&quot;Primary&quot;:&quot;61465.htm&quot;,&quot;CreatorNames&quot;:[&quot;Nebot Pérez, José, 1853-1914&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;61465&quot;});" class='title'>Apuntes para una Gramática Valenciana Popular</a>
+<div class='author'>Nebot Pérez, José, 1853-1914</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61594, {&quot;Title&quot;:&quot;Tratado de Ortografía Valenciana Clásica&quot;,&quot;Topics&quot;:[&quot;Catalan language -- Dialects -- Spain -- Valencia (Region)&quot;,&quot;Catalan language -- Orthography and spelling&quot;],&quot;Primary&quot;:&quot;61594.htm&quot;,&quot;CreatorNames&quot;:[&quot;Nebot Pérez, José, 1853-1914&quot;,&quot;Llorente, Teodoro, 1836-1911 [Author of introduction, etc.]&quot;,&quot;Aguilar, Ángel [Editor]&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;61594&quot;});" class='title'>Tratado de Ortografía Valenciana Clásica</a>
+<div class='author'>Nebot Pérez, José, 1853-1914, Llorente, Teodoro, 1836-1911 [Author of introduction, etc.], Aguilar, Ángel [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61961, {&quot;Title&quot;:&quot;Le français tel que le parlent nos tirailleurs sénégalais&quot;,&quot;Topics&quot;:[&quot;French language -- Spoken French -- Africa, West&quot;],&quot;Primary&quot;:&quot;61961.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;61961&quot;});" class='title'>Le français tel que le parlent nos tirailleurs sénégalais</a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62596, {&quot;Title&quot;:&quot;Román népdalok és balladák&quot;,&quot;Topics&quot;:[&quot;Folk songs, Romanian&quot;,&quot;Ballads, Romanian&quot;],&quot;Primary&quot;:&quot;62596.htm&quot;,&quot;CreatorNames&quot;:[&quot;Moldován, Gergely, 1845-1930&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;62596&quot;});" class='title'>Román népdalok és balladák</a>
+<div class='author'>Moldován, Gergely, 1845-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62916, {&quot;Title&quot;:&quot;Povești&quot;,&quot;Topics&quot;:[&quot;Fairy tales -- Romania&quot;],&quot;Primary&quot;:&quot;62916.htm&quot;,&quot;CreatorNames&quot;:[&quot;Slavici, Ioan, 1848-1925&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;62916&quot;});" class='title'>Povești</a>
+<div class='author'>Slavici, Ioan, 1848-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64113, {&quot;Title&quot;:&quot;Tres utile et compendieulx Traicte de l&#39;art et science d&#39;orthographie gallicane dedans lequel sont comprinses plusieurs choses necessaires, curieuses, nouvelles et dignes de scavoir non veues auparavant. Avec une petite introduction pour congnoistre a lire le chiffre&quot;,&quot;Topics&quot;:[&quot;French language -- Orthography and spelling&quot;],&quot;Primary&quot;:&quot;64113.htm&quot;,&quot;CreatorNames&quot;:[&quot;Saint-Denis, Jean, -1531 [Publisher]&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;64113&quot;});" class='title'>Tres utile et compendieulx Traicte de l'art et science d'orthographie gallicane dedans lequel sont comprinses plusieurs choses necessaires, curieuses, nouvelles et dignes de scavoir non veues auparavant. Avec une petite introduction pour congnoistre a lire le chiffre</a>
+<div class='author'>Saint-Denis, Jean, -1531 [Publisher]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64597, {&quot;Title&quot;:&quot;Nuvele&quot;,&quot;Topics&quot;:[&quot;Short stories, Romanian&quot;,&quot;Romanian fiction&quot;],&quot;Primary&quot;:&quot;64597.htm&quot;,&quot;CreatorNames&quot;:[&quot;Caragiale, I. L. (Ion Luca), 1852-1912&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;64597&quot;});" class='title'>Nuvele</a>
+<div class='author'>Caragiale, I. L. (Ion Luca), 1852-1912</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64618, {&quot;Title&quot;:&quot;Koszorú a román népköltészet virágaiból&quot;,&quot;Topics&quot;:[&quot;Folk poetry, Romanian&quot;],&quot;Primary&quot;:&quot;64618.htm&quot;,&quot;CreatorNames&quot;:[&quot;Moldován, Gergely, 1845-1930&quot;],&quot;LoCC&quot;:[&quot;GR&quot;,&quot;PC&quot;],&quot;PG_ID&quot;:&quot;64618&quot;});" class='title'>Koszorú a román népköltészet virágaiból</a>
+<div class='author'>Moldován, Gergely, 1845-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64850, {&quot;Title&quot;:&quot;Les Colons du Rivage, ou Industrie et Probité - Ouvrage destiné a servir de lecture courante dans les écoles primaires&quot;,&quot;Topics&quot;:[&quot;Readers (Primary)&quot;],&quot;Primary&quot;:&quot;64850.htm&quot;,&quot;CreatorNames&quot;:[&quot;Porchat, J. Jacques (Jean Jacques), 1800-1884&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;64850&quot;});" class='title'>Les Colons du Rivage, ou Industrie et Probité -<br><span class='subtitle'>Ouvrage destiné a servir de lecture courante dans les écoles primaires</span></a>
+<div class='author'>Porchat, J. Jacques (Jean Jacques), 1800-1884</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65421, {&quot;Title&quot;:&quot;Esthétique de la langue française&quot;,&quot;Topics&quot;:[&quot;French language&quot;],&quot;Primary&quot;:&quot;65421.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gourmont, Remy de, 1858-1915&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;65421&quot;});" class='title'>Esthétique de la langue française</a>
+<div class='author'>Gourmont, Remy de, 1858-1915</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65913, {&quot;Title&quot;:&quot;Tirant lo Blanch; a study of its authorship, principal sources and historical setting&quot;,&quot;Topics&quot;:[&quot;Martorell, Joanot, -1468. Tirant lo Blanch&quot;],&quot;Primary&quot;:&quot;65913.htm&quot;,&quot;CreatorNames&quot;:[&quot;Vaeth, Joseph Anthony, 1876-&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;65913&quot;});" class='title'>Tirant lo Blanch;<br><span class='subtitle'>a study of its authorship, principal sources and historical setting</span></a>
+<div class='author'>Vaeth, Joseph Anthony, 1876-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65988, {&quot;Title&quot;:&quot;Ausías March y su época&quot;,&quot;Topics&quot;:[&quot;March, Ausiàs, 1397?-1459 -- Criticism and interpretation&quot;],&quot;Primary&quot;:&quot;65988.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rubió y Ors, Joaquín, 1818-1899&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;65988&quot;});" class='title'>Ausías March y su época</a>
+<div class='author'>Rubió y Ors, Joaquín, 1818-1899</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66787, {&quot;Title&quot;:&quot;La Querelle de l&#39;Orthographe&quot;,&quot;Topics&quot;:[&quot;French language -- Orthography and spelling&quot;,&quot;Spelling reform&quot;],&quot;Primary&quot;:&quot;66787.htm&quot;,&quot;CreatorNames&quot;:[&quot;Boulenger, Marcel, 1873-1932&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;66787&quot;});" class='title'>La Querelle de l'Orthographe</a>
+<div class='author'>Boulenger, Marcel, 1873-1932</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68787, {&quot;Title&quot;:&quot;Cabos sueltos: Literatura y lingüística&quot;,&quot;Topics&quot;:[&quot;Spanish literature -- History and criticism&quot;,&quot;Chocano, José Santos, 1875-1934&quot;,&quot;Spanish language&quot;],&quot;Primary&quot;:&quot;68787.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cejador y Frauca, Julio, 1864-1927&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;68787&quot;});" class='title'>Cabos sueltos:<br><span class='subtitle'>Literatura y lingüística</span></a>
+<div class='author'>Cejador y Frauca, Julio, 1864-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7012, {&quot;Title&quot;:&quot;Mes Origines; Mémoires et Récits de Frédéric Mistral&quot;,&quot;Topics&quot;:[&quot;Provence (France) -- Social life and customs&quot;,&quot;Poets, Occitan -- 19th century -- Biography&quot;,&quot;Lexicographers -- France -- Biography&quot;,&quot;Mistral, Frédéric, 1830-1914 -- Childhood and youth&quot;,&quot;Occitan movement -- Biography&quot;],&quot;Primary&quot;:&quot;7012.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mistral, Frédéric, 1830-1914&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;7012&quot;});" class='title'>Mes Origines;<br><span class='subtitle'>Mémoires et Récits de Frédéric Mistral</span></a>
+<div class='author'>Mistral, Frédéric, 1830-1914</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(838, {&quot;Title&quot;:&quot;Jasmin: Barber, Poet, Philanthropist&quot;,&quot;Topics&quot;:[&quot;Jasmin, 1798-1864&quot;,&quot;Poets, French -- Biography&quot;],&quot;Primary&quot;:&quot;838.htm&quot;,&quot;CreatorNames&quot;:[&quot;Smiles, Samuel, 1812-1904&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;838&quot;});" class='title'>Jasmin:<br><span class='subtitle'>Barber, Poet, Philanthropist</span></a>
+<div class='author'>Smiles, Samuel, 1812-1904</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(9053, {&quot;Title&quot;:&quot;Poésies du troubadour Peire Raimon de Toulouse: Texte et traduction&quot;,&quot;Topics&quot;:[&quot;Troubadours&quot;,&quot;Peire Raimon, of Toulouse, approximately 1180-approximately 1225&quot;,&quot;Provençal poetry -- Translations into French&quot;],&quot;Primary&quot;:&quot;9053.htm&quot;,&quot;CreatorNames&quot;:[&quot;Peire Raimon, of Toulouse, 1180?-1225?&quot;,&quot;Anglade, Joseph, 1868-1930 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PC&quot;],&quot;PG_ID&quot;:&quot;9053&quot;});" class='title'>Poésies du troubadour Peire Raimon de Toulouse:<br><span class='subtitle'>Texte et traduction</span></a>
+<div class='author'>Peire Raimon, of Toulouse, 1180?-1225?, Anglade, Joseph, 1868-1930 [Translator]</div>
+</div>
+</ul></div>
+</body></html>

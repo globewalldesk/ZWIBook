@@ -1,0 +1,306 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Mechanical engineering and machinery (TJ)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(10998, {&quot;Title&quot;:&quot;A Catechism of the Steam Engine&quot;,&quot;Topics&quot;:[&quot;Steam engineering&quot;,&quot;Steam-engines&quot;],&quot;Primary&quot;:&quot;10998.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bourne, John, C. E.&quot;],&quot;LoCC&quot;:[&quot;TJ&quot;],&quot;PG_ID&quot;:&quot;10998&quot;});" class='title'>A Catechism of the Steam Engine</a>
+<div class='author'>Bourne, John, C. E.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(11164, {&quot;Title&quot;:&quot;Rough and Tumble Engineering&quot;,&quot;Topics&quot;:[&quot;Farm engines&quot;],&quot;Primary&quot;:&quot;11164.txt&quot;,&quot;CreatorNames&quot;:[&quot;Maggard, James H.&quot;],&quot;LoCC&quot;:[&quot;TJ&quot;],&quot;PG_ID&quot;:&quot;11164&quot;});" class='title'>Rough and Tumble Engineering</a>
+<div class='author'>Maggard, James H.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17783, {&quot;Title&quot;:&quot;The Traveling Engineers&#39; Association to Improve the Locomotive Engine Service of American Railroads - Examination Questions and Answers for Firemen for Promotion and New Men for Employment&quot;,&quot;Topics&quot;:[&quot;Locomotives -- Handbooks, manuals, etc.&quot;],&quot;Primary&quot;:&quot;17783.htm&quot;,&quot;CreatorNames&quot;:[&quot;Traveling Engineers&#39; Association&quot;],&quot;LoCC&quot;:[&quot;TJ&quot;],&quot;PG_ID&quot;:&quot;17783&quot;});" class='title'>The Traveling Engineers' Association to Improve the Locomotive Engine Service of American Railroads -<br><span class='subtitle'>Examination Questions and Answers for Firemen for Promotion and New Men for Employment</span></a>
+<div class='author'>Traveling Engineers' Association</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19133, {&quot;Title&quot;:&quot;Practical Rules for the Management of a Locomotive Engine - in the Station, on the Road, and in cases of Accident&quot;,&quot;Topics&quot;:[&quot;Locomotives -- Maintenance and repair&quot;],&quot;Primary&quot;:&quot;19133.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gregory, Charles Hutton, 1817-1898&quot;],&quot;LoCC&quot;:[&quot;TJ&quot;],&quot;PG_ID&quot;:&quot;19133&quot;});" class='title'>Practical Rules for the Management of a Locomotive Engine -<br><span class='subtitle'>in the Station, on the Road, and in cases of Accident</span></a>
+<div class='author'>Gregory, Charles Hutton, 1817-1898</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22245, {&quot;Title&quot;:&quot;Steve and the Steam Engine&quot;,&quot;Topics&quot;:[&quot;Steam-engines -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;22245.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bassett, Sara Ware, 1872-1968&quot;,&quot;Scott, A. O. (Arthur O.) [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;PZ&quot;,&quot;TJ&quot;],&quot;PG_ID&quot;:&quot;22245&quot;});" class='title'>Steve and the Steam Engine</a>
+<div class='author'>Bassett, Sara Ware, 1872-1968, Scott, A. O. (Arthur O.) [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22657, {&quot;Title&quot;:&quot;Steam, Its Generation and Use&quot;,&quot;Topics&quot;:[&quot;Steam-boilers, Water-tube&quot;],&quot;Primary&quot;:&quot;22657.htm&quot;,&quot;CreatorNames&quot;:[&quot;Babcock &amp; Wilcox Company&quot;],&quot;LoCC&quot;:[&quot;TJ&quot;],&quot;PG_ID&quot;:&quot;22657&quot;});" class='title'>Steam, Its Generation and Use</a>
+<div class='author'>Babcock & Wilcox Company</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24441, {&quot;Title&quot;:&quot;The Stoker&#39;s Catechism&quot;,&quot;Topics&quot;:[&quot;Steam-boilers&quot;],&quot;Primary&quot;:&quot;24441.htm&quot;,&quot;CreatorNames&quot;:[&quot;Connor, W. J.&quot;],&quot;LoCC&quot;:[&quot;TJ&quot;],&quot;PG_ID&quot;:&quot;24441&quot;});" class='title'>The Stoker's Catechism</a>
+<div class='author'>Connor, W. J.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25454, {&quot;Title&quot;:&quot;Introduction of the Locomotive Safety Truck - Contributions from the Museum of History and Technology: Paper 24&quot;,&quot;Topics&quot;:[&quot;Locomotives&quot;,&quot;Railroads -- Safety applications&quot;],&quot;Primary&quot;:&quot;25454.htm&quot;,&quot;CreatorNames&quot;:[&quot;White, John H., 1933-&quot;],&quot;LoCC&quot;:[&quot;TJ&quot;],&quot;PG_ID&quot;:&quot;25454&quot;});" class='title'>Introduction of the Locomotive Safety Truck -<br><span class='subtitle'>Contributions from the Museum of History and Technology: Paper 24</span></a>
+<div class='author'>White, John H., 1933-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27286, {&quot;Title&quot;:&quot;Gas and Oil Engines, Simply Explained - An Elementary Instruction Book for Amateurs and Engine Attendants&quot;,&quot;Topics&quot;:[&quot;Internal combustion engines&quot;],&quot;Primary&quot;:&quot;27286.htm&quot;,&quot;CreatorNames&quot;:[&quot;Runciman, Walter C.&quot;],&quot;LoCC&quot;:[&quot;TJ&quot;],&quot;PG_ID&quot;:&quot;27286&quot;});" class='title'>Gas and Oil Engines, Simply Explained -<br><span class='subtitle'>An Elementary Instruction Book for Amateurs and Engine Attendants</span></a>
+<div class='author'>Runciman, Walter C.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27687, {&quot;Title&quot;:&quot;Steam Turbines - A Book of Instruction for the Adjustment and Operation of the Principal Types of this Class of Prime Movers&quot;,&quot;Topics&quot;:[&quot;Steam-turbines&quot;],&quot;Primary&quot;:&quot;27687.htm&quot;,&quot;CreatorNames&quot;:[&quot;Collins, Hubert E. (Hubert Edwin), 1872-1932&quot;],&quot;LoCC&quot;:[&quot;TJ&quot;],&quot;PG_ID&quot;:&quot;27687&quot;});" class='title'>Steam Turbines -<br><span class='subtitle'>A Book of Instruction for the Adjustment and Operation of the Principal Types of this Class of Prime Movers</span></a>
+<div class='author'>Collins, Hubert E. (Hubert Edwin), 1872-1932</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28160, {&quot;Title&quot;:&quot;The &#39;Pioneer&#39;: Light Passenger Locomotive of 1851 - United States Bulletin 240, Contributions from the Museum of History and Technology, paper 42, 1964&quot;,&quot;Topics&quot;:[&quot;Locomotives&quot;],&quot;Primary&quot;:&quot;28160.htm&quot;,&quot;CreatorNames&quot;:[&quot;White, John H., 1933-&quot;],&quot;LoCC&quot;:[&quot;Q&quot;,&quot;TJ&quot;],&quot;PG_ID&quot;:&quot;28160&quot;});" class='title'>The 'Pioneer':<br><span class='subtitle'>Light Passenger Locomotive of 1851 - United States Bulletin 240, Contributions from the Museum of History and Technology, paper 42, 1964</span></a>
+<div class='author'>White, John H., 1933-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28166, {&quot;Title&quot;:&quot;Installation and Operation Instructions For Custom Mark III CP Series Oil Fired Unit&quot;,&quot;Topics&quot;:[&quot;Boilers&quot;,&quot;Hot-water heating&quot;],&quot;Primary&quot;:&quot;28166.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;TJ&quot;],&quot;PG_ID&quot;:&quot;28166&quot;});" class='title'>Installation and Operation Instructions For Custom Mark III CP Series Oil Fired Unit</a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31059, {&quot;Title&quot;:&quot;Verklaring van het stoomwerktuig - zijnde eene algemeen bevattelijke beschrijving van deszelfs onderscheidene deelen, zamenstelling en werking.&quot;,&quot;Topics&quot;:[&quot;Steam-engines&quot;],&quot;Primary&quot;:&quot;31059.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bosch, D. van den [Translator]&quot;],&quot;LoCC&quot;:[&quot;TJ&quot;],&quot;PG_ID&quot;:&quot;31059&quot;});" class='title'>Verklaring van het stoomwerktuig -<br><span class='subtitle'>zijnde eene algemeen bevattelijke beschrijving van deszelfs onderscheidene deelen, zamenstelling en werking.</span></a>
+<div class='author'>Bosch, D. van den [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32677, {&quot;Title&quot;:&quot;The Invention of the Sewing Machine&quot;,&quot;Topics&quot;:[&quot;Sewing machines -- History&quot;],&quot;Primary&quot;:&quot;32677.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cooper, Grace Rogers&quot;],&quot;LoCC&quot;:[&quot;TJ&quot;],&quot;PG_ID&quot;:&quot;32677&quot;});" class='title'>The Invention of the Sewing Machine</a>
+<div class='author'>Cooper, Grace Rogers</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34030, {&quot;Title&quot;:&quot;Turning and Boring - A specialized treatise for machinists, students in the industrial and engineering schools, and apprentices, on turning and boring methods, including modern practice with engine lathes, turret lathes, vertical and horizontal boring machines&quot;,&quot;Topics&quot;:[&quot;Turning (Lathe work)&quot;,&quot;Drilling and boring&quot;],&quot;Primary&quot;:&quot;34030.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jones, Franklin Day, 1879-1967&quot;],&quot;LoCC&quot;:[&quot;TJ&quot;],&quot;PG_ID&quot;:&quot;34030&quot;});" class='title'>Turning and Boring -<br><span class='subtitle'>A specialized treatise for machinists, students in the industrial and engineering schools, and apprentices, on turning and boring methods, including modern practice with engine lathes, turret lathes, vertical and horizontal boring machines</span></a>
+<div class='author'>Jones, Franklin Day, 1879-1967</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34701, {&quot;Title&quot;:&quot;Steam Engines&quot;,&quot;Topics&quot;:[&quot;Steam-engines&quot;],&quot;Primary&quot;:&quot;34701.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;TJ&quot;],&quot;PG_ID&quot;:&quot;34701&quot;});" class='title'>Steam Engines</a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35916, {&quot;Title&quot;:&quot;A History of the Growth of the Steam-Engine&quot;,&quot;Topics&quot;:[&quot;Steam-engines -- History&quot;],&quot;Primary&quot;:&quot;35916.htm&quot;,&quot;CreatorNames&quot;:[&quot;Thurston, Robert Henry, 1839-1903&quot;],&quot;LoCC&quot;:[&quot;TJ&quot;],&quot;PG_ID&quot;:&quot;35916&quot;});" class='title'>A History of the Growth of the Steam-Engine</a>
+<div class='author'>Thurston, Robert Henry, 1839-1903</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38415, {&quot;Title&quot;:&quot;Gas-Engines and Producer-Gas Plants - A Practice Treatise Setting Forth the Principles of Gas-Engines and Producer Design, the Selection and Installation of an Engine, Conditions of Perfect Operation, Producer-Gas Engines and Their Possibilities, the Care of Gas-Engines and Producer-Gas Plants, with a Chapter on Volatile Hydrocarbon and Oil Engines&quot;,&quot;Topics&quot;:[&quot;Internal combustion engines&quot;],&quot;Primary&quot;:&quot;38415.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mathot, Rodolphe Edgard, 1866-&quot;,&quot;Clerk, Dugald, Sir, 1854-1932 [Author of introduction, etc.]&quot;,&quot;Kaempffert, Waldemar, 1877-1956 [Translator]&quot;],&quot;LoCC&quot;:[&quot;TJ&quot;],&quot;PG_ID&quot;:&quot;38415&quot;});" class='title'>Gas-Engines and Producer-Gas Plants -<br><span class='subtitle'>A Practice Treatise Setting Forth the Principles of Gas-Engines and Producer Design, the Selection and Installation of an Engine, Conditions of Perfect Operation, Producer-Gas Engines and Their Possibilities, the Care of Gas-Engines and Producer-Gas Plants, with a Chapter on Volatile Hydrocarbon and Oil Engines</span></a>
+<div class='author'>Mathot, Rodolphe Edgard, 1866-, Clerk, Dugald, Sir, 1854-1932 [Author of introduction, etc.], Kaempffert, Waldemar, 1877-1956 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39033, {&quot;Title&quot;:&quot;An Introduction to Machine Drawing and Design&quot;,&quot;Topics&quot;:[&quot;Machinery -- Drawings&quot;,&quot;Machine design&quot;],&quot;Primary&quot;:&quot;39033.htm&quot;,&quot;CreatorNames&quot;:[&quot;Low, David Allan, 1857-1937&quot;],&quot;LoCC&quot;:[&quot;TJ&quot;],&quot;PG_ID&quot;:&quot;39033&quot;});" class='title'>An Introduction to Machine Drawing and Design</a>
+<div class='author'>Low, David Allan, 1857-1937</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39225, {&quot;Title&quot;:&quot;Modern Machine-Shop Practice, Volumes I and II&quot;,&quot;Topics&quot;:[&quot;Machinery&quot;,&quot;Electric machinery&quot;,&quot;Machine-shop practice&quot;],&quot;Primary&quot;:&quot;39225.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rose, Joshua&quot;],&quot;LoCC&quot;:[&quot;TJ&quot;],&quot;PG_ID&quot;:&quot;39225&quot;});" class='title'>Modern Machine-Shop Practice, Volumes I and II</a>
+<div class='author'>Rose, Joshua</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39329, {&quot;Title&quot;:&quot;Illustrated Catalogue of Locomotives; Baldwin Locomotive Works&quot;,&quot;Topics&quot;:[&quot;Baldwin locomotives&quot;,&quot;Locomotives -- Catalogs&quot;],&quot;Primary&quot;:&quot;39329.htm&quot;,&quot;CreatorNames&quot;:[&quot;Baldwin Locomotive Works&quot;],&quot;LoCC&quot;:[&quot;TJ&quot;],&quot;PG_ID&quot;:&quot;39329&quot;});" class='title'>Illustrated Catalogue of Locomotives;<br><span class='subtitle'>Baldwin Locomotive Works</span></a>
+<div class='author'>Baldwin Locomotive Works</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41968, {&quot;Title&quot;:&quot;Les Merveilles de la Locomotion&quot;,&quot;Topics&quot;:[&quot;Steam-engines -- History&quot;,&quot;Locomotives -- History&quot;],&quot;Primary&quot;:&quot;41968.htm&quot;,&quot;CreatorNames&quot;:[&quot;Deharme, E. (Ernest), 1837-&quot;,&quot;Bonnafoux, B. [Illustrator]&quot;,&quot;Jahandier, A. [Illustrator]&quot;,&quot;Marie, Adrien-Emmanuel, 1848-1891 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;TJ&quot;],&quot;PG_ID&quot;:&quot;41968&quot;});" class='title'>Les Merveilles de la Locomotion</a>
+<div class='author'>Deharme, E. (Ernest), 1837-, Bonnafoux, B. [Illustrator], Jahandier, A. [Illustrator], Marie, Adrien-Emmanuel, 1848-1891 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42369, {&quot;Title&quot;:&quot;Motors&quot;,&quot;Topics&quot;:[&quot;Motors&quot;],&quot;Primary&quot;:&quot;42369.htm&quot;,&quot;CreatorNames&quot;:[&quot;Zerbe, James Slough, 1850-&quot;],&quot;LoCC&quot;:[&quot;TJ&quot;],&quot;PG_ID&quot;:&quot;42369&quot;});" class='title'>Motors</a>
+<div class='author'>Zerbe, James Slough, 1850-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4238, {&quot;Title&quot;:&quot;On the Economy of Machinery and Manufactures&quot;,&quot;Topics&quot;:[&quot;Machinery&quot;,&quot;Manufactures&quot;],&quot;Primary&quot;:&quot;4238.txt&quot;,&quot;CreatorNames&quot;:[&quot;Babbage, Charles, 1791-1871&quot;],&quot;LoCC&quot;:[&quot;TJ&quot;],&quot;PG_ID&quot;:&quot;4238&quot;});" class='title'>On the Economy of Machinery and Manufactures</a>
+<div class='author'>Babbage, Charles, 1791-1871</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42602, {&quot;Title&quot;:&quot;The Steam Engine Explained and Illustrated (Seventh Edition) - With an Account of Its Invention and Progressive Improvement, and Its Application to Navigation and Railways; Including Also a Memoir of Watt&quot;,&quot;Topics&quot;:[&quot;Watt, James, 1736-1819&quot;,&quot;Steam-engines&quot;],&quot;Primary&quot;:&quot;42602.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lardner, Dionysius, 1793-1859&quot;],&quot;LoCC&quot;:[&quot;TJ&quot;],&quot;PG_ID&quot;:&quot;42602&quot;});" class='title'>The Steam Engine Explained and Illustrated (Seventh Edition) -<br><span class='subtitle'>With an Account of Its Invention and Progressive Improvement, and Its Application to Navigation and Railways; Including Also a Memoir of Watt</span></a>
+<div class='author'>Lardner, Dionysius, 1793-1859</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42951, {&quot;Title&quot;:&quot;A New Century of Inventions - Being Designs &amp; Descriptions of One Hundred Machines, Relating to Arts, Manufactures, &amp; Domestic Life&quot;,&quot;Topics&quot;:[&quot;Machinery&quot;],&quot;Primary&quot;:&quot;42951.htm&quot;,&quot;CreatorNames&quot;:[&quot;White, James (Civil engineer)&quot;],&quot;LoCC&quot;:[&quot;TJ&quot;],&quot;PG_ID&quot;:&quot;42951&quot;});" class='title'>A New Century of Inventions -<br><span class='subtitle'>Being Designs & Descriptions of One Hundred Machines, Relating to Arts, Manufactures, & Domestic Life</span></a>
+<div class='author'>White, James (Civil engineer)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43375, {&quot;Title&quot;:&quot;Measuring Tools&quot;,&quot;Topics&quot;:[&quot;Weights and measures&quot;,&quot;Measuring instruments&quot;],&quot;Primary&quot;:&quot;43375.htm&quot;,&quot;CreatorNames&quot;:[&quot;Unknown&quot;],&quot;LoCC&quot;:[&quot;TJ&quot;],&quot;PG_ID&quot;:&quot;43375&quot;});" class='title'>Measuring Tools</a>
+<div class='author'>Unknown</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43867, {&quot;Title&quot;:&quot;Farm Engines and How to Run Them: The Young Engineer&#39;s Guide&quot;,&quot;Topics&quot;:[&quot;Farm engines&quot;,&quot;Traction-engines&quot;,&quot;Tractors&quot;],&quot;Primary&quot;:&quot;43867.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stephenson, James H.&quot;],&quot;LoCC&quot;:[&quot;TJ&quot;],&quot;PG_ID&quot;:&quot;43867&quot;});" class='title'>Farm Engines and How to Run Them:<br><span class='subtitle'>The Young Engineer's Guide</span></a>
+<div class='author'>Stephenson, James H.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44604, {&quot;Title&quot;:&quot;How to Become an Engineer&quot;,&quot;Topics&quot;:[&quot;Locomotives -- Handbooks, manuals, etc.&quot;],&quot;Primary&quot;:&quot;44604.htm&quot;,&quot;CreatorNames&quot;:[&quot;Doughty, Frank W.&quot;],&quot;LoCC&quot;:[&quot;TJ&quot;],&quot;PG_ID&quot;:&quot;44604&quot;});" class='title'>How to Become an Engineer</a>
+<div class='author'>Doughty, Frank W.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44771, {&quot;Title&quot;:&quot;Perpetual Motion&quot;,&quot;Topics&quot;:[&quot;Perpetual motion&quot;],&quot;Primary&quot;:&quot;44771.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dircks, Henry, 1806-1873&quot;,&quot;Verance, Percy&quot;],&quot;LoCC&quot;:[&quot;TJ&quot;],&quot;PG_ID&quot;:&quot;44771&quot;});" class='title'>Perpetual Motion</a>
+<div class='author'>Dircks, Henry, 1806-1873, Verance, Percy</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45932, {&quot;Title&quot;:&quot;The Gasoline Motor&quot;,&quot;Topics&quot;:[&quot;Internal combustion engines&quot;],&quot;Primary&quot;:&quot;45932.htm&quot;,&quot;CreatorNames&quot;:[&quot;Slauson, Harold Whiting&quot;],&quot;LoCC&quot;:[&quot;TJ&quot;],&quot;PG_ID&quot;:&quot;45932&quot;});" class='title'>The Gasoline Motor</a>
+<div class='author'>Slauson, Harold Whiting</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46634, {&quot;Title&quot;:&quot;Life of Richard Trevithick, with an Account of His Inventions. Volume 2 (of 2)&quot;,&quot;Topics&quot;:[&quot;Engineers -- Great Britain -- Biography&quot;,&quot;Cornwall (England : County) -- Biography&quot;,&quot;Trevithick, Richard, 1771-1833&quot;],&quot;Primary&quot;:&quot;46634.htm&quot;,&quot;CreatorNames&quot;:[&quot;Trevithick, Francis, 1812-1877&quot;],&quot;LoCC&quot;:[&quot;TJ&quot;],&quot;PG_ID&quot;:&quot;46634&quot;});" class='title'>Life of Richard Trevithick, with an Account of His Inventions. Volume 2 (of 2)</a>
+<div class='author'>Trevithick, Francis, 1812-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47187, {&quot;Title&quot;:&quot;Steam Shovels and Steam Shovel Work&quot;,&quot;Topics&quot;:[&quot;Steam shovels&quot;],&quot;Primary&quot;:&quot;47187.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hermann, Edward Adolph&quot;],&quot;LoCC&quot;:[&quot;TJ&quot;],&quot;PG_ID&quot;:&quot;47187&quot;});" class='title'>Steam Shovels and Steam Shovel Work</a>
+<div class='author'>Hermann, Edward Adolph</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(476, {&quot;Title&quot;:&quot;James Nasmyth, Engineer: An Autobiography&quot;,&quot;Topics&quot;:[&quot;Engineers -- Great Britain -- Biography&quot;,&quot;Nasmyth, James, 1808-1890&quot;],&quot;Primary&quot;:&quot;476.txt&quot;,&quot;CreatorNames&quot;:[&quot;Nasmyth, James, 1808-1890&quot;,&quot;Smiles, Samuel, 1812-1904 [Editor]&quot;],&quot;LoCC&quot;:[&quot;TJ&quot;],&quot;PG_ID&quot;:&quot;476&quot;});" class='title'>James Nasmyth, Engineer:<br><span class='subtitle'>An Autobiography</span></a>
+<div class='author'>Nasmyth, James, 1808-1890, Smiles, Samuel, 1812-1904 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47762, {&quot;Title&quot;:&quot;Records of Steam Boiler Explosions&quot;,&quot;Topics&quot;:[&quot;Steam-boiler explosions&quot;],&quot;Primary&quot;:&quot;47762.htm&quot;,&quot;CreatorNames&quot;:[&quot;Marten, Edward Bindon&quot;],&quot;LoCC&quot;:[&quot;TJ&quot;],&quot;PG_ID&quot;:&quot;47762&quot;});" class='title'>Records of Steam Boiler Explosions</a>
+<div class='author'>Marten, Edward Bindon</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49445, {&quot;Title&quot;:&quot;Mechanics: The Science of Machinery&quot;,&quot;Topics&quot;:[&quot;Machinery&quot;,&quot;Mechanics&quot;,&quot;Mechanical engineering&quot;],&quot;Primary&quot;:&quot;49445.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bond, A. Russell (Alexander Russell), 1876-&quot;],&quot;LoCC&quot;:[&quot;TJ&quot;],&quot;PG_ID&quot;:&quot;49445&quot;});" class='title'>Mechanics:<br><span class='subtitle'>The Science of Machinery</span></a>
+<div class='author'>Bond, A. Russell (Alexander Russell), 1876-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51567, {&quot;Title&quot;:&quot;Die Geschichte der Dampfmaschine bis James Watt&quot;,&quot;Topics&quot;:[&quot;Steam-engines -- History&quot;],&quot;Primary&quot;:&quot;51567.htm&quot;,&quot;CreatorNames&quot;:[&quot;Geitel, Max, 1853-1926&quot;],&quot;LoCC&quot;:[&quot;TJ&quot;],&quot;PG_ID&quot;:&quot;51567&quot;});" class='title'>Die Geschichte der Dampfmaschine bis James Watt</a>
+<div class='author'>Geitel, Max, 1853-1926</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51903, {&quot;Title&quot;:&quot;The Life, Times, and Scientific Labours of the Second Marquis of Worcester - To which is added a reprint of his Century of Inventions, 1663, with a Commentary thereon.&quot;,&quot;Topics&quot;:[&quot;Industrial arts -- History&quot;,&quot;Inventions&quot;,&quot;Worcester, Edward Somerset, Marquis of, 1601-1667&quot;],&quot;Primary&quot;:&quot;51903.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dircks, Henry, 1806-1873&quot;],&quot;LoCC&quot;:[&quot;TJ&quot;],&quot;PG_ID&quot;:&quot;51903&quot;});" class='title'>The Life, Times, and Scientific Labours of the Second Marquis of Worcester -<br><span class='subtitle'>To which is added a reprint of his Century of Inventions, 1663, with a Commentary thereon.</span></a>
+<div class='author'>Dircks, Henry, 1806-1873</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51976, {&quot;Title&quot;:&quot;The First Quarter-Century of Steam Locomotives in North America - Remaining Relics and Operable Replicas with a Catalog of Locomotive Models in the U. S. National Museum. United States National Museum Bulletin 210&quot;,&quot;Topics&quot;:[&quot;Locomotives -- History&quot;],&quot;Primary&quot;:&quot;51976.htm&quot;,&quot;CreatorNames&quot;:[&quot;Oliver, Smith Hempstone&quot;],&quot;LoCC&quot;:[&quot;TJ&quot;],&quot;PG_ID&quot;:&quot;51976&quot;});" class='title'>The First Quarter-Century of Steam Locomotives in North America -<br><span class='subtitle'>Remaining Relics and Operable Replicas with a Catalog of Locomotive Models in the U. S. National Museum. United States National Museum Bulletin 210</span></a>
+<div class='author'>Oliver, Smith Hempstone</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52069, {&quot;Title&quot;:&quot;Lives of Boulton and Watt. Principally from the Original Soho Mss. - Comprising also a history of the invention and introduction of the steam engine&quot;,&quot;Topics&quot;:[&quot;Watt, James, 1736-1819&quot;,&quot;Steam-engines -- History&quot;,&quot;Boulton, Matthew, 1728-1809&quot;],&quot;Primary&quot;:&quot;52069.htm&quot;,&quot;CreatorNames&quot;:[&quot;Smiles, Samuel, 1812-1904&quot;],&quot;LoCC&quot;:[&quot;TJ&quot;],&quot;PG_ID&quot;:&quot;52069&quot;});" class='title'>Lives of Boulton and Watt. Principally from the Original Soho Mss. -<br><span class='subtitle'>Comprising also a history of the invention and introduction of the steam engine</span></a>
+<div class='author'>Smiles, Samuel, 1812-1904</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53139, {&quot;Title&quot;:&quot;Maxims and Instructions for the Boiler Room - Useful to Engineers, Firemen &amp; Mechanics; Relating to Steam Generators, Pumps, Appliances, Steam Heating, Practical Plumbing, etc.&quot;,&quot;Topics&quot;:[&quot;Steam-boilers -- Handbooks, manuals, etc.&quot;],&quot;Primary&quot;:&quot;53139.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hawkins, N. (Nehemiah), 1833-1928&quot;],&quot;LoCC&quot;:[&quot;TJ&quot;],&quot;PG_ID&quot;:&quot;53139&quot;});" class='title'>Maxims and Instructions for the Boiler Room -<br><span class='subtitle'>Useful to Engineers, Firemen & Mechanics; Relating to Steam Generators, Pumps, Appliances, Steam Heating, Practical Plumbing, etc.</span></a>
+<div class='author'>Hawkins, N. (Nehemiah), 1833-1928</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54075, {&quot;Title&quot;:&quot;Windmills, Picturesque and Historic: The Motors of the Past&quot;,&quot;Topics&quot;:[&quot;Windmills -- History&quot;],&quot;Primary&quot;:&quot;54075.htm&quot;,&quot;CreatorNames&quot;:[&quot;Shelton, F. H.&quot;],&quot;LoCC&quot;:[&quot;TJ&quot;],&quot;PG_ID&quot;:&quot;54075&quot;});" class='title'>Windmills, Picturesque and Historic:<br><span class='subtitle'>The Motors of the Past</span></a>
+<div class='author'>Shelton, F. H.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55403, {&quot;Title&quot;:&quot;The Petrol Engine - A Text-book dealing with the Principles of Design and Construction, with a Special Chapter on the Two-stroke Engine&quot;,&quot;Topics&quot;:[&quot;Internal combustion engines&quot;],&quot;Primary&quot;:&quot;55403.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kean, Francis John&quot;],&quot;LoCC&quot;:[&quot;TJ&quot;],&quot;PG_ID&quot;:&quot;55403&quot;});" class='title'>The Petrol Engine -<br><span class='subtitle'>A Text-book dealing with the Principles of Design and Construction, with a Special Chapter on the Two-stroke Engine</span></a>
+<div class='author'>Kean, Francis John</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55428, {&quot;Title&quot;:&quot;The Steam Engine Familiarly Explained and Illustrated - With an historical sketch of its invention and progressive improvement; its applications to navigation and railways; with plain axioms for railway speculators&quot;,&quot;Topics&quot;:[&quot;Steam-engines -- Early works to 1850&quot;],&quot;Primary&quot;:&quot;55428.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lardner, Dionysius, 1793-1859&quot;,&quot;Renwick, James, 1792-1863 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;TJ&quot;],&quot;PG_ID&quot;:&quot;55428&quot;});" class='title'>The Steam Engine Familiarly Explained and Illustrated -<br><span class='subtitle'>With an historical sketch of its invention and progressive improvement; its applications to navigation and railways; with plain axioms for railway speculators</span></a>
+<div class='author'>Lardner, Dionysius, 1793-1859, Renwick, James, 1792-1863 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55482, {&quot;Title&quot;:&quot;Machines at Work&quot;,&quot;Topics&quot;:[&quot;Machinery -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;55482.htm&quot;,&quot;CreatorNames&quot;:[&quot;Elting, Mary, 1906-2005&quot;,&quot;Roth, Lászlo [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;PZ&quot;,&quot;TJ&quot;],&quot;PG_ID&quot;:&quot;55482&quot;});" class='title'>Machines at Work</a>
+<div class='author'>Elting, Mary, 1906-2005, Roth, Lászlo [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55817, {&quot;Title&quot;:&quot;Automata Old and New&quot;,&quot;Topics&quot;:[&quot;Robots&quot;,&quot;Machine theory&quot;],&quot;Primary&quot;:&quot;55817.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cooke, Conrad William, 1843-1926&quot;],&quot;LoCC&quot;:[&quot;AC&quot;,&quot;TJ&quot;],&quot;PG_ID&quot;:&quot;55817&quot;});" class='title'>Automata Old and New</a>
+<div class='author'>Cooke, Conrad William, 1843-1926</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56332, {&quot;Title&quot;:&quot;Keely and His Discoveries: Aerial Navigation&quot;,&quot;Topics&quot;:[&quot;Keely, John Ernest Worrell, 1827-1898&quot;,&quot;Keely motor&quot;],&quot;Primary&quot;:&quot;56332.htm&quot;,&quot;CreatorNames&quot;:[&quot;Moore, Bloomfield H., Mrs., 1824-1899&quot;],&quot;LoCC&quot;:[&quot;TJ&quot;],&quot;PG_ID&quot;:&quot;56332&quot;});" class='title'>Keely and His Discoveries:<br><span class='subtitle'>Aerial Navigation</span></a>
+<div class='author'>Moore, Bloomfield H., Mrs., 1824-1899</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56339, {&quot;Title&quot;:&quot;Pumps and Hydraulics, Part 1 (of 2)&quot;,&quot;Topics&quot;:[&quot;Pumping machinery&quot;,&quot;Hydraulic machinery&quot;],&quot;Primary&quot;:&quot;56339.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hawkins, N. (Nehemiah), 1833-1928&quot;],&quot;LoCC&quot;:[&quot;TJ&quot;],&quot;PG_ID&quot;:&quot;56339&quot;});" class='title'>Pumps and Hydraulics, Part 1 (of 2)</a>
+<div class='author'>Hawkins, N. (Nehemiah), 1833-1928</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56776, {&quot;Title&quot;:&quot;Practical Hand Book of Gas, Oil and Steam Engines - Stationary, Marine, Traction; Gas Burners, Oil Burners, Etc.; Farm, Traction, Automobile, Locomotive; A simple, practical and comprehensive book on the construction, operation and repair of all kinds of engines. Dealing with the various parts in detail and the various types of engines and also the use of different kinds of fuel.&quot;,&quot;Topics&quot;:[&quot;Internal combustion engines&quot;,&quot;Traction-engines&quot;],&quot;Primary&quot;:&quot;56776.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rathbun, John B.&quot;],&quot;LoCC&quot;:[&quot;TJ&quot;],&quot;PG_ID&quot;:&quot;56776&quot;});" class='title'>Practical Hand Book of Gas, Oil and Steam Engines -<br><span class='subtitle'>Stationary, Marine, Traction; Gas Burners, Oil Burners, Etc.; Farm, Traction, Automobile, Locomotive; A simple, practical and comprehensive book on the construction, operation and repair of all kinds of engines. Dealing with the various parts in detail and the various types of engines and also the use of different kinds of fuel.</span></a>
+<div class='author'>Rathbun, John B.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57120, {&quot;Title&quot;:&quot;The Economy of Workshop Manipulation - A logical method of learning constructive mechanics. Arranged with questions for the use of apprentice engineers and students.&quot;,&quot;Topics&quot;:[&quot;Machine-shop practice&quot;],&quot;Primary&quot;:&quot;57120.htm&quot;,&quot;CreatorNames&quot;:[&quot;Richards, John, 1834-&quot;],&quot;LoCC&quot;:[&quot;TJ&quot;],&quot;PG_ID&quot;:&quot;57120&quot;});" class='title'>The Economy of Workshop Manipulation -<br><span class='subtitle'>A logical method of learning constructive mechanics. Arranged with questions for the use of apprentice engineers and students.</span></a>
+<div class='author'>Richards, John, 1834-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57636, {&quot;Title&quot;:&quot;Die Technik der Lastenförderung einst und jetzt - Eine Studie über die Entwicklung der Hebemaschinen und ihren Einfluß auf Wirtschaftsleben und Kulturgeschichte&quot;,&quot;Topics&quot;:[&quot;Hoisting machinery&quot;],&quot;Primary&quot;:&quot;57636.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kammerer, Otto, 1865-1951&quot;],&quot;LoCC&quot;:[&quot;TJ&quot;],&quot;PG_ID&quot;:&quot;57636&quot;});" class='title'>Die Technik der Lastenförderung einst und jetzt -<br><span class='subtitle'>Eine Studie über die Entwicklung der Hebemaschinen und ihren Einfluß auf Wirtschaftsleben und Kulturgeschichte</span></a>
+<div class='author'>Kammerer, Otto, 1865-1951</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57639, {&quot;Title&quot;:&quot;Pumps and Hydraulics, Part 2 (of 2)&quot;,&quot;Topics&quot;:[&quot;Pumping machinery&quot;,&quot;Hydraulic machinery&quot;],&quot;Primary&quot;:&quot;57639.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hawkins, N. (Nehemiah), 1833-1928&quot;],&quot;LoCC&quot;:[&quot;TJ&quot;],&quot;PG_ID&quot;:&quot;57639&quot;});" class='title'>Pumps and Hydraulics, Part 2 (of 2)</a>
+<div class='author'>Hawkins, N. (Nehemiah), 1833-1928</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58391, {&quot;Title&quot;:&quot;The Engineer&#39;s Sketch-Book - Of Mechanical Movements, Devices, Appliances, Contrivances and Details Employed in the Design and Construction of Machinery for Every Purpose Classified &amp; Arranged for Reference for the Use of Engineers, Mechanical Draughtsmen, Managers, Mechanics, Inventors, Patent Agents, and All Engaged in the Mechanical Arts&quot;,&quot;Topics&quot;:[&quot;Mechanical movements&quot;],&quot;Primary&quot;:&quot;58391.htm&quot;,&quot;CreatorNames&quot;:[&quot;Barber, Thomas Walter, -1917&quot;],&quot;LoCC&quot;:[&quot;TJ&quot;],&quot;PG_ID&quot;:&quot;58391&quot;});" class='title'>The Engineer's Sketch-Book -<br><span class='subtitle'>Of Mechanical Movements, Devices, Appliances, Contrivances and Details Employed in the Design and Construction of Machinery for Every Purpose Classified & Arranged for Reference for the Use of Engineers, Mechanical Draughtsmen, Managers, Mechanics, Inventors, Patent Agents, and All Engaged in the Mechanical Arts</span></a>
+<div class='author'>Barber, Thomas Walter, -1917</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59311, {&quot;Title&quot;:&quot;Gas and Petroleum Engines&quot;,&quot;Topics&quot;:[&quot;Internal combustion engines&quot;],&quot;Primary&quot;:&quot;59311.htm&quot;,&quot;CreatorNames&quot;:[&quot;Graffigny, H. de (Henry), 1863-1934&quot;,&quot;Elliott, Athol Garnet [Translator]&quot;],&quot;LoCC&quot;:[&quot;TJ&quot;],&quot;PG_ID&quot;:&quot;59311&quot;});" class='title'>Gas and Petroleum Engines</a>
+<div class='author'>Graffigny, H. de (Henry), 1863-1934, Elliott, Athol Garnet [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59659, {&quot;Title&quot;:&quot;Die Säge: Ein Rückblick auf vier Jahrtausende&quot;,&quot;Topics&quot;:[&quot;Saws -- History&quot;],&quot;Primary&quot;:&quot;59659.htm&quot;,&quot;CreatorNames&quot;:[&quot;Feldhaus, Franz M. (Franz Maria), 1874-1959?&quot;],&quot;LoCC&quot;:[&quot;TJ&quot;],&quot;PG_ID&quot;:&quot;59659&quot;});" class='title'>Die Säge:<br><span class='subtitle'>Ein Rückblick auf vier Jahrtausende</span></a>
+<div class='author'>Feldhaus, Franz M. (Franz Maria), 1874-1959?</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60819, {&quot;Title&quot;:&quot;The Lathe &amp; Its Uses - Or, Instruction in the Art of Turning Wood and Metal. Including a Description of the Most Modern Appliances for the Ornamentation of Plane and Curved Surfaces. With an Appendix, in Which is Described an Entirely Novel Form of Lathe for Eccentric and Rose Engine Turning; a Lathe and Planing Machine Combined; and Other Valuable Matter Relating to the Art.&quot;,&quot;Topics&quot;:[&quot;Turning (Lathe work)&quot;,&quot;Lathes&quot;],&quot;Primary&quot;:&quot;60819.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lukin, James, 1828-1917&quot;],&quot;LoCC&quot;:[&quot;TJ&quot;],&quot;PG_ID&quot;:&quot;60819&quot;});" class='title'>The Lathe & Its Uses -<br><span class='subtitle'>Or, Instruction in the Art of Turning Wood and Metal. Including a Description of the Most Modern Appliances for the Ornamentation of Plane and Curved Surfaces. With an Appendix, in Which is Described an Entirely Novel Form of Lathe for Eccentric and Rose Engine Turning; a Lathe and Planing Machine Combined; and Other Valuable Matter Relating to the Art.</span></a>
+<div class='author'>Lukin, James, 1828-1917</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61123, {&quot;Title&quot;:&quot;Shafting, Pulleys, Belting and Rope Transmission&quot;,&quot;Topics&quot;:[&quot;Power transmission&quot;],&quot;Primary&quot;:&quot;61123.htm&quot;,&quot;CreatorNames&quot;:[&quot;Collins, Hubert E. (Hubert Edwin), 1872-1932&quot;],&quot;LoCC&quot;:[&quot;TJ&quot;],&quot;PG_ID&quot;:&quot;61123&quot;});" class='title'>Shafting, Pulleys, Belting and Rope Transmission</a>
+<div class='author'>Collins, Hubert E. (Hubert Edwin), 1872-1932</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62609, {&quot;Title&quot;:&quot;Locomotive Engine Running and Management&quot;,&quot;Topics&quot;:[&quot;Locomotives -- Handbooks, manuals, etc.&quot;],&quot;Primary&quot;:&quot;62609.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sinclair, Angus, 1841-1919&quot;],&quot;LoCC&quot;:[&quot;TJ&quot;],&quot;PG_ID&quot;:&quot;62609&quot;});" class='title'>Locomotive Engine Running and Management</a>
+<div class='author'>Sinclair, Angus, 1841-1919</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63952, {&quot;Title&quot;:&quot;The Pneumatic Despatch Tube System of the Batcheller Pneumatic Tube Co. - Also, Facts and General Information Relating to Pneumatic Despatch Tubes&quot;,&quot;Topics&quot;:[&quot;Pneumatic-tube transportation&quot;],&quot;Primary&quot;:&quot;63952.htm&quot;,&quot;CreatorNames&quot;:[&quot;Batcheller, Birney C. (Birney Clark), 1865-1950&quot;],&quot;LoCC&quot;:[&quot;TJ&quot;],&quot;PG_ID&quot;:&quot;63952&quot;});" class='title'>The Pneumatic Despatch Tube System of the Batcheller Pneumatic Tube Co. -<br><span class='subtitle'>Also, Facts and General Information Relating to Pneumatic Despatch Tubes</span></a>
+<div class='author'>Batcheller, Birney C. (Birney Clark), 1865-1950</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64856, {&quot;Title&quot;:&quot;The Fireless Locomotive&quot;,&quot;Topics&quot;:[&quot;Steam locomotives -- History&quot;,&quot;Corliss steam-engine&quot;],&quot;Primary&quot;:&quot;64856.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;TJ&quot;],&quot;PG_ID&quot;:&quot;64856&quot;});" class='title'>The Fireless Locomotive</a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65257, {&quot;Title&quot;:&quot;Milestones in the Mighty Age of Steam: The Grasshopper and the Corliss&quot;,&quot;Topics&quot;:[&quot;Carillon Historical Park (Dayton, Ohio)&quot;,&quot;Davis, Phineas, 1800-1835&quot;,&quot;Corliss, George H. (George Henry), 1817-1888&quot;,&quot;John Quincy Adams (Steam locomotive) -- History&quot;,&quot;Steam-engines -- United States -- History&quot;,&quot;Steam locomotives -- United States -- History&quot;,&quot;Corliss steam-engine -- History&quot;],&quot;Primary&quot;:&quot;65257.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;TJ&quot;],&quot;PG_ID&quot;:&quot;65257&quot;});" class='title'>Milestones in the Mighty Age of Steam:<br><span class='subtitle'>The Grasshopper and the Corliss</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66109, {&quot;Title&quot;:&quot;Young Engineer&#39;s Guide&quot;,&quot;Topics&quot;:[&quot;Steam engineering&quot;],&quot;Primary&quot;:&quot;66109.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rohan, J. V.&quot;],&quot;LoCC&quot;:[&quot;TJ&quot;],&quot;PG_ID&quot;:&quot;66109&quot;});" class='title'>Young Engineer's Guide</a>
+<div class='author'>Rohan, J. V.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67844, {&quot;Title&quot;:&quot;Hoisting Appliances&quot;,&quot;Topics&quot;:[&quot;Hoisting machinery&quot;,&quot;Mine hoisting&quot;],&quot;Primary&quot;:&quot;67844.htm&quot;,&quot;CreatorNames&quot;:[&quot;International Correspondence Schools&quot;],&quot;LoCC&quot;:[&quot;TJ&quot;,&quot;TN&quot;],&quot;PG_ID&quot;:&quot;67844&quot;});" class='title'>Hoisting Appliances</a>
+<div class='author'>International Correspondence Schools</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69061, {&quot;Title&quot;:&quot;Precision locating and dividing methods&quot;,&quot;Topics&quot;:[&quot;Machine-shop practice&quot;],&quot;Primary&quot;:&quot;69061.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;TJ&quot;],&quot;PG_ID&quot;:&quot;69061&quot;});" class='title'>Precision locating and dividing methods</a>
+<div class='author'>Anonymous</div>
+</div>
+</ul></div>
+</body></html>

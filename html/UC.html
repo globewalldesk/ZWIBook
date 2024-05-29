@@ -1,0 +1,86 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Maintenance and transporation (UC)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37842, {&quot;Title&quot;:&quot;Small Horses in Warfare&quot;,&quot;Topics&quot;:[&quot;Horses&quot;,&quot;Ponies&quot;],&quot;Primary&quot;:&quot;37842.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gilbey, Walter, Sir, 1831-1914&quot;],&quot;LoCC&quot;:[&quot;UC&quot;],&quot;PG_ID&quot;:&quot;37842&quot;});" class='title'>Small Horses in Warfare</a>
+<div class='author'>Gilbey, Walter, Sir, 1831-1914</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42438, {&quot;Title&quot;:&quot;The Rise of Rail-Power in War and Conquest, 1833-1914&quot;,&quot;Topics&quot;:[&quot;Transportation, Military&quot;,&quot;Railroads&quot;],&quot;Primary&quot;:&quot;42438.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pratt, Edwin A., 1854-1922&quot;],&quot;LoCC&quot;:[&quot;UC&quot;],&quot;PG_ID&quot;:&quot;42438&quot;});" class='title'>The Rise of Rail-Power in War and Conquest, 1833-1914</a>
+<div class='author'>Pratt, Edwin A., 1854-1922</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42544, {&quot;Title&quot;:&quot;Soyer&#39;s Culinary Campaign: Being Historical Reminiscences of the Late War. - With The Plain Art of Cookery for Military and Civil Institutions&quot;,&quot;Topics&quot;:[&quot;Crimean War, 1853-1856&quot;,&quot;Cooking for military personnel&quot;],&quot;Primary&quot;:&quot;42544.htm&quot;,&quot;CreatorNames&quot;:[&quot;Soyer, Alexis, 1809-1858&quot;],&quot;LoCC&quot;:[&quot;DK&quot;,&quot;UC&quot;],&quot;PG_ID&quot;:&quot;42544&quot;});" class='title'>Soyer's Culinary Campaign:<br><span class='subtitle'>Being Historical Reminiscences of the Late War. - With The Plain Art of Cookery for Military and Civil Institutions</span></a>
+<div class='author'>Soyer, Alexis, 1809-1858</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48428, {&quot;Title&quot;:&quot;America&#39;s Munitions 1917-1918&quot;,&quot;Topics&quot;:[&quot;Weapons&quot;,&quot;United States. Army -- Supplies and stores&quot;,&quot;World War, 1914-1918 -- United States -- Equipment and supplies&quot;],&quot;Primary&quot;:&quot;48428.htm&quot;,&quot;CreatorNames&quot;:[&quot;Crowell, Benedict, 1869-1952&quot;,&quot;United States. War Department&quot;],&quot;LoCC&quot;:[&quot;UC&quot;,&quot;D&quot;],&quot;PG_ID&quot;:&quot;48428&quot;});" class='title'>America's Munitions 1917-1918</a>
+<div class='author'>Crowell, Benedict, 1869-1952, United States. War Department</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54213, {&quot;Title&quot;:&quot;Military Equipment [1917]&quot;,&quot;Topics&quot;:[&quot;Sears, Roebuck and Company -- Catalogs&quot;,&quot;Military supplies -- Catalogs&quot;,&quot;World War, 1914-1918 -- Equipment and supplies -- Catalogs&quot;],&quot;Primary&quot;:&quot;54213.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sears, Roebuck and Company&quot;],&quot;LoCC&quot;:[&quot;UC&quot;],&quot;PG_ID&quot;:&quot;54213&quot;});" class='title'>Military Equipment [1917]</a>
+<div class='author'>Sears, Roebuck and Company</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56323, {&quot;Title&quot;:&quot;Motor Transports in War&quot;,&quot;Topics&quot;:[&quot;World War, 1914-1918 -- Transportation&quot;,&quot;Automobiles, Military&quot;],&quot;Primary&quot;:&quot;56323.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wyatt, Horace, 1876-1954&quot;],&quot;LoCC&quot;:[&quot;UC&quot;],&quot;PG_ID&quot;:&quot;56323&quot;});" class='title'>Motor Transports in War</a>
+<div class='author'>Wyatt, Horace, 1876-1954</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56830, {&quot;Title&quot;:&quot;The Flags of Our Fighting Army - Including standards, guidons, colours and drum banners&quot;,&quot;Topics&quot;:[&quot;Flags -- Great Britain&quot;],&quot;Primary&quot;:&quot;56830.htm&quot;,&quot;CreatorNames&quot;:[&quot;Johnson, Stanley C. (Stanley Currie), 1878-&quot;],&quot;LoCC&quot;:[&quot;UC&quot;],&quot;PG_ID&quot;:&quot;56830&quot;});" class='title'>The Flags of Our Fighting Army -<br><span class='subtitle'>Including standards, guidons, colours and drum banners</span></a>
+<div class='author'>Johnson, Stanley C. (Stanley Currie), 1878-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59016, {&quot;Title&quot;:&quot;Post Exchange Methods - A Manual for Exchange Stewards, Exchange Officers, Members of Exchange Councils, Commanding Officers, Being an Exposition of a Simple and Efficient System of Accounting Which Is Applicable to Large and to Small Exchanges Alike.&quot;,&quot;Topics&quot;:[&quot;Military exchanges -- United States -- Accounting&quot;],&quot;Primary&quot;:&quot;59016.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bunker, Paul D. (Paul Delmont), 1881-1943&quot;],&quot;LoCC&quot;:[&quot;UC&quot;],&quot;PG_ID&quot;:&quot;59016&quot;});" class='title'>Post Exchange Methods -<br><span class='subtitle'>A Manual for Exchange Stewards, Exchange Officers, Members of Exchange Councils, Commanding Officers, Being an Exposition of a Simple and Efficient System of Accounting Which Is Applicable to Large and to Small Exchanges Alike.</span></a>
+<div class='author'>Bunker, Paul D. (Paul Delmont), 1881-1943</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65250, {&quot;Title&quot;:&quot;Recipes Used in the Cooking Schools, U. S. Army&quot;,&quot;Topics&quot;:[&quot;Cooking&quot;,&quot;United States. Army -- Commissariat&quot;,&quot;Cooking for military personnel -- Handbooks, manuals, etc.&quot;],&quot;Primary&quot;:&quot;65250.htm&quot;,&quot;CreatorNames&quot;:[&quot;United States. Army&quot;],&quot;LoCC&quot;:[&quot;UC&quot;],&quot;PG_ID&quot;:&quot;65250&quot;});" class='title'>Recipes Used in the Cooking Schools, U. S. Army</a>
+<div class='author'>United States. Army</div>
+</div>
+</ul></div>
+</body></html>

@@ -1,0 +1,491 @@
+<html>
+<head>
+<title>Category</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+<!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+      <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+      <button id="findButton">Find</button>
+  </div>
+</div>
+<div id="header">
+  <div id="header-content">
+    <div class="header-container">
+      <a id="backBtn" class="header-btn" href="#">
+          <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+      </a>
+      <a id="search" class="header-btn" href="../search.html">
+          <img src="../images/icons/search.svg" title="Search book titles">
+      </a>
+    </div>
+    <h1 id="headTitle">Category: Agriculture (S)</h1>
+    <div class="header-container">
+      <a id="sortBtn" class="header-btn" href="#">
+        <img src="../images/icons/sort.svg" title="Re-sort books">
+      </a>
+      <div id="sortDropdown" class="dropdown" style="display: none">
+        <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+        <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+        <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+        <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+      </div>
+      <a class="header-btn" href="categories.html">
+        <img src="../images/icons/categories.svg" title="Browse categories">
+      </a>
+      <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+          <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+      </a>
+    </div>
+  </div>
+</div>
+<div id="body">
+<ul>
+<li><a href='SB.html'>Plant culture (SB)</a> <span class='count'>240</span></li>
+<li><a href='SD.html'>Forestry (SD)</a> <span class='count'>23</span></li>
+<li><a href='SF.html'>Animal culture (SF)</a> <span class='count'>232</span></li>
+<li><a href='SH.html'>Aquaculture. Fisheries, Angling (SH)</a> <span class='count'>60</span></li>
+<li><a href='SK.html'>Hunting sports (SK)</a> <span class='count'>116</span></li>
+<p>&nbsp;</p>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(11238, {&quot;Title&quot;:&quot;The Fight for Conservation&quot;,&quot;Topics&quot;:[&quot;Conservation of natural resources -- United States&quot;,&quot;United States -- Economic conditions -- 1865-1918&quot;],&quot;Primary&quot;:&quot;11238.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pinchot, Gifford, 1865-1946&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;11238&quot;});" class='title'>The Fight for Conservation</a>
+<div class='author'>Pinchot, Gifford, 1865-1946</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(11555, {&quot;Title&quot;:&quot;Our Farm of Four Acres and the Money We Made by It&quot;,&quot;Topics&quot;:[&quot;Agriculture&quot;,&quot;Farm life&quot;],&quot;Primary&quot;:&quot;11555.txt&quot;,&quot;CreatorNames&quot;:[&quot;Coulton, Miss&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;11555&quot;});" class='title'>Our Farm of Four Acres and the Money We Made by It</a>
+<div class='author'>Coulton, Miss</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12140, {&quot;Title&quot;:&quot;Roman Farm Management: The Treatises of Cato and Varro&quot;,&quot;Topics&quot;:[&quot;Agriculture -- Early works to 1800&quot;,&quot;Farm management -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;12140.txt&quot;,&quot;CreatorNames&quot;:[&quot;Cato, Marcus Porcius, 234 BCE-149 BCE&quot;,&quot;Varro, Marcus Terentius&quot;,&quot;Harrison, Fairfax, 1869-1938 [Translator]&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;12140&quot;});" class='title'>Roman Farm Management:<br><span class='subtitle'>The Treatises of Cato and Varro</span></a>
+<div class='author'>Cato, Marcus Porcius, 234 BCE-149 BCE, Varro, Marcus Terentius, Harrison, Fairfax, 1869-1938 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16525, {&quot;Title&quot;:&quot;The Fat of the Land: The Story of an American Farm&quot;,&quot;Topics&quot;:[&quot;Agriculture&quot;],&quot;Primary&quot;:&quot;16525.htm&quot;,&quot;CreatorNames&quot;:[&quot;Streeter, John Williams, 1841-1905&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;16525&quot;});" class='title'>The Fat of the Land:<br><span class='subtitle'>The Story of an American Farm</span></a>
+<div class='author'>Streeter, John Williams, 1841-1905</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16594, {&quot;Title&quot;:&quot;A Short History of English Agriculture&quot;,&quot;Topics&quot;:[&quot;Agriculture -- England -- History&quot;],&quot;Primary&quot;:&quot;16594.htm&quot;,&quot;CreatorNames&quot;:[&quot;Curtler, W. H. R. (William Henry Ricketts), 1862-1925&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;16594&quot;});" class='title'>A Short History of English Agriculture</a>
+<div class='author'>Curtler, W. H. R. (William Henry Ricketts), 1862-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16900, {&quot;Title&quot;:&quot;The First Book of Farming&quot;,&quot;Topics&quot;:[&quot;Agriculture&quot;],&quot;Primary&quot;:&quot;16900.htm&quot;,&quot;CreatorNames&quot;:[&quot;Goodrich, C. L. (Charles Landon), 1859-&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;16900&quot;});" class='title'>The First Book of Farming</a>
+<div class='author'>Goodrich, C. L. (Charles Landon), 1859-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17512, {&quot;Title&quot;:&quot;Prairie Farmer, Vol. 56: No. 1, January 5, 1884. - A Weekly Journal for the Farm, Orchard and Fireside&quot;,&quot;Topics&quot;:[&quot;Farm life -- Periodicals&quot;,&quot;United States -- Rural conditions -- Periodicals&quot;,&quot;Agriculture -- United States -- Periodicals&quot;],&quot;Primary&quot;:&quot;17512.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;17512&quot;});" class='title'>Prairie Farmer, Vol. 56:<br><span class='subtitle'>No. 1, January 5, 1884. - A Weekly Journal for the Farm, Orchard and Fireside</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17683, {&quot;Title&quot;:&quot;The Prairie Farmer, Vol. 56, No. 2, January 12, 1884 - A Weekly Journal for the Farm, Orchard and Fireside&quot;,&quot;Topics&quot;:[&quot;Farm life -- Periodicals&quot;,&quot;United States -- Rural conditions -- Periodicals&quot;,&quot;Agriculture -- United States -- Periodicals&quot;],&quot;Primary&quot;:&quot;17683.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;17683&quot;});" class='title'>The Prairie Farmer, Vol. 56, No. 2, January 12, 1884 -<br><span class='subtitle'>A Weekly Journal for the Farm, Orchard and Fireside</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19448, {&quot;Title&quot;:&quot;Talks on Manures - A Series of Familiar and Practical Talks Between the Author and the Deacon, the Doctor, and Other Neighbors, on the Whole Subject&quot;,&quot;Topics&quot;:[&quot;Fertilizers&quot;,&quot;Manures&quot;],&quot;Primary&quot;:&quot;19448.htm&quot;,&quot;CreatorNames&quot;:[&quot;Harris, Joseph, 1828-1892&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;19448&quot;});" class='title'>Talks on Manures -<br><span class='subtitle'>A Series of Familiar and Practical Talks Between the Author and the Deacon, the Doctor, and Other Neighbors, on the Whole Subject</span></a>
+<div class='author'>Harris, Joseph, 1828-1892</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20168, {&quot;Title&quot;:&quot;Guano: A Treatise of Practical Information for Farmers&quot;,&quot;Topics&quot;:[&quot;Guano&quot;],&quot;Primary&quot;:&quot;20168.htm&quot;,&quot;CreatorNames&quot;:[&quot;Robinson, Solon, 1803-1880&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;20168&quot;});" class='title'>Guano:<br><span class='subtitle'>A Treatise of Practical Information for Farmers</span></a>
+<div class='author'>Robinson, Solon, 1803-1880</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20772, {&quot;Title&quot;:&quot;Agriculture for Beginners - Revised Edition&quot;,&quot;Topics&quot;:[&quot;Agriculture&quot;],&quot;Primary&quot;:&quot;20772.htm&quot;,&quot;CreatorNames&quot;:[&quot;Burkett, Charles William, 1873-1962&quot;,&quot;Hill, Daniel Harvey, 1859-1924&quot;,&quot;Stevens, Frank Lincoln, 1871-1934&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;20772&quot;});" class='title'>Agriculture for Beginners -<br><span class='subtitle'>Revised Edition</span></a>
+<div class='author'>Burkett, Charles William, 1873-1962, Hill, Daniel Harvey, 1859-1924, Stevens, Frank Lincoln, 1871-1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(21022, {&quot;Title&quot;:&quot;Lessons on Soil&quot;,&quot;Topics&quot;:[&quot;Soils&quot;],&quot;Primary&quot;:&quot;21022.htm&quot;,&quot;CreatorNames&quot;:[&quot;Russell, Edward J. (Edward John), 1872-1965&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;21022&quot;});" class='title'>Lessons on Soil</a>
+<div class='author'>Russell, Edward J. (Edward John), 1872-1965</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22040, {&quot;Title&quot;:&quot;Prairie Farmer, Vol. 56: No. 3, January 19, 1884. - A Weekly Journal for the Farm, Orchard and Fireside&quot;,&quot;Topics&quot;:[&quot;Farm life -- Periodicals&quot;,&quot;United States -- Rural conditions -- Periodicals&quot;,&quot;Agriculture -- United States -- Periodicals&quot;],&quot;Primary&quot;:&quot;22040.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;22040&quot;});" class='title'>Prairie Farmer, Vol. 56:<br><span class='subtitle'>No. 3, January 19, 1884. - A Weekly Journal for the Farm, Orchard and Fireside</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22973, {&quot;Title&quot;:&quot;The English Husbandman - The First Part: Contayning the Knowledge of the true Nature of euery Soyle within this Kingdome: how to Plow it; and the manner of the Plough, and other Instruments&quot;,&quot;Topics&quot;:[&quot;Agriculture -- England -- Early works to 1800&quot;,&quot;Agriculture -- Early works to 1800&quot;,&quot;Gardening -- England -- Early works to 1800&quot;,&quot;Gardening -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;22973.htm&quot;,&quot;CreatorNames&quot;:[&quot;Markham, Gervase, 1568?-1637&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;22973&quot;});" class='title'>The English Husbandman -<br><span class='subtitle'>The First Part: Contayning the Knowledge of the true Nature of euery Soyle within this Kingdome: how to Plow it; and the manner of the Plough, and other Instruments</span></a>
+<div class='author'>Markham, Gervase, 1568?-1637</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23682, {&quot;Title&quot;:&quot;Crops and Methods for Soil Improvement&quot;,&quot;Topics&quot;:[&quot;Soils&quot;,&quot;Fertilizers&quot;],&quot;Primary&quot;:&quot;23682.htm&quot;,&quot;CreatorNames&quot;:[&quot;Agee, Alva, 1858-1943&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;23682&quot;});" class='title'>Crops and Methods for Soil Improvement</a>
+<div class='author'>Agee, Alva, 1858-1943</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24080, {&quot;Title&quot;:&quot;The Stewardship of the Soil - Baccalaureate Address by John Henry Worst, President, North Dakota Agricultural College&quot;,&quot;Topics&quot;:[&quot;Agriculture&quot;],&quot;Primary&quot;:&quot;24080.htm&quot;,&quot;CreatorNames&quot;:[&quot;Worst, John H. (John Henry), 1850-1945&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;24080&quot;});" class='title'>The Stewardship of the Soil -<br><span class='subtitle'>Baccalaureate Address by John Henry Worst, President, North Dakota Agricultural College</span></a>
+<div class='author'>Worst, John H. (John Henry), 1850-1945</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24931, {&quot;Title&quot;:&quot;Elements of Agricultural Chemistry&quot;,&quot;Topics&quot;:[&quot;Agricultural chemistry&quot;],&quot;Primary&quot;:&quot;24931.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anderson, Thomas, 1819-1874&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;24931&quot;});" class='title'>Elements of Agricultural Chemistry</a>
+<div class='author'>Anderson, Thomas, 1819-1874</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25050, {&quot;Title&quot;:&quot;A Study of American Beers and Ales&quot;,&quot;Topics&quot;:[&quot;Beer -- United States&quot;,&quot;Ale -- United States&quot;,&quot;Brewing industry -- United States&quot;],&quot;Primary&quot;:&quot;25050.htm&quot;,&quot;CreatorNames&quot;:[&quot;Riley, James Garfield, 1881-&quot;,&quot;Tolman, L. M., 1875-&quot;],&quot;LoCC&quot;:[&quot;S&quot;,&quot;TP&quot;],&quot;PG_ID&quot;:&quot;25050&quot;});" class='title'>A Study of American Beers and Ales</a>
+<div class='author'>Riley, James Garfield, 1881-, Tolman, L. M., 1875-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25389, {&quot;Title&quot;:&quot;Right Use of Lime in Soil Improvement&quot;,&quot;Topics&quot;:[&quot;Lime&quot;,&quot;Liming of soils&quot;],&quot;Primary&quot;:&quot;25389.htm&quot;,&quot;CreatorNames&quot;:[&quot;Agee, Alva, 1858-1943&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;25389&quot;});" class='title'>Right Use of Lime in Soil Improvement</a>
+<div class='author'>Agee, Alva, 1858-1943</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26313, {&quot;Title&quot;:&quot;The Young Farmer: Some Things He Should Know&quot;,&quot;Topics&quot;:[&quot;Agriculture&quot;],&quot;Primary&quot;:&quot;26313.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hunt, Thomas Forsyth, 1862-1927&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;26313&quot;});" class='title'>The Young Farmer:<br><span class='subtitle'>Some Things He Should Know</span></a>
+<div class='author'>Hunt, Thomas Forsyth, 1862-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26801, {&quot;Title&quot;:&quot;Village Improvements and Farm Villages&quot;,&quot;Topics&quot;:[&quot;Civic improvement&quot;,&quot;Farm life&quot;],&quot;Primary&quot;:&quot;26801.htm&quot;,&quot;CreatorNames&quot;:[&quot;Waring, George E. (George Edwin), 1833-1898&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;26801&quot;});" class='title'>Village Improvements and Farm Villages</a>
+<div class='author'>Waring, George E. (George Edwin), 1833-1898</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26975, {&quot;Title&quot;:&quot;Chapters in Rural Progress&quot;,&quot;Topics&quot;:[&quot;Agriculture -- United States&quot;],&quot;Primary&quot;:&quot;26975.htm&quot;,&quot;CreatorNames&quot;:[&quot;Butterfield, Kenyon L. (Kenyon Leech), 1868-1935&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;26975&quot;});" class='title'>Chapters in Rural Progress</a>
+<div class='author'>Butterfield, Kenyon L. (Kenyon Leech), 1868-1935</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27274, {&quot;Title&quot;:&quot;Manures and the principles of manuring&quot;,&quot;Topics&quot;:[&quot;Fertilizers&quot;,&quot;Manures&quot;],&quot;Primary&quot;:&quot;27274.htm&quot;,&quot;CreatorNames&quot;:[&quot;Aikman, Charles Morton&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;27274&quot;});" class='title'>Manures and the principles of manuring</a>
+<div class='author'>Aikman, Charles Morton</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27327, {&quot;Title&quot;:&quot;Agricultural Implements and Machines in the Collection of the National Museum of History and Technology - Smithsonian Studies in History and Technology, No. 17&quot;,&quot;Topics&quot;:[&quot;Agricultural implements -- United States -- Exhibitions&quot;,&quot;Agricultural machinery -- United States -- Exhibitions&quot;],&quot;Primary&quot;:&quot;27327.htm&quot;,&quot;CreatorNames&quot;:[&quot;Schlebecker, John T.&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;27327&quot;});" class='title'>Agricultural Implements and Machines in the Collection of the National Museum of History and Technology -<br><span class='subtitle'>Smithsonian Studies in History and Technology, No. 17</span></a>
+<div class='author'>Schlebecker, John T.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28730, {&quot;Title&quot;:&quot;Agriculture in Virginia, 1607-1699&quot;,&quot;Topics&quot;:[&quot;Agriculture -- Virginia -- History&quot;],&quot;Primary&quot;:&quot;28730.htm&quot;,&quot;CreatorNames&quot;:[&quot;Carrier, Lyman, 1877-1963&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;28730&quot;});" class='title'>Agriculture in Virginia, 1607-1699</a>
+<div class='author'>Carrier, Lyman, 1877-1963</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29057, {&quot;Title&quot;:&quot;Address delivered by Hon. Henry H. Crapo, Governor of Michigan, before the Central Michigan Agricultural Society, at their Sheep-shearing Exhibition held at the Agricultural College Farm, on Thursday, May 24th, 1866&quot;,&quot;Topics&quot;:[&quot;Agriculture -- Michigan&quot;],&quot;Primary&quot;:&quot;29057.htm&quot;,&quot;CreatorNames&quot;:[&quot;Crapo, Henry Howland, 1804-1869&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;29057&quot;});" class='title'>Address delivered by Hon. Henry H. Crapo, Governor of Michigan, before the Central Michigan Agricultural Society, at their Sheep-shearing Exhibition held at the Agricultural College Farm, on Thursday, May 24th, 1866</a>
+<div class='author'>Crapo, Henry Howland, 1804-1869</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29665, {&quot;Title&quot;:&quot;Prairie Farmer, Vol. 56: No. 4, January 26, 1884 - A Weekly Journal for the Farm, Orchard and Fireside&quot;,&quot;Topics&quot;:[&quot;Farm life -- Periodicals&quot;,&quot;United States -- Rural conditions -- Periodicals&quot;,&quot;Agriculture -- United States -- Periodicals&quot;],&quot;Primary&quot;:&quot;29665.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;29665&quot;});" class='title'>Prairie Farmer, Vol. 56:<br><span class='subtitle'>No. 4, January 26, 1884 - A Weekly Journal for the Farm, Orchard and Fireside</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30808, {&quot;Title&quot;:&quot;History of Farming in Ontario&quot;,&quot;Topics&quot;:[&quot;Agriculture -- Ontario&quot;],&quot;Primary&quot;:&quot;30808.htm&quot;,&quot;CreatorNames&quot;:[&quot;James, C. C. (Charles Canniff), 1863-1916&quot;],&quot;LoCC&quot;:[&quot;S&quot;,&quot;F&quot;],&quot;PG_ID&quot;:&quot;30808&quot;});" class='title'>History of Farming in Ontario</a>
+<div class='author'>James, C. C. (Charles Canniff), 1863-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30975, {&quot;Title&quot;:&quot;Soil Culture - Containing a Comprehensive View of Agriculture, Horticulture, Pomology, Domestic Animals, Rural Economy, and Agricultural Literature&quot;,&quot;Topics&quot;:[&quot;Agriculture -- Handbooks, manuals, etc.&quot;],&quot;Primary&quot;:&quot;30975.htm&quot;,&quot;CreatorNames&quot;:[&quot;Walden, J. H.&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;30975&quot;});" class='title'>Soil Culture -<br><span class='subtitle'>Containing a Comprehensive View of Agriculture, Horticulture, Pomology, Domestic Animals, Rural Economy, and Agricultural Literature</span></a>
+<div class='author'>Walden, J. H.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31105, {&quot;Title&quot;:&quot;The Elements of Agriculture - A Book for Young Farmers, with Questions Prepared for the Use of Schools&quot;,&quot;Topics&quot;:[&quot;Agriculture&quot;],&quot;Primary&quot;:&quot;31105.htm&quot;,&quot;CreatorNames&quot;:[&quot;Waring, George E. (George Edwin), 1833-1898&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;31105&quot;});" class='title'>The Elements of Agriculture -<br><span class='subtitle'>A Book for Young Farmers, with Questions Prepared for the Use of Schools</span></a>
+<div class='author'>Waring, George E. (George Edwin), 1833-1898</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32392, {&quot;Title&quot;:&quot;Notes on Agriculture in Cyprus and Its Products&quot;,&quot;Topics&quot;:[&quot;Agriculture -- Cyprus&quot;,&quot;Produce trade -- Cyprus&quot;],&quot;Primary&quot;:&quot;32392.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bevan, William, 1864-&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;32392&quot;});" class='title'>Notes on Agriculture in Cyprus and Its Products</a>
+<div class='author'>Bevan, William, 1864-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32863, {&quot;Title&quot;:&quot;Cottage Economy, to Which is Added The Poor Man&#39;s Friend&quot;,&quot;Topics&quot;:[&quot;Agriculture&quot;,&quot;Home economics&quot;,&quot;Poor laws -- Great Britain&quot;],&quot;Primary&quot;:&quot;32863.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cobbett, William, 1763-1835&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;32863&quot;});" class='title'>Cottage Economy, to Which is Added The Poor Man's Friend</a>
+<div class='author'>Cobbett, William, 1763-1835</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32949, {&quot;Title&quot;:&quot;The American Country Girl&quot;,&quot;Topics&quot;:[&quot;Farm life -- United States&quot;,&quot;Girls -- United States&quot;],&quot;Primary&quot;:&quot;32949.htm&quot;,&quot;CreatorNames&quot;:[&quot;Crow, Martha Foote, 1854-1924&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;32949&quot;});" class='title'>The American Country Girl</a>
+<div class='author'>Crow, Martha Foote, 1854-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33060, {&quot;Title&quot;:&quot;A Living from the Land&quot;,&quot;Topics&quot;:[&quot;Agriculture&quot;],&quot;Primary&quot;:&quot;33060.htm&quot;,&quot;CreatorNames&quot;:[&quot;Duryee, William Budington, 1888-&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;33060&quot;});" class='title'>A Living from the Land</a>
+<div class='author'>Duryee, William Budington, 1888-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33178, {&quot;Title&quot;:&quot;The Holy Earth&quot;,&quot;Topics&quot;:[&quot;Country life&quot;,&quot;Nature&quot;,&quot;Natural resources&quot;,&quot;Earth (Planet)&quot;,&quot;Conservation of natural resources&quot;],&quot;Primary&quot;:&quot;33178.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bailey, L. H. (Liberty Hyde), 1858-1954&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;33178&quot;});" class='title'>The Holy Earth</a>
+<div class='author'>Bailey, L. H. (Liberty Hyde), 1858-1954</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33243, {&quot;Title&quot;:&quot;Frying Pan Farm&quot;,&quot;Topics&quot;:[&quot;Agriculture -- Virginia -- Fairfax County -- History&quot;,&quot;Family farms -- Virginia -- Fairfax County -- History&quot;,&quot;Frying Pan Park, Virginia -- Frying Pan Farm&quot;],&quot;Primary&quot;:&quot;33243.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pryor, Elizabeth Brown&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;33243&quot;});" class='title'>Frying Pan Farm</a>
+<div class='author'>Pryor, Elizabeth Brown</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33921, {&quot;Title&quot;:&quot;Cacao Culture in the Philippines&quot;,&quot;Topics&quot;:[&quot;Cacao&quot;],&quot;Primary&quot;:&quot;33921.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lyon, William Scrugham, 1852-1916&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;33921&quot;});" class='title'>Cacao Culture in the Philippines</a>
+<div class='author'>Lyon, William Scrugham, 1852-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34437, {&quot;Title&quot;:&quot;Methods of Destroying Rats&quot;,&quot;Topics&quot;:[&quot;Rats -- Control&quot;],&quot;Primary&quot;:&quot;34437.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lantz, David E. (David Ernest), 1855-1918&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;34437&quot;});" class='title'>Methods of Destroying Rats</a>
+<div class='author'>Lantz, David E. (David Ernest), 1855-1918</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34446, {&quot;Title&quot;:&quot;Cottontail Rabbits in Relation to Trees and Farm Crops&quot;,&quot;Topics&quot;:[&quot;Cottontails -- Control&quot;],&quot;Primary&quot;:&quot;34446.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lantz, David E. (David Ernest), 1855-1918&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;34446&quot;});" class='title'>Cottontail Rabbits in Relation to Trees and Farm Crops</a>
+<div class='author'>Lantz, David E. (David Ernest), 1855-1918</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34562, {&quot;Title&quot;:&quot;John Deere&#39;s Steel Plow&quot;,&quot;Topics&quot;:[&quot;Plows&quot;,&quot;Deere, John, 1804-1886&quot;],&quot;Primary&quot;:&quot;34562.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kendall, Edward C.&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;34562&quot;});" class='title'>John Deere's Steel Plow</a>
+<div class='author'>Kendall, Edward C.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35542, {&quot;Title&quot;:&quot;House Rats and Mice&quot;,&quot;Topics&quot;:[&quot;Mice&quot;,&quot;Rats&quot;],&quot;Primary&quot;:&quot;35542.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lantz, David E. (David Ernest), 1855-1918&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;35542&quot;});" class='title'>House Rats and Mice</a>
+<div class='author'>Lantz, David E. (David Ernest), 1855-1918</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35696, {&quot;Title&quot;:&quot;What I know of farming: - a series of brief and plain expositions of practical agriculture as an art based upon science&quot;,&quot;Topics&quot;:[&quot;Agriculture -- United States&quot;],&quot;Primary&quot;:&quot;35696.htm&quot;,&quot;CreatorNames&quot;:[&quot;Greeley, Horace, 1811-1872&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;35696&quot;});" class='title'>What I know of farming:<br><span class='subtitle'>- a series of brief and plain expositions of practical agriculture as an art based upon science</span></a>
+<div class='author'>Greeley, Horace, 1811-1872</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35816, {&quot;Title&quot;:&quot;The Philippine Agricultural Review. Vol. VIII, First Quarter, 1915 No. 1&quot;,&quot;Topics&quot;:[&quot;Agriculture -- Philippines -- Periodicals&quot;,&quot;Agriculture -- Periodicals&quot;],&quot;Primary&quot;:&quot;35816.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;,&quot;Edwards, H. T. [Editor]&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;35816&quot;});" class='title'>The Philippine Agricultural Review. Vol. VIII, First Quarter, 1915 No. 1</a>
+<div class='author'>Various, Edwards, H. T. [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38955, {&quot;Title&quot;:&quot;Prairie Farmer, Vol. 56: No. 12, March 22, 1884 - A Weekly Journal for the Farm, Orchard and Fireside&quot;,&quot;Topics&quot;:[&quot;Farm life -- Periodicals&quot;,&quot;United States -- Rural conditions -- Periodicals&quot;,&quot;Agriculture -- United States -- Periodicals&quot;],&quot;Primary&quot;:&quot;38955.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;38955&quot;});" class='title'>Prairie Farmer, Vol. 56:<br><span class='subtitle'>No. 12, March 22, 1884 - A Weekly Journal for the Farm, Orchard and Fireside</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39483, {&quot;Title&quot;:&quot;Farm Boys and Girls&quot;,&quot;Topics&quot;:[&quot;Girls&quot;,&quot;Boys&quot;,&quot;Farm life&quot;],&quot;Primary&quot;:&quot;39483.htm&quot;,&quot;CreatorNames&quot;:[&quot;McKeever, William A. (William Arch), 1868-1940&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;39483&quot;});" class='title'>Farm Boys and Girls</a>
+<div class='author'>McKeever, William A. (William Arch), 1868-1940</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39791, {&quot;Title&quot;:&quot;Farm Mechanics: Machinery and Its Use to Save Hand Labor on the Farm.&quot;,&quot;Topics&quot;:[&quot;Agricultural machinery&quot;],&quot;Primary&quot;:&quot;39791.htm&quot;,&quot;CreatorNames&quot;:[&quot;Shearer, Herbert A.&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;39791&quot;});" class='title'>Farm Mechanics:<br><span class='subtitle'>Machinery and Its Use to Save Hand Labor on the Farm.</span></a>
+<div class='author'>Shearer, Herbert A.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39869, {&quot;Title&quot;:&quot;Farming with Dynamite: A Few Hints to Farmers&quot;,&quot;Topics&quot;:[&quot;Explosives in agriculture&quot;],&quot;Primary&quot;:&quot;39869.htm&quot;,&quot;CreatorNames&quot;:[&quot;E.I. du Pont de Nemours &amp; Company&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;39869&quot;});" class='title'>Farming with Dynamite:<br><span class='subtitle'>A Few Hints to Farmers</span></a>
+<div class='author'>E.I. du Pont de Nemours & Company</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40670, {&quot;Title&quot;:&quot;Makers of Modern Agriculture&quot;,&quot;Topics&quot;:[&quot;Agriculturists -- Biography&quot;,&quot;Coke, Thomas William, Earl of Leicester, 1752-1842&quot;,&quot;McCormick, Cyrus Hall, 1809-1884&quot;,&quot;Sinclair, John, Sir, 1754-1835&quot;,&quot;Tull, Jethro, 1674-1741&quot;,&quot;Young, Arthur, 1741-1820&quot;],&quot;Primary&quot;:&quot;40670.htm&quot;,&quot;CreatorNames&quot;:[&quot;Macdonald, William&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;40670&quot;});" class='title'>Makers of Modern Agriculture</a>
+<div class='author'>Macdonald, William</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40888, {&quot;Title&quot;:&quot;Jethro Wood, Inventor of the Modern Plow. - A Brief Account of His Life, Services, and Trials; Together with Facts Subsequent to his Death, and Incident to His Great Invention&quot;,&quot;Topics&quot;:[&quot;Plows&quot;,&quot;Wood, Jethro, 1774-1834&quot;],&quot;Primary&quot;:&quot;40888.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gilbert, Frank, 1839-1899&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;40888&quot;});" class='title'>Jethro Wood, Inventor of the Modern Plow. -<br><span class='subtitle'>A Brief Account of His Life, Services, and Trials; Together with Facts Subsequent to his Death, and Incident to His Great Invention</span></a>
+<div class='author'>Gilbert, Frank, 1839-1899</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4509, {&quot;Title&quot;:&quot;Three Acres and Liberty&quot;,&quot;Topics&quot;:[&quot;Agriculture&quot;],&quot;Primary&quot;:&quot;4509.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hall, Bolton, 1854-1938&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;4509&quot;});" class='title'>Three Acres and Liberty</a>
+<div class='author'>Hall, Bolton, 1854-1938</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45154, {&quot;Title&quot;:&quot;The Library of Work and Play: Outdoor Work&quot;,&quot;Topics&quot;:[&quot;Agriculture -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;45154.htm&quot;,&quot;CreatorNames&quot;:[&quot;Miller, Mary Rogers, 1868-&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;45154&quot;});" class='title'>The Library of Work and Play:<br><span class='subtitle'>Outdoor Work</span></a>
+<div class='author'>Miller, Mary Rogers, 1868-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4525, {&quot;Title&quot;:&quot;The Farm That Won&#39;t Wear Out&quot;,&quot;Topics&quot;:[&quot;Agriculture&quot;,&quot;Soils&quot;,&quot;Fertilizers&quot;],&quot;Primary&quot;:&quot;4525.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hopkins, Cyril G. (Cyril George), 1866-1919&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;4525&quot;});" class='title'>The Farm That Won't Wear Out</a>
+<div class='author'>Hopkins, Cyril G. (Cyril George), 1866-1919</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4527, {&quot;Title&quot;:&quot;The Story of the Soil; from the Basis of Absolute Science and Real Life&quot;,&quot;Topics&quot;:[&quot;Soils&quot;],&quot;Primary&quot;:&quot;4527.txt&quot;,&quot;CreatorNames&quot;:[&quot;Hopkins, Cyril G. (Cyril George), 1866-1919&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;4527&quot;});" class='title'>The Story of the Soil;<br><span class='subtitle'>from the Basis of Absolute Science and Real Life</span></a>
+<div class='author'>Hopkins, Cyril G. (Cyril George), 1866-1919</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46995, {&quot;Title&quot;:&quot;The Rural Magazine, and Literary Evening Fire-Side, Vol. 1 No. 01 (1820)&quot;,&quot;Topics&quot;:[&quot;Agriculture&quot;,&quot;Agriculture -- Periodicals&quot;],&quot;Primary&quot;:&quot;46995.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AP&quot;,&quot;S&quot;],&quot;PG_ID&quot;:&quot;46995&quot;});" class='title'>The Rural Magazine, and Literary Evening Fire-Side, Vol. 1 No. 01 (1820)</a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48129, {&quot;Title&quot;:&quot;The Red Cow and Her Friends&quot;,&quot;Topics&quot;:[&quot;Domestic animals&quot;],&quot;Primary&quot;:&quot;48129.htm&quot;,&quot;CreatorNames&quot;:[&quot;McArthur, Peter, 1866-1924&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;48129&quot;});" class='title'>The Red Cow and Her Friends</a>
+<div class='author'>McArthur, Peter, 1866-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48318, {&quot;Title&quot;:&quot;In Pastures Green&quot;,&quot;Topics&quot;:[&quot;Farm life&quot;],&quot;Primary&quot;:&quot;48318.htm&quot;,&quot;CreatorNames&quot;:[&quot;McArthur, Peter, 1866-1924&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;48318&quot;});" class='title'>In Pastures Green</a>
+<div class='author'>McArthur, Peter, 1866-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48709, {&quot;Title&quot;:&quot;Information for the Guidance of Field Men and Cooperators of the Bureau of Biological Survey Engaged in the Control of Injurious Rodents and Predatory Animals&quot;,&quot;Topics&quot;:[&quot;Rodents -- Control -- United States&quot;,&quot;Predatory animals -- Control -- United States&quot;],&quot;Primary&quot;:&quot;48709.htm&quot;,&quot;CreatorNames&quot;:[&quot;Redington, Paul G. (Paul Goodwin), 1878-1942&quot;,&quot;Young, Stanley Paul, 1889-1969&quot;],&quot;LoCC&quot;:[&quot;S&quot;,&quot;SK&quot;],&quot;PG_ID&quot;:&quot;48709&quot;});" class='title'>Information for the Guidance of Field Men and Cooperators of the Bureau of Biological Survey Engaged in the Control of Injurious Rodents and Predatory Animals</a>
+<div class='author'>Redington, Paul G. (Paul Goodwin), 1878-1942, Young, Stanley Paul, 1889-1969</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48741, {&quot;Title&quot;:&quot;The Rural Magazine, and Literary Evening Fire-Side, Vol. 1 No. 02 (1820)&quot;,&quot;Topics&quot;:[&quot;Agriculture&quot;,&quot;Agriculture -- Periodicals&quot;],&quot;Primary&quot;:&quot;48741.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AP&quot;,&quot;S&quot;],&quot;PG_ID&quot;:&quot;48741&quot;});" class='title'>The Rural Magazine, and Literary Evening Fire-Side, Vol. 1 No. 02 (1820)</a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48748, {&quot;Title&quot;:&quot;The Rural Magazine, and Literary Evening Fire-Side, Vol. 1 No. 04 (1820)&quot;,&quot;Topics&quot;:[&quot;Agriculture&quot;,&quot;Agriculture -- Periodicals&quot;],&quot;Primary&quot;:&quot;48748.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AP&quot;,&quot;S&quot;],&quot;PG_ID&quot;:&quot;48748&quot;});" class='title'>The Rural Magazine, and Literary Evening Fire-Side, Vol. 1 No. 04 (1820)</a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48753, {&quot;Title&quot;:&quot;Ten Acres Enough - A practical experience, showing how a very small farm may be made to keep a very large family&quot;,&quot;Topics&quot;:[&quot;Agriculture -- Popular works&quot;],&quot;Primary&quot;:&quot;48753.htm&quot;,&quot;CreatorNames&quot;:[&quot;Morris, Edmund, 1804-1874&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;48753&quot;});" class='title'>Ten Acres Enough -<br><span class='subtitle'>A practical experience, showing how a very small farm may be made to keep a very large family</span></a>
+<div class='author'>Morris, Edmund, 1804-1874</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48759, {&quot;Title&quot;:&quot;The Rural Magazine, and Literary Evening Fire-Side, Vol. 1 No. 05 (1820)&quot;,&quot;Topics&quot;:[&quot;Agriculture&quot;,&quot;Agriculture -- Periodicals&quot;],&quot;Primary&quot;:&quot;48759.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AP&quot;,&quot;S&quot;],&quot;PG_ID&quot;:&quot;48759&quot;});" class='title'>The Rural Magazine, and Literary Evening Fire-Side, Vol. 1 No. 05 (1820)</a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48760, {&quot;Title&quot;:&quot;The Rural Magazine, and Literary Evening Fire-Side, Vol. 1 No. 06 (1820)&quot;,&quot;Topics&quot;:[&quot;Agriculture&quot;,&quot;Agriculture -- Periodicals&quot;],&quot;Primary&quot;:&quot;48760.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AP&quot;,&quot;S&quot;],&quot;PG_ID&quot;:&quot;48760&quot;});" class='title'>The Rural Magazine, and Literary Evening Fire-Side, Vol. 1 No. 06 (1820)</a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48766, {&quot;Title&quot;:&quot;The Rural Magazine, and Literary Evening Fire-Side, Vol. 1 No. 07 (1820)&quot;,&quot;Topics&quot;:[&quot;Agriculture&quot;,&quot;Agriculture -- Periodicals&quot;],&quot;Primary&quot;:&quot;48766.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AP&quot;,&quot;S&quot;],&quot;PG_ID&quot;:&quot;48766&quot;});" class='title'>The Rural Magazine, and Literary Evening Fire-Side, Vol. 1 No. 07 (1820)</a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48775, {&quot;Title&quot;:&quot;The Rural Magazine, and Literary Evening Fire-Side, Vol. 1 No. 08 (1820)&quot;,&quot;Topics&quot;:[&quot;Agriculture&quot;,&quot;Agriculture -- Periodicals&quot;],&quot;Primary&quot;:&quot;48775.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AP&quot;,&quot;S&quot;],&quot;PG_ID&quot;:&quot;48775&quot;});" class='title'>The Rural Magazine, and Literary Evening Fire-Side, Vol. 1 No. 08 (1820)</a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48786, {&quot;Title&quot;:&quot;The Rural Magazine, and Literary Evening Fire-Side, Vol. 1 No. 09 (1820)&quot;,&quot;Topics&quot;:[&quot;Agriculture&quot;,&quot;Agriculture -- Periodicals&quot;],&quot;Primary&quot;:&quot;48786.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AP&quot;,&quot;S&quot;],&quot;PG_ID&quot;:&quot;48786&quot;});" class='title'>The Rural Magazine, and Literary Evening Fire-Side, Vol. 1 No. 09 (1820)</a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48802, {&quot;Title&quot;:&quot;The Rural Magazine, and Literary Evening Fire-Side, Vol. 1 No. 10 (1820)&quot;,&quot;Topics&quot;:[&quot;Agriculture&quot;,&quot;Agriculture -- Periodicals&quot;],&quot;Primary&quot;:&quot;48802.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AP&quot;,&quot;S&quot;],&quot;PG_ID&quot;:&quot;48802&quot;});" class='title'>The Rural Magazine, and Literary Evening Fire-Side, Vol. 1 No. 10 (1820)</a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48805, {&quot;Title&quot;:&quot;The Rural Magazine, and Literary Evening Fire-Side, Vol. 1 No. 11 (1820)&quot;,&quot;Topics&quot;:[&quot;Agriculture&quot;,&quot;Agriculture -- Periodicals&quot;],&quot;Primary&quot;:&quot;48805.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AP&quot;,&quot;S&quot;],&quot;PG_ID&quot;:&quot;48805&quot;});" class='title'>The Rural Magazine, and Literary Evening Fire-Side, Vol. 1 No. 11 (1820)</a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48812, {&quot;Title&quot;:&quot;The Rural Magazine, and Literary Evening Fire-Side, Vol. 1 No. 12 (1820)&quot;,&quot;Topics&quot;:[&quot;Agriculture&quot;,&quot;Agriculture -- Periodicals&quot;],&quot;Primary&quot;:&quot;48812.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AP&quot;,&quot;S&quot;],&quot;PG_ID&quot;:&quot;48812&quot;});" class='title'>The Rural Magazine, and Literary Evening Fire-Side, Vol. 1 No. 12 (1820)</a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49036, {&quot;Title&quot;:&quot;Atoms in Agriculture: Applications of Nuclear Science to Agriculture (Revised)&quot;,&quot;Topics&quot;:[&quot;Radioisotopes in agriculture&quot;,&quot;Agriculture -- Research&quot;],&quot;Primary&quot;:&quot;49036.htm&quot;,&quot;CreatorNames&quot;:[&quot;Osborne, Thomas S.&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;49036&quot;});" class='title'>Atoms in Agriculture:<br><span class='subtitle'>Applications of Nuclear Science to Agriculture (Revised)</span></a>
+<div class='author'>Osborne, Thomas S.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49172, {&quot;Title&quot;:&quot;Cavity-Nesting Birds of North American Forests - Agriculture Handbook 511&quot;,&quot;Topics&quot;:[&quot;Birds -- Nests&quot;,&quot;Birds -- North America&quot;,&quot;Forest birds -- North America&quot;,&quot;Cavity-nesting birds -- North America&quot;],&quot;Primary&quot;:&quot;49172.htm&quot;,&quot;CreatorNames&quot;:[&quot;Evans, Keith E.&quot;,&quot;Patton, David R.&quot;,&quot;Scott, Virgil E.&quot;,&quot;Stone, Charles P., 1937-&quot;,&quot;Singer, Arthur, 1917-1990 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;QL&quot;,&quot;S&quot;],&quot;PG_ID&quot;:&quot;49172&quot;});" class='title'>Cavity-Nesting Birds of North American Forests -<br><span class='subtitle'>Agriculture Handbook 511</span></a>
+<div class='author'>Evans, Keith E., Patton, David R., Scott, Virgil E., Stone, Charles P., 1937-, Singer, Arthur, 1917-1990 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49454, {&quot;Title&quot;:&quot;The Mentor: Reclaiming the Desert, Vol. 6, Num. 17, Serial No. 165, October 15, 1918&quot;,&quot;Topics&quot;:[&quot;Desert reclamation -- Southwest, New&quot;,&quot;Desert resources development -- Southwest, New&quot;,&quot;Irrigation -- Southest, New&quot;],&quot;Primary&quot;:&quot;49454.htm&quot;,&quot;CreatorNames&quot;:[&quot;Blanchard, C. J. (Clarence John), 1863-&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;49454&quot;});" class='title'>The Mentor:<br><span class='subtitle'>Reclaiming the Desert, Vol. 6, Num. 17, Serial No. 165, October 15, 1918</span></a>
+<div class='author'>Blanchard, C. J. (Clarence John), 1863-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49800, {&quot;Title&quot;:&quot;The Rural Magazine, and Literary Evening Fire-Side, Vol. 1 No. 03 (1820)&quot;,&quot;Topics&quot;:[&quot;Agriculture&quot;,&quot;Agriculture -- Periodicals&quot;],&quot;Primary&quot;:&quot;49800.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AP&quot;,&quot;S&quot;],&quot;PG_ID&quot;:&quot;49800&quot;});" class='title'>The Rural Magazine, and Literary Evening Fire-Side, Vol. 1 No. 03 (1820)</a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5152, {&quot;Title&quot;:&quot;One Thousand Questions in California Agriculture Answered&quot;,&quot;Topics&quot;:[&quot;Agriculture -- California&quot;],&quot;Primary&quot;:&quot;5152.txt&quot;,&quot;CreatorNames&quot;:[&quot;Wickson, Edward J. (Edward James), 1848-1923&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;5152&quot;});" class='title'>One Thousand Questions in California Agriculture Answered</a>
+<div class='author'>Wickson, Edward J. (Edward James), 1848-1923</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5350, {&quot;Title&quot;:&quot;Farmers of Forty Centuries; Or, Permanent Agriculture in China, Korea, and Japan&quot;,&quot;Topics&quot;:[&quot;Agriculture -- Japan&quot;,&quot;Agriculture -- China&quot;,&quot;Agriculture -- Korea&quot;],&quot;Primary&quot;:&quot;5350.txt&quot;,&quot;CreatorNames&quot;:[&quot;King, F. H. (Franklin Hiram), 1848-1911&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;5350&quot;});" class='title'>Farmers of Forty Centuries;<br><span class='subtitle'>Or, Permanent Agriculture in China, Korea, and Japan</span></a>
+<div class='author'>King, F. H. (Franklin Hiram), 1848-1911</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55220, {&quot;Title&quot;:&quot;Five Acres Too Much - A truthful elucidation of the attractions of the country, and a careful consideration of the question of profit and loss as involved in amateur farming, with much valuable advice and instruction to those about purchasing large or small places in the rural districts&quot;,&quot;Topics&quot;:[&quot;Country life&quot;],&quot;Primary&quot;:&quot;55220.htm&quot;,&quot;CreatorNames&quot;:[&quot;Roosevelt, Robert Barnwell, 1829-1906&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;55220&quot;});" class='title'>Five Acres Too Much -<br><span class='subtitle'>A truthful elucidation of the attractions of the country, and a careful consideration of the question of profit and loss as involved in amateur farming, with much valuable advice and instruction to those about purchasing large or small places in the rural districts</span></a>
+<div class='author'>Roosevelt, Robert Barnwell, 1829-1906</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56477, {&quot;Title&quot;:&quot;The Lady&#39;s Country Companion; Or, How to Enjoy a Country Life Rationally&quot;,&quot;Topics&quot;:[&quot;Cooking&quot;,&quot;Country life&quot;,&quot;Home economics&quot;],&quot;Primary&quot;:&quot;56477.htm&quot;,&quot;CreatorNames&quot;:[&quot;Loudon, Mrs. (Jane), 1807-1858&quot;],&quot;LoCC&quot;:[&quot;S&quot;,&quot;TX&quot;],&quot;PG_ID&quot;:&quot;56477&quot;});" class='title'>The Lady's Country Companion;<br><span class='subtitle'>Or, How to Enjoy a Country Life Rationally</span></a>
+<div class='author'>Loudon, Mrs. (Jane), 1807-1858</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56640, {&quot;Title&quot;:&quot;Pleasant Talk About Fruits, Flowers and Farming&quot;,&quot;Topics&quot;:[&quot;Agriculture&quot;,&quot;Gardening&quot;,&quot;Flowers&quot;],&quot;Primary&quot;:&quot;56640.htm&quot;,&quot;CreatorNames&quot;:[&quot;Beecher, Henry Ward, 1813-1887&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;56640&quot;});" class='title'>Pleasant Talk About Fruits, Flowers and Farming</a>
+<div class='author'>Beecher, Henry Ward, 1813-1887</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57457, {&quot;Title&quot;:&quot;The Book of Husbandry&quot;,&quot;Topics&quot;:[&quot;Conduct of life&quot;,&quot;Agriculture -- England&quot;,&quot;Home economics, Rural&quot;],&quot;Primary&quot;:&quot;57457.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fitzherbert, Anthony, 1470-1538&quot;,&quot;Skeat, Walter W. (Walter William), 1835-1912 [Editor]&quot;],&quot;LoCC&quot;:[&quot;PE&quot;,&quot;S&quot;],&quot;PG_ID&quot;:&quot;57457&quot;});" class='title'>The Book of Husbandry</a>
+<div class='author'>Fitzherbert, Anthony, 1470-1538, Skeat, Walter W. (Walter William), 1835-1912 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58962, {&quot;Title&quot;:&quot;Making Home Profitable&quot;,&quot;Topics&quot;:[&quot;Agriculture&quot;,&quot;Country life&quot;],&quot;Primary&quot;:&quot;58962.htm&quot;,&quot;CreatorNames&quot;:[&quot;Saint Maur, Kate V. (Kate Vandenhoff), 1866-&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;58962&quot;});" class='title'>Making Home Profitable</a>
+<div class='author'>Saint Maur, Kate V. (Kate Vandenhoff), 1866-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59315, {&quot;Title&quot;:&quot;The Periodical Cicada, \&quot;\&quot;the 17-year Locust\&quot;\&quot;&quot;,&quot;Topics&quot;:[&quot;Periodical cicada&quot;],&quot;Primary&quot;:&quot;59315.htm&quot;,&quot;CreatorNames&quot;:[&quot;United States. Department of Agriculture&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;59315&quot;});" class='title'>The Periodical Cicada, "the 17-year Locust"</a>
+<div class='author'>United States. Department of Agriculture</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59316, {&quot;Title&quot;:&quot;Computers on the Farm - Farm Uses for Computers, How to Select Software and Hardware, and Online Information Sources in Agriculture&quot;,&quot;Topics&quot;:[&quot;Microcomputers&quot;,&quot;Farms -- United States&quot;,&quot;Information storage and retrieval systems -- Agriculture&quot;],&quot;Primary&quot;:&quot;59316.htm&quot;,&quot;CreatorNames&quot;:[&quot;Smith, Deborah Takiff&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;59316&quot;});" class='title'>Computers on the Farm -<br><span class='subtitle'>Farm Uses for Computers, How to Select Software and Hardware, and Online Information Sources in Agriculture</span></a>
+<div class='author'>Smith, Deborah Takiff</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59362, {&quot;Title&quot;:&quot;Weather, Crops, and Markets. Vol. 2, No. 6&quot;,&quot;Topics&quot;:[&quot;Agriculture -- United States -- Statistics -- Periodicals&quot;,&quot;Agriculture -- Statistics -- Periodicals&quot;,&quot;Crops and climate -- United States -- Periodicals&quot;,&quot;Farm produce -- United States -- Marketing -- Statistics -- Periodicals&quot;],&quot;Primary&quot;:&quot;59362.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;HD&quot;,&quot;S&quot;],&quot;PG_ID&quot;:&quot;59362&quot;});" class='title'>Weather, Crops, and Markets. Vol. 2, No. 6</a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59381, {&quot;Title&quot;:&quot;Simple Plumbing Repairs for the Home and Farmstead&quot;,&quot;Topics&quot;:[&quot;Plumbing -- Amateurs&#39; manuals&quot;],&quot;Primary&quot;:&quot;59381.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;S&quot;,&quot;TH&quot;],&quot;PG_ID&quot;:&quot;59381&quot;});" class='title'>Simple Plumbing Repairs for the Home and Farmstead</a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59485, {&quot;Title&quot;:&quot;Wintering Bees in Cellars&quot;,&quot;Topics&quot;:[&quot;Bee culture&quot;],&quot;Primary&quot;:&quot;59485.htm&quot;,&quot;CreatorNames&quot;:[&quot;Demuth, Geo. S. (George S.)&quot;,&quot;Phillips, Everett Franklin, 1878-1951&quot;],&quot;LoCC&quot;:[&quot;S&quot;,&quot;SF&quot;],&quot;PG_ID&quot;:&quot;59485&quot;});" class='title'>Wintering Bees in Cellars</a>
+<div class='author'>Demuth, Geo. S. (George S.), Phillips, Everett Franklin, 1878-1951</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59502, {&quot;Title&quot;:&quot;The Preparation of Bees for Outdoor Wintering&quot;,&quot;Topics&quot;:[&quot;Bee culture&quot;],&quot;Primary&quot;:&quot;59502.htm&quot;,&quot;CreatorNames&quot;:[&quot;Demuth, Geo. S. (George S.)&quot;,&quot;Phillips, Everett Franklin, 1878-1951&quot;],&quot;LoCC&quot;:[&quot;S&quot;,&quot;SF&quot;],&quot;PG_ID&quot;:&quot;59502&quot;});" class='title'>The Preparation of Bees for Outdoor Wintering</a>
+<div class='author'>Demuth, Geo. S. (George S.), Phillips, Everett Franklin, 1878-1951</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59503, {&quot;Title&quot;:&quot;Home Manufacture and Use of Unfermented Grape Juice&quot;,&quot;Topics&quot;:[&quot;Grape juice&quot;],&quot;Primary&quot;:&quot;59503.htm&quot;,&quot;CreatorNames&quot;:[&quot;Husmann, George C. (George Charles), 1861-1939&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;59503&quot;});" class='title'>Home Manufacture and Use of Unfermented Grape Juice</a>
+<div class='author'>Husmann, George C. (George Charles), 1861-1939</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59546, {&quot;Title&quot;:&quot;Turkey Raising&quot;,&quot;Topics&quot;:[&quot;Turkeys&quot;],&quot;Primary&quot;:&quot;59546.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lee, Alfred R., 1887-&quot;,&quot;Marsden, Stanley J., 1897-&quot;,&quot;Jull, Morley A. (Morley Allan), 1885-1959 [Editor]&quot;],&quot;LoCC&quot;:[&quot;S&quot;,&quot;SF&quot;],&quot;PG_ID&quot;:&quot;59546&quot;});" class='title'>Turkey Raising</a>
+<div class='author'>Lee, Alfred R., 1887-, Marsden, Stanley J., 1897-, Jull, Morley A. (Morley Allan), 1885-1959 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59554, {&quot;Title&quot;:&quot;House Flies&quot;,&quot;Topics&quot;:[&quot;Housefly&quot;],&quot;Primary&quot;:&quot;59554.htm&quot;,&quot;CreatorNames&quot;:[&quot;Howard, L. O. (Leland Ossian), 1857-1950&quot;],&quot;LoCC&quot;:[&quot;QL&quot;,&quot;S&quot;],&quot;PG_ID&quot;:&quot;59554&quot;});" class='title'>House Flies</a>
+<div class='author'>Howard, L. O. (Leland Ossian), 1857-1950</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59555, {&quot;Title&quot;:&quot;Poison-ivy, Poison-oak and Poison Sumac: Identification, Precautions and Eradication&quot;,&quot;Topics&quot;:[&quot;Poison ivy&quot;,&quot;Poison oak&quot;,&quot;Poison sumac&quot;],&quot;Primary&quot;:&quot;59555.htm&quot;,&quot;CreatorNames&quot;:[&quot;Crooks, D. M. (Donald Mundell), 1902-&quot;,&quot;Kephart, Leonard Wheeler, 1892-&quot;],&quot;LoCC&quot;:[&quot;QK&quot;,&quot;S&quot;],&quot;PG_ID&quot;:&quot;59555&quot;});" class='title'>Poison-ivy, Poison-oak and Poison Sumac:<br><span class='subtitle'>Identification, Precautions and Eradication</span></a>
+<div class='author'>Crooks, D. M. (Donald Mundell), 1902-, Kephart, Leonard Wheeler, 1892-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59579, {&quot;Title&quot;:&quot;The American Agriculturist. Vol. II. No. XI, December 1843 - Designed to Improve the Planter, the Farmer, the Stock-breeder, and the Horticulturist&quot;,&quot;Topics&quot;:[&quot;Agriculture -- United States -- Periodicals&quot;,&quot;Agriculture -- Periodicals&quot;],&quot;Primary&quot;:&quot;59579.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;,&quot;Allen, A. B. (Anthony Benezet), 1802-1892 [Editor]&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;59579&quot;});" class='title'>The American Agriculturist. Vol. II. No. XI, December 1843 -<br><span class='subtitle'>Designed to Improve the Planter, the Farmer, the Stock-breeder, and the Horticulturist</span></a>
+<div class='author'>Various, Allen, A. B. (Anthony Benezet), 1802-1892 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59599, {&quot;Title&quot;:&quot;Farmhouse Plans&quot;,&quot;Topics&quot;:[&quot;Farmhouses -- United States -- Designs and plans&quot;,&quot;Architecture, Domestic -- United States -- Designs and plans&quot;],&quot;Primary&quot;:&quot;59599.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ashby, Wallace, 1890-&quot;],&quot;LoCC&quot;:[&quot;NA&quot;,&quot;S&quot;],&quot;PG_ID&quot;:&quot;59599&quot;});" class='title'>Farmhouse Plans</a>
+<div class='author'>Ashby, Wallace, 1890-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59625, {&quot;Title&quot;:&quot;Hemp&quot;,&quot;Topics&quot;:[&quot;Hemp&quot;],&quot;Primary&quot;:&quot;59625.htm&quot;,&quot;CreatorNames&quot;:[&quot;Robinson, Brittain B. (Brittain Bragunier), 1899-&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;59625&quot;});" class='title'>Hemp</a>
+<div class='author'>Robinson, Brittain B. (Brittain Bragunier), 1899-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59630, {&quot;Title&quot;:&quot;Comb Honey&quot;,&quot;Topics&quot;:[&quot;Honey, Comb&quot;],&quot;Primary&quot;:&quot;59630.htm&quot;,&quot;CreatorNames&quot;:[&quot;Demuth, Geo. S. (George S.)&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;59630&quot;});" class='title'>Comb Honey</a>
+<div class='author'>Demuth, Geo. S. (George S.)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5992, {&quot;Title&quot;:&quot;Station Amusements in New Zealand&quot;,&quot;Topics&quot;:[&quot;New Zealand -- Description and travel&quot;,&quot;Country life -- New Zealand&quot;],&quot;Primary&quot;:&quot;5992.htm&quot;,&quot;CreatorNames&quot;:[&quot;Barker, Lady (Mary Anne), 1831-1911&quot;],&quot;LoCC&quot;:[&quot;DU&quot;,&quot;S&quot;],&quot;PG_ID&quot;:&quot;5992&quot;});" class='title'>Station Amusements in New Zealand</a>
+<div class='author'>Barker, Lady (Mary Anne), 1831-1911</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6104, {&quot;Title&quot;:&quot;Station Life in New Zealand&quot;,&quot;Topics&quot;:[&quot;Barker, Lady (Mary Anne), 1831-1911 -- Correspondence&quot;,&quot;Sheep ranches -- New Zealand&quot;,&quot;Governors&#39; spouses -- New Zealand -- Correspondence&quot;,&quot;Country life -- New Zealand -- History&quot;,&quot;New Zealand -- Biography&quot;,&quot;New Zealand -- Social life and customs&quot;],&quot;Primary&quot;:&quot;6104.htm&quot;,&quot;CreatorNames&quot;:[&quot;Barker, Lady (Mary Anne), 1831-1911&quot;],&quot;LoCC&quot;:[&quot;DU&quot;,&quot;S&quot;],&quot;PG_ID&quot;:&quot;6104&quot;});" class='title'>Station Life in New Zealand</a>
+<div class='author'>Barker, Lady (Mary Anne), 1831-1911</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61917, {&quot;Title&quot;:&quot;Educación común en el Estado de Buenos-Aires&quot;,&quot;Topics&quot;:[&quot;Agricultural education -- Argentina&quot;],&quot;Primary&quot;:&quot;61917.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sarmiento, Domingo Faustino, 1811-1888&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;61917&quot;});" class='title'>Educación común en el Estado de Buenos-Aires</a>
+<div class='author'>Sarmiento, Domingo Faustino, 1811-1888</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62592, {&quot;Title&quot;:&quot;Simple Plumbing Repairs in the Home&quot;,&quot;Topics&quot;:[&quot;Plumbing -- Amateurs&#39; manuals&quot;,&quot;Plumbing -- Repairing&quot;],&quot;Primary&quot;:&quot;62592.htm&quot;,&quot;CreatorNames&quot;:[&quot;Warren, George M. (George Milton)&quot;],&quot;LoCC&quot;:[&quot;S&quot;,&quot;TH&quot;],&quot;PG_ID&quot;:&quot;62592&quot;});" class='title'>Simple Plumbing Repairs in the Home</a>
+<div class='author'>Warren, George M. (George Milton)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62605, {&quot;Title&quot;:&quot;Sewage and Garbage Disposal on the Farm&quot;,&quot;Topics&quot;:[&quot;Sewage disposal, Rural&quot;,&quot;Sanitation, Rural&quot;],&quot;Primary&quot;:&quot;62605.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rockey, J. W. (John Wesley), 1909-&quot;,&quot;Simons, Joseph Winslow, 1908-&quot;],&quot;LoCC&quot;:[&quot;S&quot;,&quot;TD&quot;],&quot;PG_ID&quot;:&quot;62605&quot;});" class='title'>Sewage and Garbage Disposal on the Farm</a>
+<div class='author'>Rockey, J. W. (John Wesley), 1909-, Simons, Joseph Winslow, 1908-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62676, {&quot;Title&quot;:&quot;Sewage Disposal on the Farm, and Protection of Drinking Water&quot;,&quot;Topics&quot;:[&quot;Drinking water&quot;,&quot;Sewage disposal, Rural&quot;],&quot;Primary&quot;:&quot;62676.htm&quot;,&quot;CreatorNames&quot;:[&quot;Smith, Theobald, 1859-1934&quot;],&quot;LoCC&quot;:[&quot;S&quot;,&quot;TD&quot;],&quot;PG_ID&quot;:&quot;62676&quot;});" class='title'>Sewage Disposal on the Farm, and Protection of Drinking Water</a>
+<div class='author'>Smith, Theobald, 1859-1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62715, {&quot;Title&quot;:&quot;Drug Plants Under Cultivation&quot;,&quot;Topics&quot;:[&quot;Botany, Medical&quot;,&quot;Medicinal plants -- Culture -- United States&quot;],&quot;Primary&quot;:&quot;62715.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stockberger, W. W. (Warner Webster), 1872-1944&quot;],&quot;LoCC&quot;:[&quot;QK&quot;,&quot;S&quot;],&quot;PG_ID&quot;:&quot;62715&quot;});" class='title'>Drug Plants Under Cultivation</a>
+<div class='author'>Stockberger, W. W. (Warner Webster), 1872-1944</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62782, {&quot;Title&quot;:&quot;Sweet Clover: Utilization&quot;,&quot;Topics&quot;:[&quot;Sweet clover&quot;],&quot;Primary&quot;:&quot;62782.htm&quot;,&quot;CreatorNames&quot;:[&quot;Coe, H. S., 1888-1918&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;62782&quot;});" class='title'>Sweet Clover:<br><span class='subtitle'>Utilization</span></a>
+<div class='author'>Coe, H. S., 1888-1918</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63094, {&quot;Title&quot;:&quot;Sewage and sewerage of farm homes [1922]&quot;,&quot;Topics&quot;:[&quot;Sewage disposal, Rural&quot;,&quot;Sewerage, Rural&quot;],&quot;Primary&quot;:&quot;63094.htm&quot;,&quot;CreatorNames&quot;:[&quot;Warren, George M. (George Milton)&quot;],&quot;LoCC&quot;:[&quot;S&quot;,&quot;TD&quot;],&quot;PG_ID&quot;:&quot;63094&quot;});" class='title'>Sewage and sewerage of farm homes [1922]</a>
+<div class='author'>Warren, George M. (George Milton)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63131, {&quot;Title&quot;:&quot;Sewage and sewerage of farm homes [1928]&quot;,&quot;Topics&quot;:[&quot;Sewage disposal, Rural&quot;,&quot;Sewerage, Rural&quot;],&quot;Primary&quot;:&quot;63131.htm&quot;,&quot;CreatorNames&quot;:[&quot;Warren, George M. (George Milton)&quot;],&quot;LoCC&quot;:[&quot;S&quot;,&quot;TD&quot;],&quot;PG_ID&quot;:&quot;63131&quot;});" class='title'>Sewage and sewerage of farm homes [1928]</a>
+<div class='author'>Warren, George M. (George Milton)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63165, {&quot;Title&quot;:&quot;Crimson Clover: Growing the Crop&quot;,&quot;Topics&quot;:[&quot;Crimson clover&quot;],&quot;Primary&quot;:&quot;63165.htm&quot;,&quot;CreatorNames&quot;:[&quot;Westgate, J. M. (John Minton), 1878-1937&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;63165&quot;});" class='title'>Crimson Clover:<br><span class='subtitle'>Growing the Crop</span></a>
+<div class='author'>Westgate, J. M. (John Minton), 1878-1937</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63166, {&quot;Title&quot;:&quot;Growing Crimson Clover&quot;,&quot;Topics&quot;:[&quot;Crimson clover&quot;],&quot;Primary&quot;:&quot;63166.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kephart, Leonard Wheeler, 1892-&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;63166&quot;});" class='title'>Growing Crimson Clover</a>
+<div class='author'>Kephart, Leonard Wheeler, 1892-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63169, {&quot;Title&quot;:&quot;Crimson Clover [1938]&quot;,&quot;Topics&quot;:[&quot;Crimson clover&quot;,&quot;Crimson clover -- Varieties&quot;,&quot;Pasture plants&quot;,&quot;Forage plants&quot;],&quot;Primary&quot;:&quot;63169.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hollowell, E. A. (Eugene Amos), 1900-&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;63169&quot;});" class='title'>Crimson Clover [1938]</a>
+<div class='author'>Hollowell, E. A. (Eugene Amos), 1900-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63170, {&quot;Title&quot;:&quot;Crimson Clover [1947]&quot;,&quot;Topics&quot;:[&quot;Crimson clover&quot;,&quot;Crimson clover -- Varieties&quot;,&quot;Pasture plants&quot;,&quot;Forage plants&quot;],&quot;Primary&quot;:&quot;63170.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hollowell, E. A. (Eugene Amos), 1900-&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;63170&quot;});" class='title'>Crimson Clover [1947]</a>
+<div class='author'>Hollowell, E. A. (Eugene Amos), 1900-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65286, {&quot;Title&quot;:&quot;Prairie Farmer, Vol. 56: No. 5, February 2, 1884. - A Weekly Journal for the Farm, Orchard and Fireside&quot;,&quot;Topics&quot;:[&quot;Farm life -- Periodicals&quot;,&quot;United States -- Rural conditions -- Periodicals&quot;,&quot;Agriculture -- United States -- Periodicals&quot;],&quot;Primary&quot;:&quot;65286.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;65286&quot;});" class='title'>Prairie Farmer, Vol. 56:<br><span class='subtitle'>No. 5, February 2, 1884. - A Weekly Journal for the Farm, Orchard and Fireside</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69970, {&quot;Title&quot;:&quot;The English Husbandman (The Second Booke) -&quot;,&quot;Topics&quot;:[&quot;Agriculture -- England -- Early works to 1800&quot;,&quot;Agriculture -- Early works to 1800&quot;,&quot;Gardening -- England -- Early works to 1800&quot;,&quot;Gardening -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;69970.htm&quot;,&quot;CreatorNames&quot;:[&quot;Markham, Gervase, 1568?-1637&quot;],&quot;LoCC&quot;:[&quot;S&quot;],&quot;PG_ID&quot;:&quot;69970&quot;});" class='title'>The English Husbandman (The Second Booke) -<br><span class='subtitle'></span></a>
+<div class='author'>Markham, Gervase, 1568?-1637</div>
+</div>
+</ul></div>
+</body></html>

@@ -1,0 +1,114 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Human anatomy (QM)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24440, {&quot;Title&quot;:&quot;Surgical Anatomy&quot;,&quot;Topics&quot;:[&quot;Anatomy, Surgical and topographical -- Atlases&quot;,&quot;Surgery -- Atlases&quot;,&quot;Surgery, Operative -- Atlases&quot;],&quot;Primary&quot;:&quot;24440.htm&quot;,&quot;CreatorNames&quot;:[&quot;Maclise, Joseph&quot;],&quot;LoCC&quot;:[&quot;QM&quot;,&quot;RD&quot;],&quot;PG_ID&quot;:&quot;24440&quot;});" class='title'>Surgical Anatomy</a>
+<div class='author'>Maclise, Joseph</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36003, {&quot;Title&quot;:&quot;Degeneracy: Its Causes, Signs and Results&quot;,&quot;Topics&quot;:[&quot;Abnormalities, Human&quot;,&quot;Heredity, Human&quot;,&quot;Degeneration&quot;],&quot;Primary&quot;:&quot;36003.htm&quot;,&quot;CreatorNames&quot;:[&quot;Talbot, Eugene S. (Eugene Solomon), 1847-1924&quot;],&quot;LoCC&quot;:[&quot;HV&quot;,&quot;QM&quot;],&quot;PG_ID&quot;:&quot;36003&quot;});" class='title'>Degeneracy:<br><span class='subtitle'>Its Causes, Signs and Results</span></a>
+<div class='author'>Talbot, Eugene S. (Eugene Solomon), 1847-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37385, {&quot;Title&quot;:&quot;Embryology: The Beginnings of Life&quot;,&quot;Topics&quot;:[&quot;Embryology, Human&quot;],&quot;Primary&quot;:&quot;37385.htm&quot;,&quot;CreatorNames&quot;:[&quot;Leighton, Gerald R. (Gerald Rowley), 1868-&quot;],&quot;LoCC&quot;:[&quot;QM&quot;],&quot;PG_ID&quot;:&quot;37385&quot;});" class='title'>Embryology:<br><span class='subtitle'>The Beginnings of Life</span></a>
+<div class='author'>Leighton, Gerald R. (Gerald Rowley), 1868-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43350, {&quot;Title&quot;:&quot;The Anatomy of the Human Peritoneum and Abdominal Cavity - Considered from the Standpoint of Development and Comparative Anatomy&quot;,&quot;Topics&quot;:[&quot;Peritoneum&quot;,&quot;Abdomen&quot;],&quot;Primary&quot;:&quot;43350.htm&quot;,&quot;CreatorNames&quot;:[&quot;Huntington, George S. (George Sumner), 1861-1927&quot;],&quot;LoCC&quot;:[&quot;QM&quot;],&quot;PG_ID&quot;:&quot;43350&quot;});" class='title'>The Anatomy of the Human Peritoneum and Abdominal Cavity -<br><span class='subtitle'>Considered from the Standpoint of Development and Comparative Anatomy</span></a>
+<div class='author'>Huntington, George S. (George Sumner), 1861-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56118, {&quot;Title&quot;:&quot;General Anatomy, Applied to Physiology and Medicine, Vol. 1 (of 3)&quot;,&quot;Topics&quot;:[&quot;Human physiology&quot;,&quot;Human anatomy&quot;],&quot;Primary&quot;:&quot;56118.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bichat, Xavier, 1771-1802&quot;,&quot;Hayward, George, 1791-1863 [Translator]&quot;],&quot;LoCC&quot;:[&quot;QM&quot;],&quot;PG_ID&quot;:&quot;56118&quot;});" class='title'>General Anatomy, Applied to Physiology and Medicine, Vol. 1 (of 3)</a>
+<div class='author'>Bichat, Xavier, 1771-1802, Hayward, George, 1791-1863 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56147, {&quot;Title&quot;:&quot;General Anatomy, Applied to Physiology and Medicine, Vol. 2 (of 3)&quot;,&quot;Topics&quot;:[&quot;Human physiology&quot;,&quot;Human anatomy&quot;],&quot;Primary&quot;:&quot;56147.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bichat, Xavier, 1771-1802&quot;,&quot;Hayward, George, 1791-1863 [Translator]&quot;],&quot;LoCC&quot;:[&quot;QM&quot;],&quot;PG_ID&quot;:&quot;56147&quot;});" class='title'>General Anatomy, Applied to Physiology and Medicine, Vol. 2 (of 3)</a>
+<div class='author'>Bichat, Xavier, 1771-1802, Hayward, George, 1791-1863 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56328, {&quot;Title&quot;:&quot;General Anatomy, Applied to Physiology and Medicine, Vol. 3 (of 3)&quot;,&quot;Topics&quot;:[&quot;Human physiology&quot;,&quot;Human anatomy&quot;],&quot;Primary&quot;:&quot;56328.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bichat, Xavier, 1771-1802&quot;,&quot;Hayward, George, 1791-1863 [Translator]&quot;],&quot;LoCC&quot;:[&quot;QM&quot;],&quot;PG_ID&quot;:&quot;56328&quot;});" class='title'>General Anatomy, Applied to Physiology and Medicine, Vol. 3 (of 3)</a>
+<div class='author'>Bichat, Xavier, 1771-1802, Hayward, George, 1791-1863 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58331, {&quot;Title&quot;:&quot;Recuerdos de mi vida (tomo 1 de 2)&quot;,&quot;Topics&quot;:[&quot;Ramón y Cajal, Santiago, 1852-1934&quot;,&quot;Anatomists -- Spain -- Biography&quot;],&quot;Primary&quot;:&quot;58331.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ramón y Cajal, Santiago, 1852-1934&quot;],&quot;LoCC&quot;:[&quot;QM&quot;],&quot;PG_ID&quot;:&quot;58331&quot;});" class='title'>Recuerdos de mi vida (tomo 1 de 2)</a>
+<div class='author'>Ramón y Cajal, Santiago, 1852-1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58460, {&quot;Title&quot;:&quot;Use of the Dead to the Living&quot;,&quot;Topics&quot;:[&quot;Surgery&quot;,&quot;Mackenzie, William, 1791-1868. An appeal to the public and to the legislature, on the necessity of affording dead bodies to the schools of anatomy by legislative enactment&quot;,&quot;Dead bodies (Law)&quot;,&quot;Human anatomy -- Study and teaching&quot;,&quot;Medicine -- Study and teaching&quot;],&quot;Primary&quot;:&quot;58460.htm&quot;,&quot;CreatorNames&quot;:[&quot;Smith, Southwood, 1788-1861&quot;],&quot;LoCC&quot;:[&quot;QM&quot;],&quot;PG_ID&quot;:&quot;58460&quot;});" class='title'>Use of the Dead to the Living</a>
+<div class='author'>Smith, Southwood, 1788-1861</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59357, {&quot;Title&quot;:&quot;Introduction to Anatomy, 1532 - With English translation and an introductory essay on anatomical studies in Tudor England by C.D. O&#39;Malley and K.F. Russell.&quot;,&quot;Topics&quot;:[&quot;Human anatomy -- Early works to 1800&quot;,&quot;Anatomy -- Study and teaching -- England -- History -- 16th century&quot;],&quot;Primary&quot;:&quot;59357.htm&quot;,&quot;CreatorNames&quot;:[&quot;Edguard, David, 1502?-1542?&quot;,&quot;O&#39;Malley, Charles Donald [Translator]&quot;,&quot;Russell, K. F. (Kenneth Fitzpatrick), 1911- [Translator]&quot;],&quot;LoCC&quot;:[&quot;QM&quot;],&quot;PG_ID&quot;:&quot;59357&quot;});" class='title'>Introduction to Anatomy, 1532 -<br><span class='subtitle'>With English translation and an introductory essay on anatomical studies in Tudor England by C.D. O'Malley and K.F. Russell.</span></a>
+<div class='author'>Edguard, David, 1502?-1542?, O'Malley, Charles Donald [Translator], Russell, K. F. (Kenneth Fitzpatrick), 1911- [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60675, {&quot;Title&quot;:&quot;Recuerdos de mi vida (tomo 2 de 2)&quot;,&quot;Topics&quot;:[&quot;Ramón y Cajal, Santiago, 1852-1934&quot;,&quot;Anatomists -- Spain -- Biography&quot;],&quot;Primary&quot;:&quot;60675.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ramón y Cajal, Santiago, 1852-1934&quot;],&quot;LoCC&quot;:[&quot;QM&quot;],&quot;PG_ID&quot;:&quot;60675&quot;});" class='title'>Recuerdos de mi vida (tomo 2 de 2)</a>
+<div class='author'>Ramón y Cajal, Santiago, 1852-1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63456, {&quot;Title&quot;:&quot;Andreas Vesalius, the Reformer of Anatomy&quot;,&quot;Topics&quot;:[&quot;Vesalius, Andreas, 1514-1564&quot;],&quot;Primary&quot;:&quot;63456.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ball, James Moores, 1863-1929&quot;],&quot;LoCC&quot;:[&quot;QM&quot;],&quot;PG_ID&quot;:&quot;63456&quot;});" class='title'>Andreas Vesalius, the Reformer of Anatomy</a>
+<div class='author'>Ball, James Moores, 1863-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64204, {&quot;Title&quot;:&quot;Abnormitäten&quot;,&quot;Topics&quot;:[&quot;Abnormalities, Human&quot;],&quot;Primary&quot;:&quot;64204.htm&quot;,&quot;CreatorNames&quot;:[&quot;Saltarino, Signor, 1863-1941&quot;],&quot;LoCC&quot;:[&quot;QM&quot;],&quot;PG_ID&quot;:&quot;64204&quot;});" class='title'>Abnormitäten</a>
+<div class='author'>Saltarino, Signor, 1863-1941</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64754, {&quot;Title&quot;:&quot;Structure and Functions of the Body - A Hand-Book of Anatomy and Physiology for Nurses and Others Desiring a Practical Knowledge of the Subject&quot;,&quot;Topics&quot;:[&quot;Physiology&quot;,&quot;Human anatomy&quot;],&quot;Primary&quot;:&quot;64754.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fiske, Annette&quot;],&quot;LoCC&quot;:[&quot;QM&quot;],&quot;PG_ID&quot;:&quot;64754&quot;});" class='title'>Structure and Functions of the Body -<br><span class='subtitle'>A Hand-Book of Anatomy and Physiology for Nurses and Others Desiring a Practical Knowledge of the Subject</span></a>
+<div class='author'>Fiske, Annette</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67734, {&quot;Title&quot;:&quot;Landmarks Medical and Surgical&quot;,&quot;Topics&quot;:[&quot;Human anatomy&quot;,&quot;Medicine -- Study and teaching&quot;,&quot;Palpation&quot;],&quot;Primary&quot;:&quot;67734.htm&quot;,&quot;CreatorNames&quot;:[&quot;Holden, Luther, 1815-1905&quot;,&quot;Shuter, James, 1846-1883&quot;],&quot;LoCC&quot;:[&quot;QM&quot;,&quot;RC&quot;],&quot;PG_ID&quot;:&quot;67734&quot;});" class='title'>Landmarks Medical and Surgical</a>
+<div class='author'>Holden, Luther, 1815-1905, Shuter, James, 1846-1883</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68165, {&quot;Title&quot;:&quot;Report of an autopsy on the bodies of Chang and Eng Bunker, commonly known as the Siamese twins&quot;,&quot;Topics&quot;:[&quot;Conjoined twins&quot;],&quot;Primary&quot;:&quot;68165.htm&quot;,&quot;CreatorNames&quot;:[&quot;Allen, Harrison, 1841-1897&quot;],&quot;LoCC&quot;:[&quot;QM&quot;],&quot;PG_ID&quot;:&quot;68165&quot;});" class='title'>Report of an autopsy on the bodies of Chang and Eng Bunker, commonly known as the Siamese twins</a>
+<div class='author'>Allen, Harrison, 1841-1897</div>
+</div>
+</ul></div>
+</body></html>

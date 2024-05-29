@@ -1,0 +1,410 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Commerce (including tariff) (HF)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(11090, {&quot;Title&quot;:&quot;Industrial Progress and Human Economics&quot;,&quot;Topics&quot;:[&quot;Industrial efficiency&quot;,&quot;Personnel management&quot;],&quot;Primary&quot;:&quot;11090.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hartness, James, 1861-1934&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;11090&quot;});" class='title'>Industrial Progress and Human Economics</a>
+<div class='author'>Hartness, James, 1861-1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(1319, {&quot;Title&quot;:&quot;Increasing Human Efficiency in Business - A Contribution to the Psychology of Business&quot;,&quot;Topics&quot;:[&quot;Business&quot;,&quot;Psychology, Applied&quot;,&quot;Industrial efficiency&quot;,&quot;Psychology, Industrial&quot;,&quot;Industrial management&quot;],&quot;Primary&quot;:&quot;1319.txt&quot;,&quot;CreatorNames&quot;:[&quot;Scott, Walter Dill, 1869-1955&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;1319&quot;});" class='title'>Increasing Human Efficiency in Business -<br><span class='subtitle'>A Contribution to the Psychology of Business</span></a>
+<div class='author'>Scott, Walter Dill, 1869-1955</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13190, {&quot;Title&quot;:&quot;De l&#39;importance des livres de raison au point de vue archéologique&quot;,&quot;Topics&quot;:[&quot;Archaeology&quot;,&quot;Bookkeeping&quot;],&quot;Primary&quot;:&quot;13190.txt&quot;,&quot;CreatorNames&quot;:[&quot;Guibert, Louis, 1840-1904&quot;],&quot;LoCC&quot;:[&quot;CC&quot;,&quot;HF&quot;],&quot;PG_ID&quot;:&quot;13190&quot;});" class='title'>De l'importance des livres de raison au point de vue archéologique</a>
+<div class='author'>Guibert, Louis, 1840-1904</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14444, {&quot;Title&quot;:&quot;The Complete English Tradesman (1839 ed.)&quot;,&quot;Topics&quot;:[&quot;Wholesale trade -- Great Britain -- Handbooks, manuals, etc. -- Early works to 1800&quot;,&quot;Great Britain -- Commerce -- Handbooks, manuals, etc. -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;14444.htm&quot;,&quot;CreatorNames&quot;:[&quot;Defoe, Daniel, 1661?-1731&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;14444&quot;});" class='title'>The Complete English Tradesman (1839 ed.)</a>
+<div class='author'>Defoe, Daniel, 1661?-1731</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14589, {&quot;Title&quot;:&quot;Certain Success&quot;,&quot;Topics&quot;:[&quot;Success&quot;,&quot;Sales personnel&quot;,&quot;Selling&quot;],&quot;Primary&quot;:&quot;14589.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hawkins, Norval A.&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;14589&quot;});" class='title'>Certain Success</a>
+<div class='author'>Hawkins, Norval A.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15154, {&quot;Title&quot;:&quot;Psychology and Industrial Efficiency&quot;,&quot;Topics&quot;:[&quot;Psychophysiology&quot;,&quot;Industrial efficiency&quot;,&quot;Psychology, Industrial&quot;],&quot;Primary&quot;:&quot;15154.htm&quot;,&quot;CreatorNames&quot;:[&quot;Münsterberg, Hugo, 1863-1916&quot;],&quot;LoCC&quot;:[&quot;BF&quot;,&quot;HF&quot;],&quot;PG_ID&quot;:&quot;15154&quot;});" class='title'>Psychology and Industrial Efficiency</a>
+<div class='author'>Münsterberg, Hugo, 1863-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15248, {&quot;Title&quot;:&quot;Success (Second Edition)&quot;,&quot;Topics&quot;:[&quot;Success&quot;],&quot;Primary&quot;:&quot;15248.htm&quot;,&quot;CreatorNames&quot;:[&quot;Beaverbrook, Max Aitken, Baron, 1879-1964&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;15248&quot;});" class='title'>Success (Second Edition)</a>
+<div class='author'>Beaverbrook, Max Aitken, Baron, 1879-1964</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16106, {&quot;Title&quot;:&quot;What Is Free Trade? - An Adaptation of Frederic Bastiat&#39;s \&quot;\&quot;Sophismes Éconimiques\&quot;\&quot; Designed for the American Reader&quot;,&quot;Topics&quot;:[&quot;Free trade&quot;,&quot;Tariff -- United States&quot;],&quot;Primary&quot;:&quot;16106.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bastiat, Frédéric, 1801-1850&quot;,&quot;Del Mar, Alexander, 1836-1926 [Translator]&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;16106&quot;});" class='title'>What Is Free Trade? -<br><span class='subtitle'>An Adaptation of Frederic Bastiat's "Sophismes Éconimiques" Designed for the American Reader</span></a>
+<div class='author'>Bastiat, Frédéric, 1801-1850, Del Mar, Alexander, 1836-1926 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16256, {&quot;Title&quot;:&quot;The Psychology of Management - The Function of the Mind in Determining, Teaching and Installing Methods of Least Waste&quot;,&quot;Topics&quot;:[&quot;Industrial efficiency&quot;,&quot;Psychology, Industrial&quot;,&quot;Industrial management&quot;],&quot;Primary&quot;:&quot;16256.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gilbreth, Lillian Moller, 1878-1972&quot;],&quot;LoCC&quot;:[&quot;HF&quot;,&quot;T&quot;],&quot;PG_ID&quot;:&quot;16256&quot;});" class='title'>The Psychology of Management -<br><span class='subtitle'>The Function of the Mind in Determining, Teaching and Installing Methods of Least Waste</span></a>
+<div class='author'>Gilbreth, Lillian Moller, 1878-1972</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20161, {&quot;Title&quot;:&quot;Sophisms of the Protectionists&quot;,&quot;Topics&quot;:[&quot;Free trade&quot;],&quot;Primary&quot;:&quot;20161.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bastiat, Frédéric, 1801-1850&quot;,&quot;White, Horace, 1834-1916 [Translator]&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;20161&quot;});" class='title'>Sophisms of the Protectionists</a>
+<div class='author'>Bastiat, Frédéric, 1801-1850, White, Horace, 1834-1916 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20513, {&quot;Title&quot;:&quot;How to Succeed; Or, Stepping-Stones to Fame and Fortune&quot;,&quot;Topics&quot;:[&quot;Success&quot;],&quot;Primary&quot;:&quot;20513.htm&quot;,&quot;CreatorNames&quot;:[&quot;Marden, Orison Swett, 1848-1924&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;20513&quot;});" class='title'>How to Succeed;<br><span class='subtitle'>Or, Stepping-Stones to Fame and Fortune</span></a>
+<div class='author'>Marden, Orison Swett, 1848-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20531, {&quot;Title&quot;:&quot;Up To Date Business - Including Lessons in Banking, Exchange, Business Geography, Finance, Transportation and Commercial Law&quot;,&quot;Topics&quot;:[&quot;Business&quot;],&quot;Primary&quot;:&quot;20531.htm&quot;,&quot;CreatorNames&quot;:[&quot;Eaton, Seymour, 1859-1916 [Editor]&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;20531&quot;});" class='title'>Up To Date Business -<br><span class='subtitle'>Including Lessons in Banking, Exchange, Business Geography, Finance, Transportation and Commercial Law</span></a>
+<div class='author'>Eaton, Seymour, 1859-1916 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(21291, {&quot;Title&quot;:&quot;Pushing to the Front&quot;,&quot;Topics&quot;:[&quot;Success&quot;],&quot;Primary&quot;:&quot;21291.htm&quot;,&quot;CreatorNames&quot;:[&quot;Marden, Orison Swett, 1848-1924&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;21291&quot;});" class='title'>Pushing to the Front</a>
+<div class='author'>Marden, Orison Swett, 1848-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(21502, {&quot;Title&quot;:&quot;Fundamentals of Prosperity: What They Are and Whence They Come&quot;,&quot;Topics&quot;:[&quot;Success&quot;,&quot;Business&quot;],&quot;Primary&quot;:&quot;21502.htm&quot;,&quot;CreatorNames&quot;:[&quot;Babson, Roger Ward, 1875-1967&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;21502&quot;});" class='title'>Fundamentals of Prosperity:<br><span class='subtitle'>What They Are and Whence They Come</span></a>
+<div class='author'>Babson, Roger Ward, 1875-1967</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(21622, {&quot;Title&quot;:&quot;Architects of Fate; Or, Steps to Success and Power&quot;,&quot;Topics&quot;:[&quot;Success&quot;],&quot;Primary&quot;:&quot;21622.htm&quot;,&quot;CreatorNames&quot;:[&quot;Marden, Orison Swett, 1848-1924&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;21622&quot;});" class='title'>Architects of Fate;<br><span class='subtitle'>Or, Steps to Success and Power</span></a>
+<div class='author'>Marden, Orison Swett, 1848-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22418, {&quot;Title&quot;:&quot;Dollars and Sense&quot;,&quot;Topics&quot;:[&quot;Success&quot;,&quot;Conduct of life&quot;],&quot;Primary&quot;:&quot;22418.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hunter, William Crosbie, 1866-&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;22418&quot;});" class='title'>Dollars and Sense</a>
+<div class='author'>Hunter, William Crosbie, 1866-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23065, {&quot;Title&quot;:&quot;Die Gründung des Deutschen Zollvereins&quot;,&quot;Topics&quot;:[&quot;Tariff -- History -- Germany&quot;,&quot;Customs unions -- Germany -- History&quot;,&quot;Deutscher Zollverein&quot;],&quot;Primary&quot;:&quot;23065.htm&quot;,&quot;CreatorNames&quot;:[&quot;Treitschke, Heinrich von, 1834-1896&quot;],&quot;LoCC&quot;:[&quot;DD&quot;,&quot;HF&quot;],&quot;PG_ID&quot;:&quot;23065&quot;});" class='title'>Die Gründung des Deutschen Zollvereins</a>
+<div class='author'>Treitschke, Heinrich von, 1834-1896</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23547, {&quot;Title&quot;:&quot;Sam Lambert and the New Way Store: A Book for Clothiers and Their Clerks&quot;,&quot;Topics&quot;:[&quot;Sales personnel -- Clothing and dress&quot;,&quot;Clothing trade -- United States&quot;],&quot;Primary&quot;:&quot;23547.htm&quot;,&quot;CreatorNames&quot;:[&quot;Unknown&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;23547&quot;});" class='title'>Sam Lambert and the New Way Store:<br><span class='subtitle'>A Book for Clothiers and Their Clerks</span></a>
+<div class='author'>Unknown</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24884, {&quot;Title&quot;:&quot;Commercial Geography - A Book for High Schools, Commercial Courses, and Business Colleges&quot;,&quot;Topics&quot;:[&quot;Commercial geography&quot;],&quot;Primary&quot;:&quot;24884.htm&quot;,&quot;CreatorNames&quot;:[&quot;Redway, Jacques W. (Jacques Wardlaw), 1849-1942&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;24884&quot;});" class='title'>Commercial Geography -<br><span class='subtitle'>A Book for High Schools, Commercial Courses, and Business Colleges</span></a>
+<div class='author'>Redway, Jacques W. (Jacques Wardlaw), 1849-1942</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25087, {&quot;Title&quot;:&quot;Twenty Years of Hus&#39;ling&quot;,&quot;Topics&quot;:[&quot;Business&quot;,&quot;Johnston, J. P. (James Perry), 1852-&quot;],&quot;Primary&quot;:&quot;25087.htm&quot;,&quot;CreatorNames&quot;:[&quot;Johnston, J. P. (James Perry), 1852-&quot;,&quot;Denslow, W. W. (William Wallace), 1856-1915 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;25087&quot;});" class='title'>Twenty Years of Hus'ling</a>
+<div class='author'>Johnston, J. P. (James Perry), 1852-, Denslow, W. W. (William Wallace), 1856-1915 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25588, {&quot;Title&quot;:&quot;Outline of the development of the internal commerce of the United States - 1789-1900&quot;,&quot;Topics&quot;:[&quot;United States -- Commerce -- History&quot;],&quot;Primary&quot;:&quot;25588.htm&quot;,&quot;CreatorNames&quot;:[&quot;Van Metre, Thurman William, 1884-1961&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;25588&quot;});" class='title'>Outline of the development of the internal commerce of the United States -<br><span class='subtitle'>1789-1900</span></a>
+<div class='author'>Van Metre, Thurman William, 1884-1961</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28575, {&quot;Title&quot;:&quot;A Terminal Market System: New York&#39;s Most Urgent Need - Some Observations, Comments, and Comparisons of European Markets&quot;,&quot;Topics&quot;:[&quot;Markets&quot;,&quot;Markets -- New York (State) -- New York&quot;],&quot;Primary&quot;:&quot;28575.htm&quot;,&quot;CreatorNames&quot;:[&quot;Black, Madeleine&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;28575&quot;});" class='title'>A Terminal Market System:<br><span class='subtitle'>New York's Most Urgent Need - Some Observations, Comments, and Comparisons of European Markets</span></a>
+<div class='author'>Black, Madeleine</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28723, {&quot;Title&quot;:&quot;Susan and Edward; Or, A Visit to Fulton Market&quot;,&quot;Topics&quot;:[&quot;Fulton Market (New York, N.Y.) -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;28723.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;HF&quot;,&quot;PZ&quot;],&quot;PG_ID&quot;:&quot;28723&quot;});" class='title'>Susan and Edward;<br><span class='subtitle'>Or, A Visit to Fulton Market</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29276, {&quot;Title&quot;:&quot;Morals in Trade and Commerce&quot;,&quot;Topics&quot;:[&quot;Business ethics&quot;],&quot;Primary&quot;:&quot;29276.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anderson, Frank B., 1863-1935&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;29276&quot;});" class='title'>Morals in Trade and Commerce</a>
+<div class='author'>Anderson, Frank B., 1863-1935</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29562, {&quot;Title&quot;:&quot;The Clock that Had no Hands - And Nineteen Other Essays About Advertising&quot;,&quot;Topics&quot;:[&quot;Advertising&quot;],&quot;Primary&quot;:&quot;29562.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kaufman, Herbert, 1878-1947&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;29562&quot;});" class='title'>The Clock that Had no Hands -<br><span class='subtitle'>And Nineteen Other Essays About Advertising</span></a>
+<div class='author'>Kaufman, Herbert, 1878-1947</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29641, {&quot;Title&quot;:&quot;The business career in its public relations&quot;,&quot;Topics&quot;:[&quot;Business ethics&quot;],&quot;Primary&quot;:&quot;29641.htm&quot;,&quot;CreatorNames&quot;:[&quot;Shaw, Albert, 1857-1947&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;29641&quot;});" class='title'>The business career in its public relations</a>
+<div class='author'>Shaw, Albert, 1857-1947</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29674, {&quot;Title&quot;:&quot;Higher Education and Business Standards&quot;,&quot;Topics&quot;:[&quot;Business ethics&quot;,&quot;Business education&quot;],&quot;Primary&quot;:&quot;29674.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hotchkiss, Willard E. (Willard Eugene), 1874-&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;29674&quot;});" class='title'>Higher Education and Business Standards</a>
+<div class='author'>Hotchkiss, Willard E. (Willard Eugene), 1874-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29953, {&quot;Title&quot;:&quot;Commercialism and Journalism&quot;,&quot;Topics&quot;:[&quot;Advertising&quot;,&quot;Journalism&quot;],&quot;Primary&quot;:&quot;29953.htm&quot;,&quot;CreatorNames&quot;:[&quot;Holt, Hamilton, 1872-1951&quot;],&quot;LoCC&quot;:[&quot;HF&quot;,&quot;PN&quot;],&quot;PG_ID&quot;:&quot;29953&quot;});" class='title'>Commercialism and Journalism</a>
+<div class='author'>Holt, Hamilton, 1872-1951</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30077, {&quot;Title&quot;:&quot;Die Hanse und England von Eduards III. bis auf Heinrichs VIII. Zeit&quot;,&quot;Topics&quot;:[&quot;Hanseatic League -- Commerce -- Great Britain&quot;,&quot;Great Britain -- Commerce -- Hanseatic league&quot;],&quot;Primary&quot;:&quot;30077.htm&quot;,&quot;CreatorNames&quot;:[&quot;Schulz, Friedrich, 1866-1914&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;30077&quot;});" class='title'>Die Hanse und England von Eduards III. bis auf Heinrichs VIII. Zeit</a>
+<div class='author'>Schulz, Friedrich, 1866-1914</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31073, {&quot;Title&quot;:&quot;How Department Stores Are Carried On&quot;,&quot;Topics&quot;:[&quot;Department stores&quot;],&quot;Primary&quot;:&quot;31073.htm&quot;,&quot;CreatorNames&quot;:[&quot;Phillips, W. B. (Wesley Briggs)&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;31073&quot;});" class='title'>How Department Stores Are Carried On</a>
+<div class='author'>Phillips, W. B. (Wesley Briggs)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31494, {&quot;Title&quot;:&quot;The Young Man in Business&quot;,&quot;Topics&quot;:[&quot;Success&quot;,&quot;Business&quot;,&quot;Young men&quot;],&quot;Primary&quot;:&quot;31494.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bok, Edward William, 1863-1930&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;31494&quot;});" class='title'>The Young Man in Business</a>
+<div class='author'>Bok, Edward William, 1863-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32384, {&quot;Title&quot;:&quot;An Humble Proposal to the People of England, for the Increase of their Trade, and Encouragement of Their Manufactures - Whether the Present Uncertainty of Affairs Issues in Peace or War&quot;,&quot;Topics&quot;:[&quot;Great Britain -- Commerce&quot;],&quot;Primary&quot;:&quot;32384.htm&quot;,&quot;CreatorNames&quot;:[&quot;Defoe, Daniel, 1661?-1731&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;32384&quot;});" class='title'>An Humble Proposal to the People of England, for the Increase of their Trade, and Encouragement of Their Manufactures -<br><span class='subtitle'>Whether the Present Uncertainty of Affairs Issues in Peace or War</span></a>
+<div class='author'>Defoe, Daniel, 1661?-1731</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33088, {&quot;Title&quot;:&quot;Putnam&#39;s Handy Law Book for the Layman&quot;,&quot;Topics&quot;:[&quot;Commercial law&quot;],&quot;Primary&quot;:&quot;33088.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bolles, Albert Sidney, 1846-1939&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;33088&quot;});" class='title'>Putnam's Handy Law Book for the Layman</a>
+<div class='author'>Bolles, Albert Sidney, 1846-1939</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35870, {&quot;Title&quot;:&quot;Letter to the Right Honourable Lord Viscount Melbourne on the Cause of the Higher Average Price of Grain in Britain than on the the Continent&quot;,&quot;Topics&quot;:[&quot;Corn laws (Great Britain)&quot;,&quot;Great Britain -- Economic conditions&quot;,&quot;Melbourne, William Lamb, Viscount, 1779-1848&quot;],&quot;Primary&quot;:&quot;35870.htm&quot;,&quot;CreatorNames&quot;:[&quot;Grant Suttie, George, Sir, 1797-1878&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;35870&quot;});" class='title'>Letter to the Right Honourable Lord Viscount Melbourne on the Cause of the Higher Average Price of Grain in Britain than on the the Continent</a>
+<div class='author'>Grant Suttie, George, Sir, 1797-1878</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36939, {&quot;Title&quot;:&quot;Free Trade with India - An Enquiry into the True State of the Question at Issue Between His Majesty&#39;s Ministers, the Honorable the East India Company, and the Public at Large, on the Justice and Policy of a Free Trade to India&quot;,&quot;Topics&quot;:[&quot;East India Company&quot;,&quot;Great Britain -- Commerce -- India&quot;,&quot;India -- Commerce -- Great Britain&quot;],&quot;Primary&quot;:&quot;36939.htm&quot;,&quot;CreatorNames&quot;:[&quot;Common sense (Writer), active 1813&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;36939&quot;});" class='title'>Free Trade with India -<br><span class='subtitle'>An Enquiry into the True State of the Question at Issue Between His Majesty's Ministers, the Honorable the East India Company, and the Public at Large, on the Justice and Policy of a Free Trade to India</span></a>
+<div class='author'>Common sense (Writer), active 1813</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37048, {&quot;Title&quot;:&quot;A Caution to the Directors of the East-India Company - With Regard to Their Making the Midsummer Dividend of Five Per Cent. Without Due Attention to a Late Act of Parliament, and a By-law of Their Own&quot;,&quot;Topics&quot;:[&quot;East India Company -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;37048.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;37048&quot;});" class='title'>A Caution to the Directors of the East-India Company -<br><span class='subtitle'>With Regard to Their Making the Midsummer Dividend of Five Per Cent. Without Due Attention to a Late Act of Parliament, and a By-law of Their Own</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37748, {&quot;Title&quot;:&quot;How to Collect a Doctor Bill&quot;,&quot;Topics&quot;:[&quot;Jurisprudence&quot;,&quot;Collecting of accounts&quot;,&quot;Medicine -- Practice -- Management&quot;],&quot;Primary&quot;:&quot;37748.htm&quot;,&quot;CreatorNames&quot;:[&quot;Davis, Franklyn Pierre, 1868-1932&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;37748&quot;});" class='title'>How to Collect a Doctor Bill</a>
+<div class='author'>Davis, Franklyn Pierre, 1868-1932</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37924, {&quot;Title&quot;:&quot;Forging Ahead in Business&quot;,&quot;Topics&quot;:[&quot;Business&quot;],&quot;Primary&quot;:&quot;37924.htm&quot;,&quot;CreatorNames&quot;:[&quot;Alexander Hamilton Institute (U.S.)&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;37924&quot;});" class='title'>Forging Ahead in Business</a>
+<div class='author'>Alexander Hamilton Institute (U.S.)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38921, {&quot;Title&quot;:&quot;The Romance of a Great Store&quot;,&quot;Topics&quot;:[&quot;Macy&#39;s (Firm)&quot;],&quot;Primary&quot;:&quot;38921.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hungerford, Edward, 1875-1948&quot;,&quot;Bailey, Vernon Howe, 1874-1953 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;38921&quot;});" class='title'>The Romance of a Great Store</a>
+<div class='author'>Hungerford, Edward, 1875-1948, Bailey, Vernon Howe, 1874-1953 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39761, {&quot;Title&quot;:&quot;The Knack of Managing&quot;,&quot;Topics&quot;:[&quot;Business&quot;,&quot;Personnel management&quot;],&quot;Primary&quot;:&quot;39761.htm&quot;,&quot;CreatorNames&quot;:[&quot;Urquhart, Lewis K.&quot;,&quot;Watson, Herbert&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;39761&quot;});" class='title'>The Knack of Managing</a>
+<div class='author'>Urquhart, Lewis K., Watson, Herbert</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41287, {&quot;Title&quot;:&quot;Geschiedenis der Noordsche Compagnie&quot;,&quot;Topics&quot;:[&quot;Arctic regions&quot;,&quot;Whaling&quot;,&quot;Noordse Compagnie&quot;,&quot;Names, Geographical -- Norway -- Spitsbergen Island&quot;,&quot;North Pole&quot;,&quot;Spitsbergen Island (Norway)&quot;,&quot;Greenland&quot;],&quot;Primary&quot;:&quot;41287.htm&quot;,&quot;CreatorNames&quot;:[&quot;Muller, Samuel, 1848-1922&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;41287&quot;});" class='title'>Geschiedenis der Noordsche Compagnie</a>
+<div class='author'>Muller, Samuel, 1848-1922</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41510, {&quot;Title&quot;:&quot;The Psychology of Salesmanship&quot;,&quot;Topics&quot;:[&quot;Selling -- Psychological aspects&quot;],&quot;Primary&quot;:&quot;41510.htm&quot;,&quot;CreatorNames&quot;:[&quot;Atkinson, William Walker, 1862-1932&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;41510&quot;});" class='title'>The Psychology of Salesmanship</a>
+<div class='author'>Atkinson, William Walker, 1862-1932</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42241, {&quot;Title&quot;:&quot;Commercial Law&quot;,&quot;Topics&quot;:[&quot;Commercial law -- United States&quot;],&quot;Primary&quot;:&quot;42241.htm&quot;,&quot;CreatorNames&quot;:[&quot;Currier, Richard D. (Richard Dudley), 1877-&quot;,&quot;Hill, Richard William, 1878-1947&quot;,&quot;Williston, Samuel, 1861-1963&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;42241&quot;});" class='title'>Commercial Law</a>
+<div class='author'>Currier, Richard D. (Richard Dudley), 1877-, Hill, Richard William, 1878-1947, Williston, Samuel, 1861-1963</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4334, {&quot;Title&quot;:&quot;Observations on the Effects of the Corn Laws, and of a Rise or Fall in the Price of Corn on the Agriculture and General Wealth of the Country&quot;,&quot;Topics&quot;:[&quot;Corn laws (Great Britain)&quot;,&quot;Grain trade -- Great Britain&quot;],&quot;Primary&quot;:&quot;4334.htm&quot;,&quot;CreatorNames&quot;:[&quot;Malthus, T. R. (Thomas Robert), 1766-1834&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;4334&quot;});" class='title'>Observations on the Effects of the Corn Laws, and of a Rise or Fall in the Price of Corn on the Agriculture and General Wealth of the Country</a>
+<div class='author'>Malthus, T. R. (Thomas Robert), 1766-1834</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4335, {&quot;Title&quot;:&quot;The Grounds of an Opinion on the Policy of Restricting the Importation of Foreign Corn - Intended as an appendix to \&quot;\&quot;Observations on the corn laws\&quot;\&quot;&quot;,&quot;Topics&quot;:[&quot;Corn laws (Great Britain)&quot;],&quot;Primary&quot;:&quot;4335.htm&quot;,&quot;CreatorNames&quot;:[&quot;Malthus, T. R. (Thomas Robert), 1766-1834&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;4335&quot;});" class='title'>The Grounds of an Opinion on the Policy of Restricting the Importation of Foreign Corn -<br><span class='subtitle'>Intended as an appendix to "Observations on the corn laws"</span></a>
+<div class='author'>Malthus, T. R. (Thomas Robert), 1766-1834</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43667, {&quot;Title&quot;:&quot;Extracts Relating to Mediaeval Markets and Fairs in England&quot;,&quot;Topics&quot;:[&quot;Markets -- England&quot;,&quot;Fairs&quot;,&quot;Great Britain -- History -- Sources&quot;],&quot;Primary&quot;:&quot;43667.htm&quot;,&quot;CreatorNames&quot;:[&quot;Douglas-Irvine, Helen, 1880-1947&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;43667&quot;});" class='title'>Extracts Relating to Mediaeval Markets and Fairs in England</a>
+<div class='author'>Douglas-Irvine, Helen, 1880-1947</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43855, {&quot;Title&quot;:&quot;Franklin&#39;s Way to Wealth; or, \&quot;\&quot;Poor Richard Improved\&quot;\&quot;&quot;,&quot;Topics&quot;:[&quot;Success&quot;,&quot;Maxims, American&quot;],&quot;Primary&quot;:&quot;43855.htm&quot;,&quot;CreatorNames&quot;:[&quot;Franklin, Benjamin, 1706-1790&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;43855&quot;});" class='title'>Franklin's Way to Wealth;<br><span class='subtitle'>or, "Poor Richard Improved"</span></a>
+<div class='author'>Franklin, Benjamin, 1706-1790</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44144, {&quot;Title&quot;:&quot;Protection and Communism&quot;,&quot;Topics&quot;:[&quot;Communism&quot;,&quot;Free trade&quot;],&quot;Primary&quot;:&quot;44144.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bastiat, Frédéric, 1801-1850&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;44144&quot;});" class='title'>Protection and Communism</a>
+<div class='author'>Bastiat, Frédéric, 1801-1850</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44145, {&quot;Title&quot;:&quot;Economic Sophisms&quot;,&quot;Topics&quot;:[&quot;Free trade&quot;],&quot;Primary&quot;:&quot;44145.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bastiat, Frédéric, 1801-1850&quot;,&quot;Stirling, Patrick James, 1809-1891 [Translator]&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;44145&quot;});" class='title'>Economic Sophisms</a>
+<div class='author'>Bastiat, Frédéric, 1801-1850, Stirling, Patrick James, 1809-1891 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46424, {&quot;Title&quot;:&quot;Cyclopedia of Commerce, Accountancy, Business Administration, v. 01 (of 10)&quot;,&quot;Topics&quot;:[&quot;Business&quot;,&quot;Commerce&quot;,&quot;Accounting&quot;],&quot;Primary&quot;:&quot;46424.htm&quot;,&quot;CreatorNames&quot;:[&quot;American School of Correspondence&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;46424&quot;});" class='title'>Cyclopedia of Commerce, Accountancy, Business Administration, v. 01 (of 10)</a>
+<div class='author'>American School of Correspondence</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46448, {&quot;Title&quot;:&quot;Cyclopedia of Commerce, Accountancy, Business Administration, v. 02 (of 10)&quot;,&quot;Topics&quot;:[&quot;Business&quot;,&quot;Commerce&quot;,&quot;Accounting&quot;],&quot;Primary&quot;:&quot;46448.htm&quot;,&quot;CreatorNames&quot;:[&quot;American School of Correspondence&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;46448&quot;});" class='title'>Cyclopedia of Commerce, Accountancy, Business Administration, v. 02 (of 10)</a>
+<div class='author'>American School of Correspondence</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46489, {&quot;Title&quot;:&quot;Cyclopedia of Commerce, Accountancy, Business Administration, v. 03 (of 10)&quot;,&quot;Topics&quot;:[&quot;Business&quot;,&quot;Commerce&quot;,&quot;Accounting&quot;],&quot;Primary&quot;:&quot;46489.htm&quot;,&quot;CreatorNames&quot;:[&quot;American School of Correspondence&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;46489&quot;});" class='title'>Cyclopedia of Commerce, Accountancy, Business Administration, v. 03 (of 10)</a>
+<div class='author'>American School of Correspondence</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46545, {&quot;Title&quot;:&quot;Cyclopedia of Commerce, Accountancy, Business Administration, v. 04 (of 10)&quot;,&quot;Topics&quot;:[&quot;Business&quot;,&quot;Commerce&quot;,&quot;Accounting&quot;],&quot;Primary&quot;:&quot;46545.htm&quot;,&quot;CreatorNames&quot;:[&quot;American School of Correspondence&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;46545&quot;});" class='title'>Cyclopedia of Commerce, Accountancy, Business Administration, v. 04 (of 10)</a>
+<div class='author'>American School of Correspondence</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46786, {&quot;Title&quot;:&quot;Why I Believe in Poverty as the Richest Experience That Can Come to a Boy&quot;,&quot;Topics&quot;:[&quot;Success&quot;,&quot;Poverty&quot;],&quot;Primary&quot;:&quot;46786.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bok, Edward William, 1863-1930&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;46786&quot;});" class='title'>Why I Believe in Poverty as the Richest Experience That Can Come to a Boy</a>
+<div class='author'>Bok, Edward William, 1863-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47148, {&quot;Title&quot;:&quot;\&quot;\&quot;Boy Wanted\&quot;\&quot;: A Book of Cheerful Counsel&quot;,&quot;Topics&quot;:[&quot;Success&quot;],&quot;Primary&quot;:&quot;47148.htm&quot;,&quot;CreatorNames&quot;:[&quot;Waterman, Nixon, 1859-1944&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;47148&quot;});" class='title'>"Boy Wanted":<br><span class='subtitle'>A Book of Cheerful Counsel</span></a>
+<div class='author'>Waterman, Nixon, 1859-1944</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47509, {&quot;Title&quot;:&quot;An Essay to the Restoring of our Decayed Trade. - Wherein is Described, the Smuglers, Lawyers, and Officers Frauds &amp;c.&quot;,&quot;Topics&quot;:[&quot;Wool industry -- England -- Early works to 1800&quot;,&quot;Great Britain -- Commerce -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;47509.htm&quot;,&quot;CreatorNames&quot;:[&quot;Trevers, Joseph&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;47509&quot;});" class='title'>An Essay to the Restoring of our Decayed Trade. -<br><span class='subtitle'>Wherein is Described, the Smuglers, Lawyers, and Officers Frauds &c.</span></a>
+<div class='author'>Trevers, Joseph</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48243, {&quot;Title&quot;:&quot;Oesterreich&#39;s Betheiligung am Welthandel: Betrachtungen und Vorschläge&quot;,&quot;Topics&quot;:[&quot;Austria -- Commerce&quot;,&quot;Merchant marine -- Austria&quot;],&quot;Primary&quot;:&quot;48243.htm&quot;,&quot;CreatorNames&quot;:[&quot;Revoltella, Pasquale, 1799-1869&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;48243&quot;});" class='title'>Oesterreich's Betheiligung am Welthandel:<br><span class='subtitle'>Betrachtungen und Vorschläge</span></a>
+<div class='author'>Revoltella, Pasquale, 1799-1869</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48611, {&quot;Title&quot;:&quot;Fall and Holiday Trade, Season 1900-1901, Nerlich &amp; Co. Illustrated Catalogue&quot;,&quot;Topics&quot;:[&quot;Commercial catalogs -- Canada&quot;],&quot;Primary&quot;:&quot;48611.htm&quot;,&quot;CreatorNames&quot;:[&quot;Nerlich &amp; Co.&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;48611&quot;});" class='title'>Fall and Holiday Trade, Season 1900-1901, Nerlich & Co. Illustrated Catalogue</a>
+<div class='author'>Nerlich & Co.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48842, {&quot;Title&quot;:&quot;Dumbells of Business&quot;,&quot;Topics&quot;:[&quot;Business&quot;],&quot;Primary&quot;:&quot;48842.htm&quot;,&quot;CreatorNames&quot;:[&quot;Reed, Louis Custer Martin, 1879-&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;48842&quot;});" class='title'>Dumbells of Business</a>
+<div class='author'>Reed, Louis Custer Martin, 1879-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49384, {&quot;Title&quot;:&quot;Selling Home Furnishings: A Training Program&quot;,&quot;Topics&quot;:[&quot;Furniture industry and trade -- Vocational guidance&quot;,&quot;Selling -- Furniture&quot;,&quot;Retail trade&quot;],&quot;Primary&quot;:&quot;49384.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rau, Roscoe R.&quot;,&quot;Shaw, Walter F.&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;49384&quot;});" class='title'>Selling Home Furnishings:<br><span class='subtitle'>A Training Program</span></a>
+<div class='author'>Rau, Roscoe R., Shaw, Walter F.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51676, {&quot;Title&quot;:&quot;Cyclopedia of Commerce, Accountancy, Business Administration, v. 05 (of 10)&quot;,&quot;Topics&quot;:[&quot;Business&quot;,&quot;Commerce&quot;,&quot;Accounting&quot;],&quot;Primary&quot;:&quot;51676.htm&quot;,&quot;CreatorNames&quot;:[&quot;American School of Correspondence&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;51676&quot;});" class='title'>Cyclopedia of Commerce, Accountancy, Business Administration, v. 05 (of 10)</a>
+<div class='author'>American School of Correspondence</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54149, {&quot;Title&quot;:&quot;A History of Advertising from the Earliest Times.&quot;,&quot;Topics&quot;:[&quot;Advertising -- History&quot;],&quot;Primary&quot;:&quot;54149.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sampson, Henry, 1841-1891&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;54149&quot;});" class='title'>A History of Advertising from the Earliest Times.</a>
+<div class='author'>Sampson, Henry, 1841-1891</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54561, {&quot;Title&quot;:&quot;The Old East Indiamen&quot;,&quot;Topics&quot;:[&quot;Merchant marine -- Great Britain&quot;,&quot;East India Company&quot;,&quot;Great Britain -- Commerce -- India&quot;,&quot;India -- Commerce -- Great Britain&quot;],&quot;Primary&quot;:&quot;54561.htm&quot;,&quot;CreatorNames&quot;:[&quot;Chatterton, E. Keble (Edward Keble), 1878-1944&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;54561&quot;});" class='title'>The Old East Indiamen</a>
+<div class='author'>Chatterton, E. Keble (Edward Keble), 1878-1944</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54962, {&quot;Title&quot;:&quot;Retail Shoe Salesmanship&quot;,&quot;Topics&quot;:[&quot;Selling -- Shoes&quot;,&quot;Shoe stores&quot;],&quot;Primary&quot;:&quot;54962.htm&quot;,&quot;CreatorNames&quot;:[&quot;Butterworth, Frank&quot;,&quot;Conner, H. T.&quot;,&quot;Geuting, A. H.&quot;,&quot;Hamilton, George F.&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;54962&quot;});" class='title'>Retail Shoe Salesmanship</a>
+<div class='author'>Butterworth, Frank, Conner, H. T., Geuting, A. H., Hamilton, George F.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55054, {&quot;Title&quot;:&quot;The Commerce and Navigation of the Erythræan Sea - Being a Translation of the Periplus Maris Erythræi, by an Anonymous Writer, and of Arrian&#39;s Account of the Voyage of Nearkhos, from the Mouth of the Indus to the Head of the Persian Gulf&quot;,&quot;Topics&quot;:[&quot;India -- Description and travel -- Early works to 1800&quot;,&quot;Geography, Ancient&quot;,&quot;Classical geography&quot;,&quot;Indian Ocean Region -- Commerce -- History&quot;],&quot;Primary&quot;:&quot;55054.htm&quot;,&quot;CreatorNames&quot;:[&quot;McCrindle, John Watson, 1825-1913 [Translator]&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;55054&quot;});" class='title'>The Commerce and Navigation of the Erythræan Sea -<br><span class='subtitle'>Being a Translation of the Periplus Maris Erythræi, by an Anonymous Writer, and of Arrian's Account of the Voyage of Nearkhos, from the Mouth of the Indus to the Head of the Persian Gulf</span></a>
+<div class='author'>McCrindle, John Watson, 1825-1913 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55493, {&quot;Title&quot;:&quot;The British Jugernath: Free trade! Fair trade!! Reciprocity!!! Retaliation!!!!&quot;,&quot;Topics&quot;:[&quot;Free trade&quot;,&quot;Tariff&quot;,&quot;Protectionism&quot;,&quot;Reciprocity (Commerce)&quot;],&quot;Primary&quot;:&quot;55493.htm&quot;,&quot;CreatorNames&quot;:[&quot;Molesworth, Guilford L. (Guilford Lindsey), 1828-1925&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;55493&quot;});" class='title'>The British Jugernath:<br><span class='subtitle'>Free trade! Fair trade!! Reciprocity!!! Retaliation!!!!</span></a>
+<div class='author'>Molesworth, Guilford L. (Guilford Lindsey), 1828-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56018, {&quot;Title&quot;:&quot;Business Administration: Theory, Practice and Application. [Vol. 1] Business Economics&quot;,&quot;Topics&quot;:[&quot;Business&quot;,&quot;Economics&quot;,&quot;Railroads -- United States&quot;,&quot;Advertising&quot;,&quot;Commercial law -- United States&quot;,&quot;Selling&quot;,&quot;Banks and banking -- United States&quot;,&quot;Investments&quot;,&quot;Commerce&quot;,&quot;Accounting&quot;,&quot;Insurance&quot;,&quot;Auditing&quot;],&quot;Primary&quot;:&quot;56018.htm&quot;,&quot;CreatorNames&quot;:[&quot;Austin, Oscar P. (Oscar Phelps), 1848?-1933 [Contributor]&quot;,&quot;Bogart, Ernest L. (Ernest Ludlow), 1870-1958 [Contributor]&quot;,&quot;MacClintock, Samuel [Editor]&quot;,&quot;Moody, Walter D. (Walter Dwight), 1874-1920 [Editor]&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;56018&quot;});" class='title'>Business Administration:<br><span class='subtitle'>Theory, Practice and Application. [Vol. 1] Business Economics</span></a>
+<div class='author'>Austin, Oscar P. (Oscar Phelps), 1848?-1933 [Contributor], Bogart, Ernest L. (Ernest Ludlow), 1870-1958 [Contributor], MacClintock, Samuel [Editor], Moody, Walter D. (Walter Dwight), 1874-1920 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58584, {&quot;Title&quot;:&quot;Index of the Project Gutenberg Works of Frédéric Bastiat&quot;,&quot;Topics&quot;:[&quot;Indexes&quot;],&quot;Primary&quot;:&quot;58584.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bastiat, Frédéric, 1801-1850&quot;,&quot;Widger, David, 1932-2021? [Editor]&quot;],&quot;LoCC&quot;:[&quot;HB&quot;,&quot;HF&quot;],&quot;PG_ID&quot;:&quot;58584&quot;});" class='title'>Index of the Project Gutenberg Works of Frédéric Bastiat</a>
+<div class='author'>Bastiat, Frédéric, 1801-1850, Widger, David, 1932-2021? [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59176, {&quot;Title&quot;:&quot;Selling Things&quot;,&quot;Topics&quot;:[&quot;Selling&quot;],&quot;Primary&quot;:&quot;59176.htm&quot;,&quot;CreatorNames&quot;:[&quot;MacGrail, Joseph Francis, 1873-&quot;,&quot;Marden, Orison Swett, 1848-1924&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;59176&quot;});" class='title'>Selling Things</a>
+<div class='author'>MacGrail, Joseph Francis, 1873-, Marden, Orison Swett, 1848-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59763, {&quot;Title&quot;:&quot;The Tariff in Our Times&quot;,&quot;Topics&quot;:[&quot;Tariff -- United States -- History&quot;],&quot;Primary&quot;:&quot;59763.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tarbell, Ida M. (Ida Minerva), 1857-1944&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;59763&quot;});" class='title'>The Tariff in Our Times</a>
+<div class='author'>Tarbell, Ida M. (Ida Minerva), 1857-1944</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60150, {&quot;Title&quot;:&quot;Selling Latin America: A Problem in International Salesmanship. - What to Sell and How to Sell It&quot;,&quot;Topics&quot;:[&quot;Latin America -- Economic conditions&quot;,&quot;Latin America -- Commerce -- United States&quot;,&quot;United States -- Commerce -- Latin America&quot;,&quot;Latin America -- Commerce&quot;],&quot;Primary&quot;:&quot;60150.htm&quot;,&quot;CreatorNames&quot;:[&quot;Aughinbaugh, William Edmund, 1870-1940&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;60150&quot;});" class='title'>Selling Latin America:<br><span class='subtitle'>A Problem in International Salesmanship. - What to Sell and How to Sell It</span></a>
+<div class='author'>Aughinbaugh, William Edmund, 1870-1940</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6167, {&quot;Title&quot;:&quot;Business Hints for Men and Women&quot;,&quot;Topics&quot;:[&quot;Business&quot;,&quot;Commercial law -- United States&quot;],&quot;Primary&quot;:&quot;6167.txt&quot;,&quot;CreatorNames&quot;:[&quot;Calhoun, A. R. (Alfred Rochefort), 1844-&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;6167&quot;});" class='title'>Business Hints for Men and Women</a>
+<div class='author'>Calhoun, A. R. (Alfred Rochefort), 1844-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61947, {&quot;Title&quot;:&quot;Edinburgh Papers. Edinburgh Merchants and Merchandise in Old Times&quot;,&quot;Topics&quot;:[&quot;Merchants -- Scotland -- Edinburgh&quot;,&quot;Edinburgh (Scotland) -- Commerce -- History&quot;,&quot;Scotland -- Commerce -- History&quot;],&quot;Primary&quot;:&quot;61947.htm&quot;,&quot;CreatorNames&quot;:[&quot;Chambers, Robert, 1802-1871&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;61947&quot;});" class='title'>Edinburgh Papers. Edinburgh Merchants and Merchandise in Old Times</a>
+<div class='author'>Chambers, Robert, 1802-1871</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61964, {&quot;Title&quot;:&quot;An Essay on the State of England - In Relation to Its Trade, Its Poor, and Its Taxes, for Carrying on the Present War Against France&quot;,&quot;Topics&quot;:[&quot;Poor -- England&quot;,&quot;Great Britain -- Commercial policy&quot;],&quot;Primary&quot;:&quot;61964.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cary, John, -1720?&quot;],&quot;LoCC&quot;:[&quot;HB&quot;,&quot;HF&quot;],&quot;PG_ID&quot;:&quot;61964&quot;});" class='title'>An Essay on the State of England -<br><span class='subtitle'>In Relation to Its Trade, Its Poor, and Its Taxes, for Carrying on the Present War Against France</span></a>
+<div class='author'>Cary, John, -1720?</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62231, {&quot;Title&quot;:&quot;One Thousand Ways to Make a Living; or, An Encyclopædia of Plans to Make Money&quot;,&quot;Topics&quot;:[&quot;Occupations&quot;],&quot;Primary&quot;:&quot;62231.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dunphy, Harold Morse&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;62231&quot;});" class='title'>One Thousand Ways to Make a Living;<br><span class='subtitle'>or, An Encyclopædia of Plans to Make Money</span></a>
+<div class='author'>Dunphy, Harold Morse</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62299, {&quot;Title&quot;:&quot;A Discourse on Trade, and Other Matters Relative to it&quot;,&quot;Topics&quot;:[&quot;Great Britain -- Commerce -- Early works to 1800&quot;,&quot;Great Britain -- Commercial policy -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;62299.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cary, John, -1720?&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;62299&quot;});" class='title'>A Discourse on Trade, and Other Matters Relative to it</a>
+<div class='author'>Cary, John, -1720?</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63556, {&quot;Title&quot;:&quot;Confessions of a Tradesman&quot;,&quot;Topics&quot;:[&quot;Business&quot;,&quot;London (England) -- Commerce&quot;],&quot;Primary&quot;:&quot;63556.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bullen, Frank Thomas, 1857-1915&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;63556&quot;});" class='title'>Confessions of a Tradesman</a>
+<div class='author'>Bullen, Frank Thomas, 1857-1915</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64059, {&quot;Title&quot;:&quot;How They Succeeded: Life Stories of Successful Men Told by Themselves&quot;,&quot;Topics&quot;:[&quot;Success&quot;,&quot;United States -- Biography&quot;],&quot;Primary&quot;:&quot;64059.htm&quot;,&quot;CreatorNames&quot;:[&quot;Marden, Orison Swett, 1848-1924&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;64059&quot;});" class='title'>How They Succeeded:<br><span class='subtitle'>Life Stories of Successful Men Told by Themselves</span></a>
+<div class='author'>Marden, Orison Swett, 1848-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64277, {&quot;Title&quot;:&quot;Letters From an Old Time Salesman to His Son&quot;,&quot;Topics&quot;:[&quot;Selling&quot;],&quot;Primary&quot;:&quot;64277.htm&quot;,&quot;CreatorNames&quot;:[&quot;James, Roy Lester, 1884-&quot;,&quot;Aspley, John Cameron, 1888-1969 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;64277&quot;});" class='title'>Letters From an Old Time Salesman to His Son</a>
+<div class='author'>James, Roy Lester, 1884-, Aspley, John Cameron, 1888-1969 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64412, {&quot;Title&quot;:&quot;How to Make Money&quot;,&quot;Topics&quot;:[&quot;Occupations&quot;],&quot;Primary&quot;:&quot;64412.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dunlap, John V.&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;64412&quot;});" class='title'>How to Make Money</a>
+<div class='author'>Dunlap, John V.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6580, {&quot;Title&quot;:&quot;Charter and Supplemental Charter of the Hudson&#39;s Bay Company&quot;,&quot;Topics&quot;:[&quot;Fur trade&quot;,&quot;Charters&quot;,&quot;Hudson&#39;s Bay Company&quot;],&quot;Primary&quot;:&quot;6580.txt&quot;,&quot;CreatorNames&quot;:[&quot;Hudson&#39;s Bay Company&quot;],&quot;LoCC&quot;:[&quot;HF&quot;,&quot;F&quot;],&quot;PG_ID&quot;:&quot;6580&quot;});" class='title'>Charter and Supplemental Charter of the Hudson's Bay Company</a>
+<div class='author'>Hudson's Bay Company</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68778, {&quot;Title&quot;:&quot;Elements of show card writing - A course of instruction on how to make business-building show cards.&quot;,&quot;Topics&quot;:[&quot;Lettering&quot;,&quot;Advertising cards&quot;],&quot;Primary&quot;:&quot;68778.htm&quot;,&quot;CreatorNames&quot;:[&quot;De Wild, John H.&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;68778&quot;});" class='title'>Elements of show card writing -<br><span class='subtitle'>A course of instruction on how to make business-building show cards.</span></a>
+<div class='author'>De Wild, John H.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70188, {&quot;Title&quot;:&quot;Advertising by motion pictures&quot;,&quot;Topics&quot;:[&quot;Motion pictures&quot;,&quot;Advertising&quot;],&quot;Primary&quot;:&quot;70188.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dench, Ernest A.&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;70188&quot;});" class='title'>Advertising by motion pictures</a>
+<div class='author'>Dench, Ernest A.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70367, {&quot;Title&quot;:&quot;Accounting theory and practice, Volume 1 (of 3)&quot;,&quot;Topics&quot;:[&quot;Accounting&quot;],&quot;Primary&quot;:&quot;70367.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kester, Roy B. (Roy Bernard), 1882-1965&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;70367&quot;});" class='title'>Accounting theory and practice, Volume 1 (of 3)</a>
+<div class='author'>Kester, Roy B. (Roy Bernard), 1882-1965</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70410, {&quot;Title&quot;:&quot;A history of commerce&quot;,&quot;Topics&quot;:[&quot;Commerce -- History&quot;],&quot;Primary&quot;:&quot;70410.htm&quot;,&quot;CreatorNames&quot;:[&quot;Day, Clive, 1871-1951&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;70410&quot;});" class='title'>A history of commerce</a>
+<div class='author'>Day, Clive, 1871-1951</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70418, {&quot;Title&quot;:&quot;Maritime enterprise, 1485-1558&quot;,&quot;Topics&quot;:[&quot;Voyages and travels&quot;,&quot;Great Britain -- Commerce -- History -- 16th century&quot;,&quot;Great Britain -- Commerce -- History -- To 1500&quot;],&quot;Primary&quot;:&quot;70418.htm&quot;,&quot;CreatorNames&quot;:[&quot;Williamson, James A. (James Alexander), 1886-1964&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;70418&quot;});" class='title'>Maritime enterprise, 1485-1558</a>
+<div class='author'>Williamson, James A. (James Alexander), 1886-1964</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7309, {&quot;Title&quot;:&quot;Business Correspondence, Vol. 1: How to Write a Business Letter&quot;,&quot;Topics&quot;:[&quot;Advertising&quot;,&quot;Commercial correspondence&quot;],&quot;Primary&quot;:&quot;7309.txt&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;7309&quot;});" class='title'>Business Correspondence, Vol. 1:<br><span class='subtitle'>How to Write a Business Letter</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(8000, {&quot;Title&quot;:&quot;The Slave Trade, Domestic and Foreign - Why It Exists, and How It May Be Extinguished&quot;,&quot;Topics&quot;:[&quot;Slavery&quot;,&quot;Slavery -- United States&quot;,&quot;Working class&quot;,&quot;Slave trade&quot;,&quot;Tariff -- United States&quot;,&quot;Labor&quot;],&quot;Primary&quot;:&quot;8000.txt&quot;,&quot;CreatorNames&quot;:[&quot;Carey, Henry Charles, 1793-1879&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;8000&quot;});" class='title'>The Slave Trade, Domestic and Foreign -<br><span class='subtitle'>Why It Exists, and How It May Be Extinguished</span></a>
+<div class='author'>Carey, Henry Charles, 1793-1879</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(8581, {&quot;Title&quot;:&quot;The Art of Money Getting; Or, Golden Rules for Making Money&quot;,&quot;Topics&quot;:[&quot;Success&quot;,&quot;Success in business&quot;],&quot;Primary&quot;:&quot;8581.htm&quot;,&quot;CreatorNames&quot;:[&quot;Barnum, P. T. (Phineas Taylor), 1810-1891&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;8581&quot;});" class='title'>The Art of Money Getting;<br><span class='subtitle'>Or, Golden Rules for Making Money</span></a>
+<div class='author'>Barnum, P. T. (Phineas Taylor), 1810-1891</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(9951, {&quot;Title&quot;:&quot;Arbetets Herravälde&quot;,&quot;Topics&quot;:[&quot;Business&quot;,&quot;Wealth&quot;,&quot;Success in business&quot;,&quot;United States -- Economic conditions&quot;],&quot;Primary&quot;:&quot;9951.txt&quot;,&quot;CreatorNames&quot;:[&quot;Carnegie, Andrew, 1835-1919&quot;],&quot;LoCC&quot;:[&quot;HF&quot;],&quot;PG_ID&quot;:&quot;9951&quot;});" class='title'>Arbetets Herravälde</a>
+<div class='author'>Carnegie, Andrew, 1835-1919</div>
+</div>
+</ul></div>
+</body></html>

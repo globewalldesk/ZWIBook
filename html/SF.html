@@ -1,0 +1,978 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Animal culture (SF)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(10539, {&quot;Title&quot;:&quot;In the Riding-School; Chats with Esmeralda&quot;,&quot;Topics&quot;:[&quot;Horsemanship&quot;],&quot;Primary&quot;:&quot;10539.htm&quot;,&quot;CreatorNames&quot;:[&quot;Browne, Theo. Stephenson&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;10539&quot;});" class='title'>In the Riding-School;<br><span class='subtitle'>Chats with Esmeralda</span></a>
+<div class='author'>Browne, Theo. Stephenson</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(10878, {&quot;Title&quot;:&quot;The Mule: A Treatise on the Breeding, Training, and Uses to Which He May Be Put&quot;,&quot;Topics&quot;:[&quot;Mules&quot;],&quot;Primary&quot;:&quot;10878.htm&quot;,&quot;CreatorNames&quot;:[&quot;Riley, Harvey&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;10878&quot;});" class='title'>The Mule:<br><span class='subtitle'>A Treatise on the Breeding, Training, and Uses to Which He May Be Put</span></a>
+<div class='author'>Riley, Harvey</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(10991, {&quot;Title&quot;:&quot;Dogs and All about Them&quot;,&quot;Topics&quot;:[&quot;Dogs&quot;],&quot;Primary&quot;:&quot;10991.txt&quot;,&quot;CreatorNames&quot;:[&quot;Leighton, Robert, 1859-1934&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;10991&quot;});" class='title'>Dogs and All about Them</a>
+<div class='author'>Leighton, Robert, 1859-1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(11204, {&quot;Title&quot;:&quot;Diseases of the Horse&#39;s Foot&quot;,&quot;Topics&quot;:[&quot;Horses -- Diseases&quot;,&quot;Hoofs -- Diseases&quot;],&quot;Primary&quot;:&quot;11204.htm&quot;,&quot;CreatorNames&quot;:[&quot;Reeks, H. Caulton (Harry Caulton)&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;11204&quot;});" class='title'>Diseases of the Horse's Foot</a>
+<div class='author'>Reeks, H. Caulton (Harry Caulton)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(1176, {&quot;Title&quot;:&quot;On Horsemanship&quot;,&quot;Topics&quot;:[&quot;Classical literature&quot;,&quot;Horsemanship&quot;,&quot;Horses -- Training&quot;],&quot;Primary&quot;:&quot;1176.htm&quot;,&quot;CreatorNames&quot;:[&quot;Xenophon, 431 BCE-350? BCE&quot;,&quot;Dakyns, Henry Graham, 1838-1911 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PA&quot;,&quot;SF&quot;],&quot;PG_ID&quot;:&quot;1176&quot;});" class='title'>On Horsemanship</a>
+<div class='author'>Xenophon, 431 BCE-350? BCE, Dakyns, Henry Graham, 1838-1911 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13254, {&quot;Title&quot;:&quot;The Dollar Hen&quot;,&quot;Topics&quot;:[&quot;Poultry&quot;],&quot;Primary&quot;:&quot;13254.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hastings, Milo, 1884-1957&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;13254&quot;});" class='title'>The Dollar Hen</a>
+<div class='author'>Hastings, Milo, 1884-1957</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14293, {&quot;Title&quot;:&quot;The Complete Book of Cheese&quot;,&quot;Topics&quot;:[&quot;Cheese&quot;,&quot;Cooking (Cheese)&quot;],&quot;Primary&quot;:&quot;14293.htm&quot;,&quot;CreatorNames&quot;:[&quot;Brown, Bob, 1886-1959&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;14293&quot;});" class='title'>The Complete Book of Cheese</a>
+<div class='author'>Brown, Bob, 1886-1959</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14776, {&quot;Title&quot;:&quot;The Arabian Art of Taming and Training Wild &amp; Vicious Horses&quot;,&quot;Topics&quot;:[&quot;Horses -- Diseases&quot;,&quot;Horses -- Training&quot;,&quot;Horses&quot;],&quot;Primary&quot;:&quot;14776.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kincaid, P. R.&quot;,&quot;Stutzman, John J.&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;14776&quot;});" class='title'>The Arabian Art of Taming and Training Wild & Vicious Horses</a>
+<div class='author'>Kincaid, P. R., Stutzman, John J.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16370, {&quot;Title&quot;:&quot;Lameness of the Horse - Veterinary Practitioners&#39; Series, No. 1&quot;,&quot;Topics&quot;:[&quot;Horses -- Health&quot;,&quot;Lameness in horses&quot;],&quot;Primary&quot;:&quot;16370.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lacroix, John Victor, 1882-&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;16370&quot;});" class='title'>Lameness of the Horse -<br><span class='subtitle'>Veterinary Practitioners' Series, No. 1</span></a>
+<div class='author'>Lacroix, John Victor, 1882-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16744, {&quot;Title&quot;:&quot;Pratt&#39;s Practical Pointers on the Care of Livestock and Poultry&quot;,&quot;Topics&quot;:[&quot;Livestock&quot;,&quot;Poultry&quot;],&quot;Primary&quot;:&quot;16744.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pratt Food Company&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;16744&quot;});" class='title'>Pratt's Practical Pointers on the Care of Livestock and Poultry</a>
+<div class='author'>Pratt Food Company</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18033, {&quot;Title&quot;:&quot;The Boston Terrier and All About It - A Practical, Scientific, and Up to Date Guide to the Breeding of the American Dog&quot;,&quot;Topics&quot;:[&quot;Boston terrier&quot;],&quot;Primary&quot;:&quot;18033.htm&quot;,&quot;CreatorNames&quot;:[&quot;Axtell, Edward&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;18033&quot;});" class='title'>The Boston Terrier and All About It -<br><span class='subtitle'>A Practical, Scientific, and Up to Date Guide to the Breeding of the American Dog</span></a>
+<div class='author'>Axtell, Edward</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19319, {&quot;Title&quot;:&quot;A Description of the Bar-and-Frame-Hive - With an Abstract of Wildman&#39;s Complete Guide for the Management of Bees Throughout the Year&quot;,&quot;Topics&quot;:[&quot;Bees&quot;,&quot;Bee culture&quot;,&quot;Beehives&quot;],&quot;Primary&quot;:&quot;19319.htm&quot;,&quot;CreatorNames&quot;:[&quot;Munn, William Augustus&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;19319&quot;});" class='title'>A Description of the Bar-and-Frame-Hive -<br><span class='subtitle'>With an Abstract of Wildman's Complete Guide for the Management of Bees Throughout the Year</span></a>
+<div class='author'>Munn, William Augustus</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19673, {&quot;Title&quot;:&quot;Parasiten der Honigbiene - und die durch dieselben bedingten Krankheiten dieses Insects.&quot;,&quot;Topics&quot;:[&quot;Veterinary parasitology&quot;,&quot;Bees -- Parasites of&quot;],&quot;Primary&quot;:&quot;19673.htm&quot;,&quot;CreatorNames&quot;:[&quot;Assmuss, Eduard Philibert, 1838-&quot;],&quot;LoCC&quot;:[&quot;QL&quot;,&quot;QR&quot;,&quot;SF&quot;],&quot;PG_ID&quot;:&quot;19673&quot;});" class='title'>Parasiten der Honigbiene -<br><span class='subtitle'>und die durch dieselben bedingten Krankheiten dieses Insects.</span></a>
+<div class='author'>Assmuss, Eduard Philibert, 1838-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20279, {&quot;Title&quot;:&quot;The Veterinarian&quot;,&quot;Topics&quot;:[&quot;Veterinary medicine&quot;],&quot;Primary&quot;:&quot;20279.htm&quot;,&quot;CreatorNames&quot;:[&quot;Korinek, Charles James, 1880-&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;20279&quot;});" class='title'>The Veterinarian</a>
+<div class='author'>Korinek, Charles James, 1880-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(21900, {&quot;Title&quot;:&quot;The Principles of Breeding - or, Glimpses at the Physiological Laws involved in the Reproduction and Improvement of Domestic Animals&quot;,&quot;Topics&quot;:[&quot;Livestock&quot;,&quot;Breeding&quot;],&quot;Primary&quot;:&quot;21900.htm&quot;,&quot;CreatorNames&quot;:[&quot;Goodale, S. L. (Stephen Lincoln), 1815-1897&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;21900&quot;});" class='title'>The Principles of Breeding -<br><span class='subtitle'>or, Glimpses at the Physiological Laws involved in the Reproduction and Improvement of Domestic Animals</span></a>
+<div class='author'>Goodale, S. L. (Stephen Lincoln), 1815-1897</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22520, {&quot;Title&quot;:&quot;Cattle and Cattle-breeders&quot;,&quot;Topics&quot;:[&quot;Cattle -- Breeding&quot;,&quot;Cattle breeders&quot;],&quot;Primary&quot;:&quot;22520.htm&quot;,&quot;CreatorNames&quot;:[&quot;McCombie, William, 1805-1880&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;22520&quot;});" class='title'>Cattle and Cattle-breeders</a>
+<div class='author'>McCombie, William, 1805-1880</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22561, {&quot;Title&quot;:&quot;Tame Animals&quot;,&quot;Topics&quot;:[&quot;Domestic animals -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;22561.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;22561&quot;});" class='title'>Tame Animals</a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22603, {&quot;Title&quot;:&quot;Rational Horse-Shoeing&quot;,&quot;Topics&quot;:[&quot;Horseshoeing&quot;],&quot;Primary&quot;:&quot;22603.htm&quot;,&quot;CreatorNames&quot;:[&quot;Russell, John E. (John Edwards), 1834-1903&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;22603&quot;});" class='title'>Rational Horse-Shoeing</a>
+<div class='author'>Russell, John E. (John Edwards), 1834-1903</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22771, {&quot;Title&quot;:&quot;Cattle and Their Diseases - Embracing Their History and Breeds, Crossing and Breeding, and Feeding and Management; with the Diseases to Which They Are Subject, and the Remedies Best Adapted to Their Cure&quot;,&quot;Topics&quot;:[&quot;Cattle -- Diseases&quot;],&quot;Primary&quot;:&quot;22771.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jennings, Robert, 1824-1893&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;22771&quot;});" class='title'>Cattle and Their Diseases -<br><span class='subtitle'>Embracing Their History and Breeds, Crossing and Breeding, and Feeding and Management; with the Diseases to Which They Are Subject, and the Remedies Best Adapted to Their Cure</span></a>
+<div class='author'>Jennings, Robert, 1824-1893</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23403, {&quot;Title&quot;:&quot;Special Report on Diseases of the Horse&quot;,&quot;Topics&quot;:[&quot;Horses -- Diseases&quot;],&quot;Primary&quot;:&quot;23403.htm&quot;,&quot;CreatorNames&quot;:[&quot;Harbaugh, W. H. (William Heyser), 1856-1897&quot;,&quot;Huidekoper, Rush Shippen, 1854-1901&quot;,&quot;Michener, Charles B., 1838-&quot;,&quot;Pearson, Leonard, 1868-1909&quot;,&quot;United States. Bureau of Animal Industry&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;23403&quot;});" class='title'>Special Report on Diseases of the Horse</a>
+<div class='author'>Harbaugh, W. H. (William Heyser), 1856-1897, Huidekoper, Rush Shippen, 1854-1901, Michener, Charles B., 1838-, Pearson, Leonard, 1868-1909, United States. Bureau of Animal Industry</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24583, {&quot;Title&quot;:&quot;Langstroth on the Hive and the Honey-Bee: A Bee Keeper&#39;s Manual&quot;,&quot;Topics&quot;:[&quot;Bees&quot;,&quot;Honey&quot;,&quot;Bee culture&quot;,&quot;Honeybee&quot;,&quot;Honeybee -- Diseases&quot;],&quot;Primary&quot;:&quot;24583.htm&quot;,&quot;CreatorNames&quot;:[&quot;Langstroth, L. L. (Lorenzo Lorraine), 1810-1895&quot;],&quot;LoCC&quot;:[&quot;LT&quot;,&quot;SF&quot;],&quot;PG_ID&quot;:&quot;24583&quot;});" class='title'>Langstroth on the Hive and the Honey-Bee:<br><span class='subtitle'>A Bee Keeper's Manual</span></a>
+<div class='author'>Langstroth, L. L. (Lorenzo Lorraine), 1810-1895</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24858, {&quot;Title&quot;:&quot;The Story of Wool&quot;,&quot;Topics&quot;:[&quot;Sheep -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;24858.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bassett, Sara Ware, 1872-1968&quot;,&quot;Otis, Elizabeth [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;PZ&quot;,&quot;SF&quot;],&quot;PG_ID&quot;:&quot;24858&quot;});" class='title'>The Story of Wool</a>
+<div class='author'>Bassett, Sara Ware, 1872-1968, Otis, Elizabeth [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25185, {&quot;Title&quot;:&quot;Mysteries of Bee-keeping Explained&quot;,&quot;Topics&quot;:[&quot;Bees&quot;],&quot;Primary&quot;:&quot;25185.htm&quot;,&quot;CreatorNames&quot;:[&quot;Quinby, M. (Moses), 1810-1875&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;25185&quot;});" class='title'>Mysteries of Bee-keeping Explained</a>
+<div class='author'>Quinby, M. (Moses), 1810-1875</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25520, {&quot;Title&quot;:&quot;The Stock-Feeder&#39;s Manual - the chemistry of food in relation to the breeding and feeding of live stock&quot;,&quot;Topics&quot;:[&quot;Livestock&quot;,&quot;Feeds&quot;],&quot;Primary&quot;:&quot;25520.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cameron, Charles Alexander, Sir, 1830-1921&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;25520&quot;});" class='title'>The Stock-Feeder's Manual -<br><span class='subtitle'>the chemistry of food in relation to the breeding and feeding of live stock</span></a>
+<div class='author'>Cameron, Charles Alexander, Sir, 1830-1921</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25527, {&quot;Title&quot;:&quot;Australia, The Dairy Country&quot;,&quot;Topics&quot;:[&quot;Dairying -- Australia&quot;],&quot;Primary&quot;:&quot;25527.htm&quot;,&quot;CreatorNames&quot;:[&quot;Australia. Department of External Affairs&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;25527&quot;});" class='title'>Australia, The Dairy Country</a>
+<div class='author'>Australia. Department of External Affairs</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25568, {&quot;Title&quot;:&quot;Domesticated Animals - Their Relation to Man and to his Advancement in Civilization&quot;,&quot;Topics&quot;:[&quot;Domestic animals&quot;],&quot;Primary&quot;:&quot;25568.htm&quot;,&quot;CreatorNames&quot;:[&quot;Shaler, Nathaniel Southgate, 1841-1906&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;25568&quot;});" class='title'>Domesticated Animals -<br><span class='subtitle'>Their Relation to Man and to his Advancement in Civilization</span></a>
+<div class='author'>Shaler, Nathaniel Southgate, 1841-1906</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26318, {&quot;Title&quot;:&quot;The Horsewoman: A Practical Guide to Side-Saddle Riding, 2nd. Ed.&quot;,&quot;Topics&quot;:[&quot;Horsemanship&quot;,&quot;Sidesaddle riding&quot;],&quot;Primary&quot;:&quot;26318.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hayes, Alice M., 1863?-1913&quot;,&quot;Hayes, M. Horace (Matthew Horace), 1842-1904 [Editor]&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;26318&quot;});" class='title'>The Horsewoman:<br><span class='subtitle'>A Practical Guide to Side-Saddle Riding, 2nd. Ed.</span></a>
+<div class='author'>Hayes, Alice M., 1863?-1913, Hayes, M. Horace (Matthew Horace), 1842-1904 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26443, {&quot;Title&quot;:&quot;De honig en zijn gebruik&quot;,&quot;Topics&quot;:[&quot;Bees&quot;,&quot;Bee culture&quot;],&quot;Primary&quot;:&quot;26443.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rondou, W.-F.&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;26443&quot;});" class='title'>De honig en zijn gebruik</a>
+<div class='author'>Rondou, W.-F.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26903, {&quot;Title&quot;:&quot;Determining the Age of Cattle by the Teeth&quot;,&quot;Topics&quot;:[&quot;Cattle -- Age determination&quot;],&quot;Primary&quot;:&quot;26903.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pope, George W. (George Whitfield), 1867-&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;26903&quot;});" class='title'>Determining the Age of Cattle by the Teeth</a>
+<div class='author'>Pope, George W. (George Whitfield), 1867-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27050, {&quot;Title&quot;:&quot;De Canibus Britannicis: Of Englishe Dogges&quot;,&quot;Topics&quot;:[&quot;Dogs -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;27050.htm&quot;,&quot;CreatorNames&quot;:[&quot;Caius, John, 1510-1573&quot;,&quot;Fleming, Abraham, 1552?-1607 [Translator]&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;27050&quot;});" class='title'>De Canibus Britannicis:<br><span class='subtitle'>Of Englishe Dogges</span></a>
+<div class='author'>Caius, John, 1510-1573, Fleming, Abraham, 1552?-1607 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27065, {&quot;Title&quot;:&quot;A Manual or an Easy Method of Managing Bees&quot;,&quot;Topics&quot;:[&quot;Bees&quot;],&quot;Primary&quot;:&quot;27065.htm&quot;,&quot;CreatorNames&quot;:[&quot;Weeks, John M. (John Moseley), 1788-1858&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;27065&quot;});" class='title'>A Manual or an Easy Method of Managing Bees</a>
+<div class='author'>Weeks, John M. (John Moseley), 1788-1858</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27836, {&quot;Title&quot;:&quot;Het Geldersch Byenboek - of pratyk der byen, langs den kant der Maes, Peel en Niers, in het overkwartier van Gelderland&quot;,&quot;Topics&quot;:[&quot;Bees&quot;],&quot;Primary&quot;:&quot;27836.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hendrix, Petrus, 1723-1795&quot;,&quot;Janssen, M. J. [Editor]&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;27836&quot;});" class='title'>Het Geldersch Byenboek -<br><span class='subtitle'>of pratyk der byen, langs den kant der Maes, Peel en Niers, in het overkwartier van Gelderland</span></a>
+<div class='author'>Hendrix, Petrus, 1723-1795, Janssen, M. J. [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28090, {&quot;Title&quot;:&quot;Hints on Driving&quot;,&quot;Topics&quot;:[&quot;Horsemanship&quot;,&quot;Driving of horse-drawn vehicles&quot;,&quot;Driving horses&quot;],&quot;Primary&quot;:&quot;28090.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ward, C. S.&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;28090&quot;});" class='title'>Hints on Driving</a>
+<div class='author'>Ward, C. S.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28563, {&quot;Title&quot;:&quot;Hints on Horsemanship, to a Nephew and Niece - or, Common Sense and Common Errors in Common Riding&quot;,&quot;Topics&quot;:[&quot;Horsemanship&quot;],&quot;Primary&quot;:&quot;28563.htm&quot;,&quot;CreatorNames&quot;:[&quot;Greenwood, George, 1799-1875&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;28563&quot;});" class='title'>Hints on Horsemanship, to a Nephew and Niece -<br><span class='subtitle'>or, Common Sense and Common Errors in Common Riding</span></a>
+<div class='author'>Greenwood, George, 1799-1875</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28612, {&quot;Title&quot;:&quot;A New Illustrated Edition of J. S. Rarey&#39;s Art of Taming Horses - With the Substance of the Lectures at the Round House, and Additional Chapters on Horsemanship and Hunting, for the Young and Timid&quot;,&quot;Topics&quot;:[&quot;Hunting&quot;,&quot;Horsemanship&quot;,&quot;Horses -- Training&quot;],&quot;Primary&quot;:&quot;28612.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rarey, J. S. (John Solomon), 1827-1866&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;28612&quot;});" class='title'>A New Illustrated Edition of J. S. Rarey's Art of Taming Horses -<br><span class='subtitle'>With the Substance of the Lectures at the Round House, and Additional Chapters on Horsemanship and Hunting, for the Young and Timid</span></a>
+<div class='author'>Rarey, J. S. (John Solomon), 1827-1866</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28686, {&quot;Title&quot;:&quot;Wild Ducks: How to Rear and Shoot Them&quot;,&quot;Topics&quot;:[&quot;Ducks&quot;,&quot;Duck shooting&quot;],&quot;Primary&quot;:&quot;28686.htm&quot;,&quot;CreatorNames&quot;:[&quot;Oates, W. Coape&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;28686&quot;});" class='title'>Wild Ducks:<br><span class='subtitle'>How to Rear and Shoot Them</span></a>
+<div class='author'>Oates, W. Coape</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29248, {&quot;Title&quot;:&quot;The Young Lady&#39;s Equestrian Manual&quot;,&quot;Topics&quot;:[&quot;Horsemanship&quot;],&quot;Primary&quot;:&quot;29248.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;29248&quot;});" class='title'>The Young Lady's Equestrian Manual</a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29648, {&quot;Title&quot;:&quot;Štafeta&quot;,&quot;Topics&quot;:[&quot;Sled dog racing -- Alaska&quot;],&quot;Primary&quot;:&quot;29648.htm&quot;,&quot;CreatorNames&quot;:[&quot;Omelka, František, 1904-1960&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;29648&quot;});" class='title'>Štafeta</a>
+<div class='author'>Omelka, František, 1904-1960</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30310, {&quot;Title&quot;:&quot;Special Report on Diseases of Cattle&quot;,&quot;Topics&quot;:[&quot;Cattle -- Diseases&quot;],&quot;Primary&quot;:&quot;30310.htm&quot;,&quot;CreatorNames&quot;:[&quot;Atkinson, V. T. (Vickers T.), -1891&quot;,&quot;Dickson, Dr. (William), -1891&quot;,&quot;Eichhorn, A. (Adolph), 1875-1956&quot;,&quot;Hickman, Richard W. (Richard West), 1852-1926&quot;,&quot;Law, James, 1838-1921&quot;,&quot;Lowe, (Dr.) (William Herbert), 1862-1933&quot;,&quot;Marsh, C. Dwight (Charles Dwight), 1855-1932&quot;,&quot;Mohler, John R. (John Robbins), 1875-1952&quot;,&quot;Murray, A. J. (Alexander James)&quot;,&quot;Pearson, Leonard, 1868-1909&quot;,&quot;Ransom, Brayton Howard, 1879-1925&quot;,&quot;Trumbower, M. R. (Milton R.)&quot;,&quot;United States. Bureau of Animal Industry&quot;,&quot;Woodward, Dr. (Benjamin Tilghman), 1881-&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;30310&quot;});" class='title'>Special Report on Diseases of Cattle</a>
+<div class='author'>Atkinson, V. T. (Vickers T.), -1891, Dickson, Dr. (William), -1891, Eichhorn, A. (Adolph), 1875-1956, Hickman, Richard W. (Richard West), 1852-1926, Law, James, 1838-1921, Lowe, (Dr.) (William Herbert), 1862-1933, Marsh, C. Dwight (Charles Dwight), 1855-1932, Mohler, John R. (John Robbins), 1875-1952, Murray, A. J. (Alexander James), Pearson, Leonard, 1868-1909, Ransom, Brayton Howard, 1879-1925, Trumbower, M. R. (Milton R.), United States. Bureau of Animal Industry, Woodward, Dr. (Benjamin Tilghman), 1881-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30936, {&quot;Title&quot;:&quot;Handboek voor den kaasmaker in Nederland&quot;,&quot;Topics&quot;:[&quot;Cheesemakers -- Netherlands -- Handbooks, manuals, etc.&quot;,&quot;Cheesemaking -- Netherlands -- Handbooks, manuals, etc.&quot;,&quot;Cheese -- Varieties -- Netherlands&quot;],&quot;Primary&quot;:&quot;30936.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hollman, Pierre Jean&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;30936&quot;});" class='title'>Handboek voor den kaasmaker in Nederland</a>
+<div class='author'>Hollman, Pierre Jean</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31957, {&quot;Title&quot;:&quot;Lectures on Horsemanship - Wherein Is Explained Every Necessary Instruction for Both Ladies and Gentlemen, in the Useful and Polite Art of Riding, with Ease, Elegance, and Safety&quot;,&quot;Topics&quot;:[&quot;Horsemanship&quot;],&quot;Primary&quot;:&quot;31957.htm&quot;,&quot;CreatorNames&quot;:[&quot;Unknown&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;31957&quot;});" class='title'>Lectures on Horsemanship -<br><span class='subtitle'>Wherein Is Explained Every Necessary Instruction for Both Ladies and Gentlemen, in the Useful and Polite Art of Riding, with Ease, Elegance, and Safety</span></a>
+<div class='author'>Unknown</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32189, {&quot;Title&quot;:&quot;The Raising and Care of Guinea Pigs - A complete guide to the breeding, feeding, housing, exhibiting and marketing of cavies&quot;,&quot;Topics&quot;:[&quot;Guinea pigs&quot;],&quot;Primary&quot;:&quot;32189.htm&quot;,&quot;CreatorNames&quot;:[&quot;Smith, Allen Christian, 1882-&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;32189&quot;});" class='title'>The Raising and Care of Guinea Pigs -<br><span class='subtitle'>A complete guide to the breeding, feeding, housing, exhibiting and marketing of cavies</span></a>
+<div class='author'>Smith, Allen Christian, 1882-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32300, {&quot;Title&quot;:&quot;The Dog&quot;,&quot;Topics&quot;:[&quot;Dogs&quot;,&quot;Dogs -- Training&quot;],&quot;Primary&quot;:&quot;32300.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dinks, 1807-1858&quot;,&quot;Hutchinson, W. N. (William Nelson), 1803-1895&quot;,&quot;Mayhew, Edward, 1813?-1868&quot;,&quot;Forester, Frank, 1807-1858 [Editor]&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;32300&quot;});" class='title'>The Dog</a>
+<div class='author'>Dinks, 1807-1858, Hutchinson, W. N. (William Nelson), 1803-1895, Mayhew, Edward, 1813?-1868, Forester, Frank, 1807-1858 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32376, {&quot;Title&quot;:&quot;Notes on Stable Management in India and the Colonies&quot;,&quot;Topics&quot;:[&quot;Horses&quot;,&quot;Horses -- India&quot;,&quot;Stables -- India -- Management&quot;,&quot;Stables -- Management&quot;],&quot;Primary&quot;:&quot;32376.htm&quot;,&quot;CreatorNames&quot;:[&quot;Nunn, Joshua A. (Joshua Arthur), 1853-&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;32376&quot;});" class='title'>Notes on Stable Management in India and the Colonies</a>
+<div class='author'>Nunn, Joshua A. (Joshua Arthur), 1853-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32554, {&quot;Title&quot;:&quot;History of the Kentucky Derby, 1875-1921&quot;,&quot;Topics&quot;:[&quot;Kentucky Derby&quot;,&quot;Horse racing -- Kentucky&quot;],&quot;Primary&quot;:&quot;32554.htm&quot;,&quot;CreatorNames&quot;:[&quot;O&#39;Connor, John Lawrence, 1875-&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;32554&quot;});" class='title'>History of the Kentucky Derby, 1875-1921</a>
+<div class='author'>O'Connor, John Lawrence, 1875-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33029, {&quot;Title&quot;:&quot;Ducks and Geese&quot;,&quot;Topics&quot;:[&quot;Ducks&quot;,&quot;Geese&quot;],&quot;Primary&quot;:&quot;33029.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lamon, Harry M., 1872-&quot;,&quot;Slocum, Rob R. (Rob Roy), 1883-1944&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;33029&quot;});" class='title'>Ducks and Geese</a>
+<div class='author'>Lamon, Harry M., 1872-, Slocum, Rob R. (Rob Roy), 1883-1944</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33074, {&quot;Title&quot;:&quot;The Pig: Breeding, Rearing, and Marketing&quot;,&quot;Topics&quot;:[&quot;Swine&quot;,&quot;Swine -- Breeding&quot;,&quot;Swine -- Marketing&quot;],&quot;Primary&quot;:&quot;33074.htm&quot;,&quot;CreatorNames&quot;:[&quot;Spencer, Sanders, 1840-&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;33074&quot;});" class='title'>The Pig:<br><span class='subtitle'>Breeding, Rearing, and Marketing</span></a>
+<div class='author'>Spencer, Sanders, 1840-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33084, {&quot;Title&quot;:&quot;Practical Angora Goat Raising&quot;,&quot;Topics&quot;:[&quot;Angora goat&quot;],&quot;Primary&quot;:&quot;33084.htm&quot;,&quot;CreatorNames&quot;:&quot;&quot;,&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;33084&quot;});" class='title'>Practical Angora Goat Raising</a>
+<div class='author'></div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33371, {&quot;Title&quot;:&quot;Raising P. V. Squabs for Profit&quot;,&quot;Topics&quot;:[&quot;Pigeons&quot;],&quot;Primary&quot;:&quot;33371.htm&quot;,&quot;CreatorNames&quot;:[&quot;Trecartin, John S.&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;33371&quot;});" class='title'>Raising P. V. Squabs for Profit</a>
+<div class='author'>Trecartin, John S.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33830, {&quot;Title&quot;:&quot;Fur Farming - A book of Information about Fur Bearing Animals, Enclosures, Habits, Care, etc.&quot;,&quot;Topics&quot;:[&quot;Fur-bearing animals&quot;],&quot;Primary&quot;:&quot;33830.htm&quot;,&quot;CreatorNames&quot;:[&quot;Harding, A. R. (Arthur Robert), 1871-1930&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;33830&quot;});" class='title'>Fur Farming -<br><span class='subtitle'>A book of Information about Fur Bearing Animals, Enclosures, Habits, Care, etc.</span></a>
+<div class='author'>Harding, A. R. (Arthur Robert), 1871-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33972, {&quot;Title&quot;:&quot;Florida: An Ideal Cattle State&quot;,&quot;Topics&quot;:[&quot;Cattle -- Florida&quot;],&quot;Primary&quot;:&quot;33972.htm&quot;,&quot;CreatorNames&quot;:[&quot;Florida State Live Stock Association&quot;,&quot;Blackman, William Fremont, 1855-1932 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;33972&quot;});" class='title'>Florida:<br><span class='subtitle'>An Ideal Cattle State</span></a>
+<div class='author'>Florida State Live Stock Association, Blackman, William Fremont, 1855-1932 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34044, {&quot;Title&quot;:&quot;Bee Hunting: A Book of Valuable Information for Bee Hunters - Tells How to Line Bees to Trees, Etc.&quot;,&quot;Topics&quot;:[&quot;Bees&quot;],&quot;Primary&quot;:&quot;34044.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lockard, John Ready, 1858-&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;34044&quot;});" class='title'>Bee Hunting:<br><span class='subtitle'>A Book of Valuable Information for Bee Hunters - Tells How to Line Bees to Trees, Etc.</span></a>
+<div class='author'>Lockard, John Ready, 1858-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34175, {&quot;Title&quot;:&quot;Domestic Animals - History and description of the horse, mule, cattle, sheep, swine, poultry and farm dogs; with directions for their management, breeding, crossing, rearing, feeding, and preparation for a profitable market; also their diseases and remedies. Together with full directions for the management of the dairy.&quot;,&quot;Topics&quot;:[&quot;Domestic animals&quot;],&quot;Primary&quot;:&quot;34175.htm&quot;,&quot;CreatorNames&quot;:[&quot;Allen, Richard Lamb, 1803-1869&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;34175&quot;});" class='title'>Domestic Animals -<br><span class='subtitle'>History and description of the horse, mule, cattle, sheep, swine, poultry and farm dogs; with directions for their management, breeding, crossing, rearing, feeding, and preparation for a profitable market; also their diseases and remedies. Together with full directions for the management of the dairy.</span></a>
+<div class='author'>Allen, Richard Lamb, 1803-1869</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34259, {&quot;Title&quot;:&quot;Hunting Dogs - Describes in a Practical Manner the Training, Handling, Treatment, Breeds, Etc., Best Adapted for Night Hunting as Well as Gun Dogs for Daylight Sport&quot;,&quot;Topics&quot;:[&quot;Hunting&quot;,&quot;Dogs&quot;],&quot;Primary&quot;:&quot;34259.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hartley, Oliver&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;34259&quot;});" class='title'>Hunting Dogs -<br><span class='subtitle'>Describes in a Practical Manner the Training, Handling, Treatment, Breeds, Etc., Best Adapted for Night Hunting as Well as Gun Dogs for Daylight Sport</span></a>
+<div class='author'>Hartley, Oliver</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34376, {&quot;Title&quot;:&quot;Our Domestic Birds: Elementary Lessons in Aviculture&quot;,&quot;Topics&quot;:[&quot;Poultry&quot;,&quot;Pigeons&quot;,&quot;Cage birds&quot;],&quot;Primary&quot;:&quot;34376.htm&quot;,&quot;CreatorNames&quot;:[&quot;Robinson, John H. (John Henry), 1863-1935&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;34376&quot;});" class='title'>Our Domestic Birds:<br><span class='subtitle'>Elementary Lessons in Aviculture</span></a>
+<div class='author'>Robinson, John H. (John Henry), 1863-1935</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34590, {&quot;Title&quot;:&quot;Handboek voor Bijenhouders&quot;,&quot;Topics&quot;:[&quot;Bee culture&quot;],&quot;Primary&quot;:&quot;34590.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dirks, J.&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;34590&quot;});" class='title'>Handboek voor Bijenhouders</a>
+<div class='author'>Dirks, J.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35258, {&quot;Title&quot;:&quot;Contagious Abortion of Cows&quot;,&quot;Topics&quot;:[&quot;Brucellosis in cattle&quot;],&quot;Primary&quot;:&quot;35258.htm&quot;,&quot;CreatorNames&quot;:[&quot;MacNeal, Ward J.&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;35258&quot;});" class='title'>Contagious Abortion of Cows</a>
+<div class='author'>MacNeal, Ward J.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35448, {&quot;Title&quot;:&quot;Herd Record of the Association of Breeders of Thorough-Bred Neat Stock - Short Horns, Ayrshires and Devons&quot;,&quot;Topics&quot;:[&quot;Cattle&quot;,&quot;Cattle -- Pedigrees -- Periodicals&quot;],&quot;Primary&quot;:&quot;35448.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;35448&quot;});" class='title'>Herd Record of the Association of Breeders of Thorough-Bred Neat Stock -<br><span class='subtitle'>Short Horns, Ayrshires and Devons</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35450, {&quot;Title&quot;:&quot;Our Cats and All About Them - Their Varieties, Habits, and Management; and for Show, the Standard of Excellence and Beauty; Described and Pictured&quot;,&quot;Topics&quot;:[&quot;Cats&quot;],&quot;Primary&quot;:&quot;35450.htm&quot;,&quot;CreatorNames&quot;:[&quot;Weir, Harrison, 1824-1906&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;35450&quot;});" class='title'>Our Cats and All About Them -<br><span class='subtitle'>Their Varieties, Habits, and Management; and for Show, the Standard of Excellence and Beauty; Described and Pictured</span></a>
+<div class='author'>Weir, Harrison, 1824-1906</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35521, {&quot;Title&quot;:&quot;Riding Recollections, 5th ed.&quot;,&quot;Topics&quot;:[&quot;Horsemanship&quot;,&quot;Hunt riding&quot;],&quot;Primary&quot;:&quot;35521.htm&quot;,&quot;CreatorNames&quot;:[&quot;Whyte-Melville, G. J. (George John), 1821-1878&quot;,&quot;Giberne, Edgar [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;SF&quot;,&quot;SK&quot;],&quot;PG_ID&quot;:&quot;35521&quot;});" class='title'>Riding Recollections, 5th ed.</a>
+<div class='author'>Whyte-Melville, G. J. (George John), 1821-1878, Giberne, Edgar [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36496, {&quot;Title&quot;:&quot;On the cattle plague: or, Contagious typhus in horned cattle. Its history, origin, description, and treatment&quot;,&quot;Topics&quot;:[&quot;Cattle -- Diseases&quot;],&quot;Primary&quot;:&quot;36496.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bourguignon, Honoré&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;36496&quot;});" class='title'>On the cattle plague:<br><span class='subtitle'>or, Contagious typhus in horned cattle. Its history, origin, description, and treatment</span></a>
+<div class='author'>Bourguignon, Honoré</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36565, {&quot;Title&quot;:&quot;The Welsh Pony, Described in two letters to a friend&quot;,&quot;Topics&quot;:[&quot;Ponies&quot;],&quot;Primary&quot;:&quot;36565.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dargan, Olive Tilford, 1869-1968&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;36565&quot;});" class='title'>The Welsh Pony, Described in two letters to a friend</a>
+<div class='author'>Dargan, Olive Tilford, 1869-1968</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36645, {&quot;Title&quot;:&quot;Louisiana Beef Cattle&quot;,&quot;Topics&quot;:[&quot;Beef cattle -- Louisiana&quot;],&quot;Primary&quot;:&quot;36645.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stubbs, William Carter, 1846-1924&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;36645&quot;});" class='title'>Louisiana Beef Cattle</a>
+<div class='author'>Stubbs, William Carter, 1846-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36701, {&quot;Title&quot;:&quot;Graceful Riding: A Pocket Manual for Equestrians&quot;,&quot;Topics&quot;:[&quot;Horsemanship&quot;],&quot;Primary&quot;:&quot;36701.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wayte, Samuel C.&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;36701&quot;});" class='title'>Graceful Riding:<br><span class='subtitle'>A Pocket Manual for Equestrians</span></a>
+<div class='author'>Wayte, Samuel C.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37041, {&quot;Title&quot;:&quot;Preservation of Bull Semen at Sub-Zero Temperatures&quot;,&quot;Topics&quot;:[&quot;Cattle -- Artificial insemination&quot;,&quot;Frozen semen&quot;],&quot;Primary&quot;:&quot;37041.htm&quot;,&quot;CreatorNames&quot;:[&quot;Friedman, M. E.&quot;,&quot;Kinney, W. C.&quot;,&quot;Miller, W. J.&quot;,&quot;Rodriguez, Carlos&quot;,&quot;VanDemark, N. L.&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;37041&quot;});" class='title'>Preservation of Bull Semen at Sub-Zero Temperatures</a>
+<div class='author'>Friedman, M. E., Kinney, W. C., Miller, W. J., Rodriguez, Carlos, VanDemark, N. L.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37295, {&quot;Title&quot;:&quot;Soft Candy for Bees&quot;,&quot;Topics&quot;:[&quot;Bee culture&quot;],&quot;Primary&quot;:&quot;37295.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gates, Burton N. (Burton Noble), 1881-1972&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;37295&quot;});" class='title'>Soft Candy for Bees</a>
+<div class='author'>Gates, Burton N. (Burton Noble), 1881-1972</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37329, {&quot;Title&quot;:&quot;The Domestic Cat&quot;,&quot;Topics&quot;:[&quot;Cats&quot;],&quot;Primary&quot;:&quot;37329.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stables, Gordon, 1840-1910&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;37329&quot;});" class='title'>The Domestic Cat</a>
+<div class='author'>Stables, Gordon, 1840-1910</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37445, {&quot;Title&quot;:&quot;The Lady and Her Horse - Being Hints Selected from Various Sources and Compiled into a System of Equitation&quot;,&quot;Topics&quot;:[&quot;Horsemanship&quot;,&quot;Horses&quot;],&quot;Primary&quot;:&quot;37445.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jenkins, T. A.&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;37445&quot;});" class='title'>The Lady and Her Horse -<br><span class='subtitle'>Being Hints Selected from Various Sources and Compiled into a System of Equitation</span></a>
+<div class='author'>Jenkins, T. A.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37901, {&quot;Title&quot;:&quot;Profitable Squab Breeding&quot;,&quot;Topics&quot;:[&quot;Pigeons&quot;],&quot;Primary&quot;:&quot;37901.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dare, Carl&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;37901&quot;});" class='title'>Profitable Squab Breeding</a>
+<div class='author'>Dare, Carl</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37997, {&quot;Title&quot;:&quot;The American Reformed Cattle Doctor - Containing the necessary information for preserving the health and curing the diseases of oxen, cows, sheep, and swine, with a great variety of original recipes, and valuable information in reference to farm and dairy management&quot;,&quot;Topics&quot;:[&quot;Veterinary medicine&quot;],&quot;Primary&quot;:&quot;37997.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dadd, George H., 1813-1868&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;37997&quot;});" class='title'>The American Reformed Cattle Doctor -<br><span class='subtitle'>Containing the necessary information for preserving the health and curing the diseases of oxen, cows, sheep, and swine, with a great variety of original recipes, and valuable information in reference to farm and dairy management</span></a>
+<div class='author'>Dadd, George H., 1813-1868</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38184, {&quot;Title&quot;:&quot;New Method of Horsemanship - Including the Breaking and Training of Horses, with Instructions for Obtaining a Good Seat.&quot;,&quot;Topics&quot;:[&quot;Horsemanship&quot;,&quot;Dressage&quot;],&quot;Primary&quot;:&quot;38184.htm&quot;,&quot;CreatorNames&quot;:[&quot;Baucher, François, 1796-1873&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;38184&quot;});" class='title'>New Method of Horsemanship -<br><span class='subtitle'>Including the Breaking and Training of Horses, with Instructions for Obtaining a Good Seat.</span></a>
+<div class='author'>Baucher, François, 1796-1873</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38189, {&quot;Title&quot;:&quot;A Treatise on Sheep: - The Best Means for their Improvement, General Management, and the Treatment of their Diseases.&quot;,&quot;Topics&quot;:[&quot;Sheep&quot;],&quot;Primary&quot;:&quot;38189.htm&quot;,&quot;CreatorNames&quot;:[&quot;Blacklock, Ambrose, 1816-1873&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;38189&quot;});" class='title'>A Treatise on Sheep:<br><span class='subtitle'>- The Best Means for their Improvement, General Management, and the Treatment of their Diseases.</span></a>
+<div class='author'>Blacklock, Ambrose, 1816-1873</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38321, {&quot;Title&quot;:&quot;Economy of the Round Dairy Barn&quot;,&quot;Topics&quot;:[&quot;Round barns -- Illinois&quot;,&quot;Dairy barns -- Design and construction&quot;],&quot;Primary&quot;:&quot;38321.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fraser, Wilber J. (Wilber John), 1869-1949&quot;],&quot;LoCC&quot;:[&quot;NA&quot;,&quot;SF&quot;],&quot;PG_ID&quot;:&quot;38321&quot;});" class='title'>Economy of the Round Dairy Barn</a>
+<div class='author'>Fraser, Wilber J. (Wilber John), 1869-1949</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38467, {&quot;Title&quot;:&quot;Natural and Artificial Duck Culture&quot;,&quot;Topics&quot;:[&quot;Ducks&quot;],&quot;Primary&quot;:&quot;38467.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rankin, James&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;38467&quot;});" class='title'>Natural and Artificial Duck Culture</a>
+<div class='author'>Rankin, James</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38606, {&quot;Title&quot;:&quot;Poultry - A Practical Guide to the Choice, Breeding, Rearing, and Management of all Descriptions of Fowls, Turkeys, Guinea-fowls, Ducks, and Geese, for Profit and Exhibition.&quot;,&quot;Topics&quot;:[&quot;Poultry -- Breeding&quot;],&quot;Primary&quot;:&quot;38606.htm&quot;,&quot;CreatorNames&quot;:[&quot;Piper, Hugh&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;38606&quot;});" class='title'>Poultry -<br><span class='subtitle'>A Practical Guide to the Choice, Breeding, Rearing, and Management of all Descriptions of Fowls, Turkeys, Guinea-fowls, Ducks, and Geese, for Profit and Exhibition.</span></a>
+<div class='author'>Piper, Hugh</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38831, {&quot;Title&quot;:&quot;The Barb and the Bridle - A Handbook of Equitation for Ladies, and Manual of Instruction in the Science of Riding, from the Preparatory Suppling Exercises&quot;,&quot;Topics&quot;:[&quot;Horsemanship&quot;],&quot;Primary&quot;:&quot;38831.htm&quot;,&quot;CreatorNames&quot;:[&quot;Henderson, Robert, active 1866-1874&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;38831&quot;});" class='title'>The Barb and the Bridle -<br><span class='subtitle'>A Handbook of Equitation for Ladies, and Manual of Instruction in the Science of Riding, from the Preparatory Suppling Exercises</span></a>
+<div class='author'>Henderson, Robert, active 1866-1874</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39205, {&quot;Title&quot;:&quot;Sheep, Swine, and Poultry - Embracing the History and Varieties of Each; The Best Modes of Breeding; Their Feeding and Management; Together with etc.&quot;,&quot;Topics&quot;:[&quot;Poultry&quot;,&quot;Swine&quot;,&quot;Sheep&quot;],&quot;Primary&quot;:&quot;39205.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jennings, Robert, 1824-1893&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;39205&quot;});" class='title'>Sheep, Swine, and Poultry -<br><span class='subtitle'>Embracing the History and Varieties of Each; The Best Modes of Breeding; Their Feeding and Management; Together with etc.</span></a>
+<div class='author'>Jennings, Robert, 1824-1893</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39235, {&quot;Title&quot;:&quot;A Manual of Toy Dogs: How to breed, rear, and feed them&quot;,&quot;Topics&quot;:[&quot;Dogs&quot;,&quot;Toy dogs&quot;],&quot;Primary&quot;:&quot;39235.htm&quot;,&quot;CreatorNames&quot;:[&quot;Williams, Leslie, Mrs.&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;39235&quot;});" class='title'>A Manual of Toy Dogs:<br><span class='subtitle'>How to breed, rear, and feed them</span></a>
+<div class='author'>Williams, Leslie, Mrs.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39244, {&quot;Title&quot;:&quot;Patroclus and Penelope: A Chat in the Saddle&quot;,&quot;Topics&quot;:[&quot;Horsemanship&quot;],&quot;Primary&quot;:&quot;39244.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dodge, Theodore Ayrault, 1842-1909&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;39244&quot;});" class='title'>Patroclus and Penelope:<br><span class='subtitle'>A Chat in the Saddle</span></a>
+<div class='author'>Dodge, Theodore Ayrault, 1842-1909</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39357, {&quot;Title&quot;:&quot;Texas Honey Plants&quot;,&quot;Topics&quot;:[&quot;Bee culture&quot;,&quot;Honey plants -- Texas&quot;],&quot;Primary&quot;:&quot;39357.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sanborn, Charles Emerson, 1877-&quot;,&quot;Scholl, Ernest E. (Ernest Emmett), 1881-&quot;],&quot;LoCC&quot;:[&quot;QK&quot;,&quot;SF&quot;],&quot;PG_ID&quot;:&quot;39357&quot;});" class='title'>Texas Honey Plants</a>
+<div class='author'>Sanborn, Charles Emerson, 1877-, Scholl, Ernest E. (Ernest Emmett), 1881-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39410, {&quot;Title&quot;:&quot;Méthode d&#39;équitation basée sur de nouveaux principes&quot;,&quot;Topics&quot;:[&quot;Horsemanship&quot;,&quot;Dressage&quot;],&quot;Primary&quot;:&quot;39410.htm&quot;,&quot;CreatorNames&quot;:[&quot;Baucher, François, 1796-1873&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;39410&quot;});" class='title'>Méthode d'équitation basée sur de nouveaux principes</a>
+<div class='author'>Baucher, François, 1796-1873</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39501, {&quot;Title&quot;:&quot;Ladies on Horseback - Learning, Park-riding, and Hunting, with Hints Upon Costume, and Numerous Anecdotes&quot;,&quot;Topics&quot;:[&quot;Horsemanship&quot;,&quot;Sidesaddle riding&quot;,&quot;Women in horse sports&quot;],&quot;Primary&quot;:&quot;39501.htm&quot;,&quot;CreatorNames&quot;:[&quot;O&#39;Donoghue, Power, Mrs., 1858-&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;39501&quot;});" class='title'>Ladies on Horseback -<br><span class='subtitle'>Learning, Park-riding, and Hunting, with Hints Upon Costume, and Numerous Anecdotes</span></a>
+<div class='author'>O'Donoghue, Power, Mrs., 1858-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39605, {&quot;Title&quot;:&quot;Hand-book for Horsewomen&quot;,&quot;Topics&quot;:[&quot;Horsemanship&quot;],&quot;Primary&quot;:&quot;39605.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bussigny, H. L. de (Henry L. de), 1840-&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;39605&quot;});" class='title'>Hand-book for Horsewomen</a>
+<div class='author'>Bussigny, H. L. de (Henry L. de), 1840-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39610, {&quot;Title&quot;:&quot;Riding for Ladies&quot;,&quot;Topics&quot;:[&quot;Horsemanship&quot;],&quot;Primary&quot;:&quot;39610.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kerr, W. A. (William Alexander), 1831-1919&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;39610&quot;});" class='title'>Riding for Ladies</a>
+<div class='author'>Kerr, W. A. (William Alexander), 1831-1919</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40055, {&quot;Title&quot;:&quot;The Natural History of Cage Birds - Their Management, Habits, Food, Diseases, Treatment, Breeding, and the Methods of Catching Them.&quot;,&quot;Topics&quot;:[&quot;Cage birds&quot;],&quot;Primary&quot;:&quot;40055.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bechstein, Johann Matthäus, 1757-1822&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;40055&quot;});" class='title'>The Natural History of Cage Birds -<br><span class='subtitle'>Their Management, Habits, Food, Diseases, Treatment, Breeding, and the Methods of Catching Them.</span></a>
+<div class='author'>Bechstein, Johann Matthäus, 1757-1822</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40157, {&quot;Title&quot;:&quot;Breeding minks in Louisiana for their fur: A profitable industry&quot;,&quot;Topics&quot;:[&quot;American mink -- Louisiana&quot;],&quot;Primary&quot;:&quot;40157.htm&quot;,&quot;CreatorNames&quot;:[&quot;Elfer, William André&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;40157&quot;});" class='title'>Breeding minks in Louisiana for their fur:<br><span class='subtitle'>A profitable industry</span></a>
+<div class='author'>Elfer, William André</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40220, {&quot;Title&quot;:&quot;How Women Should Ride&quot;,&quot;Topics&quot;:[&quot;Horsemanship&quot;],&quot;Primary&quot;:&quot;40220.htm&quot;,&quot;CreatorNames&quot;:[&quot;De Hurst, C.&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;40220&quot;});" class='title'>How Women Should Ride</a>
+<div class='author'>De Hurst, C.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40256, {&quot;Title&quot;:&quot;Barium: A Cause of the Loco-Weed Disease&quot;,&quot;Topics&quot;:[&quot;Astragalus earlei&quot;,&quot;Barium&quot;],&quot;Primary&quot;:&quot;40256.htm&quot;,&quot;CreatorNames&quot;:[&quot;Crawford, Albert Cornelius&quot;],&quot;LoCC&quot;:[&quot;QP&quot;,&quot;SF&quot;],&quot;PG_ID&quot;:&quot;40256&quot;});" class='title'>Barium:<br><span class='subtitle'>A Cause of the Loco-Weed Disease</span></a>
+<div class='author'>Crawford, Albert Cornelius</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40318, {&quot;Title&quot;:&quot;The Book of Cheese&quot;,&quot;Topics&quot;:[&quot;Cheese&quot;],&quot;Primary&quot;:&quot;40318.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fisk, W. W. (Walter Warner), 1888-&quot;,&quot;Thom, Charles, 1872-1956&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;40318&quot;});" class='title'>The Book of Cheese</a>
+<div class='author'>Fisk, W. W. (Walter Warner), 1888-, Thom, Charles, 1872-1956</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40684, {&quot;Title&quot;:&quot;The American Horsewoman&quot;,&quot;Topics&quot;:[&quot;Horsemanship&quot;],&quot;Primary&quot;:&quot;40684.htm&quot;,&quot;CreatorNames&quot;:[&quot;Karr, Elizabeth, 1843?-1925&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;40684&quot;});" class='title'>The American Horsewoman</a>
+<div class='author'>Karr, Elizabeth, 1843?-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40872, {&quot;Title&quot;:&quot;The History of the Hen Fever. A Humorous Record&quot;,&quot;Topics&quot;:[&quot;Poultry&quot;],&quot;Primary&quot;:&quot;40872.htm&quot;,&quot;CreatorNames&quot;:[&quot;Burnham, Geo. P. (George Pickering), 1814-1902&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;40872&quot;});" class='title'>The History of the Hen Fever. A Humorous Record</a>
+<div class='author'>Burnham, Geo. P. (George Pickering), 1814-1902</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4221, {&quot;Title&quot;:&quot;Shearing in the Riverina, New South Wales&quot;,&quot;Topics&quot;:[&quot;Sheep-shearing -- Australia&quot;],&quot;Primary&quot;:&quot;4221.htm&quot;,&quot;CreatorNames&quot;:[&quot;Boldrewood, Rolf, 1826-1915&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;4221&quot;});" class='title'>Shearing in the Riverina, New South Wales</a>
+<div class='author'>Boldrewood, Rolf, 1826-1915</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42229, {&quot;Title&quot;:&quot;Riding and Driving for Women&quot;,&quot;Topics&quot;:[&quot;Horsemanship&quot;,&quot;Driving of horse-drawn vehicles&quot;],&quot;Primary&quot;:&quot;42229.htm&quot;,&quot;CreatorNames&quot;:[&quot;Beach, Belle&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;42229&quot;});" class='title'>Riding and Driving for Women</a>
+<div class='author'>Beach, Belle</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42402, {&quot;Title&quot;:&quot;Horse Laughs&quot;,&quot;Topics&quot;:[&quot;English wit and humor, Pictorial&quot;,&quot;Horses&quot;,&quot;Horses -- Caricatures and cartoons&quot;,&quot;Horsemanship -- Caricatures and cartoons&quot;],&quot;Primary&quot;:&quot;42402.htm&quot;,&quot;CreatorNames&quot;:[&quot;Marshall, Charles Hunt&quot;],&quot;LoCC&quot;:[&quot;NC&quot;,&quot;SF&quot;],&quot;PG_ID&quot;:&quot;42402&quot;});" class='title'>Horse Laughs</a>
+<div class='author'>Marshall, Charles Hunt</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42559, {&quot;Title&quot;:&quot;The Story of Scotch&quot;,&quot;Topics&quot;:[&quot;Naturalists -- United States -- Biography&quot;,&quot;Mills, Enos A., 1870-1922&quot;,&quot;Border collie -- Biography&quot;,&quot;Dogs -- Colorado -- Biography&quot;,&quot;Dogs -- Behavior&quot;],&quot;Primary&quot;:&quot;42559.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mills, Enos A., 1870-1922&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;42559&quot;});" class='title'>The Story of Scotch</a>
+<div class='author'>Mills, Enos A., 1870-1922</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42767, {&quot;Title&quot;:&quot;Home Life on an Ostrich Farm&quot;,&quot;Topics&quot;:[&quot;Cape of Good Hope (South Africa) -- Description and travel&quot;,&quot;Ostrich farms&quot;],&quot;Primary&quot;:&quot;42767.htm&quot;,&quot;CreatorNames&quot;:[&quot;Martin, Annie, Mrs.&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;42767&quot;});" class='title'>Home Life on an Ostrich Farm</a>
+<div class='author'>Martin, Annie, Mrs.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42888, {&quot;Title&quot;:&quot;Fur Farming for Profit, with Especial Reference to Skunk Raising&quot;,&quot;Topics&quot;:[&quot;Skunks&quot;,&quot;Fur farming&quot;],&quot;Primary&quot;:&quot;42888.htm&quot;,&quot;CreatorNames&quot;:[&quot;Laymon, Hermon Basil, 1888-&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;42888&quot;});" class='title'>Fur Farming for Profit, with Especial Reference to Skunk Raising</a>
+<div class='author'>Laymon, Hermon Basil, 1888-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42938, {&quot;Title&quot;:&quot;Horsemanship for Women&quot;,&quot;Topics&quot;:[&quot;Horsemanship&quot;],&quot;Primary&quot;:&quot;42938.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mead, Theodore H. (Theodore Hoe), 1837-&quot;,&quot;Parker, Gray [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;42938&quot;});" class='title'>Horsemanship for Women</a>
+<div class='author'>Mead, Theodore H. (Theodore Hoe), 1837-, Parker, Gray [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43087, {&quot;Title&quot;:&quot;Total Per Cent Lambing Rules&quot;,&quot;Topics&quot;:[&quot;Sheep&quot;,&quot;Veterinary obstetrics&quot;],&quot;Primary&quot;:&quot;43087.htm&quot;,&quot;CreatorNames&quot;:[&quot;Boylan, Thomas&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;43087&quot;});" class='title'>Total Per Cent Lambing Rules</a>
+<div class='author'>Boylan, Thomas</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43093, {&quot;Title&quot;:&quot;Coaching, with Anecdotes of the Road&quot;,&quot;Topics&quot;:[&quot;Coaching (Transportation)&quot;],&quot;Primary&quot;:&quot;43093.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lennox, William Pitt, Lord, 1799-1881&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;43093&quot;});" class='title'>Coaching, with Anecdotes of the Road</a>
+<div class='author'>Lennox, William Pitt, Lord, 1799-1881</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43323, {&quot;Title&quot;:&quot;Hints on cheese-making, for the dairyman, the factoryman, and the manufacturer&quot;,&quot;Topics&quot;:[&quot;Cheese&quot;],&quot;Primary&quot;:&quot;43323.htm&quot;,&quot;CreatorNames&quot;:[&quot;Curtis, T. D. (Thomas Day)&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;43323&quot;});" class='title'>Hints on cheese-making, for the dairyman, the factoryman, and the manufacturer</a>
+<div class='author'>Curtis, T. D. (Thomas Day)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43429, {&quot;Title&quot;:&quot;Cats: Their Points and Characteristics - With Curiosities of Cat Life, and a Chapter on Feline Ailments&quot;,&quot;Topics&quot;:[&quot;Cat breeds&quot;,&quot;Cats -- Behavior&quot;,&quot;Cats -- Anecdotes&quot;,&quot;Cats -- Diseases&quot;],&quot;Primary&quot;:&quot;43429.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stables, Gordon, 1840-1910&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;43429&quot;});" class='title'>Cats:<br><span class='subtitle'>Their Points and Characteristics - With Curiosities of Cat Life, and a Chapter on Feline Ailments</span></a>
+<div class='author'>Stables, Gordon, 1840-1910</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43580, {&quot;Title&quot;:&quot;Horses Past and Present&quot;,&quot;Topics&quot;:[&quot;Horses -- England&quot;],&quot;Primary&quot;:&quot;43580.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gilbey, Walter, Sir, 1831-1914&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;43580&quot;});" class='title'>Horses Past and Present</a>
+<div class='author'>Gilbey, Walter, Sir, 1831-1914</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43790, {&quot;Title&quot;:&quot;The Book of Cats - A Chit-chat Chronicle of Feline Facts and Fancies, Legendary, Lyrical, Medical, Mirthful and Miscellaneous&quot;,&quot;Topics&quot;:[&quot;Cats -- Anecdotes&quot;],&quot;Primary&quot;:&quot;43790.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ross, Charles H. (Charles Henry), 1842?-1897&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;43790&quot;});" class='title'>The Book of Cats -<br><span class='subtitle'>A Chit-chat Chronicle of Feline Facts and Fancies, Legendary, Lyrical, Medical, Mirthful and Miscellaneous</span></a>
+<div class='author'>Ross, Charles H. (Charles Henry), 1842?-1897</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43895, {&quot;Title&quot;:&quot;An Old Coachman&#39;s Chatter, with Some Practical Remarks on Driving&quot;,&quot;Topics&quot;:[&quot;Driving of horse-drawn vehicles&quot;,&quot;Coaching (Transportation)&quot;],&quot;Primary&quot;:&quot;43895.htm&quot;,&quot;CreatorNames&quot;:[&quot;Corbett, Edward&quot;,&quot;Sturgess, J. (John), 1839-1903 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;43895&quot;});" class='title'>An Old Coachman's Chatter, with Some Practical Remarks on Driving</a>
+<div class='author'>Corbett, Edward, Sturgess, J. (John), 1839-1903 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43930, {&quot;Title&quot;:&quot;The Cat: Its Natural History; Domestic Varieties; Management and Treatment&quot;,&quot;Topics&quot;:[&quot;Cats&quot;],&quot;Primary&quot;:&quot;43930.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rule, Philip M.&quot;,&quot;Perez, Bernard, 1836-1903 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;43930&quot;});" class='title'>The Cat:<br><span class='subtitle'>Its Natural History; Domestic Varieties; Management and Treatment</span></a>
+<div class='author'>Rule, Philip M., Perez, Bernard, 1836-1903 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43998, {&quot;Title&quot;:&quot;The Airedale&quot;,&quot;Topics&quot;:[&quot;Dogs&quot;,&quot;Airedale terrier&quot;],&quot;Primary&quot;:&quot;43998.htm&quot;,&quot;CreatorNames&quot;:[&quot;Haynes, Williams, 1886-1970&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;43998&quot;});" class='title'>The Airedale</a>
+<div class='author'>Haynes, Williams, 1886-1970</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44026, {&quot;Title&quot;:&quot;Riding for Ladies: With Hints on the Stable&quot;,&quot;Topics&quot;:[&quot;Horsemanship&quot;,&quot;Sidesaddle riding&quot;,&quot;Women in horse sports&quot;],&quot;Primary&quot;:&quot;44026.htm&quot;,&quot;CreatorNames&quot;:[&quot;O&#39;Donoghue, Power, Mrs., 1858-&quot;,&quot;Corbould, A. Chantrey (Alfred Chantrey), 1852-1920 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;44026&quot;});" class='title'>Riding for Ladies:<br><span class='subtitle'>With Hints on the Stable</span></a>
+<div class='author'>O'Donoghue, Power, Mrs., 1858-, Corbould, A. Chantrey (Alfred Chantrey), 1852-1920 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44472, {&quot;Title&quot;:&quot;Making a Poultry House&quot;,&quot;Topics&quot;:[&quot;Poultry -- Housing&quot;],&quot;Primary&quot;:&quot;44472.htm&quot;,&quot;CreatorNames&quot;:[&quot;Conover, Mary Roberts, 1880-&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;44472&quot;});" class='title'>Making a Poultry House</a>
+<div class='author'>Conover, Mary Roberts, 1880-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44477, {&quot;Title&quot;:&quot;Hints on Dairying&quot;,&quot;Topics&quot;:[&quot;Dairying&quot;],&quot;Primary&quot;:&quot;44477.htm&quot;,&quot;CreatorNames&quot;:[&quot;Curtis, T. D. (Thomas Day)&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;44477&quot;});" class='title'>Hints on Dairying</a>
+<div class='author'>Curtis, T. D. (Thomas Day)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44492, {&quot;Title&quot;:&quot;Whip and Spur&quot;,&quot;Topics&quot;:[&quot;United States -- History -- Civil War, 1861-1865 -- Personal narratives&quot;,&quot;Fox hunting&quot;,&quot;Horses&quot;],&quot;Primary&quot;:&quot;44492.htm&quot;,&quot;CreatorNames&quot;:[&quot;Waring, George E. (George Edwin), 1833-1898&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;44492&quot;});" class='title'>Whip and Spur</a>
+<div class='author'>Waring, George E. (George Edwin), 1833-1898</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45372, {&quot;Title&quot;:&quot;Road Scrapings: Coaches and Coaching&quot;,&quot;Topics&quot;:[&quot;Coaching (Transportation)&quot;],&quot;Primary&quot;:&quot;45372.htm&quot;,&quot;CreatorNames&quot;:[&quot;Haworth, M. E. (Martin E.)&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;45372&quot;});" class='title'>Road Scrapings:<br><span class='subtitle'>Coaches and Coaching</span></a>
+<div class='author'>Haworth, M. E. (Martin E.)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45377, {&quot;Title&quot;:&quot;All About Dogs: A Book for Doggy People&quot;,&quot;Topics&quot;:[&quot;Dogs&quot;],&quot;Primary&quot;:&quot;45377.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lane, Charles Henry&quot;,&quot;Moore, R. H. [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;45377&quot;});" class='title'>All About Dogs:<br><span class='subtitle'>A Book for Doggy People</span></a>
+<div class='author'>Lane, Charles Henry, Moore, R. H. [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45754, {&quot;Title&quot;:&quot;ABC Butter Making: A Hand-Book for the Beginner&quot;,&quot;Topics&quot;:[&quot;Butter&quot;],&quot;Primary&quot;:&quot;45754.htm&quot;,&quot;CreatorNames&quot;:[&quot;Burch, Frederick S.&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;45754&quot;});" class='title'>ABC Butter Making:<br><span class='subtitle'>A Hand-Book for the Beginner</span></a>
+<div class='author'>Burch, Frederick S.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46302, {&quot;Title&quot;:&quot;Riding and Driving&quot;,&quot;Topics&quot;:[&quot;Horsemanship&quot;,&quot;Driving of horse-drawn vehicles&quot;],&quot;Primary&quot;:&quot;46302.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anderson, Edward L. (Edward Lowell), 1842-1916&quot;,&quot;Collier, Price, 1860-1913&quot;,&quot;Tailer, T. Suffern [Contributor]&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;46302&quot;});" class='title'>Riding and Driving</a>
+<div class='author'>Anderson, Edward L. (Edward Lowell), 1842-1916, Collier, Price, 1860-1913, Tailer, T. Suffern [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46642, {&quot;Title&quot;:&quot;Sporting Dogs: Their Points and Management in Health and Disease&quot;,&quot;Topics&quot;:[&quot;Dogs&quot;],&quot;Primary&quot;:&quot;46642.htm&quot;,&quot;CreatorNames&quot;:[&quot;Barton, Frank Townend, 1869?-1948&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;46642&quot;});" class='title'>Sporting Dogs:<br><span class='subtitle'>Their Points and Management in Health and Disease</span></a>
+<div class='author'>Barton, Frank Townend, 1869?-1948</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46696, {&quot;Title&quot;:&quot;A New System of Horsemanship&quot;,&quot;Topics&quot;:[&quot;Horsemanship&quot;,&quot;Horsemanship -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;46696.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bourgelat, Claude, 1712-1779&quot;,&quot;Berenger, Richard, 1720?-1782 [Translator]&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;46696&quot;});" class='title'>A New System of Horsemanship</a>
+<div class='author'>Bourgelat, Claude, 1712-1779, Berenger, Richard, 1720?-1782 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47067, {&quot;Title&quot;:&quot;Margaret Mahaney Talks About Turkeys&quot;,&quot;Topics&quot;:[&quot;Turkeys&quot;],&quot;Primary&quot;:&quot;47067.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mahaney, Margaret&quot;,&quot;Park, Philip Ryder, 1870- [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;47067&quot;});" class='title'>Margaret Mahaney Talks About Turkeys</a>
+<div class='author'>Mahaney, Margaret, Park, Philip Ryder, 1870- [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47162, {&quot;Title&quot;:&quot;The Horse&#39;s Mouth, Showing the age by the teeth&quot;,&quot;Topics&quot;:[&quot;Horses -- Age&quot;],&quot;Primary&quot;:&quot;47162.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mayhew, Edward, 1813?-1868&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;47162&quot;});" class='title'>The Horse's Mouth, Showing the age by the teeth</a>
+<div class='author'>Mayhew, Edward, 1813?-1868</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47460, {&quot;Title&quot;:&quot;Practical Skunk Raising - A Book of Information Concerning the Raising of Skunks for Profit&quot;,&quot;Topics&quot;:[&quot;Skunks&quot;,&quot;Fur farming&quot;],&quot;Primary&quot;:&quot;47460.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pratt, William Edwin&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;47460&quot;});" class='title'>Practical Skunk Raising -<br><span class='subtitle'>A Book of Information Concerning the Raising of Skunks for Profit</span></a>
+<div class='author'>Pratt, William Edwin</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47765, {&quot;Title&quot;:&quot;A Profitable Instruction of the Perfite Ordering of Bees - With the Maruellous Nature, Propertie, and Gouernemente of Them: and the Necessarie Vses Both of Their Honie and Waxe, Seruing Diuersly, as Well in Inward as Outward Causes: Gathered Out of the Best Writers&quot;,&quot;Topics&quot;:[&quot;Bees -- Early works to 1800&quot;,&quot;Bee culture -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;47765.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hill, Thomas, 1528?-&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;47765&quot;});" class='title'>A Profitable Instruction of the Perfite Ordering of Bees -<br><span class='subtitle'>With the Maruellous Nature, Propertie, and Gouernemente of Them: and the Necessarie Vses Both of Their Honie and Waxe, Seruing Diuersly, as Well in Inward as Outward Causes: Gathered Out of the Best Writers</span></a>
+<div class='author'>Hill, Thomas, 1528?-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47808, {&quot;Title&quot;:&quot;Dog Breaking - The Most Expeditious, Certain, and Easy Method, Whether Great Excellence or Only Mediocrity Be Required, With Odds and Ends for Those Who Love the Dog and Gun&quot;,&quot;Topics&quot;:[&quot;Dogs -- Training&quot;],&quot;Primary&quot;:&quot;47808.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hutchinson, W. N. (William Nelson), 1803-1895&quot;,&quot;Keyl, Friedrich Wilhelm, 1823-1871 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;47808&quot;});" class='title'>Dog Breaking -<br><span class='subtitle'>The Most Expeditious, Certain, and Easy Method, Whether Great Excellence or Only Mediocrity Be Required, With Odds and Ends for Those Who Love the Dog and Gun</span></a>
+<div class='author'>Hutchinson, W. N. (William Nelson), 1803-1895, Keyl, Friedrich Wilhelm, 1823-1871 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48234, {&quot;Title&quot;:&quot;Der Damen-Reitsport&quot;,&quot;Topics&quot;:[&quot;Horsemanship&quot;,&quot;Sidesaddle riding&quot;,&quot;Women in horse sports&quot;],&quot;Primary&quot;:&quot;48234.htm&quot;,&quot;CreatorNames&quot;:[&quot;Schoenbeck, Richard, 1840-1919&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;48234&quot;});" class='title'>Der Damen-Reitsport</a>
+<div class='author'>Schoenbeck, Richard, 1840-1919</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48546, {&quot;Title&quot;:&quot;Bee Keeping&quot;,&quot;Topics&quot;:[&quot;Bee culture&quot;],&quot;Primary&quot;:&quot;48546.htm&quot;,&quot;CreatorNames&quot;:[&quot;Benton, Frank, 1852-1919&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;48546&quot;});" class='title'>Bee Keeping</a>
+<div class='author'>Benton, Frank, 1852-1919</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48547, {&quot;Title&quot;:&quot;Bees&quot;,&quot;Topics&quot;:[&quot;Bees&quot;,&quot;Bee culture&quot;,&quot;Hymenoptera&quot;],&quot;Primary&quot;:&quot;48547.htm&quot;,&quot;CreatorNames&quot;:[&quot;Phillips, Everett Franklin, 1878-1951&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;48547&quot;});" class='title'>Bees</a>
+<div class='author'>Phillips, Everett Franklin, 1878-1951</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49077, {&quot;Title&quot;:&quot;The Art of Horse-Shoeing: A Manual for Farriers&quot;,&quot;Topics&quot;:[&quot;Horseshoeing&quot;],&quot;Primary&quot;:&quot;49077.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hunting, William, 1846-1913&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;49077&quot;});" class='title'>The Art of Horse-Shoeing:<br><span class='subtitle'>A Manual for Farriers</span></a>
+<div class='author'>Hunting, William, 1846-1913</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49078, {&quot;Title&quot;:&quot;The Shire Horse in Peace and War&quot;,&quot;Topics&quot;:[&quot;Horses&quot;,&quot;Shire horse&quot;],&quot;Primary&quot;:&quot;49078.htm&quot;,&quot;CreatorNames&quot;:[&quot;Frost, J. Albert&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;49078&quot;});" class='title'>The Shire Horse in Peace and War</a>
+<div class='author'>Frost, J. Albert</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50420, {&quot;Title&quot;:&quot;History of the Beef Cattle Industry in Illinois&quot;,&quot;Topics&quot;:[&quot;Beef cattle -- Illinois -- History&quot;,&quot;Cattle trade -- Illinois -- History&quot;],&quot;Primary&quot;:&quot;50420.htm&quot;,&quot;CreatorNames&quot;:[&quot;Farley, Frank Webster, 1888-&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;50420&quot;});" class='title'>History of the Beef Cattle Industry in Illinois</a>
+<div class='author'>Farley, Frank Webster, 1888-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51041, {&quot;Title&quot;:&quot;The Horses of the Sahara and the Manners of the Desert&quot;,&quot;Topics&quot;:[&quot;Arabian horse&quot;,&quot;Sahara&quot;],&quot;Primary&quot;:&quot;51041.htm&quot;,&quot;CreatorNames&quot;:[&quot;Daumas, E.‏ (Eugène), 1803-1871&quot;,&quot;Hutton, James, 1818-1893 [Translator]&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;51041&quot;});" class='title'>The Horses of the Sahara and the Manners of the Desert</a>
+<div class='author'>Daumas, E.‏ (Eugène), 1803-1871, Hutton, James, 1818-1893 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51813, {&quot;Title&quot;:&quot;The Bee-keeper&#39;s Manual - or Practical Hints on the Management and Complete Preservation of the Honey-bee.&quot;,&quot;Topics&quot;:[&quot;Bees&quot;,&quot;Bee culture&quot;,&quot;Honeybee&quot;,&quot;Beehives&quot;,&quot;Beekeepers&quot;],&quot;Primary&quot;:&quot;51813.htm&quot;,&quot;CreatorNames&quot;:[&quot;Taylor, Henry, 1787-1869&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;51813&quot;});" class='title'>The Bee-keeper's Manual -<br><span class='subtitle'>or Practical Hints on the Management and Complete Preservation of the Honey-bee.</span></a>
+<div class='author'>Taylor, Henry, 1787-1869</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52098, {&quot;Title&quot;:&quot;Tachyhippodamia; Or, The new secret of taming horses - To which is added The breaking, training, and taming horses&quot;,&quot;Topics&quot;:[&quot;Horses -- Training&quot;],&quot;Primary&quot;:&quot;52098.htm&quot;,&quot;CreatorNames&quot;:[&quot;Powell, Willis J.&quot;,&quot;Rarey, J. S. (John Solomon), 1827-1866&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;52098&quot;});" class='title'>Tachyhippodamia;<br><span class='subtitle'>Or, The new secret of taming horses - To which is added The breaking, training, and taming horses</span></a>
+<div class='author'>Powell, Willis J., Rarey, J. S. (John Solomon), 1827-1866</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53203, {&quot;Title&quot;:&quot;Complete Treatise on the mare and foal at the time of delivery, with illustrations. - Also on cows and calves, with stallion and mare, when diseased by Gonorrhea (clap) or Pox, also Diarrhea and Costiveness in Colts.&quot;,&quot;Topics&quot;:[&quot;Horses -- Diseases&quot;,&quot;Horses -- Breeding&quot;,&quot;Veterinary obstetrics&quot;,&quot;Veterinary gynecology&quot;,&quot;Mares&quot;,&quot;Foals&quot;],&quot;Primary&quot;:&quot;53203.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mitchell, Conrad&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;53203&quot;});" class='title'>Complete Treatise on the mare and foal at the time of delivery, with illustrations. -<br><span class='subtitle'>Also on cows and calves, with stallion and mare, when diseased by Gonorrhea (clap) or Pox, also Diarrhea and Costiveness in Colts.</span></a>
+<div class='author'>Mitchell, Conrad</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53965, {&quot;Title&quot;:&quot;The Book of the Hamburgs - A Brief Treatise upon the Mating, Rearing and Management of the Different Varieties of Hamburgs&quot;,&quot;Topics&quot;:[&quot;Hamburg chicken&quot;],&quot;Primary&quot;:&quot;53965.htm&quot;,&quot;CreatorNames&quot;:[&quot;Baum, L. Frank (Lyman Frank), 1856-1919&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;53965&quot;});" class='title'>The Book of the Hamburgs -<br><span class='subtitle'>A Brief Treatise upon the Mating, Rearing and Management of the Different Varieties of Hamburgs</span></a>
+<div class='author'>Baum, L. Frank (Lyman Frank), 1856-1919</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54217, {&quot;Title&quot;:&quot;The Farmer&#39;s Own Book: A treatise on the numerous diseases of the horse - with an explanation of their symptoms, and the course of treatment to be pursued; also a treatise on the diseases of horned cattle&quot;,&quot;Topics&quot;:[&quot;Horses -- Diseases&quot;,&quot;Cattle -- Diseases&quot;,&quot;Veterinary medicine&quot;,&quot;Formulas, recipes, etc.&quot;],&quot;Primary&quot;:&quot;54217.htm&quot;,&quot;CreatorNames&quot;:[&quot;Koogle, J. D.&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;54217&quot;});" class='title'>The Farmer's Own Book:<br><span class='subtitle'>A treatise on the numerous diseases of the horse - with an explanation of their symptoms, and the course of treatment to be pursued; also a treatise on the diseases of horned cattle</span></a>
+<div class='author'>Koogle, J. D.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54352, {&quot;Title&quot;:&quot;Istruzioni popolari per la buona tenuta dei bachi da seta&quot;,&quot;Topics&quot;:[&quot;Sericulture&quot;],&quot;Primary&quot;:&quot;54352.htm&quot;,&quot;CreatorNames&quot;:[&quot;Poggi, Tito&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;54352&quot;});" class='title'>Istruzioni popolari per la buona tenuta dei bachi da seta</a>
+<div class='author'>Poggi, Tito</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54372, {&quot;Title&quot;:&quot;The Royal Pastime of Cock-fighting - The art of breeding, feeding, fighting, and curing cocks of the game&quot;,&quot;Topics&quot;:[&quot;Cockfighting&quot;],&quot;Primary&quot;:&quot;54372.htm&quot;,&quot;CreatorNames&quot;:[&quot;R. H. (Robert Howlett)&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;54372&quot;});" class='title'>The Royal Pastime of Cock-fighting -<br><span class='subtitle'>The art of breeding, feeding, fighting, and curing cocks of the game</span></a>
+<div class='author'>R. H. (Robert Howlett)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54603, {&quot;Title&quot;:&quot;La espressione dei sentimenti dei nostri volatili domestici&quot;,&quot;Topics&quot;:[&quot;Emotions&quot;,&quot;Poultry&quot;],&quot;Primary&quot;:&quot;54603.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pascal, Teodoro, 1857-1937&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;54603&quot;});" class='title'>La espressione dei sentimenti dei nostri volatili domestici</a>
+<div class='author'>Pascal, Teodoro, 1857-1937</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54716, {&quot;Title&quot;:&quot;The Horse in America - A practical treatise on the various types common in the United States, with something of their history and varying characteristics&quot;,&quot;Topics&quot;:[&quot;Horses&quot;],&quot;Primary&quot;:&quot;54716.htm&quot;,&quot;CreatorNames&quot;:[&quot;Speed, John Gilmer, 1853-1909&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;54716&quot;});" class='title'>The Horse in America -<br><span class='subtitle'>A practical treatise on the various types common in the United States, with something of their history and varying characteristics</span></a>
+<div class='author'>Speed, John Gilmer, 1853-1909</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55084, {&quot;Title&quot;:&quot;The Homing Pigeon&quot;,&quot;Topics&quot;:[&quot;Homing pigeons&quot;,&quot;Homing pigeons -- War use&quot;],&quot;Primary&quot;:&quot;55084.htm&quot;,&quot;CreatorNames&quot;:[&quot;United States. Army. Signal Corps&quot;,&quot;United States. War Department&quot;],&quot;LoCC&quot;:[&quot;SF&quot;,&quot;UH&quot;,&quot;D&quot;],&quot;PG_ID&quot;:&quot;55084&quot;});" class='title'>The Homing Pigeon</a>
+<div class='author'>United States. Army. Signal Corps, United States. War Department</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55245, {&quot;Title&quot;:&quot;Poro-kirja&quot;,&quot;Topics&quot;:[&quot;Reindeer -- Finland&quot;],&quot;Primary&quot;:&quot;55245.txt&quot;,&quot;CreatorNames&quot;:[&quot;Kianto, Ilmari, 1874-1970&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;55245&quot;});" class='title'>Poro-kirja</a>
+<div class='author'>Kianto, Ilmari, 1874-1970</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55366, {&quot;Title&quot;:&quot;The Farmer&#39;s Veterinarian: A Practical Treatise on the Diseases of Farm Stock&quot;,&quot;Topics&quot;:[&quot;Veterinary medicine&quot;],&quot;Primary&quot;:&quot;55366.htm&quot;,&quot;CreatorNames&quot;:[&quot;Burkett, Charles William, 1873-1962&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;55366&quot;});" class='title'>The Farmer's Veterinarian:<br><span class='subtitle'>A Practical Treatise on the Diseases of Farm Stock</span></a>
+<div class='author'>Burkett, Charles William, 1873-1962</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55658, {&quot;Title&quot;:&quot;The Horse in History&quot;,&quot;Topics&quot;:[&quot;Horses -- History&quot;],&quot;Primary&quot;:&quot;55658.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tozer, Basil, 1868-1949&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;55658&quot;});" class='title'>The Horse in History</a>
+<div class='author'>Tozer, Basil, 1868-1949</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56317, {&quot;Title&quot;:&quot;Unsere Haustiere vom Standpunkte ihrer wilden Verwandten&quot;,&quot;Topics&quot;:[&quot;Animal behavior&quot;,&quot;Domestic animals&quot;],&quot;Primary&quot;:&quot;56317.htm&quot;,&quot;CreatorNames&quot;:[&quot;Zell, Th., 1862-1924&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;56317&quot;});" class='title'>Unsere Haustiere vom Standpunkte ihrer wilden Verwandten</a>
+<div class='author'>Zell, Th., 1862-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56816, {&quot;Title&quot;:&quot;Hints on Driving&quot;,&quot;Topics&quot;:[&quot;Driving of horse-drawn vehicles&quot;],&quot;Primary&quot;:&quot;56816.htm&quot;,&quot;CreatorNames&quot;:[&quot;Knight, C. Morley (Charles Lewis William Morley)&quot;,&quot;White, Geoffrey Herbert Anthony, 1870-1959 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;56816&quot;});" class='title'>Hints on Driving</a>
+<div class='author'>Knight, C. Morley (Charles Lewis William Morley), White, Geoffrey Herbert Anthony, 1870-1959 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56888, {&quot;Title&quot;:&quot;Importanza e risultati degli incrociamenti in avicoltura&quot;,&quot;Topics&quot;:[&quot;Poultry -- Hybridization&quot;],&quot;Primary&quot;:&quot;56888.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pascal, Teodoro, 1857-1937&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;56888&quot;});" class='title'>Importanza e risultati degli incrociamenti in avicoltura</a>
+<div class='author'>Pascal, Teodoro, 1857-1937</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5710, {&quot;Title&quot;:&quot;A Dissertation on Horses - Wherein It is Demonstrated, by Matters of Fact, as Well as from the Principles of Philosophy, That Innate Qualities Do Not Exist, and That the Excellence of This Animal is Altogether Mechanical and Not in the Blood&quot;,&quot;Topics&quot;:[&quot;Horses&quot;,&quot;Horse breeds -- England&quot;,&quot;Horses -- Breeding&quot;],&quot;Primary&quot;:&quot;5710.htm&quot;,&quot;CreatorNames&quot;:[&quot;Osmer, William&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;5710&quot;});" class='title'>A Dissertation on Horses -<br><span class='subtitle'>Wherein It is Demonstrated, by Matters of Fact, as Well as from the Principles of Philosophy, That Innate Qualities Do Not Exist, and That the Excellence of This Animal is Altogether Mechanical and Not in the Blood</span></a>
+<div class='author'>Osmer, William</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57116, {&quot;Title&quot;:&quot;Illustrated Horse Breaking&quot;,&quot;Topics&quot;:[&quot;Horses -- Training&quot;],&quot;Primary&quot;:&quot;57116.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hayes, M. Horace (Matthew Horace), 1842-1904&quot;,&quot;Brown, J. H. Oswald [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;57116&quot;});" class='title'>Illustrated Horse Breaking</a>
+<div class='author'>Hayes, M. Horace (Matthew Horace), 1842-1904, Brown, J. H. Oswald [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57352, {&quot;Title&quot;:&quot;The Great Horse; or, The War Horse - from the time of the Roman Invasion till its development into the Shire Horse.&quot;,&quot;Topics&quot;:[&quot;Horses&quot;,&quot;Shire horse&quot;,&quot;Horses -- Great Britain -- History&quot;],&quot;Primary&quot;:&quot;57352.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gilbey, Walter, Sir, 1831-1914&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;57352&quot;});" class='title'>The Great Horse;<br><span class='subtitle'>or, The War Horse - from the time of the Roman Invasion till its development into the Shire Horse.</span></a>
+<div class='author'>Gilbey, Walter, Sir, 1831-1914</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58178, {&quot;Title&quot;:&quot;The American Bee Journal, Volume VI, Number 3, September 1870&quot;,&quot;Topics&quot;:[&quot;Bee culture -- Periodicals&quot;],&quot;Primary&quot;:&quot;58178.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;,&quot;Wagner, Samuel [Editor]&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;58178&quot;});" class='title'>The American Bee Journal, Volume VI, Number 3, September 1870</a>
+<div class='author'>Various, Wagner, Samuel [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58187, {&quot;Title&quot;:&quot;The American Bee Journal, Vol. VI, No. 4, October 1870&quot;,&quot;Topics&quot;:[&quot;Bee culture -- Periodicals&quot;],&quot;Primary&quot;:&quot;58187.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;,&quot;Wagner, Samuel [Editor]&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;58187&quot;});" class='title'>The American Bee Journal, Vol. VI, No. 4, October 1870</a>
+<div class='author'>Various, Wagner, Samuel [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58189, {&quot;Title&quot;:&quot;The American Bee Journal, Vol. VI., Number 5, November 1870&quot;,&quot;Topics&quot;:[&quot;Bee culture -- Periodicals&quot;],&quot;Primary&quot;:&quot;58189.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;,&quot;Wagner, Samuel [Editor]&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;58189&quot;});" class='title'>The American Bee Journal, Vol. VI., Number 5, November 1870</a>
+<div class='author'>Various, Wagner, Samuel [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58191, {&quot;Title&quot;:&quot;The American Bee-Keeper, Vol. II, Number 3, March, 1892&quot;,&quot;Topics&quot;:[&quot;Bee culture -- Periodicals&quot;],&quot;Primary&quot;:&quot;58191.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;58191&quot;});" class='title'>The American Bee-Keeper, Vol. II, Number 3, March, 1892</a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58229, {&quot;Title&quot;:&quot;Humanity to Honey-Bees - or, Practical Directions for the Management of Honey-Bees Upon an Improved and Humane Plan, by Which the Lives of Bees May Be  Preserved, and Abundance of Honey of a Superior Quality May Be Obtained&quot;,&quot;Topics&quot;:[&quot;Animal welfare&quot;,&quot;Bee culture&quot;,&quot;Honeybee&quot;,&quot;Honey -- Quality&quot;],&quot;Primary&quot;:&quot;58229.htm&quot;,&quot;CreatorNames&quot;:[&quot;Nutt, Thomas&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;58229&quot;});" class='title'>Humanity to Honey-Bees -<br><span class='subtitle'>or, Practical Directions for the Management of Honey-Bees Upon an Improved and Humane Plan, by Which the Lives of Bees May Be  Preserved, and Abundance of Honey of a Superior Quality May Be Obtained</span></a>
+<div class='author'>Nutt, Thomas</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58296, {&quot;Title&quot;:&quot;L&#39;anatra: Allevamento per la produzione della carne&quot;,&quot;Topics&quot;:[&quot;Ducks&quot;,&quot;Ducks -- Breeding&quot;],&quot;Primary&quot;:&quot;58296.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gonin, Carlo Alberto&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;58296&quot;});" class='title'>L'anatra:<br><span class='subtitle'>Allevamento per la produzione della carne</span></a>
+<div class='author'>Gonin, Carlo Alberto</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58385, {&quot;Title&quot;:&quot;The American Apiculturist. Vol. III. No. 6, June 15, 1885 - A Journal Devoted to Scientific and Practical Beekeeping&quot;,&quot;Topics&quot;:[&quot;Bee culture -- Periodicals&quot;],&quot;Primary&quot;:&quot;58385.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;,&quot;Locke, Silas M. [Editor]&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;58385&quot;});" class='title'>The American Apiculturist. Vol. III. No. 6, June 15, 1885 -<br><span class='subtitle'>A Journal Devoted to Scientific and Practical Beekeeping</span></a>
+<div class='author'>Various, Locke, Silas M. [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58493, {&quot;Title&quot;:&quot;The American Bee Journal, Volume XXXIII, No. 2, January 11, 1894&quot;,&quot;Topics&quot;:[&quot;Bee culture -- Periodicals&quot;],&quot;Primary&quot;:&quot;58493.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;,&quot;York, George W. [Editor]&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;58493&quot;});" class='title'>The American Bee Journal, Volume XXXIII, No. 2, January 11, 1894</a>
+<div class='author'>Various, York, George W. [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58592, {&quot;Title&quot;:&quot;Milch Cows and Dairy Farming - Comprising the Breeds, Breeding, and Management, in Health and Disease, of Dairy and Other Stock, the Selection of Milch Cows, with a Full Explanation of Guenon&#39;s Method; The Culture of Forage Plants, and the Production of Milk, Butter, and Cheese: Embodying the Most Recent Improvements, and Adapted to Farming in the United States and British Provinces. With a Treatise upon the Dairy Husbandry of Holland; To Which Is Added Horsfall&#39;s System of Dairy Management&quot;,&quot;Topics&quot;:[&quot;Dairying&quot;,&quot;Cows&quot;],&quot;Primary&quot;:&quot;58592.htm&quot;,&quot;CreatorNames&quot;:[&quot;Flint, Charles Louis, 1824-1889&quot;,&quot;Horsfall, Thomas [Contributor]&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;58592&quot;});" class='title'>Milch Cows and Dairy Farming -<br><span class='subtitle'>Comprising the Breeds, Breeding, and Management, in Health and Disease, of Dairy and Other Stock, the Selection of Milch Cows, with a Full Explanation of Guenon's Method; The Culture of Forage Plants, and the Production of Milk, Butter, and Cheese: Embodying the Most Recent Improvements, and Adapted to Farming in the United States and British Provinces. With a Treatise upon the Dairy Husbandry of Holland; To Which Is Added Horsfall's System of Dairy Management</span></a>
+<div class='author'>Flint, Charles Louis, 1824-1889, Horsfall, Thomas [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58842, {&quot;Title&quot;:&quot;Improved Queen-Rearing; or, How to Rear Large, Prolific, Long-Lived Queen Bees - The Result of Nearly Half a Century&#39;s Experience in Rearing Queen Bees, Giving the Practical, Every-day Work of the Queen-Rearing Apiary&quot;,&quot;Topics&quot;:[&quot;Bees&quot;,&quot;Bee culture&quot;],&quot;Primary&quot;:&quot;58842.htm&quot;,&quot;CreatorNames&quot;:[&quot;Alley, Henry&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;58842&quot;});" class='title'>Improved Queen-Rearing;<br><span class='subtitle'>or, How to Rear Large, Prolific, Long-Lived Queen Bees - The Result of Nearly Half a Century's Experience in Rearing Queen Bees, Giving the Practical, Every-day Work of the Queen-Rearing Apiary</span></a>
+<div class='author'>Alley, Henry</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58958, {&quot;Title&quot;:&quot;Horse Training by Modern Methods&quot;,&quot;Topics&quot;:[&quot;Horses -- Training&quot;],&quot;Primary&quot;:&quot;58958.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pope, Allan Melvill, 1879-&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;58958&quot;});" class='title'>Horse Training by Modern Methods</a>
+<div class='author'>Pope, Allan Melvill, 1879-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58961, {&quot;Title&quot;:&quot;The American Bee Journal. Vol. XVII. No. 14. April 6, 1881&quot;,&quot;Topics&quot;:[&quot;Bee culture -- Periodicals&quot;],&quot;Primary&quot;:&quot;58961.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;,&quot;Newman, Thomas G. (Thomas Gabriel), 1833-1903 [Editor]&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;58961&quot;});" class='title'>The American Bee Journal. Vol. XVII. No. 14. April 6, 1881</a>
+<div class='author'>Various, Newman, Thomas G. (Thomas Gabriel), 1833-1903 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59124, {&quot;Title&quot;:&quot;The Horse and His Rider - Or, Sketches and Anecdotes of the Noble Quadruped, and of Equestrian Nations&quot;,&quot;Topics&quot;:[&quot;Horses&quot;,&quot;Horsemen and horsewomen&quot;,&quot;Horses -- Anecdotes&quot;],&quot;Primary&quot;:&quot;59124.htm&quot;,&quot;CreatorNames&quot;:[&quot;Springfield, Rollo&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;59124&quot;});" class='title'>The Horse and His Rider -<br><span class='subtitle'>Or, Sketches and Anecdotes of the Noble Quadruped, and of Equestrian Nations</span></a>
+<div class='author'>Springfield, Rollo</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59152, {&quot;Title&quot;:&quot;The American Bee Journal. Volume XVII No. 11, March 1881&quot;,&quot;Topics&quot;:[&quot;Bee culture -- Periodicals&quot;],&quot;Primary&quot;:&quot;59152.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;,&quot;Newman, Thomas G. (Thomas Gabriel), 1833-1903 [Editor]&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;59152&quot;});" class='title'>The American Bee Journal. Volume XVII No. 11, March 1881</a>
+<div class='author'>Various, Newman, Thomas G. (Thomas Gabriel), 1833-1903 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59232, {&quot;Title&quot;:&quot;Notes on Diseases of Cattle: Cause, Symptoms and Treatment&quot;,&quot;Topics&quot;:[&quot;Cattle -- Diseases&quot;],&quot;Primary&quot;:&quot;59232.htm&quot;,&quot;CreatorNames&quot;:[&quot;Korinek, Charles James, 1880-&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;59232&quot;});" class='title'>Notes on Diseases of Cattle:<br><span class='subtitle'>Cause, Symptoms and Treatment</span></a>
+<div class='author'>Korinek, Charles James, 1880-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59284, {&quot;Title&quot;:&quot;The American Bee Journal, Volume XXXIII, No. 4, January 25, 1894&quot;,&quot;Topics&quot;:[&quot;Bee culture -- Periodicals&quot;],&quot;Primary&quot;:&quot;59284.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;,&quot;York, George W. [Editor]&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;59284&quot;});" class='title'>The American Bee Journal, Volume XXXIII, No. 4, January 25, 1894</a>
+<div class='author'>Various, York, George W. [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59358, {&quot;Title&quot;:&quot;All About Your Canary&quot;,&quot;Topics&quot;:[&quot;Canaries&quot;],&quot;Primary&quot;:&quot;59358.htm&quot;,&quot;CreatorNames&quot;:[&quot;French, George Jackson, 1854-&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;59358&quot;});" class='title'>All About Your Canary</a>
+<div class='author'>French, George Jackson, 1854-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59427, {&quot;Title&quot;:&quot;Gleanings in Bee Culture, Vol. III. No. 3&quot;,&quot;Topics&quot;:[&quot;Bee culture -- Periodicals&quot;],&quot;Primary&quot;:&quot;59427.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;,&quot;Root, A. I. (Amos Ives), 1839-1923 [Editor]&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;59427&quot;});" class='title'>Gleanings in Bee Culture, Vol. III. No. 3</a>
+<div class='author'>Various, Root, A. I. (Amos Ives), 1839-1923 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59485, {&quot;Title&quot;:&quot;Wintering Bees in Cellars&quot;,&quot;Topics&quot;:[&quot;Bee culture&quot;],&quot;Primary&quot;:&quot;59485.htm&quot;,&quot;CreatorNames&quot;:[&quot;Demuth, Geo. S. (George S.)&quot;,&quot;Phillips, Everett Franklin, 1878-1951&quot;],&quot;LoCC&quot;:[&quot;S&quot;,&quot;SF&quot;],&quot;PG_ID&quot;:&quot;59485&quot;});" class='title'>Wintering Bees in Cellars</a>
+<div class='author'>Demuth, Geo. S. (George S.), Phillips, Everett Franklin, 1878-1951</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59488, {&quot;Title&quot;:&quot;Le livree dei nostri volatili domestici - in rapporto allo sport, alla produttività ed alla rusticità&quot;,&quot;Topics&quot;:[&quot;Poultry -- Color&quot;],&quot;Primary&quot;:&quot;59488.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pascal, Teodoro, 1857-1937&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;59488&quot;});" class='title'>Le livree dei nostri volatili domestici -<br><span class='subtitle'>in rapporto allo sport, alla produttività ed alla rusticità</span></a>
+<div class='author'>Pascal, Teodoro, 1857-1937</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59502, {&quot;Title&quot;:&quot;The Preparation of Bees for Outdoor Wintering&quot;,&quot;Topics&quot;:[&quot;Bee culture&quot;],&quot;Primary&quot;:&quot;59502.htm&quot;,&quot;CreatorNames&quot;:[&quot;Demuth, Geo. S. (George S.)&quot;,&quot;Phillips, Everett Franklin, 1878-1951&quot;],&quot;LoCC&quot;:[&quot;S&quot;,&quot;SF&quot;],&quot;PG_ID&quot;:&quot;59502&quot;});" class='title'>The Preparation of Bees for Outdoor Wintering</a>
+<div class='author'>Demuth, Geo. S. (George S.), Phillips, Everett Franklin, 1878-1951</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59546, {&quot;Title&quot;:&quot;Turkey Raising&quot;,&quot;Topics&quot;:[&quot;Turkeys&quot;],&quot;Primary&quot;:&quot;59546.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lee, Alfred R., 1887-&quot;,&quot;Marsden, Stanley J., 1897-&quot;,&quot;Jull, Morley A. (Morley Allan), 1885-1959 [Editor]&quot;],&quot;LoCC&quot;:[&quot;S&quot;,&quot;SF&quot;],&quot;PG_ID&quot;:&quot;59546&quot;});" class='title'>Turkey Raising</a>
+<div class='author'>Lee, Alfred R., 1887-, Marsden, Stanley J., 1897-, Jull, Morley A. (Morley Allan), 1885-1959 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59560, {&quot;Title&quot;:&quot;Animal Castration&quot;,&quot;Topics&quot;:[&quot;Castration&quot;],&quot;Primary&quot;:&quot;59560.htm&quot;,&quot;CreatorNames&quot;:[&quot;Liautard, Alexandre François Augustin, 1835-1918&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;59560&quot;});" class='title'>Animal Castration</a>
+<div class='author'>Liautard, Alexandre François Augustin, 1835-1918</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59663, {&quot;Title&quot;:&quot;Notes on Diseases of Swine, Sheep, Poultry and the Dog - Cause, Symptoms and Treatments&quot;,&quot;Topics&quot;:[&quot;Dogs -- Diseases&quot;,&quot;Poultry -- Diseases&quot;,&quot;Swine -- Diseases&quot;,&quot;Sheep -- Diseases&quot;],&quot;Primary&quot;:&quot;59663.htm&quot;,&quot;CreatorNames&quot;:[&quot;Korinek, Charles James, 1880-&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;59663&quot;});" class='title'>Notes on Diseases of Swine, Sheep, Poultry and the Dog -<br><span class='subtitle'>Cause, Symptoms and Treatments</span></a>
+<div class='author'>Korinek, Charles James, 1880-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59957, {&quot;Title&quot;:&quot;The Shetland Pony&quot;,&quot;Topics&quot;:[&quot;Shetland pony&quot;],&quot;Primary&quot;:&quot;59957.htm&quot;,&quot;CreatorNames&quot;:[&quot;Douglas, A. I. (Anne Isabel)&quot;,&quot;Douglas, Charles, 1865-1924&quot;,&quot;Ewart, J. C. (James Cossar), 1851-1933 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;59957&quot;});" class='title'>The Shetland Pony</a>
+<div class='author'>Douglas, A. I. (Anne Isabel), Douglas, Charles, 1865-1924, Ewart, J. C. (James Cossar), 1851-1933 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60949, {&quot;Title&quot;:&quot;Notes on Veterinary Anatomy&quot;,&quot;Topics&quot;:[&quot;Veterinary anatomy&quot;],&quot;Primary&quot;:&quot;60949.htm&quot;,&quot;CreatorNames&quot;:[&quot;Korinek, Charles James, 1880-&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;60949&quot;});" class='title'>Notes on Veterinary Anatomy</a>
+<div class='author'>Korinek, Charles James, 1880-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61056, {&quot;Title&quot;:&quot;The American Bee Journal. Vol. XVII, No. 12, Mar. 23, 1881&quot;,&quot;Topics&quot;:[&quot;Bee culture -- Periodicals&quot;],&quot;Primary&quot;:&quot;61056.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;,&quot;Newman, Thomas G. (Thomas Gabriel), 1833-1903 [Editor]&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;61056&quot;});" class='title'>The American Bee Journal. Vol. XVII, No. 12, Mar. 23, 1881</a>
+<div class='author'>Various, Newman, Thomas G. (Thomas Gabriel), 1833-1903 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61276, {&quot;Title&quot;:&quot;Horse Secrets&quot;,&quot;Topics&quot;:[&quot;Horses&quot;],&quot;Primary&quot;:&quot;61276.htm&quot;,&quot;CreatorNames&quot;:[&quot;Alexander, A. S. (Alexander Septimus), 1860-1935&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;61276&quot;});" class='title'>Horse Secrets</a>
+<div class='author'>Alexander, A. S. (Alexander Septimus), 1860-1935</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61560, {&quot;Title&quot;:&quot;Notes on Diseases of the Horse: Cause, Symptoms and Treatment&quot;,&quot;Topics&quot;:[&quot;Horses -- Diseases&quot;],&quot;Primary&quot;:&quot;61560.htm&quot;,&quot;CreatorNames&quot;:[&quot;Korinek, Charles James, 1880-&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;61560&quot;});" class='title'>Notes on Diseases of the Horse:<br><span class='subtitle'>Cause, Symptoms and Treatment</span></a>
+<div class='author'>Korinek, Charles James, 1880-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61611, {&quot;Title&quot;:&quot;The Western Cowboy and Arabians in the Rockies&quot;,&quot;Topics&quot;:[&quot;Arabian horse&quot;,&quot;Cowboys -- West (U.S.)&quot;,&quot;Lazy VV Ranch (Colo.)&quot;],&quot;Primary&quot;:&quot;61611.htm&quot;,&quot;CreatorNames&quot;:[&quot;Trinidad Bean &amp; Elevator Company&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;61611&quot;});" class='title'>The Western Cowboy and Arabians in the Rockies</a>
+<div class='author'>Trinidad Bean & Elevator Company</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61711, {&quot;Title&quot;:&quot;Pig Raising: A Manual for Pig Clubs&quot;,&quot;Topics&quot;:[&quot;Swine&quot;],&quot;Primary&quot;:&quot;61711.htm&quot;,&quot;CreatorNames&quot;:[&quot;Greene, James Henry&quot;,&quot;Nolan, Aretas Wilbur, 1874-&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;61711&quot;});" class='title'>Pig Raising:<br><span class='subtitle'>A Manual for Pig Clubs</span></a>
+<div class='author'>Greene, James Henry, Nolan, Aretas Wilbur, 1874-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62606, {&quot;Title&quot;:&quot;A Mirror of the Turf; Or, The Machinery of Horse-Racing Revealed, Showing the Sport of Kings as It Is To-Day&quot;,&quot;Topics&quot;:[&quot;Horse racing -- Great Britain&quot;],&quot;Primary&quot;:&quot;62606.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bertram, James Glass, 1824-1892&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;62606&quot;});" class='title'>A Mirror of the Turf;<br><span class='subtitle'>Or, The Machinery of Horse-Racing Revealed, Showing the Sport of Kings as It Is To-Day</span></a>
+<div class='author'>Bertram, James Glass, 1824-1892</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62644, {&quot;Title&quot;:&quot;Veterinary Medicines, Their Actions, Uses and Dose&quot;,&quot;Topics&quot;:[&quot;Veterinary drugs&quot;],&quot;Primary&quot;:&quot;62644.htm&quot;,&quot;CreatorNames&quot;:[&quot;Korinek, George Franklyn, 1883-&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;62644&quot;});" class='title'>Veterinary Medicines, Their Actions, Uses and Dose</a>
+<div class='author'>Korinek, George Franklyn, 1883-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62685, {&quot;Title&quot;:&quot;Ducks and Geese: Standard Breeds and Management&quot;,&quot;Topics&quot;:[&quot;Ducks&quot;,&quot;Geese&quot;],&quot;Primary&quot;:&quot;62685.htm&quot;,&quot;CreatorNames&quot;:[&quot;Howard, George E. (George Ellsworth)&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;62685&quot;});" class='title'>Ducks and Geese:<br><span class='subtitle'>Standard Breeds and Management</span></a>
+<div class='author'>Howard, George E. (George Ellsworth)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62838, {&quot;Title&quot;:&quot;Lamb Slaughtering, Cutting, Preserving, and Cooking on the Farm&quot;,&quot;Topics&quot;:[&quot;Meat cutting&quot;,&quot;Slaughtering and slaughter-houses&quot;,&quot;Lamb (Meat)&quot;],&quot;Primary&quot;:&quot;62838.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cross, H. Russell&quot;,&quot;Green, E. Curtis&quot;,&quot;Jones, William R.&quot;,&quot;Kotula, Anthony&quot;,&quot;West, R. L. (Roger Lawrence), 1945-&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;62838&quot;});" class='title'>Lamb Slaughtering, Cutting, Preserving, and Cooking on the Farm</a>
+<div class='author'>Cross, H. Russell, Green, E. Curtis, Jones, William R., Kotula, Anthony, West, R. L. (Roger Lawrence), 1945-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62848, {&quot;Title&quot;:&quot;Beef Slaughtering, Cutting, Preserving, and Cooking on the Farm&quot;,&quot;Topics&quot;:[&quot;Meat cutting&quot;,&quot;Slaughtering and slaughter-houses&quot;,&quot;Beef&quot;],&quot;Primary&quot;:&quot;62848.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cross, H. Russell&quot;,&quot;Green, E. Curtis&quot;,&quot;Jones, William R.&quot;,&quot;Kotula, Anthony&quot;,&quot;West, R. L. (Roger Lawrence), 1945-&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;62848&quot;});" class='title'>Beef Slaughtering, Cutting, Preserving, and Cooking on the Farm</a>
+<div class='author'>Cross, H. Russell, Green, E. Curtis, Jones, William R., Kotula, Anthony, West, R. L. (Roger Lawrence), 1945-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62852, {&quot;Title&quot;:&quot;How to Select Cows - or, The Guenon system simplified, explained, and practically applied&quot;,&quot;Topics&quot;:[&quot;Cows&quot;,&quot;Cattle -- Judging&quot;,&quot;Dairy cattle&quot;],&quot;Primary&quot;:&quot;62852.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hazard, Willis P. (Willis Pope), 1825-1913&quot;,&quot;Guenon, François, 1796-1855 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;62852&quot;});" class='title'>How to Select Cows -<br><span class='subtitle'>or, The Guenon system simplified, explained, and practically applied</span></a>
+<div class='author'>Hazard, Willis P. (Willis Pope), 1825-1913, Guenon, François, 1796-1855 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62859, {&quot;Title&quot;:&quot;Pork Slaughtering, Cutting, Preserving, and Cooking on the Farm&quot;,&quot;Topics&quot;:[&quot;Pork&quot;,&quot;Meat cutting&quot;,&quot;Slaughtering and slaughter-houses&quot;,&quot;Pork industry and trade&quot;],&quot;Primary&quot;:&quot;62859.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cross, H. Russell&quot;,&quot;Green, E. Curtis&quot;,&quot;Jones, William R.&quot;,&quot;Kotula, Anthony&quot;,&quot;West, R. L. (Roger Lawrence), 1945-&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;62859&quot;});" class='title'>Pork Slaughtering, Cutting, Preserving, and Cooking on the Farm</a>
+<div class='author'>Cross, H. Russell, Green, E. Curtis, Jones, William R., Kotula, Anthony, West, R. L. (Roger Lawrence), 1945-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62959, {&quot;Title&quot;:&quot;The Horse and His Rider&quot;,&quot;Topics&quot;:[&quot;Horsemanship&quot;],&quot;Primary&quot;:&quot;62959.htm&quot;,&quot;CreatorNames&quot;:[&quot;Head, Francis Bond, Sir, 1793-1875&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;62959&quot;});" class='title'>The Horse and His Rider</a>
+<div class='author'>Head, Francis Bond, Sir, 1793-1875</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62972, {&quot;Title&quot;:&quot;The Horse of America in His Derivation, History, and Development&quot;,&quot;Topics&quot;:[&quot;Horse breeds -- History&quot;,&quot;Horses -- United States -- History&quot;,&quot;Horses -- Breeding -- United States&quot;],&quot;Primary&quot;:&quot;62972.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wallace, John Hankins, 1822-1903&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;62972&quot;});" class='title'>The Horse of America in His Derivation, History, and Development</a>
+<div class='author'>Wallace, John Hankins, 1822-1903</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62993, {&quot;Title&quot;:&quot;The Handy Horse-book - or Practical Instructions in Driving, Riding, and the General Care and Management of Horses. 4th ed.&quot;,&quot;Topics&quot;:[&quot;Horsemanship&quot;,&quot;Horses -- Training&quot;,&quot;Horses&quot;],&quot;Primary&quot;:&quot;62993.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mahon, Maurice Hartland&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;62993&quot;});" class='title'>The Handy Horse-book -<br><span class='subtitle'>or Practical Instructions in Driving, Riding, and the General Care and Management of Horses. 4th ed.</span></a>
+<div class='author'>Mahon, Maurice Hartland</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63098, {&quot;Title&quot;:&quot;The Horse&#39;s Friend - The Only Practical Method of Educating the Horse and Eradicating Vicious Habits; Followed by a Variety of Valuable Recipes, Instructions in Farriery, Horse-shoeing, the Latest Rules of Trotting, and the Record of Fast Horses Up to 1876&quot;,&quot;Topics&quot;:[&quot;Horses -- Training&quot;,&quot;Horses&quot;],&quot;Primary&quot;:&quot;63098.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pratt, O. S., 1835-&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;63098&quot;});" class='title'>The Horse's Friend -<br><span class='subtitle'>The Only Practical Method of Educating the Horse and Eradicating Vicious Habits; Followed by a Variety of Valuable Recipes, Instructions in Farriery, Horse-shoeing, the Latest Rules of Trotting, and the Record of Fast Horses Up to 1876</span></a>
+<div class='author'>Pratt, O. S., 1835-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63208, {&quot;Title&quot;:&quot;The Bee-Master of Warrilow&quot;,&quot;Topics&quot;:[&quot;Bees&quot;,&quot;Bee culture&quot;],&quot;Primary&quot;:&quot;63208.htm&quot;,&quot;CreatorNames&quot;:[&quot;Edwardes, Tickner, 1865-1944&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;63208&quot;});" class='title'>The Bee-Master of Warrilow</a>
+<div class='author'>Edwardes, Tickner, 1865-1944</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63602, {&quot;Title&quot;:&quot;Kulturgeschichte der Nutztiere&quot;,&quot;Topics&quot;:[&quot;Livestock -- History&quot;,&quot;Domestic animals -- History&quot;],&quot;Primary&quot;:&quot;63602.htm&quot;,&quot;CreatorNames&quot;:[&quot;Reinhardt, Ludwig, 1864-1921&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;63602&quot;});" class='title'>Kulturgeschichte der Nutztiere</a>
+<div class='author'>Reinhardt, Ludwig, 1864-1921</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63788, {&quot;Title&quot;:&quot;Plants Poisonous to Live Stock&quot;,&quot;Topics&quot;:[&quot;Livestock poisoning plants&quot;,&quot;Poisonous plants&quot;],&quot;Primary&quot;:&quot;63788.htm&quot;,&quot;CreatorNames&quot;:[&quot;Long, Harold Cecil, 1876-&quot;],&quot;LoCC&quot;:[&quot;SB&quot;,&quot;SF&quot;],&quot;PG_ID&quot;:&quot;63788&quot;});" class='title'>Plants Poisonous to Live Stock</a>
+<div class='author'>Long, Harold Cecil, 1876-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64352, {&quot;Title&quot;:&quot;The Illustrated Horse Doctor - Being an accurate and detailed account of the various diseases to which the equine race are subjected&quot;,&quot;Topics&quot;:[&quot;Horses -- Diseases&quot;],&quot;Primary&quot;:&quot;64352.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mayhew, Edward, 1813?-1868&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;64352&quot;});" class='title'>The Illustrated Horse Doctor -<br><span class='subtitle'>Being an accurate and detailed account of the various diseases to which the equine race are subjected</span></a>
+<div class='author'>Mayhew, Edward, 1813?-1868</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64477, {&quot;Title&quot;:&quot;Eläinden Tauti-Kirja&quot;,&quot;Topics&quot;:[&quot;Veterinary therapeutics&quot;],&quot;Primary&quot;:&quot;64477.txt&quot;,&quot;CreatorNames&quot;:[&quot;Ganander, Christfrid, 1741-1790&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;64477&quot;});" class='title'>Eläinden Tauti-Kirja</a>
+<div class='author'>Ganander, Christfrid, 1741-1790</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65820, {&quot;Title&quot;:&quot;The Bee Hunter&quot;,&quot;Topics&quot;:[&quot;Bees&quot;],&quot;Primary&quot;:&quot;65820.htm&quot;,&quot;CreatorNames&quot;:[&quot;Edgell, George Harold, 1887-1954&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;65820&quot;});" class='title'>The Bee Hunter</a>
+<div class='author'>Edgell, George Harold, 1887-1954</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66061, {&quot;Title&quot;:&quot;The Story of Milk&quot;,&quot;Topics&quot;:[&quot;Milk&quot;,&quot;Dairy products&quot;],&quot;Primary&quot;:&quot;66061.htm&quot;,&quot;CreatorNames&quot;:[&quot;Frederiksen, Johan Ditlev, 1848-&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;66061&quot;});" class='title'>The Story of Milk</a>
+<div class='author'>Frederiksen, Johan Ditlev, 1848-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66089, {&quot;Title&quot;:&quot;Balancing and Shoeing Trotting and Pacing Horses&quot;,&quot;Topics&quot;:[&quot;Horses&quot;,&quot;Horseshoeing&quot;],&quot;Primary&quot;:&quot;66089.htm&quot;,&quot;CreatorNames&quot;:[&quot;Moore, William J.&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;66089&quot;});" class='title'>Balancing and Shoeing Trotting and Pacing Horses</a>
+<div class='author'>Moore, William J.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66458, {&quot;Title&quot;:&quot;The Dog&#39;s Medical Dictionary - An encyclopædia of the diseases, their diagnosis &amp; treatment, and the physical development of the dog&quot;,&quot;Topics&quot;:[&quot;Dogs -- Diseases -- Dictionaries&quot;],&quot;Primary&quot;:&quot;66458.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sewell, Alfred Joseph&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;66458&quot;});" class='title'>The Dog's Medical Dictionary -<br><span class='subtitle'>An encyclopædia of the diseases, their diagnosis & treatment, and the physical development of the dog</span></a>
+<div class='author'>Sewell, Alfred Joseph</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66786, {&quot;Title&quot;:&quot;A Text-Book of Horseshoeing, for Horseshoers and Veterinarians&quot;,&quot;Topics&quot;:[&quot;Horseshoeing&quot;],&quot;Primary&quot;:&quot;66786.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lungwitz, A. (Anton), 1845-1936&quot;,&quot;Adams, John W. (John William), 1862-1926 [Translator]&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;66786&quot;});" class='title'>A Text-Book of Horseshoeing, for Horseshoers and Veterinarians</a>
+<div class='author'>Lungwitz, A. (Anton), 1845-1936, Adams, John W. (John William), 1862-1926 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67073, {&quot;Title&quot;:&quot;Our Humble Helpers: Familiar Talks on the Domestic Animals&quot;,&quot;Topics&quot;:[&quot;Domestic animals&quot;],&quot;Primary&quot;:&quot;67073.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fabre, Jean-Henri, 1823-1915&quot;,&quot;Bicknell, Florence Constable [Translator]&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;67073&quot;});" class='title'>Our Humble Helpers:<br><span class='subtitle'>Familiar Talks on the Domestic Animals</span></a>
+<div class='author'>Fabre, Jean-Henri, 1823-1915, Bicknell, Florence Constable [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67107, {&quot;Title&quot;:&quot;The Honey-Bee: Its Natural History, Physiology and Management&quot;,&quot;Topics&quot;:[&quot;Bees&quot;,&quot;Bee culture&quot;],&quot;Primary&quot;:&quot;67107.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bevan, Edward, 1770-1860&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;67107&quot;});" class='title'>The Honey-Bee:<br><span class='subtitle'>Its Natural History, Physiology and Management</span></a>
+<div class='author'>Bevan, Edward, 1770-1860</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67108, {&quot;Title&quot;:&quot;Hints on the History and Management of the Honey Bee - Being the Substance of Two Lectures Read Before the Members of the Hereford Literary, Philosophical, and Antiquarian Institution, in the Winter of 1850-51&quot;,&quot;Topics&quot;:[&quot;Bees&quot;,&quot;Bee culture&quot;],&quot;Primary&quot;:&quot;67108.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bevan, Edward, 1770-1860&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;67108&quot;});" class='title'>Hints on the History and Management of the Honey Bee -<br><span class='subtitle'>Being the Substance of Two Lectures Read Before the Members of the Hereford Literary, Philosophical, and Antiquarian Institution, in the Winter of 1850-51</span></a>
+<div class='author'>Bevan, Edward, 1770-1860</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67284, {&quot;Title&quot;:&quot;Bee-Keeping&quot;,&quot;Topics&quot;:[&quot;Bees&quot;,&quot;Bee culture&quot;],&quot;Primary&quot;:&quot;67284.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cumming, John, 1807-1881&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;67284&quot;});" class='title'>Bee-Keeping</a>
+<div class='author'>Cumming, John, 1807-1881</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67359, {&quot;Title&quot;:&quot;Comparison of Woods for Butter Boxes&quot;,&quot;Topics&quot;:[&quot;Butter -- Preservation&quot;,&quot;Wooden boxes&quot;,&quot;Butter -- Packaging&quot;],&quot;Primary&quot;:&quot;67359.htm&quot;,&quot;CreatorNames&quot;:[&quot;Turnbow, Grover Dean, 1892-1971&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;67359&quot;});" class='title'>Comparison of Woods for Butter Boxes</a>
+<div class='author'>Turnbow, Grover Dean, 1892-1971</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67435, {&quot;Title&quot;:&quot;The honey-bee: its nature, homes and products&quot;,&quot;Topics&quot;:[&quot;Bees&quot;,&quot;Bee culture&quot;],&quot;Primary&quot;:&quot;67435.htm&quot;,&quot;CreatorNames&quot;:[&quot;Harris, William Hetherington, 1835-&quot;],&quot;LoCC&quot;:[&quot;QL&quot;,&quot;SF&quot;],&quot;PG_ID&quot;:&quot;67435&quot;});" class='title'>The honey-bee:<br><span class='subtitle'>its nature, homes and products</span></a>
+<div class='author'>Harris, William Hetherington, 1835-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67439, {&quot;Title&quot;:&quot;The Bee Keeper&#39;s Guide, Third Edition - Containing concise practical directions for the management of bees, upon the depriving system&quot;,&quot;Topics&quot;:[&quot;Bees&quot;,&quot;Bee culture&quot;],&quot;Primary&quot;:&quot;67439.htm&quot;,&quot;CreatorNames&quot;:[&quot;Payne, J. H.&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;67439&quot;});" class='title'>The Bee Keeper's Guide, Third Edition -<br><span class='subtitle'>Containing concise practical directions for the management of bees, upon the depriving system</span></a>
+<div class='author'>Payne, J. H.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67465, {&quot;Title&quot;:&quot;Poultry diseases - Causes, symptoms and treatment, with notes on post-mortem examinations&quot;,&quot;Topics&quot;:[&quot;Poultry -- Diseases&quot;],&quot;Primary&quot;:&quot;67465.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wortley, E. J. (E. Jocelyn), 1884-1942&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;67465&quot;});" class='title'>Poultry diseases -<br><span class='subtitle'>Causes, symptoms and treatment, with notes on post-mortem examinations</span></a>
+<div class='author'>Wortley, E. J. (E. Jocelyn), 1884-1942</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67477, {&quot;Title&quot;:&quot;Bee-keeping for the Many; or, The management of the common and Ligurian honey bee - Including the selection of hives and a bee-keeper&#39;s calendar&quot;,&quot;Topics&quot;:[&quot;Bees&quot;,&quot;Bee culture&quot;],&quot;Primary&quot;:&quot;67477.htm&quot;,&quot;CreatorNames&quot;:[&quot;Payne, J. H.&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;67477&quot;});" class='title'>Bee-keeping for the Many;<br><span class='subtitle'>or, The management of the common and Ligurian honey bee - Including the selection of hives and a bee-keeper's calendar</span></a>
+<div class='author'>Payne, J. H.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67538, {&quot;Title&quot;:&quot;The Bee Keeper&#39;s Guide, Fourth Edition - Containing concise practical directions for the management of bees, upon the depriving system&quot;,&quot;Topics&quot;:[&quot;Bees&quot;,&quot;Bee culture&quot;],&quot;Primary&quot;:&quot;67538.htm&quot;,&quot;CreatorNames&quot;:[&quot;Payne, J. H.&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;67538&quot;});" class='title'>The Bee Keeper's Guide, Fourth Edition -<br><span class='subtitle'>Containing concise practical directions for the management of bees, upon the depriving system</span></a>
+<div class='author'>Payne, J. H.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67717, {&quot;Title&quot;:&quot;Bee-keeping for profit&quot;,&quot;Topics&quot;:[&quot;Bees&quot;,&quot;Bee culture&quot;],&quot;Primary&quot;:&quot;67717.htm&quot;,&quot;CreatorNames&quot;:[&quot;Morley, W. S.&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;67717&quot;});" class='title'>Bee-keeping for profit</a>
+<div class='author'>Morley, W. S.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67769, {&quot;Title&quot;:&quot;Bee Keeping for Profit. A New System of Bee Management (1880) - First Edition.&quot;,&quot;Topics&quot;:[&quot;Bees&quot;,&quot;Bee culture&quot;],&quot;Primary&quot;:&quot;67769.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cotton, Lizzie E., Mrs.&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;67769&quot;});" class='title'>Bee Keeping for Profit. A New System of Bee Management (1880) -<br><span class='subtitle'>First Edition.</span></a>
+<div class='author'>Cotton, Lizzie E., Mrs.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67770, {&quot;Title&quot;:&quot;Bee Keeping for Profit. A New System of Bee Management (1891) - Third Edition.&quot;,&quot;Topics&quot;:[&quot;Bees&quot;,&quot;Bee culture&quot;],&quot;Primary&quot;:&quot;67770.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cotton, Lizzie E., Mrs.&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;67770&quot;});" class='title'>Bee Keeping for Profit. A New System of Bee Management (1891) -<br><span class='subtitle'>Third Edition.</span></a>
+<div class='author'>Cotton, Lizzie E., Mrs.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67772, {&quot;Title&quot;:&quot;A Treatise on Regional Iodine Therapy for the Veterinary Clinician&quot;,&quot;Topics&quot;:[&quot;Veterinary medicine&quot;,&quot;Iodine -- Therapeutic use&quot;,&quot;Veterinary disinfectants&quot;],&quot;Primary&quot;:&quot;67772.htm&quot;,&quot;CreatorNames&quot;:[&quot;Steffen, Mart R. (Martin Robert), 1882-&quot;],&quot;LoCC&quot;:[&quot;RM&quot;,&quot;SF&quot;],&quot;PG_ID&quot;:&quot;67772&quot;});" class='title'>A Treatise on Regional Iodine Therapy for the Veterinary Clinician</a>
+<div class='author'>Steffen, Mart R. (Martin Robert), 1882-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67816, {&quot;Title&quot;:&quot;The Bee Preserver; or, Practical Directions for the Management and Preservation of Hives&quot;,&quot;Topics&quot;:[&quot;Bees&quot;,&quot;Bee culture&quot;,&quot;Beehives&quot;],&quot;Primary&quot;:&quot;67816.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gélieu, Jonas de, 1740-1827&quot;,&quot;Graham, Clementina Stirling, 1782-1877 [Translator]&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;67816&quot;});" class='title'>The Bee Preserver;<br><span class='subtitle'>or, Practical Directions for the Management and Preservation of Hives</span></a>
+<div class='author'>Gélieu, Jonas de, 1740-1827, Graham, Clementina Stirling, 1782-1877 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67942, {&quot;Title&quot;:&quot;The honey bee: a manual of instruction in apiculture&quot;,&quot;Topics&quot;:[&quot;Bees&quot;,&quot;Bee culture&quot;],&quot;Primary&quot;:&quot;67942.htm&quot;,&quot;CreatorNames&quot;:[&quot;Benton, Frank, 1852-1919&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;67942&quot;});" class='title'>The honey bee:<br><span class='subtitle'>a manual of instruction in apiculture</span></a>
+<div class='author'>Benton, Frank, 1852-1919</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68093, {&quot;Title&quot;:&quot;Keeping one cow - Being the experience of a number of practical writers, in a clear and condensed form, upon the management of a single milch cow&quot;,&quot;Topics&quot;:[&quot;Dairying&quot;,&quot;Cows&quot;],&quot;Primary&quot;:&quot;68093.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;68093&quot;});" class='title'>Keeping one cow -<br><span class='subtitle'>Being the experience of a number of practical writers, in a clear and condensed form, upon the management of a single milch cow</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68157, {&quot;Title&quot;:&quot;Manual of the apiary&quot;,&quot;Topics&quot;:[&quot;Bees&quot;,&quot;Bee culture&quot;],&quot;Primary&quot;:&quot;68157.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cook, Albert John, 1842-1916&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;68157&quot;});" class='title'>Manual of the apiary</a>
+<div class='author'>Cook, Albert John, 1842-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68269, {&quot;Title&quot;:&quot;The apiary; or, bees, bee-hives, and bee culture [1865] - Being a familiar account of the habits of bees, and the most improved methods of management, with full directions, adapted for the cottager, farmer, or scientific apiarian&quot;,&quot;Topics&quot;:[&quot;Bees&quot;,&quot;Bee culture&quot;,&quot;Beehives&quot;,&quot;Bee culture -- Economic aspects&quot;],&quot;Primary&quot;:&quot;68269.htm&quot;,&quot;CreatorNames&quot;:[&quot;Neighbor, Alfred&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;68269&quot;});" class='title'>The apiary;<br><span class='subtitle'>or, bees, bee-hives, and bee culture [1865] - Being a familiar account of the habits of bees, and the most improved methods of management, with full directions, adapted for the cottager, farmer, or scientific apiarian</span></a>
+<div class='author'>Neighbor, Alfred</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68500, {&quot;Title&quot;:&quot;The apiary; or, bees, bee-hives, and bee culture [1866] - Being a familiar account of the habits of bees, and the most improved methods of management, with full directions, adapted for the cottager, farmer, or scientific apiarian&quot;,&quot;Topics&quot;:[&quot;Bees&quot;,&quot;Bee culture&quot;,&quot;Beehives&quot;,&quot;Bee culture -- Economic aspects&quot;],&quot;Primary&quot;:&quot;68500.htm&quot;,&quot;CreatorNames&quot;:[&quot;Neighbor, Alfred&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;68500&quot;});" class='title'>The apiary;<br><span class='subtitle'>or, bees, bee-hives, and bee culture [1866] - Being a familiar account of the habits of bees, and the most improved methods of management, with full directions, adapted for the cottager, farmer, or scientific apiarian</span></a>
+<div class='author'>Neighbor, Alfred</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68890, {&quot;Title&quot;:&quot;Dogs of all nations - a complete work, profusely illustrated, bearing on the world&#39;s different varieties of the dog, grouped under their several nationalities, with descriptive matter explaining the characteristics and utility of each&quot;,&quot;Topics&quot;:[&quot;Dogs&quot;],&quot;Primary&quot;:&quot;68890.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mason, Walter Esplin, 1867-&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;68890&quot;});" class='title'>Dogs of all nations -<br><span class='subtitle'>a complete work, profusely illustrated, bearing on the world's different varieties of the dog, grouped under their several nationalities, with descriptive matter explaining the characteristics and utility of each</span></a>
+<div class='author'>Mason, Walter Esplin, 1867-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68897, {&quot;Title&quot;:&quot;The apiary; or, bees, bee-hives, and bee culture [1878] - being a familiar account of the habits of bees, and the most improved methods of management&quot;,&quot;Topics&quot;:[&quot;Bees&quot;,&quot;Bee culture&quot;,&quot;Beehives&quot;,&quot;Bee culture -- Economic aspects&quot;],&quot;Primary&quot;:&quot;68897.htm&quot;,&quot;CreatorNames&quot;:[&quot;Neighbor, Alfred&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;68897&quot;});" class='title'>The apiary;<br><span class='subtitle'>or, bees, bee-hives, and bee culture [1878] - being a familiar account of the habits of bees, and the most improved methods of management</span></a>
+<div class='author'>Neighbor, Alfred</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69045, {&quot;Title&quot;:&quot;Jedermanns Hundebuch: Plege, Erziehung und Dressur des Haushundes&quot;,&quot;Topics&quot;:[&quot;Dogs&quot;,&quot;Dogs -- Training&quot;],&quot;Primary&quot;:&quot;69045.htm&quot;,&quot;CreatorNames&quot;:[&quot;Otto, Ernst von&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;69045&quot;});" class='title'>Jedermanns Hundebuch:<br><span class='subtitle'>Plege, Erziehung und Dressur des Haushundes</span></a>
+<div class='author'>Otto, Ernst von</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69062, {&quot;Title&quot;:&quot;A bacteriological study of ham souring&quot;,&quot;Topics&quot;:[&quot;Ham -- Microbiology&quot;],&quot;Primary&quot;:&quot;69062.htm&quot;,&quot;CreatorNames&quot;:[&quot;McBryde, Charles Neil, 1872-&quot;],&quot;LoCC&quot;:[&quot;QR&quot;,&quot;SF&quot;],&quot;PG_ID&quot;:&quot;69062&quot;});" class='title'>A bacteriological study of ham souring</a>
+<div class='author'>McBryde, Charles Neil, 1872-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69094, {&quot;Title&quot;:&quot;Lehrbuch der Toxikologie für Tierärzte&quot;,&quot;Topics&quot;:[&quot;Veterinary toxicology&quot;],&quot;Primary&quot;:&quot;69094.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fröhner, Eugen, 1858-1940&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;69094&quot;});" class='title'>Lehrbuch der Toxikologie für Tierärzte</a>
+<div class='author'>Fröhner, Eugen, 1858-1940</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69596, {&quot;Title&quot;:&quot;Instrvcçam sobre a cvltvra das amoreiras, &amp; criaçaõ dos bichos da seda - dirigida a conseruaçaõ, &amp; augmento das manufacturas da seda, estabelecidas pelo... Principe Dom Pedro, Governador, e Regente dos Reinos de Portugal&quot;,&quot;Topics&quot;:[&quot;Mulberry&quot;,&quot;Silkworms&quot;],&quot;Primary&quot;:&quot;69596.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bluteau, Rafael, 1638-1734&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;69596&quot;});" class='title'>Instrvcçam sobre a cvltvra das amoreiras, & criaçaõ dos bichos da seda -<br><span class='subtitle'>dirigida a conseruaçaõ, & augmento das manufacturas da seda, estabelecidas pelo... Principe Dom Pedro, Governador, e Regente dos Reinos de Portugal</span></a>
+<div class='author'>Bluteau, Rafael, 1638-1734</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69676, {&quot;Title&quot;:&quot;The Italian Alp-bee; or, The gold mine of husbandry - short and practical instructions to breed genuine prolific Italian queens; to multiply them by hundreds in a few months and how to change German hives into Italian&quot;,&quot;Topics&quot;:[&quot;Bees&quot;,&quot;Bee culture&quot;],&quot;Primary&quot;:&quot;69676.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hermann, H. C. (Heinrich C.)&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;69676&quot;});" class='title'>The Italian Alp-bee;<br><span class='subtitle'>or, The gold mine of husbandry - short and practical instructions to breed genuine prolific Italian queens; to multiply them by hundreds in a few months and how to change German hives into Italian</span></a>
+<div class='author'>Hermann, H. C. (Heinrich C.)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69922, {&quot;Title&quot;:&quot;Dairying exemplified, or, The business of cheese-making - Laid down from approved rules, collected from the most experienced dairy-women, of several counties. Digested under various heads. From a series of observations, during thirty years practice in the cheese trade. The second edition corrected and improved&quot;,&quot;Topics&quot;:[&quot;Cheese&quot;,&quot;Cheese industry -- Great Britain -- 18th century&quot;,&quot;Dairying -- Great Britain -- 18th century&quot;],&quot;Primary&quot;:&quot;69922.htm&quot;,&quot;CreatorNames&quot;:[&quot;Twamley, J. (Josiah)&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;69922&quot;});" class='title'>Dairying exemplified, or, The business of cheese-making -<br><span class='subtitle'>Laid down from approved rules, collected from the most experienced dairy-women, of several counties. Digested under various heads. From a series of observations, during thirty years practice in the cheese trade. The second edition corrected and improved</span></a>
+<div class='author'>Twamley, J. (Josiah)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69991, {&quot;Title&quot;:&quot;Stock and stalks&quot;,&quot;Topics&quot;:[&quot;Dairying&quot;],&quot;Primary&quot;:&quot;69991.htm&quot;,&quot;CreatorNames&quot;:[&quot;Roberts, James Russel&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;69991&quot;});" class='title'>Stock and stalks</a>
+<div class='author'>Roberts, James Russel</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70050, {&quot;Title&quot;:&quot;Racehorses in Australia&quot;,&quot;Topics&quot;:[&quot;Stainforth, Martin, 1866-1957&quot;,&quot;Horse racing -- Australia -- History&quot;,&quot;Race horses -- Australia -- History&quot;],&quot;Primary&quot;:&quot;70050.htm&quot;,&quot;CreatorNames&quot;:[&quot;Austin, Kenneth, 1882- [Editor]&quot;,&quot;Lang, W. H. [Editor]&quot;,&quot;McKay, W. J. Stewart (William John Stewart), 1866-1948 [Editor]&quot;,&quot;Stainforth, Martin, 1866-1957 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;70050&quot;});" class='title'>Racehorses in Australia</a>
+<div class='author'>Austin, Kenneth, 1882- [Editor], Lang, W. H. [Editor], McKay, W. J. Stewart (William John Stewart), 1866-1948 [Editor], Stainforth, Martin, 1866-1957 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(8502, {&quot;Title&quot;:&quot;Common Diseases of Farm Animals&quot;,&quot;Topics&quot;:[&quot;Veterinary medicine&quot;],&quot;Primary&quot;:&quot;8502.txt&quot;,&quot;CreatorNames&quot;:[&quot;Craig, Robert Alexander, 1872-&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;8502&quot;});" class='title'>Common Diseases of Farm Animals</a>
+<div class='author'>Craig, Robert Alexander, 1872-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(9478, {&quot;Title&quot;:&quot;The Dog&quot;,&quot;Topics&quot;:[&quot;Dogs&quot;,&quot;Dogs -- Diseases&quot;],&quot;Primary&quot;:&quot;9478.htm&quot;,&quot;CreatorNames&quot;:[&quot;Youatt, William, 1776-1847&quot;,&quot;Lewis, Elisha J. (Elisha Jarrett), 1820-1877 [Editor]&quot;],&quot;LoCC&quot;:[&quot;SF&quot;],&quot;PG_ID&quot;:&quot;9478&quot;});" class='title'>The Dog</a>
+<div class='author'>Youatt, William, 1776-1847, Lewis, Elisha J. (Elisha Jarrett), 1820-1877 [Editor]</div>
+</div>
+</ul></div>
+</body></html>

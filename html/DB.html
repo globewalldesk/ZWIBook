@@ -1,0 +1,346 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">History of Austria, Austro-Hungarian Empire (DB)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(10691, {&quot;Title&quot;:&quot;Select Speeches of Kossuth&quot;,&quot;Topics&quot;:[&quot;Hungary -- History&quot;],&quot;Primary&quot;:&quot;10691.txt&quot;,&quot;CreatorNames&quot;:[&quot;Kossuth, Lajos, 1802-1894&quot;,&quot;Newman, Francis William, 1805-1897 [Editor]&quot;],&quot;LoCC&quot;:[&quot;DB&quot;],&quot;PG_ID&quot;:&quot;10691&quot;});" class='title'>Select Speeches of Kossuth</a>
+<div class='author'>Kossuth, Lajos, 1802-1894, Newman, Francis William, 1805-1897 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(11179, {&quot;Title&quot;:&quot;Seeing Europe with Famous Authors, Volume 6 - Germany, Austria-Hungary and Switzerland, part 2&quot;,&quot;Topics&quot;:[&quot;Germany -- Description and travel&quot;,&quot;Switzerland -- Description and travel&quot;,&quot;Austria -- Description and travel&quot;],&quot;Primary&quot;:&quot;11179.txt&quot;,&quot;CreatorNames&quot;:[&quot;Halsey, Francis W. (Francis Whiting), 1851-1919 [Editor]&quot;],&quot;LoCC&quot;:[&quot;DB&quot;,&quot;DD&quot;,&quot;DQ&quot;],&quot;PG_ID&quot;:&quot;11179&quot;});" class='title'>Seeing Europe with Famous Authors, Volume 6 -<br><span class='subtitle'>Germany, Austria-Hungary and Switzerland, part 2</span></a>
+<div class='author'>Halsey, Francis W. (Francis Whiting), 1851-1919 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12404, {&quot;Title&quot;:&quot;Seeing Europe with Famous Authors, Volume 5 - Germany, Austria-Hungary, and Switzerland, Part 1&quot;,&quot;Topics&quot;:[&quot;Germany -- Description and travel&quot;,&quot;Switzerland -- Description and travel&quot;,&quot;Austria -- Description and travel&quot;],&quot;Primary&quot;:&quot;12404.htm&quot;,&quot;CreatorNames&quot;:[&quot;Halsey, Francis W. (Francis Whiting), 1851-1919 [Editor]&quot;],&quot;LoCC&quot;:[&quot;DB&quot;,&quot;DD&quot;,&quot;DQ&quot;],&quot;PG_ID&quot;:&quot;12404&quot;});" class='title'>Seeing Europe with Famous Authors, Volume 5 -<br><span class='subtitle'>Germany, Austria-Hungary, and Switzerland, Part 1</span></a>
+<div class='author'>Halsey, Francis W. (Francis Whiting), 1851-1919 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13779, {&quot;Title&quot;:&quot;Minkä mitäkin Tyrolista&quot;,&quot;Topics&quot;:[&quot;Tyrol (Austria) -- Description and travel&quot;],&quot;Primary&quot;:&quot;13779.txt&quot;,&quot;CreatorNames&quot;:[&quot;Aho, Juhani, 1861-1921&quot;],&quot;LoCC&quot;:[&quot;DB&quot;],&quot;PG_ID&quot;:&quot;13779&quot;});" class='title'>Minkä mitäkin Tyrolista</a>
+<div class='author'>Aho, Juhani, 1861-1921</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13953, {&quot;Title&quot;:&quot;Celsissimus: Salzburger Roman&quot;,&quot;Topics&quot;:[&quot;Biographical fiction&quot;,&quot;Raitenau, Wolf Dietrich von, 1559-1617&quot;,&quot;Austria -- History -- Habsburg dynasty (1273-1740) -- Fiction&quot;],&quot;Primary&quot;:&quot;13953.txt&quot;,&quot;CreatorNames&quot;:[&quot;Achleitner, Arthur, 1858-1927&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;DB&quot;,&quot;PT&quot;],&quot;PG_ID&quot;:&quot;13953&quot;});" class='title'>Celsissimus:<br><span class='subtitle'>Salzburger Roman</span></a>
+<div class='author'>Achleitner, Arthur, 1858-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14190, {&quot;Title&quot;:&quot;In Oostenrijk—Stiermarken - De Aarde en haar Volken, 1906&quot;,&quot;Topics&quot;:[&quot;Styria (Austria) -- Description and travel&quot;],&quot;Primary&quot;:&quot;14190.htm&quot;,&quot;CreatorNames&quot;:[&quot;Vielliard, Edme&quot;],&quot;LoCC&quot;:[&quot;DB&quot;],&quot;PG_ID&quot;:&quot;14190&quot;});" class='title'>In Oostenrijk—Stiermarken -<br><span class='subtitle'>De Aarde en haar Volken, 1906</span></a>
+<div class='author'>Vielliard, Edme</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16070, {&quot;Title&quot;:&quot;The Empire of Austria; Its Rise and Present Power&quot;,&quot;Topics&quot;:[&quot;Austria -- History&quot;],&quot;Primary&quot;:&quot;16070.htm&quot;,&quot;CreatorNames&quot;:[&quot;Abbott, John S. C. (John Stevens Cabot), 1805-1877&quot;],&quot;LoCC&quot;:[&quot;DB&quot;],&quot;PG_ID&quot;:&quot;16070&quot;});" class='title'>The Empire of Austria;<br><span class='subtitle'>Its Rise and Present Power</span></a>
+<div class='author'>Abbott, John S. C. (John Stevens Cabot), 1805-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17288, {&quot;Title&quot;:&quot;Herzegovina; Or, Omer Pacha and the Christian Rebels&quot;,&quot;Topics&quot;:[&quot;Serbia&quot;,&quot;Hercegovina (Bosnia and Hercegovina) -- History&quot;],&quot;Primary&quot;:&quot;17288.htm&quot;,&quot;CreatorNames&quot;:[&quot;Arbuthnot, George, 1836-1912&quot;],&quot;LoCC&quot;:[&quot;DB&quot;],&quot;PG_ID&quot;:&quot;17288&quot;});" class='title'>Herzegovina;<br><span class='subtitle'>Or, Omer Pacha and the Christian Rebels</span></a>
+<div class='author'>Arbuthnot, George, 1836-1912</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17555, {&quot;Title&quot;:&quot;Lettre de m. l&#39;abbé Fortis à mylord comte de Bute, sur les moeurs et usages des Morlaques, appellés Montenegrins&quot;,&quot;Topics&quot;:[&quot;Dalmatia (Croatia) -- Description and travel&quot;],&quot;Primary&quot;:&quot;17555.txt&quot;,&quot;CreatorNames&quot;:[&quot;Fortis, Alberto, 1741-1803&quot;],&quot;LoCC&quot;:[&quot;DB&quot;],&quot;PG_ID&quot;:&quot;17555&quot;});" class='title'>Lettre de m. l'abbé Fortis à mylord comte de Bute, sur les moeurs et usages des Morlaques, appellés Montenegrins</a>
+<div class='author'>Fortis, Alberto, 1741-1803</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17972, {&quot;Title&quot;:&quot;Round About the Carpathians&quot;,&quot;Topics&quot;:[&quot;Transylvania (Romania) -- Description and travel&quot;,&quot;Carpathian Mountains -- Description and travel&quot;],&quot;Primary&quot;:&quot;17972.htm&quot;,&quot;CreatorNames&quot;:[&quot;Crosse, Andrew F.&quot;],&quot;LoCC&quot;:[&quot;DB&quot;],&quot;PG_ID&quot;:&quot;17972&quot;});" class='title'>Round About the Carpathians</a>
+<div class='author'>Crosse, Andrew F.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18519, {&quot;Title&quot;:&quot;Manifesto da Serenissima Sra. Rainha de Hungria, e Bohemia, Arquiduqueza de Austria, &amp;c. mandado publicar e divulgar pelas provincias, que França domina, fronteiras ao Imperio&quot;,&quot;Topics&quot;:[&quot;Austria -- Foreign relations -- 1740-1780 -- France&quot;],&quot;Primary&quot;:&quot;18519.txt&quot;,&quot;CreatorNames&quot;:[&quot;Menzel, Johann Daniel von&quot;,&quot;Mascarenhas, José Freire de Monterroyo, 1670-1760 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DB&quot;],&quot;PG_ID&quot;:&quot;18519&quot;});" class='title'>Manifesto da Serenissima Sra. Rainha de Hungria, e Bohemia, Arquiduqueza de Austria, &c. mandado publicar e divulgar pelas provincias, que França domina, fronteiras ao Imperio</a>
+<div class='author'>Menzel, Johann Daniel von, Mascarenhas, José Freire de Monterroyo, 1670-1760 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19040, {&quot;Title&quot;:&quot;Takáts Sándor Szalai Barkóczy Krisztina 1671-1724 czímű könyvének ismertetése&quot;,&quot;Topics&quot;:[&quot;Takáts, Sándor, 1860-1932. Szalai Barkóczy Krisztina, 1671-1724&quot;],&quot;Primary&quot;:&quot;19040.htm&quot;,&quot;CreatorNames&quot;:[&quot;Angyal, Dávid, 1857-1943&quot;],&quot;LoCC&quot;:[&quot;DB&quot;,&quot;PH&quot;],&quot;PG_ID&quot;:&quot;19040&quot;});" class='title'>Takáts Sándor Szalai Barkóczy Krisztina 1671-1724 czímű könyvének ismertetése</a>
+<div class='author'>Angyal, Dávid, 1857-1943</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19866, {&quot;Title&quot;:&quot;Zuid-Tirol - De Aarde en haar Volken, 1907&quot;,&quot;Topics&quot;:[&quot;Tyrol (Austria) -- Description and travel&quot;],&quot;Primary&quot;:&quot;19866.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bosch, G.&quot;],&quot;LoCC&quot;:[&quot;DB&quot;],&quot;PG_ID&quot;:&quot;19866&quot;});" class='title'>Zuid-Tirol -<br><span class='subtitle'>De Aarde en haar Volken, 1907</span></a>
+<div class='author'>Bosch, G.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(21947, {&quot;Title&quot;:&quot;Kijkjes in het land van keizer Frans Jozef - De Aarde en haar Volken, 1908&quot;,&quot;Topics&quot;:[&quot;Austria -- Description and travel&quot;,&quot;Vienna (Austria) -- Description and travel&quot;],&quot;Primary&quot;:&quot;21947.htm&quot;,&quot;CreatorNames&quot;:[&quot;Uildriks, Frederike van, 1854-1919&quot;],&quot;LoCC&quot;:[&quot;DB&quot;],&quot;PG_ID&quot;:&quot;21947&quot;});" class='title'>Kijkjes in het land van keizer Frans Jozef -<br><span class='subtitle'>De Aarde en haar Volken, 1908</span></a>
+<div class='author'>Uildriks, Frederike van, 1854-1919</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22776, {&quot;Title&quot;:&quot;From a Terrace in Prague&quot;,&quot;Topics&quot;:[&quot;Bohemia (Czech Republic) -- History&quot;,&quot;Prague (Czech Republic) -- Description and travel&quot;],&quot;Primary&quot;:&quot;22776.htm&quot;,&quot;CreatorNames&quot;:[&quot;Baker, B. Granville (Bernard Granville), 1870-1957&quot;],&quot;LoCC&quot;:[&quot;DB&quot;],&quot;PG_ID&quot;:&quot;22776&quot;});" class='title'>From a Terrace in Prague</a>
+<div class='author'>Baker, B. Granville (Bernard Granville), 1870-1957</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24419, {&quot;Title&quot;:&quot;Germany, Bohemia, and Hungary, Visited in 1837. Vol. II&quot;,&quot;Topics&quot;:[&quot;Germany -- Description and travel&quot;,&quot;Austria -- Description and travel&quot;,&quot;Bohemia (Czech Republic) -- Description and travel&quot;],&quot;Primary&quot;:&quot;24419.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gleig, G. R. (George Robert), 1796-1888&quot;],&quot;LoCC&quot;:[&quot;DB&quot;,&quot;DD&quot;],&quot;PG_ID&quot;:&quot;24419&quot;});" class='title'>Germany, Bohemia, and Hungary, Visited in 1837. Vol. II</a>
+<div class='author'>Gleig, G. R. (George Robert), 1796-1888</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30395, {&quot;Title&quot;:&quot;Essai historique sur l&#39;origine des Hongrois&quot;,&quot;Topics&quot;:[&quot;Hungary -- History&quot;],&quot;Primary&quot;:&quot;30395.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gérando, A. de (Auguste), 1819-1849&quot;],&quot;LoCC&quot;:[&quot;DB&quot;],&quot;PG_ID&quot;:&quot;30395&quot;});" class='title'>Essai historique sur l'origine des Hongrois</a>
+<div class='author'>Gérando, A. de (Auguste), 1819-1849</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35939, {&quot;Title&quot;:&quot;Beobachtungen über Oesterreichs Aufklärung und Litteratur&quot;,&quot;Topics&quot;:[&quot;Enlightenment&quot;,&quot;Vienna (Austria) -- Intellectual life -- 18th century&quot;],&quot;Primary&quot;:&quot;35939.htm&quot;,&quot;CreatorNames&quot;:[&quot;Blumauer, Aloys, 1755-1798&quot;],&quot;LoCC&quot;:[&quot;DB&quot;],&quot;PG_ID&quot;:&quot;35939&quot;});" class='title'>Beobachtungen über Oesterreichs Aufklärung und Litteratur</a>
+<div class='author'>Blumauer, Aloys, 1755-1798</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40889, {&quot;Title&quot;:&quot;Tyrol and Its People&quot;,&quot;Topics&quot;:[&quot;Tyrol (Austria) -- Description and travel&quot;,&quot;Tyrol (Austria) -- History&quot;],&quot;Primary&quot;:&quot;40889.htm&quot;,&quot;CreatorNames&quot;:[&quot;Holland, Clive, 1866-1959&quot;,&quot;Stokes, Adrian Scott, 1854-1935 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DB&quot;],&quot;PG_ID&quot;:&quot;40889&quot;});" class='title'>Tyrol and Its People</a>
+<div class='author'>Holland, Clive, 1866-1959, Stokes, Adrian Scott, 1854-1935 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41601, {&quot;Title&quot;:&quot;Magyarhon szépségei; A legvitézebb huszár&quot;,&quot;Topics&quot;:[&quot;Hungary -- Description and travel&quot;],&quot;Primary&quot;:&quot;41601.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jókai, Mór, 1825-1904&quot;],&quot;LoCC&quot;:[&quot;DB&quot;],&quot;PG_ID&quot;:&quot;41601&quot;});" class='title'>Magyarhon szépségei;<br><span class='subtitle'>A legvitézebb huszár</span></a>
+<div class='author'>Jókai, Mór, 1825-1904</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42826, {&quot;Title&quot;:&quot;Austria - containing a Description of the Manners, Customs, Character and Costumes of the People of that Empire&quot;,&quot;Topics&quot;:[&quot;Austria -- Social life and customs&quot;],&quot;Primary&quot;:&quot;42826.htm&quot;,&quot;CreatorNames&quot;:[&quot;Shoberl, Frederic, 1775-1853&quot;],&quot;LoCC&quot;:[&quot;DB&quot;],&quot;PG_ID&quot;:&quot;42826&quot;});" class='title'>Austria -<br><span class='subtitle'>containing a Description of the Manners, Customs, Character and Costumes of the People of that Empire</span></a>
+<div class='author'>Shoberl, Frederic, 1775-1853</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43371, {&quot;Title&quot;:&quot;Our Little Hungarian Cousin&quot;,&quot;Topics&quot;:[&quot;Children -- Hungary -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;43371.htm&quot;,&quot;CreatorNames&quot;:[&quot;Nixon-Roulet, Mary F., -1930&quot;,&quot;Goss, John, 1886-1963 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DB&quot;,&quot;PZ&quot;],&quot;PG_ID&quot;:&quot;43371&quot;});" class='title'>Our Little Hungarian Cousin</a>
+<div class='author'>Nixon-Roulet, Mary F., -1930, Goss, John, 1886-1963 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43614, {&quot;Title&quot;:&quot;The Valleys of Tirol: Their traditions and customs and how to visit them&quot;,&quot;Topics&quot;:[&quot;Tyrol (Austria) -- Description and travel&quot;,&quot;Valleys -- Austria -- Tyrol&quot;,&quot;Tyrol (Austria) -- Guidebooks&quot;],&quot;Primary&quot;:&quot;43614.htm&quot;,&quot;CreatorNames&quot;:[&quot;Busk, Rachel Harriette, 1831-1907&quot;],&quot;LoCC&quot;:[&quot;DB&quot;],&quot;PG_ID&quot;:&quot;43614&quot;});" class='title'>The Valleys of Tirol:<br><span class='subtitle'>Their traditions and customs and how to visit them</span></a>
+<div class='author'>Busk, Rachel Harriette, 1831-1907</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44461, {&quot;Title&quot;:&quot;Wanderings through unknown Austria&quot;,&quot;Topics&quot;:[&quot;Austria -- Description and travel&quot;],&quot;Primary&quot;:&quot;44461.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hodgson, Randolph Llewellyn&quot;,&quot;Thurn und Taxis, Marie, Princess, 1855-1934 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DB&quot;],&quot;PG_ID&quot;:&quot;44461&quot;});" class='title'>Wanderings through unknown Austria</a>
+<div class='author'>Hodgson, Randolph Llewellyn, Thurn und Taxis, Marie, Princess, 1855-1934 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45338, {&quot;Title&quot;:&quot;Through Bosnia and Herzegovina with a Paint Brush&quot;,&quot;Topics&quot;:[&quot;Bosnia and Herzegovina -- Description and travel&quot;],&quot;Primary&quot;:&quot;45338.htm&quot;,&quot;CreatorNames&quot;:[&quot;Whitwell, Edward Robson, Mrs.&quot;],&quot;LoCC&quot;:[&quot;DB&quot;],&quot;PG_ID&quot;:&quot;45338&quot;});" class='title'>Through Bosnia and Herzegovina with a Paint Brush</a>
+<div class='author'>Whitwell, Edward Robson, Mrs.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45615, {&quot;Title&quot;:&quot;Magyarország története. Az ifjuság használatára&quot;,&quot;Topics&quot;:[&quot;Hungary -- History&quot;],&quot;Primary&quot;:&quot;45615.htm&quot;,&quot;CreatorNames&quot;:[&quot;Peregriny, Elek&quot;],&quot;LoCC&quot;:[&quot;DB&quot;],&quot;PG_ID&quot;:&quot;45615&quot;});" class='title'>Magyarország története. Az ifjuság használatára</a>
+<div class='author'>Peregriny, Elek</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45616, {&quot;Title&quot;:&quot;Our Little Czecho-Slovak Cousin&quot;,&quot;Topics&quot;:[&quot;Children -- Czechoslovakia -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;45616.htm&quot;,&quot;CreatorNames&quot;:[&quot;Winlow, Clara Vostrovsky, 1876-&quot;,&quot;Meister, Charles E. [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DB&quot;,&quot;PZ&quot;],&quot;PG_ID&quot;:&quot;45616&quot;});" class='title'>Our Little Czecho-Slovak Cousin</a>
+<div class='author'>Winlow, Clara Vostrovsky, 1876-, Meister, Charles E. [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45993, {&quot;Title&quot;:&quot;Bohemia under Hapsburg Misrule - A Study of the Ideals and Aspirations of the Bohemian and Slovak Peoples, as They Relate to and Are Affected by the Great European War&quot;,&quot;Topics&quot;:[&quot;Nationalism -- Czech Republic -- Bohemia&quot;,&quot;Slovaks&quot;,&quot;Bohemia (Czech Republic)&quot;],&quot;Primary&quot;:&quot;45993.htm&quot;,&quot;CreatorNames&quot;:[&quot;Capek, Thomas, 1861-1950 [Editor]&quot;],&quot;LoCC&quot;:[&quot;DB&quot;],&quot;PG_ID&quot;:&quot;45993&quot;});" class='title'>Bohemia under Hapsburg Misrule -<br><span class='subtitle'>A Study of the Ideals and Aspirations of the Bohemian and Slovak Peoples, as They Relate to and Are Affected by the Great European War</span></a>
+<div class='author'>Capek, Thomas, 1861-1950 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46230, {&quot;Title&quot;:&quot;Our Little Austrian Cousin&quot;,&quot;Topics&quot;:[&quot;Children -- Austria -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;46230.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mendel, Florence Emma Voigt, 1874-&quot;,&quot;Marlowe, Diantha Horne [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DB&quot;,&quot;PZ&quot;],&quot;PG_ID&quot;:&quot;46230&quot;});" class='title'>Our Little Austrian Cousin</a>
+<div class='author'>Mendel, Florence Emma Voigt, 1874-, Marlowe, Diantha Horne [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46533, {&quot;Title&quot;:&quot;The Story of Prague&quot;,&quot;Topics&quot;:[&quot;Prague (Czech Republic) -- History&quot;],&quot;Primary&quot;:&quot;46533.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lützow, Francis, hrabe, 1849-1916&quot;,&quot;Erichsen, Nelly [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DB&quot;],&quot;PG_ID&quot;:&quot;46533&quot;});" class='title'>The Story of Prague</a>
+<div class='author'>Lützow, Francis, hrabe, 1849-1916, Erichsen, Nelly [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46624, {&quot;Title&quot;:&quot;Dalmatinische Reise&quot;,&quot;Topics&quot;:[&quot;Dalmatia (Croatia) -- Description and travel&quot;,&quot;Dalmatia (Croatia) -- Politics and government&quot;],&quot;Primary&quot;:&quot;46624.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bahr, Hermann, 1863-1934&quot;],&quot;LoCC&quot;:[&quot;DB&quot;],&quot;PG_ID&quot;:&quot;46624&quot;});" class='title'>Dalmatinische Reise</a>
+<div class='author'>Bahr, Hermann, 1863-1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47027, {&quot;Title&quot;:&quot;Nagy magyarok élete (2. kötet)&quot;,&quot;Topics&quot;:[&quot;Celebrities -- Hungary -- Biography&quot;,&quot;Hungary -- Biography&quot;],&quot;Primary&quot;:&quot;47027.htm&quot;,&quot;CreatorNames&quot;:[&quot;Benedek, Elek, 1859-1929&quot;],&quot;LoCC&quot;:[&quot;DB&quot;],&quot;PG_ID&quot;:&quot;47027&quot;});" class='title'>Nagy magyarok élete (2. kötet)</a>
+<div class='author'>Benedek, Elek, 1859-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47756, {&quot;Title&quot;:&quot;Voyage en automobile dans la Hongrie pittoresque - Fatra - Tatra - Matra&quot;,&quot;Topics&quot;:[&quot;Automobile travel&quot;,&quot;Hungary -- Description and travel&quot;],&quot;Primary&quot;:&quot;47756.htm&quot;,&quot;CreatorNames&quot;:[&quot;Marge, Pierre, 1874-&quot;],&quot;LoCC&quot;:[&quot;DB&quot;],&quot;PG_ID&quot;:&quot;47756&quot;});" class='title'>Voyage en automobile dans la Hongrie pittoresque -<br><span class='subtitle'>Fatra - Tatra - Matra</span></a>
+<div class='author'>Marge, Pierre, 1874-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48705, {&quot;Title&quot;:&quot;Wanderungen durch die interessantesten Gegenden des Sächsischen Obererzgebirges (Erstes Heft) - Ein Beitrag zur specielleren Kenntniß desselben, seines Volkslebens, seiner Gewerbsarten, Sitten und Gebräuche&quot;,&quot;Topics&quot;:[&quot;Erzgebirge (Czech Republic and Germany) -- Description and travel&quot;],&quot;Primary&quot;:&quot;48705.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lindner, Johann Traugott, 1777-1856&quot;],&quot;LoCC&quot;:[&quot;DB&quot;,&quot;DD&quot;],&quot;PG_ID&quot;:&quot;48705&quot;});" class='title'>Wanderungen durch die interessantesten Gegenden des Sächsischen Obererzgebirges (Erstes Heft) -<br><span class='subtitle'>Ein Beitrag zur specielleren Kenntniß desselben, seines Volkslebens, seiner Gewerbsarten, Sitten und Gebräuche</span></a>
+<div class='author'>Lindner, Johann Traugott, 1777-1856</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48853, {&quot;Title&quot;:&quot;Wegweiser durch das sächsisch-böhmische Erzgebirge&quot;,&quot;Topics&quot;:[&quot;Erzgebirge (Czech Republic and Germany) -- Description and travel&quot;],&quot;Primary&quot;:&quot;48853.htm&quot;,&quot;CreatorNames&quot;:[&quot;Berlet, Bruno, 1825-1892&quot;],&quot;LoCC&quot;:[&quot;DB&quot;,&quot;DD&quot;],&quot;PG_ID&quot;:&quot;48853&quot;});" class='title'>Wegweiser durch das sächsisch-böhmische Erzgebirge</a>
+<div class='author'>Berlet, Bruno, 1825-1892</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49134, {&quot;Title&quot;:&quot;Wanderungen durch die interessantesten Gegenden des Sächsischen Obererzgebirges (Zweites Heft) - Ein Beitrag zur speciellern Kenntniß desselben, seines Volkslebens, der Gewerbsarten, Sitten und Gebräuche&quot;,&quot;Topics&quot;:[&quot;Erzgebirge (Czech Republic and Germany) -- Description and travel&quot;],&quot;Primary&quot;:&quot;49134.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lindner, Johann Traugott, 1777-1856&quot;],&quot;LoCC&quot;:[&quot;DB&quot;,&quot;DD&quot;],&quot;PG_ID&quot;:&quot;49134&quot;});" class='title'>Wanderungen durch die interessantesten Gegenden des Sächsischen Obererzgebirges (Zweites Heft) -<br><span class='subtitle'>Ein Beitrag zur speciellern Kenntniß desselben, seines Volkslebens, der Gewerbsarten, Sitten und Gebräuche</span></a>
+<div class='author'>Lindner, Johann Traugott, 1777-1856</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49148, {&quot;Title&quot;:&quot;Wanderungen durch die interessantesten Gegenden des Sächsischen Obererzgebirges (Drittes Heft) - Ein Beitrag zur speciellern Kenntniß desselben, seines Volkslebens, der Gewerbsarten, Sitten und Gebräuche&quot;,&quot;Topics&quot;:[&quot;Erzgebirge (Czech Republic and Germany) -- Description and travel&quot;],&quot;Primary&quot;:&quot;49148.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lindner, Johann Traugott, 1777-1856&quot;],&quot;LoCC&quot;:[&quot;DB&quot;,&quot;DD&quot;],&quot;PG_ID&quot;:&quot;49148&quot;});" class='title'>Wanderungen durch die interessantesten Gegenden des Sächsischen Obererzgebirges (Drittes Heft) -<br><span class='subtitle'>Ein Beitrag zur speciellern Kenntniß desselben, seines Volkslebens, der Gewerbsarten, Sitten und Gebräuche</span></a>
+<div class='author'>Lindner, Johann Traugott, 1777-1856</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49955, {&quot;Title&quot;:&quot;Bohemia, from the earliest times to the fall of national independence in 1620 - With a short summary of later events&quot;,&quot;Topics&quot;:[&quot;Bohemia (Czech Republic) -- History -- To 1526&quot;,&quot;Bohemia (Czech Republic) -- History -- 1526-1618&quot;],&quot;Primary&quot;:&quot;49955.htm&quot;,&quot;CreatorNames&quot;:[&quot;Maurice, C. Edmund (Charles Edmund), 1843-1927&quot;],&quot;LoCC&quot;:[&quot;DB&quot;],&quot;PG_ID&quot;:&quot;49955&quot;});" class='title'>Bohemia, from the earliest times to the fall of national independence in 1620 -<br><span class='subtitle'>With a short summary of later events</span></a>
+<div class='author'>Maurice, C. Edmund (Charles Edmund), 1843-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50038, {&quot;Title&quot;:&quot;The story of Hungary&quot;,&quot;Topics&quot;:[&quot;Hungary -- History&quot;],&quot;Primary&quot;:&quot;50038.htm&quot;,&quot;CreatorNames&quot;:[&quot;Vámbéry, Ármin, 1832-1913&quot;,&quot;Heilprin, Louis, 1851-1912 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;DB&quot;],&quot;PG_ID&quot;:&quot;50038&quot;});" class='title'>The story of Hungary</a>
+<div class='author'>Vámbéry, Ármin, 1832-1913, Heilprin, Louis, 1851-1912 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50197, {&quot;Title&quot;:&quot;Aus halbvergessenem Lande. Culturbilder aus Dalmatien&quot;,&quot;Topics&quot;:[&quot;Dalmatia (Croatia) -- Description and travel&quot;],&quot;Primary&quot;:&quot;50197.htm&quot;,&quot;CreatorNames&quot;:[&quot;Schiff, Theodor&quot;],&quot;LoCC&quot;:[&quot;DB&quot;],&quot;PG_ID&quot;:&quot;50197&quot;});" class='title'>Aus halbvergessenem Lande. Culturbilder aus Dalmatien</a>
+<div class='author'>Schiff, Theodor</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50708, {&quot;Title&quot;:&quot;Lettres du prince de Metternich à la comtesse de Lieven, 1818-1819&quot;,&quot;Topics&quot;:[&quot;Lieven, Dorothea, Princess, 1785-1857&quot;],&quot;Primary&quot;:&quot;50708.htm&quot;,&quot;CreatorNames&quot;:[&quot;Metternich, Clemens Wenzel Lothar, Fürst von, 1773-1859&quot;,&quot;Hanoteau, Jean, 1869-1939 [Editor]&quot;],&quot;LoCC&quot;:[&quot;DB&quot;],&quot;PG_ID&quot;:&quot;50708&quot;});" class='title'>Lettres du prince de Metternich à la comtesse de Lieven, 1818-1819</a>
+<div class='author'>Metternich, Clemens Wenzel Lothar, Fürst von, 1773-1859, Hanoteau, Jean, 1869-1939 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50888, {&quot;Title&quot;:&quot;Ferien an der Adria: Bilder aus Süd-Österreich&quot;,&quot;Topics&quot;:[&quot;Austria -- Description and travel&quot;],&quot;Primary&quot;:&quot;50888.htm&quot;,&quot;CreatorNames&quot;:[&quot;Heer, J. C. (Jakob Christoph), 1859-1925&quot;],&quot;LoCC&quot;:[&quot;DB&quot;],&quot;PG_ID&quot;:&quot;50888&quot;});" class='title'>Ferien an der Adria:<br><span class='subtitle'>Bilder aus Süd-Österreich</span></a>
+<div class='author'>Heer, J. C. (Jakob Christoph), 1859-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51276, {&quot;Title&quot;:&quot;Erzgebirgs-Kammwegführer - Tetschen (Schneeberg) - Erzgebirge - Asch (Hainberg). Mit einer Karte des Kammweges&quot;,&quot;Topics&quot;:[&quot;Erzgebirge (Czech Republic and Germany) -- Guidebooks&quot;],&quot;Primary&quot;:&quot;51276.htm&quot;,&quot;CreatorNames&quot;:[&quot;Brechensbauer, Josef, 1867-1945&quot;,&quot;Prasse, E. A.&quot;],&quot;LoCC&quot;:[&quot;DB&quot;,&quot;DD&quot;],&quot;PG_ID&quot;:&quot;51276&quot;});" class='title'>Erzgebirgs-Kammwegführer -<br><span class='subtitle'>Tetschen (Schneeberg) - Erzgebirge - Asch (Hainberg). Mit einer Karte des Kammweges</span></a>
+<div class='author'>Brechensbauer, Josef, 1867-1945, Prasse, E. A.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51377, {&quot;Title&quot;:&quot;Gampe&#39;s Erzgebirge mit Einschluss der böhmischen Bäder Teplitz, Karlsbad, Franzensbad und Marienbad, des Voigtlandes und des Granulitgebietes an den unteren Mulden. Ein Reisehandbuch&quot;,&quot;Topics&quot;:[&quot;Erzgebirge (Czech Republic and Germany) -- Guidebooks&quot;],&quot;Primary&quot;:&quot;51377.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gampe, Theodor, 1845-1897&quot;],&quot;LoCC&quot;:[&quot;DB&quot;,&quot;DD&quot;],&quot;PG_ID&quot;:&quot;51377&quot;});" class='title'>Gampe's Erzgebirge mit Einschluss der böhmischen Bäder Teplitz, Karlsbad, Franzensbad und Marienbad, des Voigtlandes und des Granulitgebietes an den unteren Mulden. Ein Reisehandbuch</a>
+<div class='author'>Gampe, Theodor, 1845-1897</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53344, {&quot;Title&quot;:&quot;Kammweg-Führer von der Jeschkenkoppe bei Reichenberg bis zum Rosenberg bei Tetschen - mit Berücksichtigung der anschliessenden Kammwege&quot;,&quot;Topics&quot;:[&quot;Bohemia (Czech Republic) -- Guidebooks&quot;],&quot;Primary&quot;:&quot;53344.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hantschel, Franz, 1844-1940&quot;],&quot;LoCC&quot;:[&quot;DB&quot;],&quot;PG_ID&quot;:&quot;53344&quot;});" class='title'>Kammweg-Führer von der Jeschkenkoppe bei Reichenberg bis zum Rosenberg bei Tetschen -<br><span class='subtitle'>mit Berücksichtigung der anschliessenden Kammwege</span></a>
+<div class='author'>Hantschel, Franz, 1844-1940</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53713, {&quot;Title&quot;:&quot;Das österreichische Antlitz: Essays&quot;,&quot;Topics&quot;:[&quot;Austria -- Social life and customs&quot;,&quot;Austria -- Intellectual life&quot;,&quot;Vienna (Austria) -- Social life and customs&quot;,&quot;Vienna (Austria) -- Intellectual life&quot;],&quot;Primary&quot;:&quot;53713.htm&quot;,&quot;CreatorNames&quot;:[&quot;Salten, Felix, 1869-1945&quot;],&quot;LoCC&quot;:[&quot;DB&quot;],&quot;PG_ID&quot;:&quot;53713&quot;});" class='title'>Das österreichische Antlitz:<br><span class='subtitle'>Essays</span></a>
+<div class='author'>Salten, Felix, 1869-1945</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54427, {&quot;Title&quot;:&quot;Interessante Wanderungen durch das Sächsische Ober-Erzgebirge&quot;,&quot;Topics&quot;:[&quot;Erzgebirge (Czech Republic and Germany) -- Description and travel&quot;],&quot;Primary&quot;:&quot;54427.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wild, Christian Gottlob, 1785-1839&quot;],&quot;LoCC&quot;:[&quot;DB&quot;,&quot;DD&quot;],&quot;PG_ID&quot;:&quot;54427&quot;});" class='title'>Interessante Wanderungen durch das Sächsische Ober-Erzgebirge</a>
+<div class='author'>Wild, Christian Gottlob, 1785-1839</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54731, {&quot;Title&quot;:&quot;The Sieges of Vienna by the Turks&quot;,&quot;Topics&quot;:[&quot;Turkey -- History -- 1453-1683&quot;,&quot;Vienna (Austria) -- History&quot;],&quot;Primary&quot;:&quot;54731.htm&quot;,&quot;CreatorNames&quot;:[&quot;Schimmer, Karl August, 1800-1863&quot;,&quot;Ellesmere, Francis Egerton, Earl of, 1800-1857 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DB&quot;],&quot;PG_ID&quot;:&quot;54731&quot;});" class='title'>The Sieges of Vienna by the Turks</a>
+<div class='author'>Schimmer, Karl August, 1800-1863, Ellesmere, Francis Egerton, Earl of, 1800-1857 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55027, {&quot;Title&quot;:&quot;Führer durch das böhmische Erzgebirge, das Mittelgebirge und die angrenzenden Gebiete&quot;,&quot;Topics&quot;:[&quot;Erzgebirge (Czech Republic and Germany) -- Guidebooks&quot;,&quot;Ceské Stredohorí (Czech Republic) -- Guidebooks&quot;],&quot;Primary&quot;:&quot;55027.htm&quot;,&quot;CreatorNames&quot;:[&quot;Weymann, August&quot;],&quot;LoCC&quot;:[&quot;DB&quot;,&quot;DD&quot;],&quot;PG_ID&quot;:&quot;55027&quot;});" class='title'>Führer durch das böhmische Erzgebirge, das Mittelgebirge und die angrenzenden Gebiete</a>
+<div class='author'>Weymann, August</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55332, {&quot;Title&quot;:&quot;The Republic of Ragusa: An Episode of the Turkish Conquest&quot;,&quot;Topics&quot;:[&quot;Dubrovnik (Croatia) -- History&quot;],&quot;Primary&quot;:&quot;55332.htm&quot;,&quot;CreatorNames&quot;:[&quot;Villari, Luigi, 1876-1959&quot;,&quot;Hulton, William [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DB&quot;],&quot;PG_ID&quot;:&quot;55332&quot;});" class='title'>The Republic of Ragusa:<br><span class='subtitle'>An Episode of the Turkish Conquest</span></a>
+<div class='author'>Villari, Luigi, 1876-1959, Hulton, William [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56981, {&quot;Title&quot;:&quot;Erzgebirgisches Wanderbuch - 148 Ausflüge und Wanderungen in die Umgebung von Chemnitz und das Erzgebirge&quot;,&quot;Topics&quot;:[&quot;Erzgebirge (Czech Republic and Germany) -- Guidebooks&quot;],&quot;Primary&quot;:&quot;56981.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wenzel, Max, 1879-1946&quot;],&quot;LoCC&quot;:[&quot;DB&quot;,&quot;DD&quot;],&quot;PG_ID&quot;:&quot;56981&quot;});" class='title'>Erzgebirgisches Wanderbuch -<br><span class='subtitle'>148 Ausflüge und Wanderungen in die Umgebung von Chemnitz und das Erzgebirge</span></a>
+<div class='author'>Wenzel, Max, 1879-1946</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57168, {&quot;Title&quot;:&quot;The Land Beyond the Forest: Facts, Figures, and Fancies from Transylvania&quot;,&quot;Topics&quot;:[&quot;Transylvania (Romania) -- Description and travel&quot;],&quot;Primary&quot;:&quot;57168.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gerard, E. (Emily), 1849-1905&quot;],&quot;LoCC&quot;:[&quot;DB&quot;],&quot;PG_ID&quot;:&quot;57168&quot;});" class='title'>The Land Beyond the Forest:<br><span class='subtitle'>Facts, Figures, and Fancies from Transylvania</span></a>
+<div class='author'>Gerard, E. (Emily), 1849-1905</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60408, {&quot;Title&quot;:&quot;Elizabeth, Empress of Austria and Queen of Hungary&quot;,&quot;Topics&quot;:[&quot;Elisabeth, Empress, consort of Franz Joseph I, Emperor of Austria, 1837-1898&quot;],&quot;Primary&quot;:&quot;60408.htm&quot;,&quot;CreatorNames&quot;:[&quot;Küchler, Carl, 1869-1945&quot;,&quot;Upton, George P. (George Putnam), 1834-1919 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DB&quot;],&quot;PG_ID&quot;:&quot;60408&quot;});" class='title'>Elizabeth, Empress of Austria and Queen of Hungary</a>
+<div class='author'>Küchler, Carl, 1869-1945, Upton, George P. (George Putnam), 1834-1919 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62527, {&quot;Title&quot;:&quot;Maria Theresa&quot;,&quot;Topics&quot;:[&quot;Maria Theresa, Empress of Austria, 1717-1780&quot;],&quot;Primary&quot;:&quot;62527.htm&quot;,&quot;CreatorNames&quot;:[&quot;Horn, W. O. von, 1798-1867&quot;,&quot;Upton, George P. (George Putnam), 1834-1919 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DB&quot;],&quot;PG_ID&quot;:&quot;62527&quot;});" class='title'>Maria Theresa</a>
+<div class='author'>Horn, W. O. von, 1798-1867, Upton, George P. (George Putnam), 1834-1919 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62775, {&quot;Title&quot;:&quot;Utazás a Balaton körül (1. kötet)&quot;,&quot;Topics&quot;:[&quot;Eötvös, Károly, 1842-1916 -- Travel -- Hungary -- Balaton, Lake&quot;,&quot;Balaton, Lake (Hungary) -- Description and travel&quot;],&quot;Primary&quot;:&quot;62775.htm&quot;,&quot;CreatorNames&quot;:[&quot;Eötvös, Károly, 1842-1916&quot;],&quot;LoCC&quot;:[&quot;DB&quot;,&quot;PH&quot;],&quot;PG_ID&quot;:&quot;62775&quot;});" class='title'>Utazás a Balaton körül (1. kötet)</a>
+<div class='author'>Eötvös, Károly, 1842-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62776, {&quot;Title&quot;:&quot;Utazás a Balaton körül (2. kötet)&quot;,&quot;Topics&quot;:[&quot;Eötvös, Károly, 1842-1916 -- Travel -- Hungary -- Balaton, Lake&quot;,&quot;Balaton, Lake (Hungary) -- Description and travel&quot;],&quot;Primary&quot;:&quot;62776.htm&quot;,&quot;CreatorNames&quot;:[&quot;Eötvös, Károly, 1842-1916&quot;],&quot;LoCC&quot;:[&quot;DB&quot;,&quot;PH&quot;],&quot;PG_ID&quot;:&quot;62776&quot;});" class='title'>Utazás a Balaton körül (2. kötet)</a>
+<div class='author'>Eötvös, Károly, 1842-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62955, {&quot;Title&quot;:&quot;Magyar alakok&quot;,&quot;Topics&quot;:[&quot;Hungary -- Biography&quot;],&quot;Primary&quot;:&quot;62955.htm&quot;,&quot;CreatorNames&quot;:[&quot;Eötvös, Károly, 1842-1916&quot;],&quot;LoCC&quot;:[&quot;DB&quot;],&quot;PG_ID&quot;:&quot;62955&quot;});" class='title'>Magyar alakok</a>
+<div class='author'>Eötvös, Károly, 1842-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63002, {&quot;Title&quot;:&quot;Gróf Károlyi Gábor följegyzései (1. kötet)&quot;,&quot;Topics&quot;:[&quot;Károlyi, Gábor, gróf, 1841-1895&quot;],&quot;Primary&quot;:&quot;63002.htm&quot;,&quot;CreatorNames&quot;:[&quot;Eötvös, Károly, 1842-1916&quot;],&quot;LoCC&quot;:[&quot;DB&quot;],&quot;PG_ID&quot;:&quot;63002&quot;});" class='title'>Gróf Károlyi Gábor följegyzései (1. kötet)</a>
+<div class='author'>Eötvös, Károly, 1842-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63003, {&quot;Title&quot;:&quot;Gróf Károlyi Gábor följegyzései (2. kötet)&quot;,&quot;Topics&quot;:[&quot;Károlyi, Gábor, gróf, 1841-1895&quot;],&quot;Primary&quot;:&quot;63003.htm&quot;,&quot;CreatorNames&quot;:[&quot;Eötvös, Károly, 1842-1916&quot;],&quot;LoCC&quot;:[&quot;DB&quot;],&quot;PG_ID&quot;:&quot;63003&quot;});" class='title'>Gróf Károlyi Gábor följegyzései (2. kötet)</a>
+<div class='author'>Eötvös, Károly, 1842-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64356, {&quot;Title&quot;:&quot;Deák Ferencz és családja (1. kötet)&quot;,&quot;Topics&quot;:[&quot;Deák, Ferencz, 1803-1876&quot;],&quot;Primary&quot;:&quot;64356.htm&quot;,&quot;CreatorNames&quot;:[&quot;Eötvös, Károly, 1842-1916&quot;],&quot;LoCC&quot;:[&quot;DB&quot;],&quot;PG_ID&quot;:&quot;64356&quot;});" class='title'>Deák Ferencz és családja (1. kötet)</a>
+<div class='author'>Eötvös, Károly, 1842-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64357, {&quot;Title&quot;:&quot;Deák Ferencz és családja (2. kötet)&quot;,&quot;Topics&quot;:[&quot;Deák, Ferencz, 1803-1876&quot;],&quot;Primary&quot;:&quot;64357.htm&quot;,&quot;CreatorNames&quot;:[&quot;Eötvös, Károly, 1842-1916&quot;],&quot;LoCC&quot;:[&quot;DB&quot;],&quot;PG_ID&quot;:&quot;64357&quot;});" class='title'>Deák Ferencz és családja (2. kötet)</a>
+<div class='author'>Eötvös, Károly, 1842-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64542, {&quot;Title&quot;:&quot;Visszaemlékezéseim (1. kötet)&quot;,&quot;Topics&quot;:[&quot;Degré, Alajos, 1819-1896&quot;,&quot;Intellectuals -- Hungary -- Biography&quot;,&quot;Lawyers -- Hungary -- Biography&quot;,&quot;Hungary -- History -- Uprising of 1848-1849 -- Personal narratives&quot;,&quot;Hungary -- Politics and government -- 1849-1918&quot;],&quot;Primary&quot;:&quot;64542.htm&quot;,&quot;CreatorNames&quot;:[&quot;Degré, Alajos, 1819-1896&quot;],&quot;LoCC&quot;:[&quot;DB&quot;],&quot;PG_ID&quot;:&quot;64542&quot;});" class='title'>Visszaemlékezéseim (1. kötet)</a>
+<div class='author'>Degré, Alajos, 1819-1896</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64543, {&quot;Title&quot;:&quot;Visszaemlékezéseim (2. kötet)&quot;,&quot;Topics&quot;:[&quot;Degré, Alajos, 1819-1896&quot;,&quot;Intellectuals -- Hungary -- Biography&quot;,&quot;Lawyers -- Hungary -- Biography&quot;,&quot;Hungary -- History -- Uprising of 1848-1849 -- Personal narratives&quot;,&quot;Hungary -- Politics and government -- 1849-1918&quot;],&quot;Primary&quot;:&quot;64543.htm&quot;,&quot;CreatorNames&quot;:[&quot;Degré, Alajos, 1819-1896&quot;],&quot;LoCC&quot;:[&quot;DB&quot;],&quot;PG_ID&quot;:&quot;64543&quot;});" class='title'>Visszaemlékezéseim (2. kötet)</a>
+<div class='author'>Degré, Alajos, 1819-1896</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65057, {&quot;Title&quot;:&quot;Keisarinna Elisabet&quot;,&quot;Topics&quot;:[&quot;Elisabeth, Empress, consort of Franz Joseph I, Emperor of Austria, 1837-1898&quot;],&quot;Primary&quot;:&quot;65057.txt&quot;,&quot;CreatorNames&quot;:[&quot;Tschudi, Clara, 1856-1945&quot;,&quot;Partio, Tahvo, 1879-1947 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DB&quot;],&quot;PG_ID&quot;:&quot;65057&quot;});" class='title'>Keisarinna Elisabet</a>
+<div class='author'>Tschudi, Clara, 1856-1945, Partio, Tahvo, 1879-1947 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66319, {&quot;Title&quot;:&quot;Honszerző Árpád: Elbeszélés a honfoglalás idejéből&quot;,&quot;Topics&quot;:[&quot;Árpád, -907&quot;,&quot;Hungary -- History -- 896-1000&quot;],&quot;Primary&quot;:&quot;66319.htm&quot;,&quot;CreatorNames&quot;:[&quot;Benedek, Elek, 1859-1929&quot;,&quot;Mühlbeck, Károly, 1869-1943 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DB&quot;],&quot;PG_ID&quot;:&quot;66319&quot;});" class='title'>Honszerző Árpád:<br><span class='subtitle'>Elbeszélés a honfoglalás idejéből</span></a>
+<div class='author'>Benedek, Elek, 1859-1929, Mühlbeck, Károly, 1869-1943 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66653, {&quot;Title&quot;:&quot;Harcz a nemzeti hadseregért&quot;,&quot;Topics&quot;:[&quot;Hungary. Honvédség -- History&quot;,&quot;Hungary -- Politics and government -- 1867-1918&quot;],&quot;Primary&quot;:&quot;66653.htm&quot;,&quot;CreatorNames&quot;:[&quot;Eötvös, Károly, 1842-1916&quot;],&quot;LoCC&quot;:[&quot;DB&quot;],&quot;PG_ID&quot;:&quot;66653&quot;});" class='title'>Harcz a nemzeti hadseregért</a>
+<div class='author'>Eötvös, Károly, 1842-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66662, {&quot;Title&quot;:&quot;Fogságom története&quot;,&quot;Topics&quot;:[&quot;Deák, Farkas, 1832-1888&quot;,&quot;Prisoners -- Hungary -- Biography&quot;,&quot;Hungary -- History -- 1849-1867&quot;],&quot;Primary&quot;:&quot;66662.htm&quot;,&quot;CreatorNames&quot;:[&quot;Deák, Farkas, 1832-1888&quot;],&quot;LoCC&quot;:[&quot;DB&quot;],&quot;PG_ID&quot;:&quot;66662&quot;});" class='title'>Fogságom története</a>
+<div class='author'>Deák, Farkas, 1832-1888</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67290, {&quot;Title&quot;:&quot;Harcz az alkotmányért&quot;,&quot;Topics&quot;:[&quot;Hungary -- Politics and government -- 1867-1918&quot;],&quot;Primary&quot;:&quot;67290.htm&quot;,&quot;CreatorNames&quot;:[&quot;Eötvös, Károly, 1842-1916&quot;],&quot;LoCC&quot;:[&quot;DB&quot;],&quot;PG_ID&quot;:&quot;67290&quot;});" class='title'>Harcz az alkotmányért</a>
+<div class='author'>Eötvös, Károly, 1842-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69121, {&quot;Title&quot;:&quot;An outlaw&#39;s diary: revolution&quot;,&quot;Topics&quot;:[&quot;Hungary -- History -- Revolution, 1918-1919&quot;],&quot;Primary&quot;:&quot;69121.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tormay, Cécile, 1876-1937&quot;,&quot;Northumberland, Alan Ian Percy, Duke of, 1880-1930 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;DB&quot;],&quot;PG_ID&quot;:&quot;69121&quot;});" class='title'>An outlaw's diary:<br><span class='subtitle'>revolution</span></a>
+<div class='author'>Tormay, Cécile, 1876-1937, Northumberland, Alan Ian Percy, Duke of, 1880-1930 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69194, {&quot;Title&quot;:&quot;Élisabeth de Bavière, Impératrice d&#39;Autriche - Pages de journal, impressions, conversations, souvenirs&quot;,&quot;Topics&quot;:[&quot;Elisabeth, Empress, consort of Franz Joseph I, Emperor of Austria, 1837-1898&quot;],&quot;Primary&quot;:&quot;69194.htm&quot;,&quot;CreatorNames&quot;:[&quot;Chrestomanos, Konstantinos, 1867-1911&quot;,&quot;Barrès, Maurice, 1862-1923 [Author of introduction, etc.]&quot;,&quot;Khnopff, Fernand, 1858-1921 [Illustrator]&quot;,&quot;Syveton, Gabriel, 1864-1904 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DB&quot;],&quot;PG_ID&quot;:&quot;69194&quot;});" class='title'>Élisabeth de Bavière, Impératrice d'Autriche -<br><span class='subtitle'>Pages de journal, impressions, conversations, souvenirs</span></a>
+<div class='author'>Chrestomanos, Konstantinos, 1867-1911, Barrès, Maurice, 1862-1923 [Author of introduction, etc.], Khnopff, Fernand, 1858-1921 [Illustrator], Syveton, Gabriel, 1864-1904 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69481, {&quot;Title&quot;:&quot;Austria-Hungary&quot;,&quot;Topics&quot;:[&quot;Austria -- Description and travel&quot;,&quot;Hungary -- Description and travel&quot;],&quot;Primary&quot;:&quot;69481.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mitton, G. E. (Geraldine Edith), 1868-1955&quot;,&quot;Compton, Edward Harrison, 1881-1960 [Illustrator]&quot;,&quot;Nixon, Mima, 1861-1939 [Illustrator]&quot;,&quot;Pocock, Noel [Illustrator]&quot;,&quot;Stokes, Adrian Scott, 1854-1935 [Illustrator]&quot;,&quot;Stokes, Marianne, 1855-1927 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DB&quot;],&quot;PG_ID&quot;:&quot;69481&quot;});" class='title'>Austria-Hungary</a>
+<div class='author'>Mitton, G. E. (Geraldine Edith), 1868-1955, Compton, Edward Harrison, 1881-1960 [Illustrator], Nixon, Mima, 1861-1939 [Illustrator], Pocock, Noel [Illustrator], Stokes, Adrian Scott, 1854-1935 [Illustrator], Stokes, Marianne, 1855-1927 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69546, {&quot;Title&quot;:&quot;Together&quot;,&quot;Topics&quot;:[&quot;Tyrol (Austria) -- Description and travel&quot;],&quot;Primary&quot;:&quot;69546.htm&quot;,&quot;CreatorNames&quot;:[&quot;Douglas, Norman, 1868-1952&quot;],&quot;LoCC&quot;:[&quot;DB&quot;],&quot;PG_ID&quot;:&quot;69546&quot;});" class='title'>Together</a>
+<div class='author'>Douglas, Norman, 1868-1952</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69834, {&quot;Title&quot;:&quot;Seven years in Vienna (August, 1907-August, 1914), a record of intrigue&quot;,&quot;Topics&quot;:[&quot;World War, 1914-1918 -- Causes&quot;,&quot;Austria -- Politics and government -- 1867-1918&quot;,&quot;Europe -- Politics and government -- 1871-1918&quot;,&quot;Austria -- Foreign relations&quot;],&quot;Primary&quot;:&quot;69834.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;,&quot;Newspaper Illustrations, Ltd. [Contributor]&quot;],&quot;LoCC&quot;:[&quot;DB&quot;],&quot;PG_ID&quot;:&quot;69834&quot;});" class='title'>Seven years in Vienna (August, 1907-August, 1914), a record of intrigue</a>
+<div class='author'>Anonymous, Newspaper Illustrations, Ltd. [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(9650, {&quot;Title&quot;:&quot;Independent Bohemia - An Account of the Czecho-Slovak Struggle for Liberty&quot;,&quot;Topics&quot;:[&quot;World War, 1914-1918 -- Czech Republic -- Bohemia&quot;,&quot;Czechoslovakia -- History&quot;],&quot;Primary&quot;:&quot;9650.htm&quot;,&quot;CreatorNames&quot;:[&quot;Nosek, Vladimir, 1895-1964&quot;],&quot;LoCC&quot;:[&quot;DB&quot;],&quot;PG_ID&quot;:&quot;9650&quot;});" class='title'>Independent Bohemia -<br><span class='subtitle'>An Account of the Czecho-Slovak Struggle for Liberty</span></a>
+<div class='author'>Nosek, Vladimir, 1895-1964</div>
+</div>
+</ul></div>
+</body></html>

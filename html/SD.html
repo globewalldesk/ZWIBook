@@ -1,0 +1,142 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Forestry (SD)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(11587, {&quot;Title&quot;:&quot;The School Book of Forestry&quot;,&quot;Topics&quot;:[&quot;Forests and forestry&quot;],&quot;Primary&quot;:&quot;11587.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pack, Charles Lathrop, 1857-1937&quot;],&quot;LoCC&quot;:[&quot;SD&quot;],&quot;PG_ID&quot;:&quot;11587&quot;});" class='title'>The School Book of Forestry</a>
+<div class='author'>Pack, Charles Lathrop, 1857-1937</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17645, {&quot;Title&quot;:&quot;Arbor Day Leaves - A Complete Programme For Arbor Day Observance, Including Readings, Recitations, Music, and General Information&quot;,&quot;Topics&quot;:[&quot;Arbor Day&quot;],&quot;Primary&quot;:&quot;17645.htm&quot;,&quot;CreatorNames&quot;:[&quot;Egleston, Nathaniel Hillyer, 1822-1912&quot;],&quot;LoCC&quot;:[&quot;SD&quot;],&quot;PG_ID&quot;:&quot;17645&quot;});" class='title'>Arbor Day Leaves -<br><span class='subtitle'>A Complete Programme For Arbor Day Observance, Including Readings, Recitations, Music, and General Information</span></a>
+<div class='author'>Egleston, Nathaniel Hillyer, 1822-1912</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18680, {&quot;Title&quot;:&quot;Practical Forestry in the Pacific Northwest - Protecting Existing Forests and Growing New Ones, from the Standpoint of the Public and That of the Lumberman, with an Outline of Technical Methods&quot;,&quot;Topics&quot;:[&quot;Pacific Coast -- Forestry&quot;],&quot;Primary&quot;:&quot;18680.htm&quot;,&quot;CreatorNames&quot;:[&quot;Allen, E. T. (Edward Tyson), 1875-1942&quot;],&quot;LoCC&quot;:[&quot;SD&quot;],&quot;PG_ID&quot;:&quot;18680&quot;});" class='title'>Practical Forestry in the Pacific Northwest -<br><span class='subtitle'>Protecting Existing Forests and Growing New Ones, from the Standpoint of the Public and That of the Lumberman, with an Outline of Technical Methods</span></a>
+<div class='author'>Allen, E. T. (Edward Tyson), 1875-1942</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20778, {&quot;Title&quot;:&quot;Sylva; Or, A Discourse of Forest Trees. Vol. 1 (of 2)&quot;,&quot;Topics&quot;:[&quot;Gardening -- Early works to 1800&quot;,&quot;Forests and forestry -- Early works to 1800&quot;,&quot;Trees -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;20778.htm&quot;,&quot;CreatorNames&quot;:[&quot;Evelyn, John, 1620-1706&quot;,&quot;Nisbet, John, 1853-1914 [Commentator]&quot;],&quot;LoCC&quot;:[&quot;SD&quot;],&quot;PG_ID&quot;:&quot;20778&quot;});" class='title'>Sylva;<br><span class='subtitle'>Or, A Discourse of Forest Trees. Vol. 1 (of 2)</span></a>
+<div class='author'>Evelyn, John, 1620-1706, Nisbet, John, 1853-1914 [Commentator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23029, {&quot;Title&quot;:&quot;Ohio Arbor Day 1913: Arbor and Bird Day Manual - Issued for the Benefit of the Schools of our State&quot;,&quot;Topics&quot;:[&quot;Arbor Day&quot;,&quot;Bird Day&quot;],&quot;Primary&quot;:&quot;23029.htm&quot;,&quot;CreatorNames&quot;:[&quot;Clifton, Grace R., Mrs. [Compiler]&quot;],&quot;LoCC&quot;:[&quot;SD&quot;],&quot;PG_ID&quot;:&quot;23029&quot;});" class='title'>Ohio Arbor Day 1913:<br><span class='subtitle'>Arbor and Bird Day Manual - Issued for the Benefit of the Schools of our State</span></a>
+<div class='author'>Clifton, Grace R., Mrs. [Compiler]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27715, {&quot;Title&quot;:&quot;Eucalyptos e Acacias: Vinte annos de experiencias&quot;,&quot;Topics&quot;:[&quot;Forests and forestry&quot;,&quot;Trees&quot;,&quot;Eucalyptus&quot;,&quot;Acacia&quot;],&quot;Primary&quot;:&quot;27715.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lima, Jaime de Magalhães, 1859-1936&quot;],&quot;LoCC&quot;:[&quot;SD&quot;],&quot;PG_ID&quot;:&quot;27715&quot;});" class='title'>Eucalyptos e Acacias:<br><span class='subtitle'>Vinte annos de experiencias</span></a>
+<div class='author'>Lima, Jaime de Magalhães, 1859-1936</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31367, {&quot;Title&quot;:&quot;The Training of a Forester&quot;,&quot;Topics&quot;:[&quot;Forests and forestry&quot;,&quot;Forestry schools and education -- United States&quot;,&quot;Forests and forestry -- Vocational guidance&quot;],&quot;Primary&quot;:&quot;31367.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pinchot, Gifford, 1865-1946&quot;],&quot;LoCC&quot;:[&quot;SD&quot;],&quot;PG_ID&quot;:&quot;31367&quot;});" class='title'>The Training of a Forester</a>
+<div class='author'>Pinchot, Gifford, 1865-1946</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35419, {&quot;Title&quot;:&quot;Wood and Forest&quot;,&quot;Topics&quot;:[&quot;Forests and forestry&quot;,&quot;Wood&quot;],&quot;Primary&quot;:&quot;35419.htm&quot;,&quot;CreatorNames&quot;:[&quot;Noyes, William, 1862-1928&quot;],&quot;LoCC&quot;:[&quot;SD&quot;],&quot;PG_ID&quot;:&quot;35419&quot;});" class='title'>Wood and Forest</a>
+<div class='author'>Noyes, William, 1862-1928</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37359, {&quot;Title&quot;:&quot;Motor Truck Logging Methods - Engineering Experiment Station Series, Bulletin No. 12&quot;,&quot;Topics&quot;:[&quot;Lumbering&quot;],&quot;Primary&quot;:&quot;37359.htm&quot;,&quot;CreatorNames&quot;:[&quot;Knapp, Frederick Malcolm&quot;],&quot;LoCC&quot;:[&quot;SD&quot;],&quot;PG_ID&quot;:&quot;37359&quot;});" class='title'>Motor Truck Logging Methods -<br><span class='subtitle'>Engineering Experiment Station Series, Bulletin No. 12</span></a>
+<div class='author'>Knapp, Frederick Malcolm</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37595, {&quot;Title&quot;:&quot;Ecological Studies of the Timber Wolf in Northeastern Minnesota&quot;,&quot;Topics&quot;:[&quot;Gray wolf -- Ecology -- Minnesota&quot;,&quot;Gray wolf -- Behavior -- Minnesota&quot;,&quot;Deer -- Minnesota&quot;],&quot;Primary&quot;:&quot;37595.htm&quot;,&quot;CreatorNames&quot;:[&quot;Frenzel, Louis Daniel&quot;,&quot;Karns, P. D.&quot;,&quot;Mech, L. David&quot;,&quot;Ream, Robert R.&quot;,&quot;Winship, John W.&quot;],&quot;LoCC&quot;:[&quot;SD&quot;],&quot;PG_ID&quot;:&quot;37595&quot;});" class='title'>Ecological Studies of the Timber Wolf in Northeastern Minnesota</a>
+<div class='author'>Frenzel, Louis Daniel, Karns, P. D., Mech, L. David, Ream, Robert R., Winship, John W.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42124, {&quot;Title&quot;:&quot;American Forest Trees&quot;,&quot;Topics&quot;:[&quot;Trees -- United States&quot;,&quot;Timber -- United States&quot;],&quot;Primary&quot;:&quot;42124.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gibson, Henry H., 1855-&quot;,&quot;Maxwell, Hu, 1860-1927 [Editor]&quot;],&quot;LoCC&quot;:[&quot;SD&quot;],&quot;PG_ID&quot;:&quot;42124&quot;});" class='title'>American Forest Trees</a>
+<div class='author'>Gibson, Henry H., 1855-, Maxwell, Hu, 1860-1927 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42391, {&quot;Title&quot;:&quot;Our National Forests - A Short Popular Account of the Work of the United States Forest Service on the National Forests&quot;,&quot;Topics&quot;:[&quot;Forests and forestry -- United States&quot;,&quot;United States. Forest Service&quot;],&quot;Primary&quot;:&quot;42391.htm&quot;,&quot;CreatorNames&quot;:[&quot;Boerker, Richard H. D. (Richard Hans Douai), 1887-&quot;],&quot;LoCC&quot;:[&quot;SD&quot;],&quot;PG_ID&quot;:&quot;42391&quot;});" class='title'>Our National Forests -<br><span class='subtitle'>A Short Popular Account of the Work of the United States Forest Service on the National Forests</span></a>
+<div class='author'>Boerker, Richard H. D. (Richard Hans Douai), 1887-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45032, {&quot;Title&quot;:&quot;The Principal Species of Wood: Their Characteristic Properties - First Edition&quot;,&quot;Topics&quot;:[&quot;Wood&quot;],&quot;Primary&quot;:&quot;45032.htm&quot;,&quot;CreatorNames&quot;:[&quot;Snow, Charles H. (Charles Henry), 1863-1957&quot;],&quot;LoCC&quot;:[&quot;SD&quot;],&quot;PG_ID&quot;:&quot;45032&quot;});" class='title'>The Principal Species of Wood:<br><span class='subtitle'>Their Characteristic Properties - First Edition</span></a>
+<div class='author'>Snow, Charles H. (Charles Henry), 1863-1957</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48874, {&quot;Title&quot;:&quot;A Brief History of Forestry. - In Europe, the United States and Other Countries&quot;,&quot;Topics&quot;:[&quot;Forests and forestry -- History&quot;],&quot;Primary&quot;:&quot;48874.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fernow, B. E. (Bernhard Eduard), 1851-1923&quot;],&quot;LoCC&quot;:[&quot;SD&quot;],&quot;PG_ID&quot;:&quot;48874&quot;});" class='title'>A Brief History of Forestry. -<br><span class='subtitle'>In Europe, the United States and Other Countries</span></a>
+<div class='author'>Fernow, B. E. (Bernhard Eduard), 1851-1923</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52651, {&quot;Title&quot;:&quot;Forest Trees of Texas: How to Know Them&quot;,&quot;Topics&quot;:[&quot;Trees -- Texas&quot;,&quot;Trees -- Identification&quot;],&quot;Primary&quot;:&quot;52651.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mattoon, Wilbur R. (Wilbur Reed), 1875-1941&quot;,&quot;Webster, C. B. (Cyril Bertram), 1898-&quot;,&quot;Haislet, John A. [Editor]&quot;],&quot;LoCC&quot;:[&quot;QK&quot;,&quot;SD&quot;],&quot;PG_ID&quot;:&quot;52651&quot;});" class='title'>Forest Trees of Texas:<br><span class='subtitle'>How to Know Them</span></a>
+<div class='author'>Mattoon, Wilbur R. (Wilbur Reed), 1875-1941, Webster, C. B. (Cyril Bertram), 1898-, Haislet, John A. [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52901, {&quot;Title&quot;:&quot;Metsät ja yhtiöt&quot;,&quot;Topics&quot;:[&quot;Forests and forestry -- Finland&quot;,&quot;Farms -- Finland&quot;,&quot;Land tenure -- Finland&quot;],&quot;Primary&quot;:&quot;52901.txt&quot;,&quot;CreatorNames&quot;:[&quot;Kajander, Kalle, 1862-1928&quot;],&quot;LoCC&quot;:[&quot;SD&quot;],&quot;PG_ID&quot;:&quot;52901&quot;});" class='title'>Metsät ja yhtiöt</a>
+<div class='author'>Kajander, Kalle, 1862-1928</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53678, {&quot;Title&quot;:&quot;On Naval Timber and Arboriculture - With Critical Notes on Authors who have Recently Treated the Subject of Planting&quot;,&quot;Topics&quot;:[&quot;Forests and forestry -- Great Britain&quot;],&quot;Primary&quot;:&quot;53678.htm&quot;,&quot;CreatorNames&quot;:[&quot;Matthew, Patrick, 1790-1874&quot;],&quot;LoCC&quot;:[&quot;SD&quot;],&quot;PG_ID&quot;:&quot;53678&quot;});" class='title'>On Naval Timber and Arboriculture -<br><span class='subtitle'>With Critical Notes on Authors who have Recently Treated the Subject of Planting</span></a>
+<div class='author'>Matthew, Patrick, 1790-1874</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61555, {&quot;Title&quot;:&quot;Montezuma National Forest, Colorado (1939)&quot;,&quot;Topics&quot;:[&quot;San Juan National Forest (Colo.)&quot;,&quot;Uncompahgre National Forest (Colo.)&quot;,&quot;Forest reserves -- Colorado&quot;],&quot;Primary&quot;:&quot;61555.htm&quot;,&quot;CreatorNames&quot;:[&quot;United States. Forest Service. Rocky Mountain Region&quot;],&quot;LoCC&quot;:[&quot;F&quot;,&quot;SD&quot;],&quot;PG_ID&quot;:&quot;61555&quot;});" class='title'>Montezuma National Forest, Colorado (1939)</a>
+<div class='author'>United States. Forest Service. Rocky Mountain Region</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62686, {&quot;Title&quot;:&quot;Forestry for Farmers&quot;,&quot;Topics&quot;:[&quot;Forests and forestry&quot;,&quot;Agroforestry&quot;],&quot;Primary&quot;:&quot;62686.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fernow, B. E. (Bernhard Eduard), 1851-1923&quot;],&quot;LoCC&quot;:[&quot;SD&quot;],&quot;PG_ID&quot;:&quot;62686&quot;});" class='title'>Forestry for Farmers</a>
+<div class='author'>Fernow, B. E. (Bernhard Eduard), 1851-1923</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66012, {&quot;Title&quot;:&quot;Identifying Hardwoods Growing on Pine Sites&quot;,&quot;Topics&quot;:[&quot;Hardwoods -- Southern States -- Identification&quot;],&quot;Primary&quot;:&quot;66012.htm&quot;,&quot;CreatorNames&quot;:[&quot;Brown, Clair A. (Clair Alan), 1903-1982&quot;,&quot;Grelen, Harold E.&quot;,&quot;Jowers, Bryan A. [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;SD&quot;],&quot;PG_ID&quot;:&quot;66012&quot;});" class='title'>Identifying Hardwoods Growing on Pine Sites</a>
+<div class='author'>Brown, Clair A. (Clair Alan), 1903-1982, Grelen, Harold E., Jowers, Bryan A. [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66356, {&quot;Title&quot;:&quot;Forest Trees and Forest Scenery&quot;,&quot;Topics&quot;:[&quot;Forests and forestry&quot;,&quot;Trees&quot;],&quot;Primary&quot;:&quot;66356.htm&quot;,&quot;CreatorNames&quot;:[&quot;Schwarz, G. Frederick (George Frederick), 1868-1931&quot;],&quot;LoCC&quot;:[&quot;SD&quot;],&quot;PG_ID&quot;:&quot;66356&quot;});" class='title'>Forest Trees and Forest Scenery</a>
+<div class='author'>Schwarz, G. Frederick (George Frederick), 1868-1931</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69881, {&quot;Title&quot;:&quot;Preservation of forests as a measure of public safety - Address before the 17th National Irrigation Congress, Spokane, Wash., August, 1909&quot;,&quot;Topics&quot;:[&quot;Forests and forestry&quot;,&quot;Forests and forestry -- Brazil&quot;],&quot;Primary&quot;:&quot;69881.htm&quot;,&quot;CreatorNames&quot;:[&quot;Baeta Neves, Lourenço, 1876-1948&quot;],&quot;LoCC&quot;:[&quot;SD&quot;],&quot;PG_ID&quot;:&quot;69881&quot;});" class='title'>Preservation of forests as a measure of public safety -<br><span class='subtitle'>Address before the 17th National Irrigation Congress, Spokane, Wash., August, 1909</span></a>
+<div class='author'>Baeta Neves, Lourenço, 1876-1948</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69895, {&quot;Title&quot;:&quot;The farm and the woodlot&quot;,&quot;Topics&quot;:[&quot;Woodlots&quot;],&quot;Primary&quot;:&quot;69895.htm&quot;,&quot;CreatorNames&quot;:[&quot;Barton, J. E.&quot;],&quot;LoCC&quot;:[&quot;SD&quot;],&quot;PG_ID&quot;:&quot;69895&quot;});" class='title'>The farm and the woodlot</a>
+<div class='author'>Barton, J. E.</div>
+</div>
+</ul></div>
+</body></html>

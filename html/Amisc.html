@@ -1,0 +1,142 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Misc and Other (Amisc)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12301, {&quot;Title&quot;:&quot;Banquet du 17 janvier 1841&quot;,&quot;Topics&quot;:&quot;&quot;,&quot;Primary&quot;:&quot;12301.txt&quot;,&quot;CreatorNames&quot;:[&quot;Towianski, Andrzej, 1799-1878&quot;],&quot;LoCC&quot;:[&quot;&quot;],&quot;PG_ID&quot;:&quot;12301&quot;});" class='title'>Banquet du 17 janvier 1841</a>
+<div class='author'>Towianski, Andrzej, 1799-1878</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23685, {&quot;Title&quot;:&quot;Sarmoniou an Aotrou Quere&quot;,&quot;Topics&quot;:&quot;&quot;,&quot;Primary&quot;:&quot;23685.txt&quot;,&quot;CreatorNames&quot;:[&quot;Quéré, Jean&quot;,&quot;Jézégou, Christophe [Editor]&quot;],&quot;LoCC&quot;:[&quot;&quot;],&quot;PG_ID&quot;:&quot;23685&quot;});" class='title'>Sarmoniou an Aotrou Quere</a>
+<div class='author'>Quéré, Jean, Jézégou, Christophe [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23914, {&quot;Title&quot;:&quot;山水小牘&quot;,&quot;Topics&quot;:&quot;&quot;,&quot;Primary&quot;:&quot;23914.txt&quot;,&quot;CreatorNames&quot;:[&quot;Huangfu, Mei, active 873-910&quot;],&quot;LoCC&quot;:[&quot;&quot;],&quot;PG_ID&quot;:&quot;23914&quot;});" class='title'>山水小牘</a>
+<div class='author'>Huangfu, Mei, active 873-910</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26886, {&quot;Title&quot;:&quot;梁公九諫&quot;,&quot;Topics&quot;:&quot;&quot;,&quot;Primary&quot;:&quot;26886.txt&quot;,&quot;CreatorNames&quot;:[&quot;Unknown&quot;,&quot;An, Ping Qiu [Editor]&quot;,&quot;Li, Tian Yi [Editor]&quot;],&quot;LoCC&quot;:[&quot;&quot;],&quot;PG_ID&quot;:&quot;26886&quot;});" class='title'>梁公九諫</a>
+<div class='author'>Unknown, An, Ping Qiu [Editor], Li, Tian Yi [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27016, {&quot;Title&quot;:&quot;Eight dwelling places of Buddhist immortals&quot;,&quot;Topics&quot;:&quot;&quot;,&quot;Primary&quot;:&quot;27016.txt&quot;,&quot;CreatorNames&quot;:[&quot;Five colors stone&quot;],&quot;LoCC&quot;:[&quot;&quot;],&quot;PG_ID&quot;:&quot;27016&quot;});" class='title'>Eight dwelling places of Buddhist immortals</a>
+<div class='author'>Five colors stone</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27060, {&quot;Title&quot;:&quot;Qing Lou Meng - Qi Hong Xiao Shi&quot;,&quot;Topics&quot;:&quot;&quot;,&quot;Primary&quot;:&quot;27060.txt&quot;,&quot;CreatorNames&quot;:[&quot;Zor, Tao&quot;,&quot;An, Ping Qiu [Editor]&quot;],&quot;LoCC&quot;:[&quot;&quot;],&quot;PG_ID&quot;:&quot;27060&quot;});" class='title'>Qing Lou Meng -<br><span class='subtitle'>Qi Hong Xiao Shi</span></a>
+<div class='author'>Zor, Tao, An, Ping Qiu [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27087, {&quot;Title&quot;:&quot;Wu De Ji&quot;,&quot;Topics&quot;:&quot;&quot;,&quot;Primary&quot;:&quot;27087.txt&quot;,&quot;CreatorNames&quot;:[&quot;Liu, Guang Wei&quot;],&quot;LoCC&quot;:[&quot;&quot;],&quot;PG_ID&quot;:&quot;27087&quot;});" class='title'>Wu De Ji</a>
+<div class='author'>Liu, Guang Wei</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27332, {&quot;Title&quot;:&quot;後西游記&quot;,&quot;Topics&quot;:&quot;&quot;,&quot;Primary&quot;:&quot;27332.txt&quot;,&quot;CreatorNames&quot;:[&quot;Biao, Xuahua&quot;],&quot;LoCC&quot;:[&quot;&quot;],&quot;PG_ID&quot;:&quot;27332&quot;});" class='title'>後西游記</a>
+<div class='author'>Biao, Xuahua</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27544, {&quot;Title&quot;:&quot;Epistola de Manoel Mendes Fogaça - Dirigida de lisboa a hum amigo da sua terra, em que lhe refere como de repente se fez poeta, e lhe conta as proezas de hum rafeiro.&quot;,&quot;Topics&quot;:&quot;&quot;,&quot;Primary&quot;:&quot;27544.txt&quot;,&quot;CreatorNames&quot;:[&quot;Macedo, José Agostinho de, 1761-1831&quot;],&quot;LoCC&quot;:[&quot;&quot;],&quot;PG_ID&quot;:&quot;27544&quot;});" class='title'>Epistola de Manoel Mendes Fogaça -<br><span class='subtitle'>Dirigida de lisboa a hum amigo da sua terra, em que lhe refere como de repente se fez poeta, e lhe conta as proezas de hum rafeiro.</span></a>
+<div class='author'>Macedo, José Agostinho de, 1761-1831</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54777, {&quot;Title&quot;:&quot;天妃顯聖錄&quot;,&quot;Topics&quot;:&quot;&quot;,&quot;Primary&quot;:&quot;54777.txt&quot;,&quot;CreatorNames&quot;:[&quot;Huang, Qi You&quot;,&quot;Lin, Yao Yu&quot;],&quot;LoCC&quot;:[&quot;&quot;],&quot;PG_ID&quot;:&quot;54777&quot;});" class='title'>天妃顯聖錄</a>
+<div class='author'>Huang, Qi You, Lin, Yao Yu</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70554, {&quot;Title&quot;:&quot;Sir Richard&#39;s grandson&quot;,&quot;Topics&quot;:&quot;&quot;,&quot;Primary&quot;:&quot;70554.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stooke, Eleanora H.&quot;],&quot;LoCC&quot;:[&quot;&quot;],&quot;PG_ID&quot;:&quot;70554&quot;});" class='title'>Sir Richard's grandson</a>
+<div class='author'>Stooke, Eleanora H.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70555, {&quot;Title&quot;:&quot;The feather symbol in ancient Hopi designs&quot;,&quot;Topics&quot;:&quot;&quot;,&quot;Primary&quot;:&quot;70555.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fewkes, Jesse Walter, 1850-1930&quot;],&quot;LoCC&quot;:[&quot;&quot;],&quot;PG_ID&quot;:&quot;70555&quot;});" class='title'>The feather symbol in ancient Hopi designs</a>
+<div class='author'>Fewkes, Jesse Walter, 1850-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70556, {&quot;Title&quot;:&quot;Accounting theory and practice, Volume II (of 3)&quot;,&quot;Topics&quot;:&quot;&quot;,&quot;Primary&quot;:&quot;70556.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kester, Roy B. (Roy Bernard), 1882-1965&quot;],&quot;LoCC&quot;:[&quot;&quot;],&quot;PG_ID&quot;:&quot;70556&quot;});" class='title'>Accounting theory and practice, Volume II (of 3)</a>
+<div class='author'>Kester, Roy B. (Roy Bernard), 1882-1965</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70557, {&quot;Title&quot;:&quot;Robert Merry&#39;s Museum, Vol VII, No. 1-6&quot;,&quot;Topics&quot;:&quot;&quot;,&quot;Primary&quot;:&quot;70557.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;,&quot;Goodrich, Samuel G. (Samuel Griswold), 1793-1860 [Editor]&quot;],&quot;LoCC&quot;:[&quot;&quot;],&quot;PG_ID&quot;:&quot;70557&quot;});" class='title'>Robert Merry's Museum, Vol VII, No. 1-6</a>
+<div class='author'>Various, Goodrich, Samuel G. (Samuel Griswold), 1793-1860 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70558, {&quot;Title&quot;:&quot;Sanovat miehen sammuneen&quot;,&quot;Topics&quot;:&quot;&quot;,&quot;Primary&quot;:&quot;70558.txt&quot;,&quot;CreatorNames&quot;:[&quot;Papini, Giovanni, 1881-1956&quot;,&quot;Hollo, J. A. (Juho Aukusti), 1885-1967 [Translator]&quot;],&quot;LoCC&quot;:[&quot;&quot;],&quot;PG_ID&quot;:&quot;70558&quot;});" class='title'>Sanovat miehen sammuneen</a>
+<div class='author'>Papini, Giovanni, 1881-1956, Hollo, J. A. (Juho Aukusti), 1885-1967 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70559, {&quot;Title&quot;:&quot;Survival of the fittest&quot;,&quot;Topics&quot;:&quot;&quot;,&quot;Primary&quot;:&quot;70559.htm&quot;,&quot;CreatorNames&quot;:[&quot;Henderson, Gene L.&quot;],&quot;LoCC&quot;:[&quot;&quot;],&quot;PG_ID&quot;:&quot;70559&quot;});" class='title'>Survival of the fittest</a>
+<div class='author'>Henderson, Gene L.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70560, {&quot;Title&quot;:&quot;Wie es Licht geworden!&quot;,&quot;Topics&quot;:&quot;&quot;,&quot;Primary&quot;:&quot;70560.htm&quot;,&quot;CreatorNames&quot;:[&quot;Suttner, Maria Luise von&quot;],&quot;LoCC&quot;:[&quot;&quot;],&quot;PG_ID&quot;:&quot;70560&quot;});" class='title'>Wie es Licht geworden!</a>
+<div class='author'>Suttner, Maria Luise von</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70561, {&quot;Title&quot;:&quot;The writings of Origen, Vol. I (of 2)&quot;,&quot;Topics&quot;:&quot;&quot;,&quot;Primary&quot;:&quot;70561.htm&quot;,&quot;CreatorNames&quot;:[&quot;Origen, 185?-254?&quot;,&quot;Crombie, Frederick [Translator]&quot;],&quot;LoCC&quot;:[&quot;&quot;],&quot;PG_ID&quot;:&quot;70561&quot;});" class='title'>The writings of Origen, Vol. I (of 2)</a>
+<div class='author'>Origen, 185?-254?, Crombie, Frederick [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70562, {&quot;Title&quot;:&quot;Be young again!&quot;,&quot;Topics&quot;:&quot;&quot;,&quot;Primary&quot;:&quot;70562.htm&quot;,&quot;CreatorNames&quot;:[&quot;Leinster, Murray, 1896-1975&quot;],&quot;LoCC&quot;:[&quot;&quot;],&quot;PG_ID&quot;:&quot;70562&quot;});" class='title'>Be young again!</a>
+<div class='author'>Leinster, Murray, 1896-1975</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70563, {&quot;Title&quot;:&quot;The romance of my childhood and youth&quot;,&quot;Topics&quot;:&quot;&quot;,&quot;Primary&quot;:&quot;70563.htm&quot;,&quot;CreatorNames&quot;:[&quot;Adam, Juliette, 1836-1936&quot;],&quot;LoCC&quot;:[&quot;&quot;],&quot;PG_ID&quot;:&quot;70563&quot;});" class='title'>The romance of my childhood and youth</a>
+<div class='author'>Adam, Juliette, 1836-1936</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70564, {&quot;Title&quot;:&quot;Landesverein Sächsischer Heimatschutz — Mitteilungen Band XII, Heft 7-9&quot;,&quot;Topics&quot;:&quot;&quot;,&quot;Primary&quot;:&quot;70564.htm&quot;,&quot;CreatorNames&quot;:[&quot;Landesverein Sächsischer Heimatschutz&quot;],&quot;LoCC&quot;:[&quot;&quot;],&quot;PG_ID&quot;:&quot;70564&quot;});" class='title'>Landesverein Sächsischer Heimatschutz — Mitteilungen Band XII, Heft 7-9</a>
+<div class='author'>Landesverein Sächsischer Heimatschutz</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70565, {&quot;Title&quot;:&quot;A thousand miles up the Nile&quot;,&quot;Topics&quot;:&quot;&quot;,&quot;Primary&quot;:&quot;70565.htm&quot;,&quot;CreatorNames&quot;:[&quot;Edwards, Amelia Ann Blanford, 1831-1892&quot;],&quot;LoCC&quot;:[&quot;&quot;],&quot;PG_ID&quot;:&quot;70565&quot;});" class='title'>A thousand miles up the Nile</a>
+<div class='author'>Edwards, Amelia Ann Blanford, 1831-1892</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7221, {&quot;Title&quot;:&quot;文淵閣四庫全書&quot;,&quot;Topics&quot;:&quot;&quot;,&quot;Primary&quot;:&quot;7221.txt&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;&quot;],&quot;PG_ID&quot;:&quot;7221&quot;});" class='title'>文淵閣四庫全書</a>
+<div class='author'>Various</div>
+</div>
+</ul></div>
+</body></html>

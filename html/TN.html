@@ -1,0 +1,226 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Mining engineering, Metallurgy (TN)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(10054, {&quot;Title&quot;:&quot;Nova analysis aquarum Medeviensium&quot;,&quot;Topics&quot;:[&quot;Mineral waters -- Sweden&quot;],&quot;Primary&quot;:&quot;10054.txt&quot;,&quot;CreatorNames&quot;:[&quot;Berzelius, Jöns Jakob, friherre, 1779-1848&quot;,&quot;Ekeberg, Anders Gustaf, 1767-1813 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;TN&quot;],&quot;PG_ID&quot;:&quot;10054&quot;});" class='title'>Nova analysis aquarum Medeviensium</a>
+<div class='author'>Berzelius, Jöns Jakob, friherre, 1779-1848, Ekeberg, Anders Gustaf, 1767-1813 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12762, {&quot;Title&quot;:&quot;The Story of a Piece of Coal: What It Is, Whence It Comes, and Whither It Goes&quot;,&quot;Topics&quot;:[&quot;Coal&quot;],&quot;Primary&quot;:&quot;12762.txt&quot;,&quot;CreatorNames&quot;:[&quot;Martin, Edward A. (Edward Alfred), 1864-1943&quot;],&quot;LoCC&quot;:[&quot;TN&quot;],&quot;PG_ID&quot;:&quot;12762&quot;});" class='title'>The Story of a Piece of Coal:<br><span class='subtitle'>What It Is, Whence It Comes, and Whither It Goes</span></a>
+<div class='author'>Martin, Edward A. (Edward Alfred), 1864-1943</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17449, {&quot;Title&quot;:&quot;Mining Laws of Ohio, 1921&quot;,&quot;Topics&quot;:[&quot;Mining law -- Ohio&quot;],&quot;Primary&quot;:&quot;17449.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ohio Department of Industrial Relations [Compiler]&quot;],&quot;LoCC&quot;:[&quot;TN&quot;],&quot;PG_ID&quot;:&quot;17449&quot;});" class='title'>Mining Laws of Ohio, 1921</a>
+<div class='author'>Ohio Department of Industrial Relations [Compiler]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18751, {&quot;Title&quot;:&quot;A Text-book of Assaying: For the Use of Those Connected with Mines.&quot;,&quot;Topics&quot;:[&quot;Assaying&quot;],&quot;Primary&quot;:&quot;18751.htm&quot;,&quot;CreatorNames&quot;:[&quot;Beringer, C. (Cornelius)&quot;,&quot;Beringer, J. J. (John Jacob), 1857-1915&quot;],&quot;LoCC&quot;:[&quot;TN&quot;],&quot;PG_ID&quot;:&quot;18751&quot;});" class='title'>A Text-book of Assaying:<br><span class='subtitle'>For the Use of Those Connected with Mines.</span></a>
+<div class='author'>Beringer, C. (Cornelius), Beringer, J. J. (John Jacob), 1857-1915</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20146, {&quot;Title&quot;:&quot;Engineering Bulletin No 1: Boiler and Furnace Testing&quot;,&quot;Topics&quot;:[&quot;Furnaces&quot;,&quot;Steam-boilers -- Testing&quot;],&quot;Primary&quot;:&quot;20146.htm&quot;,&quot;CreatorNames&quot;:[&quot;Strohm, Rufus T. (Rufus Tracy), 1877-&quot;],&quot;LoCC&quot;:[&quot;TN&quot;],&quot;PG_ID&quot;:&quot;20146&quot;});" class='title'>Engineering Bulletin No 1:<br><span class='subtitle'>Boiler and Furnace Testing</span></a>
+<div class='author'>Strohm, Rufus T. (Rufus Tracy), 1877-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24330, {&quot;Title&quot;:&quot;Iron Making in the Olden Times - as instanced in the Ancient Mines, Forges, and Furnaces of The Forest of Dean&quot;,&quot;Topics&quot;:[&quot;Iron -- History&quot;,&quot;Iron industry and trade -- England&quot;],&quot;Primary&quot;:&quot;24330.htm&quot;,&quot;CreatorNames&quot;:[&quot;Nicholls, H. G. (Henry George), 1825-1867&quot;],&quot;LoCC&quot;:[&quot;TN&quot;],&quot;PG_ID&quot;:&quot;24330&quot;});" class='title'>Iron Making in the Olden Times -<br><span class='subtitle'>as instanced in the Ancient Mines, Forges, and Furnaces of The Forest of Dean</span></a>
+<div class='author'>Nicholls, H. G. (Henry George), 1825-1867</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24762, {&quot;Title&quot;:&quot;Diggers in the Earth&quot;,&quot;Topics&quot;:[&quot;Readers&quot;,&quot;Mines and mineral resources&quot;],&quot;Primary&quot;:&quot;24762.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tappan, Eva March, 1854-1930&quot;],&quot;LoCC&quot;:[&quot;PE&quot;,&quot;TN&quot;],&quot;PG_ID&quot;:&quot;24762&quot;});" class='title'>Diggers in the Earth</a>
+<div class='author'>Tappan, Eva March, 1854-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24809, {&quot;Title&quot;:&quot;Traité des Arènes - construites au Pays de Liége, pour l&#39;écoulement et l&#39;épuisement des eaux dans les ouvrages souterrains des exploitations de mines de houille&quot;,&quot;Topics&quot;:[&quot;Coal mines and mining -- Belgium -- Liège (Province)&quot;],&quot;Primary&quot;:&quot;24809.txt&quot;,&quot;CreatorNames&quot;:[&quot;Crassier, L.-M.-G de&quot;],&quot;LoCC&quot;:[&quot;TN&quot;],&quot;PG_ID&quot;:&quot;24809&quot;});" class='title'>Traité des Arènes -<br><span class='subtitle'>construites au Pays de Liége, pour l'écoulement et l'épuisement des eaux dans les ouvrages souterrains des exploitations de mines de houille</span></a>
+<div class='author'>Crassier, L.-M.-G de</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26142, {&quot;Title&quot;:&quot;Peat and its Uses as Fertilizer and Fuel&quot;,&quot;Topics&quot;:[&quot;Peat&quot;,&quot;Fuel&quot;,&quot;Fertilizers&quot;],&quot;Primary&quot;:&quot;26142.htm&quot;,&quot;CreatorNames&quot;:[&quot;Johnson, Samuel W. (Samuel William), 1830-1909&quot;],&quot;LoCC&quot;:[&quot;SB&quot;,&quot;TN&quot;],&quot;PG_ID&quot;:&quot;26142&quot;});" class='title'>Peat and its Uses as Fertilizer and Fuel</a>
+<div class='author'>Johnson, Samuel W. (Samuel William), 1830-1909</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26697, {&quot;Title&quot;:&quot;Principles of Mining: Valuation, Organization and Administration&quot;,&quot;Topics&quot;:[&quot;Mines and mineral resources&quot;,&quot;Mining engineering&quot;,&quot;Mineral industries -- Finance&quot;],&quot;Primary&quot;:&quot;26697.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hoover, Herbert, 1874-1964&quot;],&quot;LoCC&quot;:[&quot;TN&quot;],&quot;PG_ID&quot;:&quot;26697&quot;});" class='title'>Principles of Mining:<br><span class='subtitle'>Valuation, Organization and Administration</span></a>
+<div class='author'>Hoover, Herbert, 1874-1964</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27842, {&quot;Title&quot;:&quot;The Economic Aspect of Geology&quot;,&quot;Topics&quot;:[&quot;Geology, Economic&quot;],&quot;Primary&quot;:&quot;27842.htm&quot;,&quot;CreatorNames&quot;:[&quot;Leith, C. K. (Charles Kenneth), 1875-1956&quot;],&quot;LoCC&quot;:[&quot;TN&quot;],&quot;PG_ID&quot;:&quot;27842&quot;});" class='title'>The Economic Aspect of Geology</a>
+<div class='author'>Leith, C. K. (Charles Kenneth), 1875-1956</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29633, {&quot;Title&quot;:&quot;The Beginnings of Cheap Steel&quot;,&quot;Topics&quot;:[&quot;Bessemer process&quot;,&quot;Steel&quot;],&quot;Primary&quot;:&quot;29633.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bishop, Philip W.&quot;],&quot;LoCC&quot;:[&quot;Q&quot;,&quot;TN&quot;],&quot;PG_ID&quot;:&quot;29633&quot;});" class='title'>The Beginnings of Cheap Steel</a>
+<div class='author'>Bishop, Philip W.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29926, {&quot;Title&quot;:&quot;Hittel on Gold Mines and Mining&quot;,&quot;Topics&quot;:[&quot;Gold mines and mining&quot;],&quot;Primary&quot;:&quot;29926.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hittell, John S. (John Shertzer), 1825-1901&quot;],&quot;LoCC&quot;:[&quot;TN&quot;],&quot;PG_ID&quot;:&quot;29926&quot;});" class='title'>Hittel on Gold Mines and Mining</a>
+<div class='author'>Hittell, John S. (John Shertzer), 1825-1901</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31024, {&quot;Title&quot;:&quot;Mine Pumping in Agricola&#39;s Time and Later&quot;,&quot;Topics&quot;:[&quot;Mining machinery -- History&quot;,&quot;Mine pumps -- History&quot;],&quot;Primary&quot;:&quot;31024.htm&quot;,&quot;CreatorNames&quot;:[&quot;Multhauf, Robert P., 1919-2004&quot;],&quot;LoCC&quot;:[&quot;TN&quot;],&quot;PG_ID&quot;:&quot;31024&quot;});" class='title'>Mine Pumping in Agricola's Time and Later</a>
+<div class='author'>Multhauf, Robert P., 1919-2004</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33630, {&quot;Title&quot;:&quot;Geological Report on Asbestos and its Indications, in the Province of Quebec, Canada&quot;,&quot;Topics&quot;:[&quot;Asbestos -- Québec (Province)&quot;],&quot;Primary&quot;:&quot;33630.htm&quot;,&quot;CreatorNames&quot;:[&quot;Boyd, Lucius J.&quot;],&quot;LoCC&quot;:[&quot;TN&quot;],&quot;PG_ID&quot;:&quot;33630&quot;});" class='title'>Geological Report on Asbestos and its Indications, in the Province of Quebec, Canada</a>
+<div class='author'>Boyd, Lucius J.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35121, {&quot;Title&quot;:&quot;Asbestos, Its production and use - With some account of the asbestos mines of Canada&quot;,&quot;Topics&quot;:[&quot;Asbestos&quot;,&quot;Asbestos mines and mining -- Québec (Province)&quot;],&quot;Primary&quot;:&quot;35121.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jones, Robert H.&quot;],&quot;LoCC&quot;:[&quot;HD&quot;,&quot;TN&quot;],&quot;PG_ID&quot;:&quot;35121&quot;});" class='title'>Asbestos, Its production and use -<br><span class='subtitle'>With some account of the asbestos mines of Canada</span></a>
+<div class='author'>Jones, Robert H.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3679, {&quot;Title&quot;:&quot;Getting Gold: A Practical Treatise for Prospectors, Miners and Students&quot;,&quot;Topics&quot;:[&quot;Gold mines and mining&quot;],&quot;Primary&quot;:&quot;3679.htm&quot;,&quot;CreatorNames&quot;:[&quot;Johnson, J. C. F. (Joseph Colin Francis), 1848-1904&quot;],&quot;LoCC&quot;:[&quot;TN&quot;],&quot;PG_ID&quot;:&quot;3679&quot;});" class='title'>Getting Gold:<br><span class='subtitle'>A Practical Treatise for Prospectors, Miners and Students</span></a>
+<div class='author'>Johnson, J. C. F. (Joseph Colin Francis), 1848-1904</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38015, {&quot;Title&quot;:&quot;De Re Metallica, Translated from the First Latin Edition of 1556&quot;,&quot;Topics&quot;:[&quot;Zoology -- Pre-Linnaean works&quot;,&quot;Metallurgy -- Early works to 1800&quot;,&quot;Mineral industries -- Early works to 1800&quot;,&quot;Paleontology -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;38015.htm&quot;,&quot;CreatorNames&quot;:[&quot;Agricola, Georg, 1494-1555&quot;,&quot;Hoover, Herbert, 1874-1964 [Translator]&quot;,&quot;Hoover, Lou Henry, 1874-1944 [Translator]&quot;],&quot;LoCC&quot;:[&quot;TN&quot;],&quot;PG_ID&quot;:&quot;38015&quot;});" class='title'>De Re Metallica, Translated from the First Latin Edition of 1556</a>
+<div class='author'>Agricola, Georg, 1494-1555, Hoover, Herbert, 1874-1964 [Translator], Hoover, Lou Henry, 1874-1944 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38903, {&quot;Title&quot;:&quot;The Business of Mining - A brief non-technical exposition of the principles involved in the profitable operation of mines&quot;,&quot;Topics&quot;:[&quot;Mines and mineral resources&quot;,&quot;Mineral industries&quot;],&quot;Primary&quot;:&quot;38903.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hoskin, Arthur J. (Arthur Joseph), 1869-&quot;],&quot;LoCC&quot;:[&quot;TN&quot;],&quot;PG_ID&quot;:&quot;38903&quot;});" class='title'>The Business of Mining -<br><span class='subtitle'>A brief non-technical exposition of the principles involved in the profitable operation of mines</span></a>
+<div class='author'>Hoskin, Arthur J. (Arthur Joseph), 1869-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43027, {&quot;Title&quot;:&quot;Getting Gold: A Gold-Mining Handbook for Practical Men&quot;,&quot;Topics&quot;:[&quot;Gold mines and mining&quot;],&quot;Primary&quot;:&quot;43027.htm&quot;,&quot;CreatorNames&quot;:[&quot;Johnson, J. C. F. (Joseph Colin Francis), 1848-1904&quot;],&quot;LoCC&quot;:[&quot;TN&quot;],&quot;PG_ID&quot;:&quot;43027&quot;});" class='title'>Getting Gold:<br><span class='subtitle'>A Gold-Mining Handbook for Practical Men</span></a>
+<div class='author'>Johnson, J. C. F. (Joseph Colin Francis), 1848-1904</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43297, {&quot;Title&quot;:&quot;The Natural History of Clay&quot;,&quot;Topics&quot;:[&quot;Clay&quot;],&quot;Primary&quot;:&quot;43297.htm&quot;,&quot;CreatorNames&quot;:[&quot;Searle, Alfred B. (Alfred Broadhead), 1877-1967&quot;],&quot;LoCC&quot;:[&quot;TN&quot;],&quot;PG_ID&quot;:&quot;43297&quot;});" class='title'>The Natural History of Clay</a>
+<div class='author'>Searle, Alfred B. (Alfred Broadhead), 1877-1967</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45287, {&quot;Title&quot;:&quot;The A B C of Mining: A Handbook for Prospectors&quot;,&quot;Topics&quot;:[&quot;Mining engineering&quot;,&quot;Prospecting&quot;],&quot;Primary&quot;:&quot;45287.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bramble, Charles A.&quot;],&quot;LoCC&quot;:[&quot;TN&quot;],&quot;PG_ID&quot;:&quot;45287&quot;});" class='title'>The A B C of Mining:<br><span class='subtitle'>A Handbook for Prospectors</span></a>
+<div class='author'>Bramble, Charles A.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46879, {&quot;Title&quot;:&quot;The Miner&#39;s Friend; Or, An Engine to Raise Water by Fire&quot;,&quot;Topics&quot;:[&quot;Mine pumps -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;46879.htm&quot;,&quot;CreatorNames&quot;:[&quot;Savery, Thomas, 1650?-1715&quot;],&quot;LoCC&quot;:[&quot;TN&quot;],&quot;PG_ID&quot;:&quot;46879&quot;});" class='title'>The Miner's Friend;<br><span class='subtitle'>Or, An Engine to Raise Water by Fire</span></a>
+<div class='author'>Savery, Thomas, 1650?-1715</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47943, {&quot;Title&quot;:&quot;The Curiosities of Dudley and the Black Country, From 1800 to 1860 - Also an Account of the Trials and Sufferings of Dud Dudley, with His Mettallum Martis: Etc.&quot;,&quot;Topics&quot;:[&quot;Iron -- Metallurgy -- Early works to 1800&quot;,&quot;Dudley (England) -- History&quot;,&quot;Dudley (England) -- History -- Sources&quot;,&quot;Black Country (England) -- History&quot;],&quot;Primary&quot;:&quot;47943.htm&quot;,&quot;CreatorNames&quot;:[&quot;Clark, C. F. G.&quot;,&quot;Dudley, Dud, 1599-1684 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;DA&quot;,&quot;TN&quot;],&quot;PG_ID&quot;:&quot;47943&quot;});" class='title'>The Curiosities of Dudley and the Black Country, From 1800 to 1860 -<br><span class='subtitle'>Also an Account of the Trials and Sufferings of Dud Dudley, with His Mettallum Martis: Etc.</span></a>
+<div class='author'>Clark, C. F. G., Dudley, Dud, 1599-1684 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48925, {&quot;Title&quot;:&quot;A History of the Durham Miner&#39;s Association 1870-1904&quot;,&quot;Topics&quot;:[&quot;Durham Miners&#39; Association -- History&quot;,&quot;Coal miners -- Labor unions -- Great Britain -- History&quot;],&quot;Primary&quot;:&quot;48925.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wilson, John, 1837-&quot;],&quot;LoCC&quot;:[&quot;TN&quot;],&quot;PG_ID&quot;:&quot;48925&quot;});" class='title'>A History of the Durham Miner's Association 1870-1904</a>
+<div class='author'>Wilson, John, 1837-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51106, {&quot;Title&quot;:&quot;The Mentor: The Story of Coal, vol. 6, Num. 6, Serial No. 154, May 1, 1918&quot;,&quot;Topics&quot;:[&quot;Coal&quot;,&quot;Coal mines and mining&quot;],&quot;Primary&quot;:&quot;51106.htm&quot;,&quot;CreatorNames&quot;:[&quot;Talman, Charles Fitzhugh, 1874-1936&quot;],&quot;LoCC&quot;:[&quot;TN&quot;],&quot;PG_ID&quot;:&quot;51106&quot;});" class='title'>The Mentor:<br><span class='subtitle'>The Story of Coal, vol. 6, Num. 6, Serial No. 154, May 1, 1918</span></a>
+<div class='author'>Talman, Charles Fitzhugh, 1874-1936</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52825, {&quot;Title&quot;:&quot;Petroleum&quot;,&quot;Topics&quot;:[&quot;Petroleum engineering&quot;,&quot;Petroleum&quot;,&quot;Petroleum -- Great Britain&quot;],&quot;Primary&quot;:&quot;52825.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lidgett, Albert, 1876-1936&quot;],&quot;LoCC&quot;:[&quot;TN&quot;],&quot;PG_ID&quot;:&quot;52825&quot;});" class='title'>Petroleum</a>
+<div class='author'>Lidgett, Albert, 1876-1936</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53562, {&quot;Title&quot;:&quot;Underground Treasures: How and Where to Find Them - A Key for the Ready Determination of All the Useful Minerals Within the United States&quot;,&quot;Topics&quot;:[&quot;Prospecting&quot;,&quot;Mineralogy, Determinative&quot;],&quot;Primary&quot;:&quot;53562.htm&quot;,&quot;CreatorNames&quot;:[&quot;Orton, James, 1830-1877&quot;],&quot;LoCC&quot;:[&quot;TN&quot;],&quot;PG_ID&quot;:&quot;53562&quot;});" class='title'>Underground Treasures:<br><span class='subtitle'>How and Where to Find Them - A Key for the Ready Determination of All the Useful Minerals Within the United States</span></a>
+<div class='author'>Orton, James, 1830-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53672, {&quot;Title&quot;:&quot;Sketches in Crude-oil - Some accidents and incidents of the petroleum development in all parts of the globe&quot;,&quot;Topics&quot;:[&quot;Petroleum -- History&quot;,&quot;Petroleum industry and trade -- North America -- History&quot;],&quot;Primary&quot;:&quot;53672.htm&quot;,&quot;CreatorNames&quot;:[&quot;McLaurin, John J. (John James), 1841-1923&quot;],&quot;LoCC&quot;:[&quot;TN&quot;],&quot;PG_ID&quot;:&quot;53672&quot;});" class='title'>Sketches in Crude-oil -<br><span class='subtitle'>Some accidents and incidents of the petroleum development in all parts of the globe</span></a>
+<div class='author'>McLaurin, John J. (John James), 1841-1923</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55051, {&quot;Title&quot;:&quot;Rock Blasting - A Practical Treatise on the Means Employed in Blasting Rocks for Industrial Purposes&quot;,&quot;Topics&quot;:[&quot;Blasting&quot;],&quot;Primary&quot;:&quot;55051.htm&quot;,&quot;CreatorNames&quot;:[&quot;André, George G.&quot;],&quot;LoCC&quot;:[&quot;TN&quot;],&quot;PG_ID&quot;:&quot;55051&quot;});" class='title'>Rock Blasting -<br><span class='subtitle'>A Practical Treatise on the Means Employed in Blasting Rocks for Industrial Purposes</span></a>
+<div class='author'>André, George G.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56478, {&quot;Title&quot;:&quot;Old Mines of Southern California - Desert-Mountain-Coastal Areas Including the Calico-Salton Sea Colorado River Districts and Southern Counties&quot;,&quot;Topics&quot;:[&quot;Mines and mineral resources -- California, Southern&quot;,&quot;Geology -- California, Southern&quot;],&quot;Primary&quot;:&quot;56478.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fairbanks, Harold W. (Harold Wellman), 1860-&quot;,&quot;Storms, William H., 1859-&quot;],&quot;LoCC&quot;:[&quot;TN&quot;],&quot;PG_ID&quot;:&quot;56478&quot;});" class='title'>Old Mines of Southern California -<br><span class='subtitle'>Desert-Mountain-Coastal Areas Including the Calico-Salton Sea Colorado River Districts and Southern Counties</span></a>
+<div class='author'>Fairbanks, Harold W. (Harold Wellman), 1860-, Storms, William H., 1859-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57161, {&quot;Title&quot;:&quot;Notes of a Gold Digger, and Gold Diggers&#39; Guide&quot;,&quot;Topics&quot;:[&quot;Gold mines and mining -- Australia -- Victoria&quot;],&quot;Primary&quot;:&quot;57161.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bonwick, James, 1817-1906&quot;],&quot;LoCC&quot;:[&quot;TN&quot;],&quot;PG_ID&quot;:&quot;57161&quot;});" class='title'>Notes of a Gold Digger, and Gold Diggers' Guide</a>
+<div class='author'>Bonwick, James, 1817-1906</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57441, {&quot;Title&quot;:&quot;The Underground World: A mirror of life below the surface&quot;,&quot;Topics&quot;:[&quot;Mines and mineral resources&quot;,&quot;Social history -- 19th century&quot;,&quot;Caves&quot;,&quot;Tunnels&quot;],&quot;Primary&quot;:&quot;57441.htm&quot;,&quot;CreatorNames&quot;:[&quot;Knox, Thomas Wallace, 1835-1896&quot;],&quot;LoCC&quot;:[&quot;HN&quot;,&quot;TN&quot;],&quot;PG_ID&quot;:&quot;57441&quot;});" class='title'>The Underground World:<br><span class='subtitle'>A mirror of life below the surface</span></a>
+<div class='author'>Knox, Thomas Wallace, 1835-1896</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59328, {&quot;Title&quot;:&quot;Modern Copper Smelting - being lectures delivered at Birmingham University, greatly extended and adapted and with and introduction on the history, uses and properties of copper.&quot;,&quot;Topics&quot;:[&quot;Copper -- Metallurgy&quot;],&quot;Primary&quot;:&quot;59328.htm&quot;,&quot;CreatorNames&quot;:[&quot;Levy, Donald M.&quot;],&quot;LoCC&quot;:[&quot;TN&quot;],&quot;PG_ID&quot;:&quot;59328&quot;});" class='title'>Modern Copper Smelting -<br><span class='subtitle'>being lectures delivered at Birmingham University, greatly extended and adapted and with and introduction on the history, uses and properties of copper.</span></a>
+<div class='author'>Levy, Donald M.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60691, {&quot;Title&quot;:&quot;The American Consolidated Mines Company (1903)&quot;,&quot;Topics&quot;:[&quot;Prospectuses&quot;,&quot;American Consolidated Mines Company&quot;,&quot;Mines and mineral resources -- New Mexico -- Taos County&quot;],&quot;Primary&quot;:&quot;60691.htm&quot;,&quot;CreatorNames&quot;:[&quot;American Consolidated Mines Company&quot;],&quot;LoCC&quot;:[&quot;TN&quot;],&quot;PG_ID&quot;:&quot;60691&quot;});" class='title'>The American Consolidated Mines Company (1903)</a>
+<div class='author'>American Consolidated Mines Company</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61096, {&quot;Title&quot;:&quot;Diamonds&quot;,&quot;Topics&quot;:[&quot;Diamonds&quot;],&quot;Primary&quot;:&quot;61096.htm&quot;,&quot;CreatorNames&quot;:[&quot;Crookes, William, 1832-1919&quot;],&quot;LoCC&quot;:[&quot;TN&quot;],&quot;PG_ID&quot;:&quot;61096&quot;});" class='title'>Diamonds</a>
+<div class='author'>Crookes, William, 1832-1919</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62462, {&quot;Title&quot;:&quot;Mineral Survey Procedures Guide, 1980&quot;,&quot;Topics&quot;:[&quot;Mineral resources conservation -- United States&quot;,&quot;Cadastres -- United States&quot;],&quot;Primary&quot;:&quot;62462.htm&quot;,&quot;CreatorNames&quot;:[&quot;Meldrum, John V. [Compiler]&quot;],&quot;LoCC&quot;:[&quot;TN&quot;],&quot;PG_ID&quot;:&quot;62462&quot;});" class='title'>Mineral Survey Procedures Guide, 1980</a>
+<div class='author'>Meldrum, John V. [Compiler]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63784, {&quot;Title&quot;:&quot;Lead Smelting and Refining, With Some Notes on Lead Mining&quot;,&quot;Topics&quot;:[&quot;Lead -- Metallurgy&quot;,&quot;Lead mines and mining&quot;],&quot;Primary&quot;:&quot;63784.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ingalls, Walter Renton, 1865- [Editor]&quot;],&quot;LoCC&quot;:[&quot;TN&quot;],&quot;PG_ID&quot;:&quot;63784&quot;});" class='title'>Lead Smelting and Refining, With Some Notes on Lead Mining</a>
+<div class='author'>Ingalls, Walter Renton, 1865- [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64068, {&quot;Title&quot;:&quot;The platinum metals&quot;,&quot;Topics&quot;:[&quot;Platinum group&quot;],&quot;Primary&quot;:&quot;64068.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lumb, Arthur Douglas, -1938&quot;],&quot;LoCC&quot;:[&quot;TN&quot;],&quot;PG_ID&quot;:&quot;64068&quot;});" class='title'>The platinum metals</a>
+<div class='author'>Lumb, Arthur Douglas, -1938</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64699, {&quot;Title&quot;:&quot;A History of the Comstock Silver Lode &amp; Mines - Nevada and the Great Basin Region; Lake Tahoe and the High Sierras&quot;,&quot;Topics&quot;:[&quot;Silver mines and mining -- Nevada -- History&quot;,&quot;Comstock Lode (Nev.)&quot;,&quot;Nevada -- Description and travel&quot;,&quot;Frontier and pioneer life -- Nevada&quot;],&quot;Primary&quot;:&quot;64699.htm&quot;,&quot;CreatorNames&quot;:[&quot;De Quille, Dan, 1829-1898&quot;],&quot;LoCC&quot;:[&quot;TN&quot;],&quot;PG_ID&quot;:&quot;64699&quot;});" class='title'>A History of the Comstock Silver Lode & Mines -<br><span class='subtitle'>Nevada and the Great Basin Region; Lake Tahoe and the High Sierras</span></a>
+<div class='author'>De Quille, Dan, 1829-1898</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65091, {&quot;Title&quot;:&quot;Preliminary Report on Gowganda Mining Division District of Nipissing Ontario&quot;,&quot;Topics&quot;:[&quot;Geology -- Ontario&quot;,&quot;Mines and mineral resources -- Ontario&quot;],&quot;Primary&quot;:&quot;65091.htm&quot;,&quot;CreatorNames&quot;:[&quot;Collins, W. H. (William Henry), 1878-1937&quot;],&quot;LoCC&quot;:[&quot;TN&quot;],&quot;PG_ID&quot;:&quot;65091&quot;});" class='title'>Preliminary Report on Gowganda Mining Division District of Nipissing Ontario</a>
+<div class='author'>Collins, W. H. (William Henry), 1878-1937</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67844, {&quot;Title&quot;:&quot;Hoisting Appliances&quot;,&quot;Topics&quot;:[&quot;Hoisting machinery&quot;,&quot;Mine hoisting&quot;],&quot;Primary&quot;:&quot;67844.htm&quot;,&quot;CreatorNames&quot;:[&quot;International Correspondence Schools&quot;],&quot;LoCC&quot;:[&quot;TJ&quot;,&quot;TN&quot;],&quot;PG_ID&quot;:&quot;67844&quot;});" class='title'>Hoisting Appliances</a>
+<div class='author'>International Correspondence Schools</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69134, {&quot;Title&quot;:&quot;Coal and the coal mines&quot;,&quot;Topics&quot;:[&quot;Coal&quot;,&quot;Coal mines and mining&quot;],&quot;Primary&quot;:&quot;69134.htm&quot;,&quot;CreatorNames&quot;:[&quot;Greene, Homer, 1853-1940&quot;],&quot;LoCC&quot;:[&quot;TN&quot;],&quot;PG_ID&quot;:&quot;69134&quot;});" class='title'>Coal and the coal mines</a>
+<div class='author'>Greene, Homer, 1853-1940</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69590, {&quot;Title&quot;:&quot;Salt and the salt industry&quot;,&quot;Topics&quot;:[&quot;Salt industry and trade&quot;,&quot;Salt industry and trade -- England -- Cheshire&quot;],&quot;Primary&quot;:&quot;69590.htm&quot;,&quot;CreatorNames&quot;:[&quot;Calvert, Albert Frederick, 1872-1946&quot;],&quot;LoCC&quot;:[&quot;TN&quot;],&quot;PG_ID&quot;:&quot;69590&quot;});" class='title'>Salt and the salt industry</a>
+<div class='author'>Calvert, Albert Frederick, 1872-1946</div>
+</div>
+</ul></div>
+</body></html>

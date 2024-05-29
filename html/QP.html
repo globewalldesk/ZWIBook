@@ -1,0 +1,354 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Physiology (QP)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(10266, {&quot;Title&quot;:&quot;The Glands Regulating Personality - A Study of the Glands of Internal Secretion in Relation to the Types of Human Nature&quot;,&quot;Topics&quot;:[&quot;Personality&quot;,&quot;Endocrinology&quot;],&quot;Primary&quot;:&quot;10266.txt&quot;,&quot;CreatorNames&quot;:[&quot;Berman, Louis, 1893-1946&quot;],&quot;LoCC&quot;:[&quot;QP&quot;],&quot;PG_ID&quot;:&quot;10266&quot;});" class='title'>The Glands Regulating Personality -<br><span class='subtitle'>A Study of the Glands of Internal Secretion in Relation to the Types of Human Nature</span></a>
+<div class='author'>Berman, Louis, 1893-1946</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(10453, {&quot;Title&quot;:&quot;A Practical Physiology: A Text-Book for Higher Schools&quot;,&quot;Topics&quot;:[&quot;Physiology&quot;,&quot;Human physiology&quot;],&quot;Primary&quot;:&quot;10453.htm&quot;,&quot;CreatorNames&quot;:[&quot;Blaisdell, Albert F. (Albert Franklin), 1847-1927&quot;],&quot;LoCC&quot;:[&quot;QP&quot;],&quot;PG_ID&quot;:&quot;10453&quot;});" class='title'>A Practical Physiology:<br><span class='subtitle'>A Text-Book for Higher Schools</span></a>
+<div class='author'>Blaisdell, Albert F. (Albert Franklin), 1847-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(11206, {&quot;Title&quot;:&quot;Compendio di Chimica Fisiologica&quot;,&quot;Topics&quot;:[&quot;Chemistry, Physical and theoretical&quot;],&quot;Primary&quot;:&quot;11206.txt&quot;,&quot;CreatorNames&quot;:[&quot;Cominelli, A.&quot;],&quot;LoCC&quot;:[&quot;QP&quot;],&quot;PG_ID&quot;:&quot;11206&quot;});" class='title'>Compendio di Chimica Fisiologica</a>
+<div class='author'>Cominelli, A.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(1233, {&quot;Title&quot;:&quot;The Origin and Nature of the Emotions; Miscellaneous Papers&quot;,&quot;Topics&quot;:[&quot;Emotions&quot;,&quot;Psychophysiology&quot;],&quot;Primary&quot;:&quot;1233.txt&quot;,&quot;CreatorNames&quot;:[&quot;Crile, George Washington, 1864-1943&quot;],&quot;LoCC&quot;:[&quot;BF&quot;,&quot;QP&quot;],&quot;PG_ID&quot;:&quot;1233&quot;});" class='title'>The Origin and Nature of the Emotions;<br><span class='subtitle'>Miscellaneous Papers</span></a>
+<div class='author'>Crile, George Washington, 1864-1943</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13111, {&quot;Title&quot;:&quot;The Brain and the Voice in Speech and Song&quot;,&quot;Topics&quot;:[&quot;Voice&quot;],&quot;Primary&quot;:&quot;13111.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mott, F. W. (Frederick Walker), 1853-1926&quot;],&quot;LoCC&quot;:[&quot;QP&quot;],&quot;PG_ID&quot;:&quot;13111&quot;});" class='title'>The Brain and the Voice in Speech and Song</a>
+<div class='author'>Mott, F. W. (Frederick Walker), 1853-1926</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15435, {&quot;Title&quot;:&quot;Object Lessons on the Human Body - A Transcript of Lessons Given in the Primary Department of School No. 49, New York City&quot;,&quot;Topics&quot;:[&quot;Physiology&quot;,&quot;Hygiene -- Popular works&quot;,&quot;Physiology -- Popular works&quot;],&quot;Primary&quot;:&quot;15435.htm&quot;,&quot;CreatorNames&quot;:[&quot;Buckelew, Sarah F. (Sarah Frances), 1835-&quot;,&quot;Lewis, Margaret W. (Margaret Wiseham), 1837-&quot;],&quot;LoCC&quot;:[&quot;QP&quot;],&quot;PG_ID&quot;:&quot;15435&quot;});" class='title'>Object Lessons on the Human Body -<br><span class='subtitle'>A Transcript of Lessons Given in the Primary Department of School No. 49, New York City</span></a>
+<div class='author'>Buckelew, Sarah F. (Sarah Frances), 1835-, Lewis, Margaret W. (Margaret Wiseham), 1837-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15707, {&quot;Title&quot;:&quot;Zoonomia; Or, the Laws of Organic Life, Vol. I&quot;,&quot;Topics&quot;:[&quot;Physiology -- Early works to 1800&quot;,&quot;Pathology -- Early works to 1800&quot;,&quot;Medicine -- Early works to 1800&quot;,&quot;Evolution (Biology) -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;15707.htm&quot;,&quot;CreatorNames&quot;:[&quot;Darwin, Erasmus, 1731-1802&quot;],&quot;LoCC&quot;:[&quot;QP&quot;],&quot;PG_ID&quot;:&quot;15707&quot;});" class='title'>Zoonomia;<br><span class='subtitle'>Or, the Laws of Organic Life, Vol. I</span></a>
+<div class='author'>Darwin, Erasmus, 1731-1802</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17079, {&quot;Title&quot;:&quot;De Harmonie van het Dierlijke Leven: De Openbaring van Wetten&quot;,&quot;Topics&quot;:[&quot;Physiology&quot;],&quot;Primary&quot;:&quot;17079.htm&quot;,&quot;CreatorNames&quot;:[&quot;Donders, F. C. (Franciscus Cornelis), 1818-1889&quot;],&quot;LoCC&quot;:[&quot;QP&quot;],&quot;PG_ID&quot;:&quot;17079&quot;});" class='title'>De Harmonie van het Dierlijke Leven:<br><span class='subtitle'>De Openbaring van Wetten</span></a>
+<div class='author'>Donders, F. C. (Franciscus Cornelis), 1818-1889</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17367, {&quot;Title&quot;:&quot;First Book in Physiology and Hygiene&quot;,&quot;Topics&quot;:[&quot;Hygiene -- Juvenile literature&quot;,&quot;Human physiology -- Juvenile literature&quot;,&quot;Health -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;17367.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kellogg, John Harvey, 1852-1943&quot;],&quot;LoCC&quot;:[&quot;QP&quot;],&quot;PG_ID&quot;:&quot;17367&quot;});" class='title'>First Book in Physiology and Hygiene</a>
+<div class='author'>Kellogg, John Harvey, 1852-1943</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18779, {&quot;Title&quot;:&quot;Physiology and Hygiene for Secondary Schools&quot;,&quot;Topics&quot;:[&quot;Physiology&quot;],&quot;Primary&quot;:&quot;18779.htm&quot;,&quot;CreatorNames&quot;:[&quot;Walters, Francis M. (Francis Marion), 1862-&quot;],&quot;LoCC&quot;:[&quot;QP&quot;],&quot;PG_ID&quot;:&quot;18779&quot;});" class='title'>Physiology and Hygiene for Secondary Schools</a>
+<div class='author'>Walters, Francis M. (Francis Marion), 1862-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18928, {&quot;Title&quot;:&quot;Proefnemingen van de particuliere beweeging der spieren in de kikvorsch&quot;,&quot;Topics&quot;:[&quot;Muscle contraction&quot;],&quot;Primary&quot;:&quot;18928.htm&quot;,&quot;CreatorNames&quot;:[&quot;Swammerdam, Jan, 1637-1680&quot;],&quot;LoCC&quot;:[&quot;QP&quot;],&quot;PG_ID&quot;:&quot;18928&quot;});" class='title'>Proefnemingen van de particuliere beweeging der spieren in de kikvorsch</a>
+<div class='author'>Swammerdam, Jan, 1637-1680</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18929, {&quot;Title&quot;:&quot;Den Waaragtigen Omloop des Bloeds&quot;,&quot;Topics&quot;:[&quot;Blood -- Circulation&quot;,&quot;Blood-vessels&quot;],&quot;Primary&quot;:&quot;18929.htm&quot;,&quot;CreatorNames&quot;:[&quot;Leeuwenhoek, Antoni van, 1632-1723&quot;],&quot;LoCC&quot;:[&quot;QP&quot;],&quot;PG_ID&quot;:&quot;18929&quot;});" class='title'>Den Waaragtigen Omloop des Bloeds</a>
+<div class='author'>Leeuwenhoek, Antoni van, 1632-1723</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19053, {&quot;Title&quot;:&quot;Theory of Circulation by Respiration: Synopsis of its Principles and History&quot;,&quot;Topics&quot;:[&quot;Respiration&quot;,&quot;Blood -- Circulation&quot;],&quot;Primary&quot;:&quot;19053.htm&quot;,&quot;CreatorNames&quot;:[&quot;Willard, Emma, 1787-1870&quot;],&quot;LoCC&quot;:[&quot;QP&quot;],&quot;PG_ID&quot;:&quot;19053&quot;});" class='title'>Theory of Circulation by Respiration:<br><span class='subtitle'>Synopsis of its Principles and History</span></a>
+<div class='author'>Willard, Emma, 1787-1870</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22344, {&quot;Title&quot;:&quot;Remarks on the Subject of Lactation&quot;,&quot;Topics&quot;:[&quot;Lactation&quot;,&quot;Breastfeeding&quot;],&quot;Primary&quot;:&quot;22344.htm&quot;,&quot;CreatorNames&quot;:[&quot;Morton, Edward&quot;],&quot;LoCC&quot;:[&quot;QP&quot;],&quot;PG_ID&quot;:&quot;22344&quot;});" class='title'>Remarks on the Subject of Lactation</a>
+<div class='author'>Morton, Edward</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24618, {&quot;Title&quot;:&quot;Warum wir sterben&quot;,&quot;Topics&quot;:[&quot;Essays&quot;,&quot;Biology&quot;,&quot;Death -- Causes&quot;],&quot;Primary&quot;:&quot;24618.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lipschütz, Alejandro, 1883-1980&quot;],&quot;LoCC&quot;:[&quot;QH&quot;,&quot;QP&quot;],&quot;PG_ID&quot;:&quot;24618&quot;});" class='title'>Warum wir sterben</a>
+<div class='author'>Lipschütz, Alejandro, 1883-1980</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24708, {&quot;Title&quot;:&quot;The Biology, Physiology and Sociology of Reproduction - Also Sexual Hygiene with Special Reference to the Male&quot;,&quot;Topics&quot;:[&quot;Sexual ethics -- Early 20th century&quot;,&quot;Reproduction&quot;],&quot;Primary&quot;:&quot;24708.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hall, Winfield Scott, 1861-&quot;],&quot;LoCC&quot;:[&quot;BJ&quot;,&quot;QP&quot;],&quot;PG_ID&quot;:&quot;24708&quot;});" class='title'>The Biology, Physiology and Sociology of Reproduction -<br><span class='subtitle'>Also Sexual Hygiene with Special Reference to the Male</span></a>
+<div class='author'>Hall, Winfield Scott, 1861-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25646, {&quot;Title&quot;:&quot;Child&#39;s Health Primer For Primary Classes - With Special Reference to the Effects of Alcoholic Drinks, Stimulants, and Narcotics upon The Human System&quot;,&quot;Topics&quot;:[&quot;Physiology -- Juvenile literature&quot;,&quot;Hygiene -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;25646.htm&quot;,&quot;CreatorNames&quot;:[&quot;Andrews, Jane, 1833-1887&quot;],&quot;LoCC&quot;:[&quot;QP&quot;],&quot;PG_ID&quot;:&quot;25646&quot;});" class='title'>Child's Health Primer For Primary Classes -<br><span class='subtitle'>With Special Reference to the Effects of Alcoholic Drinks, Stimulants, and Narcotics upon The Human System</span></a>
+<div class='author'>Andrews, Jane, 1833-1887</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27600, {&quot;Title&quot;:&quot;Zoonomia; Or, the Laws of Organic Life, Vol. II&quot;,&quot;Topics&quot;:[&quot;Physiology -- Early works to 1800&quot;,&quot;Pathology -- Early works to 1800&quot;,&quot;Medicine -- Early works to 1800&quot;,&quot;Evolution (Biology) -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;27600.htm&quot;,&quot;CreatorNames&quot;:[&quot;Darwin, Erasmus, 1731-1802&quot;],&quot;LoCC&quot;:[&quot;QP&quot;],&quot;PG_ID&quot;:&quot;27600&quot;});" class='title'>Zoonomia;<br><span class='subtitle'>Or, the Laws of Organic Life, Vol. II</span></a>
+<div class='author'>Darwin, Erasmus, 1731-1802</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27748, {&quot;Title&quot;:&quot;Popular Lectures on Zoonomia - Or The Laws of Animal Life, in Health and Disease&quot;,&quot;Topics&quot;:[&quot;Physiology&quot;],&quot;Primary&quot;:&quot;27748.txt&quot;,&quot;CreatorNames&quot;:[&quot;Garnett, Thomas, 1766-1802&quot;],&quot;LoCC&quot;:[&quot;QP&quot;],&quot;PG_ID&quot;:&quot;27748&quot;});" class='title'>Popular Lectures on Zoonomia -<br><span class='subtitle'>Or The Laws of Animal Life, in Health and Disease</span></a>
+<div class='author'>Garnett, Thomas, 1766-1802</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28216, {&quot;Title&quot;:&quot;Respiration Calorimeters for Studying the Respiratory Exchange and Energy Transformations of Man&quot;,&quot;Topics&quot;:[&quot;Physiological apparatus&quot;,&quot;Respiration&quot;,&quot;Animal heat&quot;,&quot;Metabolism&quot;],&quot;Primary&quot;:&quot;28216.htm&quot;,&quot;CreatorNames&quot;:[&quot;Benedict, Francis Gano, 1870-1957&quot;,&quot;Carpenter, Thorne M. (Thorne Martin), 1878-&quot;],&quot;LoCC&quot;:[&quot;QP&quot;],&quot;PG_ID&quot;:&quot;28216&quot;});" class='title'>Respiration Calorimeters for Studying the Respiratory Exchange and Energy Transformations of Man</a>
+<div class='author'>Benedict, Francis Gano, 1870-1957, Carpenter, Thorne M. (Thorne Martin), 1878-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29362, {&quot;Title&quot;:&quot;The Goat-gland Transplantation - As Originated and Successfully Performed by J. R. Brinkley, M. D., of Milford, Kansas, U. S. A., in Over 600 Operations Upon Men and Women&quot;,&quot;Topics&quot;:[&quot;Brinkley, John Richard, 1885-1942&quot;,&quot;Transplantation of organs, tissues, etc.&quot;],&quot;Primary&quot;:&quot;29362.htm&quot;,&quot;CreatorNames&quot;:[&quot;Flower, Sydney Blanshard, 1867-&quot;],&quot;LoCC&quot;:[&quot;QP&quot;],&quot;PG_ID&quot;:&quot;29362&quot;});" class='title'>The Goat-gland Transplantation -<br><span class='subtitle'>As Originated and Successfully Performed by J. R. Brinkley, M. D., of Milford, Kansas, U. S. A., in Over 600 Operations Upon Men and Women</span></a>
+<div class='author'>Flower, Sydney Blanshard, 1867-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2939, {&quot;Title&quot;:&quot;William Harvey and the Discovery of the Circulation of the Blood&quot;,&quot;Topics&quot;:[&quot;Harvey, William, 1578-1657&quot;,&quot;Blood -- Circulation -- History&quot;],&quot;Primary&quot;:&quot;2939.htm&quot;,&quot;CreatorNames&quot;:[&quot;Huxley, Thomas Henry, 1825-1895&quot;],&quot;LoCC&quot;:[&quot;QP&quot;],&quot;PG_ID&quot;:&quot;2939&quot;});" class='title'>William Harvey and the Discovery of the Circulation of the Blood</a>
+<div class='author'>Huxley, Thomas Henry, 1825-1895</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30541, {&quot;Title&quot;:&quot;A Treatise on Anatomy, Physiology, and Hygiene (Revised Edition)&quot;,&quot;Topics&quot;:[&quot;Hygiene&quot;,&quot;Physiology&quot;],&quot;Primary&quot;:&quot;30541.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cutter, Calvin, 1807-1872&quot;],&quot;LoCC&quot;:[&quot;QP&quot;],&quot;PG_ID&quot;:&quot;30541&quot;});" class='title'>A Treatise on Anatomy, Physiology, and Hygiene (Revised Edition)</a>
+<div class='author'>Cutter, Calvin, 1807-1872</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31616, {&quot;Title&quot;:&quot;Health Lessons, Book 1&quot;,&quot;Topics&quot;:[&quot;Physiology -- Juvenile literature&quot;,&quot;Hygiene -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;31616.htm&quot;,&quot;CreatorNames&quot;:[&quot;Davison, Alvin, 1868-1915&quot;],&quot;LoCC&quot;:[&quot;QP&quot;],&quot;PG_ID&quot;:&quot;31616&quot;});" class='title'>Health Lessons, Book 1</a>
+<div class='author'>Davison, Alvin, 1868-1915</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32251, {&quot;Title&quot;:&quot;Applied Physiology, Including the Effects of Alcohol and Narcotics&quot;,&quot;Topics&quot;:[&quot;Physiology&quot;],&quot;Primary&quot;:&quot;32251.htm&quot;,&quot;CreatorNames&quot;:[&quot;Overton, Frank, 1867-&quot;],&quot;LoCC&quot;:[&quot;QP&quot;],&quot;PG_ID&quot;:&quot;32251&quot;});" class='title'>Applied Physiology, Including the Effects of Alcohol and Narcotics</a>
+<div class='author'>Overton, Frank, 1867-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32521, {&quot;Title&quot;:&quot;Keep-Well Stories for Little Folks&quot;,&quot;Topics&quot;:[&quot;Hygiene -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;32521.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jones, May Farinholt, 1868-&quot;,&quot;Wright, Pauline [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;QP&quot;],&quot;PG_ID&quot;:&quot;32521&quot;});" class='title'>Keep-Well Stories for Little Folks</a>
+<div class='author'>Jones, May Farinholt, 1868-, Wright, Pauline [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34211, {&quot;Title&quot;:&quot;A Treatise on Physiology and Hygiene - For Educational Institutions and General Readers&quot;,&quot;Topics&quot;:[&quot;Physiology&quot;],&quot;Primary&quot;:&quot;34211.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hutchison, Joseph C. (Joseph Chrisman), 1822-1887&quot;],&quot;LoCC&quot;:[&quot;QP&quot;],&quot;PG_ID&quot;:&quot;34211&quot;});" class='title'>A Treatise on Physiology and Hygiene -<br><span class='subtitle'>For Educational Institutions and General Readers</span></a>
+<div class='author'>Hutchison, Joseph C. (Joseph Chrisman), 1822-1887</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36297, {&quot;Title&quot;:&quot;Visual Illusions: Their Causes, Characteristics and Applications&quot;,&quot;Topics&quot;:[&quot;Optical illusions&quot;],&quot;Primary&quot;:&quot;36297.htm&quot;,&quot;CreatorNames&quot;:[&quot;Luckiesh, Matthew, 1883-1967&quot;],&quot;LoCC&quot;:[&quot;QP&quot;],&quot;PG_ID&quot;:&quot;36297&quot;});" class='title'>Visual Illusions:<br><span class='subtitle'>Their Causes, Characteristics and Applications</span></a>
+<div class='author'>Luckiesh, Matthew, 1883-1967</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39998, {&quot;Title&quot;:&quot;The Science of Animal Locomotion (Zoopraxography) - An Electro-Photographic Investigation of Consecutive Phases of Animal Movements&quot;,&quot;Topics&quot;:[&quot;Motion pictures&quot;,&quot;Animal locomotion&quot;,&quot;Prospectuses -- Pennsylvania -- Philadelphia -- 19th century&quot;,&quot;Subscribers&#39; lists -- Pennsylvania -- Philadelphia -- 19th century&quot;],&quot;Primary&quot;:&quot;39998.htm&quot;,&quot;CreatorNames&quot;:[&quot;Muybridge, Eadweard, 1830-1904&quot;],&quot;LoCC&quot;:[&quot;QP&quot;],&quot;PG_ID&quot;:&quot;39998&quot;});" class='title'>The Science of Animal Locomotion (Zoopraxography) -<br><span class='subtitle'>An Electro-Photographic Investigation of Consecutive Phases of Animal Movements</span></a>
+<div class='author'>Muybridge, Eadweard, 1830-1904</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40119, {&quot;Title&quot;:&quot;Curiosities of Light and Sight&quot;,&quot;Topics&quot;:[&quot;Light&quot;,&quot;Vision&quot;],&quot;Primary&quot;:&quot;40119.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bidwell, Shelford, 1848-1909&quot;],&quot;LoCC&quot;:[&quot;QC&quot;,&quot;QP&quot;],&quot;PG_ID&quot;:&quot;40119&quot;});" class='title'>Curiosities of Light and Sight</a>
+<div class='author'>Bidwell, Shelford, 1848-1909</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40215, {&quot;Title&quot;:&quot;Descriptive Zoopraxography; or, the science of animal locomotion made popular&quot;,&quot;Topics&quot;:[&quot;Animal locomotion&quot;],&quot;Primary&quot;:&quot;40215.htm&quot;,&quot;CreatorNames&quot;:[&quot;Muybridge, Eadweard, 1830-1904&quot;],&quot;LoCC&quot;:[&quot;QP&quot;],&quot;PG_ID&quot;:&quot;40215&quot;});" class='title'>Descriptive Zoopraxography;<br><span class='subtitle'>or, the science of animal locomotion made popular</span></a>
+<div class='author'>Muybridge, Eadweard, 1830-1904</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40256, {&quot;Title&quot;:&quot;Barium: A Cause of the Loco-Weed Disease&quot;,&quot;Topics&quot;:[&quot;Astragalus earlei&quot;,&quot;Barium&quot;],&quot;Primary&quot;:&quot;40256.htm&quot;,&quot;CreatorNames&quot;:[&quot;Crawford, Albert Cornelius&quot;],&quot;LoCC&quot;:[&quot;QP&quot;,&quot;SF&quot;],&quot;PG_ID&quot;:&quot;40256&quot;});" class='title'>Barium:<br><span class='subtitle'>A Cause of the Loco-Weed Disease</span></a>
+<div class='author'>Crawford, Albert Cornelius</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40543, {&quot;Title&quot;:&quot;Die Zelle&quot;,&quot;Topics&quot;:[&quot;Cells&quot;],&quot;Primary&quot;:&quot;40543.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kahn, Fritz, 1888-1968&quot;,&quot;Helbig, Georg [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;QP&quot;],&quot;PG_ID&quot;:&quot;40543&quot;});" class='title'>Die Zelle</a>
+<div class='author'>Kahn, Fritz, 1888-1968, Helbig, Georg [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41763, {&quot;Title&quot;:&quot;Dissertatio inauguralis physico-medica de respiratione - quam consensu &amp; auctoritate gratiosissimi medicorum ordinis in universitate patria pro summis in arte medica honoribus &amp; privilegiis doctoralibus rite consequendis....&quot;,&quot;Topics&quot;:[&quot;Respiration&quot;],&quot;Primary&quot;:&quot;41763.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bernoulli, Daniel, 1700-1782&quot;],&quot;LoCC&quot;:[&quot;QP&quot;],&quot;PG_ID&quot;:&quot;41763&quot;});" class='title'>Dissertatio inauguralis physico-medica de respiratione -<br><span class='subtitle'>quam consensu & auctoritate gratiosissimi medicorum ordinis in universitate patria pro summis in arte medica honoribus & privilegiis doctoralibus rite consequendis....</span></a>
+<div class='author'>Bernoulli, Daniel, 1700-1782</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42660, {&quot;Title&quot;:&quot;Experiments on Animals&quot;,&quot;Topics&quot;:[&quot;Vivisection&quot;,&quot;Physiology -- Technique&quot;],&quot;Primary&quot;:&quot;42660.htm&quot;,&quot;CreatorNames&quot;:[&quot;Paget, Stephen, 1855-1926&quot;,&quot;Lister, Joseph, Baron, 1827-1912 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;QP&quot;],&quot;PG_ID&quot;:&quot;42660&quot;});" class='title'>Experiments on Animals</a>
+<div class='author'>Paget, Stephen, 1855-1926, Lister, Joseph, Baron, 1827-1912 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43887, {&quot;Title&quot;:&quot;Sleep and Its Derangements&quot;,&quot;Topics&quot;:[&quot;Sleep disorders&quot;,&quot;Sleep -- Physiological aspects&quot;],&quot;Primary&quot;:&quot;43887.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hammond, William A. (William Alexander), 1828-1900&quot;],&quot;LoCC&quot;:[&quot;QP&quot;],&quot;PG_ID&quot;:&quot;43887&quot;});" class='title'>Sleep and Its Derangements</a>
+<div class='author'>Hammond, William A. (William Alexander), 1828-1900</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46078, {&quot;Title&quot;:&quot;The Senses and the Mind&quot;,&quot;Topics&quot;:[&quot;Knowledge, Theory of&quot;,&quot;Mind and body&quot;,&quot;Senses and sensation&quot;,&quot;Perception&quot;],&quot;Primary&quot;:&quot;46078.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;BF&quot;,&quot;QP&quot;],&quot;PG_ID&quot;:&quot;46078&quot;});" class='title'>The Senses and the Mind</a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46428, {&quot;Title&quot;:&quot;The Natural Philosophy of Love&quot;,&quot;Topics&quot;:[&quot;Reproduction&quot;],&quot;Primary&quot;:&quot;46428.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gourmont, Remy de, 1858-1915&quot;,&quot;Pound, Ezra, 1885-1972 [Translator]&quot;],&quot;LoCC&quot;:[&quot;QP&quot;],&quot;PG_ID&quot;:&quot;46428&quot;});" class='title'>The Natural Philosophy of Love</a>
+<div class='author'>Gourmont, Remy de, 1858-1915, Pound, Ezra, 1885-1972 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46444, {&quot;Title&quot;:&quot;Physique de l&#39;Amour: Essai sur l&#39;instinct sexuel&quot;,&quot;Topics&quot;:[&quot;Reproduction&quot;],&quot;Primary&quot;:&quot;46444.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gourmont, Remy de, 1858-1915&quot;],&quot;LoCC&quot;:[&quot;QP&quot;],&quot;PG_ID&quot;:&quot;46444&quot;});" class='title'>Physique de l'Amour:<br><span class='subtitle'>Essai sur l'instinct sexuel</span></a>
+<div class='author'>Gourmont, Remy de, 1858-1915</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46664, {&quot;Title&quot;:&quot;William Harvey&quot;,&quot;Topics&quot;:[&quot;Harvey, William, 1578-1657&quot;,&quot;Physicians -- England -- Biography&quot;],&quot;Primary&quot;:&quot;46664.htm&quot;,&quot;CreatorNames&quot;:[&quot;Power, D&#39;Arcy, Sir, 1855-1941&quot;],&quot;LoCC&quot;:[&quot;QP&quot;,&quot;R&quot;],&quot;PG_ID&quot;:&quot;46664&quot;});" class='title'>William Harvey</a>
+<div class='author'>Power, D'Arcy, Sir, 1855-1941</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46820, {&quot;Title&quot;:&quot;Experiments and Observations Relative to the Influence Lately Discovered by M. Galvani and Commonly Called Animal Electricity&quot;,&quot;Topics&quot;:[&quot;Electrophysiology -- Early works to 1800&quot;,&quot;Galvani, Luigi, 1737-1798&quot;],&quot;Primary&quot;:&quot;46820.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fowler, Richard, 1765-1863&quot;],&quot;LoCC&quot;:[&quot;QP&quot;],&quot;PG_ID&quot;:&quot;46820&quot;});" class='title'>Experiments and Observations Relative to the Influence Lately Discovered by M. Galvani and Commonly Called Animal Electricity</a>
+<div class='author'>Fowler, Richard, 1765-1863</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47026, {&quot;Title&quot;:&quot;Fletcherism: What It Is; Or, How I Became Young at Sixty&quot;,&quot;Topics&quot;:[&quot;Nutrition&quot;,&quot;Mastication&quot;],&quot;Primary&quot;:&quot;47026.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fletcher, Horace, 1849-1919&quot;],&quot;LoCC&quot;:[&quot;QP&quot;],&quot;PG_ID&quot;:&quot;47026&quot;});" class='title'>Fletcherism:<br><span class='subtitle'>What It Is; Or, How I Became Young at Sixty</span></a>
+<div class='author'>Fletcher, Horace, 1849-1919</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47185, {&quot;Title&quot;:&quot;Schenk&#39;s Theory: The Determination of Sex&quot;,&quot;Topics&quot;:[&quot;Sex determination, Genetic&quot;,&quot;Sex preselection&quot;],&quot;Primary&quot;:&quot;47185.htm&quot;,&quot;CreatorNames&quot;:[&quot;Schenk, Samuel Leopold, 1840-1902&quot;],&quot;LoCC&quot;:[&quot;QP&quot;],&quot;PG_ID&quot;:&quot;47185&quot;});" class='title'>Schenk's Theory:<br><span class='subtitle'>The Determination of Sex</span></a>
+<div class='author'>Schenk, Samuel Leopold, 1840-1902</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47309, {&quot;Title&quot;:&quot;Experiments on the Nervous System with Opium and Metalline Substances - Made Chiefly with the View of Determining the Nature and Effects of Animal Electricity&quot;,&quot;Topics&quot;:[&quot;Electrophysiology -- Early works to 1800&quot;,&quot;Nervous system -- Experiments -- Early works to 1800&quot;,&quot;Frogs -- Physiology&quot;],&quot;Primary&quot;:&quot;47309.htm&quot;,&quot;CreatorNames&quot;:[&quot;Monro, Alexander, 1733-1817&quot;],&quot;LoCC&quot;:[&quot;QP&quot;],&quot;PG_ID&quot;:&quot;47309&quot;});" class='title'>Experiments on the Nervous System with Opium and Metalline Substances -<br><span class='subtitle'>Made Chiefly with the View of Determining the Nature and Effects of Animal Electricity</span></a>
+<div class='author'>Monro, Alexander, 1733-1817</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47448, {&quot;Title&quot;:&quot;Harvey&#39;s Views on the Use of the Circulation of the Blood&quot;,&quot;Topics&quot;:[&quot;Harvey, William, 1578-1657&quot;,&quot;Blood -- Circulation&quot;],&quot;Primary&quot;:&quot;47448.htm&quot;,&quot;CreatorNames&quot;:[&quot;Curtis, John Green, 1844-1913&quot;,&quot;Lee, Frederic S. (Frederic Schiller), 1859-1939 [Editor]&quot;],&quot;LoCC&quot;:[&quot;QP&quot;],&quot;PG_ID&quot;:&quot;47448&quot;});" class='title'>Harvey's Views on the Use of the Circulation of the Blood</a>
+<div class='author'>Curtis, John Green, 1844-1913, Lee, Frederic S. (Frederic Schiller), 1859-1939 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47938, {&quot;Title&quot;:&quot;On Digestive Proteolysis - Being the Cartwright Lectures for 1894&quot;,&quot;Topics&quot;:[&quot;Digestion&quot;,&quot;Digestive enzymes&quot;,&quot;Enzymes&quot;],&quot;Primary&quot;:&quot;47938.htm&quot;,&quot;CreatorNames&quot;:[&quot;Chittenden, R. H. (Russell Henry), 1856-1943&quot;],&quot;LoCC&quot;:[&quot;QP&quot;],&quot;PG_ID&quot;:&quot;47938&quot;});" class='title'>On Digestive Proteolysis -<br><span class='subtitle'>Being the Cartwright Lectures for 1894</span></a>
+<div class='author'>Chittenden, R. H. (Russell Henry), 1856-1943</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48024, {&quot;Title&quot;:&quot;Physiology: The Science of the Body&quot;,&quot;Topics&quot;:[&quot;Physiology&quot;],&quot;Primary&quot;:&quot;48024.htm&quot;,&quot;CreatorNames&quot;:[&quot;Martin, Ernest G., 1876-1934&quot;],&quot;LoCC&quot;:[&quot;QP&quot;],&quot;PG_ID&quot;:&quot;48024&quot;});" class='title'>Physiology:<br><span class='subtitle'>The Science of the Body</span></a>
+<div class='author'>Martin, Ernest G., 1876-1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49549, {&quot;Title&quot;:&quot;Portraits of Dr. William Harvey&quot;,&quot;Topics&quot;:[&quot;Harvey, William, 1578-1657 -- Portraits&quot;],&quot;Primary&quot;:&quot;49549.htm&quot;,&quot;CreatorNames&quot;:[&quot;Royal Society of Medicine (Great Britain)&quot;],&quot;LoCC&quot;:[&quot;QP&quot;,&quot;R&quot;],&quot;PG_ID&quot;:&quot;49549&quot;});" class='title'>Portraits of Dr. William Harvey</a>
+<div class='author'>Royal Society of Medicine (Great Britain)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50458, {&quot;Title&quot;:&quot;The Toxins and Venoms and Their Antibodies&quot;,&quot;Topics&quot;:[&quot;Poisons&quot;,&quot;Toxins&quot;,&quot;Antitoxins&quot;,&quot;Venom -- Physiological effect&quot;],&quot;Primary&quot;:&quot;50458.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pozzi-Escot, M. Emm. (Marius Emmanuel), 1880-&quot;,&quot;Cohn, Alfred I. (Alfred Isaac), 1860- [Translator]&quot;],&quot;LoCC&quot;:[&quot;QP&quot;],&quot;PG_ID&quot;:&quot;50458&quot;});" class='title'>The Toxins and Venoms and Their Antibodies</a>
+<div class='author'>Pozzi-Escot, M. Emm. (Marius Emmanuel), 1880-, Cohn, Alfred I. (Alfred Isaac), 1860- [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51078, {&quot;Title&quot;:&quot;Venoms: Venomous Animals and Antivenomous Serum-therapeutics&quot;,&quot;Topics&quot;:[&quot;Toxins&quot;,&quot;Antitoxins&quot;,&quot;Venom&quot;,&quot;Poisonous snakes&quot;],&quot;Primary&quot;:&quot;51078.htm&quot;,&quot;CreatorNames&quot;:[&quot;Calmette, A. (Albert), 1863-1933&quot;,&quot;Austen, E. E. (Ernest Edward), 1867-1938 [Translator]&quot;],&quot;LoCC&quot;:[&quot;QP&quot;],&quot;PG_ID&quot;:&quot;51078&quot;});" class='title'>Venoms:<br><span class='subtitle'>Venomous Animals and Antivenomous Serum-therapeutics</span></a>
+<div class='author'>Calmette, A. (Albert), 1863-1933, Austen, E. E. (Ernest Edward), 1867-1938 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51521, {&quot;Title&quot;:&quot;The Prolongation of Life: Optimistic Studies&quot;,&quot;Topics&quot;:[&quot;Hygiene&quot;,&quot;Longevity&quot;,&quot;Aging&quot;,&quot;Older people -- Social conditions&quot;],&quot;Primary&quot;:&quot;51521.htm&quot;,&quot;CreatorNames&quot;:[&quot;Metchnikoff, Elie, 1845-1916&quot;,&quot;Mitchell, P. Chalmers (Peter Chalmers), Sir, 1864-1945 [Editor]&quot;],&quot;LoCC&quot;:[&quot;QP&quot;,&quot;RA&quot;],&quot;PG_ID&quot;:&quot;51521&quot;});" class='title'>The Prolongation of Life:<br><span class='subtitle'>Optimistic Studies</span></a>
+<div class='author'>Metchnikoff, Elie, 1845-1916, Mitchell, P. Chalmers (Peter Chalmers), Sir, 1864-1945 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52775, {&quot;Title&quot;:&quot;Ellis&#39;s Primary Physiology; Or, Good Health for Boys and Girls&quot;,&quot;Topics&quot;:[&quot;Physiology -- Juvenile literature&quot;,&quot;Hygiene -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;52775.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ellis, Edward Sylvester, 1840-1916&quot;],&quot;LoCC&quot;:[&quot;QP&quot;],&quot;PG_ID&quot;:&quot;52775&quot;});" class='title'>Ellis's Primary Physiology;<br><span class='subtitle'>Or, Good Health for Boys and Girls</span></a>
+<div class='author'>Ellis, Edward Sylvester, 1840-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53347, {&quot;Title&quot;:&quot;Physiology&quot;,&quot;Topics&quot;:[&quot;Physiology&quot;],&quot;Primary&quot;:&quot;53347.htm&quot;,&quot;CreatorNames&quot;:[&quot;Foster, M. (Michael), Sir, 1836-1907&quot;],&quot;LoCC&quot;:[&quot;QP&quot;],&quot;PG_ID&quot;:&quot;53347&quot;});" class='title'>Physiology</a>
+<div class='author'>Foster, M. (Michael), Sir, 1836-1907</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55264, {&quot;Title&quot;:&quot;On Growth and Form&quot;,&quot;Topics&quot;:[&quot;Morphology (Animals)&quot;,&quot;Growth&quot;],&quot;Primary&quot;:&quot;55264.htm&quot;,&quot;CreatorNames&quot;:[&quot;Thompson, D&#39;Arcy Wentworth, 1860-1948&quot;],&quot;LoCC&quot;:[&quot;QH&quot;,&quot;QP&quot;],&quot;PG_ID&quot;:&quot;55264&quot;});" class='title'>On Growth and Form</a>
+<div class='author'>Thompson, D'Arcy Wentworth, 1860-1948</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55462, {&quot;Title&quot;:&quot;Die organische Chemie in ihrer Anwendung auf Physiologie und Pathologie&quot;,&quot;Topics&quot;:[&quot;Biochemistry&quot;],&quot;Primary&quot;:&quot;55462.htm&quot;,&quot;CreatorNames&quot;:[&quot;Liebig, Justus, Freiherr von, 1803-1873&quot;],&quot;LoCC&quot;:[&quot;QP&quot;],&quot;PG_ID&quot;:&quot;55462&quot;});" class='title'>Die organische Chemie in ihrer Anwendung auf Physiologie und Pathologie</a>
+<div class='author'>Liebig, Justus, Freiherr von, 1803-1873</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56427, {&quot;Title&quot;:&quot;Animal Locomotion; or, walking, swimming, and flying - With a dissertation on aëronautics&quot;,&quot;Topics&quot;:[&quot;Aeronautics&quot;,&quot;Animal locomotion&quot;],&quot;Primary&quot;:&quot;56427.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pettigrew, James Bell, 1834-1908&quot;],&quot;LoCC&quot;:[&quot;QP&quot;],&quot;PG_ID&quot;:&quot;56427&quot;});" class='title'>Animal Locomotion;<br><span class='subtitle'>or, walking, swimming, and flying - With a dissertation on aëronautics</span></a>
+<div class='author'>Pettigrew, James Bell, 1834-1908</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56440, {&quot;Title&quot;:&quot;Physiological Researches on Life and Death&quot;,&quot;Topics&quot;:[&quot;Life (Biology)&quot;,&quot;Death (Biology)&quot;],&quot;Primary&quot;:&quot;56440.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bichat, Xavier, 1771-1802&quot;,&quot;Magendie, François, 1783-1855 [Contributor]&quot;,&quot;Gold, F. [Translator]&quot;,&quot;Hayward, George, 1791-1863 [Translator]&quot;],&quot;LoCC&quot;:[&quot;QP&quot;],&quot;PG_ID&quot;:&quot;56440&quot;});" class='title'>Physiological Researches on Life and Death</a>
+<div class='author'>Bichat, Xavier, 1771-1802, Magendie, François, 1783-1855 [Contributor], Gold, F. [Translator], Hayward, George, 1791-1863 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58857, {&quot;Title&quot;:&quot;The Works of William Harvey M.D. - Translated from the Latin with a life of the author&quot;,&quot;Topics&quot;:[&quot;Physiology -- Early works to 1800&quot;,&quot;Blood -- Circulation -- Early works to 1800&quot;,&quot;Embryology -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;58857.htm&quot;,&quot;CreatorNames&quot;:[&quot;Harvey, William, 1578-1657&quot;,&quot;Willis, Robert, 1799-1878 [Translator]&quot;],&quot;LoCC&quot;:[&quot;QP&quot;],&quot;PG_ID&quot;:&quot;58857&quot;});" class='title'>The Works of William Harvey M.D. -<br><span class='subtitle'>Translated from the Latin with a life of the author</span></a>
+<div class='author'>Harvey, William, 1578-1657, Willis, Robert, 1799-1878 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60584, {&quot;Title&quot;:&quot;Aromatics and the Soul: A Study of Smells&quot;,&quot;Topics&quot;:[&quot;Smell&quot;],&quot;Primary&quot;:&quot;60584.htm&quot;,&quot;CreatorNames&quot;:[&quot;McKenzie, Dan, 1870-1935&quot;],&quot;LoCC&quot;:[&quot;QP&quot;],&quot;PG_ID&quot;:&quot;60584&quot;});" class='title'>Aromatics and the Soul:<br><span class='subtitle'>A Study of Smells</span></a>
+<div class='author'>McKenzie, Dan, 1870-1935</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60773, {&quot;Title&quot;:&quot;The Philosophy of Health; Volume 1 (of 2) - or, an exposition of the physical and mental constitution of man&quot;,&quot;Topics&quot;:[&quot;Hygiene&quot;,&quot;Physiology&quot;],&quot;Primary&quot;:&quot;60773.htm&quot;,&quot;CreatorNames&quot;:[&quot;Smith, Southwood, 1788-1861&quot;],&quot;LoCC&quot;:[&quot;QP&quot;,&quot;RA&quot;],&quot;PG_ID&quot;:&quot;60773&quot;});" class='title'>The Philosophy of Health;<br><span class='subtitle'>Volume 1 (of 2) - or, an exposition of the physical and mental constitution of man</span></a>
+<div class='author'>Smith, Southwood, 1788-1861</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60937, {&quot;Title&quot;:&quot;The Philosophy of Health; Volume 2 (of 2) - or, an exposition of the physical and mental constitution of man&quot;,&quot;Topics&quot;:[&quot;Hygiene&quot;,&quot;Physiology&quot;],&quot;Primary&quot;:&quot;60937.htm&quot;,&quot;CreatorNames&quot;:[&quot;Smith, Southwood, 1788-1861&quot;],&quot;LoCC&quot;:[&quot;QP&quot;,&quot;RA&quot;],&quot;PG_ID&quot;:&quot;60937&quot;});" class='title'>The Philosophy of Health;<br><span class='subtitle'>Volume 2 (of 2) - or, an exposition of the physical and mental constitution of man</span></a>
+<div class='author'>Smith, Southwood, 1788-1861</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61944, {&quot;Title&quot;:&quot;The New Science of Controlled Breathing, Vol. 1 (of 2) - The Secret of Strength, Energy and Beauty—Through Breath Control&quot;,&quot;Topics&quot;:[&quot;Voice culture&quot;,&quot;Respiration&quot;],&quot;Primary&quot;:&quot;61944.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lankow, Edward&quot;],&quot;LoCC&quot;:[&quot;QP&quot;],&quot;PG_ID&quot;:&quot;61944&quot;});" class='title'>The New Science of Controlled Breathing, Vol. 1 (of 2) -<br><span class='subtitle'>The Secret of Strength, Energy and Beauty—Through Breath Control</span></a>
+<div class='author'>Lankow, Edward</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61945, {&quot;Title&quot;:&quot;The New Science of Controlled Breathing, Vol. 2 (of 2) - The Secret of Strength, Energy and Beauty—Through Breath Control&quot;,&quot;Topics&quot;:[&quot;Voice culture&quot;,&quot;Respiration&quot;],&quot;Primary&quot;:&quot;61945.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lankow, Edward&quot;],&quot;LoCC&quot;:[&quot;QP&quot;],&quot;PG_ID&quot;:&quot;61945&quot;});" class='title'>The New Science of Controlled Breathing, Vol. 2 (of 2) -<br><span class='subtitle'>The Secret of Strength, Energy and Beauty—Through Breath Control</span></a>
+<div class='author'>Lankow, Edward</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63089, {&quot;Title&quot;:&quot;The Body at Work: A Treatise on the Principles of Physiology&quot;,&quot;Topics&quot;:[&quot;Physiology&quot;],&quot;Primary&quot;:&quot;63089.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hill, Alex, 1856-1929&quot;],&quot;LoCC&quot;:[&quot;QP&quot;],&quot;PG_ID&quot;:&quot;63089&quot;});" class='title'>The Body at Work:<br><span class='subtitle'>A Treatise on the Principles of Physiology</span></a>
+<div class='author'>Hill, Alex, 1856-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64451, {&quot;Title&quot;:&quot;Palæontological Report of the Princeton Scientific Expedition of 1877&quot;,&quot;Topics&quot;:[&quot;Paleontology -- Eocene&quot;,&quot;Vertebrates, Fossil&quot;,&quot;Paleontology -- United States&quot;,&quot;Paleontology -- Wyoming&quot;],&quot;Primary&quot;:&quot;64451.htm&quot;,&quot;CreatorNames&quot;:[&quot;Osborn, Henry Fairfield, 1857-1935&quot;,&quot;Scott, William Berryman, 1858-1947&quot;,&quot;Speir, Francis, 1856-1925&quot;],&quot;LoCC&quot;:[&quot;QE&quot;,&quot;QP&quot;],&quot;PG_ID&quot;:&quot;64451&quot;});" class='title'>Palæontological Report of the Princeton Scientific Expedition of 1877</a>
+<div class='author'>Osborn, Henry Fairfield, 1857-1935, Scott, William Berryman, 1858-1947, Speir, Francis, 1856-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64610, {&quot;Title&quot;:&quot;A monograph on sleep and dream: their physiology and psychology&quot;,&quot;Topics&quot;:[&quot;Dreams&quot;,&quot;Sleep&quot;],&quot;Primary&quot;:&quot;64610.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cox, Edward W. (Edward William), 1809-1879&quot;],&quot;LoCC&quot;:[&quot;QP&quot;],&quot;PG_ID&quot;:&quot;64610&quot;});" class='title'>A monograph on sleep and dream:<br><span class='subtitle'>their physiology and psychology</span></a>
+<div class='author'>Cox, Edward W. (Edward William), 1809-1879</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65192, {&quot;Title&quot;:&quot;How to live: A manual of hygiene for use in the schools of the Philippine islands&quot;,&quot;Topics&quot;:[&quot;Hygiene -- Popular works&quot;],&quot;Primary&quot;:&quot;65192.htm&quot;,&quot;CreatorNames&quot;:[&quot;Knapp, Adeline, 1860-1909&quot;],&quot;LoCC&quot;:[&quot;QP&quot;],&quot;PG_ID&quot;:&quot;65192&quot;});" class='title'>How to live:<br><span class='subtitle'>A manual of hygiene for use in the schools of the Philippine islands</span></a>
+<div class='author'>Knapp, Adeline, 1860-1909</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65968, {&quot;Title&quot;:&quot;The House We Live In; or, The Making of the Body&quot;,&quot;Topics&quot;:[&quot;Physiology -- Juvenile literature&quot;,&quot;Hygiene -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;65968.htm&quot;,&quot;CreatorNames&quot;:[&quot;Farnsworth, Vesta J.&quot;],&quot;LoCC&quot;:[&quot;QP&quot;],&quot;PG_ID&quot;:&quot;65968&quot;});" class='title'>The House We Live In;<br><span class='subtitle'>or, The Making of the Body</span></a>
+<div class='author'>Farnsworth, Vesta J.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65970, {&quot;Title&quot;:&quot;Which Shall Live—Men or Animals?&quot;,&quot;Topics&quot;:[&quot;Vivisection&quot;],&quot;Primary&quot;:&quot;65970.htm&quot;,&quot;CreatorNames&quot;:[&quot;Baynes, Ernest Harold, 1868-1925&quot;],&quot;LoCC&quot;:[&quot;BJ&quot;,&quot;QP&quot;],&quot;PG_ID&quot;:&quot;65970&quot;});" class='title'>Which Shall Live—Men or Animals?</a>
+<div class='author'>Baynes, Ernest Harold, 1868-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67065, {&quot;Title&quot;:&quot;An Anatomical Disquisition on the Motion of the Heart &amp; Blood in Animals&quot;,&quot;Topics&quot;:[&quot;Blood -- Circulation&quot;],&quot;Primary&quot;:&quot;67065.htm&quot;,&quot;CreatorNames&quot;:[&quot;Harvey, William, 1578-1657&quot;,&quot;Parkyn, Ernest Albert, 1857- [Author of introduction, etc.]&quot;,&quot;Rhys, Ernest, 1859-1946 [Editor]&quot;,&quot;Willis, Robert, 1799-1878 [Translator]&quot;],&quot;LoCC&quot;:[&quot;QP&quot;],&quot;PG_ID&quot;:&quot;67065&quot;});" class='title'>An Anatomical Disquisition on the Motion of the Heart & Blood in Animals</a>
+<div class='author'>Harvey, William, 1578-1657, Parkyn, Ernest Albert, 1857- [Author of introduction, etc.], Rhys, Ernest, 1859-1946 [Editor], Willis, Robert, 1799-1878 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67326, {&quot;Title&quot;:&quot;The A.B.-Z. of our own nutrition&quot;,&quot;Topics&quot;:[&quot;Diet&quot;,&quot;Nutrition&quot;],&quot;Primary&quot;:&quot;67326.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fletcher, Horace, 1849-1919&quot;,&quot;Higgins, Hubert [Contributor]&quot;,&quot;Someren, Ernest van [Contributor]&quot;],&quot;LoCC&quot;:[&quot;QP&quot;],&quot;PG_ID&quot;:&quot;67326&quot;});" class='title'>The A.B.-Z. of our own nutrition</a>
+<div class='author'>Fletcher, Horace, 1849-1919, Higgins, Hubert [Contributor], Someren, Ernest van [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68830, {&quot;Title&quot;:&quot;The nutrition of man&quot;,&quot;Topics&quot;:[&quot;Nutrition&quot;],&quot;Primary&quot;:&quot;68830.htm&quot;,&quot;CreatorNames&quot;:[&quot;Chittenden, R. H. (Russell Henry), 1856-1943&quot;],&quot;LoCC&quot;:[&quot;QP&quot;],&quot;PG_ID&quot;:&quot;68830&quot;});" class='title'>The nutrition of man</a>
+<div class='author'>Chittenden, R. H. (Russell Henry), 1856-1943</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69439, {&quot;Title&quot;:&quot;Physiological economy in nutrition, with special reference to the minimal proteid requirement of the healthy man - an experimental study&quot;,&quot;Topics&quot;:[&quot;Nutrition&quot;,&quot;Metabolism&quot;],&quot;Primary&quot;:&quot;69439.htm&quot;,&quot;CreatorNames&quot;:[&quot;Chittenden, R. H. (Russell Henry), 1856-1943&quot;],&quot;LoCC&quot;:[&quot;QP&quot;],&quot;PG_ID&quot;:&quot;69439&quot;});" class='title'>Physiological economy in nutrition, with special reference to the minimal proteid requirement of the healthy man -<br><span class='subtitle'>an experimental study</span></a>
+<div class='author'>Chittenden, R. H. (Russell Henry), 1856-1943</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6970, {&quot;Title&quot;:&quot;The History of a Mouthful of Bread - And its effect on the organization of men and animals&quot;,&quot;Topics&quot;:[&quot;Education&quot;,&quot;Natural history -- Juvenile literature&quot;,&quot;Physiology -- Juvenile literature&quot;,&quot;Natural history -- Study and teaching&quot;,&quot;Human anatomy -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;6970.txt&quot;,&quot;CreatorNames&quot;:[&quot;Macé, Jean, 1815-1894&quot;,&quot;Gatty, Alfred, Mrs., 1809-1873 [Translator]&quot;],&quot;LoCC&quot;:[&quot;LA&quot;,&quot;QP&quot;],&quot;PG_ID&quot;:&quot;6970&quot;});" class='title'>The History of a Mouthful of Bread -<br><span class='subtitle'>And its effect on the organization of men and animals</span></a>
+<div class='author'>Macé, Jean, 1815-1894, Gatty, Alfred, Mrs., 1809-1873 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6986, {&quot;Title&quot;:&quot;Hygienic Physiology : with Special Reference to the Use of Alcoholic Drinks and Narcotics&quot;,&quot;Topics&quot;:[&quot;Hygiene&quot;,&quot;Physiology&quot;,&quot;Alcohol -- Physiological effect&quot;],&quot;Primary&quot;:&quot;6986.txt&quot;,&quot;CreatorNames&quot;:[&quot;Steele, Joel Dorman, 1836-1886&quot;],&quot;LoCC&quot;:[&quot;QP&quot;],&quot;PG_ID&quot;:&quot;6986&quot;});" class='title'>Hygienic Physiology :<br><span class='subtitle'>with Special Reference to the Use of Alcoholic Drinks and Narcotics</span></a>
+<div class='author'>Steele, Joel Dorman, 1836-1886</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7983, {&quot;Title&quot;:&quot;The Vitamine Manual&quot;,&quot;Topics&quot;:[&quot;Vitamins&quot;],&quot;Primary&quot;:&quot;7983.txt&quot;,&quot;CreatorNames&quot;:[&quot;Eddy, Walter Hollis, 1877-1959&quot;],&quot;LoCC&quot;:[&quot;QP&quot;],&quot;PG_ID&quot;:&quot;7983&quot;});" class='title'>The Vitamine Manual</a>
+<div class='author'>Eddy, Walter Hollis, 1877-1959</div>
+</div>
+</ul></div>
+</body></html>

@@ -1,0 +1,286 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Modern languages. Celtic languages (PB)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(10937, {&quot;Title&quot;:&quot;The Life of St. Mochuda of Lismore&quot;,&quot;Topics&quot;:[&quot;Carthach, Saint, Bishop of Lismore, active 570-637 -- Legends&quot;],&quot;Primary&quot;:&quot;10937.txt&quot;,&quot;CreatorNames&quot;:[&quot;Power, P. (Patrick), 1862-1951 [Editor]&quot;],&quot;LoCC&quot;:[&quot;PB&quot;],&quot;PG_ID&quot;:&quot;10937&quot;});" class='title'>The Life of St. Mochuda of Lismore</a>
+<div class='author'>Power, P. (Patrick), 1862-1951 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(11168, {&quot;Title&quot;:&quot;Life of St. Declan of Ardmore and Life of St. Mochuda of Lismore&quot;,&quot;Topics&quot;:[&quot;Declan, Saint, Bishop of Ardmore, active 6th century -- Legends&quot;,&quot;Carthach, Saint, Bishop of Lismore, active 570-637 -- Legends&quot;],&quot;Primary&quot;:&quot;11168.htm&quot;,&quot;CreatorNames&quot;:[&quot;O&#39;Clery, Michael, 1575-1643 [Contributor]&quot;,&quot;Power, P. (Patrick), 1862-1951 [Editor]&quot;],&quot;LoCC&quot;:[&quot;PB&quot;],&quot;PG_ID&quot;:&quot;11168&quot;});" class='title'>Life of St. Declan of Ardmore and Life of St. Mochuda of Lismore</a>
+<div class='author'>O'Clery, Michael, 1575-1643 [Contributor], Power, P. (Patrick), 1862-1951 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14232, {&quot;Title&quot;:&quot;A Celtic Psaltery - Being Mainly Renderings in English Verse from Irish &amp; Welsh Poetry&quot;,&quot;Topics&quot;:[&quot;Welsh poetry -- Translations into English&quot;,&quot;Religious poetry, Celtic&quot;,&quot;Irish poetry -- Translations into English&quot;],&quot;Primary&quot;:&quot;14232.htm&quot;,&quot;CreatorNames&quot;:[&quot;Graves, Alfred Perceval, 1846-1931&quot;],&quot;LoCC&quot;:[&quot;PB&quot;],&quot;PG_ID&quot;:&quot;14232&quot;});" class='title'>A Celtic Psaltery -<br><span class='subtitle'>Being Mainly Renderings in English Verse from Irish & Welsh Poetry</span></a>
+<div class='author'>Graves, Alfred Perceval, 1846-1931</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14354, {&quot;Title&quot;:&quot;Gwaith Samuel Roberts&quot;,&quot;Topics&quot;:[&quot;Welsh poetry -- 19th century&quot;,&quot;Welsh literature -- 19th century&quot;],&quot;Primary&quot;:&quot;14354.htm&quot;,&quot;CreatorNames&quot;:[&quot;Roberts, Samuel, 1800-1885&quot;,&quot;Edwards, Owen Morgan, Sir, 1858-1920 [Editor]&quot;],&quot;LoCC&quot;:[&quot;PB&quot;],&quot;PG_ID&quot;:&quot;14354&quot;});" class='title'>Gwaith Samuel Roberts</a>
+<div class='author'>Roberts, Samuel, 1800-1885, Edwards, Owen Morgan, Sir, 1858-1920 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14391, {&quot;Title&quot;:&quot;The Cattle-Raid of Cualnge (Tain Bo Cualnge) : An Old Irish Prose-Epic&quot;,&quot;Topics&quot;:[&quot;Epic literature, Irish -- Translations into English&quot;,&quot;Cattle stealing -- Fiction&quot;,&quot;Heroes -- Ulster (Northern Ireland and Ireland) -- Legends&quot;,&quot;Tales -- Ulster (Northern Ireland and Ireland)&quot;,&quot;Cuchulain (Legendary character) -- Fiction&quot;,&quot;Mythology, Celtic -- Ulster (Northern Ireland and Ireland)&quot;,&quot;Tales, Medieval -- Translations into English&quot;],&quot;Primary&quot;:&quot;14391.txt&quot;,&quot;CreatorNames&quot;:[&quot;Faraday, L. Winifred, 1872- [Translator]&quot;],&quot;LoCC&quot;:[&quot;PB&quot;],&quot;PG_ID&quot;:&quot;14391&quot;});" class='title'>The Cattle-Raid of Cualnge (Tain Bo Cualnge) :<br><span class='subtitle'>An Old Irish Prose-Epic</span></a>
+<div class='author'>Faraday, L. Winifred, 1872- [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14465, {&quot;Title&quot;:&quot;Gods and Fighting Men - The story of the Tuatha de Danaan and of the Fianna of Ireland, arranged and put into English by Lady Gregory&quot;,&quot;Topics&quot;:[&quot;Tales -- Ireland&quot;,&quot;Epic literature, Irish -- Translations into English&quot;,&quot;Mythology, Celtic -- Ireland&quot;,&quot;Finn MacCool -- Legends&quot;,&quot;Heroes -- Ireland -- Legends&quot;],&quot;Primary&quot;:&quot;14465.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gregory, Lady, 1852-1932&quot;,&quot;Yeats, W. B. (William Butler), 1865-1939 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;PB&quot;],&quot;PG_ID&quot;:&quot;14465&quot;});" class='title'>Gods and Fighting Men -<br><span class='subtitle'>The story of the Tuatha de Danaan and of the Fianna of Ireland, arranged and put into English by Lady Gregory</span></a>
+<div class='author'>Gregory, Lady, 1852-1932, Yeats, W. B. (William Butler), 1865-1939 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14547, {&quot;Title&quot;:&quot;Gwaith Mynyddog.  Cyfrol II&quot;,&quot;Topics&quot;:[&quot;Welsh poetry -- 19th century&quot;],&quot;Primary&quot;:&quot;14547.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mynyddog, 1833-1877&quot;,&quot;Edwards, Owen Morgan, Sir, 1858-1920 [Editor]&quot;],&quot;LoCC&quot;:[&quot;PB&quot;],&quot;PG_ID&quot;:&quot;14547&quot;});" class='title'>Gwaith Mynyddog.  Cyfrol II</a>
+<div class='author'>Mynyddog, 1833-1877, Edwards, Owen Morgan, Sir, 1858-1920 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14749, {&quot;Title&quot;:&quot;The High Deeds of Finn and other Bardic Romances of Ancient Ireland&quot;,&quot;Topics&quot;:[&quot;Tales -- Ireland&quot;,&quot;Epic literature, Irish -- Translations into English&quot;,&quot;Bards and bardism&quot;,&quot;Mythology, Celtic -- Ireland&quot;,&quot;Finn MacCool -- Legends&quot;,&quot;Cormac Mac Airt, King of Ireland, active 227-260 -- Legends&quot;,&quot;Heroes -- Ireland -- Legends&quot;],&quot;Primary&quot;:&quot;14749.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rolleston, T. W. (Thomas William), 1857-1920&quot;,&quot;Brooke, Stopford A. (Stopford Augustus), 1832-1916 [Author of introduction, etc.]&quot;,&quot;Reid, Stephen, 1873-1948 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;PB&quot;],&quot;PG_ID&quot;:&quot;14749&quot;});" class='title'>The High Deeds of Finn and other Bardic Romances of Ancient Ireland</a>
+<div class='author'>Rolleston, T. W. (Thomas William), 1857-1920, Brooke, Stopford A. (Stopford Augustus), 1832-1916 [Author of introduction, etc.], Reid, Stephen, 1873-1948 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14865, {&quot;Title&quot;:&quot;Gwaith Alun&quot;,&quot;Topics&quot;:[&quot;Welsh poetry -- 19th century&quot;],&quot;Primary&quot;:&quot;14865.htm&quot;,&quot;CreatorNames&quot;:[&quot;Blackwell, John, Alun, 1797-1840&quot;,&quot;Jones, Samuel Maurice, 1853-1932 [Illustrator]&quot;,&quot;Thomas, John [Photographer]&quot;],&quot;LoCC&quot;:[&quot;PB&quot;],&quot;PG_ID&quot;:&quot;14865&quot;});" class='title'>Gwaith Alun</a>
+<div class='author'>Blackwell, John, Alun, 1797-1840, Jones, Samuel Maurice, 1853-1932 [Illustrator], Thomas, John [Photographer]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16122, {&quot;Title&quot;:&quot;Leabhráin an Irisleabhair—III - Seanaid na nGaedheal&quot;,&quot;Topics&quot;:[&quot;Irish language -- Readers&quot;],&quot;Primary&quot;:&quot;16122.htm&quot;,&quot;CreatorNames&quot;:[&quot;Beirt Fhear&quot;,&quot;Chonán Maol&quot;,&quot;Gruagach an Tobair&quot;,&quot;Ó Duinnín, An tAthair Pádraig, 1860-1934&quot;],&quot;LoCC&quot;:[&quot;PB&quot;],&quot;PG_ID&quot;:&quot;16122&quot;});" class='title'>Leabhráin an Irisleabhair—III -<br><span class='subtitle'>Seanaid na nGaedheal</span></a>
+<div class='author'>Beirt Fhear, Chonán Maol, Gruagach an Tobair, Ó Duinnín, An tAthair Pádraig, 1860-1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16464, {&quot;Title&quot;:&quot;The Ancient Irish Epic Tale Táin Bó Cúalnge&quot;,&quot;Topics&quot;:[&quot;Mythology, Celtic -- Ireland&quot;],&quot;Primary&quot;:&quot;16464.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dunn, Joseph, 1872-1951 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PB&quot;],&quot;PG_ID&quot;:&quot;16464&quot;});" class='title'>The Ancient Irish Epic Tale Táin Bó Cúalnge</a>
+<div class='author'>Dunn, Joseph, 1872-1951 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18305, {&quot;Title&quot;:&quot;Keltische Mythen en Legenden&quot;,&quot;Topics&quot;:[&quot;Celts -- Religion&quot;,&quot;Mythology, Celtic&quot;],&quot;Primary&quot;:&quot;18305.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rolleston, T. W. (Thomas William), 1857-1920&quot;,&quot;Goudsmit, Boudewijn Casper, 1849-1915 [Translator]&quot;],&quot;LoCC&quot;:[&quot;BL&quot;,&quot;PB&quot;],&quot;PG_ID&quot;:&quot;18305&quot;});" class='title'>Keltische Mythen en Legenden</a>
+<div class='author'>Rolleston, T. W. (Thomas William), 1857-1920, Goudsmit, Boudewijn Casper, 1849-1915 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19704, {&quot;Title&quot;:&quot;A Pocket Dictionary: Welsh-English&quot;,&quot;Topics&quot;:[&quot;Welsh language -- Dictionaries -- English&quot;,&quot;English language -- Dictionaries -- Welsh&quot;],&quot;Primary&quot;:&quot;19704.htm&quot;,&quot;CreatorNames&quot;:[&quot;Richards, William, 1749-1818&quot;],&quot;LoCC&quot;:[&quot;PB&quot;],&quot;PG_ID&quot;:&quot;19704&quot;});" class='title'>A Pocket Dictionary:<br><span class='subtitle'>Welsh-English</span></a>
+<div class='author'>Richards, William, 1749-1818</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19959, {&quot;Title&quot;:&quot;The Mabinogion Vol. 1&quot;,&quot;Topics&quot;:[&quot;Welsh literature -- 1100-1400 -- Translations into English&quot;,&quot;Mythology, Celtic -- Wales&quot;,&quot;Tales -- Wales&quot;],&quot;Primary&quot;:&quot;19959.htm&quot;,&quot;CreatorNames&quot;:[&quot;Edwards, Owen Morgan, Sir, 1858-1920 [Editor]&quot;,&quot;Schreiber, Charlotte, Lady, 1812-1895 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PB&quot;],&quot;PG_ID&quot;:&quot;19959&quot;});" class='title'>The Mabinogion Vol. 1</a>
+<div class='author'>Edwards, Owen Morgan, Sir, 1858-1920 [Editor], Schreiber, Charlotte, Lady, 1812-1895 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19973, {&quot;Title&quot;:&quot;The Mabinogion Vol. 2&quot;,&quot;Topics&quot;:[&quot;Welsh literature -- 1100-1400 -- Translations into English&quot;,&quot;Mythology, Celtic -- Wales&quot;,&quot;Tales -- Wales&quot;],&quot;Primary&quot;:&quot;19973.htm&quot;,&quot;CreatorNames&quot;:[&quot;Edwards, Owen Morgan, Sir, 1858-1920 [Editor]&quot;,&quot;Schreiber, Charlotte, Lady, 1812-1895 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PB&quot;],&quot;PG_ID&quot;:&quot;19973&quot;});" class='title'>The Mabinogion Vol. 2</a>
+<div class='author'>Edwards, Owen Morgan, Sir, 1858-1920 [Editor], Schreiber, Charlotte, Lady, 1812-1895 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19976, {&quot;Title&quot;:&quot;The Mabinogion Vol. 3&quot;,&quot;Topics&quot;:[&quot;Welsh literature -- 1100-1400 -- Translations into English&quot;,&quot;Mythology, Celtic -- Wales&quot;,&quot;Tales -- Wales&quot;],&quot;Primary&quot;:&quot;19976.htm&quot;,&quot;CreatorNames&quot;:[&quot;Edwards, Owen Morgan, Sir, 1858-1920 [Editor]&quot;,&quot;Schreiber, Charlotte, Lady, 1812-1895 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PB&quot;],&quot;PG_ID&quot;:&quot;19976&quot;});" class='title'>The Mabinogion Vol. 3</a>
+<div class='author'>Edwards, Owen Morgan, Sir, 1858-1920 [Editor], Schreiber, Charlotte, Lady, 1812-1895 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20634, {&quot;Title&quot;:&quot;The Sleeping Bard; Or, Visions of the World, Death, and Hell&quot;,&quot;Topics&quot;:[&quot;Christian life&quot;,&quot;Allegories&quot;,&quot;Welsh literature -- Translations into English&quot;,&quot;Welsh literature -- 18th century&quot;,&quot;Religious literature, Welsh&quot;],&quot;Primary&quot;:&quot;20634.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wynne, Ellis, 1671-1734&quot;,&quot;Borrow, George, 1803-1881 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PB&quot;],&quot;PG_ID&quot;:&quot;20634&quot;});" class='title'>The Sleeping Bard;<br><span class='subtitle'>Or, Visions of the World, Death, and Hell</span></a>
+<div class='author'>Wynne, Ellis, 1671-1734, Borrow, George, 1803-1881 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22528, {&quot;Title&quot;:&quot;Cerddi&#39;r Mynydd Du - Sef Caneuon Hen a Diweddar&quot;,&quot;Topics&quot;:[&quot;Welsh poetry&quot;],&quot;Primary&quot;:&quot;22528.htm&quot;,&quot;CreatorNames&quot;:[&quot;Griffiths, W., called G. ap Lleision [Compiler]&quot;,&quot;Morgan, Llew, 1885-1960 [Photographer]&quot;],&quot;LoCC&quot;:[&quot;PB&quot;],&quot;PG_ID&quot;:&quot;22528&quot;});" class='title'>Cerddi'r Mynydd Du -<br><span class='subtitle'>Sef Caneuon Hen a Diweddar</span></a>
+<div class='author'>Griffiths, W., called G. ap Lleision [Compiler], Morgan, Llew, 1885-1960 [Photographer]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26192, {&quot;Title&quot;:&quot;A Handbook of the Cornish Language - chiefly in its latest stages with some account of its history and literature&quot;,&quot;Topics&quot;:[&quot;Cornish language -- Grammar&quot;,&quot;Cornish literature -- History and criticism&quot;,&quot;Cornwall (England : County) -- Languages&quot;,&quot;Cornish language -- History&quot;],&quot;Primary&quot;:&quot;26192.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jenner, Henry, 1848-1934&quot;],&quot;LoCC&quot;:[&quot;PB&quot;],&quot;PG_ID&quot;:&quot;26192&quot;});" class='title'>A Handbook of the Cornish Language -<br><span class='subtitle'>chiefly in its latest stages with some account of its history and literature</span></a>
+<div class='author'>Jenner, Henry, 1848-1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2734, {&quot;Title&quot;:&quot;Gwaith Twm o&#39;r Nant - Cyfrol 2&quot;,&quot;Topics&quot;:[&quot;Welsh poetry&quot;],&quot;Primary&quot;:&quot;2734.htm&quot;,&quot;CreatorNames&quot;:[&quot;Edwards, Thomas, 1739-1810&quot;,&quot;Edwards, Owen Morgan, Sir, 1858-1920 [Editor]&quot;],&quot;LoCC&quot;:[&quot;PB&quot;],&quot;PG_ID&quot;:&quot;2734&quot;});" class='title'>Gwaith Twm o'r Nant -<br><span class='subtitle'>Cyfrol 2</span></a>
+<div class='author'>Edwards, Thomas, 1739-1810, Edwards, Owen Morgan, Sir, 1858-1920 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28766, {&quot;Title&quot;:&quot;Elements of Gaelic Grammar&quot;,&quot;Topics&quot;:[&quot;Scottish Gaelic language -- Grammar&quot;],&quot;Primary&quot;:&quot;28766.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stewart, Alexander, 1764-1821&quot;],&quot;LoCC&quot;:[&quot;PB&quot;],&quot;PG_ID&quot;:&quot;28766&quot;});" class='title'>Elements of Gaelic Grammar</a>
+<div class='author'>Stewart, Alexander, 1764-1821</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29163, {&quot;Title&quot;:&quot;The Aural System - Being the Most Direct, the Straight-Line Method for the Simultaneous Fourfold Mastery of a Foreign Language.&quot;,&quot;Topics&quot;:[&quot;Languages, Modern -- Study and teaching&quot;],&quot;Primary&quot;:&quot;29163.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hardy, Charles&quot;],&quot;LoCC&quot;:[&quot;LB&quot;,&quot;PB&quot;],&quot;PG_ID&quot;:&quot;29163&quot;});" class='title'>The Aural System -<br><span class='subtitle'>Being the Most Direct, the Straight-Line Method for the Simultaneous Fourfold Mastery of a Foreign Language.</span></a>
+<div class='author'>Hardy, Charles</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31672, {&quot;Title&quot;:&quot;The Triads of Ireland&quot;,&quot;Topics&quot;:[&quot;Maxims&quot;,&quot;Proverbs, Irish&quot;],&quot;Primary&quot;:&quot;31672.htm&quot;,&quot;CreatorNames&quot;:[&quot;Meyer, Kuno, 1858-1919 [Editor]&quot;],&quot;LoCC&quot;:[&quot;PB&quot;],&quot;PG_ID&quot;:&quot;31672&quot;});" class='title'>The Triads of Ireland</a>
+<div class='author'>Meyer, Kuno, 1858-1919 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32030, {&quot;Title&quot;:&quot;Selections from Ancient Irish Poetry&quot;,&quot;Topics&quot;:[&quot;Ireland -- Poetry&quot;,&quot;Irish poetry -- To 1100 -- Translations into English&quot;],&quot;Primary&quot;:&quot;32030.htm&quot;,&quot;CreatorNames&quot;:[&quot;Meyer, Kuno, 1858-1919 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PB&quot;],&quot;PG_ID&quot;:&quot;32030&quot;});" class='title'>Selections from Ancient Irish Poetry</a>
+<div class='author'>Meyer, Kuno, 1858-1919 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32767, {&quot;Title&quot;:&quot;Some Specimens of the Poetry of the Ancient Welsh Bards&quot;,&quot;Topics&quot;:[&quot;Welsh poetry -- Translations into English&quot;,&quot;Welsh poetry -- To 1550&quot;],&quot;Primary&quot;:&quot;32767.htm&quot;,&quot;CreatorNames&quot;:[&quot;Evans, Evan, 1731-1788&quot;,&quot;Jenkins, John, 1821-1896 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;PB&quot;],&quot;PG_ID&quot;:&quot;32767&quot;});" class='title'>Some Specimens of the Poetry of the Ancient Welsh Bards</a>
+<div class='author'>Evans, Evan, 1731-1788, Jenkins, John, 1821-1896 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33336, {&quot;Title&quot;:&quot;The Welsh and Their Literature - from The London Quarterly Review, January 1861, American Edition&quot;,&quot;Topics&quot;:[&quot;Welsh literature -- History and criticism&quot;],&quot;Primary&quot;:&quot;33336.htm&quot;,&quot;CreatorNames&quot;:[&quot;Borrow, George, 1803-1881&quot;],&quot;LoCC&quot;:[&quot;PB&quot;],&quot;PG_ID&quot;:&quot;33336&quot;});" class='title'>The Welsh and Their Literature -<br><span class='subtitle'>from The London Quarterly Review, January 1861, American Edition</span></a>
+<div class='author'>Borrow, George, 1803-1881</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34081, {&quot;Title&quot;:&quot;Myths &amp; Legends of the Celtic Race&quot;,&quot;Topics&quot;:[&quot;Celts -- Religion&quot;,&quot;Mythology, Celtic&quot;],&quot;Primary&quot;:&quot;34081.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rolleston, T. W. (Thomas William), 1857-1920&quot;],&quot;LoCC&quot;:[&quot;BL&quot;,&quot;PB&quot;],&quot;PG_ID&quot;:&quot;34081&quot;});" class='title'>Myths & Legends of the Celtic Race</a>
+<div class='author'>Rolleston, T. W. (Thomas William), 1857-1920</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3500, {&quot;Title&quot;:&quot;Ceiriog&quot;,&quot;Topics&quot;:[&quot;Wales -- Poetry&quot;,&quot;Ballads, Welsh -- Texts&quot;],&quot;Primary&quot;:&quot;3500.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hughes, John Ceiriog, 1832-1887&quot;,&quot;Edwards, Owen Morgan, Sir, 1858-1920 [Editor]&quot;],&quot;LoCC&quot;:[&quot;PB&quot;],&quot;PG_ID&quot;:&quot;3500&quot;});" class='title'>Ceiriog</a>
+<div class='author'>Hughes, John Ceiriog, 1832-1887, Edwards, Owen Morgan, Sir, 1858-1920 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38041, {&quot;Title&quot;:&quot;Old Celtic Romances&quot;,&quot;Topics&quot;:[&quot;Tales -- Ireland&quot;,&quot;Epic literature, Irish -- Translations into English&quot;,&quot;Mythology, Celtic -- Ireland&quot;,&quot;Heroes -- Ireland -- Legends&quot;],&quot;Primary&quot;:&quot;38041.htm&quot;,&quot;CreatorNames&quot;:[&quot;Joyce, P. W. (Patrick Weston), 1827-1914 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PB&quot;],&quot;PG_ID&quot;:&quot;38041&quot;});" class='title'>Old Celtic Romances</a>
+<div class='author'>Joyce, P. W. (Patrick Weston), 1827-1914 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45910, {&quot;Title&quot;:&quot;Legends of Saints &amp; Sinners. Collected and Translated from the Irish&quot;,&quot;Topics&quot;:[&quot;Tales -- Ireland&quot;,&quot;Folklore -- Ireland&quot;,&quot;Legends -- Ireland&quot;],&quot;Primary&quot;:&quot;45910.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hyde, Douglas, 1860-1949 [Compiler]&quot;,&quot;Nisbet, Noel L. (Noel Laura), 1887-1956 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;PB&quot;],&quot;PG_ID&quot;:&quot;45910&quot;});" class='title'>Legends of Saints & Sinners. Collected and Translated from the Irish</a>
+<div class='author'>Hyde, Douglas, 1860-1949 [Compiler], Nisbet, Noel L. (Noel Laura), 1887-1956 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46917, {&quot;Title&quot;:&quot;The Poem-Book of the Gael - Translations from Irish Gaelic Poetry into English Prose and Verse&quot;,&quot;Topics&quot;:[&quot;Irish poetry -- Translations into English&quot;],&quot;Primary&quot;:&quot;46917.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hull, Eleanor, 1860-1935 [Editor]&quot;],&quot;LoCC&quot;:[&quot;PB&quot;],&quot;PG_ID&quot;:&quot;46917&quot;});" class='title'>The Poem-Book of the Gael -<br><span class='subtitle'>Translations from Irish Gaelic Poetry into English Prose and Verse</span></a>
+<div class='author'>Hull, Eleanor, 1860-1935 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48043, {&quot;Title&quot;:&quot;A Graduated English-Welsh Spelling Book&quot;,&quot;Topics&quot;:[&quot;Welsh language -- Orthography and spelling&quot;,&quot;English language -- Study and teaching -- Welsh speakers&quot;],&quot;Primary&quot;:&quot;48043.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lewis, John&quot;],&quot;LoCC&quot;:[&quot;PB&quot;,&quot;PE&quot;],&quot;PG_ID&quot;:&quot;48043&quot;});" class='title'>A Graduated English-Welsh Spelling Book</a>
+<div class='author'>Lewis, John</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48099, {&quot;Title&quot;:&quot;The Dean of Lismore&#39;s Book: A Selection of Ancient Gaelic Poetry&quot;,&quot;Topics&quot;:[&quot;Scottish Gaelic poetry -- Translations into English&quot;,&quot;Scottish Gaelic poetry&quot;],&quot;Primary&quot;:&quot;48099.htm&quot;,&quot;CreatorNames&quot;:[&quot;Skene, W. F. (William Forbes), 1809-1892 [Contributor]&quot;,&quot;Maclauchlan, Thomas, 1816-1886 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PB&quot;],&quot;PG_ID&quot;:&quot;48099&quot;});" class='title'>The Dean of Lismore's Book:<br><span class='subtitle'>A Selection of Ancient Gaelic Poetry</span></a>
+<div class='author'>Skene, W. F. (William Forbes), 1809-1892 [Contributor], Maclauchlan, Thomas, 1816-1886 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49685, {&quot;Title&quot;:&quot;Geiriadur Cymraeg a Saesneg Byr&quot;,&quot;Topics&quot;:[&quot;Welsh language -- Dictionaries -- English&quot;],&quot;Primary&quot;:&quot;49685.htm&quot;,&quot;CreatorNames&quot;:[&quot;Edwards, Owen Morgan, Sir, 1858-1920&quot;],&quot;LoCC&quot;:[&quot;PB&quot;],&quot;PG_ID&quot;:&quot;49685&quot;});" class='title'>Geiriadur Cymraeg a Saesneg Byr</a>
+<div class='author'>Edwards, Owen Morgan, Sir, 1858-1920</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50021, {&quot;Title&quot;:&quot;An Irish Precursor of Dante - A Study on the Vision of Heaven and Hell ascribed to the Eighth-century Irish Saint Adamnán, with Translation of the Irish Text&quot;,&quot;Topics&quot;:[&quot;Civilization, Celtic, in literature&quot;,&quot;Dante Alighieri, 1265-1321 -- Criticism and interpretation&quot;,&quot;Fís Adamnáin&quot;,&quot;Christian literature, Irish -- History and criticism&quot;,&quot;Heaven -- Christianity -- History of doctrines -- Middle Ages, 600-1500&quot;,&quot;Hell -- Christianity -- History of doctrines -- Middle Ages, 600-1500&quot;,&quot;Christian saints -- Ireland&quot;,&quot;Heaven in literature&quot;,&quot;Hell in literature&quot;],&quot;Primary&quot;:&quot;50021.htm&quot;,&quot;CreatorNames&quot;:[&quot;Boswell, Charles Stuart&quot;],&quot;LoCC&quot;:[&quot;PB&quot;],&quot;PG_ID&quot;:&quot;50021&quot;});" class='title'>An Irish Precursor of Dante -<br><span class='subtitle'>A Study on the Vision of Heaven and Hell ascribed to the Eighth-century Irish Saint Adamnán, with Translation of the Irish Text</span></a>
+<div class='author'>Boswell, Charles Stuart</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50718, {&quot;Title&quot;:&quot;Le cycle mythologique irlandais et la mythologie celtique - Cours de littérature celtique, tome II&quot;,&quot;Topics&quot;:[&quot;Epic literature, Irish -- History and criticism&quot;,&quot;Tales -- Ireland -- History and criticism&quot;,&quot;Mythology, Celtic -- Ireland&quot;,&quot;Tuatha de Danaan&quot;],&quot;Primary&quot;:&quot;50718.htm&quot;,&quot;CreatorNames&quot;:[&quot;Arbois de Jubainville, H. d&#39; (Henry), 1827-1910&quot;],&quot;LoCC&quot;:[&quot;BL&quot;,&quot;PB&quot;],&quot;PG_ID&quot;:&quot;50718&quot;});" class='title'>Le cycle mythologique irlandais et la mythologie celtique -<br><span class='subtitle'>Cours de littérature celtique, tome II</span></a>
+<div class='author'>Arbois de Jubainville, H. d' (Henry), 1827-1910</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50913, {&quot;Title&quot;:&quot;Niamh&quot;,&quot;Topics&quot;:[&quot;Ireland -- Social life and customs -- Fiction&quot;],&quot;Primary&quot;:&quot;50913.htm&quot;,&quot;CreatorNames&quot;:[&quot;O&#39;Leary, Peter, 1839-1920&quot;],&quot;LoCC&quot;:[&quot;PB&quot;],&quot;PG_ID&quot;:&quot;50913&quot;});" class='title'>Niamh</a>
+<div class='author'>O'Leary, Peter, 1839-1920</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5092, {&quot;Title&quot;:&quot;The Coming of Cuculain&quot;,&quot;Topics&quot;:[&quot;Historical fiction&quot;,&quot;Fantasy fiction&quot;,&quot;Mythology, Celtic -- Ireland&quot;,&quot;Cuchulain (Legendary character) -- Fiction&quot;],&quot;Primary&quot;:&quot;5092.htm&quot;,&quot;CreatorNames&quot;:[&quot;O&#39;Grady, Standish, 1846-1928&quot;],&quot;LoCC&quot;:[&quot;PB&quot;],&quot;PG_ID&quot;:&quot;5092&quot;});" class='title'>The Coming of Cuculain</a>
+<div class='author'>O'Grady, Standish, 1846-1928</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51190, {&quot;Title&quot;:&quot;The Hymns of Ann Griffiths, of Dolwar Fechan, Translated into English Verse&quot;,&quot;Topics&quot;:[&quot;Hymns, Welsh -- Translations into English&quot;],&quot;Primary&quot;:&quot;51190.htm&quot;,&quot;CreatorNames&quot;:[&quot;Griffiths, Ann, 1776-1805&quot;,&quot;Pughe, G. R. G. (George Richard Gould), -1918? [Translator]&quot;],&quot;LoCC&quot;:[&quot;PB&quot;],&quot;PG_ID&quot;:&quot;51190&quot;});" class='title'>The Hymns of Ann Griffiths, of Dolwar Fechan, Translated into English Verse</a>
+<div class='author'>Griffiths, Ann, 1776-1805, Pughe, G. R. G. (George Richard Gould), -1918? [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5159, {&quot;Title&quot;:&quot;Celtic Literature&quot;,&quot;Topics&quot;:[&quot;Celtic literature -- History and criticism&quot;],&quot;Primary&quot;:&quot;5159.htm&quot;,&quot;CreatorNames&quot;:[&quot;Arnold, Matthew, 1822-1888&quot;],&quot;LoCC&quot;:[&quot;PB&quot;],&quot;PG_ID&quot;:&quot;5159&quot;});" class='title'>Celtic Literature</a>
+<div class='author'>Arnold, Matthew, 1822-1888</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5160, {&quot;Title&quot;:&quot;The Mabinogion&quot;,&quot;Topics&quot;:[&quot;Welsh literature -- 1100-1400 -- Translations into English&quot;,&quot;Mythology, Celtic -- Wales&quot;,&quot;Tales -- Wales&quot;],&quot;Primary&quot;:&quot;5160.htm&quot;,&quot;CreatorNames&quot;:[&quot;Schreiber, Charlotte, Lady, 1812-1895 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PB&quot;],&quot;PG_ID&quot;:&quot;5160&quot;});" class='title'>The Mabinogion</a>
+<div class='author'>Schreiber, Charlotte, Lady, 1812-1895 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52963, {&quot;Title&quot;:&quot;Cuchulain, the Hound of Ulster&quot;,&quot;Topics&quot;:[&quot;Heroes -- Ulster (Northern Ireland and Ireland) -- Legends&quot;,&quot;Tales -- Ulster (Northern Ireland and Ireland)&quot;,&quot;Clive, Mrs. (Catherine) 1711-1785&quot;,&quot;Cuchulain (Legendary character)&quot;],&quot;Primary&quot;:&quot;52963.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hull, Eleanor, 1860-1935&quot;,&quot;Reid, Stephen, 1873-1948 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;PB&quot;],&quot;PG_ID&quot;:&quot;52963&quot;});" class='title'>Cuchulain, the Hound of Ulster</a>
+<div class='author'>Hull, Eleanor, 1860-1935, Reid, Stephen, 1873-1948 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53793, {&quot;Title&quot;:&quot;A Literary History of Ireland, from Earliest Times to the Present Day&quot;,&quot;Topics&quot;:[&quot;Civilization, Celtic, in literature&quot;,&quot;Language and culture -- Ireland&quot;,&quot;Irish literature -- History and criticism&quot;],&quot;Primary&quot;:&quot;53793.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hyde, Douglas, 1860-1949&quot;],&quot;LoCC&quot;:[&quot;PB&quot;],&quot;PG_ID&quot;:&quot;53793&quot;});" class='title'>A Literary History of Ireland, from Earliest Times to the Present Day</a>
+<div class='author'>Hyde, Douglas, 1860-1949</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54851, {&quot;Title&quot;:&quot;Welsh Poems and Ballads&quot;,&quot;Topics&quot;:[&quot;Welsh poetry -- Translations into English&quot;],&quot;Primary&quot;:&quot;54851.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rhys, Ernest, 1859-1946 [Editor]&quot;,&quot;Borrow, George, 1803-1881 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PB&quot;],&quot;PG_ID&quot;:&quot;54851&quot;});" class='title'>Welsh Poems and Ballads</a>
+<div class='author'>Rhys, Ernest, 1859-1946 [Editor], Borrow, George, 1803-1881 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54943, {&quot;Title&quot;:&quot;How to Teach a Foreign Language&quot;,&quot;Topics&quot;:[&quot;Languages, Modern -- Study and teaching&quot;],&quot;Primary&quot;:&quot;54943.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jespersen, Otto, 1860-1943&quot;,&quot;Bertelsen, Sophia Yhlen-Olsen [Translator]&quot;],&quot;LoCC&quot;:[&quot;PB&quot;],&quot;PG_ID&quot;:&quot;54943&quot;});" class='title'>How to Teach a Foreign Language</a>
+<div class='author'>Jespersen, Otto, 1860-1943, Bertelsen, Sophia Yhlen-Olsen [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5671, {&quot;Title&quot;:&quot;The Visions of the Sleeping Bard&quot;,&quot;Topics&quot;:[&quot;Wynne, Ellis, 1671-1734&quot;,&quot;Welsh literature -- Translations into English&quot;,&quot;Welsh literature -- 18th century&quot;],&quot;Primary&quot;:&quot;5671.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wynne, Ellis, 1671-1734&quot;,&quot;Davies, Robert Gwyneddon, 1870-1928 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PB&quot;],&quot;PG_ID&quot;:&quot;5671&quot;});" class='title'>The Visions of the Sleeping Bard</a>
+<div class='author'>Wynne, Ellis, 1671-1734, Davies, Robert Gwyneddon, 1870-1928 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5678, {&quot;Title&quot;:&quot;Heroic Romances of Ireland, Translated into English Prose and Verse — Volume 1&quot;,&quot;Topics&quot;:[&quot;Tales -- Ireland&quot;,&quot;Epic literature, Irish -- Translations into English&quot;,&quot;Mythology, Celtic -- Ireland&quot;,&quot;Heroes -- Ireland -- Legends&quot;],&quot;Primary&quot;:&quot;5678.txt&quot;,&quot;CreatorNames&quot;:[&quot;Leahy, Arthur Herbert, 1857-1928&quot;],&quot;LoCC&quot;:[&quot;PB&quot;],&quot;PG_ID&quot;:&quot;5678&quot;});" class='title'>Heroic Romances of Ireland, Translated into English Prose and Verse — Volume 1</a>
+<div class='author'>Leahy, Arthur Herbert, 1857-1928</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5679, {&quot;Title&quot;:&quot;Heroic Romances of Ireland, Translated into English Prose and Verse — Volume 2&quot;,&quot;Topics&quot;:[&quot;Tales -- Ireland&quot;,&quot;Epic literature, Irish -- Translations into English&quot;,&quot;Mythology, Celtic -- Ireland&quot;,&quot;Heroes -- Ireland -- Legends&quot;],&quot;Primary&quot;:&quot;5679.txt&quot;,&quot;CreatorNames&quot;:[&quot;Leahy, Arthur Herbert, 1857-1928&quot;],&quot;LoCC&quot;:[&quot;PB&quot;],&quot;PG_ID&quot;:&quot;5679&quot;});" class='title'>Heroic Romances of Ireland, Translated into English Prose and Verse — Volume 2</a>
+<div class='author'>Leahy, Arthur Herbert, 1857-1928</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5680, {&quot;Title&quot;:&quot;Heroic Romances of Ireland, Translated into English Prose and Verse — Complete&quot;,&quot;Topics&quot;:[&quot;Tales -- Ireland&quot;,&quot;Epic literature, Irish -- Translations into English&quot;,&quot;Mythology, Celtic -- Ireland&quot;,&quot;Heroes -- Ireland -- Legends&quot;],&quot;Primary&quot;:&quot;5680.txt&quot;,&quot;CreatorNames&quot;:[&quot;Leahy, Arthur Herbert, 1857-1928&quot;],&quot;LoCC&quot;:[&quot;PB&quot;],&quot;PG_ID&quot;:&quot;5680&quot;});" class='title'>Heroic Romances of Ireland, Translated into English Prose and Verse — Complete</a>
+<div class='author'>Leahy, Arthur Herbert, 1857-1928</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57981, {&quot;Title&quot;:&quot;Brethyn Cartref: Ystraeon Cymreig&quot;,&quot;Topics&quot;:[&quot;Short stories, Welsh&quot;,&quot;Welsh fiction -- 20th century&quot;],&quot;Primary&quot;:&quot;57981.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jones, T. Gwynn (Thomas Gwynn), 1871-1949&quot;],&quot;LoCC&quot;:[&quot;PB&quot;],&quot;PG_ID&quot;:&quot;57981&quot;});" class='title'>Brethyn Cartref:<br><span class='subtitle'>Ystraeon Cymreig</span></a>
+<div class='author'>Jones, T. Gwynn (Thomas Gwynn), 1871-1949</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60859, {&quot;Title&quot;:&quot;The Coming of Lugh: A Celtic Wonder-Tale Retold&quot;,&quot;Topics&quot;:[&quot;Folklore -- Ireland&quot;],&quot;Primary&quot;:&quot;60859.htm&quot;,&quot;CreatorNames&quot;:[&quot;Young, Ella, 1867-1956&quot;,&quot;Gonne, Maud, 1866-1953 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;PB&quot;,&quot;PZ&quot;],&quot;PG_ID&quot;:&quot;60859&quot;});" class='title'>The Coming of Lugh:<br><span class='subtitle'>A Celtic Wonder-Tale Retold</span></a>
+<div class='author'>Young, Ella, 1867-1956, Gonne, Maud, 1866-1953 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6656, {&quot;Title&quot;:&quot;The Kiltartan Poetry Book; prose translations from the Irish&quot;,&quot;Topics&quot;:[&quot;Irish literature -- Translations into English&quot;],&quot;Primary&quot;:&quot;6656.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gregory, Lady, 1852-1932&quot;],&quot;LoCC&quot;:[&quot;PB&quot;],&quot;PG_ID&quot;:&quot;6656&quot;});" class='title'>The Kiltartan Poetry Book;<br><span class='subtitle'>prose translations from the Irish</span></a>
+<div class='author'>Gregory, Lady, 1852-1932</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67424, {&quot;Title&quot;:&quot;Nedw&quot;,&quot;Topics&quot;:[&quot;Boys -- Juvenile fiction&quot;,&quot;Children&#39;s stories, Welsh&quot;],&quot;Primary&quot;:&quot;67424.htm&quot;,&quot;CreatorNames&quot;:[&quot;Davies, E. Tegla (Edward Tegla), 1880-1967&quot;,&quot;Illingworth, Leslie Gilbert, 1902-1979 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;PB&quot;,&quot;PZ&quot;],&quot;PG_ID&quot;:&quot;67424&quot;});" class='title'>Nedw</a>
+<div class='author'>Davies, E. Tegla (Edward Tegla), 1880-1967, Illingworth, Leslie Gilbert, 1902-1979 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68323, {&quot;Title&quot;:&quot;Celtic MSS. in relation to the Macpherson fraud - With a review of Professor Freeman&#39;s criticism of [P.B. Du Chaillu&#39;s] \&quot;\&quot;The Viking Age,\&quot;\&quot; by the author of \&quot;\&quot;Celticism a myth\&quot;\&quot;&quot;,&quot;Topics&quot;:[&quot;Celtic literature -- History and criticism&quot;,&quot;Ossian, active 3rd century&quot;],&quot;Primary&quot;:&quot;68323.htm&quot;,&quot;CreatorNames&quot;:[&quot;Roger, James Cruikshank, 1820-1899&quot;],&quot;LoCC&quot;:[&quot;PB&quot;],&quot;PG_ID&quot;:&quot;68323&quot;});" class='title'>Celtic MSS. in relation to the Macpherson fraud -<br><span class='subtitle'>With a review of Professor Freeman's criticism of [P.B. Du Chaillu's] "The Viking Age," by the author of "Celticism a myth"</span></a>
+<div class='author'>Roger, James Cruikshank, 1820-1899</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68973, {&quot;Title&quot;:&quot;Y ddwy chwaer: Ffeithiau hanesyddol&quot;,&quot;Topics&quot;:[&quot;Great Britain -- History -- Tudors, 1485-1603 -- Fiction&quot;,&quot;Romance fiction&quot;],&quot;Primary&quot;:&quot;68973.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;,&quot;Cranogwen, 1839-1916 [Editor]&quot;],&quot;LoCC&quot;:[&quot;PB&quot;],&quot;PG_ID&quot;:&quot;68973&quot;});" class='title'>Y ddwy chwaer:<br><span class='subtitle'>Ffeithiau hanesyddol</span></a>
+<div class='author'>Anonymous, Cranogwen, 1839-1916 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(8109, {&quot;Title&quot;:&quot;Early Bardic Literature, Ireland.&quot;,&quot;Topics&quot;:[&quot;Epic literature, Irish -- History and criticism&quot;,&quot;Tales -- Ireland -- History and criticism&quot;,&quot;Civilization, Celtic, in literature&quot;,&quot;Language and culture -- Ireland&quot;,&quot;Bards and bardism&quot;],&quot;Primary&quot;:&quot;8109.htm&quot;,&quot;CreatorNames&quot;:[&quot;O&#39;Grady, Standish, 1846-1928&quot;],&quot;LoCC&quot;:[&quot;PB&quot;],&quot;PG_ID&quot;:&quot;8109&quot;});" class='title'>Early Bardic Literature, Ireland.</a>
+<div class='author'>O'Grady, Standish, 1846-1928</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(8194, {&quot;Title&quot;:&quot;Yr Hwiangerddi&quot;,&quot;Topics&quot;:[&quot;Nursery rhymes, Welsh&quot;],&quot;Primary&quot;:&quot;8194.htm&quot;,&quot;CreatorNames&quot;:[&quot;Edwards, Owen Morgan, Sir, 1858-1920&quot;],&quot;LoCC&quot;:[&quot;PB&quot;,&quot;PZ&quot;],&quot;PG_ID&quot;:&quot;8194&quot;});" class='title'>Yr Hwiangerddi</a>
+<div class='author'>Edwards, Owen Morgan, Sir, 1858-1920</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(823, {&quot;Title&quot;:&quot;The Life of St. Declan of Ardmore&quot;,&quot;Topics&quot;:[&quot;Declan, Saint, Bishop of Ardmore, active 6th century -- Legends&quot;],&quot;Primary&quot;:&quot;823.htm&quot;,&quot;CreatorNames&quot;:[&quot;Power, P. (Patrick), 1862-1951 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PB&quot;],&quot;PG_ID&quot;:&quot;823&quot;});" class='title'>The Life of St. Declan of Ardmore</a>
+<div class='author'>Power, P. (Patrick), 1862-1951 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(9842, {&quot;Title&quot;:&quot;Y Gododin: A Poem of the Battle of Cattraeth&quot;,&quot;Topics&quot;:[&quot;Cattraeth, Battle of, Catterick, England, ca. 600 -- Poetry&quot;],&quot;Primary&quot;:&quot;9842.htm&quot;,&quot;CreatorNames&quot;:[&quot;Aneirin&quot;,&quot;Williams, John, 1811-1862 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PB&quot;],&quot;PG_ID&quot;:&quot;9842&quot;});" class='title'>Y Gododin:<br><span class='subtitle'>A Poem of the Battle of Cattraeth</span></a>
+<div class='author'>Aneirin, Williams, John, 1811-1862 [Translator]</div>
+</div>
+</ul></div>
+</body></html>

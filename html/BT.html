@@ -1,0 +1,882 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Doctrinal theology (BT)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(1046, {&quot;Title&quot;:&quot;God, the Invisible King&quot;,&quot;Topics&quot;:[&quot;God (Christianity)&quot;],&quot;Primary&quot;:&quot;1046.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wells, H. G. (Herbert George), 1866-1946&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;1046&quot;});" class='title'>God, the Invisible King</a>
+<div class='author'>Wells, H. G. (Herbert George), 1866-1946</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(10866, {&quot;Title&quot;:&quot;The Dolorous Passion of Our Lord Jesus Christ&quot;,&quot;Topics&quot;:[&quot;Jesus Christ -- Passion -- Devotional literature&quot;],&quot;Primary&quot;:&quot;10866.txt&quot;,&quot;CreatorNames&quot;:[&quot;Emmerich, Anna Katharina, 1774-1824&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;10866&quot;});" class='title'>The Dolorous Passion of Our Lord Jesus Christ</a>
+<div class='author'>Emmerich, Anna Katharina, 1774-1824</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(10955, {&quot;Title&quot;:&quot;The Gospels in the Second Century - An Examination of the Critical Part of a Work Entitled &#39;Supernatural Religion&#39;&quot;,&quot;Topics&quot;:[&quot;Church history -- Primitive and early church, ca. 30-600&quot;,&quot;Cassels, Walter Richard, 1826-1907. Supernatural religion&quot;,&quot;Bible. Gospels -- Evidences, authority, etc.&quot;,&quot;Bible. Gospels -- Canon&quot;,&quot;Revelation -- Biblical teaching&quot;],&quot;Primary&quot;:&quot;10955.txt&quot;,&quot;CreatorNames&quot;:[&quot;Sanday, W. (William), 1843-1920&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;10955&quot;});" class='title'>The Gospels in the Second Century -<br><span class='subtitle'>An Examination of the Critical Part of a Work Entitled 'Supernatural Religion'</span></a>
+<div class='author'>Sanday, W. (William), 1843-1920</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(10989, {&quot;Title&quot;:&quot;Our Saviour&quot;,&quot;Topics&quot;:[&quot;Jesus Christ -- Biography -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;10989.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;10989&quot;});" class='title'>Our Saviour</a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(11044, {&quot;Title&quot;:&quot;The Existence of God&quot;,&quot;Topics&quot;:[&quot;God&quot;,&quot;Ontology&quot;],&quot;Primary&quot;:&quot;11044.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fénelon, François de Salignac de La Mothe-, 1651-1715&quot;,&quot;Morley, Henry, 1822-1894 [Editor]&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;11044&quot;});" class='title'>The Existence of God</a>
+<div class='author'>Fénelon, François de Salignac de La Mothe-, 1651-1715, Morley, Henry, 1822-1894 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(11083, {&quot;Title&quot;:&quot;The Parables of the Saviour - The Good Child&#39;s Library, Tenth Book&quot;,&quot;Topics&quot;:[&quot;Children&#39;s poetry&quot;,&quot;Jesus Christ -- Parables -- Juvenile poetry&quot;,&quot;Bible stories, English -- Juvenile poetry&quot;],&quot;Primary&quot;:&quot;11083.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;11083&quot;});" class='title'>The Parables of the Saviour -<br><span class='subtitle'>The Good Child's Library, Tenth Book</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(11509, {&quot;Title&quot;:&quot;The Life of Jesus Christ for the Young, Vol. 3&quot;,&quot;Topics&quot;:[&quot;Jesus Christ -- Biography -- Juvenile literature&quot;,&quot;Jesus Christ -- Art&quot;],&quot;Primary&quot;:&quot;11509.htm&quot;,&quot;CreatorNames&quot;:[&quot;Newton, Richard, 1813-1887&quot;,&quot;Hole, William, 1846-1917 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;11509&quot;});" class='title'>The Life of Jesus Christ for the Young, Vol. 3</a>
+<div class='author'>Newton, Richard, 1813-1887, Hole, William, 1846-1917 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12311, {&quot;Title&quot;:&quot;Christ: The Way, the Truth, and the Life&quot;,&quot;Topics&quot;:[&quot;Sanctification&quot;,&quot;Jesus Christ&quot;,&quot;Bible. John XIV, 6 -- Criticism, interpretation, etc.&quot;,&quot;Justification (Christian theology)&quot;],&quot;Primary&quot;:&quot;12311.htm&quot;,&quot;CreatorNames&quot;:[&quot;Brown, John, 1610?-1679&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;12311&quot;});" class='title'>Christ:<br><span class='subtitle'>The Way, the Truth, and the Life</span></a>
+<div class='author'>Brown, John, 1610?-1679</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12586, {&quot;Title&quot;:&quot;Satan&quot;,&quot;Topics&quot;:[&quot;Devil -- Christianity&quot;,&quot;Spiritual life -- Christianity&quot;],&quot;Primary&quot;:&quot;12586.htm&quot;,&quot;CreatorNames&quot;:[&quot;Chafer, Lewis Sperry, 1871-1952&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;12586&quot;});" class='title'>Satan</a>
+<div class='author'>Chafer, Lewis Sperry, 1871-1952</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12624, {&quot;Title&quot;:&quot;Our Lady Saint Mary&quot;,&quot;Topics&quot;:[&quot;Mary, Blessed Virgin, Saint -- Meditations&quot;],&quot;Primary&quot;:&quot;12624.htm&quot;,&quot;CreatorNames&quot;:[&quot;Barry, J. G. H. (Joseph Gayle Hurd), 1858-1931&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;12624&quot;});" class='title'>Our Lady Saint Mary</a>
+<div class='author'>Barry, J. G. H. (Joseph Gayle Hurd), 1858-1931</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12809, {&quot;Title&quot;:&quot;Quiet Talks about Jesus&quot;,&quot;Topics&quot;:[&quot;Jesus Christ -- Person and offices&quot;],&quot;Primary&quot;:&quot;12809.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gordon, S. D. (Samuel Dickey), 1859-1936&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;12809&quot;});" class='title'>Quiet Talks about Jesus</a>
+<div class='author'>Gordon, S. D. (Samuel Dickey), 1859-1936</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13228, {&quot;Title&quot;:&quot;The Life of Jesus of Nazareth: A Study&quot;,&quot;Topics&quot;:[&quot;Jesus Christ -- Biography&quot;],&quot;Primary&quot;:&quot;13228.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rhees, Rush, 1860-1939&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;13228&quot;});" class='title'>The Life of Jesus of Nazareth:<br><span class='subtitle'>A Study</span></a>
+<div class='author'>Rhees, Rush, 1860-1939</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13274, {&quot;Title&quot;:&quot;A Little Catechism; With Little Verses and Little Sayings for Little Children&quot;,&quot;Topics&quot;:[&quot;Bible -- Examinations, questions, etc.&quot;,&quot;Catechisms, English&quot;,&quot;Children -- Conduct of life -- Poetry&quot;],&quot;Primary&quot;:&quot;13274.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mason, John, 1646?-1694&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;13274&quot;});" class='title'>A Little Catechism;<br><span class='subtitle'>With Little Verses and Little Sayings for Little Children</span></a>
+<div class='author'>Mason, John, 1646?-1694</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13335, {&quot;Title&quot;:&quot;The Jesus of History&quot;,&quot;Topics&quot;:[&quot;Jesus Christ -- Historicity&quot;],&quot;Primary&quot;:&quot;13335.txt&quot;,&quot;CreatorNames&quot;:[&quot;Glover, T. R. (Terrot Reaveley), 1869-1943&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;13335&quot;});" class='title'>The Jesus of History</a>
+<div class='author'>Glover, T. R. (Terrot Reaveley), 1869-1943</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13652, {&quot;Title&quot;:&quot;Exposition of the Apostles&#39; Creed&quot;,&quot;Topics&quot;:[&quot;Apostles&#39; Creed&quot;],&quot;Primary&quot;:&quot;13652.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dodds, James, 1831-1907&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;13652&quot;});" class='title'>Exposition of the Apostles' Creed</a>
+<div class='author'>Dodds, James, 1831-1907</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14780, {&quot;Title&quot;:&quot;Evidences of Christianity&quot;,&quot;Topics&quot;:[&quot;Apologetics -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;14780.txt&quot;,&quot;CreatorNames&quot;:[&quot;Paley, William, 1743-1805&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;14780&quot;});" class='title'>Evidences of Christianity</a>
+<div class='author'>Paley, William, 1743-1805</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15011, {&quot;Title&quot;:&quot;The Spirit and the Word - A Treatise on the Holy Spirit in the Light of a Rational Interpretation of the Word of Truth&quot;,&quot;Topics&quot;:[&quot;Holy Spirit&quot;],&quot;Primary&quot;:&quot;15011.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sweeney, Z. T. (Zachary Taylor), 1849-1926&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;15011&quot;});" class='title'>The Spirit and the Word -<br><span class='subtitle'>A Treatise on the Holy Spirit in the Light of a Rational Interpretation of the Word of Truth</span></a>
+<div class='author'>Sweeney, Z. T. (Zachary Taylor), 1849-1926</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15113, {&quot;Title&quot;:&quot;Vie de Jésus&quot;,&quot;Topics&quot;:[&quot;Jesus Christ -- Biography&quot;,&quot;Christian biography -- Palestine&quot;],&quot;Primary&quot;:&quot;15113.htm&quot;,&quot;CreatorNames&quot;:[&quot;Renan, Ernest, 1823-1892&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;15113&quot;});" class='title'>Vie de Jésus</a>
+<div class='author'>Renan, Ernest, 1823-1892</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15412, {&quot;Title&quot;:&quot;The Virgin-Birth of Our Lord - A paper read (in substance) before the confraternity of the Holy Trinity at Cambridge&quot;,&quot;Topics&quot;:[&quot;Virgin birth&quot;],&quot;Primary&quot;:&quot;15412.txt&quot;,&quot;CreatorNames&quot;:[&quot;Randolph, B. W. (Berkeley William), 1858-1925&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;15412&quot;});" class='title'>The Virgin-Birth of Our Lord -<br><span class='subtitle'>A paper read (in substance) before the confraternity of the Holy Trinity at Cambridge</span></a>
+<div class='author'>Randolph, B. W. (Berkeley William), 1858-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15563, {&quot;Title&quot;:&quot;Reason and Faith; Their Claims and Conflicts - From The Edinburgh Review, October 1849, Volume 90, No. CLXXXII. (Pages 293-356)&quot;,&quot;Topics&quot;:[&quot;Faith and reason -- Christianity&quot;,&quot;Christianity -- Philosophy&quot;],&quot;Primary&quot;:&quot;15563.txt&quot;,&quot;CreatorNames&quot;:[&quot;Rogers, Henry, 1806-1877&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;15563&quot;});" class='title'>Reason and Faith;<br><span class='subtitle'>Their Claims and Conflicts - From The Edinburgh Review, October 1849, Volume 90, No. CLXXXII. (Pages 293-356)</span></a>
+<div class='author'>Rogers, Henry, 1806-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15739, {&quot;Title&quot;:&quot;Traité de la Vérité de la Religion Chrétienne&quot;,&quot;Topics&quot;:[&quot;Apologetics -- Early works to 1800&quot;,&quot;Indifferentism (Religion)&quot;],&quot;Primary&quot;:&quot;15739.htm&quot;,&quot;CreatorNames&quot;:[&quot;Grotius, Hugo, 1583-1645&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;15739&quot;});" class='title'>Traité de la Vérité de la Religion Chrétienne</a>
+<div class='author'>Grotius, Hugo, 1583-1645</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15861, {&quot;Title&quot;:&quot;The Things Which Remain - An Address To Young Ministers&quot;,&quot;Topics&quot;:[&quot;Theology, Doctrinal&quot;],&quot;Primary&quot;:&quot;15861.htm&quot;,&quot;CreatorNames&quot;:[&quot;Goodsell, Daniel A. (Daniel Ayres), 1840-1909&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;15861&quot;});" class='title'>The Things Which Remain -<br><span class='subtitle'>An Address To Young Ministers</span></a>
+<div class='author'>Goodsell, Daniel A. (Daniel Ayres), 1840-1909</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16184, {&quot;Title&quot;:&quot;His Life: A Complete Story in the Words of the Four Gospels&quot;,&quot;Topics&quot;:[&quot;Jesus Christ -- Biography&quot;],&quot;Primary&quot;:&quot;16184.htm&quot;,&quot;CreatorNames&quot;:[&quot;Barton, William E. (William Eleazar), 1861-1930&quot;,&quot;Soares, Theodore Gerald, 1869-&quot;,&quot;Strong, Sydney, 1860-1938&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;16184&quot;});" class='title'>His Life:<br><span class='subtitle'>A Complete Story in the Words of the Four Gospels</span></a>
+<div class='author'>Barton, William E. (William Eleazar), 1861-1930, Soares, Theodore Gerald, 1869-, Strong, Sydney, 1860-1938</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16307, {&quot;Title&quot;:&quot;The Ascent of the Soul&quot;,&quot;Topics&quot;:[&quot;Soul&quot;,&quot;Ascension of the soul&quot;],&quot;Primary&quot;:&quot;16307.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bradford, Amory H. (Amory Howe), 1846-1911&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;16307&quot;});" class='title'>The Ascent of the Soul</a>
+<div class='author'>Bradford, Amory H. (Amory Howe), 1846-1911</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16581, {&quot;Title&quot;:&quot;The Life of Jesus&quot;,&quot;Topics&quot;:[&quot;Jesus Christ -- Biography&quot;,&quot;Christian biography -- Palestine&quot;],&quot;Primary&quot;:&quot;16581.txt&quot;,&quot;CreatorNames&quot;:[&quot;Renan, Ernest, 1823-1892&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;16581&quot;});" class='title'>The Life of Jesus</a>
+<div class='author'>Renan, Ernest, 1823-1892</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16866, {&quot;Title&quot;:&quot;The Eclipse of Faith; Or, A Visit to a Religious Sceptic&quot;,&quot;Topics&quot;:[&quot;Skepticism -- Controversial literature&quot;],&quot;Primary&quot;:&quot;16866.txt&quot;,&quot;CreatorNames&quot;:[&quot;Rogers, Henry, 1806-1877&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;16866&quot;});" class='title'>The Eclipse of Faith;<br><span class='subtitle'>Or, A Visit to a Religious Sceptic</span></a>
+<div class='author'>Rogers, Henry, 1806-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17147, {&quot;Title&quot;:&quot;Theodicy - Essays on the Goodness of God, the Freedom of Man and the Origin of Evil&quot;,&quot;Topics&quot;:[&quot;Theism&quot;,&quot;Theodicy&quot;,&quot;Free will and determinism&quot;],&quot;Primary&quot;:&quot;17147.htm&quot;,&quot;CreatorNames&quot;:[&quot;Leibniz, Gottfried Wilhelm, Freiherr von, 1646-1716&quot;,&quot;Farrer, Austin, 1904-1968 [Commentator]&quot;,&quot;Huggard, E. M. [Translator]&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;17147&quot;});" class='title'>Theodicy -<br><span class='subtitle'>Essays on the Goodness of God, the Freedom of Man and the Origin of Evil</span></a>
+<div class='author'>Leibniz, Gottfried Wilhelm, Freiherr von, 1646-1716, Farrer, Austin, 1904-1968 [Commentator], Huggard, E. M. [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18168, {&quot;Title&quot;:&quot;The Heavenly Father: Lectures on Modern Atheism&quot;,&quot;Topics&quot;:[&quot;Atheism&quot;,&quot;God -- Proof&quot;],&quot;Primary&quot;:&quot;18168.htm&quot;,&quot;CreatorNames&quot;:[&quot;Naville, Ernest, 1816-1909&quot;,&quot;Downton, Henry [Translator]&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;18168&quot;});" class='title'>The Heavenly Father:<br><span class='subtitle'>Lectures on Modern Atheism</span></a>
+<div class='author'>Naville, Ernest, 1816-1909, Downton, Henry [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18377, {&quot;Title&quot;:&quot;The Arian Controversy&quot;,&quot;Topics&quot;:[&quot;Arianism&quot;],&quot;Primary&quot;:&quot;18377.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gwatkin, Henry Melvill, 1844-1916&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;18377&quot;});" class='title'>The Arian Controversy</a>
+<div class='author'>Gwatkin, Henry Melvill, 1844-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18513, {&quot;Title&quot;:&quot;Jesus of Nazareth, A Biography, by John Mark&quot;,&quot;Topics&quot;:[&quot;Jesus Christ&quot;],&quot;Primary&quot;:&quot;18513.htm&quot;,&quot;CreatorNames&quot;:&quot;&quot;,&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;18513&quot;});" class='title'>Jesus of Nazareth, A Biography, by John Mark</a>
+<div class='author'></div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18558, {&quot;Title&quot;:&quot;The Good Shepherd: A Life of Christ for Children&quot;,&quot;Topics&quot;:[&quot;Jesus Christ -- Biography -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;18558.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;18558&quot;});" class='title'>The Good Shepherd:<br><span class='subtitle'>A Life of Christ for Children</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18729, {&quot;Title&quot;:&quot;Lourdes&quot;,&quot;Topics&quot;:[&quot;Miracles&quot;,&quot;Lourdes (France)&quot;],&quot;Primary&quot;:&quot;18729.htm&quot;,&quot;CreatorNames&quot;:[&quot;Benson, Robert Hugh, 1871-1914&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;18729&quot;});" class='title'>Lourdes</a>
+<div class='author'>Benson, Robert Hugh, 1871-1914</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19082, {&quot;Title&quot;:&quot;The Destiny of the Soul: A Critical History of the Doctrine of a Future Life&quot;,&quot;Topics&quot;:[&quot;Future life -- Christianity -- History of doctrines&quot;,&quot;Future life -- Christianity -- Bibliography&quot;],&quot;Primary&quot;:&quot;19082.txt&quot;,&quot;CreatorNames&quot;:[&quot;Alger, William Rounseville, 1822-1905&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;19082&quot;});" class='title'>The Destiny of the Soul:<br><span class='subtitle'>A Critical History of the Doctrine of a Future Life</span></a>
+<div class='author'>Alger, William Rounseville, 1822-1905</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19087, {&quot;Title&quot;:&quot;The King Nobody Wanted&quot;,&quot;Topics&quot;:[&quot;Jesus Christ -- Biography -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;19087.htm&quot;,&quot;CreatorNames&quot;:[&quot;Langford, Norman F., 1914-&quot;,&quot;Lear, John [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;19087&quot;});" class='title'>The King Nobody Wanted</a>
+<div class='author'>Langford, Norman F., 1914-, Lear, John [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19190, {&quot;Title&quot;:&quot;Men Called Him Master&quot;,&quot;Topics&quot;:[&quot;Jesus Christ -- Biography -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;19190.htm&quot;,&quot;CreatorNames&quot;:[&quot;Smith, Elwyn A. (Elwyn Allen), 1919-&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;19190&quot;});" class='title'>Men Called Him Master</a>
+<div class='author'>Smith, Elwyn A. (Elwyn Allen), 1919-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19566, {&quot;Title&quot;:&quot;Fables of Infidelity and Facts of Faith - Being an Examination of the Evidences of Infidelity&quot;,&quot;Topics&quot;:[&quot;Religion and science&quot;,&quot;Pantheism&quot;,&quot;Apologetics -- History -- 19th century&quot;,&quot;Atheism -- Controversial literature&quot;,&quot;Rationalism -- Controversial literature&quot;],&quot;Primary&quot;:&quot;19566.htm&quot;,&quot;CreatorNames&quot;:[&quot;Patterson, Robert, 1829-1885&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;19566&quot;});" class='title'>Fables of Infidelity and Facts of Faith -<br><span class='subtitle'>Being an Examination of the Evidences of Infidelity</span></a>
+<div class='author'>Patterson, Robert, 1829-1885</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19612, {&quot;Title&quot;:&quot;History of Dogma, Volume 1&quot;,&quot;Topics&quot;:[&quot;Theology, Doctrinal -- History&quot;],&quot;Primary&quot;:&quot;19612.htm&quot;,&quot;CreatorNames&quot;:[&quot;Harnack, Adolf von, 1851-1930&quot;,&quot;Buchanan, Neil [Translator]&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;19612&quot;});" class='title'>History of Dogma, Volume 1</a>
+<div class='author'>Harnack, Adolf von, 1851-1930, Buchanan, Neil [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19613, {&quot;Title&quot;:&quot;History of Dogma, Volume 2&quot;,&quot;Topics&quot;:[&quot;Theology, Doctrinal -- History&quot;],&quot;Primary&quot;:&quot;19613.htm&quot;,&quot;CreatorNames&quot;:[&quot;Harnack, Adolf von, 1851-1930&quot;,&quot;Buchanan, Neil [Translator]&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;19613&quot;});" class='title'>History of Dogma, Volume 2</a>
+<div class='author'>Harnack, Adolf von, 1851-1930, Buchanan, Neil [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(21328, {&quot;Title&quot;:&quot;The Parables of Our Lord&quot;,&quot;Topics&quot;:[&quot;Jesus Christ -- Parables&quot;],&quot;Primary&quot;:&quot;21328.htm&quot;,&quot;CreatorNames&quot;:[&quot;Arnot, William, 1808-1875&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;21328&quot;});" class='title'>The Parables of Our Lord</a>
+<div class='author'>Arnot, William, 1808-1875</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(21496, {&quot;Title&quot;:&quot;Problems of Immanence: studies critical and constructive&quot;,&quot;Topics&quot;:[&quot;Immanence of God&quot;],&quot;Primary&quot;:&quot;21496.txt&quot;,&quot;CreatorNames&quot;:[&quot;Warschauer, Joseph, 1869-&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;21496&quot;});" class='title'>Problems of Immanence:<br><span class='subtitle'>studies critical and constructive</span></a>
+<div class='author'>Warschauer, Joseph, 1869-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(21814, {&quot;Title&quot;:&quot;The Trial and Death of Jesus Christ: A Devotional History of Our Lord&#39;s Passion&quot;,&quot;Topics&quot;:[&quot;Jesus Christ -- Trial&quot;,&quot;Jesus Christ -- Crucifixion&quot;],&quot;Primary&quot;:&quot;21814.txt&quot;,&quot;CreatorNames&quot;:[&quot;Stalker, James, 1848-1927&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;21814&quot;});" class='title'>The Trial and Death of Jesus Christ:<br><span class='subtitle'>A Devotional History of Our Lord's Passion</span></a>
+<div class='author'>Stalker, James, 1848-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(21881, {&quot;Title&quot;:&quot;The Life of the Waiting Soul in the Intermediate State&quot;,&quot;Topics&quot;:[&quot;Intermediate state&quot;],&quot;Primary&quot;:&quot;21881.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sanderson, R. E. (Robert Edward), 1830-1913&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;21881&quot;});" class='title'>The Life of the Waiting Soul in the Intermediate State</a>
+<div class='author'>Sanderson, R. E. (Robert Edward), 1830-1913</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22735, {&quot;Title&quot;:&quot;King of the Jews: A story of Christ&#39;s last days on Earth&quot;,&quot;Topics&quot;:[&quot;Jesus Christ -- Last days&quot;],&quot;Primary&quot;:&quot;22735.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stead, W. T. (William Thomas), 1849-1912&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;22735&quot;});" class='title'>King of the Jews:<br><span class='subtitle'>A story of Christ's last days on Earth</span></a>
+<div class='author'>Stead, W. T. (William Thomas), 1849-1912</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24757, {&quot;Title&quot;:&quot;The Atonement and the Modern Mind&quot;,&quot;Topics&quot;:[&quot;Atonement&quot;],&quot;Primary&quot;:&quot;24757.txt&quot;,&quot;CreatorNames&quot;:[&quot;Denney, James, 1856-1917&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;24757&quot;});" class='title'>The Atonement and the Modern Mind</a>
+<div class='author'>Denney, James, 1856-1917</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25224, {&quot;Title&quot;:&quot;The Happiness of Heaven - By a Father of the Society of Jesus&quot;,&quot;Topics&quot;:[&quot;Heaven&quot;],&quot;Primary&quot;:&quot;25224.txt&quot;,&quot;CreatorNames&quot;:[&quot;Boudreaux, F. J., 1821-1894&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;25224&quot;});" class='title'>The Happiness of Heaven -<br><span class='subtitle'>By a Father of the Society of Jesus</span></a>
+<div class='author'>Boudreaux, F. J., 1821-1894</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25339, {&quot;Title&quot;:&quot;Atheism Among the People&quot;,&quot;Topics&quot;:[&quot;Apologetics&quot;,&quot;Atheism&quot;],&quot;Primary&quot;:&quot;25339.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lamartine, Alphonse de, 1790-1869&quot;,&quot;Hale, Edward Everett, 1822-1909 [Translator]&quot;,&quot;Le Baron, Francis, 1824-1911 [Translator]&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;25339&quot;});" class='title'>Atheism Among the People</a>
+<div class='author'>Lamartine, Alphonse de, 1790-1869, Hale, Edward Everett, 1822-1909 [Translator], Le Baron, Francis, 1824-1911 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25353, {&quot;Title&quot;:&quot;The Ordinance of Covenanting&quot;,&quot;Topics&quot;:[&quot;Covenant theology&quot;],&quot;Primary&quot;:&quot;25353.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cunningham, John, 1819-1893&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;25353&quot;});" class='title'>The Ordinance of Covenanting</a>
+<div class='author'>Cunningham, John, 1819-1893</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25395, {&quot;Title&quot;:&quot;The Ministry of the Spirit&quot;,&quot;Topics&quot;:[&quot;Holy Spirit&quot;],&quot;Primary&quot;:&quot;25395.txt&quot;,&quot;CreatorNames&quot;:[&quot;Gordon, A. J. (Adoniram Judson), 1836-1895&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;25395&quot;});" class='title'>The Ministry of the Spirit</a>
+<div class='author'>Gordon, A. J. (Adoniram Judson), 1836-1895</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25826, {&quot;Title&quot;:&quot;The Gospel of the Hereafter&quot;,&quot;Topics&quot;:[&quot;Eschatology&quot;],&quot;Primary&quot;:&quot;25826.txt&quot;,&quot;CreatorNames&quot;:[&quot;Smyth, J. Paterson (John Paterson), 1852-1932&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;25826&quot;});" class='title'>The Gospel of the Hereafter</a>
+<div class='author'>Smyth, J. Paterson (John Paterson), 1852-1932</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25974, {&quot;Title&quot;:&quot;God&#39;s Plan with Men&quot;,&quot;Topics&quot;:[&quot;Salvation&quot;],&quot;Primary&quot;:&quot;25974.htm&quot;,&quot;CreatorNames&quot;:[&quot;Martin, T. T. (Thomas Theodore), 1862-1939&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;25974&quot;});" class='title'>God's Plan with Men</a>
+<div class='author'>Martin, T. T. (Thomas Theodore), 1862-1939</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26003, {&quot;Title&quot;:&quot;&#39;Jesus Himself&#39;&quot;,&quot;Topics&quot;:[&quot;Jesus Christ -- Significance&quot;],&quot;Primary&quot;:&quot;26003.htm&quot;,&quot;CreatorNames&quot;:[&quot;Murray, Andrew, 1828-1917&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;26003&quot;});" class='title'>'Jesus Himself'</a>
+<div class='author'>Murray, Andrew, 1828-1917</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26397, {&quot;Title&quot;:&quot;Miracles and Supernatural Religion&quot;,&quot;Topics&quot;:[&quot;Religion and science&quot;,&quot;Miracles&quot;,&quot;Supernatural (Theology)&quot;,&quot;Jesus Christ -- Miracles&quot;],&quot;Primary&quot;:&quot;26397.htm&quot;,&quot;CreatorNames&quot;:[&quot;Whiton, James Morris, 1833-1920&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;26397&quot;});" class='title'>Miracles and Supernatural Religion</a>
+<div class='author'>Whiton, James Morris, 1833-1920</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26643, {&quot;Title&quot;:&quot;The Work Of Christ: Past, Present and Future&quot;,&quot;Topics&quot;:[&quot;Jesus Christ -- Person and offices&quot;,&quot;Messiah -- Prophecies&quot;],&quot;Primary&quot;:&quot;26643.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gaebelein, Arno Clemens, 1861-1945&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;26643&quot;});" class='title'>The Work Of Christ:<br><span class='subtitle'>Past, Present and Future</span></a>
+<div class='author'>Gaebelein, Arno Clemens, 1861-1945</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26691, {&quot;Title&quot;:&quot;Sanctification&quot;,&quot;Topics&quot;:[&quot;Sanctification&quot;],&quot;Primary&quot;:&quot;26691.htm&quot;,&quot;CreatorNames&quot;:[&quot;Byers, J. W.&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;26691&quot;});" class='title'>Sanctification</a>
+<div class='author'>Byers, J. W.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26990, {&quot;Title&quot;:&quot;Holy in Christ - Thoughts on the Calling of God&#39;s Children to be Holy as He is Holy&quot;,&quot;Topics&quot;:[&quot;Holiness&quot;],&quot;Primary&quot;:&quot;26990.htm&quot;,&quot;CreatorNames&quot;:[&quot;Murray, Andrew, 1828-1917&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;26990&quot;});" class='title'>Holy in Christ -<br><span class='subtitle'>Thoughts on the Calling of God's Children to be Holy as He is Holy</span></a>
+<div class='author'>Murray, Andrew, 1828-1917</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27237, {&quot;Title&quot;:&quot;An Essay on the Scriptural Doctrine of Immortality&quot;,&quot;Topics&quot;:[&quot;Immortality&quot;],&quot;Primary&quot;:&quot;27237.txt&quot;,&quot;CreatorNames&quot;:[&quot;Challis, James, 1803-1882&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;27237&quot;});" class='title'>An Essay on the Scriptural Doctrine of Immortality</a>
+<div class='author'>Challis, James, 1803-1882</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27344, {&quot;Title&quot;:&quot;The Faithful Promiser&quot;,&quot;Topics&quot;:[&quot;Devotional exercises&quot;],&quot;Primary&quot;:&quot;27344.htm&quot;,&quot;CreatorNames&quot;:[&quot;Macduff, John R. (John Ross), 1818-1895&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;27344&quot;});" class='title'>The Faithful Promiser</a>
+<div class='author'>Macduff, John R. (John Ross), 1818-1895</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27349, {&quot;Title&quot;:&quot;Personal Friendships of Jesus&quot;,&quot;Topics&quot;:[&quot;Jesus Christ -- Friends and associates&quot;],&quot;Primary&quot;:&quot;27349.txt&quot;,&quot;CreatorNames&quot;:[&quot;Miller, J. R. (James Russell), 1840-1912&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;27349&quot;});" class='title'>Personal Friendships of Jesus</a>
+<div class='author'>Miller, J. R. (James Russell), 1840-1912</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27500, {&quot;Title&quot;:&quot;The New Theology&quot;,&quot;Topics&quot;:[&quot;Theology, Doctrinal&quot;],&quot;Primary&quot;:&quot;27500.txt&quot;,&quot;CreatorNames&quot;:[&quot;Campbell, R. J. (Reginald John), 1867-1956&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;27500&quot;});" class='title'>The New Theology</a>
+<div class='author'>Campbell, R. J. (Reginald John), 1867-1956</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27869, {&quot;Title&quot;:&quot;A Theodicy, or, Vindication of the Divine Glory&quot;,&quot;Topics&quot;:[&quot;Theodicy&quot;],&quot;Primary&quot;:&quot;27869.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bledsoe, Albert Taylor, 1809-1877&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;27869&quot;});" class='title'>A Theodicy, or, Vindication of the Divine Glory</a>
+<div class='author'>Bledsoe, Albert Taylor, 1809-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28103, {&quot;Title&quot;:&quot;The Doctrines of Predestination, Reprobation, and Election&quot;,&quot;Topics&quot;:[&quot;Predestination&quot;,&quot;Reprobation&quot;,&quot;Election (Theology)&quot;],&quot;Primary&quot;:&quot;28103.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wallace, Robert&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;28103&quot;});" class='title'>The Doctrines of Predestination, Reprobation, and Election</a>
+<div class='author'>Wallace, Robert</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28208, {&quot;Title&quot;:&quot;The Gospel Day; Or, the Light of Christianity&quot;,&quot;Topics&quot;:[&quot;Christianity&quot;],&quot;Primary&quot;:&quot;28208.htm&quot;,&quot;CreatorNames&quot;:[&quot;Orr, Charles Ebert, 1861-1933&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;28208&quot;});" class='title'>The Gospel Day;<br><span class='subtitle'>Or, the Light of Christianity</span></a>
+<div class='author'>Orr, Charles Ebert, 1861-1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28401, {&quot;Title&quot;:&quot;Free and Impartial Thoughts, on the Sovereignty of God, The Doctrines of Election, Reprobation, and Original Sin: Humbly Addressed To all who Believe and Profess those Doctrines.&quot;,&quot;Topics&quot;:[&quot;Theology, Doctrinal -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;28401.htm&quot;,&quot;CreatorNames&quot;:[&quot;Finch, Richard, 1710-1763&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;28401&quot;});" class='title'>Free and Impartial Thoughts, on the Sovereignty of God, The Doctrines of Election, Reprobation, and Original Sin:<br><span class='subtitle'>Humbly Addressed To all who Believe and Profess those Doctrines.</span></a>
+<div class='author'>Finch, Richard, 1710-1763</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28507, {&quot;Title&quot;:&quot;The Mind of Jesus&quot;,&quot;Topics&quot;:[&quot;Jesus Christ&quot;],&quot;Primary&quot;:&quot;28507.htm&quot;,&quot;CreatorNames&quot;:[&quot;Macduff, John R. (John Ross), 1818-1895&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;28507&quot;});" class='title'>The Mind of Jesus</a>
+<div class='author'>Macduff, John R. (John Ross), 1818-1895</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28547, {&quot;Title&quot;:&quot;The Words of Jesus&quot;,&quot;Topics&quot;:[&quot;Devotional exercises&quot;,&quot;Jesus Christ -- Words&quot;],&quot;Primary&quot;:&quot;28547.htm&quot;,&quot;CreatorNames&quot;:[&quot;Macduff, John R. (John Ross), 1818-1895&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;28547&quot;});" class='title'>The Words of Jesus</a>
+<div class='author'>Macduff, John R. (John Ross), 1818-1895</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28584, {&quot;Title&quot;:&quot;O Inferno&quot;,&quot;Topics&quot;:[&quot;Hell&quot;],&quot;Primary&quot;:&quot;28584.htm&quot;,&quot;CreatorNames&quot;:[&quot;Callet, Auguste, 1812-1883&quot;,&quot;Castelo Branco, Camilo, 1825-1890 [Translator]&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;28584&quot;});" class='title'>O Inferno</a>
+<div class='author'>Callet, Auguste, 1812-1883, Castelo Branco, Camilo, 1825-1890 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29080, {&quot;Title&quot;:&quot;Plain Words for Christ, Being a Series of Readings for Working Men&quot;,&quot;Topics&quot;:[&quot;Religion&quot;,&quot;Christian life&quot;],&quot;Primary&quot;:&quot;29080.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dutton, Reginald G.&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;29080&quot;});" class='title'>Plain Words for Christ, Being a Series of Readings for Working Men</a>
+<div class='author'>Dutton, Reginald G.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29288, {&quot;Title&quot;:&quot;The Unknown Life of Jesus Christ - The Original Text of Nicolas Notovitch&#39;s 1887 Discovery&quot;,&quot;Topics&quot;:[&quot;Jesus Christ -- Biography -- Apocryphal and legendary literature&quot;,&quot;Christianity and other religions -- Buddhism&quot;],&quot;Primary&quot;:&quot;29288.htm&quot;,&quot;CreatorNames&quot;:[&quot;Notovitch, Nicolas, 1858-&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;29288&quot;});" class='title'>The Unknown Life of Jesus Christ -<br><span class='subtitle'>The Original Text of Nicolas Notovitch's 1887 Discovery</span></a>
+<div class='author'>Notovitch, Nicolas, 1858-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29540, {&quot;Title&quot;:&quot;Grace, Actual and Habitual: A Dogmatic Treatise&quot;,&quot;Topics&quot;:[&quot;Grace (Theology)&quot;],&quot;Primary&quot;:&quot;29540.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pohle, Joseph, 1852-1922&quot;,&quot;Preuss, Arthur, 1871-1934 [Editor]&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;29540&quot;});" class='title'>Grace, Actual and Habitual:<br><span class='subtitle'>A Dogmatic Treatise</span></a>
+<div class='author'>Pohle, Joseph, 1852-1922, Preuss, Arthur, 1871-1934 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29557, {&quot;Title&quot;:&quot;The Lord of Glory - Meditations on the person, the work and glory of our Lord Jesus Christ&quot;,&quot;Topics&quot;:[&quot;Jesus Christ -- Person and offices&quot;,&quot;Jesus Christ -- Meditations&quot;],&quot;Primary&quot;:&quot;29557.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gaebelein, Arno Clemens, 1861-1945&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;29557&quot;});" class='title'>The Lord of Glory -<br><span class='subtitle'>Meditations on the person, the work and glory of our Lord Jesus Christ</span></a>
+<div class='author'>Gaebelein, Arno Clemens, 1861-1945</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30119, {&quot;Title&quot;:&quot;The Calvinistic Doctrine of Predestination Examined and Refuted&quot;,&quot;Topics&quot;:[&quot;Predestination&quot;,&quot;Calvinism -- Controversial literature&quot;,&quot;Methodist Episcopal Church -- Controversial literature&quot;],&quot;Primary&quot;:&quot;30119.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hodgson, F. (Francis), 1805-1877&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;30119&quot;});" class='title'>The Calvinistic Doctrine of Predestination Examined and Refuted</a>
+<div class='author'>Hodgson, F. (Francis), 1805-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30219, {&quot;Title&quot;:&quot;Monophysitism Past and Present: A Study in Christology&quot;,&quot;Topics&quot;:[&quot;Monophysites&quot;],&quot;Primary&quot;:&quot;30219.htm&quot;,&quot;CreatorNames&quot;:[&quot;Luce, A. A. (Arthur Aston), 1882-1977&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;30219&quot;});" class='title'>Monophysitism Past and Present:<br><span class='subtitle'>A Study in Christology</span></a>
+<div class='author'>Luce, A. A. (Arthur Aston), 1882-1977</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30241, {&quot;Title&quot;:&quot;The Person and Work of The Holy Spirit&quot;,&quot;Topics&quot;:[&quot;Holy Spirit&quot;],&quot;Primary&quot;:&quot;30241.htm&quot;,&quot;CreatorNames&quot;:[&quot;Torrey, R. A. (Reuben Archer), 1856-1928&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;30241&quot;});" class='title'>The Person and Work of The Holy Spirit</a>
+<div class='author'>Torrey, R. A. (Reuben Archer), 1856-1928</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30410, {&quot;Title&quot;:&quot;Christology of the Old Testament: And a Commentary on the Messianic Predictions, Vol. 1&quot;,&quot;Topics&quot;:[&quot;Messiah -- Prophecies&quot;,&quot;Bible. Old Testament -- Prophecies&quot;],&quot;Primary&quot;:&quot;30410.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hengstenberg, Ernst Wilhelm, 1802-1869&quot;,&quot;Meyer, Theodore [Translator]&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;30410&quot;});" class='title'>Christology of the Old Testament:<br><span class='subtitle'>And a Commentary on the Messianic Predictions, Vol. 1</span></a>
+<div class='author'>Hengstenberg, Ernst Wilhelm, 1802-1869, Meyer, Theodore [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30561, {&quot;Title&quot;:&quot;His Last Week - The Story of the Passion and Resurrection of Jesus in the Words of the Four Gospels&quot;,&quot;Topics&quot;:[&quot;Jesus Christ -- Passion -- Texts&quot;],&quot;Primary&quot;:&quot;30561.htm&quot;,&quot;CreatorNames&quot;:[&quot;Barton, William E. (William Eleazar), 1861-1930&quot;,&quot;Soares, Theodore Gerald, 1869-&quot;,&quot;Strong, Sydney, 1860-1938&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;30561&quot;});" class='title'>His Last Week -<br><span class='subtitle'>The Story of the Passion and Resurrection of Jesus in the Words of the Four Gospels</span></a>
+<div class='author'>Barton, William E. (William Eleazar), 1861-1930, Soares, Theodore Gerald, 1869-, Strong, Sydney, 1860-1938</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30573, {&quot;Title&quot;:&quot;Why I Preach the Second Coming&quot;,&quot;Topics&quot;:[&quot;Second Advent&quot;],&quot;Primary&quot;:&quot;30573.htm&quot;,&quot;CreatorNames&quot;:[&quot;Haldeman, Isaac Massey, 1845-1933&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;30573&quot;});" class='title'>Why I Preach the Second Coming</a>
+<div class='author'>Haldeman, Isaac Massey, 1845-1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30608, {&quot;Title&quot;:&quot;Christology of the Old Testament: And a Commentary on the Messianic Predictions. Vol. 2&quot;,&quot;Topics&quot;:[&quot;Messiah -- Prophecies&quot;,&quot;Bible. Old Testament -- Prophecies&quot;],&quot;Primary&quot;:&quot;30608.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hengstenberg, Ernst Wilhelm, 1802-1869&quot;,&quot;Meyer, Theodore [Translator]&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;30608&quot;});" class='title'>Christology of the Old Testament:<br><span class='subtitle'>And a Commentary on the Messianic Predictions. Vol. 2</span></a>
+<div class='author'>Hengstenberg, Ernst Wilhelm, 1802-1869, Meyer, Theodore [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30657, {&quot;Title&quot;:&quot;Sovereign Grace: Its Source, Its Nature and Its Effects&quot;,&quot;Topics&quot;:[&quot;Grace (Theology) -- Sermons&quot;,&quot;Sermons, American -- 19th century&quot;],&quot;Primary&quot;:&quot;30657.htm&quot;,&quot;CreatorNames&quot;:[&quot;Moody, Dwight Lyman, 1837-1899&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;30657&quot;});" class='title'>Sovereign Grace:<br><span class='subtitle'>Its Source, Its Nature and Its Effects</span></a>
+<div class='author'>Moody, Dwight Lyman, 1837-1899</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30799, {&quot;Title&quot;:&quot;The Gnôsis of the Light&quot;,&quot;Topics&quot;:[&quot;Gnosticism&quot;],&quot;Primary&quot;:&quot;30799.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lamplugh, F.&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;30799&quot;});" class='title'>The Gnôsis of the Light</a>
+<div class='author'>Lamplugh, F.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30876, {&quot;Title&quot;:&quot;Eternal Life&quot;,&quot;Topics&quot;:[&quot;Immortality&quot;,&quot;Future life&quot;],&quot;Primary&quot;:&quot;30876.htm&quot;,&quot;CreatorNames&quot;:[&quot;Drummond, Henry, 1851-1897&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;30876&quot;});" class='title'>Eternal Life</a>
+<div class='author'>Drummond, Henry, 1851-1897</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30882, {&quot;Title&quot;:&quot;God and Mr. Wells: A Critical Examination of &#39;God the Invisible King&#39;&quot;,&quot;Topics&quot;:[&quot;Wells, H. G. (Herbert George), 1866-1946. God the invisible king&quot;],&quot;Primary&quot;:&quot;30882.htm&quot;,&quot;CreatorNames&quot;:[&quot;Archer, William, 1856-1924&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;30882&quot;});" class='title'>God and Mr. Wells:<br><span class='subtitle'>A Critical Examination of 'God the Invisible King'</span></a>
+<div class='author'>Archer, William, 1856-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32006, {&quot;Title&quot;:&quot;Modern Substitutes for Christianity&quot;,&quot;Topics&quot;:[&quot;Apologetics&quot;,&quot;Atheism&quot;,&quot;Pantheism&quot;,&quot;Theism&quot;,&quot;Positivism&quot;,&quot;Atheism -- History&quot;,&quot;Sects&quot;,&quot;Ethical culture movement&quot;,&quot;Cults&quot;,&quot;Apologetics -- History -- 20th century&quot;,&quot;Non-church-affiliated people&quot;],&quot;Primary&quot;:&quot;32006.htm&quot;,&quot;CreatorNames&quot;:[&quot;Muir, Pearson M&#39;Adam, 1846-1924&quot;],&quot;LoCC&quot;:[&quot;BL&quot;,&quot;BT&quot;],&quot;PG_ID&quot;:&quot;32006&quot;});" class='title'>Modern Substitutes for Christianity</a>
+<div class='author'>Muir, Pearson M'Adam, 1846-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32549, {&quot;Title&quot;:&quot;Declaration of Faith, in Latin and the Original Greek&quot;,&quot;Topics&quot;:[&quot;Theology, Doctrinal -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;32549.htm&quot;,&quot;CreatorNames&quot;:[&quot;Athanasius, Saint, Patriarch of Alexandria, -373&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;32549&quot;});" class='title'>Declaration of Faith, in Latin and the Original Greek</a>
+<div class='author'>Athanasius, Saint, Patriarch of Alexandria, -373</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32830, {&quot;Title&quot;:&quot;The State of the Blessed Dead&quot;,&quot;Topics&quot;:[&quot;Eschatology&quot;,&quot;Future life&quot;],&quot;Primary&quot;:&quot;32830.htm&quot;,&quot;CreatorNames&quot;:[&quot;Alford, Henry, 1810-1871&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;32830&quot;});" class='title'>The State of the Blessed Dead</a>
+<div class='author'>Alford, Henry, 1810-1871</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33194, {&quot;Title&quot;:&quot;The Warfare of the Soul: Practical Studies in the Life of Temptation&quot;,&quot;Topics&quot;:[&quot;Temptation&quot;],&quot;Primary&quot;:&quot;33194.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hughson, Shirley Carter, 1867-1949&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;33194&quot;});" class='title'>The Warfare of the Soul:<br><span class='subtitle'>Practical Studies in the Life of Temptation</span></a>
+<div class='author'>Hughson, Shirley Carter, 1867-1949</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33341, {&quot;Title&quot;:&quot;Secret Power; or, The Secret of Success in Christian Life and Work&quot;,&quot;Topics&quot;:[&quot;Christian life&quot;,&quot;Holy Spirit&quot;,&quot;Baptism in the Holy Spirit&quot;],&quot;Primary&quot;:&quot;33341.htm&quot;,&quot;CreatorNames&quot;:[&quot;Moody, Dwight Lyman, 1837-1899&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;33341&quot;});" class='title'>Secret Power;<br><span class='subtitle'>or, The Secret of Success in Christian Life and Work</span></a>
+<div class='author'>Moody, Dwight Lyman, 1837-1899</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33396, {&quot;Title&quot;:&quot;Ο Βίος του Χριστού&quot;,&quot;Topics&quot;:[&quot;Jesus Christ -- Biography&quot;],&quot;Primary&quot;:&quot;33396.txt&quot;,&quot;CreatorNames&quot;:[&quot;Farrar, F. W. (Frederic William), 1831-1903&quot;,&quot;Papadiamantes, Alexandros, 1851-1911 [Translator]&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;33396&quot;});" class='title'>Ο Βίος του Χριστού</a>
+<div class='author'>Farrar, F. W. (Frederic William), 1831-1903, Papadiamantes, Alexandros, 1851-1911 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34078, {&quot;Title&quot;:&quot;Dissertatiunculae Quaedam Critico-Theologicae&quot;,&quot;Topics&quot;:[&quot;Church history -- Primitive and early church, ca. 30-600&quot;,&quot;Fathers of the church&quot;,&quot;Christian literature, Early&quot;],&quot;Primary&quot;:&quot;34078.htm&quot;,&quot;CreatorNames&quot;:[&quot;Newman, John Henry, 1801-1890&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;34078&quot;});" class='title'>Dissertatiunculae Quaedam Critico-Theologicae</a>
+<div class='author'>Newman, John Henry, 1801-1890</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34557, {&quot;Title&quot;:&quot;Happiness in Purgatory&quot;,&quot;Topics&quot;:[&quot;Purgatory&quot;],&quot;Primary&quot;:&quot;34557.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;34557&quot;});" class='title'>Happiness in Purgatory</a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34569, {&quot;Title&quot;:&quot;Life Everlasting&quot;,&quot;Topics&quot;:[&quot;Immortality&quot;],&quot;Primary&quot;:&quot;34569.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fiske, John, 1842-1901&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;34569&quot;});" class='title'>Life Everlasting</a>
+<div class='author'>Fiske, John, 1842-1901</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34680, {&quot;Title&quot;:&quot;The Messiah in Moses and the Prophets&quot;,&quot;Topics&quot;:[&quot;Messiah -- Prophecies&quot;,&quot;Bible. Old Testament -- Prophecies&quot;,&quot;Bible -- Prophecies&quot;],&quot;Primary&quot;:&quot;34680.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lord, Eleazar, 1788-1871&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;34680&quot;});" class='title'>The Messiah in Moses and the Prophets</a>
+<div class='author'>Lord, Eleazar, 1788-1871</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34750, {&quot;Title&quot;:&quot;Mysterio do Natal&quot;,&quot;Topics&quot;:[&quot;Jesus Christ -- Nativity&quot;],&quot;Primary&quot;:&quot;34750.htm&quot;,&quot;CreatorNames&quot;:[&quot;Coelho Netto, Henrique, 1864-1934&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;34750&quot;});" class='title'>Mysterio do Natal</a>
+<div class='author'>Coelho Netto, Henrique, 1864-1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34855, {&quot;Title&quot;:&quot;The Abiding Presence of the Holy Ghost in the Soul&quot;,&quot;Topics&quot;:[&quot;Holy Spirit&quot;,&quot;Presence of God&quot;],&quot;Primary&quot;:&quot;34855.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jarrett, Bede, 1881-1934&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;34855&quot;});" class='title'>The Abiding Presence of the Holy Ghost in the Soul</a>
+<div class='author'>Jarrett, Bede, 1881-1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34913, {&quot;Title&quot;:&quot;De Essentia Patris Et Filii - Patrologiae Cursus Completus; Series Latini; Tomus X; Columns 887-888&quot;,&quot;Topics&quot;:[&quot;Christianity&quot;],&quot;Primary&quot;:&quot;34913.htm&quot;,&quot;CreatorNames&quot;:[&quot;Migne, J.-P. (Jacques-Paul), 1800-1875 [Editor]&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;34913&quot;});" class='title'>De Essentia Patris Et Filii -<br><span class='subtitle'>Patrologiae Cursus Completus; Series Latini; Tomus X; Columns 887-888</span></a>
+<div class='author'>Migne, J.-P. (Jacques-Paul), 1800-1875 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35110, {&quot;Title&quot;:&quot;An Essay on the Development of Christian Doctrine&quot;,&quot;Topics&quot;:[&quot;Catholic Church -- Doctrines&quot;,&quot;Dogma, Development of&quot;],&quot;Primary&quot;:&quot;35110.htm&quot;,&quot;CreatorNames&quot;:[&quot;Newman, John Henry, 1801-1890&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;35110&quot;});" class='title'>An Essay on the Development of Christian Doctrine</a>
+<div class='author'>Newman, John Henry, 1801-1890</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35735, {&quot;Title&quot;:&quot;The Gnostic Crucifixion&quot;,&quot;Topics&quot;:[&quot;Gnosticism&quot;,&quot;Jesus Christ -- Crucifixion&quot;],&quot;Primary&quot;:&quot;35735.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mead, G. R. S. (George Robert Stow), 1863-1933&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;35735&quot;});" class='title'>The Gnostic Crucifixion</a>
+<div class='author'>Mead, G. R. S. (George Robert Stow), 1863-1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35839, {&quot;Title&quot;:&quot;An Examination of President Edwards&#39; Inquiry into the Freedom of the Will&quot;,&quot;Topics&quot;:[&quot;Free will and determinism&quot;,&quot;Edwards, Jonathan, 1703-1758. Freedom of the will&quot;],&quot;Primary&quot;:&quot;35839.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bledsoe, Albert Taylor, 1809-1877&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;35839&quot;});" class='title'>An Examination of President Edwards' Inquiry into the Freedom of the Will</a>
+<div class='author'>Bledsoe, Albert Taylor, 1809-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36425, {&quot;Title&quot;:&quot;Jesus Fulfils the Law&quot;,&quot;Topics&quot;:[&quot;Jesus Christ&quot;],&quot;Primary&quot;:&quot;36425.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;36425&quot;});" class='title'>Jesus Fulfils the Law</a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36828, {&quot;Title&quot;:&quot;Pastor Pastorum; Or, The Schooling of the Apostles by Our Lord&quot;,&quot;Topics&quot;:[&quot;Teaching&quot;,&quot;Jesus Christ&quot;],&quot;Primary&quot;:&quot;36828.htm&quot;,&quot;CreatorNames&quot;:[&quot;Latham, Henry, 1821-1902&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;36828&quot;});" class='title'>Pastor Pastorum;<br><span class='subtitle'>Or, The Schooling of the Apostles by Our Lord</span></a>
+<div class='author'>Latham, Henry, 1821-1902</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36891, {&quot;Title&quot;:&quot;Health, Healing, and Faith&quot;,&quot;Topics&quot;:[&quot;Prayer&quot;,&quot;Spiritual healing&quot;],&quot;Primary&quot;:&quot;36891.htm&quot;,&quot;CreatorNames&quot;:[&quot;Conwell, Russell H., 1843-1925&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;36891&quot;});" class='title'>Health, Healing, and Faith</a>
+<div class='author'>Conwell, Russell H., 1843-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36996, {&quot;Title&quot;:&quot;Mystic Immanence, the Indwelling Spirit&quot;,&quot;Topics&quot;:[&quot;Mysticism&quot;,&quot;Immanence of God&quot;],&quot;Primary&quot;:&quot;36996.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wilberforce, Basil, 1841-1916&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;36996&quot;});" class='title'>Mystic Immanence, the Indwelling Spirit</a>
+<div class='author'>Wilberforce, Basil, 1841-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37696, {&quot;Title&quot;:&quot;Arguments of Celsus, Porphyry, and the Emperor Julian, Against the Christians - Also Extracts from Diodorus Siculus, Josephus, and Tacitus, Relating to the Jews, Together with an Appendix&quot;,&quot;Topics&quot;:[&quot;Theology -- Early works to 1800&quot;,&quot;Christianity -- Controversial literature -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;37696.htm&quot;,&quot;CreatorNames&quot;:[&quot;Celsus (Platonic philosopher), active 180&quot;,&quot;Diodorus, Siculus&quot;,&quot;Josephus, Flavius, 38?-100?&quot;,&quot;Julian, Emperor of Rome, 331-363&quot;,&quot;Porphyry, 234?-305?&quot;,&quot;Tacitus, Cornelius, 56-117&quot;,&quot;Taylor, Thomas, 1758-1835 [Editor]&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;37696&quot;});" class='title'>Arguments of Celsus, Porphyry, and the Emperor Julian, Against the Christians -<br><span class='subtitle'>Also Extracts from Diodorus Siculus, Josephus, and Tacitus, Relating to the Jews, Together with an Appendix</span></a>
+<div class='author'>Celsus (Platonic philosopher), active 180, Diodorus, Siculus, Josephus, Flavius, 38?-100?, Julian, Emperor of Rome, 331-363, Porphyry, 234?-305?, Tacitus, Cornelius, 56-117, Taylor, Thomas, 1758-1835 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37699, {&quot;Title&quot;:&quot;Hell: Warm Words on the Cheerful and Comforting Doctrine of Eternal Damnation&quot;,&quot;Topics&quot;:[&quot;Christianity -- Controversial literature&quot;,&quot;Hell&quot;,&quot;Agnosticism&quot;],&quot;Primary&quot;:&quot;37699.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ingersoll, Robert Green, 1833-1899&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;37699&quot;});" class='title'>Hell:<br><span class='subtitle'>Warm Words on the Cheerful and Comforting Doctrine of Eternal Damnation</span></a>
+<div class='author'>Ingersoll, Robert Green, 1833-1899</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38380, {&quot;Title&quot;:&quot;The Two Tests: The Supernatural Claims of Christianity Tried by Two of Its Own Rules&quot;,&quot;Topics&quot;:[&quot;Apologetics&quot;],&quot;Primary&quot;:&quot;38380.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lisle, Lionel&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;38380&quot;});" class='title'>The Two Tests:<br><span class='subtitle'>The Supernatural Claims of Christianity Tried by Two of Its Own Rules</span></a>
+<div class='author'>Lisle, Lionel</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38775, {&quot;Title&quot;:&quot;The First Easter&quot;,&quot;Topics&quot;:[&quot;Jesus Christ -- Resurrection -- Juvenile literature&quot;,&quot;Easter -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;38775.htm&quot;,&quot;CreatorNames&quot;:[&quot;Willard, James Hartwell, 1847-&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;38775&quot;});" class='title'>The First Easter</a>
+<div class='author'>Willard, James Hartwell, 1847-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38965, {&quot;Title&quot;:&quot;Mater Christi: Meditations on Our Lady&quot;,&quot;Topics&quot;:[&quot;Mary, Blessed Virgin, Saint -- Meditations&quot;],&quot;Primary&quot;:&quot;38965.htm&quot;,&quot;CreatorNames&quot;:[&quot;St. Paul, Mother, 1861-1940&quot;,&quot;Rickaby, Joseph, 1845-1932 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;38965&quot;});" class='title'>Mater Christi:<br><span class='subtitle'>Meditations on Our Lady</span></a>
+<div class='author'>St. Paul, Mother, 1861-1940, Rickaby, Joseph, 1845-1932 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39052, {&quot;Title&quot;:&quot;Ecce Homo! Or, A Critical Inquiry into the History of Jesus of Nazareth - Being a Rational Analysis of the Gospels&quot;,&quot;Topics&quot;:[&quot;Jesus Christ -- Biography -- Early works to 1800&quot;,&quot;Jesus Christ -- Rationalistic interpretations -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;39052.htm&quot;,&quot;CreatorNames&quot;:[&quot;Holbach, Paul Henri Thiry, baron d&#39;, 1723-1789&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;39052&quot;});" class='title'>Ecce Homo! Or, A Critical Inquiry into the History of Jesus of Nazareth -<br><span class='subtitle'>Being a Rational Analysis of the Gospels</span></a>
+<div class='author'>Holbach, Paul Henri Thiry, baron d', 1723-1789</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39290, {&quot;Title&quot;:&quot;Rome, Turkey, and Jerusalem&quot;,&quot;Topics&quot;:[&quot;Theology, Doctrinal -- Popular works&quot;,&quot;Second Advent&quot;,&quot;Bible -- Prophecies&quot;],&quot;Primary&quot;:&quot;39290.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hoare, Edward, 1812-1894&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;39290&quot;});" class='title'>Rome, Turkey, and Jerusalem</a>
+<div class='author'>Hoare, Edward, 1812-1894</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39307, {&quot;Title&quot;:&quot;Rome, Turkey and Jerusalem&quot;,&quot;Topics&quot;:[&quot;Theology, Doctrinal -- Popular works&quot;,&quot;Second Advent&quot;,&quot;Bible -- Prophecies&quot;],&quot;Primary&quot;:&quot;39307.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hoare, Edward, 1812-1894&quot;,&quot;Townsend, John Hume [Editor]&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;39307&quot;});" class='title'>Rome, Turkey and Jerusalem</a>
+<div class='author'>Hoare, Edward, 1812-1894, Townsend, John Hume [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39313, {&quot;Title&quot;:&quot;Rome and Turkey in Connexion with the Second Advent&quot;,&quot;Topics&quot;:[&quot;Theology, Doctrinal -- Popular works&quot;,&quot;Second Advent&quot;,&quot;Bible -- Prophecies&quot;],&quot;Primary&quot;:&quot;39313.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hoare, Edward, 1812-1894&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;39313&quot;});" class='title'>Rome and Turkey in Connexion with the Second Advent</a>
+<div class='author'>Hoare, Edward, 1812-1894</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40060, {&quot;Title&quot;:&quot;The Christian Faith Under Modern Searchlights&quot;,&quot;Topics&quot;:[&quot;Modernism (Christian theology)&quot;],&quot;Primary&quot;:&quot;40060.htm&quot;,&quot;CreatorNames&quot;:[&quot;Johnson, William Hallock, 1865-1963&quot;,&quot;Patton, Francis L. (Francis Landey), 1843-1932 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;40060&quot;});" class='title'>The Christian Faith Under Modern Searchlights</a>
+<div class='author'>Johnson, William Hallock, 1865-1963, Patton, Francis L. (Francis Landey), 1843-1932 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40153, {&quot;Title&quot;:&quot;The First True Gentleman: A Study of the Human Nature of Our Lord&quot;,&quot;Topics&quot;:[&quot;Christian life&quot;,&quot;Jesus Christ&quot;,&quot;Jesus Christ -- Character&quot;,&quot;Jesus Christ -- Humanity&quot;,&quot;Jesus Christ -- Natures&quot;],&quot;Primary&quot;:&quot;40153.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hale, Edward Everett, 1822-1909 [Author of introduction, etc.]&quot;,&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;40153&quot;});" class='title'>The First True Gentleman:<br><span class='subtitle'>A Study of the Human Nature of Our Lord</span></a>
+<div class='author'>Hale, Edward Everett, 1822-1909 [Author of introduction, etc.], Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40207, {&quot;Title&quot;:&quot;The Christian Doctrine of Hell&quot;,&quot;Topics&quot;:[&quot;Hell&quot;],&quot;Primary&quot;:&quot;40207.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wheeler, J. M. (Joseph Mazzini), 1850-1898&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;40207&quot;});" class='title'>The Christian Doctrine of Hell</a>
+<div class='author'>Wheeler, J. M. (Joseph Mazzini), 1850-1898</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40285, {&quot;Title&quot;:&quot;The Syrian Christ&quot;,&quot;Topics&quot;:[&quot;Jesus Christ -- Biography&quot;,&quot;Syria -- Social life and customs&quot;,&quot;Palestine -- Social life and customs&quot;],&quot;Primary&quot;:&quot;40285.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rihbany, Abraham Mitrie, 1869-1944&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;40285&quot;});" class='title'>The Syrian Christ</a>
+<div class='author'>Rihbany, Abraham Mitrie, 1869-1944</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40443, {&quot;Title&quot;:&quot;The Spirit of God as Fire; the Globe Within the Sun Our Heaven&quot;,&quot;Topics&quot;:[&quot;Heaven&quot;,&quot;Sun&quot;],&quot;Primary&quot;:&quot;40443.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mortimore, D.&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;40443&quot;});" class='title'>The Spirit of God as Fire;<br><span class='subtitle'>the Globe Within the Sun Our Heaven</span></a>
+<div class='author'>Mortimore, D.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40458, {&quot;Title&quot;:&quot;The Real Jesus of the Four Gospels&quot;,&quot;Topics&quot;:[&quot;Jesus Christ -- Biography&quot;],&quot;Primary&quot;:&quot;40458.htm&quot;,&quot;CreatorNames&quot;:[&quot;Atwater, John Birdseye, 1855-1921&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;40458&quot;});" class='title'>The Real Jesus of the Four Gospels</a>
+<div class='author'>Atwater, John Birdseye, 1855-1921</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40460, {&quot;Title&quot;:&quot;Hurlbut&#39;s Life of Christ For Young and Old - A Complete Life of Christ Written in Simple Language, Based on the Gospel Narrative&quot;,&quot;Topics&quot;:[&quot;Jesus Christ -- Biography&quot;],&quot;Primary&quot;:&quot;40460.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hurlbut, Jesse Lyman, 1843-1930&quot;,&quot;Hole, William, 1846-1917 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;40460&quot;});" class='title'>Hurlbut's Life of Christ For Young and Old -<br><span class='subtitle'>A Complete Life of Christ Written in Simple Language, Based on the Gospel Narrative</span></a>
+<div class='author'>Hurlbut, Jesse Lyman, 1843-1930, Hole, William, 1846-1917 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40482, {&quot;Title&quot;:&quot;The Meaning of Faith&quot;,&quot;Topics&quot;:[&quot;Devotional exercises&quot;,&quot;Faith&quot;],&quot;Primary&quot;:&quot;40482.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fosdick, Harry Emerson, 1878-1969&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;40482&quot;});" class='title'>The Meaning of Faith</a>
+<div class='author'>Fosdick, Harry Emerson, 1878-1969</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40929, {&quot;Title&quot;:&quot;The Transformation of Early Christianity from an Eschatological to a Socialized Movement - A Dissertation Submitted to the Faculty of the Graduate School of Arts and Literature in Candidacy for the Degree of Doctor of Philosophy&quot;,&quot;Topics&quot;:[&quot;Theology -- History -- Early Church, ca. 30-600&quot;,&quot;Eschatology -- History of doctrines&quot;,&quot;Christian sociology -- History -- Early church, ca. 30-600&quot;],&quot;Primary&quot;:&quot;40929.htm&quot;,&quot;CreatorNames&quot;:[&quot;Edwards, Lyford P. (Lyford Paterson), 1882-1984&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;40929&quot;});" class='title'>The Transformation of Early Christianity from an Eschatological to a Socialized Movement -<br><span class='subtitle'>A Dissertation Submitted to the Faculty of the Graduate School of Arts and Literature in Candidacy for the Degree of Doctor of Philosophy</span></a>
+<div class='author'>Edwards, Lyford P. (Lyford Paterson), 1882-1984</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40966, {&quot;Title&quot;:&quot;The Trial of Jesus from a Lawyer&#39;s Standpoint, Vol. 1 (of 2) - The Hebrew Trial&quot;,&quot;Topics&quot;:[&quot;Jesus Christ -- Trial&quot;,&quot;Trials (Blasphemy) -- Jerusalem&quot;,&quot;Trials (Treason) -- Jerusalem&quot;],&quot;Primary&quot;:&quot;40966.htm&quot;,&quot;CreatorNames&quot;:[&quot;Chandler, Walter M. (Walter Marion), 1867-1935&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;40966&quot;});" class='title'>The Trial of Jesus from a Lawyer's Standpoint, Vol. 1 (of 2) -<br><span class='subtitle'>The Hebrew Trial</span></a>
+<div class='author'>Chandler, Walter M. (Walter Marion), 1867-1935</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40967, {&quot;Title&quot;:&quot;The Trial of Jesus from a Lawyer&#39;s Standpoint, Vol. 2 (of 2) - The Roman Trial&quot;,&quot;Topics&quot;:[&quot;Jesus Christ -- Trial&quot;,&quot;Trials (Blasphemy) -- Jerusalem&quot;,&quot;Trials (Treason) -- Jerusalem&quot;],&quot;Primary&quot;:&quot;40967.htm&quot;,&quot;CreatorNames&quot;:[&quot;Chandler, Walter M. (Walter Marion), 1867-1935&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;40967&quot;});" class='title'>The Trial of Jesus from a Lawyer's Standpoint, Vol. 2 (of 2) -<br><span class='subtitle'>The Roman Trial</span></a>
+<div class='author'>Chandler, Walter M. (Walter Marion), 1867-1935</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41203, {&quot;Title&quot;:&quot;Six Discourses on the Miracles of Our Saviour, and Defences of His Discourses&quot;,&quot;Topics&quot;:[&quot;Jesus Christ -- Miracles -- Early works to 1800&quot;,&quot;Smalbroke, Richard, 1672-1749&quot;,&quot;Gibson, Edmund, 1669-1748&quot;],&quot;Primary&quot;:&quot;41203.htm&quot;,&quot;CreatorNames&quot;:[&quot;Woolston, Thomas, 1670-1733&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;41203&quot;});" class='title'>Six Discourses on the Miracles of Our Saviour, and Defences of His Discourses</a>
+<div class='author'>Woolston, Thomas, 1670-1733</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41421, {&quot;Title&quot;:&quot;The Protestants Plea for a Socinian - Justifying His Doctrine from Being Opposite to Scripture or Church Authority; and Him from Being Guilty of Heresie, or Schism&quot;,&quot;Topics&quot;:[&quot;Socinianism -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;41421.htm&quot;,&quot;CreatorNames&quot;:[&quot;R. H., 1609-1678&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;41421&quot;});" class='title'>The Protestants Plea for a Socinian -<br><span class='subtitle'>Justifying His Doctrine from Being Opposite to Scripture or Church Authority; and Him from Being Guilty of Heresie, or Schism</span></a>
+<div class='author'>R. H., 1609-1678</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41500, {&quot;Title&quot;:&quot;A Layman&#39;s Life of Jesus&quot;,&quot;Topics&quot;:[&quot;Jesus Christ -- Biography&quot;],&quot;Primary&quot;:&quot;41500.htm&quot;,&quot;CreatorNames&quot;:[&quot;Byers, S. H. M. (Samuel Hawkins Marshall), 1838-1933&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;41500&quot;});" class='title'>A Layman's Life of Jesus</a>
+<div class='author'>Byers, S. H. M. (Samuel Hawkins Marshall), 1838-1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41559, {&quot;Title&quot;:&quot;The New Christianity; or, The Religion of the New Age&quot;,&quot;Topics&quot;:[&quot;Christian sociology&quot;,&quot;Church and social problems&quot;],&quot;Primary&quot;:&quot;41559.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bland, Salem Goldworth, 1859-1950&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;41559&quot;});" class='title'>The New Christianity;<br><span class='subtitle'>or, The Religion of the New Age</span></a>
+<div class='author'>Bland, Salem Goldworth, 1859-1950</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41650, {&quot;Title&quot;:&quot;Is the Morality of Jesus Sound? - A Lecture Delivered Before the Independent Religious Society&quot;,&quot;Topics&quot;:[&quot;Jesus Christ&quot;],&quot;Primary&quot;:&quot;41650.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mangasarian, M. M. (Mangasar Mugurditch), 1859-1943&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;41650&quot;});" class='title'>Is the Morality of Jesus Sound? -<br><span class='subtitle'>A Lecture Delivered Before the Independent Religious Society</span></a>
+<div class='author'>Mangasarian, M. M. (Mangasar Mugurditch), 1859-1943</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42460, {&quot;Title&quot;:&quot;The Truth of Christianity - Being an Examination of the More Important Arguments For and Against Believing in That Religion&quot;,&quot;Topics&quot;:[&quot;Apologetics&quot;],&quot;Primary&quot;:&quot;42460.htm&quot;,&quot;CreatorNames&quot;:[&quot;Turton, W. H. (William Harry), 1856-1938&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;42460&quot;});" class='title'>The Truth of Christianity -<br><span class='subtitle'>Being an Examination of the More Important Arguments For and Against Believing in That Religion</span></a>
+<div class='author'>Turton, W. H. (William Harry), 1856-1938</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43205, {&quot;Title&quot;:&quot;Is the Devil a Myth?&quot;,&quot;Topics&quot;:[&quot;Good and evil&quot;,&quot;Devil&quot;],&quot;Primary&quot;:&quot;43205.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wimberly, C. F. (Charles Franklin), 1866-1946&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;43205&quot;});" class='title'>Is the Devil a Myth?</a>
+<div class='author'>Wimberly, C. F. (Charles Franklin), 1866-1946</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4323, {&quot;Title&quot;:&quot;The Heart-Cry of Jesus&quot;,&quot;Topics&quot;:[&quot;Pilgrim Holiness Church -- Controversial literature&quot;,&quot;Sanctification&quot;],&quot;Primary&quot;:&quot;4323.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rees, Byron J. (Byron Johnson), 1877-1920&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;4323&quot;});" class='title'>The Heart-Cry of Jesus</a>
+<div class='author'>Rees, Byron J. (Byron Johnson), 1877-1920</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43328, {&quot;Title&quot;:&quot;The Lost Faith, and Difficulties of the Bible, as Tested by the Laws of Evidence&quot;,&quot;Topics&quot;:[&quot;Bible and science&quot;],&quot;Primary&quot;:&quot;43328.htm&quot;,&quot;CreatorNames&quot;:[&quot;Childs, Thomas S. (Thomas Spencer), 1825-1914&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;43328&quot;});" class='title'>The Lost Faith, and Difficulties of the Bible, as Tested by the Laws of Evidence</a>
+<div class='author'>Childs, Thomas S. (Thomas Spencer), 1825-1914</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43373, {&quot;Title&quot;:&quot;He&#39;s Coming To-Morrow&quot;,&quot;Topics&quot;:[&quot;Second Advent&quot;],&quot;Primary&quot;:&quot;43373.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stowe, Harriet Beecher, 1811-1896&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;43373&quot;});" class='title'>He's Coming To-Morrow</a>
+<div class='author'>Stowe, Harriet Beecher, 1811-1896</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44035, {&quot;Title&quot;:&quot;Systematic Theology (Volume 1 of 3)&quot;,&quot;Topics&quot;:[&quot;Theology, Doctrinal&quot;,&quot;Baptists -- Doctrines&quot;],&quot;Primary&quot;:&quot;44035.htm&quot;,&quot;CreatorNames&quot;:[&quot;Strong, Augustus Hopkins, 1836-1921&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;44035&quot;});" class='title'>Systematic Theology (Volume 1 of 3)</a>
+<div class='author'>Strong, Augustus Hopkins, 1836-1921</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44073, {&quot;Title&quot;:&quot;The Aquarian Gospel of Jesus the Christ - The Philosophic and Practical Basis of the Religion of the Aquarian Age of the World and of The Church Universal&quot;,&quot;Topics&quot;:[&quot;Jesus Christ -- Biography -- Apocryphal and legendary literature&quot;,&quot;Akashic records&quot;],&quot;Primary&quot;:&quot;44073.htm&quot;,&quot;CreatorNames&quot;:[&quot;Levi, 1844-1911&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;44073&quot;});" class='title'>The Aquarian Gospel of Jesus the Christ -<br><span class='subtitle'>The Philosophic and Practical Basis of the Religion of the Aquarian Age of the World and of The Church Universal</span></a>
+<div class='author'>Levi, 1844-1911</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44119, {&quot;Title&quot;:&quot;Jesus, The Messiah; or, the Old Testament Prophecies Fulfilled in the New Testament Scriptures, by a Lady&quot;,&quot;Topics&quot;:[&quot;Bible. Old Testament -- Prophecies&quot;,&quot;Jesus Christ -- Messiahship&quot;],&quot;Primary&quot;:&quot;44119.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;44119&quot;});" class='title'>Jesus, The Messiah;<br><span class='subtitle'>or, the Old Testament Prophecies Fulfilled in the New Testament Scriptures, by a Lady</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44531, {&quot;Title&quot;:&quot;The Boyhood of Jesus&quot;,&quot;Topics&quot;:[&quot;Jesus Christ -- Biography -- Juvenile literature&quot;,&quot;Bible stories, English -- New Testament -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;44531.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;44531&quot;});" class='title'>The Boyhood of Jesus</a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44555, {&quot;Title&quot;:&quot;Systematic Theology (Volume 2 of 3)&quot;,&quot;Topics&quot;:[&quot;Theology, Doctrinal&quot;,&quot;Baptists -- Doctrines&quot;],&quot;Primary&quot;:&quot;44555.htm&quot;,&quot;CreatorNames&quot;:[&quot;Strong, Augustus Hopkins, 1836-1921&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;44555&quot;});" class='title'>Systematic Theology (Volume 2 of 3)</a>
+<div class='author'>Strong, Augustus Hopkins, 1836-1921</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44575, {&quot;Title&quot;:&quot;Das Büchlein vom Leben nach dem Tode&quot;,&quot;Topics&quot;:[&quot;Immortality&quot;],&quot;Primary&quot;:&quot;44575.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fechner, Gustav Theodor, 1801-1887&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;44575&quot;});" class='title'>Das Büchlein vom Leben nach dem Tode</a>
+<div class='author'>Fechner, Gustav Theodor, 1801-1887</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44644, {&quot;Title&quot;:&quot;Philosophy of the Plan of Salvation: A Book for the Times&quot;,&quot;Topics&quot;:[&quot;Salvation&quot;],&quot;Primary&quot;:&quot;44644.htm&quot;,&quot;CreatorNames&quot;:[&quot;Walker, James B. (James Barr), 1805-1887&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;44644&quot;});" class='title'>Philosophy of the Plan of Salvation:<br><span class='subtitle'>A Book for the Times</span></a>
+<div class='author'>Walker, James B. (James Barr), 1805-1887</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45283, {&quot;Title&quot;:&quot;Systematic Theology (Volume 3 of 3)&quot;,&quot;Topics&quot;:[&quot;Theology, Doctrinal&quot;,&quot;Baptists -- Doctrines&quot;],&quot;Primary&quot;:&quot;45283.htm&quot;,&quot;CreatorNames&quot;:[&quot;Strong, Augustus Hopkins, 1836-1921&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;45283&quot;});" class='title'>Systematic Theology (Volume 3 of 3)</a>
+<div class='author'>Strong, Augustus Hopkins, 1836-1921</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45422, {&quot;Title&quot;:&quot;The Quest of the Historical Jesus - A Critical Study of its Progress from Reimarus to Wrede&quot;,&quot;Topics&quot;:[&quot;Jesus Christ -- Historicity&quot;,&quot;Jesus Christ -- Biography -- History and criticism&quot;],&quot;Primary&quot;:&quot;45422.htm&quot;,&quot;CreatorNames&quot;:[&quot;Schweitzer, Albert, 1875-1965&quot;,&quot;Montgomery, W. (William), 1871-1930 [Translator]&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;45422&quot;});" class='title'>The Quest of the Historical Jesus -<br><span class='subtitle'>A Critical Study of its Progress from Reimarus to Wrede</span></a>
+<div class='author'>Schweitzer, Albert, 1875-1965, Montgomery, W. (William), 1871-1930 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45540, {&quot;Title&quot;:&quot;The Christ Myth&quot;,&quot;Topics&quot;:[&quot;Jesus Christ -- Historicity&quot;,&quot;Bible. New Testament -- Criticism, interpretation, etc.&quot;],&quot;Primary&quot;:&quot;45540.htm&quot;,&quot;CreatorNames&quot;:[&quot;Drews, Arthur, 1865-1935&quot;,&quot;Burns, C. Delisle, 1879-1942 [Translator]&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;45540&quot;});" class='title'>The Christ Myth</a>
+<div class='author'>Drews, Arthur, 1865-1935, Burns, C. Delisle, 1879-1942 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45716, {&quot;Title&quot;:&quot;The Life of Our Lord in Simple Language for Little Children&quot;,&quot;Topics&quot;:[&quot;Jesus Christ -- Biography -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;45716.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;45716&quot;});" class='title'>The Life of Our Lord in Simple Language for Little Children</a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45952, {&quot;Title&quot;:&quot;The Evolution of Old Testament Religion&quot;,&quot;Topics&quot;:[&quot;Judaism -- History -- To 70 A.D.&quot;,&quot;Bible. Old Testament -- Theology&quot;],&quot;Primary&quot;:&quot;45952.htm&quot;,&quot;CreatorNames&quot;:[&quot;Orchard, W. E. (William Edwin), 1877-1955&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;45952&quot;});" class='title'>The Evolution of Old Testament Religion</a>
+<div class='author'>Orchard, W. E. (William Edwin), 1877-1955</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46476, {&quot;Title&quot;:&quot;The Idea of God as Affected by Modern Knowledge&quot;,&quot;Topics&quot;:[&quot;God (Christianity)&quot;],&quot;Primary&quot;:&quot;46476.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fiske, John, 1842-1901&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;46476&quot;});" class='title'>The Idea of God as Affected by Modern Knowledge</a>
+<div class='author'>Fiske, John, 1842-1901</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46478, {&quot;Title&quot;:&quot;Lux Mundi: A Series of Studies in the Religion of the Incarnation, - 10th Edition, 1890&quot;,&quot;Topics&quot;:[&quot;Christianity&quot;,&quot;Incarnation&quot;],&quot;Primary&quot;:&quot;46478.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gore, Charles, 1853-1932 [Editor]&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;46478&quot;});" class='title'>Lux Mundi:<br><span class='subtitle'>A Series of Studies in the Religion of the Incarnation, - 10th Edition, 1890</span></a>
+<div class='author'>Gore, Charles, 1853-1932 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46986, {&quot;Title&quot;:&quot;The Christ: A Critical Review and Analysis of the Evidences of His Existence&quot;,&quot;Topics&quot;:[&quot;Rationalism&quot;,&quot;Jesus Christ -- Historicity&quot;,&quot;Jesus Christ -- Rationalistic interpretations&quot;],&quot;Primary&quot;:&quot;46986.htm&quot;,&quot;CreatorNames&quot;:[&quot;Remsburg, John E. (John Eleazer), 1848-1919&quot;],&quot;LoCC&quot;:[&quot;BL&quot;,&quot;BT&quot;],&quot;PG_ID&quot;:&quot;46986&quot;});" class='title'>The Christ:<br><span class='subtitle'>A Critical Review and Analysis of the Evidences of His Existence</span></a>
+<div class='author'>Remsburg, John E. (John Eleazer), 1848-1919</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47276, {&quot;Title&quot;:&quot;Gli eretici d&#39;Italia, vol. I&quot;,&quot;Topics&quot;:[&quot;Christian heretics&quot;,&quot;Christian heresies&quot;,&quot;Christian sects -- Italy&quot;,&quot;Reformation -- Italy&quot;],&quot;Primary&quot;:&quot;47276.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cantù, Cesare, 1804-1895&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;47276&quot;});" class='title'>Gli eretici d'Italia, vol. I</a>
+<div class='author'>Cantù, Cesare, 1804-1895</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47277, {&quot;Title&quot;:&quot;Gli eretici d&#39;Italia, vol. II&quot;,&quot;Topics&quot;:[&quot;Christian heretics&quot;,&quot;Christian heresies&quot;,&quot;Christian sects -- Italy&quot;,&quot;Reformation -- Italy&quot;],&quot;Primary&quot;:&quot;47277.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cantù, Cesare, 1804-1895&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;47277&quot;});" class='title'>Gli eretici d'Italia, vol. II</a>
+<div class='author'>Cantù, Cesare, 1804-1895</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47278, {&quot;Title&quot;:&quot;Gli eretici d&#39;Italia, vol. III&quot;,&quot;Topics&quot;:[&quot;Christian heretics&quot;,&quot;Christian heresies&quot;,&quot;Christian sects -- Italy&quot;,&quot;Reformation -- Italy&quot;],&quot;Primary&quot;:&quot;47278.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cantù, Cesare, 1804-1895&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;47278&quot;});" class='title'>Gli eretici d'Italia, vol. III</a>
+<div class='author'>Cantù, Cesare, 1804-1895</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49091, {&quot;Title&quot;:&quot;The Man of Galilee&quot;,&quot;Topics&quot;:[&quot;Jesus Christ -- Historicity&quot;,&quot;Jesus Christ -- Popular works&quot;],&quot;Primary&quot;:&quot;49091.htm&quot;,&quot;CreatorNames&quot;:[&quot;Haygood, Atticus G. (Atticus Greene), 1839-1896&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;49091&quot;});" class='title'>The Man of Galilee</a>
+<div class='author'>Haygood, Atticus G. (Atticus Greene), 1839-1896</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49126, {&quot;Title&quot;:&quot;The Duty of a Christian People under Divine Visitations&quot;,&quot;Topics&quot;:[&quot;Providence and government of God&quot;],&quot;Primary&quot;:&quot;49126.htm&quot;,&quot;CreatorNames&quot;:[&quot;Smart, Newton, 1798?-1879&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;49126&quot;});" class='title'>The Duty of a Christian People under Divine Visitations</a>
+<div class='author'>Smart, Newton, 1798?-1879</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49652, {&quot;Title&quot;:&quot;The Boyhood of Jesus&quot;,&quot;Topics&quot;:[&quot;Jesus Christ -- Biography -- Juvenile literature&quot;,&quot;Bible stories, English -- New Testament -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;49652.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;49652&quot;});" class='title'>The Boyhood of Jesus</a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50279, {&quot;Title&quot;:&quot;Johan Tobias Beckin elämäkerta&quot;,&quot;Topics&quot;:[&quot;Beck, J. T. (Johann Tobias), 1804-1878&quot;],&quot;Primary&quot;:&quot;50279.txt&quot;,&quot;CreatorNames&quot;:[&quot;Hyvärinen, Eero&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;50279&quot;});" class='title'>Johan Tobias Beckin elämäkerta</a>
+<div class='author'>Hyvärinen, Eero</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50349, {&quot;Title&quot;:&quot;A Basket of Barley Loaves&quot;,&quot;Topics&quot;:[&quot;Christian life&quot;],&quot;Primary&quot;:&quot;50349.htm&quot;,&quot;CreatorNames&quot;:[&quot;Miller, Mary Christina&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;50349&quot;});" class='title'>A Basket of Barley Loaves</a>
+<div class='author'>Miller, Mary Christina</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50851, {&quot;Title&quot;:&quot;Evankeliumin alku eli Jeesuksen syntyminen ihmisestä ja jumalasta&quot;,&quot;Topics&quot;:[&quot;Jesus Christ&quot;],&quot;Primary&quot;:&quot;50851.txt&quot;,&quot;CreatorNames&quot;:[&quot;Järnefelt, Arvid, 1861-1932&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;50851&quot;});" class='title'>Evankeliumin alku eli Jeesuksen syntyminen ihmisestä ja jumalasta</a>
+<div class='author'>Järnefelt, Arvid, 1861-1932</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50867, {&quot;Title&quot;:&quot;Mitä on jumalanpalvelus?&quot;,&quot;Topics&quot;:[&quot;Jesus Christ&quot;],&quot;Primary&quot;:&quot;50867.txt&quot;,&quot;CreatorNames&quot;:[&quot;Järnefelt, Arvid, 1861-1932&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;50867&quot;});" class='title'>Mitä on jumalanpalvelus?</a>
+<div class='author'>Järnefelt, Arvid, 1861-1932</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50901, {&quot;Title&quot;:&quot;Das Abendmahl im Zusammenhang mit dem Leben Jesu und der Geschichte des Urchristentums - Zweites Heft. Das Messianitäts- und Leidensgeheimnis. Eine Skizze des Lebens Jesu&quot;,&quot;Topics&quot;:[&quot;Jesus Christ -- Biography&quot;,&quot;Jesus Christ -- Messiahship&quot;,&quot;Kingdom of God -- Biblical teaching&quot;],&quot;Primary&quot;:&quot;50901.htm&quot;,&quot;CreatorNames&quot;:[&quot;Schweitzer, Albert, 1875-1965&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;50901&quot;});" class='title'>Das Abendmahl im Zusammenhang mit dem Leben Jesu und der Geschichte des Urchristentums -<br><span class='subtitle'>Zweites Heft. Das Messianitäts- und Leidensgeheimnis. Eine Skizze des Lebens Jesu</span></a>
+<div class='author'>Schweitzer, Albert, 1875-1965</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51388, {&quot;Title&quot;:&quot;Redemption&quot;,&quot;Topics&quot;:[&quot;Redemption&quot;],&quot;Primary&quot;:&quot;51388.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hoare, Edward, 1812-1894&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;51388&quot;});" class='title'>Redemption</a>
+<div class='author'>Hoare, Edward, 1812-1894</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51655, {&quot;Title&quot;:&quot;The Historical Jesus: A Survey of Positions&quot;,&quot;Topics&quot;:[&quot;Jesus Christ -- Historicity&quot;,&quot;Jesus Christ -- Rationalistic interpretations&quot;],&quot;Primary&quot;:&quot;51655.htm&quot;,&quot;CreatorNames&quot;:[&quot;Robertson, J. M. (John Mackinnon), 1856-1933&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;51655&quot;});" class='title'>The Historical Jesus:<br><span class='subtitle'>A Survey of Positions</span></a>
+<div class='author'>Robertson, J. M. (John Mackinnon), 1856-1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51888, {&quot;Title&quot;:&quot;The New Eschatology - Showing the Indestructibility of the Earth and the Wide Difference Between the Letter and Spirit of Holy Scripture.&quot;,&quot;Topics&quot;:[&quot;Eschatology&quot;,&quot;Judgment Day&quot;],&quot;Primary&quot;:&quot;51888.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pegg, J. G. Broughton&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;51888&quot;});" class='title'>The New Eschatology -<br><span class='subtitle'>Showing the Indestructibility of the Earth and the Wide Difference Between the Letter and Spirit of Holy Scripture.</span></a>
+<div class='author'>Pegg, J. G. Broughton</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52274, {&quot;Title&quot;:&quot;Sanctification&quot;,&quot;Topics&quot;:[&quot;Church of England -- Sermons&quot;,&quot;Sanctification&quot;,&quot;Sermons, English -- 19th century&quot;],&quot;Primary&quot;:&quot;52274.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hoare, Edward, 1812-1894&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;52274&quot;});" class='title'>Sanctification</a>
+<div class='author'>Hoare, Edward, 1812-1894</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52414, {&quot;Title&quot;:&quot;The Christian Mythology&quot;,&quot;Topics&quot;:[&quot;Mythology&quot;,&quot;Christianity and other religions&quot;],&quot;Primary&quot;:&quot;52414.htm&quot;,&quot;CreatorNames&quot;:[&quot;Leatherbee, E. B. (Ethel Brigham), 1878-1955&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;52414&quot;});" class='title'>The Christian Mythology</a>
+<div class='author'>Leatherbee, E. B. (Ethel Brigham), 1878-1955</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52712, {&quot;Title&quot;:&quot;The Two Treaties; or, Hope for Jerusalem&quot;,&quot;Topics&quot;:[&quot;Second Advent&quot;,&quot;Bible -- Prophecies&quot;],&quot;Primary&quot;:&quot;52712.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hoare, Edward, 1812-1894&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;52712&quot;});" class='title'>The Two Treaties;<br><span class='subtitle'>or, Hope for Jerusalem</span></a>
+<div class='author'>Hoare, Edward, 1812-1894</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52742, {&quot;Title&quot;:&quot;The Atonement, as taught by the Church of England: A Sermon&quot;,&quot;Topics&quot;:[&quot;Church of England -- Sermons&quot;,&quot;Atonement&quot;],&quot;Primary&quot;:&quot;52742.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hoare, Edward, 1812-1894&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;52742&quot;});" class='title'>The Atonement, as taught by the Church of England:<br><span class='subtitle'>A Sermon</span></a>
+<div class='author'>Hoare, Edward, 1812-1894</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52767, {&quot;Title&quot;:&quot;The Time of the End - or, the World, the Visible Church, and the People of God at the Advent of the Lord&quot;,&quot;Topics&quot;:[&quot;Second Advent&quot;,&quot;Bible -- Prophecies&quot;],&quot;Primary&quot;:&quot;52767.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hoare, Edward, 1812-1894&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;52767&quot;});" class='title'>The Time of the End -<br><span class='subtitle'>or, the World, the Visible Church, and the People of God at the Advent of the Lord</span></a>
+<div class='author'>Hoare, Edward, 1812-1894</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53346, {&quot;Title&quot;:&quot;The Analogy of Religion to the Constitution and Course of Nature - To which are added two brief dissertations: I. On personal identity. II. On the nature of virtue.&quot;,&quot;Topics&quot;:[&quot;Revelation&quot;,&quot;Natural theology&quot;,&quot;Apologetics -- Early works to 1800&quot;,&quot;Eschatology&quot;,&quot;Analogy (Religion)&quot;],&quot;Primary&quot;:&quot;53346.htm&quot;,&quot;CreatorNames&quot;:[&quot;Butler, Joseph, 1692-1752&quot;,&quot;Malcolm, Howard, 1799-1879 [Editor]&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;53346&quot;});" class='title'>The Analogy of Religion to the Constitution and Course of Nature -<br><span class='subtitle'>To which are added two brief dissertations: I. On personal identity. II. On the nature of virtue.</span></a>
+<div class='author'>Butler, Joseph, 1692-1752, Malcolm, Howard, 1799-1879 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53527, {&quot;Title&quot;:&quot;The Existence and Attributes of God, Volumes 1 and 2&quot;,&quot;Topics&quot;:[&quot;Providence and government of God -- Christianity&quot;,&quot;God (Christianity) -- Attributes&quot;],&quot;Primary&quot;:&quot;53527.htm&quot;,&quot;CreatorNames&quot;:[&quot;Charnock, Stephen, 1628-1680&quot;,&quot;Symington, William, 1795-1862 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;53527&quot;});" class='title'>The Existence and Attributes of God, Volumes 1 and 2</a>
+<div class='author'>Charnock, Stephen, 1628-1680, Symington, William, 1795-1862 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53616, {&quot;Title&quot;:&quot;The Jesus Problem: A Restatement of the Myth Theory&quot;,&quot;Topics&quot;:[&quot;Jesus Christ&quot;],&quot;Primary&quot;:&quot;53616.htm&quot;,&quot;CreatorNames&quot;:[&quot;Robertson, J. M. (John Mackinnon), 1856-1933&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;53616&quot;});" class='title'>The Jesus Problem:<br><span class='subtitle'>A Restatement of the Myth Theory</span></a>
+<div class='author'>Robertson, J. M. (John Mackinnon), 1856-1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54373, {&quot;Title&quot;:&quot;The state of the dead and the destiny of the wicked&quot;,&quot;Topics&quot;:[&quot;Seventh-Day Adventists -- Doctrinal and controversial works&quot;,&quot;Intermediate state&quot;,&quot;Annihilationism&quot;,&quot;Death -- Biblical teaching&quot;],&quot;Primary&quot;:&quot;54373.htm&quot;,&quot;CreatorNames&quot;:[&quot;Smith, Uriah, 1832-1903&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;54373&quot;});" class='title'>The state of the dead and the destiny of the wicked</a>
+<div class='author'>Smith, Uriah, 1832-1903</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54858, {&quot;Title&quot;:&quot;The Historical Evidence for the Virgin Birth&quot;,&quot;Topics&quot;:[&quot;Bible. Gospels&quot;,&quot;Virgin birth&quot;,&quot;Jesus Christ -- Nativity&quot;],&quot;Primary&quot;:&quot;54858.htm&quot;,&quot;CreatorNames&quot;:[&quot;Taylor, Vincent, 1887-1968&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;54858&quot;});" class='title'>The Historical Evidence for the Virgin Birth</a>
+<div class='author'>Taylor, Vincent, 1887-1968</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54914, {&quot;Title&quot;:&quot;His Glorious Appearing: An Exposition of Matthew Twenty-Four&quot;,&quot;Topics&quot;:[&quot;Second Advent&quot;,&quot;Bible. Matthew, XXIV -- Commentaries&quot;],&quot;Primary&quot;:&quot;54914.htm&quot;,&quot;CreatorNames&quot;:[&quot;White, James, 1821-1881&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;54914&quot;});" class='title'>His Glorious Appearing:<br><span class='subtitle'>An Exposition of Matthew Twenty-Four</span></a>
+<div class='author'>White, James, 1821-1881</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55230, {&quot;Title&quot;:&quot;The Day After Death; Or, Our Future Life According to Science (New Edition)&quot;,&quot;Topics&quot;:[&quot;Cosmology&quot;,&quot;Future life&quot;,&quot;Transmigration&quot;],&quot;Primary&quot;:&quot;55230.htm&quot;,&quot;CreatorNames&quot;:[&quot;Figuier, Louis, 1819-1894&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;55230&quot;});" class='title'>The Day After Death;<br><span class='subtitle'>Or, Our Future Life According to Science (New Edition)</span></a>
+<div class='author'>Figuier, Louis, 1819-1894</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55575, {&quot;Title&quot;:&quot;The Historical Christ; - Or, An investigation of the views of Mr. J. M. Robertson, Dr. A. Drews, and Prof. W. B. Smith&quot;,&quot;Topics&quot;:[&quot;Jesus Christ -- Biography -- History and criticism&quot;,&quot;Robertson, J. M. (John Mackinnon), 1856-1933&quot;,&quot;Drews, Arthur, 1865-1935&quot;,&quot;Smith, William Benjamin, 1850-1934&quot;],&quot;Primary&quot;:&quot;55575.htm&quot;,&quot;CreatorNames&quot;:[&quot;Conybeare, F. C. (Frederick Cornwallis), 1856-1924&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;55575&quot;});" class='title'>The Historical Christ;<br><span class='subtitle'>- Or, An investigation of the views of Mr. J. M. Robertson, Dr. A. Drews, and Prof. W. B. Smith</span></a>
+<div class='author'>Conybeare, F. C. (Frederick Cornwallis), 1856-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5608, {&quot;Title&quot;:&quot;Trial of the Witnesses of the Resurrection of Jesus&quot;,&quot;Topics&quot;:[&quot;Jesus Christ -- Resurrection&quot;,&quot;Woolston, Thomas, 1670-1733. Sixth discourse on the miracles of our Saviour&quot;,&quot;Deism -- Controversial literature&quot;],&quot;Primary&quot;:&quot;5608.txt&quot;,&quot;CreatorNames&quot;:[&quot;Sherlock, Thomas, 1678-1761&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;5608&quot;});" class='title'>Trial of the Witnesses of the Resurrection of Jesus</a>
+<div class='author'>Sherlock, Thomas, 1678-1761</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57330, {&quot;Title&quot;:&quot;The Opening Heavens - or a Connected View of the Testimony of the Prophets and Apostles, Concerning the Opening Heavens, Compared With Astronomical Observations, and of the Present and Future Location of the New Jerusalem, the Paradise of God&quot;,&quot;Topics&quot;:[&quot;Second Advent&quot;,&quot;Bible -- Prophecies&quot;,&quot;Paradise&quot;],&quot;Primary&quot;:&quot;57330.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bates, Joseph, 1792-1872&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;57330&quot;});" class='title'>The Opening Heavens -<br><span class='subtitle'>or a Connected View of the Testimony of the Prophets and Apostles, Concerning the Opening Heavens, Compared With Astronomical Observations, and of the Present and Future Location of the New Jerusalem, the Paradise of God</span></a>
+<div class='author'>Bates, Joseph, 1792-1872</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57722, {&quot;Title&quot;:&quot;The Sermon on the Mount: A Practical Exposition&quot;,&quot;Topics&quot;:[&quot;Sermon on the mount&quot;],&quot;Primary&quot;:&quot;57722.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gore, Charles, 1853-1932&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;57722&quot;});" class='title'>The Sermon on the Mount:<br><span class='subtitle'>A Practical Exposition</span></a>
+<div class='author'>Gore, Charles, 1853-1932</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58014, {&quot;Title&quot;:&quot;The Nature of a Gospel Church - A Confession of Evangelical Principles; and the Members&#39; Covenant. Intended for the Use of the Church of Christ.&quot;,&quot;Topics&quot;:[&quot;Theology, Doctrinal&quot;],&quot;Primary&quot;:&quot;58014.htm&quot;,&quot;CreatorNames&quot;:[&quot;Church, J. (John), 1780?-1825?&quot;],&quot;LoCC&quot;:[&quot;BT&quot;,&quot;BX&quot;],&quot;PG_ID&quot;:&quot;58014&quot;});" class='title'>The Nature of a Gospel Church -<br><span class='subtitle'>A Confession of Evangelical Principles; and the Members' Covenant. Intended for the Use of the Church of Christ.</span></a>
+<div class='author'>Church, J. (John), 1780?-1825?</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58492, {&quot;Title&quot;:&quot;A Confession of Evangelical Principles - in a letter to a friend&quot;,&quot;Topics&quot;:[&quot;Theology, Doctrinal&quot;,&quot;Church, J. (John), approximately 1780-approximately 1825&quot;],&quot;Primary&quot;:&quot;58492.htm&quot;,&quot;CreatorNames&quot;:[&quot;Church, J. (John), 1780?-1825?&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;58492&quot;});" class='title'>A Confession of Evangelical Principles -<br><span class='subtitle'>in a letter to a friend</span></a>
+<div class='author'>Church, J. (John), 1780?-1825?</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58761, {&quot;Title&quot;:&quot;The Precious Name, Proofs of the Godhead, and a Hymn&quot;,&quot;Topics&quot;:[&quot;Jesus Christ&quot;,&quot;Holy Spirit&quot;,&quot;Hymns, English&quot;],&quot;Primary&quot;:&quot;58761.htm&quot;,&quot;CreatorNames&quot;:[&quot;Church, J. (John), 1780?-1825?&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;58761&quot;});" class='title'>The Precious Name, Proofs of the Godhead, and a Hymn</a>
+<div class='author'>Church, J. (John), 1780?-1825?</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59133, {&quot;Title&quot;:&quot;A Body of Divinity, Vol. 1 (of 4) - Wherein the doctrines of the Christian religion are explained and defended, being the substance of several lectures on the Assembly&#39;s Larger Catechism&quot;,&quot;Topics&quot;:[&quot;Theology, Doctrinal&quot;,&quot;Presbyterianism&quot;,&quot;Westminster Assembly (1643-1652). Larger catechism&quot;,&quot;Presbyterian Church -- Doctrines&quot;],&quot;Primary&quot;:&quot;59133.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wilson, James P. (James Patriot), 1769-1830 [Annotator]&quot;,&quot;Ridgley, Thomas, 1667?-1734&quot;],&quot;LoCC&quot;:[&quot;BT&quot;,&quot;BX&quot;],&quot;PG_ID&quot;:&quot;59133&quot;});" class='title'>A Body of Divinity, Vol. 1 (of 4) -<br><span class='subtitle'>Wherein the doctrines of the Christian religion are explained and defended, being the substance of several lectures on the Assembly's Larger Catechism</span></a>
+<div class='author'>Wilson, James P. (James Patriot), 1769-1830 [Annotator], Ridgley, Thomas, 1667?-1734</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5954, {&quot;Title&quot;:&quot;Religious Reality: A Book for Men&quot;,&quot;Topics&quot;:[&quot;Theology, Doctrinal -- Popular works&quot;],&quot;Primary&quot;:&quot;5954.txt&quot;,&quot;CreatorNames&quot;:[&quot;Rawlinson, A. E. J. (Alfred Edward John), 1884-1960&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;5954&quot;});" class='title'>Religious Reality:<br><span class='subtitle'>A Book for Men</span></a>
+<div class='author'>Rawlinson, A. E. J. (Alfred Edward John), 1884-1960</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6038, {&quot;Title&quot;:&quot;The Great Doctrines of the Bible&quot;,&quot;Topics&quot;:[&quot;Bible -- Theology&quot;,&quot;Theology, Doctrinal -- Popular works&quot;],&quot;Primary&quot;:&quot;6038.txt&quot;,&quot;CreatorNames&quot;:[&quot;Evans, William, 1870-1950&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;6038&quot;});" class='title'>The Great Doctrines of the Bible</a>
+<div class='author'>Evans, William, 1870-1950</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60669, {&quot;Title&quot;:&quot;Around the Wicket Gate - or, a friendly talk with seekers concerning faith in the Lord Jesus Christ&quot;,&quot;Topics&quot;:[&quot;Christian life&quot;,&quot;Salvation&quot;,&quot;Faith&quot;],&quot;Primary&quot;:&quot;60669.htm&quot;,&quot;CreatorNames&quot;:[&quot;Spurgeon, C. H. (Charles Haddon), 1834-1892&quot;],&quot;LoCC&quot;:[&quot;BT&quot;,&quot;BV&quot;],&quot;PG_ID&quot;:&quot;60669&quot;});" class='title'>Around the Wicket Gate -<br><span class='subtitle'>or, a friendly talk with seekers concerning faith in the Lord Jesus Christ</span></a>
+<div class='author'>Spurgeon, C. H. (Charles Haddon), 1834-1892</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60750, {&quot;Title&quot;:&quot;Death and resurrection from the point of view of the cell-theory&quot;,&quot;Topics&quot;:[&quot;Biology&quot;,&quot;Future life&quot;],&quot;Primary&quot;:&quot;60750.htm&quot;,&quot;CreatorNames&quot;:[&quot;Björklund, Gustaf, 1846-1903&quot;,&quot;Fries, Joens Elias, 1876-1932 [Translator]&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;60750&quot;});" class='title'>Death and resurrection from the point of view of the cell-theory</a>
+<div class='author'>Björklund, Gustaf, 1846-1903, Fries, Joens Elias, 1876-1932 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6092, {&quot;Title&quot;:&quot;The Fair Haven&quot;,&quot;Topics&quot;:[&quot;Christianity -- Controversial literature&quot;,&quot;Jesus Christ -- Miracles&quot;,&quot;Jesus Christ -- Person and offices&quot;,&quot;Jesus Christ -- Biography -- History and criticism&quot;,&quot;Strauss, David Friedrich, 1808-1874&quot;,&quot;Alford, Henry, 1810-1871&quot;],&quot;Primary&quot;:&quot;6092.htm&quot;,&quot;CreatorNames&quot;:[&quot;Butler, Samuel, 1835-1902&quot;,&quot;Streatfeild, R. A. (Richard Alexander), 1866-1919 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;BT&quot;,&quot;PR&quot;],&quot;PG_ID&quot;:&quot;6092&quot;});" class='title'>The Fair Haven</a>
+<div class='author'>Butler, Samuel, 1835-1902, Streatfeild, R. A. (Richard Alexander), 1866-1919 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61249, {&quot;Title&quot;:&quot;Dæmonologia Sacra; or, A Treatise of Satan&#39;s Temptations - In Three Parts&quot;,&quot;Topics&quot;:[&quot;Devil -- Early works to 1800&quot;,&quot;Temptation -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;61249.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gilpin, Richard, 1625-1700&quot;,&quot;Grosart, Alexander Balloch, 1827-1899 [Editor]&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;61249&quot;});" class='title'>Dæmonologia Sacra;<br><span class='subtitle'>or, A Treatise of Satan's Temptations - In Three Parts</span></a>
+<div class='author'>Gilpin, Richard, 1625-1700, Grosart, Alexander Balloch, 1827-1899 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6135, {&quot;Title&quot;:&quot;When the Holy Ghost is Come&quot;,&quot;Topics&quot;:[&quot;Holy Spirit&quot;],&quot;Primary&quot;:&quot;6135.htm&quot;,&quot;CreatorNames&quot;:[&quot;Brengle, Samuel Logan, 1860-1936&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;6135&quot;});" class='title'>When the Holy Ghost is Come</a>
+<div class='author'>Brengle, Samuel Logan, 1860-1936</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61771, {&quot;Title&quot;:&quot;The Double Search: Studies in Atonement and Prayer&quot;,&quot;Topics&quot;:[&quot;Prayer -- Christianity&quot;,&quot;Atonement&quot;],&quot;Primary&quot;:&quot;61771.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jones, Rufus M. (Rufus Matthew), 1863-1948&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;61771&quot;});" class='title'>The Double Search:<br><span class='subtitle'>Studies in Atonement and Prayer</span></a>
+<div class='author'>Jones, Rufus M. (Rufus Matthew), 1863-1948</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62001, {&quot;Title&quot;:&quot;The Cross: A Tract for the Times&quot;,&quot;Topics&quot;:[&quot;Atonement&quot;],&quot;Primary&quot;:&quot;62001.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ryle, J. C. (John Charles), 1816-1900&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;62001&quot;});" class='title'>The Cross:<br><span class='subtitle'>A Tract for the Times</span></a>
+<div class='author'>Ryle, J. C. (John Charles), 1816-1900</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62149, {&quot;Title&quot;:&quot;A Body of Divinity, Vol. 2 (of 4) - Wherein the doctrines of the Christian religion are explained and defended, being the substance of several lectures on the Assembly&#39;s Larger Catechism&quot;,&quot;Topics&quot;:[&quot;Theology, Doctrinal&quot;,&quot;Presbyterianism&quot;,&quot;Westminster Assembly (1643-1652). Larger catechism&quot;,&quot;Presbyterian Church -- Doctrines&quot;],&quot;Primary&quot;:&quot;62149.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wilson, James P. (James Patriot), 1769-1830 [Annotator]&quot;,&quot;Ridgley, Thomas, 1667?-1734&quot;],&quot;LoCC&quot;:[&quot;BT&quot;,&quot;BX&quot;],&quot;PG_ID&quot;:&quot;62149&quot;});" class='title'>A Body of Divinity, Vol. 2 (of 4) -<br><span class='subtitle'>Wherein the doctrines of the Christian religion are explained and defended, being the substance of several lectures on the Assembly's Larger Catechism</span></a>
+<div class='author'>Wilson, James P. (James Patriot), 1769-1830 [Annotator], Ridgley, Thomas, 1667?-1734</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62192, {&quot;Title&quot;:&quot;L&#39;eresia nel Medio Evo&quot;,&quot;Topics&quot;:[&quot;Christian heresies -- History -- Middle Ages, 600-1500&quot;,&quot;Christian heretics -- Italy -- History&quot;],&quot;Primary&quot;:&quot;62192.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tocco, Felice, 1845-1911&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;62192&quot;});" class='title'>L'eresia nel Medio Evo</a>
+<div class='author'>Tocco, Felice, 1845-1911</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62579, {&quot;Title&quot;:&quot;Il Diavolo&quot;,&quot;Topics&quot;:[&quot;Devil -- Christianity&quot;],&quot;Primary&quot;:&quot;62579.htm&quot;,&quot;CreatorNames&quot;:[&quot;Graf, Arturo, 1848-1913&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;62579&quot;});" class='title'>Il Diavolo</a>
+<div class='author'>Graf, Arturo, 1848-1913</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63510, {&quot;Title&quot;:&quot;The Kernel and the Husk: Letters on Spiritual Christianity&quot;,&quot;Topics&quot;:[&quot;Christianity -- Controversial literature&quot;,&quot;Christianity -- Essence, genius, nature&quot;,&quot;Miracles&quot;,&quot;Faith&quot;],&quot;Primary&quot;:&quot;63510.htm&quot;,&quot;CreatorNames&quot;:[&quot;Abbott, Edwin Abbott, 1838-1926&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;63510&quot;});" class='title'>The Kernel and the Husk:<br><span class='subtitle'>Letters on Spiritual Christianity</span></a>
+<div class='author'>Abbott, Edwin Abbott, 1838-1926</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64037, {&quot;Title&quot;:&quot;The Life of Jesus Critically Examined - (4th ed.)&quot;,&quot;Topics&quot;:[&quot;Jesus Christ -- Biography&quot;,&quot;Jesus Christ -- History of doctrines&quot;],&quot;Primary&quot;:&quot;64037.htm&quot;,&quot;CreatorNames&quot;:[&quot;Strauss, David Friedrich, 1808-1874&quot;,&quot;Pfleiderer, Otto, 1839-1908 [Author of introduction, etc.]&quot;,&quot;Eliot, George, 1819-1880 [Translator]&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;64037&quot;});" class='title'>The Life of Jesus Critically Examined -<br><span class='subtitle'>(4th ed.)</span></a>
+<div class='author'>Strauss, David Friedrich, 1808-1874, Pfleiderer, Otto, 1839-1908 [Author of introduction, etc.], Eliot, George, 1819-1880 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64185, {&quot;Title&quot;:&quot;A Body of Divinity, Vol. 3 (of 4) - Wherein the doctrines of the Christian religion are explained and defended, being the substance of several lectures on the Assembly&#39;s Larger Catechism&quot;,&quot;Topics&quot;:[&quot;Theology, Doctrinal&quot;,&quot;Presbyterianism&quot;,&quot;Westminster Assembly (1643-1652). Larger catechism&quot;,&quot;Presbyterian Church -- Doctrines&quot;],&quot;Primary&quot;:&quot;64185.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wilson, James P. (James Patriot), 1769-1830 [Annotator]&quot;,&quot;Ridgley, Thomas, 1667?-1734&quot;],&quot;LoCC&quot;:[&quot;BT&quot;,&quot;BX&quot;],&quot;PG_ID&quot;:&quot;64185&quot;});" class='title'>A Body of Divinity, Vol. 3 (of 4) -<br><span class='subtitle'>Wherein the doctrines of the Christian religion are explained and defended, being the substance of several lectures on the Assembly's Larger Catechism</span></a>
+<div class='author'>Wilson, James P. (James Patriot), 1769-1830 [Annotator], Ridgley, Thomas, 1667?-1734</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64503, {&quot;Title&quot;:&quot;Christianity in relation to Freethought, Scepticism, and Faith - Three discourses by the Bishop of Peterborough with special replies by Mr. C. Bradlaugh&quot;,&quot;Topics&quot;:[&quot;Apologetics&quot;,&quot;Free thought&quot;,&quot;Christianity -- Controversial literature&quot;,&quot;Skepticism&quot;],&quot;Primary&quot;:&quot;64503.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bradlaugh, Charles, 1833-1891&quot;,&quot;Magee, William Connor, 1822-1891&quot;,&quot;Cooper, Robert A. [Contributor]&quot;,&quot;Goulburn, Edward Meyrick, 1818-1897 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;64503&quot;});" class='title'>Christianity in relation to Freethought, Scepticism, and Faith -<br><span class='subtitle'>Three discourses by the Bishop of Peterborough with special replies by Mr. C. Bradlaugh</span></a>
+<div class='author'>Bradlaugh, Charles, 1833-1891, Magee, William Connor, 1822-1891, Cooper, Robert A. [Contributor], Goulburn, Edward Meyrick, 1818-1897 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65165, {&quot;Title&quot;:&quot;Vida de Jesús&quot;,&quot;Topics&quot;:[&quot;Jesus Christ -- Biography&quot;,&quot;Christian biography -- Palestine&quot;],&quot;Primary&quot;:&quot;65165.htm&quot;,&quot;CreatorNames&quot;:[&quot;Renan, Ernest, 1823-1892&quot;,&quot;Vega, Federico de la [Translator]&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;65165&quot;});" class='title'>Vida de Jesús</a>
+<div class='author'>Renan, Ernest, 1823-1892, Vega, Federico de la [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65484, {&quot;Title&quot;:&quot;A Body of Divinity, Vol. 4 (of 4) - Wherein the doctrines of the Christian religion are explained and defended, being the substance of several lectures on the Assembly&#39;s Larger Catechism&quot;,&quot;Topics&quot;:[&quot;Theology, Doctrinal&quot;,&quot;Presbyterianism&quot;,&quot;Westminster Assembly (1643-1652). Larger catechism&quot;,&quot;Presbyterian Church -- Doctrines&quot;],&quot;Primary&quot;:&quot;65484.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wilson, James P. (James Patriot), 1769-1830 [Annotator]&quot;,&quot;Ridgley, Thomas, 1667?-1734&quot;],&quot;LoCC&quot;:[&quot;BT&quot;,&quot;BX&quot;],&quot;PG_ID&quot;:&quot;65484&quot;});" class='title'>A Body of Divinity, Vol. 4 (of 4) -<br><span class='subtitle'>Wherein the doctrines of the Christian religion are explained and defended, being the substance of several lectures on the Assembly's Larger Catechism</span></a>
+<div class='author'>Wilson, James P. (James Patriot), 1769-1830 [Annotator], Ridgley, Thomas, 1667?-1734</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65916, {&quot;Title&quot;:&quot;Medicine and the Church - Being a series of studies on the relationship between the practice of medicine and the church&#39;s ministry to the sick&quot;,&quot;Topics&quot;:[&quot;Medicine -- Religious aspects&quot;,&quot;Pastoral medicine&quot;],&quot;Primary&quot;:&quot;65916.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rhodes, Geoffrey [Editor]&quot;],&quot;LoCC&quot;:[&quot;BT&quot;,&quot;RZ&quot;],&quot;PG_ID&quot;:&quot;65916&quot;});" class='title'>Medicine and the Church -<br><span class='subtitle'>Being a series of studies on the relationship between the practice of medicine and the church's ministry to the sick</span></a>
+<div class='author'>Rhodes, Geoffrey [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6657, {&quot;Title&quot;:&quot;The Theology of Holiness&quot;,&quot;Topics&quot;:[&quot;Sanctification&quot;,&quot;Holiness&quot;],&quot;Primary&quot;:&quot;6657.htm&quot;,&quot;CreatorNames&quot;:[&quot;Clark, Dougan, 1828-1896&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;6657&quot;});" class='title'>The Theology of Holiness</a>
+<div class='author'>Clark, Dougan, 1828-1896</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67052, {&quot;Title&quot;:&quot;Celle qui pleure (Notre Dame de la Salette)&quot;,&quot;Topics&quot;:[&quot;La Salette, Our Lady of&quot;,&quot;Mary, Blessed Virgin, Saint -- Apparitions and miracles&quot;],&quot;Primary&quot;:&quot;67052.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bloy, Léon, 1846-1917&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;67052&quot;});" class='title'>Celle qui pleure (Notre Dame de la Salette)</a>
+<div class='author'>Bloy, Léon, 1846-1917</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67151, {&quot;Title&quot;:&quot;The Proofs of Christ&#39;s Resurrection; from a Lawyer&#39;s Standpoint&quot;,&quot;Topics&quot;:[&quot;Apologetics&quot;,&quot;Jesus Christ -- Resurrection&quot;],&quot;Primary&quot;:&quot;67151.htm&quot;,&quot;CreatorNames&quot;:[&quot;Morrison, Charles R. (Charles Robert), 1819-1893&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;67151&quot;});" class='title'>The Proofs of Christ's Resurrection;<br><span class='subtitle'>from a Lawyer's Standpoint</span></a>
+<div class='author'>Morrison, Charles R. (Charles Robert), 1819-1893</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67268, {&quot;Title&quot;:&quot;The Life of Jesus Christ for the Young, Vol. 4 - And His Life Depicted in a Gallery of Eighty Paintings&quot;,&quot;Topics&quot;:[&quot;Jesus Christ -- Biography -- Juvenile literature&quot;,&quot;Jesus Christ -- Art&quot;],&quot;Primary&quot;:&quot;67268.htm&quot;,&quot;CreatorNames&quot;:[&quot;Newton, Richard, 1813-1887&quot;,&quot;Hole, William, 1846-1917 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;67268&quot;});" class='title'>The Life of Jesus Christ for the Young, Vol. 4 -<br><span class='subtitle'>And His Life Depicted in a Gallery of Eighty Paintings</span></a>
+<div class='author'>Newton, Richard, 1813-1887, Hole, William, 1846-1917 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67486, {&quot;Title&quot;:&quot;Life of Christ&quot;,&quot;Topics&quot;:[&quot;Jesus Christ -- Biography&quot;],&quot;Primary&quot;:&quot;67486.htm&quot;,&quot;CreatorNames&quot;:[&quot;Papini, Giovanni, 1881-1956&quot;,&quot;Fisher, Dorothy Canfield, 1879-1958 [Translator]&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;67486&quot;});" class='title'>Life of Christ</a>
+<div class='author'>Papini, Giovanni, 1881-1956, Fisher, Dorothy Canfield, 1879-1958 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7786, {&quot;Title&quot;:&quot;The One Great Reality&quot;,&quot;Topics&quot;:[&quot;Sermons, English -- 20th century&quot;,&quot;Jesus Christ -- Sermons&quot;,&quot;God -- Sermons&quot;],&quot;Primary&quot;:&quot;7786.txt&quot;,&quot;CreatorNames&quot;:[&quot;Clayton, Louisa&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;7786&quot;});" class='title'>The One Great Reality</a>
+<div class='author'>Clayton, Louisa</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7977, {&quot;Title&quot;:&quot;Purgatory: Doctrinal, Historical, and Poetical&quot;,&quot;Topics&quot;:[&quot;Purgatory&quot;],&quot;Primary&quot;:&quot;7977.txt&quot;,&quot;CreatorNames&quot;:[&quot;Sadlier, J., Mrs., 1820-1903&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;7977&quot;});" class='title'>Purgatory:<br><span class='subtitle'>Doctrinal, Historical, and Poetical</span></a>
+<div class='author'>Sadlier, J., Mrs., 1820-1903</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(8191, {&quot;Title&quot;:&quot;Our Master: Thoughts for Salvationists about Their Lord&quot;,&quot;Topics&quot;:[&quot;Sermons, English&quot;,&quot;Jesus Christ -- Sermons&quot;],&quot;Primary&quot;:&quot;8191.htm&quot;,&quot;CreatorNames&quot;:[&quot;Booth, Bramwell, 1856-1929&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;8191&quot;});" class='title'>Our Master:<br><span class='subtitle'>Thoughts for Salvationists about Their Lord</span></a>
+<div class='author'>Booth, Bramwell, 1856-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(9103, {&quot;Title&quot;:&quot;Miracles of Our Lord&quot;,&quot;Topics&quot;:[&quot;Jesus Christ -- Miracles&quot;],&quot;Primary&quot;:&quot;9103.htm&quot;,&quot;CreatorNames&quot;:[&quot;MacDonald, George, 1824-1905&quot;],&quot;LoCC&quot;:[&quot;BT&quot;],&quot;PG_ID&quot;:&quot;9103&quot;});" class='title'>Miracles of Our Lord</a>
+<div class='author'>MacDonald, George, 1824-1905</div>
+</div>
+</ul></div>
+</body></html>

@@ -1,0 +1,157 @@
+<html>
+<head>
+<title>Category</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+<!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+      <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+      <button id="findButton">Find</button>
+  </div>
+</div>
+<div id="header">
+  <div id="header-content">
+    <div class="header-container">
+      <a id="backBtn" class="header-btn" href="#">
+          <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+      </a>
+      <a id="search" class="header-btn" href="../search.html">
+          <img src="../images/icons/search.svg" title="Search book titles">
+      </a>
+    </div>
+    <h1 id="headTitle">Category: Naval Science (V)</h1>
+    <div class="header-container">
+      <a id="sortBtn" class="header-btn" href="#">
+        <img src="../images/icons/sort.svg" title="Re-sort books">
+      </a>
+      <div id="sortDropdown" class="dropdown" style="display: none">
+        <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+        <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+        <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+        <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+      </div>
+      <a class="header-btn" href="categories.html">
+        <img src="../images/icons/categories.svg" title="Browse categories">
+      </a>
+      <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+          <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+      </a>
+    </div>
+  </div>
+</div>
+<div id="body">
+<ul>
+<li><a href='VA.html'>Navies (VA)</a> <span class='count'>10</span></li>
+<li><a href='VB.html'>Naval administration (VB)</a> <span class='count'>2</span></li>
+<li><a href='VE.html'>Marines (VE)</a> <span class='count'>1</span></li>
+<li><a href='VF.html'>Naval ordinance (VF)</a> <span class='count'>3</span></li>
+<li><a href='VG.html'>Other naval services (VG)</a> <span class='count'>1</span></li>
+<li><a href='VK.html'>Navigation, Merchant marine (VK)</a> <span class='count'>28</span></li>
+<li><a href='VM.html'>Naval architecture and engineering, Shipbuilding (VM)</a> <span class='count'>25</span></li>
+<p>&nbsp;</p>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(10694, {&quot;Title&quot;:&quot;Sea-Power and Other Studies&quot;,&quot;Topics&quot;:[&quot;Sea-power&quot;,&quot;Naval art and science&quot;,&quot;Great Britain. Royal Navy -- History&quot;],&quot;Primary&quot;:&quot;10694.txt&quot;,&quot;CreatorNames&quot;:[&quot;Bridge, Cyprian, Sir, 1839-1924&quot;],&quot;LoCC&quot;:[&quot;V&quot;],&quot;PG_ID&quot;:&quot;10694&quot;});" class='title'>Sea-Power and Other Studies</a>
+<div class='author'>Bridge, Cyprian, Sir, 1839-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13216, {&quot;Title&quot;:&quot;Diario histórico de la rebelion y guerra de los pueblos Guaranis situados en la costa oriental del Rio Uruguay, del año de 1754&quot;,&quot;Topics&quot;:[&quot;Seven Reductions, War of the, 1754-1756&quot;],&quot;Primary&quot;:&quot;13216.txt&quot;,&quot;CreatorNames&quot;:[&quot;Henis, Tadéas Xavier, 1711-&quot;],&quot;LoCC&quot;:[&quot;V&quot;],&quot;PG_ID&quot;:&quot;13216&quot;});" class='title'>Diario histórico de la rebelion y guerra de los pueblos Guaranis situados en la costa oriental del Rio Uruguay, del año de 1754</a>
+<div class='author'>Henis, Tadéas Xavier, 1711-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15076, {&quot;Title&quot;:&quot;Some Principles of Maritime Strategy&quot;,&quot;Topics&quot;:[&quot;Naval strategy&quot;],&quot;Primary&quot;:&quot;15076.htm&quot;,&quot;CreatorNames&quot;:[&quot;Corbett, Julian Stafford, 1854-1922&quot;],&quot;LoCC&quot;:[&quot;V&quot;],&quot;PG_ID&quot;:&quot;15076&quot;});" class='title'>Some Principles of Maritime Strategy</a>
+<div class='author'>Corbett, Julian Stafford, 1854-1922</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15749, {&quot;Title&quot;:&quot;The Interest of America in Sea Power, Present and Future&quot;,&quot;Topics&quot;:[&quot;Sea-power&quot;,&quot;United States. Navy&quot;,&quot;United States -- Defenses&quot;],&quot;Primary&quot;:&quot;15749.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mahan, A. T. (Alfred Thayer), 1840-1914&quot;],&quot;LoCC&quot;:[&quot;V&quot;],&quot;PG_ID&quot;:&quot;15749&quot;});" class='title'>The Interest of America in Sea Power, Present and Future</a>
+<div class='author'>Mahan, A. T. (Alfred Thayer), 1840-1914</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16695, {&quot;Title&quot;:&quot;Fighting Instructions, 1530-1816 - Publications of the Navy Records Society Vol. XXIX.&quot;,&quot;Topics&quot;:[&quot;Great Britain -- History, Naval&quot;,&quot;Great Britain. Royal Navy -- Regulations&quot;,&quot;Great Britain. Royal Navy -- Communication systems&quot;,&quot;Naval tactics&quot;],&quot;Primary&quot;:&quot;16695.txt&quot;,&quot;CreatorNames&quot;:[&quot;Corbett, Julian Stafford, 1854-1922&quot;],&quot;LoCC&quot;:[&quot;V&quot;],&quot;PG_ID&quot;:&quot;16695&quot;});" class='title'>Fighting Instructions, 1530-1816 -<br><span class='subtitle'>Publications of the Navy Records Society Vol. XXIX.</span></a>
+<div class='author'>Corbett, Julian Stafford, 1854-1922</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17547, {&quot;Title&quot;:&quot;The Navy as a Fighting Machine&quot;,&quot;Topics&quot;:[&quot;Sea-power&quot;,&quot;Naval art and science&quot;,&quot;Navies&quot;,&quot;United States. Navy -- Management&quot;,&quot;Naval strategy&quot;],&quot;Primary&quot;:&quot;17547.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fiske, Bradley A. (Bradley Allen), 1854-1942&quot;],&quot;LoCC&quot;:[&quot;V&quot;],&quot;PG_ID&quot;:&quot;17547&quot;});" class='title'>The Navy as a Fighting Machine</a>
+<div class='author'>Fiske, Bradley A. (Bradley Allen), 1854-1942</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22305, {&quot;Title&quot;:&quot;The Naval History of the United States. Volume 1&quot;,&quot;Topics&quot;:[&quot;United States -- History, Naval&quot;],&quot;Primary&quot;:&quot;22305.htm&quot;,&quot;CreatorNames&quot;:[&quot;Abbot, Willis J. (Willis John), 1863-1934&quot;],&quot;LoCC&quot;:[&quot;V&quot;],&quot;PG_ID&quot;:&quot;22305&quot;});" class='title'>The Naval History of the United States. Volume 1</a>
+<div class='author'>Abbot, Willis J. (Willis John), 1863-1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24797, {&quot;Title&quot;:&quot;A History of Sea Power&quot;,&quot;Topics&quot;:[&quot;Naval history&quot;,&quot;Sea-power&quot;],&quot;Primary&quot;:&quot;24797.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stevens, William Oliver, 1878-1955&quot;,&quot;Westcott, Allan F. (Allan Ferguson), 1882-&quot;],&quot;LoCC&quot;:[&quot;D&quot;,&quot;V&quot;],&quot;PG_ID&quot;:&quot;24797&quot;});" class='title'>A History of Sea Power</a>
+<div class='author'>Stevens, William Oliver, 1878-1955, Westcott, Allan F. (Allan Ferguson), 1882-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26000, {&quot;Title&quot;:&quot;The Sailor&#39;s Word-Book - An Alphabetical Digest of Nautical Terms, including Some More Especially Military and Scientific, but Useful to Seamen; as well as Archaisms of Early Voyagers, etc.&quot;,&quot;Topics&quot;:[&quot;Naval art and science -- Dictionaries&quot;,&quot;Military art and science -- Dictionaries&quot;],&quot;Primary&quot;:&quot;26000.htm&quot;,&quot;CreatorNames&quot;:[&quot;Smyth, W. H. (William Henry), 1788-1865&quot;,&quot;Belcher, Edward, Sir, 1799-1877 [Editor]&quot;],&quot;LoCC&quot;:[&quot;V&quot;],&quot;PG_ID&quot;:&quot;26000&quot;});" class='title'>The Sailor's Word-Book -<br><span class='subtitle'>An Alphabetical Digest of Nautical Terms, including Some More Especially Military and Scientific, but Useful to Seamen; as well as Archaisms of Early Voyagers, etc.</span></a>
+<div class='author'>Smyth, W. H. (William Henry), 1788-1865, Belcher, Edward, Sir, 1799-1877 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26416, {&quot;Title&quot;:&quot;The Naval History of the United States. Volume 2&quot;,&quot;Topics&quot;:[&quot;United States -- History, Naval&quot;],&quot;Primary&quot;:&quot;26416.htm&quot;,&quot;CreatorNames&quot;:[&quot;Abbot, Willis J. (Willis John), 1863-1934&quot;,&quot;Jackson, W. C. [Illustrator]&quot;,&quot;McVickar, H. W. (Harry Whitney), 1860- [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;V&quot;],&quot;PG_ID&quot;:&quot;26416&quot;});" class='title'>The Naval History of the United States. Volume 2</a>
+<div class='author'>Abbot, Willis J. (Willis John), 1863-1934, Jackson, W. C. [Illustrator], McVickar, H. W. (Harry Whitney), 1860- [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27244, {&quot;Title&quot;:&quot;Operations Upon the Sea: A Study&quot;,&quot;Topics&quot;:[&quot;Sea-power&quot;,&quot;Germany. Kriegsmarine&quot;,&quot;Germany. Heer -- Transport service&quot;,&quot;Transportation, Military&quot;],&quot;Primary&quot;:&quot;27244.htm&quot;,&quot;CreatorNames&quot;:[&quot;Edelsheim, Franz, Freiherr von, 1868-&quot;],&quot;LoCC&quot;:[&quot;V&quot;],&quot;PG_ID&quot;:&quot;27244&quot;});" class='title'>Operations Upon the Sea:<br><span class='subtitle'>A Study</span></a>
+<div class='author'>Edelsheim, Franz, Freiherr von, 1868-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28178, {&quot;Title&quot;:&quot;Sound Military Decision&quot;,&quot;Topics&quot;:[&quot;Naval strategy -- Decision making&quot;],&quot;Primary&quot;:&quot;28178.htm&quot;,&quot;CreatorNames&quot;:[&quot;Naval War College (U.S.)&quot;,&quot;Kalbfus, Edward C. (Edward Clifford), 1877-1954 [Commentator]&quot;],&quot;LoCC&quot;:[&quot;V&quot;],&quot;PG_ID&quot;:&quot;28178&quot;});" class='title'>Sound Military Decision</a>
+<div class='author'>Naval War College (U.S.), Kalbfus, Edward C. (Edward Clifford), 1877-1954 [Commentator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29685, {&quot;Title&quot;:&quot;Submarine Warfare of To-day - How the Submarine Menace Was Met and Vanquished, with Descriptions of the Inventions and Devices Used, Fast Boats, Mystery Ships, Nets, Aircraft, &amp;c. &amp;c., Also Describing the Selection and Training of the Enormous Personnel Used in This New Branch of the Navy&quot;,&quot;Topics&quot;:[&quot;World War, 1914-1918 -- Naval operations -- Submarine&quot;,&quot;Submarine warfare&quot;],&quot;Primary&quot;:&quot;29685.htm&quot;,&quot;CreatorNames&quot;:[&quot;Domville-Fife, Charles W. (Charles William), 1886-&quot;],&quot;LoCC&quot;:[&quot;V&quot;],&quot;PG_ID&quot;:&quot;29685&quot;});" class='title'>Submarine Warfare of To-day -<br><span class='subtitle'>How the Submarine Menace Was Met and Vanquished, with Descriptions of the Inventions and Devices Used, Fast Boats, Mystery Ships, Nets, Aircraft, &c. &c., Also Describing the Selection and Training of the Enormous Personnel Used in This New Branch of the Navy</span></a>
+<div class='author'>Domville-Fife, Charles W. (Charles William), 1886-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33445, {&quot;Title&quot;:&quot;Naval Warfare&quot;,&quot;Topics&quot;:[&quot;Naval history&quot;,&quot;Naval art and science&quot;],&quot;Primary&quot;:&quot;33445.htm&quot;,&quot;CreatorNames&quot;:[&quot;Thursfield, James R. (James Richard), 1840-1923&quot;],&quot;LoCC&quot;:[&quot;V&quot;],&quot;PG_ID&quot;:&quot;33445&quot;});" class='title'>Naval Warfare</a>
+<div class='author'>Thursfield, James R. (James Richard), 1840-1923</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37328, {&quot;Title&quot;:&quot;Medical Life in the Navy&quot;,&quot;Topics&quot;:[&quot;Great Britain. Royal Navy -- Medical care -- Anecdotes&quot;,&quot;Ship physicians -- Great Britain -- Anecdotes&quot;],&quot;Primary&quot;:&quot;37328.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stables, Gordon, 1840-1910&quot;],&quot;LoCC&quot;:[&quot;V&quot;],&quot;PG_ID&quot;:&quot;37328&quot;});" class='title'>Medical Life in the Navy</a>
+<div class='author'>Stables, Gordon, 1840-1910</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40417, {&quot;Title&quot;:&quot;Zeemans-Woordeboek - Behelzende een verklaring der woorden, by scheepvaart en den handel in gebruik en een opgave der algemeene wetsbepalingen daartoe&quot;,&quot;Topics&quot;:[&quot;Naval art and science -- Dictionaries&quot;,&quot;Dutch language -- Dictionaries&quot;],&quot;Primary&quot;:&quot;40417.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lennep, J. van (Jacob), 1802-1868&quot;],&quot;LoCC&quot;:[&quot;V&quot;],&quot;PG_ID&quot;:&quot;40417&quot;});" class='title'>Zeemans-Woordeboek -<br><span class='subtitle'>Behelzende een verklaring der woorden, by scheepvaart en den handel in gebruik en een opgave der algemeene wetsbepalingen daartoe</span></a>
+<div class='author'>Lennep, J. van (Jacob), 1802-1868</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41038, {&quot;Title&quot;:&quot;Nouveau manuel complet de marine, première partie: gréement&quot;,&quot;Topics&quot;:[&quot;Naval art and science&quot;],&quot;Primary&quot;:&quot;41038.htm&quot;,&quot;CreatorNames&quot;:[&quot;Verdier, Phocion-Aristide-Paulin&quot;],&quot;LoCC&quot;:[&quot;V&quot;],&quot;PG_ID&quot;:&quot;41038&quot;});" class='title'>Nouveau manuel complet de marine, première partie:<br><span class='subtitle'>gréement</span></a>
+<div class='author'>Verdier, Phocion-Aristide-Paulin</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41039, {&quot;Title&quot;:&quot;Nouveau manuel complet de marine, seconde partie: manoeuvres&quot;,&quot;Topics&quot;:[&quot;Naval art and science&quot;],&quot;Primary&quot;:&quot;41039.htm&quot;,&quot;CreatorNames&quot;:[&quot;Verdier, Phocion-Aristide-Paulin&quot;],&quot;LoCC&quot;:[&quot;V&quot;],&quot;PG_ID&quot;:&quot;41039&quot;});" class='title'>Nouveau manuel complet de marine, seconde partie:<br><span class='subtitle'>manoeuvres</span></a>
+<div class='author'>Verdier, Phocion-Aristide-Paulin</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44990, {&quot;Title&quot;:&quot;Torpedoes and Torpedo Warfare - Containing a Complete and Concise Account of the Rise and Progress of Submarine Warfare&quot;,&quot;Topics&quot;:[&quot;Torpedoes&quot;],&quot;Primary&quot;:&quot;44990.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sleeman, Charles William&quot;],&quot;LoCC&quot;:[&quot;V&quot;],&quot;PG_ID&quot;:&quot;44990&quot;});" class='title'>Torpedoes and Torpedo Warfare -<br><span class='subtitle'>Containing a Complete and Concise Account of the Rise and Progress of Submarine Warfare</span></a>
+<div class='author'>Sleeman, Charles William</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50582, {&quot;Title&quot;:&quot;The Story of the Submarine&quot;,&quot;Topics&quot;:[&quot;Submarines (Ships)&quot;],&quot;Primary&quot;:&quot;50582.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bishop, Farnham, 1886-1930&quot;],&quot;LoCC&quot;:[&quot;V&quot;],&quot;PG_ID&quot;:&quot;50582&quot;});" class='title'>The Story of the Submarine</a>
+<div class='author'>Bishop, Farnham, 1886-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51347, {&quot;Title&quot;:&quot;Submarines, Mines and Torpedoes in the War&quot;,&quot;Topics&quot;:[&quot;World War, 1914-1918 -- Naval operations -- Submarine&quot;,&quot;Submarine warfare&quot;,&quot;Submarines (Ships)&quot;,&quot;Submarine mines&quot;],&quot;Primary&quot;:&quot;51347.htm&quot;,&quot;CreatorNames&quot;:[&quot;Domville-Fife, Charles W. (Charles William), 1886-&quot;],&quot;LoCC&quot;:[&quot;V&quot;],&quot;PG_ID&quot;:&quot;51347&quot;});" class='title'>Submarines, Mines and Torpedoes in the War</a>
+<div class='author'>Domville-Fife, Charles W. (Charles William), 1886-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51748, {&quot;Title&quot;:&quot;Torpedo War, and Submarine Explosions&quot;,&quot;Topics&quot;:[&quot;Submarine warfare&quot;,&quot;Torpedoes&quot;],&quot;Primary&quot;:&quot;51748.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fulton, Robert, 1765-1815&quot;],&quot;LoCC&quot;:[&quot;V&quot;],&quot;PG_ID&quot;:&quot;51748&quot;});" class='title'>Torpedo War, and Submarine Explosions</a>
+<div class='author'>Fulton, Robert, 1765-1815</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52902, {&quot;Title&quot;:&quot;A Naval Expositor - Shewing and Explaining the Words and Terms of Art Belonging to the Parts, Qualities and Proportions of Building, Rigging, Furnishing, &amp; Fitting a Ship for Sea&quot;,&quot;Topics&quot;:[&quot;Naval art and science -- Dictionaries&quot;],&quot;Primary&quot;:&quot;52902.htm&quot;,&quot;CreatorNames&quot;:[&quot;Blanckley, Thomas Riley&quot;],&quot;LoCC&quot;:[&quot;V&quot;],&quot;PG_ID&quot;:&quot;52902&quot;});" class='title'>A Naval Expositor -<br><span class='subtitle'>Shewing and Explaining the Words and Terms of Art Belonging to the Parts, Qualities and Proportions of Building, Rigging, Furnishing, & Fitting a Ship for Sea</span></a>
+<div class='author'>Blanckley, Thomas Riley</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57705, {&quot;Title&quot;:&quot;An Universal Dictionary of the Marine - Or, a Copious Explanation of the Technical Terms and Phrases Employed in the Construction, Equipment, Furniture, Machinery, Movements, and Military Operations of a Ship. Illustrated With Variety of Original Designs of Shipping, in Different Situations; Together With Separate Views of Their Masts, Sails, Yards, and Rigging. to Which Is Annexed, a Translation of the French Sea-terms and Phrases, Collected from the Works of Mess. Du Hamel, Aubin, Saverien, &amp;c.&quot;,&quot;Topics&quot;:[&quot;French language -- Dictionaries -- English&quot;,&quot;Naval art and science -- Dictionaries -- Early works to 1800&quot;,&quot;Shipbuilding -- Dictionaries -- Early works to 1800&quot;,&quot;Naval art and science -- Dictionaries -- French&quot;],&quot;Primary&quot;:&quot;57705.htm&quot;,&quot;CreatorNames&quot;:[&quot;Falconer, William, 1732-1769&quot;],&quot;LoCC&quot;:[&quot;V&quot;],&quot;PG_ID&quot;:&quot;57705&quot;});" class='title'>An Universal Dictionary of the Marine -<br><span class='subtitle'>Or, a Copious Explanation of the Technical Terms and Phrases Employed in the Construction, Equipment, Furniture, Machinery, Movements, and Military Operations of a Ship. Illustrated With Variety of Original Designs of Shipping, in Different Situations; Together With Separate Views of Their Masts, Sails, Yards, and Rigging. to Which Is Annexed, a Translation of the French Sea-terms and Phrases, Collected from the Works of Mess. Du Hamel, Aubin, Saverien, &c.</span></a>
+<div class='author'>Falconer, William, 1732-1769</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67838, {&quot;Title&quot;:&quot;Instructions for the Management of Harvey&#39;s Sea Torpedo&quot;,&quot;Topics&quot;:[&quot;Torpedoes&quot;],&quot;Primary&quot;:&quot;67838.htm&quot;,&quot;CreatorNames&quot;:[&quot;Harvey, Frederick&quot;],&quot;LoCC&quot;:[&quot;V&quot;],&quot;PG_ID&quot;:&quot;67838&quot;});" class='title'>Instructions for the Management of Harvey's Sea Torpedo</a>
+<div class='author'>Harvey, Frederick</div>
+</div>
+</ul></div>
+</body></html>

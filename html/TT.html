@@ -1,0 +1,718 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Handicrafts and Arts & Crafts (TT)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(11078, {&quot;Title&quot;:&quot;What Dress Makes of Us&quot;,&quot;Topics&quot;:[&quot;Clothing and dress&quot;],&quot;Primary&quot;:&quot;11078.htm&quot;,&quot;CreatorNames&quot;:[&quot;Quigley, Dorothy&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;11078&quot;});" class='title'>What Dress Makes of Us</a>
+<div class='author'>Quigley, Dorothy</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12642, {&quot;Title&quot;:&quot;The Lady&#39;s Album of Fancy Work for 1850 - Consisting of Novel, Elegant, and Useful Designs in Knitting, Netting, Crochet, Braiding, and Embroidery, with Clear and Explicit Directions for Working the Patterns&quot;,&quot;Topics&quot;:[&quot;Needlework -- Patterns&quot;,&quot;Fancy work -- Handbooks, manuals, etc.&quot;],&quot;Primary&quot;:&quot;12642.htm&quot;,&quot;CreatorNames&quot;:[&quot;Unknown&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;12642&quot;});" class='title'>The Lady's Album of Fancy Work for 1850 -<br><span class='subtitle'>Consisting of Novel, Elegant, and Useful Designs in Knitting, Netting, Crochet, Braiding, and Embroidery, with Clear and Explicit Directions for Working the Patterns</span></a>
+<div class='author'>Unknown</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12655, {&quot;Title&quot;:&quot;The Boy Mechanic, Volume 1: 700 Things for Boys to Do&quot;,&quot;Topics&quot;:[&quot;Handicraft for boys&quot;,&quot;Handicraft&quot;],&quot;Primary&quot;:&quot;12655.htm&quot;,&quot;CreatorNames&quot;:[&quot;Windsor, H. H. (Henry Haven), 1859-1924 [Editor]&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;12655&quot;});" class='title'>The Boy Mechanic, Volume 1:<br><span class='subtitle'>700 Things for Boys to Do</span></a>
+<div class='author'>Windsor, H. H. (Henry Haven), 1859-1924 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14664, {&quot;Title&quot;:&quot;Things To Make&quot;,&quot;Topics&quot;:[&quot;Industrial arts&quot;,&quot;Do-it-yourself work&quot;],&quot;Primary&quot;:&quot;14664.htm&quot;,&quot;CreatorNames&quot;:[&quot;Williams, Archibald, 1871-1934&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;14664&quot;});" class='title'>Things To Make</a>
+<div class='author'>Williams, Archibald, 1871-1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15147, {&quot;Title&quot;:&quot;Beeton&#39;s Book of Needlework&quot;,&quot;Topics&quot;:[&quot;Needlework -- Patterns&quot;,&quot;Crocheting&quot;,&quot;Knitting&quot;,&quot;Lace and lace making&quot;],&quot;Primary&quot;:&quot;15147.htm&quot;,&quot;CreatorNames&quot;:[&quot;Beeton, Mrs. (Isabella Mary), 1836-1865&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;15147&quot;});" class='title'>Beeton's Book of Needlework</a>
+<div class='author'>Beeton, Mrs. (Isabella Mary), 1836-1865</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15460, {&quot;Title&quot;:&quot;A Course In Wood Turning&quot;,&quot;Topics&quot;:[&quot;Turning (Lathe work)&quot;,&quot;Woodwork&quot;],&quot;Primary&quot;:&quot;15460.htm&quot;,&quot;CreatorNames&quot;:[&quot;Milton, Archie Seldon, 1887-&quot;,&quot;Wohlers, Otto K., 1896?-&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;15460&quot;});" class='title'>A Course In Wood Turning</a>
+<div class='author'>Milton, Archie Seldon, 1887-, Wohlers, Otto K., 1896?-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15831, {&quot;Title&quot;:&quot;The Scientific American Boy; Or, The Camp at Willow Clump Island&quot;,&quot;Topics&quot;:[&quot;Woodwork&quot;,&quot;Camping&quot;,&quot;Sports&quot;],&quot;Primary&quot;:&quot;15831.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bond, A. Russell (Alexander Russell), 1876-&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;15831&quot;});" class='title'>The Scientific American Boy;<br><span class='subtitle'>Or, The Camp at Willow Clump Island</span></a>
+<div class='author'>Bond, A. Russell (Alexander Russell), 1876-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16605, {&quot;Title&quot;:&quot;The Ladies&#39; Work-Book - Containing Instructions In Knitting, Crochet, Point-Lace, etc.&quot;,&quot;Topics&quot;:[&quot;Crocheting&quot;,&quot;Knitting&quot;,&quot;Lace and lace making&quot;,&quot;Netting&quot;,&quot;Embroidery&quot;],&quot;Primary&quot;:&quot;16605.htm&quot;,&quot;CreatorNames&quot;:[&quot;Unknown&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;16605&quot;});" class='title'>The Ladies' Work-Book -<br><span class='subtitle'>Containing Instructions In Knitting, Crochet, Point-Lace, etc.</span></a>
+<div class='author'>Unknown</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17935, {&quot;Title&quot;:&quot;French Polishing and Enamelling: A Practical Work of Instruction&quot;,&quot;Topics&quot;:[&quot;Wood finishing&quot;,&quot;Varnish and varnishing&quot;,&quot;Stains and staining&quot;,&quot;Polishes&quot;],&quot;Primary&quot;:&quot;17935.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bitmead, Richard&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;17935&quot;});" class='title'>French Polishing and Enamelling:<br><span class='subtitle'>A Practical Work of Instruction</span></a>
+<div class='author'>Bitmead, Richard</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18901, {&quot;Title&quot;:&quot;Woman as Decoration&quot;,&quot;Topics&quot;:[&quot;Costume&quot;,&quot;Women&#39;s clothing&quot;],&quot;Primary&quot;:&quot;18901.htm&quot;,&quot;CreatorNames&quot;:[&quot;Burbank, Emily&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;18901&quot;});" class='title'>Woman as Decoration</a>
+<div class='author'>Burbank, Emily</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19740, {&quot;Title&quot;:&quot;Make Your Own Hats&quot;,&quot;Topics&quot;:[&quot;Hats&quot;,&quot;Millinery&quot;],&quot;Primary&quot;:&quot;19740.htm&quot;,&quot;CreatorNames&quot;:[&quot;Martin, Gene Allen&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;19740&quot;});" class='title'>Make Your Own Hats</a>
+<div class='author'>Martin, Gene Allen</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20386, {&quot;Title&quot;:&quot;Embroidery and Tapestry Weaving&quot;,&quot;Topics&quot;:[&quot;Embroidery&quot;,&quot;Tapestry&quot;],&quot;Primary&quot;:&quot;20386.htm&quot;,&quot;CreatorNames&quot;:[&quot;Christie, Grace&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;20386&quot;});" class='title'>Embroidery and Tapestry Weaving</a>
+<div class='author'>Christie, Grace</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20776, {&quot;Title&quot;:&quot;Encyclopedia of Needlework&quot;,&quot;Topics&quot;:[&quot;Needlework&quot;],&quot;Primary&quot;:&quot;20776.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dillmont, Thérèse de, 1846-1890&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;20776&quot;});" class='title'>Encyclopedia of Needlework</a>
+<div class='author'>Dillmont, Thérèse de, 1846-1890</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20846, {&quot;Title&quot;:&quot;Handwork in Wood&quot;,&quot;Topics&quot;:[&quot;Woodwork&quot;],&quot;Primary&quot;:&quot;20846.htm&quot;,&quot;CreatorNames&quot;:[&quot;Noyes, William, 1862-1928&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;20846&quot;});" class='title'>Handwork in Wood</a>
+<div class='author'>Noyes, William, 1862-1928</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(21032, {&quot;Title&quot;:&quot;Exercises in Knitting&quot;,&quot;Topics&quot;:[&quot;Knitting -- Patterns&quot;],&quot;Primary&quot;:&quot;21032.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mee, Cornelia&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;21032&quot;});" class='title'>Exercises in Knitting</a>
+<div class='author'>Mee, Cornelia</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(21531, {&quot;Title&quot;:&quot;Woodwork Joints: How They Are Set Out, How Made and Where Used.&quot;,&quot;Topics&quot;:[&quot;Woodwork&quot;,&quot;Carpentry&quot;],&quot;Primary&quot;:&quot;21531.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fairham, William&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;21531&quot;});" class='title'>Woodwork Joints:<br><span class='subtitle'>How They Are Set Out, How Made and Where Used.</span></a>
+<div class='author'>Fairham, William</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(21534, {&quot;Title&quot;:&quot;Textiles and Clothing&quot;,&quot;Topics&quot;:[&quot;Textile industry&quot;,&quot;Textile fabrics&quot;,&quot;Sewing&quot;,&quot;Dressmaking&quot;],&quot;Primary&quot;:&quot;21534.htm&quot;,&quot;CreatorNames&quot;:[&quot;Watson, Kate Heintz&quot;],&quot;LoCC&quot;:[&quot;TT&quot;,&quot;TX&quot;],&quot;PG_ID&quot;:&quot;21534&quot;});" class='title'>Textiles and Clothing</a>
+<div class='author'>Watson, Kate Heintz</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22029, {&quot;Title&quot;:&quot;Spool Knitting&quot;,&quot;Topics&quot;:[&quot;Spool knitting -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;22029.htm&quot;,&quot;CreatorNames&quot;:[&quot;McCormack, Mary A.&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;22029&quot;});" class='title'>Spool Knitting</a>
+<div class='author'>McCormack, Mary A.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22298, {&quot;Title&quot;:&quot;Practical Mechanics for Boys&quot;,&quot;Topics&quot;:[&quot;Handicraft for boys&quot;,&quot;Tools&quot;],&quot;Primary&quot;:&quot;22298.htm&quot;,&quot;CreatorNames&quot;:[&quot;Zerbe, James Slough, 1850-&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;22298&quot;});" class='title'>Practical Mechanics for Boys</a>
+<div class='author'>Zerbe, James Slough, 1850-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22325, {&quot;Title&quot;:&quot;The Art of Modern Lace Making&quot;,&quot;Topics&quot;:[&quot;Lace and lace making&quot;],&quot;Primary&quot;:&quot;22325.htm&quot;,&quot;CreatorNames&quot;:[&quot;Butterick Publishing Company [Publisher]&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;22325&quot;});" class='title'>The Art of Modern Lace Making</a>
+<div class='author'>Butterick Publishing Company [Publisher]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23666, {&quot;Title&quot;:&quot;Mission Furniture: How to Make It, Part 3&quot;,&quot;Topics&quot;:[&quot;Furniture making -- Amateurs&#39; manuals&quot;,&quot;Furniture, Mission -- Design and construction&quot;],&quot;Primary&quot;:&quot;23666.htm&quot;,&quot;CreatorNames&quot;:[&quot;Windsor, H. H. (Henry Haven), 1859-1924&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;23666&quot;});" class='title'>Mission Furniture:<br><span class='subtitle'>How to Make It, Part 3</span></a>
+<div class='author'>Windsor, H. H. (Henry Haven), 1859-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23770, {&quot;Title&quot;:&quot;Mission Furniture: How to Make It, Part 1&quot;,&quot;Topics&quot;:[&quot;Furniture making -- Amateurs&#39; manuals&quot;,&quot;Furniture, Mission -- Design and construction&quot;],&quot;Primary&quot;:&quot;23770.htm&quot;,&quot;CreatorNames&quot;:[&quot;Windsor, H. H. (Henry Haven), 1859-1924&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;23770&quot;});" class='title'>Mission Furniture:<br><span class='subtitle'>How to Make It, Part 1</span></a>
+<div class='author'>Windsor, H. H. (Henry Haven), 1859-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23991, {&quot;Title&quot;:&quot;Mission Furniture: How to Make It, Part 2&quot;,&quot;Topics&quot;:[&quot;Furniture making -- Amateurs&#39; manuals&quot;,&quot;Furniture, Mission -- Design and construction&quot;],&quot;Primary&quot;:&quot;23991.htm&quot;,&quot;CreatorNames&quot;:[&quot;Windsor, H. H. (Henry Haven), 1859-1924&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;23991&quot;});" class='title'>Mission Furniture:<br><span class='subtitle'>How to Make It, Part 2</span></a>
+<div class='author'>Windsor, H. H. (Henry Haven), 1859-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24219, {&quot;Title&quot;:&quot;The Royal Guide to Wax Flower Modelling&quot;,&quot;Topics&quot;:[&quot;Wax flowers&quot;],&quot;Primary&quot;:&quot;24219.htm&quot;,&quot;CreatorNames&quot;:[&quot;Peachey, Emma&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;24219&quot;});" class='title'>The Royal Guide to Wax Flower Modelling</a>
+<div class='author'>Peachey, Emma</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24682, {&quot;Title&quot;:&quot;Quilts: Their Story and How to Make Them&quot;,&quot;Topics&quot;:[&quot;Quilts&quot;,&quot;Quilting&quot;,&quot;Coverlets&quot;],&quot;Primary&quot;:&quot;24682.htm&quot;,&quot;CreatorNames&quot;:[&quot;Webster, Marie D. (Marie Daugherty), 1859-1956&quot;],&quot;LoCC&quot;:[&quot;TT&quot;,&quot;NK&quot;],&quot;PG_ID&quot;:&quot;24682&quot;});" class='title'>Quilts:<br><span class='subtitle'>Their Story and How to Make Them</span></a>
+<div class='author'>Webster, Marie D. (Marie Daugherty), 1859-1956</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24964, {&quot;Title&quot;:&quot;Handbook of Embroidery&quot;,&quot;Topics&quot;:[&quot;Embroidery&quot;],&quot;Primary&quot;:&quot;24964.htm&quot;,&quot;CreatorNames&quot;:[&quot;Higgin, L.&quot;,&quot;Alford, Marianne Margaret Compton Cust, Viscountess, 1817-1888 [Editor]&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;24964&quot;});" class='title'>Handbook of Embroidery</a>
+<div class='author'>Higgin, L., Alford, Marianne Margaret Compton Cust, Viscountess, 1817-1888 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26068, {&quot;Title&quot;:&quot;The Bath Tatting Book&quot;,&quot;Topics&quot;:[&quot;Tatting&quot;],&quot;Primary&quot;:&quot;26068.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;26068&quot;});" class='title'>The Bath Tatting Book</a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26113, {&quot;Title&quot;:&quot;Handbook of Wool Knitting and Crochet&quot;,&quot;Topics&quot;:[&quot;Knitting -- Patterns&quot;,&quot;Crocheting -- Patterns&quot;],&quot;Primary&quot;:&quot;26113.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;26113&quot;});" class='title'>Handbook of Wool Knitting and Crochet</a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26120, {&quot;Title&quot;:&quot;Chats on Old Lace and Needlework&quot;,&quot;Topics&quot;:[&quot;Lace and lace making&quot;,&quot;Needlework&quot;],&quot;Primary&quot;:&quot;26120.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lowes, Emily Leigh&quot;],&quot;LoCC&quot;:[&quot;TT&quot;,&quot;NK&quot;],&quot;PG_ID&quot;:&quot;26120&quot;});" class='title'>Chats on Old Lace and Needlework</a>
+<div class='author'>Lowes, Emily Leigh</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28269, {&quot;Title&quot;:&quot;Art in Needlework: A Book about Embroidery&quot;,&quot;Topics&quot;:[&quot;Embroidery&quot;,&quot;Needlework&quot;],&quot;Primary&quot;:&quot;28269.htm&quot;,&quot;CreatorNames&quot;:[&quot;Buckle, Mary&quot;,&quot;Day, Lewis F. (Lewis Foreman), 1845-1910&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;28269&quot;});" class='title'>Art in Needlework:<br><span class='subtitle'>A Book about Embroidery</span></a>
+<div class='author'>Buckle, Mary, Day, Lewis F. (Lewis Foreman), 1845-1910</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28457, {&quot;Title&quot;:&quot;Golden Stars in Tatting and Crochet&quot;,&quot;Topics&quot;:[&quot;Crocheting -- Patterns&quot;,&quot;Tatting -- Patterns&quot;],&quot;Primary&quot;:&quot;28457.htm&quot;,&quot;CreatorNames&quot;:[&quot;Riego de la Branchardière, Eléonore&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;28457&quot;});" class='title'>Golden Stars in Tatting and Crochet</a>
+<div class='author'>Riego de la Branchardière, Eléonore</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29382, {&quot;Title&quot;:&quot;The Ladies&#39; Work-Table Book - Containing Clear and Practical Instructions in Plain and Fancy Needlework, Embroidery, Knitting, Netting and Crochet&quot;,&quot;Topics&quot;:[&quot;Crocheting&quot;,&quot;Knitting&quot;,&quot;Netting&quot;,&quot;Needlework&quot;],&quot;Primary&quot;:&quot;29382.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;29382&quot;});" class='title'>The Ladies' Work-Table Book -<br><span class='subtitle'>Containing Clear and Practical Instructions in Plain and Fancy Needlework, Embroidery, Knitting, Netting and Crochet</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30676, {&quot;Title&quot;:&quot;Primary Handwork&quot;,&quot;Topics&quot;:[&quot;Manual training -- Methods and manuals&quot;],&quot;Primary&quot;:&quot;30676.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dobbs, Ella Victoria&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;30676&quot;});" class='title'>Primary Handwork</a>
+<div class='author'>Dobbs, Ella Victoria</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31630, {&quot;Title&quot;:&quot;Hand-Loom Weaving: A Manual for School and Home&quot;,&quot;Topics&quot;:[&quot;Weaving&quot;],&quot;Primary&quot;:&quot;31630.htm&quot;,&quot;CreatorNames&quot;:[&quot;Todd, Mattie Phipps&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;31630&quot;});" class='title'>Hand-Loom Weaving:<br><span class='subtitle'>A Manual for School and Home</span></a>
+<div class='author'>Todd, Mattie Phipps</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31714, {&quot;Title&quot;:&quot;The Art of Needle-work, from the Earliest Ages, 3rd ed. - Including Some Notices of the Ancient Historical Tapestries&quot;,&quot;Topics&quot;:[&quot;Tapestry&quot;,&quot;Needlework&quot;],&quot;Primary&quot;:&quot;31714.htm&quot;,&quot;CreatorNames&quot;:[&quot;Menzies, Sutherland, active 1840-1883&quot;,&quot;Wilton, Mary Margaret Stanley Egerton, Countess of, 1801-1858 [Editor]&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;31714&quot;});" class='title'>The Art of Needle-work, from the Earliest Ages, 3rd ed. -<br><span class='subtitle'>Including Some Notices of the Ancient Historical Tapestries</span></a>
+<div class='author'>Menzies, Sutherland, active 1840-1883, Wilton, Mary Margaret Stanley Egerton, Countess of, 1801-1858 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33446, {&quot;Title&quot;:&quot;Lace Curtain Cleaning: A Successful Home Business&quot;,&quot;Topics&quot;:[&quot;Laundry&quot;],&quot;Primary&quot;:&quot;33446.htm&quot;,&quot;CreatorNames&quot;:[&quot;Leigh, Sarah Ann, 1869-&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;33446&quot;});" class='title'>Lace Curtain Cleaning:<br><span class='subtitle'>A Successful Home Business</span></a>
+<div class='author'>Leigh, Sarah Ann, 1869-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33502, {&quot;Title&quot;:&quot;My Knitting Book&quot;,&quot;Topics&quot;:[&quot;Knitting -- Patterns&quot;],&quot;Primary&quot;:&quot;33502.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lambert, Miss (F.)&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;33502&quot;});" class='title'>My Knitting Book</a>
+<div class='author'>Lambert, Miss (F.)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33951, {&quot;Title&quot;:&quot;The Ladies&#39; Knitting and Netting Book&quot;,&quot;Topics&quot;:[&quot;Knitting -- Patterns&quot;,&quot;Netting -- Patterns&quot;],&quot;Primary&quot;:&quot;33951.htm&quot;,&quot;CreatorNames&quot;:[&quot;Watts, Miss&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;33951&quot;});" class='title'>The Ladies' Knitting and Netting Book</a>
+<div class='author'>Watts, Miss</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34092, {&quot;Title&quot;:&quot;Dress as a Fine Art, with Suggestions on Children&#39;s Dress&quot;,&quot;Topics&quot;:[&quot;Clothing and dress&quot;],&quot;Primary&quot;:&quot;34092.htm&quot;,&quot;CreatorNames&quot;:[&quot;Merrifield, Mary P. (Mary Philadelphia), 1805?-1889&quot;,&quot;Fairholt, F. W. (Frederick William), 1814-1866 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;34092&quot;});" class='title'>Dress as a Fine Art, with Suggestions on Children's Dress</a>
+<div class='author'>Merrifield, Mary P. (Mary Philadelphia), 1805?-1889, Fairholt, F. W. (Frederick William), 1814-1866 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34186, {&quot;Title&quot;:&quot;The Copeland Method - A Complete Manual for Cleaning, Repairing, Altering and Pressing All Kinds of Garments for Men and Women, at Home or for Business&quot;,&quot;Topics&quot;:[&quot;Tailoring&quot;,&quot;Cleaning&quot;],&quot;Primary&quot;:&quot;34186.htm&quot;,&quot;CreatorNames&quot;:[&quot;Copeland, Vanness&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;34186&quot;});" class='title'>The Copeland Method -<br><span class='subtitle'>A Complete Manual for Cleaning, Repairing, Altering and Pressing All Kinds of Garments for Men and Women, at Home or for Business</span></a>
+<div class='author'>Copeland, Vanness</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34854, {&quot;Title&quot;:&quot;Handicraft for Girls - A Tentative Course in Needlework, Basketry, Designing, Paper and Cardboard Construction, Textile Fibers and Fabrics and Home Decoration and Care&quot;,&quot;Topics&quot;:[&quot;Needlework&quot;,&quot;Handicraft&quot;],&quot;Primary&quot;:&quot;34854.htm&quot;,&quot;CreatorNames&quot;:[&quot;McGlauflin, Idabelle&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;34854&quot;});" class='title'>Handicraft for Girls -<br><span class='subtitle'>A Tentative Course in Needlework, Basketry, Designing, Paper and Cardboard Construction, Textile Fibers and Fabrics and Home Decoration and Care</span></a>
+<div class='author'>McGlauflin, Idabelle</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35582, {&quot;Title&quot;:&quot;The New Guide to Knitting &amp; Crochet&quot;,&quot;Topics&quot;:[&quot;Crocheting&quot;,&quot;Knitting&quot;,&quot;Knitting -- Patterns&quot;,&quot;Crocheting -- Patterns&quot;],&quot;Primary&quot;:&quot;35582.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cooper, Marie Jane&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;35582&quot;});" class='title'>The New Guide to Knitting & Crochet</a>
+<div class='author'>Cooper, Marie Jane</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36669, {&quot;Title&quot;:&quot;Knitting, Crochet, and Netting, with Twelve Illustrations&quot;,&quot;Topics&quot;:[&quot;Knitting -- Patterns&quot;,&quot;Crocheting -- Patterns&quot;,&quot;Netting -- Patterns&quot;],&quot;Primary&quot;:&quot;36669.htm&quot;,&quot;CreatorNames&quot;:[&quot;Riego de la Branchardière, Eléonore&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;36669&quot;});" class='title'>Knitting, Crochet, and Netting, with Twelve Illustrations</a>
+<div class='author'>Riego de la Branchardière, Eléonore</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37447, {&quot;Title&quot;:&quot;Hand-Craft: The Most Reliable Basis of Technical Education in Schools and Classes&quot;,&quot;Topics&quot;:[&quot;Woodwork (Manual training)&quot;,&quot;Sloyd&quot;],&quot;Primary&quot;:&quot;37447.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sutcliffe, John D.&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;37447&quot;});" class='title'>Hand-Craft:<br><span class='subtitle'>The Most Reliable Basis of Technical Education in Schools and Classes</span></a>
+<div class='author'>Sutcliffe, John D.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37456, {&quot;Title&quot;:&quot;Cycling and Shooting Knickerbocker Stockings - How to Knit Them With Plain and Fancy Turnover Tops&quot;,&quot;Topics&quot;:[&quot;Knitting -- Patterns&quot;,&quot;Socks&quot;],&quot;Primary&quot;:&quot;37456.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ryder, H. P.&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;37456&quot;});" class='title'>Cycling and Shooting Knickerbocker Stockings -<br><span class='subtitle'>How to Knit Them With Plain and Fancy Turnover Tops</span></a>
+<div class='author'>Ryder, H. P.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38658, {&quot;Title&quot;:&quot;Self-Instructor in the Art of Hair Work, Dressing Hair, Making Curls, Switches, Braids, and Hair Jewelry of Every Description.&quot;,&quot;Topics&quot;:[&quot;Hairwork&quot;,&quot;Hairdressing&quot;,&quot;Jewelry -- Catalogs&quot;],&quot;Primary&quot;:&quot;38658.htm&quot;,&quot;CreatorNames&quot;:[&quot;Campbell, Mark, active 19th century&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;38658&quot;});" class='title'>Self-Instructor in the Art of Hair Work, Dressing Hair, Making Curls, Switches, Braids, and Hair Jewelry of Every Description.</a>
+<div class='author'>Campbell, Mark, active 19th century</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39773, {&quot;Title&quot;:&quot;Juvenile Styles: Original Designs for Infants and Juveniles, Volume 4&quot;,&quot;Topics&quot;:[&quot;Knitting -- Patterns&quot;,&quot;Crocheting -- Patterns&quot;,&quot;Children&#39;s clothing&quot;,&quot;Infants&#39; clothing&quot;],&quot;Primary&quot;:&quot;39773.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hoyer, Mary, 1901-&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;39773&quot;});" class='title'>Juvenile Styles:<br><span class='subtitle'>Original Designs for Infants and Juveniles, Volume 4</span></a>
+<div class='author'>Hoyer, Mary, 1901-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41268, {&quot;Title&quot;:&quot;Manual Training Toys for the Boy&#39;s Workshop&quot;,&quot;Topics&quot;:[&quot;Manual training -- Methods and manuals&quot;,&quot;Toys&quot;],&quot;Primary&quot;:&quot;41268.htm&quot;,&quot;CreatorNames&quot;:[&quot;Moore, Harris W.&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;41268&quot;});" class='title'>Manual Training Toys for the Boy's Workshop</a>
+<div class='author'>Moore, Harris W.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41668, {&quot;Title&quot;:&quot;Rustic Carpentry&quot;,&quot;Topics&quot;:[&quot;Rustic woodwork&quot;],&quot;Primary&quot;:&quot;41668.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hasluck, Paul N. (Paul Nooncree), 1854-1931 [Editor]&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;41668&quot;});" class='title'>Rustic Carpentry</a>
+<div class='author'>Hasluck, Paul N. (Paul Nooncree), 1854-1931 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41749, {&quot;Title&quot;:&quot;Practical Graining, with Description of Colors Employed and Tools Used&quot;,&quot;Topics&quot;:[&quot;Graining&quot;],&quot;Primary&quot;:&quot;41749.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wall, William E. (William Edmund), 1858-1934&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;41749&quot;});" class='title'>Practical Graining, with Description of Colors Employed and Tools Used</a>
+<div class='author'>Wall, William E. (William Edmund), 1858-1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41851, {&quot;Title&quot;:&quot;Copper Work: A Text Book for Teachers and Students in the Manual Arts&quot;,&quot;Topics&quot;:[&quot;Copperwork&quot;],&quot;Primary&quot;:&quot;41851.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rose, Augustus F. (Augustus Foster), 1873-1946&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;41851&quot;});" class='title'>Copper Work:<br><span class='subtitle'>A Text Book for Teachers and Students in the Manual Arts</span></a>
+<div class='author'>Rose, Augustus F. (Augustus Foster), 1873-1946</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42278, {&quot;Title&quot;:&quot;Toy-Making at Home: How to Make a Hundred Toys from Odds and Ends&quot;,&quot;Topics&quot;:[&quot;Toys&quot;],&quot;Primary&quot;:&quot;42278.htm&quot;,&quot;CreatorNames&quot;:[&quot;Adams, Morley&quot;],&quot;LoCC&quot;:[&quot;GV&quot;,&quot;TT&quot;],&quot;PG_ID&quot;:&quot;42278&quot;});" class='title'>Toy-Making at Home:<br><span class='subtitle'>How to Make a Hundred Toys from Odds and Ends</span></a>
+<div class='author'>Adams, Morley</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42650, {&quot;Title&quot;:&quot;The Boy Craftsman - Practical and Profitable Ideas for a Boy&#39;s Leisure Hours&quot;,&quot;Topics&quot;:[&quot;Woodwork&quot;,&quot;Amusements&quot;,&quot;Toys&quot;],&quot;Primary&quot;:&quot;42650.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hall, A. Neely (Albert Neely), 1883-&quot;,&quot;Hall, N. P. [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;42650&quot;});" class='title'>The Boy Craftsman -<br><span class='subtitle'>Practical and Profitable Ideas for a Boy's Leisure Hours</span></a>
+<div class='author'>Hall, A. Neely (Albert Neely), 1883-, Hall, N. P. [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43166, {&quot;Title&quot;:&quot;Shaving Made Easy: What the Man Who Shaves Ought to Know&quot;,&quot;Topics&quot;:[&quot;Shaving&quot;],&quot;Primary&quot;:&quot;43166.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;43166&quot;});" class='title'>Shaving Made Easy:<br><span class='subtitle'>What the Man Who Shaves Ought to Know</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43500, {&quot;Title&quot;:&quot;Graining and Marbling - A Series of Practical Treatises on Material, Tools and Appliances Used; General Operations; Preparing Oil Graining Colors; Mixing; Rubbing; Applying Distemper Colors; Wiping Out; Penciling; The Use of Crayons; Review of Woods; The Graining of Oak, Ash, Cherry, Satinwood, Mahogany, Maple, Bird&#39;s Eye Maple, Sycamore, Walnut, Etc.; Marbling in All Shades.&quot;,&quot;Topics&quot;:[&quot;Graining&quot;,&quot;Marbling&quot;],&quot;Primary&quot;:&quot;43500.htm&quot;,&quot;CreatorNames&quot;:[&quot;Maire, F. (Frederick)&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;43500&quot;});" class='title'>Graining and Marbling -<br><span class='subtitle'>A Series of Practical Treatises on Material, Tools and Appliances Used; General Operations; Preparing Oil Graining Colors; Mixing; Rubbing; Applying Distemper Colors; Wiping Out; Penciling; The Use of Crayons; Review of Woods; The Graining of Oak, Ash, Cherry, Satinwood, Mahogany, Maple, Bird's Eye Maple, Sycamore, Walnut, Etc.; Marbling in All Shades.</span></a>
+<div class='author'>Maire, F. (Frederick)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43574, {&quot;Title&quot;:&quot;Carpentry and Woodwork&quot;,&quot;Topics&quot;:[&quot;Carpentry&quot;],&quot;Primary&quot;:&quot;43574.htm&quot;,&quot;CreatorNames&quot;:[&quot;Foster, Edwin W.&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;43574&quot;});" class='title'>Carpentry and Woodwork</a>
+<div class='author'>Foster, Edwin W.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43604, {&quot;Title&quot;:&quot;Wood-working for Beginners: A Manual for Amateurs&quot;,&quot;Topics&quot;:[&quot;Woodwork&quot;,&quot;Carpentry&quot;],&quot;Primary&quot;:&quot;43604.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wheeler, Charles G. (Charles Gardner), 1855-1946&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;43604&quot;});" class='title'>Wood-working for Beginners:<br><span class='subtitle'>A Manual for Amateurs</span></a>
+<div class='author'>Wheeler, Charles G. (Charles Gardner), 1855-1946</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43635, {&quot;Title&quot;:&quot;Educational Toys - Consisting Chiefly of Coping-Saw Problems for Children in School and the Home&quot;,&quot;Topics&quot;:[&quot;Woodwork&quot;,&quot;Toys&quot;],&quot;Primary&quot;:&quot;43635.htm&quot;,&quot;CreatorNames&quot;:[&quot;Petersen, Louis Christian, 1878-&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;43635&quot;});" class='title'>Educational Toys -<br><span class='subtitle'>Consisting Chiefly of Coping-Saw Problems for Children in School and the Home</span></a>
+<div class='author'>Petersen, Louis Christian, 1878-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43720, {&quot;Title&quot;:&quot;The Child&#39;s Rainy Day Book&quot;,&quot;Topics&quot;:[&quot;Children&#39;s literature&quot;,&quot;Amusements -- Juvenile literature&quot;,&quot;Games -- Juvenile literature&quot;,&quot;Handicraft -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;43720.htm&quot;,&quot;CreatorNames&quot;:[&quot;White, Mary, 1869-1952&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;43720&quot;});" class='title'>The Child's Rainy Day Book</a>
+<div class='author'>White, Mary, 1869-1952</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44585, {&quot;Title&quot;:&quot;The Boy Mechanic, Book 2: 1000 Things for Boys to Do&quot;,&quot;Topics&quot;:[&quot;Handicraft for boys&quot;,&quot;Handicraft&quot;],&quot;Primary&quot;:&quot;44585.htm&quot;,&quot;CreatorNames&quot;:[&quot;Windsor, H. H. (Henry Haven), 1859-1924 [Editor]&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;44585&quot;});" class='title'>The Boy Mechanic, Book 2:<br><span class='subtitle'>1000 Things for Boys to Do</span></a>
+<div class='author'>Windsor, H. H. (Henry Haven), 1859-1924 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44766, {&quot;Title&quot;:&quot;The Library of Work and Play: Needlecraft&quot;,&quot;Topics&quot;:[&quot;Needlework&quot;],&quot;Primary&quot;:&quot;44766.htm&quot;,&quot;CreatorNames&quot;:[&quot;Archer, Effie Archer&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;44766&quot;});" class='title'>The Library of Work and Play:<br><span class='subtitle'>Needlecraft</span></a>
+<div class='author'>Archer, Effie Archer</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45004, {&quot;Title&quot;:&quot;The Library of Work and Play: Working in Metals&quot;,&quot;Topics&quot;:[&quot;Metal-work&quot;],&quot;Primary&quot;:&quot;45004.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sleffel, Charles Conrad&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;45004&quot;});" class='title'>The Library of Work and Play:<br><span class='subtitle'>Working in Metals</span></a>
+<div class='author'>Sleffel, Charles Conrad</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45079, {&quot;Title&quot;:&quot;The Art of Graining: How Acquired and How Produced. - With the description of colors and their applications.&quot;,&quot;Topics&quot;:[&quot;Graining&quot;],&quot;Primary&quot;:&quot;45079.htm&quot;,&quot;CreatorNames&quot;:[&quot;Metcalf, A.&quot;,&quot;Pickert, Charles&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;45079&quot;});" class='title'>The Art of Graining:<br><span class='subtitle'>How Acquired and How Produced. - With the description of colors and their applications.</span></a>
+<div class='author'>Metcalf, A., Pickert, Charles</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45632, {&quot;Title&quot;:&quot;Beehive for Bairns, Vol. 2: From 1st Size to 2 Years - With Special Supplement: Bed Jackets&quot;,&quot;Topics&quot;:[&quot;Knitting -- Patterns&quot;,&quot;Crocheting -- Patterns&quot;,&quot;Women&#39;s clothing&quot;,&quot;Infants&#39; clothing&quot;,&quot;Infants&#39; supplies&quot;,&quot;Layettes&quot;],&quot;Primary&quot;:&quot;45632.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;45632&quot;});" class='title'>Beehive for Bairns, Vol. 2:<br><span class='subtitle'>From 1st Size to 2 Years - With Special Supplement: Bed Jackets</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46445, {&quot;Title&quot;:&quot;The Library of Work and Play: Guide and Index&quot;,&quot;Topics&quot;:[&quot;Amusements&quot;,&quot;Handicraft&quot;,&quot;Handicraft -- Indexes&quot;,&quot;Amusements -- Indexes&quot;],&quot;Primary&quot;:&quot;46445.htm&quot;,&quot;CreatorNames&quot;:[&quot;Boone, Cheshire Lowton, 1875-&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;46445&quot;});" class='title'>The Library of Work and Play:<br><span class='subtitle'>Guide and Index</span></a>
+<div class='author'>Boone, Cheshire Lowton, 1875-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47585, {&quot;Title&quot;:&quot;Clothing and Health: An Elementary Textbook of Home Making&quot;,&quot;Topics&quot;:[&quot;Clothing and dress&quot;,&quot;Sewing&quot;],&quot;Primary&quot;:&quot;47585.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cooley, Anna M. (Anna Maria), 1874-&quot;,&quot;Kinne, Helen, 1861-1917&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;47585&quot;});" class='title'>Clothing and Health:<br><span class='subtitle'>An Elementary Textbook of Home Making</span></a>
+<div class='author'>Cooley, Anna M. (Anna Maria), 1874-, Kinne, Helen, 1861-1917</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48050, {&quot;Title&quot;:&quot;Needlework Economies: A Book of Mending and Making with Oddments and Scraps&quot;,&quot;Topics&quot;:[&quot;Needlework&quot;,&quot;Fancy work&quot;,&quot;Repairing&quot;],&quot;Primary&quot;:&quot;48050.htm&quot;,&quot;CreatorNames&quot;:[&quot;Klickmann, Flora, 1867-1958 [Editor]&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;48050&quot;});" class='title'>Needlework Economies:<br><span class='subtitle'>A Book of Mending and Making with Oddments and Scraps</span></a>
+<div class='author'>Klickmann, Flora, 1867-1958 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48179, {&quot;Title&quot;:&quot;A Manual of the Hand Lathe - Comprising Concise Directions for Working Metals of All Kinds, Ivory, Bone and Precious Woods&quot;,&quot;Topics&quot;:[&quot;Turning (Lathe work)&quot;,&quot;Lathes&quot;],&quot;Primary&quot;:&quot;48179.htm&quot;,&quot;CreatorNames&quot;:[&quot;Watson, Egbert P. (Egbert Pomeroy)&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;48179&quot;});" class='title'>A Manual of the Hand Lathe -<br><span class='subtitle'>Comprising Concise Directions for Working Metals of All Kinds, Ivory, Bone and Precious Woods</span></a>
+<div class='author'>Watson, Egbert P. (Egbert Pomeroy)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48256, {&quot;Title&quot;:&quot;Spitzen und ihre Charakteristik&quot;,&quot;Topics&quot;:[&quot;Lace and lace making&quot;],&quot;Primary&quot;:&quot;48256.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jurie, Bertha von&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;48256&quot;});" class='title'>Spitzen und ihre Charakteristik</a>
+<div class='author'>Jurie, Bertha von</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49157, {&quot;Title&quot;:&quot;The Little Girl&#39;s Sewing Book&quot;,&quot;Topics&quot;:[&quot;Sewing&quot;],&quot;Primary&quot;:&quot;49157.htm&quot;,&quot;CreatorNames&quot;:[&quot;Klickmann, Flora, 1867-1958 [Editor]&quot;,&quot;Cowham, Hilda, 1873-1964 [Illustrator]&quot;,&quot;Miller, Hilda T., 1876-1939 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;49157&quot;});" class='title'>The Little Girl's Sewing Book</a>
+<div class='author'>Klickmann, Flora, 1867-1958 [Editor], Cowham, Hilda, 1873-1964 [Illustrator], Miller, Hilda T., 1876-1939 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49275, {&quot;Title&quot;:&quot;Metal Spinning&quot;,&quot;Topics&quot;:[&quot;Metal-spinning&quot;],&quot;Primary&quot;:&quot;49275.htm&quot;,&quot;CreatorNames&quot;:[&quot;Painter, William A.&quot;,&quot;Tuells, C.&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;49275&quot;});" class='title'>Metal Spinning</a>
+<div class='author'>Painter, William A., Tuells, C.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49936, {&quot;Title&quot;:&quot;New Ideas for American Boys; The Jack of All Trades&quot;,&quot;Topics&quot;:[&quot;Amusements&quot;,&quot;Sports&quot;],&quot;Primary&quot;:&quot;49936.htm&quot;,&quot;CreatorNames&quot;:[&quot;Beard, Daniel Carter, 1850-1941&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;49936&quot;});" class='title'>New Ideas for American Boys;<br><span class='subtitle'>The Jack of All Trades</span></a>
+<div class='author'>Beard, Daniel Carter, 1850-1941</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50451, {&quot;Title&quot;:&quot;A Boy&#39;s Workshop: With plans and designs for in-door and out-door work&quot;,&quot;Topics&quot;:[&quot;Carpentry&quot;,&quot;Manual training&quot;],&quot;Primary&quot;:&quot;50451.htm&quot;,&quot;CreatorNames&quot;:[&quot;Craigin, Harry&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;50451&quot;});" class='title'>A Boy's Workshop:<br><span class='subtitle'>With plans and designs for in-door and out-door work</span></a>
+<div class='author'>Craigin, Harry</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51204, {&quot;Title&quot;:&quot;Corticelli Home Needlework, 1898: A Manual of Art, Embroidery and Knitting&quot;,&quot;Topics&quot;:[&quot;Knitting&quot;,&quot;Embroidery&quot;],&quot;Primary&quot;:&quot;51204.htm&quot;,&quot;CreatorNames&quot;:[&quot;Nonotuck Silk Company [Publisher]&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;51204&quot;});" class='title'>Corticelli Home Needlework, 1898:<br><span class='subtitle'>A Manual of Art, Embroidery and Knitting</span></a>
+<div class='author'>Nonotuck Silk Company [Publisher]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51850, {&quot;Title&quot;:&quot;Hosiery Manufacture&quot;,&quot;Topics&quot;:[&quot;Hosiery&quot;,&quot;Knit goods&quot;],&quot;Primary&quot;:&quot;51850.htm&quot;,&quot;CreatorNames&quot;:[&quot;Davis, William, M.A.&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;51850&quot;});" class='title'>Hosiery Manufacture</a>
+<div class='author'>Davis, William, M.A.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52051, {&quot;Title&quot;:&quot;How to Amuse Yourself and Others: The American Girl&#39;s Handy Book&quot;,&quot;Topics&quot;:[&quot;Amusements -- Juvenile literature&quot;,&quot;Handicraft -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;52051.htm&quot;,&quot;CreatorNames&quot;:[&quot;Beard, Adelia B. (Adelia Belle), 1857-1920&quot;,&quot;Beard, Lina, -1933&quot;],&quot;LoCC&quot;:[&quot;GV&quot;,&quot;TT&quot;],&quot;PG_ID&quot;:&quot;52051&quot;});" class='title'>How to Amuse Yourself and Others:<br><span class='subtitle'>The American Girl's Handy Book</span></a>
+<div class='author'>Beard, Adelia B. (Adelia Belle), 1857-1920, Beard, Lina, -1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52074, {&quot;Title&quot;:&quot;Soldering, Brazing and Welding&quot;,&quot;Topics&quot;:[&quot;Solder and soldering&quot;,&quot;Brazing&quot;,&quot;Welding&quot;],&quot;Primary&quot;:&quot;52074.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jones, Bernard E. (Bernard Edward), 1879-1965 [Editor]&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;52074&quot;});" class='title'>Soldering, Brazing and Welding</a>
+<div class='author'>Jones, Bernard E. (Bernard Edward), 1879-1965 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52396, {&quot;Title&quot;:&quot;The Mary Frances Knitting and Crocheting Book - or, Adventures Among the Knitting People&quot;,&quot;Topics&quot;:[&quot;Crocheting&quot;,&quot;Knitting&quot;,&quot;Knitting -- Patterns&quot;,&quot;Crocheting -- Patterns&quot;,&quot;Mary Frances (Fictitious character) -- Juvenile fiction&quot;],&quot;Primary&quot;:&quot;52396.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fryer, Jane Eayre, 1876-&quot;,&quot;Boyer, Jane Allen [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;52396&quot;});" class='title'>The Mary Frances Knitting and Crocheting Book -<br><span class='subtitle'>or, Adventures Among the Knitting People</span></a>
+<div class='author'>Fryer, Jane Eayre, 1876-, Boyer, Jane Allen [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52850, {&quot;Title&quot;:&quot;Barbers&#39; Manual (Part 1); Text Book on Taxidermy (Part 2)&quot;,&quot;Topics&quot;:[&quot;Taxidermy&quot;,&quot;Barbering&quot;],&quot;Primary&quot;:&quot;52850.htm&quot;,&quot;CreatorNames&quot;:[&quot;McConnaughay, T. J.&quot;],&quot;LoCC&quot;:[&quot;QL&quot;,&quot;TT&quot;],&quot;PG_ID&quot;:&quot;52850&quot;});" class='title'>Barbers' Manual (Part 1);<br><span class='subtitle'>Text Book on Taxidermy (Part 2)</span></a>
+<div class='author'>McConnaughay, T. J.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53288, {&quot;Title&quot;:&quot;Seat Weaving&quot;,&quot;Topics&quot;:[&quot;Chair caning&quot;],&quot;Primary&quot;:&quot;53288.htm&quot;,&quot;CreatorNames&quot;:[&quot;Perry, L. Day, 1887-1955&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;53288&quot;});" class='title'>Seat Weaving</a>
+<div class='author'>Perry, L. Day, 1887-1955</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53854, {&quot;Title&quot;:&quot;Forge Work&quot;,&quot;Topics&quot;:[&quot;Forging&quot;],&quot;Primary&quot;:&quot;53854.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ilgen, William L. (William Lewis), 1862-&quot;,&quot;Moore, Charles Frederick, 1875- [Editor]&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;53854&quot;});" class='title'>Forge Work</a>
+<div class='author'>Ilgen, William L. (William Lewis), 1862-, Moore, Charles Frederick, 1875- [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56738, {&quot;Title&quot;:&quot;Paint &amp; Colour Mixing - A practical handbook for painters, decorators and all who have to mix colours, containing 72 samples of paint of various colours, including the principal graining grounds&quot;,&quot;Topics&quot;:[&quot;Paint mixing&quot;],&quot;Primary&quot;:&quot;56738.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jennings, Arthur Seymour, 1860-1928&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;56738&quot;});" class='title'>Paint & Colour Mixing -<br><span class='subtitle'>A practical handbook for painters, decorators and all who have to mix colours, containing 72 samples of paint of various colours, including the principal graining grounds</span></a>
+<div class='author'>Jennings, Arthur Seymour, 1860-1928</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56751, {&quot;Title&quot;:&quot;The Jolly Book of Boxcraft&quot;,&quot;Topics&quot;:[&quot;Children&#39;s literature&quot;,&quot;Handicraft&quot;,&quot;Toys&quot;,&quot;Paper work&quot;,&quot;Boxes&quot;],&quot;Primary&quot;:&quot;56751.htm&quot;,&quot;CreatorNames&quot;:[&quot;Beard, Patten&quot;,&quot;Pattee, Elsie Dodge, 1876-1975 [Illustrator]&quot;,&quot;North, G. S. [Photographer]&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;56751&quot;});" class='title'>The Jolly Book of Boxcraft</a>
+<div class='author'>Beard, Patten, Pattee, Elsie Dodge, 1876-1975 [Illustrator], North, G. S. [Photographer]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57054, {&quot;Title&quot;:&quot;Flat Machine Knitting and Fabrics&quot;,&quot;Topics&quot;:[&quot;Textile fabrics&quot;,&quot;Machine knitting&quot;],&quot;Primary&quot;:&quot;57054.htm&quot;,&quot;CreatorNames&quot;:[&quot;Buck, H. D. (Horace Davis)&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;57054&quot;});" class='title'>Flat Machine Knitting and Fabrics</a>
+<div class='author'>Buck, H. D. (Horace Davis)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57148, {&quot;Title&quot;:&quot;Cigar-Box Dioramas: A \&quot;\&quot;How-to-do-it\&quot;\&quot; Handbook&quot;,&quot;Topics&quot;:[&quot;Diorama&quot;,&quot;Museum techniques&quot;],&quot;Primary&quot;:&quot;57148.htm&quot;,&quot;CreatorNames&quot;:[&quot;Neal, Arminta&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;57148&quot;});" class='title'>Cigar-Box Dioramas:<br><span class='subtitle'>A "How-to-do-it" Handbook</span></a>
+<div class='author'>Neal, Arminta</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57273, {&quot;Title&quot;:&quot;The Stocking-Knitter&#39;s Manual: A Handy Book for the Work-Table&quot;,&quot;Topics&quot;:[&quot;Knitting -- Patterns&quot;,&quot;Hosiery&quot;],&quot;Primary&quot;:&quot;57273.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cupples, George, Mrs., 1839-1898&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;57273&quot;});" class='title'>The Stocking-Knitter's Manual:<br><span class='subtitle'>A Handy Book for the Work-Table</span></a>
+<div class='author'>Cupples, George, Mrs., 1839-1898</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57562, {&quot;Title&quot;:&quot;Painting by Immersion and by Compressed Air: A Practical Handbook&quot;,&quot;Topics&quot;:[&quot;Painting, Industrial&quot;],&quot;Primary&quot;:&quot;57562.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jennings, Arthur Seymour, 1860-1928&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;57562&quot;});" class='title'>Painting by Immersion and by Compressed Air:<br><span class='subtitle'>A Practical Handbook</span></a>
+<div class='author'>Jennings, Arthur Seymour, 1860-1928</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57595, {&quot;Title&quot;:&quot;My Crochet Sampler&quot;,&quot;Topics&quot;:[&quot;Crocheting&quot;,&quot;Samplers&quot;],&quot;Primary&quot;:&quot;57595.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lambert, Miss (F.)&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;57595&quot;});" class='title'>My Crochet Sampler</a>
+<div class='author'>Lambert, Miss (F.)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57767, {&quot;Title&quot;:&quot;The Andalusian Knitting and Netting Book&quot;,&quot;Topics&quot;:[&quot;Knitting -- Patterns&quot;,&quot;Netting -- Patterns&quot;],&quot;Primary&quot;:&quot;57767.htm&quot;,&quot;CreatorNames&quot;:[&quot;Riego de la Branchardière, Eléonore&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;57767&quot;});" class='title'>The Andalusian Knitting and Netting Book</a>
+<div class='author'>Riego de la Branchardière, Eléonore</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58180, {&quot;Title&quot;:&quot;My Knitting Book (Second Series)&quot;,&quot;Topics&quot;:[&quot;Knitting -- Patterns&quot;],&quot;Primary&quot;:&quot;58180.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lambert, Miss (F.)&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;58180&quot;});" class='title'>My Knitting Book (Second Series)</a>
+<div class='author'>Lambert, Miss (F.)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58293, {&quot;Title&quot;:&quot;The Leatherworker in Eighteenth-Century Williamsburg - Being an Account of the Nature of Leather, &amp; of the Crafts Commonly Engaged in the Making &amp; Using of It.&quot;,&quot;Topics&quot;:[&quot;Leatherwork -- Virginia -- Williamsburg&quot;],&quot;Primary&quot;:&quot;58293.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ford, Thomas K.&quot;,&quot;Gill, Harold B. [Contributor]&quot;,&quot;Townsend, Raymond R. [Contributor]&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;58293&quot;});" class='title'>The Leatherworker in Eighteenth-Century Williamsburg -<br><span class='subtitle'>Being an Account of the Nature of Leather, & of the Crafts Commonly Engaged in the Making & Using of It.</span></a>
+<div class='author'>Ford, Thomas K., Gill, Harold B. [Contributor], Townsend, Raymond R. [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58318, {&quot;Title&quot;:&quot;The Blacksmith in Eighteenth-Century Williamsburg - An Account of His Life &amp; Times and of His Craft&quot;,&quot;Topics&quot;:[&quot;Blacksmithing -- History&quot;],&quot;Primary&quot;:&quot;58318.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gill, Harold B.&quot;,&quot;Ford, Thomas K. [Editor]&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;58318&quot;});" class='title'>The Blacksmith in Eighteenth-Century Williamsburg -<br><span class='subtitle'>An Account of His Life & Times and of His Craft</span></a>
+<div class='author'>Gill, Harold B., Ford, Thomas K. [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58335, {&quot;Title&quot;:&quot;The Knitting Book&quot;,&quot;Topics&quot;:[&quot;Knitting -- Patterns&quot;],&quot;Primary&quot;:&quot;58335.htm&quot;,&quot;CreatorNames&quot;:[&quot;Riego de la Branchardière, Eléonore&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;58335&quot;});" class='title'>The Knitting Book</a>
+<div class='author'>Riego de la Branchardière, Eléonore</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58384, {&quot;Title&quot;:&quot;The Wigmaker in Eighteenth-Century Williamsburg - An Account of His Barbering, Hair-dressing, &amp; Peruke-Making Services, &amp; Some Remarks on Wigs of Various Styles.&quot;,&quot;Topics&quot;:[&quot;Wigmakers&quot;,&quot;Wigs -- History&quot;],&quot;Primary&quot;:&quot;58384.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bullock, Thomas K.&quot;,&quot;Tonkin, Maurice B.&quot;,&quot;Townsend, Raymond R. [Contributor]&quot;,&quot;Ford, Thomas K. [Editor]&quot;],&quot;LoCC&quot;:[&quot;GT&quot;,&quot;TT&quot;],&quot;PG_ID&quot;:&quot;58384&quot;});" class='title'>The Wigmaker in Eighteenth-Century Williamsburg -<br><span class='subtitle'>An Account of His Barbering, Hair-dressing, & Peruke-Making Services, & Some Remarks on Wigs of Various Styles.</span></a>
+<div class='author'>Bullock, Thomas K., Tonkin, Maurice B., Townsend, Raymond R. [Contributor], Ford, Thomas K. [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58636, {&quot;Title&quot;:&quot;Board-Work; or the Art of Wig-making, Etc. - Designed For the Use of Hairdressers and Especially of Young Men in the Trade. To Which Is Added Remarks Upon Razors, Razor-sharpening, Razor Strops, &amp; Miscellaneous Recipes, Specially Selected.&quot;,&quot;Topics&quot;:[&quot;Hairwork&quot;,&quot;Barbering&quot;,&quot;Wigs&quot;],&quot;Primary&quot;:&quot;58636.htm&quot;,&quot;CreatorNames&quot;:[&quot;Creer, Edwin&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;58636&quot;});" class='title'>Board-Work;<br><span class='subtitle'>or the Art of Wig-making, Etc. - Designed For the Use of Hairdressers and Especially of Young Men in the Trade. To Which Is Added Remarks Upon Razors, Razor-sharpening, Razor Strops, & Miscellaneous Recipes, Specially Selected.</span></a>
+<div class='author'>Creer, Edwin</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58937, {&quot;Title&quot;:&quot;The Mary Frances Sewing Book; Or, Adventures Among the Thimble People&quot;,&quot;Topics&quot;:[&quot;Mary Frances (Fictitious character) -- Juvenile fiction&quot;,&quot;Sewing -- Juvenile literature&quot;,&quot;Dollmaking -- Juvenile literature&quot;,&quot;Doll clothes -- Juvenile literature&quot;,&quot;Needlework -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;58937.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fryer, Jane Eayre, 1876-&quot;,&quot;Boyer, Jane Allen [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;58937&quot;});" class='title'>The Mary Frances Sewing Book;<br><span class='subtitle'>Or, Adventures Among the Thimble People</span></a>
+<div class='author'>Fryer, Jane Eayre, 1876-, Boyer, Jane Allen [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59440, {&quot;Title&quot;:&quot;Rake Knitting Patterns&quot;,&quot;Topics&quot;:[&quot;Knitting&quot;],&quot;Primary&quot;:&quot;59440.htm&quot;,&quot;CreatorNames&quot;:[&quot;Thompson, Bertha, 1882-&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;59440&quot;});" class='title'>Rake Knitting Patterns</a>
+<div class='author'>Thompson, Bertha, 1882-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60350, {&quot;Title&quot;:&quot;Crocheted Rugs&quot;,&quot;Topics&quot;:[&quot;Crocheting -- Patterns&quot;,&quot;Rugs&quot;],&quot;Primary&quot;:&quot;60350.htm&quot;,&quot;CreatorNames&quot;:[&quot;American Thread Company&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;60350&quot;});" class='title'>Crocheted Rugs</a>
+<div class='author'>American Thread Company</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60621, {&quot;Title&quot;:&quot;Boys&#39; Make-at-Home Things&quot;,&quot;Topics&quot;:[&quot;Amusements&quot;,&quot;Handicraft&quot;],&quot;Primary&quot;:&quot;60621.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bailey, Carolyn Sherwin, 1875-1961&quot;,&quot;Bailey, Marian Elizabeth&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;60621&quot;});" class='title'>Boys' Make-at-Home Things</a>
+<div class='author'>Bailey, Carolyn Sherwin, 1875-1961, Bailey, Marian Elizabeth</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60765, {&quot;Title&quot;:&quot;The Young Mechanic - Containing directions for the use of all kinds of tools, and for the construction of steam engines and mechanical models, including the art of turning in wood and metal&quot;,&quot;Topics&quot;:[&quot;Industrial arts&quot;,&quot;Handicraft&quot;],&quot;Primary&quot;:&quot;60765.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lukin, James, 1828-1917&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;60765&quot;});" class='title'>The Young Mechanic -<br><span class='subtitle'>Containing directions for the use of all kinds of tools, and for the construction of steam engines and mechanical models, including the art of turning in wood and metal</span></a>
+<div class='author'>Lukin, James, 1828-1917</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61105, {&quot;Title&quot;:&quot;Begin to Knit - All the Basic Stitches; Easy Novelty Stitches; Quick Things to Make&quot;,&quot;Topics&quot;:[&quot;Knitting&quot;,&quot;Knitting -- Patterns&quot;],&quot;Primary&quot;:&quot;61105.htm&quot;,&quot;CreatorNames&quot;:[&quot;American Thread Company&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;61105&quot;});" class='title'>Begin to Knit -<br><span class='subtitle'>All the Basic Stitches; Easy Novelty Stitches; Quick Things to Make</span></a>
+<div class='author'>American Thread Company</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61167, {&quot;Title&quot;:&quot;It&#39;s Fun to Sew with a Sewing Machine&quot;,&quot;Topics&quot;:[&quot;Sewing -- Juvenile literature&quot;,&quot;Machine sewing -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;61167.htm&quot;,&quot;CreatorNames&quot;:[&quot;Struefert, Hildegarde, -2009&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;61167&quot;});" class='title'>It's Fun to Sew with a Sewing Machine</a>
+<div class='author'>Struefert, Hildegarde, -2009</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61222, {&quot;Title&quot;:&quot;The Crochet Book, Fourth Series&quot;,&quot;Topics&quot;:[&quot;Crocheting -- Patterns&quot;],&quot;Primary&quot;:&quot;61222.htm&quot;,&quot;CreatorNames&quot;:[&quot;Riego de la Branchardière, Eléonore&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;61222&quot;});" class='title'>The Crochet Book, Fourth Series</a>
+<div class='author'>Riego de la Branchardière, Eléonore</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61260, {&quot;Title&quot;:&quot;It&#39;s Fun to Sew Aprons and Skirts&quot;,&quot;Topics&quot;:[&quot;Sewing -- Juvenile literature&quot;,&quot;Machine sewing -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;61260.htm&quot;,&quot;CreatorNames&quot;:[&quot;Johnson, Theta, 1916-2005&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;61260&quot;});" class='title'>It's Fun to Sew Aprons and Skirts</a>
+<div class='author'>Johnson, Theta, 1916-2005</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61261, {&quot;Title&quot;:&quot;It&#39;s Fun to Sew a Cotton School Dress&quot;,&quot;Topics&quot;:[&quot;Sewing -- Juvenile literature&quot;,&quot;Machine sewing -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;61261.htm&quot;,&quot;CreatorNames&quot;:[&quot;Johnson, Theta, 1916-2005&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;61261&quot;});" class='title'>It's Fun to Sew a Cotton School Dress</a>
+<div class='author'>Johnson, Theta, 1916-2005</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61293, {&quot;Title&quot;:&quot;Gimp Braiding Projects&quot;,&quot;Topics&quot;:[&quot;Plastics craft&quot;,&quot;Braid&quot;],&quot;Primary&quot;:&quot;61293.htm&quot;,&quot;CreatorNames&quot;:[&quot;White, Charles E.&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;61293&quot;});" class='title'>Gimp Braiding Projects</a>
+<div class='author'>White, Charles E.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61315, {&quot;Title&quot;:&quot;Easy to Make Fashions: from Rochelle&#39;s Mohlon Orlon Acrylic Fiber. Volume B22.&quot;,&quot;Topics&quot;:[&quot;Knitting -- Patterns&quot;,&quot;Crocheting -- Patterns&quot;],&quot;Primary&quot;:&quot;61315.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;61315&quot;});" class='title'>Easy to Make Fashions:<br><span class='subtitle'>from Rochelle's Mohlon Orlon Acrylic Fiber. Volume B22.</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61392, {&quot;Title&quot;:&quot;De nuttige handwerken: handboekje ten dienste der lagere school&quot;,&quot;Topics&quot;:[&quot;Knitting -- Patterns&quot;,&quot;Socks&quot;],&quot;Primary&quot;:&quot;61392.htm&quot;,&quot;CreatorNames&quot;:[&quot;Teunisse, A.&quot;,&quot;Velden, A. M. van der&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;61392&quot;});" class='title'>De nuttige handwerken:<br><span class='subtitle'>handboekje ten dienste der lagere school</span></a>
+<div class='author'>Teunisse, A., Velden, A. M. van der</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61512, {&quot;Title&quot;:&quot;The One-Eyed Fairies&quot;,&quot;Topics&quot;:[&quot;Sewing -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;61512.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hanley, Georgia Eldridge&quot;,&quot;Greene, Julia [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;PZ&quot;,&quot;TT&quot;],&quot;PG_ID&quot;:&quot;61512&quot;});" class='title'>The One-Eyed Fairies</a>
+<div class='author'>Hanley, Georgia Eldridge, Greene, Julia [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61786, {&quot;Title&quot;:&quot;A Manual of Mending and Repairing; With Diagrams&quot;,&quot;Topics&quot;:[&quot;Repairing&quot;],&quot;Primary&quot;:&quot;61786.htm&quot;,&quot;CreatorNames&quot;:[&quot;Leland, Charles Godfrey, 1824-1903&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;61786&quot;});" class='title'>A Manual of Mending and Repairing;<br><span class='subtitle'>With Diagrams</span></a>
+<div class='author'>Leland, Charles Godfrey, 1824-1903</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62190, {&quot;Title&quot;:&quot;Suggestions for Fairs and Bazaars&quot;,&quot;Topics&quot;:[&quot;Crocheting -- Patterns&quot;],&quot;Primary&quot;:&quot;62190.htm&quot;,&quot;CreatorNames&quot;:[&quot;American Thread Company&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;62190&quot;});" class='title'>Suggestions for Fairs and Bazaars</a>
+<div class='author'>American Thread Company</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62264, {&quot;Title&quot;:&quot;\&quot;\&quot;Crazy Daisy\&quot;\&quot; Boutique, Vol. No. 5&quot;,&quot;Topics&quot;:[&quot;Crocheting -- Patterns&quot;],&quot;Primary&quot;:&quot;62264.htm&quot;,&quot;CreatorNames&quot;:[&quot;Scovill Manufacturing Company&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;62264&quot;});" class='title'>"Crazy Daisy" Boutique, Vol. No. 5</a>
+<div class='author'>Scovill Manufacturing Company</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62306, {&quot;Title&quot;:&quot;Novelties &amp; Things: Made with Aunt Lydia&#39;s Heavy Rug Yarn&quot;,&quot;Topics&quot;:[&quot;Knitting -- Patterns&quot;,&quot;Crocheting -- Patterns&quot;],&quot;Primary&quot;:&quot;62306.htm&quot;,&quot;CreatorNames&quot;:[&quot;American Thread Company&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;62306&quot;});" class='title'>Novelties & Things:<br><span class='subtitle'>Made with Aunt Lydia's Heavy Rug Yarn</span></a>
+<div class='author'>American Thread Company</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62444, {&quot;Title&quot;:&quot;The Preservation of the Exterior of Wooden Buildings&quot;,&quot;Topics&quot;:[&quot;House painting&quot;],&quot;Primary&quot;:&quot;62444.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cushman, Allerton S. (Allerton Seward), 1867-1930&quot;,&quot;Gardner, Henry A. (Henry Alfred), 1882-1973&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;62444&quot;});" class='title'>The Preservation of the Exterior of Wooden Buildings</a>
+<div class='author'>Cushman, Allerton S. (Allerton Seward), 1867-1930, Gardner, Henry A. (Henry Alfred), 1882-1973</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62482, {&quot;Title&quot;:&quot;Your All-time Favorite Afghans to Knit or Crochet - in Bear Brand and Fleisher Yarns&quot;,&quot;Topics&quot;:[&quot;Knitting -- Patterns&quot;,&quot;Crocheting -- Patterns&quot;,&quot;Afghans (Coverlets)&quot;],&quot;Primary&quot;:&quot;62482.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;62482&quot;});" class='title'>Your All-time Favorite Afghans to Knit or Crochet -<br><span class='subtitle'>in Bear Brand and Fleisher Yarns</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62484, {&quot;Title&quot;:&quot;Ruffled Doilies and the Pansy Doily&quot;,&quot;Topics&quot;:[&quot;Crocheting -- Patterns&quot;,&quot;Doilies&quot;],&quot;Primary&quot;:&quot;62484.htm&quot;,&quot;CreatorNames&quot;:[&quot;American Thread Company&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;62484&quot;});" class='title'>Ruffled Doilies and the Pansy Doily</a>
+<div class='author'>American Thread Company</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62485, {&quot;Title&quot;:&quot;Edgings: crocheted, tatted, hair pin lace&quot;,&quot;Topics&quot;:[&quot;Crocheting -- Patterns&quot;,&quot;Tatting -- Patterns&quot;,&quot;Hairpin lace -- Patterns&quot;],&quot;Primary&quot;:&quot;62485.htm&quot;,&quot;CreatorNames&quot;:[&quot;American Thread Company&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;62485&quot;});" class='title'>Edgings:<br><span class='subtitle'>crocheted, tatted, hair pin lace</span></a>
+<div class='author'>American Thread Company</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62486, {&quot;Title&quot;:&quot;Ruffled Doilies&quot;,&quot;Topics&quot;:[&quot;Crocheting -- Patterns&quot;,&quot;Doilies&quot;],&quot;Primary&quot;:&quot;62486.htm&quot;,&quot;CreatorNames&quot;:[&quot;American Thread Company&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;62486&quot;});" class='title'>Ruffled Doilies</a>
+<div class='author'>American Thread Company</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62487, {&quot;Title&quot;:&quot;Make It With Aunt Lydia&#39;s Heavy Rug Yarn&quot;,&quot;Topics&quot;:[&quot;Knitting -- Patterns&quot;,&quot;Crocheting -- Patterns&quot;],&quot;Primary&quot;:&quot;62487.htm&quot;,&quot;CreatorNames&quot;:[&quot;American Thread Company&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;62487&quot;});" class='title'>Make It With Aunt Lydia's Heavy Rug Yarn</a>
+<div class='author'>American Thread Company</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62646, {&quot;Title&quot;:&quot;The Lady&#39;s Knitting-Book - Containing eighty clear and easy patterns of useful and ornamental knitting&quot;,&quot;Topics&quot;:[&quot;Knitting -- Patterns&quot;],&quot;Primary&quot;:&quot;62646.htm&quot;,&quot;CreatorNames&quot;:[&quot;Corbould, Elvina Mary&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;62646&quot;});" class='title'>The Lady's Knitting-Book -<br><span class='subtitle'>Containing eighty clear and easy patterns of useful and ornamental knitting</span></a>
+<div class='author'>Corbould, Elvina Mary</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62718, {&quot;Title&quot;:&quot;Discover the Excitement of Hairpin Lace&quot;,&quot;Topics&quot;:[&quot;Knitting -- Patterns&quot;,&quot;Crocheting -- Patterns&quot;,&quot;Hairpin lace -- Patterns&quot;],&quot;Primary&quot;:&quot;62718.htm&quot;,&quot;CreatorNames&quot;:[&quot;C.J. Bates &amp; Son [Publisher]&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;62718&quot;});" class='title'>Discover the Excitement of Hairpin Lace</a>
+<div class='author'>C.J. Bates & Son [Publisher]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62805, {&quot;Title&quot;:&quot;New Tablecloths&quot;,&quot;Topics&quot;:[&quot;Crocheting -- Patterns&quot;,&quot;Tablecloths&quot;,&quot;Table setting and decoration&quot;],&quot;Primary&quot;:&quot;62805.htm&quot;,&quot;CreatorNames&quot;:[&quot;American Thread Company&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;62805&quot;});" class='title'>New Tablecloths</a>
+<div class='author'>American Thread Company</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62842, {&quot;Title&quot;:&quot;In Fashions: for Him, for Her, in Knits, in Crochets&quot;,&quot;Topics&quot;:[&quot;Knitting -- Patterns&quot;,&quot;Crocheting -- Patterns&quot;],&quot;Primary&quot;:&quot;62842.htm&quot;,&quot;CreatorNames&quot;:[&quot;American Thread Company&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;62842&quot;});" class='title'>In Fashions:<br><span class='subtitle'>for Him, for Her, in Knits, in Crochets</span></a>
+<div class='author'>American Thread Company</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62847, {&quot;Title&quot;:&quot;Beautiful, Beautiful Afghans&quot;,&quot;Topics&quot;:[&quot;Crocheting -- Patterns&quot;,&quot;Afghans (Coverlets)&quot;],&quot;Primary&quot;:&quot;62847.htm&quot;,&quot;CreatorNames&quot;:[&quot;American Thread Company&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;62847&quot;});" class='title'>Beautiful, Beautiful Afghans</a>
+<div class='author'>American Thread Company</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62854, {&quot;Title&quot;:&quot;Stoles&quot;,&quot;Topics&quot;:[&quot;Knitting -- Patterns&quot;,&quot;Crocheting -- Patterns&quot;,&quot;Stoles (Clothing)&quot;],&quot;Primary&quot;:&quot;62854.htm&quot;,&quot;CreatorNames&quot;:[&quot;Goldsmith, Carleen [Editor]&quot;,&quot;Traphagen, Julia Brownell [Editor]&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;62854&quot;});" class='title'>Stoles</a>
+<div class='author'>Goldsmith, Carleen [Editor], Traphagen, Julia Brownell [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62882, {&quot;Title&quot;:&quot;Knitted and Crocheted Boutique&quot;,&quot;Topics&quot;:[&quot;Knitting -- Patterns&quot;,&quot;Crocheting -- Patterns&quot;],&quot;Primary&quot;:&quot;62882.htm&quot;,&quot;CreatorNames&quot;:[&quot;American Thread Company&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;62882&quot;});" class='title'>Knitted and Crocheted Boutique</a>
+<div class='author'>American Thread Company</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62932, {&quot;Title&quot;:&quot;Mother&#39;s Knitter: Containing some patterns of things for little children&quot;,&quot;Topics&quot;:[&quot;Knitting -- Patterns&quot;],&quot;Primary&quot;:&quot;62932.htm&quot;,&quot;CreatorNames&quot;:[&quot;Corbould, Elvina Mary&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;62932&quot;});" class='title'>Mother's Knitter:<br><span class='subtitle'>Containing some patterns of things for little children</span></a>
+<div class='author'>Corbould, Elvina Mary</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63017, {&quot;Title&quot;:&quot;Dress and Look Slender&quot;,&quot;Topics&quot;:[&quot;Clothing and dress&quot;],&quot;Primary&quot;:&quot;63017.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wells, Jane Warren, 1886-1981&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;63017&quot;});" class='title'>Dress and Look Slender</a>
+<div class='author'>Wells, Jane Warren, 1886-1981</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63282, {&quot;Title&quot;:&quot;How to Make Draperies&quot;,&quot;Topics&quot;:[&quot;Sewing&quot;,&quot;Draperies&quot;],&quot;Primary&quot;:&quot;63282.htm&quot;,&quot;CreatorNames&quot;:[&quot;Singer Sewing Machine Company&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;63282&quot;});" class='title'>How to Make Draperies</a>
+<div class='author'>Singer Sewing Machine Company</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63454, {&quot;Title&quot;:&quot;How to Make Sock Toys&quot;,&quot;Topics&quot;:[&quot;Handicraft&quot;,&quot;Puppet plays&quot;,&quot;Soft toy making&quot;,&quot;Puppets&quot;,&quot;Puppet theater&quot;],&quot;Primary&quot;:&quot;63454.htm&quot;,&quot;CreatorNames&quot;:[&quot;Clapper, Edna&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;63454&quot;});" class='title'>How to Make Sock Toys</a>
+<div class='author'>Clapper, Edna</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65305, {&quot;Title&quot;:&quot;Christmas Magic for All Your Gifts, Using \&quot;\&quot;Scotch\&quot;\&quot; Brand Tapes and \&quot;\&quot;Sasheen\&quot;\&quot; Brand Ribbon&quot;,&quot;Topics&quot;:[&quot;Christmas decorations&quot;,&quot;Gift wrapping&quot;,&quot;Transparent tape&quot;,&quot;Ribbon work&quot;],&quot;Primary&quot;:&quot;65305.htm&quot;,&quot;CreatorNames&quot;:[&quot;Minnesota Mining and Manufacturing Company&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;65305&quot;});" class='title'>Christmas Magic for All Your Gifts, Using "Scotch" Brand Tapes and "Sasheen" Brand Ribbon</a>
+<div class='author'>Minnesota Mining and Manufacturing Company</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65354, {&quot;Title&quot;:&quot;Lily Speed-O-Weave: Luncheon Set No. 86&quot;,&quot;Topics&quot;:[&quot;Hand weaving&quot;,&quot;Handlooms&quot;],&quot;Primary&quot;:&quot;65354.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lily Mills Company&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;65354&quot;});" class='title'>Lily Speed-O-Weave:<br><span class='subtitle'>Luncheon Set No. 86</span></a>
+<div class='author'>Lily Mills Company</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65503, {&quot;Title&quot;:&quot;60 New Trimmed Gift Ideas&quot;,&quot;Topics&quot;:[&quot;Handicraft&quot;,&quot;Christmas decorations&quot;,&quot;Ribbon work&quot;],&quot;Primary&quot;:&quot;65503.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wm. E. Wright &amp; Sons Co.&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;65503&quot;});" class='title'>60 New Trimmed Gift Ideas</a>
+<div class='author'>Wm. E. Wright & Sons Co.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65645, {&quot;Title&quot;:&quot;Kentucky Rug Yarns Vol. 5: Rugs - Easy to follow instructions and diagrams for colorful rugs, hats, pillows and other items&quot;,&quot;Topics&quot;:[&quot;Knitting -- Patterns&quot;,&quot;Crocheting -- Patterns&quot;,&quot;Rugs&quot;,&quot;Afghans (Coverlets)&quot;,&quot;Pillows&quot;],&quot;Primary&quot;:&quot;65645.htm&quot;,&quot;CreatorNames&quot;:[&quot;January &amp; Wood Company (Maysville, Ky.)&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;65645&quot;});" class='title'>Kentucky Rug Yarns Vol. 5:<br><span class='subtitle'>Rugs - Easy to follow instructions and diagrams for colorful rugs, hats, pillows and other items</span></a>
+<div class='author'>January & Wood Company (Maysville, Ky.)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65789, {&quot;Title&quot;:&quot;Sweaters He and She&quot;,&quot;Topics&quot;:[&quot;Knitting -- Patterns&quot;,&quot;Crocheting -- Patterns&quot;,&quot;Sweaters&quot;],&quot;Primary&quot;:&quot;65789.htm&quot;,&quot;CreatorNames&quot;:[&quot;American Thread Company&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;65789&quot;});" class='title'>Sweaters He and She</a>
+<div class='author'>American Thread Company</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65873, {&quot;Title&quot;:&quot;Art and Pleasure: \&quot;\&quot;Painting with Needles\&quot;\&quot; - New Uses of Dexter Cotton Warp&quot;,&quot;Topics&quot;:[&quot;Crocheting -- Patterns&quot;],&quot;Primary&quot;:&quot;65873.htm&quot;,&quot;CreatorNames&quot;:[&quot;Virginia Snow Studios&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;65873&quot;});" class='title'>Art and Pleasure:<br><span class='subtitle'>"Painting with Needles" - New Uses of Dexter Cotton Warp</span></a>
+<div class='author'>Virginia Snow Studios</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66065, {&quot;Title&quot;:&quot;Doily Bouquet&quot;,&quot;Topics&quot;:[&quot;Crocheting -- Patterns&quot;,&quot;Doilies&quot;],&quot;Primary&quot;:&quot;66065.htm&quot;,&quot;CreatorNames&quot;:[&quot;American Thread Company&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;66065&quot;});" class='title'>Doily Bouquet</a>
+<div class='author'>American Thread Company</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66111, {&quot;Title&quot;:&quot;Afghans&quot;,&quot;Topics&quot;:[&quot;Knitting -- Patterns&quot;,&quot;Crocheting -- Patterns&quot;,&quot;Afghans (Coverlets)&quot;],&quot;Primary&quot;:&quot;66111.htm&quot;,&quot;CreatorNames&quot;:[&quot;Spool Cotton Co.&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;66111&quot;});" class='title'>Afghans</a>
+<div class='author'>Spool Cotton Co.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66234, {&quot;Title&quot;:&quot;The Abergeldie Winter Book&quot;,&quot;Topics&quot;:[&quot;Knitting -- Patterns&quot;,&quot;Crocheting -- Patterns&quot;,&quot;Tatting -- Patterns&quot;],&quot;Primary&quot;:&quot;66234.htm&quot;,&quot;CreatorNames&quot;:[&quot;Riego de la Branchardière, Eléonore&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;66234&quot;});" class='title'>The Abergeldie Winter Book</a>
+<div class='author'>Riego de la Branchardière, Eléonore</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66271, {&quot;Title&quot;:&quot;Bulkies [Sweaters to Knit and Crochet]&quot;,&quot;Topics&quot;:[&quot;Knitting -- Patterns&quot;,&quot;Crocheting -- Patterns&quot;,&quot;Sweaters&quot;],&quot;Primary&quot;:&quot;66271.htm&quot;,&quot;CreatorNames&quot;:[&quot;American Thread Company&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;66271&quot;});" class='title'>Bulkies [Sweaters to Knit and Crochet]</a>
+<div class='author'>American Thread Company</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66272, {&quot;Title&quot;:&quot;Babies Are Such Fun to Dress: Sizes 6 Months to 4 Years Knit &amp; Crochet&quot;,&quot;Topics&quot;:[&quot;Knitting -- Patterns&quot;,&quot;Crocheting -- Patterns&quot;,&quot;Infants&#39; clothing&quot;,&quot;Layettes&quot;],&quot;Primary&quot;:&quot;66272.htm&quot;,&quot;CreatorNames&quot;:[&quot;American Thread Company&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;66272&quot;});" class='title'>Babies Are Such Fun to Dress:<br><span class='subtitle'>Sizes 6 Months to 4 Years Knit & Crochet</span></a>
+<div class='author'>American Thread Company</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66334, {&quot;Title&quot;:&quot;Aunt Lydia&#39;s Designs&quot;,&quot;Topics&quot;:[&quot;Knitting -- Patterns&quot;,&quot;Crocheting -- Patterns&quot;,&quot;Macramé -- Patterns&quot;],&quot;Primary&quot;:&quot;66334.htm&quot;,&quot;CreatorNames&quot;:[&quot;American Thread Company&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;66334&quot;});" class='title'>Aunt Lydia's Designs</a>
+<div class='author'>American Thread Company</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66616, {&quot;Title&quot;:&quot;Elementary Course in Woodwork - Designed for use in high and technical schools, with one hundred and thirty-four illustrations: First Edition&quot;,&quot;Topics&quot;:[&quot;Woodwork (Manual training)&quot;],&quot;Primary&quot;:&quot;66616.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ross, George Alexander&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;66616&quot;});" class='title'>Elementary Course in Woodwork -<br><span class='subtitle'>Designed for use in high and technical schools, with one hundred and thirty-four illustrations: First Edition</span></a>
+<div class='author'>Ross, George Alexander</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66920, {&quot;Title&quot;:&quot;Keeping Down the Cost of Your Woodwork&quot;,&quot;Topics&quot;:[&quot;Trade catalogs&quot;,&quot;Curtis Companies -- Catalogs&quot;,&quot;Millwork (Woodwork) -- Catalogs&quot;,&quot;Woodwork -- Catalogs&quot;],&quot;Primary&quot;:&quot;66920.htm&quot;,&quot;CreatorNames&quot;:[&quot;Curtis Companies&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;66920&quot;});" class='title'>Keeping Down the Cost of Your Woodwork</a>
+<div class='author'>Curtis Companies</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67109, {&quot;Title&quot;:&quot;Practical House, Wagon and Automobile Painter - including sign painting, and valuable hints and recipes&quot;,&quot;Topics&quot;:[&quot;Alphabets&quot;,&quot;Painting, Industrial&quot;,&quot;House painting&quot;,&quot;Sign painting&quot;],&quot;Primary&quot;:&quot;67109.htm&quot;,&quot;CreatorNames&quot;:[&quot;White, W. F.&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;67109&quot;});" class='title'>Practical House, Wagon and Automobile Painter -<br><span class='subtitle'>including sign painting, and valuable hints and recipes</span></a>
+<div class='author'>White, W. F.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67790, {&quot;Title&quot;:&quot;The Mirror of the Graces - Containing General Instructions for Combining Elegance, Simplicity, and Economy with Fashion in Dress; Hints on Female Accomplishments and Manners; and Directions for the Preservation of Health and Beauty&quot;,&quot;Topics&quot;:[&quot;Beauty, Personal&quot;,&quot;Clothing and dress -- Great Britain -- History -- 19th century&quot;,&quot;Etiquette -- Great Britain&quot;],&quot;Primary&quot;:&quot;67790.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lady of distinction, active 19th century&quot;],&quot;LoCC&quot;:[&quot;BJ&quot;,&quot;TT&quot;],&quot;PG_ID&quot;:&quot;67790&quot;});" class='title'>The Mirror of the Graces -<br><span class='subtitle'>Containing General Instructions for Combining Elegance, Simplicity, and Economy with Fashion in Dress; Hints on Female Accomplishments and Manners; and Directions for the Preservation of Health and Beauty</span></a>
+<div class='author'>Lady of distinction, active 19th century</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67839, {&quot;Title&quot;:&quot;Stoles: Knitted; Crocheted; Hairpin Lace&quot;,&quot;Topics&quot;:[&quot;Knitting -- Patterns&quot;,&quot;Crocheting -- Patterns&quot;,&quot;Hairpin lace -- Patterns&quot;,&quot;Stoles (Clothing)&quot;],&quot;Primary&quot;:&quot;67839.htm&quot;,&quot;CreatorNames&quot;:[&quot;American Thread Company&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;67839&quot;});" class='title'>Stoles:<br><span class='subtitle'>Knitted; Crocheted; Hairpin Lace</span></a>
+<div class='author'>American Thread Company</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68118, {&quot;Title&quot;:&quot;Correlated courses in woodwork and mechanical drawing&quot;,&quot;Topics&quot;:[&quot;Mechanical drawing&quot;,&quot;Woodwork (Manual training)&quot;],&quot;Primary&quot;:&quot;68118.htm&quot;,&quot;CreatorNames&quot;:[&quot;Griffith, Ira Samuel, 1874-1924&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;68118&quot;});" class='title'>Correlated courses in woodwork and mechanical drawing</a>
+<div class='author'>Griffith, Ira Samuel, 1874-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68261, {&quot;Title&quot;:&quot;The partnership of paint&quot;,&quot;Topics&quot;:[&quot;Interior decoration&quot;,&quot;Paint&quot;,&quot;House painting&quot;],&quot;Primary&quot;:&quot;68261.htm&quot;,&quot;CreatorNames&quot;:[&quot;Oliver, Eda A. [Contributor]&quot;,&quot;John W. Masury &amp; Son&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;68261&quot;});" class='title'>The partnership of paint</a>
+<div class='author'>Oliver, Eda A. [Contributor], John W. Masury & Son</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68650, {&quot;Title&quot;:&quot;Harper&#39;s indoor book for boys&quot;,&quot;Topics&quot;:[&quot;Handicraft&quot;],&quot;Primary&quot;:&quot;68650.htm&quot;,&quot;CreatorNames&quot;:[&quot;Adams, Joseph H. (Joseph Henry), 1867-1941&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;68650&quot;});" class='title'>Harper's indoor book for boys</a>
+<div class='author'>Adams, Joseph H. (Joseph Henry), 1867-1941</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68781, {&quot;Title&quot;:&quot;Trichocosmos: Notes historical, æsthetical, ethnological, physiological, anecdotal and tonsorial, on the hair &amp; beard&quot;,&quot;Topics&quot;:[&quot;Hairdressing&quot;,&quot;Barbering&quot;,&quot;Beards&quot;,&quot;Hair&quot;,&quot;Wigs&quot;],&quot;Primary&quot;:&quot;68781.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;GT&quot;,&quot;TT&quot;],&quot;PG_ID&quot;:&quot;68781&quot;});" class='title'>Trichocosmos:<br><span class='subtitle'>Notes historical, æsthetical, ethnological, physiological, anecdotal and tonsorial, on the hair & beard</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68866, {&quot;Title&quot;:&quot;Hints for painters, decorators, and paper-hangers. - Being a selection of useful rules, data, memoranda, methods, and suggestions for house, ship and furniture painting, paper-hanging, gilding, color mixing, and other matters useful and instructive to painters and decorators. Prepared with special reference to the wants of amateurs&quot;,&quot;Topics&quot;:[&quot;Interior decoration&quot;,&quot;House painting&quot;,&quot;Paperhanging&quot;],&quot;Primary&quot;:&quot;68866.htm&quot;,&quot;CreatorNames&quot;:[&quot;An Old Hand&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;68866&quot;});" class='title'>Hints for painters, decorators, and paper-hangers. -<br><span class='subtitle'>Being a selection of useful rules, data, memoranda, methods, and suggestions for house, ship and furniture painting, paper-hanging, gilding, color mixing, and other matters useful and instructive to painters and decorators. Prepared with special reference to the wants of amateurs</span></a>
+<div class='author'>An Old Hand</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68967, {&quot;Title&quot;:&quot;Stoles and shawls: hairpin lace, knitted, crocheted&quot;,&quot;Topics&quot;:[&quot;Knitting -- Patterns&quot;,&quot;Crocheting -- Patterns&quot;,&quot;Hairpin lace -- Patterns&quot;,&quot;Stoles (Clothing)&quot;,&quot;Shawls&quot;],&quot;Primary&quot;:&quot;68967.htm&quot;,&quot;CreatorNames&quot;:[&quot;American Thread Company&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;68967&quot;});" class='title'>Stoles and shawls:<br><span class='subtitle'>hairpin lace, knitted, crocheted</span></a>
+<div class='author'>American Thread Company</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69019, {&quot;Title&quot;:&quot;Elements of woodwork&quot;,&quot;Topics&quot;:[&quot;Woodwork (Manual training)&quot;],&quot;Primary&quot;:&quot;69019.htm&quot;,&quot;CreatorNames&quot;:[&quot;King, Charles A. (Charles Albert), 1865-&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;69019&quot;});" class='title'>Elements of woodwork</a>
+<div class='author'>King, Charles A. (Charles Albert), 1865-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69043, {&quot;Title&quot;:&quot;Chair backs&quot;,&quot;Topics&quot;:[&quot;Knitting -- Patterns&quot;,&quot;Crocheting -- Patterns&quot;,&quot;Tatting -- Patterns&quot;,&quot;Doilies&quot;],&quot;Primary&quot;:&quot;69043.htm&quot;,&quot;CreatorNames&quot;:[&quot;American Thread Company&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;69043&quot;});" class='title'>Chair backs</a>
+<div class='author'>American Thread Company</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69488, {&quot;Title&quot;:&quot;Practical forging and art smithing&quot;,&quot;Topics&quot;:[&quot;Forging&quot;,&quot;Ironwork&quot;],&quot;Primary&quot;:&quot;69488.htm&quot;,&quot;CreatorNames&quot;:[&quot;Googerty, Thomas F. (Thomas Francis), 1865-1945&quot;,&quot;Lake, Edward J. [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;69488&quot;});" class='title'>Practical forging and art smithing</a>
+<div class='author'>Googerty, Thomas F. (Thomas Francis), 1865-1945, Lake, Edward J. [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69507, {&quot;Title&quot;:&quot;Color mixing guide - For artists, painters, decorators, printing pressmen, show card writers, sign painters, color mixers. Gives color mixtures by parts&quot;,&quot;Topics&quot;:[&quot;Colors&quot;,&quot;Pigments&quot;,&quot;Paint mixing&quot;],&quot;Primary&quot;:&quot;69507.htm&quot;,&quot;CreatorNames&quot;:[&quot;King, John L.&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;69507&quot;});" class='title'>Color mixing guide -<br><span class='subtitle'>For artists, painters, decorators, printing pressmen, show card writers, sign painters, color mixers. Gives color mixtures by parts</span></a>
+<div class='author'>King, John L.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69723, {&quot;Title&quot;:&quot;An embroidery book&quot;,&quot;Topics&quot;:[&quot;Embroidery&quot;],&quot;Primary&quot;:&quot;69723.htm&quot;,&quot;CreatorNames&quot;:[&quot;Arthur, Anne Knox&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;69723&quot;});" class='title'>An embroidery book</a>
+<div class='author'>Arthur, Anne Knox</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69725, {&quot;Title&quot;:&quot;Elementary woodworking&quot;,&quot;Topics&quot;:[&quot;Woodwork&quot;,&quot;Trees&quot;,&quot;Woodworking tools&quot;],&quot;Primary&quot;:&quot;69725.htm&quot;,&quot;CreatorNames&quot;:[&quot;Foster, Edwin W.&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;69725&quot;});" class='title'>Elementary woodworking</a>
+<div class='author'>Foster, Edwin W.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69974, {&quot;Title&quot;:&quot;Fashion parade&quot;,&quot;Topics&quot;:[&quot;Knitting -- Patterns&quot;,&quot;Crocheting -- Patterns&quot;,&quot;Sweaters&quot;],&quot;Primary&quot;:&quot;69974.htm&quot;,&quot;CreatorNames&quot;:[&quot;American Thread Company&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;69974&quot;});" class='title'>Fashion parade</a>
+<div class='author'>American Thread Company</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69979, {&quot;Title&quot;:&quot;Aunt Lydia&#39;s rug yarn collection&quot;,&quot;Topics&quot;:[&quot;Knitting -- Patterns&quot;,&quot;Crocheting -- Patterns&quot;],&quot;Primary&quot;:&quot;69979.htm&quot;,&quot;CreatorNames&quot;:[&quot;American Thread Company&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;69979&quot;});" class='title'>Aunt Lydia's rug yarn collection</a>
+<div class='author'>American Thread Company</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69987, {&quot;Title&quot;:&quot;Mood fashions&quot;,&quot;Topics&quot;:[&quot;Knitting -- Patterns&quot;,&quot;Crocheting -- Patterns&quot;],&quot;Primary&quot;:&quot;69987.htm&quot;,&quot;CreatorNames&quot;:[&quot;American Thread Company&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;69987&quot;});" class='title'>Mood fashions</a>
+<div class='author'>American Thread Company</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69989, {&quot;Title&quot;:&quot;Handicraft for boys&quot;,&quot;Topics&quot;:[&quot;Handicraft for boys&quot;],&quot;Primary&quot;:&quot;69989.htm&quot;,&quot;CreatorNames&quot;:[&quot;Collins, A. Frederick (Archie Frederick), 1869-1952&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;69989&quot;});" class='title'>Handicraft for boys</a>
+<div class='author'>Collins, A. Frederick (Archie Frederick), 1869-1952</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70100, {&quot;Title&quot;:&quot;The turner&#39;s companion -&quot;,&quot;Topics&quot;:[&quot;Turning (Lathe work)&quot;],&quot;Primary&quot;:&quot;70100.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;70100&quot;});" class='title'>The turner's companion -<br><span class='subtitle'></span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70205, {&quot;Title&quot;:&quot;Designs for Crazy Daisy Winder&quot;,&quot;Topics&quot;:[&quot;Crocheting -- Patterns&quot;],&quot;Primary&quot;:&quot;70205.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hewlett, Esther Parnell, 1895-1975&quot;,&quot;Hewlett, Frank Howard, 1906-1997 [Photographer]&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;70205&quot;});" class='title'>Designs for Crazy Daisy Winder</a>
+<div class='author'>Hewlett, Esther Parnell, 1895-1975, Hewlett, Frank Howard, 1906-1997 [Photographer]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70228, {&quot;Title&quot;:&quot;Old and new favorites&quot;,&quot;Topics&quot;:[&quot;Coverlets&quot;,&quot;Crocheting -- Patterns&quot;,&quot;Doilies&quot;,&quot;Tablecloths&quot;],&quot;Primary&quot;:&quot;70228.htm&quot;,&quot;CreatorNames&quot;:[&quot;Spool Cotton Co.&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;70228&quot;});" class='title'>Old and new favorites</a>
+<div class='author'>Spool Cotton Co.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70339, {&quot;Title&quot;:&quot;Furniture upholstery for schools&quot;,&quot;Topics&quot;:[&quot;Upholstery&quot;],&quot;Primary&quot;:&quot;70339.htm&quot;,&quot;CreatorNames&quot;:[&quot;Johnson, Emil Aldren, 1875-&quot;],&quot;LoCC&quot;:[&quot;TT&quot;],&quot;PG_ID&quot;:&quot;70339&quot;});" class='title'>Furniture upholstery for schools</a>
+<div class='author'>Johnson, Emil Aldren, 1875-</div>
+</div>
+</ul></div>
+</body></html>

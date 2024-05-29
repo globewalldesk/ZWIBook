@@ -1,0 +1,150 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Physical Geography (GB)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(11598, {&quot;Title&quot;:&quot;La Montaña&quot;,&quot;Topics&quot;:[&quot;Mountains&quot;],&quot;Primary&quot;:&quot;11598.txt&quot;,&quot;CreatorNames&quot;:[&quot;Reclus, Elisée, 1830-1905&quot;],&quot;LoCC&quot;:[&quot;GB&quot;],&quot;PG_ID&quot;:&quot;11598&quot;});" class='title'>La Montaña</a>
+<div class='author'>Reclus, Elisée, 1830-1905</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(11663, {&quot;Title&quot;:&quot;El Arroyo&quot;,&quot;Topics&quot;:[&quot;Rivers&quot;],&quot;Primary&quot;:&quot;11663.txt&quot;,&quot;CreatorNames&quot;:[&quot;Reclus, Elisée, 1830-1905&quot;,&quot;López Rodrigo, A.‏ [Translator]&quot;],&quot;LoCC&quot;:[&quot;GB&quot;],&quot;PG_ID&quot;:&quot;11663&quot;});" class='title'>El Arroyo</a>
+<div class='author'>Reclus, Elisée, 1830-1905, López Rodrigo, A.‏ [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14012, {&quot;Title&quot;:&quot;Ice-Caves of France and Switzerland&quot;,&quot;Topics&quot;:[&quot;Ice caves&quot;],&quot;Primary&quot;:&quot;14012.htm&quot;,&quot;CreatorNames&quot;:[&quot;Browne, G. F. (George Forrest), 1833-1930&quot;],&quot;LoCC&quot;:[&quot;GB&quot;],&quot;PG_ID&quot;:&quot;14012&quot;});" class='title'>Ice-Caves of France and Switzerland</a>
+<div class='author'>Browne, G. F. (George Forrest), 1833-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14999, {&quot;Title&quot;:&quot;A Briefe Introduction to Geography&quot;,&quot;Topics&quot;:[&quot;Geography -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;14999.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pemble, William, 1592?-1623&quot;],&quot;LoCC&quot;:[&quot;GB&quot;],&quot;PG_ID&quot;:&quot;14999&quot;});" class='title'>A Briefe Introduction to Geography</a>
+<div class='author'>Pemble, William, 1592?-1623</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17354, {&quot;Title&quot;:&quot;Cave Regions of the Ozarks and Black Hills&quot;,&quot;Topics&quot;:[&quot;Caves -- Ozark Mountains&quot;,&quot;Caves -- Black Hills (S.D. and Wyo.)&quot;],&quot;Primary&quot;:&quot;17354.htm&quot;,&quot;CreatorNames&quot;:[&quot;Owen, Luella Agnes, 1852-1932&quot;],&quot;LoCC&quot;:[&quot;GB&quot;],&quot;PG_ID&quot;:&quot;17354&quot;});" class='title'>Cave Regions of the Ozarks and Black Hills</a>
+<div class='author'>Owen, Luella Agnes, 1852-1932</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18562, {&quot;Title&quot;:&quot;Outlines of the Earth&#39;s History: A Popular Study in Physiography&quot;,&quot;Topics&quot;:[&quot;Physical geography&quot;],&quot;Primary&quot;:&quot;18562.htm&quot;,&quot;CreatorNames&quot;:[&quot;Shaler, Nathaniel Southgate, 1841-1906&quot;],&quot;LoCC&quot;:[&quot;GB&quot;],&quot;PG_ID&quot;:&quot;18562&quot;});" class='title'>Outlines of the Earth's History:<br><span class='subtitle'>A Popular Study in Physiography</span></a>
+<div class='author'>Shaler, Nathaniel Southgate, 1841-1906</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33760, {&quot;Title&quot;:&quot;Fossil Ice Crystals: An Instance of the Practical Value of \&quot;\&quot;Pure Science\&quot;\&quot;&quot;,&quot;Topics&quot;:[&quot;Fossils&quot;,&quot;Ice&quot;],&quot;Primary&quot;:&quot;33760.htm&quot;,&quot;CreatorNames&quot;:[&quot;Udden, Johan August, 1859-1932&quot;],&quot;LoCC&quot;:[&quot;GB&quot;],&quot;PG_ID&quot;:&quot;33760&quot;});" class='title'>Fossil Ice Crystals:<br><span class='subtitle'>An Instance of the Practical Value of "Pure Science"</span></a>
+<div class='author'>Udden, Johan August, 1859-1932</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36404, {&quot;Title&quot;:&quot;Memoria hydrografica das ilhas de Cabo Verde - para servir de instrucção a carta das mesmas ilhas, publicada em o anno de 1790&quot;,&quot;Topics&quot;:[&quot;Hydrography -- Cabo Verde&quot;,&quot;Cabo Verde -- Description and travel&quot;],&quot;Primary&quot;:&quot;36404.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cabral, F. A. (Francisco Antonio)&quot;],&quot;LoCC&quot;:[&quot;GB&quot;],&quot;PG_ID&quot;:&quot;36404&quot;});" class='title'>Memoria hydrografica das ilhas de Cabo Verde -<br><span class='subtitle'>para servir de instrucção a carta das mesmas ilhas, publicada em o anno de 1790</span></a>
+<div class='author'>Cabral, F. A. (Francisco Antonio)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39621, {&quot;Title&quot;:&quot;The Jenolan Caves: An Excursion in Australian Wonderland&quot;,&quot;Topics&quot;:[&quot;Australia -- Description and travel&quot;,&quot;Caves&quot;,&quot;Jenolan Caves (N.S.W.)&quot;],&quot;Primary&quot;:&quot;39621.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cook, Samuel&quot;],&quot;LoCC&quot;:[&quot;DU&quot;,&quot;GB&quot;],&quot;PG_ID&quot;:&quot;39621&quot;});" class='title'>The Jenolan Caves:<br><span class='subtitle'>An Excursion in Australian Wonderland</span></a>
+<div class='author'>Cook, Samuel</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42860, {&quot;Title&quot;:&quot;The Andes of Southern Peru - Geographical Reconnaissance along the Seventy-Third Meridian&quot;,&quot;Topics&quot;:[&quot;Yale Peruvian Expedition (1911)&quot;,&quot;Physical geography -- Peru&quot;,&quot;Human geography -- Peru&quot;,&quot;Geology -- Andes&quot;,&quot;Peru -- Geography&quot;],&quot;Primary&quot;:&quot;42860.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bowman, Isaiah, 1878-1950&quot;],&quot;LoCC&quot;:[&quot;GB&quot;],&quot;PG_ID&quot;:&quot;42860&quot;});" class='title'>The Andes of Southern Peru -<br><span class='subtitle'>Geographical Reconnaissance along the Seventy-Third Meridian</span></a>
+<div class='author'>Bowman, Isaiah, 1878-1950</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43826, {&quot;Title&quot;:&quot;The Story of the Hills: A Book About Mountains for General Readers.&quot;,&quot;Topics&quot;:[&quot;Mountains&quot;],&quot;Primary&quot;:&quot;43826.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hutchinson, H. N. (Henry Neville), 1856-1927&quot;],&quot;LoCC&quot;:[&quot;GB&quot;],&quot;PG_ID&quot;:&quot;43826&quot;});" class='title'>The Story of the Hills:<br><span class='subtitle'>A Book About Mountains for General Readers.</span></a>
+<div class='author'>Hutchinson, H. N. (Henry Neville), 1856-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45460, {&quot;Title&quot;:&quot;Die Entstehung der Kontinente und Ozeane&quot;,&quot;Topics&quot;:[&quot;Ocean&quot;,&quot;Continental drift&quot;,&quot;Continents&quot;,&quot;Geology, Structural&quot;],&quot;Primary&quot;:&quot;45460.txt&quot;,&quot;CreatorNames&quot;:[&quot;Wegener, Alfred, 1880-1930&quot;],&quot;LoCC&quot;:[&quot;GB&quot;,&quot;QE&quot;],&quot;PG_ID&quot;:&quot;45460&quot;});" class='title'>Die Entstehung der Kontinente und Ozeane</a>
+<div class='author'>Wegener, Alfred, 1880-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47108, {&quot;Title&quot;:&quot;Deserts: Geology and Resources&quot;,&quot;Topics&quot;:[&quot;Deserts -- Research&quot;,&quot;Desertification -- Research&quot;,&quot;Hazardous geographic environments -- Research&quot;],&quot;Primary&quot;:&quot;47108.htm&quot;,&quot;CreatorNames&quot;:[&quot;Walker, A. S. (Alta Sharon), 1942-&quot;],&quot;LoCC&quot;:[&quot;GB&quot;],&quot;PG_ID&quot;:&quot;47108&quot;});" class='title'>Deserts:<br><span class='subtitle'>Geology and Resources</span></a>
+<div class='author'>Walker, A. S. (Alta Sharon), 1942-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50671, {&quot;Title&quot;:&quot;Earth Features and Their Meaning - An Introduction to Geology for the Student and the General Reader&quot;,&quot;Topics&quot;:[&quot;Geology&quot;,&quot;Physical geography&quot;],&quot;Primary&quot;:&quot;50671.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hobbs, William Herbert, 1864-1952&quot;],&quot;LoCC&quot;:[&quot;GB&quot;],&quot;PG_ID&quot;:&quot;50671&quot;});" class='title'>Earth Features and Their Meaning -<br><span class='subtitle'>An Introduction to Geology for the Student and the General Reader</span></a>
+<div class='author'>Hobbs, William Herbert, 1864-1952</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52216, {&quot;Title&quot;:&quot;Glacières; or, Freezing Caverns&quot;,&quot;Topics&quot;:[&quot;Caves&quot;,&quot;Glaciers&quot;],&quot;Primary&quot;:&quot;52216.htm&quot;,&quot;CreatorNames&quot;:[&quot;Balch, Edwin Swift, 1856-1927&quot;],&quot;LoCC&quot;:[&quot;GB&quot;],&quot;PG_ID&quot;:&quot;52216&quot;});" class='title'>Glacières;<br><span class='subtitle'>or, Freezing Caverns</span></a>
+<div class='author'>Balch, Edwin Swift, 1856-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53063, {&quot;Title&quot;:&quot;The Netherworld of Mendip - Explorations in the great caverns of Somerset, Yorkshire, Derbyshire, and elsewhere&quot;,&quot;Topics&quot;:[&quot;Caves&quot;,&quot;Mendip Hills (England)&quot;],&quot;Primary&quot;:&quot;53063.htm&quot;,&quot;CreatorNames&quot;:[&quot;Baker, Ernest A. (Ernest Albert), 1869-1941&quot;,&quot;Balch, H. E. (Herbert Ernest)&quot;],&quot;LoCC&quot;:[&quot;GB&quot;],&quot;PG_ID&quot;:&quot;53063&quot;});" class='title'>The Netherworld of Mendip -<br><span class='subtitle'>Explorations in the great caverns of Somerset, Yorkshire, Derbyshire, and elsewhere</span></a>
+<div class='author'>Baker, Ernest A. (Ernest Albert), 1869-1941, Balch, H. E. (Herbert Ernest)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57379, {&quot;Title&quot;:&quot;The Nile in 1904&quot;,&quot;Topics&quot;:[&quot;Nile River&quot;,&quot;Water-supply -- Egypt&quot;,&quot;Geology -- Egypt&quot;],&quot;Primary&quot;:&quot;57379.htm&quot;,&quot;CreatorNames&quot;:[&quot;Willcocks, William, Sir, 1852-1932&quot;,&quot;Beadnell, H. J. L. (Hugh John Llewellyn), 1874-1944 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;GB&quot;],&quot;PG_ID&quot;:&quot;57379&quot;});" class='title'>The Nile in 1904</a>
+<div class='author'>Willcocks, William, Sir, 1852-1932, Beadnell, H. J. L. (Hugh John Llewellyn), 1874-1944 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58151, {&quot;Title&quot;:&quot;An Essay on the Encroachments of the German Ocean Along the Norfolk Coast - With a Design to Arrest Its Further Depredations&quot;,&quot;Topics&quot;:[&quot;Norfolk (England) -- Description and travel&quot;,&quot;Tides -- England -- Norfolk&quot;,&quot;North Sea&quot;],&quot;Primary&quot;:&quot;58151.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hewitt, William, -1876&quot;],&quot;LoCC&quot;:[&quot;GB&quot;,&quot;TC&quot;],&quot;PG_ID&quot;:&quot;58151&quot;});" class='title'>An Essay on the Encroachments of the German Ocean Along the Norfolk Coast -<br><span class='subtitle'>With a Design to Arrest Its Further Depredations</span></a>
+<div class='author'>Hewitt, William, -1876</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58361, {&quot;Title&quot;:&quot;Armenia: A year at Erzeroom, and on the frontiers of Russia, Turkey, and Persia&quot;,&quot;Topics&quot;:[&quot;Armenia -- Description and travel&quot;,&quot;Curzon, Robert, 1810-1873 -- Travel -- Armenia&quot;,&quot;Curzon, Robert, 1810-1873 -- Homes and haunts -- Turkey&quot;,&quot;Armenia -- History -- 1801-1900&quot;],&quot;Primary&quot;:&quot;58361.htm&quot;,&quot;CreatorNames&quot;:[&quot;Curzon, Robert, 1810-1873&quot;],&quot;LoCC&quot;:[&quot;DS&quot;,&quot;GB&quot;],&quot;PG_ID&quot;:&quot;58361&quot;});" class='title'>Armenia:<br><span class='subtitle'>A year at Erzeroom, and on the frontiers of Russia, Turkey, and Persia</span></a>
+<div class='author'>Curzon, Robert, 1810-1873</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60850, {&quot;Title&quot;:&quot;Histoire d&#39;une Montagne&quot;,&quot;Topics&quot;:[&quot;Mountains&quot;],&quot;Primary&quot;:&quot;60850.htm&quot;,&quot;CreatorNames&quot;:[&quot;Reclus, Elisée, 1830-1905&quot;],&quot;LoCC&quot;:[&quot;GB&quot;],&quot;PG_ID&quot;:&quot;60850&quot;});" class='title'>Histoire d'une Montagne</a>
+<div class='author'>Reclus, Elisée, 1830-1905</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61402, {&quot;Title&quot;:&quot;Sand Dunes Story&quot;,&quot;Topics&quot;:[&quot;Death Valley National Park (Calif. and Nev.) -- Guidebooks&quot;,&quot;Sand dunes -- Death Valley National Park (Calif. and Nev.) -- Guidebooks&quot;,&quot;Natural history -- Death Valley National Park (Calif. and Nev.) -- Guidebooks&quot;],&quot;Primary&quot;:&quot;61402.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bessken, Donna P.&quot;,&quot;Olson, Virgil J. [Editor]&quot;,&quot;Osborn, T. Forbes [Illustrator]&quot;,&quot;Stosser, Sylvia [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;GB&quot;],&quot;PG_ID&quot;:&quot;61402&quot;});" class='title'>Sand Dunes Story</a>
+<div class='author'>Bessken, Donna P., Olson, Virgil J. [Editor], Osborn, T. Forbes [Illustrator], Stosser, Sylvia [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61652, {&quot;Title&quot;:&quot;Physical Geography&quot;,&quot;Topics&quot;:[&quot;Physical geography&quot;,&quot;Biogeography&quot;],&quot;Primary&quot;:&quot;61652.htm&quot;,&quot;CreatorNames&quot;:[&quot;Somerville, Mary, 1780-1872&quot;],&quot;LoCC&quot;:[&quot;GB&quot;],&quot;PG_ID&quot;:&quot;61652&quot;});" class='title'>Physical Geography</a>
+<div class='author'>Somerville, Mary, 1780-1872</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61697, {&quot;Title&quot;:&quot;Histoire d&#39;un ruisseau&quot;,&quot;Topics&quot;:[&quot;Rivers&quot;],&quot;Primary&quot;:&quot;61697.htm&quot;,&quot;CreatorNames&quot;:[&quot;Reclus, Elisée, 1830-1905&quot;],&quot;LoCC&quot;:[&quot;GB&quot;],&quot;PG_ID&quot;:&quot;61697&quot;});" class='title'>Histoire d'un ruisseau</a>
+<div class='author'>Reclus, Elisée, 1830-1905</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62831, {&quot;Title&quot;:&quot;Glaciers and Glaciation in Glacier National Park&quot;,&quot;Topics&quot;:[&quot;Glaciers -- Montana -- Glacier National Park&quot;,&quot;Glacial landforms -- Montana -- Glacier National Park&quot;,&quot;Glacier National Park (Mont.) -- Guidebooks&quot;],&quot;Primary&quot;:&quot;62831.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dyson, James L. (James Lindsay), 1912-1967&quot;],&quot;LoCC&quot;:[&quot;GB&quot;],&quot;PG_ID&quot;:&quot;62831&quot;});" class='title'>Glaciers and Glaciation in Glacier National Park</a>
+<div class='author'>Dyson, James L. (James Lindsay), 1912-1967</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62982, {&quot;Title&quot;:&quot;Peter Parley&#39;s Wonders of the Earth, Sea, and Sky&quot;,&quot;Topics&quot;:[&quot;Geology -- Juvenile literature&quot;,&quot;Astronomy -- Juvenile literature&quot;,&quot;Ocean -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;62982.htm&quot;,&quot;CreatorNames&quot;:[&quot;Goodrich, Samuel G. (Samuel Griswold), 1793-1860&quot;],&quot;LoCC&quot;:[&quot;GB&quot;],&quot;PG_ID&quot;:&quot;62982&quot;});" class='title'>Peter Parley's Wonders of the Earth, Sea, and Sky</a>
+<div class='author'>Goodrich, Samuel G. (Samuel Griswold), 1793-1860</div>
+</div>
+</ul></div>
+</body></html>

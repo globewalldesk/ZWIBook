@@ -1,0 +1,78 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">College and school magazines and papers (LH)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60351, {&quot;Title&quot;:&quot;The Trinity Archive, Vol. I, No. 1&quot;,&quot;Topics&quot;:[&quot;Trinity College (Randolph County, N.C.) -- Periodicals&quot;,&quot;College student newspapers and periodicals -- North Carolina -- Trinity&quot;],&quot;Primary&quot;:&quot;60351.htm&quot;,&quot;CreatorNames&quot;:[&quot;Trinity College (Randolph County, N.C.)&quot;],&quot;LoCC&quot;:[&quot;LH&quot;],&quot;PG_ID&quot;:&quot;60351&quot;});" class='title'>The Trinity Archive, Vol. I, No. 1</a>
+<div class='author'>Trinity College (Randolph County, N.C.)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63065, {&quot;Title&quot;:&quot;The Trinity Archive, Vol. I, No. 3, January 1888&quot;,&quot;Topics&quot;:[&quot;Trinity College (Randolph County, N.C.) -- Periodicals&quot;,&quot;College student newspapers and periodicals -- North Carolina -- Trinity&quot;],&quot;Primary&quot;:&quot;63065.htm&quot;,&quot;CreatorNames&quot;:[&quot;Trinity College (Randolph County, N.C.)&quot;],&quot;LoCC&quot;:[&quot;LH&quot;],&quot;PG_ID&quot;:&quot;63065&quot;});" class='title'>The Trinity Archive, Vol. I, No. 3, January 1888</a>
+<div class='author'>Trinity College (Randolph County, N.C.)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63725, {&quot;Title&quot;:&quot;The Trinity Archive, Vol. I, No. 4, February 1888&quot;,&quot;Topics&quot;:[&quot;Trinity College (Randolph County, N.C.) -- Periodicals&quot;,&quot;College student newspapers and periodicals -- North Carolina -- Trinity&quot;],&quot;Primary&quot;:&quot;63725.htm&quot;,&quot;CreatorNames&quot;:[&quot;Trinity College (Randolph County, N.C.)&quot;],&quot;LoCC&quot;:[&quot;LH&quot;],&quot;PG_ID&quot;:&quot;63725&quot;});" class='title'>The Trinity Archive, Vol. I, No. 4, February 1888</a>
+<div class='author'>Trinity College (Randolph County, N.C.)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63747, {&quot;Title&quot;:&quot;The Trinity Archive, Vol. I, No. 5, March 1888&quot;,&quot;Topics&quot;:[&quot;Trinity College (Randolph County, N.C.) -- Periodicals&quot;,&quot;College student newspapers and periodicals -- North Carolina -- Trinity&quot;],&quot;Primary&quot;:&quot;63747.htm&quot;,&quot;CreatorNames&quot;:[&quot;Trinity College (Randolph County, N.C.)&quot;],&quot;LoCC&quot;:[&quot;LH&quot;],&quot;PG_ID&quot;:&quot;63747&quot;});" class='title'>The Trinity Archive, Vol. I, No. 5, March 1888</a>
+<div class='author'>Trinity College (Randolph County, N.C.)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63822, {&quot;Title&quot;:&quot;The Trinity Archive, Vol. I, No. 6, April 1888&quot;,&quot;Topics&quot;:[&quot;Trinity College (Randolph County, N.C.) -- Periodicals&quot;,&quot;College student newspapers and periodicals -- North Carolina -- Trinity&quot;],&quot;Primary&quot;:&quot;63822.htm&quot;,&quot;CreatorNames&quot;:[&quot;Trinity College (Randolph County, N.C.)&quot;],&quot;LoCC&quot;:[&quot;LH&quot;],&quot;PG_ID&quot;:&quot;63822&quot;});" class='title'>The Trinity Archive, Vol. I, No. 6, April 1888</a>
+<div class='author'>Trinity College (Randolph County, N.C.)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64583, {&quot;Title&quot;:&quot;The Trinity Archive, Vol. I, No. 7, May 1888&quot;,&quot;Topics&quot;:[&quot;Trinity College (Randolph County, N.C.) -- Periodicals&quot;,&quot;College student newspapers and periodicals -- North Carolina -- Trinity&quot;],&quot;Primary&quot;:&quot;64583.htm&quot;,&quot;CreatorNames&quot;:[&quot;Trinity College (Randolph County, N.C.)&quot;],&quot;LoCC&quot;:[&quot;LH&quot;],&quot;PG_ID&quot;:&quot;64583&quot;});" class='title'>The Trinity Archive, Vol. I, No. 7, May 1888</a>
+<div class='author'>Trinity College (Randolph County, N.C.)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64584, {&quot;Title&quot;:&quot;The Trinity Archive, Vol. I, No. 8, June 1888&quot;,&quot;Topics&quot;:[&quot;Trinity College (Randolph County, N.C.) -- Periodicals&quot;,&quot;College student newspapers and periodicals -- North Carolina -- Trinity&quot;],&quot;Primary&quot;:&quot;64584.htm&quot;,&quot;CreatorNames&quot;:[&quot;Trinity College (Randolph County, N.C.)&quot;],&quot;LoCC&quot;:[&quot;LH&quot;],&quot;PG_ID&quot;:&quot;64584&quot;});" class='title'>The Trinity Archive, Vol. I, No. 8, June 1888</a>
+<div class='author'>Trinity College (Randolph County, N.C.)</div>
+</div>
+</ul></div>
+</body></html>

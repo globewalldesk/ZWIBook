@@ -1,0 +1,366 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Therapeutics. Pharmacology (RM)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14985, {&quot;Title&quot;:&quot;Valere Aude: Dare to Be Healthy, Or, The Light of Physical Regeneration&quot;,&quot;Topics&quot;:[&quot;Health&quot;,&quot;Diet therapy&quot;],&quot;Primary&quot;:&quot;14985.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dechmann, Louis&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;14985&quot;});" class='title'>Valere Aude:<br><span class='subtitle'>Dare to Be Healthy, Or, The Light of Physical Regeneration</span></a>
+<div class='author'>Dechmann, Louis</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15069, {&quot;Title&quot;:&quot;Diet and Health; With Key to the Calories&quot;,&quot;Topics&quot;:[&quot;Diet&quot;],&quot;Primary&quot;:&quot;15069.htm&quot;,&quot;CreatorNames&quot;:[&quot;Peters, Lulu Hunt, 1873-1930&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;15069&quot;});" class='title'>Diet and Health;<br><span class='subtitle'>With Key to the Calories</span></a>
+<div class='author'>Peters, Lulu Hunt, 1873-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16977, {&quot;Title&quot;:&quot;Food and Health&quot;,&quot;Topics&quot;:[&quot;Cooking&quot;,&quot;Women -- Health and hygiene&quot;,&quot;Lydia E. Pinkham Medicine Company&quot;,&quot;Patent medicines&quot;],&quot;Primary&quot;:&quot;16977.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lydia E. Pinkham Medicine Company&quot;],&quot;LoCC&quot;:[&quot;RM&quot;,&quot;TX&quot;],&quot;PG_ID&quot;:&quot;16977&quot;});" class='title'>Food and Health</a>
+<div class='author'>Lydia E. Pinkham Medicine Company</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18370, {&quot;Title&quot;:&quot;Manhood Perfectly Restored - Prof. Jean Civiale&#39;s Soluble Urethral Crayons as a Quick, Painless, and Certain Cure for Impotence, Etc.&quot;,&quot;Topics&quot;:[&quot;Patent medicines&quot;,&quot;Sexual disorders -- Popular works&quot;],&quot;Primary&quot;:&quot;18370.htm&quot;,&quot;CreatorNames&quot;:[&quot;Civiale Remedial Agency&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;18370&quot;});" class='title'>Manhood Perfectly Restored -<br><span class='subtitle'>Prof. Jean Civiale's Soluble Urethral Crayons as a Quick, Painless, and Certain Cure for Impotence, Etc.</span></a>
+<div class='author'>Civiale Remedial Agency</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18487, {&quot;Title&quot;:&quot;Food Remedies: Facts About Foods And Their Medicinal Uses&quot;,&quot;Topics&quot;:[&quot;Diet therapy&quot;,&quot;Nutrition&quot;,&quot;Functional foods&quot;],&quot;Primary&quot;:&quot;18487.htm&quot;,&quot;CreatorNames&quot;:[&quot;Daniel, Florence&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;18487&quot;});" class='title'>Food Remedies:<br><span class='subtitle'>Facts About Foods And Their Medicinal Uses</span></a>
+<div class='author'>Daniel, Florence</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23729, {&quot;Title&quot;:&quot;An Essay on the Application of the Lunar Caustic in the Cure of Certain Wounds and Ulcers&quot;,&quot;Topics&quot;:[&quot;Silver nitrate&quot;,&quot;Wound healing&quot;,&quot;Antiseptics&quot;],&quot;Primary&quot;:&quot;23729.htm&quot;,&quot;CreatorNames&quot;:[&quot;Higginbottom, John, 1788-1876&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;23729&quot;});" class='title'>An Essay on the Application of the Lunar Caustic in the Cure of Certain Wounds and Ulcers</a>
+<div class='author'>Higginbottom, John, 1788-1876</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23813, {&quot;Title&quot;:&quot;A Newly Discovered System of Electrical Medication&quot;,&quot;Topics&quot;:[&quot;Electrotherapeutics&quot;],&quot;Primary&quot;:&quot;23813.htm&quot;,&quot;CreatorNames&quot;:[&quot;Clark, Daniel&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;23813&quot;});" class='title'>A Newly Discovered System of Electrical Medication</a>
+<div class='author'>Clark, Daniel</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24886, {&quot;Title&quot;:&quot;An Account of the Foxglove and some of its Medical Uses - With Practical Remarks on Dropsy and Other Diseases&quot;,&quot;Topics&quot;:[&quot;Purple foxglove&quot;,&quot;Medicine -- Case studies -- Early works to 1800&quot;,&quot;Digitalis (Drug) -- Case studies -- Early works to 1800&quot;,&quot;Edema -- Case studies -- Early works to 1800&quot;,&quot;Materia medica&quot;],&quot;Primary&quot;:&quot;24886.htm&quot;,&quot;CreatorNames&quot;:[&quot;Withering, William, 1741-1799&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;24886&quot;});" class='title'>An Account of the Foxglove and some of its Medical Uses -<br><span class='subtitle'>With Practical Remarks on Dropsy and Other Diseases</span></a>
+<div class='author'>Withering, William, 1741-1799</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25601, {&quot;Title&quot;:&quot;Fasting Girls: Their Physiology and Pathology&quot;,&quot;Topics&quot;:[&quot;Psychology, Pathological&quot;,&quot;Medicine -- Case studies -- 1800-1900&quot;,&quot;Anorexia in children&quot;,&quot;Fasting&quot;],&quot;Primary&quot;:&quot;25601.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hammond, William A. (William Alexander), 1828-1900&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;25601&quot;});" class='title'>Fasting Girls:<br><span class='subtitle'>Their Physiology and Pathology</span></a>
+<div class='author'>Hammond, William A. (William Alexander), 1828-1900</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26020, {&quot;Title&quot;:&quot;Apis Mellifica; or, The Poison of the Honey-Bee, Considered as a Therapeutic Agent&quot;,&quot;Topics&quot;:[&quot;Homeopathy&quot;,&quot;Bees -- Venom -- Therapeutic use&quot;],&quot;Primary&quot;:&quot;26020.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wolf, C. W., -1866&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;26020&quot;});" class='title'>Apis Mellifica;<br><span class='subtitle'>or, The Poison of the Honey-Bee, Considered as a Therapeutic Agent</span></a>
+<div class='author'>Wolf, C. W., -1866</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26366, {&quot;Title&quot;:&quot;The Electric Bath&quot;,&quot;Topics&quot;:[&quot;Electric baths&quot;],&quot;Primary&quot;:&quot;26366.htm&quot;,&quot;CreatorNames&quot;:[&quot;Schweig, George M.&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;26366&quot;});" class='title'>The Electric Bath</a>
+<div class='author'>Schweig, George M.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26774, {&quot;Title&quot;:&quot;Alcohol: A Dangerous and Unnecessary Medicine, How and Why - What Medical Writers Say&quot;,&quot;Topics&quot;:[&quot;Temperance&quot;,&quot;Alcohol -- Physiological effect&quot;],&quot;Primary&quot;:&quot;26774.htm&quot;,&quot;CreatorNames&quot;:[&quot;Allen, Martha Meir, 1854-1926&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;26774&quot;});" class='title'>Alcohol:<br><span class='subtitle'>A Dangerous and Unnecessary Medicine, How and Why - What Medical Writers Say</span></a>
+<div class='author'>Allen, Martha Meir, 1854-1926</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27128, {&quot;Title&quot;:&quot;The No Breakfast Plan and the Fasting-Cure&quot;,&quot;Topics&quot;:[&quot;Fasting&quot;,&quot;Nutrition&quot;],&quot;Primary&quot;:&quot;27128.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dewey, Edward Hooker, 1837?-1904&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;27128&quot;});" class='title'>The No Breakfast Plan and the Fasting-Cure</a>
+<div class='author'>Dewey, Edward Hooker, 1837?-1904</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27181, {&quot;Title&quot;:&quot;Prof. Koch&#39;s Method to Cure Tuberculosis Popularly Treated&quot;,&quot;Topics&quot;:[&quot;Tuberculin&quot;,&quot;Tuberculosis&quot;],&quot;Primary&quot;:&quot;27181.htm&quot;,&quot;CreatorNames&quot;:[&quot;Birnbaum, Max, 1862-&quot;,&quot;Koch, Robert, 1843-1910 [Contributor]&quot;,&quot;Brendecke, Fr. (Friedrich) [Translator]&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;27181&quot;});" class='title'>Prof. Koch's Method to Cure Tuberculosis Popularly Treated</a>
+<div class='author'>Birnbaum, Max, 1862-, Koch, Robert, 1843-1910 [Contributor], Brendecke, Fr. (Friedrich) [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27203, {&quot;Title&quot;:&quot;Self Mastery Through Conscious Autosuggestion&quot;,&quot;Topics&quot;:[&quot;Mental suggestion&quot;],&quot;Primary&quot;:&quot;27203.htm&quot;,&quot;CreatorNames&quot;:[&quot;Coué, Emile, 1857-1926&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;27203&quot;});" class='title'>Self Mastery Through Conscious Autosuggestion</a>
+<div class='author'>Coué, Emile, 1857-1926</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28549, {&quot;Title&quot;:&quot;A treatise on foreign teas - Abstracted from an ingenious work, lately published, entitled An essay on the nerves&quot;,&quot;Topics&quot;:[&quot;Tea -- Health aspects -- China&quot;,&quot;Tea -- Health aspects -- India&quot;,&quot;Tea -- Health aspects&quot;],&quot;Primary&quot;:&quot;28549.htm&quot;,&quot;CreatorNames&quot;:[&quot;Smith, Hugh, 1736?-1789&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;28549&quot;});" class='title'>A treatise on foreign teas -<br><span class='subtitle'>Abstracted from an ingenious work, lately published, entitled An essay on the nerves</span></a>
+<div class='author'>Smith, Hugh, 1736?-1789</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29339, {&quot;Title&quot;:&quot;The Practice of Autosuggestion&quot;,&quot;Topics&quot;:[&quot;Mental suggestion&quot;,&quot;Coué, Emile, 1857-1926&quot;],&quot;Primary&quot;:&quot;29339.htm&quot;,&quot;CreatorNames&quot;:[&quot;Brooks, C. Harry (Cyrus Harry), 1890-&quot;,&quot;Coué, Emile, 1857-1926 [Commentator]&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;29339&quot;});" class='title'>The Practice of Autosuggestion</a>
+<div class='author'>Brooks, C. Harry (Cyrus Harry), 1890-, Coué, Emile, 1857-1926 [Commentator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30162, {&quot;Title&quot;:&quot;Old English Patent Medicines in America&quot;,&quot;Topics&quot;:[&quot;Patent medicines&quot;],&quot;Primary&quot;:&quot;30162.htm&quot;,&quot;CreatorNames&quot;:[&quot;Griffenhagen, George B.&quot;,&quot;Young, James Harvey, 1915-2006&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;30162&quot;});" class='title'>Old English Patent Medicines in America</a>
+<div class='author'>Griffenhagen, George B., Young, James Harvey, 1915-2006</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31691, {&quot;Title&quot;:&quot;The Bacillus of Long Life - A Manual of the Preparation and Souring of Milk for Dietary Purposes, Together with an Historical Account of the Use of Fermented Milks, from the Earliest Times to the Present Day, and Their Wonderful Effect in the Prolonging of Human Existence&quot;,&quot;Topics&quot;:[&quot;Fermented milk&quot;,&quot;Longevity&quot;],&quot;Primary&quot;:&quot;31691.htm&quot;,&quot;CreatorNames&quot;:[&quot;Douglas, Loudon M., 1864-1944&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;31691&quot;});" class='title'>The Bacillus of Long Life -<br><span class='subtitle'>A Manual of the Preparation and Souring of Milk for Dietary Purposes, Together with an Historical Account of the Use of Fermented Milks, from the Earliest Times to the Present Day, and Their Wonderful Effect in the Prolonging of Human Existence</span></a>
+<div class='author'>Douglas, Loudon M., 1864-1944</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33102, {&quot;Title&quot;:&quot;Bloodletting Instruments in the National Museum of History and Technology&quot;,&quot;Topics&quot;:[&quot;Phlebotomy -- Instruments -- Catalogs&quot;,&quot;Phlebotomy -- History&quot;,&quot;National Museum of History and Technology&quot;],&quot;Primary&quot;:&quot;33102.htm&quot;,&quot;CreatorNames&quot;:[&quot;Appel, Toby A., 1945-&quot;,&quot;Davis, Audrey B., 1934-&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;33102&quot;});" class='title'>Bloodletting Instruments in the National Museum of History and Technology</a>
+<div class='author'>Appel, Toby A., 1945-, Davis, Audrey B., 1934-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33379, {&quot;Title&quot;:&quot;Dietetics for Nurses&quot;,&quot;Topics&quot;:[&quot;Diet in disease&quot;],&quot;Primary&quot;:&quot;33379.htm&quot;,&quot;CreatorNames&quot;:[&quot;Proudfit, Fairfax T. (Fairfax Throckmorton)&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;33379&quot;});" class='title'>Dietetics for Nurses</a>
+<div class='author'>Proudfit, Fairfax T. (Fairfax Throckmorton)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3453, {&quot;Title&quot;:&quot;The Royal Road to Health; Or, the Secret of Health Without Drugs&quot;,&quot;Topics&quot;:[&quot;Enema&quot;,&quot;Hygiene&quot;,&quot;Health&quot;,&quot;Health -- Popular works&quot;,&quot;Health promotion&quot;],&quot;Primary&quot;:&quot;3453.txt&quot;,&quot;CreatorNames&quot;:[&quot;Tyrrell, Chas. A. (Charles Alfred), 1846-1918&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;3453&quot;});" class='title'>The Royal Road to Health;<br><span class='subtitle'>Or, the Secret of Health Without Drugs</span></a>
+<div class='author'>Tyrrell, Chas. A. (Charles Alfred), 1846-1918</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36450, {&quot;Title&quot;:&quot;Psychotherapy - Including the History of the Use of Mental Influence, Directly and Indirectly, in Healing and the Principles for the Application of Energies Derived from the Mind to the Treatment of Disease&quot;,&quot;Topics&quot;:[&quot;Mental healing&quot;],&quot;Primary&quot;:&quot;36450.htm&quot;,&quot;CreatorNames&quot;:[&quot;Walsh, James J. (James Joseph), 1865-1942&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;36450&quot;});" class='title'>Psychotherapy -<br><span class='subtitle'>Including the History of the Use of Mental Influence, Directly and Indirectly, in Healing and the Principles for the Application of Energies Derived from the Mind to the Treatment of Disease</span></a>
+<div class='author'>Walsh, James J. (James Joseph), 1865-1942</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37267, {&quot;Title&quot;:&quot;So sollt ihr leben! Winke und Rathschläge für Gesunde und Kranke...&quot;,&quot;Topics&quot;:[&quot;Hygiene&quot;,&quot;Health&quot;,&quot;Hydrotherapy&quot;],&quot;Primary&quot;:&quot;37267.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kneipp, Sebastian, 1821-1897&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;37267&quot;});" class='title'>So sollt ihr leben! Winke und Rathschläge für Gesunde und Kranke...</a>
+<div class='author'>Kneipp, Sebastian, 1821-1897</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37326, {&quot;Title&quot;:&quot;Turkish and Other Baths: A Guide to Good Health and Longevity&quot;,&quot;Topics&quot;:[&quot;Baths, Turkish&quot;],&quot;Primary&quot;:&quot;37326.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stables, Gordon, 1840-1910&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;37326&quot;});" class='title'>Turkish and Other Baths:<br><span class='subtitle'>A Guide to Good Health and Longevity</span></a>
+<div class='author'>Stables, Gordon, 1840-1910</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41292, {&quot;Title&quot;:&quot;Every Man His Own Doctor - The Cold Water, Tepid Water, and Friction-Cure, as Applicable to Every Disease to Which the Human Frame Is Subject, and Also to the Cure of Disease in Horses and Cattle&quot;,&quot;Topics&quot;:[&quot;Hydrotherapy&quot;,&quot;Veterinary medicine&quot;],&quot;Primary&quot;:&quot;41292.htm&quot;,&quot;CreatorNames&quot;:[&quot;Claridge, R. T.&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;41292&quot;});" class='title'>Every Man His Own Doctor -<br><span class='subtitle'>The Cold Water, Tepid Water, and Friction-Cure, as Applicable to Every Disease to Which the Human Frame Is Subject, and Also to the Cure of Disease in Horses and Cattle</span></a>
+<div class='author'>Claridge, R. T.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4273, {&quot;Title&quot;:&quot;Nature Cure: Philosophy &amp; Practice Based on the Unity of Disease &amp; Cure&quot;,&quot;Topics&quot;:[&quot;Naturopathy&quot;],&quot;Primary&quot;:&quot;4273.txt&quot;,&quot;CreatorNames&quot;:[&quot;Lindlahr, Henry, 1862-1924&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;4273&quot;});" class='title'>Nature Cure:<br><span class='subtitle'>Philosophy & Practice Based on the Unity of Disease & Cure</span></a>
+<div class='author'>Lindlahr, Henry, 1862-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44098, {&quot;Title&quot;:&quot;La Radiologie et La Guerre&quot;,&quot;Topics&quot;:[&quot;World War, 1914-1918 -- Medical care&quot;,&quot;Medical radiology&quot;,&quot;World War, 1914-1918 -- Health aspects&quot;],&quot;Primary&quot;:&quot;44098.htm&quot;,&quot;CreatorNames&quot;:[&quot;Curie, Marie, 1867-1934&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;44098&quot;});" class='title'>La Radiologie et La Guerre</a>
+<div class='author'>Curie, Marie, 1867-1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44325, {&quot;Title&quot;:&quot;The Great American Fraud - The Patent Medicine Evil&quot;,&quot;Topics&quot;:[&quot;Patent medicines&quot;,&quot;Quacks and quackery&quot;],&quot;Primary&quot;:&quot;44325.htm&quot;,&quot;CreatorNames&quot;:[&quot;Adams, Samuel Hopkins, 1871-1958&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;44325&quot;});" class='title'>The Great American Fraud -<br><span class='subtitle'>The Patent Medicine Evil</span></a>
+<div class='author'>Adams, Samuel Hopkins, 1871-1958</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44528, {&quot;Title&quot;:&quot;Der Selbstarzt bei äußeren Verletzungen und Entzündungen aller Art - Oder, das Geheimniß, durch Franzbranntwein und Salz alle Verwundungen, Lähmungen, offene Wunden, Brand, Krebsschäden, Zahnweh, Kolik, Rose, sowie überhaupt alle äußern und innern Entzündungen ohne Hülfe des Arztes zu heilen.&quot;,&quot;Topics&quot;:[&quot;Medicine, Popular&quot;,&quot;Brandy -- Therapeutic use&quot;,&quot;Salt -- Therapeutic use&quot;,&quot;Alcohol -- Therapeutic use&quot;],&quot;Primary&quot;:&quot;44528.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lee, William, 1778-1863&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;44528&quot;});" class='title'>Der Selbstarzt bei äußeren Verletzungen und Entzündungen aller Art -<br><span class='subtitle'>Oder, das Geheimniß, durch Franzbranntwein und Salz alle Verwundungen, Lähmungen, offene Wunden, Brand, Krebsschäden, Zahnweh, Kolik, Rose, sowie überhaupt alle äußern und innern Entzündungen ohne Hülfe des Arztes zu heilen.</span></a>
+<div class='author'>Lee, William, 1778-1863</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46356, {&quot;Title&quot;:&quot;The Toxicity of Caffein: An experimental study on different species of animals&quot;,&quot;Topics&quot;:[&quot;Caffeine -- Physiological effect&quot;],&quot;Primary&quot;:&quot;46356.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rieger, J. B. (John Benjamin), 1886-&quot;,&quot;Salant, William&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;46356&quot;});" class='title'>The Toxicity of Caffein:<br><span class='subtitle'>An experimental study on different species of animals</span></a>
+<div class='author'>Rieger, J. B. (John Benjamin), 1886-, Salant, William</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46511, {&quot;Title&quot;:&quot;Encyclopedia of Diet: A Treatise on the Food Question, Vol. 1&quot;,&quot;Topics&quot;:[&quot;Food&quot;,&quot;Diet&quot;,&quot;Diet in disease&quot;],&quot;Primary&quot;:&quot;46511.htm&quot;,&quot;CreatorNames&quot;:[&quot;Christian, Eugene, 1860-1930&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;46511&quot;});" class='title'>Encyclopedia of Diet:<br><span class='subtitle'>A Treatise on the Food Question, Vol. 1</span></a>
+<div class='author'>Christian, Eugene, 1860-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46745, {&quot;Title&quot;:&quot;The Action of Medicines in the System - Or, on the mode in which therapeutic agents introduced into the stomach produce their peculiar effects on the animal economy&quot;,&quot;Topics&quot;:[&quot;Therapeutics&quot;],&quot;Primary&quot;:&quot;46745.htm&quot;,&quot;CreatorNames&quot;:[&quot;Headland, Frederick William&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;46745&quot;});" class='title'>The Action of Medicines in the System -<br><span class='subtitle'>Or, on the mode in which therapeutic agents introduced into the stomach produce their peculiar effects on the animal economy</span></a>
+<div class='author'>Headland, Frederick William</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47439, {&quot;Title&quot;:&quot;The New Glutton or Epicure&quot;,&quot;Topics&quot;:[&quot;Diet&quot;,&quot;Nutrition&quot;],&quot;Primary&quot;:&quot;47439.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fletcher, Horace, 1849-1919&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;47439&quot;});" class='title'>The New Glutton or Epicure</a>
+<div class='author'>Fletcher, Horace, 1849-1919</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47701, {&quot;Title&quot;:&quot;Encyclopedia of Diet: A Treatise on the Food Question, Vol. 4&quot;,&quot;Topics&quot;:[&quot;Food&quot;,&quot;Diet&quot;,&quot;Diet in disease&quot;],&quot;Primary&quot;:&quot;47701.htm&quot;,&quot;CreatorNames&quot;:[&quot;Christian, Eugene, 1860-1930&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;47701&quot;});" class='title'>Encyclopedia of Diet:<br><span class='subtitle'>A Treatise on the Food Question, Vol. 4</span></a>
+<div class='author'>Christian, Eugene, 1860-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47766, {&quot;Title&quot;:&quot;The Propaganda for Reform in Proprietary Medicines, Vol. 1 of 2&quot;,&quot;Topics&quot;:[&quot;Patent medicines&quot;],&quot;Primary&quot;:&quot;47766.htm&quot;,&quot;CreatorNames&quot;:[&quot;Council on Pharmacy and Chemistry (American Medical Association)&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;47766&quot;});" class='title'>The Propaganda for Reform in Proprietary Medicines, Vol. 1 of 2</a>
+<div class='author'>Council on Pharmacy and Chemistry (American Medical Association)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47767, {&quot;Title&quot;:&quot;The Propaganda for Reform in Proprietary Medicines, Vol. 2 of 2&quot;,&quot;Topics&quot;:[&quot;Patent medicines&quot;],&quot;Primary&quot;:&quot;47767.htm&quot;,&quot;CreatorNames&quot;:[&quot;Council on Pharmacy and Chemistry (American Medical Association)&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;47767&quot;});" class='title'>The Propaganda for Reform in Proprietary Medicines, Vol. 2 of 2</a>
+<div class='author'>Council on Pharmacy and Chemistry (American Medical Association)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48328, {&quot;Title&quot;:&quot;Coca and its Therapeutic Application, Third Edition&quot;,&quot;Topics&quot;:[&quot;Coca -- Therapeutic use&quot;,&quot;Cocaine&quot;],&quot;Primary&quot;:&quot;48328.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mariani, Angelo, 1838-1914&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;48328&quot;});" class='title'>Coca and its Therapeutic Application, Third Edition</a>
+<div class='author'>Mariani, Angelo, 1838-1914</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48746, {&quot;Title&quot;:&quot;Encyclopedia of Diet: A Treatise on the Food Question, Vol. 2&quot;,&quot;Topics&quot;:[&quot;Food&quot;,&quot;Diet&quot;,&quot;Diet in disease&quot;],&quot;Primary&quot;:&quot;48746.htm&quot;,&quot;CreatorNames&quot;:[&quot;Christian, Eugene, 1860-1930&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;48746&quot;});" class='title'>Encyclopedia of Diet:<br><span class='subtitle'>A Treatise on the Food Question, Vol. 2</span></a>
+<div class='author'>Christian, Eugene, 1860-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49377, {&quot;Title&quot;:&quot;Radioisotopes in Medicine&quot;,&quot;Topics&quot;:[&quot;Nuclear medicine&quot;],&quot;Primary&quot;:&quot;49377.htm&quot;,&quot;CreatorNames&quot;:[&quot;Phelan, Earl W., 1900-1993&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;49377&quot;});" class='title'>Radioisotopes in Medicine</a>
+<div class='author'>Phelan, Earl W., 1900-1993</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49641, {&quot;Title&quot;:&quot;Whole Body Counters&quot;,&quot;Topics&quot;:[&quot;Whole body counters&quot;],&quot;Primary&quot;:&quot;49641.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lengemann, F. W. (Frederick W.)&quot;,&quot;Woodburn, John H., 1914-&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;49641&quot;});" class='title'>Whole Body Counters</a>
+<div class='author'>Lengemann, F. W. (Frederick W.), Woodburn, John H., 1914-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49833, {&quot;Title&quot;:&quot;Directions for Cooking by Troops, in Camp and Hospital - Prepared for the Army of Virginia, and published by order of the Surgeon General, with essays on \&quot;\&quot;taking food,\&quot;\&quot; and \&quot;\&quot;what food.\&quot;\&quot;&quot;,&quot;Topics&quot;:[&quot;Cooking for the sick&quot;,&quot;Quantity cooking&quot;,&quot;Cooking for military personnel&quot;],&quot;Primary&quot;:&quot;49833.htm&quot;,&quot;CreatorNames&quot;:[&quot;Nightingale, Florence, 1820-1910&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;49833&quot;});" class='title'>Directions for Cooking by Troops, in Camp and Hospital -<br><span class='subtitle'>Prepared for the Army of Virginia, and published by order of the Surgeon General, with essays on "taking food," and "what food."</span></a>
+<div class='author'>Nightingale, Florence, 1820-1910</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50213, {&quot;Title&quot;:&quot;Encyclopedia of Diet: A Treatise on the Food Question, Vol. 3&quot;,&quot;Topics&quot;:[&quot;Food&quot;,&quot;Diet&quot;,&quot;Diet in disease&quot;],&quot;Primary&quot;:&quot;50213.htm&quot;,&quot;CreatorNames&quot;:[&quot;Christian, Eugene, 1860-1930&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;50213&quot;});" class='title'>Encyclopedia of Diet:<br><span class='subtitle'>A Treatise on the Food Question, Vol. 3</span></a>
+<div class='author'>Christian, Eugene, 1860-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50660, {&quot;Title&quot;:&quot;Encyclopedia of Diet: A Treatise on the Food Question, Vol. 5&quot;,&quot;Topics&quot;:[&quot;Food&quot;,&quot;Diet&quot;,&quot;Diet in disease&quot;],&quot;Primary&quot;:&quot;50660.htm&quot;,&quot;CreatorNames&quot;:[&quot;Christian, Eugene, 1860-1930&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;50660&quot;});" class='title'>Encyclopedia of Diet:<br><span class='subtitle'>A Treatise on the Food Question, Vol. 5</span></a>
+<div class='author'>Christian, Eugene, 1860-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50985, {&quot;Title&quot;:&quot;A Treatise on Acupuncturation&quot;,&quot;Topics&quot;:[&quot;Acupuncture&quot;],&quot;Primary&quot;:&quot;50985.htm&quot;,&quot;CreatorNames&quot;:[&quot;Churchill, James Morss, 1796?-1863&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;50985&quot;});" class='title'>A Treatise on Acupuncturation</a>
+<div class='author'>Churchill, James Morss, 1796?-1863</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52328, {&quot;Title&quot;:&quot;The Royal Road to Health; or, the Secret of Health Without Drugs&quot;,&quot;Topics&quot;:[&quot;Enema&quot;,&quot;Hygiene&quot;,&quot;Health&quot;,&quot;Health -- Popular works&quot;,&quot;Health promotion&quot;],&quot;Primary&quot;:&quot;52328.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tyrrell, Chas. A. (Charles Alfred), 1846-1918&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;52328&quot;});" class='title'>The Royal Road to Health;<br><span class='subtitle'>or, the Secret of Health Without Drugs</span></a>
+<div class='author'>Tyrrell, Chas. A. (Charles Alfred), 1846-1918</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52645, {&quot;Title&quot;:&quot;Compulsory Vaccination - Report of a Public Meeting, held in the Marylebone Vestry Hall, London, on Wednesday evening, October 19, 1870.&quot;,&quot;Topics&quot;:[&quot;Vaccination&quot;,&quot;Smallpox -- Prevention&quot;],&quot;Primary&quot;:&quot;52645.htm&quot;,&quot;CreatorNames&quot;:[&quot;Marylebone Anti-Compulsory Vaccination League&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;52645&quot;});" class='title'>Compulsory Vaccination -<br><span class='subtitle'>Report of a Public Meeting, held in the Marylebone Vestry Hall, London, on Wednesday evening, October 19, 1870.</span></a>
+<div class='author'>Marylebone Anti-Compulsory Vaccination League</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52722, {&quot;Title&quot;:&quot;An account of the manner of inoculating for the small pox in the East Indies - With some observations on the practice and mode of treating that disease in those parts&quot;,&quot;Topics&quot;:[&quot;Smallpox -- Vaccination&quot;,&quot;Smallpox -- Prevention&quot;],&quot;Primary&quot;:&quot;52722.htm&quot;,&quot;CreatorNames&quot;:[&quot;Holwell, J. Z. (John Zephaniah), 1711-1798&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;52722&quot;});" class='title'>An account of the manner of inoculating for the small pox in the East Indies -<br><span class='subtitle'>With some observations on the practice and mode of treating that disease in those parts</span></a>
+<div class='author'>Holwell, J. Z. (John Zephaniah), 1711-1798</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52977, {&quot;Title&quot;:&quot;The Alumni Journal of the College of Pharmacy of the City of New York, Vol. II, No. 2, February, 1895&quot;,&quot;Topics&quot;:[&quot;College of Pharmacy of the City of New York -- Alumni and alumnae -- Periodicals&quot;,&quot;Pharmacology -- Periodicals&quot;],&quot;Primary&quot;:&quot;52977.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;,&quot;Kraemer, Henry, 1868-1924 [Editor]&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;52977&quot;});" class='title'>The Alumni Journal of the College of Pharmacy of the City of New York, Vol. II, No. 2, February, 1895</a>
+<div class='author'>Various, Kraemer, Henry, 1868-1924 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54008, {&quot;Title&quot;:&quot;Technic and Practice of Chiropractic&quot;,&quot;Topics&quot;:[&quot;Chiropractic&quot;],&quot;Primary&quot;:&quot;54008.htm&quot;,&quot;CreatorNames&quot;:[&quot;Loban, Joy Maxwell, 1887-&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;54008&quot;});" class='title'>Technic and Practice of Chiropractic</a>
+<div class='author'>Loban, Joy Maxwell, 1887-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54553, {&quot;Title&quot;:&quot;Zone therapy; or, Relieving pain at home&quot;,&quot;Topics&quot;:[&quot;Therapeutics, Physiological&quot;],&quot;Primary&quot;:&quot;54553.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bowers, Edwin F. (Edwin Frederick), 1871-&quot;,&quot;Fitzgerald, Wm. H. (William Henry Hope), 1872-&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;54553&quot;});" class='title'>Zone therapy;<br><span class='subtitle'>or, Relieving pain at home</span></a>
+<div class='author'>Bowers, Edwin F. (Edwin Frederick), 1871-, Fitzgerald, Wm. H. (William Henry Hope), 1872-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54568, {&quot;Title&quot;:&quot;A Handbook of Invalid Cooking - For the Use of Nurses in Training, Nurses in Private Practice, and Others Who Care for the Sick&quot;,&quot;Topics&quot;:[&quot;Cooking for the sick&quot;],&quot;Primary&quot;:&quot;54568.htm&quot;,&quot;CreatorNames&quot;:[&quot;Boland, Mary A., 1852-&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;54568&quot;});" class='title'>A Handbook of Invalid Cooking -<br><span class='subtitle'>For the Use of Nurses in Training, Nurses in Private Practice, and Others Who Care for the Sick</span></a>
+<div class='author'>Boland, Mary A., 1852-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55187, {&quot;Title&quot;:&quot;Körperpflege durch Gymnastik, Licht und Luft&quot;,&quot;Topics&quot;:[&quot;Physical education and training&quot;,&quot;Phototherapy&quot;,&quot;Nudity -- Therapeutic use&quot;],&quot;Primary&quot;:&quot;55187.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jaerschky, Paul, 1864-1941&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;55187&quot;});" class='title'>Körperpflege durch Gymnastik, Licht und Luft</a>
+<div class='author'>Jaerschky, Paul, 1864-1941</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56137, {&quot;Title&quot;:&quot;Rules and Directions for the Employment of Injections in Various Diseases&quot;,&quot;Topics&quot;:[&quot;Enema&quot;,&quot;Irrigation (Medicine)&quot;],&quot;Primary&quot;:&quot;56137.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lewis, Thomas&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;56137&quot;});" class='title'>Rules and Directions for the Employment of Injections in Various Diseases</a>
+<div class='author'>Lewis, Thomas</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56814, {&quot;Title&quot;:&quot;Meine Wasser-Kur - Durch mehr als 40 Jahre erprobt und geschrieben zur Heilung der Krankheiten und Erhaltung der Gesundheit&quot;,&quot;Topics&quot;:[&quot;Medicine, Popular&quot;,&quot;Hydrotherapy&quot;],&quot;Primary&quot;:&quot;56814.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kneipp, Sebastian, 1821-1897&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;56814&quot;});" class='title'>Meine Wasser-Kur -<br><span class='subtitle'>Durch mehr als 40 Jahre erprobt und geschrieben zur Heilung der Krankheiten und Erhaltung der Gesundheit</span></a>
+<div class='author'>Kneipp, Sebastian, 1821-1897</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58918, {&quot;Title&quot;:&quot;Vaccination a Delusion: Its Penal Enforcement a Crime - Proved by the Official Evidence in the Reports of the Royal Commission&quot;,&quot;Topics&quot;:[&quot;Vaccination&quot;],&quot;Primary&quot;:&quot;58918.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wallace, Alfred Russel, 1823-1913&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;58918&quot;});" class='title'>Vaccination a Delusion:<br><span class='subtitle'>Its Penal Enforcement a Crime - Proved by the Official Evidence in the Reports of the Royal Commission</span></a>
+<div class='author'>Wallace, Alfred Russel, 1823-1913</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58990, {&quot;Title&quot;:&quot;The Eastern, or Turkish Bath - Its History, Revival in Britain, and Application to the Purposes of Health.&quot;,&quot;Topics&quot;:[&quot;Baths, Turkish&quot;],&quot;Primary&quot;:&quot;58990.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wilson, Erasmus, Sir, 1809-1884&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;58990&quot;});" class='title'>The Eastern, or Turkish Bath -<br><span class='subtitle'>Its History, Revival in Britain, and Application to the Purposes of Health.</span></a>
+<div class='author'>Wilson, Erasmus, Sir, 1809-1884</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59543, {&quot;Title&quot;:&quot;How to Use a Galvanic Battery in Medicine and Surgery - A Discourse Delivered Before the Hunterian Society, Third Edition&quot;,&quot;Topics&quot;:[&quot;Electrotherapeutics&quot;],&quot;Primary&quot;:&quot;59543.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tibbits, Herbert, 1838-1907&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;59543&quot;});" class='title'>How to Use a Galvanic Battery in Medicine and Surgery -<br><span class='subtitle'>A Discourse Delivered Before the Hunterian Society, Third Edition</span></a>
+<div class='author'>Tibbits, Herbert, 1838-1907</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59682, {&quot;Title&quot;:&quot;The Practitioner. May, 1869. - A Monthly Journal of Therapeutics&quot;,&quot;Topics&quot;:[&quot;Medicine -- Periodicals&quot;,&quot;Therapeutics -- Periodicals&quot;],&quot;Primary&quot;:&quot;59682.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;,&quot;Anstie, Francis Edmund, 1833-1874 [Editor]&quot;,&quot;Lawson, H. (Henry), -1877 [Editor]&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;59682&quot;});" class='title'>The Practitioner. May, 1869. -<br><span class='subtitle'>A Monthly Journal of Therapeutics</span></a>
+<div class='author'>Various, Anstie, Francis Edmund, 1833-1874 [Editor], Lawson, H. (Henry), -1877 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59698, {&quot;Title&quot;:&quot;Observations on antimony - Read before the Medical Society of London, and published at their request&quot;,&quot;Topics&quot;:[&quot;Antimony -- Therapeutic use&quot;],&quot;Primary&quot;:&quot;59698.htm&quot;,&quot;CreatorNames&quot;:[&quot;Millar, John, 1733-1805&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;59698&quot;});" class='title'>Observations on antimony -<br><span class='subtitle'>Read before the Medical Society of London, and published at their request</span></a>
+<div class='author'>Millar, John, 1733-1805</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59908, {&quot;Title&quot;:&quot;The American Therapist. Vol. II. No. 7. Jan. 15th, 1894 - A Monthly Record of Modern Therapeutics, with Practical Suggestions Relating to the Clinical Applications of Drugs.&quot;,&quot;Topics&quot;:[&quot;Drugs -- Periodicals&quot;,&quot;Drug utilization -- Periodicals&quot;],&quot;Primary&quot;:&quot;59908.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;,&quot;Aulde, John, 1846- [Editor]&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;59908&quot;});" class='title'>The American Therapist. Vol. II. No. 7. Jan. 15th, 1894 -<br><span class='subtitle'>A Monthly Record of Modern Therapeutics, with Practical Suggestions Relating to the Clinical Applications of Drugs.</span></a>
+<div class='author'>Various, Aulde, John, 1846- [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60264, {&quot;Title&quot;:&quot;The Virtue and Use of Coffee With Regard to the Plague and Other Infectious Distempers&quot;,&quot;Topics&quot;:[&quot;Coffee -- Therapeutic use -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;60264.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bradley, Richard, 1688-1732&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;60264&quot;});" class='title'>The Virtue and Use of Coffee With Regard to the Plague and Other Infectious Distempers</a>
+<div class='author'>Bradley, Richard, 1688-1732</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61785, {&quot;Title&quot;:&quot;The Plus Food for Minus Meals&quot;,&quot;Topics&quot;:[&quot;Bran&quot;,&quot;Cooking (Cereals)&quot;,&quot;High-fiber diet -- Recipes&quot;],&quot;Primary&quot;:&quot;61785.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kellogg Company&quot;],&quot;LoCC&quot;:[&quot;RM&quot;,&quot;TX&quot;],&quot;PG_ID&quot;:&quot;61785&quot;});" class='title'>The Plus Food for Minus Meals</a>
+<div class='author'>Kellogg Company</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61809, {&quot;Title&quot;:&quot;The Story of a Great Delusion in a Series of Matter-of-Fact Chapters&quot;,&quot;Topics&quot;:[&quot;Vaccination&quot;],&quot;Primary&quot;:&quot;61809.htm&quot;,&quot;CreatorNames&quot;:[&quot;White, William, 1832?-1890&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;61809&quot;});" class='title'>The Story of a Great Delusion in a Series of Matter-of-Fact Chapters</a>
+<div class='author'>White, William, 1832?-1890</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63264, {&quot;Title&quot;:&quot;Down the Scale or Up...&quot;,&quot;Topics&quot;:[&quot;Weight loss&quot;,&quot;Weight gain&quot;],&quot;Primary&quot;:&quot;63264.htm&quot;,&quot;CreatorNames&quot;:[&quot;Abel, Barbara&quot;,&quot;Bauer, W. W. (William Waldo), 1892-1967 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;63264&quot;});" class='title'>Down the Scale or Up...</a>
+<div class='author'>Abel, Barbara, Bauer, W. W. (William Waldo), 1892-1967 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63293, {&quot;Title&quot;:&quot;The Fasting Cure&quot;,&quot;Topics&quot;:[&quot;Fasting&quot;],&quot;Primary&quot;:&quot;63293.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sinclair, Upton, 1878-1968&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;63293&quot;});" class='title'>The Fasting Cure</a>
+<div class='author'>Sinclair, Upton, 1878-1968</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63497, {&quot;Title&quot;:&quot;Medicina Gymnastica - or, A treatise concerning the power of exercise, with respect to the animal oeconomy; and the great necessity of it in the cure of several distempers&quot;,&quot;Topics&quot;:[&quot;Exercise therapy -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;63497.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fuller, Francis, 1670-1706&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;63497&quot;});" class='title'>Medicina Gymnastica -<br><span class='subtitle'>or, A treatise concerning the power of exercise, with respect to the animal oeconomy; and the great necessity of it in the cure of several distempers</span></a>
+<div class='author'>Fuller, Francis, 1670-1706</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64268, {&quot;Title&quot;:&quot;Blood Transfusion&quot;,&quot;Topics&quot;:[&quot;Blood -- Transfusion&quot;],&quot;Primary&quot;:&quot;64268.htm&quot;,&quot;CreatorNames&quot;:[&quot;Keynes, Geoffrey, 1887-1982&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;64268&quot;});" class='title'>Blood Transfusion</a>
+<div class='author'>Keynes, Geoffrey, 1887-1982</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66185, {&quot;Title&quot;:&quot;Observations on the Oleum Jecoris Aselli, or Cod-liver Oil - Its nature, properties, mode of preparation, &amp;c.&quot;,&quot;Topics&quot;:[&quot;Cod-liver oil&quot;],&quot;Primary&quot;:&quot;66185.htm&quot;,&quot;CreatorNames&quot;:[&quot;Savory, John, 1800-1871&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;66185&quot;});" class='title'>Observations on the Oleum Jecoris Aselli, or Cod-liver Oil -<br><span class='subtitle'>Its nature, properties, mode of preparation, &c.</span></a>
+<div class='author'>Savory, John, 1800-1871</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66226, {&quot;Title&quot;:&quot;Overweight and Underweight&quot;,&quot;Topics&quot;:[&quot;Diet&quot;,&quot;Weight loss&quot;,&quot;Weight gain&quot;],&quot;Primary&quot;:&quot;66226.htm&quot;,&quot;CreatorNames&quot;:[&quot;Metropolitan Life Insurance Company&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;66226&quot;});" class='title'>Overweight and Underweight</a>
+<div class='author'>Metropolitan Life Insurance Company</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67114, {&quot;Title&quot;:&quot;Massage &amp; Exercises Combined - A permanent physical culture course for men, women and children; health-giving, vitalizing, prophylactic, beautifying; a new system of the characteristic essentials of gymnastic and Indian Yogis concentration exercises combined with scientific massage movements; with 86 illustrations and deep breathing exercises&quot;,&quot;Topics&quot;:[&quot;Massage&quot;,&quot;Exercise therapy&quot;],&quot;Primary&quot;:&quot;67114.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jensen, Albrecht&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;67114&quot;});" class='title'>Massage & Exercises Combined -<br><span class='subtitle'>A permanent physical culture course for men, women and children; health-giving, vitalizing, prophylactic, beautifying; a new system of the characteristic essentials of gymnastic and Indian Yogis concentration exercises combined with scientific massage movements; with 86 illustrations and deep breathing exercises</span></a>
+<div class='author'>Jensen, Albrecht</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6752, {&quot;Title&quot;:&quot;Study and Stimulants - Or, the Use of Intoxicants and Narcotics in Relation to Intellectual Life, as Illustrated by Personal Communications on the Subject, from Men of Letters and of Science&quot;,&quot;Topics&quot;:[&quot;Narcotics&quot;,&quot;Alcoholism&quot;,&quot;Alcoholic Intoxication&quot;,&quot;Stimulants&quot;],&quot;Primary&quot;:&quot;6752.txt&quot;,&quot;CreatorNames&quot;:[&quot;Reade, A. Arthur (Alfred Arthur), 1851- [Editor]&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;6752&quot;});" class='title'>Study and Stimulants -<br><span class='subtitle'>Or, the Use of Intoxicants and Narcotics in Relation to Intellectual Life, as Illustrated by Personal Communications on the Subject, from Men of Letters and of Science</span></a>
+<div class='author'>Reade, A. Arthur (Alfred Arthur), 1851- [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67772, {&quot;Title&quot;:&quot;A Treatise on Regional Iodine Therapy for the Veterinary Clinician&quot;,&quot;Topics&quot;:[&quot;Veterinary medicine&quot;,&quot;Iodine -- Therapeutic use&quot;,&quot;Veterinary disinfectants&quot;],&quot;Primary&quot;:&quot;67772.htm&quot;,&quot;CreatorNames&quot;:[&quot;Steffen, Mart R. (Martin Robert), 1882-&quot;],&quot;LoCC&quot;:[&quot;RM&quot;,&quot;SF&quot;],&quot;PG_ID&quot;:&quot;67772&quot;});" class='title'>A Treatise on Regional Iodine Therapy for the Veterinary Clinician</a>
+<div class='author'>Steffen, Mart R. (Martin Robert), 1882-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67824, {&quot;Title&quot;:&quot;A Statement of Facts Tending to Establish an Estimate of the True Value and Present State of Vaccination&quot;,&quot;Topics&quot;:[&quot;Smallpox&quot;,&quot;Vaccination&quot;],&quot;Primary&quot;:&quot;67824.htm&quot;,&quot;CreatorNames&quot;:[&quot;Blane, Gilbert, Sir, 1749-1834&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;67824&quot;});" class='title'>A Statement of Facts Tending to Establish an Estimate of the True Value and Present State of Vaccination</a>
+<div class='author'>Blane, Gilbert, Sir, 1749-1834</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67959, {&quot;Title&quot;:&quot;On the Preparations of the Indian Hemp, or Gunjah (Cannabis Indica) - Their Effects on the Animal System in Health, and Their Utility in the Treatment of Tetanus and Other Convulsive Diseases&quot;,&quot;Topics&quot;:[&quot;Cannabis -- Physiological effect&quot;,&quot;Cannabis -- Therapeutic use&quot;],&quot;Primary&quot;:&quot;67959.htm&quot;,&quot;CreatorNames&quot;:[&quot;O&#39;Shaughnessy, W. B., 1809-1889&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;67959&quot;});" class='title'>On the Preparations of the Indian Hemp, or Gunjah (Cannabis Indica) -<br><span class='subtitle'>Their Effects on the Animal System in Health, and Their Utility in the Treatment of Tetanus and Other Convulsive Diseases</span></a>
+<div class='author'>O'Shaughnessy, W. B., 1809-1889</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68148, {&quot;Title&quot;:&quot;Tea and the effects of tea drinking&quot;,&quot;Topics&quot;:[&quot;Tea&quot;,&quot;Tea -- Health aspects&quot;,&quot;Tea -- Physiological effect&quot;],&quot;Primary&quot;:&quot;68148.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tebb, W. Scott (William Scott), 1862-1917&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;68148&quot;});" class='title'>Tea and the effects of tea drinking</a>
+<div class='author'>Tebb, W. Scott (William Scott), 1862-1917</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68406, {&quot;Title&quot;:&quot;Essay on the effects of iodine on the human constitution - With practical observation on its use in the cure of bronchocele, scrophula, and the tuberculous diseases of the chest and abdomen&quot;,&quot;Topics&quot;:[&quot;Iodine -- Therapeutic use&quot;],&quot;Primary&quot;:&quot;68406.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gairdner, William, 1793-1867&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;68406&quot;});" class='title'>Essay on the effects of iodine on the human constitution -<br><span class='subtitle'>With practical observation on its use in the cure of bronchocele, scrophula, and the tuberculous diseases of the chest and abdomen</span></a>
+<div class='author'>Gairdner, William, 1793-1867</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69965, {&quot;Title&quot;:&quot;Horrors of vaccination exposed and illustrated -&quot;,&quot;Topics&quot;:[&quot;Vaccination&quot;],&quot;Primary&quot;:&quot;69965.htm&quot;,&quot;CreatorNames&quot;:[&quot;Higgins, Chas. M. (Charles Michael), 1854-1929&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;69965&quot;});" class='title'>Horrors of vaccination exposed and illustrated -<br><span class='subtitle'></span></a>
+<div class='author'>Higgins, Chas. M. (Charles Michael), 1854-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70308, {&quot;Title&quot;:&quot;On the mechanism of the physiological action of the cathartics&quot;,&quot;Topics&quot;:[&quot;Laxatives -- Physiological effect&quot;],&quot;Primary&quot;:&quot;70308.htm&quot;,&quot;CreatorNames&quot;:[&quot;MacCallum, John Bruce, 1876-1906&quot;],&quot;LoCC&quot;:[&quot;RM&quot;],&quot;PG_ID&quot;:&quot;70308&quot;});" class='title'>On the mechanism of the physiological action of the cathartics</a>
+<div class='author'>MacCallum, John Bruce, 1876-1906</div>
+</div>
+</ul></div>
+</body></html>

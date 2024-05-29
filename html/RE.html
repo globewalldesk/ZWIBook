@@ -1,0 +1,70 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Ophthalmology (RE)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23544, {&quot;Title&quot;:&quot;Glaucoma - A Symposium Presented at a Meeting of the Chicago Ophthalmological Society, November 17, 1913&quot;,&quot;Topics&quot;:[&quot;Glaucoma&quot;],&quot;Primary&quot;:&quot;23544.htm&quot;,&quot;CreatorNames&quot;:[&quot;Nance, Willis O. (Willis Orville), 1871- [Editor]&quot;,&quot;Peck, Wesley Hamilton, 1863- [Editor]&quot;],&quot;LoCC&quot;:[&quot;RE&quot;],&quot;PG_ID&quot;:&quot;23544&quot;});" class='title'>Glaucoma -<br><span class='subtitle'>A Symposium Presented at a Meeting of the Chicago Ophthalmological Society, November 17, 1913</span></a>
+<div class='author'>Nance, Willis O. (Willis Orville), 1871- [Editor], Peck, Wesley Hamilton, 1863- [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35639, {&quot;Title&quot;:&quot;Clinical Investigations on Squint&quot;,&quot;Topics&quot;:[&quot;Strabismus&quot;],&quot;Primary&quot;:&quot;35639.htm&quot;,&quot;CreatorNames&quot;:[&quot;Schweigger, C., 1830-1905&quot;,&quot;Hartridge, Gustavus, 1849-1923 [Editor]&quot;,&quot;Robinson, Emily J. [Translator]&quot;],&quot;LoCC&quot;:[&quot;RE&quot;],&quot;PG_ID&quot;:&quot;35639&quot;});" class='title'>Clinical Investigations on Squint</a>
+<div class='author'>Schweigger, C., 1830-1905, Hartridge, Gustavus, 1849-1923 [Editor], Robinson, Emily J. [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50254, {&quot;Title&quot;:&quot;Treatment of the diseases of the eye, by means of prussic acid vapour, and other medicinal agents&quot;,&quot;Topics&quot;:[&quot;Eye -- Diseases&quot;,&quot;Hydrocyanic acid -- Therapeutic use&quot;],&quot;Primary&quot;:&quot;50254.htm&quot;,&quot;CreatorNames&quot;:[&quot;Turnbull, Alexander, 1795?-1881&quot;],&quot;LoCC&quot;:[&quot;RE&quot;],&quot;PG_ID&quot;:&quot;50254&quot;});" class='title'>Treatment of the diseases of the eye, by means of prussic acid vapour, and other medicinal agents</a>
+<div class='author'>Turnbull, Alexander, 1795?-1881</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59472, {&quot;Title&quot;:&quot;The Journal of Ophthalmology, Otology and Laryngology. Vol. XII. July, 1900. Part 3.&quot;,&quot;Topics&quot;:[&quot;Ophthalmology -- Periodicals&quot;,&quot;Otolaryngology -- Periodicals&quot;,&quot;Homeopathy -- Periodicals&quot;],&quot;Primary&quot;:&quot;59472.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;,&quot;Deady, Charles [Editor]&quot;,&quot;Palmer, A. W. [Editor]&quot;],&quot;LoCC&quot;:[&quot;RE&quot;,&quot;RF&quot;,&quot;RX&quot;],&quot;PG_ID&quot;:&quot;59472&quot;});" class='title'>The Journal of Ophthalmology, Otology and Laryngology. Vol. XII. July, 1900. Part 3.</a>
+<div class='author'>Various, Deady, Charles [Editor], Palmer, A. W. [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67117, {&quot;Title&quot;:&quot;History of Iridotomy - Knife-Needle vs. Scissors—Description of Author&#39;s V-Shaped Method&quot;,&quot;Topics&quot;:[&quot;Ophthalmology&quot;,&quot;Eye -- Abnormalities&quot;,&quot;Iris (Eye) -- Surgery&quot;,&quot;Iridectomy&quot;],&quot;Primary&quot;:&quot;67117.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ziegler, S. Lewis (Samuel Lewis), 1861-1926&quot;],&quot;LoCC&quot;:[&quot;RE&quot;],&quot;PG_ID&quot;:&quot;67117&quot;});" class='title'>History of Iridotomy -<br><span class='subtitle'>Knife-Needle vs. Scissors—Description of Author's V-Shaped Method</span></a>
+<div class='author'>Ziegler, S. Lewis (Samuel Lewis), 1861-1926</div>
+</div>
+</ul></div>
+</body></html>

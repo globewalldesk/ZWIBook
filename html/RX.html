@@ -1,0 +1,90 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Homeopathy (RX)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18589, {&quot;Title&quot;:&quot;The Act of Incorporation and the By-Laws of the Massachusetts Homeopathic Medical Society&quot;,&quot;Topics&quot;:[&quot;Massachusetts Homoeopathic Medical Society&quot;,&quot;Homeopathy -- Massachusetts -- Societies, etc.&quot;],&quot;Primary&quot;:&quot;18589.txt&quot;,&quot;CreatorNames&quot;:[&quot;Massachusetts Homoeopathic Medical Society&quot;],&quot;LoCC&quot;:[&quot;RX&quot;],&quot;PG_ID&quot;:&quot;18589&quot;});" class='title'>The Act of Incorporation and the By-Laws of the Massachusetts Homeopathic Medical Society</a>
+<div class='author'>Massachusetts Homoeopathic Medical Society</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25692, {&quot;Title&quot;:&quot;An Epitome of the Homeopathic Healing Art - Containing the New Discoveries and Improvements to the Present Time&quot;,&quot;Topics&quot;:[&quot;Homeopathy -- Popular works&quot;],&quot;Primary&quot;:&quot;25692.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hill, B. L. (Benjamin L.)&quot;],&quot;LoCC&quot;:[&quot;RX&quot;],&quot;PG_ID&quot;:&quot;25692&quot;});" class='title'>An Epitome of the Homeopathic Healing Art -<br><span class='subtitle'>Containing the New Discoveries and Improvements to the Present Time</span></a>
+<div class='author'>Hill, B. L. (Benjamin L.)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29576, {&quot;Title&quot;:&quot;Tratado metódico y práctico de Materia Médica y de Terapéutica, tomo segundo&quot;,&quot;Topics&quot;:[&quot;Homeopathy -- Materia medica and therapeutics&quot;],&quot;Primary&quot;:&quot;29576.htm&quot;,&quot;CreatorNames&quot;:[&quot;Espanet, Alexis, 1811-1886&quot;,&quot;Hernandez y Espeso, Pio [Translator]&quot;],&quot;LoCC&quot;:[&quot;RX&quot;],&quot;PG_ID&quot;:&quot;29576&quot;});" class='title'>Tratado metódico y práctico de Materia Médica y de Terapéutica, tomo segundo</a>
+<div class='author'>Espanet, Alexis, 1811-1886, Hernandez y Espeso, Pio [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31230, {&quot;Title&quot;:&quot;Allopathy and Homoeopathy Before the Judgment of Common Sense!&quot;,&quot;Topics&quot;:[&quot;Homeopathy&quot;,&quot;Hahnemann, Samuel, 1755-1843&quot;],&quot;Primary&quot;:&quot;31230.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hiller, Frederick, 1820-&quot;],&quot;LoCC&quot;:[&quot;RX&quot;],&quot;PG_ID&quot;:&quot;31230&quot;});" class='title'>Allopathy and Homoeopathy Before the Judgment of Common Sense!</a>
+<div class='author'>Hiller, Frederick, 1820-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33809, {&quot;Title&quot;:&quot;Tratado metódico y práctico de Materia Médica y de Terapéutica, tomo primero&quot;,&quot;Topics&quot;:[&quot;Homeopathy -- Materia medica and therapeutics&quot;],&quot;Primary&quot;:&quot;33809.htm&quot;,&quot;CreatorNames&quot;:[&quot;Espanet, Alexis, 1811-1886&quot;,&quot;Hernandez y Espeso, Pio [Translator]&quot;],&quot;LoCC&quot;:[&quot;RX&quot;],&quot;PG_ID&quot;:&quot;33809&quot;});" class='title'>Tratado metódico y práctico de Materia Médica y de Terapéutica, tomo primero</a>
+<div class='author'>Espanet, Alexis, 1811-1886, Hernandez y Espeso, Pio [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38757, {&quot;Title&quot;:&quot;New, Old, and Forgotten Remedies: Papers by Many Writers&quot;,&quot;Topics&quot;:[&quot;Homeopathy -- Materia medica and therapeutics&quot;],&quot;Primary&quot;:&quot;38757.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anshutz, Edward Pollock, 1846-1918 [Editor]&quot;],&quot;LoCC&quot;:[&quot;RX&quot;],&quot;PG_ID&quot;:&quot;38757&quot;});" class='title'>New, Old, and Forgotten Remedies:<br><span class='subtitle'>Papers by Many Writers</span></a>
+<div class='author'>Anshutz, Edward Pollock, 1846-1918 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40287, {&quot;Title&quot;:&quot;The Treatment of Hay Fever by rosin-weed, ichthyol and faradic electricity - With a discussion of the old theory of gout and the new theory of anaphylaxis&quot;,&quot;Topics&quot;:[&quot;Hay fever&quot;],&quot;Primary&quot;:&quot;40287.htm&quot;,&quot;CreatorNames&quot;:[&quot;Laidlaw, George Frederick, 1871-&quot;],&quot;LoCC&quot;:[&quot;RX&quot;],&quot;PG_ID&quot;:&quot;40287&quot;});" class='title'>The Treatment of Hay Fever by rosin-weed, ichthyol and faradic electricity -<br><span class='subtitle'>With a discussion of the old theory of gout and the new theory of anaphylaxis</span></a>
+<div class='author'>Laidlaw, George Frederick, 1871-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59472, {&quot;Title&quot;:&quot;The Journal of Ophthalmology, Otology and Laryngology. Vol. XII. July, 1900. Part 3.&quot;,&quot;Topics&quot;:[&quot;Ophthalmology -- Periodicals&quot;,&quot;Otolaryngology -- Periodicals&quot;,&quot;Homeopathy -- Periodicals&quot;],&quot;Primary&quot;:&quot;59472.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;,&quot;Deady, Charles [Editor]&quot;,&quot;Palmer, A. W. [Editor]&quot;],&quot;LoCC&quot;:[&quot;RE&quot;,&quot;RF&quot;,&quot;RX&quot;],&quot;PG_ID&quot;:&quot;59472&quot;});" class='title'>The Journal of Ophthalmology, Otology and Laryngology. Vol. XII. July, 1900. Part 3.</a>
+<div class='author'>Various, Deady, Charles [Editor], Palmer, A. W. [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6481, {&quot;Title&quot;:&quot;Personal Experience of a Physician&quot;,&quot;Topics&quot;:[&quot;Temperance&quot;,&quot;Homeopathy&quot;],&quot;Primary&quot;:&quot;6481.txt&quot;,&quot;CreatorNames&quot;:[&quot;Ellis, John, 1815-1896&quot;],&quot;LoCC&quot;:[&quot;RX&quot;],&quot;PG_ID&quot;:&quot;6481&quot;});" class='title'>Personal Experience of a Physician</a>
+<div class='author'>Ellis, John, 1815-1896</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70350, {&quot;Title&quot;:&quot;Dr. B. Mure&#39;s materia medica&quot;,&quot;Topics&quot;:[&quot;Homeopathy&quot;,&quot;Materia medica, Vegetable&quot;],&quot;Primary&quot;:&quot;70350.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mure, Benoît, 1809-1858&quot;,&quot;Hempel, Charles J. (Charles Julius), 1811-1879 [Translator]&quot;],&quot;LoCC&quot;:[&quot;RX&quot;],&quot;PG_ID&quot;:&quot;70350&quot;});" class='title'>Dr. B. Mure's materia medica</a>
+<div class='author'>Mure, Benoît, 1809-1858, Hempel, Charles J. (Charles Julius), 1811-1879 [Translator]</div>
+</div>
+</ul></div>
+</body></html>

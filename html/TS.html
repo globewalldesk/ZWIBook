@@ -1,0 +1,518 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Manufactures (TS)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12443, {&quot;Title&quot;:&quot;The Jute Industry: From Seed to Finished Cloth&quot;,&quot;Topics&quot;:[&quot;Jute fiber&quot;],&quot;Primary&quot;:&quot;12443.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kilgour, Peter&quot;,&quot;Woodhouse, Thomas, 1862-1933&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;12443&quot;});" class='title'>The Jute Industry:<br><span class='subtitle'>From Seed to Finished Cloth</span></a>
+<div class='author'>Kilgour, Peter, Woodhouse, Thomas, 1862-1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12694, {&quot;Title&quot;:&quot;History of the American Clock Business for the Past Sixty Years, and Life of Chauncey Jerome - Barnum&#39;s Connection with the Yankee Clock Business&quot;,&quot;Topics&quot;:[&quot;Clock and watch making -- United States&quot;],&quot;Primary&quot;:&quot;12694.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jerome, Chauncey, 1793-1868&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;12694&quot;});" class='title'>History of the American Clock Business for the Past Sixty Years, and Life of Chauncey Jerome -<br><span class='subtitle'>Barnum's Connection with the Yankee Clock Business</span></a>
+<div class='author'>Jerome, Chauncey, 1793-1868</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14600, {&quot;Title&quot;:&quot;Theory of Silk Weaving - A Treatise on the Construction and Application of Weaves, and the Decomposition and Calculation of Broad and Narrow, Plain, Novelty and Jacquard Silk Fabrics&quot;,&quot;Topics&quot;:[&quot;Weaving&quot;,&quot;Silk industry&quot;],&quot;Primary&quot;:&quot;14600.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wolfensberger, Arnold&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;14600&quot;});" class='title'>Theory of Silk Weaving -<br><span class='subtitle'>A Treatise on the Construction and Application of Weaves, and the Decomposition and Calculation of Broad and Narrow, Plain, Novelty and Jacquard Silk Fabrics</span></a>
+<div class='author'>Wolfensberger, Arnold</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17021, {&quot;Title&quot;:&quot;Watch and Clock Escapements - A Complete Study in Theory and Practice of the Lever, Cylinder and Chronometer Escapements, Together with a Brief Account of the Origin and Evolution of the Escapement in Horology&quot;,&quot;Topics&quot;:[&quot;Clocks and watches -- Escapements&quot;],&quot;Primary&quot;:&quot;17021.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;17021&quot;});" class='title'>Watch and Clock Escapements -<br><span class='subtitle'>A Complete Study in Theory and Practice of the Lever, Cylinder and Chronometer Escapements, Together with a Brief Account of the Origin and Evolution of the Escapement in Horology</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17730, {&quot;Title&quot;:&quot;A Study of the Textile Art in Its Relation to the Development of Form and Ornament - Sixth Annual Report of the Bureau of Ethnology to the Secretary of the Smithsonian Institution, 1884-&#39;85, Government Printing Office, Washington, 1888, (pages 189-252)&quot;,&quot;Topics&quot;:[&quot;Indian textile fabrics -- North America&quot;,&quot;Decoration and ornament&quot;,&quot;Textile industry&quot;,&quot;Textile fabrics&quot;],&quot;Primary&quot;:&quot;17730.htm&quot;,&quot;CreatorNames&quot;:[&quot;Holmes, William Henry, 1846-1933&quot;],&quot;LoCC&quot;:[&quot;E&quot;,&quot;TS&quot;],&quot;PG_ID&quot;:&quot;17730&quot;});" class='title'>A Study of the Textile Art in Its Relation to the Development of Form and Ornament -<br><span class='subtitle'>Sixth Annual Report of the Bureau of Ethnology to the Secretary of the Smithsonian Institution, 1884-'85, Government Printing Office, Washington, 1888, (pages 189-252)</span></a>
+<div class='author'>Holmes, William Henry, 1846-1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17740, {&quot;Title&quot;:&quot;The Chemistry of Hat Manufacturing - Lectures Delivered Before the Hat Manufacturers&#39; Association&quot;,&quot;Topics&quot;:[&quot;Hats&quot;],&quot;Primary&quot;:&quot;17740.htm&quot;,&quot;CreatorNames&quot;:[&quot;Smith, Watson, 1845-1920&quot;,&quot;Shonk, Albert [Editor]&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;17740&quot;});" class='title'>The Chemistry of Hat Manufacturing -<br><span class='subtitle'>Lectures Delivered Before the Hat Manufacturers' Association</span></a>
+<div class='author'>Smith, Watson, 1845-1920, Shonk, Albert [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17855, {&quot;Title&quot;:&quot;Hemp Hurds as Paper-Making Material&quot;,&quot;Topics&quot;:[&quot;Hemp&quot;,&quot;Fiber plants&quot;,&quot;Paper industry&quot;],&quot;Primary&quot;:&quot;17855.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dewey, Lyster H. (Lyster Hoxie), 1865-1944&quot;,&quot;Merrill, Jason L.&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;17855&quot;});" class='title'>Hemp Hurds as Paper-Making Material</a>
+<div class='author'>Dewey, Lyster H. (Lyster Hoxie), 1865-1944, Merrill, Jason L.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18806, {&quot;Title&quot;:&quot;Manuel complet des fabricans de chapeaux en tous genres&quot;,&quot;Topics&quot;:[&quot;Hats&quot;,&quot;Hat trade&quot;],&quot;Primary&quot;:&quot;18806.htm&quot;,&quot;CreatorNames&quot;:[&quot;Julia de Fontenelle (Jean-Sébastien-Eugène), 1790-1842&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;18806&quot;});" class='title'>Manuel complet des fabricans de chapeaux en tous genres</a>
+<div class='author'>Julia de Fontenelle (Jean-Sébastien-Eugène), 1790-1842</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20282, {&quot;Title&quot;:&quot;The Working of Steel - Annealing, Heat Treating and Hardening of Carbon and Alloy Steel&quot;,&quot;Topics&quot;:[&quot;Steel&quot;],&quot;Primary&quot;:&quot;20282.htm&quot;,&quot;CreatorNames&quot;:[&quot;Colvin, Fred H. (Fred Herbert), 1867-1965&quot;,&quot;Juthe, K. A. (Kristian A.)&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;20282&quot;});" class='title'>The Working of Steel -<br><span class='subtitle'>Annealing, Heat Treating and Hardening of Carbon and Alloy Steel</span></a>
+<div class='author'>Colvin, Fred H. (Fred Herbert), 1867-1965, Juthe, K. A. (Kristian A.)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20317, {&quot;Title&quot;:&quot;A Treatise on Staff Making and Pivoting - Containing Complete Directions for Making and Fitting New Staffs from the Raw Material&quot;,&quot;Topics&quot;:[&quot;Clock and watch making&quot;,&quot;Clocks and watches -- Repairing&quot;],&quot;Primary&quot;:&quot;20317.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hall, Eugene Edward&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;20317&quot;});" class='title'>A Treatise on Staff Making and Pivoting -<br><span class='subtitle'>Containing Complete Directions for Making and Fitting New Staffs from the Raw Material</span></a>
+<div class='author'>Hall, Eugene Edward</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(21978, {&quot;Title&quot;:&quot;An Analysis of the Lever Escapement&quot;,&quot;Topics&quot;:[&quot;Clocks and watches -- Escapements&quot;],&quot;Primary&quot;:&quot;21978.htm&quot;,&quot;CreatorNames&quot;:[&quot;Playtner, H. R.&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;21978&quot;});" class='title'>An Analysis of the Lever Escapement</a>
+<div class='author'>Playtner, H. R.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24077, {&quot;Title&quot;:&quot;Textiles, for Commercial, Industrial, and Domestic Arts Schools - Also Adapted to Those Engaged in Wholesale and Retail Dry Goods, Wool, Cotton, and Dressmaker&#39;s Trades&quot;,&quot;Topics&quot;:[&quot;Textile industry&quot;,&quot;Textile fabrics&quot;],&quot;Primary&quot;:&quot;24077.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dooley, William H. (William Henry), 1880-&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;24077&quot;});" class='title'>Textiles, for Commercial, Industrial, and Domestic Arts Schools -<br><span class='subtitle'>Also Adapted to Those Engaged in Wholesale and Retail Dry Goods, Wool, Cotton, and Dressmaker's Trades</span></a>
+<div class='author'>Dooley, William H. (William Henry), 1880-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25013, {&quot;Title&quot;:&quot;How to Make a Shoe&quot;,&quot;Topics&quot;:[&quot;Shoemakers&quot;,&quot;Shoes&quot;],&quot;Primary&quot;:&quot;25013.htm&quot;,&quot;CreatorNames&quot;:[&quot;Headley, John Parker&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;25013&quot;});" class='title'>How to Make a Shoe</a>
+<div class='author'>Headley, John Parker</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25025, {&quot;Title&quot;:&quot;The Story of Silk&quot;,&quot;Topics&quot;:[&quot;Silk -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;25025.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bassett, Sara Ware, 1872-1968&quot;,&quot;Price, Hattie Longstreet [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;PZ&quot;,&quot;TS&quot;],&quot;PG_ID&quot;:&quot;25025&quot;});" class='title'>The Story of Silk</a>
+<div class='author'>Bassett, Sara Ware, 1872-1968, Price, Hattie Longstreet [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25731, {&quot;Title&quot;:&quot;Ancient Egyptian and Greek Looms&quot;,&quot;Topics&quot;:[&quot;Weaving&quot;,&quot;Looms&quot;],&quot;Primary&quot;:&quot;25731.htm&quot;,&quot;CreatorNames&quot;:[&quot;Roth, H. Ling (Henry Ling), 1855-1925&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;25731&quot;});" class='title'>Ancient Egyptian and Greek Looms</a>
+<div class='author'>Roth, H. Ling (Henry Ling), 1855-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26598, {&quot;Title&quot;:&quot;Seasoning of Wood&quot;,&quot;Topics&quot;:[&quot;Lumber -- Drying&quot;],&quot;Primary&quot;:&quot;26598.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wagner, J. B. (Joseph Bernard), 1870-&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;26598&quot;});" class='title'>Seasoning of Wood</a>
+<div class='author'>Wagner, J. B. (Joseph Bernard), 1870-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27137, {&quot;Title&quot;:&quot;The Scholfield Wool-Carding Machines&quot;,&quot;Topics&quot;:[&quot;Wool-carding&quot;],&quot;Primary&quot;:&quot;27137.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cooper, Grace Rogers&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;27137&quot;});" class='title'>The Scholfield Wool-Carding Machines</a>
+<div class='author'>Cooper, Grace Rogers</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28058, {&quot;Title&quot;:&quot;A Text-Book of Precious Stones for Jewelers and the Gem-Loving Public&quot;,&quot;Topics&quot;:[&quot;Precious stones&quot;],&quot;Primary&quot;:&quot;28058.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wade, Frank Bertram, 1875-1950&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;28058&quot;});" class='title'>A Text-Book of Precious Stones for Jewelers and the Gem-Loving Public</a>
+<div class='author'>Wade, Frank Bertram, 1875-1950</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28109, {&quot;Title&quot;:&quot;How to make rugs&quot;,&quot;Topics&quot;:[&quot;Rugs&quot;],&quot;Primary&quot;:&quot;28109.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wheeler, Candace, 1827-1923&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;28109&quot;});" class='title'>How to make rugs</a>
+<div class='author'>Wheeler, Candace, 1827-1923</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29586, {&quot;Title&quot;:&quot;The Story of the Cotton Plant&quot;,&quot;Topics&quot;:[&quot;Cotton&quot;],&quot;Primary&quot;:&quot;29586.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wilkinson, Frederick&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;29586&quot;});" class='title'>The Story of the Cotton Plant</a>
+<div class='author'>Wilkinson, Frederick</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30001, {&quot;Title&quot;:&quot;On the Origin of Clockwork, Perpetual Motion Devices, and the Compass&quot;,&quot;Topics&quot;:[&quot;Clocks and watches&quot;,&quot;Horology&quot;],&quot;Primary&quot;:&quot;30001.htm&quot;,&quot;CreatorNames&quot;:[&quot;Price, Derek J. de Solla (Derek John de Solla), 1922-1983&quot;],&quot;LoCC&quot;:[&quot;Q&quot;,&quot;TS&quot;],&quot;PG_ID&quot;:&quot;30001&quot;});" class='title'>On the Origin of Clockwork, Perpetual Motion Devices, and the Compass</a>
+<div class='author'>Price, Derek J. de Solla (Derek John de Solla), 1922-1983</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32414, {&quot;Title&quot;:&quot;Home Pork Making&quot;,&quot;Topics&quot;:[&quot;Pork&quot;,&quot;Cooking (Pork)&quot;],&quot;Primary&quot;:&quot;32414.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fulton, A. W. (Albert Watson), 1859-&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;32414&quot;});" class='title'>Home Pork Making</a>
+<div class='author'>Fulton, A. W. (Albert Watson), 1859-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33287, {&quot;Title&quot;:&quot;Hints on the Use and Handling of Firearms Generally, and the Revolver in Particular&quot;,&quot;Topics&quot;:[&quot;Firearms&quot;,&quot;Revolvers&quot;],&quot;Primary&quot;:&quot;33287.htm&quot;,&quot;CreatorNames&quot;:[&quot;Curling, H. Onslow&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;33287&quot;});" class='title'>Hints on the Use and Handling of Firearms Generally, and the Revolver in Particular</a>
+<div class='author'>Curling, H. Onslow</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33424, {&quot;Title&quot;:&quot;Instruction book on ring spinning&quot;,&quot;Topics&quot;:[&quot;Spinning&quot;],&quot;Primary&quot;:&quot;33424.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lincoln, Francis L.&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;33424&quot;});" class='title'>Instruction book on ring spinning</a>
+<div class='author'>Lincoln, Francis L.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35001, {&quot;Title&quot;:&quot;Friction, Lubrication and the Lubricants in Horology&quot;,&quot;Topics&quot;:[&quot;Clock and watch making&quot;,&quot;Friction&quot;,&quot;Lubrication and lubricants&quot;],&quot;Primary&quot;:&quot;35001.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lewis, W. T. (William T.)&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;35001&quot;});" class='title'>Friction, Lubrication and the Lubricants in Horology</a>
+<div class='author'>Lewis, W. T. (William T.)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35510, {&quot;Title&quot;:&quot;The Preparation of Plantation Rubber&quot;,&quot;Topics&quot;:[&quot;Rubber&quot;],&quot;Primary&quot;:&quot;35510.htm&quot;,&quot;CreatorNames&quot;:[&quot;Morgan, Sidney&quot;,&quot;Stevens, H. P. (Henry Potter), 1875-1965 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;35510&quot;});" class='title'>The Preparation of Plantation Rubber</a>
+<div class='author'>Morgan, Sidney, Stevens, H. P. (Henry Potter), 1875-1965 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36092, {&quot;Title&quot;:&quot;North Devon Pottery and Its Export to America in the 17th Century&quot;,&quot;Topics&quot;:[&quot;Pottery -- England -- Devon&quot;,&quot;Pottery -- Atlantic States&quot;],&quot;Primary&quot;:&quot;36092.htm&quot;,&quot;CreatorNames&quot;:[&quot;Watkins, C. Malcolm&quot;],&quot;LoCC&quot;:[&quot;TS&quot;,&quot;NK&quot;],&quot;PG_ID&quot;:&quot;36092&quot;});" class='title'>North Devon Pottery and Its Export to America in the 17th Century</a>
+<div class='author'>Watkins, C. Malcolm</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36815, {&quot;Title&quot;:&quot;Advanced Toy Making for Schools&quot;,&quot;Topics&quot;:[&quot;Toys&quot;,&quot;Woodwork (Manual training)&quot;],&quot;Primary&quot;:&quot;36815.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mitchell, David M.&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;36815&quot;});" class='title'>Advanced Toy Making for Schools</a>
+<div class='author'>Mitchell, David M.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37239, {&quot;Title&quot;:&quot;Stories About Famous Precious Stones&quot;,&quot;Topics&quot;:[&quot;Gems&quot;],&quot;Primary&quot;:&quot;37239.htm&quot;,&quot;CreatorNames&quot;:[&quot;Orpen, Adela E. (Adela Elizabeth Richards), 1855-1927&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;37239&quot;});" class='title'>Stories About Famous Precious Stones</a>
+<div class='author'>Orpen, Adela E. (Adela Elizabeth Richards), 1855-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38301, {&quot;Title&quot;:&quot;Illustrated Catalogue of  Cotton Machinery&quot;,&quot;Topics&quot;:[&quot;Howard &amp; Bullough American Machine Company -- Catalogs&quot;,&quot;Textile machinery industry -- Catalogs&quot;,&quot;Textile machinery -- Catalogs&quot;,&quot;Cotton machinery industry -- Catalogs&quot;,&quot;Cotton machinery -- Catalogs&quot;],&quot;Primary&quot;:&quot;38301.htm&quot;,&quot;CreatorNames&quot;:[&quot;Howard &amp; Bullough American Machine Company&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;38301&quot;});" class='title'>Illustrated Catalogue of  Cotton Machinery</a>
+<div class='author'>Howard & Bullough American Machine Company</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38340, {&quot;Title&quot;:&quot;Rules and Practice for Adjusting Watches&quot;,&quot;Topics&quot;:[&quot;Clocks and watches&quot;],&quot;Primary&quot;:&quot;38340.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kleinlein, Walter J. (Walter John), 1876-&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;38340&quot;});" class='title'>Rules and Practice for Adjusting Watches</a>
+<div class='author'>Kleinlein, Walter J. (Walter John), 1876-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38681, {&quot;Title&quot;:&quot;Practical Basketry&quot;,&quot;Topics&quot;:[&quot;Basket making&quot;],&quot;Primary&quot;:&quot;38681.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gill, Anna A.&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;38681&quot;});" class='title'>Practical Basketry</a>
+<div class='author'>Gill, Anna A.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38953, {&quot;Title&quot;:&quot;British Manufacturing Industries: Pottery, Glass and Silicates, Furniture and Woodwork.&quot;,&quot;Topics&quot;:[&quot;Manufacturing industries -- Great Britain&quot;],&quot;Primary&quot;:&quot;38953.htm&quot;,&quot;CreatorNames&quot;:[&quot;Arnoux, Léon, 1816-1902&quot;,&quot;Barff, Frederick Settle, 1823-1886&quot;,&quot;Pollen, John Hungerford, 1820-1902&quot;,&quot;Bevan, G. Phillips, 1829?-1889 [Editor]&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;38953&quot;});" class='title'>British Manufacturing Industries:<br><span class='subtitle'>Pottery, Glass and Silicates, Furniture and Woodwork.</span></a>
+<div class='author'>Arnoux, Léon, 1816-1902, Barff, Frederick Settle, 1823-1886, Pollen, John Hungerford, 1820-1902, Bevan, G. Phillips, 1829?-1889 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38973, {&quot;Title&quot;:&quot;Lace, Its Origin and History&quot;,&quot;Topics&quot;:[&quot;Lace and lace making&quot;],&quot;Primary&quot;:&quot;38973.htm&quot;,&quot;CreatorNames&quot;:[&quot;Goldenberg, Samuel L.&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;38973&quot;});" class='title'>Lace, Its Origin and History</a>
+<div class='author'>Goldenberg, Samuel L.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39780, {&quot;Title&quot;:&quot;Baltimore Hats, Past and Present&quot;,&quot;Topics&quot;:[&quot;Hats&quot;,&quot;Hat trade -- Maryland -- Baltimore -- History&quot;],&quot;Primary&quot;:&quot;39780.htm&quot;,&quot;CreatorNames&quot;:[&quot;Brigham, William Tufts, 1841-1926&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;39780&quot;});" class='title'>Baltimore Hats, Past and Present</a>
+<div class='author'>Brigham, William Tufts, 1841-1926</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41192, {&quot;Title&quot;:&quot;Animal Proteins&quot;,&quot;Topics&quot;:[&quot;Leather&quot;,&quot;Glue&quot;,&quot;Gelatin&quot;],&quot;Primary&quot;:&quot;41192.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bennett, Hugh Garner&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;41192&quot;});" class='title'>Animal Proteins</a>
+<div class='author'>Bennett, Hugh Garner</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41925, {&quot;Title&quot;:&quot;The Pioneer Woodsman as He Is Related to Lumbering in the Northwest&quot;,&quot;Topics&quot;:[&quot;Camping&quot;,&quot;Lumbering -- Northwestern States&quot;],&quot;Primary&quot;:&quot;41925.htm&quot;,&quot;CreatorNames&quot;:[&quot;Warren, George Henry&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;41925&quot;});" class='title'>The Pioneer Woodsman as He Is Related to Lumbering in the Northwest</a>
+<div class='author'>Warren, George Henry</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41938, {&quot;Title&quot;:&quot;Principles and Practice of Fur Dressing and Fur Dyeing&quot;,&quot;Topics&quot;:[&quot;Fur -- Dressing and dyeing&quot;],&quot;Primary&quot;:&quot;41938.htm&quot;,&quot;CreatorNames&quot;:[&quot;Austin, William E.&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;41938&quot;});" class='title'>Principles and Practice of Fur Dressing and Fur Dyeing</a>
+<div class='author'>Austin, William E.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44022, {&quot;Title&quot;:&quot;On the Development and Distribution of Primitive Locks and Keys&quot;,&quot;Topics&quot;:[&quot;Locks and keys&quot;],&quot;Primary&quot;:&quot;44022.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pitt-Rivers, Augustus Henry Lane-Fox, 1827-1900&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;44022&quot;});" class='title'>On the Development and Distribution of Primitive Locks and Keys</a>
+<div class='author'>Pitt-Rivers, Augustus Henry Lane-Fox, 1827-1900</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44501, {&quot;Title&quot;:&quot;Toy Craft&quot;,&quot;Topics&quot;:[&quot;Toys&quot;,&quot;Woodwork (Manual training)&quot;],&quot;Primary&quot;:&quot;44501.htm&quot;,&quot;CreatorNames&quot;:[&quot;Baxter, Leon H.&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;44501&quot;});" class='title'>Toy Craft</a>
+<div class='author'>Baxter, Leon H.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44838, {&quot;Title&quot;:&quot;Time and Its Measurement&quot;,&quot;Topics&quot;:[&quot;Clocks and watches&quot;,&quot;Time&quot;],&quot;Primary&quot;:&quot;44838.htm&quot;,&quot;CreatorNames&quot;:[&quot;Arthur, James, 1842-1930&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;44838&quot;});" class='title'>Time and Its Measurement</a>
+<div class='author'>Arthur, James, 1842-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45775, {&quot;Title&quot;:&quot;Toy-Making in School and Home&quot;,&quot;Topics&quot;:[&quot;Creative activities and seat work&quot;,&quot;Handicraft&quot;,&quot;Toys&quot;],&quot;Primary&quot;:&quot;45775.htm&quot;,&quot;CreatorNames&quot;:[&quot;Polkinghorne, M. I. R. (Mabel Irene Rutherford)&quot;,&quot;Polkinghorne, R. K. (Ruby Kathleen)&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;45775&quot;});" class='title'>Toy-Making in School and Home</a>
+<div class='author'>Polkinghorne, M. I. R. (Mabel Irene Rutherford), Polkinghorne, R. K. (Ruby Kathleen)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45883, {&quot;Title&quot;:&quot;Time and Time-Tellers&quot;,&quot;Topics&quot;:[&quot;Clocks and watches&quot;],&quot;Primary&quot;:&quot;45883.htm&quot;,&quot;CreatorNames&quot;:[&quot;Benson, James W., active 1857-1887&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;45883&quot;});" class='title'>Time and Time-Tellers</a>
+<div class='author'>Benson, James W., active 1857-1887</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46376, {&quot;Title&quot;:&quot;Outspinning the Spider: The Story of Wire and Wire Rope&quot;,&quot;Topics&quot;:[&quot;John A. Roebling&#39;s Sons Company&quot;,&quot;Wire rope&quot;,&quot;Wire&quot;],&quot;Primary&quot;:&quot;46376.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mumford, John Kimberly, 1863-1926&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;46376&quot;});" class='title'>Outspinning the Spider:<br><span class='subtitle'>The Story of Wire and Wire Rope</span></a>
+<div class='author'>Mumford, John Kimberly, 1863-1926</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46449, {&quot;Title&quot;:&quot;The Manufacture of Paper - With Illustrations, and a Bibliography of Works Relating to Cellulose and Paper-Making&quot;,&quot;Topics&quot;:[&quot;Papermaking&quot;],&quot;Primary&quot;:&quot;46449.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sindall, R. W. (Robert Walter)&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;46449&quot;});" class='title'>The Manufacture of Paper -<br><span class='subtitle'>With Illustrations, and a Bibliography of Works Relating to Cellulose and Paper-Making</span></a>
+<div class='author'>Sindall, R. W. (Robert Walter)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47090, {&quot;Title&quot;:&quot;A Treatise on Hat-Making and Felting - Including a Full Exposition of the Singular Properties of Fur, Wool, and Hair&quot;,&quot;Topics&quot;:[&quot;Hats&quot;],&quot;Primary&quot;:&quot;47090.htm&quot;,&quot;CreatorNames&quot;:[&quot;Thomson, John, hatter&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;47090&quot;});" class='title'>A Treatise on Hat-Making and Felting -<br><span class='subtitle'>Including a Full Exposition of the Singular Properties of Fur, Wool, and Hair</span></a>
+<div class='author'>Thomson, John, hatter</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4759, {&quot;Title&quot;:&quot;The Romance of Rubber&quot;,&quot;Topics&quot;:[&quot;Rubber&quot;],&quot;Primary&quot;:&quot;4759.htm&quot;,&quot;CreatorNames&quot;:[&quot;United States Rubber Company&quot;,&quot;Martin, John, 1865-1947 [Editor]&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;4759&quot;});" class='title'>The Romance of Rubber</a>
+<div class='author'>United States Rubber Company, Martin, John, 1865-1947 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47816, {&quot;Title&quot;:&quot;The Silversmith&#39;s Handbook - Containing full instructions for the alloying and working of silver&quot;,&quot;Topics&quot;:[&quot;Silverwork&quot;],&quot;Primary&quot;:&quot;47816.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gee, George E. (George Edward)&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;47816&quot;});" class='title'>The Silversmith's Handbook -<br><span class='subtitle'>Containing full instructions for the alloying and working of silver</span></a>
+<div class='author'>Gee, George E. (George Edward)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47928, {&quot;Title&quot;:&quot;Time Telling through the Ages&quot;,&quot;Topics&quot;:[&quot;Time measurements&quot;,&quot;Clocks and watches -- History&quot;],&quot;Primary&quot;:&quot;47928.htm&quot;,&quot;CreatorNames&quot;:[&quot;Brearley, Harry Chase, 1870-1940&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;47928&quot;});" class='title'>Time Telling through the Ages</a>
+<div class='author'>Brearley, Harry Chase, 1870-1940</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47959, {&quot;Title&quot;:&quot;From Paper-mill to Pressroom&quot;,&quot;Topics&quot;:[&quot;Papermaking&quot;],&quot;Primary&quot;:&quot;47959.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wheelwright, William Bond, 1879-&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;47959&quot;});" class='title'>From Paper-mill to Pressroom</a>
+<div class='author'>Wheelwright, William Bond, 1879-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48173, {&quot;Title&quot;:&quot;Practical Carriage and Wagon Painting - A Treatise on the Painting of Carriages, Wagons and Sleighs, Embracing Full and Explicit Directions for Executing All Kinds of Work, Including Painting Factory Work, Lettering, Scrolling, Ornamenting, Varnishing, etc., with Many Tested Recipes and Formulas&quot;,&quot;Topics&quot;:[&quot;Carriage and wagon painting&quot;],&quot;Primary&quot;:&quot;48173.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hillick, M. C. (Mayton Clarence), 1859-&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;48173&quot;});" class='title'>Practical Carriage and Wagon Painting -<br><span class='subtitle'>A Treatise on the Painting of Carriages, Wagons and Sleighs, Embracing Full and Explicit Directions for Executing All Kinds of Work, Including Painting Factory Work, Lettering, Scrolling, Ornamenting, Varnishing, etc., with Many Tested Recipes and Formulas</span></a>
+<div class='author'>Hillick, M. C. (Mayton Clarence), 1859-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48719, {&quot;Title&quot;:&quot;Straw Hats: Their history and manufacture&quot;,&quot;Topics&quot;:[&quot;Hats&quot;,&quot;Straw industries&quot;],&quot;Primary&quot;:&quot;48719.htm&quot;,&quot;CreatorNames&quot;:[&quot;Inwards, Harry&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;48719&quot;});" class='title'>Straw Hats:<br><span class='subtitle'>Their history and manufacture</span></a>
+<div class='author'>Inwards, Harry</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49194, {&quot;Title&quot;:&quot;The History of Coaches&quot;,&quot;Topics&quot;:[&quot;Carriages and carts&quot;],&quot;Primary&quot;:&quot;49194.htm&quot;,&quot;CreatorNames&quot;:[&quot;Thrupp, George Athelstane, 1822-1905&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;49194&quot;});" class='title'>The History of Coaches</a>
+<div class='author'>Thrupp, George Athelstane, 1822-1905</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49532, {&quot;Title&quot;:&quot;Improvement in Fire-Arms and in the Apparatus Used Therewith - United States Patent Office Application&quot;,&quot;Topics&quot;:[&quot;Patents -- United States&quot;,&quot;Firearms -- Patents&quot;],&quot;Primary&quot;:&quot;49532.htm&quot;,&quot;CreatorNames&quot;:[&quot;Colt, Samuel, 1814-1862&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;49532&quot;});" class='title'>Improvement in Fire-Arms and in the Apparatus Used Therewith -<br><span class='subtitle'>United States Patent Office Application</span></a>
+<div class='author'>Colt, Samuel, 1814-1862</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50244, {&quot;Title&quot;:&quot;Die Uhren: Ein Abriß der Geschichte der Zeitmessung&quot;,&quot;Topics&quot;:[&quot;Clocks and watches -- History&quot;,&quot;Horology -- History&quot;],&quot;Primary&quot;:&quot;50244.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kindler, Fintan, 1863-1942&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;50244&quot;});" class='title'>Die Uhren:<br><span class='subtitle'>Ein Abriß der Geschichte der Zeitmessung</span></a>
+<div class='author'>Kindler, Fintan, 1863-1942</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50532, {&quot;Title&quot;:&quot;Jacquard Machines: Instruction Paper&quot;,&quot;Topics&quot;:[&quot;Jacquard weaving&quot;],&quot;Primary&quot;:&quot;50532.htm&quot;,&quot;CreatorNames&quot;:[&quot;Nelson, H. William (Hector William), 1869-&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;50532&quot;});" class='title'>Jacquard Machines:<br><span class='subtitle'>Instruction Paper</span></a>
+<div class='author'>Nelson, H. William (Hector William), 1869-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51500, {&quot;Title&quot;:&quot;Descriptive Pamphlet of the Richmond Mill Furnishing Works - All sizes of mill stones and complete grinding and bolting combined husk or portable flouring mills, portable corn and feed mills; smut and separating machines; zigzag and oat separators, dustless separators, warehouse separators, water wheels; mill shafting; pulleys; spur and bevel, iron and core, gearing....&quot;,&quot;Topics&quot;:[&quot;Nordyke, Marmon &amp; Company -- Catalogs&quot;,&quot;Flour industry -- Equipment and supplies -- Catalogs&quot;,&quot;Milling machinery -- Catalogs&quot;,&quot;Mills and mill-work -- Equipment and supplies -- Catalogs&quot;],&quot;Primary&quot;:&quot;51500.htm&quot;,&quot;CreatorNames&quot;:[&quot;Richmond Mill Furnishing Works&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;51500&quot;});" class='title'>Descriptive Pamphlet of the Richmond Mill Furnishing Works -<br><span class='subtitle'>All sizes of mill stones and complete grinding and bolting combined husk or portable flouring mills, portable corn and feed mills; smut and separating machines; zigzag and oat separators, dustless separators, warehouse separators, water wheels; mill shafting; pulleys; spur and bevel, iron and core, gearing....</span></a>
+<div class='author'>Richmond Mill Furnishing Works</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52227, {&quot;Title&quot;:&quot;Piece Goods Manual - Fabrics described; textile, knit goods, weaving terms, etc., explained; with notes on the classification of samples.&quot;,&quot;Topics&quot;:[&quot;Textile fabrics&quot;],&quot;Primary&quot;:&quot;52227.htm&quot;,&quot;CreatorNames&quot;:[&quot;Blanco, A. E., 1877-1945&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;52227&quot;});" class='title'>Piece Goods Manual -<br><span class='subtitle'>Fabrics described; textile, knit goods, weaving terms, etc., explained; with notes on the classification of samples.</span></a>
+<div class='author'>Blanco, A. E., 1877-1945</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52931, {&quot;Title&quot;:&quot;Pulp and Paper Magazine, Vol. XIII, No. 20, October 15, 1916 - A Semi-Monthly Magazine Devoted to the Science and Practice of the Pulp and Paper Manufacturing Industry with an Up-to-date Review of Conditions in the Allied Trades.&quot;,&quot;Topics&quot;:[&quot;Paper industry -- Periodicals&quot;,&quot;Wood-pulp industry -- Periodicals&quot;],&quot;Primary&quot;:&quot;52931.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;52931&quot;});" class='title'>Pulp and Paper Magazine, Vol. XIII, No. 20, October 15, 1916 -<br><span class='subtitle'>A Semi-Monthly Magazine Devoted to the Science and Practice of the Pulp and Paper Manufacturing Industry with an Up-to-date Review of Conditions in the Allied Trades.</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53064, {&quot;Title&quot;:&quot;Die Casting: Dies—Machines—Methods&quot;,&quot;Topics&quot;:[&quot;Dies (Metal-working)&quot;],&quot;Primary&quot;:&quot;53064.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lucas, Chester L.&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;53064&quot;});" class='title'>Die Casting:<br><span class='subtitle'>Dies—Machines—Methods</span></a>
+<div class='author'>Lucas, Chester L.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53318, {&quot;Title&quot;:&quot;Jacquard Weaving and Designing&quot;,&quot;Topics&quot;:[&quot;Decoration and ornament&quot;,&quot;Weaving&quot;,&quot;Jacquard weaving&quot;],&quot;Primary&quot;:&quot;53318.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bell, T. F.&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;53318&quot;});" class='title'>Jacquard Weaving and Designing</a>
+<div class='author'>Bell, T. F.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53656, {&quot;Title&quot;:&quot;How To Get the Most Out of Your Victrola&quot;,&quot;Topics&quot;:[&quot;Music appreciation&quot;,&quot;Phonograph -- Catalogs&quot;,&quot;Sound recordings -- United States -- Catalogs&quot;],&quot;Primary&quot;:&quot;53656.htm&quot;,&quot;CreatorNames&quot;:[&quot;Victor Talking Machine Company&quot;],&quot;LoCC&quot;:[&quot;MT&quot;,&quot;TS&quot;],&quot;PG_ID&quot;:&quot;53656&quot;});" class='title'>How To Get the Most Out of Your Victrola</a>
+<div class='author'>Victor Talking Machine Company</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54070, {&quot;Title&quot;:&quot;Il nuovo lume delle gioie - Opera utilissima ad&#39;ogni persona, così a orefici, e speciali, per l&#39;arte pratico.&quot;,&quot;Topics&quot;:[&quot;Gems&quot;],&quot;Primary&quot;:&quot;54070.htm&quot;,&quot;CreatorNames&quot;:[&quot;Caliari, Pietro&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;54070&quot;});" class='title'>Il nuovo lume delle gioie -<br><span class='subtitle'>Opera utilissima ad'ogni persona, così a orefici, e speciali, per l'arte pratico.</span></a>
+<div class='author'>Caliari, Pietro</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54090, {&quot;Title&quot;:&quot;Bamboo, Considered as a Paper-making Material - With remarks upon its cultivation and treatment. Supplemented by a consideration of the present position of the paper trade in relation to the supply of raw material.&quot;,&quot;Topics&quot;:[&quot;Papermaking&quot;,&quot;Bamboo&quot;,&quot;Bamboo-pulp industry&quot;],&quot;Primary&quot;:&quot;54090.htm&quot;,&quot;CreatorNames&quot;:[&quot;Routledge, Thomas, 1819-1887&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;54090&quot;});" class='title'>Bamboo, Considered as a Paper-making Material -<br><span class='subtitle'>With remarks upon its cultivation and treatment. Supplemented by a consideration of the present position of the paper trade in relation to the supply of raw material.</span></a>
+<div class='author'>Routledge, Thomas, 1819-1887</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54193, {&quot;Title&quot;:&quot;The Jacquard Machine Analyzed and Explained - With an appendix on the preparation of jacquard cards, and practical hints to learners of jacquard designing&quot;,&quot;Topics&quot;:[&quot;Jacquard weaving&quot;],&quot;Primary&quot;:&quot;54193.htm&quot;,&quot;CreatorNames&quot;:[&quot;Posselt, E. A. (Emanuel Anthony), 1858-1921&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;54193&quot;});" class='title'>The Jacquard Machine Analyzed and Explained -<br><span class='subtitle'>With an appendix on the preparation of jacquard cards, and practical hints to learners of jacquard designing</span></a>
+<div class='author'>Posselt, E. A. (Emanuel Anthony), 1858-1921</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54399, {&quot;Title&quot;:&quot;Gasoline and Oil Stoves, \&quot;\&quot;New Process\&quot;\&quot; and \&quot;\&quot;Standard.\&quot;\&quot; 1901&quot;,&quot;Topics&quot;:[&quot;Stoves -- Catalogs&quot;,&quot;Lamps -- Catalogs&quot;],&quot;Primary&quot;:&quot;54399.htm&quot;,&quot;CreatorNames&quot;:[&quot;Standard Lighting Company&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;54399&quot;});" class='title'>Gasoline and Oil Stoves, "New Process" and "Standard." 1901</a>
+<div class='author'>Standard Lighting Company</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54546, {&quot;Title&quot;:&quot;Time and Clocks: A Description of Ancient and Modern Methods of Measuring Time&quot;,&quot;Topics&quot;:[&quot;Clocks and watches&quot;,&quot;Time&quot;],&quot;Primary&quot;:&quot;54546.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cunynghame, Henry H. (Henry Hardinge), Sir, 1848-1935&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;54546&quot;});" class='title'>Time and Clocks:<br><span class='subtitle'>A Description of Ancient and Modern Methods of Measuring Time</span></a>
+<div class='author'>Cunynghame, Henry H. (Henry Hardinge), Sir, 1848-1935</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55474, {&quot;Title&quot;:&quot;A Manual of Shoemaking and Leather and Rubber Products&quot;,&quot;Topics&quot;:[&quot;Leather&quot;,&quot;Footwear industry&quot;],&quot;Primary&quot;:&quot;55474.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dooley, William H. (William Henry), 1880-&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;55474&quot;});" class='title'>A Manual of Shoemaking and Leather and Rubber Products</a>
+<div class='author'>Dooley, William H. (William Henry), 1880-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55757, {&quot;Title&quot;:&quot;The Art of Paper-Making - A Practical Handbook of the Manufacture of Paper from Rags, Esparto, Straw, and Other Fibrous Materials, Including the Manufacture of Pulp from Wood Fibre&quot;,&quot;Topics&quot;:[&quot;Papermaking&quot;],&quot;Primary&quot;:&quot;55757.htm&quot;,&quot;CreatorNames&quot;:[&quot;Watt, Alexander&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;55757&quot;});" class='title'>The Art of Paper-Making -<br><span class='subtitle'>A Practical Handbook of the Manufacture of Paper from Rags, Esparto, Straw, and Other Fibrous Materials, Including the Manufacture of Pulp from Wood Fibre</span></a>
+<div class='author'>Watt, Alexander</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55863, {&quot;Title&quot;:&quot;The Evolution of Modern Band Saw Mills for Sawing Logs&quot;,&quot;Topics&quot;:[&quot;Sawmills&quot;],&quot;Primary&quot;:&quot;55863.htm&quot;,&quot;CreatorNames&quot;:[&quot;Prescott, D. Clint&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;55863&quot;});" class='title'>The Evolution of Modern Band Saw Mills for Sawing Logs</a>
+<div class='author'>Prescott, D. Clint</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56103, {&quot;Title&quot;:&quot;Lloyd&#39;s Treatise on Hats, with Twenty-Four Engravings - Containing Novel Delineations of His Various Shapes, Shewing the Manner in Which They Should Be Worn...&quot;,&quot;Topics&quot;:[&quot;Hats&quot;],&quot;Primary&quot;:&quot;56103.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lloyd, Robert&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;56103&quot;});" class='title'>Lloyd's Treatise on Hats, with Twenty-Four Engravings -<br><span class='subtitle'>Containing Novel Delineations of His Various Shapes, Shewing the Manner in Which They Should Be Worn...</span></a>
+<div class='author'>Lloyd, Robert</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56336, {&quot;Title&quot;:&quot;The Automatic Toy Works - Manufacturers of the Best Novelties in Mechanical and Other Toys&quot;,&quot;Topics&quot;:[&quot;Toys -- Catalogs&quot;],&quot;Primary&quot;:&quot;56336.htm&quot;,&quot;CreatorNames&quot;:[&quot;Automatic Toy Works, New York&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;56336&quot;});" class='title'>The Automatic Toy Works -<br><span class='subtitle'>Manufacturers of the Best Novelties in Mechanical and Other Toys</span></a>
+<div class='author'>Automatic Toy Works, New York</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56601, {&quot;Title&quot;:&quot;A Text-book of Tanning - A treatise on the conversion of skins into leather, both practical and theoretical.&quot;,&quot;Topics&quot;:[&quot;Tanning&quot;],&quot;Primary&quot;:&quot;56601.htm&quot;,&quot;CreatorNames&quot;:[&quot;Procter, H. R. (Henry Richardson), 1848-1927&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;56601&quot;});" class='title'>A Text-book of Tanning -<br><span class='subtitle'>A treatise on the conversion of skins into leather, both practical and theoretical.</span></a>
+<div class='author'>Procter, H. R. (Henry Richardson), 1848-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56679, {&quot;Title&quot;:&quot;A Text-book of Paper-making&quot;,&quot;Topics&quot;:[&quot;Paper industry&quot;,&quot;Papermaking&quot;],&quot;Primary&quot;:&quot;56679.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bevan, E. J. (Edward John), 1856-1921&quot;,&quot;Cross, C. F. (Charles Frederick), 1855-1935&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;56679&quot;});" class='title'>A Text-book of Paper-making</a>
+<div class='author'>Bevan, E. J. (Edward John), 1856-1921, Cross, C. F. (Charles Frederick), 1855-1935</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56939, {&quot;Title&quot;:&quot;Making Tin Can Toys&quot;,&quot;Topics&quot;:[&quot;Toys&quot;],&quot;Primary&quot;:&quot;56939.htm&quot;,&quot;CreatorNames&quot;:[&quot;Thatcher, Edward&quot;,&quot;Thatcher, Isabel [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;56939&quot;});" class='title'>Making Tin Can Toys</a>
+<div class='author'>Thatcher, Edward, Thatcher, Isabel [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56978, {&quot;Title&quot;:&quot;The Book of the Feet: A History of Boots and Shoes&quot;,&quot;Topics&quot;:[&quot;Shoemakers&quot;,&quot;Footwear -- History&quot;],&quot;Primary&quot;:&quot;56978.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hall, Joseph Sparkes&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;56978&quot;});" class='title'>The Book of the Feet:<br><span class='subtitle'>A History of Boots and Shoes</span></a>
+<div class='author'>Hall, Joseph Sparkes</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57031, {&quot;Title&quot;:&quot;Cotton Weaving and Designing - 6th Edition&quot;,&quot;Topics&quot;:[&quot;Cotton weaving&quot;,&quot;Textile design&quot;],&quot;Primary&quot;:&quot;57031.htm&quot;,&quot;CreatorNames&quot;:[&quot;Taylor, John T.&quot;,&quot;Nisbet, Harry [Editor]&quot;,&quot;Wilkinson, Frederick [Editor]&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;57031&quot;});" class='title'>Cotton Weaving and Designing -<br><span class='subtitle'>6th Edition</span></a>
+<div class='author'>Taylor, John T., Nisbet, Harry [Editor], Wilkinson, Frederick [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57438, {&quot;Title&quot;:&quot;Glove Lore&quot;,&quot;Topics&quot;:[&quot;Gloves&quot;],&quot;Primary&quot;:&quot;57438.htm&quot;,&quot;CreatorNames&quot;:[&quot;Otis H. Kean &amp; Co. [Compiler]&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;57438&quot;});" class='title'>Glove Lore</a>
+<div class='author'>Otis H. Kean & Co. [Compiler]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57548, {&quot;Title&quot;:&quot;The Principles of Leather Manufacture&quot;,&quot;Topics&quot;:[&quot;Leather&quot;],&quot;Primary&quot;:&quot;57548.htm&quot;,&quot;CreatorNames&quot;:[&quot;Procter, H. R. (Henry Richardson), 1848-1927&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;57548&quot;});" class='title'>The Principles of Leather Manufacture</a>
+<div class='author'>Procter, H. R. (Henry Richardson), 1848-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57576, {&quot;Title&quot;:&quot;A Method of Tanning without Bark&quot;,&quot;Topics&quot;:[&quot;Tanning&quot;,&quot;Cinquefoils -- Industrial applications -- Early works to 1800&quot;,&quot;Tanning -- Ireland -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;57576.htm&quot;,&quot;CreatorNames&quot;:[&quot;Maple, William&quot;],&quot;LoCC&quot;:[&quot;HB&quot;,&quot;TS&quot;],&quot;PG_ID&quot;:&quot;57576&quot;});" class='title'>A Method of Tanning without Bark</a>
+<div class='author'>Maple, William</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57586, {&quot;Title&quot;:&quot;Modern Cotton Spinning Machinery, Its Principles and Construction&quot;,&quot;Topics&quot;:[&quot;Cotton spinning&quot;,&quot;Cotton machinery&quot;],&quot;Primary&quot;:&quot;57586.htm&quot;,&quot;CreatorNames&quot;:[&quot;Nasmith, Joseph, 1850-1904&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;57586&quot;});" class='title'>Modern Cotton Spinning Machinery, Its Principles and Construction</a>
+<div class='author'>Nasmith, Joseph, 1850-1904</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57681, {&quot;Title&quot;:&quot;Cotton Manufacturing&quot;,&quot;Topics&quot;:[&quot;Cotton manufacture&quot;,&quot;Cotton weaving&quot;,&quot;Cotton spinning&quot;],&quot;Primary&quot;:&quot;57681.htm&quot;,&quot;CreatorNames&quot;:[&quot;Brooks, Christopher Parkinson, 1866-1909&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;57681&quot;});" class='title'>Cotton Manufacturing</a>
+<div class='author'>Brooks, Christopher Parkinson, 1866-1909</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58036, {&quot;Title&quot;:&quot;The Miller in Eighteenth-Century Virginia - An Account of Mills &amp; the Craft of Milling, as Well as a Description of the Windmill near the Palace in Williamsburg&quot;,&quot;Topics&quot;:[&quot;Flour mills -- Virginia -- History&quot;],&quot;Primary&quot;:&quot;58036.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ford, Thomas K.&quot;,&quot;Sheely, Horace J. [Contributor]&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;58036&quot;});" class='title'>The Miller in Eighteenth-Century Virginia -<br><span class='subtitle'>An Account of Mills & the Craft of Milling, as Well as a Description of the Windmill near the Palace in Williamsburg</span></a>
+<div class='author'>Ford, Thomas K., Sheely, Horace J. [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58040, {&quot;Title&quot;:&quot;Southern Derringers of the Mississippi Valley&quot;,&quot;Topics&quot;:[&quot;Pistols -- Mississippi River Valley&quot;,&quot;Firearms industry and trade -- Mississippi River Valley&quot;],&quot;Primary&quot;:&quot;58040.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kirkland, Turner&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;58040&quot;});" class='title'>Southern Derringers of the Mississippi Valley</a>
+<div class='author'>Kirkland, Turner</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58066, {&quot;Title&quot;:&quot;The Silversmith in Eighteenth-Century Williamsburg - An Account of His Life &amp; Times, &amp; of His Craft&quot;,&quot;Topics&quot;:[&quot;Silverwork, Colonial -- Virginia&quot;],&quot;Primary&quot;:&quot;58066.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ford, Thomas K.&quot;,&quot;Bullock, Thomas K. [Contributor]&quot;],&quot;LoCC&quot;:[&quot;TS&quot;,&quot;NK&quot;],&quot;PG_ID&quot;:&quot;58066&quot;});" class='title'>The Silversmith in Eighteenth-Century Williamsburg -<br><span class='subtitle'>An Account of His Life & Times, & of His Craft</span></a>
+<div class='author'>Ford, Thomas K., Bullock, Thomas K. [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58168, {&quot;Title&quot;:&quot;The Puering, Bating &amp; Drenching of Skins&quot;,&quot;Topics&quot;:[&quot;Leather&quot;],&quot;Primary&quot;:&quot;58168.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wood, Joseph Turney, 1865-1924&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;58168&quot;});" class='title'>The Puering, Bating & Drenching of Skins</a>
+<div class='author'>Wood, Joseph Turney, 1865-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58319, {&quot;Title&quot;:&quot;The Story of Paper-making - An account of paper-making from its earliest known record down to the present time&quot;,&quot;Topics&quot;:[&quot;Papermaking&quot;],&quot;Primary&quot;:&quot;58319.htm&quot;,&quot;CreatorNames&quot;:[&quot;Butler, Frank O.&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;58319&quot;});" class='title'>The Story of Paper-making -<br><span class='subtitle'>An account of paper-making from its earliest known record down to the present time</span></a>
+<div class='author'>Butler, Frank O.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58469, {&quot;Title&quot;:&quot;Carpets&quot;,&quot;Topics&quot;:[&quot;Carpets&quot;],&quot;Primary&quot;:&quot;58469.htm&quot;,&quot;CreatorNames&quot;:[&quot;Brinton, R. S. (Reginald Seymour), 1870?-1942&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;58469&quot;});" class='title'>Carpets</a>
+<div class='author'>Brinton, R. S. (Reginald Seymour), 1870?-1942</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58495, {&quot;Title&quot;:&quot;Secrets of meat curing and sausage making - how to cure hams, shoulders, bacon, corned beef, etc., and how to make all kinds of sausage, etc. to comply with the pure food laws&quot;,&quot;Topics&quot;:[&quot;Meat industry and trade&quot;,&quot;Sausages&quot;],&quot;Primary&quot;:&quot;58495.htm&quot;,&quot;CreatorNames&quot;:[&quot;B. Heller &amp; Co.&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;58495&quot;});" class='title'>Secrets of meat curing and sausage making -<br><span class='subtitle'>how to cure hams, shoulders, bacon, corned beef, etc., and how to make all kinds of sausage, etc. to comply with the pure food laws</span></a>
+<div class='author'>B. Heller & Co.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58605, {&quot;Title&quot;:&quot;The Boot and Shoe Manufacturers&#39; Assistant and Guide. - Containing a Brief History of the Trade. History of India-rubber and Gutta-percha, and Their Application to the Manufacture of Boots and Shoes. Full Instructions in the Art, With Diagrams and Scales, Etc., Etc. Vulcanization and Sulphurization, English and American Patents. With an Elaborate Treatise on Tanning.&quot;,&quot;Topics&quot;:[&quot;Rubber&quot;,&quot;Tanning&quot;,&quot;Footwear industry&quot;,&quot;Gutta-percha&quot;],&quot;Primary&quot;:&quot;58605.htm&quot;,&quot;CreatorNames&quot;:[&quot;Richardson, William H., of Boston [Editor]&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;58605&quot;});" class='title'>The Boot and Shoe Manufacturers' Assistant and Guide. -<br><span class='subtitle'>Containing a Brief History of the Trade. History of India-rubber and Gutta-percha, and Their Application to the Manufacture of Boots and Shoes. Full Instructions in the Art, With Diagrams and Scales, Etc., Etc. Vulcanization and Sulphurization, English and American Patents. With an Elaborate Treatise on Tanning.</span></a>
+<div class='author'>Richardson, William H., of Boston [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58950, {&quot;Title&quot;:&quot;The Tale of the Spinning Wheel&quot;,&quot;Topics&quot;:[&quot;Spinning&quot;],&quot;Primary&quot;:&quot;58950.htm&quot;,&quot;CreatorNames&quot;:[&quot;Buel, Elizabeth C. Barney (Elizabeth Cynthia Barney), 1868-1943&quot;,&quot;Vanderpoel, Emily Noyes, 1842-1939 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;58950&quot;});" class='title'>The Tale of the Spinning Wheel</a>
+<div class='author'>Buel, Elizabeth C. Barney (Elizabeth Cynthia Barney), 1868-1943, Vanderpoel, Emily Noyes, 1842-1939 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59863, {&quot;Title&quot;:&quot;Butchers&#39;, Packers&#39; and Sausage Makers&#39; Red Book&quot;,&quot;Topics&quot;:[&quot;Meat industry and trade&quot;,&quot;Sausages&quot;],&quot;Primary&quot;:&quot;59863.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sayer, George Jacob, 1864-&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;59863&quot;});" class='title'>Butchers', Packers' and Sausage Makers' Red Book</a>
+<div class='author'>Sayer, George Jacob, 1864-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60015, {&quot;Title&quot;:&quot;Textile Fabrics&quot;,&quot;Topics&quot;:[&quot;Textile fabrics&quot;],&quot;Primary&quot;:&quot;60015.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rock, Daniel, 1799-1871&quot;,&quot;Maskell, William, 1814?-1890 [Editor]&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;60015&quot;});" class='title'>Textile Fabrics</a>
+<div class='author'>Rock, Daniel, 1799-1871, Maskell, William, 1814?-1890 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60206, {&quot;Title&quot;:&quot;Papierprüfung: Eine Anleitung zum Untersuchen von Papier&quot;,&quot;Topics&quot;:[&quot;Paper -- Testing&quot;],&quot;Primary&quot;:&quot;60206.htm&quot;,&quot;CreatorNames&quot;:[&quot;Herzberg, Wilhelm, 1861-1945&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;60206&quot;});" class='title'>Papierprüfung:<br><span class='subtitle'>Eine Anleitung zum Untersuchen von Papier</span></a>
+<div class='author'>Herzberg, Wilhelm, 1861-1945</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60512, {&quot;Title&quot;:&quot;A Hand-book of Precious Stones&quot;,&quot;Topics&quot;:[&quot;Precious stones&quot;],&quot;Primary&quot;:&quot;60512.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rothschild, Meyer D.&quot;],&quot;LoCC&quot;:[&quot;QE&quot;,&quot;TS&quot;],&quot;PG_ID&quot;:&quot;60512&quot;});" class='title'>A Hand-book of Precious Stones</a>
+<div class='author'>Rothschild, Meyer D.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61494, {&quot;Title&quot;:&quot;The Modern Clock - A Study of Time Keeping Mechanism; Its Construction, Regulation and Repair&quot;,&quot;Topics&quot;:[&quot;Clocks and watches&quot;,&quot;Clocks and watches -- Repairing&quot;],&quot;Primary&quot;:&quot;61494.htm&quot;,&quot;CreatorNames&quot;:[&quot;Goodrich, Ward L.&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;61494&quot;});" class='title'>The Modern Clock -<br><span class='subtitle'>A Study of Time Keeping Mechanism; Its Construction, Regulation and Repair</span></a>
+<div class='author'>Goodrich, Ward L.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61985, {&quot;Title&quot;:&quot;Harrods for Everything&quot;,&quot;Topics&quot;:[&quot;Harrods Ltd. -- Catalogs&quot;,&quot;Manufactures -- Catalogs&quot;],&quot;Primary&quot;:&quot;61985.htm&quot;,&quot;CreatorNames&quot;:[&quot;Harrods Ltd.&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;61985&quot;});" class='title'>Harrods for Everything</a>
+<div class='author'>Harrods Ltd.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62603, {&quot;Title&quot;:&quot;How to Enamel - Being a Treatise on the Practical Enameling of Jewelry with Hard Enamels&quot;,&quot;Topics&quot;:[&quot;Enamel and enameling&quot;],&quot;Primary&quot;:&quot;62603.htm&quot;,&quot;CreatorNames&quot;:[&quot;Chapin, Howard M., 1887-1940&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;62603&quot;});" class='title'>How to Enamel -<br><span class='subtitle'>Being a Treatise on the Practical Enameling of Jewelry with Hard Enamels</span></a>
+<div class='author'>Chapin, Howard M., 1887-1940</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63128, {&quot;Title&quot;:&quot;Rudimentary Treatise on the Construction of Locks&quot;,&quot;Topics&quot;:[&quot;Locks and keys&quot;],&quot;Primary&quot;:&quot;63128.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dodd, George, 1808-1881&quot;,&quot;Hobbs, A. C., 1812-1891&quot;,&quot;Tomlinson, Charles, 1808-1897 [Editor]&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;63128&quot;});" class='title'>Rudimentary Treatise on the Construction of Locks</a>
+<div class='author'>Dodd, George, 1808-1881, Hobbs, A. C., 1812-1891, Tomlinson, Charles, 1808-1897 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63623, {&quot;Title&quot;:&quot;The Pearl, its story, its charm, and its value&quot;,&quot;Topics&quot;:[&quot;Pearls&quot;],&quot;Primary&quot;:&quot;63623.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cattelle, Wallis Richard, 1848-1912&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;63623&quot;});" class='title'>The Pearl, its story, its charm, and its value</a>
+<div class='author'>Cattelle, Wallis Richard, 1848-1912</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64212, {&quot;Title&quot;:&quot;How Paper Boxes Are Made - A practical and instructive book telling how the beginner may manufacture all kinds of paper boxes, with special chapters on the printing department for paper box plants, embossing, gold-leafing, label work, etc.&quot;,&quot;Topics&quot;:[&quot;Paper box industry&quot;],&quot;Primary&quot;:&quot;64212.htm&quot;,&quot;CreatorNames&quot;:[&quot;Salade, Robert F., 1880-&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;64212&quot;});" class='title'>How Paper Boxes Are Made -<br><span class='subtitle'>A practical and instructive book telling how the beginner may manufacture all kinds of paper boxes, with special chapters on the printing department for paper box plants, embossing, gold-leafing, label work, etc.</span></a>
+<div class='author'>Salade, Robert F., 1880-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6464, {&quot;Title&quot;:&quot;Shop Management&quot;,&quot;Topics&quot;:[&quot;Factory management&quot;,&quot;Machine shops&quot;,&quot;Workshops&quot;],&quot;Primary&quot;:&quot;6464.txt&quot;,&quot;CreatorNames&quot;:[&quot;Taylor, Frederick Winslow, 1856-1915&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;6464&quot;});" class='title'>Shop Management</a>
+<div class='author'>Taylor, Frederick Winslow, 1856-1915</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65623, {&quot;Title&quot;:&quot;A Short Treatise on Boots and Shoes, Ancient and Modern&quot;,&quot;Topics&quot;:[&quot;Footwear -- History&quot;],&quot;Primary&quot;:&quot;65623.htm&quot;,&quot;CreatorNames&quot;:[&quot;Goater, Walter H.&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;65623&quot;});" class='title'>A Short Treatise on Boots and Shoes, Ancient and Modern</a>
+<div class='author'>Goater, Walter H.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65624, {&quot;Title&quot;:&quot;A Short Treatise on Head Wear, Ancient and Modern&quot;,&quot;Topics&quot;:[&quot;Hats -- History&quot;],&quot;Primary&quot;:&quot;65624.htm&quot;,&quot;CreatorNames&quot;:[&quot;Goater, Anne C.&quot;,&quot;Goater, Walter H. [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;65624&quot;});" class='title'>A Short Treatise on Head Wear, Ancient and Modern</a>
+<div class='author'>Goater, Anne C., Goater, Walter H. [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65967, {&quot;Title&quot;:&quot;The History of Silk, Cotton, Linen, Wool, and Other Fibrous Substances; - Including Observations on Spinning, Dyeing, and Weaving.&quot;,&quot;Topics&quot;:[&quot;History, Ancient&quot;,&quot;Textile fabrics -- History&quot;],&quot;Primary&quot;:&quot;65967.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gilroy, Clinton G.&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;65967&quot;});" class='title'>The History of Silk, Cotton, Linen, Wool, and Other Fibrous Substances;<br><span class='subtitle'>- Including Observations on Spinning, Dyeing, and Weaving.</span></a>
+<div class='author'>Gilroy, Clinton G.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66998, {&quot;Title&quot;:&quot;Rubber Hand Stamps and the Manipulation of Rubber - A practical treatise on the manufacture of India rubber hand stamps, small articles of India rubber, the hektograph, special inks, cements, and allied subjects&quot;,&quot;Topics&quot;:[&quot;Rubber&quot;,&quot;Hand stamps&quot;],&quot;Primary&quot;:&quot;66998.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sloane, T. O&#39;Conor (Thomas O&#39;Conor), 1851-1940&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;66998&quot;});" class='title'>Rubber Hand Stamps and the Manipulation of Rubber -<br><span class='subtitle'>A practical treatise on the manufacture of India rubber hand stamps, small articles of India rubber, the hektograph, special inks, cements, and allied subjects</span></a>
+<div class='author'>Sloane, T. O'Conor (Thomas O'Conor), 1851-1940</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67859, {&quot;Title&quot;:&quot;American Horological Journal, Vol. I, No. 1, July 1869: Devoted to Pratical Horology&quot;,&quot;Topics&quot;:[&quot;Clocks and watches -- Periodicals&quot;],&quot;Primary&quot;:&quot;67859.htm&quot;,&quot;CreatorNames&quot;:[&quot;Miller, George B. [Editor]&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;67859&quot;});" class='title'>American Horological Journal, Vol. I, No. 1, July 1869:<br><span class='subtitle'>Devoted to Pratical Horology</span></a>
+<div class='author'>Miller, George B. [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68282, {&quot;Title&quot;:&quot;Butchering and curing meats in China&quot;,&quot;Topics&quot;:[&quot;Meat -- Preservation&quot;,&quot;Slaughtering and slaughter-houses -- China&quot;],&quot;Primary&quot;:&quot;68282.htm&quot;,&quot;CreatorNames&quot;:[&quot;Levine, Carl Oscar&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;68282&quot;});" class='title'>Butchering and curing meats in China</a>
+<div class='author'>Levine, Carl Oscar</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68583, {&quot;Title&quot;:&quot;Elastic and non-elastic narrow fabrics - and a chapter on narrow fabrics made on knitting machines&quot;,&quot;Topics&quot;:[&quot;Textile fabrics&quot;,&quot;Weaving&quot;,&quot;Looms&quot;,&quot;Elastic fabrics&quot;,&quot;Rubber industry and trade&quot;],&quot;Primary&quot;:&quot;68583.htm&quot;,&quot;CreatorNames&quot;:[&quot;Brown, Samuel&quot;,&quot;Davis, William, M.A. [Contributor]&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;68583&quot;});" class='title'>Elastic and non-elastic narrow fabrics -<br><span class='subtitle'>and a chapter on narrow fabrics made on knitting machines</span></a>
+<div class='author'>Brown, Samuel, Davis, William, M.A. [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69560, {&quot;Title&quot;:&quot;Leisure hours among the gems&quot;,&quot;Topics&quot;:[&quot;Precious stones&quot;,&quot;Gems&quot;],&quot;Primary&quot;:&quot;69560.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hamlin, Augustus C. (Augustus Choate), 1829-1905&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;69560&quot;});" class='title'>Leisure hours among the gems</a>
+<div class='author'>Hamlin, Augustus C. (Augustus Choate), 1829-1905</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69909, {&quot;Title&quot;:&quot;Cork: Being the story of the origin of cork, the processes employed in its manufacture &amp; its various uses in the world to-day&quot;,&quot;Topics&quot;:[&quot;Cork&quot;],&quot;Primary&quot;:&quot;69909.htm&quot;,&quot;CreatorNames&quot;:[&quot;Armstrong Cork Company&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;69909&quot;});" class='title'>Cork:<br><span class='subtitle'>Being the story of the origin of cork, the processes employed in its manufacture & its various uses in the world to-day</span></a>
+<div class='author'>Armstrong Cork Company</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70169, {&quot;Title&quot;:&quot;Harness making&quot;,&quot;Topics&quot;:[&quot;Harnesses&quot;,&quot;Horses -- Equipment and supplies&quot;,&quot;Harness making and trade&quot;],&quot;Primary&quot;:&quot;70169.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hasluck, Paul N. (Paul Nooncree), 1854-1931 [Editor]&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;70169&quot;});" class='title'>Harness making</a>
+<div class='author'>Hasluck, Paul N. (Paul Nooncree), 1854-1931 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70333, {&quot;Title&quot;:&quot;Dress and care of the feet -&quot;,&quot;Topics&quot;:[&quot;Shoes&quot;,&quot;Foot&quot;,&quot;Foot -- Care and hygiene&quot;,&quot;Footwear&quot;,&quot;Boots&quot;],&quot;Primary&quot;:&quot;70333.htm&quot;,&quot;CreatorNames&quot;:[&quot;Peck, John Lord&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;70333&quot;});" class='title'>Dress and care of the feet -<br><span class='subtitle'></span></a>
+<div class='author'>Peck, John Lord</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70338, {&quot;Title&quot;:&quot;Paper &amp; paper making, ancient and modern&quot;,&quot;Topics&quot;:[&quot;Papermaking&quot;],&quot;Primary&quot;:&quot;70338.htm&quot;,&quot;CreatorNames&quot;:[&quot;Herring, Richard, 1829-&quot;,&quot;Croly, George, 1780-1860 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;70338&quot;});" class='title'>Paper & paper making, ancient and modern</a>
+<div class='author'>Herring, Richard, 1829-, Croly, George, 1780-1860 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7969, {&quot;Title&quot;:&quot;Oxy-Acetylene Welding and Cutting - Electric, Forge and Thermit Welding together with related methods and materials used in metal working and the oxygen process for removal of carbon&quot;,&quot;Topics&quot;:[&quot;Oxyacetylene welding and cutting&quot;],&quot;Primary&quot;:&quot;7969.htm&quot;,&quot;CreatorNames&quot;:[&quot;Manly, Harold P. (Harold Phillips), 1887-&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;7969&quot;});" class='title'>Oxy-Acetylene Welding and Cutting -<br><span class='subtitle'>Electric, Forge and Thermit Welding together with related methods and materials used in metal working and the oxygen process for removal of carbon</span></a>
+<div class='author'>Manly, Harold P. (Harold Phillips), 1887-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7981, {&quot;Title&quot;:&quot;Synthetic Tannins, Their Synthesis, Industrial Production and Application&quot;,&quot;Topics&quot;:[&quot;Tannins&quot;],&quot;Primary&quot;:&quot;7981.txt&quot;,&quot;CreatorNames&quot;:[&quot;Grasser, Georg, 1883-&quot;,&quot;Enna, Fini Georges Alexander [Translator]&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;7981&quot;});" class='title'>Synthetic Tannins, Their Synthesis, Industrial Production and Application</a>
+<div class='author'>Grasser, Georg, 1883-, Enna, Fini Georges Alexander [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(9954, {&quot;Title&quot;:&quot;The Story of the Invention of Steel Pens - With a Description of the Manufacturing Process by Which They Are Produced&quot;,&quot;Topics&quot;:[&quot;Pens&quot;],&quot;Primary&quot;:&quot;9954.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bore, Henry&quot;],&quot;LoCC&quot;:[&quot;TS&quot;],&quot;PG_ID&quot;:&quot;9954&quot;});" class='title'>The Story of the Invention of Steel Pens -<br><span class='subtitle'>With a Description of the Manufacturing Process by Which They Are Produced</span></a>
+<div class='author'>Bore, Henry</div>
+</div>
+</ul></div>
+</body></html>

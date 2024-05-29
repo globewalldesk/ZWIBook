@@ -1,0 +1,390 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Political theory (JC)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(10613, {&quot;Title&quot;:&quot;The Theory of Social Revolutions&quot;,&quot;Topics&quot;:[&quot;Revolutions&quot;,&quot;United States -- Politics and government&quot;,&quot;Courts -- United States&quot;],&quot;Primary&quot;:&quot;10613.htm&quot;,&quot;CreatorNames&quot;:[&quot;Adams, Brooks, 1848-1927&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;10613&quot;});" class='title'>The Theory of Social Revolutions</a>
+<div class='author'>Adams, Brooks, 1848-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(10827, {&quot;Title&quot;:&quot;Discourses on the First Decade of Titus Livius&quot;,&quot;Topics&quot;:[&quot;Political science -- Early works to 1800&quot;,&quot;Livy. Ab urbe condita&quot;,&quot;Rome -- Historiography&quot;],&quot;Primary&quot;:&quot;10827.htm&quot;,&quot;CreatorNames&quot;:[&quot;Machiavelli, Niccolò, 1469-1527&quot;,&quot;Thomson, Ninian Hill, 1830-1921 [Translator]&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;10827&quot;});" class='title'>Discourses on the First Decade of Titus Livius</a>
+<div class='author'>Machiavelli, Niccolò, 1469-1527, Thomson, Ninian Hill, 1830-1921 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(11136, {&quot;Title&quot;:&quot;A Discourse Upon the Origin and the Foundation of the Inequality Among Mankind&quot;,&quot;Topics&quot;:[&quot;Political science&quot;,&quot;Natural law&quot;,&quot;Equality&quot;],&quot;Primary&quot;:&quot;11136.txt&quot;,&quot;CreatorNames&quot;:[&quot;Rousseau, Jean-Jacques, 1712-1778&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;11136&quot;});" class='title'>A Discourse Upon the Origin and the Foundation of the Inequality Among Mankind</a>
+<div class='author'>Rousseau, Jean-Jacques, 1712-1778</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(1232, {&quot;Title&quot;:&quot;The Prince&quot;,&quot;Topics&quot;:[&quot;State, The -- Early works to 1800&quot;,&quot;Political science -- Philosophy -- Early works to 1800&quot;,&quot;Political ethics -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;1232.htm&quot;,&quot;CreatorNames&quot;:[&quot;Machiavelli, Niccolò, 1469-1527&quot;,&quot;Marriott, W. K. (William Kenaz), -1927 [Translator]&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;1232&quot;});" class='title'>The Prince</a>
+<div class='author'>Machiavelli, Niccolò, 1469-1527, Marriott, W. K. (William Kenaz), -1927 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13187, {&quot;Title&quot;:&quot;Dialogue aux enfers entre Machiavel et Montesquieu - ou la politique de Machiavel au XIXe Siècle par un contemporain&quot;,&quot;Topics&quot;:[&quot;Political ethics&quot;,&quot;France -- Politics and government -- 1852-1870&quot;],&quot;Primary&quot;:&quot;13187.htm&quot;,&quot;CreatorNames&quot;:[&quot;Joly, Maurice, 1831-1878&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;13187&quot;});" class='title'>Dialogue aux enfers entre Machiavel et Montesquieu -<br><span class='subtitle'>ou la politique de Machiavel au XIXe Siècle par un contemporain</span></a>
+<div class='author'>Joly, Maurice, 1831-1878</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14058, {&quot;Title&quot;:&quot;Readings on Fascism and National Socialism - Selected by members of the department of philosophy, University of Colorado&quot;,&quot;Topics&quot;:[&quot;Fascism&quot;,&quot;National socialism&quot;],&quot;Primary&quot;:&quot;14058.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;14058&quot;});" class='title'>Readings on Fascism and National Socialism -<br><span class='subtitle'>Selected by members of the department of philosophy, University of Colorado</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14660, {&quot;Title&quot;:&quot;Mabini&#39;s Decalogue for Filipinos&quot;,&quot;Topics&quot;:[&quot;Conduct of life&quot;,&quot;Mabini, Apolinario, 1864-1903&quot;,&quot;Patriotism&quot;],&quot;Primary&quot;:&quot;14660.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mabini, Apolinario, 1864-1903&quot;],&quot;LoCC&quot;:[&quot;DS&quot;,&quot;JC&quot;],&quot;PG_ID&quot;:&quot;14660&quot;});" class='title'>Mabini's Decalogue for Filipinos</a>
+<div class='author'>Mabini, Apolinario, 1864-1903</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(1497, {&quot;Title&quot;:&quot;The Republic&quot;,&quot;Topics&quot;:[&quot;Classical literature&quot;,&quot;Political science -- Early works to 1800&quot;,&quot;Utopias -- Early works to 1800&quot;,&quot;Justice -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;1497.htm&quot;,&quot;CreatorNames&quot;:[&quot;Plato, 427? BCE-347? BCE&quot;,&quot;Jowett, Benjamin, 1817-1893 [Translator]&quot;],&quot;LoCC&quot;:[&quot;JC&quot;,&quot;PA&quot;],&quot;PG_ID&quot;:&quot;1497&quot;});" class='title'>The Republic</a>
+<div class='author'>Plato, 427? BCE-347? BCE, Jowett, Benjamin, 1817-1893 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(150, {&quot;Title&quot;:&quot;The Republic&quot;,&quot;Topics&quot;:[&quot;Political science -- Early works to 1800&quot;,&quot;Utopias -- Early works to 1800&quot;,&quot;Justice -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;150.txt&quot;,&quot;CreatorNames&quot;:[&quot;Plato, 427? BCE-347? BCE&quot;,&quot;Jowett, Benjamin, 1817-1893 [Translator]&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;150&quot;});" class='title'>The Republic</a>
+<div class='author'>Plato, 427? BCE-347? BCE, Jowett, Benjamin, 1817-1893 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15772, {&quot;Title&quot;:&quot;Machiavelli, Volume I&quot;,&quot;Topics&quot;:[&quot;Florence (Italy) -- History&quot;,&quot;Military art and science -- Early works to 1800&quot;,&quot;Political science -- Early works to 1800&quot;,&quot;Political ethics&quot;,&quot;War -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;15772.htm&quot;,&quot;CreatorNames&quot;:[&quot;Machiavelli, Niccolò, 1469-1527&quot;,&quot;Cust, Henry John Cockayne, 1861-1917 [Author of introduction, etc.]&quot;,&quot;Dacres, Edward [Translator]&quot;,&quot;Whitehorne, Peter [Translator]&quot;],&quot;LoCC&quot;:[&quot;JC&quot;,&quot;U&quot;],&quot;PG_ID&quot;:&quot;15772&quot;});" class='title'>Machiavelli, Volume I</a>
+<div class='author'>Machiavelli, Niccolò, 1469-1527, Cust, Henry John Cockayne, 1861-1917 [Author of introduction, etc.], Dacres, Edward [Translator], Whitehorne, Peter [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(1738, {&quot;Title&quot;:&quot;Statesman&quot;,&quot;Topics&quot;:[&quot;Classical literature&quot;,&quot;Political science -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;1738.htm&quot;,&quot;CreatorNames&quot;:[&quot;Plato, 427? BCE-347? BCE&quot;,&quot;Jowett, Benjamin, 1817-1893 [Translator]&quot;],&quot;LoCC&quot;:[&quot;JC&quot;,&quot;PA&quot;],&quot;PG_ID&quot;:&quot;1738&quot;});" class='title'>Statesman</a>
+<div class='author'>Plato, 427? BCE-347? BCE, Jowett, Benjamin, 1817-1893 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(1750, {&quot;Title&quot;:&quot;Laws&quot;,&quot;Topics&quot;:[&quot;Political science -- Early works to 1800&quot;,&quot;State, The -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;1750.htm&quot;,&quot;CreatorNames&quot;:[&quot;Plato, 427? BCE-347? BCE&quot;,&quot;Jowett, Benjamin, 1817-1893 [Translator]&quot;],&quot;LoCC&quot;:[&quot;JC&quot;,&quot;PA&quot;],&quot;PG_ID&quot;:&quot;1750&quot;});" class='title'>Laws</a>
+<div class='author'>Plato, 427? BCE-347? BCE, Jowett, Benjamin, 1817-1893 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(21210, {&quot;Title&quot;:&quot;Thomas Davis, selections from his prose and poetry&quot;,&quot;Topics&quot;:[&quot;Poetry&quot;,&quot;Essays&quot;,&quot;Ireland -- Literary collections&quot;,&quot;Ireland -- History&quot;,&quot;Ireland -- History -- James II, 1685-1688&quot;,&quot;Ireland -- Parliament -- History&quot;],&quot;Primary&quot;:&quot;21210.htm&quot;,&quot;CreatorNames&quot;:[&quot;Davis, Thomas, 1814-1845&quot;,&quot;Rolleston, T. W. (Thomas William), 1857-1920 [Commentator]&quot;],&quot;LoCC&quot;:[&quot;DA&quot;,&quot;JC&quot;,&quot;PR&quot;],&quot;PG_ID&quot;:&quot;21210&quot;});" class='title'>Thomas Davis, selections from his prose and poetry</a>
+<div class='author'>Davis, Thomas, 1814-1845, Rolleston, T. W. (Thomas William), 1857-1920 [Commentator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24748, {&quot;Title&quot;:&quot;A Democracia - Estudo sobre o governo representativo&quot;,&quot;Topics&quot;:[&quot;Essays&quot;,&quot;Democracy&quot;],&quot;Primary&quot;:&quot;24748.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lima, Jaime de Magalhães, 1859-1936&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;24748&quot;});" class='title'>A Democracia -<br><span class='subtitle'>Estudo sobre o governo representativo</span></a>
+<div class='author'>Lima, Jaime de Magalhães, 1859-1936</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25690, {&quot;Title&quot;:&quot;O Federalismo&quot;,&quot;Topics&quot;:[&quot;Federal government&quot;],&quot;Primary&quot;:&quot;25690.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lima, S. de Magalhães (Sebastião de Magalhães), 1850-1928&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;25690&quot;});" class='title'>O Federalismo</a>
+<div class='author'>Lima, S. de Magalhães (Sebastião de Magalhães), 1850-1928</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26095, {&quot;Title&quot;:&quot;The Athenian Constitution&quot;,&quot;Topics&quot;:[&quot;Classical literature&quot;,&quot;Constitutional history -- Greece -- Athens -- To 146 B.C.&quot;,&quot;Athens (Greece) -- Politics and government -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;26095.htm&quot;,&quot;CreatorNames&quot;:[&quot;Aristotle, 384 BCE-322 BCE&quot;,&quot;Kenyon, Frederic G. (Frederic George), Sir, 1863-1952 [Translator]&quot;],&quot;LoCC&quot;:[&quot;JC&quot;,&quot;PA&quot;],&quot;PG_ID&quot;:&quot;26095&quot;});" class='title'>The Athenian Constitution</a>
+<div class='author'>Aristotle, 384 BCE-322 BCE, Kenyon, Frederic G. (Frederic George), Sir, 1863-1952 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27368, {&quot;Title&quot;:&quot;The Cult of Incompetence&quot;,&quot;Topics&quot;:[&quot;Democracy&quot;,&quot;France -- Politics and government&quot;,&quot;Mental efficiency&quot;],&quot;Primary&quot;:&quot;27368.htm&quot;,&quot;CreatorNames&quot;:[&quot;Faguet, Émile, 1847-1916&quot;,&quot;Barstow, Beatrice [Translator]&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;27368&quot;});" class='title'>The Cult of Incompetence</a>
+<div class='author'>Faguet, Émile, 1847-1916, Barstow, Beatrice [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27573, {&quot;Title&quot;:&quot;Esprit des lois - livres I à V, précédés d&#39;une introduction de l&#39;éditeur&quot;,&quot;Topics&quot;:[&quot;Political science&quot;,&quot;Law -- Philosophy&quot;,&quot;State, The&quot;,&quot;Jurisprudence&quot;],&quot;Primary&quot;:&quot;27573.htm&quot;,&quot;CreatorNames&quot;:[&quot;Montesquieu, Charles de Secondat, baron de, 1689-1755&quot;,&quot;Janet, Paul, 1823-1899 [Editor]&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;27573&quot;});" class='title'>Esprit des lois -<br><span class='subtitle'>livres I à V, précédés d'une introduction de l'éditeur</span></a>
+<div class='author'>Montesquieu, Charles de Secondat, baron de, 1689-1755, Janet, Paul, 1823-1899 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29815, {&quot;Title&quot;:&quot;The Declaration of the Rights of Man and of Citizens&quot;,&quot;Topics&quot;:[&quot;Constitutional history -- United States&quot;,&quot;Natural law&quot;,&quot;Constitutional history -- France&quot;],&quot;Primary&quot;:&quot;29815.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jellinek, Georg, 1851-1911&quot;,&quot;Farrand, Max, 1869-1945 [Translator]&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;29815&quot;});" class='title'>The Declaration of the Rights of Man and of Citizens</a>
+<div class='author'>Jellinek, Georg, 1851-1911, Farrand, Max, 1869-1945 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31270, {&quot;Title&quot;:&quot;The Writings of Thomas Paine, Complete - With Index to Volumes I - IV&quot;,&quot;Topics&quot;:[&quot;Political science&quot;],&quot;Primary&quot;:&quot;31270.htm&quot;,&quot;CreatorNames&quot;:[&quot;Paine, Thomas, 1737-1809&quot;,&quot;Conway, Moncure Daniel, 1832-1907 [Editor]&quot;,&quot;Widger, David, 1932-2021? [Editor]&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;31270&quot;});" class='title'>The Writings of Thomas Paine, Complete -<br><span class='subtitle'>With Index to Volumes I - IV</span></a>
+<div class='author'>Paine, Thomas, 1737-1809, Conway, Moncure Daniel, 1832-1907 [Editor], Widger, David, 1932-2021? [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31271, {&quot;Title&quot;:&quot;The Writings Of Thomas Paine, Volume III. - 1791-1804&quot;,&quot;Topics&quot;:[&quot;Political science&quot;],&quot;Primary&quot;:&quot;31271.htm&quot;,&quot;CreatorNames&quot;:[&quot;Paine, Thomas, 1737-1809&quot;,&quot;Conway, Moncure Daniel, 1832-1907 [Editor]&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;31271&quot;});" class='title'>The Writings Of Thomas Paine, Volume III. -<br><span class='subtitle'>1791-1804</span></a>
+<div class='author'>Paine, Thomas, 1737-1809, Conway, Moncure Daniel, 1832-1907 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3207, {&quot;Title&quot;:&quot;Leviathan&quot;,&quot;Topics&quot;:[&quot;Political science -- Early works to 1800&quot;,&quot;State, The -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;3207.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hobbes, Thomas, 1588-1679&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;3207&quot;});" class='title'>Leviathan</a>
+<div class='author'>Hobbes, Thomas, 1588-1679</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34649, {&quot;Title&quot;:&quot;The Right to Ignore the State&quot;,&quot;Topics&quot;:[&quot;Individualism&quot;,&quot;Anarchism&quot;,&quot;State, The&quot;],&quot;Primary&quot;:&quot;34649.htm&quot;,&quot;CreatorNames&quot;:[&quot;Spencer, Herbert, 1820-1903&quot;],&quot;LoCC&quot;:[&quot;HX&quot;,&quot;JC&quot;],&quot;PG_ID&quot;:&quot;34649&quot;});" class='title'>The Right to Ignore the State</a>
+<div class='author'>Spencer, Herbert, 1820-1903</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34896, {&quot;Title&quot;:&quot;Πολιτικός&quot;,&quot;Topics&quot;:[&quot;Political science -- Early works to 1800&quot;,&quot;Philosophy, Ancient&quot;],&quot;Primary&quot;:&quot;34896.txt&quot;,&quot;CreatorNames&quot;:[&quot;Plato, 427? BCE-347? BCE&quot;,&quot;Zambas, Kyriakos, 1866- [Translator]&quot;],&quot;LoCC&quot;:[&quot;B&quot;,&quot;JC&quot;],&quot;PG_ID&quot;:&quot;34896&quot;});" class='title'>Πολιτικός</a>
+<div class='author'>Plato, 427? BCE-347? BCE, Zambas, Kyriakos, 1866- [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34901, {&quot;Title&quot;:&quot;On Liberty&quot;,&quot;Topics&quot;:[&quot;Liberty&quot;],&quot;Primary&quot;:&quot;34901.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mill, John Stuart, 1806-1873&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;34901&quot;});" class='title'>On Liberty</a>
+<div class='author'>Mill, John Stuart, 1806-1873</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36088, {&quot;Title&quot;:&quot;Νόμοι και Επινομίς, Τόμος Α&quot;,&quot;Topics&quot;:[&quot;Political science -- Early works to 1800&quot;,&quot;State, The -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;36088.txt&quot;,&quot;CreatorNames&quot;:[&quot;Plato, 427? BCE-347? BCE&quot;,&quot;Zambas, Kyriakos, 1866- [Translator]&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;36088&quot;});" class='title'>Νόμοι και Επινομίς, Τόμος Α</a>
+<div class='author'>Plato, 427? BCE-347? BCE, Zambas, Kyriakos, 1866- [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36116, {&quot;Title&quot;:&quot;Νόμοι και Επινομίς, Τόμος B&quot;,&quot;Topics&quot;:[&quot;Political science -- Early works to 1800&quot;,&quot;State, The -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;36116.txt&quot;,&quot;CreatorNames&quot;:[&quot;Plato, 427? BCE-347? BCE&quot;,&quot;Zambas, Kyriakos, 1866- [Translator]&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;36116&quot;});" class='title'>Νόμοι και Επινομίς, Τόμος B</a>
+<div class='author'>Plato, 427? BCE-347? BCE, Zambas, Kyriakos, 1866- [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36191, {&quot;Title&quot;:&quot;Νόμοι και Επινομίς, Τόμος Γ&quot;,&quot;Topics&quot;:[&quot;Political science -- Early works to 1800&quot;,&quot;State, The -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;36191.txt&quot;,&quot;CreatorNames&quot;:[&quot;Plato, 427? BCE-347? BCE&quot;,&quot;Zambas, Kyriakos, 1866- [Translator]&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;36191&quot;});" class='title'>Νόμοι και Επινομίς, Τόμος Γ</a>
+<div class='author'>Plato, 427? BCE-347? BCE, Zambas, Kyriakos, 1866- [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36262, {&quot;Title&quot;:&quot;Νόμοι και Επινομίς, Τόμος Ε&quot;,&quot;Topics&quot;:[&quot;Political science -- Early works to 1800&quot;,&quot;State, The -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;36262.txt&quot;,&quot;CreatorNames&quot;:[&quot;Plato, 427? BCE-347? BCE&quot;,&quot;Zambas, Kyriakos, 1866- [Translator]&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;36262&quot;});" class='title'>Νόμοι και Επινομίς, Τόμος Ε</a>
+<div class='author'>Plato, 427? BCE-347? BCE, Zambas, Kyriakos, 1866- [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36284, {&quot;Title&quot;:&quot;Νόμοι και Επινομίς, Τόμος Δ&quot;,&quot;Topics&quot;:[&quot;Political science -- Early works to 1800&quot;,&quot;State, The -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;36284.txt&quot;,&quot;CreatorNames&quot;:[&quot;Plato, 427? BCE-347? BCE&quot;,&quot;Zambas, Kyriakos, 1866- [Translator]&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;36284&quot;});" class='title'>Νόμοι και Επινομίς, Τόμος Δ</a>
+<div class='author'>Plato, 427? BCE-347? BCE, Zambas, Kyriakos, 1866- [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3741, {&quot;Title&quot;:&quot;The Writings of Thomas Paine — Volume 1 (1774-1779): The American Crisis&quot;,&quot;Topics&quot;:[&quot;Political science&quot;,&quot;United States -- History -- Revolution, 1775-1783&quot;],&quot;Primary&quot;:&quot;3741.htm&quot;,&quot;CreatorNames&quot;:[&quot;Paine, Thomas, 1737-1809&quot;,&quot;Conway, Moncure Daniel, 1832-1907 [Editor]&quot;],&quot;LoCC&quot;:[&quot;E&quot;,&quot;JC&quot;],&quot;PG_ID&quot;:&quot;3741&quot;});" class='title'>The Writings of Thomas Paine — Volume 1 (1774-1779):<br><span class='subtitle'>The American Crisis</span></a>
+<div class='author'>Paine, Thomas, 1737-1809, Conway, Moncure Daniel, 1832-1907 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3742, {&quot;Title&quot;:&quot;The Writings of Thomas Paine — Volume 2 (1779-1792): The Rights of Man&quot;,&quot;Topics&quot;:[&quot;France -- History -- Revolution, 1789-1799 -- Causes&quot;,&quot;Political science&quot;,&quot;Great Britain -- Politics and government -- 1760-1820&quot;,&quot;Burke, Edmund, 1729-1797. Reflections on the revolution in France&quot;],&quot;Primary&quot;:&quot;3742.htm&quot;,&quot;CreatorNames&quot;:[&quot;Paine, Thomas, 1737-1809&quot;,&quot;Conway, Moncure Daniel, 1832-1907 [Editor]&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;3742&quot;});" class='title'>The Writings of Thomas Paine — Volume 2 (1779-1792):<br><span class='subtitle'>The Rights of Man</span></a>
+<div class='author'>Paine, Thomas, 1737-1809, Conway, Moncure Daniel, 1832-1907 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3743, {&quot;Title&quot;:&quot;The Writings of Thomas Paine — Volume 4 (1794-1796): The Age of Reason&quot;,&quot;Topics&quot;:[&quot;Philosophy and religion&quot;,&quot;Political science&quot;,&quot;Rationalism&quot;],&quot;Primary&quot;:&quot;3743.htm&quot;,&quot;CreatorNames&quot;:[&quot;Paine, Thomas, 1737-1809&quot;,&quot;Conway, Moncure Daniel, 1832-1907 [Editor]&quot;],&quot;LoCC&quot;:[&quot;BL&quot;,&quot;JC&quot;],&quot;PG_ID&quot;:&quot;3743&quot;});" class='title'>The Writings of Thomas Paine — Volume 4 (1794-1796):<br><span class='subtitle'>The Age of Reason</span></a>
+<div class='author'>Paine, Thomas, 1737-1809, Conway, Moncure Daniel, 1832-1907 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37701, {&quot;Title&quot;:&quot;The Life Of Thomas Paine, Vol. 1. (of 2) - With A History of His Literary, Political and Religious Career in America France, and England; to which is added a Sketch of Paine by William Cobbett&quot;,&quot;Topics&quot;:[&quot;Paine, Thomas, 1737-1809&quot;],&quot;Primary&quot;:&quot;37701.htm&quot;,&quot;CreatorNames&quot;:[&quot;Conway, Moncure Daniel, 1832-1907&quot;,&quot;Cobbett, William, 1763-1835 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;37701&quot;});" class='title'>The Life Of Thomas Paine, Vol. 1. (of 2) -<br><span class='subtitle'>With A History of His Literary, Political and Religious Career in America France, and England; to which is added a Sketch of Paine by William Cobbett</span></a>
+<div class='author'>Conway, Moncure Daniel, 1832-1907, Cobbett, William, 1763-1835 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37702, {&quot;Title&quot;:&quot;The Life Of Thomas Paine, Vol. 2. (of 2) - With A History of His Literary, Political and Religious Career in America France, and England&quot;,&quot;Topics&quot;:[&quot;Paine, Thomas, 1737-1809&quot;],&quot;Primary&quot;:&quot;37702.htm&quot;,&quot;CreatorNames&quot;:[&quot;Conway, Moncure Daniel, 1832-1907&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;37702&quot;});" class='title'>The Life Of Thomas Paine, Vol. 2. (of 2) -<br><span class='subtitle'>With A History of His Literary, Political and Religious Career in America France, and England</span></a>
+<div class='author'>Conway, Moncure Daniel, 1832-1907</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37704, {&quot;Title&quot;:&quot;An Oration on the Life and Services of Thomas Paine&quot;,&quot;Topics&quot;:[&quot;Paine, Thomas, 1737-1809&quot;],&quot;Primary&quot;:&quot;37704.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ingersoll, Robert Green, 1833-1899&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;37704&quot;});" class='title'>An Oration on the Life and Services of Thomas Paine</a>
+<div class='author'>Ingersoll, Robert Green, 1833-1899</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38101, {&quot;Title&quot;:&quot;Thomas Paine - From &#39;The Gods and Other Lectures&#39;&quot;,&quot;Topics&quot;:[&quot;Paine, Thomas, 1737-1809&quot;],&quot;Primary&quot;:&quot;38101.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ingersoll, Robert Green, 1833-1899&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;38101&quot;});" class='title'>Thomas Paine -<br><span class='subtitle'>From 'The Gods and Other Lectures'</span></a>
+<div class='author'>Ingersoll, Robert Green, 1833-1899</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38373, {&quot;Title&quot;:&quot;Liberty in the Nineteenth Century&quot;,&quot;Topics&quot;:[&quot;Social history&quot;,&quot;Liberty&quot;],&quot;Primary&quot;:&quot;38373.htm&quot;,&quot;CreatorNames&quot;:[&quot;Holland, Frederic May, 1836-1908&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;38373&quot;});" class='title'>Liberty in the Nineteenth Century</a>
+<div class='author'>Holland, Frederic May, 1836-1908</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39476, {&quot;Title&quot;:&quot;Πολιτεία, Τόμος 1&quot;,&quot;Topics&quot;:[&quot;Political science -- Early works to 1800&quot;,&quot;Utopias -- Early works to 1800&quot;,&quot;Justice -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;39476.htm&quot;,&quot;CreatorNames&quot;:[&quot;Plato, 427? BCE-347? BCE&quot;,&quot;Grypares, I. N. (Ioannes N.), 1870-1942 [Translator]&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;39476&quot;});" class='title'>Πολιτεία, Τόμος 1</a>
+<div class='author'>Plato, 427? BCE-347? BCE, Grypares, I. N. (Ioannes N.), 1870-1942 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39493, {&quot;Title&quot;:&quot;Πολιτεία, Τόμος 2&quot;,&quot;Topics&quot;:[&quot;Political science -- Early works to 1800&quot;,&quot;Utopias -- Early works to 1800&quot;,&quot;Justice -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;39493.htm&quot;,&quot;CreatorNames&quot;:[&quot;Plato, 427? BCE-347? BCE&quot;,&quot;Grypares, I. N. (Ioannes N.), 1870-1942 [Translator]&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;39493&quot;});" class='title'>Πολιτεία, Τόμος 2</a>
+<div class='author'>Plato, 427? BCE-347? BCE, Grypares, I. N. (Ioannes N.), 1870-1942 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39524, {&quot;Title&quot;:&quot;Πολιτεία, Τόμος 3&quot;,&quot;Topics&quot;:[&quot;Political science -- Early works to 1800&quot;,&quot;Utopias -- Early works to 1800&quot;,&quot;Justice -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;39524.htm&quot;,&quot;CreatorNames&quot;:[&quot;Plato, 427? BCE-347? BCE&quot;,&quot;Grypares, I. N. (Ioannes N.), 1870-1942 [Translator]&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;39524&quot;});" class='title'>Πολιτεία, Τόμος 3</a>
+<div class='author'>Plato, 427? BCE-347? BCE, Grypares, I. N. (Ioannes N.), 1870-1942 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39530, {&quot;Title&quot;:&quot;Πολιτεία, Τόμος 4&quot;,&quot;Topics&quot;:[&quot;Political science -- Early works to 1800&quot;,&quot;Utopias -- Early works to 1800&quot;,&quot;Justice -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;39530.htm&quot;,&quot;CreatorNames&quot;:[&quot;Plato, 427? BCE-347? BCE&quot;,&quot;Grypares, I. N. (Ioannes N.), 1870-1942 [Translator]&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;39530&quot;});" class='title'>Πολιτεία, Τόμος 4</a>
+<div class='author'>Plato, 427? BCE-347? BCE, Grypares, I. N. (Ioannes N.), 1870-1942 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39816, {&quot;Title&quot;:&quot;Macchiavellis Buch vom Fürsten&quot;,&quot;Topics&quot;:[&quot;State, The -- Early works to 1800&quot;,&quot;Political science -- Philosophy -- Early works to 1800&quot;,&quot;Political ethics -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;39816.htm&quot;,&quot;CreatorNames&quot;:[&quot;Machiavelli, Niccolò, 1469-1527&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;39816&quot;});" class='title'>Macchiavellis Buch vom Fürsten</a>
+<div class='author'>Machiavelli, Niccolò, 1469-1527</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39860, {&quot;Title&quot;:&quot;The Evolution of States&quot;,&quot;Topics&quot;:[&quot;Great Britain -- Politics and government&quot;,&quot;Europe -- Politics and government&quot;,&quot;Political science -- History&quot;],&quot;Primary&quot;:&quot;39860.htm&quot;,&quot;CreatorNames&quot;:[&quot;Robertson, J. M. (John Mackinnon), 1856-1933&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;39860&quot;});" class='title'>The Evolution of States</a>
+<div class='author'>Robertson, J. M. (John Mackinnon), 1856-1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39963, {&quot;Title&quot;:&quot;Αθηναίων Πολιτεία&quot;,&quot;Topics&quot;:[&quot;Constitutional history -- Greece -- Athens -- To 146 B.C.&quot;,&quot;Athens (Greece) -- Politics and government -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;39963.htm&quot;,&quot;CreatorNames&quot;:[&quot;Aristotle, 384 BCE-322 BCE&quot;,&quot;Zervos, I. (Ioannes), 1875-1944 [Translator]&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;39963&quot;});" class='title'>Αθηναίων Πολιτεία</a>
+<div class='author'>Aristotle, 384 BCE-322 BCE, Zervos, I. (Ioannes), 1875-1944 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40208, {&quot;Title&quot;:&quot;Life of Thomas Paine - Written Purposely to Bind with His Writings&quot;,&quot;Topics&quot;:[&quot;Paine, Thomas, 1737-1809&quot;],&quot;Primary&quot;:&quot;40208.htm&quot;,&quot;CreatorNames&quot;:[&quot;Carlile, Richard, 1790-1843&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;40208&quot;});" class='title'>Life of Thomas Paine -<br><span class='subtitle'>Written Purposely to Bind with His Writings</span></a>
+<div class='author'>Carlile, Richard, 1790-1843</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40210, {&quot;Title&quot;:&quot;Thomas Paine, the Apostle of Liberty - An Address Delivered in Chicago, January 29, 1916; Including the Testimony of Five Hundred Witnesses&quot;,&quot;Topics&quot;:[&quot;Paine, Thomas, 1737-1809&quot;],&quot;Primary&quot;:&quot;40210.htm&quot;,&quot;CreatorNames&quot;:[&quot;Remsburg, John E. (John Eleazer), 1848-1919&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;40210&quot;});" class='title'>Thomas Paine, the Apostle of Liberty -<br><span class='subtitle'>An Address Delivered in Chicago, January 29, 1916; Including the Testimony of Five Hundred Witnesses</span></a>
+<div class='author'>Remsburg, John E. (John Eleazer), 1848-1919</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40766, {&quot;Title&quot;:&quot;Nationalism&quot;,&quot;Topics&quot;:[&quot;Nationalism&quot;],&quot;Primary&quot;:&quot;40766.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tagore, Rabindranath, 1861-1941&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;40766&quot;});" class='title'>Nationalism</a>
+<div class='author'>Tagore, Rabindranath, 1861-1941</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40920, {&quot;Title&quot;:&quot;Nationalismus&quot;,&quot;Topics&quot;:[&quot;Nationalism&quot;,&quot;Nationalism -- India&quot;,&quot;Nationalism -- Japan&quot;],&quot;Primary&quot;:&quot;40920.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tagore, Rabindranath, 1861-1941&quot;,&quot;Meyer-Franck, Helene, 1873-1946 [Translator]&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;40920&quot;});" class='title'>Nationalismus</a>
+<div class='author'>Tagore, Rabindranath, 1861-1941, Meyer-Franck, Helene, 1873-1946 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4350, {&quot;Title&quot;:&quot;Physics and Politics, or, Thoughts on the application of the principles of \&quot;\&quot;natural selection\&quot;\&quot; and \&quot;\&quot;inheritance\&quot;\&quot; to political society&quot;,&quot;Topics&quot;:[&quot;Evolution&quot;,&quot;Political science&quot;,&quot;Nationalism&quot;],&quot;Primary&quot;:&quot;4350.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bagehot, Walter, 1826-1877&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;4350&quot;});" class='title'>Physics and Politics, or, Thoughts on the application of the principles of "natural selection" and "inheritance" to political society</a>
+<div class='author'>Bagehot, Walter, 1826-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45472, {&quot;Title&quot;:&quot;Ruhtinas&quot;,&quot;Topics&quot;:[&quot;State, The -- Early works to 1800&quot;,&quot;Political science -- Philosophy -- Early works to 1800&quot;,&quot;Political ethics -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;45472.txt&quot;,&quot;CreatorNames&quot;:[&quot;Machiavelli, Niccolò, 1469-1527&quot;,&quot;Kallio, O. A. (Oskar Albin), 1874-1940 [Translator]&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;45472&quot;});" class='title'>Ruhtinas</a>
+<div class='author'>Machiavelli, Niccolò, 1469-1527, Kallio, O. A. (Oskar Albin), 1874-1940 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45592, {&quot;Title&quot;:&quot;Reflections on the Rise and Fall of the Ancient Republicks - Adapted to the Present State of Great Britain&quot;,&quot;Topics&quot;:[&quot;Republics&quot;,&quot;History, Ancient -- Philosophy&quot;],&quot;Primary&quot;:&quot;45592.htm&quot;,&quot;CreatorNames&quot;:[&quot;Montagu, Edward Wortley, 1713-1776&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;45592&quot;});" class='title'>Reflections on the Rise and Fall of the Ancient Republicks -<br><span class='subtitle'>Adapted to the Present State of Great Britain</span></a>
+<div class='author'>Montagu, Edward Wortley, 1713-1776</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45950, {&quot;Title&quot;:&quot;Ancient Society - Or, Researches in the Lines of Human Progress from Savagery, through Barbarism to Civilization&quot;,&quot;Topics&quot;:[&quot;Sociology&quot;,&quot;Primitive societies&quot;,&quot;Civilization&quot;],&quot;Primary&quot;:&quot;45950.htm&quot;,&quot;CreatorNames&quot;:[&quot;Morgan, Lewis Henry, 1818-1881&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;45950&quot;});" class='title'>Ancient Society -<br><span class='subtitle'>Or, Researches in the Lines of Human Progress from Savagery, through Barbarism to Civilization</span></a>
+<div class='author'>Morgan, Lewis Henry, 1818-1881</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46333, {&quot;Title&quot;:&quot;The Social Contract &amp; Discourses&quot;,&quot;Topics&quot;:[&quot;Economics&quot;,&quot;Political science -- Early works to 1800&quot;,&quot;Social contract&quot;],&quot;Primary&quot;:&quot;46333.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rousseau, Jean-Jacques, 1712-1778&quot;,&quot;Cole, G. D. H. (George Douglas Howard), 1889-1959 [Translator]&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;46333&quot;});" class='title'>The Social Contract & Discourses</a>
+<div class='author'>Rousseau, Jean-Jacques, 1712-1778, Cole, G. D. H. (George Douglas Howard), 1889-1959 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46354, {&quot;Title&quot;:&quot;The English Village Community - Examined in its Relations to the Manorial and Tribal Systems and to the Common or Open Field System of Husbandry; An Essay in Economic History (Reprinted from the Fourth Edition)&quot;,&quot;Topics&quot;:[&quot;Village communities -- Great Britain&quot;],&quot;Primary&quot;:&quot;46354.htm&quot;,&quot;CreatorNames&quot;:[&quot;Seebohm, Frederic, 1833-1912&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;46354&quot;});" class='title'>The English Village Community -<br><span class='subtitle'>Examined in its Relations to the Manorial and Tribal Systems and to the Common or Open Field System of Husbandry; An Essay in Economic History (Reprinted from the Fourth Edition)</span></a>
+<div class='author'>Seebohm, Frederic, 1833-1912</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4776, {&quot;Title&quot;:&quot;Political Ideals&quot;,&quot;Topics&quot;:[&quot;Socialism&quot;,&quot;Political science&quot;,&quot;Economics&quot;,&quot;Individualism&quot;],&quot;Primary&quot;:&quot;4776.htm&quot;,&quot;CreatorNames&quot;:[&quot;Russell, Bertrand, 1872-1970&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;4776&quot;});" class='title'>Political Ideals</a>
+<div class='author'>Russell, Bertrand, 1872-1970</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49368, {&quot;Title&quot;:&quot;The Political Institutions of the Ancient Greeks&quot;,&quot;Topics&quot;:[&quot;Political science&quot;,&quot;Greece -- Politics and government&quot;],&quot;Primary&quot;:&quot;49368.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hammond, Basil Edward, 1842-1916&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;49368&quot;});" class='title'>The Political Institutions of the Ancient Greeks</a>
+<div class='author'>Hammond, Basil Edward, 1842-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50755, {&quot;Title&quot;:&quot;The Most Bitter Foe of Nations, and the Way to Its Permanent Overthrow&quot;,&quot;Topics&quot;:[&quot;Aristocracy (Social class)&quot;],&quot;Primary&quot;:&quot;50755.htm&quot;,&quot;CreatorNames&quot;:[&quot;White, Andrew Dickson, 1832-1918&quot;],&quot;LoCC&quot;:[&quot;HT&quot;,&quot;JC&quot;],&quot;PG_ID&quot;:&quot;50755&quot;});" class='title'>The Most Bitter Foe of Nations, and the Way to Its Permanent Overthrow</a>
+<div class='author'>White, Andrew Dickson, 1832-1918</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51543, {&quot;Title&quot;:&quot;Vapaudesta&quot;,&quot;Topics&quot;:[&quot;Liberty&quot;],&quot;Primary&quot;:&quot;51543.txt&quot;,&quot;CreatorNames&quot;:[&quot;Mill, John Stuart, 1806-1873&quot;,&quot;Liakka, Niilo, 1864-1945 [Translator]&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;51543&quot;});" class='title'>Vapaudesta</a>
+<div class='author'>Mill, John Stuart, 1806-1873, Liakka, Niilo, 1864-1945 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51544, {&quot;Title&quot;:&quot;The State: Its History and Development Viewed Sociologically&quot;,&quot;Topics&quot;:[&quot;State, The&quot;],&quot;Primary&quot;:&quot;51544.htm&quot;,&quot;CreatorNames&quot;:[&quot;Oppenheimer, Franz, 1864-1943&quot;,&quot;Gitterman, John M. (John Milton) [Translator]&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;51544&quot;});" class='title'>The State:<br><span class='subtitle'>Its History and Development Viewed Sociologically</span></a>
+<div class='author'>Oppenheimer, Franz, 1864-1943, Gitterman, John M. (John Milton) [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52758, {&quot;Title&quot;:&quot;Om Tanke- och Yttrandefrihet&quot;,&quot;Topics&quot;:[&quot;Freedom of speech&quot;],&quot;Primary&quot;:&quot;52758.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mill, John Stuart, 1806-1873&quot;,&quot;Öhrvall, Hjalmar, 1851-1929 [Translator]&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;52758&quot;});" class='title'>Om Tanke-<br><span class='subtitle'>och Yttrandefrihet</span></a>
+<div class='author'>Mill, John Stuart, 1806-1873, Öhrvall, Hjalmar, 1851-1929 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53593, {&quot;Title&quot;:&quot;Yhteiskuntasopimuksesta, eli, Valtio-oikeuden johtavat aatteet&quot;,&quot;Topics&quot;:[&quot;Political science&quot;,&quot;Social contract&quot;],&quot;Primary&quot;:&quot;53593.txt&quot;,&quot;CreatorNames&quot;:[&quot;Rousseau, Jean-Jacques, 1712-1778&quot;,&quot;Lehtonen, J. V., 1883-1948 [Translator]&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;53593&quot;});" class='title'>Yhteiskuntasopimuksesta, eli, Valtio-oikeuden johtavat aatteet</a>
+<div class='author'>Rousseau, Jean-Jacques, 1712-1778, Lehtonen, J. V., 1883-1948 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55201, {&quot;Title&quot;:&quot;The Republic of Plato&quot;,&quot;Topics&quot;:[&quot;Political science -- Early works to 1800&quot;,&quot;Utopias -- Early works to 1800&quot;,&quot;Justice -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;55201.htm&quot;,&quot;CreatorNames&quot;:[&quot;Plato, 427? BCE-347? BCE&quot;,&quot;Jowett, Benjamin, 1817-1893 [Translator]&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;55201&quot;});" class='title'>The Republic of Plato</a>
+<div class='author'>Plato, 427? BCE-347? BCE, Jowett, Benjamin, 1817-1893 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55610, {&quot;Title&quot;:&quot;Why Men Fight: A method of abolishing the international duel&quot;,&quot;Topics&quot;:[&quot;Social problems&quot;,&quot;Property&quot;,&quot;War&quot;,&quot;Liberty&quot;,&quot;State, The&quot;],&quot;Primary&quot;:&quot;55610.htm&quot;,&quot;CreatorNames&quot;:[&quot;Russell, Bertrand, 1872-1970&quot;],&quot;LoCC&quot;:[&quot;HN&quot;,&quot;JC&quot;,&quot;JX&quot;],&quot;PG_ID&quot;:&quot;55610&quot;});" class='title'>Why Men Fight:<br><span class='subtitle'>A method of abolishing the international duel</span></a>
+<div class='author'>Russell, Bertrand, 1872-1970</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5669, {&quot;Title&quot;:&quot;Considerations on Representative Government&quot;,&quot;Topics&quot;:[&quot;Representative government and representation&quot;],&quot;Primary&quot;:&quot;5669.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mill, John Stuart, 1806-1873&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;5669&quot;});" class='title'>Considerations on Representative Government</a>
+<div class='author'>Mill, John Stuart, 1806-1873</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57037, {&quot;Title&quot;:&quot;The Prince&quot;,&quot;Topics&quot;:[&quot;State, The -- Early works to 1800&quot;,&quot;Political science -- Philosophy -- Early works to 1800&quot;,&quot;Political ethics -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;57037.htm&quot;,&quot;CreatorNames&quot;:[&quot;Machiavelli, Niccolò, 1469-1527&quot;,&quot;Ricci, Luigi, 1842-1915 [Translator]&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;57037&quot;});" class='title'>The Prince</a>
+<div class='author'>Machiavelli, Niccolò, 1469-1527, Ricci, Luigi, 1842-1915 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58149, {&quot;Title&quot;:&quot;La séparation des Églises et de l&#39;État - Rapport fait au nom de la Commission de la Chambre des - Députés, suivi des pièces annexes&quot;,&quot;Topics&quot;:[&quot;Catholic Church -- France&quot;,&quot;Church and state -- France&quot;],&quot;Primary&quot;:&quot;58149.htm&quot;,&quot;CreatorNames&quot;:[&quot;Briand, Aristide, 1862-1932&quot;],&quot;LoCC&quot;:[&quot;BR&quot;,&quot;JC&quot;],&quot;PG_ID&quot;:&quot;58149&quot;});" class='title'>La séparation des Églises et de l'État -<br><span class='subtitle'>Rapport fait au nom de la Commission de la Chambre des - Députés, suivi des pièces annexes</span></a>
+<div class='author'>Briand, Aristide, 1862-1932</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61250, {&quot;Title&quot;:&quot;History of the Origin of Representative Government in Europe&quot;,&quot;Topics&quot;:[&quot;Europe -- History&quot;,&quot;Representative government and representation&quot;],&quot;Primary&quot;:&quot;61250.htm&quot;,&quot;CreatorNames&quot;:[&quot;Guizot, François, 1787-1874&quot;,&quot;Scoble, Andrew R. (Andrew Richard), Sir, 1831-1916 [Translator]&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;61250&quot;});" class='title'>History of the Origin of Representative Government in Europe</a>
+<div class='author'>Guizot, François, 1787-1874, Scoble, Andrew R. (Andrew Richard), Sir, 1831-1916 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61889, {&quot;Title&quot;:&quot;Lectures on the Principles of Political Obligation - Reprinted from Green&#39;s Philosophical Works, vol. II., with Preface by Bernard Bosanquet&quot;,&quot;Topics&quot;:[&quot;Liberty&quot;,&quot;Natural law&quot;,&quot;Political obligation&quot;],&quot;Primary&quot;:&quot;61889.txt&quot;,&quot;CreatorNames&quot;:[&quot;Green, Thomas Hill, 1836-1882&quot;,&quot;Bosanquet, Bernard, 1848-1923 [Author of introduction, etc.]&quot;,&quot;Nettleship, Richard Lewis, 1846-1892 [Editor]&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;61889&quot;});" class='title'>Lectures on the Principles of Political Obligation -<br><span class='subtitle'>Reprinted from Green's Philosophical Works, vol. II., with Preface by Bernard Bosanquet</span></a>
+<div class='author'>Green, Thomas Hill, 1836-1882, Bosanquet, Bernard, 1848-1923 [Author of introduction, etc.], Nettleship, Richard Lewis, 1846-1892 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62047, {&quot;Title&quot;:&quot;La libertà&quot;,&quot;Topics&quot;:[&quot;Liberty&quot;],&quot;Primary&quot;:&quot;62047.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mill, John Stuart, 1806-1873&quot;,&quot;Agnelli, Arnaldo, 1876-1921 [Translator]&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;62047&quot;});" class='title'>La libertà</a>
+<div class='author'>Mill, John Stuart, 1806-1873, Agnelli, Arnaldo, 1876-1921 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62051, {&quot;Title&quot;:&quot;Notice bio-bibliographique sur La Boëtie, suivie de La Servitude volontaire&quot;,&quot;Topics&quot;:[&quot;Political science -- Early works to 1800&quot;,&quot;Liberty&quot;,&quot;La Boétie, Estienne de, 1530-1563&quot;],&quot;Primary&quot;:&quot;62051.htm&quot;,&quot;CreatorNames&quot;:[&quot;La Boétie, Estienne de, 1530-1563&quot;,&quot;Payen, J.-F. (Jean-François), 1800-1870&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;62051&quot;});" class='title'>Notice bio-bibliographique sur La Boëtie, suivie de La Servitude volontaire</a>
+<div class='author'>La Boétie, Estienne de, 1530-1563, Payen, J.-F. (Jean-François), 1800-1870</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62757, {&quot;Title&quot;:&quot;A vindication of the rights of men, in a letter to the Right Honourable Edmund Burke; occasioned by his Reflections on the Revolution in France&quot;,&quot;Topics&quot;:[&quot;France -- History -- Revolution, 1789-1799 -- Causes&quot;,&quot;Liberty&quot;,&quot;Burke, Edmund, 1729-1797. Reflections on the revolution in France&quot;,&quot;Human rights&quot;],&quot;Primary&quot;:&quot;62757.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wollstonecraft, Mary, 1759-1797&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;62757&quot;});" class='title'>A vindication of the rights of men, in a letter to the Right Honourable Edmund Burke;<br><span class='subtitle'>occasioned by his Reflections on the Revolution in France</span></a>
+<div class='author'>Wollstonecraft, Mary, 1759-1797</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63249, {&quot;Title&quot;:&quot;The Philosophical Theory of the State&quot;,&quot;Topics&quot;:[&quot;State, The -- Philosophy&quot;,&quot;Political science -- Philosophy&quot;],&quot;Primary&quot;:&quot;63249.txt&quot;,&quot;CreatorNames&quot;:[&quot;Bosanquet, Bernard, 1848-1923&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;63249&quot;});" class='title'>The Philosophical Theory of the State</a>
+<div class='author'>Bosanquet, Bernard, 1848-1923</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63503, {&quot;Title&quot;:&quot;Greek Imperialism&quot;,&quot;Topics&quot;:[&quot;Greece -- History&quot;,&quot;Imperialism&quot;,&quot;Greece -- Politics and government&quot;],&quot;Primary&quot;:&quot;63503.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ferguson, William Scott, 1875-1954&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;63503&quot;});" class='title'>Greek Imperialism</a>
+<div class='author'>Ferguson, William Scott, 1875-1954</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66973, {&quot;Title&quot;:&quot;International Thought&quot;,&quot;Topics&quot;:[&quot;International cooperation&quot;],&quot;Primary&quot;:&quot;66973.htm&quot;,&quot;CreatorNames&quot;:[&quot;Galsworthy, John, 1867-1933&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;66973&quot;});" class='title'>International Thought</a>
+<div class='author'>Galsworthy, John, 1867-1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67599, {&quot;Title&quot;:&quot;A Critical Analysis of Patriotism As an Ethical Concept - A Dissertation Presented to the Faculty of the Graduate School of Yale University in Candidacy for the Degree of Doctor of Philosophy May 1, 1918&quot;,&quot;Topics&quot;:[&quot;Thesis (Ph. D.)&quot;,&quot;Patriotism&quot;],&quot;Primary&quot;:&quot;67599.htm&quot;,&quot;CreatorNames&quot;:[&quot;Reidenbach, Clarence&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;67599&quot;});" class='title'>A Critical Analysis of Patriotism As an Ethical Concept -<br><span class='subtitle'>A Dissertation Presented to the Faculty of the Graduate School of Yale University in Candidacy for the Degree of Doctor of Philosophy May 1, 1918</span></a>
+<div class='author'>Reidenbach, Clarence</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6762, {&quot;Title&quot;:&quot;Politics: A Treatise on Government&quot;,&quot;Topics&quot;:[&quot;Political science -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;6762.htm&quot;,&quot;CreatorNames&quot;:[&quot;Aristotle, 384 BCE-322 BCE&quot;,&quot;Ellis, William, 1730-1801 [Translator]&quot;],&quot;LoCC&quot;:[&quot;JC&quot;,&quot;PA&quot;],&quot;PG_ID&quot;:&quot;6762&quot;});" class='title'>Politics:<br><span class='subtitle'>A Treatise on Government</span></a>
+<div class='author'>Aristotle, 384 BCE-322 BCE, Ellis, William, 1730-1801 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68220, {&quot;Title&quot;:&quot;Compendio del derecho público romano&quot;,&quot;Topics&quot;:[&quot;Constitutional law -- Rome&quot;],&quot;Primary&quot;:&quot;68220.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mommsen, Theodor, 1817-1903&quot;,&quot;Dorado Montero, Pedro, 1861-1919 [Translator]&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;68220&quot;});" class='title'>Compendio del derecho público romano</a>
+<div class='author'>Mommsen, Theodor, 1817-1903, Dorado Montero, Pedro, 1861-1919 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68419, {&quot;Title&quot;:&quot;The Roman assemblies from their origin to the end of the Republic&quot;,&quot;Topics&quot;:[&quot;Rome -- Politics and government&quot;,&quot;Constitutional law -- Rome&quot;],&quot;Primary&quot;:&quot;68419.htm&quot;,&quot;CreatorNames&quot;:[&quot;Botsford, George Willis, 1862-1917&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;68419&quot;});" class='title'>The Roman assemblies from their origin to the end of the Republic</a>
+<div class='author'>Botsford, George Willis, 1862-1917</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68493, {&quot;Title&quot;:&quot;Promoting good citizenship&quot;,&quot;Topics&quot;:[&quot;Citizenship&quot;],&quot;Primary&quot;:&quot;68493.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bryce, James Bryce, Viscount, 1838-1922&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;68493&quot;});" class='title'>Promoting good citizenship</a>
+<div class='author'>Bryce, James Bryce, Viscount, 1838-1922</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69887, {&quot;Title&quot;:&quot;Considerations politiques sur les coups d&#39;estat&quot;,&quot;Topics&quot;:[&quot;Revolutions&quot;,&quot;Political science&quot;,&quot;Coups d&#39;état -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;69887.htm&quot;,&quot;CreatorNames&quot;:[&quot;Naudé, Gabriel, 1600-1653&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;69887&quot;});" class='title'>Considerations politiques sur les coups d'estat</a>
+<div class='author'>Naudé, Gabriel, 1600-1653</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70511, {&quot;Title&quot;:&quot;De republiek van Plato&quot;,&quot;Topics&quot;:[&quot;Political science -- Early works to 1800&quot;,&quot;Utopias -- Early works to 1800&quot;,&quot;Justice -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;70511.htm&quot;,&quot;CreatorNames&quot;:[&quot;Plato, 427? BCE-347? BCE&quot;,&quot;Burger, D. (Dionijs), 1820-1891 [Translator]&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;70511&quot;});" class='title'>De republiek van Plato</a>
+<div class='author'>Plato, 427? BCE-347? BCE, Burger, D. (Dionijs), 1820-1891 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7370, {&quot;Title&quot;:&quot;Second Treatise of Government&quot;,&quot;Topics&quot;:[&quot;Political science -- Early works to 1800&quot;,&quot;Toleration -- Early works to 1800&quot;,&quot;Liberty -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;7370.htm&quot;,&quot;CreatorNames&quot;:[&quot;Locke, John, 1632-1704&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;7370&quot;});" class='title'>Second Treatise of Government</a>
+<div class='author'>Locke, John, 1632-1704</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7383, {&quot;Title&quot;:&quot;商子&quot;,&quot;Topics&quot;:[&quot;China -- Politics and government -- To 221 B.C.&quot;,&quot;Shang, Yang, -338 B.C.&quot;,&quot;Political science -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;7383.txt&quot;,&quot;CreatorNames&quot;:[&quot;Shang, Yang, -338 BCE&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;7383&quot;});" class='title'>商子</a>
+<div class='author'>Shang, Yang, -338 BCE</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(8074, {&quot;Title&quot;:&quot;La Cité Antique - Étude sur Le Culte, Le Droit, Les Institutions de la Grèce et de Rome&quot;,&quot;Topics&quot;:[&quot;Cities and towns, Ancient&quot;,&quot;Greece -- Politics and government&quot;,&quot;Rome -- Politics and government&quot;,&quot;Civilization, Greco-Roman&quot;],&quot;Primary&quot;:&quot;8074.txt&quot;,&quot;CreatorNames&quot;:[&quot;Fustel de Coulanges, 1830-1889&quot;],&quot;LoCC&quot;:[&quot;JC&quot;],&quot;PG_ID&quot;:&quot;8074&quot;});" class='title'>La Cité Antique -<br><span class='subtitle'>Étude sur Le Culte, Le Droit, Les Institutions de la Grèce et de Rome</span></a>
+<div class='author'>Fustel de Coulanges, 1830-1889</div>
+</div>
+</ul></div>
+</body></html>

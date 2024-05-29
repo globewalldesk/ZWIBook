@@ -1,0 +1,338 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Finance (HG)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(11774, {&quot;Title&quot;:&quot;International Finance&quot;,&quot;Topics&quot;:[&quot;Finance&quot;,&quot;Debts, Public&quot;],&quot;Primary&quot;:&quot;11774.htm&quot;,&quot;CreatorNames&quot;:[&quot;Withers, Hartley, 1867-1950&quot;],&quot;LoCC&quot;:[&quot;HG&quot;],&quot;PG_ID&quot;:&quot;11774&quot;});" class='title'>International Finance</a>
+<div class='author'>Withers, Hartley, 1867-1950</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12784, {&quot;Title&quot;:&quot;The Prose Works of Jonathan Swift, D.D. — Volume 06 - The Drapier&#39;s Letters&quot;,&quot;Topics&quot;:[&quot;Wood, William, 1671-1730&quot;,&quot;Money -- Ireland -- History&quot;,&quot;Coinage -- Ireland&quot;],&quot;Primary&quot;:&quot;12784.htm&quot;,&quot;CreatorNames&quot;:[&quot;Swift, Jonathan, 1667-1745&quot;,&quot;Scott, Temple, 1864-1939 [Editor]&quot;],&quot;LoCC&quot;:[&quot;HG&quot;],&quot;PG_ID&quot;:&quot;12784&quot;});" class='title'>The Prose Works of Jonathan Swift, D.D. — Volume 06 -<br><span class='subtitle'>The Drapier's Letters</span></a>
+<div class='author'>Swift, Jonathan, 1667-1745, Scott, Temple, 1864-1939 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16320, {&quot;Title&quot;:&quot;If Not Silver, What?&quot;,&quot;Topics&quot;:[&quot;Silver question&quot;],&quot;Primary&quot;:&quot;16320.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bookwalter, John W. (John Wesley), 1837-1915&quot;],&quot;LoCC&quot;:[&quot;HG&quot;],&quot;PG_ID&quot;:&quot;16320&quot;});" class='title'>If Not Silver, What?</a>
+<div class='author'>Bookwalter, John W. (John Wesley), 1837-1915</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17374, {&quot;Title&quot;:&quot;Bank of the Manhattan Company, Chartered 1799: A Progressive Commercial Bank&quot;,&quot;Topics&quot;:[&quot;Bank of the Manhattan Company -- History&quot;,&quot;Banks and banking -- New York (State) -- New York -- History&quot;],&quot;Primary&quot;:&quot;17374.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;HG&quot;],&quot;PG_ID&quot;:&quot;17374&quot;});" class='title'>Bank of the Manhattan Company, Chartered 1799:<br><span class='subtitle'>A Progressive Commercial Bank</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(1903, {&quot;Title&quot;:&quot;Everybody&#39;s Guide to Money Matters - With a description of the various investments chiefly dealt in on the stock exchange, and the mode of dealing therein&quot;,&quot;Topics&quot;:[&quot;Money&quot;,&quot;Stock exchanges -- Great Britain&quot;,&quot;Investments -- Great Britain&quot;,&quot;Banks and banking -- Great Britain&quot;],&quot;Primary&quot;:&quot;1903.txt&quot;,&quot;CreatorNames&quot;:[&quot;Cotton, William, F.S.A., of Exeter&quot;],&quot;LoCC&quot;:[&quot;HG&quot;],&quot;PG_ID&quot;:&quot;1903&quot;});" class='title'>Everybody's Guide to Money Matters -<br><span class='subtitle'>With a description of the various investments chiefly dealt in on the stock exchange, and the mode of dealing therein</span></a>
+<div class='author'>Cotton, William, F.S.A., of Exeter</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24412, {&quot;Title&quot;:&quot;O credito agricola em Portugal&quot;,&quot;Topics&quot;:[&quot;Agricultural credit -- Portugal&quot;],&quot;Primary&quot;:&quot;24412.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lima, Jaime de Magalhães, 1859-1936&quot;],&quot;LoCC&quot;:[&quot;HG&quot;],&quot;PG_ID&quot;:&quot;24412&quot;});" class='title'>O credito agricola em Portugal</a>
+<div class='author'>Lima, Jaime de Magalhães, 1859-1936</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26330, {&quot;Title&quot;:&quot;Frenzied Finance, Vol. 1: The Crime of Amalgamated&quot;,&quot;Topics&quot;:[&quot;Speculation&quot;,&quot;Gas companies -- Massachusetts -- Boston&quot;,&quot;Standard Oil Company&quot;,&quot;Insurance -- United States&quot;,&quot;Amalgamated Copper Co.&quot;],&quot;Primary&quot;:&quot;26330.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lawson, Thomas William, 1857-1925&quot;],&quot;LoCC&quot;:[&quot;HG&quot;],&quot;PG_ID&quot;:&quot;26330&quot;});" class='title'>Frenzied Finance, Vol. 1:<br><span class='subtitle'>The Crime of Amalgamated</span></a>
+<div class='author'>Lawson, Thomas William, 1857-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26350, {&quot;Title&quot;:&quot;Le péril jaune&quot;,&quot;Topics&quot;:[&quot;Globalization&quot;],&quot;Primary&quot;:&quot;26350.htm&quot;,&quot;CreatorNames&quot;:[&quot;Novikov, Yakov Aleksandrovich, 1849-1912&quot;],&quot;LoCC&quot;:[&quot;DS&quot;,&quot;HG&quot;],&quot;PG_ID&quot;:&quot;26350&quot;});" class='title'>Le péril jaune</a>
+<div class='author'>Novikov, Yakov Aleksandrovich, 1849-1912</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26841, {&quot;Title&quot;:&quot;Successful Stock Speculation&quot;,&quot;Topics&quot;:[&quot;Speculation&quot;,&quot;Stocks&quot;],&quot;Primary&quot;:&quot;26841.htm&quot;,&quot;CreatorNames&quot;:[&quot;Butler, John James, 1867-&quot;],&quot;LoCC&quot;:[&quot;HG&quot;],&quot;PG_ID&quot;:&quot;26841&quot;});" class='title'>Successful Stock Speculation</a>
+<div class='author'>Butler, John James, 1867-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27957, {&quot;Title&quot;:&quot;Plain Facts&quot;,&quot;Topics&quot;:[&quot;Conduct of life&quot;,&quot;Finance, Personal&quot;],&quot;Primary&quot;:&quot;27957.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bauman, G. A.&quot;],&quot;LoCC&quot;:[&quot;HG&quot;],&quot;PG_ID&quot;:&quot;27957&quot;});" class='title'>Plain Facts</a>
+<div class='author'>Bauman, G. A.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28409, {&quot;Title&quot;:&quot;Facts and Fictions in the Securities Industry&quot;,&quot;Topics&quot;:[&quot;Securities industry&quot;],&quot;Primary&quot;:&quot;28409.txt&quot;,&quot;CreatorNames&quot;:[&quot;Vaknin, Samuel, 1961-&quot;,&quot;Rangelovska, Lidija [Editor]&quot;],&quot;LoCC&quot;:[&quot;HG&quot;],&quot;PG_ID&quot;:&quot;28409&quot;});" class='title'>Facts and Fictions in the Securities Industry</a>
+<div class='author'>Vaknin, Samuel, 1961-, Rangelovska, Lidija [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28525, {&quot;Title&quot;:&quot;Het Geld van Robinson Crusoe - Populaire uiteenzetting omtrent den oorsprong en het gebruik van geld als ruilmiddel&quot;,&quot;Topics&quot;:[&quot;Money&quot;,&quot;Currency question -- United States&quot;],&quot;Primary&quot;:&quot;28525.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wells, David Ames, 1828-1898&quot;],&quot;LoCC&quot;:[&quot;HG&quot;],&quot;PG_ID&quot;:&quot;28525&quot;});" class='title'>Het Geld van Robinson Crusoe -<br><span class='subtitle'>Populaire uiteenzetting omtrent den oorsprong en het gebruik van geld als ruilmiddel</span></a>
+<div class='author'>Wells, David Ames, 1828-1898</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29256, {&quot;Title&quot;:&quot;High Finance&quot;,&quot;Topics&quot;:[&quot;Capital&quot;,&quot;Capitalists and financiers -- United States&quot;],&quot;Primary&quot;:&quot;29256.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kahn, Otto H., 1867-1934&quot;],&quot;LoCC&quot;:[&quot;HG&quot;],&quot;PG_ID&quot;:&quot;29256&quot;});" class='title'>High Finance</a>
+<div class='author'>Kahn, Otto H., 1867-1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29364, {&quot;Title&quot;:&quot;Elements of Foreign Exchange: A Foreign Exchange Primer&quot;,&quot;Topics&quot;:[&quot;Foreign exchange&quot;],&quot;Primary&quot;:&quot;29364.htm&quot;,&quot;CreatorNames&quot;:[&quot;Escher, Franklin, 1881-1952&quot;],&quot;LoCC&quot;:[&quot;HG&quot;],&quot;PG_ID&quot;:&quot;29364&quot;});" class='title'>Elements of Foreign Exchange:<br><span class='subtitle'>A Foreign Exchange Primer</span></a>
+<div class='author'>Escher, Franklin, 1881-1952</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29379, {&quot;Title&quot;:&quot;The New York Stock Exchange and Public Opinion - Remarks at Annual Dinner, Association of Stock Exchange Brokers, Held at the Astor Hotel, New York, January 24, 1917&quot;,&quot;Topics&quot;:[&quot;New York Stock Exchange&quot;],&quot;Primary&quot;:&quot;29379.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kahn, Otto H., 1867-1934&quot;],&quot;LoCC&quot;:[&quot;HG&quot;],&quot;PG_ID&quot;:&quot;29379&quot;});" class='title'>The New York Stock Exchange and Public Opinion -<br><span class='subtitle'>Remarks at Annual Dinner, Association of Stock Exchange Brokers, Held at the Astor Hotel, New York, January 24, 1917</span></a>
+<div class='author'>Kahn, Otto H., 1867-1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29443, {&quot;Title&quot;:&quot;The New York Stock Exchange in the Crisis of 1914&quot;,&quot;Topics&quot;:[&quot;New York Stock Exchange&quot;],&quot;Primary&quot;:&quot;29443.htm&quot;,&quot;CreatorNames&quot;:[&quot;Noble, Henry George Stebbins, 1859-&quot;],&quot;LoCC&quot;:[&quot;HG&quot;],&quot;PG_ID&quot;:&quot;29443&quot;});" class='title'>The New York Stock Exchange in the Crisis of 1914</a>
+<div class='author'>Noble, Henry George Stebbins, 1859-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29499, {&quot;Title&quot;:&quot;The Paper Moneys of Europe: Their Moral and Economic Significance&quot;,&quot;Topics&quot;:[&quot;Paper money&quot;,&quot;Currency question&quot;],&quot;Primary&quot;:&quot;29499.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hirst, Francis W. (Francis Wrigley), 1873-1953&quot;],&quot;LoCC&quot;:[&quot;HG&quot;],&quot;PG_ID&quot;:&quot;29499&quot;});" class='title'>The Paper Moneys of Europe:<br><span class='subtitle'>Their Moral and Economic Significance</span></a>
+<div class='author'>Hirst, Francis W. (Francis Wrigley), 1873-1953</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32027, {&quot;Title&quot;:&quot;Banking&quot;,&quot;Topics&quot;:[&quot;Banks and banking&quot;],&quot;Primary&quot;:&quot;32027.htm&quot;,&quot;CreatorNames&quot;:[&quot;Scott, William Amasa, 1862-1944&quot;],&quot;LoCC&quot;:[&quot;HG&quot;],&quot;PG_ID&quot;:&quot;32027&quot;});" class='title'>Banking</a>
+<div class='author'>Scott, William Amasa, 1862-1944</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32807, {&quot;Title&quot;:&quot;Freehold Land Societies: Their History, Present Position, and Claims&quot;,&quot;Topics&quot;:[&quot;Savings and loan associations -- Great Britain&quot;],&quot;Primary&quot;:&quot;32807.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ritchie, J. Ewing (James Ewing), 1820-1898&quot;],&quot;LoCC&quot;:[&quot;DA&quot;,&quot;HG&quot;],&quot;PG_ID&quot;:&quot;32807&quot;});" class='title'>Freehold Land Societies:<br><span class='subtitle'>Their History, Present Position, and Claims</span></a>
+<div class='author'>Ritchie, J. Ewing (James Ewing), 1820-1898</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33331, {&quot;Title&quot;:&quot;An Example of Communal Currency: The facts about the Guernsey Market House&quot;,&quot;Topics&quot;:[&quot;Paper money -- Guernsey&quot;,&quot;Finance -- Guernsey&quot;],&quot;Primary&quot;:&quot;33331.htm&quot;,&quot;CreatorNames&quot;:[&quot;Harris, Joseph Theodore&quot;],&quot;LoCC&quot;:[&quot;HG&quot;],&quot;PG_ID&quot;:&quot;33331&quot;});" class='title'>An Example of Communal Currency:<br><span class='subtitle'>The facts about the Guernsey Market House</span></a>
+<div class='author'>Harris, Joseph Theodore</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34187, {&quot;Title&quot;:&quot;A New Banking System - The Needful Capital for Rebuilding the Burnt District&quot;,&quot;Topics&quot;:[&quot;Paper money&quot;,&quot;Banks and banking -- United States&quot;],&quot;Primary&quot;:&quot;34187.htm&quot;,&quot;CreatorNames&quot;:[&quot;Spooner, Lysander, 1808-1887&quot;],&quot;LoCC&quot;:[&quot;HG&quot;],&quot;PG_ID&quot;:&quot;34187&quot;});" class='title'>A New Banking System -<br><span class='subtitle'>The Needful Capital for Rebuilding the Burnt District</span></a>
+<div class='author'>Spooner, Lysander, 1808-1887</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34463, {&quot;Title&quot;:&quot;How to Invest Money&quot;,&quot;Topics&quot;:[&quot;Investments&quot;],&quot;Primary&quot;:&quot;34463.htm&quot;,&quot;CreatorNames&quot;:[&quot;Henry, George Garr, 1881-1917&quot;],&quot;LoCC&quot;:[&quot;HG&quot;],&quot;PG_ID&quot;:&quot;34463&quot;});" class='title'>How to Invest Money</a>
+<div class='author'>Henry, George Garr, 1881-1917</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34823, {&quot;Title&quot;:&quot;The Value of Money&quot;,&quot;Topics&quot;:[&quot;Money&quot;],&quot;Primary&quot;:&quot;34823.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anderson, Benjamin M. (Benjamin McAlester), 1886-1949&quot;],&quot;LoCC&quot;:[&quot;HG&quot;],&quot;PG_ID&quot;:&quot;34823&quot;});" class='title'>The Value of Money</a>
+<div class='author'>Anderson, Benjamin M. (Benjamin McAlester), 1886-1949</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35120, {&quot;Title&quot;:&quot;Readings in Money and Banking - Selected and Adapted&quot;,&quot;Topics&quot;:[&quot;Money&quot;,&quot;Banks and banking&quot;,&quot;Banks and banking -- United States&quot;],&quot;Primary&quot;:&quot;35120.htm&quot;,&quot;CreatorNames&quot;:[&quot;Phillips, Chester Arthur, 1882-1976&quot;],&quot;LoCC&quot;:[&quot;HG&quot;],&quot;PG_ID&quot;:&quot;35120&quot;});" class='title'>Readings in Money and Banking -<br><span class='subtitle'>Selected and Adapted</span></a>
+<div class='author'>Phillips, Chester Arthur, 1882-1976</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38050, {&quot;Title&quot;:&quot;All (Frightfully Unofficial) About an Old Friend of Mine - What He Most Probably Was. What He Most Certainly Will Be, and Who Has Done This? Why the Cat.&quot;,&quot;Topics&quot;:[&quot;Bank employees -- England -- London -- Humor&quot;],&quot;Primary&quot;:&quot;38050.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gash, Thomas C.&quot;],&quot;LoCC&quot;:[&quot;HG&quot;],&quot;PG_ID&quot;:&quot;38050&quot;});" class='title'>All (Frightfully Unofficial) About an Old Friend of Mine -<br><span class='subtitle'>What He Most Probably Was. What He Most Certainly Will Be, and Who Has Done This? Why the Cat.</span></a>
+<div class='author'>Gash, Thomas C.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38381, {&quot;Title&quot;:&quot;The History of Currency, 1252 to 1896&quot;,&quot;Topics&quot;:[&quot;Money -- History&quot;],&quot;Primary&quot;:&quot;38381.htm&quot;,&quot;CreatorNames&quot;:[&quot;Shaw, William Arthur, 1865-1943&quot;],&quot;LoCC&quot;:[&quot;HG&quot;],&quot;PG_ID&quot;:&quot;38381&quot;});" class='title'>The History of Currency, 1252 to 1896</a>
+<div class='author'>Shaw, William Arthur, 1865-1943</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39003, {&quot;Title&quot;:&quot;Money: Speech of Hon. John P. Jones, of Nevada, on the Free Coinage of Silver; in the United States Senate, May 12 and 13, 1890&quot;,&quot;Topics&quot;:[&quot;Silver question -- Speeches in Congress&quot;],&quot;Primary&quot;:&quot;39003.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jones, John P. (John Percival), 1829-1912&quot;],&quot;LoCC&quot;:[&quot;HG&quot;],&quot;PG_ID&quot;:&quot;39003&quot;});" class='title'>Money:<br><span class='subtitle'>Speech of Hon. John P. Jones, of Nevada, on the Free Coinage of Silver; in the United States Senate, May 12 and 13, 1890</span></a>
+<div class='author'>Jones, John P. (John Percival), 1829-1912</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40429, {&quot;Title&quot;:&quot;Robinson Crusoe&#39;s Money; - or, The Remarkable Financial Fortunes and Misfortunes of a Remote Island Community&quot;,&quot;Topics&quot;:[&quot;Money&quot;,&quot;Currency question -- United States&quot;],&quot;Primary&quot;:&quot;40429.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wells, David Ames, 1828-1898&quot;,&quot;Nast, Thomas, 1840-1902 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;HG&quot;],&quot;PG_ID&quot;:&quot;40429&quot;});" class='title'>Robinson Crusoe's Money;<br><span class='subtitle'>- or, The Remarkable Financial Fortunes and Misfortunes of a Remote Island Community</span></a>
+<div class='author'>Wells, David Ames, 1828-1898, Nast, Thomas, 1840-1902 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42583, {&quot;Title&quot;:&quot;A History of Banks for Savings in Great Britain and Ireland&quot;,&quot;Topics&quot;:[&quot;Savings banks -- Great Britain&quot;,&quot;Postal savings banks -- Great Britain&quot;],&quot;Primary&quot;:&quot;42583.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lewins, William&quot;],&quot;LoCC&quot;:[&quot;HG&quot;],&quot;PG_ID&quot;:&quot;42583&quot;});" class='title'>A History of Banks for Savings in Great Britain and Ireland</a>
+<div class='author'>Lewins, William</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4359, {&quot;Title&quot;:&quot;Lombard Street: A Description of the Money Market&quot;,&quot;Topics&quot;:[&quot;Finance -- Great Britain&quot;,&quot;Banks and banking -- Great Britain&quot;,&quot;Banks and banking -- England -- London&quot;,&quot;Finance -- England -- London&quot;],&quot;Primary&quot;:&quot;4359.txt&quot;,&quot;CreatorNames&quot;:[&quot;Bagehot, Walter, 1826-1877&quot;],&quot;LoCC&quot;:[&quot;HG&quot;],&quot;PG_ID&quot;:&quot;4359&quot;});" class='title'>Lombard Street:<br><span class='subtitle'>A Description of the Money Market</span></a>
+<div class='author'>Bagehot, Walter, 1826-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43663, {&quot;Title&quot;:&quot;A Simple Explanation of Modern Banking Customs&quot;,&quot;Topics&quot;:[&quot;Banks and banking&quot;],&quot;Primary&quot;:&quot;43663.htm&quot;,&quot;CreatorNames&quot;:[&quot;Robinson, Humphrey&quot;,&quot;Harris, Willis Overton, 1847-1911 [Editor]&quot;],&quot;LoCC&quot;:[&quot;HG&quot;],&quot;PG_ID&quot;:&quot;43663&quot;});" class='title'>A Simple Explanation of Modern Banking Customs</a>
+<div class='author'>Robinson, Humphrey, Harris, Willis Overton, 1847-1911 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44052, {&quot;Title&quot;:&quot;Profitable Stock Exchange Investments&quot;,&quot;Topics&quot;:[&quot;Speculation&quot;,&quot;Investments&quot;],&quot;Primary&quot;:&quot;44052.htm&quot;,&quot;CreatorNames&quot;:[&quot;Henry Voorce Brandenburg &amp; Co.&quot;],&quot;LoCC&quot;:[&quot;HG&quot;],&quot;PG_ID&quot;:&quot;44052&quot;});" class='title'>Profitable Stock Exchange Investments</a>
+<div class='author'>Henry Voorce Brandenburg & Co.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44274, {&quot;Title&quot;:&quot;My Adventures with Your Money&quot;,&quot;Topics&quot;:[&quot;Speculation&quot;,&quot;Mineral industries -- Finance&quot;],&quot;Primary&quot;:&quot;44274.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rice, George Graham&quot;],&quot;LoCC&quot;:[&quot;HG&quot;],&quot;PG_ID&quot;:&quot;44274&quot;});" class='title'>My Adventures with Your Money</a>
+<div class='author'>Rice, George Graham</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45066, {&quot;Title&quot;:&quot;Mrs. Leary&#39;s Cow: A Legend of Chicago&quot;,&quot;Topics&quot;:[&quot;Great Fire, Chicago, Ill., 1871 -- Poetry&quot;],&quot;Primary&quot;:&quot;45066.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hine, C. C. (Charles Cole), 1825-1897&quot;],&quot;LoCC&quot;:[&quot;HG&quot;,&quot;PS&quot;],&quot;PG_ID&quot;:&quot;45066&quot;});" class='title'>Mrs. Leary's Cow:<br><span class='subtitle'>A Legend of Chicago</span></a>
+<div class='author'>Hine, C. C. (Charles Cole), 1825-1897</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45824, {&quot;Title&quot;:&quot;Social Comptabilism - The Cheque and Clearing Service in the Austrian Postal Savings Bank. Proposed Law laid before the Chamber of Representatives of Belgium&quot;,&quot;Topics&quot;:[&quot;Postal savings banks&quot;,&quot;Postal savings banks -- Austria&quot;],&quot;Primary&quot;:&quot;45824.htm&quot;,&quot;CreatorNames&quot;:[&quot;Denis, Hector, 1842-1913&quot;,&quot;Solvay, Ernest, 1838-1922&quot;],&quot;LoCC&quot;:[&quot;HG&quot;],&quot;PG_ID&quot;:&quot;45824&quot;});" class='title'>Social Comptabilism -<br><span class='subtitle'>The Cheque and Clearing Service in the Austrian Postal Savings Bank. Proposed Law laid before the Chamber of Representatives of Belgium</span></a>
+<div class='author'>Denis, Hector, 1842-1913, Solvay, Ernest, 1838-1922</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46499, {&quot;Title&quot;:&quot;Honest Money&quot;,&quot;Topics&quot;:[&quot;Money&quot;,&quot;Paper money -- United States&quot;],&quot;Primary&quot;:&quot;46499.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fonda, Arthur Isaac&quot;],&quot;LoCC&quot;:[&quot;HG&quot;],&quot;PG_ID&quot;:&quot;46499&quot;});" class='title'>Honest Money</a>
+<div class='author'>Fonda, Arthur Isaac</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49166, {&quot;Title&quot;:&quot;Indian Currency and Finance&quot;,&quot;Topics&quot;:[&quot;Precious metals&quot;,&quot;Currency question -- India&quot;,&quot;Banks and banking -- India&quot;,&quot;Finance -- India&quot;],&quot;Primary&quot;:&quot;49166.htm&quot;,&quot;CreatorNames&quot;:[&quot;Keynes, John Maynard, 1883-1946&quot;],&quot;LoCC&quot;:[&quot;HG&quot;],&quot;PG_ID&quot;:&quot;49166&quot;});" class='title'>Indian Currency and Finance</a>
+<div class='author'>Keynes, John Maynard, 1883-1946</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50380, {&quot;Title&quot;:&quot;Annals, Anecdotes and Legends: A Chronicle of Life Assurance&quot;,&quot;Topics&quot;:[&quot;Life insurance&quot;],&quot;Primary&quot;:&quot;50380.htm&quot;,&quot;CreatorNames&quot;:[&quot;Francis, John, of the Bank of England&quot;],&quot;LoCC&quot;:[&quot;HG&quot;],&quot;PG_ID&quot;:&quot;50380&quot;});" class='title'>Annals, Anecdotes and Legends:<br><span class='subtitle'>A Chronicle of Life Assurance</span></a>
+<div class='author'>Francis, John, of the Bank of England</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50581, {&quot;Title&quot;:&quot;Remarks on the production of the precious metals - and on the demonetization of gold in several countries in Europe&quot;,&quot;Topics&quot;:[&quot;Precious metals&quot;,&quot;Precious metals -- Europe&quot;,&quot;Bimetallism&quot;],&quot;Primary&quot;:&quot;50581.htm&quot;,&quot;CreatorNames&quot;:[&quot;Faucher, Léon, 1803-1854&quot;,&quot;Hankey, Thomson, 1805-1893 [Translator]&quot;],&quot;LoCC&quot;:[&quot;HG&quot;],&quot;PG_ID&quot;:&quot;50581&quot;});" class='title'>Remarks on the production of the precious metals -<br><span class='subtitle'>and on the demonetization of gold in several countries in Europe</span></a>
+<div class='author'>Faucher, Léon, 1803-1854, Hankey, Thomson, 1805-1893 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51894, {&quot;Title&quot;:&quot;Federal Stamp Taxes on Drafts, Checks and Promissory Notes, 1919&quot;,&quot;Topics&quot;:[&quot;Stamp duties -- United States&quot;,&quot;Drafts&quot;,&quot;Checks&quot;,&quot;Promissory notes&quot;],&quot;Primary&quot;:&quot;51894.htm&quot;,&quot;CreatorNames&quot;:[&quot;Guaranty Trust Company of New York&quot;],&quot;LoCC&quot;:[&quot;HG&quot;],&quot;PG_ID&quot;:&quot;51894&quot;});" class='title'>Federal Stamp Taxes on Drafts, Checks and Promissory Notes, 1919</a>
+<div class='author'>Guaranty Trust Company of New York</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52460, {&quot;Title&quot;:&quot;Emerson on Sound Money - A Speech, 1896&quot;,&quot;Topics&quot;:[&quot;Currency question -- United States&quot;,&quot;Silver question&quot;],&quot;Primary&quot;:&quot;52460.htm&quot;,&quot;CreatorNames&quot;:[&quot;Emerson, Willis George, 1856-1918&quot;],&quot;LoCC&quot;:[&quot;HG&quot;],&quot;PG_ID&quot;:&quot;52460&quot;});" class='title'>Emerson on Sound Money -<br><span class='subtitle'>A Speech, 1896</span></a>
+<div class='author'>Emerson, Willis George, 1856-1918</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53907, {&quot;Title&quot;:&quot;The Universal Counterfeit and Altered Bank Note Detector, at Sight&quot;,&quot;Topics&quot;:[&quot;Counterfeits and counterfeiting&quot;,&quot;Bank notes&quot;],&quot;Primary&quot;:&quot;53907.htm&quot;,&quot;CreatorNames&quot;:[&quot;Foote, Henry C.&quot;],&quot;LoCC&quot;:[&quot;HG&quot;],&quot;PG_ID&quot;:&quot;53907&quot;});" class='title'>The Universal Counterfeit and Altered Bank Note Detector, at Sight</a>
+<div class='author'>Foote, Henry C.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54549, {&quot;Title&quot;:&quot;Betsy Gaskins (Dimicrat), Wife of Jobe Gaskins (Republican) - Or, Uncle Tom&#39;s Cabin Up to Date&quot;,&quot;Topics&quot;:[&quot;Money&quot;,&quot;Paper money -- United States&quot;,&quot;Interest&quot;,&quot;Gold&quot;,&quot;Populism&quot;],&quot;Primary&quot;:&quot;54549.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hood, W. I. (William I.)&quot;,&quot;Falls, C. B. (Charles Buckles), 1874-1960 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;HG&quot;,&quot;PS&quot;],&quot;PG_ID&quot;:&quot;54549&quot;});" class='title'>Betsy Gaskins (Dimicrat), Wife of Jobe Gaskins (Republican) -<br><span class='subtitle'>Or, Uncle Tom's Cabin Up to Date</span></a>
+<div class='author'>Hood, W. I. (William I.), Falls, C. B. (Charles Buckles), 1874-1960 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55099, {&quot;Title&quot;:&quot;The Federal Reserve Monster&quot;,&quot;Topics&quot;:[&quot;Federal Reserve banks&quot;],&quot;Primary&quot;:&quot;55099.htm&quot;,&quot;CreatorNames&quot;:[&quot;Campbell, Wallace [Editor]&quot;,&quot;Clark, Sam H. [Editor]&quot;],&quot;LoCC&quot;:[&quot;HG&quot;],&quot;PG_ID&quot;:&quot;55099&quot;});" class='title'>The Federal Reserve Monster</a>
+<div class='author'>Campbell, Wallace [Editor], Clark, Sam H. [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55120, {&quot;Title&quot;:&quot;The Paper Currency of England Dispassionately Considered - With Suggestions Towards a Practical Solution of the Difficulty&quot;,&quot;Topics&quot;:[&quot;Currency question -- Great Britain&quot;],&quot;Primary&quot;:&quot;55120.htm&quot;,&quot;CreatorNames&quot;:[&quot;Haslam, John (of Dublin)&quot;],&quot;LoCC&quot;:[&quot;HG&quot;],&quot;PG_ID&quot;:&quot;55120&quot;});" class='title'>The Paper Currency of England Dispassionately Considered -<br><span class='subtitle'>With Suggestions Towards a Practical Solution of the Difficulty</span></a>
+<div class='author'>Haslam, John (of Dublin)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55350, {&quot;Title&quot;:&quot;Counterfeit Money - The \&quot;\&quot;green goods\&quot;\&quot; business exposed for the benefit of all who have dishonest inclinations.&quot;,&quot;Topics&quot;:[&quot;Counterfeits and counterfeiting&quot;],&quot;Primary&quot;:&quot;55350.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;HG&quot;],&quot;PG_ID&quot;:&quot;55350&quot;});" class='title'>Counterfeit Money -<br><span class='subtitle'>The "green goods" business exposed for the benefit of all who have dishonest inclinations.</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57020, {&quot;Title&quot;:&quot;The Regulating Silver Coin, Made Practicable and Easie, to the Government and Subject&quot;,&quot;Topics&quot;:[&quot;Coinage -- Great Britain -- Early works to 1800&quot;,&quot;Great Britain. Parliament -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;57020.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pratt, Samuel, 1659?-1723&quot;],&quot;LoCC&quot;:[&quot;HG&quot;],&quot;PG_ID&quot;:&quot;57020&quot;});" class='title'>The Regulating Silver Coin, Made Practicable and Easie, to the Government and Subject</a>
+<div class='author'>Pratt, Samuel, 1659?-1723</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57819, {&quot;Title&quot;:&quot;Other People&#39;s Money, and How the Bankers Use It&quot;,&quot;Topics&quot;:[&quot;Banks and banking -- United States&quot;,&quot;Finance -- United States&quot;],&quot;Primary&quot;:&quot;57819.htm&quot;,&quot;CreatorNames&quot;:[&quot;Brandeis, Louis Dembitz, 1856-1941&quot;,&quot;Hapgood, Norman, 1868-1937 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;HG&quot;],&quot;PG_ID&quot;:&quot;57819&quot;});" class='title'>Other People's Money, and How the Bankers Use It</a>
+<div class='author'>Brandeis, Louis Dembitz, 1856-1941, Hapgood, Norman, 1868-1937 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59042, {&quot;Title&quot;:&quot;The Stock Exchange&quot;,&quot;Topics&quot;:[&quot;Stock Exchange (London, England)&quot;],&quot;Primary&quot;:&quot;59042.htm&quot;,&quot;CreatorNames&quot;:[&quot;Duguid, Charles, 1864-1923&quot;],&quot;LoCC&quot;:[&quot;HG&quot;],&quot;PG_ID&quot;:&quot;59042&quot;});" class='title'>The Stock Exchange</a>
+<div class='author'>Duguid, Charles, 1864-1923</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59518, {&quot;Title&quot;:&quot;The Theory of Stock Exchange Speculation&quot;,&quot;Topics&quot;:[&quot;Speculation&quot;],&quot;Primary&quot;:&quot;59518.htm&quot;,&quot;CreatorNames&quot;:[&quot;Crump, Arthur&quot;,&quot;Rosenbaum, Henry W. [Editor]&quot;],&quot;LoCC&quot;:[&quot;HG&quot;],&quot;PG_ID&quot;:&quot;59518&quot;});" class='title'>The Theory of Stock Exchange Speculation</a>
+<div class='author'>Crump, Arthur, Rosenbaum, Henry W. [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60029, {&quot;Title&quot;:&quot;Seventeen Talks on the Banking Question - Between Uncle Sam and Mr. Farmer, Mr. Banker, Mr. Lawyer, Mr. Laboringman, Mr. Merchant, Mr. Manufacturer&quot;,&quot;Topics&quot;:[&quot;Currency question -- United States&quot;,&quot;Banks and banking -- United States&quot;],&quot;Primary&quot;:&quot;60029.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fowler, Charles N. (Charles Newell), 1852-1932&quot;],&quot;LoCC&quot;:[&quot;HG&quot;],&quot;PG_ID&quot;:&quot;60029&quot;});" class='title'>Seventeen Talks on the Banking Question -<br><span class='subtitle'>Between Uncle Sam and Mr. Farmer, Mr. Banker, Mr. Lawyer, Mr. Laboringman, Mr. Merchant, Mr. Manufacturer</span></a>
+<div class='author'>Fowler, Charles N. (Charles Newell), 1852-1932</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60082, {&quot;Title&quot;:&quot;The Stock Exchange from Within&quot;,&quot;Topics&quot;:[&quot;New York Stock Exchange&quot;,&quot;Stock exchanges&quot;],&quot;Primary&quot;:&quot;60082.htm&quot;,&quot;CreatorNames&quot;:[&quot;Van Antwerp, William C. (William Clarkson), 1867-1938&quot;],&quot;LoCC&quot;:[&quot;HG&quot;],&quot;PG_ID&quot;:&quot;60082&quot;});" class='title'>The Stock Exchange from Within</a>
+<div class='author'>Van Antwerp, William C. (William Clarkson), 1867-1938</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60436, {&quot;Title&quot;:&quot;Banks and Their Customers - A practical guide for all who keep banking accounts from the customers&#39; point of view&quot;,&quot;Topics&quot;:[&quot;Banks and banking -- Great Britain&quot;],&quot;Primary&quot;:&quot;60436.htm&quot;,&quot;CreatorNames&quot;:[&quot;Warren, Henry&quot;],&quot;LoCC&quot;:[&quot;HG&quot;],&quot;PG_ID&quot;:&quot;60436&quot;});" class='title'>Banks and Their Customers -<br><span class='subtitle'>A practical guide for all who keep banking accounts from the customers' point of view</span></a>
+<div class='author'>Warren, Henry</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60979, {&quot;Title&quot;:&quot;Reminiscences of a Stock Operator&quot;,&quot;Topics&quot;:[&quot;Speculation&quot;,&quot;New York Stock Exchange&quot;,&quot;Investments&quot;],&quot;Primary&quot;:&quot;60979.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lefevre, Edwin, 1871-1943&quot;],&quot;LoCC&quot;:[&quot;HG&quot;],&quot;PG_ID&quot;:&quot;60979&quot;});" class='title'>Reminiscences of a Stock Operator</a>
+<div class='author'>Lefevre, Edwin, 1871-1943</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61605, {&quot;Title&quot;:&quot;The Money Market&quot;,&quot;Topics&quot;:[&quot;Finance -- Great Britain&quot;,&quot;Banks and banking -- Great Britain&quot;],&quot;Primary&quot;:&quot;61605.htm&quot;,&quot;CreatorNames&quot;:[&quot;Straker, F. (Frederick), 1863-1941&quot;],&quot;LoCC&quot;:[&quot;HG&quot;],&quot;PG_ID&quot;:&quot;61605&quot;});" class='title'>The Money Market</a>
+<div class='author'>Straker, F. (Frederick), 1863-1941</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62012, {&quot;Title&quot;:&quot;A Week in Wall Street - By One Who Knows&quot;,&quot;Topics&quot;:[&quot;Wall Street (New York, N.Y.)&quot;],&quot;Primary&quot;:&quot;62012.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jackson, Frederick&quot;],&quot;LoCC&quot;:[&quot;HG&quot;],&quot;PG_ID&quot;:&quot;62012&quot;});" class='title'>A Week in Wall Street -<br><span class='subtitle'>By One Who Knows</span></a>
+<div class='author'>Jackson, Frederick</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62050, {&quot;Title&quot;:&quot;Foreign Exchange&quot;,&quot;Topics&quot;:[&quot;Foreign exchange&quot;,&quot;Federal Reserve banks&quot;],&quot;Primary&quot;:&quot;62050.htm&quot;,&quot;CreatorNames&quot;:[&quot;Owen, Robert L. (Robert Latham), 1856-1947&quot;],&quot;LoCC&quot;:[&quot;HG&quot;],&quot;PG_ID&quot;:&quot;62050&quot;});" class='title'>Foreign Exchange</a>
+<div class='author'>Owen, Robert L. (Robert Latham), 1856-1947</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62642, {&quot;Title&quot;:&quot;War Prisoner Money and Medals&quot;,&quot;Topics&quot;:[&quot;Money&quot;,&quot;Numismatics&quot;,&quot;Prisoners of war&quot;,&quot;Medals&quot;,&quot;Coins&quot;],&quot;Primary&quot;:&quot;62642.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kisch, Guido, 1889-1985&quot;],&quot;LoCC&quot;:[&quot;CJ&quot;,&quot;HG&quot;],&quot;PG_ID&quot;:&quot;62642&quot;});" class='title'>War Prisoner Money and Medals</a>
+<div class='author'>Kisch, Guido, 1889-1985</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63132, {&quot;Title&quot;:&quot;The Problem of the Rupee, Its Origin and Its Solution&quot;,&quot;Topics&quot;:[&quot;Currency question -- India&quot;],&quot;Primary&quot;:&quot;63132.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ambedkar, B. R. (Bhimrao Ramji), 1891-1956&quot;],&quot;LoCC&quot;:[&quot;HG&quot;],&quot;PG_ID&quot;:&quot;63132&quot;});" class='title'>The Problem of the Rupee, Its Origin and Its Solution</a>
+<div class='author'>Ambedkar, B. R. (Bhimrao Ramji), 1891-1956</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63245, {&quot;Title&quot;:&quot;\&quot;White man bery unsartin\&quot;: \&quot;Nigger haint got no friends, no how\&quot;; the blackest chapter in the history of the Republican Party; the men who robbed and combined to rob the freedmen of their hard earnings.&quot;,&quot;Topics&quot;:[&quot;Freedman&#39;s Savings and Trust Company&quot;],&quot;Primary&quot;:&quot;63245.htm&quot;,&quot;CreatorNames&quot;:[&quot;Adams, F. Colburn (Francis Colburn), 1850-1891&quot;],&quot;LoCC&quot;:[&quot;E&quot;,&quot;HG&quot;],&quot;PG_ID&quot;:&quot;63245&quot;});" class='title'>"White man bery unsartin":<br><span class='subtitle'>"Nigger haint got no friends, no how"; the blackest chapter in the history of the Republican Party; the men who robbed and combined to rob the freedmen of their hard earnings.</span></a>
+<div class='author'>Adams, F. Colburn (Francis Colburn), 1850-1891</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63449, {&quot;Title&quot;:&quot;The Story of the Bank of England - (A History of English Banking, and a Sketch of the Money Market)&quot;,&quot;Topics&quot;:[&quot;Bank of England -- History&quot;,&quot;Banks and banking -- England&quot;],&quot;Primary&quot;:&quot;63449.htm&quot;,&quot;CreatorNames&quot;:[&quot;Warren, Henry&quot;],&quot;LoCC&quot;:[&quot;HG&quot;],&quot;PG_ID&quot;:&quot;63449&quot;});" class='title'>The Story of the Bank of England -<br><span class='subtitle'>(A History of English Banking, and a Sketch of the Money Market)</span></a>
+<div class='author'>Warren, Henry</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63453, {&quot;Title&quot;:&quot;John Law of Lauriston - Financier and Statesman, Founder of the Bank of France, Originator of the Mississippi Scheme, Etc.&quot;,&quot;Topics&quot;:[&quot;Law, John, 1671-1729&quot;],&quot;Primary&quot;:&quot;63453.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wiston-Glynn, A. W.&quot;],&quot;LoCC&quot;:[&quot;HG&quot;],&quot;PG_ID&quot;:&quot;63453&quot;});" class='title'>John Law of Lauriston -<br><span class='subtitle'>Financier and Statesman, Founder of the Bank of France, Originator of the Mississippi Scheme, Etc.</span></a>
+<div class='author'>Wiston-Glynn, A. W.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64598, {&quot;Title&quot;:&quot;Comment placer sa fortune&quot;,&quot;Topics&quot;:[&quot;Investments&quot;],&quot;Primary&quot;:&quot;64598.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bainville, Jacques, 1879-1936&quot;],&quot;LoCC&quot;:[&quot;HG&quot;],&quot;PG_ID&quot;:&quot;64598&quot;});" class='title'>Comment placer sa fortune</a>
+<div class='author'>Bainville, Jacques, 1879-1936</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65278, {&quot;Title&quot;:&quot;A Tract on Monetary Reform&quot;,&quot;Topics&quot;:[&quot;Money&quot;,&quot;Foreign exchange&quot;,&quot;Currency question&quot;],&quot;Primary&quot;:&quot;65278.htm&quot;,&quot;CreatorNames&quot;:[&quot;Keynes, John Maynard, 1883-1946&quot;],&quot;LoCC&quot;:[&quot;HG&quot;],&quot;PG_ID&quot;:&quot;65278&quot;});" class='title'>A Tract on Monetary Reform</a>
+<div class='author'>Keynes, John Maynard, 1883-1946</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65613, {&quot;Title&quot;:&quot;Ye Olde Mint - Being a brief description of the first U.S. Mint, established by Congress in the year 1792, at Seventh Street and Sugar Alley (now Filbert Street) Philadelphia&quot;,&quot;Topics&quot;:[&quot;Historic buildings -- Pennsylvania -- Philadelphia&quot;,&quot;Old United States Mint (Philadelphia, Pa.)&quot;,&quot;37-39 North Seventh Street (Philadelphia, Pa.)&quot;,&quot;Mints -- United States -- History&quot;,&quot;Philadelphia (Pa.) -- Buildings, structures, etc.&quot;],&quot;Primary&quot;:&quot;65613.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stewart, Frank H., 1873-1948&quot;],&quot;LoCC&quot;:[&quot;HG&quot;],&quot;PG_ID&quot;:&quot;65613&quot;});" class='title'>Ye Olde Mint -<br><span class='subtitle'>Being a brief description of the first U.S. Mint, established by Congress in the year 1792, at Seventh Street and Sugar Alley (now Filbert Street) Philadelphia</span></a>
+<div class='author'>Stewart, Frank H., 1873-1948</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66026, {&quot;Title&quot;:&quot;A Speech on the Principles of Finance&quot;,&quot;Topics&quot;:[&quot;Money -- Miscellanea&quot;],&quot;Primary&quot;:&quot;66026.htm&quot;,&quot;CreatorNames&quot;:[&quot;Woodhull, Victoria C. (Victoria Claflin), 1838-1927&quot;],&quot;LoCC&quot;:[&quot;HG&quot;],&quot;PG_ID&quot;:&quot;66026&quot;});" class='title'>A Speech on the Principles of Finance</a>
+<div class='author'>Woodhull, Victoria C. (Victoria Claflin), 1838-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66160, {&quot;Title&quot;:&quot;The Origin of Metallic Currency and Weight Standards&quot;,&quot;Topics&quot;:[&quot;Weights and measures -- History&quot;,&quot;Money -- Origin&quot;],&quot;Primary&quot;:&quot;66160.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ridgeway, William, 1853-1926&quot;],&quot;LoCC&quot;:[&quot;HG&quot;],&quot;PG_ID&quot;:&quot;66160&quot;});" class='title'>The Origin of Metallic Currency and Weight Standards</a>
+<div class='author'>Ridgeway, William, 1853-1926</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6716, {&quot;Title&quot;:&quot;The Spirit of 1906&quot;,&quot;Topics&quot;:[&quot;Insurance, Earthquake&quot;,&quot;Insurance, Disaster -- California -- San Francisco&quot;,&quot;Earthquakes -- California -- San Francisco&quot;],&quot;Primary&quot;:&quot;6716.htm&quot;,&quot;CreatorNames&quot;:[&quot;Brooks, George W., 1863-&quot;],&quot;LoCC&quot;:[&quot;HG&quot;],&quot;PG_ID&quot;:&quot;6716&quot;});" class='title'>The Spirit of 1906</a>
+<div class='author'>Brooks, George W., 1863-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68369, {&quot;Title&quot;:&quot;Illustrated history of the United States mint - with a complete description of American coinage, from the earliest period to the present time&quot;,&quot;Topics&quot;:[&quot;Mints -- United States&quot;,&quot;Coinage -- United States&quot;],&quot;Primary&quot;:&quot;68369.htm&quot;,&quot;CreatorNames&quot;:[&quot;Evans, George Greenlief [Editor]&quot;],&quot;LoCC&quot;:[&quot;HG&quot;],&quot;PG_ID&quot;:&quot;68369&quot;});" class='title'>Illustrated history of the United States mint -<br><span class='subtitle'>with a complete description of American coinage, from the earliest period to the present time</span></a>
+<div class='author'>Evans, George Greenlief [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6949, {&quot;Title&quot;:&quot;Fiat Money Inflation in France: How it Came, What it Brought, and How it Ended&quot;,&quot;Topics&quot;:[&quot;Assignats&quot;,&quot;Inflation (Finance) -- France -- History&quot;],&quot;Primary&quot;:&quot;6949.htm&quot;,&quot;CreatorNames&quot;:[&quot;White, Andrew Dickson, 1832-1918&quot;],&quot;LoCC&quot;:[&quot;HG&quot;],&quot;PG_ID&quot;:&quot;6949&quot;});" class='title'>Fiat Money Inflation in France:<br><span class='subtitle'>How it Came, What it Brought, and How it Ended</span></a>
+<div class='author'>White, Andrew Dickson, 1832-1918</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70377, {&quot;Title&quot;:&quot;Fifty years in Wall Street&quot;,&quot;Topics&quot;:[&quot;Business&quot;,&quot;Speculation&quot;,&quot;Capitalists and financiers -- United States&quot;,&quot;Wall Street (New York, N.Y.)&quot;],&quot;Primary&quot;:&quot;70377.htm&quot;,&quot;CreatorNames&quot;:[&quot;Clews, Henry, 1836-1923&quot;],&quot;LoCC&quot;:[&quot;HG&quot;],&quot;PG_ID&quot;:&quot;70377&quot;});" class='title'>Fifty years in Wall Street</a>
+<div class='author'>Clews, Henry, 1836-1923</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(88, {&quot;Title&quot;:&quot;Price/Cost Indexes from 1875 to 1989; Estimated to 2010&quot;,&quot;Topics&quot;:[&quot;Cost and standard of living&quot;],&quot;Primary&quot;:&quot;88.txt&quot;,&quot;CreatorNames&quot;:[&quot;Hart, Michael, 1947-2011&quot;],&quot;LoCC&quot;:[&quot;HG&quot;],&quot;PG_ID&quot;:&quot;88&quot;});" class='title'>Price/Cost Indexes from 1875 to 1989;<br><span class='subtitle'>Estimated to 2010</span></a>
+<div class='author'>Hart, Michael, 1947-2011</div>
+</div>
+</ul></div>
+</body></html>

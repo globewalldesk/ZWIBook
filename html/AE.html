@@ -1,0 +1,610 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Encyclopedias (AE)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(10223, {&quot;Title&quot;:&quot;Meyers Konversationslexikon Band 15&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;10223.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;10223&quot;});" class='title'>Meyers Konversationslexikon Band 15</a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13600, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Andros, Sir Edmund\&quot;\&quot; to \&quot;\&quot;Anise\&quot;\&quot; - Volume 2, Part 1, Slice 1&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;13600.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;13600&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Andros, Sir Edmund" to "Anise" -<br><span class='subtitle'>Volume 2, Part 1, Slice 1</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19699, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Bréquigny, Louis Georges Oudard Feudrix de\&quot;\&quot; to \&quot;\&quot;Bulgaria\&quot;\&quot; - Volume 4, Part 3&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;19699.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;19699&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Bréquigny, Louis Georges Oudard Feudrix de" to "Bulgaria" -<br><span class='subtitle'>Volume 4, Part 3</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19846, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Bulgaria\&quot;\&quot; to \&quot;\&quot;Calgary\&quot;\&quot; - Volume 4, Part 4&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;19846.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;19846&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Bulgaria" to "Calgary" -<br><span class='subtitle'>Volume 4, Part 4</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(200, {&quot;Title&quot;:&quot;The Project Gutenberg Encyclopedia, Volume 1 of 28&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;200.txt&quot;,&quot;CreatorNames&quot;:[&quot;Project Gutenberg&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;200&quot;});" class='title'>The Project Gutenberg Encyclopedia, Volume 1 of 28</a>
+<div class='author'>Project Gutenberg</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27478, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Austria, Lower\&quot;\&quot; to \&quot;\&quot;Bacon\&quot;\&quot; - Volume 3, Part 1, Slice 1&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;27478.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;27478&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Austria, Lower" to "Bacon" -<br><span class='subtitle'>Volume 3, Part 1, Slice 1</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27479, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Baconthorpe\&quot;\&quot; to \&quot;\&quot;Bankruptcy\&quot;\&quot; - Volume 3, Part 1, Slice 2&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;27479.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;27479&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Baconthorpe" to "Bankruptcy" -<br><span class='subtitle'>Volume 3, Part 1, Slice 2</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27480, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Banks\&quot;\&quot; to \&quot;\&quot;Bassoon\&quot;\&quot; - Volume 3, Part 1, Slice 3&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;27480.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;27480&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Banks" to "Bassoon" -<br><span class='subtitle'>Volume 3, Part 1, Slice 3</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30073, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Destructors\&quot;\&quot; to \&quot;\&quot;Diameter\&quot;\&quot; - Volume 8, Slice 3&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;30073.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;30073&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Destructors" to "Diameter" -<br><span class='subtitle'>Volume 8, Slice 3</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30685, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Demijohn\&quot;\&quot; to \&quot;\&quot;Destructors\&quot;\&quot; - Volume 8, Slice 2&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;30685.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;30685&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Demijohn" to "Destructors" -<br><span class='subtitle'>Volume 8, Slice 2</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30935, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Constantine Pavlovich\&quot;\&quot; to \&quot;\&quot;Convention\&quot;\&quot; - Volume 7, Slice 2&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;30935.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;30935&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Constantine Pavlovich" to "Convention" -<br><span class='subtitle'>Volume 7, Slice 2</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30976, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, Prependix of Volume 7 [Constantine Pavlovich to Demidov] - Volume 7, Slice 1&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;30976.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;30976&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, Prependix of Volume 7 [Constantine Pavlovich to Demidov] -<br><span class='subtitle'>Volume 7, Slice 1</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31156, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Châtelet\&quot;\&quot; to \&quot;\&quot;Chicago\&quot;\&quot; - Volume 6, Slice 1&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;31156.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;31156&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Châtelet" to "Chicago" -<br><span class='subtitle'>Volume 6, Slice 1</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31329, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Chicago, University of\&quot;\&quot; to \&quot;\&quot;Chiton\&quot;\&quot; - Volume 6, Slice 2&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;31329.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;31329&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Chicago, University of" to "Chiton" -<br><span class='subtitle'>Volume 6, Slice 2</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31447, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Chitral\&quot;\&quot; to \&quot;\&quot;Cincinnati\&quot;\&quot; - Volume 6, Slice 3&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;31447.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;31447&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Chitral" to "Cincinnati" -<br><span class='subtitle'>Volume 6, Slice 3</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31641, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Cincinnatus\&quot;\&quot; to \&quot;\&quot;Cleruchy\&quot;\&quot; - Volume 6, Slice 4&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;31641.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;31641&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Cincinnatus" to "Cleruchy" -<br><span class='subtitle'>Volume 6, Slice 4</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31793, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Clervaux\&quot;\&quot; to \&quot;\&quot;Cockade\&quot;\&quot; - Volume 6, Slice 5&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;31793.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;31793&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Clervaux" to "Cockade" -<br><span class='subtitle'>Volume 6, Slice 5</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31855, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Cockaigne\&quot;\&quot; to \&quot;\&quot;Columbus, Christopher\&quot;\&quot; - Volume 6, Slice 6&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;31855.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;31855&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Cockaigne" to "Columbus, Christopher" -<br><span class='subtitle'>Volume 6, Slice 6</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31950, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Columbus\&quot;\&quot; to \&quot;\&quot;Condottiere\&quot;\&quot; - Volume 6, Slice 7&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;31950.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;31950&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Columbus" to "Condottiere" -<br><span class='subtitle'>Volume 6, Slice 7</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32063, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Conduction, Electric\&quot;\&quot; - Volume 6, Slice 8&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;32063.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;32063&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Conduction, Electric" -<br><span class='subtitle'>Volume 6, Slice 8</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32097, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Convention\&quot;\&quot; to \&quot;\&quot;Copyright\&quot;\&quot; - Volume 7, Slice 3&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;32097.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;32097&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Convention" to "Copyright" -<br><span class='subtitle'>Volume 7, Slice 3</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32182, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Coquelin, Benoît Constant\&quot;\&quot; to \&quot;\&quot;Costume\&quot;\&quot; - Volume 7, Slice 4&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;32182.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;32182&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Coquelin, Benoît Constant" to "Costume" -<br><span class='subtitle'>Volume 7, Slice 4</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32294, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Cosway, Richard\&quot;\&quot; to \&quot;\&quot;Coucy, Le Châtelain de\&quot;\&quot; - Volume 7, Slice 5&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;32294.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;32294&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Cosway, Richard" to "Coucy, Le Châtelain de" -<br><span class='subtitle'>Volume 7, Slice 5</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32423, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Coucy-le-Château\&quot;\&quot; to \&quot;\&quot;Crocodile\&quot;\&quot; - Volume 7, Slice 6&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;32423.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;32423&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Coucy-le-Château" to "Crocodile" -<br><span class='subtitle'>Volume 7, Slice 6</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32607, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Diameter\&quot;\&quot; to \&quot;\&quot;Dinarchus\&quot;\&quot; - Volume 8, Slice 4&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;32607.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;32607&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Diameter" to "Dinarchus" -<br><span class='subtitle'>Volume 8, Slice 4</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32689, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Dinard\&quot;\&quot; to \&quot;\&quot;Dodsworth, Roger\&quot;\&quot; - Volume 8, Slice 5&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;32689.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;32689&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Dinard" to "Dodsworth, Roger" -<br><span class='subtitle'>Volume 8, Slice 5</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32758, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Dodwell, Edward\&quot;\&quot; to \&quot;\&quot;Drama\&quot;\&quot; - Volume 8, Slice 6&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;32758.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;32758&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Dodwell, Edward" to "Drama" -<br><span class='subtitle'>Volume 8, Slice 6</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32783, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Drama\&quot;\&quot; to \&quot;\&quot;Dublin\&quot;\&quot; - Volume 8, Slice 7&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;32783.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;32783&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Drama" to "Dublin" -<br><span class='subtitle'>Volume 8, Slice 7</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32860, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Edwardes, Sir Herbert Benjamin\&quot;\&quot; to \&quot;\&quot;Ehrenbreitstein\&quot;\&quot; - Volume 9, Slice 1&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;32860.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;32860&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Edwardes, Sir Herbert Benjamin" to "Ehrenbreitstein" -<br><span class='subtitle'>Volume 9, Slice 1</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32940, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;England\&quot;\&quot; to \&quot;\&quot;English Finance\&quot;\&quot; - Volume 9, Slice 4&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;32940.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;32940&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "England" to "English Finance" -<br><span class='subtitle'>Volume 9, Slice 4</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32975, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Calhoun\&quot;\&quot; to \&quot;\&quot;Camoens\&quot;\&quot; - Volume 5, Slice 1&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;32975.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;32975&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Calhoun" to "Camoens" -<br><span class='subtitle'>Volume 5, Slice 1</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33052, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Camorra\&quot;\&quot; to \&quot;\&quot;Cape Colony\&quot;\&quot; - Volume 5, Slice 2&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;33052.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;33052&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Camorra" to "Cape Colony" -<br><span class='subtitle'>Volume 5, Slice 2</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33127, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Capefigue\&quot;\&quot; to \&quot;\&quot;Carneades\&quot;\&quot; - Volume 5, Slice 3&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;33127.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;33127&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Capefigue" to "Carneades" -<br><span class='subtitle'>Volume 5, Slice 3</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33189, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Carnegie Andrew\&quot;\&quot; to \&quot;\&quot;Casus Belli\&quot;\&quot; - Volume 5, Slice 4&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;33189.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;33189&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Carnegie Andrew" to "Casus Belli" -<br><span class='subtitle'>Volume 5, Slice 4</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33239, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Cat\&quot;\&quot; to \&quot;\&quot;Celt\&quot;\&quot; - Volume 5, Slice 5&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;33239.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;33239&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Cat" to "Celt" -<br><span class='subtitle'>Volume 5, Slice 5</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33295, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Celtes, Konrad\&quot;\&quot; to \&quot;\&quot;Ceramics\&quot;\&quot; - Volume 5, Slice 6&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;33295.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;33295&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Celtes, Konrad" to "Ceramics" -<br><span class='subtitle'>Volume 5, Slice 6</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33365, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Cerargyrite\&quot;\&quot; to \&quot;\&quot;Charing Cross\&quot;\&quot; - Volume 5, Slice 7&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;33365.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;33365&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Cerargyrite" to "Charing Cross" -<br><span class='subtitle'>Volume 5, Slice 7</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33427, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Chariot\&quot;\&quot; to \&quot;\&quot;Chatelaine\&quot;\&quot; - Volume 5, Slice 8&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;33427.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;33427&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Chariot" to "Chatelaine" -<br><span class='subtitle'>Volume 5, Slice 8</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33477, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, Volume 5, Appendix: Author List&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;33477.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;33477&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, Volume 5, Appendix:<br><span class='subtitle'>Author List</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33550, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Bisharin\&quot;\&quot; to \&quot;\&quot;Bohea\&quot;\&quot; - Volume 4, Slice 1&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;33550.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;33550&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Bisharin" to "Bohea" -<br><span class='subtitle'>Volume 4, Slice 1</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33614, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Bohemia\&quot;\&quot; to \&quot;\&quot;Borgia, Francis\&quot;\&quot; - Volume 4, Slice 2&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;33614.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;33614&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Bohemia" to "Borgia, Francis" -<br><span class='subtitle'>Volume 4, Slice 2</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33698, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Borgia, Lucrezia\&quot;\&quot; to \&quot;\&quot;Bradford, John\&quot;\&quot; - Volume 4, Slice 3&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;33698.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;33698&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Borgia, Lucrezia" to "Bradford, John" -<br><span class='subtitle'>Volume 4, Slice 3</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33750, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Bradford, William\&quot;\&quot; to \&quot;\&quot;Brequigny, Louis\&quot;\&quot; - Volume 4, Slice 4&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;33750.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;33750&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Bradford, William" to "Brequigny, Louis" -<br><span class='subtitle'>Volume 4, Slice 4</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33991, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, Volume 4, Appendix: Author List&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;33991.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;33991&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, Volume 4, Appendix:<br><span class='subtitle'>Author List</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34018, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Anjar\&quot;\&quot; to \&quot;\&quot;Apollo\&quot;\&quot; - Volume 2, Slice 2&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;34018.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;34018&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Anjar" to "Apollo" -<br><span class='subtitle'>Volume 2, Slice 2</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34047, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Apollodorus\&quot;\&quot; to \&quot;\&quot;Aral\&quot;\&quot; - Volume 2, Slice 3&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;34047.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;34047&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Apollodorus" to "Aral" -<br><span class='subtitle'>Volume 2, Slice 3</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34073, {&quot;Title&quot;:&quot;The New Gresham Encyclopedia. A to Amide - Vol. 1 Part 1&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;34073.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;34073&quot;});" class='title'>The New Gresham Encyclopedia. A to Amide -<br><span class='subtitle'>Vol. 1 Part 1</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34074, {&quot;Title&quot;:&quot;The New Gresham Encyclopedia. Amiel to Atrauli - Vol. 1 Part 2&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;34074.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;34074&quot;});" class='title'>The New Gresham Encyclopedia. Amiel to Atrauli -<br><span class='subtitle'>Vol. 1 Part 2</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34075, {&quot;Title&quot;:&quot;The New Gresham Encyclopedia. Atrebates to Bedlis - Vol. 1 Part 3&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;34075.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;34075&quot;});" class='title'>The New Gresham Encyclopedia. Atrebates to Bedlis -<br><span class='subtitle'>Vol. 1 Part 3</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34082, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Aram, Eugene\&quot;\&quot; to \&quot;\&quot;Arcueil\&quot;\&quot; - Volume 2, Slice 4&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;34082.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;34082&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Aram, Eugene" to "Arcueil" -<br><span class='subtitle'>Volume 2, Slice 4</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34116, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Arculf\&quot;\&quot; to \&quot;\&quot;Armour, Philip\&quot;\&quot; - Volume 2, Slice 5&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;34116.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;34116&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Arculf" to "Armour, Philip" -<br><span class='subtitle'>Volume 2, Slice 5</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34162, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Armour Plates\&quot;\&quot; to \&quot;\&quot;Arundel, Earls of\&quot;\&quot; - Volume 2, Slice 6&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;34162.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;34162&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Armour Plates" to "Arundel, Earls of" -<br><span class='subtitle'>Volume 2, Slice 6</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34209, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Arundel, Thomas\&quot;\&quot; to \&quot;\&quot;Athens\&quot;\&quot; - Volume 2, Slice 7&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;34209.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;34209&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Arundel, Thomas" to "Athens" -<br><span class='subtitle'>Volume 2, Slice 7</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34312, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Atherstone\&quot;\&quot; to \&quot;\&quot;Austria\&quot;\&quot; - Volume 2, Slice 8&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;34312.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;34312&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Atherstone" to "Austria" -<br><span class='subtitle'>Volume 2, Slice 8</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34405, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Basso-relievo\&quot;\&quot; to \&quot;\&quot;Bedfordshire\&quot;\&quot; - Volume 3, Slice 4&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;34405.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;34405&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Basso-relievo" to "Bedfordshire" -<br><span class='subtitle'>Volume 3, Slice 4</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34533, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Bedlam\&quot;\&quot; to \&quot;\&quot;Benson, George\&quot;\&quot; - Volume 3, Slice 5&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;34533.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;34533&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Bedlam" to "Benson, George" -<br><span class='subtitle'>Volume 3, Slice 5</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34612, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Bent, James\&quot;\&quot; to \&quot;\&quot;Bibirine\&quot;\&quot; - Volume 3, Slice 6&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;34612.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;34612&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Bent, James" to "Bibirine" -<br><span class='subtitle'>Volume 3, Slice 6</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34702, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Bible\&quot;\&quot; to \&quot;\&quot;Bisectrix\&quot;\&quot; - Volume 3, Slice 7&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;34702.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;34702&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Bible" to "Bisectrix" -<br><span class='subtitle'>Volume 3, Slice 7</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34751, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Dübner, Johann Friedrich\&quot;\&quot; to \&quot;\&quot;Dyeing\&quot;\&quot; - Volume 8, Slice 8&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;34751.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;34751&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Dübner, Johann Friedrich" to "Dyeing" -<br><span class='subtitle'>Volume 8, Slice 8</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34878, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Dyer, Sir Edward\&quot;\&quot; to \&quot;\&quot;Echidna\&quot;\&quot; - Volume 8, Slice 9&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;34878.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;34878&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Dyer, Sir Edward" to "Echidna" -<br><span class='subtitle'>Volume 8, Slice 9</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34992, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Echinoderma\&quot;\&quot; to \&quot;\&quot;Edward, prince of Wales\&quot;\&quot; - Volume 8, Slice 10&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;34992.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;34992&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Echinoderma" to "Edward, prince of Wales" -<br><span class='subtitle'>Volume 8, Slice 10</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35092, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Ehud\&quot;\&quot; to \&quot;\&quot;Electroscope\&quot;\&quot; - Volume 9, Slice 2&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;35092.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;35092&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Ehud" to "Electroscope" -<br><span class='subtitle'>Volume 9, Slice 2</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35169, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Electrostatics\&quot;\&quot; to \&quot;\&quot;Engis\&quot;\&quot; - Volume 9, Slice 3&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;35169.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;35169&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Electrostatics" to "Engis" -<br><span class='subtitle'>Volume 9, Slice 3</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35236, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;English History\&quot;\&quot; - Volume 9, Slice 5&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;35236.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;35236&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "English History" -<br><span class='subtitle'>Volume 9, Slice 5</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35306, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;English Language\&quot;\&quot; to \&quot;\&quot;Epsom Salts\&quot;\&quot; - Volume 9, Slice 6&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;35306.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;35306&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "English Language" to "Epsom Salts" -<br><span class='subtitle'>Volume 9, Slice 6</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35398, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Equation\&quot;\&quot; to \&quot;\&quot;Ethics\&quot;\&quot; - Volume 9, Slice 7&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;35398.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;35398&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Equation" to "Ethics" -<br><span class='subtitle'>Volume 9, Slice 7</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35473, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Ethiopia\&quot;\&quot; to \&quot;\&quot;Evangelical Association\&quot;\&quot; - Volume 9, Slice 8&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;35473.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;35473&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Ethiopia" to "Evangelical Association" -<br><span class='subtitle'>Volume 9, Slice 8</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35561, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Fenton, Edward\&quot;\&quot; to \&quot;\&quot;Finistere\&quot;\&quot; - Volume 10, Slice 3&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;35561.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;35561&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Fenton, Edward" to "Finistere" -<br><span class='subtitle'>Volume 10, Slice 3</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35606, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Finland\&quot;\&quot; to \&quot;\&quot;Fleury, Andre\&quot;\&quot; - Volume 10, Slice 4&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;35606.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;35606&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Finland" to "Fleury, Andre" -<br><span class='subtitle'>Volume 10, Slice 4</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35747, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Fleury, Claude\&quot;\&quot; to \&quot;\&quot;Foraker\&quot;\&quot; - Volume 10, Slice 5&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;35747.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;35747&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Fleury, Claude" to "Foraker" -<br><span class='subtitle'>Volume 10, Slice 5</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35843, {&quot;Title&quot;:&quot;The New Gresham Encyclopedia. Deposition to Eberswalde - Volume 4, Part 1&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;35843.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;35843&quot;});" class='title'>The New Gresham Encyclopedia. Deposition to Eberswalde -<br><span class='subtitle'>Volume 4, Part 1</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35844, {&quot;Title&quot;:&quot;The New Gresham Encyclopedia. Ebert to Estremadura - Volume 4, Part 2&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;35844.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;35844&quot;});" class='title'>The New Gresham Encyclopedia. Ebert to Estremadura -<br><span class='subtitle'>Volume 4, Part 2</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35845, {&quot;Title&quot;:&quot;The New Gresham Encyclopedia. Estremoz to Felspar - Volume 4, Part 3&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;35845.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;35845&quot;});" class='title'>The New Gresham Encyclopedia. Estremoz to Felspar -<br><span class='subtitle'>Volume 4, Part 3</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35925, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Foraminifera\&quot;\&quot; to \&quot;\&quot;Fox, Edward\&quot;\&quot; - Volume 10, Slice 6&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;35925.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;35925&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Foraminifera" to "Fox, Edward" -<br><span class='subtitle'>Volume 10, Slice 6</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36104, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Fox, George\&quot;\&quot; to \&quot;\&quot;France\&quot;\&quot; - Volume 10, Slice 7&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;36104.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;36104&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Fox, George" to "France" -<br><span class='subtitle'>Volume 10, Slice 7</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36226, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;France\&quot;\&quot; to \&quot;\&quot;Francis Joseph I.\&quot;\&quot; - Volume 10, Slice 8&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;36226.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;36226&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "France" to "Francis Joseph I." -<br><span class='subtitle'>Volume 10, Slice 8</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36452, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Fairbanks, Erastus\&quot;\&quot; to \&quot;\&quot;Fens\&quot;\&quot; - Volume 10, Slice 2&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;36452.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;36452&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Fairbanks, Erastus" to "Fens" -<br><span class='subtitle'>Volume 10, Slice 2</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36735, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Evangelical Church Conference\&quot;\&quot; to \&quot;\&quot;Fairbairn, Sir William\&quot;\&quot; - Volume 10, Slice 1&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;36735.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;36735&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Evangelical Church Conference" to "Fairbairn, Sir William" -<br><span class='subtitle'>Volume 10, Slice 1</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37064, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Frost\&quot;\&quot; to \&quot;\&quot;Fyzabad\&quot;\&quot; - Volume 11, Slice 3&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;37064.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;37064&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Frost" to "Fyzabad" -<br><span class='subtitle'>Volume 11, Slice 3</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37160, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;G\&quot;\&quot; to \&quot;\&quot;Gaskell, Elizabeth\&quot;\&quot; - Volume 11, Slice 4&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;37160.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;37160&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "G" to "Gaskell, Elizabeth" -<br><span class='subtitle'>Volume 11, Slice 4</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37282, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Gassendi, Pierre\&quot;\&quot; to \&quot;\&quot;Geocentric\&quot;\&quot; - Volume 11, Slice 5&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;37282.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;37282&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Gassendi, Pierre" to "Geocentric" -<br><span class='subtitle'>Volume 11, Slice 5</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37461, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Geodesy\&quot;\&quot; to \&quot;\&quot;Geometry\&quot;\&quot; - Volume 11, Slice 6&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;37461.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;37461&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Geodesy" to "Geometry" -<br><span class='subtitle'>Volume 11, Slice 6</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37523, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Geoponici\&quot;\&quot; to \&quot;\&quot;Germany\&quot;\&quot; - Volume 11, Slice 7&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;37523.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;37523&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Geoponici" to "Germany" -<br><span class='subtitle'>Volume 11, Slice 7</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37610, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Germany\&quot;\&quot; to \&quot;\&quot;Gibson, William\&quot;\&quot; - Volume 11, Slice 8&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;37610.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;37610&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Germany" to "Gibson, William" -<br><span class='subtitle'>Volume 11, Slice 8</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37736, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;French Literature\&quot;\&quot; to \&quot;\&quot;Frost, William\&quot;\&quot; - Volume 11, Slice 2&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;37736.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;37736&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "French Literature" to "Frost, William" -<br><span class='subtitle'>Volume 11, Slice 2</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37806, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Franciscans\&quot;\&quot; to \&quot;\&quot;French Language\&quot;\&quot; - Volume 11, Slice 1&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;37806.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;37806&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Franciscans" to "French Language" -<br><span class='subtitle'>Volume 11, Slice 1</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37880, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Gloss\&quot;\&quot; to \&quot;\&quot;Gordon, Charles George\&quot;\&quot; - Volume 12, Slice 2&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;37880.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;37880&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Gloss" to "Gordon, Charles George" -<br><span class='subtitle'>Volume 12, Slice 2</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37984, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Gordon, Lord George\&quot;\&quot; to \&quot;\&quot;Grasses\&quot;\&quot; - Volume 12, Slice 3&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;37984.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;37984&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Gordon, Lord George" to "Grasses" -<br><span class='subtitle'>Volume 12, Slice 3</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38143, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Grasshopper\&quot;\&quot; to \&quot;\&quot;Greek Language\&quot;\&quot; - Volume 12, Slice 4&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;38143.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;38143&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Grasshopper" to "Greek Language" -<br><span class='subtitle'>Volume 12, Slice 4</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38202, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Greek Law\&quot;\&quot; to \&quot;\&quot;Ground-Squirrel\&quot;\&quot; - Volume 12, Slice 5&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;38202.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;38202&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Greek Law" to "Ground-Squirrel" -<br><span class='subtitle'>Volume 12, Slice 5</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38304, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Groups, Theory of\&quot;\&quot; to \&quot;\&quot;Gwyniad\&quot;\&quot; - Volume 12, Slice 6&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;38304.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;38304&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Groups, Theory of" to "Gwyniad" -<br><span class='subtitle'>Volume 12, Slice 6</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38401, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Gyantse\&quot;\&quot; to \&quot;\&quot;Hallel\&quot;\&quot; - Volume 12, Slice 7&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;38401.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;38401&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Gyantse" to "Hallel" -<br><span class='subtitle'>Volume 12, Slice 7</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38454, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Haller, Albrecht\&quot;\&quot; to \&quot;\&quot;Harmonium\&quot;\&quot; - Volume 12, Slice 8&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;38454.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;38454&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Haller, Albrecht" to "Harmonium" -<br><span class='subtitle'>Volume 12, Slice 8</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38539, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Gichtel, Johann\&quot;\&quot; to \&quot;\&quot;Glory\&quot;\&quot; - Volume 12, Slice 1&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;38539.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;38539&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Gichtel, Johann" to "Glory" -<br><span class='subtitle'>Volume 12, Slice 1</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38622, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Crocoite\&quot;\&quot; to \&quot;\&quot;Cuba\&quot;\&quot; - Volume 7, Slice 7&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;38622.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;38622&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Crocoite" to "Cuba" -<br><span class='subtitle'>Volume 7, Slice 7</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38709, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Cube\&quot;\&quot; to \&quot;\&quot;Daguerre, Louis Jacques Mandé\&quot;\&quot; - Volume 7, Slice 8&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;38709.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;38709&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Cube" to "Daguerre, Louis Jacques Mandé" -<br><span class='subtitle'>Volume 7, Slice 8</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38799, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Dagupan\&quot;\&quot; to \&quot;\&quot;David\&quot;\&quot; - Volume 7, Slice 9&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;38799.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;38799&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Dagupan" to "David" -<br><span class='subtitle'>Volume 7, Slice 9</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38892, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;David, St\&quot;\&quot; to \&quot;\&quot;Demidov\&quot;\&quot; - Volume 7, Slice 10&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;38892.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;38892&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "David, St" to "Demidov" -<br><span class='subtitle'>Volume 7, Slice 10</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38964, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Hudson River\&quot;\&quot; to \&quot;\&quot;Hurstmonceaux\&quot;\&quot; - Volume 13, Slice 8&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;38964.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;38964&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Hudson River" to "Hurstmonceaux" -<br><span class='subtitle'>Volume 13, Slice 8</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39029, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Horticulture\&quot;\&quot; to \&quot;\&quot;Hudson Bay\&quot;\&quot; - Volume 13, Slice 7&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;39029.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;39029&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Horticulture" to "Hudson Bay" -<br><span class='subtitle'>Volume 13, Slice 7</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39127, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Home, Daniel\&quot;\&quot; to \&quot;\&quot;Hortensius, Quintus\&quot;\&quot; - Volume 13, Slice 6&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;39127.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;39127&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Home, Daniel" to "Hortensius, Quintus" -<br><span class='subtitle'>Volume 13, Slice 6</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39232, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Hinduism\&quot;\&quot; to \&quot;\&quot;Home, Earls of\&quot;\&quot; - Volume 13, Slice 5&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;39232.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;39232&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Hinduism" to "Home, Earls of" -<br><span class='subtitle'>Volume 13, Slice 5</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39353, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Hero\&quot;\&quot; to \&quot;\&quot;Hindu Chronology\&quot;\&quot; - Volume 13, Slice 4&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;39353.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;39353&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Hero" to "Hindu Chronology" -<br><span class='subtitle'>Volume 13, Slice 4</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39435, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Helmont, Jean\&quot;\&quot; to \&quot;\&quot;Hernosand\&quot;\&quot; - Volume 13, Slice 3&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;39435.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;39435&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Helmont, Jean" to "Hernosand" -<br><span class='subtitle'>Volume 13, Slice 3</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39521, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Hearing\&quot;\&quot; to \&quot;\&quot;Helmond\&quot;\&quot; - Volume 13, Slice 2&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;39521.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;39521&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Hearing" to "Helmond" -<br><span class='subtitle'>Volume 13, Slice 2</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39632, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Harmony\&quot;\&quot; to \&quot;\&quot;Heanor\&quot;\&quot; - Volume 13, Slice 1&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;39632.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;39632&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Harmony" to "Heanor" -<br><span class='subtitle'>Volume 13, Slice 1</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39700, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Isabnormal Lines\&quot;\&quot; to \&quot;\&quot;Italic\&quot;\&quot; - Volume 14, Slice 8&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;39700.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;39700&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Isabnormal Lines" to "Italic" -<br><span class='subtitle'>Volume 14, Slice 8</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39775, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Ireland\&quot;\&quot; to \&quot;\&quot;Isabey, Jean Baptiste\&quot;\&quot; - Volume 14, Slice 7&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;39775.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;39775&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Ireland" to "Isabey, Jean Baptiste" -<br><span class='subtitle'>Volume 14, Slice 7</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39908, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Inscriptions\&quot;\&quot; to \&quot;\&quot;Ireland, William Henry\&quot;\&quot; - Volume 14, Slice 6&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;39908.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;39908&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Inscriptions" to "Ireland, William Henry" -<br><span class='subtitle'>Volume 14, Slice 6</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40009, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Indole\&quot;\&quot; to \&quot;\&quot;Insanity\&quot;\&quot; - Volume 14, Slice 5&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;40009.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;40009&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Indole" to "Insanity" -<br><span class='subtitle'>Volume 14, Slice 5</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40096, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Independence, Declaration of\&quot;\&quot; to \&quot;\&quot;Indo-European Languages\&quot;\&quot; - Volume 14, Slice 4&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;40096.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;40096&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Independence, Declaration of" to "Indo-European Languages" -<br><span class='subtitle'>Volume 14, Slice 4</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40156, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Ichthyology\&quot;\&quot; to \&quot;\&quot;Independence\&quot;\&quot; - Volume 14, Slice 3&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;40156.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;40156&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Ichthyology" to "Independence" -<br><span class='subtitle'>Volume 14, Slice 3</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40370, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Hydromechanics\&quot;\&quot; to \&quot;\&quot;Ichnography\&quot;\&quot; - Volume 14, Slice 2&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;40370.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;40370&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Hydromechanics" to "Ichnography" -<br><span class='subtitle'>Volume 14, Slice 2</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40538, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Husband\&quot;\&quot; to \&quot;\&quot;Hydrolysis\&quot;\&quot; - Volume 14, Slice 1&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;40538.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;40538&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Husband" to "Hydrolysis" -<br><span class='subtitle'>Volume 14, Slice 1</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40641, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Kite-Flying\&quot;\&quot; to \&quot;\&quot;Kyshtym\&quot;\&quot; - Volume 15, Slice 8&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;40641.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;40641&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Kite-Flying" to "Kyshtym" -<br><span class='subtitle'>Volume 15, Slice 8</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40769, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Kelly, Edward\&quot;\&quot; to \&quot;\&quot;Kite\&quot;\&quot; - Volume 15, Slice 7&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;40769.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;40769&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Kelly, Edward" to "Kite" -<br><span class='subtitle'>Volume 15, Slice 7</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40863, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Justinian II.\&quot;\&quot; to \&quot;\&quot;Kells\&quot;\&quot; - Volume 15, Slice 6&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;40863.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;40863&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Justinian II." to "Kells" -<br><span class='subtitle'>Volume 15, Slice 6</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40956, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Joints\&quot;\&quot; to \&quot;\&quot;Justinian I.\&quot;\&quot; - Volume 15, Slice 5&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;40956.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;40956&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Joints" to "Justinian I." -<br><span class='subtitle'>Volume 15, Slice 5</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41055, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Jevons, Stanley\&quot;\&quot; to \&quot;\&quot;Joint\&quot;\&quot; - Volume 15, Slice 4&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;41055.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;41055&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Jevons, Stanley" to "Joint" -<br><span class='subtitle'>Volume 15, Slice 4</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41156, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Japan\&quot;\&quot; (part) to \&quot;\&quot;Jeveros\&quot;\&quot; - Volume 15, Slice 3&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;41156.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;41156&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Japan" (part) to "Jeveros" -<br><span class='subtitle'>Volume 15, Slice 3</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41264, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Jacobites\&quot;\&quot; to \&quot;\&quot;Japan\&quot;\&quot; (part) - Volume 15, Slice 2&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;41264.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;41264&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Jacobites" to "Japan" (part) -<br><span class='subtitle'>Volume 15, Slice 2</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41343, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Italy\&quot;\&quot; to \&quot;\&quot;Jacobite Church\&quot;\&quot; - Volume 15, Slice 1&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;41343.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;41343&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Italy" to "Jacobite Church" -<br><span class='subtitle'>Volume 15, Slice 1</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41472, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Lightfoot, Joseph\&quot;\&quot; to \&quot;\&quot;Liquidation\&quot;\&quot; - Volume 16, Slice 6&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;41472.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;41472&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Lightfoot, Joseph" to "Liquidation" -<br><span class='subtitle'>Volume 16, Slice 6</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41567, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Letter\&quot;\&quot; to \&quot;\&quot;Lightfoot, John\&quot;\&quot; - Volume 16, Slice 5&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;41567.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;41567&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Letter" to "Lightfoot, John" -<br><span class='subtitle'>Volume 16, Slice 5</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41685, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Latin Language\&quot;\&quot; to \&quot;\&quot;Lefebvre, François-Joseph\&quot;\&quot; - Volume 16, Slice 3&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;41685.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;41685&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Latin Language" to "Lefebvre, François-Joseph" -<br><span class='subtitle'>Volume 16, Slice 3</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41773, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Lamennais, Robert de\&quot;\&quot; to \&quot;\&quot;Latini, Brunetto\&quot;\&quot; - Volume 16, Slice 2&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;41773.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;41773&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Lamennais, Robert de" to "Latini, Brunetto" -<br><span class='subtitle'>Volume 16, Slice 2</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41902, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;L\&quot;\&quot; to \&quot;\&quot;Lamellibranchia\&quot;\&quot; - Volume 16, Slice 1&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;41902.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;41902&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "L" to "Lamellibranchia" -<br><span class='subtitle'>Volume 16, Slice 1</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42048, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Lefebvre, Tanneguy\&quot;\&quot; to \&quot;\&quot;Letronne, Jean Antoine\&quot;\&quot; - Volume 16, Slice 4&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;42048.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;42048&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Lefebvre, Tanneguy" to "Letronne, Jean Antoine" -<br><span class='subtitle'>Volume 16, Slice 4</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42173, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Liquid Gases\&quot;\&quot; to \&quot;\&quot;Logar\&quot;\&quot; - Volume 16, Slice 7&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;42173.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;42173&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Liquid Gases" to "Logar" -<br><span class='subtitle'>Volume 16, Slice 7</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42342, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Logarithm\&quot;\&quot; to \&quot;\&quot;Lord Advocate\&quot;\&quot; - Volume 16, Slice 8&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;42342.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;42342&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Logarithm" to "Lord Advocate" -<br><span class='subtitle'>Volume 16, Slice 8</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42473, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Matter\&quot;\&quot; to \&quot;\&quot;Mecklenburg\&quot;\&quot; - Volume 17, Slice 8&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;42473.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;42473&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Matter" to "Mecklenburg" -<br><span class='subtitle'>Volume 17, Slice 8</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42552, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Mars\&quot;\&quot; to \&quot;\&quot;Matteawan\&quot;\&quot; - Volume 17, Slice 7&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;42552.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;42552&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Mars" to "Matteawan" -<br><span class='subtitle'>Volume 17, Slice 7</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42638, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Map\&quot;\&quot; to \&quot;\&quot;Mars\&quot;\&quot; - Volume 17, Slice 6&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;42638.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;42638&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Map" to "Mars" -<br><span class='subtitle'>Volume 17, Slice 6</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42736, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Malta\&quot;\&quot; to \&quot;\&quot;Map, Walter\&quot;\&quot; - Volume 17, Slice 5&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;42736.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;42736&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Malta" to "Map, Walter" -<br><span class='subtitle'>Volume 17, Slice 5</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42854, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Magnetite\&quot;\&quot; to \&quot;\&quot;Malt\&quot;\&quot; - Volume 17, Slice 4&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;42854.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;42854&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Magnetite" to "Malt" -<br><span class='subtitle'>Volume 17, Slice 4</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43060, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;McKinley, William\&quot;\&quot; to \&quot;\&quot;Magnetism, Terrestrial\&quot;\&quot; - Volume 17, Slice 3&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;43060.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;43060&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "McKinley, William" to "Magnetism, Terrestrial" -<br><span class='subtitle'>Volume 17, Slice 3</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43254, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Luray Cavern\&quot;\&quot; to \&quot;\&quot;Mackinac Island\&quot;\&quot; - Volume 17, Slice 2&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;43254.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;43254&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Luray Cavern" to "Mackinac Island" -<br><span class='subtitle'>Volume 17, Slice 2</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43427, {&quot;Title&quot;:&quot;Encyclopaedia Britannica, 11th Edition, \&quot;\&quot;Lord Chamberlain\&quot;\&quot; to \&quot;\&quot;Luqman\&quot;\&quot; - Volume 17, Slice 1&quot;,&quot;Topics&quot;:[&quot;Encyclopedias and dictionaries&quot;],&quot;Primary&quot;:&quot;43427.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;43427&quot;});" class='title'>Encyclopaedia Britannica, 11th Edition, "Lord Chamberlain" to "Luqman" -<br><span class='subtitle'>Volume 17, Slice 1</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60985, {&quot;Title&quot;:&quot;Misinforming a Nation&quot;,&quot;Topics&quot;:[&quot;Encyclopaedia Britannica&quot;],&quot;Primary&quot;:&quot;60985.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wright, Willard Huntington, 1888-1939&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;60985&quot;});" class='title'>Misinforming a Nation</a>
+<div class='author'>Wright, Willard Huntington, 1888-1939</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6493, {&quot;Title&quot;:&quot;Mediaeval Lore from Bartholomew Anglicus&quot;,&quot;Topics&quot;:[&quot;Civilization, Medieval&quot;,&quot;Science, Medieval&quot;],&quot;Primary&quot;:&quot;6493.txt&quot;,&quot;CreatorNames&quot;:[&quot;Bartholomaeus, Anglicus, active 13th century&quot;,&quot;Morris, William, 1834-1896 [Author of introduction, etc.]&quot;,&quot;Steele, Robert, 1860-1944 [Editor]&quot;,&quot;Trevisa, John, -1402 [Translator]&quot;],&quot;LoCC&quot;:[&quot;AE&quot;],&quot;PG_ID&quot;:&quot;6493&quot;});" class='title'>Mediaeval Lore from Bartholomew Anglicus</a>
+<div class='author'>Bartholomaeus, Anglicus, active 13th century, Morris, William, 1834-1896 [Author of introduction, etc.], Steele, Robert, 1860-1944 [Editor], Trevisa, John, -1402 [Translator]</div>
+</div>
+</ul></div>
+</body></html>

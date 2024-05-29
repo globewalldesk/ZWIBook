@@ -1,0 +1,506 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Public aspects of medicine (RA)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12036, {&quot;Title&quot;:&quot;Hygeia, a City of Health&quot;,&quot;Topics&quot;:[&quot;Public health&quot;],&quot;Primary&quot;:&quot;12036.htm&quot;,&quot;CreatorNames&quot;:[&quot;Richardson, Benjamin Ward, 1828-1896&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;12036&quot;});" class='title'>Hygeia, a City of Health</a>
+<div class='author'>Richardson, Benjamin Ward, 1828-1896</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13574, {&quot;Title&quot;:&quot;Keeping Fit All the Way - How to Obtain and Maintain Health, Strength and Efficiency&quot;,&quot;Topics&quot;:[&quot;Hygiene&quot;,&quot;Physical education and training&quot;],&quot;Primary&quot;:&quot;13574.htm&quot;,&quot;CreatorNames&quot;:[&quot;Camp, Walter, 1859-1925&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;13574&quot;});" class='title'>Keeping Fit All the Way -<br><span class='subtitle'>How to Obtain and Maintain Health, Strength and Efficiency</span></a>
+<div class='author'>Camp, Walter, 1859-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15352, {&quot;Title&quot;:&quot;Venereal Diseases in New Zealand (1922) - Report of the Special Committee of the Board of Health appointed by the Hon. Minister of Health&quot;,&quot;Topics&quot;:[&quot;Sexually transmitted diseases -- New Zealand&quot;],&quot;Primary&quot;:&quot;15352.htm&quot;,&quot;CreatorNames&quot;:[&quot;New Zealand. Committee of the Board of Health&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;15352&quot;});" class='title'>Venereal Diseases in New Zealand (1922) -<br><span class='subtitle'>Report of the Special Committee of the Board of Health appointed by the Hon. Minister of Health</span></a>
+<div class='author'>New Zealand. Committee of the Board of Health</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16417, {&quot;Title&quot;:&quot;Spadacrene Anglica: The English Spa Fountain&quot;,&quot;Topics&quot;:[&quot;Mineral waters -- England -- Harrogate -- Early works to 1800&quot;,&quot;Health resorts&quot;],&quot;Primary&quot;:&quot;16417.htm&quot;,&quot;CreatorNames&quot;:[&quot;Deane, Edmund, 1582?-1640&quot;,&quot;Butler, Alexander [Commentator]&quot;,&quot;Rutherford, James [Commentator]&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;16417&quot;});" class='title'>Spadacrene Anglica:<br><span class='subtitle'>The English Spa Fountain</span></a>
+<div class='author'>Deane, Edmund, 1582?-1640, Butler, Alexander [Commentator], Rutherford, James [Commentator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17682, {&quot;Title&quot;:&quot;The Healthy Life, Vol. V, Nos. 24-28 - The Independent Health Magazine&quot;,&quot;Topics&quot;:[&quot;Health -- Periodicals&quot;,&quot;Medicine, Popular -- Periodicals&quot;,&quot;Nutrition -- Periodicals&quot;],&quot;Primary&quot;:&quot;17682.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;,&quot;Daniel, Charles William [Editor]&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;17682&quot;});" class='title'>The Healthy Life, Vol. V, Nos. 24-28 -<br><span class='subtitle'>The Independent Health Magazine</span></a>
+<div class='author'>Various, Daniel, Charles William [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18376, {&quot;Title&quot;:&quot;A Lecture on the Preservation of Health&quot;,&quot;Topics&quot;:[&quot;Health -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;18376.txt&quot;,&quot;CreatorNames&quot;:[&quot;Garnett, Thomas, 1766-1802&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;18376&quot;});" class='title'>A Lecture on the Preservation of Health</a>
+<div class='author'>Garnett, Thomas, 1766-1802</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18932, {&quot;Title&quot;:&quot;Mental Defectives and Sexual Offenders - Report of the Committee of Inquiry Appointed by the Hon. Sir Maui Pomare, K.B.E., C.M.G., Minister of Health&quot;,&quot;Topics&quot;:[&quot;People with mental disabilities -- Care -- New Zealand&quot;,&quot;People with mental disabilities -- Legal status, laws, etc. -- New Zealand&quot;,&quot;Sex offenders -- Legal status, laws, etc. -- New Zealand&quot;,&quot;Sterilization (Birth control) -- New Zealand&quot;,&quot;Mental health laws -- New Zealand&quot;],&quot;Primary&quot;:&quot;18932.htm&quot;,&quot;CreatorNames&quot;:[&quot;New Zealand. Committee of Inquiry into Mental Defectives and Sexual Offenders&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;18932&quot;});" class='title'>Mental Defectives and Sexual Offenders -<br><span class='subtitle'>Report of the Committee of Inquiry Appointed by the Hon. Sir Maui Pomare, K.B.E., C.M.G., Minister of Health</span></a>
+<div class='author'>New Zealand. Committee of Inquiry into Mental Defectives and Sexual Offenders</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19019, {&quot;Title&quot;:&quot;Aids to Forensic Medicine and Toxicology&quot;,&quot;Topics&quot;:[&quot;Medical jurisprudence&quot;,&quot;Poisons&quot;],&quot;Primary&quot;:&quot;19019.htm&quot;,&quot;CreatorNames&quot;:[&quot;Robertson, W. G. Aitchison (William George Aitchison )&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;19019&quot;});" class='title'>Aids to Forensic Medicine and Toxicology</a>
+<div class='author'>Robertson, W. G. Aitchison (William George Aitchison )</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19168, {&quot;Title&quot;:&quot;Studies in Forensic Psychiatry&quot;,&quot;Topics&quot;:[&quot;Psychology, Pathological&quot;,&quot;Mentally ill offenders&quot;,&quot;Insanity (Law)&quot;],&quot;Primary&quot;:&quot;19168.htm&quot;,&quot;CreatorNames&quot;:[&quot;Glueck, Bernard, 1883-&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;19168&quot;});" class='title'>Studies in Forensic Psychiatry</a>
+<div class='author'>Glueck, Bernard, 1883-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19598, {&quot;Title&quot;:&quot;How to Live: Rules for Healthful Living Based on Modern Science&quot;,&quot;Topics&quot;:[&quot;Hygiene&quot;],&quot;Primary&quot;:&quot;19598.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fisher, Irving, 1867-1947&quot;,&quot;Fisk, Eugene Lyman, 1867-1931&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;19598&quot;});" class='title'>How to Live:<br><span class='subtitle'>Rules for Healthful Living Based on Modern Science</span></a>
+<div class='author'>Fisher, Irving, 1867-1947, Fisk, Eugene Lyman, 1867-1931</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19965, {&quot;Title&quot;:&quot;Measles&quot;,&quot;Topics&quot;:[&quot;Measles&quot;],&quot;Primary&quot;:&quot;19965.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rucker, William Colby, 1875-&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;19965&quot;});" class='title'>Measles</a>
+<div class='author'>Rucker, William Colby, 1875-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20294, {&quot;Title&quot;:&quot;A Handbook of Health&quot;,&quot;Topics&quot;:[&quot;Hygiene&quot;],&quot;Primary&quot;:&quot;20294.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hutchinson, Woods, 1862-1930&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;20294&quot;});" class='title'>A Handbook of Health</a>
+<div class='author'>Hutchinson, Woods, 1862-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(21353, {&quot;Title&quot;:&quot;Civics and Health&quot;,&quot;Topics&quot;:[&quot;Hygiene&quot;,&quot;Public health&quot;],&quot;Primary&quot;:&quot;21353.htm&quot;,&quot;CreatorNames&quot;:[&quot;Allen, William H. (WIlliam Harvey), 1874-1963&quot;,&quot;Sedgwick, W. T. (William Thompson), 1855-1921 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;21353&quot;});" class='title'>Civics and Health</a>
+<div class='author'>Allen, William H. (WIlliam Harvey), 1874-1963, Sedgwick, W. T. (William Thompson), 1855-1921 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22005, {&quot;Title&quot;:&quot;How to Add Ten Years to your Life and to Double Its Satisfactions&quot;,&quot;Topics&quot;:[&quot;Hygiene&quot;,&quot;Physical education and training&quot;],&quot;Primary&quot;:&quot;22005.htm&quot;,&quot;CreatorNames&quot;:[&quot;Curry, S. S. (Samuel Silas), 1847-1921&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;22005&quot;});" class='title'>How to Add Ten Years to your Life and to Double Its Satisfactions</a>
+<div class='author'>Curry, S. S. (Samuel Silas), 1847-1921</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22108, {&quot;Title&quot;:&quot;The Untroubled Mind&quot;,&quot;Topics&quot;:[&quot;Mental health&quot;],&quot;Primary&quot;:&quot;22108.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hall, Herbert J. (Herbert James), 1870-1923&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;22108&quot;});" class='title'>The Untroubled Mind</a>
+<div class='author'>Hall, Herbert J. (Herbert James), 1870-1923</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23750, {&quot;Title&quot;:&quot;The Woman Beautiful; or, The Art of Beauty Culture&quot;,&quot;Topics&quot;:[&quot;Beauty, Personal&quot;],&quot;Primary&quot;:&quot;23750.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jameson, Helen Follett, 1873-&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;23750&quot;});" class='title'>The Woman Beautiful;<br><span class='subtitle'>or, The Art of Beauty Culture</span></a>
+<div class='author'>Jameson, Helen Follett, 1873-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26368, {&quot;Title&quot;:&quot;The Ladies Book of Useful Information - Compiled from many sources&quot;,&quot;Topics&quot;:[&quot;Women -- Health and hygiene&quot;,&quot;Interior decoration&quot;,&quot;Physiology -- Popular works&quot;,&quot;Decoration and ornament&quot;,&quot;Marriage&quot;,&quot;Beauty, Personal&quot;,&quot;Conduct of life -- Early works to 1900&quot;,&quot;Cosmetics&quot;,&quot;Traditional medicine&quot;,&quot;Sexual ethics&quot;,&quot;Pregnancy&quot;,&quot;Cooking for the sick&quot;,&quot;Menstruation&quot;],&quot;Primary&quot;:&quot;26368.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;HQ&quot;,&quot;RA&quot;],&quot;PG_ID&quot;:&quot;26368&quot;});" class='title'>The Ladies Book of Useful Information -<br><span class='subtitle'>Compiled from many sources</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26718, {&quot;Title&quot;:&quot;Health on the Farm: A Manual of Rural Sanitation and Hygiene&quot;,&quot;Topics&quot;:[&quot;Sanitation, Household&quot;,&quot;Rural health&quot;],&quot;Primary&quot;:&quot;26718.htm&quot;,&quot;CreatorNames&quot;:[&quot;Harris, H. F. (Henry Fauntleroy), 1867-1926&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;26718&quot;});" class='title'>Health on the Farm:<br><span class='subtitle'>A Manual of Rural Sanitation and Hygiene</span></a>
+<div class='author'>Harris, H. F. (Henry Fauntleroy), 1867-1926</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27740, {&quot;Title&quot;:&quot;A Letter to the Right Honorable the Lord Chancellor, on the Nature and Interpretation of Unsoundness of Mind, and Imbecility of Intellect&quot;,&quot;Topics&quot;:[&quot;Mental illness -- Jurisprudence&quot;],&quot;Primary&quot;:&quot;27740.htm&quot;,&quot;CreatorNames&quot;:[&quot;Haslam, John, 1764-1844&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;27740&quot;});" class='title'>A Letter to the Right Honorable the Lord Chancellor, on the Nature and Interpretation of Unsoundness of Mind, and Imbecility of Intellect</a>
+<div class='author'>Haslam, John, 1764-1844</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29555, {&quot;Title&quot;:&quot;Rural Hygiene&quot;,&quot;Topics&quot;:[&quot;Sanitation, Household&quot;,&quot;Rural health&quot;],&quot;Primary&quot;:&quot;29555.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ogden, Henry N. (Henry Neely), 1868-&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;29555&quot;});" class='title'>Rural Hygiene</a>
+<div class='author'>Ogden, Henry N. (Henry Neely), 1868-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30660, {&quot;Title&quot;:&quot;Discourses on a Sober and Temperate Life - Wherein Is Demonstrated, by His Own Example, the Method of Preserving Health to Extreme Old Age&quot;,&quot;Topics&quot;:[&quot;Cornaro, Luigi, 1475-1566&quot;,&quot;Health -- Early works to 1800&quot;,&quot;Longevity -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;30660.txt&quot;,&quot;CreatorNames&quot;:[&quot;Cornaro, Luigi, 1475-1566&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;30660&quot;});" class='title'>Discourses on a Sober and Temperate Life -<br><span class='subtitle'>Wherein Is Demonstrated, by His Own Example, the Method of Preserving Health to Extreme Old Age</span></a>
+<div class='author'>Cornaro, Luigi, 1475-1566</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31747, {&quot;Title&quot;:&quot;Sound Mind - Or, Contributions to the natural history and physiology of the human intellect&quot;,&quot;Topics&quot;:[&quot;Mental health&quot;,&quot;Intellect&quot;],&quot;Primary&quot;:&quot;31747.htm&quot;,&quot;CreatorNames&quot;:[&quot;Haslam, John, 1764-1844&quot;],&quot;LoCC&quot;:[&quot;BF&quot;,&quot;RA&quot;],&quot;PG_ID&quot;:&quot;31747&quot;});" class='title'>Sound Mind -<br><span class='subtitle'>Or, Contributions to the natural history and physiology of the human intellect</span></a>
+<div class='author'>Haslam, John, 1764-1844</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32250, {&quot;Title&quot;:&quot;American Red Cross Text-Book on Home Hygiene and Care of the Sick&quot;,&quot;Topics&quot;:[&quot;Hygiene&quot;,&quot;Nursing&quot;,&quot;Nurses&quot;,&quot;Home nursing&quot;],&quot;Primary&quot;:&quot;32250.htm&quot;,&quot;CreatorNames&quot;:[&quot;American National Red Cross&quot;,&quot;Delano, Jane A., 1862-1919&quot;,&quot;McIsaac, Isabel&quot;,&quot;Strong, Anne Hervey, 1876-1925&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;32250&quot;});" class='title'>American Red Cross Text-Book on Home Hygiene and Care of the Sick</a>
+<div class='author'>American National Red Cross, Delano, Jane A., 1862-1919, McIsaac, Isabel, Strong, Anne Hervey, 1876-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32614, {&quot;Title&quot;:&quot;The Diary of a Resurrectionist, 1811-1812 - To Which Are Added an Account of the Resurrection Men in London and a Short History of the Passing of the Anatomy Act&quot;,&quot;Topics&quot;:[&quot;Body snatching&quot;],&quot;Primary&quot;:&quot;32614.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bailey, James Blake&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;32614&quot;});" class='title'>The Diary of a Resurrectionist, 1811-1812 -<br><span class='subtitle'>To Which Are Added an Account of the Resurrection Men in London and a Short History of the Passing of the Anatomy Act</span></a>
+<div class='author'>Bailey, James Blake</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32947, {&quot;Title&quot;:&quot;On Snake-Poison: Its Action and Its Antidote&quot;,&quot;Topics&quot;:[&quot;Poisonous snakes -- Venom -- Physiological effect&quot;,&quot;Antidotes&quot;,&quot;Strychnine&quot;],&quot;Primary&quot;:&quot;32947.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mueller, A.&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;32947&quot;});" class='title'>On Snake-Poison:<br><span class='subtitle'>Its Action and Its Antidote</span></a>
+<div class='author'>Mueller, A.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34189, {&quot;Title&quot;:&quot;Food Poisoning&quot;,&quot;Topics&quot;:[&quot;Food poisoning&quot;,&quot;Ptomaine poisoning&quot;,&quot;Pathogenic microorganisms&quot;],&quot;Primary&quot;:&quot;34189.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jordan, Edwin O. (Edwin Oakes), 1866-1936&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;34189&quot;});" class='title'>Food Poisoning</a>
+<div class='author'>Jordan, Edwin O. (Edwin Oakes), 1866-1936</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34603, {&quot;Title&quot;:&quot;Epidemics Examined and Explained: or, Living Germs Proved by Analogy to be a Source of Disease&quot;,&quot;Topics&quot;:[&quot;Epidemics&quot;,&quot;Germ theory of disease&quot;],&quot;Primary&quot;:&quot;34603.htm&quot;,&quot;CreatorNames&quot;:[&quot;Grove, John, 1815-1895&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;34603&quot;});" class='title'>Epidemics Examined and Explained:<br><span class='subtitle'>or, Living Germs Proved by Analogy to be a Source of Disease</span></a>
+<div class='author'>Grove, John, 1815-1895</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36037, {&quot;Title&quot;:&quot;Medical experts: Investigation of Insanity by Juries&quot;,&quot;Topics&quot;:[&quot;Medical jurisprudence&quot;,&quot;Insanity (Law)&quot;,&quot;Medicine -- California&quot;],&quot;Primary&quot;:&quot;36037.htm&quot;,&quot;CreatorNames&quot;:[&quot;Thorne, W. S.&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;36037&quot;});" class='title'>Medical experts:<br><span class='subtitle'>Investigation of Insanity by Juries</span></a>
+<div class='author'>Thorne, W. S.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37377, {&quot;Title&quot;:&quot;Ueber die Wirkung des Nordsee-Bades: Eine physiologisch-chemische Untersuchung&quot;,&quot;Topics&quot;:[&quot;Baths -- North Sea&quot;,&quot;Saline waters -- Therapeutic use&quot;],&quot;Primary&quot;:&quot;37377.htm&quot;,&quot;CreatorNames&quot;:[&quot;Beneke, F. W. (Friedrich Wilhelm), 1824-1882&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;37377&quot;});" class='title'>Ueber die Wirkung des Nordsee-Bades:<br><span class='subtitle'>Eine physiologisch-chemische Untersuchung</span></a>
+<div class='author'>Beneke, F. W. (Friedrich Wilhelm), 1824-1882</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37640, {&quot;Title&quot;:&quot;Health: Five Lay Sermons to Working-People&quot;,&quot;Topics&quot;:[&quot;Hygiene&quot;,&quot;Health&quot;,&quot;Physician and patient&quot;,&quot;Child rearing&quot;],&quot;Primary&quot;:&quot;37640.htm&quot;,&quot;CreatorNames&quot;:[&quot;Brown, John, 1810-1882&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;37640&quot;});" class='title'>Health:<br><span class='subtitle'>Five Lay Sermons to Working-People</span></a>
+<div class='author'>Brown, John, 1810-1882</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39219, {&quot;Title&quot;:&quot;Health, Happiness, and Longevity - Health without medicine: happiness without money: the result, longevity&quot;,&quot;Topics&quot;:[&quot;Hygiene&quot;],&quot;Primary&quot;:&quot;39219.htm&quot;,&quot;CreatorNames&quot;:[&quot;McCarty, Louis Philippe, 1826-1908&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;39219&quot;});" class='title'>Health, Happiness, and Longevity -<br><span class='subtitle'>Health without medicine: happiness without money: the result, longevity</span></a>
+<div class='author'>McCarty, Louis Philippe, 1826-1908</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39830, {&quot;Title&quot;:&quot;Memoranda on Poisons&quot;,&quot;Topics&quot;:[&quot;Poisons&quot;],&quot;Primary&quot;:&quot;39830.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tanner, Thomas Hawkes&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;39830&quot;});" class='title'>Memoranda on Poisons</a>
+<div class='author'>Tanner, Thomas Hawkes</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40094, {&quot;Title&quot;:&quot;Renlighet och frisk luft&quot;,&quot;Topics&quot;:[&quot;Hygiene&quot;,&quot;Health&quot;],&quot;Primary&quot;:&quot;40094.htm&quot;,&quot;CreatorNames&quot;:[&quot;Öhrvall, Hjalmar, 1851-1929&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;40094&quot;});" class='title'>Renlighet och frisk luft</a>
+<div class='author'>Öhrvall, Hjalmar, 1851-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40373, {&quot;Title&quot;:&quot;A Guide to Health&quot;,&quot;Topics&quot;:[&quot;Health&quot;],&quot;Primary&quot;:&quot;40373.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gandhi, Mahatma, 1869-1948&quot;,&quot;Rama Iyer, A. [Translator]&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;40373&quot;});" class='title'>A Guide to Health</a>
+<div class='author'>Gandhi, Mahatma, 1869-1948, Rama Iyer, A. [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40891, {&quot;Title&quot;:&quot;The Art of Invigorating and Prolonging Life - By Food, Clothes, Air, Exercise, Wine, Sleep, &amp;c. and Peptic Precepts, Pointing Out Agreeable and Effectual Methods to Prevent and Relieve Indigestion, and to Regulate and Strengthen the Action of the Stomach and Bowels&quot;,&quot;Topics&quot;:[&quot;Hygiene&quot;,&quot;Diet&quot;,&quot;Digestion&quot;],&quot;Primary&quot;:&quot;40891.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kitchiner, William, 1775?-1827&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;40891&quot;});" class='title'>The Art of Invigorating and Prolonging Life -<br><span class='subtitle'>By Food, Clothes, Air, Exercise, Wine, Sleep, &c. and Peptic Precepts, Pointing Out Agreeable and Effectual Methods to Prevent and Relieve Indigestion, and to Regulate and Strengthen the Action of the Stomach and Bowels</span></a>
+<div class='author'>Kitchiner, William, 1775?-1827</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41380, {&quot;Title&quot;:&quot;The History of Burke and Hare, and of the Resurrectionist Times - A Fragment from the Criminal Annals of Scotland&quot;,&quot;Topics&quot;:[&quot;Trials (Murder) -- Scotland&quot;,&quot;Burke, William, 1792-1829 -- Trials, litigation, etc.&quot;,&quot;Hare, William, 1792?-1870? -- Trials, litigation, etc.&quot;,&quot;Body snatching -- Scotland&quot;,&quot;Grave robbing -- Scotland&quot;],&quot;Primary&quot;:&quot;41380.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mac Gregor, George&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;41380&quot;});" class='title'>The History of Burke and Hare, and of the Resurrectionist Times -<br><span class='subtitle'>A Fragment from the Criminal Annals of Scotland</span></a>
+<div class='author'>Mac Gregor, George</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41642, {&quot;Title&quot;:&quot;The Court of Cacus; Or, The Story of Burke and Hare&quot;,&quot;Topics&quot;:[&quot;Body snatching&quot;,&quot;Burke, William, 1792-1829&quot;,&quot;Hare, William, 1792?-1870?&quot;],&quot;Primary&quot;:&quot;41642.htm&quot;,&quot;CreatorNames&quot;:[&quot;Leighton, Alexander, 1800-1874&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;41642&quot;});" class='title'>The Court of Cacus;<br><span class='subtitle'>Or, The Story of Burke and Hare</span></a>
+<div class='author'>Leighton, Alexander, 1800-1874</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42686, {&quot;Title&quot;:&quot;A History of Epidemics in Britain, Volume 1 (of 2) - From A.D. 664 to the Extinction of Plague&quot;,&quot;Topics&quot;:[&quot;Epidemics -- Great Britain -- History&quot;],&quot;Primary&quot;:&quot;42686.htm&quot;,&quot;CreatorNames&quot;:[&quot;Creighton, Charles, 1847-1927&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;42686&quot;});" class='title'>A History of Epidemics in Britain, Volume 1 (of 2) -<br><span class='subtitle'>From A.D. 664 to the Extinction of Plague</span></a>
+<div class='author'>Creighton, Charles, 1847-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42709, {&quot;Title&quot;:&quot;Poisons, Their Effects and Detection - A Manual for the Use of Analytical Chemists and Experts&quot;,&quot;Topics&quot;:[&quot;Poisons&quot;],&quot;Primary&quot;:&quot;42709.htm&quot;,&quot;CreatorNames&quot;:[&quot;Blyth, Alexander Wynter, 1844-1921&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;42709&quot;});" class='title'>Poisons, Their Effects and Detection -<br><span class='subtitle'>A Manual for the Use of Analytical Chemists and Experts</span></a>
+<div class='author'>Blyth, Alexander Wynter, 1844-1921</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4337, {&quot;Title&quot;:&quot;Power Through Repose&quot;,&quot;Topics&quot;:[&quot;Mental health&quot;,&quot;Rest&quot;,&quot;Nervous system&quot;],&quot;Primary&quot;:&quot;4337.htm&quot;,&quot;CreatorNames&quot;:[&quot;Call, Annie Payson, 1853-1940&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;4337&quot;});" class='title'>Power Through Repose</a>
+<div class='author'>Call, Annie Payson, 1853-1940</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4338, {&quot;Title&quot;:&quot;The Freedom of Life&quot;,&quot;Topics&quot;:[&quot;Mental health&quot;],&quot;Primary&quot;:&quot;4338.htm&quot;,&quot;CreatorNames&quot;:[&quot;Call, Annie Payson, 1853-1940&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;4338&quot;});" class='title'>The Freedom of Life</a>
+<div class='author'>Call, Annie Payson, 1853-1940</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4339, {&quot;Title&quot;:&quot;Nerves and Common Sense&quot;,&quot;Topics&quot;:[&quot;Mental health&quot;],&quot;Primary&quot;:&quot;4339.htm&quot;,&quot;CreatorNames&quot;:[&quot;Call, Annie Payson, 1853-1940&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;4339&quot;});" class='title'>Nerves and Common Sense</a>
+<div class='author'>Call, Annie Payson, 1853-1940</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43671, {&quot;Title&quot;:&quot;A History of Epidemics in Britain, Volume 2 (of 2) - From the Extinction of Plague to the Present Time&quot;,&quot;Topics&quot;:[&quot;Epidemics -- Great Britain -- History&quot;],&quot;Primary&quot;:&quot;43671.htm&quot;,&quot;CreatorNames&quot;:[&quot;Creighton, Charles, 1847-1927&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;43671&quot;});" class='title'>A History of Epidemics in Britain, Volume 2 (of 2) -<br><span class='subtitle'>From the Extinction of Plague to the Present Time</span></a>
+<div class='author'>Creighton, Charles, 1847-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4385, {&quot;Title&quot;:&quot;As a Matter of Course&quot;,&quot;Topics&quot;:[&quot;Mental health -- Popular works&quot;],&quot;Primary&quot;:&quot;4385.htm&quot;,&quot;CreatorNames&quot;:[&quot;Call, Annie Payson, 1853-1940&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;4385&quot;});" class='title'>As a Matter of Course</a>
+<div class='author'>Call, Annie Payson, 1853-1940</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44048, {&quot;Title&quot;:&quot;Legal Chemistry - A Guide to the Detection of Poisons, Examination of Tea, Stains, Etc., as Applied to Chemical Jurisprudence&quot;,&quot;Topics&quot;:[&quot;Poisons&quot;,&quot;Chemistry, Forensic&quot;],&quot;Primary&quot;:&quot;44048.htm&quot;,&quot;CreatorNames&quot;:[&quot;Naquet, Alfred, 1834-1916&quot;,&quot;Battershall, Jesse P. (Jesse Park), 1851-1891 [Translator]&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;44048&quot;});" class='title'>Legal Chemistry -<br><span class='subtitle'>A Guide to the Detection of Poisons, Examination of Tea, Stains, Etc., as Applied to Chemical Jurisprudence</span></a>
+<div class='author'>Naquet, Alfred, 1834-1916, Battershall, Jesse P. (Jesse Park), 1851-1891 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46880, {&quot;Title&quot;:&quot;Gerichtliche Leichen-Oeffnungen. Erstes Hundert.&quot;,&quot;Topics&quot;:[&quot;Medical jurisprudence&quot;,&quot;Autopsy&quot;],&quot;Primary&quot;:&quot;46880.htm&quot;,&quot;CreatorNames&quot;:[&quot;Casper, Johann Ludwig, 1796-1864&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;46880&quot;});" class='title'>Gerichtliche Leichen-Oeffnungen. Erstes Hundert.</a>
+<div class='author'>Casper, Johann Ludwig, 1796-1864</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46979, {&quot;Title&quot;:&quot;Gerichtliche Leichen-Oeffnungen. Zweites Hundert.&quot;,&quot;Topics&quot;:[&quot;Medical jurisprudence&quot;,&quot;Autopsy&quot;],&quot;Primary&quot;:&quot;46979.htm&quot;,&quot;CreatorNames&quot;:[&quot;Casper, Johann Ludwig, 1796-1864&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;46979&quot;});" class='title'>Gerichtliche Leichen-Oeffnungen. Zweites Hundert.</a>
+<div class='author'>Casper, Johann Ludwig, 1796-1864</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47308, {&quot;Title&quot;:&quot;The Sanitary Evolution of London&quot;,&quot;Topics&quot;:[&quot;Public health -- England -- London&quot;],&quot;Primary&quot;:&quot;47308.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jephson, Henry (Henry Lorenzo), 1844-1914&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;47308&quot;});" class='title'>The Sanitary Evolution of London</a>
+<div class='author'>Jephson, Henry (Henry Lorenzo), 1844-1914</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48078, {&quot;Title&quot;:&quot;History of Embalming - and of Preparations in Anatomy, Pathology, and Natural History; Including an Account of a New Process for Embalming&quot;,&quot;Topics&quot;:[&quot;Embalming -- History&quot;,&quot;Anatomical specimens -- Collection and preservation&quot;,&quot;Mummies&quot;],&quot;Primary&quot;:&quot;48078.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gannal, J.-N. (Jean-Nicolas), 1791-1852&quot;,&quot;Harlan, Richard, 1796-1843 [Translator]&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;48078&quot;});" class='title'>History of Embalming -<br><span class='subtitle'>and of Preparations in Anatomy, Pathology, and Natural History; Including an Account of a New Process for Embalming</span></a>
+<div class='author'>Gannal, J.-N. (Jean-Nicolas), 1791-1852, Harlan, Richard, 1796-1843 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48329, {&quot;Title&quot;:&quot;History of Sanitation&quot;,&quot;Topics&quot;:[&quot;Sanitation -- History&quot;],&quot;Primary&quot;:&quot;48329.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cosgrove, J. J. (John Joseph), 1869-&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;48329&quot;});" class='title'>History of Sanitation</a>
+<div class='author'>Cosgrove, J. J. (John Joseph), 1869-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48492, {&quot;Title&quot;:&quot;Cremation of the Dead: Its History and Bearings Upon Public Health&quot;,&quot;Topics&quot;:[&quot;Funeral rites and ceremonies&quot;,&quot;Cremation -- History&quot;],&quot;Primary&quot;:&quot;48492.htm&quot;,&quot;CreatorNames&quot;:[&quot;Eassie, William, 1832-1888&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;48492&quot;});" class='title'>Cremation of the Dead:<br><span class='subtitle'>Its History and Bearings Upon Public Health</span></a>
+<div class='author'>Eassie, William, 1832-1888</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49027, {&quot;Title&quot;:&quot;Medical Jurisprudence, Forensic medicine and Toxicology. Vol. 1&quot;,&quot;Topics&quot;:[&quot;Medical jurisprudence&quot;,&quot;Poisons&quot;,&quot;Toxicology&quot;],&quot;Primary&quot;:&quot;49027.htm&quot;,&quot;CreatorNames&quot;:[&quot;Becker, Tracy Chatfield, 1855-&quot;,&quot;Witthaus, R. A. (Rudolph August), 1846-1915&quot;],&quot;LoCC&quot;:[&quot;KF&quot;,&quot;RA&quot;],&quot;PG_ID&quot;:&quot;49027&quot;});" class='title'>Medical Jurisprudence, Forensic medicine and Toxicology. Vol. 1</a>
+<div class='author'>Becker, Tracy Chatfield, 1855-, Witthaus, R. A. (Rudolph August), 1846-1915</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49054, {&quot;Title&quot;:&quot;Anatomy and Embalming - A Treatise on the Science and Art of Embalming, the Latest and Most Successful Methods of Treatment and the General Anatomy Relating to this Subject&quot;,&quot;Topics&quot;:[&quot;Embalming&quot;],&quot;Primary&quot;:&quot;49054.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dhonau, Charles Otto, 1886-&quot;,&quot;Nunnamaker, Albert John, 1885-1928&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;49054&quot;});" class='title'>Anatomy and Embalming -<br><span class='subtitle'>A Treatise on the Science and Art of Embalming, the Latest and Most Successful Methods of Treatment and the General Anatomy Relating to this Subject</span></a>
+<div class='author'>Dhonau, Charles Otto, 1886-, Nunnamaker, Albert John, 1885-1928</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49279, {&quot;Title&quot;:&quot;Health: How to get it and keep it. - The hygiene of dress, food, exercise, rest, bathing, breathing, and ventilation.&quot;,&quot;Topics&quot;:[&quot;Hygiene&quot;,&quot;Health&quot;],&quot;Primary&quot;:&quot;49279.htm&quot;,&quot;CreatorNames&quot;:[&quot;Woods, Walter V.&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;49279&quot;});" class='title'>Health:<br><span class='subtitle'>How to get it and keep it. - The hygiene of dress, food, exercise, rest, bathing, breathing, and ventilation.</span></a>
+<div class='author'>Woods, Walter V.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49476, {&quot;Title&quot;:&quot;Thoughts on General and Partial Inoculations - Containing a translation of two treatises written when the author was at Petersburg, and published there, by Command of her Imperial Majesty, in the Russian Language&quot;,&quot;Topics&quot;:[&quot;Smallpox -- Vaccination -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;49476.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dimsdale, Thomas, 1712-1800&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;49476&quot;});" class='title'>Thoughts on General and Partial Inoculations -<br><span class='subtitle'>Containing a translation of two treatises written when the author was at Petersburg, and published there, by Command of her Imperial Majesty, in the Russian Language</span></a>
+<div class='author'>Dimsdale, Thomas, 1712-1800</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49545, {&quot;Title&quot;:&quot;Social Work; Essays on the Meeting Ground of Doctor and Social Worker&quot;,&quot;Topics&quot;:[&quot;Friendly visiting&quot;,&quot;Medical social work -- United States&quot;,&quot;Charities, Medical&quot;,&quot;Social service&quot;],&quot;Primary&quot;:&quot;49545.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cabot, Richard C. (Richard Clarke), 1868-1939&quot;],&quot;LoCC&quot;:[&quot;HV&quot;,&quot;RA&quot;],&quot;PG_ID&quot;:&quot;49545&quot;});" class='title'>Social Work;<br><span class='subtitle'>Essays on the Meeting Ground of Doctor and Social Worker</span></a>
+<div class='author'>Cabot, Richard C. (Richard Clarke), 1868-1939</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49840, {&quot;Title&quot;:&quot;The Present Method of Inoculating for the Small-Pox - To which are added, some experiments, instituted with a view to discover the effects of a similar treatment in the natural small-pox&quot;,&quot;Topics&quot;:[&quot;Smallpox -- Vaccination -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;49840.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dimsdale, Thomas, 1712-1800&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;49840&quot;});" class='title'>The Present Method of Inoculating for the Small-Pox -<br><span class='subtitle'>To which are added, some experiments, instituted with a view to discover the effects of a similar treatment in the natural small-pox</span></a>
+<div class='author'>Dimsdale, Thomas, 1712-1800</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50460, {&quot;Title&quot;:&quot;Premature Burial and How It May Be Prevented&quot;,&quot;Topics&quot;:[&quot;Burial, Premature&quot;],&quot;Primary&quot;:&quot;50460.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tebb, William, 1830-1918&quot;,&quot;Vollum, Edward Perry, -1902&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;50460&quot;});" class='title'>Premature Burial and How It May Be Prevented</a>
+<div class='author'>Tebb, William, 1830-1918, Vollum, Edward Perry, -1902</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51521, {&quot;Title&quot;:&quot;The Prolongation of Life: Optimistic Studies&quot;,&quot;Topics&quot;:[&quot;Hygiene&quot;,&quot;Longevity&quot;,&quot;Aging&quot;,&quot;Older people -- Social conditions&quot;],&quot;Primary&quot;:&quot;51521.htm&quot;,&quot;CreatorNames&quot;:[&quot;Metchnikoff, Elie, 1845-1916&quot;,&quot;Mitchell, P. Chalmers (Peter Chalmers), Sir, 1864-1945 [Editor]&quot;],&quot;LoCC&quot;:[&quot;QP&quot;,&quot;RA&quot;],&quot;PG_ID&quot;:&quot;51521&quot;});" class='title'>The Prolongation of Life:<br><span class='subtitle'>Optimistic Studies</span></a>
+<div class='author'>Metchnikoff, Elie, 1845-1916, Mitchell, P. Chalmers (Peter Chalmers), Sir, 1864-1945 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52482, {&quot;Title&quot;:&quot;Rules to be observed by masters and pilots of vessels, arriving at the port of Philadelphia, - established by the health law, and regulations of the Board of Health, to which is annexed, a supplement to the health law, passed on the 2d day of April, 1821.&quot;,&quot;Topics&quot;:[&quot;Public health laws -- Pennsylvania -- Philadelphia&quot;],&quot;Primary&quot;:&quot;52482.htm&quot;,&quot;CreatorNames&quot;:[&quot;Philadelphia. Board of health&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;52482&quot;});" class='title'>Rules to be observed by masters and pilots of vessels, arriving at the port of Philadelphia, -<br><span class='subtitle'>established by the health law, and regulations of the Board of Health, to which is annexed, a supplement to the health law, passed on the 2d day of April, 1821.</span></a>
+<div class='author'>Philadelphia. Board of health</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52541, {&quot;Title&quot;:&quot;An Essay on the Effects of Opium. Considered as a Poison&quot;,&quot;Topics&quot;:[&quot;Opium -- Toxicology&quot;],&quot;Primary&quot;:&quot;52541.htm&quot;,&quot;CreatorNames&quot;:[&quot;Awsiter, John, 1734-&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;52541&quot;});" class='title'>An Essay on the Effects of Opium. Considered as a Poison</a>
+<div class='author'>Awsiter, John, 1734-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52653, {&quot;Title&quot;:&quot;Sanitary Statistics of Native Colonial Schools and Hospitals&quot;,&quot;Topics&quot;:[&quot;Hospital buildings -- Sanitation -- Statistics&quot;],&quot;Primary&quot;:&quot;52653.htm&quot;,&quot;CreatorNames&quot;:[&quot;Nightingale, Florence, 1820-1910&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;52653&quot;});" class='title'>Sanitary Statistics of Native Colonial Schools and Hospitals</a>
+<div class='author'>Nightingale, Florence, 1820-1910</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52657, {&quot;Title&quot;:&quot;A Treatise of Cleanness in Meats and Drinks, of the Preparation of Food, - the Excellency of Good Airs, and the Benefits of Clean Sweet Beds. Also of the Generation of Bugs, and Their Cure. To Which Is Added, a Short Discourse of the Pain in the Teeth, Shewing What Cause It Does Chiefly Proceed, and Also How to Prevent It.&quot;,&quot;Topics&quot;:[&quot;Hygiene -- Early works to 1800&quot;,&quot;Teeth -- Care and hygiene&quot;],&quot;Primary&quot;:&quot;52657.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tryon, Thomas, 1634-1703&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;52657&quot;});" class='title'>A Treatise of Cleanness in Meats and Drinks, of the Preparation of Food, -<br><span class='subtitle'>the Excellency of Good Airs, and the Benefits of Clean Sweet Beds. Also of the Generation of Bugs, and Their Cure. To Which Is Added, a Short Discourse of the Pain in the Teeth, Shewing What Cause It Does Chiefly Proceed, and Also How to Prevent It.</span></a>
+<div class='author'>Tryon, Thomas, 1634-1703</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53027, {&quot;Title&quot;:&quot;A Treatise on Tobacco, Tea, Coffee, and Chocolate&quot;,&quot;Topics&quot;:[&quot;Chocolate -- Early works to 1800&quot;,&quot;Tobacco -- Early works to 1800&quot;,&quot;Tea -- Early works to 1800&quot;,&quot;Coffee -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;53027.htm&quot;,&quot;CreatorNames&quot;:[&quot;Paulli, Simon, 1603-1680&quot;,&quot;James, R. (Robert), 1703?-1776 [Translator]&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;53027&quot;});" class='title'>A Treatise on Tobacco, Tea, Coffee, and Chocolate</a>
+<div class='author'>Paulli, Simon, 1603-1680, James, R. (Robert), 1703?-1776 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53202, {&quot;Title&quot;:&quot;A Mechanical Account of Poisons in Several Essays&quot;,&quot;Topics&quot;:[&quot;Poisons -- Early works to 1800&quot;,&quot;Venom -- Physiological effect -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;53202.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mead, Richard, 1673-1754&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;53202&quot;});" class='title'>A Mechanical Account of Poisons in Several Essays</a>
+<div class='author'>Mead, Richard, 1673-1754</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53863, {&quot;Title&quot;:&quot;A Special Mortality among Infants at Loughton, in the Epping Rural Sanitary District&quot;,&quot;Topics&quot;:[&quot;Powders -- Toxicology -- England -- Loughton (Essex)&quot;,&quot;Infants -- Death -- England -- Loughton (Essex)&quot;,&quot;Infants -- Health and hygiene -- England -- Loughton (Essex)&quot;,&quot;Loughton (Essex, England) -- Social conditions -- 19th century&quot;],&quot;Primary&quot;:&quot;53863.htm&quot;,&quot;CreatorNames&quot;:[&quot;Power, William Henry, Sir, 1842-1916&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;53863&quot;});" class='title'>A Special Mortality among Infants at Loughton, in the Epping Rural Sanitary District</a>
+<div class='author'>Power, William Henry, Sir, 1842-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53974, {&quot;Title&quot;:&quot;Principles of Public Health - A Simple Text Book on Hygiene, Presenting the Principles Fundamental to the Conservation of Individual and Community Health&quot;,&quot;Topics&quot;:[&quot;Public health&quot;],&quot;Primary&quot;:&quot;53974.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tuttle, Thomas Dyer, 1869-&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;53974&quot;});" class='title'>Principles of Public Health -<br><span class='subtitle'>A Simple Text Book on Hygiene, Presenting the Principles Fundamental to the Conservation of Individual and Community Health</span></a>
+<div class='author'>Tuttle, Thomas Dyer, 1869-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53978, {&quot;Title&quot;:&quot;Veien til Skjønhed, Sundhed og et Langt Liv&quot;,&quot;Topics&quot;:[&quot;Hygiene&quot;,&quot;Health -- Popular works&quot;,&quot;Beauty, Personal&quot;,&quot;Longevity&quot;,&quot;Diet -- Health aspects&quot;],&quot;Primary&quot;:&quot;53978.htm&quot;,&quot;CreatorNames&quot;:[&quot;Laynard, Boyd&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;53978&quot;});" class='title'>Veien til Skjønhed, Sundhed og et Langt Liv</a>
+<div class='author'>Laynard, Boyd</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54176, {&quot;Title&quot;:&quot;The cremation of the dead - considered from an aesthetic, sanitary, religious, historical, medico-legal, and economical standpoint&quot;,&quot;Topics&quot;:[&quot;Cremation&quot;],&quot;Primary&quot;:&quot;54176.htm&quot;,&quot;CreatorNames&quot;:[&quot;Erichsen, Hugo, 1860-1944&quot;,&quot;Wells, Spencer, 1818-1897 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;54176&quot;});" class='title'>The cremation of the dead -<br><span class='subtitle'>considered from an aesthetic, sanitary, religious, historical, medico-legal, and economical standpoint</span></a>
+<div class='author'>Erichsen, Hugo, 1860-1944, Wells, Spencer, 1818-1897 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54622, {&quot;Title&quot;:&quot;Reports Relating to the Sanitary Condition of the City of London&quot;,&quot;Topics&quot;:[&quot;Sanitation -- England -- London&quot;,&quot;Cemeteries -- England -- London&quot;,&quot;Mortality -- Statistics&quot;],&quot;Primary&quot;:&quot;54622.htm&quot;,&quot;CreatorNames&quot;:[&quot;Simon, John, 1816-1904&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;54622&quot;});" class='title'>Reports Relating to the Sanitary Condition of the City of London</a>
+<div class='author'>Simon, John, 1816-1904</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54646, {&quot;Title&quot;:&quot;A supplementary report on the results of a special inquiry into the practice of interment in towns.&quot;,&quot;Topics&quot;:[&quot;Working class -- Great Britain&quot;,&quot;Burial&quot;,&quot;Mortality -- Statistics&quot;,&quot;Public health -- Great Britain&quot;,&quot;Cemeteries -- Great Britain&quot;],&quot;Primary&quot;:&quot;54646.htm&quot;,&quot;CreatorNames&quot;:[&quot;Chadwick, Edwin, 1800-1890&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;54646&quot;});" class='title'>A supplementary report on the results of a special inquiry into the practice of interment in towns.</a>
+<div class='author'>Chadwick, Edwin, 1800-1890</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54904, {&quot;Title&quot;:&quot;London (Ancient and Modern) from the Sanitary and Medical Point of View&quot;,&quot;Topics&quot;:[&quot;Sanitation -- England -- London -- History -- 19th century&quot;,&quot;Medicine -- England -- London -- History -- 19th century&quot;],&quot;Primary&quot;:&quot;54904.htm&quot;,&quot;CreatorNames&quot;:[&quot;Poore, George Vivian, 1843-1904&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;54904&quot;});" class='title'>London (Ancient and Modern) from the Sanitary and Medical Point of View</a>
+<div class='author'>Poore, George Vivian, 1843-1904</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55453, {&quot;Title&quot;:&quot;A vénülés elhárítása és az élet meghosszabbítása - Célszerű életmóddal és gyógyeszközökkel&quot;,&quot;Topics&quot;:[&quot;Old age&quot;,&quot;Hygiene&quot;,&quot;Longevity&quot;],&quot;Primary&quot;:&quot;55453.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lorand, Arnold&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;55453&quot;});" class='title'>A vénülés elhárítása és az élet meghosszabbítása -<br><span class='subtitle'>Célszerű életmóddal és gyógyeszközökkel</span></a>
+<div class='author'>Lorand, Arnold</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56382, {&quot;Title&quot;:&quot;Die gerichtliche Arzneikunde in ihrem Verhältnisse zur Rechtspflege, mit besonderer Berücksichtigung der österreichischen Gesetzgebung. Erster Band. - Zum Gebrauche für Ärzte, Wundärzte und Rechtskundige dargestellt und mit entscheidenden Thatsachen begründet&quot;,&quot;Topics&quot;:[&quot;Medical jurisprudence -- Austria&quot;],&quot;Primary&quot;:&quot;56382.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ney, Franz von, 1803-1879&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;56382&quot;});" class='title'>Die gerichtliche Arzneikunde in ihrem Verhältnisse zur Rechtspflege, mit besonderer Berücksichtigung der österreichischen Gesetzgebung. Erster Band. -<br><span class='subtitle'>Zum Gebrauche für Ärzte, Wundärzte und Rechtskundige dargestellt und mit entscheidenden Thatsachen begründet</span></a>
+<div class='author'>Ney, Franz von, 1803-1879</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56633, {&quot;Title&quot;:&quot;The City That Was&quot;,&quot;Topics&quot;:[&quot;Public health -- New York (State) -- New York&quot;,&quot;Sanitation -- New York (State) -- New York&quot;,&quot;Eaton, Dorman B. (Dorman Bridgman), 1823-1899&quot;],&quot;Primary&quot;:&quot;56633.htm&quot;,&quot;CreatorNames&quot;:[&quot;Smith, Stephen, 1823-1922&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;56633&quot;});" class='title'>The City That Was</a>
+<div class='author'>Smith, Stephen, 1823-1922</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57122, {&quot;Title&quot;:&quot;Climate and Health in Hot Countries and the Outlines of Tropical Climatology - A Popular Treatise on Personal Hygiene in the Hotter Parts of the World, and on the Climates That Will Be Met Within Them.&quot;,&quot;Topics&quot;:[&quot;Hygiene -- Popular works&quot;,&quot;Medical climatology&quot;,&quot;Tropical medicine&quot;],&quot;Primary&quot;:&quot;57122.htm&quot;,&quot;CreatorNames&quot;:[&quot;Giles, George Michael James, 1853-1916&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;57122&quot;});" class='title'>Climate and Health in Hot Countries and the Outlines of Tropical Climatology -<br><span class='subtitle'>A Popular Treatise on Personal Hygiene in the Hotter Parts of the World, and on the Climates That Will Be Met Within Them.</span></a>
+<div class='author'>Giles, George Michael James, 1853-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57543, {&quot;Title&quot;:&quot;The Health Master&quot;,&quot;Topics&quot;:[&quot;Health&quot;,&quot;Public health&quot;],&quot;Primary&quot;:&quot;57543.htm&quot;,&quot;CreatorNames&quot;:[&quot;Adams, Samuel Hopkins, 1871-1958&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;57543&quot;});" class='title'>The Health Master</a>
+<div class='author'>Adams, Samuel Hopkins, 1871-1958</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57829, {&quot;Title&quot;:&quot;ΝΕΚΡΟΚΗΔΕΙΑ; Or, the Art of Embalming; - Wherein Is Shewn the Right of Burial, and Funeral Ceremonies, Especially That of Preserving Bodies After the Egyptian Method. Together With an Account of the Egyptian Mummies, Pyramids, Subterranean Vaults and Lamps, and Their Opinion of the Metempsychosis, the Cause of Their Embalming. As Also a Geographical Description of Egypt, the Rise and Course of the Nile, the Temper, Constitution and Physic of the Inhabitants, Their Inventions, Arts, Sciences, Stupendous Works and Sepulchres, and Other Curious Observations Any Ways Relating to the Physiology and Knowledge of This Art.&quot;,&quot;Topics&quot;:[&quot;Embalming -- Early works to 1800&quot;,&quot;Burial -- Early works to 1800&quot;,&quot;Funeral rites and ceremonies -- Early works to 1800&quot;,&quot;Mummies -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;57829.htm&quot;,&quot;CreatorNames&quot;:[&quot;Greenhill, Thomas, 1681-1740?&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;57829&quot;});" class='title'>ΝΕΚΡΟΚΗΔΕΙΑ;<br><span class='subtitle'>Or, the Art of Embalming; - Wherein Is Shewn the Right of Burial, and Funeral Ceremonies, Especially That of Preserving Bodies After the Egyptian Method. Together With an Account of the Egyptian Mummies, Pyramids, Subterranean Vaults and Lamps, and Their Opinion of the Metempsychosis, the Cause of Their Embalming. As Also a Geographical Description of Egypt, the Rise and Course of the Nile, the Temper, Constitution and Physic of the Inhabitants, Their Inventions, Arts, Sciences, Stupendous Works and Sepulchres, and Other Curious Observations Any Ways Relating to the Physiology and Knowledge of This Art.</span></a>
+<div class='author'>Greenhill, Thomas, 1681-1740?</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58591, {&quot;Title&quot;:&quot;Hygiene: a manual of personal and public health (New Edition)&quot;,&quot;Topics&quot;:[&quot;Hygiene&quot;,&quot;Sanitation&quot;,&quot;Public health -- Great Britain&quot;],&quot;Primary&quot;:&quot;58591.htm&quot;,&quot;CreatorNames&quot;:[&quot;Newsholme, Arthur, Sir, 1857-1943&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;58591&quot;});" class='title'>Hygiene:<br><span class='subtitle'>a manual of personal and public health (New Edition)</span></a>
+<div class='author'>Newsholme, Arthur, Sir, 1857-1943</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59140, {&quot;Title&quot;:&quot;Étude sur les maladies éteintes et les maladies nouvelles - pour servir à l&#39;histoire des évolutions séculaires de la pathologie&quot;,&quot;Topics&quot;:[&quot;Medicine -- History&quot;,&quot;Epidemics -- History&quot;],&quot;Primary&quot;:&quot;59140.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anglada, Charles&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;59140&quot;});" class='title'>Étude sur les maladies éteintes et les maladies nouvelles -<br><span class='subtitle'>pour servir à l'histoire des évolutions séculaires de la pathologie</span></a>
+<div class='author'>Anglada, Charles</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59822, {&quot;Title&quot;:&quot;Epidemics Resulting from Wars&quot;,&quot;Topics&quot;:[&quot;Military hygiene&quot;,&quot;Medicine, Military -- History&quot;,&quot;Epidemics -- History&quot;,&quot;Armies -- Medical and sanitary affairs&quot;],&quot;Primary&quot;:&quot;59822.htm&quot;,&quot;CreatorNames&quot;:[&quot;Prinzing, Friedrich, 1859-1938&quot;,&quot;Westergaard, Harald, 1853-1936 [Editor]&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;59822&quot;});" class='title'>Epidemics Resulting from Wars</a>
+<div class='author'>Prinzing, Friedrich, 1859-1938, Westergaard, Harald, 1853-1936 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59846, {&quot;Title&quot;:&quot;A Comparative View of the Mortality of the Human Species, at All Ages - And of the Diseases and Casualties by Which They Are Destroyed or Annoyed. Illustrated With Charts and Tables&quot;,&quot;Topics&quot;:[&quot;Vital statistics -- Early works to 1800&quot;,&quot;Medical statistics -- Early works to 1800&quot;,&quot;Death -- Causes -- Early works to 1800&quot;,&quot;Mortality -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;59846.htm&quot;,&quot;CreatorNames&quot;:[&quot;Black, William, 1749-1829&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;59846&quot;});" class='title'>A Comparative View of the Mortality of the Human Species, at All Ages -<br><span class='subtitle'>And of the Diseases and Casualties by Which They Are Destroyed or Annoyed. Illustrated With Charts and Tables</span></a>
+<div class='author'>Black, William, 1749-1829</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60104, {&quot;Title&quot;:&quot;Pilgrimages to the Spas in Pursuit of Health and Recreation - With an inquiry into the comparative merits of different mineral waters: the maladies to which they are applicable, and those in which they are injurious&quot;,&quot;Topics&quot;:[&quot;Health resorts&quot;,&quot;Mineral waters&quot;,&quot;Balneology&quot;],&quot;Primary&quot;:&quot;60104.htm&quot;,&quot;CreatorNames&quot;:[&quot;Johnson, James, 1777-1845&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;60104&quot;});" class='title'>Pilgrimages to the Spas in Pursuit of Health and Recreation -<br><span class='subtitle'>With an inquiry into the comparative merits of different mineral waters: the maladies to which they are applicable, and those in which they are injurious</span></a>
+<div class='author'>Johnson, James, 1777-1845</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60773, {&quot;Title&quot;:&quot;The Philosophy of Health; Volume 1 (of 2) - or, an exposition of the physical and mental constitution of man&quot;,&quot;Topics&quot;:[&quot;Hygiene&quot;,&quot;Physiology&quot;],&quot;Primary&quot;:&quot;60773.htm&quot;,&quot;CreatorNames&quot;:[&quot;Smith, Southwood, 1788-1861&quot;],&quot;LoCC&quot;:[&quot;QP&quot;,&quot;RA&quot;],&quot;PG_ID&quot;:&quot;60773&quot;});" class='title'>The Philosophy of Health;<br><span class='subtitle'>Volume 1 (of 2) - or, an exposition of the physical and mental constitution of man</span></a>
+<div class='author'>Smith, Southwood, 1788-1861</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60937, {&quot;Title&quot;:&quot;The Philosophy of Health; Volume 2 (of 2) - or, an exposition of the physical and mental constitution of man&quot;,&quot;Topics&quot;:[&quot;Hygiene&quot;,&quot;Physiology&quot;],&quot;Primary&quot;:&quot;60937.htm&quot;,&quot;CreatorNames&quot;:[&quot;Smith, Southwood, 1788-1861&quot;],&quot;LoCC&quot;:[&quot;QP&quot;,&quot;RA&quot;],&quot;PG_ID&quot;:&quot;60937&quot;});" class='title'>The Philosophy of Health;<br><span class='subtitle'>Volume 2 (of 2) - or, an exposition of the physical and mental constitution of man</span></a>
+<div class='author'>Smith, Southwood, 1788-1861</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61029, {&quot;Title&quot;:&quot;The Common Nature of Epidemics, and their relation to climate and civilization&quot;,&quot;Topics&quot;:[&quot;Epidemics&quot;,&quot;Communicable diseases&quot;,&quot;Quarantine&quot;],&quot;Primary&quot;:&quot;61029.htm&quot;,&quot;CreatorNames&quot;:[&quot;Smith, Southwood, 1788-1861&quot;,&quot;Baker, Thomas, 1819- [Editor]&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;61029&quot;});" class='title'>The Common Nature of Epidemics, and their relation to climate and civilization</a>
+<div class='author'>Smith, Southwood, 1788-1861, Baker, Thomas, 1819- [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62066, {&quot;Title&quot;:&quot;The Annual Report on the Health of the Parish of St. Mary Abbotts, Kensington, during the year 1874&quot;,&quot;Topics&quot;:[&quot;Public health -- England -- London&quot;],&quot;Primary&quot;:&quot;62066.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dudfield, T. Orme&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;62066&quot;});" class='title'>The Annual Report on the Health of the Parish of St. Mary Abbotts, Kensington, during the year 1874</a>
+<div class='author'>Dudfield, T. Orme</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62116, {&quot;Title&quot;:&quot;A Working Plan for Colored Antituberculosis Leagues&quot;,&quot;Topics&quot;:[&quot;Tuberculosis -- Prevention&quot;],&quot;Primary&quot;:&quot;62116.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wertenbaker, Charles Poindexter, 1860-1916&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;62116&quot;});" class='title'>A Working Plan for Colored Antituberculosis Leagues</a>
+<div class='author'>Wertenbaker, Charles Poindexter, 1860-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62124, {&quot;Title&quot;:&quot;Sanitation of Mofussil Bazaars&quot;,&quot;Topics&quot;:[&quot;Sanitation&quot;],&quot;Primary&quot;:&quot;62124.htm&quot;,&quot;CreatorNames&quot;:[&quot;Disney, G. W. (George William)&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;62124&quot;});" class='title'>Sanitation of Mofussil Bazaars</a>
+<div class='author'>Disney, G. W. (George William)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62174, {&quot;Title&quot;:&quot;Water pollution—Wells&quot;,&quot;Topics&quot;:[&quot;Wells&quot;,&quot;Water -- Pollution&quot;,&quot;Drinking water&quot;],&quot;Primary&quot;:&quot;62174.htm&quot;,&quot;CreatorNames&quot;:[&quot;Watson, Irving A. (Irving Allison), 1849-1918&quot;],&quot;LoCC&quot;:[&quot;RA&quot;,&quot;TD&quot;],&quot;PG_ID&quot;:&quot;62174&quot;});" class='title'>Water pollution—Wells</a>
+<div class='author'>Watson, Irving A. (Irving Allison), 1849-1918</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62531, {&quot;Title&quot;:&quot;Luxurious Bathing&quot;,&quot;Topics&quot;:[&quot;Baths&quot;],&quot;Primary&quot;:&quot;62531.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tuer, Andrew White, 1838-1900&quot;,&quot;Ellis, Tristram J., 1844-1922 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;62531&quot;});" class='title'>Luxurious Bathing</a>
+<div class='author'>Tuer, Andrew White, 1838-1900, Ellis, Tristram J., 1844-1922 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63232, {&quot;Title&quot;:&quot;The Epidemics of the Middle Ages&quot;,&quot;Topics&quot;:[&quot;Black Death&quot;,&quot;Epidemics -- History&quot;,&quot;Hysteria, Epidemic&quot;],&quot;Primary&quot;:&quot;63232.htm&quot;,&quot;CreatorNames&quot;:[&quot;Caius, John, 1510-1573&quot;,&quot;Hecker, J. F. C. (Justus Friedrich Carl), 1795-1850&quot;,&quot;Babington, B. G. (Benjamin Guy), 1794-1866 [Translator]&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;63232&quot;});" class='title'>The Epidemics of the Middle Ages</a>
+<div class='author'>Caius, John, 1510-1573, Hecker, J. F. C. (Justus Friedrich Carl), 1795-1850, Babington, B. G. (Benjamin Guy), 1794-1866 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64143, {&quot;Title&quot;:&quot;Soil and Water Pollution : Presented to the American Public Health Association at New Orleans, Dec. 1880&quot;,&quot;Topics&quot;:[&quot;Water -- Pollution&quot;,&quot;Water-supply -- Indiana -- Indianapolis&quot;],&quot;Primary&quot;:&quot;64143.htm&quot;,&quot;CreatorNames&quot;:[&quot;Runnels, M. T. (Moses Thurston), 1830-1902&quot;],&quot;LoCC&quot;:[&quot;RA&quot;,&quot;TD&quot;],&quot;PG_ID&quot;:&quot;64143&quot;});" class='title'>Soil and Water Pollution :<br><span class='subtitle'>Presented to the American Public Health Association at New Orleans, Dec. 1880</span></a>
+<div class='author'>Runnels, M. T. (Moses Thurston), 1830-1902</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64188, {&quot;Title&quot;:&quot;La simulación en la lucha por la vida&quot;,&quot;Topics&quot;:[&quot;Psychology, Comparative&quot;,&quot;Personality disorders&quot;,&quot;Malingering&quot;],&quot;Primary&quot;:&quot;64188.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ingenieros, José, 1877-1925&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;64188&quot;});" class='title'>La simulación en la lucha por la vida</a>
+<div class='author'>Ingenieros, José, 1877-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64237, {&quot;Title&quot;:&quot;Old Age Deferred - The causes of old age and its postponement by hygienic and therapeutic measures&quot;,&quot;Topics&quot;:[&quot;Old age&quot;,&quot;Hygiene&quot;,&quot;Longevity&quot;],&quot;Primary&quot;:&quot;64237.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lorand, Arnold&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;64237&quot;});" class='title'>Old Age Deferred -<br><span class='subtitle'>The causes of old age and its postponement by hygienic and therapeutic measures</span></a>
+<div class='author'>Lorand, Arnold</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65090, {&quot;Title&quot;:&quot;Report to Her Majesty&#39;s Principal Secretary of State For the Home Department, from the Poor Law Commissioners, on an Inquiry Into the Sanitary Condition of the Labouring Population of Great Britain; With Appendices&quot;,&quot;Topics&quot;:[&quot;Public health -- Great Britain&quot;,&quot;Housing -- Great Britain&quot;],&quot;Primary&quot;:&quot;65090.htm&quot;,&quot;CreatorNames&quot;:[&quot;Chadwick, Edwin, 1800-1890&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;65090&quot;});" class='title'>Report to Her Majesty's Principal Secretary of State For the Home Department, from the Poor Law Commissioners, on an Inquiry Into the Sanitary Condition of the Labouring Population of Great Britain;<br><span class='subtitle'>With Appendices</span></a>
+<div class='author'>Chadwick, Edwin, 1800-1890</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65244, {&quot;Title&quot;:&quot;On criminal abortion in America&quot;,&quot;Topics&quot;:[&quot;Abortion -- United States&quot;],&quot;Primary&quot;:&quot;65244.htm&quot;,&quot;CreatorNames&quot;:[&quot;Storer, Horatio Robinson, 1830-1922&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;65244&quot;});" class='title'>On criminal abortion in America</a>
+<div class='author'>Storer, Horatio Robinson, 1830-1922</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65341, {&quot;Title&quot;:&quot;Treatise on Poisons - In relation to medical jurisprudence, physiology, and the practice of physic&quot;,&quot;Topics&quot;:[&quot;Medical jurisprudence&quot;,&quot;Toxicology&quot;],&quot;Primary&quot;:&quot;65341.htm&quot;,&quot;CreatorNames&quot;:[&quot;Christison, Robert, Sir, 1797-1882&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;65341&quot;});" class='title'>Treatise on Poisons -<br><span class='subtitle'>In relation to medical jurisprudence, physiology, and the practice of physic</span></a>
+<div class='author'>Christison, Robert, Sir, 1797-1882</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65479, {&quot;Title&quot;:&quot;An Authentick Account of the Measures and Precautions Used at Venice - By the Magistrate of the Office of Health, for the Preservation of Publick Health&quot;,&quot;Topics&quot;:[&quot;Plague -- Italy -- Venice&quot;,&quot;Public health laws -- Italy -- Venice&quot;,&quot;Public health administration -- Italy -- Venice&quot;],&quot;Primary&quot;:&quot;65479.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;65479&quot;});" class='title'>An Authentick Account of the Measures and Precautions Used at Venice -<br><span class='subtitle'>By the Magistrate of the Office of Health, for the Preservation of Publick Health</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66016, {&quot;Title&quot;:&quot;Observation on the Use and Abuse of Mercury, and on the Precautions Necessary in Its Employment&quot;,&quot;Topics&quot;:[&quot;Mercury&quot;,&quot;Mercury -- Therapeutic use&quot;,&quot;Mercury -- Toxicology&quot;],&quot;Primary&quot;:&quot;66016.htm&quot;,&quot;CreatorNames&quot;:[&quot;Philip, Alexander Philip Wilson, 1770-1847&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;66016&quot;});" class='title'>Observation on the Use and Abuse of Mercury, and on the Precautions Necessary in Its Employment</a>
+<div class='author'>Philip, Alexander Philip Wilson, 1770-1847</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66077, {&quot;Title&quot;:&quot;Good Health and How We Won It, With an Account of the New Hygiene&quot;,&quot;Topics&quot;:[&quot;Hygiene&quot;],&quot;Primary&quot;:&quot;66077.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sinclair, Upton, 1878-1968&quot;,&quot;Williams, Michael, 1878-1950&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;66077&quot;});" class='title'>Good Health and How We Won It, With an Account of the New Hygiene</a>
+<div class='author'>Sinclair, Upton, 1878-1968, Williams, Michael, 1878-1950</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66442, {&quot;Title&quot;:&quot;The Minor Horrors of War&quot;,&quot;Topics&quot;:[&quot;Insects as carriers of disease&quot;,&quot;Insect pests&quot;,&quot;Military hygiene&quot;,&quot;World War, 1914-1918 -- Health aspects&quot;,&quot;Mites&quot;,&quot;Ticks&quot;,&quot;Leeches&quot;],&quot;Primary&quot;:&quot;66442.htm&quot;,&quot;CreatorNames&quot;:[&quot;Shipley, A. E. (Arthur Everett), Sir, 1861-1927&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;66442&quot;});" class='title'>The Minor Horrors of War</a>
+<div class='author'>Shipley, A. E. (Arthur Everett), Sir, 1861-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66507, {&quot;Title&quot;:&quot;Cholera and the Water Supply in the South Districts of London in 1854&quot;,&quot;Topics&quot;:[&quot;Cholera -- England -- London -- Epidemiology&quot;,&quot;Water-supply -- England -- London&quot;],&quot;Primary&quot;:&quot;66507.htm&quot;,&quot;CreatorNames&quot;:[&quot;Snow, John, 1813-1858&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;66507&quot;});" class='title'>Cholera and the Water Supply in the South Districts of London in 1854</a>
+<div class='author'>Snow, John, 1813-1858</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67045, {&quot;Title&quot;:&quot;The Cholera: the claims of the poor upon the rich&quot;,&quot;Topics&quot;:[&quot;Poor -- Great Britain&quot;,&quot;Public health -- Great Britain&quot;,&quot;Cholera -- Great Britain&quot;,&quot;Medical policy -- Great Britain&quot;],&quot;Primary&quot;:&quot;67045.htm&quot;,&quot;CreatorNames&quot;:[&quot;Beggs, Thomas, 1808-1896&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;67045&quot;});" class='title'>The Cholera:<br><span class='subtitle'>the claims of the poor upon the rich</span></a>
+<div class='author'>Beggs, Thomas, 1808-1896</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67182, {&quot;Title&quot;:&quot;A History of Epidemic Pestilences - From the Earliest Ages, 1495 Years Before the Birth of our Saviour to 1848: With Researches into Their Nature, Causes, and Prophylaxis&quot;,&quot;Topics&quot;:[&quot;Epidemics -- History&quot;],&quot;Primary&quot;:&quot;67182.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bascome, Edward&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;67182&quot;});" class='title'>A History of Epidemic Pestilences -<br><span class='subtitle'>From the Earliest Ages, 1495 Years Before the Birth of our Saviour to 1848: With Researches into Their Nature, Causes, and Prophylaxis</span></a>
+<div class='author'>Bascome, Edward</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67634, {&quot;Title&quot;:&quot;Report of the Sanitary Committee of the Commissioners of Sewers of the City of London, together with a report of the Medical Officer of Health on the objections raised by the Butchers&#39; Trade Society to the bye-laws proposed for the regulation of slaughter-houses&quot;,&quot;Topics&quot;:[&quot;Sewerage&quot;,&quot;Slaughtering and slaughter-houses -- Law and legislation -- Great Britain&quot;],&quot;Primary&quot;:&quot;67634.htm&quot;,&quot;CreatorNames&quot;:[&quot;Saunders, W. Sedgwick (William Sedgwick), 1824-1901&quot;,&quot;City of London (England). Commissioners of Sewers. Sanitary Committee&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;67634&quot;});" class='title'>Report of the Sanitary Committee of the Commissioners of Sewers of the City of London, together with a report of the Medical Officer of Health on the objections raised by the Butchers' Trade Society to the bye-laws proposed for the regulation of slaughter-houses</a>
+<div class='author'>Saunders, W. Sedgwick (William Sedgwick), 1824-1901, City of London (England). Commissioners of Sewers. Sanitary Committee</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67768, {&quot;Title&quot;:&quot;Hand-book of Sanitary Information for Householders - Containing facts and suggestions about ventilation, drainage, care of contageous diseases, disinfection, food, and water. With appendices on disinfectants and plumbers&#39; materials.&quot;,&quot;Topics&quot;:[&quot;Sanitation, Household&quot;,&quot;Hygiene&quot;,&quot;Food adulteration and inspection&quot;,&quot;Ventilation&quot;,&quot;Drinking water&quot;,&quot;Disinfection and disinfectants&quot;],&quot;Primary&quot;:&quot;67768.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tracy, Roger Sherman, 1841-1926&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;67768&quot;});" class='title'>Hand-book of Sanitary Information for Householders -<br><span class='subtitle'>Containing facts and suggestions about ventilation, drainage, care of contageous diseases, disinfection, food, and water. With appendices on disinfectants and plumbers' materials.</span></a>
+<div class='author'>Tracy, Roger Sherman, 1841-1926</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68053, {&quot;Title&quot;:&quot;The Frugal Life: A Paradox&quot;,&quot;Topics&quot;:[&quot;Diet&quot;],&quot;Primary&quot;:&quot;68053.htm&quot;,&quot;CreatorNames&quot;:[&quot;Landi, Ortensio, 1512?-1553?&quot;,&quot;Axon, William E. A. (William Edward Armytage), 1846-1913 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;68053&quot;});" class='title'>The Frugal Life:<br><span class='subtitle'>A Paradox</span></a>
+<div class='author'>Landi, Ortensio, 1512?-1553?, Axon, William E. A. (William Edward Armytage), 1846-1913 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69167, {&quot;Title&quot;:&quot;Body-snatching&quot;,&quot;Topics&quot;:[&quot;Surgery&quot;,&quot;Anatomy&quot;,&quot;Body snatching&quot;],&quot;Primary&quot;:&quot;69167.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;69167&quot;});" class='title'>Body-snatching</a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69283, {&quot;Title&quot;:&quot;The necessity of disinterment, under existing circumstances&quot;,&quot;Topics&quot;:[&quot;Body snatching&quot;,&quot;Human dissection&quot;],&quot;Primary&quot;:&quot;69283.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cooke, William, 1802-1834&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;69283&quot;});" class='title'>The necessity of disinterment, under existing circumstances</a>
+<div class='author'>Cooke, William, 1802-1834</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69556, {&quot;Title&quot;:&quot;Golden rules of medical evidence&quot;,&quot;Topics&quot;:[&quot;Medical jurisprudence&quot;],&quot;Primary&quot;:&quot;69556.htm&quot;,&quot;CreatorNames&quot;:[&quot;Atkinson, Stanley B. (Stanley Bean)&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;69556&quot;});" class='title'>Golden rules of medical evidence</a>
+<div class='author'>Atkinson, Stanley B. (Stanley Bean)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69823, {&quot;Title&quot;:&quot;Public health and insurance: American addresses&quot;,&quot;Topics&quot;:[&quot;Public health&quot;,&quot;Public health -- Great Britain&quot;,&quot;Health insurance -- Great Britain&quot;],&quot;Primary&quot;:&quot;69823.htm&quot;,&quot;CreatorNames&quot;:[&quot;Newsholme, Arthur, Sir, 1857-1943&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;69823&quot;});" class='title'>Public health and insurance:<br><span class='subtitle'>American addresses</span></a>
+<div class='author'>Newsholme, Arthur, Sir, 1857-1943</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70024, {&quot;Title&quot;:&quot;The old man&#39;s guide to health and longer life&quot;,&quot;Topics&quot;:[&quot;Longevity -- Early works to 1800&quot;,&quot;Hygiene -- Early works to 1800&quot;,&quot;Diet -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;70024.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hill, John, 1714?-1775&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;70024&quot;});" class='title'>The old man's guide to health and longer life</a>
+<div class='author'>Hill, John, 1714?-1775</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(8521, {&quot;Title&quot;:&quot;Maintaining Health (Formerly Health and Efficiency)&quot;,&quot;Topics&quot;:[&quot;Hygiene&quot;,&quot;Diet&quot;],&quot;Primary&quot;:&quot;8521.txt&quot;,&quot;CreatorNames&quot;:[&quot;Alsaker, Rasmus Larssen, 1883-1960&quot;],&quot;LoCC&quot;:[&quot;RA&quot;],&quot;PG_ID&quot;:&quot;8521&quot;});" class='title'>Maintaining Health (Formerly Health and Efficiency)</a>
+<div class='author'>Alsaker, Rasmus Larssen, 1883-1960</div>
+</div>
+</ul></div>
+</body></html>

@@ -1,0 +1,94 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Nursing (RT)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12439, {&quot;Title&quot;:&quot;Notes on Nursing: What It Is, and What It Is Not&quot;,&quot;Topics&quot;:[&quot;Nursing&quot;],&quot;Primary&quot;:&quot;12439.txt&quot;,&quot;CreatorNames&quot;:[&quot;Nightingale, Florence, 1820-1910&quot;],&quot;LoCC&quot;:[&quot;RT&quot;],&quot;PG_ID&quot;:&quot;12439&quot;});" class='title'>Notes on Nursing:<br><span class='subtitle'>What It Is, and What It Is Not</span></a>
+<div class='author'>Nightingale, Florence, 1820-1910</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17366, {&quot;Title&quot;:&quot;Notes on Nursing: What It Is, and What It Is Not&quot;,&quot;Topics&quot;:[&quot;Nursing&quot;],&quot;Primary&quot;:&quot;17366.htm&quot;,&quot;CreatorNames&quot;:[&quot;Nightingale, Florence, 1820-1910&quot;],&quot;LoCC&quot;:[&quot;RT&quot;],&quot;PG_ID&quot;:&quot;17366&quot;});" class='title'>Notes on Nursing:<br><span class='subtitle'>What It Is, and What It Is Not</span></a>
+<div class='author'>Nightingale, Florence, 1820-1910</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18843, {&quot;Title&quot;:&quot;Applied Psychology for Nurses&quot;,&quot;Topics&quot;:[&quot;Psychology&quot;,&quot;Nurses&quot;],&quot;Primary&quot;:&quot;18843.htm&quot;,&quot;CreatorNames&quot;:[&quot;Porter, Mary F.&quot;],&quot;LoCC&quot;:[&quot;RT&quot;],&quot;PG_ID&quot;:&quot;18843&quot;});" class='title'>Applied Psychology for Nurses</a>
+<div class='author'>Porter, Mary F.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25020, {&quot;Title&quot;:&quot;Humanistic Nursing&quot;,&quot;Topics&quot;:[&quot;Nursing&quot;,&quot;Nursing -- Philosophy&quot;],&quot;Primary&quot;:&quot;25020.txt&quot;,&quot;CreatorNames&quot;:[&quot;Paterson, Josephine G.&quot;,&quot;Zderad, Loretta T.&quot;],&quot;LoCC&quot;:[&quot;RT&quot;],&quot;PG_ID&quot;:&quot;25020&quot;});" class='title'>Humanistic Nursing</a>
+<div class='author'>Paterson, Josephine G., Zderad, Loretta T.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42988, {&quot;Title&quot;:&quot;Nursing as Caring: A Model for Transforming Practice&quot;,&quot;Topics&quot;:[&quot;Nursing -- Philosophy&quot;,&quot;Caring&quot;,&quot;Empathy&quot;,&quot;Nursing models&quot;],&quot;Primary&quot;:&quot;42988.htm&quot;,&quot;CreatorNames&quot;:[&quot;Boykin, Anne&quot;,&quot;Schoenhofer, Savina O&#39;Bryan&quot;,&quot;Pennell, Shawn [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;RT&quot;],&quot;PG_ID&quot;:&quot;42988&quot;});" class='title'>Nursing as Caring:<br><span class='subtitle'>A Model for Transforming Practice</span></a>
+<div class='author'>Boykin, Anne, Schoenhofer, Savina O'Bryan, Pennell, Shawn [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49732, {&quot;Title&quot;:&quot;Florence Nightingale to Her Nurses - A selection from Miss Nightingale&#39;s addresses to probationers and nurses of the Nightingale school at St. Thomas&#39;s hospital&quot;,&quot;Topics&quot;:[&quot;Nursing -- Vocational guidance -- 19th century&quot;,&quot;Nursing -- Education -- 19th century&quot;,&quot;Nursing -- History -- 19th century&quot;],&quot;Primary&quot;:&quot;49732.htm&quot;,&quot;CreatorNames&quot;:[&quot;Nightingale, Florence, 1820-1910&quot;,&quot;Nash, Rosalind Nightingale, 1862-1952 [Editor]&quot;],&quot;LoCC&quot;:[&quot;RT&quot;],&quot;PG_ID&quot;:&quot;49732&quot;});" class='title'>Florence Nightingale to Her Nurses -<br><span class='subtitle'>A selection from Miss Nightingale's addresses to probationers and nurses of the Nightingale school at St. Thomas's hospital</span></a>
+<div class='author'>Nightingale, Florence, 1820-1910, Nash, Rosalind Nightingale, 1862-1952 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50432, {&quot;Title&quot;:&quot;Workhouse Nursing: The story of a successful experiment&quot;,&quot;Topics&quot;:[&quot;Nursing&quot;,&quot;Poor -- Medical care&quot;],&quot;Primary&quot;:&quot;50432.htm&quot;,&quot;CreatorNames&quot;:[&quot;Nightingale, Florence, 1820-1910&quot;,&quot;Rathbone, William, 1819-1902&quot;],&quot;LoCC&quot;:[&quot;RT&quot;],&quot;PG_ID&quot;:&quot;50432&quot;});" class='title'>Workhouse Nursing:<br><span class='subtitle'>The story of a successful experiment</span></a>
+<div class='author'>Nightingale, Florence, 1820-1910, Rathbone, William, 1819-1902</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54191, {&quot;Title&quot;:&quot;An Address to the Sisters of St. Peter&#39;s Home, Brompton&quot;,&quot;Topics&quot;:[&quot;Christian life -- Anglican authors&quot;,&quot;Nursing -- Religious aspects -- Christianity&quot;,&quot;Hospitals, Convalescent&quot;],&quot;Primary&quot;:&quot;54191.htm&quot;,&quot;CreatorNames&quot;:[&quot;Goulburn, Edward Meyrick, 1818-1897&quot;],&quot;LoCC&quot;:[&quot;RT&quot;],&quot;PG_ID&quot;:&quot;54191&quot;});" class='title'>An Address to the Sisters of St. Peter's Home, Brompton</a>
+<div class='author'>Goulburn, Edward Meyrick, 1818-1897</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6361, {&quot;Title&quot;:&quot;Making Good on Private Duty: Practical Hints to Graduate Nurses&quot;,&quot;Topics&quot;:[&quot;Private duty nursing&quot;],&quot;Primary&quot;:&quot;6361.txt&quot;,&quot;CreatorNames&quot;:[&quot;Lounsbery, Harriet Camp&quot;],&quot;LoCC&quot;:[&quot;RT&quot;],&quot;PG_ID&quot;:&quot;6361&quot;});" class='title'>Making Good on Private Duty:<br><span class='subtitle'>Practical Hints to Graduate Nurses</span></a>
+<div class='author'>Lounsbery, Harriet Camp</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65268, {&quot;Title&quot;:&quot;Sairaanhoitajan maailmasta&quot;,&quot;Topics&quot;:[&quot;Nurses -- Biography&quot;,&quot;Mannerheim, Sophie, 1863-1928&quot;],&quot;Primary&quot;:&quot;65268.txt&quot;,&quot;CreatorNames&quot;:[&quot;Mannerheim, Sophie, 1863-1928&quot;],&quot;LoCC&quot;:[&quot;RT&quot;],&quot;PG_ID&quot;:&quot;65268&quot;});" class='title'>Sairaanhoitajan maailmasta</a>
+<div class='author'>Mannerheim, Sophie, 1863-1928</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68149, {&quot;Title&quot;:&quot;The martyrdom of Nurse Cavell - The life story of the victim of Germany&#39;s most barbarous crime&quot;,&quot;Topics&quot;:[&quot;Cavell, Edith, 1865-1915&quot;,&quot;Nurses -- Biography&quot;],&quot;Primary&quot;:&quot;68149.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hill, William Thomson, 1875-&quot;],&quot;LoCC&quot;:[&quot;RT&quot;,&quot;D&quot;],&quot;PG_ID&quot;:&quot;68149&quot;});" class='title'>The martyrdom of Nurse Cavell -<br><span class='subtitle'>The life story of the victim of Germany's most barbarous crime</span></a>
+<div class='author'>Hill, William Thomson, 1875-</div>
+</div>
+</ul></div>
+</body></html>

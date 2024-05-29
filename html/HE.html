@@ -1,0 +1,746 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Transportation and communications (HE)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13271, {&quot;Title&quot;:&quot;Rides on Railways&quot;,&quot;Topics&quot;:[&quot;Great Britain -- Description and travel&quot;,&quot;Railroads -- Great Britain&quot;,&quot;Railroad travel -- Great Britain&quot;],&quot;Primary&quot;:&quot;13271.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sidney, Samuel, 1813-1883&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;13271&quot;});" class='title'>Rides on Railways</a>
+<div class='author'>Sidney, Samuel, 1813-1883</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13718, {&quot;Title&quot;:&quot;Manual of Ship Subsidies - An Historical Summary of the Systems of All Nations&quot;,&quot;Topics&quot;:[&quot;Shipping bounties and subsidies&quot;],&quot;Primary&quot;:&quot;13718.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bacon, Edwin M. (Edwin Monroe), 1844-1916&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;13718&quot;});" class='title'>Manual of Ship Subsidies -<br><span class='subtitle'>An Historical Summary of the Systems of All Nations</span></a>
+<div class='author'>Bacon, Edwin M. (Edwin Monroe), 1844-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15713, {&quot;Title&quot;:&quot;What Philately Teaches - A Lecture Delivered before the Section on Philately of the Brooklyn Institute of Arts and Sciences, February 24, 1899&quot;,&quot;Topics&quot;:[&quot;Stamp collecting&quot;],&quot;Primary&quot;:&quot;15713.htm&quot;,&quot;CreatorNames&quot;:[&quot;Luff, John N. (John Nicholas), 1860-1938&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;15713&quot;});" class='title'>What Philately Teaches -<br><span class='subtitle'>A Lecture Delivered before the Section on Philately of the Brooklyn Institute of Arts and Sciences, February 24, 1899</span></a>
+<div class='author'>Luff, John N. (John Nicholas), 1860-1938</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17299, {&quot;Title&quot;:&quot;Fifty Years of Railway Life in England, Scotland and Ireland&quot;,&quot;Topics&quot;:[&quot;Railroads -- Great Britain -- History&quot;],&quot;Primary&quot;:&quot;17299.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tatlow, Joseph, 1851-1929&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;17299&quot;});" class='title'>Fifty Years of Railway Life in England, Scotland and Ireland</a>
+<div class='author'>Tatlow, Joseph, 1851-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18084, {&quot;Title&quot;:&quot;Rapport au Ministre des Finances sur l&#39;Administration des Postes - Extrait de L&#39;Annuaire des Postes de 1865&quot;,&quot;Topics&quot;:[&quot;Postal service -- France&quot;],&quot;Primary&quot;:&quot;18084.htm&quot;,&quot;CreatorNames&quot;:[&quot;Vandal, Édouard, 1813-1889&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;18084&quot;});" class='title'>Rapport au Ministre des Finances sur l'Administration des Postes -<br><span class='subtitle'>Extrait de L'Annuaire des Postes de 1865</span></a>
+<div class='author'>Vandal, Édouard, 1813-1889</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18204, {&quot;Title&quot;:&quot;Stamp Collecting as a Pastime&quot;,&quot;Topics&quot;:[&quot;Stamp collecting&quot;],&quot;Primary&quot;:&quot;18204.htm&quot;,&quot;CreatorNames&quot;:[&quot;Nankivell, Edward J. (Edward James), 1848-1909&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;18204&quot;});" class='title'>Stamp Collecting as a Pastime</a>
+<div class='author'>Nankivell, Edward J. (Edward James), 1848-1909</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18491, {&quot;Title&quot;:&quot;Lettre relative à l&#39;organisation des postes et relais&quot;,&quot;Topics&quot;:[&quot;Postal service -- France&quot;,&quot;Coaching (Transportation) -- France&quot;],&quot;Primary&quot;:&quot;18491.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dugas, Ch.&quot;],&quot;LoCC&quot;:[&quot;DC&quot;,&quot;HE&quot;],&quot;PG_ID&quot;:&quot;18491&quot;});" class='title'>Lettre relative à l'organisation des postes et relais</a>
+<div class='author'>Dugas, Ch.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18878, {&quot;Title&quot;:&quot;Return-Loads Bureaus to Save Waste in Transportation&quot;,&quot;Topics&quot;:[&quot;Transportation, Automotive&quot;,&quot;Roads&quot;,&quot;Trucking&quot;],&quot;Primary&quot;:&quot;18878.htm&quot;,&quot;CreatorNames&quot;:[&quot;United States. Council of National Defense. Highways Transport Committee&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;18878&quot;});" class='title'>Return-Loads Bureaus to Save Waste in Transportation</a>
+<div class='author'>United States. Council of National Defense. Highways Transport Committee</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18889, {&quot;Title&quot;:&quot;Mémoire sur la réunion des trois services, des postes aux chevaux, de la poste aux lettres, et des messageries, sous une seule administration&quot;,&quot;Topics&quot;:[&quot;Postal service -- France&quot;,&quot;Transportation -- France&quot;],&quot;Primary&quot;:&quot;18889.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fenis, M.&quot;],&quot;LoCC&quot;:[&quot;DC&quot;,&quot;HE&quot;],&quot;PG_ID&quot;:&quot;18889&quot;});" class='title'>Mémoire sur la réunion des trois services, des postes aux chevaux, de la poste aux lettres, et des messageries, sous une seule administration</a>
+<div class='author'>Fenis, M.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18890, {&quot;Title&quot;:&quot;Mémoire pour le service actuel des messageries&quot;,&quot;Topics&quot;:[&quot;Coaching (Transportation) -- France&quot;,&quot;Transportation -- France&quot;],&quot;Primary&quot;:&quot;18890.htm&quot;,&quot;CreatorNames&quot;:[&quot;Durdan, Bazile [Dubious author]&quot;],&quot;LoCC&quot;:[&quot;DC&quot;,&quot;HE&quot;],&quot;PG_ID&quot;:&quot;18890&quot;});" class='title'>Mémoire pour le service actuel des messageries</a>
+<div class='author'>Durdan, Bazile [Dubious author]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19414, {&quot;Title&quot;:&quot;General Instructions for the Guidance of Post Office Inspectors in the Dominion of Canada&quot;,&quot;Topics&quot;:[&quot;Postal service -- Canada -- Handbooks, manuals, etc.&quot;],&quot;Primary&quot;:&quot;19414.htm&quot;,&quot;CreatorNames&quot;:[&quot;Campbell, Alexander, 1822-1892&quot;],&quot;LoCC&quot;:[&quot;HE&quot;,&quot;F&quot;],&quot;PG_ID&quot;:&quot;19414&quot;});" class='title'>General Instructions for the Guidance of Post Office Inspectors in the Dominion of Canada</a>
+<div class='author'>Campbell, Alexander, 1822-1892</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19756, {&quot;Title&quot;:&quot;La réforme postale en France&quot;,&quot;Topics&quot;:[&quot;Postal service -- France&quot;],&quot;Primary&quot;:&quot;19756.htm&quot;,&quot;CreatorNames&quot;:[&quot;Barrillon, François-Guillaume, 1804-1885&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;19756&quot;});" class='title'>La réforme postale en France</a>
+<div class='author'>Barrillon, François-Guillaume, 1804-1885</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19757, {&quot;Title&quot;:&quot;&#39;Return Loads&#39; to Increase Transport Resources by Avoiding Waste of Empty Vehicle Running.&quot;,&quot;Topics&quot;:[&quot;Transportation, Automotive&quot;,&quot;Roads&quot;,&quot;Trucking&quot;],&quot;Primary&quot;:&quot;19757.htm&quot;,&quot;CreatorNames&quot;:[&quot;United States. Council of National Defense. Highways Transport Committee&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;19757&quot;});" class='title'>'Return Loads' to Increase Transport Resources by Avoiding Waste of Empty Vehicle Running.</a>
+<div class='author'>United States. Council of National Defense. Highways Transport Committee</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19758, {&quot;Title&quot;:&quot;Address by Honorable William C. Redfield, Secretary of Commerce at Conference of Regional Chairmen of the Highways Transport Committee Council of National Defense&quot;,&quot;Topics&quot;:[&quot;Transportation, Automotive&quot;,&quot;Roads&quot;,&quot;Trucking&quot;],&quot;Primary&quot;:&quot;19758.htm&quot;,&quot;CreatorNames&quot;:[&quot;United States. Council of National Defense. Highways Transport Committee&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;19758&quot;});" class='title'>Address by Honorable William C. Redfield, Secretary of Commerce at Conference of Regional Chairmen of the Highways Transport Committee Council of National Defense</a>
+<div class='author'>United States. Council of National Defense. Highways Transport Committee</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19759, {&quot;Title&quot;:&quot;Address by Honorable Franklin K. Lane, Secretary of the Interior at Conference of Regional Chairmen of the Highways Transport Committee Council of National Defense&quot;,&quot;Topics&quot;:[&quot;Transportation, Automotive&quot;,&quot;Roads&quot;],&quot;Primary&quot;:&quot;19759.htm&quot;,&quot;CreatorNames&quot;:[&quot;United States. Council of National Defense. Highways Transport Committee&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;19759&quot;});" class='title'>Address by Honorable Franklin K. Lane, Secretary of the Interior at Conference of Regional Chairmen of the Highways Transport Committee Council of National Defense</a>
+<div class='author'>United States. Council of National Defense. Highways Transport Committee</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19799, {&quot;Title&quot;:&quot;The Rural Motor Express - To Conserve Foodstuffs and Labor and to Supply Rural Transportation.&quot;,&quot;Topics&quot;:[&quot;Transportation, Automotive&quot;,&quot;Roads&quot;,&quot;Trucking&quot;],&quot;Primary&quot;:&quot;19799.htm&quot;,&quot;CreatorNames&quot;:[&quot;United States. Council of National Defense. Highways Transport Committee&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;19799&quot;});" class='title'>The Rural Motor Express -<br><span class='subtitle'>To Conserve Foodstuffs and Labor and to Supply Rural Transportation.</span></a>
+<div class='author'>United States. Council of National Defense. Highways Transport Committee</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19982, {&quot;Title&quot;:&quot;Projet pour la compagnie des transports, postes et messageries&quot;,&quot;Topics&quot;:[&quot;Postal service -- France&quot;,&quot;France. Ministère des P.T.T. -- History&quot;],&quot;Primary&quot;:&quot;19982.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;DC&quot;,&quot;HE&quot;],&quot;PG_ID&quot;:&quot;19982&quot;});" class='title'>Projet pour la compagnie des transports, postes et messageries</a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19984, {&quot;Title&quot;:&quot;Du service des postes et de la taxation des lettres au moyen d&#39;un timbre&quot;,&quot;Topics&quot;:[&quot;Postal service -- France&quot;,&quot;Taxation -- France&quot;],&quot;Primary&quot;:&quot;19984.htm&quot;,&quot;CreatorNames&quot;:[&quot;Piron, A.&quot;],&quot;LoCC&quot;:[&quot;DC&quot;,&quot;HE&quot;],&quot;PG_ID&quot;:&quot;19984&quot;});" class='title'>Du service des postes et de la taxation des lettres au moyen d'un timbre</a>
+<div class='author'>Piron, A.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20074, {&quot;Title&quot;:&quot;The Story of the Cambrian: A Biography of a Railway&quot;,&quot;Topics&quot;:[&quot;Cambrian Railway&quot;],&quot;Primary&quot;:&quot;20074.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gasquoine, C. P. (Charles Penrhyn), 1871-&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;20074&quot;});" class='title'>The Story of the Cambrian:<br><span class='subtitle'>A Biography of a Railway</span></a>
+<div class='author'>Gasquoine, C. P. (Charles Penrhyn), 1871-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20209, {&quot;Title&quot;:&quot;History of Steam on the Erie Canal&quot;,&quot;Topics&quot;:[&quot;Steam-navigation -- New York (State) -- Erie canal&quot;,&quot;Erie Canal (N.Y.)&quot;],&quot;Primary&quot;:&quot;20209.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;20209&quot;});" class='title'>History of Steam on the Erie Canal</a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20388, {&quot;Title&quot;:&quot;Report of the Railway Department of the Board of Trade on the London, Worcester, and Wolverhampton, and on the Birmingham and Shrewsbury Districts&quot;,&quot;Topics&quot;:[&quot;Railroads -- England -- Worcestershire -- Early works to 1850&quot;,&quot;Railroads -- England -- Wolverhampton -- Early works to 1850&quot;,&quot;Railroads -- Maps&quot;],&quot;Primary&quot;:&quot;20388.htm&quot;,&quot;CreatorNames&quot;:[&quot;Great Britain. Board of Trade. Railway Department&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;20388&quot;});" class='title'>Report of the Railway Department of the Board of Trade on the London, Worcester, and Wolverhampton, and on the Birmingham and Shrewsbury Districts</a>
+<div class='author'>Great Britain. Board of Trade. Railway Department</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20702, {&quot;Title&quot;:&quot;A General Plan for a Mail Communication by Steam, Between Great Britain and the Eastern and Western Parts of the World&quot;,&quot;Topics&quot;:[&quot;Postal service -- Great Britain -- Colonies&quot;,&quot;Mail steamers -- Great Britain&quot;],&quot;Primary&quot;:&quot;20702.htm&quot;,&quot;CreatorNames&quot;:[&quot;MacQueen, James, 1778-1870&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;20702&quot;});" class='title'>A General Plan for a Mail Communication by Steam, Between Great Britain and the Eastern and Western Parts of the World</a>
+<div class='author'>MacQueen, James, 1778-1870</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(21956, {&quot;Title&quot;:&quot;Report of the Knaresbrough Rail-way Committee&quot;,&quot;Topics&quot;:[&quot;Railroads -- England -- Knaresborough&quot;],&quot;Primary&quot;:&quot;21956.htm&quot;,&quot;CreatorNames&quot;:[&quot;Knaresbrough Rail-Way Committee (Knaresborough, England)&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;21956&quot;});" class='title'>Report of the Knaresbrough Rail-way Committee</a>
+<div class='author'>Knaresbrough Rail-Way Committee (Knaresborough, England)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22143, {&quot;Title&quot;:&quot;The Panama Canal Conflict between Great Britain and the United States of America - A Study&quot;,&quot;Topics&quot;:[&quot;Panama Canal (Panama)&quot;,&quot;Great Britain. Treaties, etc. United States, 1901 Nov. 18&quot;],&quot;Primary&quot;:&quot;22143.htm&quot;,&quot;CreatorNames&quot;:[&quot;Oppenheim, L. (Lassa), 1858-1919&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;22143&quot;});" class='title'>The Panama Canal Conflict between Great Britain and the United States of America -<br><span class='subtitle'>A Study</span></a>
+<div class='author'>Oppenheim, L. (Lassa), 1858-1919</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22190, {&quot;Title&quot;:&quot;The Stamps of Canada&quot;,&quot;Topics&quot;:[&quot;Postage stamps -- Canada&quot;],&quot;Primary&quot;:&quot;22190.htm&quot;,&quot;CreatorNames&quot;:[&quot;Poole, Bertram W. H. (Bertram William Henry), 1880-1957&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;22190&quot;});" class='title'>The Stamps of Canada</a>
+<div class='author'>Poole, Bertram W. H. (Bertram William Henry), 1880-1957</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22598, {&quot;Title&quot;:&quot;The Story of the First Trans-Continental Railroad - Its Projectors, Construction and History&quot;,&quot;Topics&quot;:[&quot;Railroads -- United States -- History&quot;,&quot;Union Pacific Railroad Company&quot;],&quot;Primary&quot;:&quot;22598.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bailey, William Francis, 1861-&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;22598&quot;});" class='title'>The Story of the First Trans-Continental Railroad -<br><span class='subtitle'>Its Projectors, Construction and History</span></a>
+<div class='author'>Bailey, William Francis, 1861-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22635, {&quot;Title&quot;:&quot;Die Postgeheimnisse - oder die hauptsächlichsten Regeln welche man beim Reisen und bei Versendungen mit der Post beobachten muß um Verdruß und Verlust zu vermeiden&quot;,&quot;Topics&quot;:[&quot;Travel&quot;,&quot;Postal service&quot;],&quot;Primary&quot;:&quot;22635.htm&quot;,&quot;CreatorNames&quot;:[&quot;Raabe, Heinrich August, 1759-1841&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;22635&quot;});" class='title'>Die Postgeheimnisse -<br><span class='subtitle'>oder die hauptsächlichsten Regeln welche man beim Reisen und bei Versendungen mit der Post beobachten muß um Verdruß und Verlust zu vermeiden</span></a>
+<div class='author'>Raabe, Heinrich August, 1759-1841</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23852, {&quot;Title&quot;:&quot;Canadian Postal Guide&quot;,&quot;Topics&quot;:[&quot;Postal service -- Canada&quot;],&quot;Primary&quot;:&quot;23852.htm&quot;,&quot;CreatorNames&quot;:[&quot;Canada. Post Office Department&quot;,&quot;Dewé, John, 1821- [Editor]&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;23852&quot;});" class='title'>Canadian Postal Guide</a>
+<div class='author'>Canada. Post Office Department, Dewé, John, 1821- [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25075, {&quot;Title&quot;:&quot;A Letter from Major Robert Carmichael-Smyth to His Friend, the Author of &#39;The Clockmaker&#39;&quot;,&quot;Topics&quot;:[&quot;Haliburton, Thomas Chandler, 1796-1865&quot;,&quot;Railroads -- Canada&quot;,&quot;Transportation -- Canada&quot;,&quot;Great Britain -- Colonies -- America&quot;],&quot;Primary&quot;:&quot;25075.htm&quot;,&quot;CreatorNames&quot;:[&quot;Carmichael-Smyth, Robert, 1800?-1888&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;25075&quot;});" class='title'>A Letter from Major Robert Carmichael-Smyth to His Friend, the Author of 'The Clockmaker'</a>
+<div class='author'>Carmichael-Smyth, Robert, 1800?-1888</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25104, {&quot;Title&quot;:&quot;Ocean Steam Navigation and the Ocean Post&quot;,&quot;Topics&quot;:[&quot;Mail steamers&quot;,&quot;Steam-navigation&quot;],&quot;Primary&quot;:&quot;25104.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rainey, Thomas&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;25104&quot;});" class='title'>Ocean Steam Navigation and the Ocean Post</a>
+<div class='author'>Rainey, Thomas</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26601, {&quot;Title&quot;:&quot;Gambia&quot;,&quot;Topics&quot;:[&quot;Postage stamps -- Gambia&quot;],&quot;Primary&quot;:&quot;26601.htm&quot;,&quot;CreatorNames&quot;:[&quot;Melville, Frederick John, 1882-1940&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;26601&quot;});" class='title'>Gambia</a>
+<div class='author'>Melville, Frederick John, 1882-1940</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27196, {&quot;Title&quot;:&quot;Cheap Postage&quot;,&quot;Topics&quot;:[&quot;Postal rates&quot;],&quot;Primary&quot;:&quot;27196.htm&quot;,&quot;CreatorNames&quot;:[&quot;Leavitt, Joshua, 1794-1873&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;27196&quot;});" class='title'>Cheap Postage</a>
+<div class='author'>Leavitt, Joshua, 1794-1873</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27256, {&quot;Title&quot;:&quot;A Pioneer Railway of the West&quot;,&quot;Topics&quot;:[&quot;Lexington and Ohio Rail Road Company -- History&quot;,&quot;Louisville and Nashville Railroad Company -- History&quot;],&quot;Primary&quot;:&quot;27256.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lafferty, Maude Ward, 1869-1962&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;27256&quot;});" class='title'>A Pioneer Railway of the West</a>
+<div class='author'>Lafferty, Maude Ward, 1869-1962</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27688, {&quot;Title&quot;:&quot;A Hundred Years by Post: A Jubilee Retrospect&quot;,&quot;Topics&quot;:[&quot;Postal service -- Great Britain&quot;],&quot;Primary&quot;:&quot;27688.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hyde, James Wilson, 1841-1918&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;27688&quot;});" class='title'>A Hundred Years by Post:<br><span class='subtitle'>A Jubilee Retrospect</span></a>
+<div class='author'>Hyde, James Wilson, 1841-1918</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28533, {&quot;Title&quot;:&quot;The King&#39;s Post - Being a volume of historical facts relating to the posts, mail coaches, coach roads, and railway mail services of and connected with the ancient city of Bristol from 1580 to the present time&quot;,&quot;Topics&quot;:[&quot;Postal service -- England -- Bristol&quot;],&quot;Primary&quot;:&quot;28533.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tombs, Robert Charles, 1842-1923&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;28533&quot;});" class='title'>The King's Post -<br><span class='subtitle'>Being a volume of historical facts relating to the posts, mail coaches, coach roads, and railway mail services of and connected with the ancient city of Bristol from 1580 to the present time</span></a>
+<div class='author'>Tombs, Robert Charles, 1842-1923</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28704, {&quot;Title&quot;:&quot;Free Ships: The Restoration of the American Carrying Trade&quot;,&quot;Topics&quot;:[&quot;Merchant marine -- United States&quot;],&quot;Primary&quot;:&quot;28704.htm&quot;,&quot;CreatorNames&quot;:[&quot;Codman, John, 1814-1900&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;28704&quot;});" class='title'>Free Ships:<br><span class='subtitle'>The Restoration of the American Carrying Trade</span></a>
+<div class='author'>Codman, John, 1814-1900</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29175, {&quot;Title&quot;:&quot;Lettre de Defrance à Bion, sur sa réponse aux objections contre l&#39;établissement de la régie intéressée des postes et messageries&quot;,&quot;Topics&quot;:[&quot;France. Ministère des P.T.T. -- History&quot;,&quot;Postal service -- France -- Administration -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;29175.htm&quot;,&quot;CreatorNames&quot;:[&quot;Defrance, Jean Claude, 1743-1807&quot;],&quot;LoCC&quot;:[&quot;DC&quot;,&quot;HE&quot;],&quot;PG_ID&quot;:&quot;29175&quot;});" class='title'>Lettre de Defrance à Bion, sur sa réponse aux objections contre l'établissement de la régie intéressée des postes et messageries</a>
+<div class='author'>Defrance, Jean Claude, 1743-1807</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29294, {&quot;Title&quot;:&quot;The Railroad Question - A historical and practical treatise on railroads, and remedies for their abuses&quot;,&quot;Topics&quot;:[&quot;Railroads&quot;,&quot;Railroads -- United States&quot;,&quot;Railroads and state -- United States&quot;],&quot;Primary&quot;:&quot;29294.htm&quot;,&quot;CreatorNames&quot;:[&quot;Larrabee, William, 1832-1912&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;29294&quot;});" class='title'>The Railroad Question -<br><span class='subtitle'>A historical and practical treatise on railroads, and remedies for their abuses</span></a>
+<div class='author'>Larrabee, William, 1832-1912</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29493, {&quot;Title&quot;:&quot;Government Ownership of Railroads, and War Taxation&quot;,&quot;Topics&quot;:[&quot;World War, 1914-1918 -- Finance -- United States&quot;,&quot;Railroads and state -- United States&quot;,&quot;Finance, Public -- United States -- History -- 1901-1933&quot;],&quot;Primary&quot;:&quot;29493.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kahn, Otto H., 1867-1934&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;29493&quot;});" class='title'>Government Ownership of Railroads, and War Taxation</a>
+<div class='author'>Kahn, Otto H., 1867-1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3036, {&quot;Title&quot;:&quot;The Railroad Builders: A Chronicle of the Welding of the States&quot;,&quot;Topics&quot;:[&quot;Railroads -- United States -- History&quot;],&quot;Primary&quot;:&quot;3036.htm&quot;,&quot;CreatorNames&quot;:[&quot;Moody, John, 1868-1958&quot;],&quot;LoCC&quot;:[&quot;E&quot;,&quot;HE&quot;],&quot;PG_ID&quot;:&quot;3036&quot;});" class='title'>The Railroad Builders:<br><span class='subtitle'>A Chronicle of the Welding of the States</span></a>
+<div class='author'>Moody, John, 1868-1958</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30509, {&quot;Title&quot;:&quot;The Railway Builders: A Chronicle of Overland Highways&quot;,&quot;Topics&quot;:[&quot;Railroads -- Canada -- History&quot;,&quot;Pacific railroads&quot;],&quot;Primary&quot;:&quot;30509.htm&quot;,&quot;CreatorNames&quot;:[&quot;Skelton, Oscar D. (Oscar Douglas), 1878-1941&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;30509&quot;});" class='title'>The Railway Builders:<br><span class='subtitle'>A Chronicle of Overland Highways</span></a>
+<div class='author'>Skelton, Oscar D. (Oscar Douglas), 1878-1941</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3098, {&quot;Title&quot;:&quot;The Paths of Inland Commerce; A Chronicle of Trail, Road, and Waterway&quot;,&quot;Topics&quot;:[&quot;Transportation -- United States -- History&quot;],&quot;Primary&quot;:&quot;3098.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hulbert, Archer Butler, 1873-1933&quot;],&quot;LoCC&quot;:[&quot;E&quot;,&quot;HE&quot;],&quot;PG_ID&quot;:&quot;3098&quot;});" class='title'>The Paths of Inland Commerce;<br><span class='subtitle'>A Chronicle of Trail, Road, and Waterway</span></a>
+<div class='author'>Hulbert, Archer Butler, 1873-1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3099, {&quot;Title&quot;:&quot;The Old Merchant Marine: A Chronicle of American Ships and Sailors&quot;,&quot;Topics&quot;:[&quot;Merchant marine -- United States -- History&quot;],&quot;Primary&quot;:&quot;3099.htm&quot;,&quot;CreatorNames&quot;:[&quot;Paine, Ralph Delahaye, 1871-1925&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;3099&quot;});" class='title'>The Old Merchant Marine:<br><span class='subtitle'>A Chronicle of American Ships and Sailors</span></a>
+<div class='author'>Paine, Ralph Delahaye, 1871-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31163, {&quot;Title&quot;:&quot;Are we ruined by the Germans?&quot;,&quot;Topics&quot;:[&quot;Great Britain -- Commerce&quot;,&quot;Great Britain -- Commerce -- Germany&quot;,&quot;Germany -- Commerce -- Great Britain&quot;],&quot;Primary&quot;:&quot;31163.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cox, Harold, 1859-1936&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;31163&quot;});" class='title'>Are we ruined by the Germans?</a>
+<div class='author'>Cox, Harold, 1859-1936</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31395, {&quot;Title&quot;:&quot;Railway Adventures and Anecdotes: Extending over More Than Fifty Years&quot;,&quot;Topics&quot;:[&quot;Railroads&quot;],&quot;Primary&quot;:&quot;31395.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pike, Richard [Editor]&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;31395&quot;});" class='title'>Railway Adventures and Anecdotes:<br><span class='subtitle'>Extending over More Than Fifty Years</span></a>
+<div class='author'>Pike, Richard [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33706, {&quot;Title&quot;:&quot;The Future of Road-making in America&quot;,&quot;Topics&quot;:[&quot;Roads&quot;,&quot;Roads -- United States&quot;,&quot;Roads -- United States -- Design and construction&quot;],&quot;Primary&quot;:&quot;33706.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hulbert, Archer Butler, 1873-1933&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;33706&quot;});" class='title'>The Future of Road-making in America</a>
+<div class='author'>Hulbert, Archer Butler, 1873-1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34007, {&quot;Title&quot;:&quot;The Postage Stamp in War&quot;,&quot;Topics&quot;:[&quot;Postage stamps&quot;],&quot;Primary&quot;:&quot;34007.htm&quot;,&quot;CreatorNames&quot;:[&quot;Melville, Frederick John, 1882-1940&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;34007&quot;});" class='title'>The Postage Stamp in War</a>
+<div class='author'>Melville, Frederick John, 1882-1940</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34011, {&quot;Title&quot;:&quot;The Development of Rates of Postage: An Historical and Analytical Study&quot;,&quot;Topics&quot;:[&quot;Postal rates&quot;],&quot;Primary&quot;:&quot;34011.htm&quot;,&quot;CreatorNames&quot;:[&quot;Smith, A. D. (Alfred Daniel)&quot;,&quot;Samuel, Herbert Louis Samuel, Viscount, 1870-1963 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;34011&quot;});" class='title'>The Development of Rates of Postage:<br><span class='subtitle'>An Historical and Analytical Study</span></a>
+<div class='author'>Smith, A. D. (Alfred Daniel), Samuel, Herbert Louis Samuel, Viscount, 1870-1963 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34197, {&quot;Title&quot;:&quot;The Bristol Royal Mail: Post, Telegraph, and Telephone&quot;,&quot;Topics&quot;:[&quot;Postal service -- England -- Bristol&quot;],&quot;Primary&quot;:&quot;34197.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tombs, Robert Charles, 1842-1923&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;34197&quot;});" class='title'>The Bristol Royal Mail:<br><span class='subtitle'>Post, Telegraph, and Telephone</span></a>
+<div class='author'>Tombs, Robert Charles, 1842-1923</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35344, {&quot;Title&quot;:&quot;Third Biennial Report of the Oregon State Highway Commission - Covering the Period December 1st, 1916 to November 30th, 1918&quot;,&quot;Topics&quot;:[&quot;Highway engineering -- Oregon -- History&quot;,&quot;Water resources development -- Systems engineering -- Oregon -- History&quot;],&quot;Primary&quot;:&quot;35344.htm&quot;,&quot;CreatorNames&quot;:[&quot;Benson, Simon&quot;,&quot;Booth, R. A.&quot;,&quot;Nunn, Herbert&quot;,&quot;Thompson, W. L.&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;35344&quot;});" class='title'>Third Biennial Report of the Oregon State Highway Commission -<br><span class='subtitle'>Covering the Period December 1st, 1916 to November 30th, 1918</span></a>
+<div class='author'>Benson, Simon, Booth, R. A., Nunn, Herbert, Thompson, W. L.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35566, {&quot;Title&quot;:&quot;History of the Postage Stamps of the United States of America&quot;,&quot;Topics&quot;:[&quot;Postage stamps -- United States&quot;],&quot;Primary&quot;:&quot;35566.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tiffany, John K. (John Kerr), 1843-1897&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;35566&quot;});" class='title'>History of the Postage Stamps of the United States of America</a>
+<div class='author'>Tiffany, John K. (John Kerr), 1843-1897</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35715, {&quot;Title&quot;:&quot;The Early History of the Colonial Post-Office&quot;,&quot;Topics&quot;:[&quot;Postal service -- United States -- History -- Colonial period, ca. 1600-1775&quot;],&quot;Primary&quot;:&quot;35715.htm&quot;,&quot;CreatorNames&quot;:[&quot;Woolley, Mary Emma, 1863-1947&quot;],&quot;LoCC&quot;:[&quot;E&quot;,&quot;F&quot;,&quot;HE&quot;],&quot;PG_ID&quot;:&quot;35715&quot;});" class='title'>The Early History of the Colonial Post-Office</a>
+<div class='author'>Woolley, Mary Emma, 1863-1947</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36464, {&quot;Title&quot;:&quot;The Mail Pay on the Burlington Railroad - Statements of Car Space and All Facilities Furnished for the Government Mails and for Express and Passengers in All Passenger Trains on the Chicago, Burlington and Quincy Railroad&quot;,&quot;Topics&quot;:[&quot;Chicago, Burlington &amp; Quincy Railroad Company&quot;,&quot;Railway mail service -- United States&quot;],&quot;Primary&quot;:&quot;36464.htm&quot;,&quot;CreatorNames&quot;:[&quot;Chicago, Burlington &amp; Quincy Railroad Company [Editor]&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;36464&quot;});" class='title'>The Mail Pay on the Burlington Railroad -<br><span class='subtitle'>Statements of Car Space and All Facilities Furnished for the Government Mails and for Express and Passengers in All Passenger Trains on the Chicago, Burlington and Quincy Railroad</span></a>
+<div class='author'>Chicago, Burlington & Quincy Railroad Company [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37024, {&quot;Title&quot;:&quot;The Express Companies of the United States: A Study of a Public Utility&quot;,&quot;Topics&quot;:[&quot;Express service -- United States&quot;,&quot;Parcel post -- United States&quot;],&quot;Primary&quot;:&quot;37024.htm&quot;,&quot;CreatorNames&quot;:[&quot;Benedict, Bertram&quot;,&quot;Laidler, Harry W. (Harry Wellington), 1884-1970 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;37024&quot;});" class='title'>The Express Companies of the United States:<br><span class='subtitle'>A Study of a Public Utility</span></a>
+<div class='author'>Benedict, Bertram, Laidler, Harry W. (Harry Wellington), 1884-1970 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37238, {&quot;Title&quot;:&quot;The History of the Post Office in British North America&quot;,&quot;Topics&quot;:[&quot;Postal service -- Great Britain -- Colonies&quot;,&quot;Canada. Post Office Department&quot;,&quot;Postal service -- Canada -- History&quot;],&quot;Primary&quot;:&quot;37238.htm&quot;,&quot;CreatorNames&quot;:[&quot;Smith, William, 1859-&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;37238&quot;});" class='title'>The History of the Post Office in British North America</a>
+<div class='author'>Smith, William, 1859-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37457, {&quot;Title&quot;:&quot;Canada: Its Postage Stamps and Postal Stationery&quot;,&quot;Topics&quot;:[&quot;Postage stamps -- Canada&quot;,&quot;Postal stationery -- Canada&quot;],&quot;Primary&quot;:&quot;37457.htm&quot;,&quot;CreatorNames&quot;:[&quot;Howes, Clifton A. (Clifton Armstrong), 1872-1936&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;37457&quot;});" class='title'>Canada:<br><span class='subtitle'>Its Postage Stamps and Postal Stationery</span></a>
+<div class='author'>Howes, Clifton A. (Clifton Armstrong), 1872-1936</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38328, {&quot;Title&quot;:&quot;The History of the Post Office, from Its Establishment Down to 1836&quot;,&quot;Topics&quot;:[&quot;Postal service -- Great Britain -- History&quot;],&quot;Primary&quot;:&quot;38328.htm&quot;,&quot;CreatorNames&quot;:[&quot;Joyce, Herbert&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;38328&quot;});" class='title'>The History of the Post Office, from Its Establishment Down to 1836</a>
+<div class='author'>Joyce, Herbert</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38359, {&quot;Title&quot;:&quot;Peeps at Postage Stamps&quot;,&quot;Topics&quot;:[&quot;Stamp collecting&quot;],&quot;Primary&quot;:&quot;38359.htm&quot;,&quot;CreatorNames&quot;:[&quot;Johnson, Stanley C. (Stanley Currie), 1878-&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;38359&quot;});" class='title'>Peeps at Postage Stamps</a>
+<div class='author'>Johnson, Stanley C. (Stanley Currie), 1878-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38542, {&quot;Title&quot;:&quot;A Century of Sail and Steam on the Niagara River&quot;,&quot;Topics&quot;:[&quot;Niagara Navigation Company (Toronto, Ont.)&quot;,&quot;Shipping -- Niagara River (N.Y. and Ont.)&quot;,&quot;Steam-navigation -- Niagara River (N.Y. and Ont.)&quot;],&quot;Primary&quot;:&quot;38542.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cumberland, Barlow, 1846-1913&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;38542&quot;});" class='title'>A Century of Sail and Steam on the Niagara River</a>
+<div class='author'>Cumberland, Barlow, 1846-1913</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38731, {&quot;Title&quot;:&quot;Railroad Accidents, Their Cause and Prevention&quot;,&quot;Topics&quot;:[&quot;Railroad accidents&quot;],&quot;Primary&quot;:&quot;38731.htm&quot;,&quot;CreatorNames&quot;:[&quot;Richards, R. C. (Ralph Coffin), 1855-&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;38731&quot;});" class='title'>Railroad Accidents, Their Cause and Prevention</a>
+<div class='author'>Richards, R. C. (Ralph Coffin), 1855-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39021, {&quot;Title&quot;:&quot;The Story of the Rome, Watertown, and Ogdensburg Railroad&quot;,&quot;Topics&quot;:[&quot;Rome, Watertown &amp; Ogdensburg Railroad Company&quot;,&quot;Railroads -- New York (State) -- History&quot;],&quot;Primary&quot;:&quot;39021.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hungerford, Edward, 1875-1948&quot;],&quot;LoCC&quot;:[&quot;F&quot;,&quot;HE&quot;],&quot;PG_ID&quot;:&quot;39021&quot;});" class='title'>The Story of the Rome, Watertown, and Ogdensburg Railroad</a>
+<div class='author'>Hungerford, Edward, 1875-1948</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39569, {&quot;Title&quot;:&quot;The Adhesive Postage Stamp&quot;,&quot;Topics&quot;:[&quot;Postage stamps&quot;,&quot;Hill, Rowland, Sir, 1795-1879&quot;,&quot;Chalmers, James, 1782-1853&quot;],&quot;Primary&quot;:&quot;39569.htm&quot;,&quot;CreatorNames&quot;:[&quot;Chalmers, Patrick&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;39569&quot;});" class='title'>The Adhesive Postage Stamp</a>
+<div class='author'>Chalmers, Patrick</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39838, {&quot;Title&quot;:&quot;Our Railroads To-Morrow&quot;,&quot;Topics&quot;:[&quot;Railroads -- United States&quot;],&quot;Primary&quot;:&quot;39838.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hungerford, Edward, 1875-1948&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;39838&quot;});" class='title'>Our Railroads To-Morrow</a>
+<div class='author'>Hungerford, Edward, 1875-1948</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39978, {&quot;Title&quot;:&quot;The Royal Mail: Its Curiosities and Romance&quot;,&quot;Topics&quot;:[&quot;Postal service -- Great Britain&quot;],&quot;Primary&quot;:&quot;39978.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hyde, James Wilson, 1841-1918&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;39978&quot;});" class='title'>The Royal Mail:<br><span class='subtitle'>Its Curiosities and Romance</span></a>
+<div class='author'>Hyde, James Wilson, 1841-1918</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40002, {&quot;Title&quot;:&quot;The Die Varieties of the Nesbitt Series of United States Envelopes&quot;,&quot;Topics&quot;:[&quot;Postage stamps -- United States&quot;],&quot;Primary&quot;:&quot;40002.htm&quot;,&quot;CreatorNames&quot;:[&quot;Berthold, Victor Maximilian, 1856-1932&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;40002&quot;});" class='title'>The Die Varieties of the Nesbitt Series of United States Envelopes</a>
+<div class='author'>Berthold, Victor Maximilian, 1856-1932</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40125, {&quot;Title&quot;:&quot;The Railroad Problem&quot;,&quot;Topics&quot;:[&quot;Railroads -- United States&quot;,&quot;Railroads -- United States -- Employees&quot;],&quot;Primary&quot;:&quot;40125.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hungerford, Edward, 1875-1948&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;40125&quot;});" class='title'>The Railroad Problem</a>
+<div class='author'>Hungerford, Edward, 1875-1948</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40469, {&quot;Title&quot;:&quot;An Historical Summary of the Post Office in Scotland&quot;,&quot;Topics&quot;:[&quot;Postal service -- Scotland&quot;],&quot;Primary&quot;:&quot;40469.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lang, T. B. (Thomas Bamford), 1820-1868&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;40469&quot;});" class='title'>An Historical Summary of the Post Office in Scotland</a>
+<div class='author'>Lang, T. B. (Thomas Bamford), 1820-1868</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40514, {&quot;Title&quot;:&quot;Minority Report of the Committee on Railways in Relation to the Hoosac Tunnel and the Railroads Leading Thereto - With a bill to incorporate the State Board of Trustees of the Hoosac Tunnel Railroad; also the speech delivered by Hon. E. P. Carpenter in the Senate of Massachusetts, June 3, 1873, in support of the same&quot;,&quot;Topics&quot;:[&quot;Railroad tunnels -- Massachusetts&quot;,&quot;Hoosac Tunnel (Mass.)&quot;,&quot;Railroads -- Massachusetts&quot;],&quot;Primary&quot;:&quot;40514.htm&quot;,&quot;CreatorNames&quot;:[&quot;Massachusetts. General Court. Committee on Railways and Canals&quot;,&quot;Carpenter, E. P. (Erastus Payson) [Contributor]&quot;],&quot;LoCC&quot;:[&quot;HE&quot;,&quot;TA&quot;],&quot;PG_ID&quot;:&quot;40514&quot;});" class='title'>Minority Report of the Committee on Railways in Relation to the Hoosac Tunnel and the Railroads Leading Thereto -<br><span class='subtitle'>With a bill to incorporate the State Board of Trustees of the Hoosac Tunnel Railroad; also the speech delivered by Hon. E. P. Carpenter in the Senate of Massachusetts, June 3, 1873, in support of the same</span></a>
+<div class='author'>Massachusetts. General Court. Committee on Railways and Canals, Carpenter, E. P. (Erastus Payson) [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40709, {&quot;Title&quot;:&quot;Facts and Figures Concerning the Hoosac Tunnel&quot;,&quot;Topics&quot;:[&quot;Railroad tunnels -- Massachusetts&quot;,&quot;Hoosac Tunnel (Mass.)&quot;,&quot;Railroads -- Massachusetts&quot;,&quot;Tunnels -- Massachusetts&quot;],&quot;Primary&quot;:&quot;40709.htm&quot;,&quot;CreatorNames&quot;:[&quot;Piper, John J., -1869&quot;],&quot;LoCC&quot;:[&quot;HE&quot;,&quot;TA&quot;],&quot;PG_ID&quot;:&quot;40709&quot;});" class='title'>Facts and Figures Concerning the Hoosac Tunnel</a>
+<div class='author'>Piper, John J., -1869</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40840, {&quot;Title&quot;:&quot;Ten Years Among the Mail Bags - Or, Notes from the Diary of a Special Agent of the Post-Office Department&quot;,&quot;Topics&quot;:[&quot;Postal service -- United States&quot;],&quot;Primary&quot;:&quot;40840.htm&quot;,&quot;CreatorNames&quot;:[&quot;Holbrook, James, 1812-1864&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;40840&quot;});" class='title'>Ten Years Among the Mail Bags -<br><span class='subtitle'>Or, Notes from the Diary of a Special Agent of the Post-Office Department</span></a>
+<div class='author'>Holbrook, James, 1812-1864</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41008, {&quot;Title&quot;:&quot;The Great American Canals (Volume 2, The Erie Canal)&quot;,&quot;Topics&quot;:[&quot;Erie Canal (N.Y.)&quot;],&quot;Primary&quot;:&quot;41008.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hulbert, Archer Butler, 1873-1933&quot;],&quot;LoCC&quot;:[&quot;E&quot;,&quot;HE&quot;],&quot;PG_ID&quot;:&quot;41008&quot;});" class='title'>The Great American Canals (Volume 2, The Erie Canal)</a>
+<div class='author'>Hulbert, Archer Butler, 1873-1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41030, {&quot;Title&quot;:&quot;Pioneer Roads and Experiences of Travelers (Volume 2)&quot;,&quot;Topics&quot;:[&quot;Frontier and pioneer life -- Ohio River Valley&quot;,&quot;Pennsylvania -- Description and travel&quot;,&quot;Roads -- Ohio River Valley&quot;,&quot;Kentucky -- Description and travel&quot;],&quot;Primary&quot;:&quot;41030.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hulbert, Archer Butler, 1873-1933&quot;],&quot;LoCC&quot;:[&quot;E&quot;,&quot;HE&quot;],&quot;PG_ID&quot;:&quot;41030&quot;});" class='title'>Pioneer Roads and Experiences of Travelers (Volume 2)</a>
+<div class='author'>Hulbert, Archer Butler, 1873-1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41041, {&quot;Title&quot;:&quot;The Cumberland Road&quot;,&quot;Topics&quot;:[&quot;Cumberland Road&quot;],&quot;Primary&quot;:&quot;41041.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hulbert, Archer Butler, 1873-1933&quot;],&quot;LoCC&quot;:[&quot;E&quot;,&quot;HE&quot;],&quot;PG_ID&quot;:&quot;41041&quot;});" class='title'>The Cumberland Road</a>
+<div class='author'>Hulbert, Archer Butler, 1873-1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41067, {&quot;Title&quot;:&quot;Pioneer Roads and Experiences of Travelers (Volume 1)&quot;,&quot;Topics&quot;:[&quot;Frontier and pioneer life -- Ohio River Valley&quot;,&quot;Pennsylvania -- Description and travel&quot;,&quot;Roads -- Ohio River Valley&quot;,&quot;Kentucky -- Description and travel&quot;],&quot;Primary&quot;:&quot;41067.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hulbert, Archer Butler, 1873-1933&quot;],&quot;LoCC&quot;:[&quot;E&quot;,&quot;HE&quot;],&quot;PG_ID&quot;:&quot;41067&quot;});" class='title'>Pioneer Roads and Experiences of Travelers (Volume 1)</a>
+<div class='author'>Hulbert, Archer Butler, 1873-1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41118, {&quot;Title&quot;:&quot;The Old Glade (Forbes&#39;s) Road (Pennsylvania State Road)&quot;,&quot;Topics&quot;:[&quot;United States -- History -- French and Indian War, 1754-1763&quot;,&quot;Forbes Road (Pa.)&quot;],&quot;Primary&quot;:&quot;41118.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hulbert, Archer Butler, 1873-1933&quot;],&quot;LoCC&quot;:[&quot;E&quot;,&quot;HE&quot;],&quot;PG_ID&quot;:&quot;41118&quot;});" class='title'>The Old Glade (Forbes's) Road (Pennsylvania State Road)</a>
+<div class='author'>Hulbert, Archer Butler, 1873-1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41143, {&quot;Title&quot;:&quot;Boone&#39;s Wilderness Road&quot;,&quot;Topics&quot;:[&quot;Kentucky -- History&quot;,&quot;Roads -- United States&quot;,&quot;Wilderness Road&quot;],&quot;Primary&quot;:&quot;41143.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hulbert, Archer Butler, 1873-1933&quot;],&quot;LoCC&quot;:[&quot;E&quot;,&quot;HE&quot;],&quot;PG_ID&quot;:&quot;41143&quot;});" class='title'>Boone's Wilderness Road</a>
+<div class='author'>Hulbert, Archer Butler, 1873-1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41152, {&quot;Title&quot;:&quot;Braddock&#39;s Road and Three Relative Papers&quot;,&quot;Topics&quot;:[&quot;Roads -- United States&quot;,&quot;Braddock&#39;s Campaign, 1755&quot;,&quot;United States Highway 40&quot;],&quot;Primary&quot;:&quot;41152.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hulbert, Archer Butler, 1873-1933&quot;],&quot;LoCC&quot;:[&quot;E&quot;,&quot;HE&quot;],&quot;PG_ID&quot;:&quot;41152&quot;});" class='title'>Braddock's Road and Three Relative Papers</a>
+<div class='author'>Hulbert, Archer Butler, 1873-1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41167, {&quot;Title&quot;:&quot;Military Roads of the Mississippi Basin&quot;,&quot;Topics&quot;:[&quot;Northwest, Old -- History -- 1775-1865&quot;,&quot;Clark, George Rogers, 1752-1818&quot;,&quot;Indians of North America -- Wars -- 1790-1794&quot;],&quot;Primary&quot;:&quot;41167.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hulbert, Archer Butler, 1873-1933&quot;],&quot;LoCC&quot;:[&quot;E&quot;,&quot;HE&quot;],&quot;PG_ID&quot;:&quot;41167&quot;});" class='title'>Military Roads of the Mississippi Basin</a>
+<div class='author'>Hulbert, Archer Butler, 1873-1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41179, {&quot;Title&quot;:&quot;Portage Paths: The Keys of the Continent&quot;,&quot;Topics&quot;:[&quot;Portages -- North America&quot;],&quot;Primary&quot;:&quot;41179.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hulbert, Archer Butler, 1873-1933&quot;],&quot;LoCC&quot;:[&quot;E&quot;,&quot;HE&quot;],&quot;PG_ID&quot;:&quot;41179&quot;});" class='title'>Portage Paths:<br><span class='subtitle'>The Keys of the Continent</span></a>
+<div class='author'>Hulbert, Archer Butler, 1873-1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41799, {&quot;Title&quot;:&quot;The Old Pike - A History of the National Road, with Incidents, Accidents, and Anecdotes Thereon&quot;,&quot;Topics&quot;:[&quot;Cumberland Road&quot;,&quot;Pennsylvania -- Biography&quot;],&quot;Primary&quot;:&quot;41799.htm&quot;,&quot;CreatorNames&quot;:[&quot;Searight, Thomas B. (Thomas Brownfield)&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;41799&quot;});" class='title'>The Old Pike -<br><span class='subtitle'>A History of the National Road, with Incidents, Accidents, and Anecdotes Thereon</span></a>
+<div class='author'>Searight, Thomas B. (Thomas Brownfield)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42129, {&quot;Title&quot;:&quot;Her Majesty&#39;s Mails - An Historical and Descriptive Account of the British Post-Office&quot;,&quot;Topics&quot;:[&quot;Postal service -- Great Britain&quot;],&quot;Primary&quot;:&quot;42129.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lewins, William&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;42129&quot;});" class='title'>Her Majesty's Mails -<br><span class='subtitle'>An Historical and Descriptive Account of the British Post-Office</span></a>
+<div class='author'>Lewins, William</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42983, {&quot;Title&quot;:&quot;The History of the British Post Office&quot;,&quot;Topics&quot;:[&quot;Postal service -- Great Britain -- History&quot;],&quot;Primary&quot;:&quot;42983.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hemmeon, Joseph Clarence, 1880-&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;42983&quot;});" class='title'>The History of the British Post Office</a>
+<div class='author'>Hemmeon, Joseph Clarence, 1880-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43367, {&quot;Title&quot;:&quot;Drake&#39;s Road Book of the Grand Junction Railway - from Birmingham to Liverpool and Manchester&quot;,&quot;Topics&quot;:[&quot;Grand Junction Railway Company (Great Britain) -- Guidebooks&quot;,&quot;Railroad travel -- Great Britain -- Guidebooks&quot;],&quot;Primary&quot;:&quot;43367.htm&quot;,&quot;CreatorNames&quot;:[&quot;Drake, James, active 1825&quot;],&quot;LoCC&quot;:[&quot;DA&quot;,&quot;HE&quot;],&quot;PG_ID&quot;:&quot;43367&quot;});" class='title'>Drake's Road Book of the Grand Junction Railway -<br><span class='subtitle'>from Birmingham to Liverpool and Manchester</span></a>
+<div class='author'>Drake, James, active 1825</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43857, {&quot;Title&quot;:&quot;Catalogue of books on philately in the Public Library of the city of Boston&quot;,&quot;Topics&quot;:[&quot;Postage stamps -- Bibliography&quot;,&quot;Stamp collecting -- Bibliography&quot;],&quot;Primary&quot;:&quot;43857.htm&quot;,&quot;CreatorNames&quot;:[&quot;Boston Philatelic Society&quot;,&quot;Boston Public Library&quot;],&quot;LoCC&quot;:[&quot;HE&quot;,&quot;Z&quot;],&quot;PG_ID&quot;:&quot;43857&quot;});" class='title'>Catalogue of books on philately in the Public Library of the city of Boston</a>
+<div class='author'>Boston Philatelic Society, Boston Public Library</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44135, {&quot;Title&quot;:&quot;Albert Ballin&quot;,&quot;Topics&quot;:[&quot;Ballin, Albert, 1857-1918&quot;,&quot;Hamburg-American Line&quot;,&quot;Hamburg-Amerikanische Packetfahrt-Actien-Gesellschaft&quot;,&quot;Capitalists and financiers -- Germany -- Biography&quot;,&quot;Germany -- Politics and government -- 1888-1918 -- Biography&quot;],&quot;Primary&quot;:&quot;44135.htm&quot;,&quot;CreatorNames&quot;:[&quot;Huldermann, Bernhard&quot;,&quot;Eggers, Wilhelm Johann [Translator]&quot;],&quot;LoCC&quot;:[&quot;DD&quot;,&quot;HE&quot;],&quot;PG_ID&quot;:&quot;44135&quot;});" class='title'>Albert Ballin</a>
+<div class='author'>Huldermann, Bernhard, Eggers, Wilhelm Johann [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44171, {&quot;Title&quot;:&quot;The Postal System of the United States and the New York General Post Office&quot;,&quot;Topics&quot;:[&quot;Postal service -- United States&quot;,&quot;Postal service -- New York (State) -- New York&quot;],&quot;Primary&quot;:&quot;44171.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jefferies, Thomas C.&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;44171&quot;});" class='title'>The Postal System of the United States and the New York General Post Office</a>
+<div class='author'>Jefferies, Thomas C.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44853, {&quot;Title&quot;:&quot;Letters from an Old Railway Official to His Son, a Division Superintendent&quot;,&quot;Topics&quot;:[&quot;Railroads -- Management&quot;],&quot;Primary&quot;:&quot;44853.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hine, Charles De Lano, 1867-1927&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;44853&quot;});" class='title'>Letters from an Old Railway Official to His Son, a Division Superintendent</a>
+<div class='author'>Hine, Charles De Lano, 1867-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44864, {&quot;Title&quot;:&quot;Coaching Days &amp; Ways&quot;,&quot;Topics&quot;:[&quot;England -- Social life and customs&quot;,&quot;Coaching (Transportation) -- England&quot;],&quot;Primary&quot;:&quot;44864.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cuming, E. D. (Edward William Dirom), 1862-1941&quot;,&quot;Armour, G. D. (George Denholm), 1864-1949 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DA&quot;,&quot;HE&quot;],&quot;PG_ID&quot;:&quot;44864&quot;});" class='title'>Coaching Days & Ways</a>
+<div class='author'>Cuming, E. D. (Edward William Dirom), 1862-1941, Armour, G. D. (George Denholm), 1864-1949 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45092, {&quot;Title&quot;:&quot;The Post Office of India and Its Story&quot;,&quot;Topics&quot;:[&quot;Postal service -- India&quot;],&quot;Primary&quot;:&quot;45092.htm&quot;,&quot;CreatorNames&quot;:[&quot;Clarke, Geoffrey, -1950&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;45092&quot;});" class='title'>The Post Office of India and Its Story</a>
+<div class='author'>Clarke, Geoffrey, -1950</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45444, {&quot;Title&quot;:&quot;Letters from an Old Railway Official. Second Series: [To] His Son, a General Manager&quot;,&quot;Topics&quot;:[&quot;Railroads -- Management&quot;],&quot;Primary&quot;:&quot;45444.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hine, Charles De Lano, 1867-1927&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;45444&quot;});" class='title'>Letters from an Old Railway Official. Second Series:<br><span class='subtitle'>[To] His Son, a General Manager</span></a>
+<div class='author'>Hine, Charles De Lano, 1867-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45563, {&quot;Title&quot;:&quot;Deeds of a Great Railway - A record of the enterprise and achievements of the London and North-Western Railway company during the Great War&quot;,&quot;Topics&quot;:[&quot;World War, 1914-1918 -- Transportation&quot;,&quot;London and North-Western Railway&quot;],&quot;Primary&quot;:&quot;45563.htm&quot;,&quot;CreatorNames&quot;:[&quot;Darroch, G. R. S.&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;45563&quot;});" class='title'>Deeds of a Great Railway -<br><span class='subtitle'>A record of the enterprise and achievements of the London and North-Western Railway company during the Great War</span></a>
+<div class='author'>Darroch, G. R. S.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46498, {&quot;Title&quot;:&quot;The Life of Sir Rowland Hill and the History of Penny Postage, Vol. 2 (of 2)&quot;,&quot;Topics&quot;:[&quot;Hill, Rowland, Sir, 1795-1879&quot;,&quot;Postal service -- Great Britain -- Rates&quot;],&quot;Primary&quot;:&quot;46498.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hill, George Birkbeck Norman, 1835-1903&quot;,&quot;Hill, Rowland, Sir, 1795-1879&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;46498&quot;});" class='title'>The Life of Sir Rowland Hill and the History of Penny Postage, Vol. 2 (of 2)</a>
+<div class='author'>Hill, George Birkbeck Norman, 1835-1903, Hill, Rowland, Sir, 1795-1879</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4671, {&quot;Title&quot;:&quot;The Story of the Pony Express&quot;,&quot;Topics&quot;:[&quot;Pony express&quot;],&quot;Primary&quot;:&quot;4671.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bradley, Glenn D. (Glenn Danford), 1884-1930&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;4671&quot;});" class='title'>The Story of the Pony Express</a>
+<div class='author'>Bradley, Glenn D. (Glenn Danford), 1884-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46713, {&quot;Title&quot;:&quot;Die Bagdadbahn&quot;,&quot;Topics&quot;:[&quot;Baghdad Railway&quot;],&quot;Primary&quot;:&quot;46713.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rohrbach, Paul, 1869-1956&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;46713&quot;});" class='title'>Die Bagdadbahn</a>
+<div class='author'>Rohrbach, Paul, 1869-1956</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47190, {&quot;Title&quot;:&quot;Foot-prints of a letter carrier; or, a history of the world&#39;s correspondece&quot;,&quot;Topics&quot;:[&quot;Postal service -- History&quot;,&quot;Postal service -- United States -- History&quot;],&quot;Primary&quot;:&quot;47190.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rees, James, 1802-1885&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;47190&quot;});" class='title'>Foot-prints of a letter carrier;<br><span class='subtitle'>or, a history of the world's correspondece</span></a>
+<div class='author'>Rees, James, 1802-1885</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47359, {&quot;Title&quot;:&quot;The Ashtabula Disaster&quot;,&quot;Topics&quot;:[&quot;Railroad accidents -- Ohio -- Ashtabula&quot;,&quot;Bridge failures -- Ohio -- Ashtabula&quot;],&quot;Primary&quot;:&quot;47359.htm&quot;,&quot;CreatorNames&quot;:[&quot;Peet, Stephen D. (Stephen Denison), 1831-1914&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;47359&quot;});" class='title'>The Ashtabula Disaster</a>
+<div class='author'>Peet, Stephen D. (Stephen Denison), 1831-1914</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47435, {&quot;Title&quot;:&quot;British Canals: Is their resuscitation practicable?&quot;,&quot;Topics&quot;:[&quot;Canals -- Great Britain&quot;,&quot;Inland navigation -- Great Britain&quot;],&quot;Primary&quot;:&quot;47435.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pratt, Edwin A., 1854-1922&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;47435&quot;});" class='title'>British Canals:<br><span class='subtitle'>Is their resuscitation practicable?</span></a>
+<div class='author'>Pratt, Edwin A., 1854-1922</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47536, {&quot;Title&quot;:&quot;The Country&#39;s Need of Greater Railway Facilities and Terminals - Address Delivered at the Annual Dinner of the Railway Business Association, New York City, December 19, 1912&quot;,&quot;Topics&quot;:[&quot;Railroad stations -- United States&quot;,&quot;Railroads -- United States -- Finance&quot;],&quot;Primary&quot;:&quot;47536.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hill, James J. (James Jerome), 1838-1916&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;47536&quot;});" class='title'>The Country's Need of Greater Railway Facilities and Terminals -<br><span class='subtitle'>Address Delivered at the Annual Dinner of the Railway Business Association, New York City, December 19, 1912</span></a>
+<div class='author'>Hill, James J. (James Jerome), 1838-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47719, {&quot;Title&quot;:&quot;Railway Rates: English and Foreign&quot;,&quot;Topics&quot;:[&quot;Railroads -- Freight -- Rates&quot;],&quot;Primary&quot;:&quot;47719.htm&quot;,&quot;CreatorNames&quot;:[&quot;Grierson, James, 1827-1887&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;47719&quot;});" class='title'>Railway Rates:<br><span class='subtitle'>English and Foreign</span></a>
+<div class='author'>Grierson, James, 1827-1887</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47831, {&quot;Title&quot;:&quot;Railroads: Rates and Regulations&quot;,&quot;Topics&quot;:[&quot;Railroads and state -- United States&quot;,&quot;Railroads -- Freight -- Rates -- United States&quot;],&quot;Primary&quot;:&quot;47831.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ripley, William Zebina, 1867-1941&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;47831&quot;});" class='title'>Railroads:<br><span class='subtitle'>Rates and Regulations</span></a>
+<div class='author'>Ripley, William Zebina, 1867-1941</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48014, {&quot;Title&quot;:&quot;The American Postal Service - History of the Postal Service from the Earliest Times&quot;,&quot;Topics&quot;:[&quot;Postal service -- United States -- History&quot;],&quot;Primary&quot;:&quot;48014.htm&quot;,&quot;CreatorNames&quot;:[&quot;Melius, Louis&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;48014&quot;});" class='title'>The American Postal Service -<br><span class='subtitle'>History of the Postal Service from the Earliest Times</span></a>
+<div class='author'>Melius, Louis</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48118, {&quot;Title&quot;:&quot;The British State Telegraphs - A Study of the Problem of a Large Body of Civil Servants in a Democracy&quot;,&quot;Topics&quot;:[&quot;Telegraph -- Great Britain&quot;,&quot;Government ownership&quot;],&quot;Primary&quot;:&quot;48118.htm&quot;,&quot;CreatorNames&quot;:[&quot;Meyer, Hugo Richard, 1866-1923&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;48118&quot;});" class='title'>The British State Telegraphs -<br><span class='subtitle'>A Study of the Problem of a Large Body of Civil Servants in a Democracy</span></a>
+<div class='author'>Meyer, Hugo Richard, 1866-1923</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48232, {&quot;Title&quot;:&quot;The Robinson Telegraphic Cipher&quot;,&quot;Topics&quot;:[&quot;Cipher and telegraph codes -- Grain trade&quot;],&quot;Primary&quot;:&quot;48232.htm&quot;,&quot;CreatorNames&quot;:[&quot;Robinson, Stephen L. (Telegrapher)&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;48232&quot;});" class='title'>The Robinson Telegraphic Cipher</a>
+<div class='author'>Robinson, Stephen L. (Telegrapher)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48693, {&quot;Title&quot;:&quot;Notes on Railroad Accidents&quot;,&quot;Topics&quot;:[&quot;Railroad accidents&quot;],&quot;Primary&quot;:&quot;48693.htm&quot;,&quot;CreatorNames&quot;:[&quot;Adams, Charles Francis, 1835-1915&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;48693&quot;});" class='title'>Notes on Railroad Accidents</a>
+<div class='author'>Adams, Charles Francis, 1835-1915</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48879, {&quot;Title&quot;:&quot;Chapters on the History of the Southern Pacific&quot;,&quot;Topics&quot;:[&quot;Southern Pacific Company&quot;,&quot;Railroads -- California -- History&quot;,&quot;Pacific railroads -- History&quot;],&quot;Primary&quot;:&quot;48879.htm&quot;,&quot;CreatorNames&quot;:[&quot;Daggett, Stuart, 1881-1954&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;48879&quot;});" class='title'>Chapters on the History of the Southern Pacific</a>
+<div class='author'>Daggett, Stuart, 1881-1954</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49012, {&quot;Title&quot;:&quot;The postal power of Congress: A study in constitutional expansion&quot;,&quot;Topics&quot;:[&quot;Thesis (Ph. D.)&quot;,&quot;Postal service -- United States -- History&quot;,&quot;United States. Congress -- Powers and duties&quot;,&quot;Postal service -- Law and legislation -- United States&quot;],&quot;Primary&quot;:&quot;49012.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rogers, Lindsay, 1891-1970&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;49012&quot;});" class='title'>The postal power of Congress:<br><span class='subtitle'>A study in constitutional expansion</span></a>
+<div class='author'>Rogers, Lindsay, 1891-1970</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49371, {&quot;Title&quot;:&quot;The Waterways of the Pacific Northwest&quot;,&quot;Topics&quot;:[&quot;Water-supply -- Northwest, Pacific&quot;,&quot;Inland navigation -- Northwest, Pacific&quot;],&quot;Primary&quot;:&quot;49371.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bagley, Clarence, 1843-1932&quot;],&quot;LoCC&quot;:[&quot;F&quot;,&quot;HE&quot;],&quot;PG_ID&quot;:&quot;49371&quot;});" class='title'>The Waterways of the Pacific Northwest</a>
+<div class='author'>Bagley, Clarence, 1843-1932</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49589, {&quot;Title&quot;:&quot;The \&quot;Switzerland of America\&quot;: Lehigh Valley Railroad&quot;,&quot;Topics&quot;:[&quot;Lehigh River Valley (Pa.) -- Pictorial works&quot;],&quot;Primary&quot;:&quot;49589.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lehigh Coal and Navigation Company&quot;],&quot;LoCC&quot;:[&quot;F&quot;,&quot;HE&quot;],&quot;PG_ID&quot;:&quot;49589&quot;});" class='title'>The "Switzerland of America":<br><span class='subtitle'>Lehigh Valley Railroad</span></a>
+<div class='author'>Lehigh Coal and Navigation Company</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50220, {&quot;Title&quot;:&quot;The Railway Library, 1909 - A Collection of Noteworthy Chapters, Addresses, and Papers Relating to Railways, Mostly Published During the Year&quot;,&quot;Topics&quot;:[&quot;Railroads -- United States -- Periodicals&quot;],&quot;Primary&quot;:&quot;50220.htm&quot;,&quot;CreatorNames&quot;:[&quot;Thompson, Slason, 1849-1935 [Editor]&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;50220&quot;});" class='title'>The Railway Library, 1909 -<br><span class='subtitle'>A Collection of Noteworthy Chapters, Addresses, and Papers Relating to Railways, Mostly Published During the Year</span></a>
+<div class='author'>Thompson, Slason, 1849-1935 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52087, {&quot;Title&quot;:&quot;A History of Inland Transport and Communication in England&quot;,&quot;Topics&quot;:[&quot;Transportation -- Great Britain -- History&quot;,&quot;Communication and traffic -- Great Britain&quot;],&quot;Primary&quot;:&quot;52087.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pratt, Edwin A., 1854-1922&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;52087&quot;});" class='title'>A History of Inland Transport and Communication in England</a>
+<div class='author'>Pratt, Edwin A., 1854-1922</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52244, {&quot;Title&quot;:&quot;Mail Carrying Railways Underpaid&quot;,&quot;Topics&quot;:[&quot;Railway mail service -- United States&quot;],&quot;Primary&quot;:&quot;52244.htm&quot;,&quot;CreatorNames&quot;:[&quot;Committee on Railway Mail Pay&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;52244&quot;});" class='title'>Mail Carrying Railways Underpaid</a>
+<div class='author'>Committee on Railway Mail Pay</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52976, {&quot;Title&quot;:&quot;The Great Lakes - The Vessels That Plough Them: Their Owners, Their Sailors, and Their Cargoes, Together with a Brief History of Our Inland Seas&quot;,&quot;Topics&quot;:[&quot;Great Lakes (North America)&quot;,&quot;Shipping -- Great Lakes (North America)&quot;,&quot;Inland navigation -- United States&quot;],&quot;Primary&quot;:&quot;52976.htm&quot;,&quot;CreatorNames&quot;:[&quot;Curwood, James Oliver, 1878-1927&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;52976&quot;});" class='title'>The Great Lakes -<br><span class='subtitle'>The Vessels That Plough Them: Their Owners, Their Sailors, and Their Cargoes, Together with a Brief History of Our Inland Seas</span></a>
+<div class='author'>Curwood, James Oliver, 1878-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52996, {&quot;Title&quot;:&quot;Selected Articles on the Parcels Post&quot;,&quot;Topics&quot;:[&quot;Parcel post -- United States&quot;],&quot;Primary&quot;:&quot;52996.htm&quot;,&quot;CreatorNames&quot;:[&quot;Phelps, Edith M., 1881-1980 [Compiler]&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;52996&quot;});" class='title'>Selected Articles on the Parcels Post</a>
+<div class='author'>Phelps, Edith M., 1881-1980 [Compiler]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53037, {&quot;Title&quot;:&quot;Der Weltverkehr - Telegraphie und Post, Eisenbahnen und Schiffahrt, in ihrer Entwickelung dargestellt&quot;,&quot;Topics&quot;:[&quot;Communication and traffic&quot;,&quot;Transportation -- History&quot;],&quot;Primary&quot;:&quot;53037.htm&quot;,&quot;CreatorNames&quot;:[&quot;Geistbeck, Michael, 1846-1918&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;53037&quot;});" class='title'>Der Weltverkehr -<br><span class='subtitle'>Telegraphie und Post, Eisenbahnen und Schiffahrt, in ihrer Entwickelung dargestellt</span></a>
+<div class='author'>Geistbeck, Michael, 1846-1918</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53122, {&quot;Title&quot;:&quot;The Story of the American Merchant Marine&quot;,&quot;Topics&quot;:[&quot;Merchant marine -- United States&quot;],&quot;Primary&quot;:&quot;53122.htm&quot;,&quot;CreatorNames&quot;:[&quot;Spears, John Randolph, 1850-1936&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;53122&quot;});" class='title'>The Story of the American Merchant Marine</a>
+<div class='author'>Spears, John Randolph, 1850-1936</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53222, {&quot;Title&quot;:&quot;Royal Railways with Uniform Rates - A proposal for amalgamation of Railways with the General Post Office and adoption of uniform fares and rates for any distance&quot;,&quot;Topics&quot;:[&quot;Railroads -- Freight -- Rates -- Great Britain&quot;,&quot;Railroads and state -- Great Britain&quot;],&quot;Primary&quot;:&quot;53222.htm&quot;,&quot;CreatorNames&quot;:[&quot;Arnold, Whately C.&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;53222&quot;});" class='title'>Royal Railways with Uniform Rates -<br><span class='subtitle'>A proposal for amalgamation of Railways with the General Post Office and adoption of uniform fares and rates for any distance</span></a>
+<div class='author'>Arnold, Whately C.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53431, {&quot;Title&quot;:&quot;Chats on Postage Stamps&quot;,&quot;Topics&quot;:[&quot;Stamp collecting&quot;],&quot;Primary&quot;:&quot;53431.htm&quot;,&quot;CreatorNames&quot;:[&quot;Melville, Frederick John, 1882-1940&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;53431&quot;});" class='title'>Chats on Postage Stamps</a>
+<div class='author'>Melville, Frederick John, 1882-1940</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53805, {&quot;Title&quot;:&quot;Voyage des souverains: Inauguration du Canal de Suez&quot;,&quot;Topics&quot;:[&quot;Egypt -- Social life and customs&quot;,&quot;Visits of state -- Egypt -- Suez&quot;,&quot;Suez Canal (Egypt) -- History&quot;],&quot;Primary&quot;:&quot;53805.htm&quot;,&quot;CreatorNames&quot;:[&quot;Nicole, Gustave, 1835-&quot;,&quot;Riou, Edouard, 1833-1900 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;53805&quot;});" class='title'>Voyage des souverains:<br><span class='subtitle'>Inauguration du Canal de Suez</span></a>
+<div class='author'>Nicole, Gustave, 1835-, Riou, Edouard, 1833-1900 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53873, {&quot;Title&quot;:&quot;Old Coaching Days - Some Incidents in the Life of Moses James Nobbs, the last of the Mail Coach Guards&quot;,&quot;Topics&quot;:[&quot;Nobbs, Moses James, 1817-&quot;,&quot;Postal service -- Great Britain -- Employees&quot;],&quot;Primary&quot;:&quot;53873.htm&quot;,&quot;CreatorNames&quot;:[&quot;Nobbs, Moses James, 1817-&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;53873&quot;});" class='title'>Old Coaching Days -<br><span class='subtitle'>Some Incidents in the Life of Moses James Nobbs, the last of the Mail Coach Guards</span></a>
+<div class='author'>Nobbs, Moses James, 1817-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54084, {&quot;Title&quot;:&quot;List of Post Offices in Canada, with the Names of the Postmasters ... 1865&quot;,&quot;Topics&quot;:[&quot;Postal service -- Canada -- Guides&quot;],&quot;Primary&quot;:&quot;54084.htm&quot;,&quot;CreatorNames&quot;:[&quot;Canada. Post Office Department&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;54084&quot;});" class='title'>List of Post Offices in Canada, with the Names of the Postmasters ... 1865</a>
+<div class='author'>Canada. Post Office Department</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54179, {&quot;Title&quot;:&quot;Remarks on the Proposed Railway Between Birmingham and London&quot;,&quot;Topics&quot;:[&quot;Railroads -- England -- Cost effectiveness&quot;,&quot;Railroads -- Early works to 1850&quot;],&quot;Primary&quot;:&quot;54179.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;54179&quot;});" class='title'>Remarks on the Proposed Railway Between Birmingham and London</a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54383, {&quot;Title&quot;:&quot;The American Railway: Its Construction, Development, Management, and Appliances&quot;,&quot;Topics&quot;:[&quot;Railroads -- United States&quot;],&quot;Primary&quot;:&quot;54383.htm&quot;,&quot;CreatorNames&quot;:[&quot;Clarke, Thomas Curtis, 1827-1901&quot;,&quot;Cooley, Thomas McIntyre, 1824-1898 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;54383&quot;});" class='title'>The American Railway:<br><span class='subtitle'>Its Construction, Development, Management, and Appliances</span></a>
+<div class='author'>Clarke, Thomas Curtis, 1827-1901, Cooley, Thomas McIntyre, 1824-1898 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55064, {&quot;Title&quot;:&quot;An Abstract of the Proceedings of the Select Committee of the House of Commons, Appointed Session, 1849, to Inquire Into the Contract Packet Service&quot;,&quot;Topics&quot;:[&quot;Mail steamers -- Great Britain&quot;],&quot;Primary&quot;:&quot;55064.htm&quot;,&quot;CreatorNames&quot;:[&quot;Great Britain. Parliament. House of Commons. Select Committee to Inquire into the Contract Packet Service&quot;,&quot;Peninsular and Oriental Steam Navigation Company&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;55064&quot;});" class='title'>An Abstract of the Proceedings of the Select Committee of the House of Commons, Appointed Session, 1849, to Inquire Into the Contract Packet Service</a>
+<div class='author'>Great Britain. Parliament. House of Commons. Select Committee to Inquire into the Contract Packet Service, Peninsular and Oriental Steam Navigation Company</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55397, {&quot;Title&quot;:&quot;Railroad Reorganization&quot;,&quot;Topics&quot;:[&quot;Railroads -- United States&quot;,&quot;Railroads -- United States -- Finance&quot;],&quot;Primary&quot;:&quot;55397.htm&quot;,&quot;CreatorNames&quot;:[&quot;Daggett, Stuart, 1881-1954&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;55397&quot;});" class='title'>Railroad Reorganization</a>
+<div class='author'>Daggett, Stuart, 1881-1954</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55467, {&quot;Title&quot;:&quot;Sir Rowland Hill: The Story of a Great Reform&quot;,&quot;Topics&quot;:[&quot;Postal service -- Great Britain -- History&quot;,&quot;Hill, Rowland, Sir, 1795-1879&quot;],&quot;Primary&quot;:&quot;55467.htm&quot;,&quot;CreatorNames&quot;:[&quot;Smyth, Eleanor C. Hill, 1831-1926&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;55467&quot;});" class='title'>Sir Rowland Hill:<br><span class='subtitle'>The Story of a Great Reform</span></a>
+<div class='author'>Smyth, Eleanor C. Hill, 1831-1926</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55570, {&quot;Title&quot;:&quot;Postal Riders and Raiders&quot;,&quot;Topics&quot;:[&quot;Postal service -- United States -- Second-class matter&quot;],&quot;Primary&quot;:&quot;55570.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gantz, W. H.&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;55570&quot;});" class='title'>Postal Riders and Raiders</a>
+<div class='author'>Gantz, W. H.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55673, {&quot;Title&quot;:&quot;List of Post Offices in Canada, with the Names of the Postmasters ... 1872&quot;,&quot;Topics&quot;:[&quot;Postal service -- Canada -- Guides&quot;],&quot;Primary&quot;:&quot;55673.htm&quot;,&quot;CreatorNames&quot;:[&quot;Canada. Post Office Department&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;55673&quot;});" class='title'>List of Post Offices in Canada, with the Names of the Postmasters ... 1872</a>
+<div class='author'>Canada. Post Office Department</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55685, {&quot;Title&quot;:&quot;The Post Office and Its Story - An interesting account of the activities of a great government department&quot;,&quot;Topics&quot;:[&quot;Postal service -- Great Britain -- History&quot;],&quot;Primary&quot;:&quot;55685.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bennett, Edward&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;55685&quot;});" class='title'>The Post Office and Its Story -<br><span class='subtitle'>An interesting account of the activities of a great government department</span></a>
+<div class='author'>Bennett, Edward</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56070, {&quot;Title&quot;:&quot;List of Post Offices in Canada, with the Names of the Postmasters ... 1873&quot;,&quot;Topics&quot;:[&quot;Postal service -- Canada -- Guides&quot;],&quot;Primary&quot;:&quot;56070.htm&quot;,&quot;CreatorNames&quot;:[&quot;Canada. Post Office Department&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;56070&quot;});" class='title'>List of Post Offices in Canada, with the Names of the Postmasters ... 1873</a>
+<div class='author'>Canada. Post Office Department</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56203, {&quot;Title&quot;:&quot;List of Post Offices in Canada, with the Names of the Postmasters ... 1864&quot;,&quot;Topics&quot;:[&quot;Postal service -- Canada -- Guides&quot;],&quot;Primary&quot;:&quot;56203.htm&quot;,&quot;CreatorNames&quot;:[&quot;Canada. Post Office Department&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;56203&quot;});" class='title'>List of Post Offices in Canada, with the Names of the Postmasters ... 1864</a>
+<div class='author'>Canada. Post Office Department</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56334, {&quot;Title&quot;:&quot;List of Post Offices in Canada, with the Names of the Postmasters ... 1866&quot;,&quot;Topics&quot;:[&quot;Postal service -- Canada -- Guides&quot;],&quot;Primary&quot;:&quot;56334.htm&quot;,&quot;CreatorNames&quot;:[&quot;Canada. Post Office Department&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;56334&quot;});" class='title'>List of Post Offices in Canada, with the Names of the Postmasters ... 1866</a>
+<div class='author'>Canada. Post Office Department</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56560, {&quot;Title&quot;:&quot;Waterways and Water Transport in Different Countries - With a description of the Panama, Suez, Manchester, Nicaraguan, and other canals.&quot;,&quot;Topics&quot;:[&quot;Canals&quot;],&quot;Primary&quot;:&quot;56560.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jeans, J. Stephen (James Stephen), 1846-1913&quot;],&quot;LoCC&quot;:[&quot;HE&quot;,&quot;TC&quot;],&quot;PG_ID&quot;:&quot;56560&quot;});" class='title'>Waterways and Water Transport in Different Countries -<br><span class='subtitle'>With a description of the Panama, Suez, Manchester, Nicaraguan, and other canals.</span></a>
+<div class='author'>Jeans, J. Stephen (James Stephen), 1846-1913</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57877, {&quot;Title&quot;:&quot;A history of postal agitation from fifty years ago till the present day&quot;,&quot;Topics&quot;:[&quot;Postal service -- Great Britain -- History&quot;],&quot;Primary&quot;:&quot;57877.htm&quot;,&quot;CreatorNames&quot;:[&quot;Swift, H. G.&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;57877&quot;});" class='title'>A history of postal agitation from fifty years ago till the present day</a>
+<div class='author'>Swift, H. G.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58472, {&quot;Title&quot;:&quot;Saint Vincent, with notes and publishers&#39; prices&quot;,&quot;Topics&quot;:[&quot;Postage stamps -- Saint Vincent and the Grenadines&quot;],&quot;Primary&quot;:&quot;58472.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bacon, Edward Denny, Sir, 1860-1938&quot;,&quot;Napier, Francis John Hamilton Scott, 1850-1929&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;58472&quot;});" class='title'>Saint Vincent, with notes and publishers' prices</a>
+<div class='author'>Bacon, Edward Denny, Sir, 1860-1938, Napier, Francis John Hamilton Scott, 1850-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58667, {&quot;Title&quot;:&quot;Stage-coach and Mail in Days of Yore, Volume 1 (of 2) - A picturesque history of the coaching age&quot;,&quot;Topics&quot;:[&quot;Coaching (Transportation) -- History&quot;],&quot;Primary&quot;:&quot;58667.htm&quot;,&quot;CreatorNames&quot;:[&quot;Harper, Charles G. (Charles George), 1863-1943&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;58667&quot;});" class='title'>Stage-coach and Mail in Days of Yore, Volume 1 (of 2) -<br><span class='subtitle'>A picturesque history of the coaching age</span></a>
+<div class='author'>Harper, Charles G. (Charles George), 1863-1943</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58668, {&quot;Title&quot;:&quot;Stage-coach and Mail in Days of Yore, Volume 2 (of 2) - A picturesque history of the coaching age&quot;,&quot;Topics&quot;:[&quot;Coaching (Transportation) -- History&quot;],&quot;Primary&quot;:&quot;58668.htm&quot;,&quot;CreatorNames&quot;:[&quot;Harper, Charles G. (Charles George), 1863-1943&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;58668&quot;});" class='title'>Stage-coach and Mail in Days of Yore, Volume 2 (of 2) -<br><span class='subtitle'>A picturesque history of the coaching age</span></a>
+<div class='author'>Harper, Charles G. (Charles George), 1863-1943</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58717, {&quot;Title&quot;:&quot;The Early History of the Post in Grant and Farm&quot;,&quot;Topics&quot;:[&quot;Postal service -- Great Britain -- History&quot;],&quot;Primary&quot;:&quot;58717.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hyde, James Wilson, 1841-1918&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;58717&quot;});" class='title'>The Early History of the Post in Grant and Farm</a>
+<div class='author'>Hyde, James Wilson, 1841-1918</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59295, {&quot;Title&quot;:&quot;The Isthmus of Suez Question&quot;,&quot;Topics&quot;:[&quot;Suez Canal (Egypt)&quot;],&quot;Primary&quot;:&quot;59295.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lesseps, Ferdinand de, 1805-1894&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;59295&quot;});" class='title'>The Isthmus of Suez Question</a>
+<div class='author'>Lesseps, Ferdinand de, 1805-1894</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59310, {&quot;Title&quot;:&quot;History of the Post-Office Packet Service between the years 1793-1815 - Compiled from Records, Chiefly Official&quot;,&quot;Topics&quot;:[&quot;Postal service -- Great Britain -- History&quot;],&quot;Primary&quot;:&quot;59310.htm&quot;,&quot;CreatorNames&quot;:[&quot;Norway, Arthur H. (Arthur Hamilton), 1859-1938&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;59310&quot;});" class='title'>History of the Post-Office Packet Service between the years 1793-1815 -<br><span class='subtitle'>Compiled from Records, Chiefly Official</span></a>
+<div class='author'>Norway, Arthur H. (Arthur Hamilton), 1859-1938</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59390, {&quot;Title&quot;:&quot;The Life of Sir Rowland Hill and the History of Penny Postage, Vol. 1 (of 2)&quot;,&quot;Topics&quot;:[&quot;Hill, Rowland, Sir, 1795-1879&quot;,&quot;Postal service -- Great Britain -- Rates&quot;],&quot;Primary&quot;:&quot;59390.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hill, George Birkbeck Norman, 1835-1903&quot;,&quot;Hill, Rowland, Sir, 1795-1879&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;59390&quot;});" class='title'>The Life of Sir Rowland Hill and the History of Penny Postage, Vol. 1 (of 2)</a>
+<div class='author'>Hill, George Birkbeck Norman, 1835-1903, Hill, Rowland, Sir, 1795-1879</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60516, {&quot;Title&quot;:&quot;List of Post Offices in Canada, with the Names of the Postmasters ... 1874&quot;,&quot;Topics&quot;:[&quot;Postal service -- Canada -- Guides&quot;],&quot;Primary&quot;:&quot;60516.htm&quot;,&quot;CreatorNames&quot;:[&quot;Canada. Post Office Department&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;60516&quot;});" class='title'>List of Post Offices in Canada, with the Names of the Postmasters ... 1874</a>
+<div class='author'>Canada. Post Office Department</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60597, {&quot;Title&quot;:&quot;The Postal Service (Fifth Edition)&quot;,&quot;Topics&quot;:[&quot;Postal service -- United States&quot;],&quot;Primary&quot;:&quot;60597.htm&quot;,&quot;CreatorNames&quot;:[&quot;O&#39;Reilly, Joseph John Edward, 1872- [Editor]&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;60597&quot;});" class='title'>The Postal Service (Fifth Edition)</a>
+<div class='author'>O'Reilly, Joseph John Edward, 1872- [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61203, {&quot;Title&quot;:&quot;Baum&#39;s Complete Stamp Dealers Directory - Containing a Complete List of All Dealers in the United States, Together with the Principal Ones of Europe, and a List of Philatelic Publications&quot;,&quot;Topics&quot;:[&quot;Postage stamps -- United States -- Directories&quot;,&quot;Stamp collecting -- Directories&quot;],&quot;Primary&quot;:&quot;61203.htm&quot;,&quot;CreatorNames&quot;:[&quot;Baum, L. Frank (Lyman Frank), 1856-1919&quot;,&quot;Baum, Henry Clay, 1859-1916 [Contributor]&quot;,&quot;Norris, William [Contributor]&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;61203&quot;});" class='title'>Baum's Complete Stamp Dealers Directory -<br><span class='subtitle'>Containing a Complete List of All Dealers in the United States, Together with the Principal Ones of Europe, and a List of Philatelic Publications</span></a>
+<div class='author'>Baum, L. Frank (Lyman Frank), 1856-1919, Baum, Henry Clay, 1859-1916 [Contributor], Norris, William [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62156, {&quot;Title&quot;:&quot;International Bridge Authority, Sault Ste. Marie&quot;,&quot;Topics&quot;:[&quot;Sault Sainte Marie International Bridge (Sault Sainte Marie, Mich., and Sault Ste. Marie, Ont.)&quot;],&quot;Primary&quot;:&quot;62156.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;62156&quot;});" class='title'>International Bridge Authority, Sault Ste. Marie</a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62157, {&quot;Title&quot;:&quot;The Chester and Holyhead Railway and Its Prospects&quot;,&quot;Topics&quot;:[&quot;Chester and Holyhead Railway&quot;,&quot;Railroads -- Wales, North&quot;],&quot;Primary&quot;:&quot;62157.htm&quot;,&quot;CreatorNames&quot;:[&quot;Morgan, William&quot;],&quot;LoCC&quot;:[&quot;HE&quot;,&quot;TF&quot;],&quot;PG_ID&quot;:&quot;62157&quot;});" class='title'>The Chester and Holyhead Railway and Its Prospects</a>
+<div class='author'>Morgan, William</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62214, {&quot;Title&quot;:&quot;The proposed union of the telegraph and postal systems - Statement of the Western Union Telegraph Company&quot;,&quot;Topics&quot;:[&quot;Postal service -- United States&quot;,&quot;Telegraph -- Law and legislation -- United States&quot;,&quot;Telegraph -- History -- 19th century&quot;],&quot;Primary&quot;:&quot;62214.htm&quot;,&quot;CreatorNames&quot;:[&quot;Western Union Telegraph Company&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;62214&quot;});" class='title'>The proposed union of the telegraph and postal systems -<br><span class='subtitle'>Statement of the Western Union Telegraph Company</span></a>
+<div class='author'>Western Union Telegraph Company</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62640, {&quot;Title&quot;:&quot;The History and Romance of Air Mail Stamps&quot;,&quot;Topics&quot;:[&quot;Air mail stamps&quot;],&quot;Primary&quot;:&quot;62640.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bruechig, Emil&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;62640&quot;});" class='title'>The History and Romance of Air Mail Stamps</a>
+<div class='author'>Bruechig, Emil</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62664, {&quot;Title&quot;:&quot;Three Little Lines - Silverton Railroad; Silverton, Gladstone and Northerly; Silverton Northern&quot;,&quot;Topics&quot;:[&quot;Railroads -- Colorado -- San Juan County&quot;],&quot;Primary&quot;:&quot;62664.htm&quot;,&quot;CreatorNames&quot;:[&quot;Crum, Josie Moore&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;62664&quot;});" class='title'>Three Little Lines -<br><span class='subtitle'>Silverton Railroad; Silverton, Gladstone and Northerly; Silverton Northern</span></a>
+<div class='author'>Crum, Josie Moore</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63059, {&quot;Title&quot;:&quot;Trains of Recollection - Drawn from Fifty Years of Railway Service in Scotland and Canada, and told to Arthur Hawkes&quot;,&quot;Topics&quot;:[&quot;Railroads -- Canada&quot;,&quot;Canadian National Railways&quot;,&quot;Railroads -- Scotland&quot;],&quot;Primary&quot;:&quot;63059.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hanna, D. B. (David Blyth), 1858-1938&quot;,&quot;Hawkes, Arthur, 1871-1933 [Editor]&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;63059&quot;});" class='title'>Trains of Recollection -<br><span class='subtitle'>Drawn from Fifty Years of Railway Service in Scotland and Canada, and told to Arthur Hawkes</span></a>
+<div class='author'>Hanna, D. B. (David Blyth), 1858-1938, Hawkes, Arthur, 1871-1933 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63374, {&quot;Title&quot;:&quot;Confessions of a Railroad Signalman&quot;,&quot;Topics&quot;:[&quot;Railroads&quot;,&quot;Railroad accidents&quot;,&quot;Railroads -- United States -- Employees&quot;],&quot;Primary&quot;:&quot;63374.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fagan, James O. (James Octavius), 1859-&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;63374&quot;});" class='title'>Confessions of a Railroad Signalman</a>
+<div class='author'>Fagan, James O. (James Octavius), 1859-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63740, {&quot;Title&quot;:&quot;A Letter on the Late Post Office Agitation&quot;,&quot;Topics&quot;:[&quot;Postal service -- Great Britain&quot;,&quot;Sunday legislation -- Great Britain&quot;],&quot;Primary&quot;:&quot;63740.htm&quot;,&quot;CreatorNames&quot;:[&quot;Vaughan, C. J. (Charles John), 1816-1897&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;63740&quot;});" class='title'>A Letter on the Late Post Office Agitation</a>
+<div class='author'>Vaughan, C. J. (Charles John), 1816-1897</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63746, {&quot;Title&quot;:&quot;A Reply to Dr. Vaughan&#39;s \&quot;\&quot;Letter on the Late Post-Office Agitation\&quot;\&quot;&quot;,&quot;Topics&quot;:[&quot;Postal service -- Great Britain&quot;,&quot;Sunday legislation -- Great Britain&quot;,&quot;Vaughan, C. J. (Charles John), 1816-1897. Letter on the late Post-Office agitation&quot;],&quot;Primary&quot;:&quot;63746.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pears, James Roberts&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;63746&quot;});" class='title'>A Reply to Dr. Vaughan's "Letter on the Late Post-Office Agitation"</a>
+<div class='author'>Pears, James Roberts</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63753, {&quot;Title&quot;:&quot;A Second Letter on the late Post Office Agitation&quot;,&quot;Topics&quot;:[&quot;Postal service -- Great Britain&quot;,&quot;Sunday legislation -- Great Britain&quot;],&quot;Primary&quot;:&quot;63753.htm&quot;,&quot;CreatorNames&quot;:[&quot;Vaughan, C. J. (Charles John), 1816-1897&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;63753&quot;});" class='title'>A Second Letter on the late Post Office Agitation</a>
+<div class='author'>Vaughan, C. J. (Charles John), 1816-1897</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64220, {&quot;Title&quot;:&quot;Railway Reform - ou considérations sur la nécessité de réformer les bases du système qui a créé et qui dirige les chemins de fer de la Grande Bretagne, et des moyens à employer pour atteindre ce but.&quot;,&quot;Topics&quot;:[&quot;Railroads -- Great Britain&quot;],&quot;Primary&quot;:&quot;64220.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;64220&quot;});" class='title'>Railway Reform -<br><span class='subtitle'>ou considérations sur la nécessité de réformer les bases du système qui a créé et qui dirige les chemins de fer de la Grande Bretagne, et des moyens à employer pour atteindre ce but.</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64233, {&quot;Title&quot;:&quot;The postage stamps, envelopes, wrappers and post cards of the North American colonies of Great Britain&quot;,&quot;Topics&quot;:[&quot;Postage stamps -- Canada&quot;,&quot;Postal stationery -- Canada&quot;],&quot;Primary&quot;:&quot;64233.htm&quot;,&quot;CreatorNames&quot;:[&quot;Philatelic Society (London, England) [Compiler]&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;64233&quot;});" class='title'>The postage stamps, envelopes, wrappers and post cards of the North American colonies of Great Britain</a>
+<div class='author'>Philatelic Society (London, England) [Compiler]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65092, {&quot;Title&quot;:&quot;Histoire du Canal de Suez&quot;,&quot;Topics&quot;:[&quot;Suez Canal (Egypt) -- History&quot;],&quot;Primary&quot;:&quot;65092.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lesseps, Ferdinand de, 1805-1894&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;65092&quot;});" class='title'>Histoire du Canal de Suez</a>
+<div class='author'>Lesseps, Ferdinand de, 1805-1894</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65454, {&quot;Title&quot;:&quot;The Trail of the Swinging Lanterns - a racy, railroading review of transportation matters, methods and men&quot;,&quot;Topics&quot;:[&quot;Railroads -- Canada&quot;],&quot;Primary&quot;:&quot;65454.htm&quot;,&quot;CreatorNames&quot;:[&quot;Copeland, John Morison&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;65454&quot;});" class='title'>The Trail of the Swinging Lanterns -<br><span class='subtitle'>a racy, railroading review of transportation matters, methods and men</span></a>
+<div class='author'>Copeland, John Morison</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65663, {&quot;Title&quot;:&quot;List of Post Offices in Canada, with the Names of the Postmasters ... 1860&quot;,&quot;Topics&quot;:[&quot;Postal service -- Canada -- Guides&quot;],&quot;Primary&quot;:&quot;65663.htm&quot;,&quot;CreatorNames&quot;:[&quot;Canada. Post Office Department&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;65663&quot;});" class='title'>List of Post Offices in Canada, with the Names of the Postmasters ... 1860</a>
+<div class='author'>Canada. Post Office Department</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66482, {&quot;Title&quot;:&quot;Highways and Highway Transportation&quot;,&quot;Topics&quot;:[&quot;Roads&quot;,&quot;Transportation&quot;],&quot;Primary&quot;:&quot;66482.htm&quot;,&quot;CreatorNames&quot;:[&quot;Chatburn, George R., 1863-1940&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;66482&quot;});" class='title'>Highways and Highway Transportation</a>
+<div class='author'>Chatburn, George R., 1863-1940</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66597, {&quot;Title&quot;:&quot;Early Carriages and Roads&quot;,&quot;Topics&quot;:[&quot;Great Britain -- Social life and customs&quot;,&quot;Communication and traffic&quot;,&quot;Carriages and carts&quot;,&quot;Vehicles -- History&quot;],&quot;Primary&quot;:&quot;66597.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gilbey, Walter, Sir, 1831-1914&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;66597&quot;});" class='title'>Early Carriages and Roads</a>
+<div class='author'>Gilbey, Walter, Sir, 1831-1914</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66685, {&quot;Title&quot;:&quot;The Tunnel Under the Channel&quot;,&quot;Topics&quot;:[&quot;Tunnels -- English Channel&quot;],&quot;Primary&quot;:&quot;66685.htm&quot;,&quot;CreatorNames&quot;:[&quot;Whiteside, Thomas, 1918-1997&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;66685&quot;});" class='title'>The Tunnel Under the Channel</a>
+<div class='author'>Whiteside, Thomas, 1918-1997</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66912, {&quot;Title&quot;:&quot;A Nosseigneurs de l&#39;Assemblée nationale: Mémoire pour les maîtres de postes&quot;,&quot;Topics&quot;:[&quot;France -- History -- Revolution, 1789-1799&quot;,&quot;Pamphlets&quot;,&quot;Postal service -- France&quot;,&quot;Postal service -- France -- Paris&quot;],&quot;Primary&quot;:&quot;66912.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;66912&quot;});" class='title'>A Nosseigneurs de l'Assemblée nationale:<br><span class='subtitle'>Mémoire pour les maîtres de postes</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67555, {&quot;Title&quot;:&quot;Adhesiones á la Venta de los Ferro-carriles de la Provincia&quot;,&quot;Topics&quot;:[&quot;Railroads -- Argentina&quot;],&quot;Primary&quot;:&quot;67555.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gonnet, Manuel B., 1855-1927&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;67555&quot;});" class='title'>Adhesiones á la Venta de los Ferro-carriles de la Provincia</a>
+<div class='author'>Gonnet, Manuel B., 1855-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68356, {&quot;Title&quot;:&quot;En voyage&quot;,&quot;Topics&quot;:[&quot;Transportation -- Juvenile fiction&quot;,&quot;Transportation -- Pictorial works -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;68356.htm&quot;,&quot;CreatorNames&quot;:[&quot;Grandmaison, Marie de, 1856?-&quot;],&quot;LoCC&quot;:[&quot;HE&quot;,&quot;PZ&quot;],&quot;PG_ID&quot;:&quot;68356&quot;});" class='title'>En voyage</a>
+<div class='author'>Grandmaison, Marie de, 1856?-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68664, {&quot;Title&quot;:&quot;The heart of the railroad problem - The history of railway discrimination in the United States, the chief efforts at control and the remedies proposed, with hints from other countries&quot;,&quot;Topics&quot;:[&quot;Railroads and state -- United States&quot;,&quot;Railroads -- Freight -- Rates -- United States&quot;],&quot;Primary&quot;:&quot;68664.htm&quot;,&quot;CreatorNames&quot;:[&quot;Parsons, Frank, 1854-1908&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;68664&quot;});" class='title'>The heart of the railroad problem -<br><span class='subtitle'>The history of railway discrimination in the United States, the chief efforts at control and the remedies proposed, with hints from other countries</span></a>
+<div class='author'>Parsons, Frank, 1854-1908</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68728, {&quot;Title&quot;:&quot;Opinion par Defrance, sur les postes et messageries: Séance du 28 Fructidor, an IV&quot;,&quot;Topics&quot;:[&quot;Postal service -- France -- Administration -- Early works to 1800&quot;,&quot;Finance, Public -- France -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;68728.htm&quot;,&quot;CreatorNames&quot;:[&quot;Defrance, Jean Claude, 1743-1807&quot;],&quot;LoCC&quot;:[&quot;DC&quot;,&quot;HE&quot;],&quot;PG_ID&quot;:&quot;68728&quot;});" class='title'>Opinion par Defrance, sur les postes et messageries:<br><span class='subtitle'>Séance du 28 Fructidor, an IV</span></a>
+<div class='author'>Defrance, Jean Claude, 1743-1807</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68757, {&quot;Title&quot;:&quot;List of post offices in Canada, with the names of the postmasters ... 1856 - With a supplementary list to 1st March, 1857, inclusive&quot;,&quot;Topics&quot;:[&quot;Postal service -- Canada -- Guides&quot;],&quot;Primary&quot;:&quot;68757.htm&quot;,&quot;CreatorNames&quot;:[&quot;Canada. Post Office Department&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;68757&quot;});" class='title'>List of post offices in Canada, with the names of the postmasters ... 1856 -<br><span class='subtitle'>With a supplementary list to 1st March, 1857, inclusive</span></a>
+<div class='author'>Canada. Post Office Department</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68764, {&quot;Title&quot;:&quot;Observations sur l&#39;organisation des postes et messageries, présentées au Corps législatif&quot;,&quot;Topics&quot;:[&quot;Postal service -- France -- Administration -- Early works to 1800&quot;,&quot;Finance, Public -- France -- Early works to 1800&quot;,&quot;Delaunay, Pierre-Marie, 1755-1814. Motion d&#39;ordre sur l&#39;organisation des postes et messageries&quot;,&quot;France -- History -- Directory, 1795-1799 -- Economic aspects&quot;],&quot;Primary&quot;:&quot;68764.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pérez, Joachim de, 1759-1822?&quot;],&quot;LoCC&quot;:[&quot;DC&quot;,&quot;HE&quot;],&quot;PG_ID&quot;:&quot;68764&quot;});" class='title'>Observations sur l'organisation des postes et messageries, présentées au Corps législatif</a>
+<div class='author'>Pérez, Joachim de, 1759-1822?</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68864, {&quot;Title&quot;:&quot;Ramsey &amp; Carmick, contract. - Letter from the Postmaster General transmitting copy of a conditional mail contract; also copies of correspondence relative to the same&quot;,&quot;Topics&quot;:[&quot;Postal service -- United States -- History -- Sources&quot;],&quot;Primary&quot;:&quot;68864.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;68864&quot;});" class='title'>Ramsey & Carmick, contract. -<br><span class='subtitle'>Letter from the Postmaster General transmitting copy of a conditional mail contract; also copies of correspondence relative to the same</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69189, {&quot;Title&quot;:&quot;Opinion de Defrance, sur les postes et messageries: Séance du 16 Pluviôse, an V&quot;,&quot;Topics&quot;:[&quot;Postal service -- France -- Administration -- Early works to 1800&quot;,&quot;Finance, Public -- France -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;69189.htm&quot;,&quot;CreatorNames&quot;:[&quot;Defrance, Jean Claude, 1743-1807&quot;],&quot;LoCC&quot;:[&quot;DC&quot;,&quot;HE&quot;],&quot;PG_ID&quot;:&quot;69189&quot;});" class='title'>Opinion de Defrance, sur les postes et messageries:<br><span class='subtitle'>Séance du 16 Pluviôse, an V</span></a>
+<div class='author'>Defrance, Jean Claude, 1743-1807</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69214, {&quot;Title&quot;:&quot;List of Post Offices in Canada, with the names of the postmasters ... 1863&quot;,&quot;Topics&quot;:[&quot;Postal service -- Canada -- Guides&quot;],&quot;Primary&quot;:&quot;69214.htm&quot;,&quot;CreatorNames&quot;:[&quot;Canada. Post Office Department&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;69214&quot;});" class='title'>List of Post Offices in Canada, with the names of the postmasters ... 1863</a>
+<div class='author'>Canada. Post Office Department</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69588, {&quot;Title&quot;:&quot;The romance of the Canadian Pacific Railway&quot;,&quot;Topics&quot;:[&quot;Canadian Pacific Railway Company&quot;],&quot;Primary&quot;:&quot;69588.htm&quot;,&quot;CreatorNames&quot;:[&quot;MacBeth, R. G. (Roderick George), 1858-1934&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;69588&quot;});" class='title'>The romance of the Canadian Pacific Railway</a>
+<div class='author'>MacBeth, R. G. (Roderick George), 1858-1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69915, {&quot;Title&quot;:&quot;Réflexions pour les fermiers-généraux des messageries&quot;,&quot;Topics&quot;:[&quot;Coaching (Transportation) -- France&quot;,&quot;Transportation -- France&quot;],&quot;Primary&quot;:&quot;69915.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;DC&quot;,&quot;HE&quot;],&quot;PG_ID&quot;:&quot;69915&quot;});" class='title'>Réflexions pour les fermiers-généraux des messageries</a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70042, {&quot;Title&quot;:&quot;Des paquebots transatlantiques -&quot;,&quot;Topics&quot;:[&quot;Steamboat lines -- Atlantic Ocean&quot;,&quot;Merchant marine -- France&quot;],&quot;Primary&quot;:&quot;70042.htm&quot;,&quot;CreatorNames&quot;:[&quot;Le Hir, Jean Louis, 1806-1880&quot;],&quot;LoCC&quot;:[&quot;HE&quot;],&quot;PG_ID&quot;:&quot;70042&quot;});" class='title'>Des paquebots transatlantiques -<br><span class='subtitle'></span></a>
+<div class='author'>Le Hir, Jean Louis, 1806-1880</div>
+</div>
+</ul></div>
+</body></html>

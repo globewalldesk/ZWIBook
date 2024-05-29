@@ -1,0 +1,422 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Economic theory, Demography (HB)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(10612, {&quot;Title&quot;:&quot;Supply and Demand&quot;,&quot;Topics&quot;:[&quot;Supply and demand&quot;,&quot;Consumption (Economics)&quot;,&quot;Prices&quot;],&quot;Primary&quot;:&quot;10612.htm&quot;,&quot;CreatorNames&quot;:[&quot;Henderson, Hubert Douglas, Sir, 1890-1952&quot;,&quot;Keynes, John Maynard, 1883-1946 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;10612&quot;});" class='title'>Supply and Demand</a>
+<div class='author'>Henderson, Hubert Douglas, Sir, 1890-1952, Keynes, John Maynard, 1883-1946 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(11262, {&quot;Title&quot;:&quot;Cyclopedia of Economics&quot;,&quot;Topics&quot;:[&quot;Economics&quot;],&quot;Primary&quot;:&quot;11262.txt&quot;,&quot;CreatorNames&quot;:[&quot;Vaknin, Samuel, 1961-&quot;,&quot;Rangelovska, Lidija [Editor]&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;11262&quot;});" class='title'>Cyclopedia of Economics</a>
+<div class='author'>Vaknin, Samuel, 1961-, Rangelovska, Lidija [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12004, {&quot;Title&quot;:&quot;Essays on some unsettled Questions of Political Economy&quot;,&quot;Topics&quot;:[&quot;Economics&quot;],&quot;Primary&quot;:&quot;12004.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mill, John Stuart, 1806-1873&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;12004&quot;});" class='title'>Essays on some unsettled Questions of Political Economy</a>
+<div class='author'>Mill, John Stuart, 1806-1873</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12217, {&quot;Title&quot;:&quot;Economics Volume II: Modern Economic Problems&quot;,&quot;Topics&quot;:[&quot;Economics&quot;],&quot;Primary&quot;:&quot;12217.txt&quot;,&quot;CreatorNames&quot;:[&quot;Fetter, Frank A. (Frank Albert), 1863-1949&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;12217&quot;});" class='title'>Economics Volume II:<br><span class='subtitle'>Modern Economic Problems</span></a>
+<div class='author'>Fetter, Frank A. (Frank Albert), 1863-1949</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12920, {&quot;Title&quot;:&quot;The \&quot;\&quot;Goldfish\&quot;\&quot; - Being the Confessions af a Successful Man&quot;,&quot;Topics&quot;:[&quot;Leisure class&quot;,&quot;Wealth -- Moral and ethical aspects&quot;],&quot;Primary&quot;:&quot;12920.txt&quot;,&quot;CreatorNames&quot;:[&quot;Train, Arthur Cheney, 1875-1945&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;12920&quot;});" class='title'>The "Goldfish" -<br><span class='subtitle'>Being the Confessions af a Successful Man</span></a>
+<div class='author'>Train, Arthur Cheney, 1875-1945</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13488, {&quot;Title&quot;:&quot;An Essay on Mediæval Economic Teaching&quot;,&quot;Topics&quot;:[&quot;Economics -- History -- To 1800&quot;,&quot;Property -- History -- To 1500&quot;],&quot;Primary&quot;:&quot;13488.txt&quot;,&quot;CreatorNames&quot;:[&quot;O&#39;Brien, George, 1892-1973&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;13488&quot;});" class='title'>An Essay on Mediæval Economic Teaching</a>
+<div class='author'>O'Brien, George, 1892-1973</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14943, {&quot;Title&quot;:&quot;An American Idyll: The Life of Carleton H. Parker&quot;,&quot;Topics&quot;:[&quot;Parker, Carleton H. (Carleton Hubbell), 1879-1918&quot;],&quot;Primary&quot;:&quot;14943.htm&quot;,&quot;CreatorNames&quot;:[&quot;Parker, Cornelia Stratton, 1885-1972&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;14943&quot;});" class='title'>An American Idyll:<br><span class='subtitle'>The Life of Carleton H. Parker</span></a>
+<div class='author'>Parker, Cornelia Stratton, 1885-1972</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15939, {&quot;Title&quot;:&quot;Definition &amp; Reality in the General Theory of Political Economy&quot;,&quot;Topics&quot;:[&quot;Political science&quot;,&quot;Economics&quot;],&quot;Primary&quot;:&quot;15939.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cool, Thomas&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;15939&quot;});" class='title'>Definition & Reality in the General Theory of Political Economy</a>
+<div class='author'>Cool, Thomas</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15962, {&quot;Title&quot;:&quot;Essays on Political Economy&quot;,&quot;Topics&quot;:[&quot;Economics&quot;],&quot;Primary&quot;:&quot;15962.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bastiat, Frédéric, 1801-1850&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;15962&quot;});" class='title'>Essays on Political Economy</a>
+<div class='author'>Bastiat, Frédéric, 1801-1850</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17196, {&quot;Title&quot;:&quot;Life of Adam Smith&quot;,&quot;Topics&quot;:[&quot;Smith, Adam, 1723-1790&quot;,&quot;Economists -- Great Britain -- Biography&quot;],&quot;Primary&quot;:&quot;17196.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rae, John, 1845-1915&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;17196&quot;});" class='title'>Life of Adam Smith</a>
+<div class='author'>Rae, John, 1845-1915</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20435, {&quot;Title&quot;:&quot;The World in Chains: Some Aspects of War and Trade&quot;,&quot;Topics&quot;:[&quot;Profiteering&quot;,&quot;War -- Economic aspects&quot;],&quot;Primary&quot;:&quot;20435.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mavrogordato, John&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;20435&quot;});" class='title'>The World in Chains:<br><span class='subtitle'>Some Aspects of War and Trade</span></a>
+<div class='author'>Mavrogordato, John</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20743, {&quot;Title&quot;:&quot;The Marx He Knew&quot;,&quot;Topics&quot;:[&quot;Marx, Karl, 1818-1883&quot;],&quot;Primary&quot;:&quot;20743.htm&quot;,&quot;CreatorNames&quot;:[&quot;Spargo, John, 1876-1966&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;20743&quot;});" class='title'>The Marx He Knew</a>
+<div class='author'>Spargo, John, 1876-1966</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(21623, {&quot;Title&quot;:&quot;Usury - A Scriptural, Ethical and Economic View&quot;,&quot;Topics&quot;:[&quot;Usury&quot;],&quot;Primary&quot;:&quot;21623.htm&quot;,&quot;CreatorNames&quot;:[&quot;Elliott, Calvin&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;21623&quot;});" class='title'>Usury -<br><span class='subtitle'>A Scriptural, Ethical and Economic View</span></a>
+<div class='author'>Elliott, Calvin</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22502, {&quot;Title&quot;:&quot;Economisti del cinque e seicento&quot;,&quot;Topics&quot;:[&quot;Money&quot;,&quot;Economics&quot;],&quot;Primary&quot;:&quot;22502.txt&quot;,&quot;CreatorNames&quot;:[&quot;Montanari, Geminiano, 1633-1687&quot;,&quot;Scaruffi, Gasparo, 1519-1584&quot;,&quot;Serra, Antonio, active 1613&quot;,&quot;Graziani, Augusto, 1865-1944 [Editor]&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;22502&quot;});" class='title'>Economisti del cinque e seicento</a>
+<div class='author'>Montanari, Geminiano, 1633-1687, Scaruffi, Gasparo, 1519-1584, Serra, Antonio, active 1613, Graziani, Augusto, 1865-1944 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25300, {&quot;Title&quot;:&quot;The Causes of the Rebellion in Ireland Disclosed - In an Address to the People of England, in Which It Is Proved by Incontrovertible Facts, That the System for Some Years Pursued in That Country, Has Driven It into Its Present Dreadful Situation&quot;,&quot;Topics&quot;:[&quot;Irish question&quot;,&quot;Ireland -- Politics and government -- 1760-1820&quot;,&quot;Great Britain -- Politics and government -- 1714-1820&quot;],&quot;Primary&quot;:&quot;25300.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;25300&quot;});" class='title'>The Causes of the Rebellion in Ireland Disclosed -<br><span class='subtitle'>In an Address to the People of England, in Which It Is Proved by Incontrovertible Facts, That the System for Some Years Pursued in That Country, Has Driven It into Its Present Dreadful Situation</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27698, {&quot;Title&quot;:&quot;Principles of Political Economy, Vol. 1&quot;,&quot;Topics&quot;:[&quot;Economics&quot;],&quot;Primary&quot;:&quot;27698.htm&quot;,&quot;CreatorNames&quot;:[&quot;Roscher, Wilhelm, 1817-1894&quot;,&quot;Wolowski, L. (Louis), 1810-1876 [Contributor]&quot;,&quot;Lalor, John J. (John Joseph), -1899 [Translator]&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;27698&quot;});" class='title'>Principles of Political Economy, Vol. 1</a>
+<div class='author'>Roscher, Wilhelm, 1817-1894, Wolowski, L. (Louis), 1810-1876 [Contributor], Lalor, John J. (John Joseph), -1899 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29673, {&quot;Title&quot;:&quot;Creating Capital - Money-making as an aim in business&quot;,&quot;Topics&quot;:[&quot;Business&quot;,&quot;Wealth -- Moral and ethical aspects&quot;,&quot;Saving and investment&quot;],&quot;Primary&quot;:&quot;29673.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lipman, Frederick L. (Frederic Lockwood), 1866-&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;29673&quot;});" class='title'>Creating Capital -<br><span class='subtitle'>Money-making as an aim in business</span></a>
+<div class='author'>Lipman, Frederick L. (Frederic Lockwood), 1866-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30107, {&quot;Title&quot;:&quot;Principles of Political Economy - Abridged with Critical, Bibliographical, and Explanatory Notes, and a Sketch of the History of Political Economy&quot;,&quot;Topics&quot;:[&quot;Economics&quot;],&quot;Primary&quot;:&quot;30107.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mill, John Stuart, 1806-1873&quot;,&quot;Laughlin, J. Laurence (James Laurence), 1850-1933 [Editor]&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;30107&quot;});" class='title'>Principles of Political Economy -<br><span class='subtitle'>Abridged with Critical, Bibliographical, and Explanatory Notes, and a Sketch of the History of Political Economy</span></a>
+<div class='author'>Mill, John Stuart, 1806-1873, Laughlin, J. Laurence (James Laurence), 1850-1933 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31159, {&quot;Title&quot;:&quot;Essentials of Economic Theory - As Applied to Modern Problems of Industry and Public Policy&quot;,&quot;Topics&quot;:[&quot;Economics&quot;],&quot;Primary&quot;:&quot;31159.htm&quot;,&quot;CreatorNames&quot;:[&quot;Clark, John Bates, 1847-1938&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;31159&quot;});" class='title'>Essentials of Economic Theory -<br><span class='subtitle'>As Applied to Modern Problems of Industry and Public Policy</span></a>
+<div class='author'>Clark, John Bates, 1847-1938</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32158, {&quot;Title&quot;:&quot;Rural Wealth and Welfare: Economic Principles Illustrated and Applied in Farm Life&quot;,&quot;Topics&quot;:[&quot;Economics&quot;,&quot;Agriculture -- Economic aspects&quot;],&quot;Primary&quot;:&quot;32158.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fairchild, Geo. T. (George Thompson), 1838-1901&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;32158&quot;});" class='title'>Rural Wealth and Welfare:<br><span class='subtitle'>Economic Principles Illustrated and Applied in Farm Life</span></a>
+<div class='author'>Fairchild, Geo. T. (George Thompson), 1838-1901</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32252, {&quot;Title&quot;:&quot;The Stages in the Social History of Capitalism&quot;,&quot;Topics&quot;:[&quot;Capitalism&quot;],&quot;Primary&quot;:&quot;32252.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pirenne, Henri, 1862-1935&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;32252&quot;});" class='title'>The Stages in the Social History of Capitalism</a>
+<div class='author'>Pirenne, Henri, 1862-1935</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3300, {&quot;Title&quot;:&quot;An Inquiry into the Nature and Causes of the Wealth of Nations&quot;,&quot;Topics&quot;:[&quot;Economics&quot;],&quot;Primary&quot;:&quot;3300.htm&quot;,&quot;CreatorNames&quot;:[&quot;Smith, Adam, 1723-1790&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;3300&quot;});" class='title'>An Inquiry into the Nature and Causes of the Wealth of Nations</a>
+<div class='author'>Smith, Adam, 1723-1790</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33219, {&quot;Title&quot;:&quot;Political economy&quot;,&quot;Topics&quot;:[&quot;Economics&quot;],&quot;Primary&quot;:&quot;33219.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jevons, William Stanley, 1835-1882&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;33219&quot;});" class='title'>Political economy</a>
+<div class='author'>Jevons, William Stanley, 1835-1882</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33310, {&quot;Title&quot;:&quot;On The Principles of Political Economy, and Taxation&quot;,&quot;Topics&quot;:[&quot;Economics&quot;],&quot;Primary&quot;:&quot;33310.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ricardo, David, 1772-1823&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;33310&quot;});" class='title'>On The Principles of Political Economy, and Taxation</a>
+<div class='author'>Ricardo, David, 1772-1823</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33741, {&quot;Title&quot;:&quot;The Acquisitive Society&quot;,&quot;Topics&quot;:[&quot;Social problems&quot;,&quot;Economics&quot;,&quot;Industries&quot;],&quot;Primary&quot;:&quot;33741.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tawney, R. H. (Richard Henry), 1880-1962&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;33741&quot;});" class='title'>The Acquisitive Society</a>
+<div class='author'>Tawney, R. H. (Richard Henry), 1880-1962</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33946, {&quot;Title&quot;:&quot;A Stiptick for a Bleeding Nation - Or, a safe and speedy way to restore publick credit, and pay the national debts&quot;,&quot;Topics&quot;:[&quot;Debts, Public -- Great Britain -- Early works to 1800&quot;,&quot;Coinage -- Great Britain -- Early works to 1800&quot;,&quot;South Sea Company&quot;],&quot;Primary&quot;:&quot;33946.htm&quot;,&quot;CreatorNames&quot;:[&quot;Unknown&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;33946&quot;});" class='title'>A Stiptick for a Bleeding Nation -<br><span class='subtitle'>Or, a safe and speedy way to restore publick credit, and pay the national debts</span></a>
+<div class='author'>Unknown</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35390, {&quot;Title&quot;:&quot;Œuvres Complètes de Frédéric Bastiat, tome 1 - mises en ordre, revues et annotées d&#39;après les manuscrits de l&#39;auteur&quot;,&quot;Topics&quot;:[&quot;Economics&quot;],&quot;Primary&quot;:&quot;35390.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bastiat, Frédéric, 1801-1850&quot;,&quot;Paillottet, Prosper, 1804-1878 [Editor]&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;35390&quot;});" class='title'>Œuvres Complètes de Frédéric Bastiat, tome 1 -<br><span class='subtitle'>mises en ordre, revues et annotées d'après les manuscrits de l'auteur</span></a>
+<div class='author'>Bastiat, Frédéric, 1801-1850, Paillottet, Prosper, 1804-1878 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(360, {&quot;Title&quot;:&quot;What is Property? An Inquiry into the Principle of Right and of Government&quot;,&quot;Topics&quot;:[&quot;Economics&quot;,&quot;Property&quot;],&quot;Primary&quot;:&quot;360.htm&quot;,&quot;CreatorNames&quot;:[&quot;Proudhon, P.-J. (Pierre-Joseph), 1809-1865&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;360&quot;});" class='title'>What is Property? An Inquiry into the Principle of Right and of Government</a>
+<div class='author'>Proudhon, P.-J. (Pierre-Joseph), 1809-1865</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36345, {&quot;Title&quot;:&quot;Letters of David Ricardo to Thomas Robert Malthus, 1810-1823&quot;,&quot;Topics&quot;:[&quot;Malthusianism&quot;,&quot;Ricardo, David, 1772-1823 -- Correspondence&quot;,&quot;Malthus, T. R. (Thomas Robert), 1766-1834 -- Correspondence&quot;,&quot;Economists -- Great Britain -- Correspondence&quot;],&quot;Primary&quot;:&quot;36345.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ricardo, David, 1772-1823&quot;,&quot;Bonar, James, 1852-1941 [Editor]&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;36345&quot;});" class='title'>Letters of David Ricardo to Thomas Robert Malthus, 1810-1823</a>
+<div class='author'>Ricardo, David, 1772-1823, Bonar, James, 1852-1941 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36541, {&quot;Title&quot;:&quot;Unto This Last, and Other Essays on Political Economy&quot;,&quot;Topics&quot;:[&quot;Art&quot;,&quot;Economics&quot;],&quot;Primary&quot;:&quot;36541.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ruskin, John, 1819-1900&quot;],&quot;LoCC&quot;:[&quot;HB&quot;,&quot;PR&quot;],&quot;PG_ID&quot;:&quot;36541&quot;});" class='title'>Unto This Last, and Other Essays on Political Economy</a>
+<div class='author'>Ruskin, John, 1819-1900</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37098, {&quot;Title&quot;:&quot;Το κεφάλαιον - Περίληψις Παύλου Λαφάργκ, μετά προλόγου Β. Παρέτο&quot;,&quot;Topics&quot;:[&quot;Socialism&quot;,&quot;Capital&quot;,&quot;Economics&quot;],&quot;Primary&quot;:&quot;37098.htm&quot;,&quot;CreatorNames&quot;:[&quot;Marx, Karl, 1818-1883&quot;,&quot;Pareto, Vilfredo, 1848-1923 [Commentator]&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;37098&quot;});" class='title'>Το κεφάλαιον -<br><span class='subtitle'>Περίληψις Παύλου Λαφάργκ, μετά προλόγου Β. Παρέτο</span></a>
+<div class='author'>Marx, Karl, 1818-1883, Pareto, Vilfredo, 1848-1923 [Commentator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37290, {&quot;Title&quot;:&quot;The life and teaching of Karl Marx&quot;,&quot;Topics&quot;:[&quot;Socialism&quot;,&quot;Marx, Karl, 1818-1883&quot;],&quot;Primary&quot;:&quot;37290.htm&quot;,&quot;CreatorNames&quot;:[&quot;Beer, Max, 1864-1943&quot;,&quot;Partington, T. C. [Translator]&quot;,&quot;Stenning, H. J. (Henry James), 1889- [Translator]&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;37290&quot;});" class='title'>The life and teaching of Karl Marx</a>
+<div class='author'>Beer, Max, 1864-1943, Partington, T. C. [Translator], Stenning, H. J. (Henry James), 1889- [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38047, {&quot;Title&quot;:&quot;Social Value: A Study in Economic Theory, Critical and Constructive&quot;,&quot;Topics&quot;:[&quot;Value&quot;],&quot;Primary&quot;:&quot;38047.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anderson, Benjamin M. (Benjamin McAlester), 1886-1949&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;38047&quot;});" class='title'>Social Value:<br><span class='subtitle'>A Study in Economic Theory, Critical and Constructive</span></a>
+<div class='author'>Anderson, Benjamin M. (Benjamin McAlester), 1886-1949</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38185, {&quot;Title&quot;:&quot;Fruits of Philosophy: A Treatise on the Population Question&quot;,&quot;Topics&quot;:[&quot;Birth control&quot;,&quot;Malthusianism&quot;],&quot;Primary&quot;:&quot;38185.htm&quot;,&quot;CreatorNames&quot;:[&quot;Knowlton, Charles, 1800-1850&quot;,&quot;Besant, Annie, 1847-1933 [Editor]&quot;,&quot;Bradlaugh, Charles, 1833-1891 [Editor]&quot;],&quot;LoCC&quot;:[&quot;HB&quot;,&quot;HQ&quot;],&quot;PG_ID&quot;:&quot;38185&quot;});" class='title'>Fruits of Philosophy:<br><span class='subtitle'>A Treatise on the Population Question</span></a>
+<div class='author'>Knowlton, Charles, 1800-1850, Besant, Annie, 1847-1933 [Editor], Bradlaugh, Charles, 1833-1891 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38194, {&quot;Title&quot;:&quot;An Inquiry Into the Nature and Causes of the Wealth of Nations&quot;,&quot;Topics&quot;:[&quot;Economics&quot;],&quot;Primary&quot;:&quot;38194.htm&quot;,&quot;CreatorNames&quot;:[&quot;Garnier, M. (Germain), 1754-1821&quot;,&quot;Smith, Adam, 1723-1790&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;38194&quot;});" class='title'>An Inquiry Into the Nature and Causes of the Wealth of Nations</a>
+<div class='author'>Garnier, M. (Germain), 1754-1821, Smith, Adam, 1723-1790</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38439, {&quot;Title&quot;:&quot;Curiosities of Impecuniosity&quot;,&quot;Topics&quot;:[&quot;Poor -- Great Britain&quot;],&quot;Primary&quot;:&quot;38439.htm&quot;,&quot;CreatorNames&quot;:[&quot;Somerville, H. G.&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;38439&quot;});" class='title'>Curiosities of Impecuniosity</a>
+<div class='author'>Somerville, H. G.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38655, {&quot;Title&quot;:&quot;Principles of Political Economy, Vol. 2&quot;,&quot;Topics&quot;:[&quot;Economics&quot;],&quot;Primary&quot;:&quot;38655.htm&quot;,&quot;CreatorNames&quot;:[&quot;Roscher, Wilhelm, 1817-1894&quot;,&quot;Lalor, John J. (John Joseph), -1899 [Translator]&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;38655&quot;});" class='title'>Principles of Political Economy, Vol. 2</a>
+<div class='author'>Roscher, Wilhelm, 1817-1894, Lalor, John J. (John Joseph), -1899 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38975, {&quot;Title&quot;:&quot;Karl Marx en zijne voorgangers&quot;,&quot;Topics&quot;:[&quot;Socialism&quot;,&quot;Economics&quot;,&quot;Capitalism&quot;,&quot;Marx, Karl, 1818-1883&quot;],&quot;Primary&quot;:&quot;38975.htm&quot;,&quot;CreatorNames&quot;:[&quot;Loopuit, Jos., 1864-1923&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;38975&quot;});" class='title'>Karl Marx en zijne voorgangers</a>
+<div class='author'>Loopuit, Jos., 1864-1923</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39949, {&quot;Title&quot;:&quot;The Place of Science in Modern Civilisation, and Other Essays&quot;,&quot;Topics&quot;:[&quot;Science&quot;,&quot;Economics&quot;],&quot;Primary&quot;:&quot;39949.htm&quot;,&quot;CreatorNames&quot;:[&quot;Veblen, Thorstein, 1857-1929&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;39949&quot;});" class='title'>The Place of Science in Modern Civilisation, and Other Essays</a>
+<div class='author'>Veblen, Thorstein, 1857-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40077, {&quot;Title&quot;:&quot;The Principles of Economics, with Applications to Practical Problems&quot;,&quot;Topics&quot;:[&quot;Economics&quot;],&quot;Primary&quot;:&quot;40077.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fetter, Frank A. (Frank Albert), 1863-1949&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;40077&quot;});" class='title'>The Principles of Economics, with Applications to Practical Problems</a>
+<div class='author'>Fetter, Frank A. (Frank Albert), 1863-1949</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41405, {&quot;Title&quot;:&quot;The Accumulation of Capital&quot;,&quot;Topics&quot;:[&quot;Socialism&quot;,&quot;Capitalism&quot;,&quot;Saving and investment&quot;,&quot;Imperialism&quot;],&quot;Primary&quot;:&quot;41405.htm&quot;,&quot;CreatorNames&quot;:[&quot;Luxemburg, Rosa, 1871-1919&quot;,&quot;Robinson, Joan, 1903-1983 [Author of introduction, etc.]&quot;,&quot;Schwarzschild, Agnes [Translator]&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;41405&quot;});" class='title'>The Accumulation of Capital</a>
+<div class='author'>Luxemburg, Rosa, 1871-1919, Robinson, Joan, 1903-1983 [Author of introduction, etc.], Schwarzschild, Agnes [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41856, {&quot;Title&quot;:&quot;Manual of References and Exercises in Economics for Use with Volume II. Modern Economic Problems&quot;,&quot;Topics&quot;:[&quot;Economics -- Examinations, questions, etc.&quot;],&quot;Primary&quot;:&quot;41856.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fetter, Frank A. (Frank Albert), 1863-1949&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;41856&quot;});" class='title'>Manual of References and Exercises in Economics for Use with Volume II. Modern Economic Problems</a>
+<div class='author'>Fetter, Frank A. (Frank Albert), 1863-1949</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41936, {&quot;Title&quot;:&quot;Principles of Political Economy&quot;,&quot;Topics&quot;:[&quot;Economics&quot;],&quot;Primary&quot;:&quot;41936.htm&quot;,&quot;CreatorNames&quot;:[&quot;Perry, Arthur Latham, 1830-1905&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;41936&quot;});" class='title'>Principles of Political Economy</a>
+<div class='author'>Perry, Arthur Latham, 1830-1905</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42300, {&quot;Title&quot;:&quot;Œuvres Complètes de Frédéric Bastiat, tome 2 - mises en ordre, revues et annotées d&#39;après les manuscrits de l&#39;auteur&quot;,&quot;Topics&quot;:[&quot;Economics&quot;],&quot;Primary&quot;:&quot;42300.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bastiat, Frédéric, 1801-1850&quot;,&quot;Paillottet, Prosper, 1804-1878 [Editor]&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;42300&quot;});" class='title'>Œuvres Complètes de Frédéric Bastiat, tome 2 -<br><span class='subtitle'>mises en ordre, revues et annotées d'après les manuscrits de l'auteur</span></a>
+<div class='author'>Bastiat, Frédéric, 1801-1850, Paillottet, Prosper, 1804-1878 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4239, {&quot;Title&quot;:&quot;An Essay on the Principle of Population&quot;,&quot;Topics&quot;:[&quot;Population&quot;],&quot;Primary&quot;:&quot;4239.htm&quot;,&quot;CreatorNames&quot;:[&quot;Malthus, T. R. (Thomas Robert), 1766-1834&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;4239&quot;});" class='title'>An Essay on the Principle of Population</a>
+<div class='author'>Malthus, T. R. (Thomas Robert), 1766-1834</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42759, {&quot;Title&quot;:&quot;Distributive Justice: The Right and Wrong of Our Present Distribution of Wealth&quot;,&quot;Topics&quot;:[&quot;Economic history&quot;,&quot;Wealth -- Religious aspects&quot;,&quot;Income distribution -- Moral and ethical aspects&quot;],&quot;Primary&quot;:&quot;42759.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ryan, John A. (John Augustine), 1869-1945&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;42759&quot;});" class='title'>Distributive Justice:<br><span class='subtitle'>The Right and Wrong of Our Present Distribution of Wealth</span></a>
+<div class='author'>Ryan, John A. (John Augustine), 1869-1945</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43315, {&quot;Title&quot;:&quot;Œuvres Complètes de Frédéric Bastiat, tome 3 - mises en ordre, revues et annotées d&#39;après les manuscrits de l&#39;auteur&quot;,&quot;Topics&quot;:[&quot;Economics&quot;],&quot;Primary&quot;:&quot;43315.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bastiat, Frédéric, 1801-1850&quot;,&quot;Paillottet, Prosper, 1804-1878 [Editor]&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;43315&quot;});" class='title'>Œuvres Complètes de Frédéric Bastiat, tome 3 -<br><span class='subtitle'>mises en ordre, revues et annotées d'après les manuscrits de l'auteur</span></a>
+<div class='author'>Bastiat, Frédéric, 1801-1850, Paillottet, Prosper, 1804-1878 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4336, {&quot;Title&quot;:&quot;An Inquiry into the Nature and Progress of Rent, and the Principles by Which It is Regulated&quot;,&quot;Topics&quot;:[&quot;Rent&quot;],&quot;Primary&quot;:&quot;4336.htm&quot;,&quot;CreatorNames&quot;:[&quot;Malthus, T. R. (Thomas Robert), 1766-1834&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;4336&quot;});" class='title'>An Inquiry into the Nature and Progress of Rent, and the Principles by Which It is Regulated</a>
+<div class='author'>Malthus, T. R. (Thomas Robert), 1766-1834</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(444, {&quot;Title&quot;:&quot;System of Economical Contradictions; Or, The Philosophy of Misery&quot;,&quot;Topics&quot;:[&quot;Economics&quot;],&quot;Primary&quot;:&quot;444.txt&quot;,&quot;CreatorNames&quot;:[&quot;Proudhon, P.-J. (Pierre-Joseph), 1809-1865&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;444&quot;});" class='title'>System of Economical Contradictions;<br><span class='subtitle'>Or, The Philosophy of Misery</span></a>
+<div class='author'>Proudhon, P.-J. (Pierre-Joseph), 1809-1865</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45002, {&quot;Title&quot;:&quot;Harmonies of Political Economy - Translated from the Third French Edition, with a Notice of the Life and Writings of the Author&quot;,&quot;Topics&quot;:[&quot;Economics&quot;],&quot;Primary&quot;:&quot;45002.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bastiat, Frédéric, 1801-1850&quot;,&quot;Stirling, Patrick James, 1809-1891 [Translator]&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;45002&quot;});" class='title'>Harmonies of Political Economy -<br><span class='subtitle'>Translated from the Third French Edition, with a Notice of the Life and Writings of the Author</span></a>
+<div class='author'>Bastiat, Frédéric, 1801-1850, Stirling, Patrick James, 1809-1891 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4543, {&quot;Title&quot;:&quot;The Querist - Containing Several Queries Proposed to the Consideration of the Public&quot;,&quot;Topics&quot;:[&quot;Great Britain -- Economic policy&quot;,&quot;Wealth&quot;,&quot;Great Britain -- Economic conditions -- 18th century&quot;],&quot;Primary&quot;:&quot;4543.htm&quot;,&quot;CreatorNames&quot;:[&quot;Berkeley, George, 1685-1753&quot;],&quot;LoCC&quot;:[&quot;HB&quot;,&quot;HC&quot;],&quot;PG_ID&quot;:&quot;4543&quot;});" class='title'>The Querist -<br><span class='subtitle'>Containing Several Queries Proposed to the Consideration of the Public</span></a>
+<div class='author'>Berkeley, George, 1685-1753</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46423, {&quot;Title&quot;:&quot;A Contribution to the Critique of Political Economy&quot;,&quot;Topics&quot;:[&quot;Economics&quot;,&quot;Marxian economics&quot;],&quot;Primary&quot;:&quot;46423.htm&quot;,&quot;CreatorNames&quot;:[&quot;Marx, Karl, 1818-1883&quot;,&quot;Stone, N. I. (Nahum Isaac), 1873-1966 [Translator]&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;46423&quot;});" class='title'>A Contribution to the Critique of Political Economy</a>
+<div class='author'>Marx, Karl, 1818-1883, Stone, N. I. (Nahum Isaac), 1873-1966 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46625, {&quot;Title&quot;:&quot;Œuvres Complètes de Frédéric Bastiat, tome 4 - mises en ordre, revues et annotées d&#39;après les manuscrits de l&#39;auteur&quot;,&quot;Topics&quot;:[&quot;Economics&quot;],&quot;Primary&quot;:&quot;46625.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bastiat, Frédéric, 1801-1850&quot;,&quot;Paillottet, Prosper, 1804-1878 [Editor]&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;46625&quot;});" class='title'>Œuvres Complètes de Frédéric Bastiat, tome 4 -<br><span class='subtitle'>mises en ordre, revues et annotées d'après les manuscrits de l'auteur</span></a>
+<div class='author'>Bastiat, Frédéric, 1801-1850, Paillottet, Prosper, 1804-1878 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46626, {&quot;Title&quot;:&quot;Œuvres Complètes de Frédéric Bastiat, tome 5 - mises en ordre, revues et annotées d&#39;après les manuscrits de l&#39;auteur&quot;,&quot;Topics&quot;:[&quot;Economics&quot;],&quot;Primary&quot;:&quot;46626.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bastiat, Frédéric, 1801-1850&quot;,&quot;Paillottet, Prosper, 1804-1878 [Editor]&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;46626&quot;});" class='title'>Œuvres Complètes de Frédéric Bastiat, tome 5 -<br><span class='subtitle'>mises en ordre, revues et annotées d'après les manuscrits de l'auteur</span></a>
+<div class='author'>Bastiat, Frédéric, 1801-1850, Paillottet, Prosper, 1804-1878 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46627, {&quot;Title&quot;:&quot;Œuvres Complètes de Frédéric Bastiat, tome 6 - mises en ordre, revues et annotées d&#39;après les manuscrits de l&#39;auteur&quot;,&quot;Topics&quot;:[&quot;Economics&quot;],&quot;Primary&quot;:&quot;46627.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bastiat, Frédéric, 1801-1850&quot;,&quot;Paillottet, Prosper, 1804-1878 [Editor]&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;46627&quot;});" class='title'>Œuvres Complètes de Frédéric Bastiat, tome 6 -<br><span class='subtitle'>mises en ordre, revues et annotées d'après les manuscrits de l'auteur</span></a>
+<div class='author'>Bastiat, Frédéric, 1801-1850, Paillottet, Prosper, 1804-1878 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46628, {&quot;Title&quot;:&quot;Œuvres Complètes de Frédéric Bastiat, tome 7 - mises en ordre, revues et annotées d&#39;après les manuscrits de l&#39;auteur&quot;,&quot;Topics&quot;:[&quot;Economics&quot;],&quot;Primary&quot;:&quot;46628.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bastiat, Frédéric, 1801-1850&quot;,&quot;Paillottet, Prosper, 1804-1878 [Editor]&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;46628&quot;});" class='title'>Œuvres Complètes de Frédéric Bastiat, tome 7 -<br><span class='subtitle'>mises en ordre, revues et annotées d'après les manuscrits de l'auteur</span></a>
+<div class='author'>Bastiat, Frédéric, 1801-1850, Paillottet, Prosper, 1804-1878 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47081, {&quot;Title&quot;:&quot;Zur Geschichte der englischen Volkswirthschaftslehre - aus dem III. Bande der Abhandlungen der Königlich Sächsischen Gesellschaft der Wissenschaften&quot;,&quot;Topics&quot;:[&quot;Economics&quot;,&quot;Great Britain -- Economic conditions&quot;,&quot;Economics -- History -- To 1800&quot;,&quot;Economics -- Great Britain -- History&quot;],&quot;Primary&quot;:&quot;47081.htm&quot;,&quot;CreatorNames&quot;:[&quot;Roscher, Wilhelm, 1817-1894&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;47081&quot;});" class='title'>Zur Geschichte der englischen Volkswirthschaftslehre -<br><span class='subtitle'>aus dem III. Bande der Abhandlungen der Königlich Sächsischen Gesellschaft der Wissenschaften</span></a>
+<div class='author'>Roscher, Wilhelm, 1817-1894</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47266, {&quot;Title&quot;:&quot;Four Introductory Lectures on Political Economy&quot;,&quot;Topics&quot;:[&quot;Economics&quot;],&quot;Primary&quot;:&quot;47266.htm&quot;,&quot;CreatorNames&quot;:[&quot;Senior, Nassau William, 1790-1864&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;47266&quot;});" class='title'>Four Introductory Lectures on Political Economy</a>
+<div class='author'>Senior, Nassau William, 1790-1864</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48446, {&quot;Title&quot;:&quot;Karl Marx&quot;,&quot;Topics&quot;:[&quot;Socialism&quot;,&quot;Capitalism&quot;,&quot;Marx, Karl, 1818-1883&quot;],&quot;Primary&quot;:&quot;48446.htm&quot;,&quot;CreatorNames&quot;:[&quot;Loria, Achille, 1857-1943&quot;,&quot;Paul, Cedar, 1880-1972 [Translator]&quot;,&quot;Paul, Eden, 1865-1944 [Translator]&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;48446&quot;});" class='title'>Karl Marx</a>
+<div class='author'>Loria, Achille, 1857-1943, Paul, Cedar, 1880-1972 [Translator], Paul, Eden, 1865-1944 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50424, {&quot;Title&quot;:&quot;The Impending Crisis - Conditions Resulting from the Concentration of Wealth in the United States&quot;,&quot;Topics&quot;:[&quot;Wealth&quot;,&quot;United States -- Economic conditions&quot;,&quot;Trusts, Industrial&quot;],&quot;Primary&quot;:&quot;50424.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bouroff, Basil A.&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;50424&quot;});" class='title'>The Impending Crisis -<br><span class='subtitle'>Conditions Resulting from the Concentration of Wealth in the United States</span></a>
+<div class='author'>Bouroff, Basil A.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51558, {&quot;Title&quot;:&quot;Die Entwicklung des gutsherrlich-bäuerlichen Verhältnisses in Galizien (1772-1848)&quot;,&quot;Topics&quot;:[&quot;Agricultural laborers -- Galicia (Poland and Ukraine)&quot;,&quot;Land tenure -- Galicia (Poland and Ukraine)&quot;],&quot;Primary&quot;:&quot;51558.htm&quot;,&quot;CreatorNames&quot;:[&quot;Von Mises, Ludwig, 1881-1973&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;51558&quot;});" class='title'>Die Entwicklung des gutsherrlich-bäuerlichen Verhältnisses in Galizien (1772-1848)</a>
+<div class='author'>Von Mises, Ludwig, 1881-1973</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55308, {&quot;Title&quot;:&quot;Progress and Poverty, Volumes I and II - An Inquiry into the Cause of Industrial Depressions and of Increase of Want with Increase of Wealth&quot;,&quot;Topics&quot;:[&quot;Economics&quot;,&quot;Single tax&quot;],&quot;Primary&quot;:&quot;55308.htm&quot;,&quot;CreatorNames&quot;:[&quot;George, Henry, 1839-1897&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;55308&quot;});" class='title'>Progress and Poverty, Volumes I and II -<br><span class='subtitle'>An Inquiry into the Cause of Industrial Depressions and of Increase of Want with Increase of Wealth</span></a>
+<div class='author'>George, Henry, 1839-1897</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5619, {&quot;Title&quot;:&quot;Essays on Mankind and Political Arithmetic&quot;,&quot;Topics&quot;:[&quot;Population&quot;,&quot;London (England) -- Population&quot;],&quot;Primary&quot;:&quot;5619.htm&quot;,&quot;CreatorNames&quot;:[&quot;Petty, William, Sir, 1623-1687&quot;,&quot;Morley, Henry, 1822-1894 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;5619&quot;});" class='title'>Essays on Mankind and Political Arithmetic</a>
+<div class='author'>Petty, William, Sir, 1623-1687, Morley, Henry, 1822-1894 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56727, {&quot;Title&quot;:&quot;The Irish Crisis&quot;,&quot;Topics&quot;:[&quot;Ireland -- Economic conditions&quot;,&quot;Ireland -- History -- 1837-1901&quot;,&quot;Ireland -- History -- Famine, 1845-1852&quot;],&quot;Primary&quot;:&quot;56727.htm&quot;,&quot;CreatorNames&quot;:[&quot;Trevelyan, Charles E. (Charles Edward), 1807-1886&quot;],&quot;LoCC&quot;:[&quot;DA&quot;,&quot;HB&quot;],&quot;PG_ID&quot;:&quot;56727&quot;});" class='title'>The Irish Crisis</a>
+<div class='author'>Trevelyan, Charles E. (Charles Edward), 1807-1886</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57500, {&quot;Title&quot;:&quot;A History of Economic Doctrines - from the time of the physiocrats to the present day&quot;,&quot;Topics&quot;:[&quot;Economics -- History&quot;],&quot;Primary&quot;:&quot;57500.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gide, Charles, 1847-1932&quot;,&quot;Rist, Charles, 1874-1955&quot;,&quot;Richards, R. (Robert), 1884-1954 [Translator]&quot;,&quot;Smart, William, 1853-1915 [Translator]&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;57500&quot;});" class='title'>A History of Economic Doctrines -<br><span class='subtitle'>from the time of the physiocrats to the present day</span></a>
+<div class='author'>Gide, Charles, 1847-1932, Rist, Charles, 1874-1955, Richards, R. (Robert), 1884-1954 [Translator], Smart, William, 1853-1915 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57576, {&quot;Title&quot;:&quot;A Method of Tanning without Bark&quot;,&quot;Topics&quot;:[&quot;Tanning&quot;,&quot;Cinquefoils -- Industrial applications -- Early works to 1800&quot;,&quot;Tanning -- Ireland -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;57576.htm&quot;,&quot;CreatorNames&quot;:[&quot;Maple, William&quot;],&quot;LoCC&quot;:[&quot;HB&quot;,&quot;TS&quot;],&quot;PG_ID&quot;:&quot;57576&quot;});" class='title'>A Method of Tanning without Bark</a>
+<div class='author'>Maple, William</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57987, {&quot;Title&quot;:&quot;The Present State of the British Interest in India - With a Plan for Establishing a Regular System of Government in That Country&quot;,&quot;Topics&quot;:[&quot;India -- Politics and government -- 1765-1947&quot;,&quot;Great Britain -- Colonies -- India -- Administration&quot;,&quot;Bengal (India) -- Politics and government&quot;],&quot;Primary&quot;:&quot;57987.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;DS&quot;,&quot;HB&quot;],&quot;PG_ID&quot;:&quot;57987&quot;});" class='title'>The Present State of the British Interest in India -<br><span class='subtitle'>With a Plan for Establishing a Regular System of Government in That Country</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58204, {&quot;Title&quot;:&quot;A History of Greek Economic Thought&quot;,&quot;Topics&quot;:[&quot;Thesis (Ph. D.)&quot;,&quot;Economics -- Greece -- History&quot;],&quot;Primary&quot;:&quot;58204.htm&quot;,&quot;CreatorNames&quot;:[&quot;Trever, Albert Augustus, 1874-1940&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;58204&quot;});" class='title'>A History of Greek Economic Thought</a>
+<div class='author'>Trever, Albert Augustus, 1874-1940</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58584, {&quot;Title&quot;:&quot;Index of the Project Gutenberg Works of Frédéric Bastiat&quot;,&quot;Topics&quot;:[&quot;Indexes&quot;],&quot;Primary&quot;:&quot;58584.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bastiat, Frédéric, 1801-1850&quot;,&quot;Widger, David, 1932-2021? [Editor]&quot;],&quot;LoCC&quot;:[&quot;HB&quot;,&quot;HF&quot;],&quot;PG_ID&quot;:&quot;58584&quot;});" class='title'>Index of the Project Gutenberg Works of Frédéric Bastiat</a>
+<div class='author'>Bastiat, Frédéric, 1801-1850, Widger, David, 1932-2021? [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59792, {&quot;Title&quot;:&quot;Hume&#39;s Political Discourses&quot;,&quot;Topics&quot;:[&quot;Political science&quot;,&quot;Economics&quot;],&quot;Primary&quot;:&quot;59792.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hume, David, 1711-1776&quot;,&quot;Robertson, William Bell [Editor]&quot;],&quot;LoCC&quot;:[&quot;HB&quot;,&quot;J&quot;],&quot;PG_ID&quot;:&quot;59792&quot;});" class='title'>Hume's Political Discourses</a>
+<div class='author'>Hume, David, 1711-1776, Robertson, William Bell [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60378, {&quot;Title&quot;:&quot;Life and Writings of Thomas R. Malthus&quot;,&quot;Topics&quot;:[&quot;Malthusianism&quot;,&quot;Malthus, T. R. (Thomas Robert), 1766-1834&quot;],&quot;Primary&quot;:&quot;60378.htm&quot;,&quot;CreatorNames&quot;:[&quot;Drysdale, Charles R. (Charles Robert), 1829-1907&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;60378&quot;});" class='title'>Life and Writings of Thomas R. Malthus</a>
+<div class='author'>Drysdale, Charles R. (Charles Robert), 1829-1907</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60379, {&quot;Title&quot;:&quot;The Camel and the Needle&#39;s Eye&quot;,&quot;Topics&quot;:[&quot;Wealth&quot;,&quot;Wealth -- Moral and ethical aspects&quot;],&quot;Primary&quot;:&quot;60379.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ponsonby, Arthur Ponsonby, Baron, 1871-1946&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;60379&quot;});" class='title'>The Camel and the Needle's Eye</a>
+<div class='author'>Ponsonby, Arthur Ponsonby, Baron, 1871-1946</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60411, {&quot;Title&quot;:&quot;An Inquiry into the Principles of Political Oeconomy (Vol. 1 of 2) - Being an essay on the science of domestic policy in free nations. In which are particularly considered population, agriculture, trade, industry, money, coin, interest, circulation, banks, exchange, public credit, and taxes&quot;,&quot;Topics&quot;:[&quot;Economics&quot;],&quot;Primary&quot;:&quot;60411.htm&quot;,&quot;CreatorNames&quot;:[&quot;Steuart, James, Sir, 1712-1780&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;60411&quot;});" class='title'>An Inquiry into the Principles of Political Oeconomy (Vol. 1 of 2) -<br><span class='subtitle'>Being an essay on the science of domestic policy in free nations. In which are particularly considered population, agriculture, trade, industry, money, coin, interest, circulation, banks, exchange, public credit, and taxes</span></a>
+<div class='author'>Steuart, James, Sir, 1712-1780</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60917, {&quot;Title&quot;:&quot;Dialogue between John and Thomas, on the Corn Laws, the Charter, Teetotalism, and the Probable Remedy for the Present Disstresses&quot;,&quot;Topics&quot;:[&quot;Temperance&quot;,&quot;Chartism&quot;,&quot;Great Britain -- Economic conditions -- 19th century&quot;],&quot;Primary&quot;:&quot;60917.htm&quot;,&quot;CreatorNames&quot;:[&quot;Unknown&quot;],&quot;LoCC&quot;:[&quot;HB&quot;,&quot;PR&quot;],&quot;PG_ID&quot;:&quot;60917&quot;});" class='title'>Dialogue between John and Thomas, on the Corn Laws, the Charter, Teetotalism, and the Probable Remedy for the Present Disstresses</a>
+<div class='author'>Unknown</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61483, {&quot;Title&quot;:&quot;Definitions in Political Economy, - Preceded by an Inquiry Into the Rules which Ought to Guide Political Economists in the Definition and Use of Their Terms; with Remarks on the Deviation from These Rules in Their Writings&quot;,&quot;Topics&quot;:[&quot;Economics&quot;,&quot;Classical school of economics&quot;],&quot;Primary&quot;:&quot;61483.htm&quot;,&quot;CreatorNames&quot;:[&quot;Malthus, T. R. (Thomas Robert), 1766-1834&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;61483&quot;});" class='title'>Definitions in Political Economy, -<br><span class='subtitle'>Preceded by an Inquiry Into the Rules which Ought to Guide Political Economists in the Definition and Use of Their Terms; with Remarks on the Deviation from These Rules in Their Writings</span></a>
+<div class='author'>Malthus, T. R. (Thomas Robert), 1766-1834</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61964, {&quot;Title&quot;:&quot;An Essay on the State of England - In Relation to Its Trade, Its Poor, and Its Taxes, for Carrying on the Present War Against France&quot;,&quot;Topics&quot;:[&quot;Poor -- England&quot;,&quot;Great Britain -- Commercial policy&quot;],&quot;Primary&quot;:&quot;61964.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cary, John, -1720?&quot;],&quot;LoCC&quot;:[&quot;HB&quot;,&quot;HF&quot;],&quot;PG_ID&quot;:&quot;61964&quot;});" class='title'>An Essay on the State of England -<br><span class='subtitle'>In Relation to Its Trade, Its Poor, and Its Taxes, for Carrying on the Present War Against France</span></a>
+<div class='author'>Cary, John, -1720?</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62318, {&quot;Title&quot;:&quot;Essai sur le commerce&quot;,&quot;Topics&quot;:[&quot;Economics&quot;,&quot;Commerce&quot;],&quot;Primary&quot;:&quot;62318.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cantillon, Richard, -1734&quot;,&quot;Higgs, Henry, 1864-1940 [Editor]&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;62318&quot;});" class='title'>Essai sur le commerce</a>
+<div class='author'>Cantillon, Richard, -1734, Higgs, Henry, 1864-1940 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62353, {&quot;Title&quot;:&quot;An Essay Towards Regulating the Trade, and Employing the Poor of This Kingdom - Whereunto is Added, an Essay Towards Paying Off the Publick Debts&quot;,&quot;Topics&quot;:[&quot;Poor -- Great Britain&quot;,&quot;Great Britain -- Economic conditions -- 18th century&quot;,&quot;Great Britain -- Commercial policy&quot;],&quot;Primary&quot;:&quot;62353.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cary, John, -1720?&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;62353&quot;});" class='title'>An Essay Towards Regulating the Trade, and Employing the Poor of This Kingdom -<br><span class='subtitle'>Whereunto is Added, an Essay Towards Paying Off the Publick Debts</span></a>
+<div class='author'>Cary, John, -1720?</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62407, {&quot;Title&quot;:&quot;The Measure of Value Stated and Illustrated - With an Application of it to the Alterations in the Value of the English Currency since 1790&quot;,&quot;Topics&quot;:[&quot;Currency question -- Great Britain&quot;,&quot;Value&quot;],&quot;Primary&quot;:&quot;62407.htm&quot;,&quot;CreatorNames&quot;:[&quot;Malthus, T. R. (Thomas Robert), 1766-1834&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;62407&quot;});" class='title'>The Measure of Value Stated and Illustrated -<br><span class='subtitle'>With an Application of it to the Alterations in the Value of the English Currency since 1790</span></a>
+<div class='author'>Malthus, T. R. (Thomas Robert), 1766-1834</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62459, {&quot;Title&quot;:&quot;Usury; Or, Interest, Premium and Discount&quot;,&quot;Topics&quot;:[&quot;Usury&quot;],&quot;Primary&quot;:&quot;62459.htm&quot;,&quot;CreatorNames&quot;:[&quot;Crittenden, S. H.&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;62459&quot;});" class='title'>Usury;<br><span class='subtitle'>Or, Interest, Premium and Discount</span></a>
+<div class='author'>Crittenden, S. H.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63063, {&quot;Title&quot;:&quot;Les Industriels: Métiers et professions en France&quot;,&quot;Topics&quot;:[&quot;Working class -- France&quot;,&quot;Labor movement -- France&quot;,&quot;Labor -- France&quot;,&quot;Professions -- France&quot;],&quot;Primary&quot;:&quot;63063.htm&quot;,&quot;CreatorNames&quot;:[&quot;La Bédollière, Emile de, 1812-1883&quot;,&quot;Monnier, Henry, 1799-1877 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;63063&quot;});" class='title'>Les Industriels:<br><span class='subtitle'>Métiers et professions en France</span></a>
+<div class='author'>La Bédollière, Emile de, 1812-1883, Monnier, Henry, 1799-1877 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64241, {&quot;Title&quot;:&quot;Other Worlds - A story concerning the wealth earned by American citizens and showing how it can be secured to them instead of to the trusts&quot;,&quot;Topics&quot;:[&quot;Wealth&quot;,&quot;Trusts, Industrial&quot;,&quot;Distribution (Economic theory)&quot;,&quot;Utopias -- United States&quot;],&quot;Primary&quot;:&quot;64241.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fry, Lena Jane&quot;],&quot;LoCC&quot;:[&quot;HB&quot;,&quot;PS&quot;],&quot;PG_ID&quot;:&quot;64241&quot;});" class='title'>Other Worlds -<br><span class='subtitle'>A story concerning the wealth earned by American citizens and showing how it can be secured to them instead of to the trusts</span></a>
+<div class='author'>Fry, Lena Jane</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64753, {&quot;Title&quot;:&quot;Adam Smith&quot;,&quot;Topics&quot;:[&quot;Smith, Adam, 1723-1790&quot;,&quot;Economists -- Great Britain -- Biography&quot;],&quot;Primary&quot;:&quot;64753.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hirst, Francis W. (Francis Wrigley), 1873-1953&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;64753&quot;});" class='title'>Adam Smith</a>
+<div class='author'>Hirst, Francis W. (Francis Wrigley), 1873-1953</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65293, {&quot;Title&quot;:&quot;Owen&#39;s Moral Physiology; or, A Brief and Plain Treatise on the Population Question&quot;,&quot;Topics&quot;:[&quot;Birth control&quot;,&quot;Malthusianism&quot;],&quot;Primary&quot;:&quot;65293.htm&quot;,&quot;CreatorNames&quot;:[&quot;Owen, Robert Dale, 1801-1877&quot;,&quot;Glover, Ralph [Editor]&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;65293&quot;});" class='title'>Owen's Moral Physiology;<br><span class='subtitle'>or, A Brief and Plain Treatise on the Population Question</span></a>
+<div class='author'>Owen, Robert Dale, 1801-1877, Glover, Ralph [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65818, {&quot;Title&quot;:&quot;Letters to Judd, an American Workingman&quot;,&quot;Topics&quot;:[&quot;Working class -- United States&quot;,&quot;United States -- Economic conditions -- 1918-1945&quot;,&quot;Labor -- United States&quot;,&quot;United States -- Politics and government -- 1923-1929&quot;,&quot;Capitalism -- United States&quot;],&quot;Primary&quot;:&quot;65818.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sinclair, Upton, 1878-1968&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;65818&quot;});" class='title'>Letters to Judd, an American Workingman</a>
+<div class='author'>Sinclair, Upton, 1878-1968</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66544, {&quot;Title&quot;:&quot;Tolstoy&#39;s interpretation of money and property&quot;,&quot;Topics&quot;:[&quot;Tolstoy, Leo, graf, 1828-1910&quot;,&quot;Money&quot;,&quot;Property&quot;],&quot;Primary&quot;:&quot;66544.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stanoyevich, Milivoy S. (Milivoy Stoyan), 1882-1973&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;66544&quot;});" class='title'>Tolstoy's interpretation of money and property</a>
+<div class='author'>Stanoyevich, Milivoy S. (Milivoy Stoyan), 1882-1973</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66710, {&quot;Title&quot;:&quot;An Inquiry into the Principles of Political Oeconomy (Vol. 2 of 2) - Being an essay on the science of domestic policy in free nations. In which are particularly considered population, agriculture, trade, industry, money, coin, interest, circulation, banks, exchange, public credit, and taxes&quot;,&quot;Topics&quot;:[&quot;Economics&quot;],&quot;Primary&quot;:&quot;66710.htm&quot;,&quot;CreatorNames&quot;:[&quot;Steuart, James, Sir, 1712-1780&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;66710&quot;});" class='title'>An Inquiry into the Principles of Political Oeconomy (Vol. 2 of 2) -<br><span class='subtitle'>Being an essay on the science of domestic policy in free nations. In which are particularly considered population, agriculture, trade, industry, money, coin, interest, circulation, banks, exchange, public credit, and taxes</span></a>
+<div class='author'>Steuart, James, Sir, 1712-1780</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67939, {&quot;Title&quot;:&quot;El capital: Resumido y acompañado de un estudio sobre el Socialismo científico&quot;,&quot;Topics&quot;:[&quot;Socialism&quot;,&quot;Capital&quot;,&quot;Economics&quot;,&quot;Wages&quot;],&quot;Primary&quot;:&quot;67939.htm&quot;,&quot;CreatorNames&quot;:[&quot;Deville, Gabriel Pierre, 1854-1940&quot;,&quot;Marx, Karl, 1818-1883&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;67939&quot;});" class='title'>El capital:<br><span class='subtitle'>Resumido y acompañado de un estudio sobre el Socialismo científico</span></a>
+<div class='author'>Deville, Gabriel Pierre, 1854-1940, Marx, Karl, 1818-1883</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68099, {&quot;Title&quot;:&quot;Malthus and his work&quot;,&quot;Topics&quot;:[&quot;Malthusianism&quot;,&quot;Malthus, T. R. (Thomas Robert), 1766-1834&quot;],&quot;Primary&quot;:&quot;68099.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bonar, James, 1852-1941&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;68099&quot;});" class='title'>Malthus and his work</a>
+<div class='author'>Bonar, James, 1852-1941</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7361, {&quot;Title&quot;:&quot;A Brief History of Panics and Their Periodical Occurrence in the United States&quot;,&quot;Topics&quot;:[&quot;Depressions&quot;],&quot;Primary&quot;:&quot;7361.txt&quot;,&quot;CreatorNames&quot;:[&quot;Juglar, Clément, 1819-1905&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;7361&quot;});" class='title'>A Brief History of Panics and Their Periodical Occurrence in the United States</a>
+<div class='author'>Juglar, Clément, 1819-1905</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(8214, {&quot;Title&quot;:&quot;Capitalistic Musings&quot;,&quot;Topics&quot;:[&quot;Economics&quot;,&quot;Capitalism&quot;],&quot;Primary&quot;:&quot;8214.txt&quot;,&quot;CreatorNames&quot;:[&quot;Vaknin, Samuel, 1961-&quot;,&quot;Rangelovska, Lidija [Editor]&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;8214&quot;});" class='title'>Capitalistic Musings</a>
+<div class='author'>Vaknin, Samuel, 1961-, Rangelovska, Lidija [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(833, {&quot;Title&quot;:&quot;The Theory of the Leisure Class&quot;,&quot;Topics&quot;:[&quot;Sociology&quot;,&quot;Leisure class&quot;],&quot;Primary&quot;:&quot;833.htm&quot;,&quot;CreatorNames&quot;:[&quot;Veblen, Thorstein, 1857-1929&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;833&quot;});" class='title'>The Theory of the Leisure Class</a>
+<div class='author'>Veblen, Thorstein, 1857-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(8436, {&quot;Title&quot;:&quot;Speculations from Political Economy&quot;,&quot;Topics&quot;:[&quot;Economics&quot;],&quot;Primary&quot;:&quot;8436.htm&quot;,&quot;CreatorNames&quot;:[&quot;Clarke, Charles Baron, 1832-1906&quot;],&quot;LoCC&quot;:[&quot;HB&quot;],&quot;PG_ID&quot;:&quot;8436&quot;});" class='title'>Speculations from Political Economy</a>
+<div class='author'>Clarke, Charles Baron, 1832-1906</div>
+</div>
+</ul></div>
+</body></html>

@@ -1,0 +1,240 @@
+<html>
+<head>
+<title>Category</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+<!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+      <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+      <button id="findButton">Find</button>
+  </div>
+</div>
+<div id="header">
+  <div id="header-content">
+    <div class="header-container">
+      <a id="backBtn" class="header-btn" href="#">
+          <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+      </a>
+      <a id="search" class="header-btn" href="../search.html">
+          <img src="../images/icons/search.svg" title="Search book titles">
+      </a>
+    </div>
+    <h1 id="headTitle">Category: Music (M)</h1>
+    <div class="header-container">
+      <a id="sortBtn" class="header-btn" href="#">
+        <img src="../images/icons/sort.svg" title="Re-sort books">
+      </a>
+      <div id="sortDropdown" class="dropdown" style="display: none">
+        <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+        <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+        <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+        <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+      </div>
+      <a class="header-btn" href="categories.html">
+        <img src="../images/icons/categories.svg" title="Browse categories">
+      </a>
+      <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+          <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+      </a>
+    </div>
+  </div>
+</div>
+<div id="body">
+<ul>
+<li><a href='ML.html'>Literature of Music (ML)</a> <span class='count'>360</span></li>
+<li><a href='MT.html'>Musical instruction and study (MT)</a> <span class='count'>74</span></li>
+<p>&nbsp;</p>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(10448, {&quot;Title&quot;:&quot;The Anti-Slavery Harp: A Collection of Songs for Anti-Slavery Meetings&quot;,&quot;Topics&quot;:[&quot;Slavery -- United States -- Poetry&quot;,&quot;Antislavery movements -- Songs and music&quot;,&quot;Songs, English -- United States -- Texts&quot;],&quot;Primary&quot;:&quot;10448.txt&quot;,&quot;CreatorNames&quot;:[&quot;Brown, William Wells, 1814?-1884 [Compiler]&quot;],&quot;LoCC&quot;:[&quot;E&quot;,&quot;HT&quot;,&quot;M&quot;],&quot;PG_ID&quot;:&quot;10448&quot;});" class='title'>The Anti-Slavery Harp:<br><span class='subtitle'>A Collection of Songs for Anti-Slavery Meetings</span></a>
+<div class='author'>Brown, William Wells, 1814?-1884 [Compiler]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(117, {&quot;Title&quot;:&quot;Symphony No. 5 in C minor Opus 67&quot;,&quot;Topics&quot;:[&quot;Music&quot;],&quot;Primary&quot;:&quot;117.htm&quot;,&quot;CreatorNames&quot;:[&quot;Beethoven, Ludwig van, 1770-1827&quot;],&quot;LoCC&quot;:[&quot;M&quot;],&quot;PG_ID&quot;:&quot;117&quot;});" class='title'>Symphony No. 5 in C minor Opus 67</a>
+<div class='author'>Beethoven, Ludwig van, 1770-1827</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(156, {&quot;Title&quot;:&quot;Symphony No. 5 in C minor, Opus 67&quot;,&quot;Topics&quot;:[&quot;Music&quot;],&quot;Primary&quot;:&quot;156.htm&quot;,&quot;CreatorNames&quot;:[&quot;Beethoven, Ludwig van, 1770-1827&quot;],&quot;LoCC&quot;:[&quot;M&quot;],&quot;PG_ID&quot;:&quot;156&quot;});" class='title'>Symphony No. 5 in C minor, Opus 67</a>
+<div class='author'>Beethoven, Ludwig van, 1770-1827</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16455, {&quot;Title&quot;:&quot;The Otterbein Hymnal - For Use in Public and Social Worship&quot;,&quot;Topics&quot;:[&quot;Hymns, English&quot;,&quot;Church of the United Brethren in Christ (New constitution) -- Hymns&quot;],&quot;Primary&quot;:&quot;16455.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lorenz, Edmund S. (Edmund Simon), 1854-1942&quot;],&quot;LoCC&quot;:[&quot;M&quot;],&quot;PG_ID&quot;:&quot;16455&quot;});" class='title'>The Otterbein Hymnal -<br><span class='subtitle'>For Use in Public and Social Worship</span></a>
+<div class='author'>Lorenz, Edmund S. (Edmund Simon), 1854-1942</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17421, {&quot;Title&quot;:&quot;Emperor Quartet op.76 no.3., 2nd movement - Arranged for solo guitar&quot;,&quot;Topics&quot;:[&quot;Guitar music, Arranged&quot;],&quot;Primary&quot;:&quot;17421.txt&quot;,&quot;CreatorNames&quot;:[&quot;Davis, Rick [Arranger]&quot;,&quot;Haydn, Joseph, 1732-1809&quot;],&quot;LoCC&quot;:[&quot;M&quot;],&quot;PG_ID&quot;:&quot;17421&quot;});" class='title'>Emperor Quartet op.76 no.3., 2nd movement -<br><span class='subtitle'>Arranged for solo guitar</span></a>
+<div class='author'>Davis, Rick [Arranger], Haydn, Joseph, 1732-1809</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17422, {&quot;Title&quot;:&quot;Fine Knacks for Ladies&quot;,&quot;Topics&quot;:[&quot;Guitar music, Arranged&quot;],&quot;Primary&quot;:&quot;17422.txt&quot;,&quot;CreatorNames&quot;:[&quot;Davis, Rick [Arranger]&quot;,&quot;Dowland, John, 1563?-1626&quot;],&quot;LoCC&quot;:[&quot;M&quot;],&quot;PG_ID&quot;:&quot;17422&quot;});" class='title'>Fine Knacks for Ladies</a>
+<div class='author'>Davis, Rick [Arranger], Dowland, John, 1563?-1626</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17423, {&quot;Title&quot;:&quot;Theme from Mozart&#39;s Piano Sonata in A major, K.331 - Arranged for Solo Guitar&quot;,&quot;Topics&quot;:[&quot;Guitar music, Arranged&quot;],&quot;Primary&quot;:&quot;17423.txt&quot;,&quot;CreatorNames&quot;:[&quot;Davis, Rick [Arranger]&quot;,&quot;Mozart, Wolfgang Amadeus, 1756-1791 [Composer]&quot;],&quot;LoCC&quot;:[&quot;M&quot;],&quot;PG_ID&quot;:&quot;17423&quot;});" class='title'>Theme from Mozart's Piano Sonata in A major, K.331 -<br><span class='subtitle'>Arranged for Solo Guitar</span></a>
+<div class='author'>Davis, Rick [Arranger], Mozart, Wolfgang Amadeus, 1756-1791 [Composer]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17424, {&quot;Title&quot;:&quot;Eternal Father, Strong to Save - a.k.a., Navy Hymn&quot;,&quot;Topics&quot;:[&quot;Hymn tunes&quot;],&quot;Primary&quot;:&quot;17424.txt&quot;,&quot;CreatorNames&quot;:[&quot;Dykes, John Bacchus, 1823-1876&quot;],&quot;LoCC&quot;:[&quot;M&quot;],&quot;PG_ID&quot;:&quot;17424&quot;});" class='title'>Eternal Father, Strong to Save -<br><span class='subtitle'>a.k.a., Navy Hymn</span></a>
+<div class='author'>Dykes, John Bacchus, 1823-1876</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17773, {&quot;Title&quot;:&quot;Slavery&#39;s Passed Away and Other Songs&quot;,&quot;Topics&quot;:[&quot;Slavery -- United States -- Songs and music&quot;,&quot;Slaves -- Emancipation -- United States -- Songs and music&quot;],&quot;Primary&quot;:&quot;17773.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;M&quot;],&quot;PG_ID&quot;:&quot;17773&quot;});" class='title'>Slavery's Passed Away and Other Songs</a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18608, {&quot;Title&quot;:&quot;Oh Little Town of Bethlehem&quot;,&quot;Topics&quot;:[&quot;Christmas music&quot;],&quot;Primary&quot;:&quot;18608.txt&quot;,&quot;CreatorNames&quot;:[&quot;Davis, Rick [Arranger]&quot;,&quot;Redner, Lewis, 1830-1908&quot;],&quot;LoCC&quot;:[&quot;M&quot;],&quot;PG_ID&quot;:&quot;18608&quot;});" class='title'>Oh Little Town of Bethlehem</a>
+<div class='author'>Davis, Rick [Arranger], Redner, Lewis, 1830-1908</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18609, {&quot;Title&quot;:&quot;Hark!  The Herald Angels Sing&quot;,&quot;Topics&quot;:[&quot;Christmas music&quot;],&quot;Primary&quot;:&quot;18609.txt&quot;,&quot;CreatorNames&quot;:[&quot;Mendelssohn-Bartholdy, Felix, 1809-1847&quot;],&quot;LoCC&quot;:[&quot;M&quot;],&quot;PG_ID&quot;:&quot;18609&quot;});" class='title'>Hark!  The Herald Angels Sing</a>
+<div class='author'>Mendelssohn-Bartholdy, Felix, 1809-1847</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19394, {&quot;Title&quot;:&quot;You&#39;ll git dar in de mornin&#39;&quot;,&quot;Topics&quot;:[&quot;African Americans -- Songs and music&quot;],&quot;Primary&quot;:&quot;19394.txt&quot;,&quot;CreatorNames&quot;:[&quot;Burleigh, H. T. (Harry Thacker), 1866-1949&quot;,&quot;Stanton, Frank Lebby, 1857-1927&quot;],&quot;LoCC&quot;:[&quot;M&quot;],&quot;PG_ID&quot;:&quot;19394&quot;});" class='title'>You'll git dar in de mornin'</a>
+<div class='author'>Burleigh, H. T. (Harry Thacker), 1866-1949, Stanton, Frank Lebby, 1857-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20774, {&quot;Title&quot;:&quot;The Shanty Book, Part I, Sailor Shanties&quot;,&quot;Topics&quot;:[&quot;Sea songs&quot;],&quot;Primary&quot;:&quot;20774.htm&quot;,&quot;CreatorNames&quot;:[&quot;Terry, Richard Runciman, 1865-1938 [Editor]&quot;],&quot;LoCC&quot;:[&quot;M&quot;],&quot;PG_ID&quot;:&quot;20774&quot;});" class='title'>The Shanty Book, Part I, Sailor Shanties</a>
+<div class='author'>Terry, Richard Runciman, 1865-1938 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(21300, {&quot;Title&quot;:&quot;Cowboy Songs, and Other Frontier Ballads&quot;,&quot;Topics&quot;:[&quot;Ballads, English -- West (U.S.)&quot;,&quot;Cowboys -- Songs and music&quot;,&quot;Folk songs, English -- West (U.S.)&quot;],&quot;Primary&quot;:&quot;21300.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;M&quot;,&quot;PS&quot;],&quot;PG_ID&quot;:&quot;21300&quot;});" class='title'>Cowboy Songs, and Other Frontier Ballads</a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(21566, {&quot;Title&quot;:&quot;The Good Old Songs We Used to Sing, &#39;61 to &#39;65&quot;,&quot;Topics&quot;:[&quot;War songs -- United States&quot;,&quot;United States -- History -- Civil War, 1861-1865 -- Poetry&quot;,&quot;United States. Army -- Insignia&quot;],&quot;Primary&quot;:&quot;21566.htm&quot;,&quot;CreatorNames&quot;:[&quot;Oldroyd, Osborn H. (Osborn Hamiline), 1842-1930&quot;],&quot;LoCC&quot;:[&quot;E&quot;,&quot;M&quot;],&quot;PG_ID&quot;:&quot;21566&quot;});" class='title'>The Good Old Songs We Used to Sing, '61 to '65</a>
+<div class='author'>Oldroyd, Osborn H. (Osborn Hamiline), 1842-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22035, {&quot;Title&quot;:&quot;Dramatized Rhythm Plays - Mother Goose and Traditional&quot;,&quot;Topics&quot;:[&quot;Schools -- Exercises and recreations&quot;,&quot;Exercise music&quot;],&quot;Primary&quot;:&quot;22035.htm&quot;,&quot;CreatorNames&quot;:[&quot;Richards, John N.&quot;],&quot;LoCC&quot;:[&quot;M&quot;],&quot;PG_ID&quot;:&quot;22035&quot;});" class='title'>Dramatized Rhythm Plays -<br><span class='subtitle'>Mother Goose and Traditional</span></a>
+<div class='author'>Richards, John N.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22089, {&quot;Title&quot;:&quot;The Liberty Minstrel&quot;,&quot;Topics&quot;:[&quot;African Americans -- Music&quot;,&quot;Slavery -- United States -- Songs and music&quot;,&quot;Antislavery movements -- United States -- Songs and music&quot;],&quot;Primary&quot;:&quot;22089.htm&quot;,&quot;CreatorNames&quot;:[&quot;Clark, George Washington, 1812-&quot;],&quot;LoCC&quot;:[&quot;M&quot;],&quot;PG_ID&quot;:&quot;22089&quot;});" class='title'>The Liberty Minstrel</a>
+<div class='author'>Clark, George Washington, 1812-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23673, {&quot;Title&quot;:&quot;The St. Gregory Hymnal and Catholic Choir Book&quot;,&quot;Topics&quot;:[&quot;Hymns, English&quot;,&quot;Catholic Church -- Hymns&quot;,&quot;Service books (Music) -- Catholic Church&quot;,&quot;Hymns, Latin&quot;],&quot;Primary&quot;:&quot;23673.htm&quot;,&quot;CreatorNames&quot;:[&quot;Montani, Nicola A. (Nicola Aloysius), 1880-1948 [Editor]&quot;],&quot;LoCC&quot;:[&quot;M&quot;],&quot;PG_ID&quot;:&quot;23673&quot;});" class='title'>The St. Gregory Hymnal and Catholic Choir Book</a>
+<div class='author'>Montani, Nicola A. (Nicola Aloysius), 1880-1948 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25012, {&quot;Title&quot;:&quot;The Case of Wagner, Nietzsche Contra Wagner, and Selected Aphorisms.&quot;,&quot;Topics&quot;:[&quot;Essays&quot;,&quot;Wagner, Richard, 1813-1883&quot;,&quot;Music -- History and criticism&quot;,&quot;Literature -- Collections&quot;],&quot;Primary&quot;:&quot;25012.htm&quot;,&quot;CreatorNames&quot;:[&quot;Nietzsche, Friedrich Wilhelm, 1844-1900&quot;],&quot;LoCC&quot;:[&quot;B&quot;,&quot;M&quot;,&quot;PT&quot;],&quot;PG_ID&quot;:&quot;25012&quot;});" class='title'>The Case of Wagner, Nietzsche Contra Wagner, and Selected Aphorisms.</a>
+<div class='author'>Nietzsche, Friedrich Wilhelm, 1844-1900</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25418, {&quot;Title&quot;:&quot;The Baby&#39;s Opera&quot;,&quot;Topics&quot;:[&quot;Nursery rhymes&quot;,&quot;Children&#39;s songs&quot;],&quot;Primary&quot;:&quot;25418.htm&quot;,&quot;CreatorNames&quot;:[&quot;Crane, Walter, 1845-1915&quot;,&quot;Evans, Edmund, 1826-1905 [Engraver]&quot;],&quot;LoCC&quot;:[&quot;M&quot;,&quot;PZ&quot;],&quot;PG_ID&quot;:&quot;25418&quot;});" class='title'>The Baby's Opera</a>
+<div class='author'>Crane, Walter, 1845-1915, Evans, Edmund, 1826-1905 [Engraver]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25432, {&quot;Title&quot;:&quot;The Baby&#39;s Bouquet: A Fresh Bunch of Rhymes and Tunes&quot;,&quot;Topics&quot;:[&quot;Nursery rhymes&quot;,&quot;Children&#39;s songs&quot;],&quot;Primary&quot;:&quot;25432.htm&quot;,&quot;CreatorNames&quot;:[&quot;Crane, Walter, 1845-1915&quot;,&quot;Crane, Lucy, 1842-1882 [Contributor]&quot;,&quot;Evans, Edmund, 1826-1905 [Engraver]&quot;],&quot;LoCC&quot;:[&quot;M&quot;,&quot;PZ&quot;],&quot;PG_ID&quot;:&quot;25432&quot;});" class='title'>The Baby's Bouquet:<br><span class='subtitle'>A Fresh Bunch of Rhymes and Tunes</span></a>
+<div class='author'>Crane, Walter, 1845-1915, Crane, Lucy, 1842-1882 [Contributor], Evans, Edmund, 1826-1905 [Engraver]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26679, {&quot;Title&quot;:&quot;Wit and Mirth: or Pills to Purge Melancholy, Vol. 5 of 6&quot;,&quot;Topics&quot;:[&quot;Ballads, English&quot;,&quot;Songs, English&quot;],&quot;Primary&quot;:&quot;26679.htm&quot;,&quot;CreatorNames&quot;:[&quot;D&#39;Urfey, Thomas, 1653-1723 [Editor]&quot;],&quot;LoCC&quot;:[&quot;M&quot;],&quot;PG_ID&quot;:&quot;26679&quot;});" class='title'>Wit and Mirth:<br><span class='subtitle'>or Pills to Purge Melancholy, Vol. 5 of 6</span></a>
+<div class='author'>D'Urfey, Thomas, 1653-1723 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(276, {&quot;Title&quot;:&quot;Franz Haydn&#39;s 104th Symphony [1794-5] - MIDI file&quot;,&quot;Topics&quot;:[&quot;Music&quot;],&quot;Primary&quot;:&quot;276.htm&quot;,&quot;CreatorNames&quot;:[&quot;Haydn, Joseph, 1732-1809&quot;],&quot;LoCC&quot;:[&quot;M&quot;],&quot;PG_ID&quot;:&quot;276&quot;});" class='title'>Franz Haydn's 104th Symphony [1794-5] -<br><span class='subtitle'>MIDI file</span></a>
+<div class='author'>Haydn, Joseph, 1732-1809</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3001, {&quot;Title&quot;:&quot;Society&#39;s Child (lyrics)&quot;,&quot;Topics&quot;:[&quot;Folk songs, English -- United States&quot;,&quot;Popular music -- 1961-1970&quot;],&quot;Primary&quot;:&quot;3001.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ian, Janis, 1951-&quot;],&quot;LoCC&quot;:[&quot;M&quot;],&quot;PG_ID&quot;:&quot;3001&quot;});" class='title'>Society's Child (lyrics)</a>
+<div class='author'>Ian, Janis, 1951-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31606, {&quot;Title&quot;:&quot;Twelve Preludes for the Pianoforte Op. 25: I. Prelude in F Major&quot;,&quot;Topics&quot;:[&quot;Piano music&quot;],&quot;Primary&quot;:&quot;31606.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wright, N. Louise (Nannie Louise), 1879-&quot;],&quot;LoCC&quot;:[&quot;M&quot;],&quot;PG_ID&quot;:&quot;31606&quot;});" class='title'>Twelve Preludes for the Pianoforte Op. 25:<br><span class='subtitle'>I. Prelude in F Major</span></a>
+<div class='author'>Wright, N. Louise (Nannie Louise), 1879-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33404, {&quot;Title&quot;:&quot;Wit and Mirth: or Pills to Purge Melancholy, Vol. 6 of 6&quot;,&quot;Topics&quot;:[&quot;Ballads, English&quot;,&quot;Songs, English&quot;],&quot;Primary&quot;:&quot;33404.htm&quot;,&quot;CreatorNames&quot;:[&quot;D&#39;Urfey, Thomas, 1653-1723 [Editor]&quot;],&quot;LoCC&quot;:[&quot;M&quot;],&quot;PG_ID&quot;:&quot;33404&quot;});" class='title'>Wit and Mirth:<br><span class='subtitle'>or Pills to Purge Melancholy, Vol. 6 of 6</span></a>
+<div class='author'>D'Urfey, Thomas, 1653-1723 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36567, {&quot;Title&quot;:&quot;Music by Janis Ian&quot;,&quot;Topics&quot;:[&quot;Popular music&quot;],&quot;Primary&quot;:null,&quot;CreatorNames&quot;:[&quot;Ian, Janis, 1951-&quot;],&quot;LoCC&quot;:[&quot;M&quot;],&quot;PG_ID&quot;:&quot;36567&quot;});" class='title'>Music by Janis Ian</a>
+<div class='author'>Ian, Janis, 1951-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37538, {&quot;Title&quot;:&quot;Southern War Songs: Camp-Fire, Patriotic and Sentimental&quot;,&quot;Topics&quot;:[&quot;United States -- History -- Civil War, 1861-1865 -- Songs and music -- Confederate States&quot;],&quot;Primary&quot;:&quot;37538.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fagan, W. L. (William Long), 1838-1914 [Compiler]&quot;],&quot;LoCC&quot;:[&quot;M&quot;],&quot;PG_ID&quot;:&quot;37538&quot;});" class='title'>Southern War Songs:<br><span class='subtitle'>Camp-Fire, Patriotic and Sentimental</span></a>
+<div class='author'>Fagan, W. L. (William Long), 1838-1914 [Compiler]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42711, {&quot;Title&quot;:&quot;Vieilles chansons pour les petits enfants - avec accompagnements de Ch. M. Widor&quot;,&quot;Topics&quot;:[&quot;Children&#39;s songs, French&quot;,&quot;Singing games&quot;],&quot;Primary&quot;:&quot;42711.htm&quot;,&quot;CreatorNames&quot;:[&quot;Widor, Charles-Marie, 1844-1937 [Arranger]&quot;,&quot;Boutet de Monvel, Louis-Maurice, 1851-1913 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;M&quot;],&quot;PG_ID&quot;:&quot;42711&quot;});" class='title'>Vieilles chansons pour les petits enfants -<br><span class='subtitle'>avec accompagnements de Ch. M. Widor</span></a>
+<div class='author'>Widor, Charles-Marie, 1844-1937 [Arranger], Boutet de Monvel, Louis-Maurice, 1851-1913 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42911, {&quot;Title&quot;:&quot;Variations Chromatiques de Concert - MP3, MIDI and PDF files&quot;,&quot;Topics&quot;:[&quot;Variations (Piano)&quot;],&quot;Primary&quot;:null,&quot;CreatorNames&quot;:[&quot;Bizet, Georges, 1838-1875&quot;,&quot;Jong, Songmuh [Editor]&quot;],&quot;LoCC&quot;:[&quot;M&quot;],&quot;PG_ID&quot;:&quot;42911&quot;});" class='title'>Variations Chromatiques de Concert -<br><span class='subtitle'>MP3, MIDI and PDF files</span></a>
+<div class='author'>Bizet, Georges, 1838-1875, Jong, Songmuh [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45715, {&quot;Title&quot;:&quot;Gai, gai, marions-nous: Chansons de France&quot;,&quot;Topics&quot;:[&quot;Songs with piano&quot;,&quot;Folk songs, French -- Juvenile literature&quot;,&quot;Children&#39;s songs, French&quot;],&quot;Primary&quot;:&quot;45715.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pierné, Gabriel, 1863-1937 [Arranger]&quot;,&quot;Delaw, George, 1871-1938 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;M&quot;],&quot;PG_ID&quot;:&quot;45715&quot;});" class='title'>Gai, gai, marions-nous:<br><span class='subtitle'>Chansons de France</span></a>
+<div class='author'>Pierné, Gabriel, 1863-1937 [Arranger], Delaw, George, 1871-1938 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46273, {&quot;Title&quot;:&quot;Church Bells&quot;,&quot;Topics&quot;:[&quot;Bells&quot;],&quot;Primary&quot;:&quot;46273.htm&quot;,&quot;CreatorNames&quot;:[&quot;Walters, H. B. (Henry Beauchamp), 1867-1944&quot;],&quot;LoCC&quot;:[&quot;M&quot;],&quot;PG_ID&quot;:&quot;46273&quot;});" class='title'>Church Bells</a>
+<div class='author'>Walters, H. B. (Henry Beauchamp), 1867-1944</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47919, {&quot;Title&quot;:&quot;Recueil de chansons en patois de la Bresse&quot;,&quot;Topics&quot;:[&quot;Songs, French -- France -- Bresse (Region)&quot;],&quot;Primary&quot;:&quot;47919.htm&quot;,&quot;CreatorNames&quot;:[&quot;La Gelière, P.-C. de&quot;],&quot;LoCC&quot;:[&quot;M&quot;,&quot;PQ&quot;],&quot;PG_ID&quot;:&quot;47919&quot;});" class='title'>Recueil de chansons en patois de la Bresse</a>
+<div class='author'>La Gelière, P.-C. de</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48494, {&quot;Title&quot;:&quot;Beadle&#39;s Dime Song Book No. 1 - A Collection of New and Popular Comic and Sentimental Songs.&quot;,&quot;Topics&quot;:[&quot;Songs, English -- United States -- Texts&quot;,&quot;Songbooks&quot;],&quot;Primary&quot;:&quot;48494.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;M&quot;],&quot;PG_ID&quot;:&quot;48494&quot;});" class='title'>Beadle's Dime Song Book No. 1 -<br><span class='subtitle'>A Collection of New and Popular Comic and Sentimental Songs.</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48878, {&quot;Title&quot;:&quot;Chansons de France pour les petits Français - Accompagnements de J.B. Weckerlin; Illustrations de M. Boutet de Monvel&quot;,&quot;Topics&quot;:[&quot;Folk songs, French&quot;,&quot;Children&#39;s songs, French&quot;],&quot;Primary&quot;:&quot;48878.htm&quot;,&quot;CreatorNames&quot;:[&quot;Weckerlin, J.-B. (Jean-Baptiste), 1821-1910 [Arranger]&quot;,&quot;Boutet de Monvel, Louis-Maurice, 1851-1913 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;M&quot;],&quot;PG_ID&quot;:&quot;48878&quot;});" class='title'>Chansons de France pour les petits Français -<br><span class='subtitle'>Accompagnements de J.B. Weckerlin; Illustrations de M. Boutet de Monvel</span></a>
+<div class='author'>Weckerlin, J.-B. (Jean-Baptiste), 1821-1910 [Arranger], Boutet de Monvel, Louis-Maurice, 1851-1913 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49628, {&quot;Title&quot;:&quot;Beadle&#39;s Dime Union Song Book No. 2 - A Collection of New and Popular Comic and Sentimental Songs.&quot;,&quot;Topics&quot;:[&quot;National songs -- United States&quot;,&quot;War songs -- United States&quot;,&quot;United States -- History -- Civil War, 1861-1865 -- Songs and music&quot;,&quot;Songbooks&quot;],&quot;Primary&quot;:&quot;49628.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;M&quot;],&quot;PG_ID&quot;:&quot;49628&quot;});" class='title'>Beadle's Dime Union Song Book No. 2 -<br><span class='subtitle'>A Collection of New and Popular Comic and Sentimental Songs.</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49629, {&quot;Title&quot;:&quot;Beadle&#39;s Dime Song Book No. 3 - A Collection of New and Popular Comic and Sentimental Songs.&quot;,&quot;Topics&quot;:[&quot;Songs, English -- Texts&quot;,&quot;Songbooks&quot;],&quot;Primary&quot;:&quot;49629.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;M&quot;],&quot;PG_ID&quot;:&quot;49629&quot;});" class='title'>Beadle's Dime Song Book No. 3 -<br><span class='subtitle'>A Collection of New and Popular Comic and Sentimental Songs.</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50041, {&quot;Title&quot;:&quot;Beadle&#39;s Dime Song Book No. 4 - A Collection of New and Popular Comic and Sentimental Songs.&quot;,&quot;Topics&quot;:[&quot;Songs, English -- United States -- Texts&quot;,&quot;Songbooks&quot;],&quot;Primary&quot;:&quot;50041.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;M&quot;],&quot;PG_ID&quot;:&quot;50041&quot;});" class='title'>Beadle's Dime Song Book No. 4 -<br><span class='subtitle'>A Collection of New and Popular Comic and Sentimental Songs.</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50878, {&quot;Title&quot;:&quot;Beadle&#39;s Dime Song Book No. 5 - A Collection of New and Popular Comic and Sentimental Songs&quot;,&quot;Topics&quot;:[&quot;Songs, English -- Texts&quot;,&quot;Songbooks&quot;],&quot;Primary&quot;:&quot;50878.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;M&quot;],&quot;PG_ID&quot;:&quot;50878&quot;});" class='title'>Beadle's Dime Song Book No. 5 -<br><span class='subtitle'>A Collection of New and Popular Comic and Sentimental Songs</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55367, {&quot;Title&quot;:&quot;La chanson des joujoux&quot;,&quot;Topics&quot;:[&quot;Toys -- Juvenile poetry&quot;,&quot;Children&#39;s songs, French&quot;],&quot;Primary&quot;:&quot;55367.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jouy, Jules, 1855-1897&quot;,&quot;Blanc, Claudius, 1854-1900 [Composer]&quot;,&quot;Dauphin, Léopold, 1847-1925 [Composer]&quot;,&quot;Marie, Adrien-Emmanuel, 1848-1891 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;M&quot;,&quot;PZ&quot;],&quot;PG_ID&quot;:&quot;55367&quot;});" class='title'>La chanson des joujoux</a>
+<div class='author'>Jouy, Jules, 1855-1897, Blanc, Claudius, 1854-1900 [Composer], Dauphin, Léopold, 1847-1925 [Composer], Marie, Adrien-Emmanuel, 1848-1891 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56625, {&quot;Title&quot;:&quot;Songs of the West - Folk Songs of Devon &amp; Cornwall Collected from the Mouths of the People&quot;,&quot;Topics&quot;:[&quot;Ballads, English&quot;,&quot;Folk songs, English&quot;],&quot;Primary&quot;:&quot;56625.htm&quot;,&quot;CreatorNames&quot;:[&quot;Baring-Gould, S. (Sabine), 1834-1924&quot;,&quot;Bussell, F. W. (Frederick William), 1862-1944&quot;,&quot;Sheppard, H. Fleetwood (Henry Fleetwood), 1824-1901&quot;,&quot;Sharp, Cecil J. (Cecil James), 1859-1924 [Editor]&quot;],&quot;LoCC&quot;:[&quot;M&quot;],&quot;PG_ID&quot;:&quot;56625&quot;});" class='title'>Songs of the West -<br><span class='subtitle'>Folk Songs of Devon & Cornwall Collected from the Mouths of the People</span></a>
+<div class='author'>Baring-Gould, S. (Sabine), 1834-1924, Bussell, F. W. (Frederick William), 1862-1944, Sheppard, H. Fleetwood (Henry Fleetwood), 1824-1901, Sharp, Cecil J. (Cecil James), 1859-1924 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56931, {&quot;Title&quot;:&quot;Suffrage Songs and Verses&quot;,&quot;Topics&quot;:[&quot;Women -- Suffrage -- United States -- Songs and music -- Texts&quot;,&quot;Suffragists -- United States -- Songs and music -- Texts&quot;,&quot;Song texts&quot;],&quot;Primary&quot;:&quot;56931.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gilman, Charlotte Perkins, 1860-1935&quot;],&quot;LoCC&quot;:[&quot;HQ&quot;,&quot;M&quot;],&quot;PG_ID&quot;:&quot;56931&quot;});" class='title'>Suffrage Songs and Verses</a>
+<div class='author'>Gilman, Charlotte Perkins, 1860-1935</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57570, {&quot;Title&quot;:&quot;Famous Composers and Their Works, Vol. 2&quot;,&quot;Topics&quot;:[&quot;Musicians&quot;,&quot;Music -- History and criticism&quot;],&quot;Primary&quot;:&quot;57570.htm&quot;,&quot;CreatorNames&quot;:[&quot;Klauser, Karl, 1823-1905 [Editor]&quot;,&quot;Paine, John Knowles, 1839-1906 [Editor]&quot;,&quot;Thomas, Theodore, 1835-1905 [Editor]&quot;],&quot;LoCC&quot;:[&quot;M&quot;],&quot;PG_ID&quot;:&quot;57570&quot;});" class='title'>Famous Composers and Their Works, Vol. 2</a>
+<div class='author'>Klauser, Karl, 1823-1905 [Editor], Paine, John Knowles, 1839-1906 [Editor], Thomas, Theodore, 1835-1905 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58414, {&quot;Title&quot;:&quot;The Anti-slavery Harp: A Collection of Songs for Anti-slavery Meetings&quot;,&quot;Topics&quot;:[&quot;Slavery -- United States -- Poetry&quot;,&quot;Antislavery movements -- Songs and music&quot;,&quot;Songs, English -- United States -- Texts&quot;],&quot;Primary&quot;:&quot;58414.htm&quot;,&quot;CreatorNames&quot;:[&quot;Brown, William Wells, 1814?-1884&quot;],&quot;LoCC&quot;:[&quot;E&quot;,&quot;HT&quot;,&quot;M&quot;],&quot;PG_ID&quot;:&quot;58414&quot;});" class='title'>The Anti-slavery Harp:<br><span class='subtitle'>A Collection of Songs for Anti-slavery Meetings</span></a>
+<div class='author'>Brown, William Wells, 1814?-1884</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59884, {&quot;Title&quot;:&quot;Spiritual Folk-Songs of Early America - Two Hundred and Fifty Tunes and Texts, with an Introduction and Notes&quot;,&quot;Topics&quot;:[&quot;Folk songs, English -- United States&quot;,&quot;Folk music -- United States&quot;,&quot;Ballads, English -- United States&quot;,&quot;Hymns, English -- History and criticism&quot;,&quot;Hymns, English -- United States&quot;],&quot;Primary&quot;:&quot;59884.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jackson, George Pullen, 1874-1953 [Editor]&quot;],&quot;LoCC&quot;:[&quot;M&quot;],&quot;PG_ID&quot;:&quot;59884&quot;});" class='title'>Spiritual Folk-Songs of Early America -<br><span class='subtitle'>Two Hundred and Fifty Tunes and Texts, with an Introduction and Notes</span></a>
+<div class='author'>Jackson, George Pullen, 1874-1953 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61009, {&quot;Title&quot;:&quot;Our Old Nursery Rhymes&quot;,&quot;Topics&quot;:[&quot;Children&#39;s poetry&quot;,&quot;Nursery rhymes&quot;,&quot;Songs with piano&quot;,&quot;Children&#39;s songs&quot;,&quot;Nursery rhymes, English&quot;],&quot;Primary&quot;:&quot;61009.htm&quot;,&quot;CreatorNames&quot;:[&quot;Moffat, Alfred, 1866-1950 [Arranger]&quot;,&quot;Willebeek le Mair, H. (Henriëtte), 1889-1966 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;M&quot;,&quot;PZ&quot;],&quot;PG_ID&quot;:&quot;61009&quot;});" class='title'>Our Old Nursery Rhymes</a>
+<div class='author'>Moffat, Alfred, 1866-1950 [Arranger], Willebeek le Mair, H. (Henriëtte), 1889-1966 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70442, {&quot;Title&quot;:&quot;The Barnum &amp; Bailey Greatest Show on Earth songster&quot;,&quot;Topics&quot;:[&quot;Songs, English -- United States -- Texts&quot;,&quot;Songsters&quot;],&quot;Primary&quot;:&quot;70442.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;M&quot;],&quot;PG_ID&quot;:&quot;70442&quot;});" class='title'>The Barnum & Bailey Greatest Show on Earth songster</a>
+<div class='author'>Various</div>
+</div>
+</ul></div>
+</body></html>

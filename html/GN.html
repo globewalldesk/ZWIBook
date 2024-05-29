@@ -1,0 +1,554 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Anthropology (GN)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(11291, {&quot;Title&quot;:&quot;Камено доба&quot;,&quot;Topics&quot;:[&quot;Stone age&quot;],&quot;Primary&quot;:&quot;11291.txt&quot;,&quot;CreatorNames&quot;:[&quot;Zujovic, Jovan, 1856-1936&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;11291&quot;});" class='title'>Камено доба</a>
+<div class='author'>Zujovic, Jovan, 1856-1936</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12545, {&quot;Title&quot;:&quot;Traditions of the Tinguian: a Study in Philippine Folk-Lore&quot;,&quot;Topics&quot;:[&quot;Tinguian (Philippine people)&quot;,&quot;Folklore -- Philippines -- Luzon&quot;],&quot;Primary&quot;:&quot;12545.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cole, Fay-Cooper, 1881-1961&quot;],&quot;LoCC&quot;:[&quot;GN&quot;,&quot;GR&quot;],&quot;PG_ID&quot;:&quot;12545&quot;});" class='title'>Traditions of the Tinguian:<br><span class='subtitle'>a Study in Philippine Folk-Lore</span></a>
+<div class='author'>Cole, Fay-Cooper, 1881-1961</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12849, {&quot;Title&quot;:&quot;The Tinguian: Social, Religious, and Economic Life of a Philippine Tribe&quot;,&quot;Topics&quot;:[&quot;Tinguian (Philippine people)&quot;],&quot;Primary&quot;:&quot;12849.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cole, Fay-Cooper, 1881-1961&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;12849&quot;});" class='title'>The Tinguian:<br><span class='subtitle'>Social, Religious, and Economic Life of a Philippine Tribe</span></a>
+<div class='author'>Cole, Fay-Cooper, 1881-1961</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12850, {&quot;Title&quot;:&quot;A Philological Essay Concerning the Pygmies of the Ancients&quot;,&quot;Topics&quot;:[&quot;Pygmies&quot;,&quot;Dwarfs&quot;,&quot;Fairies&quot;],&quot;Primary&quot;:&quot;12850.txt&quot;,&quot;CreatorNames&quot;:[&quot;Tyson, Edward, 1650-1708&quot;,&quot;Windle, Bertram Coghill Alan, Sir, 1858-1929 [Editor]&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;12850&quot;});" class='title'>A Philological Essay Concerning the Pygmies of the Ancients</a>
+<div class='author'>Tyson, Edward, 1650-1708, Windle, Bertram Coghill Alan, Sir, 1858-1929 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14028, {&quot;Title&quot;:&quot;Über das Aussterben der Naturvölker&quot;,&quot;Topics&quot;:[&quot;Ethnology&quot;,&quot;Anthropology&quot;],&quot;Primary&quot;:&quot;14028.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gerland, Georg Karl Cornelius, 1833-1919&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;14028&quot;});" class='title'>Über das Aussterben der Naturvölker</a>
+<div class='author'>Gerland, Georg Karl Cornelius, 1833-1919</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15459, {&quot;Title&quot;:&quot;Cham et Japhet, ou De l&#39;émigration des nègres chez les blancs considérée comme moyen providentiel de régénérer la race nègre et de civiliser l&#39;Afrique intérieure.&quot;,&quot;Topics&quot;:[&quot;Black race&quot;,&quot;Algeria -- Colonization&quot;],&quot;Primary&quot;:&quot;15459.txt&quot;,&quot;CreatorNames&quot;:[&quot;Chancel, A. de (Ausone), 1808-1878&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;15459&quot;});" class='title'>Cham et Japhet, ou De l'émigration des nègres chez les blancs considérée comme moyen providentiel de régénérer la race nègre et de civiliser l'Afrique intérieure.</a>
+<div class='author'>Chancel, A. de (Ausone), 1808-1878</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15590, {&quot;Title&quot;:&quot;Rough Stone Monuments and Their Builders&quot;,&quot;Topics&quot;:[&quot;Prehistoric peoples&quot;,&quot;Megalithic monuments&quot;],&quot;Primary&quot;:&quot;15590.htm&quot;,&quot;CreatorNames&quot;:[&quot;Peet, T. Eric (Thomas Eric), 1882-1934&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;15590&quot;});" class='title'>Rough Stone Monuments and Their Builders</a>
+<div class='author'>Peet, T. Eric (Thomas Eric), 1882-1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17280, {&quot;Title&quot;:&quot;Anthropology&quot;,&quot;Topics&quot;:[&quot;Sociology&quot;,&quot;Anthropology&quot;],&quot;Primary&quot;:&quot;17280.htm&quot;,&quot;CreatorNames&quot;:[&quot;Marett, R. R. (Robert Ranulph), 1866-1943&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;17280&quot;});" class='title'>Anthropology</a>
+<div class='author'>Marett, R. R. (Robert Ranulph), 1866-1943</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17379, {&quot;Title&quot;:&quot;Quer Durch Borneo - Ergebnisse seiner Reisen in den Jahren 1894, 1896-97 und 1898-1900; Erster Teil&quot;,&quot;Topics&quot;:[&quot;Borneo -- Description and travel&quot;,&quot;Borneo -- Ethnology&quot;],&quot;Primary&quot;:&quot;17379.htm&quot;,&quot;CreatorNames&quot;:[&quot;Nieuwenhuis, Anton Willem, 1864-1953&quot;,&quot;Nieuwenhuis-von Üxküll-Güldenbandt, M. [Editor]&quot;],&quot;LoCC&quot;:[&quot;DS&quot;,&quot;GN&quot;],&quot;PG_ID&quot;:&quot;17379&quot;});" class='title'>Quer Durch Borneo -<br><span class='subtitle'>Ergebnisse seiner Reisen in den Jahren 1894, 1896-97 und 1898-1900; Erster Teil</span></a>
+<div class='author'>Nieuwenhuis, Anton Willem, 1864-1953, Nieuwenhuis-von Üxküll-Güldenbandt, M. [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17383, {&quot;Title&quot;:&quot;Quer Durch Borneo - Ergebnisse seiner Reisen in den Jahren 1894, 1896-97 und 1898-1900; Zweiter Teil&quot;,&quot;Topics&quot;:[&quot;Borneo -- Description and travel&quot;,&quot;Borneo -- Ethnology&quot;],&quot;Primary&quot;:&quot;17383.htm&quot;,&quot;CreatorNames&quot;:[&quot;Nieuwenhuis, Anton Willem, 1864-1953&quot;,&quot;Nieuwenhuis-von Üxküll-Güldenbandt, M. [Editor]&quot;],&quot;LoCC&quot;:[&quot;DS&quot;,&quot;GN&quot;],&quot;PG_ID&quot;:&quot;17383&quot;});" class='title'>Quer Durch Borneo -<br><span class='subtitle'>Ergebnisse seiner Reisen in den Jahren 1894, 1896-97 und 1898-1900; Zweiter Teil</span></a>
+<div class='author'>Nieuwenhuis, Anton Willem, 1864-1953, Nieuwenhuis-von Üxküll-Güldenbandt, M. [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17404, {&quot;Title&quot;:&quot;Kinship Organisations and Group Marriage in Australia&quot;,&quot;Topics&quot;:[&quot;Ethnology -- Australia&quot;,&quot;Tribes&quot;,&quot;Aboriginal Australians -- Kinship&quot;,&quot;Kinship&quot;,&quot;Aboriginal Australians -- Social life and customs&quot;,&quot;Marriage -- History&quot;,&quot;Consanguinity&quot;],&quot;Primary&quot;:&quot;17404.htm&quot;,&quot;CreatorNames&quot;:[&quot;Thomas, Northcote Whitridge, 1868-1936&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;17404&quot;});" class='title'>Kinship Organisations and Group Marriage in Australia</a>
+<div class='author'>Thomas, Northcote Whitridge, 1868-1936</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17910, {&quot;Title&quot;:&quot;The Mafulu: Mountain People of British New Guinea&quot;,&quot;Topics&quot;:[&quot;Mafulus&quot;,&quot;Fuyuge language&quot;,&quot;Ethnology -- New Guinea&quot;],&quot;Primary&quot;:&quot;17910.htm&quot;,&quot;CreatorNames&quot;:[&quot;Williamson, Robert Wood, 1856-1932&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;17910&quot;});" class='title'>The Mafulu:<br><span class='subtitle'>Mountain People of British New Guinea</span></a>
+<div class='author'>Williamson, Robert Wood, 1856-1932</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18273, {&quot;Title&quot;:&quot;The Wild Tribes of Davao District, Mindanao - The R. F. Cummings Philippine Expedition&quot;,&quot;Topics&quot;:[&quot;Ethnology -- Philippines -- Mindanao Island&quot;],&quot;Primary&quot;:&quot;18273.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cole, Fay-Cooper, 1881-1961&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;18273&quot;});" class='title'>The Wild Tribes of Davao District, Mindanao -<br><span class='subtitle'>The R. F. Cummings Philippine Expedition</span></a>
+<div class='author'>Cole, Fay-Cooper, 1881-1961</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18607, {&quot;Title&quot;:&quot;The Manóbos of Mindanáo - Memoirs of the National Academy of Sciences, Volume XXIII, First Memoir&quot;,&quot;Topics&quot;:[&quot;Ethnology -- Philippines -- Mindanao Island&quot;],&quot;Primary&quot;:&quot;18607.htm&quot;,&quot;CreatorNames&quot;:[&quot;Garvan, John M.&quot;],&quot;LoCC&quot;:[&quot;DS&quot;,&quot;GN&quot;],&quot;PG_ID&quot;:&quot;18607&quot;});" class='title'>The Manóbos of Mindanáo -<br><span class='subtitle'>Memoirs of the National Academy of Sciences, Volume XXIII, First Memoir</span></a>
+<div class='author'>Garvan, John M.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19774, {&quot;Title&quot;:&quot;Geschiedenis der Europeesche Volken&quot;,&quot;Topics&quot;:[&quot;Ethnology -- Europe&quot;],&quot;Primary&quot;:&quot;19774.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kohl, Johann Georg, 1808-1878&quot;,&quot;Kretschmer, Albert, 1825-1891 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;19774&quot;});" class='title'>Geschiedenis der Europeesche Volken</a>
+<div class='author'>Kohl, Johann Georg, 1808-1878, Kretschmer, Albert, 1825-1891 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19956, {&quot;Title&quot;:&quot;Histoire d&#39;une jeune fille sauvage trouvée dans les bois à l&#39;âge de dix ans&quot;,&quot;Topics&quot;:[&quot;Wild men&quot;],&quot;Primary&quot;:&quot;19956.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hecquet, Mme., active 1755&quot;,&quot;La Condamine, Charles-Marie de, 1701-1774&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;19956&quot;});" class='title'>Histoire d'une jeune fille sauvage trouvée dans les bois à l'âge de dix ans</a>
+<div class='author'>Hecquet, Mme., active 1755, La Condamine, Charles-Marie de, 1701-1774</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20329, {&quot;Title&quot;:&quot;Negritos of Zambales&quot;,&quot;Topics&quot;:[&quot;Aeta (Philippine people)&quot;,&quot;Ethnology -- Philippines -- Zambales&quot;],&quot;Primary&quot;:&quot;20329.htm&quot;,&quot;CreatorNames&quot;:[&quot;Reed, William Allan&quot;],&quot;LoCC&quot;:[&quot;DS&quot;,&quot;GN&quot;],&quot;PG_ID&quot;:&quot;20329&quot;});" class='title'>Negritos of Zambales</a>
+<div class='author'>Reed, William Allan</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20902, {&quot;Title&quot;:&quot;The Clyde Mystery - a Study in Forgeries and Folklore&quot;,&quot;Topics&quot;:[&quot;Archaeology&quot;],&quot;Primary&quot;:&quot;20902.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lang, Andrew, 1844-1912&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;20902&quot;});" class='title'>The Clyde Mystery -<br><span class='subtitle'>a Study in Forgeries and Folklore</span></a>
+<div class='author'>Lang, Andrew, 1844-1912</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20966, {&quot;Title&quot;:&quot;De l&#39;éducation d&#39;un homme sauvage - ou des premiers développemens physiques et moraux du jeune sauvage de l&#39;Aveyron&quot;,&quot;Topics&quot;:[&quot;Wild Boy of Aveyron&quot;,&quot;Feral children&quot;],&quot;Primary&quot;:&quot;20966.htm&quot;,&quot;CreatorNames&quot;:[&quot;Itard, Jean Marc Gaspard, 1775-1838&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;20966&quot;});" class='title'>De l'éducation d'un homme sauvage -<br><span class='subtitle'>ou des premiers développemens physiques et moraux du jeune sauvage de l'Aveyron</span></a>
+<div class='author'>Itard, Jean Marc Gaspard, 1775-1838</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(21796, {&quot;Title&quot;:&quot;The Story of Atlantis and the Lost Lemuria&quot;,&quot;Topics&quot;:[&quot;Atlantis (Legendary place)&quot;,&quot;Lemuria&quot;],&quot;Primary&quot;:&quot;21796.htm&quot;,&quot;CreatorNames&quot;:[&quot;Scott-Elliot, W. (William)&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;21796&quot;});" class='title'>The Story of Atlantis and the Lost Lemuria</a>
+<div class='author'>Scott-Elliot, W. (William)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22253, {&quot;Title&quot;:&quot;L&#39;Humanité préhistorique&quot;,&quot;Topics&quot;:[&quot;Prehistoric peoples&quot;,&quot;Archaeology&quot;],&quot;Primary&quot;:&quot;22253.htm&quot;,&quot;CreatorNames&quot;:[&quot;Morgan, J. de (Jacques), 1857-1924&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;22253&quot;});" class='title'>L'Humanité préhistorique</a>
+<div class='author'>Morgan, J. de (Jacques), 1857-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23135, {&quot;Title&quot;:&quot;History of Circumcision from the Earliest Times to the Present - Moral and Physical Reasons for its Performance&quot;,&quot;Topics&quot;:[&quot;Circumcision&quot;],&quot;Primary&quot;:&quot;23135.htm&quot;,&quot;CreatorNames&quot;:[&quot;Remondino, P. C. (Peter Charles), 1846-1926&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;23135&quot;});" class='title'>History of Circumcision from the Earliest Times to the Present -<br><span class='subtitle'>Moral and Physical Reasons for its Performance</span></a>
+<div class='author'>Remondino, P. C. (Peter Charles), 1846-1926</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24568, {&quot;Title&quot;:&quot;Aboriginal American Weaving&quot;,&quot;Topics&quot;:[&quot;Indian textile fabrics -- North America&quot;,&quot;Weaving&quot;,&quot;Anthropology&quot;],&quot;Primary&quot;:&quot;24568.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kissell, Mary Lois&quot;],&quot;LoCC&quot;:[&quot;E&quot;,&quot;GN&quot;,&quot;NK&quot;],&quot;PG_ID&quot;:&quot;24568&quot;});" class='title'>Aboriginal American Weaving</a>
+<div class='author'>Kissell, Mary Lois</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25098, {&quot;Title&quot;:&quot;The Tree-Dwellers&quot;,&quot;Topics&quot;:[&quot;Readers&quot;,&quot;Prehistoric peoples -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;25098.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dopp, Katharine Elizabeth, 1863-1944&quot;,&quot;Brown, Howard V. [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;25098&quot;});" class='title'>The Tree-Dwellers</a>
+<div class='author'>Dopp, Katharine Elizabeth, 1863-1944, Brown, Howard V. [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25907, {&quot;Title&quot;:&quot;Indian Child Life&quot;,&quot;Topics&quot;:[&quot;Dakota Indians&quot;,&quot;Indian children -- North America&quot;],&quot;Primary&quot;:&quot;25907.htm&quot;,&quot;CreatorNames&quot;:[&quot;Eastman, Charles A., 1858-1939&quot;,&quot;Varian, George, 1865-1923 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;E&quot;,&quot;GN&quot;],&quot;PG_ID&quot;:&quot;25907&quot;});" class='title'>Indian Child Life</a>
+<div class='author'>Eastman, Charles A., 1858-1939, Varian, George, 1865-1923 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26544, {&quot;Title&quot;:&quot;The Dance Festivals of the Alaskan Eskimo&quot;,&quot;Topics&quot;:[&quot;Indian dance -- North America&quot;,&quot;Eskimos -- Alaska&quot;],&quot;Primary&quot;:&quot;26544.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hawkes, Ernest William, 1883-&quot;],&quot;LoCC&quot;:[&quot;E&quot;,&quot;GN&quot;],&quot;PG_ID&quot;:&quot;26544&quot;});" class='title'>The Dance Festivals of the Alaskan Eskimo</a>
+<div class='author'>Hawkes, Ernest William, 1883-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26603, {&quot;Title&quot;:&quot;The Later Cave-Men&quot;,&quot;Topics&quot;:[&quot;Archaeology -- Juvenile literature&quot;,&quot;Cave dwellers -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;26603.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dopp, Katharine Elizabeth, 1863-1944&quot;,&quot;Brown, Howard V. [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;26603&quot;});" class='title'>The Later Cave-Men</a>
+<div class='author'>Dopp, Katharine Elizabeth, 1863-1944, Brown, Howard V. [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26880, {&quot;Title&quot;:&quot;The Bronze Age in Ireland&quot;,&quot;Topics&quot;:[&quot;Bronze age -- Ireland&quot;],&quot;Primary&quot;:&quot;26880.htm&quot;,&quot;CreatorNames&quot;:[&quot;Coffey, George, 1857-1916&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;26880&quot;});" class='title'>The Bronze Age in Ireland</a>
+<div class='author'>Coffey, George, 1857-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2873, {&quot;Title&quot;:&quot;The Prehistoric World; Or, Vanished Races&quot;,&quot;Topics&quot;:[&quot;Prehistoric peoples&quot;,&quot;Archaeology&quot;,&quot;Indians&quot;],&quot;Primary&quot;:&quot;2873.htm&quot;,&quot;CreatorNames&quot;:[&quot;Allen, Emory Adams, 1853-&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;2873&quot;});" class='title'>The Prehistoric World;<br><span class='subtitle'>Or, Vanished Races</span></a>
+<div class='author'>Allen, Emory Adams, 1853-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30931, {&quot;Title&quot;:&quot;The Ethnology of the British Islands&quot;,&quot;Topics&quot;:[&quot;Ethnology -- Great Britain&quot;],&quot;Primary&quot;:&quot;30931.htm&quot;,&quot;CreatorNames&quot;:[&quot;Latham, R. G. (Robert Gordon), 1812-1888&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;30931&quot;});" class='title'>The Ethnology of the British Islands</a>
+<div class='author'>Latham, R. G. (Robert Gordon), 1812-1888</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31296, {&quot;Title&quot;:&quot;The Ethnology of the British Colonies and Dependencies&quot;,&quot;Topics&quot;:[&quot;Ethnology&quot;],&quot;Primary&quot;:&quot;31296.htm&quot;,&quot;CreatorNames&quot;:[&quot;Latham, R. G. (Robert Gordon), 1812-1888&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;31296&quot;});" class='title'>The Ethnology of the British Colonies and Dependencies</a>
+<div class='author'>Latham, R. G. (Robert Gordon), 1812-1888</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31360, {&quot;Title&quot;:&quot;Anthropology - As a Science and as a Branch of University Education in the United States&quot;,&quot;Topics&quot;:[&quot;Anthropology -- Outlines, syllabi, etc.&quot;],&quot;Primary&quot;:&quot;31360.htm&quot;,&quot;CreatorNames&quot;:[&quot;Brinton, Daniel G. (Daniel Garrison), 1837-1899&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;31360&quot;});" class='title'>Anthropology -<br><span class='subtitle'>As a Science and as a Branch of University Education in the United States</span></a>
+<div class='author'>Brinton, Daniel G. (Daniel Garrison), 1837-1899</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31461, {&quot;Title&quot;:&quot;Das Grabmal des Theoderich zu Ravenna und seine Stellung in der - Architekturgeschichte&quot;,&quot;Topics&quot;:[&quot;Mausoleum of Theodoric (Ravenna, Italy)&quot;],&quot;Primary&quot;:&quot;31461.htm&quot;,&quot;CreatorNames&quot;:[&quot;Schulz, Bruno, 1865-1932&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;31461&quot;});" class='title'>Das Grabmal des Theoderich zu Ravenna und seine Stellung in der -<br><span class='subtitle'>Architekturgeschichte</span></a>
+<div class='author'>Schulz, Bruno, 1865-1932</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3307, {&quot;Title&quot;:&quot;The Pagan Tribes of Borneo - A Description of Their Physical Moral and Intellectual Condition, with Some Discussion of Their Ethnic Relations&quot;,&quot;Topics&quot;:[&quot;Ethnology -- Borneo&quot;,&quot;Anthropometry -- Borneo&quot;,&quot;Borneo -- Social life and customs&quot;,&quot;Material culture -- Borneo&quot;],&quot;Primary&quot;:&quot;3307.txt&quot;,&quot;CreatorNames&quot;:[&quot;Hose, Charles, 1863-1929&quot;,&quot;McDougall, William, 1871-1938&quot;,&quot;Haddon, Alfred C. (Alfred Cort), 1855-1940 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;3307&quot;});" class='title'>The Pagan Tribes of Borneo -<br><span class='subtitle'>A Description of Their Physical Moral and Intellectual Condition, with Some Discussion of Their Ethnic Relations</span></a>
+<div class='author'>Hose, Charles, 1863-1929, McDougall, William, 1871-1938, Haddon, Alfred C. (Alfred Cort), 1855-1940 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3309, {&quot;Title&quot;:&quot;Manners and Monuments of Prehistoric Peoples&quot;,&quot;Topics&quot;:[&quot;Prehistoric peoples&quot;,&quot;Archaeology&quot;],&quot;Primary&quot;:&quot;3309.htm&quot;,&quot;CreatorNames&quot;:[&quot;Nadaillac, Jean-François-Albert du Pouget, marquis de, 1818-1904&quot;,&quot;D&#39;Anvers, N., -1933 [Translator]&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;3309&quot;});" class='title'>Manners and Monuments of Prehistoric Peoples</a>
+<div class='author'>Nadaillac, Jean-François-Albert du Pouget, marquis de, 1818-1904, D'Anvers, N., -1933 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35234, {&quot;Title&quot;:&quot;The Progress of Ethnology - An Account of Recent Archaeological, Philological and Geographical Researches in Various Parts of the Globe, Tending to Elucidate the Physical History of Man&quot;,&quot;Topics&quot;:[&quot;Anthropology -- History&quot;,&quot;Ethnology -- History&quot;],&quot;Primary&quot;:&quot;35234.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bartlett, John Russell, 1805-1886&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;35234&quot;});" class='title'>The Progress of Ethnology -<br><span class='subtitle'>An Account of Recent Archaeological, Philological and Geographical Researches in Various Parts of the Globe, Tending to Elucidate the Physical History of Man</span></a>
+<div class='author'>Bartlett, John Russell, 1805-1886</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35329, {&quot;Title&quot;:&quot;A Manual of the Antiquity of Man&quot;,&quot;Topics&quot;:[&quot;Human beings -- Origin&quot;],&quot;Primary&quot;:&quot;35329.htm&quot;,&quot;CreatorNames&quot;:[&quot;MacLean, J. P. (John Patterson), 1848-1939&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;35329&quot;});" class='title'>A Manual of the Antiquity of Man</a>
+<div class='author'>MacLean, J. P. (John Patterson), 1848-1939</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35685, {&quot;Title&quot;:&quot;Man, Past and Present&quot;,&quot;Topics&quot;:[&quot;Ethnology&quot;,&quot;Anthropology&quot;],&quot;Primary&quot;:&quot;35685.htm&quot;,&quot;CreatorNames&quot;:[&quot;Keane, A. H. (Augustus Henry), 1833-1912&quot;,&quot;Haddon, Alfred C. (Alfred Cort), 1855-1940 [Editor]&quot;,&quot;Quiggin, A. Hingston (Alison Hingston), 1874- [Editor]&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;35685&quot;});" class='title'>Man, Past and Present</a>
+<div class='author'>Keane, A. H. (Augustus Henry), 1833-1912, Haddon, Alfred C. (Alfred Cort), 1855-1940 [Editor], Quiggin, A. Hingston (Alison Hingston), 1874- [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35911, {&quot;Title&quot;:&quot;Odd People: Being a Popular Description of Singular Races of Man&quot;,&quot;Topics&quot;:[&quot;Ethnology&quot;,&quot;Primitive societies&quot;],&quot;Primary&quot;:&quot;35911.htm&quot;,&quot;CreatorNames&quot;:[&quot;Reid, Mayne, 1818-1883&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;35911&quot;});" class='title'>Odd People:<br><span class='subtitle'>Being a Popular Description of Singular Races of Man</span></a>
+<div class='author'>Reid, Mayne, 1818-1883</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35952, {&quot;Title&quot;:&quot;The Sun Dance of the Blackfoot Indians&quot;,&quot;Topics&quot;:[&quot;Siksika Indians&quot;,&quot;Sun dance&quot;],&quot;Primary&quot;:&quot;35952.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wissler, Clark, 1870-1947&quot;],&quot;LoCC&quot;:[&quot;E&quot;,&quot;GN&quot;],&quot;PG_ID&quot;:&quot;35952&quot;});" class='title'>The Sun Dance of the Blackfoot Indians</a>
+<div class='author'>Wissler, Clark, 1870-1947</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36182, {&quot;Title&quot;:&quot;The Whale House of the Chilkat&quot;,&quot;Topics&quot;:[&quot;Indians of North America -- Dwellings&quot;,&quot;Chilkat Indians&quot;],&quot;Primary&quot;:&quot;36182.htm&quot;,&quot;CreatorNames&quot;:[&quot;Emmons, George Thornton&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;36182&quot;});" class='title'>The Whale House of the Chilkat</a>
+<div class='author'>Emmons, George Thornton</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36382, {&quot;Title&quot;:&quot;Der Unterkiefer des Homo Heidelbergensis: Aus den Sanden von Mauer bei Heidelberg&quot;,&quot;Topics&quot;:[&quot;Prehistoric peoples&quot;],&quot;Primary&quot;:&quot;36382.htm&quot;,&quot;CreatorNames&quot;:[&quot;Schoetensack, Otto, 1850-1912&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;36382&quot;});" class='title'>Der Unterkiefer des Homo Heidelbergensis:<br><span class='subtitle'>Aus den Sanden von Mauer bei Heidelberg</span></a>
+<div class='author'>Schoetensack, Otto, 1850-1912</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36947, {&quot;Title&quot;:&quot;Les primitifs: Études d&#39;ethnologie comparée&quot;,&quot;Topics&quot;:[&quot;Primitive societies&quot;],&quot;Primary&quot;:&quot;36947.htm&quot;,&quot;CreatorNames&quot;:[&quot;Reclus, Élie, 1827-1904&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;36947&quot;});" class='title'>Les primitifs:<br><span class='subtitle'>Études d'ethnologie comparée</span></a>
+<div class='author'>Reclus, Élie, 1827-1904</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36979, {&quot;Title&quot;:&quot;Finger Prints&quot;,&quot;Topics&quot;:[&quot;Fingerprints -- Identification&quot;,&quot;Fingerprints -- Classification&quot;],&quot;Primary&quot;:&quot;36979.htm&quot;,&quot;CreatorNames&quot;:[&quot;Galton, Francis, 1822-1911&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;36979&quot;});" class='title'>Finger Prints</a>
+<div class='author'>Galton, Francis, 1822-1911</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3819, {&quot;Title&quot;:&quot;The Euahlayi Tribe: A Study of Aboriginal Life in Australia&quot;,&quot;Topics&quot;:[&quot;Euahlayi (Australian people)&quot;],&quot;Primary&quot;:&quot;3819.htm&quot;,&quot;CreatorNames&quot;:[&quot;Parker, K. Langloh (Katie Langloh), 1856-1940&quot;,&quot;Lang, Andrew, 1844-1912 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;3819&quot;});" class='title'>The Euahlayi Tribe:<br><span class='subtitle'>A Study of Aboriginal Life in Australia</span></a>
+<div class='author'>Parker, K. Langloh (Katie Langloh), 1856-1940, Lang, Andrew, 1844-1912 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39140, {&quot;Title&quot;:&quot;A Racial Study of the Fijians&quot;,&quot;Topics&quot;:[&quot;Fijians&quot;,&quot;Anthropometry -- Fiji&quot;],&quot;Primary&quot;:&quot;39140.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gabel, Norman E., 1906-1961&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;39140&quot;});" class='title'>A Racial Study of the Fijians</a>
+<div class='author'>Gabel, Norman E., 1906-1961</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40121, {&quot;Title&quot;:&quot;The Meeting-Place of Geology and History&quot;,&quot;Topics&quot;:[&quot;Deluge&quot;,&quot;Prehistoric peoples&quot;],&quot;Primary&quot;:&quot;40121.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dawson, John William, Sir, 1820-1899&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;40121&quot;});" class='title'>The Meeting-Place of Geology and History</a>
+<div class='author'>Dawson, John William, Sir, 1820-1899</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40167, {&quot;Title&quot;:&quot;The Archaeology of the Yakima Valley&quot;,&quot;Topics&quot;:[&quot;Yakima River Valley (Wash.) -- Antiquities&quot;],&quot;Primary&quot;:&quot;40167.htm&quot;,&quot;CreatorNames&quot;:[&quot;Smith, Harlan Ingersoll, 1872-1940&quot;],&quot;LoCC&quot;:[&quot;E&quot;,&quot;GN&quot;],&quot;PG_ID&quot;:&quot;40167&quot;});" class='title'>The Archaeology of the Yakima Valley</a>
+<div class='author'>Smith, Harlan Ingersoll, 1872-1940</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40257, {&quot;Title&quot;:&quot;Man&#39;s Place in Nature, and Other Essays&quot;,&quot;Topics&quot;:[&quot;Human beings -- Origin&quot;,&quot;Apes&quot;,&quot;Ethnology&quot;,&quot;Indo-Europeans&quot;],&quot;Primary&quot;:&quot;40257.htm&quot;,&quot;CreatorNames&quot;:[&quot;Huxley, Thomas Henry, 1825-1895&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;40257&quot;});" class='title'>Man's Place in Nature, and Other Essays</a>
+<div class='author'>Huxley, Thomas Henry, 1825-1895</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4032, {&quot;Title&quot;:&quot;Atlantis: The Antedeluvian World&quot;,&quot;Topics&quot;:[&quot;Deluge&quot;,&quot;Ethnology&quot;,&quot;Atlantis (Legendary place)&quot;],&quot;Primary&quot;:&quot;4032.txt&quot;,&quot;CreatorNames&quot;:[&quot;Donnelly, Ignatius, 1831-1901&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;4032&quot;});" class='title'>Atlantis:<br><span class='subtitle'>The Antedeluvian World</span></a>
+<div class='author'>Donnelly, Ignatius, 1831-1901</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40826, {&quot;Title&quot;:&quot;The Group Mind: A Sketch of the Principles of Collective Psychology - With Some Attempt to Apply Them to the Interpretation of National Life and Character&quot;,&quot;Topics&quot;:[&quot;Social psychology&quot;,&quot;Ethnopsychology&quot;,&quot;National characteristics&quot;],&quot;Primary&quot;:&quot;40826.htm&quot;,&quot;CreatorNames&quot;:[&quot;McDougall, William, 1871-1938&quot;],&quot;LoCC&quot;:[&quot;BF&quot;,&quot;GN&quot;],&quot;PG_ID&quot;:&quot;40826&quot;});" class='title'>The Group Mind:<br><span class='subtitle'>A Sketch of the Principles of Collective Psychology - With Some Attempt to Apply Them to the Interpretation of National Life and Character</span></a>
+<div class='author'>McDougall, William, 1871-1938</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40867, {&quot;Title&quot;:&quot;Versuch einer Ethnographie der Philippinen&quot;,&quot;Topics&quot;:[&quot;Ethnology -- Philippines&quot;,&quot;Philippines -- Social life and customs&quot;],&quot;Primary&quot;:&quot;40867.htm&quot;,&quot;CreatorNames&quot;:[&quot;Blumentritt, Ferdinand, 1853-1913&quot;],&quot;LoCC&quot;:[&quot;DS&quot;,&quot;GN&quot;],&quot;PG_ID&quot;:&quot;40867&quot;});" class='title'>Versuch einer Ethnographie der Philippinen</a>
+<div class='author'>Blumentritt, Ferdinand, 1853-1913</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41360, {&quot;Title&quot;:&quot;The Elementary Forms of the Religious Life&quot;,&quot;Topics&quot;:[&quot;Religion&quot;,&quot;Rites and ceremonies&quot;,&quot;Religion -- Philosophy&quot;,&quot;Cults&quot;,&quot;Totemism&quot;],&quot;Primary&quot;:&quot;41360.htm&quot;,&quot;CreatorNames&quot;:[&quot;Durkheim, Émile, 1858-1917&quot;,&quot;Swain, Joseph Ward, 1891- [Translator]&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;41360&quot;});" class='title'>The Elementary Forms of the Religious Life</a>
+<div class='author'>Durkheim, Émile, 1858-1917, Swain, Joseph Ward, 1891- [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41649, {&quot;Title&quot;:&quot;The New Stone Age in Northern Europe&quot;,&quot;Topics&quot;:[&quot;Stone age -- Europe&quot;],&quot;Primary&quot;:&quot;41649.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tyler, John M. (John Mason), 1851-1929&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;41649&quot;});" class='title'>The New Stone Age in Northern Europe</a>
+<div class='author'>Tyler, John M. (John Mason), 1851-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41849, {&quot;Title&quot;:&quot;The Human Race&quot;,&quot;Topics&quot;:[&quot;Ethnology&quot;,&quot;Manners and customs&quot;],&quot;Primary&quot;:&quot;41849.htm&quot;,&quot;CreatorNames&quot;:[&quot;Figuier, Louis, 1819-1894&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;41849&quot;});" class='title'>The Human Race</a>
+<div class='author'>Figuier, Louis, 1819-1894</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42380, {&quot;Title&quot;:&quot;Primitive Man&quot;,&quot;Topics&quot;:[&quot;Prehistoric peoples&quot;,&quot;Archaeology&quot;],&quot;Primary&quot;:&quot;42380.htm&quot;,&quot;CreatorNames&quot;:[&quot;Figuier, Louis, 1819-1894&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;42380&quot;});" class='title'>Primitive Man</a>
+<div class='author'>Figuier, Louis, 1819-1894</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43510, {&quot;Title&quot;:&quot;The Ethnology of Europe&quot;,&quot;Topics&quot;:[&quot;Ethnology -- Europe&quot;],&quot;Primary&quot;:&quot;43510.htm&quot;,&quot;CreatorNames&quot;:[&quot;Latham, R. G. (Robert Gordon), 1812-1888&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;43510&quot;});" class='title'>The Ethnology of Europe</a>
+<div class='author'>Latham, R. G. (Robert Gordon), 1812-1888</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43750, {&quot;Title&quot;:&quot;Ancient Man in Britain&quot;,&quot;Topics&quot;:[&quot;Great Britain -- Antiquities&quot;,&quot;Great Britain -- History -- Roman period, 55 B.C.-449 A.D.&quot;,&quot;Prehistoric peoples -- Great Britain&quot;,&quot;Prehistoric peoples -- Europe&quot;],&quot;Primary&quot;:&quot;43750.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mackenzie, Donald A. (Donald Alexander), 1873-1936&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;43750&quot;});" class='title'>Ancient Man in Britain</a>
+<div class='author'>Mackenzie, Donald A. (Donald Alexander), 1873-1936</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43820, {&quot;Title&quot;:&quot;Men of the Old Stone Age: Their Environment, Life and Art&quot;,&quot;Topics&quot;:[&quot;Art, Primitive&quot;,&quot;Prehistoric peoples&quot;,&quot;Stone age&quot;],&quot;Primary&quot;:&quot;43820.htm&quot;,&quot;CreatorNames&quot;:[&quot;Osborn, Henry Fairfield, 1857-1935&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;43820&quot;});" class='title'>Men of the Old Stone Age:<br><span class='subtitle'>Their Environment, Life and Art</span></a>
+<div class='author'>Osborn, Henry Fairfield, 1857-1935</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44138, {&quot;Title&quot;:&quot;Elements of Folk Psychology - Outline of a Psychological History of the Development of Mankind&quot;,&quot;Topics&quot;:[&quot;Ethnopsychology&quot;],&quot;Primary&quot;:&quot;44138.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wundt, Wilhelm Max, 1832-1920&quot;,&quot;Schaub, Edward L. (Edward Leroy), 1881- [Translator]&quot;],&quot;LoCC&quot;:[&quot;BF&quot;,&quot;GN&quot;],&quot;PG_ID&quot;:&quot;44138&quot;});" class='title'>Elements of Folk Psychology -<br><span class='subtitle'>Outline of a Psychological History of the Development of Mankind</span></a>
+<div class='author'>Wundt, Wilhelm Max, 1832-1920, Schaub, Edward L. (Edward Leroy), 1881- [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44331, {&quot;Title&quot;:&quot;Prehistoric man&quot;,&quot;Topics&quot;:[&quot;Prehistoric peoples&quot;],&quot;Primary&quot;:&quot;44331.htm&quot;,&quot;CreatorNames&quot;:[&quot;Duckworth, W. L. H. (Wynfrid Laurence Henry), 1870-1956&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;44331&quot;});" class='title'>Prehistoric man</a>
+<div class='author'>Duckworth, W. L. H. (Wynfrid Laurence Henry), 1870-1956</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44605, {&quot;Title&quot;:&quot;Man and His Migrations&quot;,&quot;Topics&quot;:[&quot;Ethnology&quot;,&quot;Human beings -- Migrations&quot;],&quot;Primary&quot;:&quot;44605.htm&quot;,&quot;CreatorNames&quot;:[&quot;Latham, R. G. (Robert Gordon), 1812-1888&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;44605&quot;});" class='title'>Man and His Migrations</a>
+<div class='author'>Latham, R. G. (Robert Gordon), 1812-1888</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44679, {&quot;Title&quot;:&quot;Siam: Land of Free Men&quot;,&quot;Topics&quot;:[&quot;Thailand -- History&quot;],&quot;Primary&quot;:&quot;44679.txt&quot;,&quot;CreatorNames&quot;:[&quot;Deignan, H. G. (Herbert Girton), 1906-1968&quot;],&quot;LoCC&quot;:[&quot;DS&quot;,&quot;GN&quot;],&quot;PG_ID&quot;:&quot;44679&quot;});" class='title'>Siam:<br><span class='subtitle'>Land of Free Men</span></a>
+<div class='author'>Deignan, H. G. (Herbert Girton), 1906-1968</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44728, {&quot;Title&quot;:&quot;Kinship and Social Organisation&quot;,&quot;Topics&quot;:[&quot;Marriage&quot;,&quot;Primitive societies&quot;,&quot;Consanguinity&quot;,&quot;Ethnology -- Melanesia&quot;],&quot;Primary&quot;:&quot;44728.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rivers, W. H. R. (William Halse Rivers), 1864-1922&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;44728&quot;});" class='title'>Kinship and Social Organisation</a>
+<div class='author'>Rivers, W. H. R. (William Halse Rivers), 1864-1922</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44844, {&quot;Title&quot;:&quot;The Evolution of Culture, and Other Essays&quot;,&quot;Topics&quot;:[&quot;Culture&quot;,&quot;Anthropology&quot;],&quot;Primary&quot;:&quot;44844.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pitt-Rivers, Augustus Henry Lane-Fox, 1827-1900&quot;,&quot;Balfour, Henry, 1863-1939 [Author of introduction, etc.]&quot;,&quot;Myres, John Linton, Sir, 1869-1954 [Editor]&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;44844&quot;});" class='title'>The Evolution of Culture, and Other Essays</a>
+<div class='author'>Pitt-Rivers, Augustus Henry Lane-Fox, 1827-1900, Balfour, Henry, 1863-1939 [Author of introduction, etc.], Myres, John Linton, Sir, 1869-1954 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45363, {&quot;Title&quot;:&quot;The Secret of the Totem&quot;,&quot;Topics&quot;:[&quot;Totemism&quot;],&quot;Primary&quot;:&quot;45363.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lang, Andrew, 1844-1912&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;45363&quot;});" class='title'>The Secret of the Totem</a>
+<div class='author'>Lang, Andrew, 1844-1912</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45958, {&quot;Title&quot;:&quot;Indo-China and Its Primitive People&quot;,&quot;Topics&quot;:[&quot;Ethnology -- Indochina&quot;,&quot;Indochina -- Social life and customs&quot;],&quot;Primary&quot;:&quot;45958.htm&quot;,&quot;CreatorNames&quot;:[&quot;Baudesson, Henry&quot;,&quot;Holt, E. Appleby [Translator]&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;45958&quot;});" class='title'>Indo-China and Its Primitive People</a>
+<div class='author'>Baudesson, Henry, Holt, E. Appleby [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46379, {&quot;Title&quot;:&quot;Human Origins&quot;,&quot;Topics&quot;:[&quot;History, Ancient&quot;,&quot;Prehistoric peoples&quot;,&quot;Human beings -- Origin&quot;],&quot;Primary&quot;:&quot;46379.htm&quot;,&quot;CreatorNames&quot;:[&quot;Laing, S. (Samuel), 1812-1897&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;46379&quot;});" class='title'>Human Origins</a>
+<div class='author'>Laing, S. (Samuel), 1812-1897</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46848, {&quot;Title&quot;:&quot;The Races of Man: An Outline of Anthropology and Ethnography&quot;,&quot;Topics&quot;:[&quot;Ethnology&quot;,&quot;Anthropology&quot;],&quot;Primary&quot;:&quot;46848.htm&quot;,&quot;CreatorNames&quot;:[&quot;Deniker, Joseph, 1852-1918&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;46848&quot;});" class='title'>The Races of Man:<br><span class='subtitle'>An Outline of Anthropology and Ethnography</span></a>
+<div class='author'>Deniker, Joseph, 1852-1918</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46884, {&quot;Title&quot;:&quot;The Origin of Man and of His Superstitions&quot;,&quot;Topics&quot;:[&quot;Magic&quot;,&quot;Superstition&quot;,&quot;Human beings -- Origin&quot;,&quot;Totemism&quot;,&quot;Animism&quot;],&quot;Primary&quot;:&quot;46884.htm&quot;,&quot;CreatorNames&quot;:[&quot;Read, Carveth, 1848-1931&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;46884&quot;});" class='title'>The Origin of Man and of His Superstitions</a>
+<div class='author'>Read, Carveth, 1848-1931</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46924, {&quot;Title&quot;:&quot;The Bronze Age and the Celtic World&quot;,&quot;Topics&quot;:[&quot;Indo-Europeans&quot;,&quot;Celts&quot;,&quot;Celtic languages&quot;,&quot;Bronze age&quot;],&quot;Primary&quot;:&quot;46924.htm&quot;,&quot;CreatorNames&quot;:[&quot;Peake, Harold, 1867-1946&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;46924&quot;});" class='title'>The Bronze Age and the Celtic World</a>
+<div class='author'>Peake, Harold, 1867-1946</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47137, {&quot;Title&quot;:&quot;On the Phenomena of Hybridity in the Genus Homo&quot;,&quot;Topics&quot;:[&quot;Miscegenation&quot;,&quot;Hominids -- Hybridization&quot;],&quot;Primary&quot;:&quot;47137.htm&quot;,&quot;CreatorNames&quot;:[&quot;Broca, Paul, 1824-1880&quot;,&quot;Blake, C. Carter (Charles Carter) [Editor]&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;47137&quot;});" class='title'>On the Phenomena of Hybridity in the Genus Homo</a>
+<div class='author'>Broca, Paul, 1824-1880, Blake, C. Carter (Charles Carter) [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47390, {&quot;Title&quot;:&quot;The Natural History of the Varieties of Man&quot;,&quot;Topics&quot;:[&quot;Ethnology&quot;],&quot;Primary&quot;:&quot;47390.htm&quot;,&quot;CreatorNames&quot;:[&quot;Latham, R. G. (Robert Gordon), 1812-1888&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;47390&quot;});" class='title'>The Natural History of the Varieties of Man</a>
+<div class='author'>Latham, R. G. (Robert Gordon), 1812-1888</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47627, {&quot;Title&quot;:&quot;The Quest for a Lost Race&quot;,&quot;Topics&quot;:[&quot;Names, Personal -- English&quot;,&quot;National characteristics, English&quot;,&quot;Ethnology -- Great Britain&quot;,&quot;Kentucky -- Social life and customs&quot;,&quot;Du Chaillu, Paul B. (Paul Belloni), 1835-1903&quot;,&quot;Scandinavians -- England&quot;],&quot;Primary&quot;:&quot;47627.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pickett, Thomas Edward, 1841-1913&quot;],&quot;LoCC&quot;:[&quot;F&quot;,&quot;GN&quot;],&quot;PG_ID&quot;:&quot;47627&quot;});" class='title'>The Quest for a Lost Race</a>
+<div class='author'>Pickett, Thomas Edward, 1841-1913</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47845, {&quot;Title&quot;:&quot;Longhead: The Story of the First Fire&quot;,&quot;Topics&quot;:[&quot;Prehistoric peoples&quot;,&quot;Industries, Primitive&quot;],&quot;Primary&quot;:&quot;47845.htm&quot;,&quot;CreatorNames&quot;:[&quot;Robinson, C. H. (Charles Henry), 1843-&quot;,&quot;Bull, Charles Livingston, 1874-1932 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;47845&quot;});" class='title'>Longhead:<br><span class='subtitle'>The Story of the First Fire</span></a>
+<div class='author'>Robinson, C. H. (Charles Henry), 1843-, Bull, Charles Livingston, 1874-1932 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48514, {&quot;Title&quot;:&quot;The Lake-Dwellings of Europe - Being the Rhind Lectures in Archæology for 1888&quot;,&quot;Topics&quot;:[&quot;Lake-dwellers and lake-dwellings -- Europe&quot;,&quot;Lake-dwellers and lake-dwellings -- Bibliography&quot;],&quot;Primary&quot;:&quot;48514.htm&quot;,&quot;CreatorNames&quot;:[&quot;Munro, Robert, 1835-1920&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;48514&quot;});" class='title'>The Lake-Dwellings of Europe -<br><span class='subtitle'>Being the Rhind Lectures in Archæology for 1888</span></a>
+<div class='author'>Munro, Robert, 1835-1920</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48961, {&quot;Title&quot;:&quot;En piga bland pigor&quot;,&quot;Topics&quot;:[&quot;Farm life -- Sweden&quot;,&quot;Household employees -- Sweden&quot;],&quot;Primary&quot;:&quot;48961.htm&quot;,&quot;CreatorNames&quot;:[&quot;Nordström, Ester Blenda, 1891-1948&quot;],&quot;LoCC&quot;:[&quot;GN&quot;,&quot;PT&quot;],&quot;PG_ID&quot;:&quot;48961&quot;});" class='title'>En piga bland pigor</a>
+<div class='author'>Nordström, Ester Blenda, 1891-1948</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49304, {&quot;Title&quot;:&quot;Days Before history&quot;,&quot;Topics&quot;:[&quot;Prehistoric peoples -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;49304.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hall, H. R. (Harry Reginald), 1873-1930&quot;,&quot;Randall, A. M. [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;GN&quot;,&quot;PZ&quot;],&quot;PG_ID&quot;:&quot;49304&quot;});" class='title'>Days Before history</a>
+<div class='author'>Hall, H. R. (Harry Reginald), 1873-1930, Randall, A. M. [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49313, {&quot;Title&quot;:&quot;The Lake Dwellings of Ireland - Or ancient lacustrine habitations of Erin, commonly called crannogs.&quot;,&quot;Topics&quot;:[&quot;Lake-dwellers and lake-dwellings -- Ireland&quot;],&quot;Primary&quot;:&quot;49313.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wood-Martin, W. G. (William Gregory), 1847-1917&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;49313&quot;});" class='title'>The Lake Dwellings of Ireland -<br><span class='subtitle'>Or ancient lacustrine habitations of Erin, commonly called crannogs.</span></a>
+<div class='author'>Wood-Martin, W. G. (William Gregory), 1847-1917</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50057, {&quot;Title&quot;:&quot;The Early Cave-Men&quot;,&quot;Topics&quot;:[&quot;Archaeology -- Juvenile literature&quot;,&quot;Cave dwellers -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;50057.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dopp, Katharine Elizabeth, 1863-1944&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;50057&quot;});" class='title'>The Early Cave-Men</a>
+<div class='author'>Dopp, Katharine Elizabeth, 1863-1944</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50484, {&quot;Title&quot;:&quot;The First Days of Man, as Narrated Quite Simply for Young Readers&quot;,&quot;Topics&quot;:[&quot;Prehistoric peoples -- Juvenile literature&quot;,&quot;Cave dwellers -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;50484.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kummer, Frederic Arnold, 1873-1943&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;50484&quot;});" class='title'>The First Days of Man, as Narrated Quite Simply for Young Readers</a>
+<div class='author'>Kummer, Frederic Arnold, 1873-1943</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5109, {&quot;Title&quot;:&quot;Ragnarok : the Age of Fire and Gravel&quot;,&quot;Topics&quot;:[&quot;Atlantis (Legendary place)&quot;,&quot;Drift&quot;,&quot;Comets&quot;],&quot;Primary&quot;:&quot;5109.htm&quot;,&quot;CreatorNames&quot;:[&quot;Donnelly, Ignatius, 1831-1901&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;5109&quot;});" class='title'>Ragnarok :<br><span class='subtitle'>the Age of Fire and Gravel</span></a>
+<div class='author'>Donnelly, Ignatius, 1831-1901</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51960, {&quot;Title&quot;:&quot;The Ancient Stone Implements, Weapons and Ornaments, of Great Britain - Second Edition, Revised&quot;,&quot;Topics&quot;:[&quot;Great Britain -- Antiquities&quot;,&quot;Stone age -- Great Britain&quot;],&quot;Primary&quot;:&quot;51960.htm&quot;,&quot;CreatorNames&quot;:[&quot;Evans, John, 1823-1908&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;51960&quot;});" class='title'>The Ancient Stone Implements, Weapons and Ornaments, of Great Britain -<br><span class='subtitle'>Second Edition, Revised</span></a>
+<div class='author'>Evans, John, 1823-1908</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52339, {&quot;Title&quot;:&quot;Ancient Scottish Lake-Dwellings or Crannogs - With a supplementary chapter on remains of lake-dwellings in England&quot;,&quot;Topics&quot;:[&quot;Scotland -- Antiquities&quot;,&quot;Lake-dwellers and lake-dwellings -- Scotland&quot;,&quot;Prehistoric peoples -- Scotland&quot;],&quot;Primary&quot;:&quot;52339.htm&quot;,&quot;CreatorNames&quot;:[&quot;Munro, Robert, 1835-1920&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;52339&quot;});" class='title'>Ancient Scottish Lake-Dwellings or Crannogs -<br><span class='subtitle'>With a supplementary chapter on remains of lake-dwellings in England</span></a>
+<div class='author'>Munro, Robert, 1835-1920</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52389, {&quot;Title&quot;:&quot;Vestiges of the supremacy of Mercia in the south of England during the eighth century&quot;,&quot;Topics&quot;:[&quot;Great Britain -- History -- Anglo-Saxon period, 449-1066&quot;,&quot;Great Britain -- Antiquities&quot;,&quot;Mercia (Kingdom) -- History&quot;],&quot;Primary&quot;:&quot;52389.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kerslake, T. (Thomas), 1812-1891&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;52389&quot;});" class='title'>Vestiges of the supremacy of Mercia in the south of England during the eighth century</a>
+<div class='author'>Kerslake, T. (Thomas), 1812-1891</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52406, {&quot;Title&quot;:&quot;Prehistoric Man - Researches into the Origin of Civilization in the Old and the New World&quot;,&quot;Topics&quot;:[&quot;Prehistoric peoples&quot;,&quot;Civilization -- History&quot;,&quot;Ethnology -- America&quot;],&quot;Primary&quot;:&quot;52406.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wilson, Daniel, Sir, 1816-1892&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;52406&quot;});" class='title'>Prehistoric Man -<br><span class='subtitle'>Researches into the Origin of Civilization in the Old and the New World</span></a>
+<div class='author'>Wilson, Daniel, Sir, 1816-1892</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52424, {&quot;Title&quot;:&quot;Cave Hunting - Researches on the evidence of caves respecting the early inhabitants of Europe&quot;,&quot;Topics&quot;:[&quot;Prehistoric peoples -- Europe&quot;,&quot;Antiquities, Prehistoric -- Europe&quot;,&quot;Caves -- Europe&quot;,&quot;Europe -- Antiquities&quot;],&quot;Primary&quot;:&quot;52424.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dawkins, William Boyd, 1838-1929&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;52424&quot;});" class='title'>Cave Hunting -<br><span class='subtitle'>Researches on the evidence of caves respecting the early inhabitants of Europe</span></a>
+<div class='author'>Dawkins, William Boyd, 1838-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52664, {&quot;Title&quot;:&quot;Prehistoric Men&quot;,&quot;Topics&quot;:[&quot;Prehistoric peoples&quot;],&quot;Primary&quot;:&quot;52664.htm&quot;,&quot;CreatorNames&quot;:[&quot;Braidwood, Robert J. (Robert John), 1907-2003&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;52664&quot;});" class='title'>Prehistoric Men</a>
+<div class='author'>Braidwood, Robert J. (Robert John), 1907-2003</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52906, {&quot;Title&quot;:&quot;Grave-mounds and Their Contents - A Manual of Archæology, as Exemplified in the Burials of the Celtic, the Romano-British, and the Anglo-Saxon Periods&quot;,&quot;Topics&quot;:[&quot;Great Britain -- Antiquities&quot;,&quot;Mounds -- Great Britain&quot;,&quot;Megalithic monuments -- Great Britain&quot;],&quot;Primary&quot;:&quot;52906.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jewitt, Llewellynn Frederick William, 1816-1886&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;52906&quot;});" class='title'>Grave-mounds and Their Contents -<br><span class='subtitle'>A Manual of Archæology, as Exemplified in the Burials of the Celtic, the Romano-British, and the Anglo-Saxon Periods</span></a>
+<div class='author'>Jewitt, Llewellynn Frederick William, 1816-1886</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53050, {&quot;Title&quot;:&quot;Tietoja maailman kansoista, heidän tavoista, uskonnoista ja vaiheista&quot;,&quot;Topics&quot;:[&quot;Ethnology&quot;],&quot;Primary&quot;:&quot;53050.txt&quot;,&quot;CreatorNames&quot;:[&quot;Forsman, Jaakko, 1839-1899&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;53050&quot;});" class='title'>Tietoja maailman kansoista, heidän tavoista, uskonnoista ja vaiheista</a>
+<div class='author'>Forsman, Jaakko, 1839-1899</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53092, {&quot;Title&quot;:&quot;The Ancient Bronze Implements, Weapons, and Ornaments, of Great Britain and Ireland.&quot;,&quot;Topics&quot;:[&quot;Bronze age -- Ireland&quot;,&quot;Great Britain -- Antiquities&quot;,&quot;Bronze age -- Great Britain&quot;],&quot;Primary&quot;:&quot;53092.htm&quot;,&quot;CreatorNames&quot;:[&quot;Evans, John, 1823-1908&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;53092&quot;});" class='title'>The Ancient Bronze Implements, Weapons, and Ornaments, of Great Britain and Ireland.</a>
+<div class='author'>Evans, John, 1823-1908</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53531, {&quot;Title&quot;:&quot;Fire-making Apparatus in the U. S. National Museum&quot;,&quot;Topics&quot;:[&quot;Indians of North America -- Implements&quot;,&quot;Firemaking&quot;],&quot;Primary&quot;:&quot;53531.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hough, Walter, 1859-1935&quot;],&quot;LoCC&quot;:[&quot;E&quot;,&quot;GN&quot;],&quot;PG_ID&quot;:&quot;53531&quot;});" class='title'>Fire-making Apparatus in the U. S. National Museum</a>
+<div class='author'>Hough, Walter, 1859-1935</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53646, {&quot;Title&quot;:&quot;Anthropology and the Classics - Six Lectures Delivered Before the University of Oxford&quot;,&quot;Topics&quot;:[&quot;Classical philology&quot;,&quot;Anthropology -- History&quot;,&quot;Picture-writing&quot;],&quot;Primary&quot;:&quot;53646.htm&quot;,&quot;CreatorNames&quot;:[&quot;Evans, Arthur, Sir, 1851-1941&quot;,&quot;Fowler, W. Warde (William Warde), 1847-1921&quot;,&quot;Jevons, F. B. (Frank Byron), 1858-1936&quot;,&quot;Lang, Andrew, 1844-1912&quot;,&quot;Murray, Gilbert, 1866-1957&quot;,&quot;Myres, John Linton, Sir, 1869-1954&quot;,&quot;Marett, R. R. (Robert Ranulph), 1866-1943 [Editor]&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;53646&quot;});" class='title'>Anthropology and the Classics -<br><span class='subtitle'>Six Lectures Delivered Before the University of Oxford</span></a>
+<div class='author'>Evans, Arthur, Sir, 1851-1941, Fowler, W. Warde (William Warde), 1847-1921, Jevons, F. B. (Frank Byron), 1858-1936, Lang, Andrew, 1844-1912, Murray, Gilbert, 1866-1957, Myres, John Linton, Sir, 1869-1954, Marett, R. R. (Robert Ranulph), 1866-1943 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54086, {&quot;Title&quot;:&quot;Human Leopards - An Account of the Trials of Human Leopards before the Special Commission Court; With a Note on Sierra Leone, Past and Present&quot;,&quot;Topics&quot;:[&quot;Cannibalism&quot;,&quot;Ethnology -- Sierra Leone&quot;,&quot;Leopard men&quot;,&quot;Sierra Leone -- History&quot;],&quot;Primary&quot;:&quot;54086.htm&quot;,&quot;CreatorNames&quot;:[&quot;Beatty, Kenneth James, Sir, 1878-&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;54086&quot;});" class='title'>Human Leopards -<br><span class='subtitle'>An Account of the Trials of Human Leopards before the Special Commission Court; With a Note on Sierra Leone, Past and Present</span></a>
+<div class='author'>Beatty, Kenneth James, Sir, 1878-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54620, {&quot;Title&quot;:&quot;Rude Stone Monuments in All Countries: Their Age and Uses&quot;,&quot;Topics&quot;:[&quot;Megalithic monuments&quot;],&quot;Primary&quot;:&quot;54620.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fergusson, James, 1808-1886&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;54620&quot;});" class='title'>Rude Stone Monuments in All Countries:<br><span class='subtitle'>Their Age and Uses</span></a>
+<div class='author'>Fergusson, James, 1808-1886</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55822, {&quot;Title&quot;:&quot;Argonauts of the Western Pacific - An Account of Native Enterprise and Adventure in the Archipelagoes of Melanesian New Guinea&quot;,&quot;Topics&quot;:[&quot;Kula exchange -- Papua New Guinea -- Trobriand Islands&quot;,&quot;Massim (Papua New Guinean people) -- Rites and ceremonies&quot;,&quot;Ethnology -- Papua New Guinea -- Trobriand Islands&quot;,&quot;Folklore -- Papua New Guinea -- Trobriand Islands&quot;,&quot;Barter -- Papua New Guinea -- Trobriand Islands&quot;,&quot;Trobriand Islands (Papua New Guinea) -- Social life and customs&quot;],&quot;Primary&quot;:&quot;55822.htm&quot;,&quot;CreatorNames&quot;:[&quot;Malinowski, Bronislaw, 1884-1942&quot;,&quot;Frazer, James George, 1854-1941 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;55822&quot;});" class='title'>Argonauts of the Western Pacific -<br><span class='subtitle'>An Account of Native Enterprise and Adventure in the Archipelagoes of Melanesian New Guinea</span></a>
+<div class='author'>Malinowski, Bronislaw, 1884-1942, Frazer, James George, 1854-1941 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55892, {&quot;Title&quot;:&quot;Die Anfänge der Naturbeherrschung. 1. Frühformen der Mechanik&quot;,&quot;Topics&quot;:[&quot;Ethnology&quot;,&quot;Civilization -- History&quot;,&quot;Industries, Primitive&quot;],&quot;Primary&quot;:&quot;55892.htm&quot;,&quot;CreatorNames&quot;:[&quot;Weule, Karl, 1864-1926&quot;,&quot;Wilhelm, Max [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;55892&quot;});" class='title'>Die Anfänge der Naturbeherrschung. 1. Frühformen der Mechanik</a>
+<div class='author'>Weule, Karl, 1864-1926, Wilhelm, Max [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55974, {&quot;Title&quot;:&quot;Anthropophagy&quot;,&quot;Topics&quot;:[&quot;Cannibalism&quot;],&quot;Primary&quot;:&quot;55974.htm&quot;,&quot;CreatorNames&quot;:[&quot;Darling, Charles W. (Charles William), 1830-1905&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;55974&quot;});" class='title'>Anthropophagy</a>
+<div class='author'>Darling, Charles W. (Charles William), 1830-1905</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56571, {&quot;Title&quot;:&quot;The Birth of Civilization in the Near East&quot;,&quot;Topics&quot;:[&quot;Egypt -- Antiquities&quot;,&quot;Civilization, Ancient&quot;,&quot;Iraq -- Antiquities&quot;,&quot;Middle East -- Civilization -- To 622&quot;],&quot;Primary&quot;:&quot;56571.htm&quot;,&quot;CreatorNames&quot;:[&quot;Frankfort, Henri, 1897-1954&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;56571&quot;});" class='title'>The Birth of Civilization in the Near East</a>
+<div class='author'>Frankfort, Henri, 1897-1954</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57315, {&quot;Title&quot;:&quot;Races and Peoples: Lectures on the Science of Ethnography&quot;,&quot;Topics&quot;:[&quot;Ethnology&quot;],&quot;Primary&quot;:&quot;57315.htm&quot;,&quot;CreatorNames&quot;:[&quot;Brinton, Daniel G. (Daniel Garrison), 1837-1899&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;57315&quot;});" class='title'>Races and Peoples:<br><span class='subtitle'>Lectures on the Science of Ethnography</span></a>
+<div class='author'>Brinton, Daniel G. (Daniel Garrison), 1837-1899</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57739, {&quot;Title&quot;:&quot;Papuan Pictures&quot;,&quot;Topics&quot;:[&quot;Papuans&quot;,&quot;Missions -- Papua New Guinea&quot;],&quot;Primary&quot;:&quot;57739.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dauncey, H. M., 1863-1932&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;57739&quot;});" class='title'>Papuan Pictures</a>
+<div class='author'>Dauncey, H. M., 1863-1932</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58098, {&quot;Title&quot;:&quot;Children of Wild Australia&quot;,&quot;Topics&quot;:[&quot;Aboriginal Australians -- Childhood and youth -- Juvenile literature&quot;,&quot;Aboriginal Australians -- Juvenile literature&quot;,&quot;Australia -- Juveile literature&quot;],&quot;Primary&quot;:&quot;58098.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pitts, Herbert&quot;],&quot;LoCC&quot;:[&quot;DU&quot;,&quot;GN&quot;],&quot;PG_ID&quot;:&quot;58098&quot;});" class='title'>Children of Wild Australia</a>
+<div class='author'>Pitts, Herbert</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58475, {&quot;Title&quot;:&quot;Sexual Life of Primitive People&quot;,&quot;Topics&quot;:[&quot;Prehistoric peoples&quot;,&quot;Ethnology&quot;,&quot;Sexual ethics&quot;],&quot;Primary&quot;:&quot;58475.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fehlinger, Hans, 1874-&quot;,&quot;Herbert, Fanny Segaller, 1881- [Translator]&quot;,&quot;Herbert, S. (Solomon), 1874- [Translator]&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;58475&quot;});" class='title'>Sexual Life of Primitive People</a>
+<div class='author'>Fehlinger, Hans, 1874-, Herbert, Fanny Segaller, 1881- [Translator], Herbert, S. (Solomon), 1874- [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59789, {&quot;Title&quot;:&quot;Crania Ægyptiaca - Or, Observations on Egyptian Ethnography Derived from Anatomy, History and the Monuments&quot;,&quot;Topics&quot;:[&quot;Craniology -- Egypt&quot;,&quot;Ethnology -- Egypt&quot;],&quot;Primary&quot;:&quot;59789.htm&quot;,&quot;CreatorNames&quot;:[&quot;Morton, Samuel George, 1799-1851&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;59789&quot;});" class='title'>Crania Ægyptiaca -<br><span class='subtitle'>Or, Observations on Egyptian Ethnography Derived from Anatomy, History and the Monuments</span></a>
+<div class='author'>Morton, Samuel George, 1799-1851</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59922, {&quot;Title&quot;:&quot;Stories of the Cave People&quot;,&quot;Topics&quot;:[&quot;Prehistoric peoples -- Juvenile literature&quot;,&quot;Cave dwellers -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;59922.htm&quot;,&quot;CreatorNames&quot;:[&quot;Marcy, Mary, 1877-1922&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;59922&quot;});" class='title'>Stories of the Cave People</a>
+<div class='author'>Marcy, Mary, 1877-1922</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60943, {&quot;Title&quot;:&quot;Primitive Manners and Customs&quot;,&quot;Topics&quot;:[&quot;Folklore&quot;,&quot;Mythology&quot;,&quot;Manners and customs&quot;,&quot;Primitive societies&quot;],&quot;Primary&quot;:&quot;60943.htm&quot;,&quot;CreatorNames&quot;:[&quot;Farrer, James Anson, 1849-1925&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;60943&quot;});" class='title'>Primitive Manners and Customs</a>
+<div class='author'>Farrer, James Anson, 1849-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61220, {&quot;Title&quot;:&quot;Religions of Primitive Peoples&quot;,&quot;Topics&quot;:[&quot;Religion&quot;,&quot;Mythology&quot;,&quot;Religions -- History&quot;],&quot;Primary&quot;:&quot;61220.htm&quot;,&quot;CreatorNames&quot;:[&quot;Brinton, Daniel G. (Daniel Garrison), 1837-1899&quot;],&quot;LoCC&quot;:[&quot;BL&quot;,&quot;GN&quot;],&quot;PG_ID&quot;:&quot;61220&quot;});" class='title'>Religions of Primitive Peoples</a>
+<div class='author'>Brinton, Daniel G. (Daniel Garrison), 1837-1899</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62342, {&quot;Title&quot;:&quot;Stonehenge and Other British Stone Monuments Astronomically Considered&quot;,&quot;Topics&quot;:[&quot;Stonehenge (England)&quot;,&quot;Great Britain -- Antiquities&quot;,&quot;Temples&quot;,&quot;Sun worship&quot;,&quot;Druids and Druidism&quot;],&quot;Primary&quot;:&quot;62342.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lockyer, Norman, Sir, 1836-1920&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;62342&quot;});" class='title'>Stonehenge and Other British Stone Monuments Astronomically Considered</a>
+<div class='author'>Lockyer, Norman, Sir, 1836-1920</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62749, {&quot;Title&quot;:&quot;Strange Peoples&quot;,&quot;Topics&quot;:[&quot;Ethnology -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;62749.htm&quot;,&quot;CreatorNames&quot;:[&quot;Starr, Frederick, 1858-1933&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;62749&quot;});" class='title'>Strange Peoples</a>
+<div class='author'>Starr, Frederick, 1858-1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64088, {&quot;Title&quot;:&quot;Children of Africa&quot;,&quot;Topics&quot;:[&quot;Children -- Africa -- Juvenile literature&quot;,&quot;Missions -- Africa -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;64088.htm&quot;,&quot;CreatorNames&quot;:[&quot;Baird, James B.&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;64088&quot;});" class='title'>Children of Africa</a>
+<div class='author'>Baird, James B.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65169, {&quot;Title&quot;:&quot;Early Man Projectile Points in the Southwest&quot;,&quot;Topics&quot;:[&quot;Indians of North America -- Implements&quot;,&quot;Indians of North America -- Southwest, New&quot;,&quot;Arrowheads&quot;],&quot;Primary&quot;:&quot;65169.htm&quot;,&quot;CreatorNames&quot;:[&quot;Honea, Kenneth&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;65169&quot;});" class='title'>Early Man Projectile Points in the Southwest</a>
+<div class='author'>Honea, Kenneth</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66299, {&quot;Title&quot;:&quot;Among Cannibals: An Account of Four Years&#39; Travels in Australia and of Camp Life With the Aborigines of Queensland&quot;,&quot;Topics&quot;:[&quot;Ethnology -- Australia&quot;,&quot;Natural history -- Australia&quot;,&quot;Queensland -- Description and travel&quot;,&quot;Aboriginal Australians -- Australia -- Queensland&quot;],&quot;Primary&quot;:&quot;66299.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lumholtz, Carl, 1851-1922&quot;,&quot;Anderson, Rasmus Björn, 1846-1936 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DU&quot;,&quot;GN&quot;],&quot;PG_ID&quot;:&quot;66299&quot;});" class='title'>Among Cannibals:<br><span class='subtitle'>An Account of Four Years' Travels in Australia and of Camp Life With the Aborigines of Queensland</span></a>
+<div class='author'>Lumholtz, Carl, 1851-1922, Anderson, Rasmus Björn, 1846-1936 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6693, {&quot;Title&quot;:&quot;People of Africa&quot;,&quot;Topics&quot;:[&quot;Ethnology -- Africa&quot;],&quot;Primary&quot;:&quot;6693.txt&quot;,&quot;CreatorNames&quot;:[&quot;How, Edith A.&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;6693&quot;});" class='title'>People of Africa</a>
+<div class='author'>How, Edith A.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67056, {&quot;Title&quot;:&quot;The Japanese New Year&#39;s Festival, Games and Pastimes&quot;,&quot;Topics&quot;:[&quot;Japan -- Social life and customs&quot;,&quot;New Year&quot;,&quot;Games -- Japan&quot;],&quot;Primary&quot;:&quot;67056.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gunsaulus, Helen Cowen, 1886-1954&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;67056&quot;});" class='title'>The Japanese New Year's Festival, Games and Pastimes</a>
+<div class='author'>Gunsaulus, Helen Cowen, 1886-1954</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67426, {&quot;Title&quot;:&quot;Bantu Beliefs and Magic - With particular reference to the Kikuyu and Kamba tribes of Kenya Colony; together with some reflections on East Africa after the war&quot;,&quot;Topics&quot;:[&quot;Folklore -- Africa&quot;,&quot;Kikuyu (African people)&quot;,&quot;Bantu-speaking peoples -- Folklore&quot;,&quot;Kamba (African people)&quot;,&quot;Indigenous peoples -- Africa, East&quot;],&quot;Primary&quot;:&quot;67426.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hobley, C. W. (Charles William), 1867-1947&quot;,&quot;Frazer, James George, 1854-1941 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;DT&quot;,&quot;GN&quot;],&quot;PG_ID&quot;:&quot;67426&quot;});" class='title'>Bantu Beliefs and Magic -<br><span class='subtitle'>With particular reference to the Kikuyu and Kamba tribes of Kenya Colony; together with some reflections on East Africa after the war</span></a>
+<div class='author'>Hobley, C. W. (Charles William), 1867-1947, Frazer, James George, 1854-1941 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67597, {&quot;Title&quot;:&quot;Bantu Folk Lore (Medical and General)&quot;,&quot;Topics&quot;:[&quot;Traditional medicine -- South Africa&quot;,&quot;Pondo (African people)&quot;,&quot;Xhosa (African people)&quot;,&quot;Zulu (African people)&quot;],&quot;Primary&quot;:&quot;67597.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hewat, Matthew L.&quot;],&quot;LoCC&quot;:[&quot;GN&quot;,&quot;GR&quot;],&quot;PG_ID&quot;:&quot;67597&quot;});" class='title'>Bantu Folk Lore (Medical and General)</a>
+<div class='author'>Hewat, Matthew L.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68145, {&quot;Title&quot;:&quot;Use of tobacco among North American Indians&quot;,&quot;Topics&quot;:[&quot;Tobacco pipes&quot;,&quot;Indians of North America -- Tobacco use&quot;],&quot;Primary&quot;:&quot;68145.htm&quot;,&quot;CreatorNames&quot;:[&quot;Linton, Ralph, 1893-1953&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;68145&quot;});" class='title'>Use of tobacco among North American Indians</a>
+<div class='author'>Linton, Ralph, 1893-1953</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68185, {&quot;Title&quot;:&quot;The passing of the great race; or, The racial basis of European history&quot;,&quot;Topics&quot;:[&quot;Ethnology -- Europe&quot;],&quot;Primary&quot;:&quot;68185.htm&quot;,&quot;CreatorNames&quot;:[&quot;Grant, Madison, 1865-1937&quot;,&quot;Osborn, Henry Fairfield, 1857-1935 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;68185&quot;});" class='title'>The passing of the great race;<br><span class='subtitle'>or, The racial basis of European history</span></a>
+<div class='author'>Grant, Madison, 1865-1937, Osborn, Henry Fairfield, 1857-1935 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68562, {&quot;Title&quot;:&quot;The peoples of Europe&quot;,&quot;Topics&quot;:[&quot;Ethnology -- Europe&quot;],&quot;Primary&quot;:&quot;68562.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fleure, H. J. (Herbert John), 1877-1969&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;68562&quot;});" class='title'>The peoples of Europe</a>
+<div class='author'>Fleure, H. J. (Herbert John), 1877-1969</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69073, {&quot;Title&quot;:&quot;The uncivilized races of men in all countries of the world; vol. 1 of 2 - Being a comprehensive account of their manners and customs, and of their physical, social, mental, moral and religious characteristics&quot;,&quot;Topics&quot;:[&quot;Ethnology&quot;,&quot;Anthropology&quot;,&quot;Manners and customs&quot;],&quot;Primary&quot;:&quot;69073.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wood, J. G. (John George), 1827-1889&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;69073&quot;});" class='title'>The uncivilized races of men in all countries of the world;<br><span class='subtitle'>vol. 1 of 2 - Being a comprehensive account of their manners and customs, and of their physical, social, mental, moral and religious characteristics</span></a>
+<div class='author'>Wood, J. G. (John George), 1827-1889</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69074, {&quot;Title&quot;:&quot;The uncivilized races of men in all countries of the world; vol. 2 of 2 - Being a comprehensive account of their manners and customs, and of their physical, social, mental, moral and religious characteristics&quot;,&quot;Topics&quot;:[&quot;Ethnology&quot;,&quot;Anthropology&quot;,&quot;Manners and customs&quot;],&quot;Primary&quot;:&quot;69074.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wood, J. G. (John George), 1827-1889&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;69074&quot;});" class='title'>The uncivilized races of men in all countries of the world;<br><span class='subtitle'>vol. 2 of 2 - Being a comprehensive account of their manners and customs, and of their physical, social, mental, moral and religious characteristics</span></a>
+<div class='author'>Wood, J. G. (John George), 1827-1889</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69934, {&quot;Title&quot;:&quot;Early British trackways, moats, mounds, camps, and sites&quot;,&quot;Topics&quot;:[&quot;Great Britain -- Antiquities&quot;,&quot;Mounds -- Great Britain&quot;,&quot;Megalithic monuments -- Great Britain&quot;,&quot;Leys -- Great Britain&quot;],&quot;Primary&quot;:&quot;69934.htm&quot;,&quot;CreatorNames&quot;:[&quot;Watkins, Alfred, 1855-1935&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;69934&quot;});" class='title'>Early British trackways, moats, mounds, camps, and sites</a>
+<div class='author'>Watkins, Alfred, 1855-1935</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70009, {&quot;Title&quot;:&quot;The plurality of the human race&quot;,&quot;Topics&quot;:[&quot;Monogenism and polygenism&quot;],&quot;Primary&quot;:&quot;70009.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pouchet, G. (Georges), 1833-1894&quot;,&quot;Beavan, Hugh J. C. [Translator]&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;70009&quot;});" class='title'>The plurality of the human race</a>
+<div class='author'>Pouchet, G. (Georges), 1833-1894, Beavan, Hugh J. C. [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70452, {&quot;Title&quot;:&quot;The man-eaters and other odd people&quot;,&quot;Topics&quot;:[&quot;Ethnology&quot;,&quot;Primitive societies&quot;],&quot;Primary&quot;:&quot;70452.htm&quot;,&quot;CreatorNames&quot;:[&quot;Reid, Mayne, 1818-1883&quot;,&quot;Stoddard, Richard Henry, 1825-1903 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;70452&quot;});" class='title'>The man-eaters and other odd people</a>
+<div class='author'>Reid, Mayne, 1818-1883, Stoddard, Richard Henry, 1825-1903 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70458, {&quot;Title&quot;:&quot;Primitive culture, vol. 1 (of 2)&quot;,&quot;Topics&quot;:[&quot;Religion&quot;,&quot;Mythology&quot;,&quot;Ethnology&quot;,&quot;Civilization -- History&quot;,&quot;Primitive societies&quot;,&quot;Language and languages&quot;,&quot;Animism&quot;,&quot;Social evolution&quot;],&quot;Primary&quot;:&quot;70458.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tylor, Edward B. (Edward Burnett), 1832-1917&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;70458&quot;});" class='title'>Primitive culture, vol. 1 (of 2)</a>
+<div class='author'>Tylor, Edward B. (Edward Burnett), 1832-1917</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70484, {&quot;Title&quot;:&quot;Primitive culture, vol. 2 (of 2)&quot;,&quot;Topics&quot;:[&quot;Religion&quot;,&quot;Mythology&quot;,&quot;Ethnology&quot;,&quot;Civilization -- History&quot;,&quot;Primitive societies&quot;,&quot;Language and languages&quot;,&quot;Animism&quot;,&quot;Social evolution&quot;],&quot;Primary&quot;:&quot;70484.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tylor, Edward B. (Edward Burnett), 1832-1917&quot;],&quot;LoCC&quot;:[&quot;GN&quot;],&quot;PG_ID&quot;:&quot;70484&quot;});" class='title'>Primitive culture, vol. 2 (of 2)</a>
+<div class='author'>Tylor, Edward B. (Edward Burnett), 1832-1917</div>
+</div>
+</ul></div>
+</body></html>

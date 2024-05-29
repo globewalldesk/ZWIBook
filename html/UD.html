@@ -1,0 +1,98 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Infantry (UD)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(10908, {&quot;Title&quot;:&quot;Manual for Noncommissioned Officers and Privates of Infantry of the Army of the United States, 1917 - To be used by Engineer companies (dismounted) and Coast Artillery companies for Infantry instruction and training&quot;,&quot;Topics&quot;:[&quot;United States. Army -- Handbooks, manuals, etc.&quot;,&quot;United States. Army. Infantry -- Drill and tactics&quot;,&quot;United States. Army -- Non-commissioned officers&#39; handbooks&quot;],&quot;Primary&quot;:&quot;10908.htm&quot;,&quot;CreatorNames&quot;:[&quot;United States. War Department&quot;],&quot;LoCC&quot;:[&quot;UD&quot;],&quot;PG_ID&quot;:&quot;10908&quot;});" class='title'>Manual for Noncommissioned Officers and Privates of Infantry of the Army of the United States, 1917 -<br><span class='subtitle'>To be used by Engineer companies (dismounted) and Coast Artillery companies for Infantry instruction and training</span></a>
+<div class='author'>United States. War Department</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20866, {&quot;Title&quot;:&quot;Infantry Drill Regulations, United States Army, 1911 - Corrected to April 15, 1917 (Changes Nos. 1 to 19)&quot;,&quot;Topics&quot;:[&quot;United States. Army. Infantry -- Drill and tactics&quot;],&quot;Primary&quot;:&quot;20866.htm&quot;,&quot;CreatorNames&quot;:[&quot;United States. War Department&quot;],&quot;LoCC&quot;:[&quot;UD&quot;],&quot;PG_ID&quot;:&quot;20866&quot;});" class='title'>Infantry Drill Regulations, United States Army, 1911 -<br><span class='subtitle'>Corrected to April 15, 1917 (Changes Nos. 1 to 19)</span></a>
+<div class='author'>United States. War Department</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55185, {&quot;Title&quot;:&quot;Some Principles of Frontier Mountain Warfare&quot;,&quot;Topics&quot;:[&quot;Military art and science&quot;],&quot;Primary&quot;:&quot;55185.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bird, W. D. (Wilkinson Dent), 1869-1943&quot;],&quot;LoCC&quot;:[&quot;UD&quot;],&quot;PG_ID&quot;:&quot;55185&quot;});" class='title'>Some Principles of Frontier Mountain Warfare</a>
+<div class='author'>Bird, W. D. (Wilkinson Dent), 1869-1943</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55247, {&quot;Title&quot;:&quot;Night Operations for Infantry - Compiled for the Use of Company Officers&quot;,&quot;Topics&quot;:[&quot;Infantry drill and tactics&quot;],&quot;Primary&quot;:&quot;55247.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dawkins, C. T., 1858-1919&quot;],&quot;LoCC&quot;:[&quot;UD&quot;],&quot;PG_ID&quot;:&quot;55247&quot;});" class='title'>Night Operations for Infantry -<br><span class='subtitle'>Compiled for the Use of Company Officers</span></a>
+<div class='author'>Dawkins, C. T., 1858-1919</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56395, {&quot;Title&quot;:&quot;Musketry (.303 and .22 cartridges) - Elementary training, visual training, judging distance, fire discipline, range practices, field practices&quot;,&quot;Topics&quot;:[&quot;Shooting, Military&quot;,&quot;Rifles&quot;,&quot;Grenades&quot;],&quot;Primary&quot;:&quot;56395.htm&quot;,&quot;CreatorNames&quot;:[&quot;Solano, E. John [Editor]&quot;],&quot;LoCC&quot;:[&quot;UD&quot;],&quot;PG_ID&quot;:&quot;56395&quot;});" class='title'>Musketry (.303 and .22 cartridges) -<br><span class='subtitle'>Elementary training, visual training, judging distance, fire discipline, range practices, field practices</span></a>
+<div class='author'>Solano, E. John [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57186, {&quot;Title&quot;:&quot;Bayonet Training Manual Used by the British Forces&quot;,&quot;Topics&quot;:[&quot;Bayonets&quot;],&quot;Primary&quot;:&quot;57186.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;UD&quot;],&quot;PG_ID&quot;:&quot;57186&quot;});" class='title'>Bayonet Training Manual Used by the British Forces</a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58396, {&quot;Title&quot;:&quot;Elements of Trench Warfare: Bayonet Training&quot;,&quot;Topics&quot;:[&quot;Bayonets&quot;],&quot;Primary&quot;:&quot;58396.htm&quot;,&quot;CreatorNames&quot;:[&quot;Waldron, William H. (William Henry), 1877-1947&quot;],&quot;LoCC&quot;:[&quot;UD&quot;],&quot;PG_ID&quot;:&quot;58396&quot;});" class='title'>Elements of Trench Warfare:<br><span class='subtitle'>Bayonet Training</span></a>
+<div class='author'>Waldron, William H. (William Henry), 1877-1947</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59336, {&quot;Title&quot;:&quot;A New System of Sword Exercise for Infantry&quot;,&quot;Topics&quot;:[&quot;Swords&quot;,&quot;Infantry drill and tactics&quot;],&quot;Primary&quot;:&quot;59336.htm&quot;,&quot;CreatorNames&quot;:[&quot;Burton, Richard Francis, Sir, 1821-1890&quot;],&quot;LoCC&quot;:[&quot;UD&quot;],&quot;PG_ID&quot;:&quot;59336&quot;});" class='title'>A New System of Sword Exercise for Infantry</a>
+<div class='author'>Burton, Richard Francis, Sir, 1821-1890</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60441, {&quot;Title&quot;:&quot;Class Book for the School of Musketry, Hythe - Prepared for the Use of Officers&quot;,&quot;Topics&quot;:[&quot;Firearms&quot;,&quot;Military education&quot;,&quot;Gunpowder&quot;,&quot;Shooting, Military&quot;],&quot;Primary&quot;:&quot;60441.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wilford, Ernest Christian&quot;],&quot;LoCC&quot;:[&quot;UD&quot;],&quot;PG_ID&quot;:&quot;60441&quot;});" class='title'>Class Book for the School of Musketry, Hythe -<br><span class='subtitle'>Prepared for the Use of Officers</span></a>
+<div class='author'>Wilford, Ernest Christian</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61058, {&quot;Title&quot;:&quot;Notes on Training for Rifle Fire in Trench Warfare&quot;,&quot;Topics&quot;:[&quot;Intrenchments&quot;,&quot;Siege warfare&quot;,&quot;Defensive (Military science)&quot;,&quot;Offensive (Military science)&quot;,&quot;Shooting, Military&quot;],&quot;Primary&quot;:&quot;61058.htm&quot;,&quot;CreatorNames&quot;:[&quot;Army War College (U.S.)&quot;],&quot;LoCC&quot;:[&quot;UD&quot;],&quot;PG_ID&quot;:&quot;61058&quot;});" class='title'>Notes on Training for Rifle Fire in Trench Warfare</a>
+<div class='author'>Army War College (U.S.)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69943, {&quot;Title&quot;:&quot;The training of an infantry company&quot;,&quot;Topics&quot;:[&quot;Infantry drill and tactics&quot;,&quot;Great Britain. Army -- Infantry -- Drill and tactics&quot;],&quot;Primary&quot;:&quot;69943.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kirkpatrick, E. (Edward), 1869-&quot;],&quot;LoCC&quot;:[&quot;UD&quot;],&quot;PG_ID&quot;:&quot;69943&quot;});" class='title'>The training of an infantry company</a>
+<div class='author'>Kirkpatrick, E. (Edward), 1869-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70414, {&quot;Title&quot;:&quot;Training Infantry&quot;,&quot;Topics&quot;:[&quot;Infantry drill and tactics&quot;],&quot;Primary&quot;:&quot;70414.htm&quot;,&quot;CreatorNames&quot;:[&quot;Morrison, John F. (John Frank), 1857-1932&quot;],&quot;LoCC&quot;:[&quot;UD&quot;],&quot;PG_ID&quot;:&quot;70414&quot;});" class='title'>Training Infantry</a>
+<div class='author'>Morrison, John F. (John Frank), 1857-1932</div>
+</div>
+</ul></div>
+</body></html>

@@ -1,0 +1,362 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Law of the United Kingdom and Ireland (KD)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(10000, {&quot;Title&quot;:&quot;The Magna Carta&quot;,&quot;Topics&quot;:[&quot;Magna Carta&quot;,&quot;Constitutional history -- England -- Sources&quot;],&quot;Primary&quot;:&quot;10000.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;JN&quot;,&quot;KD&quot;],&quot;PG_ID&quot;:&quot;10000&quot;});" class='title'>The Magna Carta</a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(10392, {&quot;Title&quot;:&quot;The Reminiscences of Sir Henry Hawkins (Baron Brampton)&quot;,&quot;Topics&quot;:[&quot;Judges -- Great Britain -- Biography&quot;,&quot;Brampton, Henry Hawkins, Baron, 1817-1907&quot;],&quot;Primary&quot;:&quot;10392.txt&quot;,&quot;CreatorNames&quot;:[&quot;Brampton, Henry Hawkins, Baron, 1817-1907&quot;,&quot;Harris, Richard, 1833-1906 [Editor]&quot;],&quot;LoCC&quot;:[&quot;KD&quot;],&quot;PG_ID&quot;:&quot;10392&quot;});" class='title'>The Reminiscences of Sir Henry Hawkins (Baron Brampton)</a>
+<div class='author'>Brampton, Henry Hawkins, Baron, 1817-1907, Harris, Richard, 1833-1906 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12640, {&quot;Title&quot;:&quot;Trial of Mary Blandy&quot;,&quot;Topics&quot;:[&quot;Blandy, Mary, 1720-1752 -- Trials, litigation, etc.&quot;,&quot;Trials (Murder) -- Great Britain&quot;,&quot;Trials (Poisoning) -- Great Britain&quot;],&quot;Primary&quot;:&quot;12640.htm&quot;,&quot;CreatorNames&quot;:[&quot;Roughead, William, 1870-1952 [Editor]&quot;],&quot;LoCC&quot;:[&quot;KD&quot;],&quot;PG_ID&quot;:&quot;12640&quot;});" class='title'>Trial of Mary Blandy</a>
+<div class='author'>Roughead, William, 1870-1952 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13376, {&quot;Title&quot;:&quot;Our Legal Heritage, King AEthelbert, 596 to King George III, 1775&quot;,&quot;Topics&quot;:[&quot;Law -- England -- History&quot;],&quot;Primary&quot;:&quot;13376.htm&quot;,&quot;CreatorNames&quot;:[&quot;Reilly, S. A.&quot;],&quot;LoCC&quot;:[&quot;KD&quot;],&quot;PG_ID&quot;:&quot;13376&quot;});" class='title'>Our Legal Heritage, King AEthelbert, 596 to King George III, 1775</a>
+<div class='author'>Reilly, S. A.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15257, {&quot;Title&quot;:&quot;The Curious Case of Lady Purbeck: A Scandal of the XVIIth Century&quot;,&quot;Topics&quot;:[&quot;Purbeck, Frances (Coke) Villiers, viscountess, -1645&quot;,&quot;Trials (Adultery) -- Great Britain&quot;],&quot;Primary&quot;:&quot;15257.htm&quot;,&quot;CreatorNames&quot;:[&quot;Longueville, Thomas, 1844-1922&quot;],&quot;LoCC&quot;:[&quot;KD&quot;],&quot;PG_ID&quot;:&quot;15257&quot;});" class='title'>The Curious Case of Lady Purbeck:<br><span class='subtitle'>A Scandal of the XVIIth Century</span></a>
+<div class='author'>Longueville, Thomas, 1844-1922</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(1694, {&quot;Title&quot;:&quot;Our Legal Heritage: The First Thousand Years: 600 - 1600 - King Aethelbert - Queen Elizabeth&quot;,&quot;Topics&quot;:[&quot;Law -- England -- History&quot;],&quot;Primary&quot;:&quot;1694.txt&quot;,&quot;CreatorNames&quot;:[&quot;Reilly, S. A.&quot;],&quot;LoCC&quot;:[&quot;KD&quot;],&quot;PG_ID&quot;:&quot;1694&quot;});" class='title'>Our Legal Heritage:<br><span class='subtitle'>The First Thousand Years: 600 - 1600 - King Aethelbert - Queen Elizabeth</span></a>
+<div class='author'>Reilly, S. A.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(21027, {&quot;Title&quot;:&quot;The Trial of Charles Random de Berenger, Sir Thomas Cochrane, commonly called Lord Cochrane, the Hon. Andrew Cochrane Johnstone, Richard Gathorne Butt, Ralph Sandom, Alexander M&#39;Rae, John Peter Holloway, and Henry Lyte for A Conspiracy - In the Court of King&#39;s Bench, Guildhall, on Wednesday the 8th, and Thursday the 9th of June, 1814&quot;,&quot;Topics&quot;:[&quot;Napoleonic Wars, 1800-1815&quot;,&quot;Beaufain, Charles Random de Bérenger, baron de -- Trials, litigation, etc.&quot;,&quot;Dundonald, Thomas Cochrane, Earl of, 1775-1860 -- Trials, litigation, etc.&quot;,&quot;Johnstone, Andrew James Cochrane, 1767- -- Trials, litigation, etc.&quot;,&quot;Butt, Richard Gathorne -- Trials, litigation, etc.&quot;,&quot;Sandom, Richard -- Trials, litigation, etc.&quot;,&quot;McRae, Alexander -- Trials, litigation, etc.&quot;,&quot;Holloway, John Peter -- Trials, litigation, etc.&quot;,&quot;Lyte, Henry -- Trials, litigation, etc.&quot;,&quot;Trials (Fraud) -- England -- London&quot;],&quot;Primary&quot;:&quot;21027.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gurney, William Brodie, 1777-1855 [Transcriber]&quot;],&quot;LoCC&quot;:[&quot;KD&quot;],&quot;PG_ID&quot;:&quot;21027&quot;});" class='title'>The Trial of Charles Random de Berenger, Sir Thomas Cochrane, commonly called Lord Cochrane, the Hon. Andrew Cochrane Johnstone, Richard Gathorne Butt, Ralph Sandom, Alexander M'Rae, John Peter Holloway, and Henry Lyte for A Conspiracy -<br><span class='subtitle'>In the Court of King's Bench, Guildhall, on Wednesday the 8th, and Thursday the 9th of June, 1814</span></a>
+<div class='author'>Gurney, William Brodie, 1777-1855 [Transcriber]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23826, {&quot;Title&quot;:&quot;A Sketch of the Life of the late Henry Cooper - Barrister-at-Law, of the Norfolk Circuit; as also, of his Father&quot;,&quot;Topics&quot;:[&quot;Cooper, Henry, barrister-at-law&quot;,&quot;Carlile, Mary Anne -- Trials, litigation, etc.&quot;,&quot;Lawyers -- England -- Biography&quot;,&quot;Trials (Libel) -- England&quot;],&quot;Primary&quot;:&quot;23826.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cooper, William&quot;],&quot;LoCC&quot;:[&quot;KD&quot;],&quot;PG_ID&quot;:&quot;23826&quot;});" class='title'>A Sketch of the Life of the late Henry Cooper -<br><span class='subtitle'>Barrister-at-Law, of the Norfolk Circuit; as also, of his Father</span></a>
+<div class='author'>Cooper, William</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26133, {&quot;Title&quot;:&quot;Trial of Duncan Terig, alias Clerk, and Alexander Bane Macdonald - for the Murder of Arthur Davis, Sergeant in General Guise&#39;s - Regiment of Foot&quot;,&quot;Topics&quot;:[&quot;Trials (Murder) -- Scotland&quot;,&quot;Terig, Duncan -- Trials, litigation, etc.&quot;,&quot;Macdonald, Alexander Bane -- Trials, litigation, etc.&quot;],&quot;Primary&quot;:&quot;26133.htm&quot;,&quot;CreatorNames&quot;:[&quot;Scott, Walter, 1771-1832&quot;],&quot;LoCC&quot;:[&quot;KD&quot;],&quot;PG_ID&quot;:&quot;26133&quot;});" class='title'>Trial of Duncan Terig, alias Clerk, and Alexander Bane Macdonald -<br><span class='subtitle'>for the Murder of Arthur Davis, Sergeant in General Guise's - Regiment of Foot</span></a>
+<div class='author'>Scott, Walter, 1771-1832</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27515, {&quot;Title&quot;:&quot;State Trials, Political and Social. Volume 1 (of 2)&quot;,&quot;Topics&quot;:[&quot;Trials -- Great Britain&quot;],&quot;Primary&quot;:&quot;27515.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stephen, Harry Lushington, 1860-1945 [Editor]&quot;],&quot;LoCC&quot;:[&quot;KD&quot;],&quot;PG_ID&quot;:&quot;27515&quot;});" class='title'>State Trials, Political and Social. Volume 1 (of 2)</a>
+<div class='author'>Stephen, Harry Lushington, 1860-1945 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27785, {&quot;Title&quot;:&quot;A Book About Lawyers&quot;,&quot;Topics&quot;:[&quot;Lawyers -- Great Britain -- Anecdotes&quot;],&quot;Primary&quot;:&quot;27785.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jeaffreson, John Cordy, 1831-1901&quot;],&quot;LoCC&quot;:[&quot;KD&quot;],&quot;PG_ID&quot;:&quot;27785&quot;});" class='title'>A Book About Lawyers</a>
+<div class='author'>Jeaffreson, John Cordy, 1831-1901</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28980, {&quot;Title&quot;:&quot;The Life of Sir James Fitzjames Stephen, Bart., K.C.S.I. - A Judge of the High Court of Justice&quot;,&quot;Topics&quot;:[&quot;Stephen, James Fitzjames, Sir, 1829-1894&quot;,&quot;Judges -- Great Britain -- Biography&quot;],&quot;Primary&quot;:&quot;28980.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stephen, Leslie, 1832-1904&quot;],&quot;LoCC&quot;:[&quot;DA&quot;,&quot;KD&quot;],&quot;PG_ID&quot;:&quot;28980&quot;});" class='title'>The Life of Sir James Fitzjames Stephen, Bart., K.C.S.I. -<br><span class='subtitle'>A Judge of the High Court of Justice</span></a>
+<div class='author'>Stephen, Leslie, 1832-1904</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30802, {&quot;Title&quot;:&quot;Commentaries on the Laws of England, Book the First&quot;,&quot;Topics&quot;:[&quot;Law -- England -- History&quot;,&quot;Law -- England&quot;],&quot;Primary&quot;:&quot;30802.htm&quot;,&quot;CreatorNames&quot;:[&quot;Blackstone, William, Sir, 1723-1780&quot;],&quot;LoCC&quot;:[&quot;KD&quot;],&quot;PG_ID&quot;:&quot;30802&quot;});" class='title'>Commentaries on the Laws of England, Book the First</a>
+<div class='author'>Blackstone, William, Sir, 1723-1780</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33333, {&quot;Title&quot;:&quot;The Statute of Anne&quot;,&quot;Topics&quot;:[&quot;Great Britain. Laws, statutes, etc. Anno octavo Annæ reginæ ... An act for the encouragement of learning -- Anne, 1702-1714&quot;,&quot;Copyright -- Great Britain -- History -- Sources&quot;],&quot;Primary&quot;:&quot;33333.txt&quot;,&quot;CreatorNames&quot;:[&quot;Great Britain. Parliament&quot;],&quot;LoCC&quot;:[&quot;KD&quot;],&quot;PG_ID&quot;:&quot;33333&quot;});" class='title'>The Statute of Anne</a>
+<div class='author'>Great Britain. Parliament</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33661, {&quot;Title&quot;:&quot;The Affecting Case of the Unfortunate Thomas Daniels - Who Was Tried at the Sessions Held at the Old Bailey, September, 1761, for the Supposed Murder of His Wife; by Casting Her out of a Chamber Window: and for Which He Was Sentenced to Die, but Received His Majesty&#39;s Most Gracious and Free Pardon.&quot;,&quot;Topics&quot;:[&quot;Daniels, Thomas -- Trials, litigation, etc.&quot;,&quot;Daniels, Sarah -- Trials, litigation, etc.&quot;,&quot;Trials (Murder) -- England -- London&quot;,&quot;Murder -- England -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;33661.htm&quot;,&quot;CreatorNames&quot;:[&quot;Daniels, Thomas&quot;],&quot;LoCC&quot;:[&quot;KD&quot;],&quot;PG_ID&quot;:&quot;33661&quot;});" class='title'>The Affecting Case of the Unfortunate Thomas Daniels -<br><span class='subtitle'>Who Was Tried at the Sessions Held at the Old Bailey, September, 1761, for the Supposed Murder of His Wife; by Casting Her out of a Chamber Window: and for Which He Was Sentenced to Die, but Received His Majesty's Most Gracious and Free Pardon.</span></a>
+<div class='author'>Daniels, Thomas</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36045, {&quot;Title&quot;:&quot;The Law and the Poor&quot;,&quot;Topics&quot;:[&quot;Law -- England&quot;,&quot;Poor laws -- England&quot;,&quot;Working class -- England&quot;,&quot;Poor -- England&quot;],&quot;Primary&quot;:&quot;36045.htm&quot;,&quot;CreatorNames&quot;:[&quot;Parry, Edward Abbott, Sir, 1863-1943&quot;],&quot;LoCC&quot;:[&quot;KD&quot;],&quot;PG_ID&quot;:&quot;36045&quot;});" class='title'>The Law and the Poor</a>
+<div class='author'>Parry, Edward Abbott, Sir, 1863-1943</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36181, {&quot;Title&quot;:&quot;The Three Charters of the Virginia Company of London - With Seven Related Documents; 1606-1621&quot;,&quot;Topics&quot;:[&quot;Virginia -- History -- Colonial period, ca. 1600-1775 -- Sources&quot;,&quot;Great Britain. Laws, statutes, etc., 1603-1625 (James I)&quot;],&quot;Primary&quot;:&quot;36181.htm&quot;,&quot;CreatorNames&quot;:[&quot;Virginia 350th Anniversary Celebration Corporation&quot;,&quot;Bemiss, Samuel Merrifield, 1894-1966 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;F&quot;,&quot;KD&quot;],&quot;PG_ID&quot;:&quot;36181&quot;});" class='title'>The Three Charters of the Virginia Company of London -<br><span class='subtitle'>With Seven Related Documents; 1606-1621</span></a>
+<div class='author'>Virginia 350th Anniversary Celebration Corporation, Bemiss, Samuel Merrifield, 1894-1966 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36299, {&quot;Title&quot;:&quot;Our Legal Heritage: King AEthelbert - King George III, 600 A.D. - 1776 - June 2011 (Sixth) Edition&quot;,&quot;Topics&quot;:[&quot;Law -- England -- History&quot;],&quot;Primary&quot;:&quot;36299.txt&quot;,&quot;CreatorNames&quot;:[&quot;Reilly, S. A.&quot;],&quot;LoCC&quot;:[&quot;KD&quot;],&quot;PG_ID&quot;:&quot;36299&quot;});" class='title'>Our Legal Heritage:<br><span class='subtitle'>King AEthelbert - King George III, 600 A.D. - 1776 - June 2011 (Sixth) Edition</span></a>
+<div class='author'>Reilly, S. A.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36799, {&quot;Title&quot;:&quot;The History of the Last Trial by Jury for Atheism in England - A Fragment of Autobiography Submitted for the Perusal of Her Majesty&#39;s Attorney-General and the British Clergy&quot;,&quot;Topics&quot;:[&quot;Holyoake, George Jacob, 1817-1906 -- Trials, litigation, etc.&quot;,&quot;Trials (Blasphemy) -- England&quot;,&quot;Atheism -- England&quot;],&quot;Primary&quot;:&quot;36799.htm&quot;,&quot;CreatorNames&quot;:[&quot;Holyoake, George Jacob, 1817-1906&quot;],&quot;LoCC&quot;:[&quot;KD&quot;],&quot;PG_ID&quot;:&quot;36799&quot;});" class='title'>The History of the Last Trial by Jury for Atheism in England -<br><span class='subtitle'>A Fragment of Autobiography Submitted for the Perusal of Her Majesty's Attorney-General and the British Clergy</span></a>
+<div class='author'>Holyoake, George Jacob, 1817-1906</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38088, {&quot;Title&quot;:&quot;State Trials, Political and Social. Volume 2 (of 2)&quot;,&quot;Topics&quot;:[&quot;Trials -- Great Britain&quot;],&quot;Primary&quot;:&quot;38088.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stephen, Harry Lushington, 1860-1945 [Editor]&quot;],&quot;LoCC&quot;:[&quot;KD&quot;],&quot;PG_ID&quot;:&quot;38088&quot;});" class='title'>State Trials, Political and Social. Volume 2 (of 2)</a>
+<div class='author'>Stephen, Harry Lushington, 1860-1945 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38876, {&quot;Title&quot;:&quot;Villainage in England: Essays in English Mediaeval History&quot;,&quot;Topics&quot;:[&quot;Villeinage -- England -- History -- To 1500&quot;],&quot;Primary&quot;:&quot;38876.htm&quot;,&quot;CreatorNames&quot;:[&quot;Vinogradoff, Paul, 1854-1925&quot;],&quot;LoCC&quot;:[&quot;KD&quot;],&quot;PG_ID&quot;:&quot;38876&quot;});" class='title'>Villainage in England:<br><span class='subtitle'>Essays in English Mediaeval History</span></a>
+<div class='author'>Vinogradoff, Paul, 1854-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38916, {&quot;Title&quot;:&quot;The Trial of Oscar Wilde, from the Shorthand Reports&quot;,&quot;Topics&quot;:[&quot;Wilde, Oscar, 1854-1900 -- Trials, litigation, etc.&quot;,&quot;Taylor, Alfred, 1862 or 1863- -- Trials, litigation, etc.&quot;,&quot;Queensberry, John Sholto Douglas, Marquis of, 1844-1900 -- Trials, litigation, etc.&quot;,&quot;Trials (Slander) -- Great Britain&quot;],&quot;Primary&quot;:&quot;38916.htm&quot;,&quot;CreatorNames&quot;:[&quot;Grolleau, Charles, 1867-1940&quot;],&quot;LoCC&quot;:[&quot;KD&quot;],&quot;PG_ID&quot;:&quot;38916&quot;});" class='title'>The Trial of Oscar Wilde, from the Shorthand Reports</a>
+<div class='author'>Grolleau, Charles, 1867-1940</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39055, {&quot;Title&quot;:&quot;The Trial of Henry Hetherington, on an Indictment for Blasphemy&quot;,&quot;Topics&quot;:[&quot;Hetherington, H. (Henry), 1792-1849 -- Trials, litigation, etc.&quot;,&quot;Trials (Blasphemy) -- England -- London&quot;],&quot;Primary&quot;:&quot;39055.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hetherington, H. (Henry), 1792-1849&quot;],&quot;LoCC&quot;:[&quot;KD&quot;],&quot;PG_ID&quot;:&quot;39055&quot;});" class='title'>The Trial of Henry Hetherington, on an Indictment for Blasphemy</a>
+<div class='author'>Hetherington, H. (Henry), 1792-1849</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40076, {&quot;Title&quot;:&quot;Atrocious Judges : Lives of Judges Infamous as Tools of Tyrants and Instruments of Oppression&quot;,&quot;Topics&quot;:[&quot;Judges -- England -- Biography&quot;,&quot;Political questions and judicial power -- England -- History&quot;,&quot;Judicial corruption -- England -- History&quot;],&quot;Primary&quot;:&quot;40076.htm&quot;,&quot;CreatorNames&quot;:[&quot;Campbell, John Campbell, Baron, 1779-1861&quot;,&quot;Hildreth, Richard, 1807-1865 [Editor]&quot;],&quot;LoCC&quot;:[&quot;KD&quot;],&quot;PG_ID&quot;:&quot;40076&quot;});" class='title'>Atrocious Judges :<br><span class='subtitle'>Lives of Judges Infamous as Tools of Tyrants and Instruments of Oppression</span></a>
+<div class='author'>Campbell, John Campbell, Baron, 1779-1861, Hildreth, Richard, 1807-1865 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40606, {&quot;Title&quot;:&quot;The Legal Position of the Clergy&quot;,&quot;Topics&quot;:[&quot;Clergy -- Legal status, laws, etc. -- Great Britain&quot;,&quot;Ecclesiastical law -- Great Britain&quot;,&quot;Canon law&quot;],&quot;Primary&quot;:&quot;40606.htm&quot;,&quot;CreatorNames&quot;:[&quot;Smith, Philip Vernon, 1845-1929&quot;],&quot;LoCC&quot;:[&quot;KD&quot;],&quot;PG_ID&quot;:&quot;40606&quot;});" class='title'>The Legal Position of the Clergy</a>
+<div class='author'>Smith, Philip Vernon, 1845-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40780, {&quot;Title&quot;:&quot;Our Legal Heritage: King AEthelbert - King George III, 600 A.D. - 1776&quot;,&quot;Topics&quot;:[&quot;Law -- England -- History&quot;],&quot;Primary&quot;:&quot;40780.txt&quot;,&quot;CreatorNames&quot;:[&quot;Reilly, S. A.&quot;],&quot;LoCC&quot;:[&quot;KD&quot;],&quot;PG_ID&quot;:&quot;40780&quot;});" class='title'>Our Legal Heritage:<br><span class='subtitle'>King AEthelbert - King George III, 600 A.D. - 1776</span></a>
+<div class='author'>Reilly, S. A.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41034, {&quot;Title&quot;:&quot;A Philadelphia Lawyer in the London Courts&quot;,&quot;Topics&quot;:[&quot;Courts -- Great Britain&quot;,&quot;Lawyers -- Great Britain&quot;],&quot;Primary&quot;:&quot;41034.htm&quot;,&quot;CreatorNames&quot;:[&quot;Leaming, Thomas, 1858-1911&quot;],&quot;LoCC&quot;:[&quot;KD&quot;],&quot;PG_ID&quot;:&quot;41034&quot;});" class='title'>A Philadelphia Lawyer in the London Courts</a>
+<div class='author'>Leaming, Thomas, 1858-1911</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41145, {&quot;Title&quot;:&quot;An account of the Death of Philip Jolin - who was executed for the murder of his father, in the Island of Jersey, October 3, 1829&quot;,&quot;Topics&quot;:[&quot;Jolin, Philippe, -1829&quot;,&quot;Trials (Murder) -- Jersey&quot;],&quot;Primary&quot;:&quot;41145.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cunningham, Francis, 1785-1863&quot;],&quot;LoCC&quot;:[&quot;KD&quot;],&quot;PG_ID&quot;:&quot;41145&quot;});" class='title'>An account of the Death of Philip Jolin -<br><span class='subtitle'>who was executed for the murder of his father, in the Island of Jersey, October 3, 1829</span></a>
+<div class='author'>Cunningham, Francis, 1785-1863</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41888, {&quot;Title&quot;:&quot;De Mortuis Nil Nisi Bona - Being a Series of Problems in Executorship Law and Accounts&quot;,&quot;Topics&quot;:[&quot;Executors and administrators -- Great Britain&quot;,&quot;Decedents&#39; estates -- Great Britain&quot;],&quot;Primary&quot;:&quot;41888.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pegler, Ernest Charles&quot;,&quot;Spicer, Ernest Evan&quot;,&quot;Ranking, Devey Fearon de l&#39;Hoste, 1848?-1931 [Author of introduction, etc.]&quot;,&quot;Reed, Edward Tennyson, 1860-1933 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;KD&quot;],&quot;PG_ID&quot;:&quot;41888&quot;});" class='title'>De Mortuis Nil Nisi Bona -<br><span class='subtitle'>Being a Series of Problems in Executorship Law and Accounts</span></a>
+<div class='author'>Pegler, Ernest Charles, Spicer, Ernest Evan, Ranking, Devey Fearon de l'Hoste, 1848?-1931 [Author of introduction, etc.], Reed, Edward Tennyson, 1860-1933 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4351, {&quot;Title&quot;:&quot;The English Constitution&quot;,&quot;Topics&quot;:[&quot;Great Britain -- Politics and government&quot;,&quot;Constitutional history -- Great Britain&quot;,&quot;Constitutional law -- Great Britain&quot;],&quot;Primary&quot;:&quot;4351.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bagehot, Walter, 1826-1877&quot;],&quot;LoCC&quot;:[&quot;JN&quot;,&quot;KD&quot;],&quot;PG_ID&quot;:&quot;4351&quot;});" class='title'>The English Constitution</a>
+<div class='author'>Bagehot, Walter, 1826-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44320, {&quot;Title&quot;:&quot;On the State of Lunacy and the Legal Provision for the Insane - With Observations on the Construction and Organization of Asylums&quot;,&quot;Topics&quot;:[&quot;Psychiatric hospitals -- Great Britain&quot;,&quot;Psychiatric epidemiology&quot;,&quot;Mental health services -- Great Britain&quot;,&quot;Insanity (Law) -- Great Britain&quot;,&quot;Mentally ill -- Care -- Great Britain&quot;,&quot;Psychology, Pathological -- Epidemiology&quot;],&quot;Primary&quot;:&quot;44320.htm&quot;,&quot;CreatorNames&quot;:[&quot;Arlidge, J. T. (John Thomas), 1822-1899&quot;],&quot;LoCC&quot;:[&quot;KD&quot;],&quot;PG_ID&quot;:&quot;44320&quot;});" class='title'>On the State of Lunacy and the Legal Provision for the Insane -<br><span class='subtitle'>With Observations on the Construction and Organization of Asylums</span></a>
+<div class='author'>Arlidge, J. T. (John Thomas), 1822-1899</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47068, {&quot;Title&quot;:&quot;The Growth of the English Constitution from the Earliest Times&quot;,&quot;Topics&quot;:[&quot;Constitutional history -- Great Britain&quot;],&quot;Primary&quot;:&quot;47068.htm&quot;,&quot;CreatorNames&quot;:[&quot;Freeman, Edward A. (Edward Augustus), 1823-1892&quot;],&quot;LoCC&quot;:[&quot;JN&quot;,&quot;KD&quot;],&quot;PG_ID&quot;:&quot;47068&quot;});" class='title'>The Growth of the English Constitution from the Earliest Times</a>
+<div class='author'>Freeman, Edward A. (Edward Augustus), 1823-1892</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49405, {&quot;Title&quot;:&quot;Trial of Deacon Brodie&quot;,&quot;Topics&quot;:[&quot;Brodie, William, 1741-1788 -- Trials, litigation, etc.&quot;,&quot;Trials (Robbery) -- Scotland&quot;],&quot;Primary&quot;:&quot;49405.htm&quot;,&quot;CreatorNames&quot;:[&quot;Roughead, William, 1870-1952 [Editor]&quot;,&quot;Brodie, William, 1741-1788 [Other]&quot;,&quot;Smith, George, -1788 [Other]&quot;],&quot;LoCC&quot;:[&quot;KD&quot;],&quot;PG_ID&quot;:&quot;49405&quot;});" class='title'>Trial of Deacon Brodie</a>
+<div class='author'>Roughead, William, 1870-1952 [Editor], Brodie, William, 1741-1788 [Other], Smith, George, -1788 [Other]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50124, {&quot;Title&quot;:&quot;Frederick William Maitland, Downing Professor of the Laws of England - A Biographical Sketch&quot;,&quot;Topics&quot;:[&quot;Maitland, Frederic William, 1850-1906&quot;],&quot;Primary&quot;:&quot;50124.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fisher, H. A. L. (Herbert Albert Laurens), 1865-1940&quot;],&quot;LoCC&quot;:[&quot;KD&quot;],&quot;PG_ID&quot;:&quot;50124&quot;});" class='title'>Frederick William Maitland, Downing Professor of the Laws of England -<br><span class='subtitle'>A Biographical Sketch</span></a>
+<div class='author'>Fisher, H. A. L. (Herbert Albert Laurens), 1865-1940</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50636, {&quot;Title&quot;:&quot;Reports of Trials for Murder by Poisoning; - by Prussic Acid, Strychnia, Antimony, Arsenic, and Aconita. Including the trials of Tawell, W. Palmer, Dove, Madeline Smith, Dr. Pritchard, Smethurst, and Dr. Lamson, with chemical introduction and notes on the poisons used&quot;,&quot;Topics&quot;:[&quot;Poisons&quot;,&quot;Trials (Murder) -- Great Britain&quot;,&quot;Trials (Poisoning) -- Great Britain&quot;,&quot;Medical jurisprudence -- Great Britain&quot;],&quot;Primary&quot;:&quot;50636.htm&quot;,&quot;CreatorNames&quot;:[&quot;Browne, G. Lathom (George Lathom), 1815-1892&quot;,&quot;Stewart, C. G. (Charles G.), active 19th century&quot;],&quot;LoCC&quot;:[&quot;KD&quot;],&quot;PG_ID&quot;:&quot;50636&quot;});" class='title'>Reports of Trials for Murder by Poisoning;<br><span class='subtitle'>- by Prussic Acid, Strychnia, Antimony, Arsenic, and Aconita. Including the trials of Tawell, W. Palmer, Dove, Madeline Smith, Dr. Pritchard, Smethurst, and Dr. Lamson, with chemical introduction and notes on the poisons used</span></a>
+<div class='author'>Browne, G. Lathom (George Lathom), 1815-1892, Stewart, C. G. (Charles G.), active 19th century</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51135, {&quot;Title&quot;:&quot;The Most Extraordinary Trial of William Palmer, for the Rugeley Poisonings, which lasted Twelve Days&quot;,&quot;Topics&quot;:[&quot;Trials (Murder) -- England -- London&quot;,&quot;Cook, John Parsons, -1855&quot;,&quot;Palmer, William, 1824-1856 -- Trials, litigation, etc.&quot;,&quot;Trials (Poisoning) -- England -- London&quot;,&quot;Poisoning -- England -- Rugeley&quot;],&quot;Primary&quot;:&quot;51135.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;KD&quot;],&quot;PG_ID&quot;:&quot;51135&quot;});" class='title'>The Most Extraordinary Trial of William Palmer, for the Rugeley Poisonings, which lasted Twelve Days</a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51334, {&quot;Title&quot;:&quot;The Story of Elizabeth Canning Considered&quot;,&quot;Topics&quot;:[&quot;Canning, Elizabeth, 1734-1773 -- Trials, litigation, etc.&quot;,&quot;Fielding, Henry, 1707-1754. Clear state of the case of Elizabeth Canning&quot;,&quot;Trials (Perjury) -- England&quot;],&quot;Primary&quot;:&quot;51334.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hill, John, 1714?-1775&quot;],&quot;LoCC&quot;:[&quot;KD&quot;],&quot;PG_ID&quot;:&quot;51334&quot;});" class='title'>The Story of Elizabeth Canning Considered</a>
+<div class='author'>Hill, John, 1714?-1775</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52264, {&quot;Title&quot;:&quot;Trial of William Palmer&quot;,&quot;Topics&quot;:[&quot;Trials (Murder) -- England -- London&quot;,&quot;Cook, John Parsons, -1855&quot;,&quot;Palmer, William, 1824-1856 -- Trials, litigation, etc.&quot;],&quot;Primary&quot;:&quot;52264.htm&quot;,&quot;CreatorNames&quot;:[&quot;Knott, George H., -1924 [Editor]&quot;],&quot;LoCC&quot;:[&quot;KD&quot;],&quot;PG_ID&quot;:&quot;52264&quot;});" class='title'>Trial of William Palmer</a>
+<div class='author'>Knott, George H., -1924 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54235, {&quot;Title&quot;:&quot;The Office of Bailiff of a Liberty&quot;,&quot;Topics&quot;:[&quot;Bailiffs&quot;],&quot;Primary&quot;:&quot;54235.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ritson, Joseph, 1752-1803&quot;,&quot;Frank, Joseph, 1774?- [Editor]&quot;],&quot;LoCC&quot;:[&quot;KD&quot;],&quot;PG_ID&quot;:&quot;54235&quot;});" class='title'>The Office of Bailiff of a Liberty</a>
+<div class='author'>Ritson, Joseph, 1752-1803, Frank, Joseph, 1774?- [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54251, {&quot;Title&quot;:&quot;English Law and the Renaissance - The Rede Lecture for 1901&quot;,&quot;Topics&quot;:[&quot;Law -- England -- History&quot;,&quot;Renaissance -- England&quot;],&quot;Primary&quot;:&quot;54251.htm&quot;,&quot;CreatorNames&quot;:[&quot;Maitland, Frederic William, 1850-1906&quot;],&quot;LoCC&quot;:[&quot;KD&quot;],&quot;PG_ID&quot;:&quot;54251&quot;});" class='title'>English Law and the Renaissance -<br><span class='subtitle'>The Rede Lecture for 1901</span></a>
+<div class='author'>Maitland, Frederic William, 1850-1906</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55062, {&quot;Title&quot;:&quot;The Inns of Court&quot;,&quot;Topics&quot;:[&quot;London (England) -- Description and travel&quot;,&quot;Inns of Court&quot;],&quot;Primary&quot;:&quot;55062.htm&quot;,&quot;CreatorNames&quot;:[&quot;Headlam, Cecil, 1872-1934&quot;,&quot;Home, Gordon, 1878-1969 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DA&quot;,&quot;KD&quot;],&quot;PG_ID&quot;:&quot;55062&quot;});" class='title'>The Inns of Court</a>
+<div class='author'>Headlam, Cecil, 1872-1934, Home, Gordon, 1878-1969 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55724, {&quot;Title&quot;:&quot;The Law&#39;s Lumber Room&quot;,&quot;Topics&quot;:[&quot;Law -- Great Britain&quot;],&quot;Primary&quot;:&quot;55724.htm&quot;,&quot;CreatorNames&quot;:[&quot;Watt, Francis, 1849-1927&quot;],&quot;LoCC&quot;:[&quot;KD&quot;],&quot;PG_ID&quot;:&quot;55724&quot;});" class='title'>The Law's Lumber Room</a>
+<div class='author'>Watt, Francis, 1849-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55839, {&quot;Title&quot;:&quot;The Law&#39;s Lumber Room (Second Series)&quot;,&quot;Topics&quot;:[&quot;Law -- Great Britain&quot;],&quot;Primary&quot;:&quot;55839.htm&quot;,&quot;CreatorNames&quot;:[&quot;Watt, Francis, 1849-1927&quot;],&quot;LoCC&quot;:[&quot;KD&quot;],&quot;PG_ID&quot;:&quot;55839&quot;});" class='title'>The Law's Lumber Room (Second Series)</a>
+<div class='author'>Watt, Francis, 1849-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56145, {&quot;Title&quot;:&quot;Tribal Custom in Anglo-Saxon Law - Being an Essay Supplemental to (1) &#39;The English Village Community&#39;, (2) &#39;The Tribal System in Wales&#39;&quot;,&quot;Topics&quot;:[&quot;Anglo-Saxons&quot;,&quot;Law, Anglo-Saxon&quot;,&quot;Tribes -- Great Britain&quot;,&quot;Law, Medieval&quot;],&quot;Primary&quot;:&quot;56145.htm&quot;,&quot;CreatorNames&quot;:[&quot;Seebohm, Frederic, 1833-1912&quot;],&quot;LoCC&quot;:[&quot;KD&quot;],&quot;PG_ID&quot;:&quot;56145&quot;});" class='title'>Tribal Custom in Anglo-Saxon Law -<br><span class='subtitle'>Being an Essay Supplemental to (1) 'The English Village Community', (2) 'The Tribal System in Wales'</span></a>
+<div class='author'>Seebohm, Frederic, 1833-1912</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56656, {&quot;Title&quot;:&quot;Medical Jurisprudence as it Relates to Insanity, According to the Law of England&quot;,&quot;Topics&quot;:[&quot;Mental illness -- Jurisprudence&quot;,&quot;Insanity (Law) -- Great Britain&quot;],&quot;Primary&quot;:&quot;56656.htm&quot;,&quot;CreatorNames&quot;:[&quot;Haslam, John, 1764-1844&quot;],&quot;LoCC&quot;:[&quot;KD&quot;],&quot;PG_ID&quot;:&quot;56656&quot;});" class='title'>Medical Jurisprudence as it Relates to Insanity, According to the Law of England</a>
+<div class='author'>Haslam, John, 1764-1844</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56957, {&quot;Title&quot;:&quot;A history of the Irish poor law, in connexion with the condition of the people&quot;,&quot;Topics&quot;:[&quot;Poor laws -- Ireland -- History&quot;],&quot;Primary&quot;:&quot;56957.htm&quot;,&quot;CreatorNames&quot;:[&quot;Nicholls, George, Sir, 1781-1865&quot;],&quot;LoCC&quot;:[&quot;KD&quot;],&quot;PG_ID&quot;:&quot;56957&quot;});" class='title'>A history of the Irish poor law, in connexion with the condition of the people</a>
+<div class='author'>Nicholls, George, Sir, 1781-1865</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58018, {&quot;Title&quot;:&quot;The Rod in Pickle; or, An Answer to the Appeal of John Church, the Obelisk Preacher - Containing an Authentic Narrative of the Cause of His Leaving Banbury, in Oxfordshire: Together With the Charges Exhibited Against Him, the Meeting of His Friends in Consequence of Those Charges, and the Result of That Meeting. To Which Are Added, His Letters, Written to the Managers of the Banbury Meeting-House, Begging Them Not to Let the Cause of His Dismissal Be Known in London.&quot;,&quot;Topics&quot;:[&quot;Church, J. (John), approximately 1780-approximately 1825 -- Trials, litigation, etc.&quot;,&quot;Trials (Sodomy) -- England&quot;],&quot;Primary&quot;:&quot;58018.htm&quot;,&quot;CreatorNames&quot;:[&quot;Latham, T.&quot;],&quot;LoCC&quot;:[&quot;KD&quot;],&quot;PG_ID&quot;:&quot;58018&quot;});" class='title'>The Rod in Pickle;<br><span class='subtitle'>or, An Answer to the Appeal of John Church, the Obelisk Preacher - Containing an Authentic Narrative of the Cause of His Leaving Banbury, in Oxfordshire: Together With the Charges Exhibited Against Him, the Meeting of His Friends in Consequence of Those Charges, and the Result of That Meeting. To Which Are Added, His Letters, Written to the Managers of the Banbury Meeting-House, Begging Them Not to Let the Cause of His Dismissal Be Known in London.</span></a>
+<div class='author'>Latham, T.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58019, {&quot;Title&quot;:&quot;The Infamous Life of John Church, the St. George&#39;s Fields Preacher - From His Infancy Up to His Trial and Conviction, With His Confession, Sent in a Letter to the Rev. Mr. L--, Two Days After His Attack on Adam Foreman, at Vauxhall, With Clerical Remarks by the Same Gentleman; to Which Is Added, His Love Epistles to E**** B****.   Together With Various Other Letters, Particularly One to Cook, of Vere-Street Notoriety.&quot;,&quot;Topics&quot;:[&quot;Church, J. (John), approximately 1780-approximately 1825&quot;,&quot;Church, J. (John), approximately 1780-approximately 1825 -- Trials, litigation, etc.&quot;,&quot;Trials (Sodomy) -- England&quot;],&quot;Primary&quot;:&quot;58019.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;KD&quot;],&quot;PG_ID&quot;:&quot;58019&quot;});" class='title'>The Infamous Life of John Church, the St. George's Fields Preacher -<br><span class='subtitle'>From His Infancy Up to His Trial and Conviction, With His Confession, Sent in a Letter to the Rev. Mr. L--, Two Days After His Attack on Adam Foreman, at Vauxhall, With Clerical Remarks by the Same Gentleman; to Which Is Added, His Love Epistles to E**** B****.   Together With Various Other Letters, Particularly One to Cook, of Vere-Street Notoriety.</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58020, {&quot;Title&quot;:&quot;The Trial and Conviction of John Church - The Preacher of the Surrey Tabernacle, Borough Road, at the Surrey Assizes, at Croydon, on Saturday, the 16th of August, 1817, for an Assault With Intent to Commit an Unnatural Crime.&quot;,&quot;Topics&quot;:[&quot;Church, J. (John), approximately 1780-approximately 1825 -- Trials, litigation, etc.&quot;,&quot;Trials (Sodomy) -- England&quot;],&quot;Primary&quot;:&quot;58020.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;KD&quot;],&quot;PG_ID&quot;:&quot;58020&quot;});" class='title'>The Trial and Conviction of John Church -<br><span class='subtitle'>The Preacher of the Surrey Tabernacle, Borough Road, at the Surrey Assizes, at Croydon, on Saturday, the 16th of August, 1817, for an Assault With Intent to Commit an Unnatural Crime.</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58026, {&quot;Title&quot;:&quot;The Trial and Conviction of That Infamous Hypocrite John Church - The Surrey Tabernacle Preacher, Borough-road, St. George&#39;s Fields, for an Abominable Offence; Including the Whole of the Evidence; Tried Before Lord Ellenborough, at the Surrey Assizes, Croydon, Saturday, August 16, 1817. To Which Is Added, His Life, Confessions, Notes of One of His Sermons, the Whole of the Love-letters, &amp;c. &amp;c.&quot;,&quot;Topics&quot;:[&quot;Church, J. (John), approximately 1780-approximately 1825 -- Trials, litigation, etc.&quot;,&quot;Trials (Sodomy) -- England&quot;],&quot;Primary&quot;:&quot;58026.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;KD&quot;],&quot;PG_ID&quot;:&quot;58026&quot;});" class='title'>The Trial and Conviction of That Infamous Hypocrite John Church -<br><span class='subtitle'>The Surrey Tabernacle Preacher, Borough-road, St. George's Fields, for an Abominable Offence; Including the Whole of the Evidence; Tried Before Lord Ellenborough, at the Surrey Assizes, Croydon, Saturday, August 16, 1817. To Which Is Added, His Life, Confessions, Notes of One of His Sermons, the Whole of the Love-letters, &c. &c.</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58027, {&quot;Title&quot;:&quot;The Sentence and Affidavit of John Church, the Obelisk Preacher - For an Attempt to Commit an Unnatural Crime on Adam Foreman, at Vauxhall. Together With Judge Bayley&#39;s Impressive Address to the Prisoner, at Full Length. At the Court of King&#39;s Bench, Nov. 24, 1817.&quot;,&quot;Topics&quot;:[&quot;Church, J. (John), approximately 1780-approximately 1825 -- Trials, litigation, etc.&quot;,&quot;Trials (Sodomy) -- England&quot;],&quot;Primary&quot;:&quot;58027.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dowling, Joseph Augustus&quot;],&quot;LoCC&quot;:[&quot;KD&quot;],&quot;PG_ID&quot;:&quot;58027&quot;});" class='title'>The Sentence and Affidavit of John Church, the Obelisk Preacher -<br><span class='subtitle'>For an Attempt to Commit an Unnatural Crime on Adam Foreman, at Vauxhall. Together With Judge Bayley's Impressive Address to the Prisoner, at Full Length. At the Court of King's Bench, Nov. 24, 1817.</span></a>
+<div class='author'>Dowling, Joseph Augustus</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58053, {&quot;Title&quot;:&quot;A Correct Account of the Horrible Occurrence Which Took Place at a Public-House in St. James&#39;s Market - In Which It Was Discovered That the Right Rev. Father in God the Bishop of Clogher, Lately Transferred From the Bishopric of Ferns, Was a Principal Actor With a Common Soldier! To the Disgrace Not Only of the Cloth, to Which He Was Attached, and as a Commissioner of the Board of Education, and a Dictator of Public Morals, but as a Member of That Nation Which Gave Him Birth!&quot;,&quot;Topics&quot;:[&quot;Trials (Sodomy) -- England&quot;,&quot;Jocelyn, Percy, 1764-1843 -- Trials, litigation, etc.&quot;],&quot;Primary&quot;:&quot;58053.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;KD&quot;],&quot;PG_ID&quot;:&quot;58053&quot;});" class='title'>A Correct Account of the Horrible Occurrence Which Took Place at a Public-House in St. James's Market -<br><span class='subtitle'>In Which It Was Discovered That the Right Rev. Father in God the Bishop of Clogher, Lately Transferred From the Bishopric of Ferns, Was a Principal Actor With a Common Soldier! To the Disgrace Not Only of the Cloth, to Which He Was Attached, and as a Commissioner of the Board of Education, and a Dictator of Public Morals, but as a Member of That Nation Which Gave Him Birth!</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58104, {&quot;Title&quot;:&quot;Observations on Coroners&quot;,&quot;Topics&quot;:[&quot;Coroners -- Great Britain&quot;],&quot;Primary&quot;:&quot;58104.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hewitt, William, -1876&quot;],&quot;LoCC&quot;:[&quot;KD&quot;],&quot;PG_ID&quot;:&quot;58104&quot;});" class='title'>Observations on Coroners</a>
+<div class='author'>Hewitt, William, -1876</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58113, {&quot;Title&quot;:&quot;An Act to Provide for the Paving, Gravelling, Lighting, and Watching Certain Footways and Carriageways in and Near Brompton Square - In the Parish of Saint Mary Abbotts Kensington, in the County of Middlesex and to Provide for the Maintenance of a Garden and Shrubbery in the Said Square.&quot;,&quot;Topics&quot;:[&quot;Great Britain. Laws, statutes, etc.&quot;,&quot;Kensington (London, England)&quot;],&quot;Primary&quot;:&quot;58113.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;KD&quot;],&quot;PG_ID&quot;:&quot;58113&quot;});" class='title'>An Act to Provide for the Paving, Gravelling, Lighting, and Watching Certain Footways and Carriageways in and Near Brompton Square -<br><span class='subtitle'>In the Parish of Saint Mary Abbotts Kensington, in the County of Middlesex and to Provide for the Maintenance of a Garden and Shrubbery in the Said Square.</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58555, {&quot;Title&quot;:&quot;Religion &amp; Morality Vindicated, Against Hypocrisy and Pollution - Or, an Account of the Life and Character of John Church the Obelisk Preacher, Who Was Formerly a Frequenter of Vere-street, and Who Has Been Charged With Unnatural Practices in Various Places. To Which Is Annexed, a Fac-simile of a Letter, Written by Him to James Cook, Who Kept the Infamous House in Vere-street.&quot;,&quot;Topics&quot;:[&quot;Church, J. (John), approximately 1780-approximately 1825 -- Trials, litigation, etc.&quot;,&quot;Trials (Sodomy) -- England&quot;],&quot;Primary&quot;:&quot;58555.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bell, Robert, 1766-1826&quot;],&quot;LoCC&quot;:[&quot;KD&quot;],&quot;PG_ID&quot;:&quot;58555&quot;});" class='title'>Religion & Morality Vindicated, Against Hypocrisy and Pollution -<br><span class='subtitle'>Or, an Account of the Life and Character of John Church the Obelisk Preacher, Who Was Formerly a Frequenter of Vere-street, and Who Has Been Charged With Unnatural Practices in Various Places. To Which Is Annexed, a Fac-simile of a Letter, Written by Him to James Cook, Who Kept the Infamous House in Vere-street.</span></a>
+<div class='author'>Bell, Robert, 1766-1826</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58599, {&quot;Title&quot;:&quot;The Devil and Parson Church; or, Birds of a feather&quot;,&quot;Topics&quot;:[&quot;Church, J. (John), approximately 1780-approximately 1825 -- Trials, litigation, etc.&quot;,&quot;Trials (Sodomy) -- England&quot;],&quot;Primary&quot;:&quot;58599.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;KD&quot;],&quot;PG_ID&quot;:&quot;58599&quot;});" class='title'>The Devil and Parson Church;<br><span class='subtitle'>or, Birds of a feather</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58613, {&quot;Title&quot;:&quot;The Phœnix of Sodom; or, the Vere Street Coterie - Being an Exhibition of the Gambols Practised by the Ancient Lechers of Sodom and Gomorrah, Embellished and Improved with the Modern Refinements in Sodomitical Practices, by the Members of the Vere Street Coterie, of Detestable Memory.&quot;,&quot;Topics&quot;:[&quot;Trials (Sodomy) -- England&quot;],&quot;Primary&quot;:&quot;58613.htm&quot;,&quot;CreatorNames&quot;:[&quot;Holloway, Robert&quot;],&quot;LoCC&quot;:[&quot;KD&quot;],&quot;PG_ID&quot;:&quot;58613&quot;});" class='title'>The Phœnix of Sodom;<br><span class='subtitle'>or, the Vere Street Coterie - Being an Exhibition of the Gambols Practised by the Ancient Lechers of Sodom and Gomorrah, Embellished and Improved with the Modern Refinements in Sodomitical Practices, by the Members of the Vere Street Coterie, of Detestable Memory.</span></a>
+<div class='author'>Holloway, Robert</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59129, {&quot;Title&quot;:&quot;The Early History of English Poor Relief&quot;,&quot;Topics&quot;:[&quot;Poor laws -- Great Britain -- History&quot;],&quot;Primary&quot;:&quot;59129.htm&quot;,&quot;CreatorNames&quot;:[&quot;Leonard, E. M., of Girton College&quot;],&quot;LoCC&quot;:[&quot;HV&quot;,&quot;KD&quot;],&quot;PG_ID&quot;:&quot;59129&quot;});" class='title'>The Early History of English Poor Relief</a>
+<div class='author'>Leonard, E. M., of Girton College</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60538, {&quot;Title&quot;:&quot;The Trial of Captain John Kimber, for the Murder of Two Female Negro Slaves, on Board the Recovery, African Slave Ship - Tried at the Admiralty Sessions, Held at the Old Baily, the 7th of June, 1792&quot;,&quot;Topics&quot;:[&quot;Trials (Murder) -- England -- London&quot;,&quot;Kimber, John -- Trials, litigation, etc.&quot;,&quot;Women slaves -- Africa&quot;],&quot;Primary&quot;:&quot;60538.htm&quot;,&quot;CreatorNames&quot;:[&quot;Student of the Temple&quot;],&quot;LoCC&quot;:[&quot;KD&quot;],&quot;PG_ID&quot;:&quot;60538&quot;});" class='title'>The Trial of Captain John Kimber, for the Murder of Two Female Negro Slaves, on Board the Recovery, African Slave Ship -<br><span class='subtitle'>Tried at the Admiralty Sessions, Held at the Old Baily, the 7th of June, 1792</span></a>
+<div class='author'>Student of the Temple</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63018, {&quot;Title&quot;:&quot;The Power of Conscience, exemplified in the genuine and extraordinary confession of Thomas Bedworth - delivered to one of the principal officers of Newgate, the night before his execution on September 18, 1815, for the murder of Elizabeth Beesmore in Drury lane. Relating his horrible sufferings until compelled to surrender to public justice by the constant supernatural visitations of the murdered woman, and the frequent appearance of her apparition. From the original paper now in the possession of the publisher. Including interesting particulars of Bedworth&#39;s former life, his behaviour before execution, and an original and full report of the Common Serjeant&#39;s address on passing sentence.&quot;,&quot;Topics&quot;:[&quot;Trials (Murder) -- England -- London&quot;,&quot;Bedworth, Thomas, 1764-1815 -- Trials, litigation, etc.&quot;,&quot;Beesmore, Elizabeth, -1815&quot;],&quot;Primary&quot;:&quot;63018.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bedworth, Thomas, 1764-1815&quot;],&quot;LoCC&quot;:[&quot;KD&quot;],&quot;PG_ID&quot;:&quot;63018&quot;});" class='title'>The Power of Conscience, exemplified in the genuine and extraordinary confession of Thomas Bedworth -<br><span class='subtitle'>delivered to one of the principal officers of Newgate, the night before his execution on September 18, 1815, for the murder of Elizabeth Beesmore in Drury lane. Relating his horrible sufferings until compelled to surrender to public justice by the constant supernatural visitations of the murdered woman, and the frequent appearance of her apparition. From the original paper now in the possession of the publisher. Including interesting particulars of Bedworth's former life, his behaviour before execution, and an original and full report of the Common Serjeant's address on passing sentence.</span></a>
+<div class='author'>Bedworth, Thomas, 1764-1815</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63241, {&quot;Title&quot;:&quot;Medical Jurisprudence, Volume 1 (of 3)&quot;,&quot;Topics&quot;:[&quot;Medical laws and legislation -- Great Britain&quot;],&quot;Primary&quot;:&quot;63241.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fonblanque, J. S. M. (John Samuel Martin), 1787-1865&quot;,&quot;Paris, John Ayrton, 1785-1856&quot;],&quot;LoCC&quot;:[&quot;KD&quot;],&quot;PG_ID&quot;:&quot;63241&quot;});" class='title'>Medical Jurisprudence, Volume 1 (of 3)</a>
+<div class='author'>Fonblanque, J. S. M. (John Samuel Martin), 1787-1865, Paris, John Ayrton, 1785-1856</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63348, {&quot;Title&quot;:&quot;Trial of Pedro de Zulueta, jun., on a Charge of Slave Trading, under 5 Geo. IV, cap. 113, on Friday the 27th, Saturday the 28th, and Monday the 30th of October, 1843, at the Central Criminal Court, Old Bailey, London - A Full Report from the Short-hand Notes of W. B. Gurney, Esq.&quot;,&quot;Topics&quot;:[&quot;Slave trade -- Africa&quot;,&quot;Zulueta, Pedro de -- Trials, litigation, etc.&quot;,&quot;Slave traders -- Africa&quot;,&quot;Trial transcripts -- England -- London&quot;],&quot;Primary&quot;:&quot;63348.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gurney, William Brodie, 1777-1855&quot;,&quot;Zulueta, Pedro de&quot;],&quot;LoCC&quot;:[&quot;HT&quot;,&quot;KD&quot;],&quot;PG_ID&quot;:&quot;63348&quot;});" class='title'>Trial of Pedro de Zulueta, jun., on a Charge of Slave Trading, under 5 Geo. IV, cap. 113, on Friday the 27th, Saturday the 28th, and Monday the 30th of October, 1843, at the Central Criminal Court, Old Bailey, London -<br><span class='subtitle'>A Full Report from the Short-hand Notes of W. B. Gurney, Esq.</span></a>
+<div class='author'>Gurney, William Brodie, 1777-1855, Zulueta, Pedro de</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63830, {&quot;Title&quot;:&quot;Medical Jurisprudence, Volume 2 (of 3)&quot;,&quot;Topics&quot;:[&quot;Medical laws and legislation -- Great Britain&quot;],&quot;Primary&quot;:&quot;63830.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fonblanque, J. S. M. (John Samuel Martin), 1787-1865&quot;,&quot;Paris, John Ayrton, 1785-1856&quot;],&quot;LoCC&quot;:[&quot;KD&quot;],&quot;PG_ID&quot;:&quot;63830&quot;});" class='title'>Medical Jurisprudence, Volume 2 (of 3)</a>
+<div class='author'>Fonblanque, J. S. M. (John Samuel Martin), 1787-1865, Paris, John Ayrton, 1785-1856</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63844, {&quot;Title&quot;:&quot;Chronicles of an Old Inn; Or, A Few Words about Gray&#39;s Inn&quot;,&quot;Topics&quot;:[&quot;Lawyers -- Great Britain&quot;,&quot;Inns of Court&quot;,&quot;Gray&#39;s Inn&quot;],&quot;Primary&quot;:&quot;63844.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hope, Andrée, -1898&quot;],&quot;LoCC&quot;:[&quot;KD&quot;],&quot;PG_ID&quot;:&quot;63844&quot;});" class='title'>Chronicles of an Old Inn;<br><span class='subtitle'>Or, A Few Words about Gray's Inn</span></a>
+<div class='author'>Hope, Andrée, -1898</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64773, {&quot;Title&quot;:&quot;The history of the London Burkers - Containing a faithful and authentic account of the horrid acts of the noted Resurrectionists, Bishop, Williams, May, etc., etc., and their trial and condemnation at the Old Bailey for the wilful murder of Carlo Ferrari, with the criminals&#39; confessions after trial. Including also the life, character, and behaviour of the atrocious Eliza Ross, the murderer of Mrs. Walsh, etc., etc.&quot;,&quot;Topics&quot;:[&quot;Trials (Murder) -- England -- London&quot;,&quot;Bishop, John, -1831&quot;,&quot;Williams, Thomas, -1831&quot;,&quot;May, James, -1832&quot;,&quot;Ross, Eliza, 1793 or 1794-1832&quot;],&quot;Primary&quot;:&quot;64773.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;KD&quot;],&quot;PG_ID&quot;:&quot;64773&quot;});" class='title'>The history of the London Burkers -<br><span class='subtitle'>Containing a faithful and authentic account of the horrid acts of the noted Resurrectionists, Bishop, Williams, May, etc., etc., and their trial and condemnation at the Old Bailey for the wilful murder of Carlo Ferrari, with the criminals' confessions after trial. Including also the life, character, and behaviour of the atrocious Eliza Ross, the murderer of Mrs. Walsh, etc., etc.</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64898, {&quot;Title&quot;:&quot;Judgments in Vacation&quot;,&quot;Topics&quot;:[&quot;Law -- Great Britain -- Anecdotes&quot;],&quot;Primary&quot;:&quot;64898.htm&quot;,&quot;CreatorNames&quot;:[&quot;Parry, Edward Abbott, Sir, 1863-1943&quot;],&quot;LoCC&quot;:[&quot;KD&quot;],&quot;PG_ID&quot;:&quot;64898&quot;});" class='title'>Judgments in Vacation</a>
+<div class='author'>Parry, Edward Abbott, Sir, 1863-1943</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64926, {&quot;Title&quot;:&quot;Medical Jurisprudence, Volume 3 (of 3)&quot;,&quot;Topics&quot;:[&quot;Medical laws and legislation -- Great Britain&quot;],&quot;Primary&quot;:&quot;64926.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fonblanque, J. S. M. (John Samuel Martin), 1787-1865&quot;,&quot;Paris, John Ayrton, 1785-1856&quot;],&quot;LoCC&quot;:[&quot;KD&quot;],&quot;PG_ID&quot;:&quot;64926&quot;});" class='title'>Medical Jurisprudence, Volume 3 (of 3)</a>
+<div class='author'>Fonblanque, J. S. M. (John Samuel Martin), 1787-1865, Paris, John Ayrton, 1785-1856</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65233, {&quot;Title&quot;:&quot;What the Judge Saw: Being Twenty-Five Years in Manchester by One Who Has Done It&quot;,&quot;Topics&quot;:[&quot;Law -- Humor&quot;,&quot;Law -- Anecdotes&quot;],&quot;Primary&quot;:&quot;65233.htm&quot;,&quot;CreatorNames&quot;:[&quot;Parry, Edward Abbott, Sir, 1863-1943&quot;],&quot;LoCC&quot;:[&quot;KD&quot;],&quot;PG_ID&quot;:&quot;65233&quot;});" class='title'>What the Judge Saw:<br><span class='subtitle'>Being Twenty-Five Years in Manchester by One Who Has Done It</span></a>
+<div class='author'>Parry, Edward Abbott, Sir, 1863-1943</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65363, {&quot;Title&quot;:&quot;Magna Carta: A Commentary on the Great Charter of King John - With an Historical Introduction&quot;,&quot;Topics&quot;:[&quot;Law -- England -- History&quot;,&quot;Magna Carta&quot;,&quot;Constitutional history -- England -- Sources&quot;,&quot;Law -- England -- Sources&quot;],&quot;Primary&quot;:&quot;65363.htm&quot;,&quot;CreatorNames&quot;:[&quot;McKechnie, William Sharp, 1863-1930&quot;],&quot;LoCC&quot;:[&quot;KD&quot;],&quot;PG_ID&quot;:&quot;65363&quot;});" class='title'>Magna Carta:<br><span class='subtitle'>A Commentary on the Great Charter of King John - With an Historical Introduction</span></a>
+<div class='author'>McKechnie, William Sharp, 1863-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6603, {&quot;Title&quot;:&quot;Our Legal Heritage : 600-1776 King Aethelbert - King George III&quot;,&quot;Topics&quot;:[&quot;Law -- England -- History&quot;],&quot;Primary&quot;:&quot;6603.txt&quot;,&quot;CreatorNames&quot;:[&quot;Reilly, S. A.&quot;],&quot;LoCC&quot;:[&quot;KD&quot;],&quot;PG_ID&quot;:&quot;6603&quot;});" class='title'>Our Legal Heritage :<br><span class='subtitle'>600-1776 King Aethelbert - King George III</span></a>
+<div class='author'>Reilly, S. A.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66162, {&quot;Title&quot;:&quot;The Seven Lamps of Advocacy&quot;,&quot;Topics&quot;:[&quot;Legal ethics&quot;,&quot;Lawyers&quot;],&quot;Primary&quot;:&quot;66162.htm&quot;,&quot;CreatorNames&quot;:[&quot;Parry, Edward Abbott, Sir, 1863-1943&quot;],&quot;LoCC&quot;:[&quot;KD&quot;],&quot;PG_ID&quot;:&quot;66162&quot;});" class='title'>The Seven Lamps of Advocacy</a>
+<div class='author'>Parry, Edward Abbott, Sir, 1863-1943</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69351, {&quot;Title&quot;:&quot;Lectures on the constitution and laws of England - With a commentary on Magna Charta, and illustrations of many of the English statutes&quot;,&quot;Topics&quot;:[&quot;Magna Carta -- Early works to 1800&quot;,&quot;Constitutional history -- England -- Early works to 1800&quot;,&quot;Feudal law -- England -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;69351.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sullivan, Francis Stoughton, 1719-1776&quot;,&quot;Stuart, Gilbert, 1742-1786 [Commentator]&quot;],&quot;LoCC&quot;:[&quot;KD&quot;],&quot;PG_ID&quot;:&quot;69351&quot;});" class='title'>Lectures on the constitution and laws of England -<br><span class='subtitle'>With a commentary on Magna Charta, and illustrations of many of the English statutes</span></a>
+<div class='author'>Sullivan, Francis Stoughton, 1719-1776, Stuart, Gilbert, 1742-1786 [Commentator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69686, {&quot;Title&quot;:&quot;The hand-book of the law of legacies - containing a statement of the nature of legacies, and the accidents to which they are subjects; together with the rights of legatees, and the causes and manner of the ademption, cumulation, and abatement of their bequests&quot;,&quot;Topics&quot;:[&quot;Legacies -- Great Britain&quot;],&quot;Primary&quot;:&quot;69686.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;KD&quot;],&quot;PG_ID&quot;:&quot;69686&quot;});" class='title'>The hand-book of the law of legacies -<br><span class='subtitle'>containing a statement of the nature of legacies, and the accidents to which they are subjects; together with the rights of legatees, and the causes and manner of the ademption, cumulation, and abatement of their bequests</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70332, {&quot;Title&quot;:&quot;The declaration and confession of Robert Watt&quot;,&quot;Topics&quot;:[&quot;Watt, Robert, -1794 -- Trials, litigation, etc.&quot;,&quot;Trials (Treason) -- Scotland -- Edinburgh&quot;],&quot;Primary&quot;:&quot;70332.htm&quot;,&quot;CreatorNames&quot;:[&quot;Watt, Robert, -1794&quot;,&quot;Baird, George Husband, 1761-1840 [Other]&quot;,&quot;Jones, T. S. (Thomas Snell), 1754-1837 [Other]&quot;],&quot;LoCC&quot;:[&quot;KD&quot;],&quot;PG_ID&quot;:&quot;70332&quot;});" class='title'>The declaration and confession of Robert Watt</a>
+<div class='author'>Watt, Robert, -1794, Baird, George Husband, 1761-1840 [Other], Jones, T. S. (Thomas Snell), 1754-1837 [Other]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70523, {&quot;Title&quot;:&quot;Remarks on the speeches of William Paul Clerk, and John Hall of Otterburn, Esq&quot;,&quot;Topics&quot;:[&quot;Jacobite Rebellion, 1715&quot;,&quot;Paul, William, 1678-1716 -- Trials, litigation, etc.&quot;,&quot;Hall, John, -1716 -- Trials, litigation, etc.&quot;,&quot;Trials (Treason) -- Great Britain -- Early works to 1800&quot;,&quot;Nonjurors&quot;],&quot;Primary&quot;:&quot;70523.htm&quot;,&quot;CreatorNames&quot;:[&quot;Defoe, Daniel, 1661?-1731&quot;,&quot;Hall, John, -1716 [Contributor]&quot;,&quot;Paul, William, 1678-1716 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;DA&quot;,&quot;KD&quot;],&quot;PG_ID&quot;:&quot;70523&quot;});" class='title'>Remarks on the speeches of William Paul Clerk, and John Hall of Otterburn, Esq</a>
+<div class='author'>Defoe, Daniel, 1661?-1731, Hall, John, -1716 [Contributor], Paul, William, 1678-1716 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7360, {&quot;Title&quot;:&quot;The Tryal of William Penn &amp; William Mead for Causing a Tumult - at the Sessions Held at the Old Bailey in London the 1st, 3d, 4th, and 5th of September 1670&quot;,&quot;Topics&quot;:[&quot;Mead, William, 1628-1713 -- Trials, litigation, etc.&quot;,&quot;Penn, William, 1644-1718 -- Trials, litigation, etc.&quot;,&quot;Freedom of speech -- England&quot;,&quot;Assembly, Right of -- England&quot;],&quot;Primary&quot;:&quot;7360.htm&quot;,&quot;CreatorNames&quot;:[&quot;Seitz, Don Carlos, 1862-1935 [Editor]&quot;],&quot;LoCC&quot;:[&quot;KD&quot;],&quot;PG_ID&quot;:&quot;7360&quot;});" class='title'>The Tryal of William Penn & William Mead for Causing a Tumult -<br><span class='subtitle'>at the Sessions Held at the Old Bailey in London the 1st, 3d, 4th, and 5th of September 1670</span></a>
+<div class='author'>Seitz, Don Carlos, 1862-1935 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7975, {&quot;Title&quot;:&quot;Memoirs of James Robert Hope-Scott, Volume 2&quot;,&quot;Topics&quot;:[&quot;Great Britain -- Social life and customs -- 19th century&quot;,&quot;Statesmen -- Great Britain -- Biography&quot;,&quot;Hope-Scott, James Robert, 1812-1873&quot;,&quot;Lawyers -- Great Britain -- Biography&quot;,&quot;Abbotsford (Scotland) -- Biography&quot;,&quot;Hope-Scott, James Robert, 1812-1873 -- Correspondence&quot;],&quot;Primary&quot;:&quot;7975.txt&quot;,&quot;CreatorNames&quot;:[&quot;Ornsby, Robert, 1820-1889&quot;],&quot;LoCC&quot;:[&quot;DA&quot;,&quot;KD&quot;],&quot;PG_ID&quot;:&quot;7975&quot;});" class='title'>Memoirs of James Robert Hope-Scott, Volume 2</a>
+<div class='author'>Ornsby, Robert, 1820-1889</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(8142, {&quot;Title&quot;:&quot;The Riot Act&quot;,&quot;Topics&quot;:[&quot;Law -- Great Britain&quot;],&quot;Primary&quot;:&quot;8142.htm&quot;,&quot;CreatorNames&quot;:[&quot;Great Britain. Parliament&quot;],&quot;LoCC&quot;:[&quot;KD&quot;],&quot;PG_ID&quot;:&quot;8142&quot;});" class='title'>The Riot Act</a>
+<div class='author'>Great Britain. Parliament</div>
+</div>
+</ul></div>
+</body></html>

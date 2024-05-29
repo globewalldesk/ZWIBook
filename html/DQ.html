@@ -1,0 +1,202 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Switzerland (DQ)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(11179, {&quot;Title&quot;:&quot;Seeing Europe with Famous Authors, Volume 6 - Germany, Austria-Hungary and Switzerland, part 2&quot;,&quot;Topics&quot;:[&quot;Germany -- Description and travel&quot;,&quot;Switzerland -- Description and travel&quot;,&quot;Austria -- Description and travel&quot;],&quot;Primary&quot;:&quot;11179.txt&quot;,&quot;CreatorNames&quot;:[&quot;Halsey, Francis W. (Francis Whiting), 1851-1919 [Editor]&quot;],&quot;LoCC&quot;:[&quot;DB&quot;,&quot;DD&quot;,&quot;DQ&quot;],&quot;PG_ID&quot;:&quot;11179&quot;});" class='title'>Seeing Europe with Famous Authors, Volume 6 -<br><span class='subtitle'>Germany, Austria-Hungary and Switzerland, part 2</span></a>
+<div class='author'>Halsey, Francis W. (Francis Whiting), 1851-1919 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12404, {&quot;Title&quot;:&quot;Seeing Europe with Famous Authors, Volume 5 - Germany, Austria-Hungary, and Switzerland, Part 1&quot;,&quot;Topics&quot;:[&quot;Germany -- Description and travel&quot;,&quot;Switzerland -- Description and travel&quot;,&quot;Austria -- Description and travel&quot;],&quot;Primary&quot;:&quot;12404.htm&quot;,&quot;CreatorNames&quot;:[&quot;Halsey, Francis W. (Francis Whiting), 1851-1919 [Editor]&quot;],&quot;LoCC&quot;:[&quot;DB&quot;,&quot;DD&quot;,&quot;DQ&quot;],&quot;PG_ID&quot;:&quot;12404&quot;});" class='title'>Seeing Europe with Famous Authors, Volume 5 -<br><span class='subtitle'>Germany, Austria-Hungary, and Switzerland, Part 1</span></a>
+<div class='author'>Halsey, Francis W. (Francis Whiting), 1851-1919 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18565, {&quot;Title&quot;:&quot;A Little Swiss Sojourn&quot;,&quot;Topics&quot;:[&quot;Switzerland -- Description and travel&quot;],&quot;Primary&quot;:&quot;18565.htm&quot;,&quot;CreatorNames&quot;:[&quot;Howells, William Dean, 1837-1920&quot;],&quot;LoCC&quot;:[&quot;DQ&quot;,&quot;PS&quot;],&quot;PG_ID&quot;:&quot;18565&quot;});" class='title'>A Little Swiss Sojourn</a>
+<div class='author'>Howells, William Dean, 1837-1920</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22255, {&quot;Title&quot;:&quot;The Counts of Gruyère&quot;,&quot;Topics&quot;:[&quot;Gruyère, Counts of&quot;,&quot;Gruyère (Switzerland) -- History&quot;],&quot;Primary&quot;:&quot;22255.htm&quot;,&quot;CreatorNames&quot;:[&quot;De Koven, Anna, 1860-&quot;],&quot;LoCC&quot;:[&quot;DQ&quot;],&quot;PG_ID&quot;:&quot;22255&quot;});" class='title'>The Counts of Gruyère</a>
+<div class='author'>De Koven, Anna, 1860-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22377, {&quot;Title&quot;:&quot;Rollo in Switzerland&quot;,&quot;Topics&quot;:[&quot;Switzerland -- Description and travel -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;22377.htm&quot;,&quot;CreatorNames&quot;:[&quot;Abbott, Jacob, 1803-1879&quot;],&quot;LoCC&quot;:[&quot;DQ&quot;,&quot;PZ&quot;],&quot;PG_ID&quot;:&quot;22377&quot;});" class='title'>Rollo in Switzerland</a>
+<div class='author'>Abbott, Jacob, 1803-1879</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27608, {&quot;Title&quot;:&quot;Bollettino del Club Alpino Italiano 1895-96 - Vol. 29 Num. 62&quot;,&quot;Topics&quot;:[&quot;Alps -- Description and travel -- Periodicals&quot;,&quot;Mountaineering -- Periodicals&quot;],&quot;Primary&quot;:&quot;27608.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;DQ&quot;],&quot;PG_ID&quot;:&quot;27608&quot;});" class='title'>Bollettino del Club Alpino Italiano 1895-96 -<br><span class='subtitle'>Vol. 29 Num. 62</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32823, {&quot;Title&quot;:&quot;Narrative of a Journey to the Summit of Mont Blanc&quot;,&quot;Topics&quot;:[&quot;Mountaineering&quot;,&quot;Blanc, Mont (France and Italy)&quot;],&quot;Primary&quot;:&quot;32823.htm&quot;,&quot;CreatorNames&quot;:[&quot;Howard, William, 1793-1834&quot;],&quot;LoCC&quot;:[&quot;DQ&quot;],&quot;PG_ID&quot;:&quot;32823&quot;});" class='title'>Narrative of a Journey to the Summit of Mont Blanc</a>
+<div class='author'>Howard, William, 1793-1834</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33122, {&quot;Title&quot;:&quot;An Impromptu Ascent of Mont Blanc&quot;,&quot;Topics&quot;:[&quot;Mountaineering&quot;,&quot;Blanc, Mont (France and Italy)&quot;],&quot;Primary&quot;:&quot;33122.htm&quot;,&quot;CreatorNames&quot;:[&quot;Le Mesurier, W. H.&quot;],&quot;LoCC&quot;:[&quot;DQ&quot;],&quot;PG_ID&quot;:&quot;33122&quot;});" class='title'>An Impromptu Ascent of Mont Blanc</a>
+<div class='author'>Le Mesurier, W. H.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35068, {&quot;Title&quot;:&quot;The Car That Went Abroad: Motoring Through the Golden Age&quot;,&quot;Topics&quot;:[&quot;France -- Description and travel&quot;,&quot;Switzerland -- Description and travel&quot;],&quot;Primary&quot;:&quot;35068.htm&quot;,&quot;CreatorNames&quot;:[&quot;Paine, Albert Bigelow, 1861-1937&quot;,&quot;Hale, Walter, 1869-1917 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DC&quot;,&quot;DQ&quot;],&quot;PG_ID&quot;:&quot;35068&quot;});" class='title'>The Car That Went Abroad:<br><span class='subtitle'>Motoring Through the Golden Age</span></a>
+<div class='author'>Paine, Albert Bigelow, 1861-1937, Hale, Walter, 1869-1917 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38044, {&quot;Title&quot;:&quot;The Ascent of the Matterhorn&quot;,&quot;Topics&quot;:[&quot;Mountaineering&quot;,&quot;Matterhorn (Switzerland and Italy)&quot;],&quot;Primary&quot;:&quot;38044.htm&quot;,&quot;CreatorNames&quot;:[&quot;Whymper, Edward, 1840-1911&quot;],&quot;LoCC&quot;:[&quot;DQ&quot;],&quot;PG_ID&quot;:&quot;38044&quot;});" class='title'>The Ascent of the Matterhorn</a>
+<div class='author'>Whymper, Edward, 1840-1911</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39542, {&quot;Title&quot;:&quot;The Alps&quot;,&quot;Topics&quot;:[&quot;Alps -- Description and travel&quot;],&quot;Primary&quot;:&quot;39542.htm&quot;,&quot;CreatorNames&quot;:[&quot;Conway, William Martin, Sir, 1856-1937&quot;,&quot;McCormick, A. D. (Arthur David), 1860-1943 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DQ&quot;],&quot;PG_ID&quot;:&quot;39542&quot;});" class='title'>The Alps</a>
+<div class='author'>Conway, William Martin, Sir, 1856-1937, McCormick, A. D. (Arthur David), 1860-1943 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39651, {&quot;Title&quot;:&quot;Switzerland&quot;,&quot;Topics&quot;:[&quot;Switzerland -- Description and travel&quot;],&quot;Primary&quot;:&quot;39651.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fox, Frank, 1874-1960&quot;],&quot;LoCC&quot;:[&quot;DQ&quot;],&quot;PG_ID&quot;:&quot;39651&quot;});" class='title'>Switzerland</a>
+<div class='author'>Fox, Frank, 1874-1960</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39695, {&quot;Title&quot;:&quot;The Story of Switzerland&quot;,&quot;Topics&quot;:[&quot;Switzerland -- History&quot;],&quot;Primary&quot;:&quot;39695.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hug, Lina&quot;,&quot;Stead, Richard&quot;],&quot;LoCC&quot;:[&quot;DQ&quot;],&quot;PG_ID&quot;:&quot;39695&quot;});" class='title'>The Story of Switzerland</a>
+<div class='author'>Hug, Lina, Stead, Richard</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41153, {&quot;Title&quot;:&quot;The Spell of Switzerland&quot;,&quot;Topics&quot;:[&quot;Switzerland -- Description and travel&quot;],&quot;Primary&quot;:&quot;41153.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dole, Nathan Haskell, 1852-1935&quot;],&quot;LoCC&quot;:[&quot;DQ&quot;],&quot;PG_ID&quot;:&quot;41153&quot;});" class='title'>The Spell of Switzerland</a>
+<div class='author'>Dole, Nathan Haskell, 1852-1935</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42758, {&quot;Title&quot;:&quot;True Tales of Mountain Adventures: For Non-Climbers Young and Old&quot;,&quot;Topics&quot;:[&quot;Mountaineering&quot;,&quot;Alps -- Description and travel&quot;],&quot;Primary&quot;:&quot;42758.htm&quot;,&quot;CreatorNames&quot;:[&quot;Le Blond, Aubrey, Mrs., 1861-1934&quot;],&quot;LoCC&quot;:[&quot;DQ&quot;],&quot;PG_ID&quot;:&quot;42758&quot;});" class='title'>True Tales of Mountain Adventures:<br><span class='subtitle'>For Non-Climbers Young and Old</span></a>
+<div class='author'>Le Blond, Aubrey, Mrs., 1861-1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43314, {&quot;Title&quot;:&quot;Adventures on the Roof of the World&quot;,&quot;Topics&quot;:[&quot;Mountaineering&quot;,&quot;Alps -- Description and travel&quot;],&quot;Primary&quot;:&quot;43314.htm&quot;,&quot;CreatorNames&quot;:[&quot;Le Blond, Aubrey, Mrs., 1861-1934&quot;],&quot;LoCC&quot;:[&quot;DQ&quot;],&quot;PG_ID&quot;:&quot;43314&quot;});" class='title'>Adventures on the Roof of the World</a>
+<div class='author'>Le Blond, Aubrey, Mrs., 1861-1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43639, {&quot;Title&quot;:&quot;Our Little Swiss Cousin&quot;,&quot;Topics&quot;:[&quot;Children -- Switzerland -- Juvenile literature&quot;,&quot;Switzerland -- Social life and customs -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;43639.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wade, Mary Hazelton Blanchard, 1860-1936&quot;,&quot;Bridgman, L. J. (Lewis Jesse), 1857-1931 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DQ&quot;,&quot;PZ&quot;],&quot;PG_ID&quot;:&quot;43639&quot;});" class='title'>Our Little Swiss Cousin</a>
+<div class='author'>Wade, Mary Hazelton Blanchard, 1860-1936, Bridgman, L. J. (Lewis Jesse), 1857-1931 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45097, {&quot;Title&quot;:&quot;Letters from Switzerland&quot;,&quot;Topics&quot;:[&quot;Switzerland -- Description and travel&quot;],&quot;Primary&quot;:&quot;45097.htm&quot;,&quot;CreatorNames&quot;:[&quot;Prime, Samuel Irenæus, 1812-1885&quot;],&quot;LoCC&quot;:[&quot;DQ&quot;],&quot;PG_ID&quot;:&quot;45097&quot;});" class='title'>Letters from Switzerland</a>
+<div class='author'>Prime, Samuel Irenæus, 1812-1885</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45560, {&quot;Title&quot;:&quot;The Lake of Geneva&quot;,&quot;Topics&quot;:[&quot;Geneva, Lake (Switzerland and France)&quot;],&quot;Primary&quot;:&quot;45560.htm&quot;,&quot;CreatorNames&quot;:[&quot;Morris, Joseph E. (Joseph Ernest)&quot;],&quot;LoCC&quot;:[&quot;DQ&quot;],&quot;PG_ID&quot;:&quot;45560&quot;});" class='title'>The Lake of Geneva</a>
+<div class='author'>Morris, Joseph E. (Joseph Ernest)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45642, {&quot;Title&quot;:&quot;The Lake of Lucerne&quot;,&quot;Topics&quot;:[&quot;Lucerne Lake (Switzerland)&quot;],&quot;Primary&quot;:&quot;45642.htm&quot;,&quot;CreatorNames&quot;:[&quot;Morris, Joseph E. (Joseph Ernest)&quot;],&quot;LoCC&quot;:[&quot;DQ&quot;],&quot;PG_ID&quot;:&quot;45642&quot;});" class='title'>The Lake of Lucerne</a>
+<div class='author'>Morris, Joseph E. (Joseph Ernest)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46074, {&quot;Title&quot;:&quot;Lausanne&quot;,&quot;Topics&quot;:[&quot;Lausanne (Switzerland) -- Description and travel&quot;],&quot;Primary&quot;:&quot;46074.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gribble, Francis Henry, 1862-1946&quot;,&quot;Lewis, J. Hardwicke (John Hardwicke), 1840-1927 [Illustrator]&quot;,&quot;Lewis, May Hardwicke [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DQ&quot;],&quot;PG_ID&quot;:&quot;46074&quot;});" class='title'>Lausanne</a>
+<div class='author'>Gribble, Francis Henry, 1862-1946, Lewis, J. Hardwicke (John Hardwicke), 1840-1927 [Illustrator], Lewis, May Hardwicke [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47209, {&quot;Title&quot;:&quot;Hours of Exercise in the Alps&quot;,&quot;Topics&quot;:[&quot;Mountaineering&quot;,&quot;Alps -- Description and travel&quot;],&quot;Primary&quot;:&quot;47209.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tyndall, John, 1820-1893&quot;],&quot;LoCC&quot;:[&quot;DQ&quot;],&quot;PG_ID&quot;:&quot;47209&quot;});" class='title'>Hours of Exercise in the Alps</a>
+<div class='author'>Tyndall, John, 1820-1893</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48075, {&quot;Title&quot;:&quot;Aus Berg und Tal: Charakterbilder aus dem schweizer. Bauernleben&quot;,&quot;Topics&quot;:[&quot;Peasants -- Switzerland&quot;,&quot;Agriculture -- Switzerland&quot;],&quot;Primary&quot;:&quot;48075.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kiebler, Ulrich, 1864-1929&quot;],&quot;LoCC&quot;:[&quot;DQ&quot;],&quot;PG_ID&quot;:&quot;48075&quot;});" class='title'>Aus Berg und Tal:<br><span class='subtitle'>Charakterbilder aus dem schweizer. Bauernleben</span></a>
+<div class='author'>Kiebler, Ulrich, 1864-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50738, {&quot;Title&quot;:&quot;Geneva - Painted by J. Hardwicke Lewis &amp; May Hardwicke Lewis. - Described by Francis Gribble.&quot;,&quot;Topics&quot;:[&quot;Geneva (Switzerland) -- Description and travel&quot;,&quot;Geneva (Switzerland) -- History&quot;],&quot;Primary&quot;:&quot;50738.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gribble, Francis Henry, 1862-1946&quot;,&quot;Lewis, J. Hardwicke (John Hardwicke), 1840-1927 [Illustrator]&quot;,&quot;Lewis, May Hardwicke [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DQ&quot;],&quot;PG_ID&quot;:&quot;50738&quot;});" class='title'>Geneva -<br><span class='subtitle'>Painted by J. Hardwicke Lewis & May Hardwicke Lewis. - Described by Francis Gribble.</span></a>
+<div class='author'>Gribble, Francis Henry, 1862-1946, Lewis, J. Hardwicke (John Hardwicke), 1840-1927 [Illustrator], Lewis, May Hardwicke [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57435, {&quot;Title&quot;:&quot;Lucerne&quot;,&quot;Topics&quot;:[&quot;Lucerne (Switzerland) -- Description and travel&quot;],&quot;Primary&quot;:&quot;57435.htm&quot;,&quot;CreatorNames&quot;:[&quot;Flemwell, G. (George), 1865-1928&quot;],&quot;LoCC&quot;:[&quot;DQ&quot;],&quot;PG_ID&quot;:&quot;57435&quot;});" class='title'>Lucerne</a>
+<div class='author'>Flemwell, G. (George), 1865-1928</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58193, {&quot;Title&quot;:&quot;Villars and Its Environs&quot;,&quot;Topics&quot;:[&quot;Villars-le-Grand (Switzerland) -- Description and travel&quot;],&quot;Primary&quot;:&quot;58193.htm&quot;,&quot;CreatorNames&quot;:[&quot;Flemwell, G. (George), 1865-1928&quot;],&quot;LoCC&quot;:[&quot;DQ&quot;],&quot;PG_ID&quot;:&quot;58193&quot;});" class='title'>Villars and Its Environs</a>
+<div class='author'>Flemwell, G. (George), 1865-1928</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59751, {&quot;Title&quot;:&quot;Arnold of Winkelried, the Hero of Sempach&quot;,&quot;Topics&quot;:[&quot;Winkelried, Arnold von -- Juvenile literature&quot;,&quot;Sempach, Battle of, Switzerland, 1386 -- Juvenile literature&quot;,&quot;Legends -- Switzerland -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;59751.htm&quot;,&quot;CreatorNames&quot;:[&quot;Höcker, Gustav, 1832-1911&quot;,&quot;Upton, George P. (George Putnam), 1834-1919 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DQ&quot;],&quot;PG_ID&quot;:&quot;59751&quot;});" class='title'>Arnold of Winkelried, the Hero of Sempach</a>
+<div class='author'>Höcker, Gustav, 1832-1911, Upton, George P. (George Putnam), 1834-1919 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60153, {&quot;Title&quot;:&quot;Winter Sports in Switzerland&quot;,&quot;Topics&quot;:[&quot;Switzerland -- Description and travel&quot;,&quot;Winter sports -- Switzerland&quot;,&quot;Winter resorts -- Switzerland&quot;],&quot;Primary&quot;:&quot;60153.htm&quot;,&quot;CreatorNames&quot;:[&quot;Benson, E. F. (Edward Frederic), 1867-1940&quot;,&quot;Williams, C. Fleming [Illustrator]&quot;,&quot;Le Blond, Aubrey, Mrs., 1861-1934 [Photographer]&quot;],&quot;LoCC&quot;:[&quot;DQ&quot;,&quot;GV&quot;],&quot;PG_ID&quot;:&quot;60153&quot;});" class='title'>Winter Sports in Switzerland</a>
+<div class='author'>Benson, E. F. (Edward Frederic), 1867-1940, Williams, C. Fleming [Illustrator], Le Blond, Aubrey, Mrs., 1861-1934 [Photographer]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62394, {&quot;Title&quot;:&quot;Ascendo al Monto-Blanka en 1787&quot;,&quot;Topics&quot;:[&quot;Blanc, Mont (France and Italy)&quot;,&quot;Mountaineering -- Alps&quot;],&quot;Primary&quot;:&quot;62394.htm&quot;,&quot;CreatorNames&quot;:[&quot;Saussure, Horace Bénédict de, 1740-1799&quot;,&quot;Saussure, René de, 1868-1943 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DQ&quot;],&quot;PG_ID&quot;:&quot;62394&quot;});" class='title'>Ascendo al Monto-Blanka en 1787</a>
+<div class='author'>Saussure, Horace Bénédict de, 1740-1799, Saussure, René de, 1868-1943 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62789, {&quot;Title&quot;:&quot;Peregrinazioni d&#39;uno zingaro per laghi ed Alpi - Il Lago Maggiore, l&#39;Ossola, la Frua e il Gries&quot;,&quot;Topics&quot;:[&quot;Ossola Valley (Italy) -- Description and travel&quot;,&quot;Maggiore, Lake (Italy and Switzerland)&quot;,&quot;Ticino River Valley (Switzerland and Italy) -- Description and travel&quot;],&quot;Primary&quot;:&quot;62789.htm&quot;,&quot;CreatorNames&quot;:[&quot;Carrera, Valentino, 1834-1895&quot;],&quot;LoCC&quot;:[&quot;DG&quot;,&quot;DQ&quot;],&quot;PG_ID&quot;:&quot;62789&quot;});" class='title'>Peregrinazioni d'uno zingaro per laghi ed Alpi -<br><span class='subtitle'>Il Lago Maggiore, l'Ossola, la Frua e il Gries</span></a>
+<div class='author'>Carrera, Valentino, 1834-1895</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62812, {&quot;Title&quot;:&quot;Au Mont-Blanc - Aiguilles, sommets, vallées et glaciers; ascensions, sports d&#39;hiver&quot;,&quot;Topics&quot;:[&quot;Mountaineering -- Alps, Western&quot;,&quot;Blanc, Mont (France and Italy) -- Guidebooks&quot;,&quot;Chamonix-Mont-Blanc (France) -- Guidebooks&quot;],&quot;Primary&quot;:&quot;62812.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tissot, Roger&quot;,&quot;Auscher, Léon, 1866-1943 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;DQ&quot;],&quot;PG_ID&quot;:&quot;62812&quot;});" class='title'>Au Mont-Blanc -<br><span class='subtitle'>Aiguilles, sommets, vallées et glaciers; ascensions, sports d'hiver</span></a>
+<div class='author'>Tissot, Roger, Auscher, Léon, 1866-1943 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64163, {&quot;Title&quot;:&quot;Legends of Switzerland&quot;,&quot;Topics&quot;:[&quot;Folklore -- Switzerland&quot;,&quot;Legends -- Switzerland&quot;],&quot;Primary&quot;:&quot;64163.htm&quot;,&quot;CreatorNames&quot;:[&quot;Guerber, H. A. (Hélène Adeline), 1859-1929&quot;],&quot;LoCC&quot;:[&quot;DQ&quot;],&quot;PG_ID&quot;:&quot;64163&quot;});" class='title'>Legends of Switzerland</a>
+<div class='author'>Guerber, H. A. (Hélène Adeline), 1859-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66001, {&quot;Title&quot;:&quot;Ragatz en Pfeffers - De Aarde en haar volken, Jaargang 1868&quot;,&quot;Topics&quot;:[&quot;Switzerland -- Description and travel&quot;],&quot;Primary&quot;:&quot;66001.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;DQ&quot;],&quot;PG_ID&quot;:&quot;66001&quot;});" class='title'>Ragatz en Pfeffers -<br><span class='subtitle'>De Aarde en haar volken, Jaargang 1868</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66527, {&quot;Title&quot;:&quot;My Home in the Alps&quot;,&quot;Topics&quot;:[&quot;Mountaineering&quot;,&quot;Alps -- Description and travel&quot;],&quot;Primary&quot;:&quot;66527.htm&quot;,&quot;CreatorNames&quot;:[&quot;Le Blond, Aubrey, Mrs., 1861-1934&quot;],&quot;LoCC&quot;:[&quot;DQ&quot;],&quot;PG_ID&quot;:&quot;66527&quot;});" class='title'>My Home in the Alps</a>
+<div class='author'>Le Blond, Aubrey, Mrs., 1861-1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67083, {&quot;Title&quot;:&quot;Aus der Schweiz&quot;,&quot;Topics&quot;:[&quot;Switzerland -- Description and travel&quot;],&quot;Primary&quot;:&quot;67083.htm&quot;,&quot;CreatorNames&quot;:[&quot;Düringsfeld, Ida von, 1815-1876&quot;],&quot;LoCC&quot;:[&quot;DQ&quot;],&quot;PG_ID&quot;:&quot;67083&quot;});" class='title'>Aus der Schweiz</a>
+<div class='author'>Düringsfeld, Ida von, 1815-1876</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67842, {&quot;Title&quot;:&quot;An Oberland Châlet&quot;,&quot;Topics&quot;:[&quot;Switzerland -- Description and travel&quot;],&quot;Primary&quot;:&quot;67842.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wood, Edith Elmer, 1871-1945&quot;],&quot;LoCC&quot;:[&quot;DQ&quot;],&quot;PG_ID&quot;:&quot;67842&quot;});" class='title'>An Oberland Châlet</a>
+<div class='author'>Wood, Edith Elmer, 1871-1945</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69971, {&quot;Title&quot;:&quot;The Swiss Republic&quot;,&quot;Topics&quot;:[&quot;Switzerland&quot;,&quot;Switzerland -- Politics and government -- 1815-&quot;],&quot;Primary&quot;:&quot;69971.htm&quot;,&quot;CreatorNames&quot;:[&quot;Winchester, Boyd, 1836-1923&quot;],&quot;LoCC&quot;:[&quot;DQ&quot;],&quot;PG_ID&quot;:&quot;69971&quot;});" class='title'>The Swiss Republic</a>
+<div class='author'>Winchester, Boyd, 1836-1923</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69990, {&quot;Title&quot;:&quot;A month in Switzerland&quot;,&quot;Topics&quot;:[&quot;Switzerland -- Description and travel&quot;],&quot;Primary&quot;:&quot;69990.htm&quot;,&quot;CreatorNames&quot;:[&quot;Zincke, F. Barham (Foster Barham), 1817-1893&quot;],&quot;LoCC&quot;:[&quot;DQ&quot;],&quot;PG_ID&quot;:&quot;69990&quot;});" class='title'>A month in Switzerland</a>
+<div class='author'>Zincke, F. Barham (Foster Barham), 1817-1893</div>
+</div>
+</ul></div>
+</body></html>

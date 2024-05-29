@@ -1,0 +1,870 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Botany (QK)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(10118, {&quot;Title&quot;:&quot;The Folk-lore of Plants&quot;,&quot;Topics&quot;:[&quot;Folklore&quot;,&quot;Plants -- Folklore&quot;],&quot;Primary&quot;:&quot;10118.txt&quot;,&quot;CreatorNames&quot;:[&quot;Thiselton-Dyer, T. F. (Thomas Firminger), 1848-1923&quot;],&quot;LoCC&quot;:[&quot;GR&quot;,&quot;QK&quot;],&quot;PG_ID&quot;:&quot;10118&quot;});" class='title'>The Folk-lore of Plants</a>
+<div class='author'>Thiselton-Dyer, T. F. (Thomas Firminger), 1848-1923</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(10218, {&quot;Title&quot;:&quot;Stauder&quot;,&quot;Topics&quot;:[&quot;Perennials&quot;],&quot;Primary&quot;:&quot;10218.txt&quot;,&quot;CreatorNames&quot;:[&quot;Brandt, G. N. (Gudmund Nyeland), 1878-1945&quot;],&quot;LoCC&quot;:[&quot;QK&quot;,&quot;SB&quot;],&quot;PG_ID&quot;:&quot;10218&quot;});" class='title'>Stauder</a>
+<div class='author'>Brandt, G. N. (Gudmund Nyeland), 1878-1945</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(10726, {&quot;Title&quot;:&quot;Outlines of Lessons in Botany, Part I; from Seed to Leaf - For the Use of Teachers, or Mothers Studying with Their Children&quot;,&quot;Topics&quot;:[&quot;Botany -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;10726.htm&quot;,&quot;CreatorNames&quot;:[&quot;Moore, Jane Newell, 1857-1945&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;10726&quot;});" class='title'>Outlines of Lessons in Botany, Part I;<br><span class='subtitle'>from Seed to Leaf - For the Use of Teachers, or Mothers Studying with Their Children</span></a>
+<div class='author'>Moore, Jane Newell, 1857-1945</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(11365, {&quot;Title&quot;:&quot;The Fern Lover&#39;s Companion - A Guide for the Northeastern States and Canada&quot;,&quot;Topics&quot;:[&quot;Ferns -- United States&quot;,&quot;Ferns -- Canada&quot;],&quot;Primary&quot;:&quot;11365.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tilton, George Henry, 1845-&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;11365&quot;});" class='title'>The Fern Lover's Companion -<br><span class='subtitle'>A Guide for the Northeastern States and Canada</span></a>
+<div class='author'>Tilton, George Henry, 1845-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(11723, {&quot;Title&quot;:&quot;Among the Trees at Elmridge&quot;,&quot;Topics&quot;:[&quot;Trees -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;11723.htm&quot;,&quot;CreatorNames&quot;:[&quot;Church, Ella Rodman, 1831-&quot;],&quot;LoCC&quot;:[&quot;PZ&quot;,&quot;QK&quot;],&quot;PG_ID&quot;:&quot;11723&quot;});" class='title'>Among the Trees at Elmridge</a>
+<div class='author'>Church, Ella Rodman, 1831-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(1221, {&quot;Title&quot;:&quot;A Preliminary Revision of the North American Species of Cactus, Anhalonium, and Lophophora&quot;,&quot;Topics&quot;:[&quot;Cactus&quot;,&quot;Ariocarpus&quot;,&quot;Peyote&quot;,&quot;Plants -- North America&quot;],&quot;Primary&quot;:&quot;1221.txt&quot;,&quot;CreatorNames&quot;:[&quot;Coulter, John Merle, 1851-1928&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;1221&quot;});" class='title'>A Preliminary Revision of the North American Species of Cactus, Anhalonium, and Lophophora</a>
+<div class='author'>Coulter, John Merle, 1851-1928</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12286, {&quot;Title&quot;:&quot;Flowers and Flower-Gardens - With an Appendix of Practical Instructions and Useful Information Respecting the Anglo-Indian Flower-Garden&quot;,&quot;Topics&quot;:[&quot;Gardening&quot;,&quot;Flowers -- Poetry&quot;],&quot;Primary&quot;:&quot;12286.htm&quot;,&quot;CreatorNames&quot;:[&quot;Richardson, David Lester, 1801-1865&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;12286&quot;});" class='title'>Flowers and Flower-Gardens -<br><span class='subtitle'>With an Appendix of Practical Instructions and Useful Information Respecting the Anglo-Indian Flower-Garden</span></a>
+<div class='author'>Richardson, David Lester, 1801-1865</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12363, {&quot;Title&quot;:&quot;The Botanist&#39;s Companion, Volume II - Or an Introduction to the Knowledge of Practical Botany, and the Uses of Plants. Either Growing Wild in Great Britain, or Cultivated for the Puroses of Agriculture, Medicine, Rural Oeconomy, or the Arts&quot;,&quot;Topics&quot;:[&quot;Plants -- Great Britain&quot;],&quot;Primary&quot;:&quot;12363.txt&quot;,&quot;CreatorNames&quot;:[&quot;Salisbury, William, -1823&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;12363&quot;});" class='title'>The Botanist's Companion, Volume II -<br><span class='subtitle'>Or an Introduction to the Knowledge of Practical Botany, and the Uses of Plants. Either Growing Wild in Great Britain, or Cultivated for the Puroses of Agriculture, Medicine, Rural Oeconomy, or the Arts</span></a>
+<div class='author'>Salisbury, William, -1823</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13347, {&quot;Title&quot;:&quot;Wildflowers of the Farm&quot;,&quot;Topics&quot;:[&quot;Wild flowers -- Great Britain&quot;],&quot;Primary&quot;:&quot;13347.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cooke, Arthur O. (Arthur Owens), 1867-1930&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;13347&quot;});" class='title'>Wildflowers of the Farm</a>
+<div class='author'>Cooke, Arthur O. (Arthur Owens), 1867-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13357, {&quot;Title&quot;:&quot;Cactus Culture for Amateurs - Being Descriptions of the Various Cactuses Grown in This Country, With Full and Practical Instructions for Their Successful Cultivation&quot;,&quot;Topics&quot;:[&quot;Cactus&quot;],&quot;Primary&quot;:&quot;13357.htm&quot;,&quot;CreatorNames&quot;:[&quot;Watson, William, 1858-1925&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;13357&quot;});" class='title'>Cactus Culture for Amateurs -<br><span class='subtitle'>Being Descriptions of the Various Cactuses Grown in This Country, With Full and Practical Instructions for Their Successful Cultivation</span></a>
+<div class='author'>Watson, William, 1858-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15088, {&quot;Title&quot;:&quot;Proserpina, Volume 2 - Studies of Wayside Flowers, While the Air was Yet Pure Among the Alps and in the Scotland and England Which My Father Knew&quot;,&quot;Topics&quot;:[&quot;Plants&quot;,&quot;Flowers&quot;],&quot;Primary&quot;:&quot;15088.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ruskin, John, 1819-1900&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;15088&quot;});" class='title'>Proserpina, Volume 2 -<br><span class='subtitle'>Studies of Wayside Flowers, While the Air was Yet Pure Among the Alps and in the Scotland and England Which My Father Knew</span></a>
+<div class='author'>Ruskin, John, 1819-1900</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15139, {&quot;Title&quot;:&quot;Notizie del pubblico giardino de&#39; semplici di Padova compilate intorno l&#39;anno 1771&quot;,&quot;Topics&quot;:[&quot;Botanical gardens -- Italy -- Padua&quot;],&quot;Primary&quot;:&quot;15139.htm&quot;,&quot;CreatorNames&quot;:[&quot;Marsili, Giovanni, 1727-1795&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;15139&quot;});" class='title'>Notizie del pubblico giardino de' semplici di Padova compilate intorno l'anno 1771</a>
+<div class='author'>Marsili, Giovanni, 1727-1795</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16116, {&quot;Title&quot;:&quot;Studies of Trees&quot;,&quot;Topics&quot;:[&quot;Trees&quot;],&quot;Primary&quot;:&quot;16116.htm&quot;,&quot;CreatorNames&quot;:[&quot;Levison, Jacob Joshua, 1881-&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;16116&quot;});" class='title'>Studies of Trees</a>
+<div class='author'>Levison, Jacob Joshua, 1881-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17198, {&quot;Title&quot;:&quot;The Botanical Magazine, Vol. 01 - Or, Flower-Garden Displayed&quot;,&quot;Topics&quot;:[&quot;Plants -- Periodicals&quot;,&quot;Plants, Cultivated -- Periodicals&quot;,&quot;Plants, Ornamental -- Periodicals&quot;,&quot;Botanical illustration -- Periodicals&quot;],&quot;Primary&quot;:&quot;17198.htm&quot;,&quot;CreatorNames&quot;:[&quot;Curtis, William, 1746-1799&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;17198&quot;});" class='title'>The Botanical Magazine, Vol. 01 -<br><span class='subtitle'>Or, Flower-Garden Displayed</span></a>
+<div class='author'>Curtis, William, 1746-1799</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17531, {&quot;Title&quot;:&quot;The Botanical Magazine, Vol. 02 - Or, Flower-Garden Displayed&quot;,&quot;Topics&quot;:[&quot;Plants -- Periodicals&quot;,&quot;Plants, Cultivated -- Periodicals&quot;,&quot;Plants, Ornamental -- Periodicals&quot;,&quot;Botanical illustration -- Periodicals&quot;],&quot;Primary&quot;:&quot;17531.htm&quot;,&quot;CreatorNames&quot;:[&quot;Curtis, William, 1746-1799&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;17531&quot;});" class='title'>The Botanical Magazine, Vol. 02 -<br><span class='subtitle'>Or, Flower-Garden Displayed</span></a>
+<div class='author'>Curtis, William, 1746-1799</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17672, {&quot;Title&quot;:&quot;The Botanical Magazine, Vol. 03 - Or, Flower-Garden Displayed&quot;,&quot;Topics&quot;:[&quot;Plants -- Periodicals&quot;,&quot;Plants, Cultivated -- Periodicals&quot;,&quot;Plants, Ornamental -- Periodicals&quot;,&quot;Botanical illustration -- Periodicals&quot;],&quot;Primary&quot;:&quot;17672.htm&quot;,&quot;CreatorNames&quot;:[&quot;Curtis, William, 1746-1799&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;17672&quot;});" class='title'>The Botanical Magazine, Vol. 03 -<br><span class='subtitle'>Or, Flower-Garden Displayed</span></a>
+<div class='author'>Curtis, William, 1746-1799</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17979, {&quot;Title&quot;:&quot;The Botanical Magazine, Vol. 04 - Or, Flower-Garden Displayed&quot;,&quot;Topics&quot;:[&quot;Plants -- Periodicals&quot;,&quot;Plants, Cultivated -- Periodicals&quot;,&quot;Plants, Ornamental -- Periodicals&quot;,&quot;Botanical illustration -- Periodicals&quot;],&quot;Primary&quot;:&quot;17979.htm&quot;,&quot;CreatorNames&quot;:[&quot;Curtis, William, 1746-1799&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;17979&quot;});" class='title'>The Botanical Magazine, Vol. 04 -<br><span class='subtitle'>Or, Flower-Garden Displayed</span></a>
+<div class='author'>Curtis, William, 1746-1799</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18452, {&quot;Title&quot;:&quot;Among the Mushrooms: A Guide For Beginners&quot;,&quot;Topics&quot;:[&quot;Mushrooms&quot;],&quot;Primary&quot;:&quot;18452.htm&quot;,&quot;CreatorNames&quot;:[&quot;Burgin, Caroline A.&quot;,&quot;Dallas, Ellen M.&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;18452&quot;});" class='title'>Among the Mushrooms:<br><span class='subtitle'>A Guide For Beginners</span></a>
+<div class='author'>Burgin, Caroline A., Dallas, Ellen M.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18754, {&quot;Title&quot;:&quot;Ohio Biological Survey, Bull. 10, Vol. 11, No. 6 - The Ascomycetes of Ohio IV and V&quot;,&quot;Topics&quot;:[&quot;Ascomycetes&quot;],&quot;Primary&quot;:&quot;18754.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fink, Bruce, 1861-1927&quot;,&quot;Hilker, Leafy Jane Corrington, 1889-&quot;],&quot;LoCC&quot;:[&quot;QH&quot;,&quot;QK&quot;],&quot;PG_ID&quot;:&quot;18754&quot;});" class='title'>Ohio Biological Survey, Bull. 10, Vol. 11, No. 6 -<br><span class='subtitle'>The Ascomycetes of Ohio IV and V</span></a>
+<div class='author'>Fink, Bruce, 1861-1927, Hilker, Leafy Jane Corrington, 1889-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19123, {&quot;Title&quot;:&quot;The Botanical Magazine, Vol. 05 - Or, Flower-Garden Displayed&quot;,&quot;Topics&quot;:[&quot;Plants -- Periodicals&quot;,&quot;Plants, Cultivated -- Periodicals&quot;,&quot;Plants, Ornamental -- Periodicals&quot;,&quot;Botanical illustration -- Periodicals&quot;],&quot;Primary&quot;:&quot;19123.htm&quot;,&quot;CreatorNames&quot;:[&quot;Curtis, William, 1746-1799&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;19123&quot;});" class='title'>The Botanical Magazine, Vol. 05 -<br><span class='subtitle'>Or, Flower-Garden Displayed</span></a>
+<div class='author'>Curtis, William, 1746-1799</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19352, {&quot;Title&quot;:&quot;Herbal Simples Approved for Modern Uses of Cure&quot;,&quot;Topics&quot;:[&quot;Botany, Medical&quot;],&quot;Primary&quot;:&quot;19352.txt&quot;,&quot;CreatorNames&quot;:[&quot;Fernie, William Thomas, 1830-&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;19352&quot;});" class='title'>Herbal Simples Approved for Modern Uses of Cure</a>
+<div class='author'>Fernie, William Thomas, 1830-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20390, {&quot;Title&quot;:&quot;Elements of Structural and Systematic Botany - For High Schools and Elementary College Courses&quot;,&quot;Topics&quot;:[&quot;Botany -- Textbooks&quot;],&quot;Primary&quot;:&quot;20390.htm&quot;,&quot;CreatorNames&quot;:[&quot;Campbell, Douglas Houghton, 1859-1953&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;20390&quot;});" class='title'>Elements of Structural and Systematic Botany -<br><span class='subtitle'>For High Schools and Elementary College Courses</span></a>
+<div class='author'>Campbell, Douglas Houghton, 1859-1953</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20421, {&quot;Title&quot;:&quot;Proserpina, Volume 1 - Studies of Wayside Flowers, While the Air was Yet Pure Among the Alps and in the Scotland and England Which My Father Knew&quot;,&quot;Topics&quot;:[&quot;Plants&quot;,&quot;Flowers&quot;],&quot;Primary&quot;:&quot;20421.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ruskin, John, 1819-1900&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;20421&quot;});" class='title'>Proserpina, Volume 1 -<br><span class='subtitle'>Studies of Wayside Flowers, While the Air was Yet Pure Among the Alps and in the Scotland and England Which My Father Knew</span></a>
+<div class='author'>Ruskin, John, 1819-1900</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20467, {&quot;Title&quot;:&quot;Handbook of the Trees of New England&quot;,&quot;Topics&quot;:[&quot;Trees -- New England&quot;,&quot;Trees -- North America&quot;],&quot;Primary&quot;:&quot;20467.htm&quot;,&quot;CreatorNames&quot;:[&quot;Brooks, Henry M. (Henry Mason), 1822-1898&quot;,&quot;Dame, Lorin Low, 1838-1903&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;20467&quot;});" class='title'>Handbook of the Trees of New England</a>
+<div class='author'>Brooks, Henry M. (Henry Mason), 1822-1898, Dame, Lorin Low, 1838-1903</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20771, {&quot;Title&quot;:&quot;Species Plantarum, Sections I-III&quot;,&quot;Topics&quot;:[&quot;Plants -- Classification -- Early works to 1800&quot;,&quot;Plants -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;20771.htm&quot;,&quot;CreatorNames&quot;:[&quot;Linné, Carl von, 1707-1778&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;20771&quot;});" class='title'>Species Plantarum, Sections I-III</a>
+<div class='author'>Linné, Carl von, 1707-1778</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(21761, {&quot;Title&quot;:&quot;Synopsis of Some Genera of the Large Pyrenomycetes - Camillea, Thamnomyces, Engleromyces&quot;,&quot;Topics&quot;:[&quot;Pyrenomycetes&quot;],&quot;Primary&quot;:&quot;21761.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lloyd, C. G. (Curtis Gates), 1859-1926&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;21761&quot;});" class='title'>Synopsis of Some Genera of the Large Pyrenomycetes -<br><span class='subtitle'>Camillea, Thamnomyces, Engleromyces</span></a>
+<div class='author'>Lloyd, C. G. (Curtis Gates), 1859-1926</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(21843, {&quot;Title&quot;:&quot;The Botanical Magazine, Vol. 06 - Or, Flower-Garden Displayed&quot;,&quot;Topics&quot;:[&quot;Plants -- Periodicals&quot;,&quot;Plants, Cultivated -- Periodicals&quot;,&quot;Plants, Ornamental -- Periodicals&quot;,&quot;Botanical illustration -- Periodicals&quot;],&quot;Primary&quot;:&quot;21843.htm&quot;,&quot;CreatorNames&quot;:[&quot;Curtis, William, 1746-1799&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;21843&quot;});" class='title'>The Botanical Magazine, Vol. 06 -<br><span class='subtitle'>Or, Flower-Garden Displayed</span></a>
+<div class='author'>Curtis, William, 1746-1799</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22761, {&quot;Title&quot;:&quot;Ideen zu einer Physiognomik der Gewächse&quot;,&quot;Topics&quot;:[&quot;Phytogeography&quot;,&quot;Plant ecology&quot;],&quot;Primary&quot;:&quot;22761.htm&quot;,&quot;CreatorNames&quot;:[&quot;Humboldt, Alexander von, 1769-1859&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;22761&quot;});" class='title'>Ideen zu einer Physiognomik der Gewächse</a>
+<div class='author'>Humboldt, Alexander von, 1769-1859</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23354, {&quot;Title&quot;:&quot;Vegetable Teratology - An Account of the Principal Deviations from the Usual Construction of Plants&quot;,&quot;Topics&quot;:[&quot;Plants -- Abnormalities&quot;],&quot;Primary&quot;:&quot;23354.htm&quot;,&quot;CreatorNames&quot;:[&quot;Masters, Maxwell T. (Maxwell Tylden), 1833-1907&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;23354&quot;});" class='title'>Vegetable Teratology -<br><span class='subtitle'>An Account of the Principal Deviations from the Usual Construction of Plants</span></a>
+<div class='author'>Masters, Maxwell T. (Maxwell Tylden), 1833-1907</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23579, {&quot;Title&quot;:&quot;The Botanical Magazine, Vol. 07 - Or, Flower-Garden Displayed&quot;,&quot;Topics&quot;:[&quot;Plants -- Periodicals&quot;,&quot;Plants, Cultivated -- Periodicals&quot;,&quot;Plants, Ornamental -- Periodicals&quot;,&quot;Botanical illustration -- Periodicals&quot;],&quot;Primary&quot;:&quot;23579.htm&quot;,&quot;CreatorNames&quot;:[&quot;Curtis, William, 1746-1799&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;23579&quot;});" class='title'>The Botanical Magazine, Vol. 07 -<br><span class='subtitle'>Or, Flower-Garden Displayed</span></a>
+<div class='author'>Curtis, William, 1746-1799</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23672, {&quot;Title&quot;:&quot;Die epiphytische Vegetation Amerikas&quot;,&quot;Topics&quot;:[&quot;Phytogeography&quot;,&quot;Plant ecology&quot;,&quot;Botany -- Tropics&quot;],&quot;Primary&quot;:&quot;23672.htm&quot;,&quot;CreatorNames&quot;:[&quot;Schimper, A. F. W. (Andreas Franz Wilhelm), 1856-1901&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;23672&quot;});" class='title'>Die epiphytische Vegetation Amerikas</a>
+<div class='author'>Schimper, A. F. W. (Andreas Franz Wilhelm), 1856-1901</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24063, {&quot;Title&quot;:&quot;A Handbook of Some South Indian Grasses&quot;,&quot;Topics&quot;:[&quot;Grasses -- India, South&quot;,&quot;Plants -- India, South&quot;],&quot;Primary&quot;:&quot;24063.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rangachari, K.&quot;,&quot;Tadulinga Mudaliyar, C.&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;24063&quot;});" class='title'>A Handbook of Some South Indian Grasses</a>
+<div class='author'>Rangachari, K., Tadulinga Mudaliyar, C.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24402, {&quot;Title&quot;:&quot;Catalogue of Economic Plants in the Collection of the U. S. Department of Agriculture&quot;,&quot;Topics&quot;:[&quot;Botany&quot;,&quot;Agriculture&quot;,&quot;Plants, Useful -- Catalogs and collections&quot;,&quot;United States. Dept. of Agriculture -- Catalogs&quot;,&quot;Botany, Economic -- Catalogs and collections&quot;],&quot;Primary&quot;:&quot;24402.htm&quot;,&quot;CreatorNames&quot;:[&quot;Saunders, William, 1822-1900&quot;],&quot;LoCC&quot;:[&quot;QK&quot;,&quot;SB&quot;],&quot;PG_ID&quot;:&quot;24402&quot;});" class='title'>Catalogue of Economic Plants in the Collection of the U. S. Department of Agriculture</a>
+<div class='author'>Saunders, William, 1822-1900</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24588, {&quot;Title&quot;:&quot;The Natural History of Chocolate - Being a Distinct and Particular Account of the Cocoa-Tree, its Growth and Culture, and the Preparation, Excellent Properties, and Medicinal Vertues of its Fruit&quot;,&quot;Topics&quot;:[&quot;Chocolate -- Early works to 1800&quot;,&quot;Cacao -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;24588.htm&quot;,&quot;CreatorNames&quot;:[&quot;Quélus, D.&quot;,&quot;Brookes, R. (Richard), active 1721-1763 [Translator]&quot;],&quot;LoCC&quot;:[&quot;QK&quot;,&quot;SB&quot;],&quot;PG_ID&quot;:&quot;24588&quot;});" class='title'>The Natural History of Chocolate -<br><span class='subtitle'>Being a Distinct and Particular Account of the Cocoa-Tree, its Growth and Culture, and the Preparation, Excellent Properties, and Medicinal Vertues of its Fruit</span></a>
+<div class='author'>Quélus, D., Brookes, R. (Richard), active 1721-1763 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24670, {&quot;Title&quot;:&quot;The Botanical Magazine, Vol. 08 - Or, Flower-Garden Displayed&quot;,&quot;Topics&quot;:[&quot;Plants -- Periodicals&quot;,&quot;Plants, Cultivated -- Periodicals&quot;,&quot;Plants, Ornamental -- Periodicals&quot;,&quot;Botanical illustration -- Periodicals&quot;],&quot;Primary&quot;:&quot;24670.htm&quot;,&quot;CreatorNames&quot;:[&quot;Curtis, William, 1746-1799&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;24670&quot;});" class='title'>The Botanical Magazine, Vol. 08 -<br><span class='subtitle'>Or, Flower-Garden Displayed</span></a>
+<div class='author'>Curtis, William, 1746-1799</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2485, {&quot;Title&quot;:&quot;The Movements and Habits of Climbing Plants&quot;,&quot;Topics&quot;:[&quot;Climbing plants&quot;,&quot;Plants -- Irritability and movements&quot;,&quot;Geotropism&quot;,&quot;Plants&quot;],&quot;Primary&quot;:&quot;2485.htm&quot;,&quot;CreatorNames&quot;:[&quot;Darwin, Charles, 1809-1882&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;2485&quot;});" class='title'>The Movements and Habits of Climbing Plants</a>
+<div class='author'>Darwin, Charles, 1809-1882</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26158, {&quot;Title&quot;:&quot;Seed Dispersal&quot;,&quot;Topics&quot;:[&quot;Plant propagation&quot;,&quot;Seeds -- Dispersal&quot;],&quot;Primary&quot;:&quot;26158.htm&quot;,&quot;CreatorNames&quot;:[&quot;Beal, W. J. (William James), 1833-1924&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;26158&quot;});" class='title'>Seed Dispersal</a>
+<div class='author'>Beal, W. J. (William James), 1833-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26393, {&quot;Title&quot;:&quot;The Medicinal Plants of the Philippines&quot;,&quot;Topics&quot;:[&quot;Medicinal plants -- Philippines&quot;,&quot;Botany -- Philippines&quot;],&quot;Primary&quot;:&quot;26393.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pardo de Tavera, T. H. (Trinidad Hermenegildo), 1857-1925&quot;,&quot;Thomas, Jerome Beers, 1867- [Translator]&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;26393&quot;});" class='title'>The Medicinal Plants of the Philippines</a>
+<div class='author'>Pardo de Tavera, T. H. (Trinidad Hermenegildo), 1857-1925, Thomas, Jerome Beers, 1867- [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26492, {&quot;Title&quot;:&quot;Studies of American Fungi. Mushrooms, Edible, Poisonous, etc.&quot;,&quot;Topics&quot;:[&quot;Cooking (Mushrooms)&quot;,&quot;Fungi -- United States&quot;,&quot;Mushrooms&quot;],&quot;Primary&quot;:&quot;26492.htm&quot;,&quot;CreatorNames&quot;:[&quot;Atkinson, George Francis, 1854-1918&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;26492&quot;});" class='title'>Studies of American Fungi. Mushrooms, Edible, Poisonous, etc.</a>
+<div class='author'>Atkinson, George Francis, 1854-1918</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26798, {&quot;Title&quot;:&quot;The Genus Pinus&quot;,&quot;Topics&quot;:[&quot;Pine&quot;],&quot;Primary&quot;:&quot;26798.htm&quot;,&quot;CreatorNames&quot;:[&quot;Shaw, George Russell, 1848-1937&quot;,&quot;Shaw, George Russell, 1848-1937 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;26798&quot;});" class='title'>The Genus Pinus</a>
+<div class='author'>Shaw, George Russell, 1848-1937, Shaw, George Russell, 1848-1937 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27049, {&quot;Title&quot;:&quot;Species Plantarum, Sections IV-V&quot;,&quot;Topics&quot;:[&quot;Plants -- Classification -- Early works to 1800&quot;,&quot;Plants -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;27049.htm&quot;,&quot;CreatorNames&quot;:[&quot;Linné, Carl von, 1707-1778&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;27049&quot;});" class='title'>Species Plantarum, Sections IV-V</a>
+<div class='author'>Linné, Carl von, 1707-1778</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27412, {&quot;Title&quot;:&quot;Lendas dos Vegetaes&quot;,&quot;Topics&quot;:[&quot;Plants -- Folklore&quot;],&quot;Primary&quot;:&quot;27412.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sequeira, Eduardo Henrique Vieira Coelho de, 1861-1914&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;27412&quot;});" class='title'>Lendas dos Vegetaes</a>
+<div class='author'>Sequeira, Eduardo Henrique Vieira Coelho de, 1861-1914</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28055, {&quot;Title&quot;:&quot;Memorias sobre a influencia dos descobrimentos portuguezes no conhecimento das plantas - I. - Memoria sobre a Malagueta&quot;,&quot;Topics&quot;:[&quot;Plants&quot;],&quot;Primary&quot;:&quot;28055.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ficalho, Francisco Manuel de Melo, Conde de, 1837-1903&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;28055&quot;});" class='title'>Memorias sobre a influencia dos descobrimentos portuguezes no conhecimento das plantas -<br><span class='subtitle'>I. - Memoria sobre a Malagueta</span></a>
+<div class='author'>Ficalho, Francisco Manuel de Melo, Conde de, 1837-1903</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28764, {&quot;Title&quot;:&quot;Getting Acquainted with the Trees&quot;,&quot;Topics&quot;:[&quot;Trees&quot;],&quot;Primary&quot;:&quot;28764.htm&quot;,&quot;CreatorNames&quot;:[&quot;McFarland, J. Horace (John Horace), 1859-1948&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;28764&quot;});" class='title'>Getting Acquainted with the Trees</a>
+<div class='author'>McFarland, J. Horace (John Horace), 1859-1948</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29086, {&quot;Title&quot;:&quot;The Mushroom, Edible and Otherwise - Its Habitat and its Time of Growth&quot;,&quot;Topics&quot;:[&quot;Mushrooms&quot;],&quot;Primary&quot;:&quot;29086.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hard, Miron Elisha, 1845-1914&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;29086&quot;});" class='title'>The Mushroom, Edible and Otherwise -<br><span class='subtitle'>Its Habitat and its Time of Growth</span></a>
+<div class='author'>Hard, Miron Elisha, 1845-1914</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29534, {&quot;Title&quot;:&quot;The Myxomycetes of the Miami Valley, Ohio&quot;,&quot;Topics&quot;:[&quot;Myxomycetes -- Ohio -- Miami River Valley&quot;],&quot;Primary&quot;:&quot;29534.htm&quot;,&quot;CreatorNames&quot;:[&quot;Morgan, A. P. (Andrew Price), 1836-1906&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;29534&quot;});" class='title'>The Myxomycetes of the Miami Valley, Ohio</a>
+<div class='author'>Morgan, A. P. (Andrew Price), 1836-1906</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29724, {&quot;Title&quot;:&quot;Trees of the Northern United States - Their Study, Description and Determination&quot;,&quot;Topics&quot;:[&quot;Trees -- North America&quot;],&quot;Primary&quot;:&quot;29724.htm&quot;,&quot;CreatorNames&quot;:[&quot;Apgar, A. C. (Austin Craig), 1838-1908&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;29724&quot;});" class='title'>Trees of the Northern United States -<br><span class='subtitle'>Their Study, Description and Determination</span></a>
+<div class='author'>Apgar, A. C. (Austin Craig), 1838-1908</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29951, {&quot;Title&quot;:&quot;The Mayflower, January, 1905&quot;,&quot;Topics&quot;:[&quot;Horticulture -- Periodicals&quot;,&quot;Gardening -- Periodicals&quot;],&quot;Primary&quot;:&quot;29951.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;,&quot;Childs, John Lewis, 1856-1921 [Editor]&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;29951&quot;});" class='title'>The Mayflower, January, 1905</a>
+<div class='author'>Various, Childs, John Lewis, 1856-1921 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3003, {&quot;Title&quot;:&quot;Wild Flowers - An Aid to Knowledge of Our Wild Flowers and Their Insect Visitors&quot;,&quot;Topics&quot;:[&quot;Wild flowers -- North America&quot;],&quot;Primary&quot;:&quot;3003.txt&quot;,&quot;CreatorNames&quot;:[&quot;Blanchan, Neltje, 1865-1918&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;3003&quot;});" class='title'>Wild Flowers -<br><span class='subtitle'>An Aid to Knowledge of Our Wild Flowers and Their Insect Visitors</span></a>
+<div class='author'>Blanchan, Neltje, 1865-1918</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30042, {&quot;Title&quot;:&quot;Streifzüge an der Riviera&quot;,&quot;Topics&quot;:[&quot;Plants -- France -- Riviera&quot;,&quot;Riviera (France) -- Description and travel&quot;],&quot;Primary&quot;:&quot;30042.htm&quot;,&quot;CreatorNames&quot;:[&quot;Strasburger, Eduard, 1844-1912&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;30042&quot;});" class='title'>Streifzüge an der Riviera</a>
+<div class='author'>Strasburger, Eduard, 1844-1912</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30104, {&quot;Title&quot;:&quot;Species Plantarum, Sections VI-X&quot;,&quot;Topics&quot;:[&quot;Plants -- Classification -- Early works to 1800&quot;,&quot;Plants -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;30104.htm&quot;,&quot;CreatorNames&quot;:[&quot;Linné, Carl von, 1707-1778&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;30104&quot;});" class='title'>Species Plantarum, Sections VI-X</a>
+<div class='author'>Linné, Carl von, 1707-1778</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30181, {&quot;Title&quot;:&quot;Fungi: Their Nature and Uses&quot;,&quot;Topics&quot;:[&quot;Fungi&quot;],&quot;Primary&quot;:&quot;30181.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cooke, M. C. (Mordecai Cubitt), 1825-1914&quot;,&quot;Berkeley, M. J. (Miles Joseph), 1803-1889 [Editor]&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;30181&quot;});" class='title'>Fungi:<br><span class='subtitle'>Their Nature and Uses</span></a>
+<div class='author'>Cooke, M. C. (Mordecai Cubitt), 1825-1914, Berkeley, M. J. (Miles Joseph), 1803-1889 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30734, {&quot;Title&quot;:&quot;Mushrooms of America, Edible and Poisonous&quot;,&quot;Topics&quot;:[&quot;Cooking (Mushrooms)&quot;,&quot;Mushrooms&quot;],&quot;Primary&quot;:&quot;30734.htm&quot;,&quot;CreatorNames&quot;:[&quot;Palmer, Julius A. (Julius Auboineau), 1840-1899 [Editor]&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;30734&quot;});" class='title'>Mushrooms of America, Edible and Poisonous</a>
+<div class='author'>Palmer, Julius A. (Julius Auboineau), 1840-1899 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31010, {&quot;Title&quot;:&quot;Species Plantarum, Sections XI-XIII&quot;,&quot;Topics&quot;:[&quot;Plants -- Classification -- Early works to 1800&quot;,&quot;Plants -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;31010.htm&quot;,&quot;CreatorNames&quot;:[&quot;Linné, Carl von, 1707-1778&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;31010&quot;});" class='title'>Species Plantarum, Sections XI-XIII</a>
+<div class='author'>Linné, Carl von, 1707-1778</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31098, {&quot;Title&quot;:&quot;The North American Slime-Moulds - A Descriptive List of All Species of Myxomycetes Hitherto Reported from the Continent of North America, with Notes on Some Extra-Limital Species&quot;,&quot;Topics&quot;:[&quot;Myxomycetes&quot;],&quot;Primary&quot;:&quot;31098.htm&quot;,&quot;CreatorNames&quot;:[&quot;Macbride, Thomas H. (Thomas Huston), 1848-1934&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;31098&quot;});" class='title'>The North American Slime-Moulds -<br><span class='subtitle'>A Descriptive List of All Species of Myxomycetes Hitherto Reported from the Continent of North America, with Notes on Some Extra-Limital Species</span></a>
+<div class='author'>Macbride, Thomas H. (Thomas Huston), 1848-1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31856, {&quot;Title&quot;:&quot;Führer für Pilzfreunde&quot;,&quot;Topics&quot;:[&quot;Mushrooms -- Identification&quot;],&quot;Primary&quot;:&quot;31856.htm&quot;,&quot;CreatorNames&quot;:[&quot;Michael, Edmund, 1849-1920&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;31856&quot;});" class='title'>Führer für Pilzfreunde</a>
+<div class='author'>Michael, Edmund, 1849-1920</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32050, {&quot;Title&quot;:&quot;The Plants of Michigan - Simple Keys for the Identification of the Native Seed Plants of the State&quot;,&quot;Topics&quot;:[&quot;Plants -- Michigan&quot;],&quot;Primary&quot;:&quot;32050.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gleason, Henry A. (Henry Allan), 1882-1975&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;32050&quot;});" class='title'>The Plants of Michigan -<br><span class='subtitle'>Simple Keys for the Identification of the Native Seed Plants of the State</span></a>
+<div class='author'>Gleason, Henry A. (Henry Allan), 1882-1975</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32982, {&quot;Title&quot;:&quot;Student&#39;s Hand-book of Mushrooms of America, Edible and Poisonous&quot;,&quot;Topics&quot;:[&quot;Mushrooms -- United States&quot;,&quot;Pathogenic fungi&quot;],&quot;Primary&quot;:&quot;32982.htm&quot;,&quot;CreatorNames&quot;:[&quot;Taylor, Thomas, 1820-1910&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;32982&quot;});" class='title'>Student's Hand-book of Mushrooms of America, Edible and Poisonous</a>
+<div class='author'>Taylor, Thomas, 1820-1910</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33013, {&quot;Title&quot;:&quot;European Fungus Flora: Agaricaceae&quot;,&quot;Topics&quot;:[&quot;Agaricaceae -- Europe&quot;,&quot;Fungi -- Europe&quot;,&quot;Mushrooms -- Europe&quot;],&quot;Primary&quot;:&quot;33013.htm&quot;,&quot;CreatorNames&quot;:[&quot;Massee, George, 1850-1917&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;33013&quot;});" class='title'>European Fungus Flora:<br><span class='subtitle'>Agaricaceae</span></a>
+<div class='author'>Massee, George, 1850-1917</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33394, {&quot;Title&quot;:&quot;The Chemistry of Plant Life&quot;,&quot;Topics&quot;:[&quot;Botanical chemistry&quot;],&quot;Primary&quot;:&quot;33394.htm&quot;,&quot;CreatorNames&quot;:[&quot;Thatcher, Roscoe Wilfred, 1872-1933&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;33394&quot;});" class='title'>The Chemistry of Plant Life</a>
+<div class='author'>Thatcher, Roscoe Wilfred, 1872-1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33443, {&quot;Title&quot;:&quot;Cruise of the Revenue-Steamer Corwin in Alaska and the N.W. Arctic Ocean in 1881: Botanical Notes - Notes and Memoranda: Medical and Anthropological; Botanical; Ornithological.&quot;,&quot;Topics&quot;:[&quot;Plants -- Alaska&quot;],&quot;Primary&quot;:&quot;33443.htm&quot;,&quot;CreatorNames&quot;:[&quot;Muir, John, 1838-1914&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;33443&quot;});" class='title'>Cruise of the Revenue-Steamer Corwin in Alaska and the N.W. Arctic Ocean in 1881:<br><span class='subtitle'>Botanical Notes - Notes and Memoranda: Medical and Anthropological; Botanical; Ornithological.</span></a>
+<div class='author'>Muir, John, 1838-1914</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33654, {&quot;Title&quot;:&quot;The Old English Herbals&quot;,&quot;Topics&quot;:[&quot;Botany -- Great Britain -- History&quot;,&quot;Botanical literature&quot;,&quot;Herbs -- Bibliography&quot;,&quot;Herbals&quot;],&quot;Primary&quot;:&quot;33654.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rohde, Eleanour Sinclair&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;33654&quot;});" class='title'>The Old English Herbals</a>
+<div class='author'>Rohde, Eleanour Sinclair</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33757, {&quot;Title&quot;:&quot;The Elements of Botany, For Beginners and For Schools&quot;,&quot;Topics&quot;:[&quot;Plants&quot;],&quot;Primary&quot;:&quot;33757.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gray, Asa, 1810-1888&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;33757&quot;});" class='title'>The Elements of Botany, For Beginners and For Schools</a>
+<div class='author'>Gray, Asa, 1810-1888</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34380, {&quot;Title&quot;:&quot;The Call of the Wildflower&quot;,&quot;Topics&quot;:[&quot;Flowers -- Great Britain&quot;],&quot;Primary&quot;:&quot;34380.htm&quot;,&quot;CreatorNames&quot;:[&quot;Salt, Henry S., 1851-1939&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;34380&quot;});" class='title'>The Call of the Wildflower</a>
+<div class='author'>Salt, Henry S., 1851-1939</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34510, {&quot;Title&quot;:&quot;Some Constituents of the Poison Ivy Plant (Rhus Toxicodendron)&quot;,&quot;Topics&quot;:[&quot;Poison ivy&quot;],&quot;Primary&quot;:&quot;34510.htm&quot;,&quot;CreatorNames&quot;:[&quot;Syme, William Anderson, 1879-&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;34510&quot;});" class='title'>Some Constituents of the Poison Ivy Plant (Rhus Toxicodendron)</a>
+<div class='author'>Syme, William Anderson, 1879-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34624, {&quot;Title&quot;:&quot;Elogio Historico do Conde de Ficalho&quot;,&quot;Topics&quot;:[&quot;Ficalho, Francisco Manuel de Melo, Conde de, 1837-1903&quot;],&quot;Primary&quot;:&quot;34624.htm&quot;,&quot;CreatorNames&quot;:[&quot;Burnay, Eduardo, 1853-1924&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;34624&quot;});" class='title'>Elogio Historico do Conde de Ficalho</a>
+<div class='author'>Burnay, Eduardo, 1853-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34715, {&quot;Title&quot;:&quot;Nouvel atlas de poche des champignons Comestibles et Vénéneux les plus répandus. Série I (Troisième édition) - Suivi de notions générales sur les champignons, leur classification, composition chimique, valeur alimentaire, préparation&quot;,&quot;Topics&quot;:[&quot;Mushrooms&quot;],&quot;Primary&quot;:&quot;34715.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dumée, Paul, 1849-1930&quot;,&quot;Bessin, Aimé, 1870-1942 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;34715&quot;});" class='title'>Nouvel atlas de poche des champignons Comestibles et Vénéneux les plus répandus. Série I (Troisième édition) -<br><span class='subtitle'>Suivi de notions générales sur les champignons, leur classification, composition chimique, valeur alimentaire, préparation</span></a>
+<div class='author'>Dumée, Paul, 1849-1930, Bessin, Aimé, 1870-1942 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34740, {&quot;Title&quot;:&quot;Wayside and Woodland Trees: A pocket guide to the British sylva&quot;,&quot;Topics&quot;:[&quot;Shrubs -- Great Britain&quot;,&quot;Trees -- Great Britain&quot;],&quot;Primary&quot;:&quot;34740.htm&quot;,&quot;CreatorNames&quot;:[&quot;Step, Edward, 1855-1931&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;34740&quot;});" class='title'>Wayside and Woodland Trees:<br><span class='subtitle'>A pocket guide to the British sylva</span></a>
+<div class='author'>Step, Edward, 1855-1931</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34914, {&quot;Title&quot;:&quot;De Plantis Esculentis Insularum Oceani Australis Commentatio Botanica&quot;,&quot;Topics&quot;:[&quot;Plants, Edible -- Australia&quot;,&quot;Plants, Edible -- Oceania&quot;,&quot;Botany, Economic -- Oceania&quot;],&quot;Primary&quot;:&quot;34914.htm&quot;,&quot;CreatorNames&quot;:[&quot;Forster, Georg, 1754-1794&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;34914&quot;});" class='title'>De Plantis Esculentis Insularum Oceani Australis Commentatio Botanica</a>
+<div class='author'>Forster, Georg, 1754-1794</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36186, {&quot;Title&quot;:&quot;Florulae Insularum Australium Prodromus&quot;,&quot;Topics&quot;:[&quot;Plants -- Australia&quot;],&quot;Primary&quot;:&quot;36186.htm&quot;,&quot;CreatorNames&quot;:[&quot;Forster, Georg, 1754-1794&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;36186&quot;});" class='title'>Florulae Insularum Australium Prodromus</a>
+<div class='author'>Forster, Georg, 1754-1794</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37119, {&quot;Title&quot;:&quot;Sea-Weeds, Shells and Fossils&quot;,&quot;Topics&quot;:[&quot;Marine algae -- Identification -- Juvenile literature&quot;,&quot;Mollusks -- Identification -- Juvenile literature&quot;,&quot;Mollusks -- Classification -- Juvenile literature&quot;,&quot;Mollusks, Fossil -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;37119.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gray, Peter&quot;,&quot;Woodward, B. B. (Bernard Bolingbroke), 1816-1869&quot;],&quot;LoCC&quot;:[&quot;QK&quot;,&quot;QL&quot;],&quot;PG_ID&quot;:&quot;37119&quot;});" class='title'>Sea-Weeds, Shells and Fossils</a>
+<div class='author'>Gray, Peter, Woodward, B. B. (Bernard Bolingbroke), 1816-1869</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37646, {&quot;Title&quot;:&quot;Forest Trees of Illinois: How to Know Them&quot;,&quot;Topics&quot;:[&quot;Trees -- Illinois&quot;],&quot;Primary&quot;:&quot;37646.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fuller, George D. (George Damon), 1869-&quot;,&quot;Mattoon, Wilbur R. (Wilbur Reed), 1875-1941&quot;,&quot;Miller, Robert B. (Robert Barclay)&quot;,&quot;Nuuttila, E. E.&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;37646&quot;});" class='title'>Forest Trees of Illinois:<br><span class='subtitle'>How to Know Them</span></a>
+<div class='author'>Fuller, George D. (George Damon), 1869-, Mattoon, Wilbur R. (Wilbur Reed), 1875-1941, Miller, Robert B. (Robert Barclay), Nuuttila, E. E.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37717, {&quot;Title&quot;:&quot;Trees Worth Knowing&quot;,&quot;Topics&quot;:[&quot;Trees&quot;],&quot;Primary&quot;:&quot;37717.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rogers, Julia Ellen, 1866-&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;37717&quot;});" class='title'>Trees Worth Knowing</a>
+<div class='author'>Rogers, Julia Ellen, 1866-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3807, {&quot;Title&quot;:&quot;The Different Forms of Flowers on Plants of the Same Species&quot;,&quot;Topics&quot;:[&quot;Plants -- Variation&quot;,&quot;Fertilization of plants&quot;,&quot;Heterostylism&quot;,&quot;Plant physiology&quot;,&quot;Pollination&quot;],&quot;Primary&quot;:&quot;3807.htm&quot;,&quot;CreatorNames&quot;:[&quot;Darwin, Charles, 1809-1882&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;3807&quot;});" class='title'>The Different Forms of Flowers on Plants of the Same Species</a>
+<div class='author'>Darwin, Charles, 1809-1882</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38382, {&quot;Title&quot;:&quot;The Botanical Magazine, Vol. 09 - Or, Flower-Garden Displayed&quot;,&quot;Topics&quot;:[&quot;Plants -- Periodicals&quot;,&quot;Plants, Cultivated -- Periodicals&quot;,&quot;Plants, Ornamental -- Periodicals&quot;,&quot;Botanical illustration -- Periodicals&quot;],&quot;Primary&quot;:&quot;38382.htm&quot;,&quot;CreatorNames&quot;:[&quot;Curtis, William, 1746-1799&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;38382&quot;});" class='title'>The Botanical Magazine, Vol. 09 -<br><span class='subtitle'>Or, Flower-Garden Displayed</span></a>
+<div class='author'>Curtis, William, 1746-1799</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38886, {&quot;Title&quot;:&quot;The Wild Flowers of California: Their Names, Haunts, and Habits&quot;,&quot;Topics&quot;:[&quot;Wild flowers -- California&quot;],&quot;Primary&quot;:&quot;38886.htm&quot;,&quot;CreatorNames&quot;:[&quot;Parsons, Mary Elizabeth&quot;,&quot;Buck, Margaret Warriner [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;38886&quot;});" class='title'>The Wild Flowers of California:<br><span class='subtitle'>Their Names, Haunts, and Habits</span></a>
+<div class='author'>Parsons, Mary Elizabeth, Buck, Margaret Warriner [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38904, {&quot;Title&quot;:&quot;Our Flowering Shrubs, and How to Know Them&quot;,&quot;Topics&quot;:[&quot;Shrubs -- Great Britain -- Identification -- Pictorial works&quot;],&quot;Primary&quot;:&quot;38904.htm&quot;,&quot;CreatorNames&quot;:[&quot;Smith, William [Commentator]&quot;,&quot;Kirk, Charles [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;38904&quot;});" class='title'>Our Flowering Shrubs, and How to Know Them</a>
+<div class='author'>Smith, William [Commentator], Kirk, Charles [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38937, {&quot;Title&quot;:&quot;Sertum Anglicum, seu, Plantae Rariores quae in Hortis Juxta Londinum - Imprimis in Horto Regio Kewensi excoluntur, ab anno 1786 ad annum 1787 observata&quot;,&quot;Topics&quot;:[&quot;Plants -- Early works to 1800&quot;,&quot;Rare plants -- England -- London&quot;,&quot;Plants -- England -- London&quot;,&quot;Plants, Cultivated -- England -- London&quot;,&quot;Royal Botanic Gardens, Kew&quot;],&quot;Primary&quot;:&quot;38937.htm&quot;,&quot;CreatorNames&quot;:[&quot;L&#39;Héritier de Brutelle, Charles Louis, 1746-1800&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;38937&quot;});" class='title'>Sertum Anglicum, seu, Plantae Rariores quae in Hortis Juxta Londinum -<br><span class='subtitle'>Imprimis in Horto Regio Kewensi excoluntur, ab anno 1786 ad annum 1787 observata</span></a>
+<div class='author'>L'Héritier de Brutelle, Charles Louis, 1746-1800</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39107, {&quot;Title&quot;:&quot;Noções botanicas das especies de Nicociana mais usadas nas fabricas de tabaco, e da sua cultura&quot;,&quot;Topics&quot;:[&quot;Tobacco&quot;,&quot;Nicotiana&quot;],&quot;Primary&quot;:&quot;39107.htm&quot;,&quot;CreatorNames&quot;:[&quot;Avellar Brotero, Felix de, 1744-1828 [Adapter]&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;39107&quot;});" class='title'>Noções botanicas das especies de Nicociana mais usadas nas fabricas de tabaco, e da sua cultura</a>
+<div class='author'>Avellar Brotero, Felix de, 1744-1828 [Adapter]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39357, {&quot;Title&quot;:&quot;Texas Honey Plants&quot;,&quot;Topics&quot;:[&quot;Bee culture&quot;,&quot;Honey plants -- Texas&quot;],&quot;Primary&quot;:&quot;39357.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sanborn, Charles Emerson, 1877-&quot;,&quot;Scholl, Ernest E. (Ernest Emmett), 1881-&quot;],&quot;LoCC&quot;:[&quot;QK&quot;,&quot;SF&quot;],&quot;PG_ID&quot;:&quot;39357&quot;});" class='title'>Texas Honey Plants</a>
+<div class='author'>Sanborn, Charles Emerson, 1877-, Scholl, Ernest E. (Ernest Emmett), 1881-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39423, {&quot;Title&quot;:&quot;The Manual of the Botany of the Northern United States - Including the District East of the Mississippi and North of North Carolina and Tennessee&quot;,&quot;Topics&quot;:[&quot;Plants -- United States&quot;],&quot;Primary&quot;:&quot;39423.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gray, Asa, 1810-1888&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;39423&quot;});" class='title'>The Manual of the Botany of the Northern United States -<br><span class='subtitle'>Including the District East of the Mississippi and North of North Carolina and Tennessee</span></a>
+<div class='author'>Gray, Asa, 1810-1888</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39534, {&quot;Title&quot;:&quot;Tentamen Botanicum de Filicum Generibus Dorsiferarum - Mémoires de l&#39;Académie Royale des Sciences de Turin vol. 5, 401-422&quot;,&quot;Topics&quot;:[&quot;Pteridophyta&quot;,&quot;Aspleniaceae&quot;,&quot;Cyatheaceae&quot;,&quot;Hymenophyllaceae&quot;],&quot;Primary&quot;:&quot;39534.htm&quot;,&quot;CreatorNames&quot;:[&quot;Smith, James Edward, 1759-1828&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;39534&quot;});" class='title'>Tentamen Botanicum de Filicum Generibus Dorsiferarum -<br><span class='subtitle'>Mémoires de l'Académie Royale des Sciences de Turin vol. 5, 401-422</span></a>
+<div class='author'>Smith, James Edward, 1759-1828</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39946, {&quot;Title&quot;:&quot;Trees: A Woodland Notebook - Containing Observations on Certain British and Exotic Trees&quot;,&quot;Topics&quot;:[&quot;Trees&quot;],&quot;Primary&quot;:&quot;39946.htm&quot;,&quot;CreatorNames&quot;:[&quot;Maxwell, Herbert, Sir, 1845-1937&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;39946&quot;});" class='title'>Trees:<br><span class='subtitle'>A Woodland Notebook - Containing Observations on Certain British and Exotic Trees</span></a>
+<div class='author'>Maxwell, Herbert, Sir, 1845-1937</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40040, {&quot;Title&quot;:&quot;Flowers, Shown to the Children&quot;,&quot;Topics&quot;:[&quot;Plants -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;40040.htm&quot;,&quot;CreatorNames&quot;:[&quot;Smith, C. E.&quot;,&quot;Chisholm, Louey [Editor]&quot;,&quot;Kelman, Janet Harvey [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;40040&quot;});" class='title'>Flowers, Shown to the Children</a>
+<div class='author'>Smith, C. E., Chisholm, Louey [Editor], Kelman, Janet Harvey [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40050, {&quot;Title&quot;:&quot;Life Movements in Plants, Volume II&quot;,&quot;Topics&quot;:[&quot;Plants -- Irritability and movements&quot;,&quot;Growth (Plants)&quot;],&quot;Primary&quot;:&quot;40050.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bose, Jagadis Chandra, 1858-1937&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;40050&quot;});" class='title'>Life Movements in Plants, Volume II</a>
+<div class='author'>Bose, Jagadis Chandra, 1858-1937</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40554, {&quot;Title&quot;:&quot;Journal of a Horticultural Tour through Germany, Belgium, and part of France, in the Autumn of 1835 - To which is added, a Catalogue of the different Species of Cacteæ in the Gardens at Woburn Abbey.&quot;,&quot;Topics&quot;:[&quot;Cactus&quot;,&quot;Botanical gardens -- Europe&quot;],&quot;Primary&quot;:&quot;40554.htm&quot;,&quot;CreatorNames&quot;:[&quot;Forbes, James, 1773-1861&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;40554&quot;});" class='title'>Journal of a Horticultural Tour through Germany, Belgium, and part of France, in the Autumn of 1835 -<br><span class='subtitle'>To which is added, a Catalogue of the different Species of Cacteæ in the Gardens at Woburn Abbey.</span></a>
+<div class='author'>Forbes, James, 1773-1861</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41175, {&quot;Title&quot;:&quot;Woodland Gleanings: Being an Account of British Forest-Trees&quot;,&quot;Topics&quot;:[&quot;Trees -- Great Britain -- Identification&quot;,&quot;Forests and forestry -- Great Britain&quot;],&quot;Primary&quot;:&quot;41175.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tyas, Robert, 1811-1879&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;41175&quot;});" class='title'>Woodland Gleanings:<br><span class='subtitle'>Being an Account of British Forest-Trees</span></a>
+<div class='author'>Tyas, Robert, 1811-1879</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41255, {&quot;Title&quot;:&quot;Prodromus Florae Norfolkicae - Sive, Catalogus stirpium quae in insula Norfolk annis 1804 et 1805 a Ferdinando Bauer collectae et depictae, nunc in Museo caesareo palatino rerum naturalium Vindobonae servantur&quot;,&quot;Topics&quot;:[&quot;Plants -- Norfolk Island&quot;],&quot;Primary&quot;:&quot;41255.htm&quot;,&quot;CreatorNames&quot;:[&quot;Endlicher, Stephan, 1804-1849&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;41255&quot;});" class='title'>Prodromus Florae Norfolkicae -<br><span class='subtitle'>Sive, Catalogus stirpium quae in insula Norfolk annis 1804 et 1805 a Ferdinando Bauer collectae et depictae, nunc in Museo caesareo palatino rerum naturalium Vindobonae servantur</span></a>
+<div class='author'>Endlicher, Stephan, 1804-1849</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41394, {&quot;Title&quot;:&quot;Michigan Trees: A Handbook of the Native and Most Important Introduced Species&quot;,&quot;Topics&quot;:[&quot;Trees -- Michigan&quot;],&quot;Primary&quot;:&quot;41394.htm&quot;,&quot;CreatorNames&quot;:[&quot;Otis, Charles Herbert, 1886-&quot;,&quot;Burns, George Plumer, 1871-1953 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;41394&quot;});" class='title'>Michigan Trees:<br><span class='subtitle'>A Handbook of the Native and Most Important Introduced Species</span></a>
+<div class='author'>Otis, Charles Herbert, 1886-, Burns, George Plumer, 1871-1953 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41702, {&quot;Title&quot;:&quot;Trees of Indiana - First Revised Edition (Publication No. 13, Department of Conservation, State of Indiana)&quot;,&quot;Topics&quot;:[&quot;Trees -- Indiana&quot;],&quot;Primary&quot;:&quot;41702.htm&quot;,&quot;CreatorNames&quot;:[&quot;Deam, Charles Clemon, 1865-1953&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;41702&quot;});" class='title'>Trees of Indiana -<br><span class='subtitle'>First Revised Edition (Publication No. 13, Department of Conservation, State of Indiana)</span></a>
+<div class='author'>Deam, Charles Clemon, 1865-1953</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41972, {&quot;Title&quot;:&quot;The Story of a Thousand-Year Pine&quot;,&quot;Topics&quot;:[&quot;Pine&quot;],&quot;Primary&quot;:&quot;41972.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mills, Enos A., 1870-1922&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;41972&quot;});" class='title'>The Story of a Thousand-Year Pine</a>
+<div class='author'>Mills, Enos A., 1870-1922</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42198, {&quot;Title&quot;:&quot;I funghi mangerecci e velenosi dell&#39;Europa media - con speciale riguardo a quelli che crescono nel Trentino - II edizione riveduta ed aumentata&quot;,&quot;Topics&quot;:[&quot;Mushrooms -- Italy -- Identification&quot;,&quot;Fungi -- Pictorial works&quot;],&quot;Primary&quot;:&quot;42198.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bresadola, Giacomo, 1847-1929&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;42198&quot;});" class='title'>I funghi mangerecci e velenosi dell'Europa media -<br><span class='subtitle'>con speciale riguardo a quelli che crescono nel Trentino - II edizione riveduta ed aumentata</span></a>
+<div class='author'>Bresadola, Giacomo, 1847-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42696, {&quot;Title&quot;:&quot;Field and Woodland Plants&quot;,&quot;Topics&quot;:[&quot;Wild flowers -- Great Britain&quot;,&quot;Plants -- Identification&quot;],&quot;Primary&quot;:&quot;42696.htm&quot;,&quot;CreatorNames&quot;:[&quot;Furneaux, William S.&quot;,&quot;Wilson, Patten [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;42696&quot;});" class='title'>Field and Woodland Plants</a>
+<div class='author'>Furneaux, William S., Wilson, Patten [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43167, {&quot;Title&quot;:&quot;How to Know the Ferns - A Guide to the Names, Haunts and Habitats of Our Common Ferns&quot;,&quot;Topics&quot;:[&quot;Ferns -- United States -- Identification&quot;],&quot;Primary&quot;:&quot;43167.htm&quot;,&quot;CreatorNames&quot;:[&quot;Parsons, Frances Theodora, 1861-1952&quot;,&quot;Satterlee, Marion [Illustrator]&quot;,&quot;Smith, Alice Josephine [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;43167&quot;});" class='title'>How to Know the Ferns -<br><span class='subtitle'>A Guide to the Names, Haunts and Habitats of Our Common Ferns</span></a>
+<div class='author'>Parsons, Frances Theodora, 1861-1952, Satterlee, Marion [Illustrator], Smith, Alice Josephine [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43343, {&quot;Title&quot;:&quot;The Vegetable Lamb of Tartary: A Curious Fable of the Cotton Plant. - To Which Is Added a Sketch of the History of Cotton and the Cotton Trade&quot;,&quot;Topics&quot;:[&quot;Plants -- Folklore&quot;,&quot;Cotton -- History&quot;],&quot;Primary&quot;:&quot;43343.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lee, Henry, 1826-1888&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;43343&quot;});" class='title'>The Vegetable Lamb of Tartary:<br><span class='subtitle'>A Curious Fable of the Cotton Plant. - To Which Is Added a Sketch of the History of Cotton and the Cotton Trade</span></a>
+<div class='author'>Lee, Henry, 1826-1888</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4346, {&quot;Title&quot;:&quot;The Effects of Cross &amp; Self-Fertilisation in the Vegetable Kingdom&quot;,&quot;Topics&quot;:[&quot;Plants -- Variation&quot;,&quot;Fertilization of plants&quot;,&quot;Pollination&quot;],&quot;Primary&quot;:&quot;4346.htm&quot;,&quot;CreatorNames&quot;:[&quot;Darwin, Charles, 1809-1882&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;4346&quot;});" class='title'>The Effects of Cross & Self-Fertilisation in the Vegetable Kingdom</a>
+<div class='author'>Darwin, Charles, 1809-1882</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43858, {&quot;Title&quot;:&quot;The Botanical Magazine,  Vol. 13 - Or, Flower-Garden Displayed&quot;,&quot;Topics&quot;:[&quot;Plants -- Periodicals&quot;,&quot;Plants, Cultivated -- Periodicals&quot;,&quot;Plants, Ornamental -- Periodicals&quot;,&quot;Botanical illustration -- Periodicals&quot;],&quot;Primary&quot;:&quot;43858.htm&quot;,&quot;CreatorNames&quot;:[&quot;Curtis, William, 1746-1799&quot;,&quot;Sims, John, 1749-1831&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;43858&quot;});" class='title'>The Botanical Magazine,  Vol. 13 -<br><span class='subtitle'>Or, Flower-Garden Displayed</span></a>
+<div class='author'>Curtis, William, 1746-1799, Sims, John, 1749-1831</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44186, {&quot;Title&quot;:&quot;Trees Every Child Should Know: Easy Tree Studies for All Seasons of the Year&quot;,&quot;Topics&quot;:[&quot;Trees -- United States&quot;],&quot;Primary&quot;:&quot;44186.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rogers, Julia Ellen, 1866-&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;44186&quot;});" class='title'>Trees Every Child Should Know:<br><span class='subtitle'>Easy Tree Studies for All Seasons of the Year</span></a>
+<div class='author'>Rogers, Julia Ellen, 1866-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44569, {&quot;Title&quot;:&quot;The Diatomaceæ of Philadelphia and Vicinity&quot;,&quot;Topics&quot;:[&quot;Diatoms -- Pennsylvania -- Philadelphia&quot;],&quot;Primary&quot;:&quot;44569.htm&quot;,&quot;CreatorNames&quot;:[&quot;Boyer, Charles S. (Charles Sumner), 1856-1928&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;44569&quot;});" class='title'>The Diatomaceæ of Philadelphia and Vicinity</a>
+<div class='author'>Boyer, Charles S. (Charles Sumner), 1856-1928</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44638, {&quot;Title&quot;:&quot;Plant Lore, Legends, and Lyrics - Embracing the Myths, Traditions, Superstitions, and Folk-Lore of the Plant Kingdom&quot;,&quot;Topics&quot;:[&quot;Plants -- Folklore&quot;],&quot;Primary&quot;:&quot;44638.htm&quot;,&quot;CreatorNames&quot;:[&quot;Folkard, Richard&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;44638&quot;});" class='title'>Plant Lore, Legends, and Lyrics -<br><span class='subtitle'>Embracing the Myths, Traditions, Superstitions, and Folk-Lore of the Plant Kingdom</span></a>
+<div class='author'>Folkard, Richard</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45110, {&quot;Title&quot;:&quot;Beautiful Ferns&quot;,&quot;Topics&quot;:[&quot;Ferns -- United States&quot;],&quot;Primary&quot;:&quot;45110.htm&quot;,&quot;CreatorNames&quot;:[&quot;Eaton, Daniel Cady, 1834-1895&quot;,&quot;Emerton, J. H. (James Henry), 1847-1930 [Illustrator]&quot;,&quot;Faxon, Charles Edward, 1846-1918 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;45110&quot;});" class='title'>Beautiful Ferns</a>
+<div class='author'>Eaton, Daniel Cady, 1834-1895, Emerton, J. H. (James Henry), 1847-1930 [Illustrator], Faxon, Charles Edward, 1846-1918 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45251, {&quot;Title&quot;:&quot;How to Know the Ferns&quot;,&quot;Topics&quot;:[&quot;Ferns&quot;],&quot;Primary&quot;:&quot;45251.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bastin, S. Leonard&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;45251&quot;});" class='title'>How to Know the Ferns</a>
+<div class='author'>Bastin, S. Leonard</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45676, {&quot;Title&quot;:&quot;Flower Guide: Wild Flowers East of the Rockies - (Revised and with New Illustrations)&quot;,&quot;Topics&quot;:[&quot;Flowers -- United States&quot;],&quot;Primary&quot;:&quot;45676.htm&quot;,&quot;CreatorNames&quot;:[&quot;Reed, Chester A. (Chester Albert), 1876-1912&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;45676&quot;});" class='title'>Flower Guide:<br><span class='subtitle'>Wild Flowers East of the Rockies - (Revised and with New Illustrations)</span></a>
+<div class='author'>Reed, Chester A. (Chester Albert), 1876-1912</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45930, {&quot;Title&quot;:&quot;The Romance of Plant Life - Interesting Descriptions of the Strange and Curious in the Plant World&quot;,&quot;Topics&quot;:[&quot;Plants&quot;],&quot;Primary&quot;:&quot;45930.htm&quot;,&quot;CreatorNames&quot;:[&quot;Elliot, G. F. Scott (George Francis Scott), 1862-1934&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;45930&quot;});" class='title'>The Romance of Plant Life -<br><span class='subtitle'>Interesting Descriptions of the Strange and Curious in the Plant World</span></a>
+<div class='author'>Elliot, G. F. Scott (George Francis Scott), 1862-1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46155, {&quot;Title&quot;:&quot;The Fantastic Clan: The Cactus Family&quot;,&quot;Topics&quot;:[&quot;Cactus -- Southwest, New&quot;],&quot;Primary&quot;:&quot;46155.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bonker, Frances&quot;,&quot;Thornber, J. J. (John James), 1872-1962&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;46155&quot;});" class='title'>The Fantastic Clan:<br><span class='subtitle'>The Cactus Family</span></a>
+<div class='author'>Bonker, Frances, Thornber, J. J. (John James), 1872-1962</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46281, {&quot;Title&quot;:&quot;A Monograph of Odontoglossum&quot;,&quot;Topics&quot;:[&quot;Orchids&quot;,&quot;Orchids -- Pictorial works&quot;],&quot;Primary&quot;:&quot;46281.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bateman, Jas. (James), 1811-1897&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;46281&quot;});" class='title'>A Monograph of Odontoglossum</a>
+<div class='author'>Bateman, Jas. (James), 1811-1897</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46415, {&quot;Title&quot;:&quot;Makers of British Botany; a collection of biographies by living botanists&quot;,&quot;Topics&quot;:[&quot;Botany -- Great Britain -- History&quot;,&quot;Botanists -- Great Britain -- Biography&quot;],&quot;Primary&quot;:&quot;46415.htm&quot;,&quot;CreatorNames&quot;:[&quot;Oliver, F. W. (Francis Wall), 1864-1951 [Editor]&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;46415&quot;});" class='title'>Makers of British Botany;<br><span class='subtitle'>a collection of biographies by living botanists</span></a>
+<div class='author'>Oliver, F. W. (Francis Wall), 1864-1951 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46450, {&quot;Title&quot;:&quot;Manual of the Trees of North America (Exclusive of Mexico) 2nd ed.&quot;,&quot;Topics&quot;:[&quot;Trees -- North America&quot;],&quot;Primary&quot;:&quot;46450.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sargent, Charles Sprague, 1841-1927&quot;,&quot;Faxon, Charles Edward, 1846-1918 [Illustrator]&quot;,&quot;Gill, Mary W. [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;46450&quot;});" class='title'>Manual of the Trees of North America (Exclusive of Mexico) 2nd ed.</a>
+<div class='author'>Sargent, Charles Sprague, 1841-1927, Faxon, Charles Edward, 1846-1918 [Illustrator], Gill, Mary W. [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46514, {&quot;Title&quot;:&quot;Our Edible Toadstools and Mushrooms and How to Distinguish Them - A Selection of Thirty Native Food Varieties Easily Recognizable by their Marked Individualities, with Simple Rules for the Identification of Poisonous Species&quot;,&quot;Topics&quot;:[&quot;Cooking (Mushrooms)&quot;,&quot;Mushrooms&quot;],&quot;Primary&quot;:&quot;46514.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gibson, W. Hamilton (William Hamilton), 1850-1896&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;46514&quot;});" class='title'>Our Edible Toadstools and Mushrooms and How to Distinguish Them -<br><span class='subtitle'>A Selection of Thirty Native Food Varieties Easily Recognizable by their Marked Individualities, with Simple Rules for the Identification of Poisonous Species</span></a>
+<div class='author'>Gibson, W. Hamilton (William Hamilton), 1850-1896</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46889, {&quot;Title&quot;:&quot;Herbals, Their Origin and Evolution: A Chapter in the History of Botany 1470-1670&quot;,&quot;Topics&quot;:[&quot;Herbals -- Europe -- History&quot;,&quot;Botany -- Europe -- History&quot;],&quot;Primary&quot;:&quot;46889.htm&quot;,&quot;CreatorNames&quot;:[&quot;Arber, Agnes Robertson, 1879-1960&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;46889&quot;});" class='title'>Herbals, Their Origin and Evolution:<br><span class='subtitle'>A Chapter in the History of Botany 1470-1670</span></a>
+<div class='author'>Arber, Agnes Robertson, 1879-1960</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47039, {&quot;Title&quot;:&quot;Botany for Ladies - or, A Popular Introduction to the Natural System of Plants, According to the Classification of De Candolle.&quot;,&quot;Topics&quot;:[&quot;Botany&quot;,&quot;Plants -- Classification&quot;],&quot;Primary&quot;:&quot;47039.htm&quot;,&quot;CreatorNames&quot;:[&quot;Loudon, Mrs. (Jane), 1807-1858&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;47039&quot;});" class='title'>Botany for Ladies -<br><span class='subtitle'>or, A Popular Introduction to the Natural System of Plants, According to the Classification of De Candolle.</span></a>
+<div class='author'>Loudon, Mrs. (Jane), 1807-1858</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47339, {&quot;Title&quot;:&quot;Flowers of Mountain and Plain - Third Edition&quot;,&quot;Topics&quot;:[&quot;Flowers -- Rocky Mountains&quot;,&quot;Flowers -- West (U.S.)&quot;],&quot;Primary&quot;:&quot;47339.htm&quot;,&quot;CreatorNames&quot;:[&quot;Clements, Edith S. (Edith Schwartz)&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;47339&quot;});" class='title'>Flowers of Mountain and Plain -<br><span class='subtitle'>Third Edition</span></a>
+<div class='author'>Clements, Edith S. (Edith Schwartz)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47898, {&quot;Title&quot;:&quot;Grasses: A Handbook for use in the Field and Laboratory&quot;,&quot;Topics&quot;:[&quot;Grasses&quot;],&quot;Primary&quot;:&quot;47898.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ward, H. Marshall (Harry Marshall), 1854-1906&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;47898&quot;});" class='title'>Grasses:<br><span class='subtitle'>A Handbook for use in the Field and Laboratory</span></a>
+<div class='author'>Ward, H. Marshall (Harry Marshall), 1854-1906</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47971, {&quot;Title&quot;:&quot;Field Book of Western Wild Flowers&quot;,&quot;Topics&quot;:[&quot;Flowers -- West (U.S.)&quot;,&quot;Flowers -- West (U.S.) -- Pictorial works&quot;],&quot;Primary&quot;:&quot;47971.htm&quot;,&quot;CreatorNames&quot;:[&quot;Armstrong, Margaret, 1867-1944&quot;,&quot;Thornber, J. J. (John James), 1872-1962&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;47971&quot;});" class='title'>Field Book of Western Wild Flowers</a>
+<div class='author'>Armstrong, Margaret, 1867-1944, Thornber, J. J. (John James), 1872-1962</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48008, {&quot;Title&quot;:&quot;Inorganic Plant Poisons and Stimulants&quot;,&quot;Topics&quot;:[&quot;Growth (Plants)&quot;,&quot;Plants -- Effect of poisons on&quot;],&quot;Primary&quot;:&quot;48008.htm&quot;,&quot;CreatorNames&quot;:[&quot;Brenchley, Winifred Elsie, 1883-1953&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;48008&quot;});" class='title'>Inorganic Plant Poisons and Stimulants</a>
+<div class='author'>Brenchley, Winifred Elsie, 1883-1953</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48280, {&quot;Title&quot;:&quot;Life Movements in Plants, Volume I&quot;,&quot;Topics&quot;:[&quot;Plants -- Irritability and movements&quot;,&quot;Growth (Plants)&quot;],&quot;Primary&quot;:&quot;48280.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bose, Jagadis Chandra, 1858-1937&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;48280&quot;});" class='title'>Life Movements in Plants, Volume I</a>
+<div class='author'>Bose, Jagadis Chandra, 1858-1937</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49211, {&quot;Title&quot;:&quot;Botany: The Science of Plant Life&quot;,&quot;Topics&quot;:[&quot;Plants&quot;,&quot;Botany -- Textbooks&quot;],&quot;Primary&quot;:&quot;49211.htm&quot;,&quot;CreatorNames&quot;:[&quot;Taylor, Norman, 1883-1967&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;49211&quot;});" class='title'>Botany:<br><span class='subtitle'>The Science of Plant Life</span></a>
+<div class='author'>Taylor, Norman, 1883-1967</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50300, {&quot;Title&quot;:&quot;Het paddestoelenboekje&quot;,&quot;Topics&quot;:[&quot;Fungi&quot;],&quot;Primary&quot;:&quot;50300.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cool, Catherina&quot;,&quot;Lek, Hendrik Adrianus Abraham van der, 1881-&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;50300&quot;});" class='title'>Het paddestoelenboekje</a>
+<div class='author'>Cool, Catherina, Lek, Hendrik Adrianus Abraham van der, 1881-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51393, {&quot;Title&quot;:&quot;Toadstools, mushrooms, fungi, edible and poisonous; one thousand American fungi - How to select and cook the edible; how to distinguish and avoid the poisonous, with full botanic descriptions. Toadstool poisons and their treatment, instructions to students, recipes for cooking, etc., etc.&quot;,&quot;Topics&quot;:[&quot;Cooking (Mushrooms)&quot;,&quot;Mushrooms&quot;,&quot;Edible mushrooms -- North America&quot;,&quot;Mushrooms, Poisonous -- North America&quot;,&quot;Fungi -- North America&quot;],&quot;Primary&quot;:&quot;51393.htm&quot;,&quot;CreatorNames&quot;:[&quot;Macadam, Robert K.&quot;,&quot;McIlvaine, Charles, 1840-1909&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;51393&quot;});" class='title'>Toadstools, mushrooms, fungi, edible and poisonous;<br><span class='subtitle'>one thousand American fungi - How to select and cook the edible; how to distinguish and avoid the poisonous, with full botanic descriptions. Toadstool poisons and their treatment, instructions to students, recipes for cooking, etc., etc.</span></a>
+<div class='author'>Macadam, Robert K., McIlvaine, Charles, 1840-1909</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52651, {&quot;Title&quot;:&quot;Forest Trees of Texas: How to Know Them&quot;,&quot;Topics&quot;:[&quot;Trees -- Texas&quot;,&quot;Trees -- Identification&quot;],&quot;Primary&quot;:&quot;52651.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mattoon, Wilbur R. (Wilbur Reed), 1875-1941&quot;,&quot;Webster, C. B. (Cyril Bertram), 1898-&quot;,&quot;Haislet, John A. [Editor]&quot;],&quot;LoCC&quot;:[&quot;QK&quot;,&quot;SD&quot;],&quot;PG_ID&quot;:&quot;52651&quot;});" class='title'>Forest Trees of Texas:<br><span class='subtitle'>How to Know Them</span></a>
+<div class='author'>Mattoon, Wilbur R. (Wilbur Reed), 1875-1941, Webster, C. B. (Cyril Bertram), 1898-, Haislet, John A. [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53432, {&quot;Title&quot;:&quot;Flowers of the Southwest Deserts&quot;,&quot;Topics&quot;:[&quot;Flowers -- Southwest, New&quot;,&quot;Desert plants&quot;],&quot;Primary&quot;:&quot;53432.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dodge, Natt N. (Natt Noyes), 1900-1982&quot;,&quot;Janish, Jeanne R. [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;53432&quot;});" class='title'>Flowers of the Southwest Deserts</a>
+<div class='author'>Dodge, Natt N. (Natt Noyes), 1900-1982, Janish, Jeanne R. [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53433, {&quot;Title&quot;:&quot;West Virginia Trees&quot;,&quot;Topics&quot;:[&quot;Trees -- Identification&quot;,&quot;Trees -- West Virginia&quot;],&quot;Primary&quot;:&quot;53433.htm&quot;,&quot;CreatorNames&quot;:[&quot;Brooks, A. B. (Alonzo Beecher)&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;53433&quot;});" class='title'>West Virginia Trees</a>
+<div class='author'>Brooks, A. B. (Alonzo Beecher)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53535, {&quot;Title&quot;:&quot;Common Trees of Pennsylvania&quot;,&quot;Topics&quot;:[&quot;Trees -- Pennsylvania&quot;],&quot;Primary&quot;:&quot;53535.htm&quot;,&quot;CreatorNames&quot;:[&quot;Aughenbaugh, J. E.&quot;,&quot;Ibberson, Joseph E., 1917-&quot;,&quot;Mickalitis, A. B.&quot;,&quot;Morris, C. L.&quot;,&quot;Francis, J. M. [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;53535&quot;});" class='title'>Common Trees of Pennsylvania</a>
+<div class='author'>Aughenbaugh, J. E., Ibberson, Joseph E., 1917-, Mickalitis, A. B., Morris, C. L., Francis, J. M. [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53647, {&quot;Title&quot;:&quot;Texas Flowers in Natural Colors&quot;,&quot;Topics&quot;:[&quot;Wild flowers -- Southwestern States&quot;,&quot;Wild flowers -- Texas&quot;],&quot;Primary&quot;:&quot;53647.htm&quot;,&quot;CreatorNames&quot;:[&quot;Whitehouse, Eula, 1892-1974&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;53647&quot;});" class='title'>Texas Flowers in Natural Colors</a>
+<div class='author'>Whitehouse, Eula, 1892-1974</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54457, {&quot;Title&quot;:&quot;Kasvikon oppisanoja&quot;,&quot;Topics&quot;:[&quot;Plants -- Finland&quot;],&quot;Primary&quot;:&quot;54457.txt&quot;,&quot;CreatorNames&quot;:[&quot;Lönnrot, Elias, 1802-1884&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;54457&quot;});" class='title'>Kasvikon oppisanoja</a>
+<div class='author'>Lönnrot, Elias, 1802-1884</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54631, {&quot;Title&quot;:&quot;100 Desert Wildflowers in Natural Color&quot;,&quot;Topics&quot;:[&quot;Wild flowers -- Southwestern States&quot;,&quot;Desert plants -- Southwest, New&quot;],&quot;Primary&quot;:&quot;54631.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dodge, Natt N. (Natt Noyes), 1900-1982&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;54631&quot;});" class='title'>100 Desert Wildflowers in Natural Color</a>
+<div class='author'>Dodge, Natt N. (Natt Noyes), 1900-1982</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55009, {&quot;Title&quot;:&quot;The Botanical Lore of the California Indians - with Side Lights on Historical Incidents in California&quot;,&quot;Topics&quot;:[&quot;Botany, Medical&quot;,&quot;Indians of North America -- Medicine&quot;,&quot;Medicinal plants -- California -- Pacific Coast&quot;,&quot;Ethnobotany -- California -- Pacific Coast&quot;],&quot;Primary&quot;:&quot;55009.htm&quot;,&quot;CreatorNames&quot;:[&quot;Romero, John Bruno&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;55009&quot;});" class='title'>The Botanical Lore of the California Indians -<br><span class='subtitle'>with Side Lights on Historical Incidents in California</span></a>
+<div class='author'>Romero, John Bruno</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55145, {&quot;Title&quot;:&quot;The Orchid Album, Volume 1 - Comprising Coloured Figures and Descriptions of New, Rare, and Beautiful Orchidaceous Plants&quot;,&quot;Topics&quot;:[&quot;Orchids&quot;,&quot;Orchids -- Pictorial works&quot;],&quot;Primary&quot;:&quot;55145.htm&quot;,&quot;CreatorNames&quot;:[&quot;Moore, Thomas, 1821-1887&quot;,&quot;Warner, Robert, 1814-1896 [Editor]&quot;,&quot;Williams, Benjamin Samuel, 1822-1890 [Editor]&quot;,&quot;Fitch, J. N. (John Nugent), 1843-1927 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;55145&quot;});" class='title'>The Orchid Album, Volume 1 -<br><span class='subtitle'>Comprising Coloured Figures and Descriptions of New, Rare, and Beautiful Orchidaceous Plants</span></a>
+<div class='author'>Moore, Thomas, 1821-1887, Warner, Robert, 1814-1896 [Editor], Williams, Benjamin Samuel, 1822-1890 [Editor], Fitch, J. N. (John Nugent), 1843-1927 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55363, {&quot;Title&quot;:&quot;Wild Flowers of Zion and Bryce Canyon National Parks and Cedar Breaks National Monument&quot;,&quot;Topics&quot;:[&quot;Wild flowers -- Utah -- Zion National Park -- Pictorial works&quot;,&quot;Wild flowers -- Utah -- Bryce Canyon National Park -- Pictorial works&quot;,&quot;Wild flowers -- Utah -- Cedar Breaks National Monument -- Pictorial works&quot;],&quot;Primary&quot;:&quot;55363.htm&quot;,&quot;CreatorNames&quot;:[&quot;Allen, Leland F.&quot;,&quot;Jepson, Carl E.&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;55363&quot;});" class='title'>Wild Flowers of Zion and Bryce Canyon National Parks and Cedar Breaks National Monument</a>
+<div class='author'>Allen, Leland F., Jepson, Carl E.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55700, {&quot;Title&quot;:&quot;Nouvel atlas de poche des champignons Comestibles et Vénéneux les plus répandus. Série II (Première édition)&quot;,&quot;Topics&quot;:[&quot;Mushrooms&quot;],&quot;Primary&quot;:&quot;55700.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dumée, Paul, 1849-1930&quot;,&quot;Bessin, Aimé, 1870-1942 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;55700&quot;});" class='title'>Nouvel atlas de poche des champignons Comestibles et Vénéneux les plus répandus. Série II (Première édition)</a>
+<div class='author'>Dumée, Paul, 1849-1930, Bessin, Aimé, 1870-1942 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55899, {&quot;Title&quot;:&quot;Kew Gardens - With 24 full-page Illustrations in Colour&quot;,&quot;Topics&quot;:[&quot;Royal Botanic Gardens, Kew&quot;,&quot;Kew (London, England)&quot;],&quot;Primary&quot;:&quot;55899.htm&quot;,&quot;CreatorNames&quot;:[&quot;Moncrieff, A. R. Hope (Ascott Robert Hope), 1846-1927&quot;,&quot;Martin, T. Mower (Thomas Mower), 1838-1934 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;55899&quot;});" class='title'>Kew Gardens -<br><span class='subtitle'>With 24 full-page Illustrations in Colour</span></a>
+<div class='author'>Moncrieff, A. R. Hope (Ascott Robert Hope), 1846-1927, Martin, T. Mower (Thomas Mower), 1838-1934 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55986, {&quot;Title&quot;:&quot;Letters of Asa Gray; Vol. 1&quot;,&quot;Topics&quot;:[&quot;Gray, Asa, 1810-1888 -- Correspondence&quot;,&quot;Botanists -- United States -- Correspondence&quot;],&quot;Primary&quot;:&quot;55986.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gray, Asa, 1810-1888&quot;,&quot;Gray, Jane Loring, 1821-1909 [Editor]&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;55986&quot;});" class='title'>Letters of Asa Gray;<br><span class='subtitle'>Vol. 1</span></a>
+<div class='author'>Gray, Asa, 1810-1888, Gray, Jane Loring, 1821-1909 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55987, {&quot;Title&quot;:&quot;Letters of Asa Gray; Vol. 2&quot;,&quot;Topics&quot;:[&quot;Gray, Asa, 1810-1888 -- Correspondence&quot;,&quot;Botanists -- United States -- Correspondence&quot;],&quot;Primary&quot;:&quot;55987.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gray, Asa, 1810-1888&quot;,&quot;Gray, Jane Loring, 1821-1909 [Editor]&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;55987&quot;});" class='title'>Letters of Asa Gray;<br><span class='subtitle'>Vol. 2</span></a>
+<div class='author'>Gray, Asa, 1810-1888, Gray, Jane Loring, 1821-1909 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5605, {&quot;Title&quot;:&quot;The Power of Movement in Plants&quot;,&quot;Topics&quot;:[&quot;Botany&quot;,&quot;Plants -- Irritability and movements&quot;,&quot;Geotropism&quot;],&quot;Primary&quot;:&quot;5605.htm&quot;,&quot;CreatorNames&quot;:[&quot;Darwin, Charles, 1809-1882&quot;,&quot;Darwin, Francis, Sir, 1848-1925&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;5605&quot;});" class='title'>The Power of Movement in Plants</a>
+<div class='author'>Darwin, Charles, 1809-1882, Darwin, Francis, Sir, 1848-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56138, {&quot;Title&quot;:&quot;Zakflora voor Suriname [Deel I] - Bulletin van het Koloniaal Museum te Haarlem No. 47.&quot;,&quot;Topics&quot;:[&quot;Plants -- Suriname -- Classification&quot;],&quot;Primary&quot;:&quot;56138.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pulle, A. A. (August Adriaan), 1878-1955&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;56138&quot;});" class='title'>Zakflora voor Suriname [Deel I] -<br><span class='subtitle'>Bulletin van het Koloniaal Museum te Haarlem No. 47.</span></a>
+<div class='author'>Pulle, A. A. (August Adriaan), 1878-1955</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56288, {&quot;Title&quot;:&quot;North American Wild Flowers&quot;,&quot;Topics&quot;:[&quot;Wild flowers -- Canada&quot;,&quot;Wild flowers -- Canada -- Pictorial works&quot;],&quot;Primary&quot;:&quot;56288.htm&quot;,&quot;CreatorNames&quot;:[&quot;Traill, Catharine Parr Strickland, 1802-1899&quot;,&quot;Fitzgibbon, Agnes, 1833- [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;56288&quot;});" class='title'>North American Wild Flowers</a>
+<div class='author'>Traill, Catharine Parr Strickland, 1802-1899, Fitzgibbon, Agnes, 1833- [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56900, {&quot;Title&quot;:&quot;Aspects of plant life; with special reference to the British flora&quot;,&quot;Topics&quot;:[&quot;Plants -- Great Britain&quot;],&quot;Primary&quot;:&quot;56900.htm&quot;,&quot;CreatorNames&quot;:[&quot;Praeger, R. Lloyd (Robert Lloyd), 1865-1953&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;56900&quot;});" class='title'>Aspects of plant life;<br><span class='subtitle'>with special reference to the British flora</span></a>
+<div class='author'>Praeger, R. Lloyd (Robert Lloyd), 1865-1953</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56959, {&quot;Title&quot;:&quot;The Fern Bulletin, October 1903 - A Quarterly Devoted to Ferns&quot;,&quot;Topics&quot;:[&quot;Ferns&quot;],&quot;Primary&quot;:&quot;56959.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;,&quot;Clute, Willard Nelson, 1869-1950 [Editor]&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;56959&quot;});" class='title'>The Fern Bulletin, October 1903 -<br><span class='subtitle'>A Quarterly Devoted to Ferns</span></a>
+<div class='author'>Various, Clute, Willard Nelson, 1869-1950 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57142, {&quot;Title&quot;:&quot;How Does a Tree Grow? Or, Botany for Young Australians&quot;,&quot;Topics&quot;:[&quot;Plants -- Australia -- Juvenile literature&quot;,&quot;Plant physiology -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;57142.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bonwick, James, 1817-1906&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;57142&quot;});" class='title'>How Does a Tree Grow? Or, Botany for Young Australians</a>
+<div class='author'>Bonwick, James, 1817-1906</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57280, {&quot;Title&quot;:&quot;The Fern Bulletin, April 1912 - A Quarterly Devoted to Ferns&quot;,&quot;Topics&quot;:[&quot;Ferns&quot;],&quot;Primary&quot;:&quot;57280.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;,&quot;Clute, Willard Nelson, 1869-1950 [Editor]&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;57280&quot;});" class='title'>The Fern Bulletin, April 1912 -<br><span class='subtitle'>A Quarterly Devoted to Ferns</span></a>
+<div class='author'>Various, Clute, Willard Nelson, 1869-1950 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57291, {&quot;Title&quot;:&quot;Keys to Fungi on Dung&quot;,&quot;Topics&quot;:[&quot;Fungi -- Identification&quot;],&quot;Primary&quot;:&quot;57291.htm&quot;,&quot;CreatorNames&quot;:[&quot;Richardson, M. J. (Michael J.), 1938-&quot;,&quot;Watling, Roy, 1938-&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;57291&quot;});" class='title'>Keys to Fungi on Dung</a>
+<div class='author'>Richardson, M. J. (Michael J.), 1938-, Watling, Roy, 1938-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5765, {&quot;Title&quot;:&quot;Insectivorous Plants&quot;,&quot;Topics&quot;:[&quot;Carnivorous plants&quot;,&quot;Plants -- Assimilation&quot;],&quot;Primary&quot;:&quot;5765.htm&quot;,&quot;CreatorNames&quot;:[&quot;Darwin, Charles, 1809-1882&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;5765&quot;});" class='title'>Insectivorous Plants</a>
+<div class='author'>Darwin, Charles, 1809-1882</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57753, {&quot;Title&quot;:&quot;The Flower-Fields of Alpine Switzerland: An Appreciation and a Plea&quot;,&quot;Topics&quot;:[&quot;Alps -- Description and travel&quot;,&quot;Mountain plants&quot;],&quot;Primary&quot;:&quot;57753.htm&quot;,&quot;CreatorNames&quot;:[&quot;Flemwell, G. (George), 1865-1928&quot;,&quot;Correvon, Henry, 1854-1939 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;QK&quot;,&quot;SB&quot;],&quot;PG_ID&quot;:&quot;57753&quot;});" class='title'>The Flower-Fields of Alpine Switzerland:<br><span class='subtitle'>An Appreciation and a Plea</span></a>
+<div class='author'>Flemwell, G. (George), 1865-1928, Correvon, Henry, 1854-1939 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58034, {&quot;Title&quot;:&quot;Hawaiian Flowers&quot;,&quot;Topics&quot;:[&quot;Wild flowers -- Hawaii&quot;,&quot;Plants -- Hawaii&quot;],&quot;Primary&quot;:&quot;58034.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kuck, Loraine E., -1977&quot;,&quot;Tongg, Richard C., 1899-&quot;,&quot;Mundorff, Ted [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;58034&quot;});" class='title'>Hawaiian Flowers</a>
+<div class='author'>Kuck, Loraine E., -1977, Tongg, Richard C., 1899-, Mundorff, Ted [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58138, {&quot;Title&quot;:&quot;The Anatomy of Vegetables Begun - With a General Account of Vegetation founded thereon&quot;,&quot;Topics&quot;:[&quot;Plant anatomy&quot;,&quot;Botany -- Pre-Linnean works&quot;],&quot;Primary&quot;:&quot;58138.htm&quot;,&quot;CreatorNames&quot;:[&quot;Grew, Nehemiah, 1641-1712&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;58138&quot;});" class='title'>The Anatomy of Vegetables Begun -<br><span class='subtitle'>With a General Account of Vegetation founded thereon</span></a>
+<div class='author'>Grew, Nehemiah, 1641-1712</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58294, {&quot;Title&quot;:&quot;Trees You Want to Know&quot;,&quot;Topics&quot;:[&quot;Trees -- North America&quot;],&quot;Primary&quot;:&quot;58294.htm&quot;,&quot;CreatorNames&quot;:[&quot;Peattie, Donald Culross, 1898-1964&quot;,&quot;Michaux, François André, 1770-1855 [Illustrator]&quot;,&quot;Taylor, Ethel Bonney [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;58294&quot;});" class='title'>Trees You Want to Know</a>
+<div class='author'>Peattie, Donald Culross, 1898-1964, Michaux, François André, 1770-1855 [Illustrator], Taylor, Ethel Bonney [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58525, {&quot;Title&quot;:&quot;Remarks on the Uses of some of the Bazaar Medicines and Common Medical Plants of India - With a full index of diseases, indicating their treatment by these and other agents procurable throughout India; to which are added directions for treatment in cases of drowning, snake-bites &amp;c.&quot;,&quot;Topics&quot;:[&quot;Medicinal plants -- India&quot;,&quot;Traditional medicine -- India&quot;,&quot;Botany, Medical -- India&quot;,&quot;Materia medica, Vegetable -- India&quot;],&quot;Primary&quot;:&quot;58525.htm&quot;,&quot;CreatorNames&quot;:[&quot;Waring, Edward John, 1819-1891&quot;],&quot;LoCC&quot;:[&quot;QK&quot;,&quot;RS&quot;],&quot;PG_ID&quot;:&quot;58525&quot;});" class='title'>Remarks on the Uses of some of the Bazaar Medicines and Common Medical Plants of India -<br><span class='subtitle'>With a full index of diseases, indicating their treatment by these and other agents procurable throughout India; to which are added directions for treatment in cases of drowning, snake-bites &c.</span></a>
+<div class='author'>Waring, Edward John, 1819-1891</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58683, {&quot;Title&quot;:&quot;Flora von Deutschland - Ein Hilfsbuch zum Bestimmen der zwischen den deutschen Meeren und den Alpen wildwachsenden und angebauten Pflanzen&quot;,&quot;Topics&quot;:[&quot;Plants -- Germany -- Identification&quot;],&quot;Primary&quot;:&quot;58683.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fitschen, Jost, 1869-1947&quot;,&quot;Schmeil, O. (Otto), 1860-1943&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;58683&quot;});" class='title'>Flora von Deutschland -<br><span class='subtitle'>Ein Hilfsbuch zum Bestimmen der zwischen den deutschen Meeren und den Alpen wildwachsenden und angebauten Pflanzen</span></a>
+<div class='author'>Fitschen, Jost, 1869-1947, Schmeil, O. (Otto), 1860-1943</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58703, {&quot;Title&quot;:&quot;Key and Guide to Native Trees, Shrubs, and Woody Vines of Dallas County&quot;,&quot;Topics&quot;:[&quot;Trees -- Texas&quot;,&quot;Shrubs -- Texas&quot;,&quot;Woody plants -- Texas -- Dallas County -- Identification&quot;],&quot;Primary&quot;:&quot;58703.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stillwell, Norma&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;58703&quot;});" class='title'>Key and Guide to Native Trees, Shrubs, and Woody Vines of Dallas County</a>
+<div class='author'>Stillwell, Norma</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58853, {&quot;Title&quot;:&quot;A treatise on the esculent funguses of England - containing an account of their classical history, uses, characters, development, structure, nutritious properties, modes of cooking and preserving, etc.&quot;,&quot;Topics&quot;:[&quot;Mushrooms -- England&quot;],&quot;Primary&quot;:&quot;58853.htm&quot;,&quot;CreatorNames&quot;:[&quot;Badham, David, 1806-1857&quot;,&quot;Currey, Frederick, 1819-1881 [Editor]&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;58853&quot;});" class='title'>A treatise on the esculent funguses of England -<br><span class='subtitle'>containing an account of their classical history, uses, characters, development, structure, nutritious properties, modes of cooking and preserving, etc.</span></a>
+<div class='author'>Badham, David, 1806-1857, Currey, Frederick, 1819-1881 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59035, {&quot;Title&quot;:&quot;Wayside and Woodland Blossoms - A Pocket Guide to British Wild-flowers for the Country Rambler&quot;,&quot;Topics&quot;:[&quot;Wild flowers -- Great Britain -- Identification&quot;],&quot;Primary&quot;:&quot;59035.htm&quot;,&quot;CreatorNames&quot;:[&quot;Step, Edward, 1855-1931&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;59035&quot;});" class='title'>Wayside and Woodland Blossoms -<br><span class='subtitle'>A Pocket Guide to British Wild-flowers for the Country Rambler</span></a>
+<div class='author'>Step, Edward, 1855-1931</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59106, {&quot;Title&quot;:&quot;The Study of Plant Life&quot;,&quot;Topics&quot;:[&quot;Plants -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;59106.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stopes, Marie Carmichael, 1880-1958&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;59106&quot;});" class='title'>The Study of Plant Life</a>
+<div class='author'>Stopes, Marie Carmichael, 1880-1958</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59109, {&quot;Title&quot;:&quot;The Orchid Album, Volume 2 - Comprising Coloured Figures and Descriptions of New, Rare, and Beautiful Orchidaceous Plants&quot;,&quot;Topics&quot;:[&quot;Orchids&quot;,&quot;Orchids -- Pictorial works&quot;],&quot;Primary&quot;:&quot;59109.htm&quot;,&quot;CreatorNames&quot;:[&quot;Moore, Thomas, 1821-1887&quot;,&quot;Warner, Robert, 1814-1896 [Editor]&quot;,&quot;Williams, Benjamin Samuel, 1822-1890 [Editor]&quot;,&quot;Fitch, J. N. (John Nugent), 1843-1927 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;59109&quot;});" class='title'>The Orchid Album, Volume 2 -<br><span class='subtitle'>Comprising Coloured Figures and Descriptions of New, Rare, and Beautiful Orchidaceous Plants</span></a>
+<div class='author'>Moore, Thomas, 1821-1887, Warner, Robert, 1814-1896 [Editor], Williams, Benjamin Samuel, 1822-1890 [Editor], Fitch, J. N. (John Nugent), 1843-1927 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59411, {&quot;Title&quot;:&quot;The Orchid Album, Volume 3 - Comprising Coloured Figures and Descriptions of New, Rare, and Beautiful Orchidaceous Plants&quot;,&quot;Topics&quot;:[&quot;Orchids&quot;,&quot;Orchids -- Pictorial works&quot;],&quot;Primary&quot;:&quot;59411.htm&quot;,&quot;CreatorNames&quot;:[&quot;Moore, Thomas, 1821-1887&quot;,&quot;Warner, Robert, 1814-1896 [Editor]&quot;,&quot;Williams, Benjamin Samuel, 1822-1890 [Editor]&quot;,&quot;Fitch, J. N. (John Nugent), 1843-1927 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;59411&quot;});" class='title'>The Orchid Album, Volume 3 -<br><span class='subtitle'>Comprising Coloured Figures and Descriptions of New, Rare, and Beautiful Orchidaceous Plants</span></a>
+<div class='author'>Moore, Thomas, 1821-1887, Warner, Robert, 1814-1896 [Editor], Williams, Benjamin Samuel, 1822-1890 [Editor], Fitch, J. N. (John Nugent), 1843-1927 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59412, {&quot;Title&quot;:&quot;Trees of the Forest: Their Beauty and Use&quot;,&quot;Topics&quot;:[&quot;Trees -- United States&quot;],&quot;Primary&quot;:&quot;59412.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;59412&quot;});" class='title'>Trees of the Forest:<br><span class='subtitle'>Their Beauty and Use</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59555, {&quot;Title&quot;:&quot;Poison-ivy, Poison-oak and Poison Sumac: Identification, Precautions and Eradication&quot;,&quot;Topics&quot;:[&quot;Poison ivy&quot;,&quot;Poison oak&quot;,&quot;Poison sumac&quot;],&quot;Primary&quot;:&quot;59555.htm&quot;,&quot;CreatorNames&quot;:[&quot;Crooks, D. M. (Donald Mundell), 1902-&quot;,&quot;Kephart, Leonard Wheeler, 1892-&quot;],&quot;LoCC&quot;:[&quot;QK&quot;,&quot;S&quot;],&quot;PG_ID&quot;:&quot;59555&quot;});" class='title'>Poison-ivy, Poison-oak and Poison Sumac:<br><span class='subtitle'>Identification, Precautions and Eradication</span></a>
+<div class='author'>Crooks, D. M. (Donald Mundell), 1902-, Kephart, Leonard Wheeler, 1892-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59913, {&quot;Title&quot;:&quot;Ferns of Hawaii National Park&quot;,&quot;Topics&quot;:[&quot;Hawaii Volcanoes National Park (Hawaii)&quot;,&quot;Ferns -- Hawaii -- Hawaii Volcanoes National Park -- Identification&quot;],&quot;Primary&quot;:&quot;59913.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hubbard, Douglass H., 1918-2011&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;59913&quot;});" class='title'>Ferns of Hawaii National Park</a>
+<div class='author'>Hubbard, Douglass H., 1918-2011</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60050, {&quot;Title&quot;:&quot;The Book of Herbs&quot;,&quot;Topics&quot;:[&quot;Herbs&quot;,&quot;Plants -- Folklore&quot;,&quot;Herbs -- Folklore&quot;],&quot;Primary&quot;:&quot;60050.htm&quot;,&quot;CreatorNames&quot;:[&quot;Northcote, Rosalind, 1873-1950&quot;,&quot;Roberts, Harry, 1871-1946 [Editor]&quot;],&quot;LoCC&quot;:[&quot;QK&quot;,&quot;SB&quot;],&quot;PG_ID&quot;:&quot;60050&quot;});" class='title'>The Book of Herbs</a>
+<div class='author'>Northcote, Rosalind, 1873-1950, Roberts, Harry, 1871-1946 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60159, {&quot;Title&quot;:&quot;Identification of the Larger Fungi&quot;,&quot;Topics&quot;:[&quot;Mushrooms -- Identification&quot;,&quot;Fungi -- Great Britain -- Identification&quot;],&quot;Primary&quot;:&quot;60159.htm&quot;,&quot;CreatorNames&quot;:[&quot;Watling, Roy, 1938-&quot;,&quot;Kenney, Antony [Editor]&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;60159&quot;});" class='title'>Identification of the Larger Fungi</a>
+<div class='author'>Watling, Roy, 1938-, Kenney, Antony [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60561, {&quot;Title&quot;:&quot;Mushroom and Toadstools - How to Distinguish Easily the Differences Between Edible and Poisonous Fungi&quot;,&quot;Topics&quot;:[&quot;Edible mushrooms -- Great Britain&quot;,&quot;Mushrooms, Poisonous -- Great Britain&quot;],&quot;Primary&quot;:&quot;60561.htm&quot;,&quot;CreatorNames&quot;:[&quot;Smith, Worthington George, 1835-1917&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;60561&quot;});" class='title'>Mushroom and Toadstools -<br><span class='subtitle'>How to Distinguish Easily the Differences Between Edible and Poisonous Fungi</span></a>
+<div class='author'>Smith, Worthington George, 1835-1917</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61240, {&quot;Title&quot;:&quot;History of Botany (1530-1860)&quot;,&quot;Topics&quot;:[&quot;Botany -- History&quot;],&quot;Primary&quot;:&quot;61240.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sachs, Julius, 1832-1897&quot;,&quot;Balfour, Isaac Bayley, 1853-1922 [Editor]&quot;,&quot;Garnsey, Henry E. F. (Henry Edward Fowler), 1826-1903 [Translator]&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;61240&quot;});" class='title'>History of Botany (1530-1860)</a>
+<div class='author'>Sachs, Julius, 1832-1897, Balfour, Isaac Bayley, 1853-1922 [Editor], Garnsey, Henry E. F. (Henry Edward Fowler), 1826-1903 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61295, {&quot;Title&quot;:&quot;Little Wanderers&quot;,&quot;Topics&quot;:[&quot;Natural history -- Juvenile literature&quot;,&quot;Plants -- Juvenile literature&quot;,&quot;Seeds -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;61295.htm&quot;,&quot;CreatorNames&quot;:[&quot;Morley, Margaret Warner, 1858-1923&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;61295&quot;});" class='title'>Little Wanderers</a>
+<div class='author'>Morley, Margaret Warner, 1858-1923</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61616, {&quot;Title&quot;:&quot;Lichens&quot;,&quot;Topics&quot;:[&quot;Lichens&quot;],&quot;Primary&quot;:&quot;61616.htm&quot;,&quot;CreatorNames&quot;:[&quot;Smith, Annie Lorrain, 1854-1937&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;61616&quot;});" class='title'>Lichens</a>
+<div class='author'>Smith, Annie Lorrain, 1854-1937</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62172, {&quot;Title&quot;:&quot;The Botanical Magazine, Vol. 10 - Or, Flower-Garden Displayed&quot;,&quot;Topics&quot;:[&quot;Plants -- Periodicals&quot;,&quot;Plants, Cultivated -- Periodicals&quot;,&quot;Plants, Ornamental -- Periodicals&quot;,&quot;Botanical illustration -- Periodicals&quot;],&quot;Primary&quot;:&quot;62172.htm&quot;,&quot;CreatorNames&quot;:[&quot;Curtis, William, 1746-1799&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;62172&quot;});" class='title'>The Botanical Magazine, Vol. 10 -<br><span class='subtitle'>Or, Flower-Garden Displayed</span></a>
+<div class='author'>Curtis, William, 1746-1799</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62263, {&quot;Title&quot;:&quot;Colorado Wild Flowers&quot;,&quot;Topics&quot;:[&quot;Wild flowers -- Colorado -- Identification&quot;],&quot;Primary&quot;:&quot;62263.htm&quot;,&quot;CreatorNames&quot;:[&quot;Roberts, Harold DeWitt, 1887-1956&quot;,&quot;Roberts, Rhoda N., 1886-&quot;,&quot;Bailey, Alfred M. (Alfred Marshall), 1894-1978 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;62263&quot;});" class='title'>Colorado Wild Flowers</a>
+<div class='author'>Roberts, Harold DeWitt, 1887-1956, Roberts, Rhoda N., 1886-, Bailey, Alfred M. (Alfred Marshall), 1894-1978 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62521, {&quot;Title&quot;:&quot;Links With the Past in the Plant World&quot;,&quot;Topics&quot;:[&quot;Plants -- Great Britain&quot;,&quot;Paleobotany -- Great Britain&quot;],&quot;Primary&quot;:&quot;62521.htm&quot;,&quot;CreatorNames&quot;:[&quot;Seward, A. C. (Albert Charles), 1863-1941&quot;],&quot;LoCC&quot;:[&quot;QE&quot;,&quot;QK&quot;],&quot;PG_ID&quot;:&quot;62521&quot;});" class='title'>Links With the Past in the Plant World</a>
+<div class='author'>Seward, A. C. (Albert Charles), 1863-1941</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62715, {&quot;Title&quot;:&quot;Drug Plants Under Cultivation&quot;,&quot;Topics&quot;:[&quot;Botany, Medical&quot;,&quot;Medicinal plants -- Culture -- United States&quot;],&quot;Primary&quot;:&quot;62715.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stockberger, W. W. (Warner Webster), 1872-1944&quot;],&quot;LoCC&quot;:[&quot;QK&quot;,&quot;S&quot;],&quot;PG_ID&quot;:&quot;62715&quot;});" class='title'>Drug Plants Under Cultivation</a>
+<div class='author'>Stockberger, W. W. (Warner Webster), 1872-1944</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62884, {&quot;Title&quot;:&quot;The flowering plants of South Africa; vol. 1&quot;,&quot;Topics&quot;:[&quot;Plants -- South Africa -- Periodicals&quot;,&quot;Plants -- South Africa -- Pictorial works -- Periodicals&quot;],&quot;Primary&quot;:&quot;62884.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pole Evans, I. B. (Illtyd Buller), 1879-1968 [Editor]&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;62884&quot;});" class='title'>The flowering plants of South Africa;<br><span class='subtitle'>vol. 1</span></a>
+<div class='author'>Pole Evans, I. B. (Illtyd Buller), 1879-1968 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63371, {&quot;Title&quot;:&quot;Lehrbuch der Botanik für Hochschulen&quot;,&quot;Topics&quot;:[&quot;Botany -- Textbooks&quot;],&quot;Primary&quot;:&quot;63371.htm&quot;,&quot;CreatorNames&quot;:[&quot;Noll, Fritz, 1858-1908&quot;,&quot;Schenck, H. (Heinrich), 1860-1927&quot;,&quot;Schimper, A. F. W. (Andreas Franz Wilhelm), 1856-1901&quot;,&quot;Strasburger, Eduard, 1844-1912&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;63371&quot;});" class='title'>Lehrbuch der Botanik für Hochschulen</a>
+<div class='author'>Noll, Fritz, 1858-1908, Schenck, H. (Heinrich), 1860-1927, Schimper, A. F. W. (Andreas Franz Wilhelm), 1856-1901, Strasburger, Eduard, 1844-1912</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63416, {&quot;Title&quot;:&quot;Rust, Smut, Mildew, &amp; Mould: An Introduction to the Study of Microscopic Fungi&quot;,&quot;Topics&quot;:[&quot;Phytopathogenic fungi -- Great Britain&quot;],&quot;Primary&quot;:&quot;63416.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cooke, M. C. (Mordecai Cubitt), 1825-1914&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;63416&quot;});" class='title'>Rust, Smut, Mildew, & Mould:<br><span class='subtitle'>An Introduction to the Study of Microscopic Fungi</span></a>
+<div class='author'>Cooke, M. C. (Mordecai Cubitt), 1825-1914</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64336, {&quot;Title&quot;:&quot;The flowering plants of South Africa; vol. 2&quot;,&quot;Topics&quot;:[&quot;Plants -- South Africa -- Periodicals&quot;,&quot;Plants -- South Africa -- Pictorial works -- Periodicals&quot;],&quot;Primary&quot;:&quot;64336.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pole Evans, I. B. (Illtyd Buller), 1879-1968 [Editor]&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;64336&quot;});" class='title'>The flowering plants of South Africa;<br><span class='subtitle'>vol. 2</span></a>
+<div class='author'>Pole Evans, I. B. (Illtyd Buller), 1879-1968 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64601, {&quot;Title&quot;:&quot;Elementary Botany&quot;,&quot;Topics&quot;:[&quot;Botany&quot;,&quot;Plants&quot;,&quot;Botany -- Textbooks&quot;],&quot;Primary&quot;:&quot;64601.htm&quot;,&quot;CreatorNames&quot;:[&quot;Atkinson, George Francis, 1854-1918&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;64601&quot;});" class='title'>Elementary Botany</a>
+<div class='author'>Atkinson, George Francis, 1854-1918</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64762, {&quot;Title&quot;:&quot;Some Historic Trees&quot;,&quot;Topics&quot;:[&quot;Trees -- United States -- History&quot;,&quot;Trees -- Folklore&quot;],&quot;Primary&quot;:&quot;64762.htm&quot;,&quot;CreatorNames&quot;:[&quot;Public Library of Fort Wayne and Allen County&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;64762&quot;});" class='title'>Some Historic Trees</a>
+<div class='author'>Public Library of Fort Wayne and Allen County</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65161, {&quot;Title&quot;:&quot;The Forest Giant&quot;,&quot;Topics&quot;:[&quot;Life&quot;,&quot;Giant sequoia&quot;],&quot;Primary&quot;:&quot;65161.htm&quot;,&quot;CreatorNames&quot;:[&quot;Le Corbeau, Adrien, 1886-1932&quot;,&quot;Lawrence, T. E. (Thomas Edward), 1888-1935 [Translator]&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;65161&quot;});" class='title'>The Forest Giant</a>
+<div class='author'>Le Corbeau, Adrien, 1886-1932, Lawrence, T. E. (Thomas Edward), 1888-1935 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65196, {&quot;Title&quot;:&quot;Floral Illustrations of the Seasons - Consisting of the Most Beautiful, Hardy and Rare Herbaceous Plants, Cultivated in the Flower Garden&quot;,&quot;Topics&quot;:[&quot;Floriculture&quot;,&quot;Flowers -- Pictorial works&quot;],&quot;Primary&quot;:&quot;65196.htm&quot;,&quot;CreatorNames&quot;:[&quot;Roscoe, Margaret, -1840&quot;,&quot;Havell, Robert, 1793-1878 [Engraver]&quot;],&quot;LoCC&quot;:[&quot;QK&quot;,&quot;SB&quot;],&quot;PG_ID&quot;:&quot;65196&quot;});" class='title'>Floral Illustrations of the Seasons -<br><span class='subtitle'>Consisting of the Most Beautiful, Hardy and Rare Herbaceous Plants, Cultivated in the Flower Garden</span></a>
+<div class='author'>Roscoe, Margaret, -1840, Havell, Robert, 1793-1878 [Engraver]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65569, {&quot;Title&quot;:&quot;Histology of medicinal plants&quot;,&quot;Topics&quot;:[&quot;Botany, Medical&quot;,&quot;Plant anatomy&quot;],&quot;Primary&quot;:&quot;65569.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mansfield, William James, 1878-&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;65569&quot;});" class='title'>Histology of medicinal plants</a>
+<div class='author'>Mansfield, William James, 1878-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65705, {&quot;Title&quot;:&quot;Forest Trees of Illinois (Third Edition)&quot;,&quot;Topics&quot;:[&quot;Trees -- Illinois -- Identification&quot;,&quot;Forest plants -- Illinois -- Identification&quot;],&quot;Primary&quot;:&quot;65705.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mohlenbrock, Robert H., 1931-&quot;,&quot;Burton, Fredda J. [Illustrator]&quot;,&quot;Meyer, Miriam Wysong [Illustrator]&quot;,&quot;Mohlenbrock, Robert H., 1931- [Photographer]&quot;,&quot;Richardson, John A. [Photographer]&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;65705&quot;});" class='title'>Forest Trees of Illinois (Third Edition)</a>
+<div class='author'>Mohlenbrock, Robert H., 1931-, Burton, Fredda J. [Illustrator], Meyer, Miriam Wysong [Illustrator], Mohlenbrock, Robert H., 1931- [Photographer], Richardson, John A. [Photographer]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65710, {&quot;Title&quot;:&quot;A Synopsis of the British Mosses - Containing Descriptions of All the Genera and Species, (With Localities of the Rarer Ones) Found in Great Britain and Ireland, Based Upon Wilson&#39;s \&quot;\&quot;Bryologia Britannica,\&quot;\&quot; Schimper&#39;s \&quot;\&quot;Synopsis,\&quot;\&quot; Etc.&quot;,&quot;Topics&quot;:[&quot;Mosses -- Great Britain&quot;],&quot;Primary&quot;:&quot;65710.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hobkirk, Charles C. P. (Charles Codrington Pressick), 1837-1902&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;65710&quot;});" class='title'>A Synopsis of the British Mosses -<br><span class='subtitle'>Containing Descriptions of All the Genera and Species, (With Localities of the Rarer Ones) Found in Great Britain and Ireland, Based Upon Wilson's "Bryologia Britannica," Schimper's "Synopsis," Etc.</span></a>
+<div class='author'>Hobkirk, Charles C. P. (Charles Codrington Pressick), 1837-1902</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66278, {&quot;Title&quot;:&quot;Summer Flowers of the High Alps&quot;,&quot;Topics&quot;:[&quot;Wild flowers -- Alps&quot;,&quot;Mountain plants -- Alps&quot;],&quot;Primary&quot;:&quot;66278.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hastings, Somerville, 1878-1967&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;66278&quot;});" class='title'>Summer Flowers of the High Alps</a>
+<div class='author'>Hastings, Somerville, 1878-1967</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66670, {&quot;Title&quot;:&quot;Trees, Shown to the Children&quot;,&quot;Topics&quot;:[&quot;Trees -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;66670.htm&quot;,&quot;CreatorNames&quot;:[&quot;Smith, C. E.&quot;,&quot;Chisholm, Louey [Editor]&quot;,&quot;Kelman, Janet Harvey [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;66670&quot;});" class='title'>Trees, Shown to the Children</a>
+<div class='author'>Smith, C. E., Chisholm, Louey [Editor], Kelman, Janet Harvey [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66680, {&quot;Title&quot;:&quot;The flowering plants of South Africa; vol. 3&quot;,&quot;Topics&quot;:[&quot;Plants -- South Africa -- Periodicals&quot;,&quot;Plants -- South Africa -- Pictorial works -- Periodicals&quot;],&quot;Primary&quot;:&quot;66680.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pole Evans, I. B. (Illtyd Buller), 1879-1968&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;66680&quot;});" class='title'>The flowering plants of South Africa;<br><span class='subtitle'>vol. 3</span></a>
+<div class='author'>Pole Evans, I. B. (Illtyd Buller), 1879-1968</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67736, {&quot;Title&quot;:&quot;The Chemical Constituents of Piper Methysticum - Or, The Chemical Constituents of the Active Principle of the Ava Root&quot;,&quot;Topics&quot;:[&quot;Kava plant&quot;],&quot;Primary&quot;:&quot;67736.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ball, Alice A., 1892-1916&quot;],&quot;LoCC&quot;:[&quot;QD&quot;,&quot;QK&quot;],&quot;PG_ID&quot;:&quot;67736&quot;});" class='title'>The Chemical Constituents of Piper Methysticum -<br><span class='subtitle'>Or, The Chemical Constituents of the Active Principle of the Ava Root</span></a>
+<div class='author'>Ball, Alice A., 1892-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68097, {&quot;Title&quot;:&quot;Report on the New York Botanical Garden&quot;,&quot;Topics&quot;:[&quot;New York Botanical Garden&quot;],&quot;Primary&quot;:&quot;68097.htm&quot;,&quot;CreatorNames&quot;:[&quot;Olmsted Brothers&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;68097&quot;});" class='title'>Report on the New York Botanical Garden</a>
+<div class='author'>Olmsted Brothers</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68239, {&quot;Title&quot;:&quot;Personality of plants&quot;,&quot;Topics&quot;:[&quot;Plants&quot;],&quot;Primary&quot;:&quot;68239.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dixon, Royal, 1885-1962&quot;,&quot;Fitch, Franklyn Everett&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;68239&quot;});" class='title'>Personality of plants</a>
+<div class='author'>Dixon, Royal, 1885-1962, Fitch, Franklyn Everett</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68580, {&quot;Title&quot;:&quot;A handbook of systematic botany&quot;,&quot;Topics&quot;:[&quot;Plants -- Classification&quot;],&quot;Primary&quot;:&quot;68580.htm&quot;,&quot;CreatorNames&quot;:[&quot;Warming, Eugenius, 1841-1924&quot;,&quot;Knoblauch, Emil, 1864-1936 [Contributor]&quot;,&quot;Potter, Michael Cresse, 1858- [Translator]&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;68580&quot;});" class='title'>A handbook of systematic botany</a>
+<div class='author'>Warming, Eugenius, 1841-1924, Knoblauch, Emil, 1864-1936 [Contributor], Potter, Michael Cresse, 1858- [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68947, {&quot;Title&quot;:&quot;Das Protoplasma der Rhizopoden und der Pflanzenzellen - ein Beitrag zur Theorie der Zelle&quot;,&quot;Topics&quot;:[&quot;Plant cells and tissues&quot;,&quot;Rhizopoda&quot;],&quot;Primary&quot;:&quot;68947.htm&quot;,&quot;CreatorNames&quot;:[&quot;Schultze, Max, 1825-1874&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;68947&quot;});" class='title'>Das Protoplasma der Rhizopoden und der Pflanzenzellen -<br><span class='subtitle'>ein Beitrag zur Theorie der Zelle</span></a>
+<div class='author'>Schultze, Max, 1825-1874</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69049, {&quot;Title&quot;:&quot;The flowering plants of Africa - An analytical key to the genera of African phanerograms&quot;,&quot;Topics&quot;:[&quot;Plants -- Africa&quot;,&quot;Angiosperms -- Africa&quot;],&quot;Primary&quot;:&quot;69049.htm&quot;,&quot;CreatorNames&quot;:[&quot;Thonner, Franz, 1863-1928&quot;,&quot;Rendle, A. B. (Alfred Barton), 1865-1938 [Editor]&quot;,&quot;Fleischmann, Joseph [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;69049&quot;});" class='title'>The flowering plants of Africa -<br><span class='subtitle'>An analytical key to the genera of African phanerograms</span></a>
+<div class='author'>Thonner, Franz, 1863-1928, Rendle, A. B. (Alfred Barton), 1865-1938 [Editor], Fleischmann, Joseph [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69469, {&quot;Title&quot;:&quot;Bäume und Sträucher&quot;,&quot;Topics&quot;:[&quot;Nature study -- Juvenile literature&quot;,&quot;Trees -- Juvenile literature&quot;,&quot;Shrubs -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;69469.htm&quot;,&quot;CreatorNames&quot;:[&quot;Buckley, Arabella B. (Arabella Burton), 1840-1929&quot;,&quot;Muckley, Angelo Fairfax, 1859-1920 [Illustrator]&quot;,&quot;Kriete, Fritz, 1858- [Translator]&quot;,&quot;Rabes, O. (Otto), 1873- [Translator]&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;69469&quot;});" class='title'>Bäume und Sträucher</a>
+<div class='author'>Buckley, Arabella B. (Arabella Burton), 1840-1929, Muckley, Angelo Fairfax, 1859-1920 [Illustrator], Kriete, Fritz, 1858- [Translator], Rabes, O. (Otto), 1873- [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69524, {&quot;Title&quot;:&quot;Pflanzenleben in Feld und Garten&quot;,&quot;Topics&quot;:[&quot;Nature study -- Juvenile literature&quot;,&quot;Plants -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;69524.htm&quot;,&quot;CreatorNames&quot;:[&quot;Buckley, Arabella B. (Arabella Burton), 1840-1929&quot;,&quot;Muckley, Angelo Fairfax, 1859-1920 [Illustrator]&quot;,&quot;Kriete, Fritz, 1858- [Translator]&quot;,&quot;Rabes, O. (Otto), 1873- [Translator]&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;69524&quot;});" class='title'>Pflanzenleben in Feld und Garten</a>
+<div class='author'>Buckley, Arabella B. (Arabella Burton), 1840-1929, Muckley, Angelo Fairfax, 1859-1920 [Illustrator], Kriete, Fritz, 1858- [Translator], Rabes, O. (Otto), 1873- [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69639, {&quot;Title&quot;:&quot;The heathery; or, A monograph of the genus Erica. vol. 1&quot;,&quot;Topics&quot;:[&quot;Ericas&quot;,&quot;Ericas -- Pictorial works&quot;],&quot;Primary&quot;:&quot;69639.htm&quot;,&quot;CreatorNames&quot;:[&quot;Andrews, Henry Cranke, active 1799-1828&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;69639&quot;});" class='title'>The heathery;<br><span class='subtitle'>or, A monograph of the genus Erica. vol. 1</span></a>
+<div class='author'>Andrews, Henry Cranke, active 1799-1828</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69783, {&quot;Title&quot;:&quot;A synopsis of the palms of Puerto Rico&quot;,&quot;Topics&quot;:[&quot;Palms -- Puerto Rico&quot;],&quot;Primary&quot;:&quot;69783.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cook, O. F. (Orator Fuller), 1867-1949&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;69783&quot;});" class='title'>A synopsis of the palms of Puerto Rico</a>
+<div class='author'>Cook, O. F. (Orator Fuller), 1867-1949</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69947, {&quot;Title&quot;:&quot;The flowering plants of South Africa; vol. 4&quot;,&quot;Topics&quot;:[&quot;Plants -- South Africa -- Periodicals&quot;,&quot;Plants -- South Africa -- Pictorial works -- Periodicals&quot;],&quot;Primary&quot;:&quot;69947.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pole Evans, I. B. (Illtyd Buller), 1879-1968&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;69947&quot;});" class='title'>The flowering plants of South Africa;<br><span class='subtitle'>vol. 4</span></a>
+<div class='author'>Pole Evans, I. B. (Illtyd Buller), 1879-1968</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69985, {&quot;Title&quot;:&quot;Ilex cassine, the aboriginal North American tea -&quot;,&quot;Topics&quot;:[&quot;Aquifoliaceae&quot;,&quot;Ilex vomitoria&quot;,&quot;Indians of North America -- Food -- Southern States&quot;,&quot;Black drink&quot;],&quot;Primary&quot;:&quot;69985.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hale, Edwin M. (Edwin Moses), 1829-1899&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;69985&quot;});" class='title'>Ilex cassine, the aboriginal North American tea -<br><span class='subtitle'></span></a>
+<div class='author'>Hale, Edwin M. (Edwin Moses), 1829-1899</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70045, {&quot;Title&quot;:&quot;Coloured engravings of heaths; vol. 2&quot;,&quot;Topics&quot;:[&quot;Ericas&quot;,&quot;Ericas -- Pictorial works&quot;],&quot;Primary&quot;:&quot;70045.htm&quot;,&quot;CreatorNames&quot;:[&quot;Andrews, Henry Cranke, active 1799-1828&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;70045&quot;});" class='title'>Coloured engravings of heaths;<br><span class='subtitle'>vol. 2</span></a>
+<div class='author'>Andrews, Henry Cranke, active 1799-1828</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70062, {&quot;Title&quot;:&quot;Coloured engravings of heaths; vol. 3&quot;,&quot;Topics&quot;:[&quot;Ericas&quot;,&quot;Ericas -- Pictorial works&quot;],&quot;Primary&quot;:&quot;70062.htm&quot;,&quot;CreatorNames&quot;:[&quot;Andrews, Henry Cranke, active 1799-1828&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;70062&quot;});" class='title'>Coloured engravings of heaths;<br><span class='subtitle'>vol. 3</span></a>
+<div class='author'>Andrews, Henry Cranke, active 1799-1828</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70072, {&quot;Title&quot;:&quot;Coloured engravings of heaths; vol. 4&quot;,&quot;Topics&quot;:[&quot;Ericas&quot;,&quot;Ericas -- Pictorial works&quot;],&quot;Primary&quot;:&quot;70072.htm&quot;,&quot;CreatorNames&quot;:[&quot;Andrews, Henry Cranke, active 1799-1828&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;70072&quot;});" class='title'>Coloured engravings of heaths;<br><span class='subtitle'>vol. 4</span></a>
+<div class='author'>Andrews, Henry Cranke, active 1799-1828</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70075, {&quot;Title&quot;:&quot;Palm trees of the Amazon and their uses&quot;,&quot;Topics&quot;:[&quot;Palms -- Amazon River Valley&quot;],&quot;Primary&quot;:&quot;70075.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wallace, Alfred Russel, 1823-1913&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;70075&quot;});" class='title'>Palm trees of the Amazon and their uses</a>
+<div class='author'>Wallace, Alfred Russel, 1823-1913</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70078, {&quot;Title&quot;:&quot;The heathery; or, A monograph of the genus Erica. vol. 2&quot;,&quot;Topics&quot;:[&quot;Ericas&quot;,&quot;Ericas -- Pictorial works&quot;],&quot;Primary&quot;:&quot;70078.htm&quot;,&quot;CreatorNames&quot;:[&quot;Andrews, Henry Cranke, active 1799-1828&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;70078&quot;});" class='title'>The heathery;<br><span class='subtitle'>or, A monograph of the genus Erica. vol. 2</span></a>
+<div class='author'>Andrews, Henry Cranke, active 1799-1828</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70082, {&quot;Title&quot;:&quot;The heathery; or, A monograph of the genus Erica. vol. 3&quot;,&quot;Topics&quot;:[&quot;Ericas&quot;,&quot;Ericas -- Pictorial works&quot;],&quot;Primary&quot;:&quot;70082.htm&quot;,&quot;CreatorNames&quot;:[&quot;Andrews, Henry Cranke, active 1799-1828&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;70082&quot;});" class='title'>The heathery;<br><span class='subtitle'>or, A monograph of the genus Erica. vol. 3</span></a>
+<div class='author'>Andrews, Henry Cranke, active 1799-1828</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70085, {&quot;Title&quot;:&quot;The heathery; or, A monograph of the genus Erica. vol. 4&quot;,&quot;Topics&quot;:[&quot;Ericas&quot;,&quot;Ericas -- Pictorial works&quot;],&quot;Primary&quot;:&quot;70085.htm&quot;,&quot;CreatorNames&quot;:[&quot;Andrews, Henry Cranke, active 1799-1828&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;70085&quot;});" class='title'>The heathery;<br><span class='subtitle'>or, A monograph of the genus Erica. vol. 4</span></a>
+<div class='author'>Andrews, Henry Cranke, active 1799-1828</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70093, {&quot;Title&quot;:&quot;The heathery; or, A monograph of the genus Erica. vol. 5&quot;,&quot;Topics&quot;:[&quot;Ericas&quot;,&quot;Ericas -- Pictorial works&quot;],&quot;Primary&quot;:&quot;70093.htm&quot;,&quot;CreatorNames&quot;:[&quot;Andrews, Henry Cranke, active 1799-1828&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;70093&quot;});" class='title'>The heathery;<br><span class='subtitle'>or, A monograph of the genus Erica. vol. 5</span></a>
+<div class='author'>Andrews, Henry Cranke, active 1799-1828</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70096, {&quot;Title&quot;:&quot;The heathery; or, A monograph of the genus Erica. vol. 6&quot;,&quot;Topics&quot;:[&quot;Ericas&quot;,&quot;Ericas -- Pictorial works&quot;],&quot;Primary&quot;:&quot;70096.htm&quot;,&quot;CreatorNames&quot;:[&quot;Andrews, Henry Cranke, active 1799-1828&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;70096&quot;});" class='title'>The heathery;<br><span class='subtitle'>or, A monograph of the genus Erica. vol. 6</span></a>
+<div class='author'>Andrews, Henry Cranke, active 1799-1828</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7234, {&quot;Title&quot;:&quot;Species and Varieties, Their Origin by Mutation&quot;,&quot;Topics&quot;:[&quot;Evolution (Biology)&quot;,&quot;Plants -- Variation&quot;,&quot;Plant mutation&quot;,&quot;Plant hybridization&quot;,&quot;Plants -- Evolution&quot;],&quot;Primary&quot;:&quot;7234.htm&quot;,&quot;CreatorNames&quot;:[&quot;Vries, Hugo de, 1848-1935&quot;,&quot;MacDougal, Daniel Trembly, 1865-1958 [Editor]&quot;],&quot;LoCC&quot;:[&quot;QH&quot;,&quot;QK&quot;],&quot;PG_ID&quot;:&quot;7234&quot;});" class='title'>Species and Varieties, Their Origin by Mutation</a>
+<div class='author'>Vries, Hugo de, 1848-1935, MacDougal, Daniel Trembly, 1865-1958 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(8866, {&quot;Title&quot;:&quot;Wild Flowers Worth Knowing&quot;,&quot;Topics&quot;:[&quot;Wild flowers -- North America&quot;],&quot;Primary&quot;:&quot;8866.htm&quot;,&quot;CreatorNames&quot;:[&quot;Blanchan, Neltje, 1865-1918&quot;,&quot;Dickinson, Asa Don, 1876-1960 [Editor]&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;8866&quot;});" class='title'>Wild Flowers Worth Knowing</a>
+<div class='author'>Blanchan, Neltje, 1865-1918, Dickinson, Asa Don, 1876-1960 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(9264, {&quot;Title&quot;:&quot;Vand- og stenhoejsplanter en vejledning for havevenner&quot;,&quot;Topics&quot;:[&quot;Aquatic plants&quot;],&quot;Primary&quot;:&quot;9264.htm&quot;,&quot;CreatorNames&quot;:[&quot;Brandt, G. N. (Gudmund Nyeland), 1878-1945 [Editor]&quot;],&quot;LoCC&quot;:[&quot;QK&quot;],&quot;PG_ID&quot;:&quot;9264&quot;});" class='title'>Vand-<br><span class='subtitle'>og stenhoejsplanter en vejledning for havevenner</span></a>
+<div class='author'>Brandt, G. N. (Gudmund Nyeland), 1878-1945 [Editor]</div>
+</div>
+</ul></div>
+</body></html>

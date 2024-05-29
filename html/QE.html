@@ -1,0 +1,722 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Geology (QE)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(10251, {&quot;Title&quot;:&quot;Town Geology&quot;,&quot;Topics&quot;:[&quot;Geology&quot;],&quot;Primary&quot;:&quot;10251.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kingsley, Charles, 1819-1875&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;10251&quot;});" class='title'>Town Geology</a>
+<div class='author'>Kingsley, Charles, 1819-1875</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12861, {&quot;Title&quot;:&quot;Theory of the Earth, With Proofs and Illustrations, Volume 1 (of 4)&quot;,&quot;Topics&quot;:[&quot;Geology -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;12861.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hutton, James, 1726-1797&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;12861&quot;});" class='title'>Theory of the Earth, With Proofs and Illustrations, Volume 1 (of 4)</a>
+<div class='author'>Hutton, James, 1726-1797</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14179, {&quot;Title&quot;:&quot;Theory of the Earth, With Proofs and Illustrations, Volume 2 (of 4)&quot;,&quot;Topics&quot;:[&quot;Geology -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;14179.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hutton, James, 1726-1797&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;14179&quot;});" class='title'>Theory of the Earth, With Proofs and Illustrations, Volume 2 (of 4)</a>
+<div class='author'>Hutton, James, 1726-1797</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14279, {&quot;Title&quot;:&quot;The Ancient Life History of the Earth - A Comprehensive Outline of the Principles and Leading Facts of Palæontological Science&quot;,&quot;Topics&quot;:[&quot;Paleontology&quot;],&quot;Primary&quot;:&quot;14279.htm&quot;,&quot;CreatorNames&quot;:[&quot;Nicholson, Henry Alleyne, 1844-1899&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;14279&quot;});" class='title'>The Ancient Life History of the Earth -<br><span class='subtitle'>A Comprehensive Outline of the Principles and Leading Facts of Palæontological Science</span></a>
+<div class='author'>Nicholson, Henry Alleyne, 1844-1899</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16718, {&quot;Title&quot;:&quot;Mineralogia Polyglotta&quot;,&quot;Topics&quot;:[&quot;Mineralogy&quot;],&quot;Primary&quot;:&quot;16718.htm&quot;,&quot;CreatorNames&quot;:[&quot;Keferstein, Christian, 1784-1866&quot;],&quot;LoCC&quot;:[&quot;QD&quot;,&quot;QE&quot;],&quot;PG_ID&quot;:&quot;16718&quot;});" class='title'>Mineralogia Polyglotta</a>
+<div class='author'>Keferstein, Christian, 1784-1866</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(1697, {&quot;Title&quot;:&quot;Madam How and Lady Why; Or, First Lessons in Earth Lore for Children&quot;,&quot;Topics&quot;:[&quot;Geology -- Juvenile literature&quot;,&quot;Natural history -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;1697.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kingsley, Charles, 1819-1875&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;1697&quot;});" class='title'>Madam How and Lady Why;<br><span class='subtitle'>Or, First Lessons in Earth Lore for Children</span></a>
+<div class='author'>Kingsley, Charles, 1819-1875</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18016, {&quot;Title&quot;:&quot;In Het Rijk van Vulcaan - de Uitbarsting van Krakatau en Hare Gevolgen&quot;,&quot;Topics&quot;:[&quot;Krakatoa (Indonesia) -- Eruption, 1883&quot;],&quot;Primary&quot;:&quot;18016.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sandick, R. A. (Rudolf Adriaan) van, 1855-1933&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;18016&quot;});" class='title'>In Het Rijk van Vulcaan -<br><span class='subtitle'>de Uitbarsting van Krakatau en Hare Gevolgen</span></a>
+<div class='author'>Sandick, R. A. (Rudolf Adriaan) van, 1855-1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18527, {&quot;Title&quot;:&quot;An Assessment of the Consequences and Preparations for a Catastrophic California Earthquake: Findings and Actions Taken&quot;,&quot;Topics&quot;:[&quot;Earthquakes -- California&quot;,&quot;Natural disasters -- California&quot;,&quot;Earthquakes -- Safety measures&quot;],&quot;Primary&quot;:&quot;18527.htm&quot;,&quot;CreatorNames&quot;:[&quot;United States. Federal Emergency Management Agency&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;18527&quot;});" class='title'>An Assessment of the Consequences and Preparations for a Catastrophic California Earthquake:<br><span class='subtitle'>Findings and Actions Taken</span></a>
+<div class='author'>United States. Federal Emergency Management Agency</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18556, {&quot;Title&quot;:&quot;Catalogue of Violent and Destructive Earthquakes in the Philippines - With an Appendix: Earthquakes in the Marianas Islands 1599-1909&quot;,&quot;Topics&quot;:[&quot;Earthquakes -- Philippines&quot;,&quot;Earthquakes -- Mariana Islands&quot;],&quot;Primary&quot;:&quot;18556.htm&quot;,&quot;CreatorNames&quot;:[&quot;Saderra Masó, Miguel, -1939&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;18556&quot;});" class='title'>Catalogue of Violent and Destructive Earthquakes in the Philippines -<br><span class='subtitle'>With an Appendix: Earthquakes in the Marianas Islands 1599-1909</span></a>
+<div class='author'>Saderra Masó, Miguel, -1939</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19302, {&quot;Title&quot;:&quot;Dinosaurs, with Special Reference to the American Museum Collections&quot;,&quot;Topics&quot;:[&quot;Dinosaurs&quot;],&quot;Primary&quot;:&quot;19302.htm&quot;,&quot;CreatorNames&quot;:[&quot;Matthew, William Diller, 1871-1930&quot;,&quot;Brown, Barnum, 1873-1963 [Contributor]&quot;,&quot;Osborn, Henry Fairfield, 1857-1935 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;19302&quot;});" class='title'>Dinosaurs, with Special Reference to the American Museum Collections</a>
+<div class='author'>Matthew, William Diller, 1871-1930, Brown, Barnum, 1873-1963 [Contributor], Osborn, Henry Fairfield, 1857-1935 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19456, {&quot;Title&quot;:&quot;De ramp van Valparaiso - De Aarde en haar Volken, 1907&quot;,&quot;Topics&quot;:[&quot;Earthquakes -- Chile&quot;,&quot;Valparaíso (Chile) -- Earthquake, 1906&quot;],&quot;Primary&quot;:&quot;19456.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bourdon, Henri&quot;],&quot;LoCC&quot;:[&quot;QE&quot;,&quot;F&quot;],&quot;PG_ID&quot;:&quot;19456&quot;});" class='title'>De ramp van Valparaiso -<br><span class='subtitle'>De Aarde en haar Volken, 1907</span></a>
+<div class='author'>Bourdon, Henri</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19585, {&quot;Title&quot;:&quot;De Wereld vóór de schepping van den mensch&quot;,&quot;Topics&quot;:[&quot;Paleontology&quot;,&quot;Human beings -- Origin&quot;,&quot;Earth (Planet)&quot;],&quot;Primary&quot;:&quot;19585.htm&quot;,&quot;CreatorNames&quot;:[&quot;Flammarion, Camille, 1842-1925&quot;,&quot;Goudsmit, Boudewijn Casper, 1849-1915 [Editor]&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;19585&quot;});" class='title'>De Wereld vóór de schepping van den mensch</a>
+<div class='author'>Flammarion, Camille, 1842-1925, Goudsmit, Boudewijn Casper, 1849-1915 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20159, {&quot;Title&quot;:&quot;Catálogo Instructivo de las Colecciones Mineralógicas&quot;,&quot;Topics&quot;:[&quot;Minerals -- Catalogs and collections&quot;],&quot;Primary&quot;:&quot;20159.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bodenbender, Guillermo, 1857-1941&quot;,&quot;Hermitte, Enrique Martín, 1871-1955&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;20159&quot;});" class='title'>Catálogo Instructivo de las Colecciones Mineralógicas</a>
+<div class='author'>Bodenbender, Guillermo, 1857-1941, Hermitte, Enrique Martín, 1871-1955</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22492, {&quot;Title&quot;:&quot;Reise in die Aequinoctial-Gegenden des neuen Continents. Band 1.&quot;,&quot;Topics&quot;:[&quot;South America -- Description and travel&quot;,&quot;Geology -- South America&quot;,&quot;Natural history -- South America&quot;,&quot;South America -- History&quot;],&quot;Primary&quot;:&quot;22492.htm&quot;,&quot;CreatorNames&quot;:[&quot;Humboldt, Alexander von, 1769-1859&quot;,&quot;Hauff, Hermann, 1800-1865 [Translator]&quot;],&quot;LoCC&quot;:[&quot;G&quot;,&quot;QE&quot;,&quot;QH&quot;,&quot;F&quot;,&quot;F&quot;],&quot;PG_ID&quot;:&quot;22492&quot;});" class='title'>Reise in die Aequinoctial-Gegenden des neuen Continents. Band 1.</a>
+<div class='author'>Humboldt, Alexander von, 1769-1859, Hauff, Hermann, 1800-1865 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23626, {&quot;Title&quot;:&quot;The Chemistry, Properties and Tests of Precious Stones&quot;,&quot;Topics&quot;:[&quot;Precious stones&quot;],&quot;Primary&quot;:&quot;23626.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mastin, John, 1865-&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;23626&quot;});" class='title'>The Chemistry, Properties and Tests of Precious Stones</a>
+<div class='author'>Mastin, John, 1865-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24746, {&quot;Title&quot;:&quot;Reise in die Aequinoctial-Gegenden des neuen Continents. Band 2.&quot;,&quot;Topics&quot;:[&quot;South America -- Description and travel&quot;,&quot;Geology -- South America&quot;,&quot;Natural history -- South America&quot;,&quot;South America -- History&quot;],&quot;Primary&quot;:&quot;24746.htm&quot;,&quot;CreatorNames&quot;:[&quot;Humboldt, Alexander von, 1769-1859&quot;,&quot;Hauff, Hermann, 1800-1865 [Translator]&quot;],&quot;LoCC&quot;:[&quot;G&quot;,&quot;QE&quot;,&quot;QH&quot;,&quot;F&quot;,&quot;F&quot;],&quot;PG_ID&quot;:&quot;24746&quot;});" class='title'>Reise in die Aequinoctial-Gegenden des neuen Continents. Band 2.</a>
+<div class='author'>Humboldt, Alexander von, 1769-1859, Hauff, Hermann, 1800-1865 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25062, {&quot;Title&quot;:&quot;A Study of Recent Earthquakes&quot;,&quot;Topics&quot;:[&quot;Earthquakes&quot;],&quot;Primary&quot;:&quot;25062.htm&quot;,&quot;CreatorNames&quot;:[&quot;Davison, Charles, 1858-1940&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;25062&quot;});" class='title'>A Study of Recent Earthquakes</a>
+<div class='author'>Davison, Charles, 1858-1940</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2690, {&quot;Title&quot;:&quot;Coral Reefs&quot;,&quot;Topics&quot;:[&quot;Beagle Expedition (1831-1836)&quot;,&quot;Coral reefs and islands&quot;,&quot;Volcanoes&quot;,&quot;Islands&quot;,&quot;Geology -- South America&quot;],&quot;Primary&quot;:&quot;2690.htm&quot;,&quot;CreatorNames&quot;:[&quot;Darwin, Charles, 1809-1882&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;2690&quot;});" class='title'>Coral Reefs</a>
+<div class='author'>Darwin, Charles, 1809-1882</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28273, {&quot;Title&quot;:&quot;The Cruise of the Betsey - or, A Summer Ramble Among the Fossiliferous Deposits of the Hebrides. With Rambles of a Geologist or, Ten Thousand Miles Over the Fossiliferous Deposits of Scotland&quot;,&quot;Topics&quot;:[&quot;Geology -- Scotland&quot;],&quot;Primary&quot;:&quot;28273.htm&quot;,&quot;CreatorNames&quot;:[&quot;Miller, Hugh, 1802-1856&quot;,&quot;Symonds, W. S. (William Samuel), 1818-1887 [Editor]&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;28273&quot;});" class='title'>The Cruise of the Betsey -<br><span class='subtitle'>or, A Summer Ramble Among the Fossiliferous Deposits of the Hebrides. With Rambles of a Geologist or, Ten Thousand Miles Over the Fossiliferous Deposits of Scotland</span></a>
+<div class='author'>Miller, Hugh, 1802-1856, Symonds, W. S. (William Samuel), 1818-1887 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2923, {&quot;Title&quot;:&quot;The Method by Which the Causes of the Present and Past Conditions of Organic Nature Are to Be Discovered; the Origination of Living Beings - Lecture III. (of VI.), \&quot;\&quot;Lectures to Working Men\&quot;\&quot;, at the Museum of Practical Geology, 1863, on Darwin&#39;s Work: \&quot;\&quot;Origin of Species\&quot;\&quot;&quot;,&quot;Topics&quot;:[&quot;Evolution (Biology)&quot;,&quot;Darwin, Charles, 1809-1882. On the origin of species&quot;],&quot;Primary&quot;:&quot;2923.htm&quot;,&quot;CreatorNames&quot;:[&quot;Huxley, Thomas Henry, 1825-1895&quot;],&quot;LoCC&quot;:[&quot;QE&quot;,&quot;QH&quot;],&quot;PG_ID&quot;:&quot;2923&quot;});" class='title'>The Method by Which the Causes of the Present and Past Conditions of Organic Nature Are to Be Discovered;<br><span class='subtitle'>the Origination of Living Beings - Lecture III. (of VI.), "Lectures to Working Men", at the Museum of Practical Geology, 1863, on Darwin's Work: "Origin of Species"</span></a>
+<div class='author'>Huxley, Thomas Henry, 1825-1895</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2936, {&quot;Title&quot;:&quot;Geological Contemporaneity and Persistent Types of Life&quot;,&quot;Topics&quot;:[&quot;Life (Biology)&quot;,&quot;Fossils&quot;],&quot;Primary&quot;:&quot;2936.htm&quot;,&quot;CreatorNames&quot;:[&quot;Huxley, Thomas Henry, 1825-1895&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;2936&quot;});" class='title'>Geological Contemporaneity and Persistent Types of Life</a>
+<div class='author'>Huxley, Thomas Henry, 1825-1895</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30297, {&quot;Title&quot;:&quot;Records of the Fossil Mammal Sinclairella, Family Apatemyidae, From the Chadronian and Orellan&quot;,&quot;Topics&quot;:[&quot;Sinclairella dakotensis&quot;,&quot;Paleontology -- Oligocene&quot;,&quot;Paleontology -- Colorado -- Logan County&quot;,&quot;Paleontology -- Nebraska -- Sioux County&quot;],&quot;Primary&quot;:&quot;30297.htm&quot;,&quot;CreatorNames&quot;:[&quot;Clemens, William Alvin&quot;],&quot;LoCC&quot;:[&quot;QE&quot;,&quot;QH&quot;],&quot;PG_ID&quot;:&quot;30297&quot;});" class='title'>Records of the Fossil Mammal Sinclairella, Family Apatemyidae, From the Chadronian and Orellan</a>
+<div class='author'>Clemens, William Alvin</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3054, {&quot;Title&quot;:&quot;Volcanic Islands&quot;,&quot;Topics&quot;:[&quot;Beagle Expedition (1831-1836)&quot;,&quot;Volcanoes&quot;,&quot;Geology -- South America&quot;],&quot;Primary&quot;:&quot;3054.htm&quot;,&quot;CreatorNames&quot;:[&quot;Darwin, Charles, 1809-1882&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;3054&quot;});" class='title'>Volcanic Islands</a>
+<div class='author'>Darwin, Charles, 1809-1882</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30737, {&quot;Title&quot;:&quot;My Schools and Schoolmasters; Or, The Story of My Education&quot;,&quot;Topics&quot;:[&quot;Miller, Hugh, 1802-1856 -- Knowledge and learning&quot;,&quot;Education -- Scotland -- History -- 19th century&quot;,&quot;Geologists -- Scotland -- Biography&quot;],&quot;Primary&quot;:&quot;30737.htm&quot;,&quot;CreatorNames&quot;:[&quot;Miller, Hugh, 1802-1856&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;30737&quot;});" class='title'>My Schools and Schoolmasters;<br><span class='subtitle'>Or, The Story of My Education</span></a>
+<div class='author'>Miller, Hugh, 1802-1856</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31627, {&quot;Title&quot;:&quot;Volcanoes: Past and Present&quot;,&quot;Topics&quot;:[&quot;Volcanoes&quot;,&quot;Igneous rocks&quot;],&quot;Primary&quot;:&quot;31627.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hull, Edward, 1829-1917&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;31627&quot;});" class='title'>Volcanoes:<br><span class='subtitle'>Past and Present</span></a>
+<div class='author'>Hull, Edward, 1829-1917</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31827, {&quot;Title&quot;:&quot;Etna: A History of the Mountain and of its Eruptions&quot;,&quot;Topics&quot;:[&quot;Etna, Mount (Italy)&quot;],&quot;Primary&quot;:&quot;31827.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rodwell, G. F. (George Farrer), 1843-&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;31827&quot;});" class='title'>Etna:<br><span class='subtitle'>A History of the Mountain and of its Eruptions</span></a>
+<div class='author'>Rodwell, G. F. (George Farrer), 1843-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31899, {&quot;Title&quot;:&quot;Conservation Through Engineering - Extract from the Annual Report of the Secretary of the Interior&quot;,&quot;Topics&quot;:[&quot;Natural resources -- United States&quot;],&quot;Primary&quot;:&quot;31899.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lane, Franklin K., 1864-1921&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;31899&quot;});" class='title'>Conservation Through Engineering -<br><span class='subtitle'>Extract from the Annual Report of the Secretary of the Interior</span></a>
+<div class='author'>Lane, Franklin K., 1864-1921</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32201, {&quot;Title&quot;:&quot;Geologische Beobachtungen über die Vulcanischen Inseln - Mit kurzen Bemerkungen über die Geologie von Australien und dem Cap der guten Hoffnung&quot;,&quot;Topics&quot;:[&quot;Beagle Expedition (1831-1836)&quot;,&quot;Geology -- South America&quot;,&quot;Volcanoes -- Southern Hemisphere&quot;],&quot;Primary&quot;:&quot;32201.htm&quot;,&quot;CreatorNames&quot;:[&quot;Darwin, Charles, 1809-1882&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;32201&quot;});" class='title'>Geologische Beobachtungen über die Vulcanischen Inseln -<br><span class='subtitle'>Mit kurzen Bemerkungen über die Geologie von Australien und dem Cap der guten Hoffnung</span></a>
+<div class='author'>Darwin, Charles, 1809-1882</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32598, {&quot;Title&quot;:&quot;Earth and Sky Every Child Should Know - Easy studies of the earth and the stars for any time and place&quot;,&quot;Topics&quot;:[&quot;Geology -- Juvenile literature&quot;,&quot;Astronomy -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;32598.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rogers, Julia Ellen, 1866-&quot;],&quot;LoCC&quot;:[&quot;QB&quot;,&quot;QE&quot;],&quot;PG_ID&quot;:&quot;32598&quot;});" class='title'>Earth and Sky Every Child Should Know -<br><span class='subtitle'>Easy studies of the earth and the stars for any time and place</span></a>
+<div class='author'>Rogers, Julia Ellen, 1866-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33050, {&quot;Title&quot;:&quot;Drainage Modifications and Glaciation in the Danbury Region Connecticut - State of Connecticut State Geological and Natural History Survey Bulletin No. 30&quot;,&quot;Topics&quot;:[&quot;Glacial epoch&quot;,&quot;Geology -- Connecticut&quot;],&quot;Primary&quot;:&quot;33050.htm&quot;,&quot;CreatorNames&quot;:[&quot;Harvey, Ruth Sawyer&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;33050&quot;});" class='title'>Drainage Modifications and Glaciation in the Danbury Region Connecticut -<br><span class='subtitle'>State of Connecticut State Geological and Natural History Survey Bulletin No. 30</span></a>
+<div class='author'>Harvey, Ruth Sawyer</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33224, {&quot;Title&quot;:&quot;Principles of Geology - or, The Modern Changes of the Earth and its Inhabitants Considered as Illustrative of Geology&quot;,&quot;Topics&quot;:[&quot;Geology&quot;],&quot;Primary&quot;:&quot;33224.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lyell, Charles, Sir, 1797-1875&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;33224&quot;});" class='title'>Principles of Geology -<br><span class='subtitle'>or, The Modern Changes of the Earth and its Inhabitants Considered as Illustrative of Geology</span></a>
+<div class='author'>Lyell, Charles, Sir, 1797-1875</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33483, {&quot;Title&quot;:&quot;The Eruption of Vesuvius in 1872&quot;,&quot;Topics&quot;:[&quot;Vesuvius (Italy)&quot;],&quot;Primary&quot;:&quot;33483.htm&quot;,&quot;CreatorNames&quot;:[&quot;Palmieri, Luigi, 1807-1896&quot;,&quot;Mallet, Robert, 1810-1881 [Translator]&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;33483&quot;});" class='title'>The Eruption of Vesuvius in 1872</a>
+<div class='author'>Palmieri, Luigi, 1807-1896, Mallet, Robert, 1810-1881 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33560, {&quot;Title&quot;:&quot;A New Genus of Pennsylvanian Fish (Crossopterygii, Coelacanthiformes) from Kansas&quot;,&quot;Topics&quot;:[&quot;Synaptotylus newelli&quot;,&quot;Coelacanthiformes&quot;,&quot;Fishes, Fossil&quot;],&quot;Primary&quot;:&quot;33560.htm&quot;,&quot;CreatorNames&quot;:[&quot;Echols, Joan&quot;],&quot;LoCC&quot;:[&quot;QE&quot;,&quot;QH&quot;],&quot;PG_ID&quot;:&quot;33560&quot;});" class='title'>A New Genus of Pennsylvanian Fish (Crossopterygii, Coelacanthiformes) from Kansas</a>
+<div class='author'>Echols, Joan</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33925, {&quot;Title&quot;:&quot;The Geological Story of the Isle of Wight&quot;,&quot;Topics&quot;:[&quot;Geology -- England -- Isle of Wight&quot;,&quot;Paleontology -- England -- Isle of Wight&quot;,&quot;Geology, Stratigraphic -- Tertiary&quot;],&quot;Primary&quot;:&quot;33925.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hughes, J. Cecil (John Cecil)&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;33925&quot;});" class='title'>The Geological Story of the Isle of Wight</a>
+<div class='author'>Hughes, J. Cecil (John Cecil)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34056, {&quot;Title&quot;:&quot;Remarks on some fossil impressions in the sandstone rocks of Connecticut River&quot;,&quot;Topics&quot;:[&quot;Footprints, Fossil -- Connecticut River Valley&quot;,&quot;Paleontology -- Connecticut River Valley&quot;],&quot;Primary&quot;:&quot;34056.htm&quot;,&quot;CreatorNames&quot;:[&quot;Warren, John Collins, 1778-1856&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;34056&quot;});" class='title'>Remarks on some fossil impressions in the sandstone rocks of Connecticut River</a>
+<div class='author'>Warren, John Collins, 1778-1856</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34192, {&quot;Title&quot;:&quot;The Glaciers of the Alps - Being a narrative of excursions and ascents, an account of the origin and phenomena of glaciers and an exposition of the physical principles to which they are related&quot;,&quot;Topics&quot;:[&quot;Alps -- Description and travel&quot;,&quot;Glaciers -- Alps&quot;],&quot;Primary&quot;:&quot;34192.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tyndall, John, 1820-1893&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;34192&quot;});" class='title'>The Glaciers of the Alps -<br><span class='subtitle'>Being a narrative of excursions and ascents, an account of the origin and phenomena of glaciers and an exposition of the physical principles to which they are related</span></a>
+<div class='author'>Tyndall, John, 1820-1893</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34350, {&quot;Title&quot;:&quot;A Manual of Elementary Geology - or, The Ancient Changes of the Earth and its Inhabitants as Illustrated by Geological Monuments&quot;,&quot;Topics&quot;:[&quot;Geology&quot;],&quot;Primary&quot;:&quot;34350.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lyell, Charles, Sir, 1797-1875&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;34350&quot;});" class='title'>A Manual of Elementary Geology -<br><span class='subtitle'>or, The Ancient Changes of the Earth and its Inhabitants as Illustrated by Geological Monuments</span></a>
+<div class='author'>Lyell, Charles, Sir, 1797-1875</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34502, {&quot;Title&quot;:&quot;Charles Lyell and Modern Geology&quot;,&quot;Topics&quot;:[&quot;Lyell, Charles, Sir, 1797-1875&quot;,&quot;Geology -- History&quot;],&quot;Primary&quot;:&quot;34502.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bonney, T. G. (Thomas George), 1833-1923&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;34502&quot;});" class='title'>Charles Lyell and Modern Geology</a>
+<div class='author'>Bonney, T. G. (Thomas George), 1833-1923</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35316, {&quot;Title&quot;:&quot;Dragons of the Air: An Account of Extinct Flying Reptiles&quot;,&quot;Topics&quot;:[&quot;Pterosauria&quot;],&quot;Primary&quot;:&quot;35316.htm&quot;,&quot;CreatorNames&quot;:[&quot;Seeley, H. G. (Harry Govier), 1839-1909&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;35316&quot;});" class='title'>Dragons of the Air:<br><span class='subtitle'>An Account of Extinct Flying Reptiles</span></a>
+<div class='author'>Seeley, H. G. (Harry Govier), 1839-1909</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35317, {&quot;Title&quot;:&quot;Geology&quot;,&quot;Topics&quot;:[&quot;Geology&quot;],&quot;Primary&quot;:&quot;35317.htm&quot;,&quot;CreatorNames&quot;:[&quot;Geikie, James, 1839-1915&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;35317&quot;});" class='title'>Geology</a>
+<div class='author'>Geikie, James, 1839-1915</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35433, {&quot;Title&quot;:&quot;Observations on Mount Vesuvius, Mount Etna, and Other Volcanos&quot;,&quot;Topics&quot;:[&quot;Volcanoes -- Italy -- Early works to 1800&quot;,&quot;Vesuvius (Italy) -- Early works to 1800&quot;,&quot;Etna, Mount (Italy) -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;35433.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hamilton, William, Sir, 1730-1803&quot;,&quot;Cadell, T. (Thomas), 1742-1802 [Editor]&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;35433&quot;});" class='title'>Observations on Mount Vesuvius, Mount Etna, and Other Volcanos</a>
+<div class='author'>Hamilton, William, Sir, 1730-1803, Cadell, T. (Thomas), 1742-1802 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3620, {&quot;Title&quot;:&quot;Geological Observations on South America&quot;,&quot;Topics&quot;:[&quot;Beagle Expedition (1831-1836)&quot;,&quot;Paleontology&quot;,&quot;Geology -- South America&quot;,&quot;Mollusks, Fossil -- South America&quot;],&quot;Primary&quot;:&quot;3620.htm&quot;,&quot;CreatorNames&quot;:[&quot;Darwin, Charles, 1809-1882&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;3620&quot;});" class='title'>Geological Observations on South America</a>
+<div class='author'>Darwin, Charles, 1809-1882</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36261, {&quot;Title&quot;:&quot;The Chain of Life in Geological Time - A Sketch of the Origin and Succession of Animals and Plants&quot;,&quot;Topics&quot;:[&quot;Paleontology&quot;,&quot;Paleobotany&quot;],&quot;Primary&quot;:&quot;36261.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dawson, John William, Sir, 1820-1899&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;36261&quot;});" class='title'>The Chain of Life in Geological Time -<br><span class='subtitle'>A Sketch of the Origin and Succession of Animals and Plants</span></a>
+<div class='author'>Dawson, John William, Sir, 1820-1899</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3772, {&quot;Title&quot;:&quot;The Student&#39;s Elements of Geology&quot;,&quot;Topics&quot;:[&quot;Geology&quot;],&quot;Primary&quot;:&quot;3772.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lyell, Charles, Sir, 1797-1875&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;3772&quot;});" class='title'>The Student's Elements of Geology</a>
+<div class='author'>Lyell, Charles, Sir, 1797-1875</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38013, {&quot;Title&quot;:&quot;Animals of the Past&quot;,&quot;Topics&quot;:[&quot;Paleontology&quot;],&quot;Primary&quot;:&quot;38013.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lucas, Frederic A. (Frederic Augustus), 1852-1929&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;38013&quot;});" class='title'>Animals of the Past</a>
+<div class='author'>Lucas, Frederic A. (Frederic Augustus), 1852-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38148, {&quot;Title&quot;:&quot;The Geography of the Region about Devil&#39;s Lake and the Dalles of the Wisconsin - With Some Notes on Its Surface Geology&quot;,&quot;Topics&quot;:[&quot;Physical geography&quot;,&quot;Wisconsin -- Description and travel&quot;],&quot;Primary&quot;:&quot;38148.htm&quot;,&quot;CreatorNames&quot;:[&quot;Atwood, Wallace Walter, 1872-1949&quot;,&quot;Salisbury, Rollin D., 1858-1922&quot;],&quot;LoCC&quot;:[&quot;QE&quot;,&quot;F&quot;],&quot;PG_ID&quot;:&quot;38148&quot;});" class='title'>The Geography of the Region about Devil's Lake and the Dalles of the Wisconsin -<br><span class='subtitle'>With Some Notes on Its Surface Geology</span></a>
+<div class='author'>Atwood, Wallace Walter, 1872-1949, Salisbury, Rollin D., 1858-1922</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39723, {&quot;Title&quot;:&quot;The World Before the Deluge&quot;,&quot;Topics&quot;:[&quot;Geology, Stratigraphic&quot;],&quot;Primary&quot;:&quot;39723.htm&quot;,&quot;CreatorNames&quot;:[&quot;Figuier, Louis, 1819-1894&quot;,&quot;Bristow, Henry W. (Henry William), 1817-1889 [Editor]&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;39723&quot;});" class='title'>The World Before the Deluge</a>
+<div class='author'>Figuier, Louis, 1819-1894, Bristow, Henry W. (Henry William), 1817-1889 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4022, {&quot;Title&quot;:&quot;Coral Reefs; Volcanic Islands; South American Geology — Complete&quot;,&quot;Topics&quot;:[&quot;Beagle Expedition (1831-1836)&quot;,&quot;Coral reefs and islands&quot;,&quot;Volcanoes&quot;,&quot;Islands&quot;,&quot;Geology -- South America&quot;],&quot;Primary&quot;:&quot;4022.htm&quot;,&quot;CreatorNames&quot;:[&quot;Darwin, Charles, 1809-1882&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;4022&quot;});" class='title'>Coral Reefs;<br><span class='subtitle'>Volcanic Islands; South American Geology — Complete</span></a>
+<div class='author'>Darwin, Charles, 1809-1882</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40404, {&quot;Title&quot;:&quot;The Elements of Geology&quot;,&quot;Topics&quot;:[&quot;Geology&quot;],&quot;Primary&quot;:&quot;40404.htm&quot;,&quot;CreatorNames&quot;:[&quot;Norton, William Harmon, 1856-1944&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;40404&quot;});" class='title'>The Elements of Geology</a>
+<div class='author'>Norton, William Harmon, 1856-1944</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41840, {&quot;Title&quot;:&quot;The Elements of Geology; Adapted to the Use of Schools and Colleges&quot;,&quot;Topics&quot;:[&quot;Geology&quot;],&quot;Primary&quot;:&quot;41840.htm&quot;,&quot;CreatorNames&quot;:[&quot;Loomis, Justin R. (Justin Rudolph), 1810-1898&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;41840&quot;});" class='title'>The Elements of Geology;<br><span class='subtitle'>Adapted to the Use of Schools and Colleges</span></a>
+<div class='author'>Loomis, Justin R. (Justin Rudolph), 1810-1898</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4204, {&quot;Title&quot;:&quot;The Elements of Geology&quot;,&quot;Topics&quot;:[&quot;Geology&quot;],&quot;Primary&quot;:&quot;4204.txt&quot;,&quot;CreatorNames&quot;:[&quot;Norton, William Harmon, 1856-1944&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;4204&quot;});" class='title'>The Elements of Geology</a>
+<div class='author'>Norton, William Harmon, 1856-1944</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42043, {&quot;Title&quot;:&quot;Illogical Geology, the Weakest Point in the Evolution Theory&quot;,&quot;Topics&quot;:[&quot;Evolution&quot;,&quot;Paleontology&quot;],&quot;Primary&quot;:&quot;42043.htm&quot;,&quot;CreatorNames&quot;:[&quot;Price, George McCready, 1870-1963&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;42043&quot;});" class='title'>Illogical Geology, the Weakest Point in the Evolution Theory</a>
+<div class='author'>Price, George McCready, 1870-1963</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42356, {&quot;Title&quot;:&quot;On the Red Chalk of England&quot;,&quot;Topics&quot;:[&quot;Geology, Stratigraphic -- Cretaceous&quot;,&quot;Geology -- Great Britain&quot;],&quot;Primary&quot;:&quot;42356.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wiltshire, Thomas&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;42356&quot;});" class='title'>On the Red Chalk of England</a>
+<div class='author'>Wiltshire, Thomas</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42584, {&quot;Title&quot;:&quot;Extinct Monsters - A Popular Account of Some of the Larger Forms of Ancient Animal Life&quot;,&quot;Topics&quot;:[&quot;Paleontology&quot;],&quot;Primary&quot;:&quot;42584.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hutchinson, H. N. (Henry Neville), 1856-1927&quot;,&quot;Woodward, Henry, 1832-1921 [Author of introduction, etc.]&quot;,&quot;Smit, Joseph, 1836-1929 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;42584&quot;});" class='title'>Extinct Monsters -<br><span class='subtitle'>A Popular Account of Some of the Larger Forms of Ancient Animal Life</span></a>
+<div class='author'>Hutchinson, H. N. (Henry Neville), 1856-1927, Woodward, Henry, 1832-1921 [Author of introduction, etc.], Smit, Joseph, 1836-1929 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42741, {&quot;Title&quot;:&quot;The Story of the Earth and Man&quot;,&quot;Topics&quot;:[&quot;Paleontology&quot;,&quot;Human beings -- Origin&quot;],&quot;Primary&quot;:&quot;42741.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dawson, John William, Sir, 1820-1899&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;42741&quot;});" class='title'>The Story of the Earth and Man</a>
+<div class='author'>Dawson, John William, Sir, 1820-1899</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42937, {&quot;Title&quot;:&quot;Einfache Erzählung von dem schrecklichen Absturze des Schrofenberges und der dadurch erfolgten Verwüstung bei Brannenburg im August 1851 - Zum Beßten der Verunglückten&quot;,&quot;Topics&quot;:[&quot;Landslides -- Germany -- Brannenburg&quot;],&quot;Primary&quot;:&quot;42937.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dachauer, Sebastian, 1778-1863&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;42937&quot;});" class='title'>Einfache Erzählung von dem schrecklichen Absturze des Schrofenberges und der dadurch erfolgten Verwüstung bei Brannenburg im August 1851 -<br><span class='subtitle'>Zum Beßten der Verunglückten</span></a>
+<div class='author'>Dachauer, Sebastian, 1778-1863</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43232, {&quot;Title&quot;:&quot;The Preparation of Illustrations for Reports of the United States Geological Survey - With Brief Descriptions of Processes of Reproduction&quot;,&quot;Topics&quot;:[&quot;Illustration of books&quot;],&quot;Primary&quot;:&quot;43232.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ridgway, John L., 1859-1947&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;43232&quot;});" class='title'>The Preparation of Illustrations for Reports of the United States Geological Survey -<br><span class='subtitle'>With Brief Descriptions of Processes of Reproduction</span></a>
+<div class='author'>Ridgway, John L., 1859-1947</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43320, {&quot;Title&quot;:&quot;The Wonder Book of Volcanoes and Earthquakes&quot;,&quot;Topics&quot;:[&quot;Earthquakes&quot;,&quot;Volcanoes&quot;],&quot;Primary&quot;:&quot;43320.htm&quot;,&quot;CreatorNames&quot;:[&quot;Houston, Edwin J. (Edwin James), 1847-1914&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;43320&quot;});" class='title'>The Wonder Book of Volcanoes and Earthquakes</a>
+<div class='author'>Houston, Edwin J. (Edwin James), 1847-1914</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43597, {&quot;Title&quot;:&quot;Notes on the Fenland; with A Description of the Shippea Man&quot;,&quot;Topics&quot;:[&quot;Geology -- England -- Bedford Level&quot;],&quot;Primary&quot;:&quot;43597.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hughes, Thomas McKenny, 1832-1917&quot;,&quot;Macalister, Alex. (Alexander)‏ [Contributor]&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;43597&quot;});" class='title'>Notes on the Fenland;<br><span class='subtitle'>with A Description of the Shippea Man</span></a>
+<div class='author'>Hughes, Thomas McKenny, 1832-1917, Macalister, Alex. (Alexander)‏ [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43963, {&quot;Title&quot;:&quot;The Principles of Stratigraphical Geology&quot;,&quot;Topics&quot;:[&quot;Geology, Stratigraphic&quot;],&quot;Primary&quot;:&quot;43963.htm&quot;,&quot;CreatorNames&quot;:[&quot;Marr, J. E. (John Edward), 1857-1933&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;43963&quot;});" class='title'>The Principles of Stratigraphical Geology</a>
+<div class='author'>Marr, J. E. (John Edward), 1857-1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43976, {&quot;Title&quot;:&quot;Ancient Plants - Being a Simple Account of the past Vegetation of the Earth and of the Recent Important Discoveries Made in This Realm of Nature&quot;,&quot;Topics&quot;:[&quot;Paleobotany&quot;],&quot;Primary&quot;:&quot;43976.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stopes, Marie Carmichael, 1880-1958&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;43976&quot;});" class='title'>Ancient Plants -<br><span class='subtitle'>Being a Simple Account of the past Vegetation of the Earth and of the Recent Important Discoveries Made in This Realm of Nature</span></a>
+<div class='author'>Stopes, Marie Carmichael, 1880-1958</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44530, {&quot;Title&quot;:&quot;Hugh Miller&quot;,&quot;Topics&quot;:[&quot;Geologists -- Scotland -- Biography&quot;,&quot;Miller, Hugh, 1802-1856&quot;],&quot;Primary&quot;:&quot;44530.htm&quot;,&quot;CreatorNames&quot;:[&quot;Leask, W. Keith (William Keith), 1857-1925&quot;,&quot;Brown, Joseph [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;44530&quot;});" class='title'>Hugh Miller</a>
+<div class='author'>Leask, W. Keith (William Keith), 1857-1925, Brown, Joseph [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45460, {&quot;Title&quot;:&quot;Die Entstehung der Kontinente und Ozeane&quot;,&quot;Topics&quot;:[&quot;Ocean&quot;,&quot;Continental drift&quot;,&quot;Continents&quot;,&quot;Geology, Structural&quot;],&quot;Primary&quot;:&quot;45460.txt&quot;,&quot;CreatorNames&quot;:[&quot;Wegener, Alfred, 1880-1930&quot;],&quot;LoCC&quot;:[&quot;GB&quot;,&quot;QE&quot;],&quot;PG_ID&quot;:&quot;45460&quot;});" class='title'>Die Entstehung der Kontinente und Ozeane</a>
+<div class='author'>Wegener, Alfred, 1880-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46658, {&quot;Title&quot;:&quot;\&quot;\&quot;Sterminator Vesevo\&quot;\&quot; (Vesuvius the great exterminator) - Diary of the Eruption of April 1906&quot;,&quot;Topics&quot;:[&quot;Volcanoes&quot;,&quot;Vesuvius (Italy)&quot;],&quot;Primary&quot;:&quot;46658.htm&quot;,&quot;CreatorNames&quot;:[&quot;Serao, Matilde, 1856-1927&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;46658&quot;});" class='title'>"Sterminator Vesevo" (Vesuvius the great exterminator) -<br><span class='subtitle'>Diary of the Eruption of April 1906</span></a>
+<div class='author'>Serao, Matilde, 1856-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46894, {&quot;Title&quot;:&quot;Volcanoes&quot;,&quot;Topics&quot;:[&quot;Volcanoes&quot;],&quot;Primary&quot;:&quot;46894.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tilling, Robert I., 1935-&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;46894&quot;});" class='title'>Volcanoes</a>
+<div class='author'>Tilling, Robert I., 1935-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46969, {&quot;Title&quot;:&quot;The Geologic Setting of the John Day Country: Grant County, Oregon&quot;,&quot;Topics&quot;:[&quot;Recreation areas -- Oregon -- Grant County&quot;,&quot;Geology -- Oregon -- Grant County&quot;],&quot;Primary&quot;:&quot;46969.htm&quot;,&quot;CreatorNames&quot;:[&quot;Thayer, Thomas P., 1907-2004&quot;],&quot;LoCC&quot;:[&quot;F&quot;,&quot;QE&quot;],&quot;PG_ID&quot;:&quot;46969&quot;});" class='title'>The Geologic Setting of the John Day Country:<br><span class='subtitle'>Grant County, Oregon</span></a>
+<div class='author'>Thayer, Thomas P., 1907-2004</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47119, {&quot;Title&quot;:&quot;Fragments of Earth Lore: Sketches &amp; Addresses Geological and Geographical&quot;,&quot;Topics&quot;:[&quot;Geology&quot;,&quot;Glacial epoch&quot;,&quot;Climatology&quot;,&quot;Physical geography -- Scotland&quot;,&quot;Geology -- Europe&quot;],&quot;Primary&quot;:&quot;47119.htm&quot;,&quot;CreatorNames&quot;:[&quot;Geikie, James, 1839-1915&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;47119&quot;});" class='title'>Fragments of Earth Lore:<br><span class='subtitle'>Sketches & Addresses Geological and Geographical</span></a>
+<div class='author'>Geikie, James, 1839-1915</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47147, {&quot;Title&quot;:&quot;An Introduction to the Study of Meteorites - With a List of the Meteorites Represented in the Collection&quot;,&quot;Topics&quot;:[&quot;Meteorites&quot;,&quot;British Museum (Natural History). Department of Mineralogy&quot;,&quot;Meteorites -- Catalogs and collections&quot;],&quot;Primary&quot;:&quot;47147.htm&quot;,&quot;CreatorNames&quot;:[&quot;British Museum (Natural History). Department of Mineralogy&quot;,&quot;Fletcher, L. (Lazarus), 1854-1921&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;47147&quot;});" class='title'>An Introduction to the Study of Meteorites -<br><span class='subtitle'>With a List of the Meteorites Represented in the Collection</span></a>
+<div class='author'>British Museum (Natural History). Department of Mineralogy, Fletcher, L. (Lazarus), 1854-1921</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47340, {&quot;Title&quot;:&quot;Earthquakes&quot;,&quot;Topics&quot;:[&quot;Earthquakes -- United States&quot;],&quot;Primary&quot;:&quot;47340.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pakiser, L. C. (Louis Charles), 1919-&quot;,&quot;Shedlock, Kaye M.&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;47340&quot;});" class='title'>Earthquakes</a>
+<div class='author'>Pakiser, L. C. (Louis Charles), 1919-, Shedlock, Kaye M.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47648, {&quot;Title&quot;:&quot;Geology: The Science of the Earth&#39;s Crust&quot;,&quot;Topics&quot;:[&quot;Geology&quot;],&quot;Primary&quot;:&quot;47648.htm&quot;,&quot;CreatorNames&quot;:[&quot;Miller, William J. (William John), 1880-1965&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;47648&quot;});" class='title'>Geology:<br><span class='subtitle'>The Science of the Earth's Crust</span></a>
+<div class='author'>Miller, William J. (William John), 1880-1965</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47871, {&quot;Title&quot;:&quot;James Geikie, the Man and the Geologist&quot;,&quot;Topics&quot;:[&quot;Geologists -- Scotland -- Biography&quot;,&quot;Geikie, James, 1839-1915&quot;],&quot;Primary&quot;:&quot;47871.htm&quot;,&quot;CreatorNames&quot;:[&quot;Flett, J. S. (John Smith), Sir, 1869-1947&quot;,&quot;Newbigin, Marion I. (Marion Isabel), 1869-1934&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;47871&quot;});" class='title'>James Geikie, the Man and the Geologist</a>
+<div class='author'>Flett, J. S. (John Smith), Sir, 1869-1947, Newbigin, Marion I. (Marion Isabel), 1869-1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47999, {&quot;Title&quot;:&quot;Natural Gemstones&quot;,&quot;Topics&quot;:[&quot;Precious stones -- United States&quot;,&quot;Precious stones -- Collection and preservation -- United States&quot;,&quot;Gems -- United States&quot;],&quot;Primary&quot;:&quot;47999.htm&quot;,&quot;CreatorNames&quot;:[&quot;Geological Survey (U.S.)&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;47999&quot;});" class='title'>Natural Gemstones</a>
+<div class='author'>Geological Survey (U.S.)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48109, {&quot;Title&quot;:&quot;De koraal-eilanden: fragment uit het dagboek van een natuuronderzoeker - De Aarde en haar Volken, 1875&quot;,&quot;Topics&quot;:[&quot;Coral reefs and islands&quot;],&quot;Primary&quot;:&quot;48109.htm&quot;,&quot;CreatorNames&quot;:[&quot;Darwin, Charles, 1809-1882&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;48109&quot;});" class='title'>De koraal-eilanden:<br><span class='subtitle'>fragment uit het dagboek van een natuuronderzoeker - De Aarde en haar Volken, 1875</span></a>
+<div class='author'>Darwin, Charles, 1809-1882</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48915, {&quot;Title&quot;:&quot;Account of the Skeleton of the Mammoth - A non-descript carnivorous animal of immense size, found in America&quot;,&quot;Topics&quot;:[&quot;Mammoths -- North America&quot;],&quot;Primary&quot;:&quot;48915.htm&quot;,&quot;CreatorNames&quot;:[&quot;Peale, Rembrandt, 1778-1860&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;48915&quot;});" class='title'>Account of the Skeleton of the Mammoth -<br><span class='subtitle'>A non-descript carnivorous animal of immense size, found in America</span></a>
+<div class='author'>Peale, Rembrandt, 1778-1860</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49271, {&quot;Title&quot;:&quot;Common Minerals and Rocks&quot;,&quot;Topics&quot;:[&quot;Geology -- Study and teaching&quot;],&quot;Primary&quot;:&quot;49271.htm&quot;,&quot;CreatorNames&quot;:[&quot;Crosby, William O. (William Otis), 1850-1925&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;49271&quot;});" class='title'>Common Minerals and Rocks</a>
+<div class='author'>Crosby, William O. (William Otis), 1850-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49288, {&quot;Title&quot;:&quot;The Dinosaur Quarry. Dinosaur National Monument, Colorado-Utah&quot;,&quot;Topics&quot;:[&quot;Dinosaurs&quot;,&quot;Paleontology -- Jurassic&quot;,&quot;Dinosaur National Monument (Colo. and Utah)&quot;],&quot;Primary&quot;:&quot;49288.htm&quot;,&quot;CreatorNames&quot;:[&quot;Good, John M. (John Maxwell), 1924-&quot;,&quot;Stucker, Gilbert F.&quot;,&quot;White, Theodore Elmer, 1905-1977&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;49288&quot;});" class='title'>The Dinosaur Quarry. Dinosaur National Monument, Colorado-Utah</a>
+<div class='author'>Good, John M. (John Maxwell), 1924-, Stucker, Gilbert F., White, Theodore Elmer, 1905-1977</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49829, {&quot;Title&quot;:&quot;The Geological History of Fossil Butte National Monument and Fossil Basin&quot;,&quot;Topics&quot;:[&quot;Geology -- Wyoming -- Fossil Butte National Monument&quot;,&quot;Geology, Stratigraphic -- Eocene&quot;,&quot;Paleontology -- Eocene&quot;,&quot;Fossil Butte National Monument (Wyo.)&quot;],&quot;Primary&quot;:&quot;49829.htm&quot;,&quot;CreatorNames&quot;:[&quot;Casilliano, Michael&quot;,&quot;McGrew, Paul O. (Paul Orman), 1909-1983&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;49829&quot;});" class='title'>The Geological History of Fossil Butte National Monument and Fossil Basin</a>
+<div class='author'>Casilliano, Michael, McGrew, Paul O. (Paul Orman), 1909-1983</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49966, {&quot;Title&quot;:&quot;Geology of Devils Tower National Monument, Wyoming - A Contribution to General Geology&quot;,&quot;Topics&quot;:[&quot;Geology -- Wyoming -- Devils Tower National Monument&quot;],&quot;Primary&quot;:&quot;49966.htm&quot;,&quot;CreatorNames&quot;:[&quot;Robinson, Charles Sherwood, 1920-&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;49966&quot;});" class='title'>Geology of Devils Tower National Monument, Wyoming -<br><span class='subtitle'>A Contribution to General Geology</span></a>
+<div class='author'>Robinson, Charles Sherwood, 1920-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50487, {&quot;Title&quot;:&quot;Guidebook of Palo Duro Canyon&quot;,&quot;Topics&quot;:[&quot;Geology -- Texas -- Palo Duro Canyon&quot;,&quot;Palo Duro Canyon (Tex.)&quot;],&quot;Primary&quot;:&quot;50487.htm&quot;,&quot;CreatorNames&quot;:[&quot;West Texas State University. Geological Society&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;50487&quot;});" class='title'>Guidebook of Palo Duro Canyon</a>
+<div class='author'>West Texas State University. Geological Society</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50767, {&quot;Title&quot;:&quot;Life&#39;s Dawn on Earth - Being the history of the oldest known fossil remains, and their relations to geological time and to the development of the animal kingdom&quot;,&quot;Topics&quot;:[&quot;Life -- Origin&quot;,&quot;Paleontology -- Precambrian&quot;],&quot;Primary&quot;:&quot;50767.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dawson, John William, Sir, 1820-1899&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;50767&quot;});" class='title'>Life's Dawn on Earth -<br><span class='subtitle'>Being the history of the oldest known fossil remains, and their relations to geological time and to the development of the animal kingdom</span></a>
+<div class='author'>Dawson, John William, Sir, 1820-1899</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50882, {&quot;Title&quot;:&quot;Introduction to the Study of Palæontological Botany&quot;,&quot;Topics&quot;:[&quot;Paleobotany&quot;],&quot;Primary&quot;:&quot;50882.htm&quot;,&quot;CreatorNames&quot;:[&quot;Balfour, John Hutton, 1808-1884&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;50882&quot;});" class='title'>Introduction to the Study of Palæontological Botany</a>
+<div class='author'>Balfour, John Hutton, 1808-1884</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50957, {&quot;Title&quot;:&quot;Man and the Glacial Period&quot;,&quot;Topics&quot;:[&quot;Prehistoric peoples&quot;,&quot;Glacial epoch&quot;],&quot;Primary&quot;:&quot;50957.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wright, G. Frederick (George Frederick), 1838-1921&quot;,&quot;Haynes, Henry W. (Henry Williamson), 1831-1912 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;50957&quot;});" class='title'>Man and the Glacial Period</a>
+<div class='author'>Wright, G. Frederick (George Frederick), 1838-1921, Haynes, Henry W. (Henry Williamson), 1831-1912 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50986, {&quot;Title&quot;:&quot;Glaciers of the Rockies and Selkirks, 2nd. ed. - With Notes on Five Great Glaciers of the Canadian National Parks&quot;,&quot;Topics&quot;:[&quot;National parks and reserves -- Canada&quot;,&quot;Glaciers -- Canadian Rockies (B.C. and Alta.)&quot;,&quot;Glaciers -- Selkirk Range&quot;,&quot;Glaciers -- Alberta&quot;,&quot;Glaciers -- British Columbia&quot;,&quot;Canadian Rockies (B.C. and Alta.) -- Description and travel&quot;,&quot;Selkirk Range -- Description and travel&quot;],&quot;Primary&quot;:&quot;50986.htm&quot;,&quot;CreatorNames&quot;:[&quot;Coleman, A. P. (Arthur Philemon), 1852-1939&quot;,&quot;Wheeler, A. O. (Arthur Oliver), 1860-1945 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;50986&quot;});" class='title'>Glaciers of the Rockies and Selkirks, 2nd. ed. -<br><span class='subtitle'>With Notes on Five Great Glaciers of the Canadian National Parks</span></a>
+<div class='author'>Coleman, A. P. (Arthur Philemon), 1852-1939, Wheeler, A. O. (Arthur Oliver), 1860-1945 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51021, {&quot;Title&quot;:&quot;The Geological History of Plants&quot;,&quot;Topics&quot;:[&quot;Paleobotany&quot;],&quot;Primary&quot;:&quot;51021.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dawson, John William, Sir, 1820-1899&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;51021&quot;});" class='title'>The Geological History of Plants</a>
+<div class='author'>Dawson, John William, Sir, 1820-1899</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51048, {&quot;Title&quot;:&quot;The Geologic Story of Canyonlands National Park&quot;,&quot;Topics&quot;:[&quot;Geology -- Utah -- Canyonlands National Park -- Guidebooks&quot;,&quot;Canyonlands National Park (Utah) -- Guidebooks&quot;],&quot;Primary&quot;:&quot;51048.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lohman, Stanley William, 1907-&quot;,&quot;Stacy, John R. [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;51048&quot;});" class='title'>The Geologic Story of Canyonlands National Park</a>
+<div class='author'>Lohman, Stanley William, 1907-, Stacy, John R. [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51116, {&quot;Title&quot;:&quot;The Geologic Story of Arches National Park - Geological Survey Bulletin 1393&quot;,&quot;Topics&quot;:[&quot;Geology -- Utah -- Arches National Park -- Guidebooks&quot;,&quot;Arches National Park (Utah)&quot;],&quot;Primary&quot;:&quot;51116.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lohman, Stanley William, 1907-&quot;,&quot;Stacy, John R. [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;51116&quot;});" class='title'>The Geologic Story of Arches National Park -<br><span class='subtitle'>Geological Survey Bulletin 1393</span></a>
+<div class='author'>Lohman, Stanley William, 1907-, Stacy, John R. [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52179, {&quot;Title&quot;:&quot;The Geologic Story of Palo Duro Canyon&quot;,&quot;Topics&quot;:[&quot;Geology -- Texas -- Palo Duro State Park&quot;,&quot;Palo Duro State Park (Tex.)&quot;],&quot;Primary&quot;:&quot;52179.htm&quot;,&quot;CreatorNames&quot;:[&quot;Matthews, William Henry, 1919-&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;52179&quot;});" class='title'>The Geologic Story of Palo Duro Canyon</a>
+<div class='author'>Matthews, William Henry, 1919-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52325, {&quot;Title&quot;:&quot;The Geologic Story of Colorado National Monument - Revised Edition&quot;,&quot;Topics&quot;:[&quot;Geology -- Colorado -- Colorado National Monument&quot;,&quot;Colorado National Monument (Colo.)&quot;],&quot;Primary&quot;:&quot;52325.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lohman, Stanley William, 1907-&quot;,&quot;Stacy, John R. [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;52325&quot;});" class='title'>The Geologic Story of Colorado National Monument -<br><span class='subtitle'>Revised Edition</span></a>
+<div class='author'>Lohman, Stanley William, 1907-, Stacy, John R. [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52466, {&quot;Title&quot;:&quot;The Subterranean World&quot;,&quot;Topics&quot;:[&quot;Geology&quot;,&quot;Mines and mineral resources&quot;,&quot;Caves&quot;],&quot;Primary&quot;:&quot;52466.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hartwig, G. (Georg), 1813-1880&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;52466&quot;});" class='title'>The Subterranean World</a>
+<div class='author'>Hartwig, G. (Georg), 1813-1880</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52655, {&quot;Title&quot;:&quot;The Ornithosauria - An elementary study of the bones of Pterodactyles made from fossil remains found in the Cambridge Upper Greensand, and arranged in the Woodwardian Museum of the University of Cambridge&quot;,&quot;Topics&quot;:[&quot;Pterosauria&quot;],&quot;Primary&quot;:&quot;52655.htm&quot;,&quot;CreatorNames&quot;:[&quot;Seeley, H. G. (Harry Govier), 1839-1909&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;52655&quot;});" class='title'>The Ornithosauria -<br><span class='subtitle'>An elementary study of the bones of Pterodactyles made from fossil remains found in the Cambridge Upper Greensand, and arranged in the Woodwardian Museum of the University of Cambridge</span></a>
+<div class='author'>Seeley, H. G. (Harry Govier), 1839-1909</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52838, {&quot;Title&quot;:&quot;Creation of the Teton Landscape: The Geologic Story of Grand Teton National Park&quot;,&quot;Topics&quot;:[&quot;Geology -- Wyoming -- Grand Teton National Park&quot;],&quot;Primary&quot;:&quot;52838.htm&quot;,&quot;CreatorNames&quot;:[&quot;Love, J. D. (John David), 1913-2002&quot;,&quot;Reed, John C. (John Calvin), 1836-1910&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;52838&quot;});" class='title'>Creation of the Teton Landscape:<br><span class='subtitle'>The Geologic Story of Grand Teton National Park</span></a>
+<div class='author'>Love, J. D. (John David), 1913-2002, Reed, John C. (John Calvin), 1836-1910</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52839, {&quot;Title&quot;:&quot;Texas Rocks and Minerals: An Amateur&#39;s Guide&quot;,&quot;Topics&quot;:[&quot;Petrology&quot;,&quot;Petrology -- Texas&quot;,&quot;Mineralogy -- Texas&quot;],&quot;Primary&quot;:&quot;52839.htm&quot;,&quot;CreatorNames&quot;:[&quot;Girard, Roselle M., 1918-&quot;,&quot;Harris, Bill M. [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;52839&quot;});" class='title'>Texas Rocks and Minerals:<br><span class='subtitle'>An Amateur's Guide</span></a>
+<div class='author'>Girard, Roselle M., 1918-, Harris, Bill M. [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55168, {&quot;Title&quot;:&quot;Fossils: A Story of the Rocks and Their Record of Prehistoric Life&quot;,&quot;Topics&quot;:[&quot;Paleontology&quot;,&quot;Fossils&quot;],&quot;Primary&quot;:&quot;55168.htm&quot;,&quot;CreatorNames&quot;:[&quot;Markman, Harvey C., 1881-1969&quot;,&quot;Gray, Mary Chilton [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;QE&quot;,&quot;QH&quot;],&quot;PG_ID&quot;:&quot;55168&quot;});" class='title'>Fossils:<br><span class='subtitle'>A Story of the Rocks and Their Record of Prehistoric Life</span></a>
+<div class='author'>Markman, Harvey C., 1881-1969, Gray, Mary Chilton [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55382, {&quot;Title&quot;:&quot;Field Book of Common Rocks and Minerals - For identifying the Rocks and Minerals of the United States and interpreting their Origins and Meanings&quot;,&quot;Topics&quot;:[&quot;Minerals -- United States&quot;,&quot;Rocks -- United States&quot;],&quot;Primary&quot;:&quot;55382.htm&quot;,&quot;CreatorNames&quot;:[&quot;Loomis, Frederic Brewster, 1873-1937&quot;,&quot;Corbin, Walter Everett [Photographer]&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;55382&quot;});" class='title'>Field Book of Common Rocks and Minerals -<br><span class='subtitle'>For identifying the Rocks and Minerals of the United States and interpreting their Origins and Meanings</span></a>
+<div class='author'>Loomis, Frederic Brewster, 1873-1937, Corbin, Walter Everett [Photographer]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56004, {&quot;Title&quot;:&quot;Fossil Butterflies - Memoirs of the American Association for the Advancement of Science, I.&quot;,&quot;Topics&quot;:[&quot;Butterflies, Fossil&quot;],&quot;Primary&quot;:&quot;56004.htm&quot;,&quot;CreatorNames&quot;:[&quot;Scudder, Samuel Hubbard, 1837-1911&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;56004&quot;});" class='title'>Fossil Butterflies -<br><span class='subtitle'>Memoirs of the American Association for the Advancement of Science, I.</span></a>
+<div class='author'>Scudder, Samuel Hubbard, 1837-1911</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56239, {&quot;Title&quot;:&quot;Festländer und Meere im Wechsel der Zeiten&quot;,&quot;Topics&quot;:[&quot;Earth (Planet)&quot;,&quot;Geophysics&quot;],&quot;Primary&quot;:&quot;56239.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bölsche, Wilhelm, 1861-1939&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;56239&quot;});" class='title'>Festländer und Meere im Wechsel der Zeiten</a>
+<div class='author'>Bölsche, Wilhelm, 1861-1939</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56303, {&quot;Title&quot;:&quot;Agate Fossil Beds National Monument, Nebraska&quot;,&quot;Topics&quot;:[&quot;Paleontology -- Miocene&quot;,&quot;Vertebrates, Fossil -- Nebraska -- Agate Fossil Beds National Monument&quot;,&quot;Paleontology -- Nebraska -- Agate Fossil Beds National Monument&quot;,&quot;Natural history -- Nebraska -- Agate Fossil Beds National Monument&quot;,&quot;Agate Fossil Beds National Monument (Neb.)&quot;],&quot;Primary&quot;:&quot;56303.htm&quot;,&quot;CreatorNames&quot;:[&quot;United States. National Park Service&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;56303&quot;});" class='title'>Agate Fossil Beds National Monument, Nebraska</a>
+<div class='author'>United States. National Park Service</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56315, {&quot;Title&quot;:&quot;Texas Fossils: An Amateur Collector&#39;s Handbook&quot;,&quot;Topics&quot;:[&quot;Paleontology -- Texas&quot;],&quot;Primary&quot;:&quot;56315.htm&quot;,&quot;CreatorNames&quot;:[&quot;Matthews, William Henry, 1919-&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;56315&quot;});" class='title'>Texas Fossils:<br><span class='subtitle'>An Amateur Collector's Handbook</span></a>
+<div class='author'>Matthews, William Henry, 1919-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57178, {&quot;Title&quot;:&quot;The Life of a Fossil Hunter&quot;,&quot;Topics&quot;:[&quot;Sternberg, Charles H., (Charles Hazelius), 1850-1943&quot;,&quot;Paleontologists -- United States -- Biography&quot;,&quot;Fossils -- Collection and preservation -- United States -- History&quot;],&quot;Primary&quot;:&quot;57178.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sternberg, Charles H. (Charles Hazelius), 1850-1943&quot;,&quot;Osborn, Henry Fairfield, 1857-1935 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;57178&quot;});" class='title'>The Life of a Fossil Hunter</a>
+<div class='author'>Sternberg, Charles H. (Charles Hazelius), 1850-1943, Osborn, Henry Fairfield, 1857-1935 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57530, {&quot;Title&quot;:&quot;Volcanoes of the United States&quot;,&quot;Topics&quot;:[&quot;Volcanoes -- United States&quot;],&quot;Primary&quot;:&quot;57530.htm&quot;,&quot;CreatorNames&quot;:[&quot;Brantley, Steven R.&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;57530&quot;});" class='title'>Volcanoes of the United States</a>
+<div class='author'>Brantley, Steven R.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57800, {&quot;Title&quot;:&quot;The Flow of Time in the Connecticut Valley: Geological Imprints&quot;,&quot;Topics&quot;:[&quot;Geology -- Connecticut River Valley&quot;],&quot;Primary&quot;:&quot;57800.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bain, George W. (George William), 1901-&quot;,&quot;Meyerhoff, Howard A. (Howard Augustus), 1899-1982&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;57800&quot;});" class='title'>The Flow of Time in the Connecticut Valley:<br><span class='subtitle'>Geological Imprints</span></a>
+<div class='author'>Bain, George W. (George William), 1901-, Meyerhoff, Howard A. (Howard Augustus), 1899-1982</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58235, {&quot;Title&quot;:&quot;Beach Rambles in Search of Seaside Pebbles and Crystals - With Some Observations on the Origin of the Diamond and Other Precious Stones&quot;,&quot;Topics&quot;:[&quot;Precious stones&quot;,&quot;Mineralogy&quot;,&quot;Pebbles&quot;,&quot;Crystals&quot;,&quot;Seashore ecology&quot;],&quot;Primary&quot;:&quot;58235.htm&quot;,&quot;CreatorNames&quot;:[&quot;Francis, John George&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;58235&quot;});" class='title'>Beach Rambles in Search of Seaside Pebbles and Crystals -<br><span class='subtitle'>With Some Observations on the Origin of the Diamond and Other Precious Stones</span></a>
+<div class='author'>Francis, John George</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59074, {&quot;Title&quot;:&quot;Australasian Fossils: A Students&#39; Manual of Palaeontology&quot;,&quot;Topics&quot;:[&quot;Paleontology -- Australia&quot;],&quot;Primary&quot;:&quot;59074.htm&quot;,&quot;CreatorNames&quot;:[&quot;Chapman, Frederick, 1864-1943&quot;,&quot;Skeats, Ernest Willington, 1875-1953 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;59074&quot;});" class='title'>Australasian Fossils:<br><span class='subtitle'>A Students' Manual of Palaeontology</span></a>
+<div class='author'>Chapman, Frederick, 1864-1943, Skeats, Ernest Willington, 1875-1953 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59161, {&quot;Title&quot;:&quot;Eiszeit und Klimawechsel&quot;,&quot;Topics&quot;:[&quot;Glacial epoch&quot;,&quot;Climatology&quot;],&quot;Primary&quot;:&quot;59161.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bölsche, Wilhelm, 1861-1939&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;59161&quot;});" class='title'>Eiszeit und Klimawechsel</a>
+<div class='author'>Bölsche, Wilhelm, 1861-1939</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59419, {&quot;Title&quot;:&quot;The Journal of Geology, May-June 1893 - A Semi-Quarterly Magazone of Geology and Related Sciences&quot;,&quot;Topics&quot;:[&quot;Geology -- Periodicals&quot;],&quot;Primary&quot;:&quot;59419.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;,&quot;Chamberlin, Thomas C. (Thomas Chrowder), 1843-1928 [Editor]&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;59419&quot;});" class='title'>The Journal of Geology, May-June 1893 -<br><span class='subtitle'>A Semi-Quarterly Magazone of Geology and Related Sciences</span></a>
+<div class='author'>Various, Chamberlin, Thomas C. (Thomas Chrowder), 1843-1928 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59611, {&quot;Title&quot;:&quot;The Journal of Geology, January-February 1893 - A Semi-Quarterly Magazine of Geology and Related Sciences&quot;,&quot;Topics&quot;:[&quot;Geology -- Periodicals&quot;],&quot;Primary&quot;:&quot;59611.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;,&quot;Chamberlin, Thomas C. (Thomas Chrowder), 1843-1928 [Editor]&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;59611&quot;});" class='title'>The Journal of Geology, January-February 1893 -<br><span class='subtitle'>A Semi-Quarterly Magazine of Geology and Related Sciences</span></a>
+<div class='author'>Various, Chamberlin, Thomas C. (Thomas Chrowder), 1843-1928 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59658, {&quot;Title&quot;:&quot;Some Salient Points in the Science of the Earth&quot;,&quot;Topics&quot;:[&quot;Geology&quot;,&quot;Paleontology&quot;],&quot;Primary&quot;:&quot;59658.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dawson, John William, Sir, 1820-1899&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;59658&quot;});" class='title'>Some Salient Points in the Science of the Earth</a>
+<div class='author'>Dawson, John William, Sir, 1820-1899</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59662, {&quot;Title&quot;:&quot;The Coal Measures Amphibia of North America&quot;,&quot;Topics&quot;:[&quot;Amphibians, Fossil -- North America&quot;,&quot;Paleontology -- North America&quot;,&quot;Paleontology -- Carboniferous&quot;],&quot;Primary&quot;:&quot;59662.htm&quot;,&quot;CreatorNames&quot;:[&quot;Moodie, Roy Lee, 1880-1934&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;59662&quot;});" class='title'>The Coal Measures Amphibia of North America</a>
+<div class='author'>Moodie, Roy Lee, 1880-1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59836, {&quot;Title&quot;:&quot;The Geologic Story of Glacier National Park&quot;,&quot;Topics&quot;:[&quot;Glacier National Park (Mont.)&quot;,&quot;Geology -- Montana -- Glacier National Park&quot;],&quot;Primary&quot;:&quot;59836.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dyson, James L. (James Lindsay), 1912-1967&quot;],&quot;LoCC&quot;:[&quot;F&quot;,&quot;QE&quot;],&quot;PG_ID&quot;:&quot;59836&quot;});" class='title'>The Geologic Story of Glacier National Park</a>
+<div class='author'>Dyson, James L. (James Lindsay), 1912-1967</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60007, {&quot;Title&quot;:&quot;Earthquakes and other earth movements&quot;,&quot;Topics&quot;:[&quot;Earthquakes&quot;],&quot;Primary&quot;:&quot;60007.htm&quot;,&quot;CreatorNames&quot;:[&quot;Milne, John, 1850-1913&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;60007&quot;});" class='title'>Earthquakes and other earth movements</a>
+<div class='author'>Milne, John, 1850-1913</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60070, {&quot;Title&quot;:&quot;Texas Gemstones&quot;,&quot;Topics&quot;:[&quot;Mineralogy -- Texas&quot;,&quot;Precious stones -- Texas&quot;],&quot;Primary&quot;:&quot;60070.htm&quot;,&quot;CreatorNames&quot;:[&quot;King, Elbert A., 1935-1998&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;60070&quot;});" class='title'>Texas Gemstones</a>
+<div class='author'>King, Elbert A., 1935-1998</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60143, {&quot;Title&quot;:&quot;Prairie, Peak, and Plateau: A Guide to the Geology of Colorado&quot;,&quot;Topics&quot;:[&quot;Geology -- Colorado -- Guidebooks&quot;],&quot;Primary&quot;:&quot;60143.htm&quot;,&quot;CreatorNames&quot;:[&quot;Chronic, Halka, 1923-2013&quot;,&quot;Chronic, John&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;60143&quot;});" class='title'>Prairie, Peak, and Plateau:<br><span class='subtitle'>A Guide to the Geology of Colorado</span></a>
+<div class='author'>Chronic, Halka, 1923-2013, Chronic, John</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60195, {&quot;Title&quot;:&quot;The Coming Ice Age&quot;,&quot;Topics&quot;:[&quot;Glacial epoch&quot;],&quot;Primary&quot;:&quot;60195.htm&quot;,&quot;CreatorNames&quot;:[&quot;Taber, C. A. M. (Charles Austin Mendell), 1824-1911&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;60195&quot;});" class='title'>The Coming Ice Age</a>
+<div class='author'>Taber, C. A. M. (Charles Austin Mendell), 1824-1911</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60234, {&quot;Title&quot;:&quot;The Geologic Story of Mount Rainier - A look at the geologic past of one of America&#39;s most scenic volcanoes&quot;,&quot;Topics&quot;:[&quot;Rainier, Mount (Wash.)&quot;,&quot;Geology -- Washington (State) -- Rainier, Mount&quot;],&quot;Primary&quot;:&quot;60234.htm&quot;,&quot;CreatorNames&quot;:[&quot;Crandell, Dwight R. (Dwight Raymond), 1923-2009&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;60234&quot;});" class='title'>The Geologic Story of Mount Rainier -<br><span class='subtitle'>A look at the geologic past of one of America's most scenic volcanoes</span></a>
+<div class='author'>Crandell, Dwight R. (Dwight Raymond), 1923-2009</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60512, {&quot;Title&quot;:&quot;A Hand-book of Precious Stones&quot;,&quot;Topics&quot;:[&quot;Precious stones&quot;],&quot;Primary&quot;:&quot;60512.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rothschild, Meyer D.&quot;],&quot;LoCC&quot;:[&quot;QE&quot;,&quot;TS&quot;],&quot;PG_ID&quot;:&quot;60512&quot;});" class='title'>A Hand-book of Precious Stones</a>
+<div class='author'>Rothschild, Meyer D.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60574, {&quot;Title&quot;:&quot;The Geologic Story of Yellowstone National Park&quot;,&quot;Topics&quot;:[&quot;Geology -- Yellowstone National Park&quot;],&quot;Primary&quot;:&quot;60574.htm&quot;,&quot;CreatorNames&quot;:[&quot;Keefer, William R., 1924-&quot;,&quot;Stacy, John R. [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;60574&quot;});" class='title'>The Geologic Story of Yellowstone National Park</a>
+<div class='author'>Keefer, William R., 1924-, Stacy, John R. [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60710, {&quot;Title&quot;:&quot;The Geology of Groton State Forest&quot;,&quot;Topics&quot;:[&quot;Geology -- Vermont -- Groton State Forest&quot;],&quot;Primary&quot;:&quot;60710.htm&quot;,&quot;CreatorNames&quot;:[&quot;Christman, Robert A. (Robert Adam), 1924-&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;60710&quot;});" class='title'>The Geology of Groton State Forest</a>
+<div class='author'>Christman, Robert A. (Robert Adam), 1924-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60730, {&quot;Title&quot;:&quot;The Geology of Darling State Park&quot;,&quot;Topics&quot;:[&quot;Geology -- Vermont -- Darling State Park&quot;],&quot;Primary&quot;:&quot;60730.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dodge, Harry W.&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;60730&quot;});" class='title'>The Geology of Darling State Park</a>
+<div class='author'>Dodge, Harry W.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60989, {&quot;Title&quot;:&quot;The Geology of D.A.R. State Park, Mt. Philo State Forest Park, Sand Bar State Park&quot;,&quot;Topics&quot;:[&quot;Geology -- Vermont -- D.A.R. State Park&quot;,&quot;Geology -- Vermont -- Mt. Philo State Forest Park&quot;,&quot;Geology -- Vermont -- Sand Bar State Park&quot;,&quot;D.A.R. State Park (Vt.)&quot;,&quot;Mt. Philo State Forest Park (Vt.)&quot;,&quot;Sand Bar State Park (Vt.)&quot;,&quot;Parks -- Vermont&quot;],&quot;Primary&quot;:&quot;60989.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dodge, Harry W.&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;60989&quot;});" class='title'>The Geology of D.A.R. State Park, Mt. Philo State Forest Park, Sand Bar State Park</a>
+<div class='author'>Dodge, Harry W.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60990, {&quot;Title&quot;:&quot;Gem-Stones and Their Distinctive Characters&quot;,&quot;Topics&quot;:[&quot;Precious stones&quot;],&quot;Primary&quot;:&quot;60990.htm&quot;,&quot;CreatorNames&quot;:[&quot;Smith, George Frederick Herbert, 1872-1953&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;60990&quot;});" class='title'>Gem-Stones and Their Distinctive Characters</a>
+<div class='author'>Smith, George Frederick Herbert, 1872-1953</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61230, {&quot;Title&quot;:&quot;The Geology of Button Bay State Park&quot;,&quot;Topics&quot;:[&quot;Geology -- Vermont -- Button Bay State Park&quot;],&quot;Primary&quot;:&quot;61230.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dodge, Harry W.&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;61230&quot;});" class='title'>The Geology of Button Bay State Park</a>
+<div class='author'>Dodge, Harry W.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6131, {&quot;Title&quot;:&quot;Wonders of Creation: A Descriptive Account of Volcanoes and Their Phenomena&quot;,&quot;Topics&quot;:[&quot;Volcanoes -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;6131.txt&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;6131&quot;});" class='title'>Wonders of Creation:<br><span class='subtitle'>A Descriptive Account of Volcanoes and Their Phenomena</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61400, {&quot;Title&quot;:&quot;The Geology of Calvin Coolidge State Forest&quot;,&quot;Topics&quot;:[&quot;Geology -- Vermont -- Calvin Coolidge State Forest&quot;],&quot;Primary&quot;:&quot;61400.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dodge, Harry W.&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;61400&quot;});" class='title'>The Geology of Calvin Coolidge State Forest</a>
+<div class='author'>Dodge, Harry W.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61765, {&quot;Title&quot;:&quot;The Pleistocene of North America - and its vertebrated animals from the states east of the Mississippi River and from the Canadian provinces east of longitude 95°&quot;,&quot;Topics&quot;:[&quot;Paleontology -- Pleistocene&quot;,&quot;Paleontology -- North America&quot;,&quot;Vertebrates, Fossil&quot;],&quot;Primary&quot;:&quot;61765.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hay, Oliver Perry, 1846-1930&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;61765&quot;});" class='title'>The Pleistocene of North America -<br><span class='subtitle'>and its vertebrated animals from the states east of the Mississippi River and from the Canadian provinces east of longitude 95°</span></a>
+<div class='author'>Hay, Oliver Perry, 1846-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61850, {&quot;Title&quot;:&quot;Riesen und Drachen der Vorzeit. Geschichte der Erde, Dritter Teil&quot;,&quot;Topics&quot;:[&quot;Geology&quot;,&quot;Paleontology&quot;,&quot;Earth (Planet)&quot;,&quot;Cosmogony&quot;],&quot;Primary&quot;:&quot;61850.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bommeli, R. (Rudolf), 1859-1926&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;61850&quot;});" class='title'>Riesen und Drachen der Vorzeit. Geschichte der Erde, Dritter Teil</a>
+<div class='author'>Bommeli, R. (Rudolf), 1859-1926</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62053, {&quot;Title&quot;:&quot;The Geology of Mt. Mansfield State Forest&quot;,&quot;Topics&quot;:[&quot;Geology -- Vermont -- Mount Mansfield State Forest&quot;],&quot;Primary&quot;:&quot;62053.htm&quot;,&quot;CreatorNames&quot;:[&quot;Christman, Robert A. (Robert Adam), 1924-&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;62053&quot;});" class='title'>The Geology of Mt. Mansfield State Forest</a>
+<div class='author'>Christman, Robert A. (Robert Adam), 1924-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62414, {&quot;Title&quot;:&quot;Geology and Inhabitants of the Ancient World&quot;,&quot;Topics&quot;:[&quot;Geological museums&quot;,&quot;Crystal Palace (Great Exhibition, 1851, London, England) -- Guidebooks&quot;,&quot;Great Exhibition (1851 : London, England) -- Guidebooks&quot;,&quot;Dinosaurs -- Exhibitions&quot;,&quot;Paleontology -- Exhibitions&quot;,&quot;Geology -- Exhibitions&quot;],&quot;Primary&quot;:&quot;62414.htm&quot;,&quot;CreatorNames&quot;:[&quot;Owen, Richard, 1804-1892&quot;],&quot;LoCC&quot;:[&quot;AM&quot;,&quot;QE&quot;],&quot;PG_ID&quot;:&quot;62414&quot;});" class='title'>Geology and Inhabitants of the Ancient World</a>
+<div class='author'>Owen, Richard, 1804-1892</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62521, {&quot;Title&quot;:&quot;Links With the Past in the Plant World&quot;,&quot;Topics&quot;:[&quot;Plants -- Great Britain&quot;,&quot;Paleobotany -- Great Britain&quot;],&quot;Primary&quot;:&quot;62521.htm&quot;,&quot;CreatorNames&quot;:[&quot;Seward, A. C. (Albert Charles), 1863-1941&quot;],&quot;LoCC&quot;:[&quot;QE&quot;,&quot;QK&quot;],&quot;PG_ID&quot;:&quot;62521&quot;});" class='title'>Links With the Past in the Plant World</a>
+<div class='author'>Seward, A. C. (Albert Charles), 1863-1941</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62693, {&quot;Title&quot;:&quot;Climate and Time in Their Geological Relations - A Theory of Secular Changes of the Earth&#39;s Climate&quot;,&quot;Topics&quot;:[&quot;Glacial epoch&quot;,&quot;Climatology&quot;,&quot;Geological time&quot;,&quot;Ocean currents&quot;],&quot;Primary&quot;:&quot;62693.htm&quot;,&quot;CreatorNames&quot;:[&quot;Croll, James, 1821-1890&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;62693&quot;});" class='title'>Climate and Time in Their Geological Relations -<br><span class='subtitle'>A Theory of Secular Changes of the Earth's Climate</span></a>
+<div class='author'>Croll, James, 1821-1890</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62871, {&quot;Title&quot;:&quot;Thoughts on a Pebble, or, A First Lesson in Geology&quot;,&quot;Topics&quot;:[&quot;Geology -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;62871.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mantell, Gideon Algernon, 1790-1852&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;62871&quot;});" class='title'>Thoughts on a Pebble, or, A First Lesson in Geology</a>
+<div class='author'>Mantell, Gideon Algernon, 1790-1852</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62891, {&quot;Title&quot;:&quot;The Medals of Creation, Volumes 1 and 2 - First Lessons in Geology and the Study of Organic Remains&quot;,&quot;Topics&quot;:[&quot;Paleontology&quot;,&quot;Geology -- England -- Guidebooks&quot;],&quot;Primary&quot;:&quot;62891.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mantell, Gideon Algernon, 1790-1852&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;62891&quot;});" class='title'>The Medals of Creation, Volumes 1 and 2 -<br><span class='subtitle'>First Lessons in Geology and the Study of Organic Remains</span></a>
+<div class='author'>Mantell, Gideon Algernon, 1790-1852</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62918, {&quot;Title&quot;:&quot;Essay on the Theory of the Earth&quot;,&quot;Topics&quot;:[&quot;Geology&quot;,&quot;Paleontology&quot;],&quot;Primary&quot;:&quot;62918.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cuvier, Georges, baron, 1769-1832&quot;,&quot;Jameson, Robert, 1774-1854 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;62918&quot;});" class='title'>Essay on the Theory of the Earth</a>
+<div class='author'>Cuvier, Georges, baron, 1769-1832, Jameson, Robert, 1774-1854 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6322, {&quot;Title&quot;:&quot;Personal Narrative of Travels to the Equinoctial Regions of America, During the Year 1799-1804 — Volume 1&quot;,&quot;Topics&quot;:[&quot;South America -- Description and travel&quot;,&quot;Voyages and travels&quot;,&quot;Humboldt, Alexander von, 1769-1859 -- Travel -- South America&quot;,&quot;Natural history -- South America&quot;,&quot;Scientific expeditions&quot;],&quot;Primary&quot;:&quot;6322.txt&quot;,&quot;CreatorNames&quot;:[&quot;Bonpland, Aimé, 1773-1858&quot;,&quot;Humboldt, Alexander von, 1769-1859&quot;,&quot;Ross, Thomasina [Translator]&quot;],&quot;LoCC&quot;:[&quot;G&quot;,&quot;QE&quot;,&quot;QH&quot;,&quot;F&quot;,&quot;F&quot;],&quot;PG_ID&quot;:&quot;6322&quot;});" class='title'>Personal Narrative of Travels to the Equinoctial Regions of America, During the Year 1799-1804 — Volume 1</a>
+<div class='author'>Bonpland, Aimé, 1773-1858, Humboldt, Alexander von, 1769-1859, Ross, Thomasina [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63322, {&quot;Title&quot;:&quot;The Philosophy of Earthquakes, Natural and Religious - or, An Inquiry Into Their Cause, and Their Purpose&quot;,&quot;Topics&quot;:[&quot;Earthquakes&quot;],&quot;Primary&quot;:&quot;63322.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stukeley, William, 1687-1765&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;63322&quot;});" class='title'>The Philosophy of Earthquakes, Natural and Religious -<br><span class='subtitle'>or, An Inquiry Into Their Cause, and Their Purpose</span></a>
+<div class='author'>Stukeley, William, 1687-1765</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63396, {&quot;Title&quot;:&quot;The Geologic Story of the Great Plains - A nontechnical description of the origin and evolution of the landscape of the Great Plains&quot;,&quot;Topics&quot;:[&quot;Geology -- Great Plains&quot;,&quot;Landscapes -- Great Plains&quot;],&quot;Primary&quot;:&quot;63396.htm&quot;,&quot;CreatorNames&quot;:[&quot;Trimble, Donald E., 1916-&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;63396&quot;});" class='title'>The Geologic Story of the Great Plains -<br><span class='subtitle'>A nontechnical description of the origin and evolution of the landscape of the Great Plains</span></a>
+<div class='author'>Trimble, Donald E., 1916-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63519, {&quot;Title&quot;:&quot;Fossil Forests of the Yellowstone National Park&quot;,&quot;Topics&quot;:[&quot;Petrified forests&quot;,&quot;Paleobotany -- Yellowstone National Park&quot;,&quot;Trees, Fossil -- Yellowstone National Park&quot;],&quot;Primary&quot;:&quot;63519.htm&quot;,&quot;CreatorNames&quot;:[&quot;Knowlton, Frank Hall, 1860-1926&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;63519&quot;});" class='title'>Fossil Forests of the Yellowstone National Park</a>
+<div class='author'>Knowlton, Frank Hall, 1860-1926</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63803, {&quot;Title&quot;:&quot;The Forms of Water in Clouds and Rivers, Ice and Glaciers&quot;,&quot;Topics&quot;:[&quot;Rivers&quot;,&quot;Clouds&quot;,&quot;Ice&quot;,&quot;Glaciers&quot;,&quot;Water&quot;],&quot;Primary&quot;:&quot;63803.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tyndall, John, 1820-1893&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;63803&quot;});" class='title'>The Forms of Water in Clouds and Rivers, Ice and Glaciers</a>
+<div class='author'>Tyndall, John, 1820-1893</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63923, {&quot;Title&quot;:&quot;The Old Red Sandstone; or, New Walks in an Old Field&quot;,&quot;Topics&quot;:[&quot;Geology -- Scotland&quot;,&quot;Geology, Stratigraphic -- Devonian&quot;],&quot;Primary&quot;:&quot;63923.htm&quot;,&quot;CreatorNames&quot;:[&quot;Miller, Hugh, 1802-1856&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;63923&quot;});" class='title'>The Old Red Sandstone;<br><span class='subtitle'>or, New Walks in an Old Field</span></a>
+<div class='author'>Miller, Hugh, 1802-1856</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64325, {&quot;Title&quot;:&quot;Landscape in History, and Other Essays&quot;,&quot;Topics&quot;:[&quot;Geology&quot;,&quot;Darwin, Charles, 1809-1882&quot;,&quot;Physical geography&quot;,&quot;Miller, Hugh, 1802-1856&quot;],&quot;Primary&quot;:&quot;64325.htm&quot;,&quot;CreatorNames&quot;:[&quot;Geikie, Archibald, 1835-1924&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;64325&quot;});" class='title'>Landscape in History, and Other Essays</a>
+<div class='author'>Geikie, Archibald, 1835-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64434, {&quot;Title&quot;:&quot;A Pictorial Atlas of Fossil Remains, consisting of coloured illustrations selected from Parkinson&#39;s \&quot;\&quot;Organic remains of a former world,\&quot;\&quot; and Artis&#39;s \&quot;\&quot;Antediluvian phytology.\&quot;\&quot;&quot;,&quot;Topics&quot;:[&quot;Paleontology&quot;],&quot;Primary&quot;:&quot;64434.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mantell, Gideon Algernon, 1790-1852&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;64434&quot;});" class='title'>A Pictorial Atlas of Fossil Remains, consisting of coloured illustrations selected from Parkinson's "Organic remains of a former world," and Artis's "Antediluvian phytology."</a>
+<div class='author'>Mantell, Gideon Algernon, 1790-1852</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64451, {&quot;Title&quot;:&quot;Palæontological Report of the Princeton Scientific Expedition of 1877&quot;,&quot;Topics&quot;:[&quot;Paleontology -- Eocene&quot;,&quot;Vertebrates, Fossil&quot;,&quot;Paleontology -- United States&quot;,&quot;Paleontology -- Wyoming&quot;],&quot;Primary&quot;:&quot;64451.htm&quot;,&quot;CreatorNames&quot;:[&quot;Osborn, Henry Fairfield, 1857-1935&quot;,&quot;Scott, William Berryman, 1858-1947&quot;,&quot;Speir, Francis, 1856-1925&quot;],&quot;LoCC&quot;:[&quot;QE&quot;,&quot;QP&quot;],&quot;PG_ID&quot;:&quot;64451&quot;});" class='title'>Palæontological Report of the Princeton Scientific Expedition of 1877</a>
+<div class='author'>Osborn, Henry Fairfield, 1857-1935, Scott, William Berryman, 1858-1947, Speir, Francis, 1856-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65307, {&quot;Title&quot;:&quot;The Romance of Modern Geology - Describing in simple but exact language the making of the earth with some account of prehistoric animal life&quot;,&quot;Topics&quot;:[&quot;Geology&quot;,&quot;Paleontology&quot;],&quot;Primary&quot;:&quot;65307.htm&quot;,&quot;CreatorNames&quot;:[&quot;Grew, Edwin Sharpe, 1867-1950&quot;,&quot;Smit, Joseph, 1836-1929 [Illustrator]&quot;,&quot;Woodward, Alice B., 1862-1951 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;65307&quot;});" class='title'>The Romance of Modern Geology -<br><span class='subtitle'>Describing in simple but exact language the making of the earth with some account of prehistoric animal life</span></a>
+<div class='author'>Grew, Edwin Sharpe, 1867-1950, Smit, Joseph, 1836-1929 [Illustrator], Woodward, Alice B., 1862-1951 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65426, {&quot;Title&quot;:&quot;Industrial Minerals and Metals of Illinois&quot;,&quot;Topics&quot;:[&quot;Mines and mineral resources -- Illinois&quot;],&quot;Primary&quot;:&quot;65426.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lamar, J. E. (John Everts), 1897-1979&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;65426&quot;});" class='title'>Industrial Minerals and Metals of Illinois</a>
+<div class='author'>Lamar, J. E. (John Everts), 1897-1979</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65704, {&quot;Title&quot;:&quot;Guide to the Geologic Map of Illinois&quot;,&quot;Topics&quot;:[&quot;Geology -- Illinois&quot;,&quot;Geology -- Illinois -- Maps&quot;],&quot;Primary&quot;:&quot;65704.htm&quot;,&quot;CreatorNames&quot;:[&quot;Illinois State Geological Survey&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;65704&quot;});" class='title'>Guide to the Geologic Map of Illinois</a>
+<div class='author'>Illinois State Geological Survey</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65776, {&quot;Title&quot;:&quot;Field Book: Pennsylvanian Plant Fossils of Illinois&quot;,&quot;Topics&quot;:[&quot;Paleobotany -- Illinois&quot;,&quot;Paleobotany -- Pennsylvanian&quot;],&quot;Primary&quot;:&quot;65776.htm&quot;,&quot;CreatorNames&quot;:[&quot;Collinson, Charles William&quot;,&quot;Skartvedt, Romayne&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;65776&quot;});" class='title'>Field Book:<br><span class='subtitle'>Pennsylvanian Plant Fossils of Illinois</span></a>
+<div class='author'>Collinson, Charles William, Skartvedt, Romayne</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66308, {&quot;Title&quot;:&quot;Guide to Rocks and Minerals of Illinois&quot;,&quot;Topics&quot;:[&quot;Petrology -- Illinois&quot;,&quot;Mineralogy -- Illinois&quot;],&quot;Primary&quot;:&quot;66308.htm&quot;,&quot;CreatorNames&quot;:[&quot;Illinois State Geological Survey&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;66308&quot;});" class='title'>Guide to Rocks and Minerals of Illinois</a>
+<div class='author'>Illinois State Geological Survey</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66317, {&quot;Title&quot;:&quot;Inside Illinois: Mineral Resources&quot;,&quot;Topics&quot;:[&quot;Mines and mineral resources -- Illinois&quot;],&quot;Primary&quot;:&quot;66317.htm&quot;,&quot;CreatorNames&quot;:[&quot;Illinois State Geological Survey&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;66317&quot;});" class='title'>Inside Illinois:<br><span class='subtitle'>Mineral Resources</span></a>
+<div class='author'>Illinois State Geological Survey</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66333, {&quot;Title&quot;:&quot;A Monograph of the Trilobites of North America: with Coloured Models of the Species&quot;,&quot;Topics&quot;:[&quot;Paleontology -- North America&quot;,&quot;Trilobites -- North America&quot;],&quot;Primary&quot;:&quot;66333.htm&quot;,&quot;CreatorNames&quot;:[&quot;Green, Jacob, 1790-1841&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;66333&quot;});" class='title'>A Monograph of the Trilobites of North America:<br><span class='subtitle'>with Coloured Models of the Species</span></a>
+<div class='author'>Green, Jacob, 1790-1841</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66492, {&quot;Title&quot;:&quot;The Ancient Volcanoes of Great Britain, Volume 1 (of 2)&quot;,&quot;Topics&quot;:[&quot;Volcanoes -- Great Britain&quot;],&quot;Primary&quot;:&quot;66492.htm&quot;,&quot;CreatorNames&quot;:[&quot;Geikie, Archibald, 1835-1924&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;66492&quot;});" class='title'>The Ancient Volcanoes of Great Britain, Volume 1 (of 2)</a>
+<div class='author'>Geikie, Archibald, 1835-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66493, {&quot;Title&quot;:&quot;The Ancient Volcanoes of Great Britain, Volume 2 (of 2)&quot;,&quot;Topics&quot;:[&quot;Volcanoes -- Great Britain&quot;],&quot;Primary&quot;:&quot;66493.htm&quot;,&quot;CreatorNames&quot;:[&quot;Geikie, Archibald, 1835-1924&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;66493&quot;});" class='title'>The Ancient Volcanoes of Great Britain, Volume 2 (of 2)</a>
+<div class='author'>Geikie, Archibald, 1835-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66703, {&quot;Title&quot;:&quot;The Story of a Boulder; or, Gleanings from the Note-book of a Field Geologist&quot;,&quot;Topics&quot;:[&quot;Geology&quot;,&quot;Petrology&quot;],&quot;Primary&quot;:&quot;66703.htm&quot;,&quot;CreatorNames&quot;:[&quot;Geikie, Archibald, 1835-1924&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;66703&quot;});" class='title'>The Story of a Boulder;<br><span class='subtitle'>or, Gleanings from the Note-book of a Field Geologist</span></a>
+<div class='author'>Geikie, Archibald, 1835-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66818, {&quot;Title&quot;:&quot;The Strange Adventures of a Pebble&quot;,&quot;Topics&quot;:[&quot;Geology -- Juvenile literature&quot;,&quot;Physical geography -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;66818.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hawksworth, Hallam, 1863-&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;66818&quot;});" class='title'>The Strange Adventures of a Pebble</a>
+<div class='author'>Hawksworth, Hallam, 1863-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67196, {&quot;Title&quot;:&quot;Observations on the Terataspis grandis, Hall, the largest known trilobite&quot;,&quot;Topics&quot;:[&quot;Trilobites&quot;,&quot;Paleontology -- New York (State)&quot;],&quot;Primary&quot;:&quot;67196.htm&quot;,&quot;CreatorNames&quot;:[&quot;Clarke, John Mason, 1857-1925&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;67196&quot;});" class='title'>Observations on the Terataspis grandis, Hall, the largest known trilobite</a>
+<div class='author'>Clarke, John Mason, 1857-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67265, {&quot;Title&quot;:&quot;Researches on the Visual Organs of the Trilobites&quot;,&quot;Topics&quot;:[&quot;Trilobites&quot;],&quot;Primary&quot;:&quot;67265.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lindström, Gustaf, 1829-1901&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;67265&quot;});" class='title'>Researches on the Visual Organs of the Trilobites</a>
+<div class='author'>Lindström, Gustaf, 1829-1901</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67287, {&quot;Title&quot;:&quot;Relics of Primeval Life: Beginning of Life in the Dawn of Geological Time&quot;,&quot;Topics&quot;:[&quot;Life -- Origin&quot;,&quot;Paleontology -- Precambrian&quot;,&quot;Eozoon canadense&quot;,&quot;Paleontology -- Canada&quot;,&quot;Geology, Stratigraphic -- Precambrian&quot;],&quot;Primary&quot;:&quot;67287.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dawson, John William, Sir, 1820-1899&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;67287&quot;});" class='title'>Relics of Primeval Life:<br><span class='subtitle'>Beginning of Life in the Dawn of Geological Time</span></a>
+<div class='author'>Dawson, John William, Sir, 1820-1899</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67331, {&quot;Title&quot;:&quot;Illustrations of the Huttonian Theory of the Earth&quot;,&quot;Topics&quot;:[&quot;Geology&quot;,&quot;Hutton, James, 1726-1797. Theory of the earth&quot;],&quot;Primary&quot;:&quot;67331.htm&quot;,&quot;CreatorNames&quot;:[&quot;Playfair, John, 1748-1819&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;67331&quot;});" class='title'>Illustrations of the Huttonian Theory of the Earth</a>
+<div class='author'>Playfair, John, 1748-1819</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67527, {&quot;Title&quot;:&quot;The Foot-prints of the Creator: or, The Asterolepis of Stromness&quot;,&quot;Topics&quot;:[&quot;Evolution&quot;,&quot;Creation&quot;,&quot;Geology -- Scotland&quot;,&quot;Fishes, Fossil&quot;,&quot;Miller, Hugh, 1802-1856&quot;,&quot;Asterolepididae&quot;,&quot;Paleontology -- Scotland&quot;],&quot;Primary&quot;:&quot;67527.htm&quot;,&quot;CreatorNames&quot;:[&quot;Miller, Hugh, 1802-1856&quot;,&quot;Agassiz, Louis, 1807-1873 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;QE&quot;,&quot;QH&quot;],&quot;PG_ID&quot;:&quot;67527&quot;});" class='title'>The Foot-prints of the Creator:<br><span class='subtitle'>or, The Asterolepis of Stromness</span></a>
+<div class='author'>Miller, Hugh, 1802-1856, Agassiz, Louis, 1807-1873 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67685, {&quot;Title&quot;:&quot;Rocks and Their Origins&quot;,&quot;Topics&quot;:[&quot;Rocks&quot;],&quot;Primary&quot;:&quot;67685.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cole, Grenville A. J. (Grenville Arthur James), 1859-1924&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;67685&quot;});" class='title'>Rocks and Their Origins</a>
+<div class='author'>Cole, Grenville A. J. (Grenville Arthur James), 1859-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67873, {&quot;Title&quot;:&quot;Volcanoes: What They are and What They Teach&quot;,&quot;Topics&quot;:[&quot;Volcanoes&quot;],&quot;Primary&quot;:&quot;67873.htm&quot;,&quot;CreatorNames&quot;:[&quot;Judd, John W. (John Wesley), 1840-1916&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;67873&quot;});" class='title'>Volcanoes:<br><span class='subtitle'>What They are and What They Teach</span></a>
+<div class='author'>Judd, John W. (John Wesley), 1840-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68043, {&quot;Title&quot;:&quot;Fossil plants, Vol. 1: [A text-book] for students of botany and geology&quot;,&quot;Topics&quot;:[&quot;Paleobotany&quot;],&quot;Primary&quot;:&quot;68043.htm&quot;,&quot;CreatorNames&quot;:[&quot;Seward, A. C. (Albert Charles), 1863-1941&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;68043&quot;});" class='title'>Fossil plants, Vol. 1:<br><span class='subtitle'>[A text-book] for students of botany and geology</span></a>
+<div class='author'>Seward, A. C. (Albert Charles), 1863-1941</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68122, {&quot;Title&quot;:&quot;The Hollow Earth&quot;,&quot;Topics&quot;:[&quot;Earth (Planet) -- Internal structure&quot;],&quot;Primary&quot;:&quot;68122.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ives, F. T. (Franklin Titus), 1828-1910&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;68122&quot;});" class='title'>The Hollow Earth</a>
+<div class='author'>Ives, F. T. (Franklin Titus), 1828-1910</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68258, {&quot;Title&quot;:&quot;Jahreszahlen der Erdgeschichte&quot;,&quot;Topics&quot;:[&quot;Earth (Planet) -- Age&quot;],&quot;Primary&quot;:&quot;68258.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lotze, Reinhold, 1887-1951&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;68258&quot;});" class='title'>Jahreszahlen der Erdgeschichte</a>
+<div class='author'>Lotze, Reinhold, 1887-1951</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68470, {&quot;Title&quot;:&quot;Fossil plants, Vol. 2: A text-book for students of botany and geology&quot;,&quot;Topics&quot;:[&quot;Paleobotany&quot;],&quot;Primary&quot;:&quot;68470.htm&quot;,&quot;CreatorNames&quot;:[&quot;Seward, A. C. (Albert Charles), 1863-1941&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;68470&quot;});" class='title'>Fossil plants, Vol. 2:<br><span class='subtitle'>A text-book for students of botany and geology</span></a>
+<div class='author'>Seward, A. C. (Albert Charles), 1863-1941</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68564, {&quot;Title&quot;:&quot;Barrier beaches of the Atlantic coast&quot;,&quot;Topics&quot;:[&quot;Beaches -- New Jersey&quot;,&quot;Barrier islands&quot;],&quot;Primary&quot;:&quot;68564.htm&quot;,&quot;CreatorNames&quot;:[&quot;Merrill, Frederick J. H. (Frederick James Hamilton), 1861-1916&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;68564&quot;});" class='title'>Barrier beaches of the Atlantic coast</a>
+<div class='author'>Merrill, Frederick J. H. (Frederick James Hamilton), 1861-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69109, {&quot;Title&quot;:&quot;The cretaceous birds of New Jersey&quot;,&quot;Topics&quot;:[&quot;Birds, Fossil&quot;,&quot;Paleontology -- Cretaceous&quot;,&quot;Paleontology -- New Jersey&quot;],&quot;Primary&quot;:&quot;69109.htm&quot;,&quot;CreatorNames&quot;:[&quot;Olson, Storrs L., 1944-2021&quot;,&quot;Parris, David C.&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;69109&quot;});" class='title'>The cretaceous birds of New Jersey</a>
+<div class='author'>Olson, Storrs L., 1944-2021, Parris, David C.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69830, {&quot;Title&quot;:&quot;My experiments with volcanoes&quot;,&quot;Topics&quot;:[&quot;Volcanoes&quot;,&quot;Geologists -- Biography&quot;],&quot;Primary&quot;:&quot;69830.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jaggar, Thomas Augustus, 1871-1953&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;69830&quot;});" class='title'>My experiments with volcanoes</a>
+<div class='author'>Jaggar, Thomas Augustus, 1871-1953</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70390, {&quot;Title&quot;:&quot;The monster-hunters&quot;,&quot;Topics&quot;:[&quot;Paleontology -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;70390.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rolt-Wheeler, Francis, 1876-1960&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;70390&quot;});" class='title'>The monster-hunters</a>
+<div class='author'>Rolt-Wheeler, Francis, 1876-1960</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(9824, {&quot;Title&quot;:&quot;Observations Géologiques sur les Îles Volcaniques Explorées par l&#39;Expédition du \&quot;\&quot;Beagle\&quot;\&quot; - Et Notes sur la Géologie de l&#39;Australie et du Cap de Bonne-Espérance&quot;,&quot;Topics&quot;:[&quot;Beagle Expedition (1831-1836)&quot;,&quot;Geology -- South America&quot;,&quot;Volcanoes -- Southern Hemisphere&quot;],&quot;Primary&quot;:&quot;9824.txt&quot;,&quot;CreatorNames&quot;:[&quot;Darwin, Charles, 1809-1882&quot;,&quot;Renard, Alphonse-François, 1842-1903 [Translator]&quot;],&quot;LoCC&quot;:[&quot;QE&quot;],&quot;PG_ID&quot;:&quot;9824&quot;});" class='title'>Observations Géologiques sur les Îles Volcaniques Explorées par l'Expédition du "Beagle" -<br><span class='subtitle'>Et Notes sur la Géologie de l'Australie et du Cap de Bonne-Espérance</span></a>
+<div class='author'>Darwin, Charles, 1809-1882, Renard, Alphonse-François, 1842-1903 [Translator]</div>
+</div>
+</ul></div>
+</body></html>

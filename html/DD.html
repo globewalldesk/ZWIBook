@@ -1,0 +1,834 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Germany (DD)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(11179, {&quot;Title&quot;:&quot;Seeing Europe with Famous Authors, Volume 6 - Germany, Austria-Hungary and Switzerland, part 2&quot;,&quot;Topics&quot;:[&quot;Germany -- Description and travel&quot;,&quot;Switzerland -- Description and travel&quot;,&quot;Austria -- Description and travel&quot;],&quot;Primary&quot;:&quot;11179.txt&quot;,&quot;CreatorNames&quot;:[&quot;Halsey, Francis W. (Francis Whiting), 1851-1919 [Editor]&quot;],&quot;LoCC&quot;:[&quot;DB&quot;,&quot;DD&quot;,&quot;DQ&quot;],&quot;PG_ID&quot;:&quot;11179&quot;});" class='title'>Seeing Europe with Famous Authors, Volume 6 -<br><span class='subtitle'>Germany, Austria-Hungary and Switzerland, part 2</span></a>
+<div class='author'>Halsey, Francis W. (Francis Whiting), 1851-1919 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12266, {&quot;Title&quot;:&quot;Von Haparanda bis San Francisco: Reise-Erinnerungen&quot;,&quot;Topics&quot;:[&quot;Germany -- Description and travel&quot;,&quot;United States -- Description and travel&quot;,&quot;Denmark -- Description and travel&quot;,&quot;Sweden -- Description and travel&quot;,&quot;Latvia -- Description and travel&quot;],&quot;Primary&quot;:&quot;12266.txt&quot;,&quot;CreatorNames&quot;:[&quot;Wasserzieher, Ernst, 1860-1927&quot;],&quot;LoCC&quot;:[&quot;DD&quot;,&quot;DK&quot;,&quot;DL&quot;,&quot;E&quot;],&quot;PG_ID&quot;:&quot;12266&quot;});" class='title'>Von Haparanda bis San Francisco:<br><span class='subtitle'>Reise-Erinnerungen</span></a>
+<div class='author'>Wasserzieher, Ernst, 1860-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12400, {&quot;Title&quot;:&quot;Bismarck and the Foundation of the German Empire&quot;,&quot;Topics&quot;:[&quot;Germany -- History&quot;,&quot;Bismarck, Otto, Fürst von, 1815-1898&quot;],&quot;Primary&quot;:&quot;12400.htm&quot;,&quot;CreatorNames&quot;:[&quot;Headlam, James Wycliffe, 1863-1929&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;12400&quot;});" class='title'>Bismarck and the Foundation of the German Empire</a>
+<div class='author'>Headlam, James Wycliffe, 1863-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12404, {&quot;Title&quot;:&quot;Seeing Europe with Famous Authors, Volume 5 - Germany, Austria-Hungary, and Switzerland, Part 1&quot;,&quot;Topics&quot;:[&quot;Germany -- Description and travel&quot;,&quot;Switzerland -- Description and travel&quot;,&quot;Austria -- Description and travel&quot;],&quot;Primary&quot;:&quot;12404.htm&quot;,&quot;CreatorNames&quot;:[&quot;Halsey, Francis W. (Francis Whiting), 1851-1919 [Editor]&quot;],&quot;LoCC&quot;:[&quot;DB&quot;,&quot;DD&quot;,&quot;DQ&quot;],&quot;PG_ID&quot;:&quot;12404&quot;});" class='title'>Seeing Europe with Famous Authors, Volume 5 -<br><span class='subtitle'>Germany, Austria-Hungary, and Switzerland, Part 1</span></a>
+<div class='author'>Halsey, Francis W. (Francis Whiting), 1851-1919 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12548, {&quot;Title&quot;:&quot;The Secret Memoirs of the Courts of Europe: William II, Germany; Francis Joseph, Austria-Hungary, Volume I. (of 2)&quot;,&quot;Topics&quot;:[&quot;William II, German Emperor, 1859-1941&quot;,&quot;Franz Joseph I, Emperor of Austria, 1830-1916&quot;],&quot;Primary&quot;:&quot;12548.txt&quot;,&quot;CreatorNames&quot;:[&quot;Fontenoy, marquise de&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;12548&quot;});" class='title'>The Secret Memoirs of the Courts of Europe:<br><span class='subtitle'>William II, Germany; Francis Joseph, Austria-Hungary, Volume I. (of 2)</span></a>
+<div class='author'>Fontenoy, marquise de</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13043, {&quot;Title&quot;:&quot;William of Germany&quot;,&quot;Topics&quot;:[&quot;William II, German Emperor, 1859-1941&quot;,&quot;Germany -- Politics and government -- 1888-1918&quot;],&quot;Primary&quot;:&quot;13043.txt&quot;,&quot;CreatorNames&quot;:[&quot;Shaw, Stanley, 1870-&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;13043&quot;});" class='title'>William of Germany</a>
+<div class='author'>Shaw, Stanley, 1870-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13470, {&quot;Title&quot;:&quot;Bertha, Our Little German Cousin&quot;,&quot;Topics&quot;:[&quot;Germany -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;13470.txt&quot;,&quot;CreatorNames&quot;:[&quot;Wade, Mary Hazelton Blanchard, 1860-1936&quot;],&quot;LoCC&quot;:[&quot;DD&quot;,&quot;PZ&quot;],&quot;PG_ID&quot;:&quot;13470&quot;});" class='title'>Bertha, Our Little German Cousin</a>
+<div class='author'>Wade, Mary Hazelton Blanchard, 1860-1936</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13657, {&quot;Title&quot;:&quot;Der Todesgruß der Legionen, 1. Band&quot;,&quot;Topics&quot;:[&quot;Historical fiction&quot;,&quot;Georg V, King of Hannover, 1819-1878 -- Fiction&quot;,&quot;Prussia (Germany) -- History -- 1815-1870 -- Fiction&quot;,&quot;Hannover (Germany : Province) -- History -- Fiction&quot;],&quot;Primary&quot;:&quot;13657.txt&quot;,&quot;CreatorNames&quot;:[&quot;Samarow, Gregor, 1829-1903&quot;],&quot;LoCC&quot;:[&quot;DD&quot;,&quot;PT&quot;],&quot;PG_ID&quot;:&quot;13657&quot;});" class='title'>Der Todesgruß der Legionen, 1. Band</a>
+<div class='author'>Samarow, Gregor, 1829-1903</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13658, {&quot;Title&quot;:&quot;Der Todesgruß der Legionen, 2. Band&quot;,&quot;Topics&quot;:[&quot;Historical fiction&quot;,&quot;Georg V, King of Hannover, 1819-1878 -- Fiction&quot;,&quot;Prussia (Germany) -- History -- 1815-1870 -- Fiction&quot;,&quot;Hannover (Germany : Province) -- History -- Fiction&quot;],&quot;Primary&quot;:&quot;13658.txt&quot;,&quot;CreatorNames&quot;:[&quot;Samarow, Gregor, 1829-1903&quot;],&quot;LoCC&quot;:[&quot;DD&quot;,&quot;PT&quot;],&quot;PG_ID&quot;:&quot;13658&quot;});" class='title'>Der Todesgruß der Legionen, 2. Band</a>
+<div class='author'>Samarow, Gregor, 1829-1903</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13659, {&quot;Title&quot;:&quot;Der Todesgruß der Legionen, 3. Band&quot;,&quot;Topics&quot;:[&quot;Historical fiction&quot;,&quot;Georg V, King of Hannover, 1819-1878 -- Fiction&quot;,&quot;Prussia (Germany) -- History -- 1815-1870 -- Fiction&quot;,&quot;Hannover (Germany : Province) -- History -- Fiction&quot;],&quot;Primary&quot;:&quot;13659.txt&quot;,&quot;CreatorNames&quot;:[&quot;Samarow, Gregor, 1829-1903&quot;],&quot;LoCC&quot;:[&quot;DD&quot;,&quot;PT&quot;],&quot;PG_ID&quot;:&quot;13659&quot;});" class='title'>Der Todesgruß der Legionen, 3. Band</a>
+<div class='author'>Samarow, Gregor, 1829-1903</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15163, {&quot;Title&quot;:&quot;Sagen van den Rijn&quot;,&quot;Topics&quot;:[&quot;Legends -- Rhine River&quot;,&quot;Legends -- Rhine River Valley&quot;],&quot;Primary&quot;:&quot;15163.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ruland, Wilhelm, 1869-1927&quot;,&quot;Meyen-Barends, W. B. [Translator]&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;15163&quot;});" class='title'>Sagen van den Rijn</a>
+<div class='author'>Ruland, Wilhelm, 1869-1927, Meyen-Barends, W. B. [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16264, {&quot;Title&quot;:&quot;Deutsches Leben der Gegenwart&quot;,&quot;Topics&quot;:[&quot;Germany -- Civilization&quot;],&quot;Primary&quot;:&quot;16264.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bekker, Paul, 1882-1937&quot;,&quot;Briefs, Goetz A. (Goetz Antony), 1889-1974&quot;,&quot;Scheler, Max, 1874-1928&quot;,&quot;Sommerfeld, Arnold, 1868-1951&quot;,&quot;Witkop, Philipp, 1880-1942&quot;,&quot;Witkop, Philipp, 1880-1942 [Editor]&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;16264&quot;});" class='title'>Deutsches Leben der Gegenwart</a>
+<div class='author'>Bekker, Paul, 1882-1937, Briefs, Goetz A. (Goetz Antony), 1889-1974, Scheler, Max, 1874-1928, Sommerfeld, Arnold, 1868-1951, Witkop, Philipp, 1880-1942, Witkop, Philipp, 1880-1942 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16587, {&quot;Title&quot;:&quot;Historic Tales: The Romance of Reality. Vol. 05 (of 15), German&quot;,&quot;Topics&quot;:[&quot;Germany -- History&quot;],&quot;Primary&quot;:&quot;16587.htm&quot;,&quot;CreatorNames&quot;:[&quot;Morris, Charles, 1833-1922&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;16587&quot;});" class='title'>Historic Tales:<br><span class='subtitle'>The Romance of Reality. Vol. 05 (of 15), German</span></a>
+<div class='author'>Morris, Charles, 1833-1922</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16970, {&quot;Title&quot;:&quot;De kasteelen van Koning Lodewijk II van Beieren - De Aarde en haar Volken, 1887&quot;,&quot;Topics&quot;:[&quot;Ludwig II, King of Bavaria, 1845-1886&quot;,&quot;Castles -- Germany -- Bavaria&quot;],&quot;Primary&quot;:&quot;16970.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;DD&quot;,&quot;NA&quot;],&quot;PG_ID&quot;:&quot;16970&quot;});" class='title'>De kasteelen van Koning Lodewijk II van Beieren -<br><span class='subtitle'>De Aarde en haar Volken, 1887</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17230, {&quot;Title&quot;:&quot;Alsace, Lorraine et France rhénane - Exposé des droits historiques de la France sur toute la rive gauche du Rhin&quot;,&quot;Topics&quot;:[&quot;Alsace-Lorraine question&quot;,&quot;France -- Boundaries&quot;,&quot;Alsace (France) -- History&quot;,&quot;Lorraine (France) -- History&quot;],&quot;Primary&quot;:&quot;17230.txt&quot;,&quot;CreatorNames&quot;:[&quot;Coubé, Stéphen, 1857-1938&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;17230&quot;});" class='title'>Alsace, Lorraine et France rhénane -<br><span class='subtitle'>Exposé des droits historiques de la France sur toute la rive gauche du Rhin</span></a>
+<div class='author'>Coubé, Stéphen, 1857-1938</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17657, {&quot;Title&quot;:&quot;Belagerung von Mainz&quot;,&quot;Topics&quot;:[&quot;Mainz (Rhineland-Palatinate, Germany) -- History -- Siege, 1793&quot;],&quot;Primary&quot;:&quot;17657.txt&quot;,&quot;CreatorNames&quot;:[&quot;Goethe, Johann Wolfgang von, 1749-1832&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;17657&quot;});" class='title'>Belagerung von Mainz</a>
+<div class='author'>Goethe, Johann Wolfgang von, 1749-1832</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17664, {&quot;Title&quot;:&quot;Kampagne in Frankreich&quot;,&quot;Topics&quot;:[&quot;Autobiographies&quot;,&quot;France -- History -- Revolution, 1789-1799&quot;,&quot;Mainz (Rhineland-Palatinate, Germany) -- History -- Siege, 1793&quot;],&quot;Primary&quot;:&quot;17664.txt&quot;,&quot;CreatorNames&quot;:[&quot;Goethe, Johann Wolfgang von, 1749-1832&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;DC&quot;,&quot;DD&quot;],&quot;PG_ID&quot;:&quot;17664&quot;});" class='title'>Kampagne in Frankreich</a>
+<div class='author'>Goethe, Johann Wolfgang von, 1749-1832</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17685, {&quot;Title&quot;:&quot;Wandelingen door Elzas-Lotharingen - De Aarde en haar Volken, 1886&quot;,&quot;Topics&quot;:[&quot;Alsace (France) -- Description and travel&quot;,&quot;Lorraine (France) -- Description and travel&quot;],&quot;Primary&quot;:&quot;17685.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;17685&quot;});" class='title'>Wandelingen door Elzas-Lotharingen -<br><span class='subtitle'>De Aarde en haar Volken, 1886</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17737, {&quot;Title&quot;:&quot;The Schemes of the Kaiser&quot;,&quot;Topics&quot;:[&quot;William II, German Emperor, 1859-1941&quot;,&quot;Germany -- Foreign relations -- 1871-1918&quot;],&quot;Primary&quot;:&quot;17737.txt&quot;,&quot;CreatorNames&quot;:[&quot;Adam, Juliette, 1836-1936&quot;,&quot;Bland, J. O. P. (John Otway Percy), 1863-1945 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;17737&quot;});" class='title'>The Schemes of the Kaiser</a>
+<div class='author'>Adam, Juliette, 1836-1936, Bland, J. O. P. (John Otway Percy), 1863-1945 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18258, {&quot;Title&quot;:&quot;Deutsche Charaktere und Begebenheiten&quot;,&quot;Topics&quot;:[&quot;Böttcher, Johann Friedrich, 1682-1719&quot;,&quot;Maurice, Elector of Saxony, 1521-1553&quot;,&quot;Thurneysser, Leonhard, 1531-1595&quot;,&quot;Danckelman, Eberhard Christoph Balthasar Freiherr von, 1643-1722&quot;,&quot;Rudolf II, Holy Roman Emperor, 1552-1612&quot;,&quot;Frederick William I of Prussia, 1688-1740&quot;,&quot;Nettelbeck, Joachim Christian, 1738-1824&quot;,&quot;Charles Augustus, Grand Duke of Saxe-Weimar-Eisenach, 1757-1828&quot;,&quot;Germany -- Biography&quot;,&quot;Wallenstein, Albrecht Wenzel Eusebius von, Herzog von Friedland, 1583-1634&quot;],&quot;Primary&quot;:&quot;18258.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wassermann, Jakob, 1873-1934&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;DD&quot;],&quot;PG_ID&quot;:&quot;18258&quot;});" class='title'>Deutsche Charaktere und Begebenheiten</a>
+<div class='author'>Wassermann, Jakob, 1873-1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18389, {&quot;Title&quot;:&quot;Thuringen - De Aarde en haar Volken, 1873&quot;,&quot;Topics&quot;:[&quot;Thuringia (Germany) -- Description and travel&quot;],&quot;Primary&quot;:&quot;18389.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;18389&quot;});" class='title'>Thuringen -<br><span class='subtitle'>De Aarde en haar Volken, 1873</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19036, {&quot;Title&quot;:&quot;Germany and the Germans from an American Point of View&quot;,&quot;Topics&quot;:[&quot;Germany&quot;,&quot;National characteristics, German&quot;],&quot;Primary&quot;:&quot;19036.htm&quot;,&quot;CreatorNames&quot;:[&quot;Collier, Price, 1860-1913&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;19036&quot;});" class='title'>Germany and the Germans from an American Point of View</a>
+<div class='author'>Collier, Price, 1860-1913</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19380, {&quot;Title&quot;:&quot;Anzeiger des Germanischen Nationalmuseums, Jg. 1900&quot;,&quot;Topics&quot;:[&quot;Germany -- History&quot;],&quot;Primary&quot;:&quot;19380.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bezold, Gustav von, 1848-1934&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;19380&quot;});" class='title'>Anzeiger des Germanischen Nationalmuseums, Jg. 1900</a>
+<div class='author'>Bezold, Gustav von, 1848-1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19741, {&quot;Title&quot;:&quot;Altenahr en zijn omgeving - De Aarde en haar Volken, 1907—Also includes a short article - \&quot;\&quot;Bekoring van het Matterhornland\&quot;\&quot; by J. C. Heer&quot;,&quot;Topics&quot;:[&quot;Altenahr (Germany) -- Description and travel&quot;],&quot;Primary&quot;:&quot;19741.htm&quot;,&quot;CreatorNames&quot;:[&quot;Neuhauser, Eduard&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;19741&quot;});" class='title'>Altenahr en zijn omgeving -<br><span class='subtitle'>De Aarde en haar Volken, 1907—Also includes a short article - "Bekoring van het Matterhornland" by J. C. Heer</span></a>
+<div class='author'>Neuhauser, Eduard</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19755, {&quot;Title&quot;:&quot;Gesammelte Abhandlungen III - Vorträge, Reden und Schriften sozialpolitischen und verwandten Inhalts&quot;,&quot;Topics&quot;:[&quot;Germany -- Social policy -- History&quot;],&quot;Primary&quot;:&quot;19755.htm&quot;,&quot;CreatorNames&quot;:[&quot;Abbe, Ernst, 1840-1905&quot;],&quot;LoCC&quot;:[&quot;DD&quot;,&quot;HN&quot;],&quot;PG_ID&quot;:&quot;19755&quot;});" class='title'>Gesammelte Abhandlungen III -<br><span class='subtitle'>Vorträge, Reden und Schriften sozialpolitischen und verwandten Inhalts</span></a>
+<div class='author'>Abbe, Ernst, 1840-1905</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20461, {&quot;Title&quot;:&quot;German Culture Past and Present&quot;,&quot;Topics&quot;:[&quot;Germany -- Civilization&quot;,&quot;Germany -- Social conditions&quot;,&quot;Reformation -- Germany&quot;,&quot;Peasants&#39; War, 1524-1525&quot;,&quot;Anabaptists&quot;],&quot;Primary&quot;:&quot;20461.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bax, Ernest Belfort, 1854-1926&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;20461&quot;});" class='title'>German Culture Past and Present</a>
+<div class='author'>Bax, Ernest Belfort, 1854-1926</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20496, {&quot;Title&quot;:&quot;Legends of the Rhine&quot;,&quot;Topics&quot;:[&quot;Legends -- Rhine River&quot;,&quot;Legends -- Rhine River Valley&quot;],&quot;Primary&quot;:&quot;20496.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ruland, Wilhelm, 1869-1927&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;20496&quot;});" class='title'>Legends of the Rhine</a>
+<div class='author'>Ruland, Wilhelm, 1869-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2101, {&quot;Title&quot;:&quot;History of Friedrich II of Prussia — Volume 01&quot;,&quot;Topics&quot;:[&quot;Social problems&quot;,&quot;Frederick II, King of Prussia, 1712-1786&quot;,&quot;Prussia (Germany) -- History -- Frederick II, 1740-1786&quot;],&quot;Primary&quot;:&quot;2101.htm&quot;,&quot;CreatorNames&quot;:[&quot;Carlyle, Thomas, 1795-1881&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;2101&quot;});" class='title'>History of Friedrich II of Prussia — Volume 01</a>
+<div class='author'>Carlyle, Thomas, 1795-1881</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2102, {&quot;Title&quot;:&quot;History of Friedrich II of Prussia — Volume 02&quot;,&quot;Topics&quot;:[&quot;Social problems&quot;,&quot;Frederick II, King of Prussia, 1712-1786&quot;,&quot;Prussia (Germany) -- History -- Frederick II, 1740-1786&quot;],&quot;Primary&quot;:&quot;2102.htm&quot;,&quot;CreatorNames&quot;:[&quot;Carlyle, Thomas, 1795-1881&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;2102&quot;});" class='title'>History of Friedrich II of Prussia — Volume 02</a>
+<div class='author'>Carlyle, Thomas, 1795-1881</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2103, {&quot;Title&quot;:&quot;History of Friedrich II of Prussia — Volume 03&quot;,&quot;Topics&quot;:[&quot;Social problems&quot;,&quot;Frederick II, King of Prussia, 1712-1786&quot;,&quot;Prussia (Germany) -- History -- Frederick II, 1740-1786&quot;],&quot;Primary&quot;:&quot;2103.htm&quot;,&quot;CreatorNames&quot;:[&quot;Carlyle, Thomas, 1795-1881&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;2103&quot;});" class='title'>History of Friedrich II of Prussia — Volume 03</a>
+<div class='author'>Carlyle, Thomas, 1795-1881</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(21031, {&quot;Title&quot;:&quot;Die Organisation der Rohstoffversorgung&quot;,&quot;Topics&quot;:[&quot;Speeches, addresses, etc.&quot;,&quot;World War, 1914-1918 -- Economic aspects -- Germany&quot;,&quot;Industries -- Germany (West)&quot;],&quot;Primary&quot;:&quot;21031.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rathenau, Walther, 1867-1922&quot;],&quot;LoCC&quot;:[&quot;DD&quot;,&quot;HC&quot;],&quot;PG_ID&quot;:&quot;21031&quot;});" class='title'>Die Organisation der Rohstoffversorgung</a>
+<div class='author'>Rathenau, Walther, 1867-1922</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2104, {&quot;Title&quot;:&quot;History of Friedrich II of Prussia — Volume 04&quot;,&quot;Topics&quot;:[&quot;Social problems&quot;,&quot;Frederick II, King of Prussia, 1712-1786&quot;,&quot;Prussia (Germany) -- History -- Frederick II, 1740-1786&quot;],&quot;Primary&quot;:&quot;2104.htm&quot;,&quot;CreatorNames&quot;:[&quot;Carlyle, Thomas, 1795-1881&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;2104&quot;});" class='title'>History of Friedrich II of Prussia — Volume 04</a>
+<div class='author'>Carlyle, Thomas, 1795-1881</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2105, {&quot;Title&quot;:&quot;History of Friedrich II of Prussia — Volume 05&quot;,&quot;Topics&quot;:[&quot;Social problems&quot;,&quot;Frederick II, King of Prussia, 1712-1786&quot;,&quot;Prussia (Germany) -- History -- Frederick II, 1740-1786&quot;],&quot;Primary&quot;:&quot;2105.htm&quot;,&quot;CreatorNames&quot;:[&quot;Carlyle, Thomas, 1795-1881&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;2105&quot;});" class='title'>History of Friedrich II of Prussia — Volume 05</a>
+<div class='author'>Carlyle, Thomas, 1795-1881</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2106, {&quot;Title&quot;:&quot;History of Friedrich II of Prussia — Volume 06&quot;,&quot;Topics&quot;:[&quot;Social problems&quot;,&quot;Frederick II, King of Prussia, 1712-1786&quot;,&quot;Prussia (Germany) -- History -- Frederick II, 1740-1786&quot;],&quot;Primary&quot;:&quot;2106.htm&quot;,&quot;CreatorNames&quot;:[&quot;Carlyle, Thomas, 1795-1881&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;2106&quot;});" class='title'>History of Friedrich II of Prussia — Volume 06</a>
+<div class='author'>Carlyle, Thomas, 1795-1881</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2107, {&quot;Title&quot;:&quot;History of Friedrich II of Prussia — Volume 07&quot;,&quot;Topics&quot;:[&quot;Social problems&quot;,&quot;Frederick II, King of Prussia, 1712-1786&quot;,&quot;Prussia (Germany) -- History -- Frederick II, 1740-1786&quot;],&quot;Primary&quot;:&quot;2107.htm&quot;,&quot;CreatorNames&quot;:[&quot;Carlyle, Thomas, 1795-1881&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;2107&quot;});" class='title'>History of Friedrich II of Prussia — Volume 07</a>
+<div class='author'>Carlyle, Thomas, 1795-1881</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2108, {&quot;Title&quot;:&quot;History of Friedrich II of Prussia — Volume 08&quot;,&quot;Topics&quot;:[&quot;Social problems&quot;,&quot;Frederick II, King of Prussia, 1712-1786&quot;,&quot;Prussia (Germany) -- History -- Frederick II, 1740-1786&quot;],&quot;Primary&quot;:&quot;2108.htm&quot;,&quot;CreatorNames&quot;:[&quot;Carlyle, Thomas, 1795-1881&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;2108&quot;});" class='title'>History of Friedrich II of Prussia — Volume 08</a>
+<div class='author'>Carlyle, Thomas, 1795-1881</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2109, {&quot;Title&quot;:&quot;History of Friedrich II of Prussia — Volume 09&quot;,&quot;Topics&quot;:[&quot;Social problems&quot;,&quot;Frederick II, King of Prussia, 1712-1786&quot;,&quot;Prussia (Germany) -- History -- Frederick II, 1740-1786&quot;],&quot;Primary&quot;:&quot;2109.htm&quot;,&quot;CreatorNames&quot;:[&quot;Carlyle, Thomas, 1795-1881&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;2109&quot;});" class='title'>History of Friedrich II of Prussia — Volume 09</a>
+<div class='author'>Carlyle, Thomas, 1795-1881</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2110, {&quot;Title&quot;:&quot;History of Friedrich II of Prussia — Volume 10&quot;,&quot;Topics&quot;:[&quot;Social problems&quot;,&quot;Frederick II, King of Prussia, 1712-1786&quot;,&quot;Prussia (Germany) -- History -- Frederick II, 1740-1786&quot;],&quot;Primary&quot;:&quot;2110.htm&quot;,&quot;CreatorNames&quot;:[&quot;Carlyle, Thomas, 1795-1881&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;2110&quot;});" class='title'>History of Friedrich II of Prussia — Volume 10</a>
+<div class='author'>Carlyle, Thomas, 1795-1881</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2111, {&quot;Title&quot;:&quot;History of Friedrich II of Prussia — Volume 11&quot;,&quot;Topics&quot;:[&quot;Social problems&quot;,&quot;Frederick II, King of Prussia, 1712-1786&quot;,&quot;Prussia (Germany) -- History -- Frederick II, 1740-1786&quot;],&quot;Primary&quot;:&quot;2111.htm&quot;,&quot;CreatorNames&quot;:[&quot;Carlyle, Thomas, 1795-1881&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;2111&quot;});" class='title'>History of Friedrich II of Prussia — Volume 11</a>
+<div class='author'>Carlyle, Thomas, 1795-1881</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2112, {&quot;Title&quot;:&quot;History of Friedrich II of Prussia — Volume 12&quot;,&quot;Topics&quot;:[&quot;Social problems&quot;,&quot;Frederick II, King of Prussia, 1712-1786&quot;,&quot;Prussia (Germany) -- History -- Frederick II, 1740-1786&quot;],&quot;Primary&quot;:&quot;2112.htm&quot;,&quot;CreatorNames&quot;:[&quot;Carlyle, Thomas, 1795-1881&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;2112&quot;});" class='title'>History of Friedrich II of Prussia — Volume 12</a>
+<div class='author'>Carlyle, Thomas, 1795-1881</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2113, {&quot;Title&quot;:&quot;History of Friedrich II of Prussia — Volume 13&quot;,&quot;Topics&quot;:[&quot;Social problems&quot;,&quot;Frederick II, King of Prussia, 1712-1786&quot;,&quot;Prussia (Germany) -- History -- Frederick II, 1740-1786&quot;],&quot;Primary&quot;:&quot;2113.htm&quot;,&quot;CreatorNames&quot;:[&quot;Carlyle, Thomas, 1795-1881&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;2113&quot;});" class='title'>History of Friedrich II of Prussia — Volume 13</a>
+<div class='author'>Carlyle, Thomas, 1795-1881</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2114, {&quot;Title&quot;:&quot;History of Friedrich II of Prussia — Volume 14&quot;,&quot;Topics&quot;:[&quot;Social problems&quot;,&quot;Frederick II, King of Prussia, 1712-1786&quot;,&quot;Prussia (Germany) -- History -- Frederick II, 1740-1786&quot;],&quot;Primary&quot;:&quot;2114.htm&quot;,&quot;CreatorNames&quot;:[&quot;Carlyle, Thomas, 1795-1881&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;2114&quot;});" class='title'>History of Friedrich II of Prussia — Volume 14</a>
+<div class='author'>Carlyle, Thomas, 1795-1881</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2115, {&quot;Title&quot;:&quot;History of Friedrich II of Prussia — Volume 15&quot;,&quot;Topics&quot;:[&quot;Social problems&quot;,&quot;Frederick II, King of Prussia, 1712-1786&quot;,&quot;Prussia (Germany) -- History -- Frederick II, 1740-1786&quot;],&quot;Primary&quot;:&quot;2115.htm&quot;,&quot;CreatorNames&quot;:[&quot;Carlyle, Thomas, 1795-1881&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;2115&quot;});" class='title'>History of Friedrich II of Prussia — Volume 15</a>
+<div class='author'>Carlyle, Thomas, 1795-1881</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2116, {&quot;Title&quot;:&quot;History of Friedrich II of Prussia — Volume 16&quot;,&quot;Topics&quot;:[&quot;Social problems&quot;,&quot;Frederick II, King of Prussia, 1712-1786&quot;,&quot;Prussia (Germany) -- History -- Frederick II, 1740-1786&quot;],&quot;Primary&quot;:&quot;2116.htm&quot;,&quot;CreatorNames&quot;:[&quot;Carlyle, Thomas, 1795-1881&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;2116&quot;});" class='title'>History of Friedrich II of Prussia — Volume 16</a>
+<div class='author'>Carlyle, Thomas, 1795-1881</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2117, {&quot;Title&quot;:&quot;History of Friedrich II of Prussia — Volume 17&quot;,&quot;Topics&quot;:[&quot;Social problems&quot;,&quot;Frederick II, King of Prussia, 1712-1786&quot;,&quot;Prussia (Germany) -- History -- Frederick II, 1740-1786&quot;],&quot;Primary&quot;:&quot;2117.htm&quot;,&quot;CreatorNames&quot;:[&quot;Carlyle, Thomas, 1795-1881&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;2117&quot;});" class='title'>History of Friedrich II of Prussia — Volume 17</a>
+<div class='author'>Carlyle, Thomas, 1795-1881</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2118, {&quot;Title&quot;:&quot;History of Friedrich II of Prussia — Volume 18&quot;,&quot;Topics&quot;:[&quot;Social problems&quot;,&quot;Frederick II, King of Prussia, 1712-1786&quot;,&quot;Prussia (Germany) -- History -- Frederick II, 1740-1786&quot;],&quot;Primary&quot;:&quot;2118.htm&quot;,&quot;CreatorNames&quot;:[&quot;Carlyle, Thomas, 1795-1881&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;2118&quot;});" class='title'>History of Friedrich II of Prussia — Volume 18</a>
+<div class='author'>Carlyle, Thomas, 1795-1881</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2119, {&quot;Title&quot;:&quot;History of Friedrich II of Prussia — Volume 19&quot;,&quot;Topics&quot;:[&quot;Social problems&quot;,&quot;Frederick II, King of Prussia, 1712-1786&quot;,&quot;Prussia (Germany) -- History -- Frederick II, 1740-1786&quot;],&quot;Primary&quot;:&quot;2119.htm&quot;,&quot;CreatorNames&quot;:[&quot;Carlyle, Thomas, 1795-1881&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;2119&quot;});" class='title'>History of Friedrich II of Prussia — Volume 19</a>
+<div class='author'>Carlyle, Thomas, 1795-1881</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2120, {&quot;Title&quot;:&quot;History of Friedrich II of Prussia — Volume 20&quot;,&quot;Topics&quot;:[&quot;Social problems&quot;,&quot;Frederick II, King of Prussia, 1712-1786&quot;,&quot;Prussia (Germany) -- History -- Frederick II, 1740-1786&quot;],&quot;Primary&quot;:&quot;2120.htm&quot;,&quot;CreatorNames&quot;:[&quot;Carlyle, Thomas, 1795-1881&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;2120&quot;});" class='title'>History of Friedrich II of Prussia — Volume 20</a>
+<div class='author'>Carlyle, Thomas, 1795-1881</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2121, {&quot;Title&quot;:&quot;History of Friedrich II of Prussia — Volume 21&quot;,&quot;Topics&quot;:[&quot;Social problems&quot;,&quot;Frederick II, King of Prussia, 1712-1786&quot;,&quot;Prussia (Germany) -- History -- Frederick II, 1740-1786&quot;],&quot;Primary&quot;:&quot;2121.htm&quot;,&quot;CreatorNames&quot;:[&quot;Carlyle, Thomas, 1795-1881&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;2121&quot;});" class='title'>History of Friedrich II of Prussia — Volume 21</a>
+<div class='author'>Carlyle, Thomas, 1795-1881</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2122, {&quot;Title&quot;:&quot;History of Friedrich II of Prussia — Appendix&quot;,&quot;Topics&quot;:[&quot;Social problems&quot;,&quot;Frederick II, King of Prussia, 1712-1786&quot;,&quot;Prussia (Germany) -- History -- Frederick II, 1740-1786&quot;],&quot;Primary&quot;:&quot;2122.htm&quot;,&quot;CreatorNames&quot;:[&quot;Carlyle, Thomas, 1795-1881&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;2122&quot;});" class='title'>History of Friedrich II of Prussia — Appendix</a>
+<div class='author'>Carlyle, Thomas, 1795-1881</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(21421, {&quot;Title&quot;:&quot;The Magnificent Montez: From Courtesan to Convert&quot;,&quot;Topics&quot;:[&quot;Montez, Lola, 1818-1861&quot;],&quot;Primary&quot;:&quot;21421.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wyndham, Horace, 1875-&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;21421&quot;});" class='title'>The Magnificent Montez:<br><span class='subtitle'>From Courtesan to Convert</span></a>
+<div class='author'>Wyndham, Horace, 1875-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(21654, {&quot;Title&quot;:&quot;In and Around Berlin&quot;,&quot;Topics&quot;:[&quot;Berlin (Germany) -- Description and travel&quot;],&quot;Primary&quot;:&quot;21654.htm&quot;,&quot;CreatorNames&quot;:[&quot;Norton, Minerva Brace, 1837-&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;21654&quot;});" class='title'>In and Around Berlin</a>
+<div class='author'>Norton, Minerva Brace, 1837-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(21801, {&quot;Title&quot;:&quot;Briefe an eine Freundin&quot;,&quot;Topics&quot;:[&quot;Humboldt, Wilhelm, Freiherr von, 1767-1835 -- Correspondence&quot;,&quot;Diede, Charlotte (Charlotte Hildebrand), 1769-1846&quot;],&quot;Primary&quot;:&quot;21801.htm&quot;,&quot;CreatorNames&quot;:[&quot;Humboldt, Wilhelm von, 1767-1835&quot;],&quot;LoCC&quot;:[&quot;DD&quot;,&quot;PT&quot;],&quot;PG_ID&quot;:&quot;21801&quot;});" class='title'>Briefe an eine Freundin</a>
+<div class='author'>Humboldt, Wilhelm von, 1767-1835</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22511, {&quot;Title&quot;:&quot;Rollo on the Rhine&quot;,&quot;Topics&quot;:[&quot;Rhineland (Germany) -- Description and travel -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;22511.htm&quot;,&quot;CreatorNames&quot;:[&quot;Abbott, Jacob, 1803-1879&quot;],&quot;LoCC&quot;:[&quot;DD&quot;,&quot;PZ&quot;],&quot;PG_ID&quot;:&quot;22511&quot;});" class='title'>Rollo on the Rhine</a>
+<div class='author'>Abbott, Jacob, 1803-1879</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22682, {&quot;Title&quot;:&quot;Secret Armies - The New Technique of Nazi Warfare&quot;,&quot;Topics&quot;:[&quot;Secret service -- Germany&quot;,&quot;Propaganda, German&quot;,&quot;Fascism&quot;],&quot;Primary&quot;:&quot;22682.htm&quot;,&quot;CreatorNames&quot;:[&quot;Spivak, John L. (John Louis), 1897-1981&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;22682&quot;});" class='title'>Secret Armies -<br><span class='subtitle'>The New Technique of Nazi Warfare</span></a>
+<div class='author'>Spivak, John L. (John Louis), 1897-1981</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23065, {&quot;Title&quot;:&quot;Die Gründung des Deutschen Zollvereins&quot;,&quot;Topics&quot;:[&quot;Tariff -- History -- Germany&quot;,&quot;Customs unions -- Germany -- History&quot;,&quot;Deutscher Zollverein&quot;],&quot;Primary&quot;:&quot;23065.htm&quot;,&quot;CreatorNames&quot;:[&quot;Treitschke, Heinrich von, 1834-1896&quot;],&quot;LoCC&quot;:[&quot;DD&quot;,&quot;HF&quot;],&quot;PG_ID&quot;:&quot;23065&quot;});" class='title'>Die Gründung des Deutschen Zollvereins</a>
+<div class='author'>Treitschke, Heinrich von, 1834-1896</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23333, {&quot;Title&quot;:&quot;Ein Mann - Des Seefahrers und aufrechten Bürgers Joachim Nettelbeck wundersame Lebensgeschichte von ihm selbst erzählt&quot;,&quot;Topics&quot;:[&quot;Autobiographies&quot;,&quot;Seafaring life&quot;,&quot;Slave trade -- Africa&quot;,&quot;Napoleonic Wars, 1800-1815 -- Campaigns -- Germany -- Prussia&quot;,&quot;Nettelbeck, Joachim Christian, 1738-1824&quot;],&quot;Primary&quot;:&quot;23333.htm&quot;,&quot;CreatorNames&quot;:[&quot;Nettelbeck, Joachim, 1738-1824&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;DD&quot;],&quot;PG_ID&quot;:&quot;23333&quot;});" class='title'>Ein Mann -<br><span class='subtitle'>Des Seefahrers und aufrechten Bürgers Joachim Nettelbeck wundersame Lebensgeschichte von ihm selbst erzählt</span></a>
+<div class='author'>Nettelbeck, Joachim, 1738-1824</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23396, {&quot;Title&quot;:&quot;An Deutschlands Jugend&quot;,&quot;Topics&quot;:[&quot;Speeches, addresses, etc.&quot;,&quot;World War, 1914-1918&quot;,&quot;Ethics&quot;,&quot;Reconstruction (1914-1939) -- Germany&quot;],&quot;Primary&quot;:&quot;23396.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rathenau, Walther, 1867-1922&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;23396&quot;});" class='title'>An Deutschlands Jugend</a>
+<div class='author'>Rathenau, Walther, 1867-1922</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23446, {&quot;Title&quot;:&quot;Picturesque Germany - First Series&quot;,&quot;Topics&quot;:[&quot;Painting -- Germany&quot;,&quot;Germany -- Pictorial works&quot;],&quot;Primary&quot;:&quot;23446.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;,&quot;Bruckmann, F. [Illustrator]&quot;,&quot;Nitsche, Julius [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;23446&quot;});" class='title'>Picturesque Germany -<br><span class='subtitle'>First Series</span></a>
+<div class='author'>Anonymous, Bruckmann, F. [Illustrator], Nitsche, Julius [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24419, {&quot;Title&quot;:&quot;Germany, Bohemia, and Hungary, Visited in 1837. Vol. II&quot;,&quot;Topics&quot;:[&quot;Germany -- Description and travel&quot;,&quot;Austria -- Description and travel&quot;,&quot;Bohemia (Czech Republic) -- Description and travel&quot;],&quot;Primary&quot;:&quot;24419.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gleig, G. R. (George Robert), 1796-1888&quot;],&quot;LoCC&quot;:[&quot;DB&quot;,&quot;DD&quot;],&quot;PG_ID&quot;:&quot;24419&quot;});" class='title'>Germany, Bohemia, and Hungary, Visited in 1837. Vol. II</a>
+<div class='author'>Gleig, G. R. (George Robert), 1796-1888</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25734, {&quot;Title&quot;:&quot;Correspondance de Voltaire avec le roi de Prusse&quot;,&quot;Topics&quot;:[&quot;Frederick II, King of Prussia, 1712-1786 -- Correspondence&quot;,&quot;Voltaire, 1694-1778. Correspondence&quot;,&quot;Authors, French -- 18th century -- Correspondence&quot;,&quot;Prussia (Germany) -- Kings and rulers -- Correspondence&quot;],&quot;Primary&quot;:&quot;25734.htm&quot;,&quot;CreatorNames&quot;:[&quot;Frederick II, King of Prussia, 1712-1786&quot;,&quot;Voltaire, 1694-1778&quot;,&quot;Pompery, Edouard de, 1812-1895 [Commentator]&quot;],&quot;LoCC&quot;:[&quot;DD&quot;,&quot;PQ&quot;],&quot;PG_ID&quot;:&quot;25734&quot;});" class='title'>Correspondance de Voltaire avec le roi de Prusse</a>
+<div class='author'>Frederick II, King of Prussia, 1712-1786, Voltaire, 1694-1778, Pompery, Edouard de, 1812-1895 [Commentator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25758, {&quot;Title&quot;:&quot;A German Pompadour - Being the Extraordinary History of Wilhelmine van Grävenitz, Landhofmeisterin of Wirtemberg&quot;,&quot;Topics&quot;:[&quot;Grävenitz, Christina Wilhelmina von, 1685-1744&quot;],&quot;Primary&quot;:&quot;25758.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hay, Marie, Hon. (Agnes Blanche Marie), 1873-1938&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;25758&quot;});" class='title'>A German Pompadour -<br><span class='subtitle'>Being the Extraordinary History of Wilhelmine van Grävenitz, Landhofmeisterin of Wirtemberg</span></a>
+<div class='author'>Hay, Marie, Hon. (Agnes Blanche Marie), 1873-1938</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25808, {&quot;Title&quot;:&quot;History of Friedrich II. of Prussia - Frederick The Great—Complete Table of Contents: 22 Volumes&quot;,&quot;Topics&quot;:[&quot;Social problems&quot;,&quot;Frederick II, King of Prussia, 1712-1786&quot;,&quot;Prussia (Germany) -- History -- Frederick II, 1740-1786&quot;,&quot;Indexes&quot;],&quot;Primary&quot;:&quot;25808.htm&quot;,&quot;CreatorNames&quot;:[&quot;Carlyle, Thomas, 1795-1881&quot;,&quot;Widger, David, 1932-2021? [Editor]&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;25808&quot;});" class='title'>History of Friedrich II. of Prussia -<br><span class='subtitle'>Frederick The Great—Complete Table of Contents: 22 Volumes</span></a>
+<div class='author'>Carlyle, Thomas, 1795-1881, Widger, David, 1932-2021? [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25999, {&quot;Title&quot;:&quot;Der Hansische Stahlhof in London - Ein Vortrag, gehalten im Saale des goldenen Sterns zu Bonn am 11. März 1856&quot;,&quot;Topics&quot;:[&quot;Speeches, addresses, etc.&quot;,&quot;Europe -- History -- Hanseatic League&quot;],&quot;Primary&quot;:&quot;25999.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pauli, Reinhold, 1823-1882&quot;],&quot;LoCC&quot;:[&quot;DA&quot;,&quot;DD&quot;],&quot;PG_ID&quot;:&quot;25999&quot;});" class='title'>Der Hansische Stahlhof in London -<br><span class='subtitle'>Ein Vortrag, gehalten im Saale des goldenen Sterns zu Bonn am 11. März 1856</span></a>
+<div class='author'>Pauli, Reinhold, 1823-1882</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2668, {&quot;Title&quot;:&quot;The Life and Adventures of Baron Trenck, Volume 1&quot;,&quot;Topics&quot;:[&quot;Autobiographies&quot;,&quot;Adventure and adventurers&quot;,&quot;Trenck, Friedrich, Freiherr von der, 1726-1794&quot;,&quot;Europe -- Biography -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;2668.htm&quot;,&quot;CreatorNames&quot;:[&quot;Trenck, Friedrich, Freiherr von der, 1726-1794&quot;,&quot;Morley, Henry, 1822-1894 [Editor]&quot;,&quot;Holcroft, Thomas, 1745-1809 [Translator]&quot;],&quot;LoCC&quot;:[&quot;D&quot;,&quot;DD&quot;],&quot;PG_ID&quot;:&quot;2668&quot;});" class='title'>The Life and Adventures of Baron Trenck, Volume 1</a>
+<div class='author'>Trenck, Friedrich, Freiherr von der, 1726-1794, Morley, Henry, 1822-1894 [Editor], Holcroft, Thomas, 1745-1809 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2669, {&quot;Title&quot;:&quot;The Life and Adventures of Baron Trenck, Volume 2&quot;,&quot;Topics&quot;:[&quot;Autobiographies&quot;,&quot;Adventure and adventurers&quot;,&quot;Trenck, Friedrich, Freiherr von der, 1726-1794&quot;,&quot;Europe -- Biography -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;2669.htm&quot;,&quot;CreatorNames&quot;:[&quot;Trenck, Friedrich, Freiherr von der, 1726-1794&quot;,&quot;Morley, Henry, 1822-1894 [Editor]&quot;,&quot;Holcroft, Thomas, 1745-1809 [Translator]&quot;],&quot;LoCC&quot;:[&quot;D&quot;,&quot;DD&quot;],&quot;PG_ID&quot;:&quot;2669&quot;});" class='title'>The Life and Adventures of Baron Trenck, Volume 2</a>
+<div class='author'>Trenck, Friedrich, Freiherr von der, 1726-1794, Morley, Henry, 1822-1894 [Editor], Holcroft, Thomas, 1745-1809 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27808, {&quot;Title&quot;:&quot;Mémoires de Frédérique Sophie Wilhelmine de Prusse, margrave de Bareith. Tome 1&quot;,&quot;Topics&quot;:[&quot;Wilhelmine, Margravine, consort of Friedrich, Margrave of Bayreuth, 1709-1758&quot;,&quot;Prussia (Germany) -- History -- Frederick William I, 1713-1740&quot;,&quot;Prussia (Germany) -- Court and courtiers&quot;],&quot;Primary&quot;:&quot;27808.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wilhelmine, Margravine, consort of Friedrich, Margrave of Bayreuth, 1709-1758&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;27808&quot;});" class='title'>Mémoires de Frédérique Sophie Wilhelmine de Prusse, margrave de Bareith. Tome 1</a>
+<div class='author'>Wilhelmine, Margravine, consort of Friedrich, Margrave of Bayreuth, 1709-1758</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27809, {&quot;Title&quot;:&quot;Mémoires de Frédérique Sophie Wilhelmine de Prusse, margrave de Bareith. Tome 2&quot;,&quot;Topics&quot;:[&quot;Wilhelmine, Margravine, consort of Friedrich, Margrave of Bayreuth, 1709-1758&quot;,&quot;Prussia (Germany) -- History -- Frederick William I, 1713-1740&quot;,&quot;Prussia (Germany) -- Court and courtiers&quot;],&quot;Primary&quot;:&quot;27809.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wilhelmine, Margravine, consort of Friedrich, Margrave of Bayreuth, 1709-1758&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;27809&quot;});" class='title'>Mémoires de Frédérique Sophie Wilhelmine de Prusse, margrave de Bareith. Tome 2</a>
+<div class='author'>Wilhelmine, Margravine, consort of Friedrich, Margrave of Bayreuth, 1709-1758</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28003, {&quot;Title&quot;:&quot;Supplement to Punch, or the London Charivari, September 16, 1914 - The New Rake&#39;s Progress: Cartoons from \&quot;\&quot;Punch\&quot;\&quot; Illustrating the Kaiser&#39;s Career, 1888-1914&quot;,&quot;Topics&quot;:[&quot;William II, German Emperor, 1859-1941 -- Caricatures and cartoons&quot;,&quot;Germany -- History -- 1871-1918 -- Caricatures and cartoons&quot;],&quot;Primary&quot;:&quot;28003.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;28003&quot;});" class='title'>Supplement to Punch, or the London Charivari, September 16, 1914 -<br><span class='subtitle'>The New Rake's Progress: Cartoons from "Punch" Illustrating the Kaiser's Career, 1888-1914</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28324, {&quot;Title&quot;:&quot;Supplement to \&quot;\&quot;Punch, Or The London Charivari.\&quot;\&quot;—October 14, 1914 - \&quot;\&quot;Punch\&quot;\&quot; and the Prussian Bully&quot;,&quot;Topics&quot;:[&quot;World War, 1914-1918 -- Caricatures and cartoons&quot;,&quot;William II, German Emperor, 1859-1941 -- Caricatures and cartoons&quot;],&quot;Primary&quot;:&quot;28324.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;DD&quot;,&quot;D&quot;],&quot;PG_ID&quot;:&quot;28324&quot;});" class='title'>Supplement to "Punch, Or The London Charivari."—October 14, 1914 -<br><span class='subtitle'>"Punch" and the Prussian Bully</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28432, {&quot;Title&quot;:&quot;Home Life in Germany&quot;,&quot;Topics&quot;:[&quot;Germany -- Social life and customs&quot;],&quot;Primary&quot;:&quot;28432.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sidgwick, Alfred, Mrs., 1854-1934&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;28432&quot;});" class='title'>Home Life in Germany</a>
+<div class='author'>Sidgwick, Alfred, Mrs., 1854-1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29167, {&quot;Title&quot;:&quot;Secret Memoirs: The Story of Louise, Crown Princess&quot;,&quot;Topics&quot;:[&quot;Toscana, Luise von, 1870-1947&quot;,&quot;Saxony (Germany) -- Court and courtiers&quot;],&quot;Primary&quot;:&quot;29167.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fischer, Henry W. (Henry William), 1856-1932&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;29167&quot;});" class='title'>Secret Memoirs:<br><span class='subtitle'>The Story of Louise, Crown Princess</span></a>
+<div class='author'>Fischer, Henry W. (Henry William), 1856-1932</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29473, {&quot;Title&quot;:&quot;Blood and Iron - Origin of German Empire As Revealed by Character of Its Founder, Bismarck&quot;,&quot;Topics&quot;:[&quot;Bismarck, Otto, Fürst von, 1815-1898&quot;,&quot;Germany -- History -- 1789-1900&quot;],&quot;Primary&quot;:&quot;29473.htm&quot;,&quot;CreatorNames&quot;:[&quot;Greusel, John Hubert, 1868-&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;29473&quot;});" class='title'>Blood and Iron -<br><span class='subtitle'>Origin of German Empire As Revealed by Character of Its Founder, Bismarck</span></a>
+<div class='author'>Greusel, John Hubert, 1868-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31161, {&quot;Title&quot;:&quot;German Problems and Personalities&quot;,&quot;Topics&quot;:[&quot;World War, 1914-1918&quot;,&quot;Germany -- Foreign relations&quot;,&quot;Germany -- Politics and government&quot;,&quot;Germany -- Intellectual life&quot;],&quot;Primary&quot;:&quot;31161.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sarolea, Charles, 1870-1953&quot;,&quot;Sorel, Albert, 1842-1906 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;31161&quot;});" class='title'>German Problems and Personalities</a>
+<div class='author'>Sarolea, Charles, 1870-1953, Sorel, Albert, 1842-1906 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31337, {&quot;Title&quot;:&quot;Über allgemeine Landesbewaffnung, insbesondere in Beziehung auf Württemberg&quot;,&quot;Topics&quot;:[&quot;Germany -- History, Military -- 19th century -- Sources&quot;],&quot;Primary&quot;:&quot;31337.htm&quot;,&quot;CreatorNames&quot;:[&quot;Prittwitz, M. von (Moritz), 1795-1885&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;31337&quot;});" class='title'>Über allgemeine Landesbewaffnung, insbesondere in Beziehung auf Württemberg</a>
+<div class='author'>Prittwitz, M. von (Moritz), 1795-1885</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31936, {&quot;Title&quot;:&quot;The Cathedrals and Churches of the Rhine&quot;,&quot;Topics&quot;:[&quot;Rhine River Valley -- Description and travel&quot;,&quot;Cathedrals -- Rhine River Valley&quot;,&quot;Church architecture -- Rhine River Valley&quot;],&quot;Primary&quot;:&quot;31936.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mansfield, M. F. (Milburg Francisco), 1871-&quot;,&quot;McManus, Blanche, 1869-1935 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DD&quot;,&quot;NA&quot;],&quot;PG_ID&quot;:&quot;31936&quot;});" class='title'>The Cathedrals and Churches of the Rhine</a>
+<div class='author'>Mansfield, M. F. (Milburg Francisco), 1871-, McManus, Blanche, 1869-1935 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32966, {&quot;Title&quot;:&quot;Revolution and Counter-Revolution; Or, Germany in 1848&quot;,&quot;Topics&quot;:[&quot;Germany -- History -- Revolution, 1848-1849&quot;],&quot;Primary&quot;:&quot;32966.htm&quot;,&quot;CreatorNames&quot;:[&quot;Engels, Friedrich, 1820-1895&quot;,&quot;Marx, Karl, 1818-1883&quot;,&quot;Aveling, Eleanor Marx, 1855-1898 [Editor]&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;32966&quot;});" class='title'>Revolution and Counter-Revolution;<br><span class='subtitle'>Or, Germany in 1848</span></a>
+<div class='author'>Engels, Friedrich, 1820-1895, Marx, Karl, 1818-1883, Aveling, Eleanor Marx, 1855-1898 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33794, {&quot;Title&quot;:&quot;Pictures of German Life in the XVth, XVIth, and XVIIth Centuries, Vol. I.&quot;,&quot;Topics&quot;:[&quot;Germany -- Civilization&quot;,&quot;Germany -- Social life and customs&quot;],&quot;Primary&quot;:&quot;33794.htm&quot;,&quot;CreatorNames&quot;:[&quot;Freytag, Gustav, 1816-1895&quot;,&quot;Malcolm, Mrs. (Georgina) [Translator]&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;33794&quot;});" class='title'>Pictures of German Life in the XVth, XVIth, and XVIIth Centuries, Vol. I.</a>
+<div class='author'>Freytag, Gustav, 1816-1895, Malcolm, Mrs. (Georgina) [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33795, {&quot;Title&quot;:&quot;Pictures of German Life in the XVth, XVIth, and XVIIth Centuries, Vol. II.&quot;,&quot;Topics&quot;:[&quot;Germany -- Civilization&quot;,&quot;Germany -- Social life and customs&quot;],&quot;Primary&quot;:&quot;33795.htm&quot;,&quot;CreatorNames&quot;:[&quot;Freytag, Gustav, 1816-1895&quot;,&quot;Malcolm, Mrs. (Georgina) [Translator]&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;33795&quot;});" class='title'>Pictures of German Life in the XVth, XVIth, and XVIIth Centuries, Vol. II.</a>
+<div class='author'>Freytag, Gustav, 1816-1895, Malcolm, Mrs. (Georgina) [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33818, {&quot;Title&quot;:&quot;Pictures of German Life in the XVIIIth and XIXth Centuries, Vol. I.&quot;,&quot;Topics&quot;:[&quot;Germany -- Civilization&quot;,&quot;Germany -- Social life and customs&quot;],&quot;Primary&quot;:&quot;33818.htm&quot;,&quot;CreatorNames&quot;:[&quot;Freytag, Gustav, 1816-1895&quot;,&quot;Malcolm, Mrs. (Georgina) [Translator]&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;33818&quot;});" class='title'>Pictures of German Life in the XVIIIth and XIXth Centuries, Vol. I.</a>
+<div class='author'>Freytag, Gustav, 1816-1895, Malcolm, Mrs. (Georgina) [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33819, {&quot;Title&quot;:&quot;Pictures of German Life in the XVIIIth and XIXth Centuries, Vol. II.&quot;,&quot;Topics&quot;:[&quot;Germany -- Civilization&quot;,&quot;Germany -- Social life and customs&quot;],&quot;Primary&quot;:&quot;33819.htm&quot;,&quot;CreatorNames&quot;:[&quot;Freytag, Gustav, 1816-1895&quot;,&quot;Malcolm, Mrs. (Georgina) [Translator]&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;33819&quot;});" class='title'>Pictures of German Life in the XVIIIth and XIXth Centuries, Vol. II.</a>
+<div class='author'>Freytag, Gustav, 1816-1895, Malcolm, Mrs. (Georgina) [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33891, {&quot;Title&quot;:&quot;Bartholomew Sastrow: Being the Memoirs of a German Burgomaster&quot;,&quot;Topics&quot;:[&quot;Reformation -- Germany&quot;,&quot;Germany -- Social life and customs&quot;,&quot;Germany -- History -- Charles V, 1519-1556&quot;],&quot;Primary&quot;:&quot;33891.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sastrow, Bartholomäus, 1520-1603&quot;,&quot;Fisher, H. A. L. (Herbert Albert Laurens), 1865-1940 [Author of introduction, etc.]&quot;,&quot;Vandam, Albert D. (Albert Dresden), 1843-1903 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;33891&quot;});" class='title'>Bartholomew Sastrow:<br><span class='subtitle'>Being the Memoirs of a German Burgomaster</span></a>
+<div class='author'>Sastrow, Bartholomäus, 1520-1603, Fisher, H. A. L. (Herbert Albert Laurens), 1865-1940 [Author of introduction, etc.], Vandam, Albert D. (Albert Dresden), 1843-1903 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34072, {&quot;Title&quot;:&quot;The Evolution of an Empire: A Brief Historical Sketch of Germany&quot;,&quot;Topics&quot;:[&quot;Germany -- History&quot;],&quot;Primary&quot;:&quot;34072.htm&quot;,&quot;CreatorNames&quot;:[&quot;Parmele, Mary Platt, 1843-1911&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;34072&quot;});" class='title'>The Evolution of an Empire:<br><span class='subtitle'>A Brief Historical Sketch of Germany</span></a>
+<div class='author'>Parmele, Mary Platt, 1843-1911</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34223, {&quot;Title&quot;:&quot;The New Germany&quot;,&quot;Topics&quot;:[&quot;Germany -- History -- Revolution, 1918&quot;,&quot;Germany -- Politics and government -- 1918-1933&quot;],&quot;Primary&quot;:&quot;34223.htm&quot;,&quot;CreatorNames&quot;:[&quot;Young, George, 1872-1952&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;34223&quot;});" class='title'>The New Germany</a>
+<div class='author'>Young, George, 1872-1952</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34278, {&quot;Title&quot;:&quot;The Secrets of Potsdam - A Startling Exposure of the Inner Life of the Courts of the Kaiser and Crown-Prince&quot;,&quot;Topics&quot;:[&quot;Germany -- Court and courtiers&quot;],&quot;Primary&quot;:&quot;34278.htm&quot;,&quot;CreatorNames&quot;:[&quot;Le Queux, William, 1864-1927&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;34278&quot;});" class='title'>The Secrets of Potsdam -<br><span class='subtitle'>A Startling Exposure of the Inner Life of the Courts of the Kaiser and Crown-Prince</span></a>
+<div class='author'>Le Queux, William, 1864-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34397, {&quot;Title&quot;:&quot;A Short History of Germany&quot;,&quot;Topics&quot;:[&quot;Germany -- History&quot;],&quot;Primary&quot;:&quot;34397.htm&quot;,&quot;CreatorNames&quot;:[&quot;Parmele, Mary Platt, 1843-1911&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;34397&quot;});" class='title'>A Short History of Germany</a>
+<div class='author'>Parmele, Mary Platt, 1843-1911</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36412, {&quot;Title&quot;:&quot;Ten Years Near the German Frontier: A Retrospect and a Warning&quot;,&quot;Topics&quot;:[&quot;Propaganda, German&quot;,&quot;Courts and courtiers&quot;,&quot;Denmark -- Foreign relations -- Germany&quot;,&quot;Germany -- Foreign relations -- Denmark&quot;,&quot;United States Virgin Islands&quot;],&quot;Primary&quot;:&quot;36412.htm&quot;,&quot;CreatorNames&quot;:[&quot;Egan, Maurice Francis, 1852-1924&quot;],&quot;LoCC&quot;:[&quot;DD&quot;,&quot;DL&quot;],&quot;PG_ID&quot;:&quot;36412&quot;});" class='title'>Ten Years Near the German Frontier:<br><span class='subtitle'>A Retrospect and a Warning</span></a>
+<div class='author'>Egan, Maurice Francis, 1852-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36484, {&quot;Title&quot;:&quot;A History of Germany from the Earliest Times to the Present Day&quot;,&quot;Topics&quot;:[&quot;Germany -- History&quot;],&quot;Primary&quot;:&quot;36484.htm&quot;,&quot;CreatorNames&quot;:[&quot;Taylor, Bayard, 1825-1878&quot;,&quot;Taylor, Marie Hansen, 1829-1925 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;36484&quot;});" class='title'>A History of Germany from the Earliest Times to the Present Day</a>
+<div class='author'>Taylor, Bayard, 1825-1878, Taylor, Marie Hansen, 1829-1925 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36818, {&quot;Title&quot;:&quot;Visits and Sketches at Home and Abroad, Vol. 1 (of 3) - With Tales and Miscellanies Now First Collected&quot;,&quot;Topics&quot;:[&quot;Germany -- Description and travel&quot;],&quot;Primary&quot;:&quot;36818.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jameson, Mrs. (Anna), 1794-1860&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;36818&quot;});" class='title'>Visits and Sketches at Home and Abroad, Vol. 1 (of 3) -<br><span class='subtitle'>With Tales and Miscellanies Now First Collected</span></a>
+<div class='author'>Jameson, Mrs. (Anna), 1794-1860</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36819, {&quot;Title&quot;:&quot;Visits and Sketches at Home and Abroad, Vol. 2 (of 3) - With Tales and Miscellanies Now First Collected&quot;,&quot;Topics&quot;:[&quot;Germany -- Description and travel&quot;],&quot;Primary&quot;:&quot;36819.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jameson, Mrs. (Anna), 1794-1860&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;36819&quot;});" class='title'>Visits and Sketches at Home and Abroad, Vol. 2 (of 3) -<br><span class='subtitle'>With Tales and Miscellanies Now First Collected</span></a>
+<div class='author'>Jameson, Mrs. (Anna), 1794-1860</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36820, {&quot;Title&quot;:&quot;Visits and Sketches at Home and Abroad, Vol. 3 (of 3) - With Tales and Miscellanies Now First Collected&quot;,&quot;Topics&quot;:[&quot;Germany -- Description and travel&quot;],&quot;Primary&quot;:&quot;36820.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jameson, Mrs. (Anna), 1794-1860&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;36820&quot;});" class='title'>Visits and Sketches at Home and Abroad, Vol. 3 (of 3) -<br><span class='subtitle'>With Tales and Miscellanies Now First Collected</span></a>
+<div class='author'>Jameson, Mrs. (Anna), 1794-1860</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38512, {&quot;Title&quot;:&quot;Lola Montez: An Adventuress of the &#39;Forties&quot;,&quot;Topics&quot;:[&quot;Montez, Lola, 1818-1861&quot;],&quot;Primary&quot;:&quot;38512.htm&quot;,&quot;CreatorNames&quot;:[&quot;D&#39;Auvergne, Edmund B. (Edmund Basil)&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;38512&quot;});" class='title'>Lola Montez:<br><span class='subtitle'>An Adventuress of the 'Forties</span></a>
+<div class='author'>D'Auvergne, Edmund B. (Edmund Basil)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39563, {&quot;Title&quot;:&quot;And the Kaiser abdicates: The German Revolution November 1918-August 1919&quot;,&quot;Topics&quot;:[&quot;Germany -- Politics and government&quot;,&quot;Germany -- History -- Revolution, 1918&quot;],&quot;Primary&quot;:&quot;39563.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bouton, S. Miles (Stephen Miles), 1876-&quot;,&quot;Holcombe, Arthur N. (Arthur Norman), 1884-1977 [Translator]&quot;,&quot;Munro, William Bennett, 1875-1957 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;39563&quot;});" class='title'>And the Kaiser abdicates:<br><span class='subtitle'>The German Revolution November 1918-August 1919</span></a>
+<div class='author'>Bouton, S. Miles (Stephen Miles), 1876-, Holcombe, Arthur N. (Arthur Norman), 1884-1977 [Translator], Munro, William Bennett, 1875-1957 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39664, {&quot;Title&quot;:&quot;The Hansa Towns&quot;,&quot;Topics&quot;:[&quot;Hanseatic League&quot;],&quot;Primary&quot;:&quot;39664.htm&quot;,&quot;CreatorNames&quot;:[&quot;Zimmern, Helen, 1846-1934&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;39664&quot;});" class='title'>The Hansa Towns</a>
+<div class='author'>Zimmern, Helen, 1846-1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39667, {&quot;Title&quot;:&quot;Vier Jahre Politischer Mord&quot;,&quot;Topics&quot;:[&quot;Political crimes and offenses -- Germany&quot;,&quot;Germany -- History -- 1918-1933&quot;],&quot;Primary&quot;:&quot;39667.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gumbel, Emil Julius, 1891-1966&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;39667&quot;});" class='title'>Vier Jahre Politischer Mord</a>
+<div class='author'>Gumbel, Emil Julius, 1891-1966</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39883, {&quot;Title&quot;:&quot;Alsace-Lorraine - A Study of the Relations of the Two Provinces to France and to Germany and a Presentation of the Just Claims of Their People&quot;,&quot;Topics&quot;:[&quot;Alsace-Lorraine question&quot;],&quot;Primary&quot;:&quot;39883.htm&quot;,&quot;CreatorNames&quot;:[&quot;Blumenthal, Daniel, 1860-&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;39883&quot;});" class='title'>Alsace-Lorraine -<br><span class='subtitle'>A Study of the Relations of the Two Provinces to France and to Germany and a Presentation of the Just Claims of Their People</span></a>
+<div class='author'>Blumenthal, Daniel, 1860-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40172, {&quot;Title&quot;:&quot;Le Rhin, Tome III&quot;,&quot;Topics&quot;:[&quot;France -- Description and travel&quot;,&quot;Rhine River Valley -- Description and travel&quot;,&quot;Hugo, Victor, 1802-1885 -- Travel -- Rhine River Valley&quot;,&quot;Hugo, Victor, 1802-1885 -- Travel -- France&quot;],&quot;Primary&quot;:&quot;40172.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hugo, Victor, 1802-1885&quot;],&quot;LoCC&quot;:[&quot;DC&quot;,&quot;DD&quot;],&quot;PG_ID&quot;:&quot;40172&quot;});" class='title'>Le Rhin, Tome III</a>
+<div class='author'>Hugo, Victor, 1802-1885</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40239, {&quot;Title&quot;:&quot;Le Rhin, Tome IV&quot;,&quot;Topics&quot;:[&quot;France -- Description and travel&quot;,&quot;Rhine River Valley -- Description and travel&quot;,&quot;Hugo, Victor, 1802-1885 -- Travel -- Rhine River Valley&quot;,&quot;Hugo, Victor, 1802-1885 -- Travel -- France&quot;],&quot;Primary&quot;:&quot;40239.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hugo, Victor, 1802-1885&quot;],&quot;LoCC&quot;:[&quot;DC&quot;,&quot;DD&quot;],&quot;PG_ID&quot;:&quot;40239&quot;});" class='title'>Le Rhin, Tome IV</a>
+<div class='author'>Hugo, Victor, 1802-1885</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41986, {&quot;Title&quot;:&quot;Le Rhin, Tome I&quot;,&quot;Topics&quot;:[&quot;France -- Description and travel&quot;,&quot;Rhine River Valley -- Description and travel&quot;,&quot;Hugo, Victor, 1802-1885 -- Travel -- Rhine River Valley&quot;,&quot;Hugo, Victor, 1802-1885 -- Travel -- France&quot;],&quot;Primary&quot;:&quot;41986.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hugo, Victor, 1802-1885&quot;],&quot;LoCC&quot;:[&quot;DC&quot;,&quot;DD&quot;],&quot;PG_ID&quot;:&quot;41986&quot;});" class='title'>Le Rhin, Tome I</a>
+<div class='author'>Hugo, Victor, 1802-1885</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42151, {&quot;Title&quot;:&quot;Le Rhin, Tome II&quot;,&quot;Topics&quot;:[&quot;France -- Description and travel&quot;,&quot;Rhine River Valley -- Description and travel&quot;,&quot;Hugo, Victor, 1802-1885 -- Travel -- Rhine River Valley&quot;,&quot;Hugo, Victor, 1802-1885 -- Travel -- France&quot;],&quot;Primary&quot;:&quot;42151.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hugo, Victor, 1802-1885&quot;],&quot;LoCC&quot;:[&quot;DC&quot;,&quot;DD&quot;],&quot;PG_ID&quot;:&quot;42151&quot;});" class='title'>Le Rhin, Tome II</a>
+<div class='author'>Hugo, Victor, 1802-1885</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42539, {&quot;Title&quot;:&quot;A July Holiday in Saxony, Bohemia, and Silesia&quot;,&quot;Topics&quot;:[&quot;Bohemia (Czech Republic) -- Description and travel&quot;,&quot;Saxony (Germany) -- Description and travel&quot;,&quot;Silesia -- Description and travel&quot;],&quot;Primary&quot;:&quot;42539.htm&quot;,&quot;CreatorNames&quot;:[&quot;White, Walter, 1811-1893&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;42539&quot;});" class='title'>A July Holiday in Saxony, Bohemia, and Silesia</a>
+<div class='author'>White, Walter, 1811-1893</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43407, {&quot;Title&quot;:&quot;The Empress Frederick: a memoir&quot;,&quot;Topics&quot;:[&quot;Victoria, Empress, consort of Frederick III, German Emperor, 1840-1901&quot;],&quot;Primary&quot;:&quot;43407.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;43407&quot;});" class='title'>The Empress Frederick:<br><span class='subtitle'>a memoir</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43522, {&quot;Title&quot;:&quot;The Kaiser&#39;s Memoirs&quot;,&quot;Topics&quot;:[&quot;World War, 1914-1918&quot;,&quot;William II, German Emperor, 1859-1941&quot;,&quot;Germany -- Politics and government -- 1888-1918&quot;],&quot;Primary&quot;:&quot;43522.htm&quot;,&quot;CreatorNames&quot;:[&quot;William II, German Emperor, 1859-1941&quot;,&quot;Ybarra, T. R. (Thomas Russell), 1880-1971 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;43522&quot;});" class='title'>The Kaiser's Memoirs</a>
+<div class='author'>William II, German Emperor, 1859-1941, Ybarra, T. R. (Thomas Russell), 1880-1971 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43666, {&quot;Title&quot;:&quot;The German Emperor as Shown in His Public Utterances&quot;,&quot;Topics&quot;:[&quot;Germany -- History -- William II, 1888-1918 -- Sources&quot;,&quot;Germany -- Politics And Government -- 1871-1918&quot;],&quot;Primary&quot;:&quot;43666.htm&quot;,&quot;CreatorNames&quot;:[&quot;William II, German Emperor, 1859-1941&quot;,&quot;Gauss, Christian, 1878-1951 [Editor]&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;43666&quot;});" class='title'>The German Emperor as Shown in His Public Utterances</a>
+<div class='author'>William II, German Emperor, 1859-1941, Gauss, Christian, 1878-1951 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44101, {&quot;Title&quot;:&quot;The Holy Roman Empire&quot;,&quot;Topics&quot;:[&quot;Holy Roman Empire -- History&quot;],&quot;Primary&quot;:&quot;44101.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bryce, James Bryce, Viscount, 1838-1922&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;44101&quot;});" class='title'>The Holy Roman Empire</a>
+<div class='author'>Bryce, James Bryce, Viscount, 1838-1922</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44135, {&quot;Title&quot;:&quot;Albert Ballin&quot;,&quot;Topics&quot;:[&quot;Ballin, Albert, 1857-1918&quot;,&quot;Hamburg-American Line&quot;,&quot;Hamburg-Amerikanische Packetfahrt-Actien-Gesellschaft&quot;,&quot;Capitalists and financiers -- Germany -- Biography&quot;,&quot;Germany -- Politics and government -- 1888-1918 -- Biography&quot;],&quot;Primary&quot;:&quot;44135.htm&quot;,&quot;CreatorNames&quot;:[&quot;Huldermann, Bernhard&quot;,&quot;Eggers, Wilhelm Johann [Translator]&quot;],&quot;LoCC&quot;:[&quot;DD&quot;,&quot;HE&quot;],&quot;PG_ID&quot;:&quot;44135&quot;});" class='title'>Albert Ballin</a>
+<div class='author'>Huldermann, Bernhard, Eggers, Wilhelm Johann [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44430, {&quot;Title&quot;:&quot;Myths of the Rhine&quot;,&quot;Topics&quot;:[&quot;Mythology, Germanic&quot;,&quot;Folklore -- Germany -- Rhine Valley&quot;],&quot;Primary&quot;:&quot;44430.htm&quot;,&quot;CreatorNames&quot;:[&quot;Saintine, X.-B. (Xavier-Boniface), 1798-1865&quot;,&quot;Doré, Gustave, 1832-1883 [Illustrator]&quot;,&quot;Schele de Vere, M. (Maximilian), 1820-1898 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;44430&quot;});" class='title'>Myths of the Rhine</a>
+<div class='author'>Saintine, X.-B. (Xavier-Boniface), 1798-1865, Doré, Gustave, 1832-1883 [Illustrator], Schele de Vere, M. (Maximilian), 1820-1898 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45138, {&quot;Title&quot;:&quot;Bubbles from the Brunnens of Nassau - By an Old Man.&quot;,&quot;Topics&quot;:[&quot;Mineral waters -- Germany -- Nassau (Duchy)&quot;,&quot;Nassau (Duchy) -- Description and travel&quot;],&quot;Primary&quot;:&quot;45138.htm&quot;,&quot;CreatorNames&quot;:[&quot;Head, Francis Bond, Sir, 1793-1875&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;45138&quot;});" class='title'>Bubbles from the Brunnens of Nassau -<br><span class='subtitle'>By an Old Man.</span></a>
+<div class='author'>Head, Francis Bond, Sir, 1793-1875</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45191, {&quot;Title&quot;:&quot;Deutsche Freiheit: Ein Weckruf&quot;,&quot;Topics&quot;:[&quot;Germany -- Civilization&quot;,&quot;Liberty&quot;,&quot;Germany -- Politics and government -- 1918-1933&quot;],&quot;Primary&quot;:&quot;45191.htm&quot;,&quot;CreatorNames&quot;:[&quot;Eucken, Rudolf, 1846-1926&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;45191&quot;});" class='title'>Deutsche Freiheit:<br><span class='subtitle'>Ein Weckruf</span></a>
+<div class='author'>Eucken, Rudolf, 1846-1926</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45418, {&quot;Title&quot;:&quot;Deutschlands Beruf in der Gegenwart und Zukunft&quot;,&quot;Topics&quot;:[&quot;Germany -- Civilization&quot;],&quot;Primary&quot;:&quot;45418.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rohmer, Theodor, 1816-1859&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;45418&quot;});" class='title'>Deutschlands Beruf in der Gegenwart und Zukunft</a>
+<div class='author'>Rohmer, Theodor, 1816-1859</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46401, {&quot;Title&quot;:&quot;The Story of Nuremberg&quot;,&quot;Topics&quot;:[&quot;Nuremberg (Germany) -- Description and travel&quot;,&quot;Nuremberg (Germany) -- History&quot;],&quot;Primary&quot;:&quot;46401.htm&quot;,&quot;CreatorNames&quot;:[&quot;Headlam, Cecil, 1872-1934&quot;,&quot;James, Helen M. [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;46401&quot;});" class='title'>The Story of Nuremberg</a>
+<div class='author'>Headlam, Cecil, 1872-1934, James, Helen M. [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47033, {&quot;Title&quot;:&quot;Deutsche Lebensbilder&quot;,&quot;Topics&quot;:[&quot;Germany -- Biography&quot;],&quot;Primary&quot;:&quot;47033.htm&quot;,&quot;CreatorNames&quot;:[&quot;Treitschke, Heinrich von, 1834-1896&quot;,&quot;Blaschke, Lotte [Editor]&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;47033&quot;});" class='title'>Deutsche Lebensbilder</a>
+<div class='author'>Treitschke, Heinrich von, 1834-1896, Blaschke, Lotte [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47311, {&quot;Title&quot;:&quot;Wanderungen durch die Mark Brandenburg, Dritter Teil - Havelland&quot;,&quot;Topics&quot;:[&quot;Brandenburg (Germany) -- Description and travel&quot;,&quot;Brandenburg (Germany) -- History&quot;],&quot;Primary&quot;:&quot;47311.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fontane, Theodor, 1819-1898&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;47311&quot;});" class='title'>Wanderungen durch die Mark Brandenburg, Dritter Teil -<br><span class='subtitle'>Havelland</span></a>
+<div class='author'>Fontane, Theodor, 1819-1898</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47322, {&quot;Title&quot;:&quot;Alfried Krupp: Ein Lebensbild&quot;,&quot;Topics&quot;:[&quot;Krupp, Alfred, 1812-1887&quot;],&quot;Primary&quot;:&quot;47322.htm&quot;,&quot;CreatorNames&quot;:[&quot;Frobenius, Herman, 1841-1916&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;47322&quot;});" class='title'>Alfried Krupp:<br><span class='subtitle'>Ein Lebensbild</span></a>
+<div class='author'>Frobenius, Herman, 1841-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47659, {&quot;Title&quot;:&quot;Robert Blum: Ein Zeit- und Charakterbild für das deutsche Volk&quot;,&quot;Topics&quot;:[&quot;Politicians -- Germany -- Biography&quot;,&quot;Blum, Robert, 1807-1848&quot;],&quot;Primary&quot;:&quot;47659.htm&quot;,&quot;CreatorNames&quot;:[&quot;Blum, Hans, 1841-1910&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;47659&quot;});" class='title'>Robert Blum:<br><span class='subtitle'>Ein Zeit- und Charakterbild für das deutsche Volk</span></a>
+<div class='author'>Blum, Hans, 1841-1910</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47868, {&quot;Title&quot;:&quot;German Society at the Close of the Middle Ages&quot;,&quot;Topics&quot;:[&quot;Germany -- Social conditions&quot;,&quot;Reformation -- Germany&quot;],&quot;Primary&quot;:&quot;47868.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bax, Ernest Belfort, 1854-1926&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;47868&quot;});" class='title'>German Society at the Close of the Middle Ages</a>
+<div class='author'>Bax, Ernest Belfort, 1854-1926</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48340, {&quot;Title&quot;:&quot;Reden an die deutsche Nation&quot;,&quot;Topics&quot;:[&quot;National characteristics, German&quot;,&quot;Germany -- Politics and government -- 1806-1815&quot;,&quot;Education and state -- Germany&quot;],&quot;Primary&quot;:&quot;48340.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fichte, Johann Gottlieb, 1762-1814&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;48340&quot;});" class='title'>Reden an die deutsche Nation</a>
+<div class='author'>Fichte, Johann Gottlieb, 1762-1814</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48578, {&quot;Title&quot;:&quot;Ludwig the Second, King of Bavaria&quot;,&quot;Topics&quot;:[&quot;Ludwig II, King of Bavaria, 1845-1886&quot;],&quot;Primary&quot;:&quot;48578.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tschudi, Clara, 1856-1945&quot;,&quot;Hearn, Ethel Harriet [Translator]&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;48578&quot;});" class='title'>Ludwig the Second, King of Bavaria</a>
+<div class='author'>Tschudi, Clara, 1856-1945, Hearn, Ethel Harriet [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48689, {&quot;Title&quot;:&quot;Endres Tuchers Baumeisterbuch der Stadt Nürnberg&quot;,&quot;Topics&quot;:[&quot;Nuremberg (Germany) -- History -- Sources&quot;],&quot;Primary&quot;:&quot;48689.htm&quot;,&quot;CreatorNames&quot;:[&quot;Weech, Friedrich von, 1837-1905 [Annotator]&quot;,&quot;Tucher, Endres, 1423-1507&quot;,&quot;Lexer, Matthias, 1830-1892 [Editor]&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;48689&quot;});" class='title'>Endres Tuchers Baumeisterbuch der Stadt Nürnberg</a>
+<div class='author'>Weech, Friedrich von, 1837-1905 [Annotator], Tucher, Endres, 1423-1507, Lexer, Matthias, 1830-1892 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48705, {&quot;Title&quot;:&quot;Wanderungen durch die interessantesten Gegenden des Sächsischen Obererzgebirges (Erstes Heft) - Ein Beitrag zur specielleren Kenntniß desselben, seines Volkslebens, seiner Gewerbsarten, Sitten und Gebräuche&quot;,&quot;Topics&quot;:[&quot;Erzgebirge (Czech Republic and Germany) -- Description and travel&quot;],&quot;Primary&quot;:&quot;48705.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lindner, Johann Traugott, 1777-1856&quot;],&quot;LoCC&quot;:[&quot;DB&quot;,&quot;DD&quot;],&quot;PG_ID&quot;:&quot;48705&quot;});" class='title'>Wanderungen durch die interessantesten Gegenden des Sächsischen Obererzgebirges (Erstes Heft) -<br><span class='subtitle'>Ein Beitrag zur specielleren Kenntniß desselben, seines Volkslebens, seiner Gewerbsarten, Sitten und Gebräuche</span></a>
+<div class='author'>Lindner, Johann Traugott, 1777-1856</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48853, {&quot;Title&quot;:&quot;Wegweiser durch das sächsisch-böhmische Erzgebirge&quot;,&quot;Topics&quot;:[&quot;Erzgebirge (Czech Republic and Germany) -- Description and travel&quot;],&quot;Primary&quot;:&quot;48853.htm&quot;,&quot;CreatorNames&quot;:[&quot;Berlet, Bruno, 1825-1892&quot;],&quot;LoCC&quot;:[&quot;DB&quot;,&quot;DD&quot;],&quot;PG_ID&quot;:&quot;48853&quot;});" class='title'>Wegweiser durch das sächsisch-böhmische Erzgebirge</a>
+<div class='author'>Berlet, Bruno, 1825-1892</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49084, {&quot;Title&quot;:&quot;Mitteilungen aus dem Germanischen Nationalmuseum. Jahrgang 1900&quot;,&quot;Topics&quot;:[&quot;Germany -- Antiquities&quot;],&quot;Primary&quot;:&quot;49084.htm&quot;,&quot;CreatorNames&quot;:[&quot;Germanisches Nationalmuseum Nürnberg&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;49084&quot;});" class='title'>Mitteilungen aus dem Germanischen Nationalmuseum. Jahrgang 1900</a>
+<div class='author'>Germanisches Nationalmuseum Nürnberg</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49134, {&quot;Title&quot;:&quot;Wanderungen durch die interessantesten Gegenden des Sächsischen Obererzgebirges (Zweites Heft) - Ein Beitrag zur speciellern Kenntniß desselben, seines Volkslebens, der Gewerbsarten, Sitten und Gebräuche&quot;,&quot;Topics&quot;:[&quot;Erzgebirge (Czech Republic and Germany) -- Description and travel&quot;],&quot;Primary&quot;:&quot;49134.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lindner, Johann Traugott, 1777-1856&quot;],&quot;LoCC&quot;:[&quot;DB&quot;,&quot;DD&quot;],&quot;PG_ID&quot;:&quot;49134&quot;});" class='title'>Wanderungen durch die interessantesten Gegenden des Sächsischen Obererzgebirges (Zweites Heft) -<br><span class='subtitle'>Ein Beitrag zur speciellern Kenntniß desselben, seines Volkslebens, der Gewerbsarten, Sitten und Gebräuche</span></a>
+<div class='author'>Lindner, Johann Traugott, 1777-1856</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49148, {&quot;Title&quot;:&quot;Wanderungen durch die interessantesten Gegenden des Sächsischen Obererzgebirges (Drittes Heft) - Ein Beitrag zur speciellern Kenntniß desselben, seines Volkslebens, der Gewerbsarten, Sitten und Gebräuche&quot;,&quot;Topics&quot;:[&quot;Erzgebirge (Czech Republic and Germany) -- Description and travel&quot;],&quot;Primary&quot;:&quot;49148.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lindner, Johann Traugott, 1777-1856&quot;],&quot;LoCC&quot;:[&quot;DB&quot;,&quot;DD&quot;],&quot;PG_ID&quot;:&quot;49148&quot;});" class='title'>Wanderungen durch die interessantesten Gegenden des Sächsischen Obererzgebirges (Drittes Heft) -<br><span class='subtitle'>Ein Beitrag zur speciellern Kenntniß desselben, seines Volkslebens, der Gewerbsarten, Sitten und Gebräuche</span></a>
+<div class='author'>Lindner, Johann Traugott, 1777-1856</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49501, {&quot;Title&quot;:&quot;Anzeiger für Kunde der deutschen Vorzeit (Jg. 26, 1879) - Neue Folge&quot;,&quot;Topics&quot;:[&quot;Germany -- History -- Periodicals&quot;,&quot;Germany -- Antiquities -- Periodicals&quot;],&quot;Primary&quot;:&quot;49501.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;49501&quot;});" class='title'>Anzeiger für Kunde der deutschen Vorzeit (Jg. 26, 1879) -<br><span class='subtitle'>Neue Folge</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50248, {&quot;Title&quot;:&quot;Das Geschlechtsleben in der Deutschen Vergangenheit&quot;,&quot;Topics&quot;:[&quot;Germany -- Social life and customs&quot;],&quot;Primary&quot;:&quot;50248.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bauer, Max, 1861-1932&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;50248&quot;});" class='title'>Das Geschlechtsleben in der Deutschen Vergangenheit</a>
+<div class='author'>Bauer, Max, 1861-1932</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50299, {&quot;Title&quot;:&quot;Anzeiger für Kunde der deutschen Vorzeit (1866) - Neue Folge. Dreizehnter Band.&quot;,&quot;Topics&quot;:[&quot;Germany -- History -- Periodicals&quot;,&quot;Germany -- Antiquities -- Periodicals&quot;],&quot;Primary&quot;:&quot;50299.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;50299&quot;});" class='title'>Anzeiger für Kunde der deutschen Vorzeit (1866) -<br><span class='subtitle'>Neue Folge. Dreizehnter Band.</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50529, {&quot;Title&quot;:&quot;Der sächsische Prinzenraub nach älteren und neueren Quellen - nebst einer Beschreibung des zu dessen Erinnerung errichteten Denkmals und des zu seinem Schutz erbauten Köhlerhauses am Fürstenberge bei Grünhain&quot;,&quot;Topics&quot;:[&quot;Princes, Robbery of the, Germany, 1455&quot;],&quot;Primary&quot;:&quot;50529.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;50529&quot;});" class='title'>Der sächsische Prinzenraub nach älteren und neueren Quellen -<br><span class='subtitle'>nebst einer Beschreibung des zu dessen Erinnerung errichteten Denkmals und des zu seinem Schutz erbauten Köhlerhauses am Fürstenberge bei Grünhain</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50554, {&quot;Title&quot;:&quot;The Campaign of Königgrätz - A Study of the Austro-Prussian Conflict in the Light of the American Civil War&quot;,&quot;Topics&quot;:[&quot;Königgrätz, Battle of, Sadová, Czech Republic, 1866&quot;],&quot;Primary&quot;:&quot;50554.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wagner, Arthur L. (Arthur Lockwood), 1853-1905&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;50554&quot;});" class='title'>The Campaign of Königgrätz -<br><span class='subtitle'>A Study of the Austro-Prussian Conflict in the Light of the American Civil War</span></a>
+<div class='author'>Wagner, Arthur L. (Arthur Lockwood), 1853-1905</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50870, {&quot;Title&quot;:&quot;Briefe aus Frankfurt und Paris 1848-1849 (1/2)&quot;,&quot;Topics&quot;:[&quot;France -- Politics and government -- 1848-1852&quot;,&quot;Germany -- Politics and government -- 1848-1849&quot;,&quot;Germany -- Foreign relations -- France&quot;,&quot;France -- Foreign relations -- Germany&quot;],&quot;Primary&quot;:&quot;50870.htm&quot;,&quot;CreatorNames&quot;:[&quot;Raumer, Friedrich von, 1781-1873&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;50870&quot;});" class='title'>Briefe aus Frankfurt und Paris 1848-1849 (1/2)</a>
+<div class='author'>Raumer, Friedrich von, 1781-1873</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50917, {&quot;Title&quot;:&quot;Mitteilungen aus dem germanischen Nationalmuseum. Jahrgang 1896&quot;,&quot;Topics&quot;:[&quot;Germany -- Antiquities&quot;],&quot;Primary&quot;:&quot;50917.htm&quot;,&quot;CreatorNames&quot;:[&quot;Germanisches Nationalmuseum Nürnberg&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;50917&quot;});" class='title'>Mitteilungen aus dem germanischen Nationalmuseum. Jahrgang 1896</a>
+<div class='author'>Germanisches Nationalmuseum Nürnberg</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51119, {&quot;Title&quot;:&quot;Die weltgeschichtliche Bedeutung des deutschen Geistes&quot;,&quot;Topics&quot;:[&quot;Germany -- Civilization&quot;],&quot;Primary&quot;:&quot;51119.htm&quot;,&quot;CreatorNames&quot;:[&quot;Eucken, Rudolf, 1846-1926&quot;,&quot;Jäckh, Ernst, 1875-1959 [Editor]&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;51119&quot;});" class='title'>Die weltgeschichtliche Bedeutung des deutschen Geistes</a>
+<div class='author'>Eucken, Rudolf, 1846-1926, Jäckh, Ernst, 1875-1959 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51260, {&quot;Title&quot;:&quot;Anzeiger des Germanischen Nationalmuseums, Jahrgang 1901&quot;,&quot;Topics&quot;:[&quot;Germany -- History&quot;],&quot;Primary&quot;:&quot;51260.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;51260&quot;});" class='title'>Anzeiger des Germanischen Nationalmuseums, Jahrgang 1901</a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51276, {&quot;Title&quot;:&quot;Erzgebirgs-Kammwegführer - Tetschen (Schneeberg) - Erzgebirge - Asch (Hainberg). Mit einer Karte des Kammweges&quot;,&quot;Topics&quot;:[&quot;Erzgebirge (Czech Republic and Germany) -- Guidebooks&quot;],&quot;Primary&quot;:&quot;51276.htm&quot;,&quot;CreatorNames&quot;:[&quot;Brechensbauer, Josef, 1867-1945&quot;,&quot;Prasse, E. A.&quot;],&quot;LoCC&quot;:[&quot;DB&quot;,&quot;DD&quot;],&quot;PG_ID&quot;:&quot;51276&quot;});" class='title'>Erzgebirgs-Kammwegführer -<br><span class='subtitle'>Tetschen (Schneeberg) - Erzgebirge - Asch (Hainberg). Mit einer Karte des Kammweges</span></a>
+<div class='author'>Brechensbauer, Josef, 1867-1945, Prasse, E. A.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51290, {&quot;Title&quot;:&quot;Memories of the Kaiser&#39;s Court&quot;,&quot;Topics&quot;:[&quot;William II, German Emperor, 1859-1941&quot;,&quot;Germany -- Court and courtiers&quot;],&quot;Primary&quot;:&quot;51290.htm&quot;,&quot;CreatorNames&quot;:[&quot;Topham, Anne, 1864-1927&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;51290&quot;});" class='title'>Memories of the Kaiser's Court</a>
+<div class='author'>Topham, Anne, 1864-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51377, {&quot;Title&quot;:&quot;Gampe&#39;s Erzgebirge mit Einschluss der böhmischen Bäder Teplitz, Karlsbad, Franzensbad und Marienbad, des Voigtlandes und des Granulitgebietes an den unteren Mulden. Ein Reisehandbuch&quot;,&quot;Topics&quot;:[&quot;Erzgebirge (Czech Republic and Germany) -- Guidebooks&quot;],&quot;Primary&quot;:&quot;51377.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gampe, Theodor, 1845-1897&quot;],&quot;LoCC&quot;:[&quot;DB&quot;,&quot;DD&quot;],&quot;PG_ID&quot;:&quot;51377&quot;});" class='title'>Gampe's Erzgebirge mit Einschluss der böhmischen Bäder Teplitz, Karlsbad, Franzensbad und Marienbad, des Voigtlandes und des Granulitgebietes an den unteren Mulden. Ein Reisehandbuch</a>
+<div class='author'>Gampe, Theodor, 1845-1897</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51496, {&quot;Title&quot;:&quot;Maximilian I, Holy Roman Emperor - (Stanhope Historical Essay 1901)&quot;,&quot;Topics&quot;:[&quot;Maximilian I, Holy Roman Emperor, 1459-1519&quot;],&quot;Primary&quot;:&quot;51496.htm&quot;,&quot;CreatorNames&quot;:[&quot;Seton-Watson, R. W. (Robert William), 1879-1951&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;51496&quot;});" class='title'>Maximilian I, Holy Roman Emperor -<br><span class='subtitle'>(Stanhope Historical Essay 1901)</span></a>
+<div class='author'>Seton-Watson, R. W. (Robert William), 1879-1951</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52483, {&quot;Title&quot;:&quot;Sagen und Bilder aus Muskau und dem Park&quot;,&quot;Topics&quot;:[&quot;Muskau (Germany)&quot;,&quot;Parks -- Germany -- Muskau&quot;],&quot;Primary&quot;:&quot;52483.htm&quot;,&quot;CreatorNames&quot;:[&quot;Liebusch, Georg&quot;,&quot;Petzold, E. [Editor]&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;52483&quot;});" class='title'>Sagen und Bilder aus Muskau und dem Park</a>
+<div class='author'>Liebusch, Georg, Petzold, E. [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52856, {&quot;Title&quot;:&quot;Anzeiger für Kunde der deutschen Vorzeit (1868) - Neue Folge. Fünfzehnter Band.&quot;,&quot;Topics&quot;:[&quot;Germany -- History -- Periodicals&quot;,&quot;Germany -- Antiquities -- Periodicals&quot;],&quot;Primary&quot;:&quot;52856.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;52856&quot;});" class='title'>Anzeiger für Kunde der deutschen Vorzeit (1868) -<br><span class='subtitle'>Neue Folge. Fünfzehnter Band.</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52916, {&quot;Title&quot;:&quot;Geyer und das Obererzgebirge in Sage und Geschichte&quot;,&quot;Topics&quot;:[&quot;Geyer (Germany)&quot;,&quot;Erzgebirge (Czech Republic and Germany)&quot;],&quot;Primary&quot;:&quot;52916.htm&quot;,&quot;CreatorNames&quot;:[&quot;Grohmann, Max, 1861-1925&quot;,&quot;Lungwitz, Hermann, 1845-1927&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;52916&quot;});" class='title'>Geyer und das Obererzgebirge in Sage und Geschichte</a>
+<div class='author'>Grohmann, Max, 1861-1925, Lungwitz, Hermann, 1845-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53689, {&quot;Title&quot;:&quot;Anzeiger für Kunde der deutschen Vorzeit, 27. Band, 1880 - Organ des Germanischen Museums&quot;,&quot;Topics&quot;:[&quot;Germany -- History -- Periodicals&quot;,&quot;Germany -- Antiquities -- Periodicals&quot;],&quot;Primary&quot;:&quot;53689.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;53689&quot;});" class='title'>Anzeiger für Kunde der deutschen Vorzeit, 27. Band, 1880 -<br><span class='subtitle'>Organ des Germanischen Museums</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53856, {&quot;Title&quot;:&quot;Die dreizehn Bücher der deutschen Seele&quot;,&quot;Topics&quot;:[&quot;Folklore -- Germany&quot;,&quot;Germany -- History&quot;,&quot;Germans&quot;],&quot;Primary&quot;:&quot;53856.htm&quot;,&quot;CreatorNames&quot;:[&quot;Schäfer, Wilhelm, 1868-1952&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;53856&quot;});" class='title'>Die dreizehn Bücher der deutschen Seele</a>
+<div class='author'>Schäfer, Wilhelm, 1868-1952</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54427, {&quot;Title&quot;:&quot;Interessante Wanderungen durch das Sächsische Ober-Erzgebirge&quot;,&quot;Topics&quot;:[&quot;Erzgebirge (Czech Republic and Germany) -- Description and travel&quot;],&quot;Primary&quot;:&quot;54427.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wild, Christian Gottlob, 1785-1839&quot;],&quot;LoCC&quot;:[&quot;DB&quot;,&quot;DD&quot;],&quot;PG_ID&quot;:&quot;54427&quot;});" class='title'>Interessante Wanderungen durch das Sächsische Ober-Erzgebirge</a>
+<div class='author'>Wild, Christian Gottlob, 1785-1839</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54758, {&quot;Title&quot;:&quot;Briefe aus Frankfurt und Paris 1848-1849 (2/2)&quot;,&quot;Topics&quot;:[&quot;France -- Politics and government -- 1848-1852&quot;,&quot;Germany -- Politics and government -- 1848-1849&quot;,&quot;Germany -- Foreign relations -- France&quot;,&quot;France -- Foreign relations -- Germany&quot;],&quot;Primary&quot;:&quot;54758.htm&quot;,&quot;CreatorNames&quot;:[&quot;Raumer, Friedrich von, 1781-1873&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;54758&quot;});" class='title'>Briefe aus Frankfurt und Paris 1848-1849 (2/2)</a>
+<div class='author'>Raumer, Friedrich von, 1781-1873</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54949, {&quot;Title&quot;:&quot;Deutschlands Geschichtsquellen im Mittelalter bis zur Mitte des dreizehnten Jahrhunderts, Erster Band (von 2)&quot;,&quot;Topics&quot;:[&quot;Literary forgeries and mystifications&quot;,&quot;Middle Ages -- Bibliography&quot;,&quot;Obituaries&quot;,&quot;Germany -- History -- Bibliography&quot;,&quot;Germany -- History -- 843-1273 -- Sources&quot;],&quot;Primary&quot;:&quot;54949.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wattenbach, Wilhelm, 1819-1897&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;54949&quot;});" class='title'>Deutschlands Geschichtsquellen im Mittelalter bis zur Mitte des dreizehnten Jahrhunderts, Erster Band (von 2)</a>
+<div class='author'>Wattenbach, Wilhelm, 1819-1897</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54989, {&quot;Title&quot;:&quot;The Young Emperor, William II of Germany - A Study in Character Development on a Throne&quot;,&quot;Topics&quot;:[&quot;William II, German Emperor, 1859-1941&quot;],&quot;Primary&quot;:&quot;54989.htm&quot;,&quot;CreatorNames&quot;:[&quot;Frederic, Harold, 1856-1898&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;54989&quot;});" class='title'>The Young Emperor, William II of Germany -<br><span class='subtitle'>A Study in Character Development on a Throne</span></a>
+<div class='author'>Frederic, Harold, 1856-1898</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55027, {&quot;Title&quot;:&quot;Führer durch das böhmische Erzgebirge, das Mittelgebirge und die angrenzenden Gebiete&quot;,&quot;Topics&quot;:[&quot;Erzgebirge (Czech Republic and Germany) -- Guidebooks&quot;,&quot;Ceské Stredohorí (Czech Republic) -- Guidebooks&quot;],&quot;Primary&quot;:&quot;55027.htm&quot;,&quot;CreatorNames&quot;:[&quot;Weymann, August&quot;],&quot;LoCC&quot;:[&quot;DB&quot;,&quot;DD&quot;],&quot;PG_ID&quot;:&quot;55027&quot;});" class='title'>Führer durch das böhmische Erzgebirge, das Mittelgebirge und die angrenzenden Gebiete</a>
+<div class='author'>Weymann, August</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55193, {&quot;Title&quot;:&quot;Wilhelms I. Briefe an seinen Vater König Friedrich Wilhelm III. (1827-1839)&quot;,&quot;Topics&quot;:[&quot;William I, German Emperor, 1797-1888 -- Correspondence&quot;,&quot;Frederick William III, King of Prussia, 1770-1840 -- Correspondence&quot;],&quot;Primary&quot;:&quot;55193.htm&quot;,&quot;CreatorNames&quot;:[&quot;William I, German Emperor, 1797-1888&quot;,&quot;Merbach, Paul Alfred, 1880- [Editor]&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;55193&quot;});" class='title'>Wilhelms I. Briefe an seinen Vater König Friedrich Wilhelm III. (1827-1839)</a>
+<div class='author'>William I, German Emperor, 1797-1888, Merbach, Paul Alfred, 1880- [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55345, {&quot;Title&quot;:&quot;Aristipp in Hamburg und Altona: Ein Sitten-Gemälde neuester Zeit&quot;,&quot;Topics&quot;:[&quot;Hamburg (Germany)&quot;,&quot;Altona (Germany)&quot;],&quot;Primary&quot;:&quot;55345.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hammerstein, Eugen von, 1804-1851&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;55345&quot;});" class='title'>Aristipp in Hamburg und Altona:<br><span class='subtitle'>Ein Sitten-Gemälde neuester Zeit</span></a>
+<div class='author'>Hammerstein, Eugen von, 1804-1851</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55352, {&quot;Title&quot;:&quot;Schneeberger Schützenmittwoch vor fünfizig Jahren&quot;,&quot;Topics&quot;:[&quot;Schneeberg (Saxony, Germany)&quot;],&quot;Primary&quot;:&quot;55352.htm&quot;,&quot;CreatorNames&quot;:[&quot;Meyer, Guido&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;55352&quot;});" class='title'>Schneeberger Schützenmittwoch vor fünfizig Jahren</a>
+<div class='author'>Meyer, Guido</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55895, {&quot;Title&quot;:&quot;Erinnerungen eines Achtundvierzigers&quot;,&quot;Topics&quot;:[&quot;Germany -- History -- Revolution, 1848-1849&quot;,&quot;Socialism -- Germany&quot;],&quot;Primary&quot;:&quot;55895.htm&quot;,&quot;CreatorNames&quot;:[&quot;Born, Stephan, 1824-1898&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;55895&quot;});" class='title'>Erinnerungen eines Achtundvierzigers</a>
+<div class='author'>Born, Stephan, 1824-1898</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56265, {&quot;Title&quot;:&quot;La mythologie du Rhin&quot;,&quot;Topics&quot;:[&quot;Mythology, Germanic&quot;,&quot;Folklore -- Germany -- Rhine Valley&quot;],&quot;Primary&quot;:&quot;56265.htm&quot;,&quot;CreatorNames&quot;:[&quot;Saintine, X.-B. (Xavier-Boniface), 1798-1865&quot;,&quot;Doré, Gustave, 1832-1883 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;56265&quot;});" class='title'>La mythologie du Rhin</a>
+<div class='author'>Saintine, X.-B. (Xavier-Boniface), 1798-1865, Doré, Gustave, 1832-1883 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56387, {&quot;Title&quot;:&quot;Frederick the Great and the Rise of Prussia&quot;,&quot;Topics&quot;:[&quot;Frederick II, King of Prussia, 1712-1786&quot;,&quot;Prussia (Germany) -- History -- Frederick II, 1740-1786&quot;],&quot;Primary&quot;:&quot;56387.htm&quot;,&quot;CreatorNames&quot;:[&quot;Reddaway, William Fiddian, 1872-1949&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;56387&quot;});" class='title'>Frederick the Great and the Rise of Prussia</a>
+<div class='author'>Reddaway, William Fiddian, 1872-1949</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56928, {&quot;Title&quot;:&quot;History of Frederick the Second, Called Frederick the Great.&quot;,&quot;Topics&quot;:[&quot;Frederick II, King of Prussia, 1712-1786&quot;,&quot;Prussia (Germany) -- History -- Frederick II, 1740-1786&quot;],&quot;Primary&quot;:&quot;56928.htm&quot;,&quot;CreatorNames&quot;:[&quot;Abbott, John S. C. (John Stevens Cabot), 1805-1877&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;56928&quot;});" class='title'>History of Frederick the Second, Called Frederick the Great.</a>
+<div class='author'>Abbott, John S. C. (John Stevens Cabot), 1805-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56981, {&quot;Title&quot;:&quot;Erzgebirgisches Wanderbuch - 148 Ausflüge und Wanderungen in die Umgebung von Chemnitz und das Erzgebirge&quot;,&quot;Topics&quot;:[&quot;Erzgebirge (Czech Republic and Germany) -- Guidebooks&quot;],&quot;Primary&quot;:&quot;56981.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wenzel, Max, 1879-1946&quot;],&quot;LoCC&quot;:[&quot;DB&quot;,&quot;DD&quot;],&quot;PG_ID&quot;:&quot;56981&quot;});" class='title'>Erzgebirgisches Wanderbuch -<br><span class='subtitle'>148 Ausflüge und Wanderungen in die Umgebung von Chemnitz und das Erzgebirge</span></a>
+<div class='author'>Wenzel, Max, 1879-1946</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58139, {&quot;Title&quot;:&quot;Vagabonding Through Changing Germany&quot;,&quot;Topics&quot;:[&quot;Germany -- Description and travel&quot;,&quot;Germany -- Social life and customs&quot;],&quot;Primary&quot;:&quot;58139.htm&quot;,&quot;CreatorNames&quot;:[&quot;Franck, Harry Alverson, 1881-1962&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;58139&quot;});" class='title'>Vagabonding Through Changing Germany</a>
+<div class='author'>Franck, Harry Alverson, 1881-1962</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58142, {&quot;Title&quot;:&quot;Saksanmaa&quot;,&quot;Topics&quot;:[&quot;Germany&quot;],&quot;Primary&quot;:&quot;58142.txt&quot;,&quot;CreatorNames&quot;:[&quot;Inha, Into Konrad, 1865-1930&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;58142&quot;});" class='title'>Saksanmaa</a>
+<div class='author'>Inha, Into Konrad, 1865-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58776, {&quot;Title&quot;:&quot;The Life of Bismarck, Private and Political - With Descriptive Notices of His Ancestry&quot;,&quot;Topics&quot;:[&quot;Bismarck, Otto, Fürst von, 1815-1898&quot;,&quot;Statesmen -- Germany -- Biography&quot;,&quot;Germany -- Politics and government -- 1871-&quot;,&quot;Prussia (Germany) -- Politics and government -- 1815-1870&quot;],&quot;Primary&quot;:&quot;58776.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hesekiel, George, 1819-1874&quot;,&quot;Mackenzie, Kenneth R. H. (Kenneth Robert Henderson), 1833-1886 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;58776&quot;});" class='title'>The Life of Bismarck, Private and Political -<br><span class='subtitle'>With Descriptive Notices of His Ancestry</span></a>
+<div class='author'>Hesekiel, George, 1819-1874, Mackenzie, Kenneth R. H. (Kenneth Robert Henderson), 1833-1886 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59081, {&quot;Title&quot;:&quot;Geschichte der Belagerung, Eroberung und Zerstörung Magdeburg&#39;s&quot;,&quot;Topics&quot;:[&quot;Magdeburg (Germany) -- History -- Siege, 1631&quot;],&quot;Primary&quot;:&quot;59081.htm&quot;,&quot;CreatorNames&quot;:[&quot;Guericke, Otto von, 1602-1686&quot;,&quot;Hoffmann, Friedrich Wilhelm, 1785?-1869 [Editor]&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;59081&quot;});" class='title'>Geschichte der Belagerung, Eroberung und Zerstörung Magdeburg's</a>
+<div class='author'>Guericke, Otto von, 1602-1686, Hoffmann, Friedrich Wilhelm, 1785?-1869 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59596, {&quot;Title&quot;:&quot;Dresden und die Sächsische Schweiz&quot;,&quot;Topics&quot;:[&quot;Dresden (Germany) -- Description and travel&quot;,&quot;Meissen (Saxony, Germany) -- Description and travel&quot;,&quot;Saxon Switzerland (Germany) -- Description and travel&quot;],&quot;Primary&quot;:&quot;59596.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ruge, Sophus, 1831-1903&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;59596&quot;});" class='title'>Dresden und die Sächsische Schweiz</a>
+<div class='author'>Ruge, Sophus, 1831-1903</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59597, {&quot;Title&quot;:&quot;Vergißmeinnicht - Ein Taschenbuch für den Besuch der sächsischen Schweiz und der angränzenden Theile Böhmens&quot;,&quot;Topics&quot;:[&quot;Saxon Switzerland (Germany) -- Description and travel&quot;],&quot;Primary&quot;:&quot;59597.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lindau, Wilhelm Adolf, 1774-1849&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;59597&quot;});" class='title'>Vergißmeinnicht -<br><span class='subtitle'>Ein Taschenbuch für den Besuch der sächsischen Schweiz und der angränzenden Theile Böhmens</span></a>
+<div class='author'>Lindau, Wilhelm Adolf, 1774-1849</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59929, {&quot;Title&quot;:&quot;The Youth of the Great Elector&quot;,&quot;Topics&quot;:[&quot;Friedrich Wilhelm, Elector of Brandenburg, 1620-1688 -- Juvenile literature&quot;,&quot;Brandenburg (Germany) -- History -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;59929.htm&quot;,&quot;CreatorNames&quot;:[&quot;Schmidt, Ferdinand, 1816-1890&quot;,&quot;Upton, George P. (George Putnam), 1834-1919 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;59929&quot;});" class='title'>The Youth of the Great Elector</a>
+<div class='author'>Schmidt, Ferdinand, 1816-1890, Upton, George P. (George Putnam), 1834-1919 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60880, {&quot;Title&quot;:&quot;Alice, grand duchess of Hesse, princess of Great Britain and Ireland - Biographical sketch and letters. With portrait.&quot;,&quot;Topics&quot;:[&quot;Princesses -- Great Britain -- Biography&quot;,&quot;Alice, Grand Duchess, consort of Ludwig IV, Grand Duke of Hesse-Darmstadt, 1843-1878&quot;],&quot;Primary&quot;:&quot;60880.htm&quot;,&quot;CreatorNames&quot;:[&quot;Alice, Grand Duchess, consort of Ludwig IV, Grand Duke of Hesse-Darmstadt, 1843-1878&quot;,&quot;Helena Augusta Victoria, Princess Christian of Schleswig-Holstein, 1846-1923 [Contributor]&quot;,&quot;Sell, Karl, 1845-1914 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;DA&quot;,&quot;DD&quot;],&quot;PG_ID&quot;:&quot;60880&quot;});" class='title'>Alice, grand duchess of Hesse, princess of Great Britain and Ireland -<br><span class='subtitle'>Biographical sketch and letters. With portrait.</span></a>
+<div class='author'>Alice, Grand Duchess, consort of Ludwig IV, Grand Duke of Hesse-Darmstadt, 1843-1878, Helena Augusta Victoria, Princess Christian of Schleswig-Holstein, 1846-1923 [Contributor], Sell, Karl, 1845-1914 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60942, {&quot;Title&quot;:&quot;Sagen van den Rijn&quot;,&quot;Topics&quot;:[&quot;Legends -- Rhine River&quot;,&quot;Legends -- Rhine River Valley&quot;],&quot;Primary&quot;:&quot;60942.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ruland, Wilhelm, 1869-1927&quot;,&quot;Meyen-Barends, W. B. [Translator]&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;60942&quot;});" class='title'>Sagen van den Rijn</a>
+<div class='author'>Ruland, Wilhelm, 1869-1927, Meyen-Barends, W. B. [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61666, {&quot;Title&quot;:&quot;Le chemin des écoliers - Promenade de Paris à Marly-le-Roy, en suivant les bords du Rhin&quot;,&quot;Topics&quot;:[&quot;Rhine River Valley -- Description and travel&quot;],&quot;Primary&quot;:&quot;61666.htm&quot;,&quot;CreatorNames&quot;:[&quot;Saintine, X.-B. (Xavier-Boniface), 1798-1865&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;61666&quot;});" class='title'>Le chemin des écoliers -<br><span class='subtitle'>Promenade de Paris à Marly-le-Roy, en suivant les bords du Rhin</span></a>
+<div class='author'>Saintine, X.-B. (Xavier-Boniface), 1798-1865</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61833, {&quot;Title&quot;:&quot;Der Harz&quot;,&quot;Topics&quot;:[&quot;Harz Mountains (Germany) -- Description and travel&quot;],&quot;Primary&quot;:&quot;61833.htm&quot;,&quot;CreatorNames&quot;:[&quot;Günther, Friedrich, 1843-1912&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;61833&quot;});" class='title'>Der Harz</a>
+<div class='author'>Günther, Friedrich, 1843-1912</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61891, {&quot;Title&quot;:&quot;Der Schwarzwald&quot;,&quot;Topics&quot;:[&quot;Black Forest (Germany) -- Description and travel&quot;],&quot;Primary&quot;:&quot;61891.htm&quot;,&quot;CreatorNames&quot;:[&quot;Neumann, Ludwig, 1854-1925&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;61891&quot;});" class='title'>Der Schwarzwald</a>
+<div class='author'>Neumann, Ludwig, 1854-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62451, {&quot;Title&quot;:&quot;Emperor William First, the Great War and Peace Hero&quot;,&quot;Topics&quot;:[&quot;William I, German Emperor, 1797-1888&quot;],&quot;Primary&quot;:&quot;62451.htm&quot;,&quot;CreatorNames&quot;:[&quot;Walter, A.&quot;,&quot;Upton, George P. (George Putnam), 1834-1919 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;62451&quot;});" class='title'>Emperor William First, the Great War and Peace Hero</a>
+<div class='author'>Walter, A., Upton, George P. (George Putnam), 1834-1919 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64462, {&quot;Title&quot;:&quot;The Defeat of Varus and the German Frontier Policy of Augustus&quot;,&quot;Topics&quot;:[&quot;Varus, Publius Quintilius&quot;,&quot;Teutoburger Wald, Battle of, Germany, 9 A.D.&quot;,&quot;Rome -- History -- Augustus, 30 B.C.-14 A.D.&quot;,&quot;Germany -- History -- To 843&quot;],&quot;Primary&quot;:&quot;64462.htm&quot;,&quot;CreatorNames&quot;:[&quot;Canter, H. V. (Howard Vernon), 1873-1942&quot;,&quot;Oldfather, W. A. (William Abbott), 1880-1945&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;64462&quot;});" class='title'>The Defeat of Varus and the German Frontier Policy of Augustus</a>
+<div class='author'>Canter, H. V. (Howard Vernon), 1873-1942, Oldfather, W. A. (William Abbott), 1880-1945</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64714, {&quot;Title&quot;:&quot;Thüringen&quot;,&quot;Topics&quot;:[&quot;Thuringia (Germany) -- Description and travel&quot;],&quot;Primary&quot;:&quot;64714.htm&quot;,&quot;CreatorNames&quot;:[&quot;Scobel, Albert, 1851-1912&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;64714&quot;});" class='title'>Thüringen</a>
+<div class='author'>Scobel, Albert, 1851-1912</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64937, {&quot;Title&quot;:&quot;Landesverein Sächsischer Heimatschutz, Mitteilungen Band X, Heft 10-12 - Monatsschrift für Heimatschutz und Denkmalpflege&quot;,&quot;Topics&quot;:[&quot;Nature conservation -- Germany -- Saxony -- Periodicals&quot;,&quot;Saxony (Germany) -- Periodicals&quot;],&quot;Primary&quot;:&quot;64937.htm&quot;,&quot;CreatorNames&quot;:[&quot;Landesverein Sächsischer Heimatschutz&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;64937&quot;});" class='title'>Landesverein Sächsischer Heimatschutz, Mitteilungen Band X, Heft 10-12 -<br><span class='subtitle'>Monatsschrift für Heimatschutz und Denkmalpflege</span></a>
+<div class='author'>Landesverein Sächsischer Heimatschutz</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65142, {&quot;Title&quot;:&quot;Barbarossa&quot;,&quot;Topics&quot;:[&quot;Frederick I, Holy Roman Emperor, approximately 1123-1190&quot;,&quot;Germany -- History -- Frederick I, 1152-1190&quot;],&quot;Primary&quot;:&quot;65142.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kühn, Franz&quot;,&quot;Upton, George P. (George Putnam), 1834-1919 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;65142&quot;});" class='title'>Barbarossa</a>
+<div class='author'>Kühn, Franz, Upton, George P. (George Putnam), 1834-1919 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65549, {&quot;Title&quot;:&quot;Louise, Queen of Prussia&quot;,&quot;Topics&quot;:[&quot;Luise, Queen, consort of Frederick William III, King of Prussia, 1776-1810&quot;,&quot;Queens -- Germany -- Prussia -- Biography&quot;],&quot;Primary&quot;:&quot;65549.htm&quot;,&quot;CreatorNames&quot;:[&quot;Merz, Heinrich, 1816-1893&quot;,&quot;Upton, George P. (George Putnam), 1834-1919 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;65549&quot;});" class='title'>Louise, Queen of Prussia</a>
+<div class='author'>Merz, Heinrich, 1816-1893, Upton, George P. (George Putnam), 1834-1919 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65827, {&quot;Title&quot;:&quot;Frederick the Great and the Seven Years&#39; War&quot;,&quot;Topics&quot;:[&quot;Frederick II, King of Prussia, 1712-1786&quot;,&quot;Seven Years&#39; War, 1756-1763&quot;],&quot;Primary&quot;:&quot;65827.htm&quot;,&quot;CreatorNames&quot;:[&quot;Schrader, Ferdinand&quot;,&quot;Upton, George P. (George Putnam), 1834-1919 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;65827&quot;});" class='title'>Frederick the Great and the Seven Years' War</a>
+<div class='author'>Schrader, Ferdinand, Upton, George P. (George Putnam), 1834-1919 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65973, {&quot;Title&quot;:&quot;Das Weserbergland und der Teutoburger Wald&quot;,&quot;Topics&quot;:[&quot;Wesergebirge (Germany) -- Description and travel&quot;,&quot;Teutoburg Forest (Germany) -- Description and travel&quot;],&quot;Primary&quot;:&quot;65973.htm&quot;,&quot;CreatorNames&quot;:[&quot;Reissert, Oswald, 1861-1931&quot;,&quot;Stille, Hans, 1876-1966 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;65973&quot;});" class='title'>Das Weserbergland und der Teutoburger Wald</a>
+<div class='author'>Reissert, Oswald, 1861-1931, Stille, Hans, 1876-1966 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66504, {&quot;Title&quot;:&quot;Landesverein Sächsischer Heimatschutz, Mitteilungen Band X, Heft 1-3 - Monatsschrift für Heimatschutz und Denkmalpflege&quot;,&quot;Topics&quot;:[&quot;Nature conservation -- Germany -- Saxony -- Periodicals&quot;,&quot;Saxony (Germany) -- Periodicals&quot;],&quot;Primary&quot;:&quot;66504.htm&quot;,&quot;CreatorNames&quot;:[&quot;Landesverein Sächsischer Heimatschutz [Editor]&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;66504&quot;});" class='title'>Landesverein Sächsischer Heimatschutz, Mitteilungen Band X, Heft 1-3 -<br><span class='subtitle'>Monatsschrift für Heimatschutz und Denkmalpflege</span></a>
+<div class='author'>Landesverein Sächsischer Heimatschutz [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66769, {&quot;Title&quot;:&quot;Landesverein Sächsischer Heimatschutz — Mitteilungen Band X, Heft 4-6 - Monatsschrift für Heimatschutz und Denkmalpflege&quot;,&quot;Topics&quot;:[&quot;Nature conservation -- Germany -- Saxony -- Periodicals&quot;,&quot;Saxony (Germany) -- Periodicals&quot;],&quot;Primary&quot;:&quot;66769.htm&quot;,&quot;CreatorNames&quot;:[&quot;Landesverein Sächsischer Heimatschutz&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;66769&quot;});" class='title'>Landesverein Sächsischer Heimatschutz — Mitteilungen Band X, Heft 4-6 -<br><span class='subtitle'>Monatsschrift für Heimatschutz und Denkmalpflege</span></a>
+<div class='author'>Landesverein Sächsischer Heimatschutz</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66770, {&quot;Title&quot;:&quot;Aus grauen Mauern und grünen Weiten - Schauen und Sinnen auf Heimatwegen&quot;,&quot;Topics&quot;:[&quot;Saxony (Germany) -- Description and travel&quot;,&quot;Folklore -- Germany -- Saxony&quot;],&quot;Primary&quot;:&quot;66770.htm&quot;,&quot;CreatorNames&quot;:[&quot;Riess, Gustav, 1871-1932&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;66770&quot;});" class='title'>Aus grauen Mauern und grünen Weiten -<br><span class='subtitle'>Schauen und Sinnen auf Heimatwegen</span></a>
+<div class='author'>Riess, Gustav, 1871-1932</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66924, {&quot;Title&quot;:&quot;De l&#39;Allemagne; t.1&quot;,&quot;Topics&quot;:[&quot;Germany&quot;],&quot;Primary&quot;:&quot;66924.htm&quot;,&quot;CreatorNames&quot;:[&quot;Staël, Madame de (Anne-Louise-Germaine), 1766-1817&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;66924&quot;});" class='title'>De l'Allemagne;<br><span class='subtitle'>t.1</span></a>
+<div class='author'>Staël, Madame de (Anne-Louise-Germaine), 1766-1817</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67178, {&quot;Title&quot;:&quot;Landesverein Sächsischer Heimatschutz — Mitteilungen Band X, Heft 7-9 - Monatsschrift für Heimatschutz und Denkmalpflege&quot;,&quot;Topics&quot;:[&quot;Nature conservation -- Germany -- Saxony -- Periodicals&quot;,&quot;Saxony (Germany) -- Periodicals&quot;],&quot;Primary&quot;:&quot;67178.htm&quot;,&quot;CreatorNames&quot;:[&quot;Landesverein Sächsischer Heimatschutz&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;67178&quot;});" class='title'>Landesverein Sächsischer Heimatschutz — Mitteilungen Band X, Heft 7-9 -<br><span class='subtitle'>Monatsschrift für Heimatschutz und Denkmalpflege</span></a>
+<div class='author'>Landesverein Sächsischer Heimatschutz</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67532, {&quot;Title&quot;:&quot;The Confessions of the Celebrated Countess of Lichtenau, Late Mrs. Rietz - Now Confined in the Fortress of Gloglau as a State-prisoner&quot;,&quot;Topics&quot;:[&quot;Lichtenau, Wilhelmine Enke, Gräfin Lichtenau, 1752-1820&quot;,&quot;Prussia (Germany) -- History -- Frederick William II, 1786-1797 -- Biography&quot;],&quot;Primary&quot;:&quot;67532.htm&quot;,&quot;CreatorNames&quot;:[&quot;Husen, Heinrich&quot;,&quot;Lichtenau, Wilhelmine Enke, Gräfin Lichtenau, 1752-1820 [Dubious author]&quot;,&quot;B--t--n, Richard [Translator]&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;67532&quot;});" class='title'>The Confessions of the Celebrated Countess of Lichtenau, Late Mrs. Rietz -<br><span class='subtitle'>Now Confined in the Fortress of Gloglau as a State-prisoner</span></a>
+<div class='author'>Husen, Heinrich, Lichtenau, Wilhelmine Enke, Gräfin Lichtenau, 1752-1820 [Dubious author], B--t--n, Richard [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67933, {&quot;Title&quot;:&quot;De l&#39;Allemagne; t. 2&quot;,&quot;Topics&quot;:[&quot;Germany&quot;],&quot;Primary&quot;:&quot;67933.htm&quot;,&quot;CreatorNames&quot;:[&quot;Staël, Madame de (Anne-Louise-Germaine), 1766-1817&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;67933&quot;});" class='title'>De l'Allemagne;<br><span class='subtitle'>t. 2</span></a>
+<div class='author'>Staël, Madame de (Anne-Louise-Germaine), 1766-1817</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67949, {&quot;Title&quot;:&quot;Landesverein Sächsischer Heimatschutz — Mitteilungen Band XI, Heft 1-3 - Monatsschrift für Heimatschutz und Denkmalpflege&quot;,&quot;Topics&quot;:[&quot;Nature conservation -- Germany -- Saxony -- Periodicals&quot;,&quot;Saxony (Germany) -- Periodicals&quot;],&quot;Primary&quot;:&quot;67949.htm&quot;,&quot;CreatorNames&quot;:[&quot;Landesverein Sächsischer Heimatschutz [Editor]&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;67949&quot;});" class='title'>Landesverein Sächsischer Heimatschutz — Mitteilungen Band XI, Heft 1-3 -<br><span class='subtitle'>Monatsschrift für Heimatschutz und Denkmalpflege</span></a>
+<div class='author'>Landesverein Sächsischer Heimatschutz [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68259, {&quot;Title&quot;:&quot;Das Speicherbuch&quot;,&quot;Topics&quot;:[&quot;Hamburg (Germany) -- History&quot;,&quot;Hamburg (Germany) -- Commerce -- History&quot;],&quot;Primary&quot;:&quot;68259.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rabe, Johs. E. (Johannes E.), 1838-1924&quot;,&quot;Förster, Christian, 1825-1902 [Illustrator]&quot;,&quot;Förster, Hans, 1885-1966 [Illustrator]&quot;,&quot;Lühring, W. [Illustrator]&quot;,&quot;Schildt, Carl, 1851-1920 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;68259&quot;});" class='title'>Das Speicherbuch</a>
+<div class='author'>Rabe, Johs. E. (Johannes E.), 1838-1924, Förster, Christian, 1825-1902 [Illustrator], Förster, Hans, 1885-1966 [Illustrator], Lühring, W. [Illustrator], Schildt, Carl, 1851-1920 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68651, {&quot;Title&quot;:&quot;Bismarck: some secret pages of his history (Vol. 1 of 3) - being a diary kept by Dr. Moritz Busch during twenty-five years&#39; official and private intercourse with the great Chancellor&quot;,&quot;Topics&quot;:[&quot;Bismarck, Otto, Fürst von, 1815-1898&quot;],&quot;Primary&quot;:&quot;68651.htm&quot;,&quot;CreatorNames&quot;:[&quot;Busch, Moritz, 1821-1899&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;68651&quot;});" class='title'>Bismarck:<br><span class='subtitle'>some secret pages of his history (Vol. 1 of 3) - being a diary kept by Dr. Moritz Busch during twenty-five years' official and private intercourse with the great Chancellor</span></a>
+<div class='author'>Busch, Moritz, 1821-1899</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69001, {&quot;Title&quot;:&quot;Landesverein Sächsischer Heimatschutz — Mitteilungen Band XI, Heft 4-6 - Monatsschrift für Heimatschutz und Denkmalpflege&quot;,&quot;Topics&quot;:[&quot;Nature conservation -- Germany -- Saxony -- Periodicals&quot;,&quot;Saxony (Germany) -- Periodicals&quot;],&quot;Primary&quot;:&quot;69001.htm&quot;,&quot;CreatorNames&quot;:[&quot;Landesverein Sächsischer Heimatschutz [Editor]&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;69001&quot;});" class='title'>Landesverein Sächsischer Heimatschutz — Mitteilungen Band XI, Heft 4-6 -<br><span class='subtitle'>Monatsschrift für Heimatschutz und Denkmalpflege</span></a>
+<div class='author'>Landesverein Sächsischer Heimatschutz [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69101, {&quot;Title&quot;:&quot;Landesverein Sächsischer Heimatschutz — Mitteilungen Band XI, Heft 7-9 - Monatsschrift für Heimatschutz und Denkmalpflege&quot;,&quot;Topics&quot;:[&quot;Nature conservation -- Germany -- Saxony -- Periodicals&quot;,&quot;Saxony (Germany) -- Periodicals&quot;],&quot;Primary&quot;:&quot;69101.htm&quot;,&quot;CreatorNames&quot;:[&quot;Landesverein Sächsischer Heimatschutz&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;69101&quot;});" class='title'>Landesverein Sächsischer Heimatschutz — Mitteilungen Band XI, Heft 7-9 -<br><span class='subtitle'>Monatsschrift für Heimatschutz und Denkmalpflege</span></a>
+<div class='author'>Landesverein Sächsischer Heimatschutz</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69359, {&quot;Title&quot;:&quot;Landesverein Sächsischer Heimatschutz — Mitteilungen Band XI, Heft 10-12 - Monatsschrift für Heimatschutz und Denkmalpflege&quot;,&quot;Topics&quot;:[&quot;Nature conservation -- Germany -- Saxony -- Periodicals&quot;,&quot;Saxony (Germany) -- Periodicals&quot;],&quot;Primary&quot;:&quot;69359.htm&quot;,&quot;CreatorNames&quot;:[&quot;Landesverein Sächsischer Heimatschutz&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;69359&quot;});" class='title'>Landesverein Sächsischer Heimatschutz — Mitteilungen Band XI, Heft 10-12 -<br><span class='subtitle'>Monatsschrift für Heimatschutz und Denkmalpflege</span></a>
+<div class='author'>Landesverein Sächsischer Heimatschutz</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6948, {&quot;Title&quot;:&quot;The Secrets of the German War Office&quot;,&quot;Topics&quot;:[&quot;Germany -- Foreign relations -- 1871-1918&quot;],&quot;Primary&quot;:&quot;6948.htm&quot;,&quot;CreatorNames&quot;:[&quot;Graves, Armgaard Karl&quot;,&quot;Fox, Edward Lyell, 1887- [Collaborator]&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;6948&quot;});" class='title'>The Secrets of the German War Office</a>
+<div class='author'>Graves, Armgaard Karl, Fox, Edward Lyell, 1887- [Collaborator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69548, {&quot;Title&quot;:&quot;Landesverein Sächsischer Heimatschutz — Mitteilungen Band XII, Heft 1-3 - Monatsschrift für Heimatschutz, Volkskunde und Denkmalpflege&quot;,&quot;Topics&quot;:[&quot;Nature conservation -- Germany -- Saxony -- Periodicals&quot;,&quot;Saxony (Germany) -- Periodicals&quot;],&quot;Primary&quot;:&quot;69548.htm&quot;,&quot;CreatorNames&quot;:[&quot;Landesverein Sächsischer Heimatschutz&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;69548&quot;});" class='title'>Landesverein Sächsischer Heimatschutz — Mitteilungen Band XII, Heft 1-3 -<br><span class='subtitle'>Monatsschrift für Heimatschutz, Volkskunde und Denkmalpflege</span></a>
+<div class='author'>Landesverein Sächsischer Heimatschutz</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69662, {&quot;Title&quot;:&quot;Watching on the Rhine&quot;,&quot;Topics&quot;:[&quot;Germany -- Description and travel&quot;,&quot;World War, 1914-1918 -- Germany&quot;,&quot;Cologne (Germany) -- Description and travel&quot;],&quot;Primary&quot;:&quot;69662.htm&quot;,&quot;CreatorNames&quot;:[&quot;Markham, Violet R. (Violet Rosa), 1872-1959&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;69662&quot;});" class='title'>Watching on the Rhine</a>
+<div class='author'>Markham, Violet R. (Violet Rosa), 1872-1959</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69848, {&quot;Title&quot;:&quot;La police secrète prussienne&quot;,&quot;Topics&quot;:[&quot;Police -- Germany -- Prussia&quot;,&quot;Secret service -- Germany -- Prussia&quot;],&quot;Primary&quot;:&quot;69848.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tissot, Victor, 1845-1917&quot;],&quot;LoCC&quot;:[&quot;DD&quot;,&quot;HV&quot;],&quot;PG_ID&quot;:&quot;69848&quot;});" class='title'>La police secrète prussienne</a>
+<div class='author'>Tissot, Victor, 1845-1917</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69903, {&quot;Title&quot;:&quot;Deutsche Nordseeküste: Friesische Inseln und Helgoland.&quot;,&quot;Topics&quot;:[&quot;Germany -- Description and travel&quot;,&quot;North Sea&quot;,&quot;Frisian Islands&quot;,&quot;Helgoland (Germany)&quot;],&quot;Primary&quot;:&quot;69903.htm&quot;,&quot;CreatorNames&quot;:[&quot;Haas, Hippolyt Julius, 1855-1913&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;69903&quot;});" class='title'>Deutsche Nordseeküste:<br><span class='subtitle'>Friesische Inseln und Helgoland.</span></a>
+<div class='author'>Haas, Hippolyt Julius, 1855-1913</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70317, {&quot;Title&quot;:&quot;Landesverein Sächsischer Heimatschutz — Mitteilungen Band XII, Heft 4-6&quot;,&quot;Topics&quot;:[&quot;Nature conservation -- Germany -- Saxony -- Periodicals&quot;,&quot;Saxony (Germany) -- Periodicals&quot;],&quot;Primary&quot;:&quot;70317.htm&quot;,&quot;CreatorNames&quot;:[&quot;Landesverein Sächsischer Heimatschutz&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;70317&quot;});" class='title'>Landesverein Sächsischer Heimatschutz — Mitteilungen Band XII, Heft 4-6</a>
+<div class='author'>Landesverein Sächsischer Heimatschutz</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(8401, {&quot;Title&quot;:&quot;Germany from the Earliest Period, Volume 4&quot;,&quot;Topics&quot;:[&quot;Germany -- History&quot;],&quot;Primary&quot;:&quot;8401.txt&quot;,&quot;CreatorNames&quot;:[&quot;Menzel, Wolfgang, 1798-1873&quot;,&quot;Horrocks, George, Mrs. [Translator]&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;8401&quot;});" class='title'>Germany from the Earliest Period, Volume 4</a>
+<div class='author'>Menzel, Wolfgang, 1798-1873, Horrocks, George, Mrs. [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(9977, {&quot;Title&quot;:&quot;Berlin — Panorama einer Weltstadt&quot;,&quot;Topics&quot;:[&quot;Germany -- Description and travel&quot;],&quot;Primary&quot;:&quot;9977.txt&quot;,&quot;CreatorNames&quot;:[&quot;Gutzkow, Karl, 1811-1878&quot;],&quot;LoCC&quot;:[&quot;DD&quot;],&quot;PG_ID&quot;:&quot;9977&quot;});" class='title'>Berlin — Panorama einer Weltstadt</a>
+<div class='author'>Gutzkow, Karl, 1811-1878</div>
+</div>
+</ul></div>
+</body></html>

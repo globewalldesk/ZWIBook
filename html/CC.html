@@ -1,0 +1,86 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Archaeology (CC)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13190, {&quot;Title&quot;:&quot;De l&#39;importance des livres de raison au point de vue archéologique&quot;,&quot;Topics&quot;:[&quot;Archaeology&quot;,&quot;Bookkeeping&quot;],&quot;Primary&quot;:&quot;13190.txt&quot;,&quot;CreatorNames&quot;:[&quot;Guibert, Louis, 1840-1904&quot;],&quot;LoCC&quot;:[&quot;CC&quot;,&quot;HF&quot;],&quot;PG_ID&quot;:&quot;13190&quot;});" class='title'>De l'importance des livres de raison au point de vue archéologique</a>
+<div class='author'>Guibert, Louis, 1840-1904</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13575, {&quot;Title&quot;:&quot;How to Observe in Archaeology - Suggestions for Travellers in the Near and Middle East&quot;,&quot;Topics&quot;:[&quot;Archaeology&quot;,&quot;Oriental antiquities&quot;],&quot;Primary&quot;:&quot;13575.htm&quot;,&quot;CreatorNames&quot;:[&quot;British Museum&quot;,&quot;Hill, George Francis, Sir, 1867-1948 [Editor]&quot;],&quot;LoCC&quot;:[&quot;CC&quot;],&quot;PG_ID&quot;:&quot;13575&quot;});" class='title'>How to Observe in Archaeology -<br><span class='subtitle'>Suggestions for Travellers in the Near and Middle East</span></a>
+<div class='author'>British Museum, Hill, George Francis, Sir, 1867-1948 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17186, {&quot;Title&quot;:&quot;Noções elementares de archeologia&quot;,&quot;Topics&quot;:[&quot;Archaeology&quot;,&quot;Architecture -- History&quot;],&quot;Primary&quot;:&quot;17186.htm&quot;,&quot;CreatorNames&quot;:[&quot;Silva, Joaquim Possidónio Narciso da, 1806-1896&quot;,&quot;Barbosa, Inácio de Vilhena, 1811-1890 [Commentator]&quot;],&quot;LoCC&quot;:[&quot;CC&quot;],&quot;PG_ID&quot;:&quot;17186&quot;});" class='title'>Noções elementares de archeologia</a>
+<div class='author'>Silva, Joaquim Possidónio Narciso da, 1806-1896, Barbosa, Inácio de Vilhena, 1811-1890 [Commentator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20153, {&quot;Title&quot;:&quot;The American Journal of Archaeology, 1893-1&quot;,&quot;Topics&quot;:[&quot;Art -- Periodicals&quot;,&quot;Archaeology -- Periodicals&quot;],&quot;Primary&quot;:&quot;20153.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;CC&quot;],&quot;PG_ID&quot;:&quot;20153&quot;});" class='title'>The American Journal of Archaeology, 1893-1</a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27354, {&quot;Title&quot;:&quot;Archæological Essays, Vol. 1&quot;,&quot;Topics&quot;:[&quot;Archaeology&quot;],&quot;Primary&quot;:&quot;27354.htm&quot;,&quot;CreatorNames&quot;:[&quot;Simpson, James Young, 1811-1870&quot;,&quot;Stuart, John, 1813-1877 [Editor]&quot;],&quot;LoCC&quot;:[&quot;CC&quot;],&quot;PG_ID&quot;:&quot;27354&quot;});" class='title'>Archæological Essays, Vol. 1</a>
+<div class='author'>Simpson, James Young, 1811-1870, Stuart, John, 1813-1877 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45741, {&quot;Title&quot;:&quot;Smithsonian Institution - United States National Museum - Bulletin 249 - Contributions from the Museum of History and Technology - Papers 52-54 on Archeology&quot;,&quot;Topics&quot;:[&quot;Archaeology&quot;,&quot;Excavations (Archaeology) -- Virginia -- Gloucester County&quot;,&quot;Excavations (Archaeology) -- Virginia -- James City County&quot;,&quot;Excavations (Archaeology) -- Virginia -- Yorktown&quot;,&quot;Gloucester County (Va.) -- Antiquities&quot;,&quot;James City County (Va.) -- Antiquities&quot;,&quot;Yorktown (Va.) -- Antiquities&quot;],&quot;Primary&quot;:&quot;45741.htm&quot;,&quot;CreatorNames&quot;:[&quot;Noël Hume, Ivor&quot;,&quot;Watkins, C. Malcolm&quot;,&quot;Taylor, Frank A. (Frank Augustus), 1903-2007 [Editor]&quot;],&quot;LoCC&quot;:[&quot;CC&quot;,&quot;F&quot;],&quot;PG_ID&quot;:&quot;45741&quot;});" class='title'>Smithsonian Institution -<br><span class='subtitle'>United States National Museum - Bulletin 249 - Contributions from the Museum of History and Technology - Papers 52-54 on Archeology</span></a>
+<div class='author'>Noël Hume, Ivor, Watkins, C. Malcolm, Taylor, Frank A. (Frank Augustus), 1903-2007 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47833, {&quot;Title&quot;:&quot;Archæological Essays, Vol. 2&quot;,&quot;Topics&quot;:[&quot;Archaeology&quot;],&quot;Primary&quot;:&quot;47833.htm&quot;,&quot;CreatorNames&quot;:[&quot;Simpson, James Young, 1811-1870&quot;,&quot;Stuart, John, 1813-1877 [Editor]&quot;],&quot;LoCC&quot;:[&quot;CC&quot;],&quot;PG_ID&quot;:&quot;47833&quot;});" class='title'>Archæological Essays, Vol. 2</a>
+<div class='author'>Simpson, James Young, 1811-1870, Stuart, John, 1813-1877 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56059, {&quot;Title&quot;:&quot;Old Crosses and Lychgates&quot;,&quot;Topics&quot;:[&quot;Crosses -- England&quot;,&quot;Crosses -- Wales&quot;,&quot;Lich-gates&quot;],&quot;Primary&quot;:&quot;56059.htm&quot;,&quot;CreatorNames&quot;:[&quot;Vallance, Aymer, 1862-1943&quot;],&quot;LoCC&quot;:[&quot;CC&quot;],&quot;PG_ID&quot;:&quot;56059&quot;});" class='title'>Old Crosses and Lychgates</a>
+<div class='author'>Vallance, Aymer, 1862-1943</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63311, {&quot;Title&quot;:&quot;Methods &amp; Aims in Archaeology&quot;,&quot;Topics&quot;:[&quot;Archaeology -- Methodology&quot;],&quot;Primary&quot;:&quot;63311.htm&quot;,&quot;CreatorNames&quot;:[&quot;Petrie, W. M. Flinders (William Matthew Flinders), 1853-1942&quot;],&quot;LoCC&quot;:[&quot;CC&quot;],&quot;PG_ID&quot;:&quot;63311&quot;});" class='title'>Methods & Aims in Archaeology</a>
+<div class='author'>Petrie, W. M. Flinders (William Matthew Flinders), 1853-1942</div>
+</div>
+</ul></div>
+</body></html>

@@ -1,0 +1,534 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Greece (DF)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(1170, {&quot;Title&quot;:&quot;Anabasis&quot;,&quot;Topics&quot;:[&quot;Classical literature&quot;,&quot;Iran -- History -- To 640&quot;,&quot;Cyrus, the Younger, approximately 423 B.C.-401 B.C.&quot;,&quot;Greece -- History -- Expedition of Cyrus, 401 B.C.&quot;],&quot;Primary&quot;:&quot;1170.htm&quot;,&quot;CreatorNames&quot;:[&quot;Xenophon, 431 BCE-350? BCE&quot;,&quot;Dakyns, Henry Graham, 1838-1911 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DF&quot;,&quot;PA&quot;],&quot;PG_ID&quot;:&quot;1170&quot;});" class='title'>Anabasis</a>
+<div class='author'>Xenophon, 431 BCE-350? BCE, Dakyns, Henry Graham, 1838-1911 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(1174, {&quot;Title&quot;:&quot;Hellenica&quot;,&quot;Topics&quot;:[&quot;Classical literature&quot;,&quot;Greece -- History -- Peloponnesian War, 431-404 B.C.&quot;,&quot;Greece -- History -- Spartan and Theban Supremacies, 404-362 B.C.&quot;],&quot;Primary&quot;:&quot;1174.htm&quot;,&quot;CreatorNames&quot;:[&quot;Xenophon, 431 BCE-350? BCE&quot;,&quot;Dakyns, Henry Graham, 1838-1911 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DF&quot;,&quot;PA&quot;],&quot;PG_ID&quot;:&quot;1174&quot;});" class='title'>Hellenica</a>
+<div class='author'>Xenophon, 431 BCE-350? BCE, Dakyns, Henry Graham, 1838-1911 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12916, {&quot;Title&quot;:&quot;The Secret History of the Court of Justinian&quot;,&quot;Topics&quot;:[&quot;Byzantine Empire -- History -- Justinian I, 527-565&quot;,&quot;Justinian I, Emperor of the East, 483?-565&quot;],&quot;Primary&quot;:&quot;12916.txt&quot;,&quot;CreatorNames&quot;:[&quot;Procopius&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;12916&quot;});" class='title'>The Secret History of the Court of Justinian</a>
+<div class='author'>Procopius</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13516, {&quot;Title&quot;:&quot;Expedición de Catalanes y Aragoneses al Oriente&quot;,&quot;Topics&quot;:[&quot;Catalan Grand Company&quot;,&quot;Flor, Roger de, -1305&quot;,&quot;Byzantine Empire -- History -- Andronicus II Palaeologus, 1282-1328&quot;],&quot;Primary&quot;:&quot;13516.txt&quot;,&quot;CreatorNames&quot;:[&quot;Moncada, Francisco de, 1586-1635&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;13516&quot;});" class='title'>Expedición de Catalanes y Aragoneses al Oriente</a>
+<div class='author'>Moncada, Francisco de, 1586-1635</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14634, {&quot;Title&quot;:&quot;Sketches and Studies in Italy and Greece, Second Series&quot;,&quot;Topics&quot;:[&quot;Italy -- Description and travel&quot;,&quot;Greece -- Description and travel&quot;],&quot;Primary&quot;:&quot;14634.htm&quot;,&quot;CreatorNames&quot;:[&quot;Symonds, John Addington, 1840-1893&quot;,&quot;Brown, Horatio Robert Forbes, 1854-1926 [Editor]&quot;],&quot;LoCC&quot;:[&quot;DF&quot;,&quot;DG&quot;],&quot;PG_ID&quot;:&quot;14634&quot;});" class='title'>Sketches and Studies in Italy and Greece, Second Series</a>
+<div class='author'>Symonds, John Addington, 1840-1893, Brown, Horatio Robert Forbes, 1854-1926 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14972, {&quot;Title&quot;:&quot;Sketches and Studies in Italy and Greece, First Series&quot;,&quot;Topics&quot;:[&quot;Italy -- Description and travel&quot;,&quot;Greece -- Description and travel&quot;],&quot;Primary&quot;:&quot;14972.htm&quot;,&quot;CreatorNames&quot;:[&quot;Symonds, John Addington, 1840-1893&quot;,&quot;Brown, Horatio Robert Forbes, 1854-1926 [Editor]&quot;],&quot;LoCC&quot;:[&quot;DF&quot;,&quot;DG&quot;],&quot;PG_ID&quot;:&quot;14972&quot;});" class='title'>Sketches and Studies in Italy and Greece, First Series</a>
+<div class='author'>Symonds, John Addington, 1840-1893, Brown, Horatio Robert Forbes, 1854-1926 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16755, {&quot;Title&quot;:&quot;Reis door Griekenland - De Aarde en haar Volken, 1887&quot;,&quot;Topics&quot;:[&quot;Greece -- Description and travel&quot;],&quot;Primary&quot;:&quot;16755.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;16755&quot;});" class='title'>Reis door Griekenland -<br><span class='subtitle'>De Aarde en haar Volken, 1887</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18845, {&quot;Title&quot;:&quot;Seeing Europe with Famous Authors, Volume 7 - Italy, Sicily, and Greece (Part One)&quot;,&quot;Topics&quot;:[&quot;Italy -- Description and travel&quot;,&quot;Greece -- Description and travel&quot;,&quot;Sicily (Italy) -- Description and travel&quot;],&quot;Primary&quot;:&quot;18845.htm&quot;,&quot;CreatorNames&quot;:[&quot;Halsey, Francis W. (Francis Whiting), 1851-1919 [Editor]&quot;],&quot;LoCC&quot;:[&quot;DF&quot;,&quot;DG&quot;],&quot;PG_ID&quot;:&quot;18845&quot;});" class='title'>Seeing Europe with Famous Authors, Volume 7 -<br><span class='subtitle'>Italy, Sicily, and Greece (Part One)</span></a>
+<div class='author'>Halsey, Francis W. (Francis Whiting), 1851-1919 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18893, {&quot;Title&quot;:&quot;Sketches and Studies in Italy and Greece, Complete - Series I, II, and III&quot;,&quot;Topics&quot;:[&quot;Italy -- Description and travel&quot;,&quot;Greece -- Description and travel&quot;],&quot;Primary&quot;:&quot;18893.htm&quot;,&quot;CreatorNames&quot;:[&quot;Symonds, John Addington, 1840-1893&quot;],&quot;LoCC&quot;:[&quot;DF&quot;,&quot;DG&quot;],&quot;PG_ID&quot;:&quot;18893&quot;});" class='title'>Sketches and Studies in Italy and Greece, Complete -<br><span class='subtitle'>Series I, II, and III</span></a>
+<div class='author'>Symonds, John Addington, 1840-1893</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19061, {&quot;Title&quot;:&quot;Seeing Europe with Famous Authors, Volume 8 - Italy, Sicily, and Greece, Part Two&quot;,&quot;Topics&quot;:[&quot;Italy -- Description and travel&quot;,&quot;Greece -- Description and travel&quot;,&quot;Sicily (Italy) -- Description and travel&quot;],&quot;Primary&quot;:&quot;19061.htm&quot;,&quot;CreatorNames&quot;:[&quot;Halsey, Francis W. (Francis Whiting), 1851-1919 [Editor]&quot;],&quot;LoCC&quot;:[&quot;DF&quot;,&quot;DG&quot;],&quot;PG_ID&quot;:&quot;19061&quot;});" class='title'>Seeing Europe with Famous Authors, Volume 8 -<br><span class='subtitle'>Italy, Sicily, and Greece, Part Two</span></a>
+<div class='author'>Halsey, Francis W. (Francis Whiting), 1851-1919 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19328, {&quot;Title&quot;:&quot;The Sea-Kings of Crete&quot;,&quot;Topics&quot;:[&quot;Crete (Greece) -- Antiquities&quot;],&quot;Primary&quot;:&quot;19328.htm&quot;,&quot;CreatorNames&quot;:[&quot;Baikie, James, 1866-1931&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;19328&quot;});" class='title'>The Sea-Kings of Crete</a>
+<div class='author'>Baikie, James, 1866-1931</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2096, {&quot;Title&quot;:&quot;A Smaller History of Greece: from the Earliest Times to the Roman Conquest&quot;,&quot;Topics&quot;:[&quot;Greece -- History -- To 146 B.C.&quot;],&quot;Primary&quot;:&quot;2096.htm&quot;,&quot;CreatorNames&quot;:[&quot;Smith, William, 1813-1893&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;2096&quot;});" class='title'>A Smaller History of Greece:<br><span class='subtitle'>from the Earliest Times to the Roman Conquest</span></a>
+<div class='author'>Smith, William, 1813-1893</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22259, {&quot;Title&quot;:&quot;The Legacy of Greece - Essays By: Gilbert Murray, W. R. Inge, J. Burnet, Sir T. L. Heath, D&#39;arcy W. Thompson, Charles Singer, R. W. Livingston, A. Toynbee, A. E. Zimmern, Percy Gardner, Sir Reginald Blomfield&quot;,&quot;Topics&quot;:[&quot;Greece -- Civilization&quot;],&quot;Primary&quot;:&quot;22259.htm&quot;,&quot;CreatorNames&quot;:[&quot;Livingstone, Richard Winn, Sir, 1880-1960 [Editor]&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;22259&quot;});" class='title'>The Legacy of Greece -<br><span class='subtitle'>Essays By: Gilbert Murray, W. R. Inge, J. Burnet, Sir T. L. Heath, D'arcy W. Thompson, Charles Singer, R. W. Livingston, A. Toynbee, A. E. Zimmern, Percy Gardner, Sir Reginald Blomfield</span></a>
+<div class='author'>Livingstone, Richard Winn, Sir, 1880-1960 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22677, {&quot;Title&quot;:&quot;Greece and the Allies, 1914-1922&quot;,&quot;Topics&quot;:[&quot;World War, 1914-1918 -- Greece&quot;,&quot;Greece -- Foreign relations&quot;,&quot;Greece -- Politics and government -- 1913-1917&quot;],&quot;Primary&quot;:&quot;22677.txt&quot;,&quot;CreatorNames&quot;:[&quot;Abbott, G. F. (George Frederick), 1874-1947&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;22677&quot;});" class='title'>Greece and the Allies, 1914-1922</a>
+<div class='author'>Abbott, G. F. (George Frederick), 1874-1947</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23495, {&quot;Title&quot;:&quot;The Story of the Greeks&quot;,&quot;Topics&quot;:[&quot;Greece -- History&quot;,&quot;Readers -- History&quot;],&quot;Primary&quot;:&quot;23495.htm&quot;,&quot;CreatorNames&quot;:[&quot;Guerber, H. A. (Hélène Adeline), 1859-1929&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;23495&quot;});" class='title'>The Story of the Greeks</a>
+<div class='author'>Guerber, H. A. (Hélène Adeline), 1859-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23756, {&quot;Title&quot;:&quot;Geschichte Alexanders des Grossen&quot;,&quot;Topics&quot;:[&quot;Alexander, the Great, 356 B.C.-323 B.C.&quot;,&quot;Generals -- Greece -- Biography&quot;,&quot;Statesmen -- Greece -- Biography&quot;,&quot;Greece -- History -- Macedonian Expansion, 359-323 B.C.&quot;],&quot;Primary&quot;:&quot;23756.htm&quot;,&quot;CreatorNames&quot;:[&quot;Droysen, Johann Gustav, 1808-1884&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;DF&quot;],&quot;PG_ID&quot;:&quot;23756&quot;});" class='title'>Geschichte Alexanders des Grossen</a>
+<div class='author'>Droysen, Johann Gustav, 1808-1884</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24448, {&quot;Title&quot;:&quot;Om en door den Peloponnesus - De Aarde en haar Volken, 1909&quot;,&quot;Topics&quot;:[&quot;Greece -- Description and travel&quot;],&quot;Primary&quot;:&quot;24448.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jandin, B. de&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;24448&quot;});" class='title'>Om en door den Peloponnesus -<br><span class='subtitle'>De Aarde en haar Volken, 1909</span></a>
+<div class='author'>Jandin, B. de</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24515, {&quot;Title&quot;:&quot;Le Tour du Monde; Athos - Journal des voyages et des voyageurs; 2. sem. 1860&quot;,&quot;Topics&quot;:[&quot;Athos (Greece) -- Description and travel&quot;,&quot;Geography -- Pictorial works -- Periodicals&quot;,&quot;Voyages and travels -- Periodicals&quot;,&quot;Travelers -- Periodicals&quot;],&quot;Primary&quot;:&quot;24515.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;,&quot;Charton, Édouard, 1807-1890 [Editor]&quot;],&quot;LoCC&quot;:[&quot;DF&quot;,&quot;G&quot;],&quot;PG_ID&quot;:&quot;24515&quot;});" class='title'>Le Tour du Monde;<br><span class='subtitle'>Athos - Journal des voyages et des voyageurs; 2. sem. 1860</span></a>
+<div class='author'>Various, Charton, Édouard, 1807-1890 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26341, {&quot;Title&quot;:&quot;On The Structure of Greek Tribal Society: An Essay&quot;,&quot;Topics&quot;:[&quot;Greece -- History&quot;,&quot;Land tenure -- Greece&quot;,&quot;Tribes&quot;,&quot;Greece -- Law -- Antiquities&quot;,&quot;Greece -- Social life and customs&quot;],&quot;Primary&quot;:&quot;26341.htm&quot;,&quot;CreatorNames&quot;:[&quot;Seebohm, Hugh E. (Hugh Exton), 1867-1946&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;26341&quot;});" class='title'>On The Structure of Greek Tribal Society:<br><span class='subtitle'>An Essay</span></a>
+<div class='author'>Seebohm, Hugh E. (Hugh Exton), 1867-1946</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27240, {&quot;Title&quot;:&quot;Pyrrhus - Makers of History&quot;,&quot;Topics&quot;:[&quot;Pyrrhus, King of Epirus, 318 B.C.-272 B.C.&quot;],&quot;Primary&quot;:&quot;27240.htm&quot;,&quot;CreatorNames&quot;:[&quot;Abbott, Jacob, 1803-1879&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;27240&quot;});" class='title'>Pyrrhus -<br><span class='subtitle'>Makers of History</span></a>
+<div class='author'>Abbott, Jacob, 1803-1879</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28085, {&quot;Title&quot;:&quot;In Griekenland - De Aarde en haar Volken, 1909&quot;,&quot;Topics&quot;:[&quot;Greece -- Description and travel&quot;],&quot;Primary&quot;:&quot;28085.htm&quot;,&quot;CreatorNames&quot;:[&quot;Adossidès, A.&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;28085&quot;});" class='title'>In Griekenland -<br><span class='subtitle'>De Aarde en haar Volken, 1909</span></a>
+<div class='author'>Adossidès, A.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28581, {&quot;Title&quot;:&quot;De Geschiedenis van het Grieksche Volk&quot;,&quot;Topics&quot;:[&quot;Greece -- History&quot;],&quot;Primary&quot;:&quot;28581.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tappan, Eva March, 1854-1930&quot;,&quot;Goudsmit, Boudewijn Casper, 1849-1915 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;28581&quot;});" class='title'>De Geschiedenis van het Grieksche Volk</a>
+<div class='author'>Tappan, Eva March, 1854-1930, Goudsmit, Boudewijn Casper, 1849-1915 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29833, {&quot;Title&quot;:&quot;Πελοποννησιακός Πόλεμος, Τόμος πρώτος&quot;,&quot;Topics&quot;:[&quot;Greece -- History -- Peloponnesian War, 431-404 B.C.&quot;],&quot;Primary&quot;:&quot;29833.txt&quot;,&quot;CreatorNames&quot;:[&quot;Thucydides, 455? BCE-395 BCE&quot;,&quot;Zervos, I. (Ioannes), 1875-1944 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;29833&quot;});" class='title'>Πελοποννησιακός Πόλεμος, Τόμος πρώτος</a>
+<div class='author'>Thucydides, 455? BCE-395 BCE, Zervos, I. (Ioannes), 1875-1944 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29834, {&quot;Title&quot;:&quot;Πελοποννησιακός Πόλεμος, Τόμος δεύτερος&quot;,&quot;Topics&quot;:[&quot;Greece -- History -- Peloponnesian War, 431-404 B.C.&quot;],&quot;Primary&quot;:&quot;29834.txt&quot;,&quot;CreatorNames&quot;:[&quot;Thucydides, 455? BCE-395 BCE&quot;,&quot;Zervos, I. (Ioannes), 1875-1944 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;29834&quot;});" class='title'>Πελοποννησιακός Πόλεμος, Τόμος δεύτερος</a>
+<div class='author'>Thucydides, 455? BCE-395 BCE, Zervos, I. (Ioannes), 1875-1944 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29835, {&quot;Title&quot;:&quot;Πελοποννησιακός Πόλεμος, Τόμος τρίτος&quot;,&quot;Topics&quot;:[&quot;Greece -- History -- Peloponnesian War, 431-404 B.C.&quot;],&quot;Primary&quot;:&quot;29835.txt&quot;,&quot;CreatorNames&quot;:[&quot;Thucydides, 455? BCE-395 BCE&quot;,&quot;Zervos, I. (Ioannes), 1875-1944 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;29835&quot;});" class='title'>Πελοποννησιακός Πόλεμος, Τόμος τρίτος</a>
+<div class='author'>Thucydides, 455? BCE-395 BCE, Zervos, I. (Ioannes), 1875-1944 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29836, {&quot;Title&quot;:&quot;Πελοποννησιακός Πόλεμος, Τόμος τέταρτος&quot;,&quot;Topics&quot;:[&quot;Greece -- History -- Peloponnesian War, 431-404 B.C.&quot;],&quot;Primary&quot;:&quot;29836.txt&quot;,&quot;CreatorNames&quot;:[&quot;Thucydides, 455? BCE-395 BCE&quot;,&quot;Zervos, I. (Ioannes), 1875-1944 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;29836&quot;});" class='title'>Πελοποννησιακός Πόλεμος, Τόμος τέταρτος</a>
+<div class='author'>Thucydides, 455? BCE-395 BCE, Zervos, I. (Ioannes), 1875-1944 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30624, {&quot;Title&quot;:&quot;Alexander the Great - Makers of History&quot;,&quot;Topics&quot;:[&quot;Alexander, the Great, 356 B.C.-323 B.C. -- Juvenile literature&quot;,&quot;Generals -- Greece -- Biography -- Juvenile literature&quot;,&quot;Greece -- History -- Macedonian expansion, 359-323 B.C. -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;30624.htm&quot;,&quot;CreatorNames&quot;:[&quot;Abbott, Jacob, 1803-1879&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;30624&quot;});" class='title'>Alexander the Great -<br><span class='subtitle'>Makers of History</span></a>
+<div class='author'>Abbott, Jacob, 1803-1879</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30809, {&quot;Title&quot;:&quot;Aunt Charlotte&#39;s Stories of Greek History&quot;,&quot;Topics&quot;:[&quot;Mythology, Greek -- Juvenile literature&quot;,&quot;Greece -- History -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;30809.htm&quot;,&quot;CreatorNames&quot;:[&quot;Yonge, Charlotte M. (Charlotte Mary), 1823-1901&quot;],&quot;LoCC&quot;:[&quot;BL&quot;,&quot;DF&quot;],&quot;PG_ID&quot;:&quot;30809&quot;});" class='title'>Aunt Charlotte's Stories of Greek History</a>
+<div class='author'>Yonge, Charlotte M. (Charlotte Mary), 1823-1901</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32174, {&quot;Title&quot;:&quot;Historia da Grecia&quot;,&quot;Topics&quot;:[&quot;Greece -- History&quot;],&quot;Primary&quot;:&quot;32174.htm&quot;,&quot;CreatorNames&quot;:[&quot;Costa, Fernandes, 1848-1920&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;32174&quot;});" class='title'>Historia da Grecia</a>
+<div class='author'>Costa, Fernandes, 1848-1920</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32215, {&quot;Title&quot;:&quot;Ιστορία της Ρωμιοσύνης, Πρώτος τόμος&quot;,&quot;Topics&quot;:[&quot;Greece -- History&quot;,&quot;Byzantine Empire -- History&quot;,&quot;Greece -- History -- 323-1453&quot;],&quot;Primary&quot;:&quot;32215.txt&quot;,&quot;CreatorNames&quot;:[&quot;Eftaliotis, Argyris, 1849-1923&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;32215&quot;});" class='title'>Ιστορία της Ρωμιοσύνης, Πρώτος τόμος</a>
+<div class='author'>Eftaliotis, Argyris, 1849-1923</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32318, {&quot;Title&quot;:&quot;Greek Women&quot;,&quot;Topics&quot;:[&quot;Women -- Greece -- History&quot;,&quot;Women -- Greece -- Biography&quot;],&quot;Primary&quot;:&quot;32318.htm&quot;,&quot;CreatorNames&quot;:[&quot;Carroll, Mitchell, 1870-1925&quot;],&quot;LoCC&quot;:[&quot;DF&quot;,&quot;HQ&quot;],&quot;PG_ID&quot;:&quot;32318&quot;});" class='title'>Greek Women</a>
+<div class='author'>Carroll, Mitchell, 1870-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33743, {&quot;Title&quot;:&quot;The History and Antiquities of the Doric Race, Vol. 1 of 2&quot;,&quot;Topics&quot;:[&quot;Dorians -- History&quot;,&quot;Greece -- Antiquities, Dorian&quot;,&quot;Greece -- History -- Dorian Invasions, approximately 1125-1025 B.C.&quot;],&quot;Primary&quot;:&quot;33743.htm&quot;,&quot;CreatorNames&quot;:[&quot;Müller, Karl Otfried, 1797-1840&quot;,&quot;Lewis, George Cornewall, Sir, 1806-1863 [Translator]&quot;,&quot;Tufnell, Henry, 1805-1854 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;33743&quot;});" class='title'>The History and Antiquities of the Doric Race, Vol. 1 of 2</a>
+<div class='author'>Müller, Karl Otfried, 1797-1840, Lewis, George Cornewall, Sir, 1806-1863 [Translator], Tufnell, Henry, 1805-1854 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34010, {&quot;Title&quot;:&quot;The History and Antiquities of the Doric Race, Vol. 2 of 2&quot;,&quot;Topics&quot;:[&quot;Dorians -- History&quot;,&quot;Greece -- Antiquities, Dorian&quot;,&quot;Greece -- History -- Dorian Invasions, approximately 1125-1025 B.C.&quot;],&quot;Primary&quot;:&quot;34010.htm&quot;,&quot;CreatorNames&quot;:[&quot;Müller, Karl Otfried, 1797-1840&quot;,&quot;Lewis, George Cornewall, Sir, 1806-1863 [Translator]&quot;,&quot;Tufnell, Henry, 1805-1854 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;34010&quot;});" class='title'>The History and Antiquities of the Doric Race, Vol. 2 of 2</a>
+<div class='author'>Müller, Karl Otfried, 1797-1840, Lewis, George Cornewall, Sir, 1806-1863 [Translator], Tufnell, Henry, 1805-1854 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34095, {&quot;Title&quot;:&quot;Ιστορία των Εθνικών Δανείων - Μέρος Α&#39; - Τα δάνεια της ανεξαρτησίας (1824-1825) - Το Δημόσιον Χρέος επί της Βαυαρικής Δυναστείας&quot;,&quot;Topics&quot;:[&quot;Greece -- Economic conditions -- 19th century&quot;],&quot;Primary&quot;:&quot;34095.htm&quot;,&quot;CreatorNames&quot;:[&quot;Andreadis, Andreas, 1876-1935&quot;],&quot;LoCC&quot;:[&quot;DF&quot;,&quot;HJ&quot;],&quot;PG_ID&quot;:&quot;34095&quot;});" class='title'>Ιστορία των Εθνικών Δανείων -<br><span class='subtitle'>Μέρος Α' - Τα δάνεια της ανεξαρτησίας (1824-1825) - Το Δημόσιον Χρέος επί της Βαυαρικής Δυναστείας</span></a>
+<div class='author'>Andreadis, Andreas, 1876-1935</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35230, {&quot;Title&quot;:&quot;Griechische Altertumskunde&quot;,&quot;Topics&quot;:[&quot;Greece -- Antiquities&quot;],&quot;Primary&quot;:&quot;35230.htm&quot;,&quot;CreatorNames&quot;:[&quot;Maisch, Richard, 1860-1909&quot;,&quot;Pohlhammer, Franz [Editor]&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;35230&quot;});" class='title'>Griechische Altertumskunde</a>
+<div class='author'>Maisch, Richard, 1860-1909, Pohlhammer, Franz [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35298, {&quot;Title&quot;:&quot;Rambles and Studies in Greece&quot;,&quot;Topics&quot;:[&quot;Art, Greek&quot;,&quot;Greece -- Description and travel&quot;],&quot;Primary&quot;:&quot;35298.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mahaffy, J. P. (John Pentland), 1839-1919&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;35298&quot;});" class='title'>Rambles and Studies in Greece</a>
+<div class='author'>Mahaffy, J. P. (John Pentland), 1839-1919</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35655, {&quot;Title&quot;:&quot;Η ολοκαύτωσις του Αρκαδίου&quot;,&quot;Topics&quot;:[&quot;Crete (Greece) -- History -- Insurrection, 1866-1868&quot;],&quot;Primary&quot;:&quot;35655.txt&quot;,&quot;CreatorNames&quot;:[&quot;Kondylakes, Ioannes, 1861-1920&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;35655&quot;});" class='title'>Η ολοκαύτωσις του Αρκαδίου</a>
+<div class='author'>Kondylakes, Ioannes, 1861-1920</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36095, {&quot;Title&quot;:&quot;Ο Αυτοκράτωρ Ηράκλειος&quot;,&quot;Topics&quot;:[&quot;Heraclius, Emperor of the East, approximately 575-641&quot;,&quot;Byzantine Empire -- History -- Heraclius, 610-641&quot;],&quot;Primary&quot;:&quot;36095.txt&quot;,&quot;CreatorNames&quot;:[&quot;Karolides, Paulos, 1849-1930&quot;],&quot;LoCC&quot;:[&quot;DF&quot;,&quot;PA&quot;],&quot;PG_ID&quot;:&quot;36095&quot;});" class='title'>Ο Αυτοκράτωρ Ηράκλειος</a>
+<div class='author'>Karolides, Paulos, 1849-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36096, {&quot;Title&quot;:&quot;Ο Αυτοκράτωρ Ιουστινιανός&quot;,&quot;Topics&quot;:[&quot;Byzantine Empire -- History -- Justinian I, 527-565&quot;,&quot;Justinian I, Emperor of the East, 483?-565&quot;],&quot;Primary&quot;:&quot;36096.txt&quot;,&quot;CreatorNames&quot;:[&quot;Karolides, Paulos, 1849-1930&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;36096&quot;});" class='title'>Ο Αυτοκράτωρ Ιουστινιανός</a>
+<div class='author'>Karolides, Paulos, 1849-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36129, {&quot;Title&quot;:&quot;Μελέται: 10 άρθρα του στον «Νουμά»&quot;,&quot;Topics&quot;:[&quot;Greece -- Civilization&quot;],&quot;Primary&quot;:&quot;36129.txt&quot;,&quot;CreatorNames&quot;:[&quot;Dragoumes, Ion, 1878-1920&quot;,&quot;Tankopoulos, Demetrios P., 1867-1926 [Editor]&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;36129&quot;});" class='title'>Μελέται:<br><span class='subtitle'>10 άρθρα του στον «Νουμά»</span></a>
+<div class='author'>Dragoumes, Ion, 1878-1920, Tankopoulos, Demetrios P., 1867-1926 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36354, {&quot;Title&quot;:&quot;Problems in Greek history&quot;,&quot;Topics&quot;:[&quot;Greece -- History&quot;,&quot;Greece -- Historiography&quot;],&quot;Primary&quot;:&quot;36354.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mahaffy, J. P. (John Pentland), 1839-1919&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;36354&quot;});" class='title'>Problems in Greek history</a>
+<div class='author'>Mahaffy, J. P. (John Pentland), 1839-1919</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37162, {&quot;Title&quot;:&quot;Η Βιογραφία του στρατηγού Γεωργίου Καραϊσκάκη&quot;,&quot;Topics&quot;:[&quot;Generals -- Greece -- Biography&quot;,&quot;Karaiskakes, Georgios, 1780-1827&quot;,&quot;Greece -- History -- War of Independence, 1821-1829&quot;],&quot;Primary&quot;:&quot;37162.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ainian, Demetrios, 1800-1881&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;37162&quot;});" class='title'>Η Βιογραφία του στρατηγού Γεωργίου Καραϊσκάκη</a>
+<div class='author'>Ainian, Demetrios, 1800-1881</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37756, {&quot;Title&quot;:&quot;The Byzantine Empire - Third Edition&quot;,&quot;Topics&quot;:[&quot;Byzantine Empire -- History&quot;],&quot;Primary&quot;:&quot;37756.htm&quot;,&quot;CreatorNames&quot;:[&quot;Oman, Charles, 1860-1946&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;37756&quot;});" class='title'>The Byzantine Empire -<br><span class='subtitle'>Third Edition</span></a>
+<div class='author'>Oman, Charles, 1860-1946</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37889, {&quot;Title&quot;:&quot;Incidents of Travel in Greece, Turkey, Russia, and Poland, Vol. 1 (of 2)&quot;,&quot;Topics&quot;:[&quot;Europe -- Description and travel&quot;,&quot;Greece -- Description and travel&quot;,&quot;Russia -- Description and travel&quot;,&quot;Turkey -- Description and travel&quot;,&quot;Poland -- Description and travel&quot;],&quot;Primary&quot;:&quot;37889.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stephens, John L., 1805-1852&quot;],&quot;LoCC&quot;:[&quot;DF&quot;,&quot;DK&quot;,&quot;DR&quot;],&quot;PG_ID&quot;:&quot;37889&quot;});" class='title'>Incidents of Travel in Greece, Turkey, Russia, and Poland, Vol. 1 (of 2)</a>
+<div class='author'>Stephens, John L., 1805-1852</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37947, {&quot;Title&quot;:&quot;Incidents of Travel in Greece, Turkey, Russia, and Poland, Vol. 2 (of 2)&quot;,&quot;Topics&quot;:[&quot;Europe -- Description and travel&quot;,&quot;Greece -- Description and travel&quot;,&quot;Russia -- Description and travel&quot;,&quot;Turkey -- Description and travel&quot;,&quot;Poland -- Description and travel&quot;],&quot;Primary&quot;:&quot;37947.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stephens, John L., 1805-1852&quot;],&quot;LoCC&quot;:[&quot;DF&quot;,&quot;DK&quot;,&quot;DR&quot;],&quot;PG_ID&quot;:&quot;37947&quot;});" class='title'>Incidents of Travel in Greece, Turkey, Russia, and Poland, Vol. 2 (of 2)</a>
+<div class='author'>Stephens, John L., 1805-1852</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38414, {&quot;Title&quot;:&quot;Ιστορία της Ελληνικής Επαναστάσεως, Τόμος Α&quot;,&quot;Topics&quot;:[&quot;Greece -- History -- War of Independence, 1821-1829&quot;],&quot;Primary&quot;:&quot;38414.htm&quot;,&quot;CreatorNames&quot;:[&quot;Trikoupes, Spyridon, 1788-1873&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;38414&quot;});" class='title'>Ιστορία της Ελληνικής Επαναστάσεως, Τόμος Α</a>
+<div class='author'>Trikoupes, Spyridon, 1788-1873</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38524, {&quot;Title&quot;:&quot;Ιστορία της Ελληνικής Επαναστάσεως, Τόμος Β&quot;,&quot;Topics&quot;:[&quot;Greece -- History -- War of Independence, 1821-1829&quot;],&quot;Primary&quot;:&quot;38524.htm&quot;,&quot;CreatorNames&quot;:[&quot;Trikoupes, Spyridon, 1788-1873&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;38524&quot;});" class='title'>Ιστορία της Ελληνικής Επαναστάσεως, Τόμος Β</a>
+<div class='author'>Trikoupes, Spyridon, 1788-1873</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38765, {&quot;Title&quot;:&quot;Ιστορία της Ελληνικής Επαναστάσεως, Τόμος Γ&quot;,&quot;Topics&quot;:[&quot;Greece -- History -- War of Independence, 1821-1829&quot;],&quot;Primary&quot;:&quot;38765.htm&quot;,&quot;CreatorNames&quot;:[&quot;Trikoupes, Spyridon, 1788-1873&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;38765&quot;});" class='title'>Ιστορία της Ελληνικής Επαναστάσεως, Τόμος Γ</a>
+<div class='author'>Trikoupes, Spyridon, 1788-1873</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39069, {&quot;Title&quot;:&quot;Ιστορία της Ελληνικής Επαναστάσεως, Τόμος Δ&quot;,&quot;Topics&quot;:[&quot;Greece -- History -- War of Independence, 1821-1829&quot;],&quot;Primary&quot;:&quot;39069.htm&quot;,&quot;CreatorNames&quot;:[&quot;Trikoupes, Spyridon, 1788-1873&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;39069&quot;});" class='title'>Ιστορία της Ελληνικής Επαναστάσεως, Τόμος Δ</a>
+<div class='author'>Trikoupes, Spyridon, 1788-1873</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39600, {&quot;Title&quot;:&quot;Ελληνική Εποποιία, Ο Εωσφόρος: [Ιωάννης Τσιμισκής]&quot;,&quot;Topics&quot;:[&quot;John I Tzimisces, Emperor of the East, 925-976&quot;],&quot;Primary&quot;:&quot;39600.htm&quot;,&quot;CreatorNames&quot;:[&quot;Papantoniou, Ch.&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;39600&quot;});" class='title'>Ελληνική Εποποιία, Ο Εωσφόρος:<br><span class='subtitle'>[Ιωάννης Τσιμισκής]</span></a>
+<div class='author'>Papantoniou, Ch.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40098, {&quot;Title&quot;:&quot;Τα ανέκδοτα του Βασιλέως Γεωργίου Α&quot;,&quot;Topics&quot;:[&quot;George I, King of the Hellenes, 1845-1913&quot;],&quot;Primary&quot;:&quot;40098.htm&quot;,&quot;CreatorNames&quot;:&quot;&quot;,&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;40098&quot;});" class='title'>Τα ανέκδοτα του Βασιλέως Γεωργίου Α</a>
+<div class='author'></div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40139, {&quot;Title&quot;:&quot;Σύντομος αφήγησις του βίου του Ιωάννου Καποδιστρίου&quot;,&quot;Topics&quot;:[&quot;Kapodistrias, Iōannēs Antōniou, 1776-1831&quot;],&quot;Primary&quot;:&quot;40139.htm&quot;,&quot;CreatorNames&quot;:[&quot;Vrokines, Laurentios S., 1847-1910&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;40139&quot;});" class='title'>Σύντομος αφήγησις του βίου του Ιωάννου Καποδιστρίου</a>
+<div class='author'>Vrokines, Laurentios S., 1847-1910</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40329, {&quot;Title&quot;:&quot;Ο Γερμανικός Φιλελληνισμός&quot;,&quot;Topics&quot;:[&quot;Philhellenism -- Germany&quot;,&quot;Greece -- History -- War of Independence, 1821-1829 -- Participation, German&quot;],&quot;Primary&quot;:&quot;40329.htm&quot;,&quot;CreatorNames&quot;:[&quot;Karolides, Paulos, 1849-1930&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;40329&quot;});" class='title'>Ο Γερμανικός Φιλελληνισμός</a>
+<div class='author'>Karolides, Paulos, 1849-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4035, {&quot;Title&quot;:&quot;Greek Studies: a Series of Essays&quot;,&quot;Topics&quot;:[&quot;Mythology, Greek&quot;,&quot;Art, Greek&quot;,&quot;Greek drama -- History and criticism&quot;],&quot;Primary&quot;:&quot;4035.txt&quot;,&quot;CreatorNames&quot;:[&quot;Pater, Walter, 1839-1894&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;4035&quot;});" class='title'>Greek Studies:<br><span class='subtitle'>a Series of Essays</span></a>
+<div class='author'>Pater, Walter, 1839-1894</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40578, {&quot;Title&quot;:&quot;Joseph Pennell&#39;s Pictures in the Land of Temples - Reproductions of a Series of Lithographs Made by Him in the Land of Temples, March-June 1913, Together with Impressions and Notes by the Artist.&quot;,&quot;Topics&quot;:[&quot;Lithography, American&quot;,&quot;Pennell, Joseph, 1857-1926&quot;,&quot;Temples in art&quot;,&quot;Temples -- Greece -- Pictorial works&quot;],&quot;Primary&quot;:&quot;40578.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pennell, Joseph, 1857-1926&quot;],&quot;LoCC&quot;:[&quot;DF&quot;,&quot;NE&quot;],&quot;PG_ID&quot;:&quot;40578&quot;});" class='title'>Joseph Pennell's Pictures in the Land of Temples -<br><span class='subtitle'>Reproductions of a Series of Lithographs Made by Him in the Land of Temples, March-June 1913, Together with Impressions and Notes by the Artist.</span></a>
+<div class='author'>Pennell, Joseph, 1857-1926</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41684, {&quot;Title&quot;:&quot;Εγχειρίδιον Βυζαντινής Ιστορίας&quot;,&quot;Topics&quot;:[&quot;Byzantine Empire -- History&quot;],&quot;Primary&quot;:&quot;41684.htm&quot;,&quot;CreatorNames&quot;:[&quot;Karolides, Paulos, 1849-1930&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;41684&quot;});" class='title'>Εγχειρίδιον Βυζαντινής Ιστορίας</a>
+<div class='author'>Karolides, Paulos, 1849-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41868, {&quot;Title&quot;:&quot;Ιστορία του Ιωάννου Καποδιστρίου Κυβερνήτου της Ελλάδος&quot;,&quot;Topics&quot;:[&quot;Kapodistrias, Iōannēs Antōniou, 1776-1831&quot;,&quot;Greece -- History -- 1821-&quot;],&quot;Primary&quot;:&quot;41868.htm&quot;,&quot;CreatorNames&quot;:[&quot;Euangelides, Tryphon E., 1863-1941&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;41868&quot;});" class='title'>Ιστορία του Ιωάννου Καποδιστρίου Κυβερνήτου της Ελλάδος</a>
+<div class='author'>Euangelides, Tryphon E., 1863-1941</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42510, {&quot;Title&quot;:&quot;Ιστορία της Αλώσεως του Βυζαντίου υπό των Φράγκων και της αυτόθι εξουσίας αυτών&quot;,&quot;Topics&quot;:[&quot;Crusades -- Fourth, 1202-1204&quot;,&quot;Latin Empire, 1204-1261&quot;],&quot;Primary&quot;:&quot;42510.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stamatiades, Epameinondas I., 1835-1901&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;42510&quot;});" class='title'>Ιστορία της Αλώσεως του Βυζαντίου υπό των Φράγκων και της αυτόθι εξουσίας αυτών</a>
+<div class='author'>Stamatiades, Epameinondas I., 1835-1901</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45043, {&quot;Title&quot;:&quot;Atheensch Jongensleven&quot;,&quot;Topics&quot;:[&quot;Greece -- Social life and customs&quot;],&quot;Primary&quot;:&quot;45043.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kuiper, K. (Koenraad), 1854-1922&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;45043&quot;});" class='title'>Atheensch Jongensleven</a>
+<div class='author'>Kuiper, K. (Koenraad), 1854-1922</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45132, {&quot;Title&quot;:&quot;Studies of Travel: Greece&quot;,&quot;Topics&quot;:[&quot;Greece -- Description and travel&quot;],&quot;Primary&quot;:&quot;45132.htm&quot;,&quot;CreatorNames&quot;:[&quot;Freeman, Edward A. (Edward Augustus), 1823-1892&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;45132&quot;});" class='title'>Studies of Travel:<br><span class='subtitle'>Greece</span></a>
+<div class='author'>Freeman, Edward A. (Edward Augustus), 1823-1892</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45175, {&quot;Title&quot;:&quot;Vacation days in Greece&quot;,&quot;Topics&quot;:[&quot;Greece -- Description and travel&quot;],&quot;Primary&quot;:&quot;45175.htm&quot;,&quot;CreatorNames&quot;:[&quot;Richardson, Rufus B. (Rufus Byam), 1845-1914&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;45175&quot;});" class='title'>Vacation days in Greece</a>
+<div class='author'>Richardson, Rufus B. (Rufus Byam), 1845-1914</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45190, {&quot;Title&quot;:&quot;Troy and Its Remains - A Narrative of Researches and Discoveries Made on the Site of Ilium and in the Trojan Plain&quot;,&quot;Topics&quot;:[&quot;Excavations (Archaeology) -- Turkey -- Troy (Extinct city)&quot;,&quot;Troy (Extinct city)&quot;,&quot;Turkey -- Antiquities&quot;,&quot;Greece -- Civilization -- To 146 B.C.&quot;],&quot;Primary&quot;:&quot;45190.htm&quot;,&quot;CreatorNames&quot;:[&quot;Schliemann, Heinrich, 1822-1890&quot;,&quot;Smith, Philip, 1817-1885 [Editor]&quot;,&quot;Schmitz, L. Dora [Translator]&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;45190&quot;});" class='title'>Troy and Its Remains -<br><span class='subtitle'>A Narrative of Researches and Discoveries Made on the Site of Ilium and in the Trojan Plain</span></a>
+<div class='author'>Schliemann, Heinrich, 1822-1890, Smith, Philip, 1817-1885 [Editor], Schmitz, L. Dora [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45319, {&quot;Title&quot;:&quot;Taten des großen Alexander&quot;,&quot;Topics&quot;:[&quot;Alexander, the Great, 356 B.C.-323 B.C.&quot;],&quot;Primary&quot;:&quot;45319.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kuzmin, M. A. (Mikhail Alekseevich), 1872-1936&quot;,&quot;Rubiner, Ludwig, 1881-1920 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;45319&quot;});" class='title'>Taten des großen Alexander</a>
+<div class='author'>Kuzmin, M. A. (Mikhail Alekseevich), 1872-1936, Rubiner, Ludwig, 1881-1920 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46508, {&quot;Title&quot;:&quot;Our Little Grecian Cousin&quot;,&quot;Topics&quot;:[&quot;Children -- Greece -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;46508.htm&quot;,&quot;CreatorNames&quot;:[&quot;Nixon-Roulet, Mary F., -1930&quot;,&quot;Horne, Diantha W. [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DF&quot;,&quot;PZ&quot;],&quot;PG_ID&quot;:&quot;46508&quot;});" class='title'>Our Little Grecian Cousin</a>
+<div class='author'>Nixon-Roulet, Mary F., -1930, Horne, Diantha W. [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46976, {&quot;Title&quot;:&quot;The Anabasis of Alexander - or, The History of the Wars and Conquests of Alexander the Great&quot;,&quot;Topics&quot;:[&quot;Alexander, the Great, 356 B.C.-323 B.C.&quot;,&quot;Iran -- History -- To 640&quot;,&quot;India -- History -- To 324 B.C.&quot;],&quot;Primary&quot;:&quot;46976.htm&quot;,&quot;CreatorNames&quot;:[&quot;Arrian&quot;,&quot;Chinnock, Edward James [Translator]&quot;],&quot;LoCC&quot;:[&quot;DF&quot;,&quot;PA&quot;],&quot;PG_ID&quot;:&quot;46976&quot;});" class='title'>The Anabasis of Alexander -<br><span class='subtitle'>or, The History of the Wars and Conquests of Alexander the Great</span></a>
+<div class='author'>Arrian, Chinnock, Edward James [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4716, {&quot;Title&quot;:&quot;A Day in Old Athens; a Picture of Athenian Life&quot;,&quot;Topics&quot;:[&quot;Athens (Greece) -- Social life and customs&quot;],&quot;Primary&quot;:&quot;4716.htm&quot;,&quot;CreatorNames&quot;:[&quot;Davis, William Stearns, 1877-1930&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;4716&quot;});" class='title'>A Day in Old Athens;<br><span class='subtitle'>a Picture of Athenian Life</span></a>
+<div class='author'>Davis, William Stearns, 1877-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47496, {&quot;Title&quot;:&quot;Greece - Painted by John Fulleylove; described by J.A. McClymont&quot;,&quot;Topics&quot;:[&quot;Greece -- Description and travel&quot;,&quot;Athens (Greece)&quot;,&quot;Greece -- Antiquities&quot;],&quot;Primary&quot;:&quot;47496.htm&quot;,&quot;CreatorNames&quot;:[&quot;M&#39;Clymont, J. A. (James Alexander), 1848-1927&quot;,&quot;Fulleylove, John, 1847-1908 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;47496&quot;});" class='title'>Greece -<br><span class='subtitle'>Painted by John Fulleylove; described by J.A. McClymont</span></a>
+<div class='author'>M'Clymont, J. A. (James Alexander), 1848-1927, Fulleylove, John, 1847-1908 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49431, {&quot;Title&quot;:&quot;The Burial Customs of the Ancient Greeks&quot;,&quot;Topics&quot;:[&quot;Greece -- Antiquities&quot;,&quot;Burial -- Greece&quot;],&quot;Primary&quot;:&quot;49431.htm&quot;,&quot;CreatorNames&quot;:[&quot;Graves, Frank Pierrepont, 1869-1956&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;49431&quot;});" class='title'>The Burial Customs of the Ancient Greeks</a>
+<div class='author'>Graves, Frank Pierrepont, 1869-1956</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49956, {&quot;Title&quot;:&quot;The Cretan Insurrection of 1866-7-8&quot;,&quot;Topics&quot;:[&quot;Crete (Greece) -- History -- Insurrection, 1866-1868&quot;],&quot;Primary&quot;:&quot;49956.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stillman, William James, 1828-1901&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;49956&quot;});" class='title'>The Cretan Insurrection of 1866-7-8</a>
+<div class='author'>Stillman, William James, 1828-1901</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50065, {&quot;Title&quot;:&quot;Peloponneesolais-sota&quot;,&quot;Topics&quot;:[&quot;Greece -- History -- Peloponnesian War, 431-404 B.C.&quot;],&quot;Primary&quot;:&quot;50065.txt&quot;,&quot;CreatorNames&quot;:[&quot;Thucydides, 455? BCE-395 BCE&quot;,&quot;Hårdh, Emil [Translator]&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;50065&quot;});" class='title'>Peloponneesolais-sota</a>
+<div class='author'>Thucydides, 455? BCE-395 BCE, Hårdh, Emil [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50106, {&quot;Title&quot;:&quot;Greece and the Ægean Islands&quot;,&quot;Topics&quot;:[&quot;Greece -- Description and travel&quot;,&quot;Aegean Islands (Greece and Turkey) -- Description and travel&quot;],&quot;Primary&quot;:&quot;50106.htm&quot;,&quot;CreatorNames&quot;:[&quot;Marden, Philip Sanford, 1874-1963&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;50106&quot;});" class='title'>Greece and the Ægean Islands</a>
+<div class='author'>Marden, Philip Sanford, 1874-1963</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51181, {&quot;Title&quot;:&quot;History of Greece, Volume 07 (of 12)&quot;,&quot;Topics&quot;:[&quot;Greece -- History&quot;],&quot;Primary&quot;:&quot;51181.htm&quot;,&quot;CreatorNames&quot;:[&quot;Grote, George, 1794-1871&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;51181&quot;});" class='title'>History of Greece, Volume 07 (of 12)</a>
+<div class='author'>Grote, George, 1794-1871</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51182, {&quot;Title&quot;:&quot;History of Greece, Volume 09 (of 12)&quot;,&quot;Topics&quot;:[&quot;Greece -- History&quot;],&quot;Primary&quot;:&quot;51182.htm&quot;,&quot;CreatorNames&quot;:[&quot;Grote, George, 1794-1871&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;51182&quot;});" class='title'>History of Greece, Volume 09 (of 12)</a>
+<div class='author'>Grote, George, 1794-1871</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51183, {&quot;Title&quot;:&quot;History of Greece, Volume 10 (of 12)&quot;,&quot;Topics&quot;:[&quot;Greece -- History&quot;],&quot;Primary&quot;:&quot;51183.htm&quot;,&quot;CreatorNames&quot;:[&quot;Grote, George, 1794-1871&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;51183&quot;});" class='title'>History of Greece, Volume 10 (of 12)</a>
+<div class='author'>Grote, George, 1794-1871</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52119, {&quot;Title&quot;:&quot;History of Greece, Volume 08 (of 12)&quot;,&quot;Topics&quot;:[&quot;Greece -- History&quot;],&quot;Primary&quot;:&quot;52119.htm&quot;,&quot;CreatorNames&quot;:[&quot;Grote, George, 1794-1871&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;52119&quot;});" class='title'>History of Greece, Volume 08 (of 12)</a>
+<div class='author'>Grote, George, 1794-1871</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54936, {&quot;Title&quot;:&quot;History of Greece, Volume 06 (of 12)&quot;,&quot;Topics&quot;:[&quot;Greece -- History&quot;],&quot;Primary&quot;:&quot;54936.htm&quot;,&quot;CreatorNames&quot;:[&quot;Grote, George, 1794-1871&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;54936&quot;});" class='title'>History of Greece, Volume 06 (of 12)</a>
+<div class='author'>Grote, George, 1794-1871</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55792, {&quot;Title&quot;:&quot;Greeks &amp; Barbarians&quot;,&quot;Topics&quot;:[&quot;Hellenism&quot;,&quot;National characteristics, Greek (Ancient)&quot;,&quot;Comparative literature -- Greek and modern&quot;,&quot;Comparative literature -- Modern and Greek&quot;],&quot;Primary&quot;:&quot;55792.htm&quot;,&quot;CreatorNames&quot;:[&quot;Thomson, J. A. K. (James Alexander Kerr), 1879-1959&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;55792&quot;});" class='title'>Greeks & Barbarians</a>
+<div class='author'>Thomson, J. A. K. (James Alexander Kerr), 1879-1959</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56002, {&quot;Title&quot;:&quot;Studies in Greek Scenery, Legend and History - Selected from His Commentary on Pausanias&#39; &#39;Description of Greece,&#39;&quot;,&quot;Topics&quot;:[&quot;Greece -- Description and travel&quot;,&quot;Greece -- Antiquities&quot;],&quot;Primary&quot;:&quot;56002.htm&quot;,&quot;CreatorNames&quot;:[&quot;Frazer, James George, 1854-1941&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;56002&quot;});" class='title'>Studies in Greek Scenery, Legend and History -<br><span class='subtitle'>Selected from His Commentary on Pausanias' 'Description of Greece,'</span></a>
+<div class='author'>Frazer, James George, 1854-1941</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56342, {&quot;Title&quot;:&quot;History of Greece, Volume 01 (of 12)&quot;,&quot;Topics&quot;:[&quot;Greece -- History&quot;],&quot;Primary&quot;:&quot;56342.htm&quot;,&quot;CreatorNames&quot;:[&quot;Grote, George, 1794-1871&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;56342&quot;});" class='title'>History of Greece, Volume 01 (of 12)</a>
+<div class='author'>Grote, George, 1794-1871</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56940, {&quot;Title&quot;:&quot;Mycenæ: a narrative of researches and discoveries at Mycenæ and Tiryns&quot;,&quot;Topics&quot;:[&quot;Mycenae (Extinct city)&quot;,&quot;Tiryns (Extinct city)&quot;],&quot;Primary&quot;:&quot;56940.htm&quot;,&quot;CreatorNames&quot;:[&quot;Schliemann, Heinrich, 1822-1890&quot;,&quot;Gladstone, W. E. (William Ewart), 1809-1898 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;56940&quot;});" class='title'>Mycenæ:<br><span class='subtitle'>a narrative of researches and discoveries at Mycenæ and Tiryns</span></a>
+<div class='author'>Schliemann, Heinrich, 1822-1890, Gladstone, W. E. (William Ewart), 1809-1898 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57143, {&quot;Title&quot;:&quot;History of Greece, Volume 02 (of 12)&quot;,&quot;Topics&quot;:[&quot;Greece -- History&quot;],&quot;Primary&quot;:&quot;57143.htm&quot;,&quot;CreatorNames&quot;:[&quot;Grote, George, 1794-1871&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;57143&quot;});" class='title'>History of Greece, Volume 02 (of 12)</a>
+<div class='author'>Grote, George, 1794-1871</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57928, {&quot;Title&quot;:&quot;Griechischer Frühling&quot;,&quot;Topics&quot;:[&quot;Greece -- Description and travel&quot;],&quot;Primary&quot;:&quot;57928.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hauptmann, Gerhart, 1862-1946&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;57928&quot;});" class='title'>Griechischer Frühling</a>
+<div class='author'>Hauptmann, Gerhart, 1862-1946</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58119, {&quot;Title&quot;:&quot;The Destruction of the Greek Empire and the Story of the Capture of Constantinople by the Turks&quot;,&quot;Topics&quot;:[&quot;Istanbul (Turkey) -- History -- Siege, 1453&quot;,&quot;Byzantine Empire -- History -- 1081-1453&quot;],&quot;Primary&quot;:&quot;58119.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pears, Edwin, 1835-1919&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;58119&quot;});" class='title'>The Destruction of the Greek Empire and the Story of the Capture of Constantinople by the Turks</a>
+<div class='author'>Pears, Edwin, 1835-1919</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58565, {&quot;Title&quot;:&quot;History of Greece, Volume 03 (of 12)&quot;,&quot;Topics&quot;:[&quot;Greece -- History&quot;],&quot;Primary&quot;:&quot;58565.htm&quot;,&quot;CreatorNames&quot;:[&quot;Grote, George, 1794-1871&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;58565&quot;});" class='title'>History of Greece, Volume 03 (of 12)</a>
+<div class='author'>Grote, George, 1794-1871</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59132, {&quot;Title&quot;:&quot;What Have the Greeks Done for Modern Civilisation?&quot;,&quot;Topics&quot;:[&quot;Civilization&quot;,&quot;Greece -- Civilization&quot;,&quot;Greece -- Intellectual life&quot;],&quot;Primary&quot;:&quot;59132.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mahaffy, J. P. (John Pentland), 1839-1919&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;59132&quot;});" class='title'>What Have the Greeks Done for Modern Civilisation?</a>
+<div class='author'>Mahaffy, J. P. (John Pentland), 1839-1919</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59532, {&quot;Title&quot;:&quot;The Glory That Was Greece: a survey of Hellenic culture and civilisation&quot;,&quot;Topics&quot;:[&quot;Art, Greek&quot;,&quot;Greece -- Civilization -- To 146 B.C.&quot;],&quot;Primary&quot;:&quot;59532.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stobart, J. C. (John Clarke), 1878-1933&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;59532&quot;});" class='title'>The Glory That Was Greece:<br><span class='subtitle'>a survey of Hellenic culture and civilisation</span></a>
+<div class='author'>Stobart, J. C. (John Clarke), 1878-1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60426, {&quot;Title&quot;:&quot;History of Greece, Volume 04 (of 12)&quot;,&quot;Topics&quot;:[&quot;Greece -- History&quot;],&quot;Primary&quot;:&quot;60426.htm&quot;,&quot;CreatorNames&quot;:[&quot;Grote, George, 1794-1871&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;60426&quot;});" class='title'>History of Greece, Volume 04 (of 12)</a>
+<div class='author'>Grote, George, 1794-1871</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60786, {&quot;Title&quot;:&quot;History of Greece, Volume 12 (of 12)&quot;,&quot;Topics&quot;:[&quot;Greece -- History&quot;],&quot;Primary&quot;:&quot;60786.htm&quot;,&quot;CreatorNames&quot;:[&quot;Grote, George, 1794-1871&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;60786&quot;});" class='title'>History of Greece, Volume 12 (of 12)</a>
+<div class='author'>Grote, George, 1794-1871</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60938, {&quot;Title&quot;:&quot;The Empresses of Constantinople&quot;,&quot;Topics&quot;:[&quot;Byzantine Empire -- History&quot;,&quot;Empresses -- Byzantine Empire -- Biography&quot;],&quot;Primary&quot;:&quot;60938.htm&quot;,&quot;CreatorNames&quot;:[&quot;McCabe, Joseph, 1867-1955&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;60938&quot;});" class='title'>The Empresses of Constantinople</a>
+<div class='author'>McCabe, Joseph, 1867-1955</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61469, {&quot;Title&quot;:&quot;History of Greece, Volume 11 (of 12)&quot;,&quot;Topics&quot;:[&quot;Greece -- History&quot;],&quot;Primary&quot;:&quot;61469.htm&quot;,&quot;CreatorNames&quot;:[&quot;Grote, George, 1794-1871&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;61469&quot;});" class='title'>History of Greece, Volume 11 (of 12)</a>
+<div class='author'>Grote, George, 1794-1871</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6151, {&quot;Title&quot;:&quot;Athens: Its Rise and Fall, Book I&quot;,&quot;Topics&quot;:[&quot;Athens (Greece) -- History&quot;],&quot;Primary&quot;:&quot;6151.txt&quot;,&quot;CreatorNames&quot;:[&quot;Lytton, Edward Bulwer Lytton, Baron, 1803-1873&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;6151&quot;});" class='title'>Athens:<br><span class='subtitle'>Its Rise and Fall, Book I</span></a>
+<div class='author'>Lytton, Edward Bulwer Lytton, Baron, 1803-1873</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6152, {&quot;Title&quot;:&quot;Athens: Its Rise and Fall, Book II&quot;,&quot;Topics&quot;:[&quot;Athens (Greece) -- History&quot;],&quot;Primary&quot;:&quot;6152.txt&quot;,&quot;CreatorNames&quot;:[&quot;Lytton, Edward Bulwer Lytton, Baron, 1803-1873&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;6152&quot;});" class='title'>Athens:<br><span class='subtitle'>Its Rise and Fall, Book II</span></a>
+<div class='author'>Lytton, Edward Bulwer Lytton, Baron, 1803-1873</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6153, {&quot;Title&quot;:&quot;Athens: Its Rise and Fall, Book III&quot;,&quot;Topics&quot;:[&quot;Athens (Greece) -- History&quot;],&quot;Primary&quot;:&quot;6153.txt&quot;,&quot;CreatorNames&quot;:[&quot;Lytton, Edward Bulwer Lytton, Baron, 1803-1873&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;6153&quot;});" class='title'>Athens:<br><span class='subtitle'>Its Rise and Fall, Book III</span></a>
+<div class='author'>Lytton, Edward Bulwer Lytton, Baron, 1803-1873</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6154, {&quot;Title&quot;:&quot;Athens: Its Rise and Fall, Book IV&quot;,&quot;Topics&quot;:[&quot;Athens (Greece) -- History&quot;],&quot;Primary&quot;:&quot;6154.txt&quot;,&quot;CreatorNames&quot;:[&quot;Lytton, Edward Bulwer Lytton, Baron, 1803-1873&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;6154&quot;});" class='title'>Athens:<br><span class='subtitle'>Its Rise and Fall, Book IV</span></a>
+<div class='author'>Lytton, Edward Bulwer Lytton, Baron, 1803-1873</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6155, {&quot;Title&quot;:&quot;Athens: Its Rise and Fall, Book V&quot;,&quot;Topics&quot;:[&quot;Athens (Greece) -- History&quot;],&quot;Primary&quot;:&quot;6155.txt&quot;,&quot;CreatorNames&quot;:[&quot;Lytton, Edward Bulwer Lytton, Baron, 1803-1873&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;6155&quot;});" class='title'>Athens:<br><span class='subtitle'>Its Rise and Fall, Book V</span></a>
+<div class='author'>Lytton, Edward Bulwer Lytton, Baron, 1803-1873</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6156, {&quot;Title&quot;:&quot;Athens: Its Rise and Fall, Complete&quot;,&quot;Topics&quot;:[&quot;Athens (Greece) -- History&quot;],&quot;Primary&quot;:&quot;6156.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lytton, Edward Bulwer Lytton, Baron, 1803-1873&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;6156&quot;});" class='title'>Athens:<br><span class='subtitle'>Its Rise and Fall, Complete</span></a>
+<div class='author'>Lytton, Edward Bulwer Lytton, Baron, 1803-1873</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61689, {&quot;Title&quot;:&quot;The Home Life of the Ancient Greeks&quot;,&quot;Topics&quot;:[&quot;Greece -- Social life and customs -- To 146 B.C.&quot;],&quot;Primary&quot;:&quot;61689.htm&quot;,&quot;CreatorNames&quot;:[&quot;Blümner, Hugo, 1844-1919&quot;,&quot;Zimmern, Alice, 1855-1939 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;61689&quot;});" class='title'>The Home Life of the Ancient Greeks</a>
+<div class='author'>Blümner, Hugo, 1844-1919, Zimmern, Alice, 1855-1939 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6200, {&quot;Title&quot;:&quot;The Greek View of Life&quot;,&quot;Topics&quot;:[&quot;Greece -- Civilization&quot;],&quot;Primary&quot;:&quot;6200.txt&quot;,&quot;CreatorNames&quot;:[&quot;Dickinson, G. Lowes (Goldsworthy Lowes), 1862-1932&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;6200&quot;});" class='title'>The Greek View of Life</a>
+<div class='author'>Dickinson, G. Lowes (Goldsworthy Lowes), 1862-1932</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62098, {&quot;Title&quot;:&quot;History of Greece, Volume 05 (of 12)&quot;,&quot;Topics&quot;:[&quot;Greece -- History&quot;],&quot;Primary&quot;:&quot;62098.htm&quot;,&quot;CreatorNames&quot;:[&quot;Grote, George, 1794-1871&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;62098&quot;});" class='title'>History of Greece, Volume 05 (of 12)</a>
+<div class='author'>Grote, George, 1794-1871</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63994, {&quot;Title&quot;:&quot;Hier beghint die hystorie Vanden grooten Coninck Alexander&quot;,&quot;Topics&quot;:[&quot;Alexander, the Great, 356 B.C.-323 B.C. -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;63994.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;63994&quot;});" class='title'>Hier beghint die hystorie Vanden grooten Coninck Alexander</a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64215, {&quot;Title&quot;:&quot;The Nurse in Greek Life&quot;,&quot;Topics&quot;:[&quot;Thesis (Ph. D.)&quot;,&quot;Nurses&quot;,&quot;Greek literature -- History and criticism&quot;],&quot;Primary&quot;:&quot;64215.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mary Rosaria, Sister, 1880-&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;64215&quot;});" class='title'>The Nurse in Greek Life</a>
+<div class='author'>Mary Rosaria, Sister, 1880-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64627, {&quot;Title&quot;:&quot;Athletics and Games of the Ancient Greeks&quot;,&quot;Topics&quot;:[&quot;Athletics&quot;,&quot;Olympics&quot;],&quot;Primary&quot;:&quot;64627.htm&quot;,&quot;CreatorNames&quot;:[&quot;Plummer, Edward M. (Edward Marwick)&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;64627&quot;});" class='title'>Athletics and Games of the Ancient Greeks</a>
+<div class='author'>Plummer, Edward M. (Edward Marwick)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65337, {&quot;Title&quot;:&quot;The Age of Justinian and Theodora: A History of the Sixth Century A.D., Volume 1 (of 2)&quot;,&quot;Topics&quot;:[&quot;Justinian I, Emperor of the East, 483?-565&quot;,&quot;Byzantine Empire -- History&quot;,&quot;Theodora, Empress, consort of Justinian I, Emperor of the East, -548&quot;],&quot;Primary&quot;:&quot;65337.htm&quot;,&quot;CreatorNames&quot;:[&quot;Holmes, William Gordon, 1845-1927&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;65337&quot;});" class='title'>The Age of Justinian and Theodora:<br><span class='subtitle'>A History of the Sixth Century A.D., Volume 1 (of 2)</span></a>
+<div class='author'>Holmes, William Gordon, 1845-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65717, {&quot;Title&quot;:&quot;The Age of Justinian and Theodora: A History of the Sixth Century A.D., Volume 2 (of 2)&quot;,&quot;Topics&quot;:[&quot;Justinian I, Emperor of the East, 483?-565&quot;,&quot;Byzantine Empire -- History&quot;,&quot;Theodora, Empress, consort of Justinian I, Emperor of the East, -548&quot;],&quot;Primary&quot;:&quot;65717.htm&quot;,&quot;CreatorNames&quot;:[&quot;Holmes, William Gordon, 1845-1927&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;65717&quot;});" class='title'>The Age of Justinian and Theodora:<br><span class='subtitle'>A History of the Sixth Century A.D., Volume 2 (of 2)</span></a>
+<div class='author'>Holmes, William Gordon, 1845-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66070, {&quot;Title&quot;:&quot;The Story of Greece: Told to Boys and Girls&quot;,&quot;Topics&quot;:[&quot;Mythology, Greek -- Juvenile literature&quot;,&quot;Greece -- History -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;66070.htm&quot;,&quot;CreatorNames&quot;:[&quot;Macgregor, Mary&quot;,&quot;Crane, Walter, 1845-1915 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;66070&quot;});" class='title'>The Story of Greece:<br><span class='subtitle'>Told to Boys and Girls</span></a>
+<div class='author'>Macgregor, Mary, Crane, Walter, 1845-1915 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66388, {&quot;Title&quot;:&quot;The Invasion of India by Alexander the Great as described by Arrian, Q. Curtius, Diodoros, Plutarch and Justin: Being Translations of such portions of the Works of these and other Classical Authors as describe Alexander&#39;s Campaigns in Afghanistan, the Panjâb, Sindh, Gedrosia and Karmania&quot;,&quot;Topics&quot;:[&quot;Alexander, the Great, 356 B.C.-323 B.C.&quot;,&quot;India -- History -- To 324 B.C. -- Sources&quot;],&quot;Primary&quot;:&quot;66388.htm&quot;,&quot;CreatorNames&quot;:[&quot;McCrindle, John Watson, 1825-1913&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;66388&quot;});" class='title'>The Invasion of India by Alexander the Great as described by Arrian, Q. Curtius, Diodoros, Plutarch and Justin:<br><span class='subtitle'>Being Translations of such portions of the Works of these and other Classical Authors as describe Alexander's Campaigns in Afghanistan, the Panjâb, Sindh, Gedrosia and Karmania</span></a>
+<div class='author'>McCrindle, John Watson, 1825-1913</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66663, {&quot;Title&quot;:&quot;Ancient history from the monuments: Greek cities &amp; islands of Asia Minor&quot;,&quot;Topics&quot;:[&quot;Turkey -- History&quot;,&quot;Greeks -- Turkey&quot;],&quot;Primary&quot;:&quot;66663.htm&quot;,&quot;CreatorNames&quot;:[&quot;Vaux, W. S. W. (William Sandys Wright), 1818-1885&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;66663&quot;});" class='title'>Ancient history from the monuments:<br><span class='subtitle'>Greek cities & islands of Asia Minor</span></a>
+<div class='author'>Vaux, W. S. W. (William Sandys Wright), 1818-1885</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66866, {&quot;Title&quot;:&quot;Historia de la guerra del Peloponeso (1 de 2)&quot;,&quot;Topics&quot;:[&quot;Greece -- History -- Peloponnesian War, 431-404 B.C.&quot;],&quot;Primary&quot;:&quot;66866.htm&quot;,&quot;CreatorNames&quot;:[&quot;Thucydides, 455? BCE-395 BCE&quot;,&quot;Gracián, Diego, 1494-1586? [Translator]&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;66866&quot;});" class='title'>Historia de la guerra del Peloponeso (1 de 2)</a>
+<div class='author'>Thucydides, 455? BCE-395 BCE, Gracián, Diego, 1494-1586? [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66867, {&quot;Title&quot;:&quot;Historia de la guerra del Peloponeso (2 de 2)&quot;,&quot;Topics&quot;:[&quot;Greece -- History -- Peloponnesian War, 431-404 B.C.&quot;],&quot;Primary&quot;:&quot;66867.htm&quot;,&quot;CreatorNames&quot;:[&quot;Thucydides, 455? BCE-395 BCE&quot;,&quot;Gracián, Diego, 1494-1586? [Translator]&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;66867&quot;});" class='title'>Historia de la guerra del Peloponeso (2 de 2)</a>
+<div class='author'>Thucydides, 455? BCE-395 BCE, Gracián, Diego, 1494-1586? [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67552, {&quot;Title&quot;:&quot;The History of the Manners and Customs of Ancient Greece, Volume 1 (of 3)&quot;,&quot;Topics&quot;:[&quot;Greece -- Social life and customs&quot;],&quot;Primary&quot;:&quot;67552.htm&quot;,&quot;CreatorNames&quot;:[&quot;St. John, James Augustus, 1795-1875&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;67552&quot;});" class='title'>The History of the Manners and Customs of Ancient Greece, Volume 1 (of 3)</a>
+<div class='author'>St. John, James Augustus, 1795-1875</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67637, {&quot;Title&quot;:&quot;The History of the Manners and Customs of Ancient Greece, Volume 2 (of 3)&quot;,&quot;Topics&quot;:[&quot;Greece -- Social life and customs&quot;],&quot;Primary&quot;:&quot;67637.htm&quot;,&quot;CreatorNames&quot;:[&quot;St. John, James Augustus, 1795-1875&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;67637&quot;});" class='title'>The History of the Manners and Customs of Ancient Greece, Volume 2 (of 3)</a>
+<div class='author'>St. John, James Augustus, 1795-1875</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67707, {&quot;Title&quot;:&quot;The History of the Manners and Customs of Ancient Greece, Volume 3 (of 3)&quot;,&quot;Topics&quot;:[&quot;Greece -- Social life and customs&quot;],&quot;Primary&quot;:&quot;67707.htm&quot;,&quot;CreatorNames&quot;:[&quot;St. John, James Augustus, 1795-1875&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;67707&quot;});" class='title'>The History of the Manners and Customs of Ancient Greece, Volume 3 (of 3)</a>
+<div class='author'>St. John, James Augustus, 1795-1875</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67984, {&quot;Title&quot;:&quot;Greek Lands and Letters&quot;,&quot;Topics&quot;:[&quot;Greece -- Description and travel&quot;,&quot;Greek literature -- History and criticism&quot;],&quot;Primary&quot;:&quot;67984.htm&quot;,&quot;CreatorNames&quot;:[&quot;Allinson, Anne C. E. (Anne Crosby Emery), 1871-1932&quot;,&quot;Allinson, Francis Greenleaf, 1856-1931&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;67984&quot;});" class='title'>Greek Lands and Letters</a>
+<div class='author'>Allinson, Anne C. E. (Anne Crosby Emery), 1871-1932, Allinson, Francis Greenleaf, 1856-1931</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68180, {&quot;Title&quot;:&quot;The book of the ancient Greeks - An introduction to the history and civilization of Greece from the coming of the Greeks to the conquest of Corinth by Rome in 146 B.C.&quot;,&quot;Topics&quot;:[&quot;Greece -- History -- To 146 B.C.&quot;,&quot;Greece -- Civilization -- To 146 B.C.&quot;],&quot;Primary&quot;:&quot;68180.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mills, Dorothy&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;68180&quot;});" class='title'>The book of the ancient Greeks -<br><span class='subtitle'>An introduction to the history and civilization of Greece from the coming of the Greeks to the conquest of Corinth by Rome in 146 B.C.</span></a>
+<div class='author'>Mills, Dorothy</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6841, {&quot;Title&quot;:&quot;Mosaics of Grecian History&quot;,&quot;Topics&quot;:[&quot;Greece -- History&quot;],&quot;Primary&quot;:&quot;6841.htm&quot;,&quot;CreatorNames&quot;:[&quot;Willson, Marcius, 1813-1905&quot;,&quot;Wilson, Robert Pierpont&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;6841&quot;});" class='title'>Mosaics of Grecian History</a>
+<div class='author'>Willson, Marcius, 1813-1905, Wilson, Robert Pierpont</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68680, {&quot;Title&quot;:&quot;Pausanias&#39; description of Greece, Volume II.&quot;,&quot;Topics&quot;:[&quot;Greece -- Antiquities&quot;,&quot;Greece -- Description and travel -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;68680.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pausanias, active approximately 150-175&quot;,&quot;Shilleto, A. R. (Arthur Richard), 1848-1894 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;68680&quot;});" class='title'>Pausanias' description of Greece, Volume II.</a>
+<div class='author'>Pausanias, active approximately 150-175, Shilleto, A. R. (Arthur Richard), 1848-1894 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68946, {&quot;Title&quot;:&quot;Pausanias&#39; description of Greece, Volume I.&quot;,&quot;Topics&quot;:[&quot;Greece -- Antiquities&quot;,&quot;Greece -- Description and travel -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;68946.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pausanias, active approximately 150-175&quot;,&quot;Shilleto, A. R. (Arthur Richard), 1848-1894 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;68946&quot;});" class='title'>Pausanias' description of Greece, Volume I.</a>
+<div class='author'>Pausanias, active approximately 150-175, Shilleto, A. R. (Arthur Richard), 1848-1894 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69026, {&quot;Title&quot;:&quot;Essays on the Latin Orient&quot;,&quot;Topics&quot;:[&quot;Greece -- History&quot;,&quot;Balkan Peninsula&quot;,&quot;Latin Orient&quot;],&quot;Primary&quot;:&quot;69026.htm&quot;,&quot;CreatorNames&quot;:[&quot;Miller, William, 1864-1945&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;69026&quot;});" class='title'>Essays on the Latin Orient</a>
+<div class='author'>Miller, William, 1864-1945</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69344, {&quot;Title&quot;:&quot;Poine: a study in ancient Greek blood-vengeance&quot;,&quot;Topics&quot;:[&quot;Greece -- Civilization&quot;,&quot;Vendetta&quot;,&quot;Criminal law (Greek law)&quot;,&quot;Homicide (Greek law)&quot;,&quot;Greek drama (Tragedy) -- History and criticism&quot;],&quot;Primary&quot;:&quot;69344.htm&quot;,&quot;CreatorNames&quot;:[&quot;Treston, Hubert Joseph, 1888-1959&quot;],&quot;LoCC&quot;:[&quot;DF&quot;,&quot;KL&quot;],&quot;PG_ID&quot;:&quot;69344&quot;});" class='title'>Poine:<br><span class='subtitle'>a study in ancient Greek blood-vengeance</span></a>
+<div class='author'>Treston, Hubert Joseph, 1888-1959</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69765, {&quot;Title&quot;:&quot;The Minoans&quot;,&quot;Topics&quot;:[&quot;Crete (Greece) -- Antiquities&quot;,&quot;Minoans&quot;],&quot;Primary&quot;:&quot;69765.htm&quot;,&quot;CreatorNames&quot;:[&quot;Glasgow, George, 1891-&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;69765&quot;});" class='title'>The Minoans</a>
+<div class='author'>Glasgow, George, 1891-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7142, {&quot;Title&quot;:&quot;The History of the Peloponnesian War&quot;,&quot;Topics&quot;:[&quot;Greece -- History -- Peloponnesian War, 431-404 B.C.&quot;],&quot;Primary&quot;:&quot;7142.htm&quot;,&quot;CreatorNames&quot;:[&quot;Thucydides, 455? BCE-395 BCE&quot;,&quot;Crawley, Richard, 1840-1893 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DF&quot;],&quot;PG_ID&quot;:&quot;7142&quot;});" class='title'>The History of the Peloponnesian War</a>
+<div class='author'>Thucydides, 455? BCE-395 BCE, Crawley, Richard, 1840-1893 [Translator]</div>
+</div>
+</ul></div>
+</body></html>

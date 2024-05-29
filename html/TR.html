@@ -1,0 +1,214 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Photography (TR)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16260, {&quot;Title&quot;:&quot;Nouveau moyen de préparer la couche sensible des plaques destinées à recevoir les images photographiques - Lettre à M. Arago&quot;,&quot;Topics&quot;:[&quot;Daguerreotype&quot;],&quot;Primary&quot;:&quot;16260.htm&quot;,&quot;CreatorNames&quot;:[&quot;Daguerre, Louis Jacques Mandé, 1787-1851&quot;],&quot;LoCC&quot;:[&quot;TR&quot;],&quot;PG_ID&quot;:&quot;16260&quot;});" class='title'>Nouveau moyen de préparer la couche sensible des plaques destinées à recevoir les images photographiques -<br><span class='subtitle'>Lettre à M. Arago</span></a>
+<div class='author'>Daguerre, Louis Jacques Mandé, 1787-1851</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(167, {&quot;Title&quot;:&quot;American Hand Book of the Daguerreotype&quot;,&quot;Topics&quot;:[&quot;Photography&quot;,&quot;Daguerreotype&quot;],&quot;Primary&quot;:&quot;167.htm&quot;,&quot;CreatorNames&quot;:[&quot;Humphrey, S. D. (Samuel Dwight), 1823-1883&quot;],&quot;LoCC&quot;:[&quot;TR&quot;],&quot;PG_ID&quot;:&quot;167&quot;});" class='title'>American Hand Book of the Daguerreotype</a>
+<div class='author'>Humphrey, S. D. (Samuel Dwight), 1823-1883</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(168, {&quot;Title&quot;:&quot;The History and Practice of the Art of Photography&quot;,&quot;Topics&quot;:[&quot;Photography&quot;,&quot;Daguerreotype&quot;],&quot;Primary&quot;:&quot;168.htm&quot;,&quot;CreatorNames&quot;:[&quot;Snelling, Henry Hunt, 1816-1897&quot;],&quot;LoCC&quot;:[&quot;TR&quot;],&quot;PG_ID&quot;:&quot;168&quot;});" class='title'>The History and Practice of the Art of Photography</a>
+<div class='author'>Snelling, Henry Hunt, 1816-1897</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24016, {&quot;Title&quot;:&quot;Photographic Reproduction Processes&quot;,&quot;Topics&quot;:[&quot;Photographic reproduction of plans, drawings, etc.&quot;,&quot;Photography -- Printing processes&quot;],&quot;Primary&quot;:&quot;24016.htm&quot;,&quot;CreatorNames&quot;:[&quot;Duchochois, Peter C.&quot;],&quot;LoCC&quot;:[&quot;TR&quot;],&quot;PG_ID&quot;:&quot;24016&quot;});" class='title'>Photographic Reproduction Processes</a>
+<div class='author'>Duchochois, Peter C.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24637, {&quot;Title&quot;:&quot;Bromide Printing and Enlarging - A Practical Guide to the Making of Bromide Prints by Contact and Bromide Enlarging by Daylight and Artificial Light, With the Toning of Bromide Prints and Enlargements&quot;,&quot;Topics&quot;:[&quot;Photography -- Printing processes -- Silver&quot;,&quot;Photography -- Enlarging&quot;],&quot;Primary&quot;:&quot;24637.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tennant, John A.&quot;],&quot;LoCC&quot;:[&quot;TR&quot;],&quot;PG_ID&quot;:&quot;24637&quot;});" class='title'>Bromide Printing and Enlarging -<br><span class='subtitle'>A Practical Guide to the Making of Bromide Prints by Contact and Bromide Enlarging by Daylight and Artificial Light, With the Toning of Bromide Prints and Enlargements</span></a>
+<div class='author'>Tennant, John A.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28015, {&quot;Title&quot;:&quot;Pictorial Photography in America 1920&quot;,&quot;Topics&quot;:[&quot;Photography, Artistic -- Periodicals&quot;],&quot;Primary&quot;:&quot;28015.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pictorial Photographers of America&quot;,&quot;White, Clarence H. (Clarence Hudson), 1871-1925 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;TR&quot;],&quot;PG_ID&quot;:&quot;28015&quot;});" class='title'>Pictorial Photography in America 1920</a>
+<div class='author'>Pictorial Photographers of America, White, Clarence H. (Clarence Hudson), 1871-1925 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28023, {&quot;Title&quot;:&quot;Pictorial Photography in America 1921&quot;,&quot;Topics&quot;:[&quot;Photography, Artistic -- Periodicals&quot;],&quot;Primary&quot;:&quot;28023.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pictorial Photographers of America&quot;,&quot;Dow, Arthur W. (Arthur Wesley), 1857-1922 [Commentator]&quot;,&quot;Moore, Henry Hoyt [Commentator]&quot;,&quot;White, Clarence H. (Clarence Hudson), 1871-1925 [Commentator]&quot;],&quot;LoCC&quot;:[&quot;TR&quot;],&quot;PG_ID&quot;:&quot;28023&quot;});" class='title'>Pictorial Photography in America 1921</a>
+<div class='author'>Pictorial Photographers of America, Dow, Arthur W. (Arthur Wesley), 1857-1922 [Commentator], Moore, Henry Hoyt [Commentator], White, Clarence H. (Clarence Hudson), 1871-1925 [Commentator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28024, {&quot;Title&quot;:&quot;Pictorial Photography in America 1922&quot;,&quot;Topics&quot;:[&quot;Photography, Artistic -- Periodicals&quot;],&quot;Primary&quot;:&quot;28024.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pictorial Photographers of America&quot;,&quot;Campbell, Heyworth, -1953 [Commentator]&quot;,&quot;Moore, Henry Hoyt [Commentator]&quot;,&quot;Sterner, Albert, 1863-1946 [Commentator]&quot;],&quot;LoCC&quot;:[&quot;TR&quot;],&quot;PG_ID&quot;:&quot;28024&quot;});" class='title'>Pictorial Photography in America 1922</a>
+<div class='author'>Pictorial Photographers of America, Campbell, Heyworth, -1953 [Commentator], Moore, Henry Hoyt [Commentator], Sterner, Albert, 1863-1946 [Commentator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33034, {&quot;Title&quot;:&quot;Premo Cameras, 1914&quot;,&quot;Topics&quot;:[&quot;Premo camera -- Catalogs&quot;,&quot;Cameras -- Catalogs&quot;],&quot;Primary&quot;:&quot;33034.htm&quot;,&quot;CreatorNames&quot;:[&quot;Canadian Kodak Company&quot;],&quot;LoCC&quot;:[&quot;TR&quot;],&quot;PG_ID&quot;:&quot;33034&quot;});" class='title'>Premo Cameras, 1914</a>
+<div class='author'>Canadian Kodak Company</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33183, {&quot;Title&quot;:&quot;Kodaks and Kodak Supplies, 1914&quot;,&quot;Topics&quot;:[&quot;Cameras -- Catalogs&quot;,&quot;Photography -- Equipment and supplies -- Catalogs&quot;],&quot;Primary&quot;:&quot;33183.htm&quot;,&quot;CreatorNames&quot;:[&quot;Canadian Kodak Company&quot;],&quot;LoCC&quot;:[&quot;TR&quot;],&quot;PG_ID&quot;:&quot;33183&quot;});" class='title'>Kodaks and Kodak Supplies, 1914</a>
+<div class='author'>Canadian Kodak Company</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33447, {&quot;Title&quot;:&quot;The Pencil of Nature&quot;,&quot;Topics&quot;:[&quot;Photography -- Early works to 1850&quot;],&quot;Primary&quot;:&quot;33447.htm&quot;,&quot;CreatorNames&quot;:[&quot;Talbot, William Henry Fox, 1800-1877&quot;],&quot;LoCC&quot;:[&quot;TR&quot;],&quot;PG_ID&quot;:&quot;33447&quot;});" class='title'>The Pencil of Nature</a>
+<div class='author'>Talbot, William Henry Fox, 1800-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35709, {&quot;Title&quot;:&quot;Making Your Camera Pay&quot;,&quot;Topics&quot;:[&quot;Commercial photography&quot;],&quot;Primary&quot;:&quot;35709.htm&quot;,&quot;CreatorNames&quot;:[&quot;Davis, Frederick C.&quot;],&quot;LoCC&quot;:[&quot;TR&quot;],&quot;PG_ID&quot;:&quot;35709&quot;});" class='title'>Making Your Camera Pay</a>
+<div class='author'>Davis, Frederick C.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36446, {&quot;Title&quot;:&quot;Photogravure&quot;,&quot;Topics&quot;:[&quot;Photogravure&quot;],&quot;Primary&quot;:&quot;36446.htm&quot;,&quot;CreatorNames&quot;:[&quot;Blaney, Henry R., 1855-1913&quot;,&quot;Adams, W. I. Lincoln (Washington Irving Lincoln), 1865-1946 [Editor]&quot;],&quot;LoCC&quot;:[&quot;TR&quot;],&quot;PG_ID&quot;:&quot;36446&quot;});" class='title'>Photogravure</a>
+<div class='author'>Blaney, Henry R., 1855-1913, Adams, W. I. Lincoln (Washington Irving Lincoln), 1865-1946 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37743, {&quot;Title&quot;:&quot;The Attitudes of Animals in Motion, Illustrated with the Zoopraxiscope&quot;,&quot;Topics&quot;:[&quot;Animal locomotion&quot;],&quot;Primary&quot;:&quot;37743.htm&quot;,&quot;CreatorNames&quot;:[&quot;Muybridge, Eadweard, 1830-1904&quot;],&quot;LoCC&quot;:[&quot;QL&quot;,&quot;TR&quot;],&quot;PG_ID&quot;:&quot;37743&quot;});" class='title'>The Attitudes of Animals in Motion, Illustrated with the Zoopraxiscope</a>
+<div class='author'>Muybridge, Eadweard, 1830-1904</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38866, {&quot;Title&quot;:&quot;The Evolution of Photography - With a Chronological Record of Discoveries, Inventions, Etc., Contributions to Photographic Literature, and Personal Reminescences Extending over Forty Years&quot;,&quot;Topics&quot;:[&quot;Photography -- History&quot;],&quot;Primary&quot;:&quot;38866.htm&quot;,&quot;CreatorNames&quot;:[&quot;Werge, John, active 1854-1890&quot;],&quot;LoCC&quot;:[&quot;TR&quot;],&quot;PG_ID&quot;:&quot;38866&quot;});" class='title'>The Evolution of Photography -<br><span class='subtitle'>With a Chronological Record of Discoveries, Inventions, Etc., Contributions to Photographic Literature, and Personal Reminescences Extending over Forty Years</span></a>
+<div class='author'>Werge, John, active 1854-1890</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39691, {&quot;Title&quot;:&quot;Photographic Amusements, Ninth Edition - Including A Description of a Number of Novel Effects Obtainable with the Camera&quot;,&quot;Topics&quot;:[&quot;Trick photography&quot;],&quot;Primary&quot;:&quot;39691.htm&quot;,&quot;CreatorNames&quot;:[&quot;Woodbury, Walter E.&quot;,&quot;Fraprie, Frank Roy, 1874-1951 [Editor]&quot;],&quot;LoCC&quot;:[&quot;TR&quot;],&quot;PG_ID&quot;:&quot;39691&quot;});" class='title'>Photographic Amusements, Ninth Edition -<br><span class='subtitle'>Including A Description of a Number of Novel Effects Obtainable with the Camera</span></a>
+<div class='author'>Woodbury, Walter E., Fraprie, Frank Roy, 1874-1951 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40468, {&quot;Title&quot;:&quot;The Barnet Book of Photography: A Collection of Practical Articles&quot;,&quot;Topics&quot;:[&quot;Photography&quot;],&quot;Primary&quot;:&quot;40468.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;TR&quot;],&quot;PG_ID&quot;:&quot;40468&quot;});" class='title'>The Barnet Book of Photography:<br><span class='subtitle'>A Collection of Practical Articles</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41367, {&quot;Title&quot;:&quot;Handbuch der praktischen Kinematographie - Die verschiedenen Konstruktions-Formen des Kinematographen, die Darstellung der lebenden Lichtbilder sowie das ...&quot;,&quot;Topics&quot;:[&quot;Cinematography -- Handbooks, manuals, etc.&quot;,&quot;Motion picture industry&quot;],&quot;Primary&quot;:&quot;41367.htm&quot;,&quot;CreatorNames&quot;:[&quot;Liesegang, Franz Paul, 1873-1949&quot;],&quot;LoCC&quot;:[&quot;TR&quot;],&quot;PG_ID&quot;:&quot;41367&quot;});" class='title'>Handbuch der praktischen Kinematographie -<br><span class='subtitle'>Die verschiedenen Konstruktions-Formen des Kinematographen, die Darstellung der lebenden Lichtbilder sowie das ...</span></a>
+<div class='author'>Liesegang, Franz Paul, 1873-1949</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42547, {&quot;Title&quot;:&quot;The Art and Practice of Silver Printing&quot;,&quot;Topics&quot;:[&quot;Photography -- Printing processes -- Silver&quot;],&quot;Primary&quot;:&quot;42547.htm&quot;,&quot;CreatorNames&quot;:[&quot;Abney, William de Wiveleslie, Sir, 1843-1920&quot;,&quot;Robinson, H. P. (Henry Peach), 1830-1901&quot;],&quot;LoCC&quot;:[&quot;TR&quot;],&quot;PG_ID&quot;:&quot;42547&quot;});" class='title'>The Art and Practice of Silver Printing</a>
+<div class='author'>Abney, William de Wiveleslie, Sir, 1843-1920, Robinson, H. P. (Henry Peach), 1830-1901</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42982, {&quot;Title&quot;:&quot;Photography in the Studio and in the Field - A Practical Manual Designed as a Companion Alike to the Professional and the Amateur Photographer&quot;,&quot;Topics&quot;:[&quot;Photography&quot;],&quot;Primary&quot;:&quot;42982.htm&quot;,&quot;CreatorNames&quot;:[&quot;Estabrooke, Edward M.&quot;],&quot;LoCC&quot;:[&quot;TR&quot;],&quot;PG_ID&quot;:&quot;42982&quot;});" class='title'>Photography in the Studio and in the Field -<br><span class='subtitle'>A Practical Manual Designed as a Companion Alike to the Professional and the Amateur Photographer</span></a>
+<div class='author'>Estabrooke, Edward M.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44972, {&quot;Title&quot;:&quot;Sciopticon: Einführung in die Projections-Kunst&quot;,&quot;Topics&quot;:[&quot;Lantern projection&quot;],&quot;Primary&quot;:&quot;44972.htm&quot;,&quot;CreatorNames&quot;:[&quot;Liesegang, Franz Paul, 1873-1949&quot;],&quot;LoCC&quot;:[&quot;TR&quot;],&quot;PG_ID&quot;:&quot;44972&quot;});" class='title'>Sciopticon:<br><span class='subtitle'>Einführung in die Projections-Kunst</span></a>
+<div class='author'>Liesegang, Franz Paul, 1873-1949</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45714, {&quot;Title&quot;:&quot;Practical Cinematography and Its Applications&quot;,&quot;Topics&quot;:[&quot;Cinematography&quot;],&quot;Primary&quot;:&quot;45714.htm&quot;,&quot;CreatorNames&quot;:[&quot;Talbot, Frederick Arthur Ambrose, 1880-1924&quot;],&quot;LoCC&quot;:[&quot;TR&quot;],&quot;PG_ID&quot;:&quot;45714&quot;});" class='title'>Practical Cinematography and Its Applications</a>
+<div class='author'>Talbot, Frederick Arthur Ambrose, 1880-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49464, {&quot;Title&quot;:&quot;Lichtbild- und Kino-Technik - Lichtbühnen-Bibliothek Nr. 1&quot;,&quot;Topics&quot;:[&quot;Cinematography&quot;],&quot;Primary&quot;:&quot;49464.htm&quot;,&quot;CreatorNames&quot;:[&quot;Liesegang, Franz Paul, 1873-1949&quot;],&quot;LoCC&quot;:[&quot;TR&quot;],&quot;PG_ID&quot;:&quot;49464&quot;});" class='title'>Lichtbild-<br><span class='subtitle'>und Kino-Technik - Lichtbühnen-Bibliothek Nr. 1</span></a>
+<div class='author'>Liesegang, Franz Paul, 1873-1949</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49640, {&quot;Title&quot;:&quot;The Mentor: Photography, Vol. 6, Num. 12, Serial No. 160, August 1, 1918&quot;,&quot;Topics&quot;:[&quot;Photography&quot;],&quot;Primary&quot;:&quot;49640.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anderson, Paul, 1880-1956&quot;],&quot;LoCC&quot;:[&quot;TR&quot;],&quot;PG_ID&quot;:&quot;49640&quot;});" class='title'>The Mentor:<br><span class='subtitle'>Photography, Vol. 6, Num. 12, Serial No. 160, August 1, 1918</span></a>
+<div class='author'>Anderson, Paul, 1880-1956</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49866, {&quot;Title&quot;:&quot;Collotype and Photo-lithography&quot;,&quot;Topics&quot;:[&quot;Photolithography&quot;,&quot;Collotype&quot;],&quot;Primary&quot;:&quot;49866.htm&quot;,&quot;CreatorNames&quot;:[&quot;Schnauss, Julius, 1827-1895&quot;,&quot;Middleton, Edwin C. [Translator]&quot;],&quot;LoCC&quot;:[&quot;TR&quot;],&quot;PG_ID&quot;:&quot;49866&quot;});" class='title'>Collotype and Photo-lithography</a>
+<div class='author'>Schnauss, Julius, 1827-1895, Middleton, Edwin C. [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52378, {&quot;Title&quot;:&quot;Photo-engraving, Photo-etching and Photo-lithography in Line and Half-tone - Also Collotype and Heliotype&quot;,&quot;Topics&quot;:[&quot;Photomechanical processes&quot;],&quot;Primary&quot;:&quot;52378.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wilkinson, W. T.&quot;,&quot;Wilson, Edward L. (Edward Livingston), 1838-1903 [Editor]&quot;],&quot;LoCC&quot;:[&quot;TR&quot;],&quot;PG_ID&quot;:&quot;52378&quot;});" class='title'>Photo-engraving, Photo-etching and Photo-lithography in Line and Half-tone -<br><span class='subtitle'>Also Collotype and Heliotype</span></a>
+<div class='author'>Wilkinson, W. T., Wilson, Edward L. (Edward Livingston), 1838-1903 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53508, {&quot;Title&quot;:&quot;Airplane Photography&quot;,&quot;Topics&quot;:[&quot;Aerial photography&quot;],&quot;Primary&quot;:&quot;53508.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ives, Herbert Eugene, 1882-1953&quot;],&quot;LoCC&quot;:[&quot;TR&quot;],&quot;PG_ID&quot;:&quot;53508&quot;});" class='title'>Airplane Photography</a>
+<div class='author'>Ives, Herbert Eugene, 1882-1953</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55971, {&quot;Title&quot;:&quot;Photo-Lithography&quot;,&quot;Topics&quot;:[&quot;Photolithography&quot;],&quot;Primary&quot;:&quot;55971.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fritz, Georg, 1851-&quot;,&quot;Wall, E. J. (Edward John), 1860-1928 [Translator]&quot;],&quot;LoCC&quot;:[&quot;TR&quot;],&quot;PG_ID&quot;:&quot;55971&quot;});" class='title'>Photo-Lithography</a>
+<div class='author'>Fritz, Georg, 1851-, Wall, E. J. (Edward John), 1860-1928 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56164, {&quot;Title&quot;:&quot;Das lebende Lichtbild: Entwicklung, Wesen und Bedeutung des Kinematographen&quot;,&quot;Topics&quot;:[&quot;Motion pictures&quot;,&quot;Cinematography&quot;],&quot;Primary&quot;:&quot;56164.htm&quot;,&quot;CreatorNames&quot;:[&quot;Liesegang, Franz Paul, 1873-1949&quot;],&quot;LoCC&quot;:[&quot;TR&quot;],&quot;PG_ID&quot;:&quot;56164&quot;});" class='title'>Das lebende Lichtbild:<br><span class='subtitle'>Entwicklung, Wesen und Bedeutung des Kinematographen</span></a>
+<div class='author'>Liesegang, Franz Paul, 1873-1949</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56833, {&quot;Title&quot;:&quot;Naturalistic Photography for Students of the Art.&quot;,&quot;Topics&quot;:[&quot;Photography&quot;,&quot;Art&quot;],&quot;Primary&quot;:&quot;56833.htm&quot;,&quot;CreatorNames&quot;:[&quot;Emerson, P. H. (Peter Henry), 1856-1936&quot;],&quot;LoCC&quot;:[&quot;TR&quot;],&quot;PG_ID&quot;:&quot;56833&quot;});" class='title'>Naturalistic Photography for Students of the Art.</a>
+<div class='author'>Emerson, P. H. (Peter Henry), 1856-1936</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58708, {&quot;Title&quot;:&quot;The British Journal of Photography, No. 613, Vol. XIX, February 2, 1872&quot;,&quot;Topics&quot;:[&quot;Photography -- Periodicals&quot;],&quot;Primary&quot;:&quot;58708.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;TR&quot;],&quot;PG_ID&quot;:&quot;58708&quot;});" class='title'>The British Journal of Photography, No. 613, Vol. XIX, February 2, 1872</a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59193, {&quot;Title&quot;:&quot;The American Journal of Photography, Vol. XI, No. 7, July 1890&quot;,&quot;Topics&quot;:[&quot;Photography -- Periodicals&quot;],&quot;Primary&quot;:&quot;59193.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;,&quot;McCollin, Thomas H. [Editor]&quot;,&quot;Sachse, Julius Friedrich, 1842-1919 [Editor]&quot;],&quot;LoCC&quot;:[&quot;TR&quot;],&quot;PG_ID&quot;:&quot;59193&quot;});" class='title'>The American Journal of Photography, Vol. XI, No. 7, July 1890</a>
+<div class='author'>Various, McCollin, Thomas H. [Editor], Sachse, Julius Friedrich, 1842-1919 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62068, {&quot;Title&quot;:&quot;The Face of the Earth as Seen from the Air - A Study in the Application of Airplane Photography to Geography&quot;,&quot;Topics&quot;:[&quot;Physical geography&quot;,&quot;Cartography&quot;,&quot;Aerial photography&quot;],&quot;Primary&quot;:&quot;62068.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lee, Willis T. (Willis Thomas), 1864-1926&quot;,&quot;Joerg, W. L. G. (Wolfgang Louis Gottfried), 1885-1952 [Editor]&quot;],&quot;LoCC&quot;:[&quot;TR&quot;],&quot;PG_ID&quot;:&quot;62068&quot;});" class='title'>The Face of the Earth as Seen from the Air -<br><span class='subtitle'>A Study in the Application of Airplane Photography to Geography</span></a>
+<div class='author'>Lee, Willis T. (Willis Thomas), 1864-1926, Joerg, W. L. G. (Wolfgang Louis Gottfried), 1885-1952 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63427, {&quot;Title&quot;:&quot;The Daguerreian Journal, Vol. I, No. 8, March 1, 1851&quot;,&quot;Topics&quot;:[&quot;Daguerreotype&quot;,&quot;Photography -- Periodicals&quot;],&quot;Primary&quot;:&quot;63427.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;,&quot;Humphrey, S. D. (Samuel Dwight), 1823-1883 [Editor]&quot;],&quot;LoCC&quot;:[&quot;TR&quot;],&quot;PG_ID&quot;:&quot;63427&quot;});" class='title'>The Daguerreian Journal, Vol. I, No. 8, March 1, 1851</a>
+<div class='author'>Various, Humphrey, S. D. (Samuel Dwight), 1823-1883 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63428, {&quot;Title&quot;:&quot;The Daguerreian Journal, Vol. II, No. 2, June 1, 1851&quot;,&quot;Topics&quot;:[&quot;Daguerreotype&quot;,&quot;Photography -- Periodicals&quot;],&quot;Primary&quot;:&quot;63428.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;,&quot;Hill, Levi L., 1816-1865 [Editor]&quot;,&quot;Humphrey, S. D. (Samuel Dwight), 1823-1883 [Editor]&quot;],&quot;LoCC&quot;:[&quot;TR&quot;],&quot;PG_ID&quot;:&quot;63428&quot;});" class='title'>The Daguerreian Journal, Vol. II, No. 2, June 1, 1851</a>
+<div class='author'>Various, Hill, Levi L., 1816-1865 [Editor], Humphrey, S. D. (Samuel Dwight), 1823-1883 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63517, {&quot;Title&quot;:&quot;A Practical Manual of the Collodion Process, Giving in Detail a Method For Producing Positive and Negative Pictures on Glass and Paper.&quot;,&quot;Topics&quot;:[&quot;Photography&quot;,&quot;Ambrotype&quot;],&quot;Primary&quot;:&quot;63517.htm&quot;,&quot;CreatorNames&quot;:[&quot;Humphrey, S. D. (Samuel Dwight), 1823-1883&quot;],&quot;LoCC&quot;:[&quot;TR&quot;],&quot;PG_ID&quot;:&quot;63517&quot;});" class='title'>A Practical Manual of the Collodion Process, Giving in Detail a Method For Producing Positive and Negative Pictures on Glass and Paper.</a>
+<div class='author'>Humphrey, S. D. (Samuel Dwight), 1823-1883</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63710, {&quot;Title&quot;:&quot;A Manual of Photographic Chemistry, Including the Practice of the Collodion Process&quot;,&quot;Topics&quot;:[&quot;Photography&quot;,&quot;Photographic chemistry&quot;],&quot;Primary&quot;:&quot;63710.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hardwich, T. Frederick, 1829-1890&quot;],&quot;LoCC&quot;:[&quot;TR&quot;],&quot;PG_ID&quot;:&quot;63710&quot;});" class='title'>A Manual of Photographic Chemistry, Including the Practice of the Collodion Process</a>
+<div class='author'>Hardwich, T. Frederick, 1829-1890</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63814, {&quot;Title&quot;:&quot;The Dry Collodion Process&quot;,&quot;Topics&quot;:[&quot;Photography -- Plates&quot;,&quot;Photography -- Developing and developers&quot;,&quot;Collodion&quot;],&quot;Primary&quot;:&quot;63814.htm&quot;,&quot;CreatorNames&quot;:[&quot;Long, Charles A.&quot;],&quot;LoCC&quot;:[&quot;TR&quot;],&quot;PG_ID&quot;:&quot;63814&quot;});" class='title'>The Dry Collodion Process</a>
+<div class='author'>Long, Charles A.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64578, {&quot;Title&quot;:&quot;Magic Shadows: The Story of the Origin of Motion Pictures&quot;,&quot;Topics&quot;:[&quot;Lantern projection&quot;,&quot;Motion pictures -- History&quot;],&quot;Primary&quot;:&quot;64578.htm&quot;,&quot;CreatorNames&quot;:[&quot;Quigley, Martin, 1917-2011&quot;,&quot;Curtis, Edward Peck, 1897-1987 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;TR&quot;],&quot;PG_ID&quot;:&quot;64578&quot;});" class='title'>Magic Shadows:<br><span class='subtitle'>The Story of the Origin of Motion Pictures</span></a>
+<div class='author'>Quigley, Martin, 1917-2011, Curtis, Edward Peck, 1897-1987 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69127, {&quot;Title&quot;:&quot;Bromoil printing and bromoil transfer&quot;,&quot;Topics&quot;:[&quot;Photography -- Printing processes&quot;],&quot;Primary&quot;:&quot;69127.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mayer, Emil, 1871-1938&quot;,&quot;Fraprie, Frank Roy, 1874-1951 [Translator]&quot;],&quot;LoCC&quot;:[&quot;TR&quot;],&quot;PG_ID&quot;:&quot;69127&quot;});" class='title'>Bromoil printing and bromoil transfer</a>
+<div class='author'>Mayer, Emil, 1871-1938, Fraprie, Frank Roy, 1874-1951 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70417, {&quot;Title&quot;:&quot;Tinting and toning of Eastman positive motion picture film&quot;,&quot;Topics&quot;:[&quot;Color cinematography&quot;,&quot;Motion picture film&quot;],&quot;Primary&quot;:&quot;70417.htm&quot;,&quot;CreatorNames&quot;:[&quot;Eastman Kodak Company&quot;],&quot;LoCC&quot;:[&quot;TR&quot;],&quot;PG_ID&quot;:&quot;70417&quot;});" class='title'>Tinting and toning of Eastman positive motion picture film</a>
+<div class='author'>Eastman Kodak Company</div>
+</div>
+</ul></div>
+</body></html>

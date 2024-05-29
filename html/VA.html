@@ -1,0 +1,90 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Navies (VA)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25122, {&quot;Title&quot;:&quot;From Sail to Steam, Recollections of Naval Life&quot;,&quot;Topics&quot;:[&quot;United States. Navy -- History&quot;],&quot;Primary&quot;:&quot;25122.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mahan, A. T. (Alfred Thayer), 1840-1914&quot;],&quot;LoCC&quot;:[&quot;VA&quot;],&quot;PG_ID&quot;:&quot;25122&quot;});" class='title'>From Sail to Steam, Recollections of Naval Life</a>
+<div class='author'>Mahan, A. T. (Alfred Thayer), 1840-1914</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34103, {&quot;Title&quot;:&quot;Korvetten Heimdals Togt til de vestindiske Farvande i Aarene 1861 &amp; 1862&quot;,&quot;Topics&quot;:[&quot;Heimdal (Ship)&quot;],&quot;Primary&quot;:&quot;34103.htm&quot;,&quot;CreatorNames&quot;:[&quot;Holm, Jacob&quot;],&quot;LoCC&quot;:[&quot;VA&quot;],&quot;PG_ID&quot;:&quot;34103&quot;});" class='title'>Korvetten Heimdals Togt til de vestindiske Farvande i Aarene 1861 & 1862</a>
+<div class='author'>Holm, Jacob</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40847, {&quot;Title&quot;:&quot;A Short History of H.M.S. Victory&quot;,&quot;Topics&quot;:[&quot;Great Britain -- History, Naval&quot;,&quot;Victory (Ship)&quot;],&quot;Primary&quot;:&quot;40847.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wharton, W. J. L. (William James Lloyd), 1843-1905&quot;],&quot;LoCC&quot;:[&quot;VA&quot;],&quot;PG_ID&quot;:&quot;40847&quot;});" class='title'>A Short History of H.M.S. Victory</a>
+<div class='author'>Wharton, W. J. L. (William James Lloyd), 1843-1905</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40871, {&quot;Title&quot;:&quot;Fifty-two Stories of the British Navy, from Damme to Trafalgar.&quot;,&quot;Topics&quot;:[&quot;Great Britain -- History, Naval -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;40871.htm&quot;,&quot;CreatorNames&quot;:[&quot;Miles, Alfred H. (Alfred Henry), 1848-1929&quot;],&quot;LoCC&quot;:[&quot;DA&quot;,&quot;PZ&quot;,&quot;VA&quot;],&quot;PG_ID&quot;:&quot;40871&quot;});" class='title'>Fifty-two Stories of the British Navy, from Damme to Trafalgar.</a>
+<div class='author'>Miles, Alfred H. (Alfred Henry), 1848-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41244, {&quot;Title&quot;:&quot;With the Battle Fleet - Cruise of the Sixteen Battleships of the United States Atlantic Fleet from Hampton Roads to the Golden Gate, December, 1907-May, 1908&quot;,&quot;Topics&quot;:[&quot;United States. Navy. Atlantic Fleet -- Cruise, 1907-1909&quot;],&quot;Primary&quot;:&quot;41244.htm&quot;,&quot;CreatorNames&quot;:[&quot;Matthews, Franklin, 1858-1917&quot;,&quot;Reuterdahl, Henry, 1871-1925 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;VA&quot;],&quot;PG_ID&quot;:&quot;41244&quot;});" class='title'>With the Battle Fleet -<br><span class='subtitle'>Cruise of the Sixteen Battleships of the United States Atlantic Fleet from Hampton Roads to the Golden Gate, December, 1907-May, 1908</span></a>
+<div class='author'>Matthews, Franklin, 1858-1917, Reuterdahl, Henry, 1871-1925 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45583, {&quot;Title&quot;:&quot;Scapa and a Camera - Pictorial Impressions of Five Years Spent at the Grand Fleet Base&quot;,&quot;Topics&quot;:[&quot;World War, 1914-1918 -- Naval operations&quot;,&quot;Great Britain. Royal Navy -- Pictorial works&quot;,&quot;Germany. Kriegsmarine -- Pictorial works&quot;,&quot;Scapa Flow (Scotland) -- History, Naval -- 20th century&quot;,&quot;Scapa Flow (Scotland) -- Pictorial works&quot;,&quot;Warships -- Great Britain -- Pictorial works&quot;,&quot;Orkney (Scotland) -- Pictorial works&quot;],&quot;Primary&quot;:&quot;45583.htm&quot;,&quot;CreatorNames&quot;:[&quot;Burrows, C. W.&quot;,&quot;Miller, F. S. (Francis Spurstow), 1863-1954 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;VA&quot;],&quot;PG_ID&quot;:&quot;45583&quot;});" class='title'>Scapa and a Camera -<br><span class='subtitle'>Pictorial Impressions of Five Years Spent at the Grand Fleet Base</span></a>
+<div class='author'>Burrows, C. W., Miller, F. S. (Francis Spurstow), 1863-1954 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46788, {&quot;Title&quot;:&quot;The Story of the \&quot;\&quot;Britannia\&quot;\&quot; - The training ship for naval cadets. With some account of previous methods of naval education, and of the new scheme of 1903.&quot;,&quot;Topics&quot;:[&quot;Great Britain. Royal Navy&quot;,&quot;Britannia (Ship)&quot;,&quot;Naval education -- Great Britain&quot;],&quot;Primary&quot;:&quot;46788.htm&quot;,&quot;CreatorNames&quot;:[&quot;Statham, Edward Phillips, -1921&quot;],&quot;LoCC&quot;:[&quot;VA&quot;],&quot;PG_ID&quot;:&quot;46788&quot;});" class='title'>The Story of the "Britannia" -<br><span class='subtitle'>The training ship for naval cadets. With some account of previous methods of naval education, and of the new scheme of 1903.</span></a>
+<div class='author'>Statham, Edward Phillips, -1921</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48353, {&quot;Title&quot;:&quot;Samuel Pepys and the Royal Navy&quot;,&quot;Topics&quot;:[&quot;Pepys, Samuel, 1633-1703&quot;,&quot;Great Britain. Royal Navy -- History -- 17th century&quot;,&quot;Great Britain -- History, Naval -- Stuarts, 1603-1714&quot;],&quot;Primary&quot;:&quot;48353.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tanner, J. R. (Joseph Robson), 1860-1931&quot;],&quot;LoCC&quot;:[&quot;DA&quot;,&quot;VA&quot;],&quot;PG_ID&quot;:&quot;48353&quot;});" class='title'>Samuel Pepys and the Royal Navy</a>
+<div class='author'>Tanner, J. R. (Joseph Robson), 1860-1931</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55010, {&quot;Title&quot;:&quot;Charlestown Navy Yard: Boston National Historical Park, Massachusetts&quot;,&quot;Topics&quot;:[&quot;Boston Naval Shipyard (Boston, Mass.) -- History&quot;,&quot;Charlestown Navy Yard (Mass.) -- History&quot;],&quot;Primary&quot;:&quot;55010.htm&quot;,&quot;CreatorNames&quot;:[&quot;United States. National Park Service&quot;],&quot;LoCC&quot;:[&quot;VA&quot;],&quot;PG_ID&quot;:&quot;55010&quot;});" class='title'>Charlestown Navy Yard:<br><span class='subtitle'>Boston National Historical Park, Massachusetts</span></a>
+<div class='author'>United States. National Park Service</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56653, {&quot;Title&quot;:&quot;The German Fleet - Being The Companion Volume to \&quot;\&quot;The Fleets At War\&quot;\&quot; and \&quot;\&quot;From Heligoland To Keeling Island&quot;,&quot;Topics&quot;:[&quot;Germany. Kriegsmarine&quot;],&quot;Primary&quot;:&quot;56653.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hurd, Archibald, 1869-1959&quot;],&quot;LoCC&quot;:[&quot;VA&quot;],&quot;PG_ID&quot;:&quot;56653&quot;});" class='title'>The German Fleet -<br><span class='subtitle'>Being The Companion Volume to "The Fleets At War" and "From Heligoland To Keeling Island</span></a>
+<div class='author'>Hurd, Archibald, 1869-1959</div>
+</div>
+</ul></div>
+</body></html>

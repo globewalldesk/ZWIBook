@@ -1,0 +1,102 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Oceanography (GC)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(21754, {&quot;Title&quot;:&quot;The Ocean and Its Wonders&quot;,&quot;Topics&quot;:[&quot;Ocean&quot;],&quot;Primary&quot;:&quot;21754.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ballantyne, R. M. (Robert Michael), 1825-1894&quot;],&quot;LoCC&quot;:[&quot;GC&quot;],&quot;PG_ID&quot;:&quot;21754&quot;});" class='title'>The Ocean and Its Wonders</a>
+<div class='author'>Ballantyne, R. M. (Robert Michael), 1825-1894</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23279, {&quot;Title&quot;:&quot;La mer&quot;,&quot;Topics&quot;:[&quot;Natural history&quot;,&quot;Ocean&quot;],&quot;Primary&quot;:&quot;23279.htm&quot;,&quot;CreatorNames&quot;:[&quot;Michelet, Jules, 1798-1874&quot;],&quot;LoCC&quot;:[&quot;GC&quot;,&quot;QH&quot;],&quot;PG_ID&quot;:&quot;23279&quot;});" class='title'>La mer</a>
+<div class='author'>Michelet, Jules, 1798-1874</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26284, {&quot;Title&quot;:&quot;El Mar&quot;,&quot;Topics&quot;:[&quot;Natural history&quot;,&quot;Ocean&quot;],&quot;Primary&quot;:&quot;26284.htm&quot;,&quot;CreatorNames&quot;:[&quot;Michelet, Jules, 1798-1874&quot;],&quot;LoCC&quot;:[&quot;GC&quot;,&quot;QH&quot;],&quot;PG_ID&quot;:&quot;26284&quot;});" class='title'>El Mar</a>
+<div class='author'>Michelet, Jules, 1798-1874</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39341, {&quot;Title&quot;:&quot;The Sea: Its Stirring Story of Adventure, Peril, &amp; Heroism. Volume 1&quot;,&quot;Topics&quot;:[&quot;Voyages around the world&quot;,&quot;Arctic regions&quot;,&quot;Adventure and adventurers&quot;,&quot;Ocean&quot;],&quot;Primary&quot;:&quot;39341.htm&quot;,&quot;CreatorNames&quot;:[&quot;Whymper, Frederick&quot;],&quot;LoCC&quot;:[&quot;GC&quot;],&quot;PG_ID&quot;:&quot;39341&quot;});" class='title'>The Sea:<br><span class='subtitle'>Its Stirring Story of Adventure, Peril, & Heroism. Volume 1</span></a>
+<div class='author'>Whymper, Frederick</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39342, {&quot;Title&quot;:&quot;The Sea: Its Stirring Story of Adventure, Peril, &amp; Heroism. Volume 2&quot;,&quot;Topics&quot;:[&quot;Voyages around the world&quot;,&quot;Arctic regions&quot;,&quot;Adventure and adventurers&quot;,&quot;Ocean&quot;],&quot;Primary&quot;:&quot;39342.htm&quot;,&quot;CreatorNames&quot;:[&quot;Whymper, Frederick&quot;],&quot;LoCC&quot;:[&quot;GC&quot;],&quot;PG_ID&quot;:&quot;39342&quot;});" class='title'>The Sea:<br><span class='subtitle'>Its Stirring Story of Adventure, Peril, & Heroism. Volume 2</span></a>
+<div class='author'>Whymper, Frederick</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39343, {&quot;Title&quot;:&quot;The Sea: Its Stirring Story of Adventure, Peril, &amp; Heroism. Volume 3&quot;,&quot;Topics&quot;:[&quot;Voyages around the world&quot;,&quot;Arctic regions&quot;,&quot;Adventure and adventurers&quot;,&quot;Ocean&quot;],&quot;Primary&quot;:&quot;39343.htm&quot;,&quot;CreatorNames&quot;:[&quot;Whymper, Frederick&quot;],&quot;LoCC&quot;:[&quot;GC&quot;],&quot;PG_ID&quot;:&quot;39343&quot;});" class='title'>The Sea:<br><span class='subtitle'>Its Stirring Story of Adventure, Peril, & Heroism. Volume 3</span></a>
+<div class='author'>Whymper, Frederick</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42845, {&quot;Title&quot;:&quot;The Sea (La Mer)&quot;,&quot;Topics&quot;:[&quot;Natural history&quot;,&quot;Ocean&quot;],&quot;Primary&quot;:&quot;42845.htm&quot;,&quot;CreatorNames&quot;:[&quot;Michelet, Jules, 1798-1874&quot;],&quot;LoCC&quot;:[&quot;GC&quot;,&quot;QH&quot;],&quot;PG_ID&quot;:&quot;42845&quot;});" class='title'>The Sea (La Mer)</a>
+<div class='author'>Michelet, Jules, 1798-1874</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45033, {&quot;Title&quot;:&quot;The Sea: Its Stirring Story of Adventure, Peril, &amp; Heroism. Volume 4&quot;,&quot;Topics&quot;:[&quot;Voyages around the world&quot;,&quot;Arctic regions&quot;,&quot;Adventure and adventurers&quot;,&quot;Ocean&quot;],&quot;Primary&quot;:&quot;45033.htm&quot;,&quot;CreatorNames&quot;:[&quot;Whymper, Frederick&quot;],&quot;LoCC&quot;:[&quot;GC&quot;],&quot;PG_ID&quot;:&quot;45033&quot;});" class='title'>The Sea:<br><span class='subtitle'>Its Stirring Story of Adventure, Peril, & Heroism. Volume 4</span></a>
+<div class='author'>Whymper, Frederick</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49069, {&quot;Title&quot;:&quot;The Floors of the Ocean: 1. The North Atlantic - Text to accompany the physiographic diagram of the North Atlantic&quot;,&quot;Topics&quot;:[&quot;Ocean bottom&quot;],&quot;Primary&quot;:&quot;49069.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ewing, W. Maurice (William Maurice), 1906-1974&quot;,&quot;Heezen, Bruce C., 1924-1977&quot;,&quot;Tharp, Marie, 1920-2006&quot;],&quot;LoCC&quot;:[&quot;GC&quot;],&quot;PG_ID&quot;:&quot;49069&quot;});" class='title'>The Floors of the Ocean:<br><span class='subtitle'>1. The North Atlantic - Text to accompany the physiographic diagram of the North Atlantic</span></a>
+<div class='author'>Ewing, W. Maurice (William Maurice), 1906-1974, Heezen, Bruce C., 1924-1977, Tharp, Marie, 1920-2006</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57172, {&quot;Title&quot;:&quot;Life and Adventures of Frances Namon Sorcho - The Only Woman Deep Sea Diver in the World&quot;,&quot;Topics&quot;:[&quot;Sorcho, Frances Namon&quot;,&quot;Women divers&quot;,&quot;Deep diving&quot;],&quot;Primary&quot;:&quot;57172.htm&quot;,&quot;CreatorNames&quot;:[&quot;Captain Louis Sorcho Great Deep Sea Diving Co.&quot;],&quot;LoCC&quot;:[&quot;GC&quot;],&quot;PG_ID&quot;:&quot;57172&quot;});" class='title'>Life and Adventures of Frances Namon Sorcho -<br><span class='subtitle'>The Only Woman Deep Sea Diver in the World</span></a>
+<div class='author'>Captain Louis Sorcho Great Deep Sea Diving Co.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62011, {&quot;Title&quot;:&quot;The Sea and Its Living Wonders - A Popular Account of the Marvels of the Deep and of the Progress of Martime Discovery from the Earliest Ages to the Present Time&quot;,&quot;Topics&quot;:[&quot;Animal behavior&quot;,&quot;Discoveries in geography&quot;,&quot;Ocean&quot;,&quot;Marine animals&quot;,&quot;Marine plants&quot;,&quot;Discoveries in geography -- History&quot;],&quot;Primary&quot;:&quot;62011.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hartwig, G. (Georg), 1813-1880&quot;],&quot;LoCC&quot;:[&quot;GC&quot;,&quot;QH&quot;,&quot;QL&quot;],&quot;PG_ID&quot;:&quot;62011&quot;});" class='title'>The Sea and Its Living Wonders -<br><span class='subtitle'>A Popular Account of the Marvels of the Deep and of the Progress of Martime Discovery from the Earliest Ages to the Present Time</span></a>
+<div class='author'>Hartwig, G. (Georg), 1813-1880</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65071, {&quot;Title&quot;:&quot;Matthew Fontaine Maury, the Pathfinder of the Seas&quot;,&quot;Topics&quot;:[&quot;Maury, Matthew Fontaine, 1806-1873&quot;],&quot;Primary&quot;:&quot;65071.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lewis, Charles Lee, 1886-1951&quot;],&quot;LoCC&quot;:[&quot;GC&quot;],&quot;PG_ID&quot;:&quot;65071&quot;});" class='title'>Matthew Fontaine Maury, the Pathfinder of the Seas</a>
+<div class='author'>Lewis, Charles Lee, 1886-1951</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66268, {&quot;Title&quot;:&quot;The Atom and the Ocean&quot;,&quot;Topics&quot;:[&quot;Radioisotopes in oceanography&quot;],&quot;Primary&quot;:&quot;66268.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hull, E. W. Seabrook&quot;],&quot;LoCC&quot;:[&quot;GC&quot;],&quot;PG_ID&quot;:&quot;66268&quot;});" class='title'>The Atom and the Ocean</a>
+<div class='author'>Hull, E. W. Seabrook</div>
+</div>
+</ul></div>
+</body></html>

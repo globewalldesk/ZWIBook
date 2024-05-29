@@ -1,0 +1,214 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Heraldry (CR)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12034, {&quot;Title&quot;:&quot;Knights of Malta, 1523-1798&quot;,&quot;Topics&quot;:[&quot;Knights of Malta&quot;,&quot;Malta -- History -- Siege, 1565&quot;],&quot;Primary&quot;:&quot;12034.txt&quot;,&quot;CreatorNames&quot;:[&quot;Cohen, Reuben, 1895-1981&quot;],&quot;LoCC&quot;:[&quot;CR&quot;],&quot;PG_ID&quot;:&quot;12034&quot;});" class='title'>Knights of Malta, 1523-1798</a>
+<div class='author'>Cohen, Reuben, 1895-1981</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12096, {&quot;Title&quot;:&quot;Bushido, the Soul of Japan&quot;,&quot;Topics&quot;:[&quot;Japan -- Civilization&quot;,&quot;Japan -- Social life and customs&quot;,&quot;Bushido&quot;,&quot;Ethics -- Japan&quot;,&quot;Samurai -- History&quot;,&quot;Philosophy, Japanese&quot;],&quot;Primary&quot;:&quot;12096.htm&quot;,&quot;CreatorNames&quot;:[&quot;Nitobe, Inazo, 1862-1933&quot;],&quot;LoCC&quot;:[&quot;BJ&quot;,&quot;CR&quot;],&quot;PG_ID&quot;:&quot;12096&quot;});" class='title'>Bushido, the Soul of Japan</a>
+<div class='author'>Nitobe, Inazo, 1862-1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16273, {&quot;Title&quot;:&quot;The Manual of Heraldry; Fifth Edition - Being a Concise Description of the Several Terms Used, and Containing a Dictionary of Every Designation in the Science&quot;,&quot;Topics&quot;:[&quot;Heraldry&quot;],&quot;Primary&quot;:&quot;16273.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;CR&quot;],&quot;PG_ID&quot;:&quot;16273&quot;});" class='title'>The Manual of Heraldry;<br><span class='subtitle'>Fifth Edition - Being a Concise Description of the Several Terms Used, and Containing a Dictionary of Every Designation in the Science</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22919, {&quot;Title&quot;:&quot;Le procès des Templiers, Tome I.&quot;,&quot;Topics&quot;:[&quot;Inquisition -- France&quot;,&quot;Templars -- France&quot;],&quot;Primary&quot;:&quot;22919.htm&quot;,&quot;CreatorNames&quot;:[&quot;Michelet, Jules, 1798-1874 [Editor]&quot;],&quot;LoCC&quot;:[&quot;CR&quot;],&quot;PG_ID&quot;:&quot;22919&quot;});" class='title'>Le procès des Templiers, Tome I.</a>
+<div class='author'>Michelet, Jules, 1798-1874 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22920, {&quot;Title&quot;:&quot;Le procès des Templiers, Tome II.&quot;,&quot;Topics&quot;:[&quot;Inquisition -- France&quot;,&quot;Templars -- France&quot;],&quot;Primary&quot;:&quot;22920.htm&quot;,&quot;CreatorNames&quot;:[&quot;Michelet, Jules, 1798-1874 [Editor]&quot;],&quot;LoCC&quot;:[&quot;CR&quot;],&quot;PG_ID&quot;:&quot;22920&quot;});" class='title'>Le procès des Templiers, Tome II.</a>
+<div class='author'>Michelet, Jules, 1798-1874 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23186, {&quot;Title&quot;:&quot;The Handbook to English Heraldry&quot;,&quot;Topics&quot;:[&quot;Heraldry -- Great Britain&quot;],&quot;Primary&quot;:&quot;23186.htm&quot;,&quot;CreatorNames&quot;:[&quot;Boutell, Charles, 1812-1877&quot;,&quot;Fox-Davies, Arthur Charles, 1871-1928 [Editor]&quot;,&quot;Utting, R. B. [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;CR&quot;],&quot;PG_ID&quot;:&quot;23186&quot;});" class='title'>The Handbook to English Heraldry</a>
+<div class='author'>Boutell, Charles, 1812-1877, Fox-Davies, Arthur Charles, 1871-1928 [Editor], Utting, R. B. [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27745, {&quot;Title&quot;:&quot;The True Story of the American Flag&quot;,&quot;Topics&quot;:[&quot;Flags -- United States&quot;],&quot;Primary&quot;:&quot;27745.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fow, John Henry, 1851-1915&quot;],&quot;LoCC&quot;:[&quot;CR&quot;],&quot;PG_ID&quot;:&quot;27745&quot;});" class='title'>The True Story of the American Flag</a>
+<div class='author'>Fow, John Henry, 1851-1915</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30893, {&quot;Title&quot;:&quot;The Little Book of the Flag&quot;,&quot;Topics&quot;:[&quot;Flags -- United States&quot;],&quot;Primary&quot;:&quot;30893.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tappan, Eva March, 1854-1930&quot;],&quot;LoCC&quot;:[&quot;CR&quot;],&quot;PG_ID&quot;:&quot;30893&quot;});" class='title'>The Little Book of the Flag</a>
+<div class='author'>Tappan, Eva March, 1854-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33953, {&quot;Title&quot;:&quot;The Boke of Noblesse - Addressed to King Edward the Fourth on His Invasion of France in 1475&quot;,&quot;Topics&quot;:[&quot;Chivalry -- Early works to 1800&quot;,&quot;Hundred Years&#39; War, 1339-1453&quot;,&quot;Great Britain -- History -- Edward IV, 1461-1483&quot;],&quot;Primary&quot;:&quot;33953.htm&quot;,&quot;CreatorNames&quot;:[&quot;Nichols, John Gough, 1806-1873 [Editor]&quot;],&quot;LoCC&quot;:[&quot;CR&quot;],&quot;PG_ID&quot;:&quot;33953&quot;});" class='title'>The Boke of Noblesse -<br><span class='subtitle'>Addressed to King Edward the Fourth on His Invasion of France in 1475</span></a>
+<div class='author'>Nichols, John Gough, 1806-1873 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36180, {&quot;Title&quot;:&quot;Heraldiek&quot;,&quot;Topics&quot;:[&quot;Heraldry&quot;],&quot;Primary&quot;:&quot;36180.htm&quot;,&quot;CreatorNames&quot;:[&quot;Godefroy, Jan&quot;],&quot;LoCC&quot;:[&quot;CR&quot;],&quot;PG_ID&quot;:&quot;36180&quot;});" class='title'>Heraldiek</a>
+<div class='author'>Godefroy, Jan</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38593, {&quot;Title&quot;:&quot;The History of the Knights Templars, the Temple Church, and the Temple&quot;,&quot;Topics&quot;:[&quot;Templars -- History&quot;],&quot;Primary&quot;:&quot;38593.htm&quot;,&quot;CreatorNames&quot;:[&quot;Addison, C. G. (Charles Greenstreet), -1866&quot;],&quot;LoCC&quot;:[&quot;CR&quot;],&quot;PG_ID&quot;:&quot;38593&quot;});" class='title'>The History of the Knights Templars, the Temple Church, and the Temple</a>
+<div class='author'>Addison, C. G. (Charles Greenstreet), -1866</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38951, {&quot;Title&quot;:&quot;The Curiosities of Heraldry&quot;,&quot;Topics&quot;:[&quot;Heraldry&quot;],&quot;Primary&quot;:&quot;38951.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lower, Mark Antony, 1813-1876&quot;],&quot;LoCC&quot;:[&quot;CR&quot;],&quot;PG_ID&quot;:&quot;38951&quot;});" class='title'>The Curiosities of Heraldry</a>
+<div class='author'>Lower, Mark Antony, 1813-1876</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39221, {&quot;Title&quot;:&quot;Flags: Some Account of their History and Uses&quot;,&quot;Topics&quot;:[&quot;Flags&quot;],&quot;Primary&quot;:&quot;39221.htm&quot;,&quot;CreatorNames&quot;:[&quot;Macgeorge, Andrew, 1810-1891&quot;],&quot;LoCC&quot;:[&quot;CR&quot;],&quot;PG_ID&quot;:&quot;39221&quot;});" class='title'>Flags:<br><span class='subtitle'>Some Account of their History and Uses</span></a>
+<div class='author'>Macgeorge, Andrew, 1810-1891</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39823, {&quot;Title&quot;:&quot;History of the National Flag of the United States of America&quot;,&quot;Topics&quot;:[&quot;Flags -- United States&quot;],&quot;Primary&quot;:&quot;39823.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hamilton, Schuyler, 1822-1903&quot;],&quot;LoCC&quot;:[&quot;CR&quot;],&quot;PG_ID&quot;:&quot;39823&quot;});" class='title'>History of the National Flag of the United States of America</a>
+<div class='author'>Hamilton, Schuyler, 1822-1903</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40021, {&quot;Title&quot;:&quot;The History of Chivalry; Or, Knighthood and Its Times, Volume 1 (of 2)&quot;,&quot;Topics&quot;:[&quot;Chivalry&quot;],&quot;Primary&quot;:&quot;40021.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mills, Charles, 1788-1826&quot;],&quot;LoCC&quot;:[&quot;CR&quot;],&quot;PG_ID&quot;:&quot;40021&quot;});" class='title'>The History of Chivalry;<br><span class='subtitle'>Or, Knighthood and Its Times, Volume 1 (of 2)</span></a>
+<div class='author'>Mills, Charles, 1788-1826</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40022, {&quot;Title&quot;:&quot;The History of Chivalry; Or, Knighthood and Its Times, Volume 2 (of 2)&quot;,&quot;Topics&quot;:[&quot;Chivalry&quot;],&quot;Primary&quot;:&quot;40022.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mills, Charles, 1788-1826&quot;],&quot;LoCC&quot;:[&quot;CR&quot;],&quot;PG_ID&quot;:&quot;40022&quot;});" class='title'>The History of Chivalry;<br><span class='subtitle'>Or, Knighthood and Its Times, Volume 2 (of 2)</span></a>
+<div class='author'>Mills, Charles, 1788-1826</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40113, {&quot;Title&quot;:&quot;The Flags of the World: Their History, Blazonry, and Associations&quot;,&quot;Topics&quot;:[&quot;Flags&quot;],&quot;Primary&quot;:&quot;40113.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hulme, F. Edward (Frederick Edward), 1841-1909&quot;],&quot;LoCC&quot;:[&quot;CR&quot;],&quot;PG_ID&quot;:&quot;40113&quot;});" class='title'>The Flags of the World:<br><span class='subtitle'>Their History, Blazonry, and Associations</span></a>
+<div class='author'>Hulme, F. Edward (Frederick Edward), 1841-1909</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40825, {&quot;Title&quot;:&quot;Fictitious &amp; Symbolic Creatures in Art - With Special Reference to Their Use in British Heraldry&quot;,&quot;Topics&quot;:[&quot;Heraldry -- Great Britain&quot;,&quot;Symbolism&quot;,&quot;Animals, Mythical&quot;],&quot;Primary&quot;:&quot;40825.htm&quot;,&quot;CreatorNames&quot;:[&quot;Vinycomb, John&quot;],&quot;LoCC&quot;:[&quot;CR&quot;,&quot;N&quot;],&quot;PG_ID&quot;:&quot;40825&quot;});" class='title'>Fictitious & Symbolic Creatures in Art -<br><span class='subtitle'>With Special Reference to Their Use in British Heraldry</span></a>
+<div class='author'>Vinycomb, John</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41617, {&quot;Title&quot;:&quot;A Complete Guide to Heraldry&quot;,&quot;Topics&quot;:[&quot;Heraldry -- Great Britain&quot;],&quot;Primary&quot;:&quot;41617.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fox-Davies, Arthur Charles, 1871-1928&quot;,&quot;Johnston, Graham, 1869- [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;CR&quot;],&quot;PG_ID&quot;:&quot;41617&quot;});" class='title'>A Complete Guide to Heraldry</a>
+<div class='author'>Fox-Davies, Arthur Charles, 1871-1928, Johnston, Graham, 1869- [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43365, {&quot;Title&quot;:&quot;The Buke of the Order of Knyghthood - Translated from the French by Sir Gilbert Hay, Knight&quot;,&quot;Topics&quot;:[&quot;Chivalry&quot;],&quot;Primary&quot;:&quot;43365.htm&quot;,&quot;CreatorNames&quot;:[&quot;Llull, Ramon, 1232?-1316&quot;,&quot;Botfield, Beriah, 1807-1863 [Editor]&quot;,&quot;Hay, Gilbert,‏ ‎Sir,‏ active 1456 [Translator]&quot;],&quot;LoCC&quot;:[&quot;CR&quot;],&quot;PG_ID&quot;:&quot;43365&quot;});" class='title'>The Buke of the Order of Knyghthood -<br><span class='subtitle'>Translated from the French by Sir Gilbert Hay, Knight</span></a>
+<div class='author'>Llull, Ramon, 1232?-1316, Botfield, Beriah, 1807-1863 [Editor], Hay, Gilbert,‏ ‎Sir,‏ active 1456 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44376, {&quot;Title&quot;:&quot;The Knights Templars&quot;,&quot;Topics&quot;:[&quot;Templars&quot;],&quot;Primary&quot;:&quot;44376.htm&quot;,&quot;CreatorNames&quot;:[&quot;Addison, C. G. (Charles Greenstreet), -1866&quot;],&quot;LoCC&quot;:[&quot;CR&quot;],&quot;PG_ID&quot;:&quot;44376&quot;});" class='title'>The Knights Templars</a>
+<div class='author'>Addison, C. G. (Charles Greenstreet), -1866</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45181, {&quot;Title&quot;:&quot;Heraldry for Craftsmen &amp; Designers&quot;,&quot;Topics&quot;:[&quot;Heraldry -- Great Britain&quot;,&quot;Heraldry, Ornamental&quot;,&quot;Heraldry in art&quot;],&quot;Primary&quot;:&quot;45181.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hope, W. H. St. John (William Henry St. John), Sir, 1854-1919&quot;],&quot;LoCC&quot;:[&quot;CR&quot;],&quot;PG_ID&quot;:&quot;45181&quot;});" class='title'>Heraldry for Craftsmen & Designers</a>
+<div class='author'>Hope, W. H. St. John (William Henry St. John), Sir, 1854-1919</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45498, {&quot;Title&quot;:&quot;History of the Union Jack and Flags of the Empire&quot;,&quot;Topics&quot;:[&quot;Flags -- Great Britain&quot;,&quot;Emblems -- Great Britain&quot;],&quot;Primary&quot;:&quot;45498.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cumberland, Barlow, 1846-1913&quot;],&quot;LoCC&quot;:[&quot;CR&quot;],&quot;PG_ID&quot;:&quot;45498&quot;});" class='title'>History of the Union Jack and Flags of the Empire</a>
+<div class='author'>Cumberland, Barlow, 1846-1913</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46370, {&quot;Title&quot;:&quot;British Flags: Their Early History, and Their Development at Sea - With an Account of the Origin of the Flag as a National Device&quot;,&quot;Topics&quot;:[&quot;Flags -- Great Britain&quot;],&quot;Primary&quot;:&quot;46370.htm&quot;,&quot;CreatorNames&quot;:[&quot;Perrin, William Gordon, 1874-&quot;,&quot;Vaughan, Herbert S. [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;CR&quot;],&quot;PG_ID&quot;:&quot;46370&quot;});" class='title'>British Flags:<br><span class='subtitle'>Their Early History, and Their Development at Sea - With an Account of the Origin of the Flag as a National Device</span></a>
+<div class='author'>Perrin, William Gordon, 1874-, Vaughan, Herbert S. [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46374, {&quot;Title&quot;:&quot;\&quot;\&quot;Mr. Punch&#39;s\&quot;\&quot; Book of Arms&quot;,&quot;Topics&quot;:[&quot;English wit and humor&quot;,&quot;English wit and humor, Pictorial&quot;,&quot;Heraldry -- Humor&quot;],&quot;Primary&quot;:&quot;46374.htm&quot;,&quot;CreatorNames&quot;:[&quot;Reed, Edward Tennyson, 1860-1933&quot;],&quot;LoCC&quot;:[&quot;CR&quot;,&quot;NC&quot;],&quot;PG_ID&quot;:&quot;46374&quot;});" class='title'>"Mr. Punch's" Book of Arms</a>
+<div class='author'>Reed, Edward Tennyson, 1860-1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47714, {&quot;Title&quot;:&quot;English Heraldic Book-stamps&quot;,&quot;Topics&quot;:[&quot;Heraldry -- Great Britain&quot;,&quot;Armorial bindings&quot;,&quot;Bookplates, English&quot;],&quot;Primary&quot;:&quot;47714.htm&quot;,&quot;CreatorNames&quot;:[&quot;Davenport, Cyril, 1848-1941&quot;],&quot;LoCC&quot;:[&quot;CR&quot;,&quot;Z&quot;],&quot;PG_ID&quot;:&quot;47714&quot;});" class='title'>English Heraldic Book-stamps</a>
+<div class='author'>Davenport, Cyril, 1848-1941</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47761, {&quot;Title&quot;:&quot;The Dates of Variously-shaped Shields, with Coincident Dates and Examples&quot;,&quot;Topics&quot;:[&quot;Shields&quot;,&quot;Seals (Numismatics) -- Great Britain&quot;],&quot;Primary&quot;:&quot;47761.htm&quot;,&quot;CreatorNames&quot;:[&quot;Grazebrook, George, 1831-1917&quot;],&quot;LoCC&quot;:[&quot;CR&quot;],&quot;PG_ID&quot;:&quot;47761&quot;});" class='title'>The Dates of Variously-shaped Shields, with Coincident Dates and Examples</a>
+<div class='author'>Grazebrook, George, 1831-1917</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48555, {&quot;Title&quot;:&quot;The History of the Most Noble Order of the Garter&quot;,&quot;Topics&quot;:[&quot;Order of the Garter -- History&quot;,&quot;Orders of knighthood and chivalry -- Great Britain -- History&quot;,&quot;Orders of knighthood and chivalry -- Europe -- History&quot;],&quot;Primary&quot;:&quot;48555.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ashmole, Elias, 1617-1692&quot;],&quot;LoCC&quot;:[&quot;CR&quot;],&quot;PG_ID&quot;:&quot;48555&quot;});" class='title'>The History of the Most Noble Order of the Garter</a>
+<div class='author'>Ashmole, Elias, 1617-1692</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51088, {&quot;Title&quot;:&quot;The History of the First United States Flag - and the Patriotism of Betsy Ross, the Immortal Heroine That Originated the First Flag of the Union&quot;,&quot;Topics&quot;:[&quot;Flags -- United States&quot;],&quot;Primary&quot;:&quot;51088.htm&quot;,&quot;CreatorNames&quot;:[&quot;Reigart, J. Franklin (John Franklin), 1813-1884&quot;],&quot;LoCC&quot;:[&quot;CR&quot;],&quot;PG_ID&quot;:&quot;51088&quot;});" class='title'>The History of the First United States Flag -<br><span class='subtitle'>and the Patriotism of Betsy Ross, the Immortal Heroine That Originated the First Flag of the Union</span></a>
+<div class='author'>Reigart, J. Franklin (John Franklin), 1813-1884</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51089, {&quot;Title&quot;:&quot;Did Betsey Ross Design the Flag of the United States of America? - Publication of the Scottsville Literary Society&quot;,&quot;Topics&quot;:[&quot;Flags -- United States&quot;,&quot;Ross, Betsy, 1752-1836&quot;],&quot;Primary&quot;:&quot;51089.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hanford, Franklin, 1844-&quot;],&quot;LoCC&quot;:[&quot;CR&quot;],&quot;PG_ID&quot;:&quot;51089&quot;});" class='title'>Did Betsey Ross Design the Flag of the United States of America? -<br><span class='subtitle'>Publication of the Scottsville Literary Society</span></a>
+<div class='author'>Hanford, Franklin, 1844-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52354, {&quot;Title&quot;:&quot;The Story of Our Flag, Colonial and National - With Historical Sketch of the Quakeress Betsy Ross&quot;,&quot;Topics&quot;:[&quot;Flags -- United States&quot;,&quot;Ross, Betsy, 1752-1836&quot;],&quot;Primary&quot;:&quot;52354.htm&quot;,&quot;CreatorNames&quot;:[&quot;Weaver, Addie Guthrie&quot;],&quot;LoCC&quot;:[&quot;CR&quot;],&quot;PG_ID&quot;:&quot;52354&quot;});" class='title'>The Story of Our Flag, Colonial and National -<br><span class='subtitle'>With Historical Sketch of the Quakeress Betsy Ross</span></a>
+<div class='author'>Weaver, Addie Guthrie</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54438, {&quot;Title&quot;:&quot;Duell-Codex&quot;,&quot;Topics&quot;:[&quot;Dueling&quot;],&quot;Primary&quot;:&quot;54438.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hergsell, Gustav, 1847-1914&quot;],&quot;LoCC&quot;:[&quot;CR&quot;,&quot;K&quot;],&quot;PG_ID&quot;:&quot;54438&quot;});" class='title'>Duell-Codex</a>
+<div class='author'>Hergsell, Gustav, 1847-1914</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55439, {&quot;Title&quot;:&quot;Peeps at Heraldry&quot;,&quot;Topics&quot;:[&quot;Heraldry -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;55439.htm&quot;,&quot;CreatorNames&quot;:[&quot;Allen, Phoebe, 1850-1933&quot;],&quot;LoCC&quot;:[&quot;CR&quot;],&quot;PG_ID&quot;:&quot;55439&quot;});" class='title'>Peeps at Heraldry</a>
+<div class='author'>Allen, Phoebe, 1850-1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55461, {&quot;Title&quot;:&quot;The Book of the V.C. - A record of the deeds of heroism for which the Victoria Cross has been bestowed, from its institution in 1857 to the present time&quot;,&quot;Topics&quot;:[&quot;Great Britain -- History, Military&quot;,&quot;Victoria Cross&quot;],&quot;Primary&quot;:&quot;55461.htm&quot;,&quot;CreatorNames&quot;:[&quot;Haydon, A. L. (Arthur Lincoln), 1872-1964&quot;],&quot;LoCC&quot;:[&quot;CR&quot;],&quot;PG_ID&quot;:&quot;55461&quot;});" class='title'>The Book of the V.C. -<br><span class='subtitle'>A record of the deeds of heroism for which the Victoria Cross has been bestowed, from its institution in 1857 to the present time</span></a>
+<div class='author'>Haydon, A. L. (Arthur Lincoln), 1872-1964</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57326, {&quot;Title&quot;:&quot;The History of Duelling. Vol. 1 (of 2)&quot;,&quot;Topics&quot;:[&quot;Dueling&quot;],&quot;Primary&quot;:&quot;57326.htm&quot;,&quot;CreatorNames&quot;:[&quot;Millingen, J. G. (John Gideon), 1782-1862&quot;],&quot;LoCC&quot;:[&quot;CR&quot;],&quot;PG_ID&quot;:&quot;57326&quot;});" class='title'>The History of Duelling. Vol. 1 (of 2)</a>
+<div class='author'>Millingen, J. G. (John Gideon), 1782-1862</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57701, {&quot;Title&quot;:&quot;The History of Duelling. Vol. 2 (of 2)&quot;,&quot;Topics&quot;:[&quot;Dueling&quot;],&quot;Primary&quot;:&quot;57701.htm&quot;,&quot;CreatorNames&quot;:[&quot;Millingen, J. G. (John Gideon), 1782-1862&quot;],&quot;LoCC&quot;:[&quot;CR&quot;],&quot;PG_ID&quot;:&quot;57701&quot;});" class='title'>The History of Duelling. Vol. 2 (of 2)</a>
+<div class='author'>Millingen, J. G. (John Gideon), 1782-1862</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58334, {&quot;Title&quot;:&quot;The Jewel House: An Account of the Many Romances Connected with the Royal Regalia - Together with Sir Gilbert Talbot&#39;s Account of Colonel Blood&#39;s Plot&quot;,&quot;Topics&quot;:[&quot;Crown jewels -- Great Britain&quot;],&quot;Primary&quot;:&quot;58334.htm&quot;,&quot;CreatorNames&quot;:[&quot;Younghusband, G. J. (George John), 1859-1944&quot;],&quot;LoCC&quot;:[&quot;CR&quot;],&quot;PG_ID&quot;:&quot;58334&quot;});" class='title'>The Jewel House:<br><span class='subtitle'>An Account of the Many Romances Connected with the Royal Regalia - Together with Sir Gilbert Talbot's Account of Colonel Blood's Plot</span></a>
+<div class='author'>Younghusband, G. J. (George John), 1859-1944</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6085, {&quot;Title&quot;:&quot;The Code of Honor - Or, Rules for the Government of Principals and Seconds in Duelling&quot;,&quot;Topics&quot;:[&quot;Dueling&quot;],&quot;Primary&quot;:&quot;6085.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wilson, John Lyde, 1784-1849&quot;],&quot;LoCC&quot;:[&quot;CR&quot;],&quot;PG_ID&quot;:&quot;6085&quot;});" class='title'>The Code of Honor -<br><span class='subtitle'>Or, Rules for the Government of Principals and Seconds in Duelling</span></a>
+<div class='author'>Wilson, John Lyde, 1784-1849</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61799, {&quot;Title&quot;:&quot;The Ecclesiastical Orders of Knighthood&quot;,&quot;Topics&quot;:[&quot;Orders of knighthood and chivalry, Papal&quot;],&quot;Primary&quot;:&quot;61799.htm&quot;,&quot;CreatorNames&quot;:[&quot;Van der Veldt, James Herman, 1893-&quot;],&quot;LoCC&quot;:[&quot;CR&quot;],&quot;PG_ID&quot;:&quot;61799&quot;});" class='title'>The Ecclesiastical Orders of Knighthood</a>
+<div class='author'>Van der Veldt, James Herman, 1893-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64928, {&quot;Title&quot;:&quot;The Tournament—Its Periods and Phases&quot;,&quot;Topics&quot;:[&quot;Military art and science -- History -- Medieval, 500-1500&quot;,&quot;Tournaments, Medieval -- History&quot;,&quot;Knights and knighthood -- History&quot;],&quot;Primary&quot;:&quot;64928.htm&quot;,&quot;CreatorNames&quot;:[&quot;Clephan, R. Coltman (Robert Coltman)&quot;,&quot;Ffoulkes, Charles John, 1868-1947 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;CR&quot;],&quot;PG_ID&quot;:&quot;64928&quot;});" class='title'>The Tournament—Its Periods and Phases</a>
+<div class='author'>Clephan, R. Coltman (Robert Coltman), Ffoulkes, Charles John, 1868-1947 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69298, {&quot;Title&quot;:&quot;Heraldry as art: An account of its development and practice, chiefly in England&quot;,&quot;Topics&quot;:[&quot;Heraldry -- Great Britain&quot;],&quot;Primary&quot;:&quot;69298.htm&quot;,&quot;CreatorNames&quot;:[&quot;Eve, G. W. (George William), 1855-1914&quot;],&quot;LoCC&quot;:[&quot;CR&quot;],&quot;PG_ID&quot;:&quot;69298&quot;});" class='title'>Heraldry as art:<br><span class='subtitle'>An account of its development and practice, chiefly in England</span></a>
+<div class='author'>Eve, G. W. (George William), 1855-1914</div>
+</div>
+</ul></div>
+</body></html>

@@ -1,0 +1,962 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Spain, Portugal (DP)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12579, {&quot;Title&quot;:&quot;As Farpas: Chronica Mensal da Politica, das Letras e dos Costumes (1883-06)&quot;,&quot;Topics&quot;:[&quot;Portugal -- Politics and government -- Periodicals&quot;,&quot;Portugal -- Civilization -- Periodicals&quot;,&quot;Portugal -- Social life and customs -- Periodicals&quot;],&quot;Primary&quot;:&quot;12579.txt&quot;,&quot;CreatorNames&quot;:[&quot;Ortigão, Ramalho, 1836-1915 [Editor]&quot;,&quot;Queirós, Eça de, 1845-1900 [Editor]&quot;],&quot;LoCC&quot;:[&quot;AP&quot;,&quot;DP&quot;],&quot;PG_ID&quot;:&quot;12579&quot;});" class='title'>As Farpas:<br><span class='subtitle'>Chronica Mensal da Politica, das Letras e dos Costumes (1883-06)</span></a>
+<div class='author'>Ortigão, Ramalho, 1836-1915 [Editor], Queirós, Eça de, 1845-1900 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13092, {&quot;Title&quot;:&quot;As Farpas: Chronica Mensal da Politica, das Letras e dos Costumes (1878-01)&quot;,&quot;Topics&quot;:[&quot;Portugal -- Politics and government -- Periodicals&quot;,&quot;Portugal -- Civilization -- Periodicals&quot;,&quot;Portugal -- Social life and customs -- Periodicals&quot;],&quot;Primary&quot;:&quot;13092.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ortigão, Ramalho, 1836-1915 [Editor]&quot;,&quot;Queirós, Eça de, 1845-1900 [Editor]&quot;],&quot;LoCC&quot;:[&quot;AP&quot;,&quot;DP&quot;],&quot;PG_ID&quot;:&quot;13092&quot;});" class='title'>As Farpas:<br><span class='subtitle'>Chronica Mensal da Politica, das Letras e dos Costumes (1878-01)</span></a>
+<div class='author'>Ortigão, Ramalho, 1836-1915 [Editor], Queirós, Eça de, 1845-1900 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13093, {&quot;Title&quot;:&quot;As Farpas: Chronica Mensal da Politica, das Letras e dos Costumes (1878-02/05)&quot;,&quot;Topics&quot;:[&quot;Portugal -- Politics and government -- Periodicals&quot;,&quot;Portugal -- Civilization -- Periodicals&quot;,&quot;Portugal -- Social life and customs -- Periodicals&quot;],&quot;Primary&quot;:&quot;13093.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ortigão, Ramalho, 1836-1915 [Editor]&quot;,&quot;Queirós, Eça de, 1845-1900 [Editor]&quot;],&quot;LoCC&quot;:[&quot;AP&quot;,&quot;DP&quot;],&quot;PG_ID&quot;:&quot;13093&quot;});" class='title'>As Farpas:<br><span class='subtitle'>Chronica Mensal da Politica, das Letras e dos Costumes (1878-02/05)</span></a>
+<div class='author'>Ortigão, Ramalho, 1836-1915 [Editor], Queirós, Eça de, 1845-1900 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13630, {&quot;Title&quot;:&quot;As Farpas: Chronica Mensal da Politica, das Letras e dos Costumes (1882-06/07)&quot;,&quot;Topics&quot;:[&quot;Portugal -- Politics and government -- Periodicals&quot;,&quot;Portugal -- Civilization -- Periodicals&quot;,&quot;Portugal -- Social life and customs -- Periodicals&quot;],&quot;Primary&quot;:&quot;13630.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ortigão, Ramalho, 1836-1915 [Editor]&quot;,&quot;Queirós, Eça de, 1845-1900 [Editor]&quot;],&quot;LoCC&quot;:[&quot;AP&quot;,&quot;DP&quot;],&quot;PG_ID&quot;:&quot;13630&quot;});" class='title'>As Farpas:<br><span class='subtitle'>Chronica Mensal da Politica, das Letras e dos Costumes (1882-06/07)</span></a>
+<div class='author'>Ortigão, Ramalho, 1836-1915 [Editor], Queirós, Eça de, 1845-1900 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14198, {&quot;Title&quot;:&quot;Van Toledo naar Granada - De Aarde en haar Volken, 1906&quot;,&quot;Topics&quot;:[&quot;Spain -- Description and travel&quot;],&quot;Primary&quot;:&quot;14198.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dieulafoy, Jane, 1851-1916&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;14198&quot;});" class='title'>Van Toledo naar Granada -<br><span class='subtitle'>De Aarde en haar Volken, 1906</span></a>
+<div class='author'>Dieulafoy, Jane, 1851-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14296, {&quot;Title&quot;:&quot;As Farpas: Chronica Mensal da Politica, das Letras e dos Costumes (1882-11/12)&quot;,&quot;Topics&quot;:[&quot;Portugal -- Politics and government -- Periodicals&quot;,&quot;Portugal -- Civilization -- Periodicals&quot;,&quot;Portugal -- Social life and customs -- Periodicals&quot;],&quot;Primary&quot;:&quot;14296.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ortigão, Ramalho, 1836-1915 [Editor]&quot;,&quot;Queirós, Eça de, 1845-1900 [Editor]&quot;],&quot;LoCC&quot;:[&quot;AP&quot;,&quot;DP&quot;],&quot;PG_ID&quot;:&quot;14296&quot;});" class='title'>As Farpas:<br><span class='subtitle'>Chronica Mensal da Politica, das Letras e dos Costumes (1882-11/12)</span></a>
+<div class='author'>Ortigão, Ramalho, 1836-1915 [Editor], Queirós, Eça de, 1845-1900 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14620, {&quot;Title&quot;:&quot;As Farpas: Chronica Mensal da Politica, das Letras e dos Costumes (1873-01/02)&quot;,&quot;Topics&quot;:[&quot;Portugal -- Politics and government -- Periodicals&quot;,&quot;Portugal -- Civilization -- Periodicals&quot;,&quot;Portugal -- Social life and customs -- Periodicals&quot;],&quot;Primary&quot;:&quot;14620.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ortigão, Ramalho, 1836-1915 [Editor]&quot;,&quot;Queirós, Eça de, 1845-1900 [Editor]&quot;],&quot;LoCC&quot;:[&quot;AP&quot;,&quot;DP&quot;],&quot;PG_ID&quot;:&quot;14620&quot;});" class='title'>As Farpas:<br><span class='subtitle'>Chronica Mensal da Politica, das Letras e dos Costumes (1873-01/02)</span></a>
+<div class='author'>Ortigão, Ramalho, 1836-1915 [Editor], Queirós, Eça de, 1845-1900 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14621, {&quot;Title&quot;:&quot;As Farpas: Chronica Mensal da Politica, das Letras e dos Costumes (1873-03/04)&quot;,&quot;Topics&quot;:[&quot;Portugal -- Politics and government -- Periodicals&quot;,&quot;Portugal -- Civilization -- Periodicals&quot;,&quot;Portugal -- Social life and customs -- Periodicals&quot;],&quot;Primary&quot;:&quot;14621.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ortigão, Ramalho, 1836-1915 [Editor]&quot;,&quot;Queirós, Eça de, 1845-1900 [Editor]&quot;],&quot;LoCC&quot;:[&quot;AP&quot;,&quot;DP&quot;],&quot;PG_ID&quot;:&quot;14621&quot;});" class='title'>As Farpas:<br><span class='subtitle'>Chronica Mensal da Politica, das Letras e dos Costumes (1873-03/04)</span></a>
+<div class='author'>Ortigão, Ramalho, 1836-1915 [Editor], Queirós, Eça de, 1845-1900 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14622, {&quot;Title&quot;:&quot;As Farpas: Chronica Mensal da Politica, das Letras e dos Costumes (1873-10/11)&quot;,&quot;Topics&quot;:[&quot;Portugal -- Politics and government -- Periodicals&quot;,&quot;Portugal -- Civilization -- Periodicals&quot;,&quot;Portugal -- Social life and customs -- Periodicals&quot;],&quot;Primary&quot;:&quot;14622.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ortigão, Ramalho, 1836-1915 [Editor]&quot;,&quot;Queirós, Eça de, 1845-1900 [Editor]&quot;],&quot;LoCC&quot;:[&quot;AP&quot;,&quot;DP&quot;],&quot;PG_ID&quot;:&quot;14622&quot;});" class='title'>As Farpas:<br><span class='subtitle'>Chronica Mensal da Politica, das Letras e dos Costumes (1873-10/11)</span></a>
+<div class='author'>Ortigão, Ramalho, 1836-1915 [Editor], Queirós, Eça de, 1845-1900 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14688, {&quot;Title&quot;:&quot;Un hiver à Majorque&quot;,&quot;Topics&quot;:[&quot;Sand, George, 1804-1876 -- Travel -- Spain -- Majorca&quot;,&quot;French -- Spain -- Majorca -- History -- 19th century&quot;,&quot;Novelists, French -- 19th century -- Biography&quot;,&quot;Majorca (Spain) -- Description and travel&quot;],&quot;Primary&quot;:&quot;14688.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sand, George, 1804-1876&quot;],&quot;LoCC&quot;:[&quot;DP&quot;,&quot;PQ&quot;],&quot;PG_ID&quot;:&quot;14688&quot;});" class='title'>Un hiver à Majorque</a>
+<div class='author'>Sand, George, 1804-1876</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15674, {&quot;Title&quot;:&quot;Chronica d&#39;El-Rei D. Affonso III&quot;,&quot;Topics&quot;:[&quot;Afonso III, King of Portugal, 1210-1279&quot;,&quot;Portugal -- History -- Afonso III, 1248-1279&quot;],&quot;Primary&quot;:&quot;15674.txt&quot;,&quot;CreatorNames&quot;:[&quot;Pina, Rui de, 1440-1521&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;15674&quot;});" class='title'>Chronica d'El-Rei D. Affonso III</a>
+<div class='author'>Pina, Rui de, 1440-1521</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16214, {&quot;Title&quot;:&quot;As Farpas: Chronica Mensal da Politica, das Letras e dos Costumes, (1877-08/09)&quot;,&quot;Topics&quot;:[&quot;Portugal -- Politics and government -- Periodicals&quot;,&quot;Portugal -- Civilization -- Periodicals&quot;,&quot;Portugal -- Social life and customs -- Periodicals&quot;],&quot;Primary&quot;:&quot;16214.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ortigão, Ramalho, 1836-1915 [Editor]&quot;,&quot;Queirós, Eça de, 1845-1900 [Editor]&quot;],&quot;LoCC&quot;:[&quot;AP&quot;,&quot;DP&quot;],&quot;PG_ID&quot;:&quot;16214&quot;});" class='title'>As Farpas:<br><span class='subtitle'>Chronica Mensal da Politica, das Letras e dos Costumes, (1877-08/09)</span></a>
+<div class='author'>Ortigão, Ramalho, 1836-1915 [Editor], Queirós, Eça de, 1845-1900 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16218, {&quot;Title&quot;:&quot;As Farpas: Chronica Mensal da Politica, das Letras e dos Costumes (1877-01/02)&quot;,&quot;Topics&quot;:[&quot;Portugal -- Politics and government -- Periodicals&quot;,&quot;Portugal -- Civilization -- Periodicals&quot;,&quot;Portugal -- Social life and customs -- Periodicals&quot;],&quot;Primary&quot;:&quot;16218.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ortigão, Ramalho, 1836-1915 [Editor]&quot;,&quot;Queirós, Eça de, 1845-1900 [Editor]&quot;],&quot;LoCC&quot;:[&quot;AP&quot;,&quot;DP&quot;],&quot;PG_ID&quot;:&quot;16218&quot;});" class='title'>As Farpas:<br><span class='subtitle'>Chronica Mensal da Politica, das Letras e dos Costumes (1877-01/02)</span></a>
+<div class='author'>Ortigão, Ramalho, 1836-1915 [Editor], Queirós, Eça de, 1845-1900 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16219, {&quot;Title&quot;:&quot;As Farpas: Chronica Mensal da Politica, das Letras e dos Costumes (1877-05/06)&quot;,&quot;Topics&quot;:[&quot;Portugal -- Politics and government -- Periodicals&quot;,&quot;Portugal -- Civilization -- Periodicals&quot;,&quot;Portugal -- Social life and customs -- Periodicals&quot;],&quot;Primary&quot;:&quot;16219.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ortigão, Ramalho, 1836-1915 [Editor]&quot;,&quot;Queirós, Eça de, 1845-1900 [Editor]&quot;],&quot;LoCC&quot;:[&quot;AP&quot;,&quot;DP&quot;],&quot;PG_ID&quot;:&quot;16219&quot;});" class='title'>As Farpas:<br><span class='subtitle'>Chronica Mensal da Politica, das Letras e dos Costumes (1877-05/06)</span></a>
+<div class='author'>Ortigão, Ramalho, 1836-1915 [Editor], Queirós, Eça de, 1845-1900 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16571, {&quot;Title&quot;:&quot;Chronica d&#39;el rei D. Diniz (Vol. I)&quot;,&quot;Topics&quot;:[&quot;Dinis, King of Portugal, 1261-1325&quot;,&quot;Portugal -- History -- Dinis, 1279-1325&quot;],&quot;Primary&quot;:&quot;16571.txt&quot;,&quot;CreatorNames&quot;:[&quot;Pina, Rui de, 1440-1521&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;16571&quot;});" class='title'>Chronica d'el rei D. Diniz (Vol. I)</a>
+<div class='author'>Pina, Rui de, 1440-1521</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16633, {&quot;Title&quot;:&quot;Chronica de el-rei D. Pedro I&quot;,&quot;Topics&quot;:[&quot;Pedro I, King of Portugal, 1320-1367&quot;,&quot;Portugal -- History -- Pedro I, 1357-1367&quot;],&quot;Primary&quot;:&quot;16633.txt&quot;,&quot;CreatorNames&quot;:[&quot;Lopes, Fernão, 1380?-1459&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;16633&quot;});" class='title'>Chronica de el-rei D. Pedro I</a>
+<div class='author'>Lopes, Fernão, 1380?-1459</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18026, {&quot;Title&quot;:&quot;Chronica de el-rei D. Affonso Henriques&quot;,&quot;Topics&quot;:[&quot;Afonso I, King of Portugal, 1109?-1185&quot;,&quot;Portugal -- History -- Afonso I, 1139-1185&quot;],&quot;Primary&quot;:&quot;18026.txt&quot;,&quot;CreatorNames&quot;:[&quot;Galvão, Duarte, 1446-1517&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;18026&quot;});" class='title'>Chronica de el-rei D. Affonso Henriques</a>
+<div class='author'>Galvão, Duarte, 1446-1517</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18053, {&quot;Title&quot;:&quot;Spanish Life in Town and Country&quot;,&quot;Topics&quot;:[&quot;Spain -- Social life and customs&quot;,&quot;Portugal -- Social life and customs&quot;],&quot;Primary&quot;:&quot;18053.htm&quot;,&quot;CreatorNames&quot;:[&quot;Higgin, L.&quot;,&quot;Street, Eugène E. (Eugène Edward), -1913&quot;,&quot;Dawson, William Harbutt, 1860-1948 [Editor]&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;18053&quot;});" class='title'>Spanish Life in Town and Country</a>
+<div class='author'>Higgin, L., Street, Eugène E. (Eugène Edward), -1913, Dawson, William Harbutt, 1860-1948 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18167, {&quot;Title&quot;:&quot;Chronica d&#39;el rei D. Diniz (Vol. II)&quot;,&quot;Topics&quot;:[&quot;Dinis, King of Portugal, 1261-1325&quot;,&quot;Portugal -- History -- Dinis, 1279-1325&quot;],&quot;Primary&quot;:&quot;18167.txt&quot;,&quot;CreatorNames&quot;:[&quot;Pina, Rui de, 1440-1521&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;18167&quot;});" class='title'>Chronica d'el rei D. Diniz (Vol. II)</a>
+<div class='author'>Pina, Rui de, 1440-1521</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18764, {&quot;Title&quot;:&quot;Life in Morocco and Glimpses Beyond&quot;,&quot;Topics&quot;:[&quot;Spain -- Description and travel&quot;,&quot;Morocco&quot;],&quot;Primary&quot;:&quot;18764.htm&quot;,&quot;CreatorNames&quot;:[&quot;Meakin, Budgett, 1866-1906&quot;],&quot;LoCC&quot;:[&quot;DP&quot;,&quot;DT&quot;],&quot;PG_ID&quot;:&quot;18764&quot;});" class='title'>Life in Morocco and Glimpses Beyond</a>
+<div class='author'>Meakin, Budgett, 1866-1906</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18982, {&quot;Title&quot;:&quot;Manuel da Maya e os engenheiros militares portugueses no Terramoto de 1755&quot;,&quot;Topics&quot;:[&quot;Lisbon Earthquake, Portugal, 1755&quot;,&quot;Maia, Manuel da, -1768&quot;],&quot;Primary&quot;:&quot;18982.txt&quot;,&quot;CreatorNames&quot;:[&quot;Sepúlveda, Christóvam Ayres de Magalhães, 1857-1930&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;18982&quot;});" class='title'>Manuel da Maya e os engenheiros militares portugueses no Terramoto de 1755</a>
+<div class='author'>Sepúlveda, Christóvam Ayres de Magalhães, 1857-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19062, {&quot;Title&quot;:&quot;Eco da Voz Portugueza por Terras de Santa Cruz&quot;,&quot;Topics&quot;:[&quot;Portugal -- History -- 19th century&quot;],&quot;Primary&quot;:&quot;19062.txt&quot;,&quot;CreatorNames&quot;:[&quot;Castilho, Antonio Feliciano de, 1800-1875&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;19062&quot;});" class='title'>Eco da Voz Portugueza por Terras de Santa Cruz</a>
+<div class='author'>Castilho, Antonio Feliciano de, 1800-1875</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19305, {&quot;Title&quot;:&quot;Van Toledo naar Granada, deel 2 - De Aarde en haar Volken, 1907&quot;,&quot;Topics&quot;:[&quot;Spain -- Description and travel&quot;],&quot;Primary&quot;:&quot;19305.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dieulafoy, Jane, 1851-1916&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;19305&quot;});" class='title'>Van Toledo naar Granada, deel 2 -<br><span class='subtitle'>De Aarde en haar Volken, 1907</span></a>
+<div class='author'>Dieulafoy, Jane, 1851-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19375, {&quot;Title&quot;:&quot;A senhora Rattazzi&quot;,&quot;Topics&quot;:[&quot;Rattazzi, Marie, 1833-1902. Portugal à vol d&#39;oiseau&quot;],&quot;Primary&quot;:&quot;19375.txt&quot;,&quot;CreatorNames&quot;:[&quot;Castelo Branco, Camilo, 1825-1890&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;19375&quot;});" class='title'>A senhora Rattazzi</a>
+<div class='author'>Castelo Branco, Camilo, 1825-1890</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19457, {&quot;Title&quot;:&quot;Historic Tales: The Romance of Reality. Vol. 07 (of 15), Spanish&quot;,&quot;Topics&quot;:[&quot;Spain -- History&quot;],&quot;Primary&quot;:&quot;19457.htm&quot;,&quot;CreatorNames&quot;:[&quot;Morris, Charles, 1833-1922&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;19457&quot;});" class='title'>Historic Tales:<br><span class='subtitle'>The Romance of Reality. Vol. 07 (of 15), Spanish</span></a>
+<div class='author'>Morris, Charles, 1833-1922</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19974, {&quot;Title&quot;:&quot;Verdades amargas - estudo politico dedicado às classes que pensam, que possuem - e que trabalham&quot;,&quot;Topics&quot;:[&quot;Portugal -- Politics and government -- 1861-1889&quot;],&quot;Primary&quot;:&quot;19974.txt&quot;,&quot;CreatorNames&quot;:[&quot;Nunes, Cláudio José, 1831-1875&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;19974&quot;});" class='title'>Verdades amargas -<br><span class='subtitle'>estudo politico dedicado às classes que pensam, que possuem - e que trabalham</span></a>
+<div class='author'>Nunes, Cláudio José, 1831-1875</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20042, {&quot;Title&quot;:&quot;Relação do formidavel, e lastimoso terremoto succedido no Reino de Valença - No dia 23 de Março deste presente anno de 1748 pelas 6. - horas, e tres quartos da manhã&quot;,&quot;Topics&quot;:[&quot;Earthquakes -- Portugal -- Valença&quot;,&quot;Valença (Portugal)&quot;],&quot;Primary&quot;:&quot;20042.txt&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;20042&quot;});" class='title'>Relação do formidavel, e lastimoso terremoto succedido no Reino de Valença -<br><span class='subtitle'>No dia 23 de Março deste presente anno de 1748 pelas 6. - horas, e tres quartos da manhã</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20099, {&quot;Title&quot;:&quot;Historia de la célebre Reina de España Doña Juana, llamada vulgarmente, La Loca&quot;,&quot;Topics&quot;:[&quot;Juana, la Loca, Queen of Castile, 1479-1555&quot;,&quot;Queens -- Spain -- Castile -- Biography&quot;],&quot;Primary&quot;:&quot;20099.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;20099&quot;});" class='title'>Historia de la célebre Reina de España Doña Juana, llamada vulgarmente, La Loca</a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20103, {&quot;Title&quot;:&quot;A princeza na berlinda - Rattazzi a vol d&#39;oiseau, com a biographia de sua Alteza&quot;,&quot;Topics&quot;:[&quot;Rattazzi, Marie, 1833-1902&quot;],&quot;Primary&quot;:&quot;20103.htm&quot;,&quot;CreatorNames&quot;:[&quot;Castro, Urbano de, 1850-1902&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;20103&quot;});" class='title'>A princeza na berlinda -<br><span class='subtitle'>Rattazzi a vol d'oiseau, com a biographia de sua Alteza</span></a>
+<div class='author'>Castro, Urbano de, 1850-1902</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20998, {&quot;Title&quot;:&quot;A fundação da monarchia portugueza - narração anti-iberica&quot;,&quot;Topics&quot;:[&quot;Portugal -- History -- To 1385&quot;],&quot;Primary&quot;:&quot;20998.htm&quot;,&quot;CreatorNames&quot;:[&quot;Vasconcelos, António Augusto Teixeira de, 1816-1878&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;20998&quot;});" class='title'>A fundação da monarchia portugueza -<br><span class='subtitle'>narração anti-iberica</span></a>
+<div class='author'>Vasconcelos, António Augusto Teixeira de, 1816-1878</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(21429, {&quot;Title&quot;:&quot;Portugal e Ilhas Adjacentes: Exposição Ethnografica Portugueza&quot;,&quot;Topics&quot;:[&quot;Ethnology -- Portugal&quot;],&quot;Primary&quot;:&quot;21429.txt&quot;,&quot;CreatorNames&quot;:[&quot;Coelho, Adolfo, 1847-1919&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;21429&quot;});" class='title'>Portugal e Ilhas Adjacentes:<br><span class='subtitle'>Exposição Ethnografica Portugueza</span></a>
+<div class='author'>Coelho, Adolfo, 1847-1919</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(21564, {&quot;Title&quot;:&quot;Catecismo d&#39;a Doutrina Labrega&quot;,&quot;Topics&quot;:[&quot;Peasants -- Spain -- Galicia (Region) -- Social conditions&quot;],&quot;Primary&quot;:&quot;21564.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lamas Carvajal, Valentín, 1849-1906&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;21564&quot;});" class='title'>Catecismo d'a Doutrina Labrega</a>
+<div class='author'>Lamas Carvajal, Valentín, 1849-1906</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(21911, {&quot;Title&quot;:&quot;Chronica de el-rei D. Affonso V (Vol. II)&quot;,&quot;Topics&quot;:[&quot;Afonso V, King of Portugal, 1432-1481&quot;,&quot;Portugal -- History -- Alfonso V, 1438-1481&quot;],&quot;Primary&quot;:&quot;21911.txt&quot;,&quot;CreatorNames&quot;:[&quot;Pina, Rui de, 1440-1521&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;21911&quot;});" class='title'>Chronica de el-rei D. Affonso V (Vol. II)</a>
+<div class='author'>Pina, Rui de, 1440-1521</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(21925, {&quot;Title&quot;:&quot;In Portugal - De Aarde en haar Volken, 1908&quot;,&quot;Topics&quot;:[&quot;Portugal -- Description and travel&quot;],&quot;Primary&quot;:&quot;21925.htm&quot;,&quot;CreatorNames&quot;:[&quot;Beauregard, Gérard de, 1865-&quot;,&quot;Fouchier, Louis Charles Eugène Joseph de, 1869-&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;21925&quot;});" class='title'>In Portugal -<br><span class='subtitle'>De Aarde en haar Volken, 1908</span></a>
+<div class='author'>Beauregard, Gérard de, 1865-, Fouchier, Louis Charles Eugène Joseph de, 1869-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22337, {&quot;Title&quot;:&quot;History of the Moors of Spain&quot;,&quot;Topics&quot;:[&quot;Islam&quot;,&quot;Arabs -- Spain&quot;,&quot;Spain -- History -- 711-1516&quot;,&quot;Islamic Empire -- History&quot;,&quot;Muslims -- Spain -- History&quot;],&quot;Primary&quot;:&quot;22337.txt&quot;,&quot;CreatorNames&quot;:[&quot;Florian, 1755-1794&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;22337&quot;});" class='title'>History of the Moors of Spain</a>
+<div class='author'>Florian, 1755-1794</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22826, {&quot;Title&quot;:&quot;Chronica de El-Rey D. Affonso II&quot;,&quot;Topics&quot;:[&quot;Afonso II, King of Portugal, 1185-1223&quot;,&quot;Portugal -- History -- Afonso II, 1211-1223&quot;],&quot;Primary&quot;:&quot;22826.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pina, Rui de, 1440-1521&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;22826&quot;});" class='title'>Chronica de El-Rey D. Affonso II</a>
+<div class='author'>Pina, Rui de, 1440-1521</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24480, {&quot;Title&quot;:&quot;Castilië en Andalusië - De Aarde en haar Volken, 1909&quot;,&quot;Topics&quot;:[&quot;Spain -- Description and travel&quot;,&quot;Castile (Spain)&quot;,&quot;Andalusia (Spain)&quot;],&quot;Primary&quot;:&quot;24480.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dieulafoy, Jane, 1851-1916&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;24480&quot;});" class='title'>Castilië en Andalusië -<br><span class='subtitle'>De Aarde en haar Volken, 1909</span></a>
+<div class='author'>Dieulafoy, Jane, 1851-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24508, {&quot;Title&quot;:&quot;Chronica de el-rei D. Affonso V (Vol. III)&quot;,&quot;Topics&quot;:[&quot;Biography&quot;,&quot;Afonso V, King of Portugal, 1432-1481&quot;,&quot;Portugal -- History -- Alfonso V, 1438-1481&quot;],&quot;Primary&quot;:&quot;24508.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pina, Rui de, 1440-1521&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;DP&quot;],&quot;PG_ID&quot;:&quot;24508&quot;});" class='title'>Chronica de el-rei D. Affonso V (Vol. III)</a>
+<div class='author'>Pina, Rui de, 1440-1521</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24514, {&quot;Title&quot;:&quot;Luiz de Camões: notas biograficas - Prefacio da setima edição do Camões de Garrett&quot;,&quot;Topics&quot;:[&quot;Biography&quot;,&quot;Camões, Luís de, 1524?-1580&quot;],&quot;Primary&quot;:&quot;24514.htm&quot;,&quot;CreatorNames&quot;:[&quot;Castelo Branco, Camilo, 1825-1890&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;DP&quot;],&quot;PG_ID&quot;:&quot;24514&quot;});" class='title'>Luiz de Camões:<br><span class='subtitle'>notas biograficas - Prefacio da setima edição do Camões de Garrett</span></a>
+<div class='author'>Castelo Branco, Camilo, 1825-1890</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24533, {&quot;Title&quot;:&quot;O Infante D. Henrique e a arte de navegar dos portuguezes&quot;,&quot;Topics&quot;:[&quot;Biography&quot;,&quot;Henry, Infante of Portugal, 1394-1460&quot;,&quot;Explorers&quot;,&quot;Portugal -- History&quot;,&quot;Navigation&quot;],&quot;Primary&quot;:&quot;24533.htm&quot;,&quot;CreatorNames&quot;:[&quot;Eça, Vicente de Almeida de, 1852-1929&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;DP&quot;,&quot;G&quot;],&quot;PG_ID&quot;:&quot;24533&quot;});" class='title'>O Infante D. Henrique e a arte de navegar dos portuguezes</a>
+<div class='author'>Eça, Vicente de Almeida de, 1852-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24620, {&quot;Title&quot;:&quot;José Estevão - (Edição do centenario)&quot;,&quot;Topics&quot;:[&quot;Estêvão, José, 1809-1862&quot;],&quot;Primary&quot;:&quot;24620.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sousa, Eduardo de&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;24620&quot;});" class='title'>José Estevão -<br><span class='subtitle'>(Edição do centenario)</span></a>
+<div class='author'>Sousa, Eduardo de</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24843, {&quot;Title&quot;:&quot;As ratices da Rattazzi: O pello nacional&quot;,&quot;Topics&quot;:[&quot;Rattazzi, Marie, 1833-1902&quot;],&quot;Primary&quot;:&quot;24843.htm&quot;,&quot;CreatorNames&quot;:[&quot;Monteiro, Ramalho, 1862-1949&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;24843&quot;});" class='title'>As ratices da Rattazzi:<br><span class='subtitle'>O pello nacional</span></a>
+<div class='author'>Monteiro, Ramalho, 1862-1949</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25113, {&quot;Title&quot;:&quot;Centenario do Revolução de 1820 - Integração de Aveiro nesse glorioso movimento&quot;,&quot;Topics&quot;:[&quot;Portugal -- History -- Revolution, 1820&quot;],&quot;Primary&quot;:&quot;25113.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gomes, Marques, 1853-1931&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;25113&quot;});" class='title'>Centenario do Revolução de 1820 -<br><span class='subtitle'>Integração de Aveiro nesse glorioso movimento</span></a>
+<div class='author'>Gomes, Marques, 1853-1931</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25238, {&quot;Title&quot;:&quot;A batalha de Toro&quot;,&quot;Topics&quot;:[&quot;Portugal -- History -- Alfonso V, 1438-1481&quot;,&quot;Toro, Battle of, 1476&quot;],&quot;Primary&quot;:&quot;25238.txt&quot;,&quot;CreatorNames&quot;:[&quot;Barata, António Francisco, 1836-1910&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;25238&quot;});" class='title'>A batalha de Toro</a>
+<div class='author'>Barata, António Francisco, 1836-1910</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25313, {&quot;Title&quot;:&quot;Um conto portuguez: episodio da guerra civil: a Maria da Fonte&quot;,&quot;Topics&quot;:[&quot;Portugal -- History -- Maria II, 1834-1853&quot;],&quot;Primary&quot;:&quot;25313.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mascarenhas, Miguel J. T.&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;25313&quot;});" class='title'>Um conto portuguez:<br><span class='subtitle'>episodio da guerra civil: a Maria da Fonte</span></a>
+<div class='author'>Mascarenhas, Miguel J. T.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25437, {&quot;Title&quot;:&quot;D. Joanna de Portugal (A Princesa Santa) - Esboço Biographico&quot;,&quot;Topics&quot;:[&quot;Joanna, Princess of Portugal, 1452-1490&quot;,&quot;Christian saints -- Portugal -- Biography&quot;],&quot;Primary&quot;:&quot;25437.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gomes, Marques, 1853-1931&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;25437&quot;});" class='title'>D. Joanna de Portugal (A Princesa Santa) -<br><span class='subtitle'>Esboço Biographico</span></a>
+<div class='author'>Gomes, Marques, 1853-1931</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25697, {&quot;Title&quot;:&quot;Lord Palmerston: a opinião e os factos - um brado a pró da verdade&quot;,&quot;Topics&quot;:[&quot;Portugal -- Colonies -- Africa&quot;,&quot;Portugal -- Foreign relations -- Great Britain&quot;,&quot;Great Britain -- Foreign relations -- Portugal&quot;],&quot;Primary&quot;:&quot;25697.htm&quot;,&quot;CreatorNames&quot;:[&quot;Testa, Carlos, 1823-1891&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;25697&quot;});" class='title'>Lord Palmerston:<br><span class='subtitle'>a opinião e os factos - um brado a pró da verdade</span></a>
+<div class='author'>Testa, Carlos, 1823-1891</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25846, {&quot;Title&quot;:&quot;O General Carlos Ribeiro - Recordações da Mocidade&quot;,&quot;Topics&quot;:[&quot;Ribeiro, Carlos, 1813-1882&quot;],&quot;Primary&quot;:&quot;25846.htm&quot;,&quot;CreatorNames&quot;:[&quot;Castelo Branco, Camilo, 1825-1890&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;25846&quot;});" class='title'>O General Carlos Ribeiro -<br><span class='subtitle'>Recordações da Mocidade</span></a>
+<div class='author'>Castelo Branco, Camilo, 1825-1890</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25934, {&quot;Title&quot;:&quot;Portugal e Marrocos perante a historia e a politica europea&quot;,&quot;Topics&quot;:[&quot;Morocco -- Foreign relations -- Portugal&quot;,&quot;Portugal -- Foreign relations -- Morocco&quot;],&quot;Primary&quot;:&quot;25934.htm&quot;,&quot;CreatorNames&quot;:[&quot;Testa, Carlos, 1823-1891&quot;],&quot;LoCC&quot;:[&quot;DP&quot;,&quot;DT&quot;],&quot;PG_ID&quot;:&quot;25934&quot;});" class='title'>Portugal e Marrocos perante a historia e a politica europea</a>
+<div class='author'>Testa, Carlos, 1823-1891</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25987, {&quot;Title&quot;:&quot;Chronica de El-Rei D. Affonso V (Vol. I)&quot;,&quot;Topics&quot;:[&quot;Afonso V, King of Portugal, 1432-1481&quot;,&quot;Portugal -- History -- Alfonso V, 1438-1481&quot;],&quot;Primary&quot;:&quot;25987.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pina, Rui de, 1440-1521&quot;,&quot;Pereira, Gabriel, 1847-1911 [Editor]&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;25987&quot;});" class='title'>Chronica de El-Rei D. Affonso V (Vol. I)</a>
+<div class='author'>Pina, Rui de, 1440-1521, Pereira, Gabriel, 1847-1911 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26314, {&quot;Title&quot;:&quot;Viajes por España&quot;,&quot;Topics&quot;:[&quot;Spain -- Description and travel&quot;,&quot;Spain -- Social life and customs -- 19th century&quot;],&quot;Primary&quot;:&quot;26314.htm&quot;,&quot;CreatorNames&quot;:[&quot;Alarcón, Pedro Antonio de, 1833-1891&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;26314&quot;});" class='title'>Viajes por España</a>
+<div class='author'>Alarcón, Pedro Antonio de, 1833-1891</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26777, {&quot;Title&quot;:&quot;A Revolução Portugueza: O 5 de Outubro (Lisboa 1910)&quot;,&quot;Topics&quot;:[&quot;Portugal -- History -- Revolution, 1910&quot;],&quot;Primary&quot;:&quot;26777.htm&quot;,&quot;CreatorNames&quot;:[&quot;Abreu, Francisco Jorge de, 1878-1932&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;26777&quot;});" class='title'>A Revolução Portugueza:<br><span class='subtitle'>O 5 de Outubro (Lisboa 1910)</span></a>
+<div class='author'>Abreu, Francisco Jorge de, 1878-1932</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27167, {&quot;Title&quot;:&quot;Historia de Teruel&quot;,&quot;Topics&quot;:[&quot;Teruel (Spain)&quot;],&quot;Primary&quot;:&quot;27167.htm&quot;,&quot;CreatorNames&quot;:[&quot;Blasco, Cosme, 1838-1900&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;27167&quot;});" class='title'>Historia de Teruel</a>
+<div class='author'>Blasco, Cosme, 1838-1900</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27252, {&quot;Title&quot;:&quot;The Land of The Blessed Virgin; Sketches and Impressions in Andalusia&quot;,&quot;Topics&quot;:[&quot;Maugham, W. Somerset (William Somerset), 1874-1965 -- Travel -- Spain -- Andalusia&quot;,&quot;Andalusia (Spain) -- Description and travel&quot;],&quot;Primary&quot;:&quot;27252.htm&quot;,&quot;CreatorNames&quot;:[&quot;Maugham, W. Somerset (William Somerset), 1874-1965&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;27252&quot;});" class='title'>The Land of The Blessed Virgin;<br><span class='subtitle'>Sketches and Impressions in Andalusia</span></a>
+<div class='author'>Maugham, W. Somerset (William Somerset), 1874-1965</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27311, {&quot;Title&quot;:&quot;Chronica de El-Rei D. Sancho II&quot;,&quot;Topics&quot;:[&quot;Sancho II, King of Portugal, 1207-1248&quot;,&quot;Portugal -- History -- Sancho II, 1223-1248&quot;],&quot;Primary&quot;:&quot;27311.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pina, Rui de, 1440-1521&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;27311&quot;});" class='title'>Chronica de El-Rei D. Sancho II</a>
+<div class='author'>Pina, Rui de, 1440-1521</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27542, {&quot;Title&quot;:&quot;O Centenario de José Estevão: Homenagem da Maçonaria Portugueza&quot;,&quot;Topics&quot;:[&quot;Estêvão, José, 1809-1862&quot;],&quot;Primary&quot;:&quot;27542.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lima, S. de Magalhães (Sebastião de Magalhães), 1850-1928&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;27542&quot;});" class='title'>O Centenario de José Estevão:<br><span class='subtitle'>Homenagem da Maçonaria Portugueza</span></a>
+<div class='author'>Lima, S. de Magalhães (Sebastião de Magalhães), 1850-1928</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28902, {&quot;Title&quot;:&quot;José Estevão&quot;,&quot;Topics&quot;:[&quot;Estêvão, José, 1809-1862&quot;],&quot;Primary&quot;:&quot;28902.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lima, Jaime de Magalhães, 1859-1936&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;28902&quot;});" class='title'>José Estevão</a>
+<div class='author'>Lima, Jaime de Magalhães, 1859-1936</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29073, {&quot;Title&quot;:&quot;Rosinante to the Road Again&quot;,&quot;Topics&quot;:[&quot;Spain&quot;],&quot;Primary&quot;:&quot;29073.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dos Passos, John, 1896-1970&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;29073&quot;});" class='title'>Rosinante to the Road Again</a>
+<div class='author'>Dos Passos, John, 1896-1970</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29078, {&quot;Title&quot;:&quot;Estudios históricos del reinado de Felipe II&quot;,&quot;Topics&quot;:[&quot;Pérez, Antonio, -1611&quot;,&quot;Jerba, Massacre of, 1560&quot;,&quot;Spain -- History -- Philip II, 1556-1598&quot;,&quot;Spain -- Politics and government -- 1556-1598&quot;],&quot;Primary&quot;:&quot;29078.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fernández Duro, Cesáreo, 1830-1908&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;29078&quot;});" class='title'>Estudios históricos del reinado de Felipe II</a>
+<div class='author'>Fernández Duro, Cesáreo, 1830-1908</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29114, {&quot;Title&quot;:&quot;La cour et la ville de Madrid vers la fin du XVIIe siècle - Relation du voyage d&#39;Espagne par la comtesse d&#39;Aulnoy&quot;,&quot;Topics&quot;:[&quot;Spain -- Description and travel&quot;,&quot;Spain -- Court and courtiers&quot;],&quot;Primary&quot;:&quot;29114.htm&quot;,&quot;CreatorNames&quot;:[&quot;Aulnoy, Madame d&#39; (Marie-Catherine), 1651?-1705&quot;,&quot;Carey, B., Mme. [Editor]&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;29114&quot;});" class='title'>La cour et la ville de Madrid vers la fin du XVIIe siècle -<br><span class='subtitle'>Relation du voyage d'Espagne par la comtesse d'Aulnoy</span></a>
+<div class='author'>Aulnoy, Madame d' (Marie-Catherine), 1651?-1705, Carey, B., Mme. [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29197, {&quot;Title&quot;:&quot;A Short History of Spain&quot;,&quot;Topics&quot;:[&quot;Spain -- History&quot;],&quot;Primary&quot;:&quot;29197.htm&quot;,&quot;CreatorNames&quot;:[&quot;Parmele, Mary Platt, 1843-1911&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;29197&quot;});" class='title'>A Short History of Spain</a>
+<div class='author'>Parmele, Mary Platt, 1843-1911</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29394, {&quot;Title&quot;:&quot;Historia alegre de Portugal: leitura para o povo e para as escolas&quot;,&quot;Topics&quot;:[&quot;Portugal -- History&quot;],&quot;Primary&quot;:&quot;29394.htm&quot;,&quot;CreatorNames&quot;:[&quot;Chagas, Manuel Pinheiro, 1842-1895&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;29394&quot;});" class='title'>Historia alegre de Portugal:<br><span class='subtitle'>leitura para o povo e para as escolas</span></a>
+<div class='author'>Chagas, Manuel Pinheiro, 1842-1895</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29469, {&quot;Title&quot;:&quot;A Supplementary Chapter to the Bible in Spain&quot;,&quot;Topics&quot;:[&quot;Spain -- Description and travel&quot;,&quot;Ford, Richard, 1796-1858. Hand-book for travellers in Spain&quot;],&quot;Primary&quot;:&quot;29469.htm&quot;,&quot;CreatorNames&quot;:[&quot;Borrow, George, 1803-1881&quot;,&quot;Wise, Thomas James, 1859-1937 [Editor]&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;29469&quot;});" class='title'>A Supplementary Chapter to the Bible in Spain</a>
+<div class='author'>Borrow, George, 1803-1881, Wise, Thomas James, 1859-1937 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29484, {&quot;Title&quot;:&quot;A Revolução Portugueza: O 31 de Janeiro (Porto 1891)&quot;,&quot;Topics&quot;:[&quot;Portugal -- History -- Revolution, 1891&quot;,&quot;Portugal -- Politics and government -- 1889-1908&quot;],&quot;Primary&quot;:&quot;29484.htm&quot;,&quot;CreatorNames&quot;:[&quot;Abreu, Francisco Jorge de, 1878-1932&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;29484&quot;});" class='title'>A Revolução Portugueza:<br><span class='subtitle'>O 31 de Janeiro (Porto 1891)</span></a>
+<div class='author'>Abreu, Francisco Jorge de, 1878-1932</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29591, {&quot;Title&quot;:&quot;Getting to know Spain&quot;,&quot;Topics&quot;:[&quot;Spain -- Description and travel&quot;,&quot;Spain -- History -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;29591.htm&quot;,&quot;CreatorNames&quot;:[&quot;Day, Dee&quot;,&quot;Lambo, Don [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;29591&quot;});" class='title'>Getting to know Spain</a>
+<div class='author'>Day, Dee, Lambo, Don [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29804, {&quot;Title&quot;:&quot;O thesouro do rei Fernando - historia anecdotica de um tratado inedito&quot;,&quot;Topics&quot;:[&quot;Fernando I, King of Portugal, 1345-1383&quot;,&quot;Portugal -- History -- To 1385&quot;],&quot;Primary&quot;:&quot;29804.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cordeiro, Luciano, 1844-1900&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;29804&quot;});" class='title'>O thesouro do rei Fernando -<br><span class='subtitle'>historia anecdotica de um tratado inedito</span></a>
+<div class='author'>Cordeiro, Luciano, 1844-1900</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29898, {&quot;Title&quot;:&quot;O Máo Rei e o Bom Subdito: Um Trecho da Historia Portugueza&quot;,&quot;Topics&quot;:[&quot;Portugal -- History -- Sancho II, 1223-1248&quot;,&quot;Portugal -- History -- Afonso III, 1248-1279&quot;],&quot;Primary&quot;:&quot;29898.htm&quot;,&quot;CreatorNames&quot;:[&quot;Unknown&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;29898&quot;});" class='title'>O Máo Rei e o Bom Subdito:<br><span class='subtitle'>Um Trecho da Historia Portugueza</span></a>
+<div class='author'>Unknown</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29996, {&quot;Title&quot;:&quot;Manifesto dos Estudantes da Universidade de Coimbra á opinião illustrada do paiz&quot;,&quot;Topics&quot;:[&quot;Students -- Portugal -- Political activity&quot;,&quot;Portugal -- Politics and government -- 1861-1889&quot;],&quot;Primary&quot;:&quot;29996.htm&quot;,&quot;CreatorNames&quot;:[&quot;Quental, Antero de, 1842-1891&quot;,&quot;Veloso, Rodrigo [Editor]&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;29996&quot;});" class='title'>Manifesto dos Estudantes da Universidade de Coimbra á opinião illustrada do paiz</a>
+<div class='author'>Quental, Antero de, 1842-1891, Veloso, Rodrigo [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29998, {&quot;Title&quot;:&quot;Ultimatum de 11 de Janeiro&quot;,&quot;Topics&quot;:[&quot;Portugal -- Politics and government -- 1889-1908&quot;],&quot;Primary&quot;:&quot;29998.htm&quot;,&quot;CreatorNames&quot;:[&quot;Quental, Antero de, 1842-1891&quot;,&quot;Veloso, Rodrigo [Editor]&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;29998&quot;});" class='title'>Ultimatum de 11 de Janeiro</a>
+<div class='author'>Quental, Antero de, 1842-1891, Veloso, Rodrigo [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29999, {&quot;Title&quot;:&quot;Costumes Madrilenos - Notas de um Viajante&quot;,&quot;Topics&quot;:[&quot;Madrid (Spain) -- Description and travel&quot;,&quot;Madrid (Spain) -- Social life and customs&quot;],&quot;Primary&quot;:&quot;29999.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lima, S. de Magalhães (Sebastião de Magalhães), 1850-1928&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;29999&quot;});" class='title'>Costumes Madrilenos -<br><span class='subtitle'>Notas de um Viajante</span></a>
+<div class='author'>Lima, S. de Magalhães (Sebastião de Magalhães), 1850-1928</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30355, {&quot;Title&quot;:&quot;O senhor Dom Miguel I, e a senhora Dona Maria II - Comparações, reflexões, desengano&quot;,&quot;Topics&quot;:[&quot;Miguel I, King of Portugal, 1802-1866&quot;],&quot;Primary&quot;:&quot;30355.htm&quot;,&quot;CreatorNames&quot;:[&quot;Novaes Vieira, João Augusto&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;30355&quot;});" class='title'>O senhor Dom Miguel I, e a senhora Dona Maria II -<br><span class='subtitle'>Comparações, reflexões, desengano</span></a>
+<div class='author'>Novaes Vieira, João Augusto</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30424, {&quot;Title&quot;:&quot;As relações luso-brasileiras - a immigração e a «desnacionalização» do Brasil&quot;,&quot;Topics&quot;:[&quot;Brazil -- Emigration and immigration&quot;,&quot;Brazil -- Relations -- Portugal&quot;,&quot;Portugal -- Relations -- Brazil&quot;],&quot;Primary&quot;:&quot;30424.htm&quot;,&quot;CreatorNames&quot;:[&quot;Barbosa, José, 1869-1923&quot;],&quot;LoCC&quot;:[&quot;DP&quot;,&quot;F&quot;],&quot;PG_ID&quot;:&quot;30424&quot;});" class='title'>As relações luso-brasileiras -<br><span class='subtitle'>a immigração e a «desnacionalização» do Brasil</span></a>
+<div class='author'>Barbosa, José, 1869-1923</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30605, {&quot;Title&quot;:&quot;Spagna&quot;,&quot;Topics&quot;:[&quot;Spain -- Description and travel&quot;],&quot;Primary&quot;:&quot;30605.htm&quot;,&quot;CreatorNames&quot;:[&quot;De Amicis, Edmondo, 1846-1908&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;30605&quot;});" class='title'>Spagna</a>
+<div class='author'>De Amicis, Edmondo, 1846-1908</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30806, {&quot;Title&quot;:&quot;Apontamentos para a Biographia do Cidadão José da Silva Passos&quot;,&quot;Topics&quot;:[&quot;Passos, José da Silva, 1800-1863&quot;],&quot;Primary&quot;:&quot;30806.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pereira da Silva, Manuel Joaquim&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;30806&quot;});" class='title'>Apontamentos para a Biographia do Cidadão José da Silva Passos</a>
+<div class='author'>Pereira da Silva, Manuel Joaquim</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30921, {&quot;Title&quot;:&quot;Quadros de historia portugueza&quot;,&quot;Topics&quot;:[&quot;Portugal -- History -- To 1385&quot;,&quot;Portugal -- History -- Period of discoveries, 1385-1580&quot;],&quot;Primary&quot;:&quot;30921.htm&quot;,&quot;CreatorNames&quot;:[&quot;Silveira da Mota, I. F., 1836-1907&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;30921&quot;});" class='title'>Quadros de historia portugueza</a>
+<div class='author'>Silveira da Mota, I. F., 1836-1907</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31379, {&quot;Title&quot;:&quot;Oliveira Martins: Estudo de Psychologia&quot;,&quot;Topics&quot;:[&quot;Oliveira Martins, J. P. (Joaquim Pedro), 1845-1894&quot;,&quot;Statesmen -- Portugal -- Biography&quot;],&quot;Primary&quot;:&quot;31379.htm&quot;,&quot;CreatorNames&quot;:[&quot;Barreto, Moniz, 1865-1894&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;31379&quot;});" class='title'>Oliveira Martins:<br><span class='subtitle'>Estudo de Psychologia</span></a>
+<div class='author'>Barreto, Moniz, 1865-1894</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31532, {&quot;Title&quot;:&quot;Romantic Spain: A Record of Personal Experiences (Vol. II)&quot;,&quot;Topics&quot;:[&quot;Spain -- Description and travel&quot;],&quot;Primary&quot;:&quot;31532.htm&quot;,&quot;CreatorNames&quot;:[&quot;O&#39;Shea, John Augustus, 1840-1905&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;31532&quot;});" class='title'>Romantic Spain:<br><span class='subtitle'>A Record of Personal Experiences (Vol. II)</span></a>
+<div class='author'>O'Shea, John Augustus, 1840-1905</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31576, {&quot;Title&quot;:&quot;Memoria sobre a descoberta das ilhas de Porto Santo e Madeira 1418-1419 - (Fragmento de um livro inedito)&quot;,&quot;Topics&quot;:[&quot;Vila de Porto Santo (Madeira Islands)&quot;,&quot;Madeira Islands&quot;],&quot;Primary&quot;:&quot;31576.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bettencourt, Emiliano Augusto de&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;31576&quot;});" class='title'>Memoria sobre a descoberta das ilhas de Porto Santo e Madeira 1418-1419 -<br><span class='subtitle'>(Fragmento de um livro inedito)</span></a>
+<div class='author'>Bettencourt, Emiliano Augusto de</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31654, {&quot;Title&quot;:&quot;Oliveira Martins - O critico litterario, o economista, o historiador, o publicista, o politico&quot;,&quot;Topics&quot;:[&quot;Oliveira Martins, J. P. (Joaquim Pedro), 1845-1894&quot;],&quot;Primary&quot;:&quot;31654.htm&quot;,&quot;CreatorNames&quot;:[&quot;Quental, Antero de, 1842-1891&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;31654&quot;});" class='title'>Oliveira Martins -<br><span class='subtitle'>O critico litterario, o economista, o historiador, o publicista, o politico</span></a>
+<div class='author'>Quental, Antero de, 1842-1891</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31656, {&quot;Title&quot;:&quot;Os factos&quot;,&quot;Topics&quot;:[&quot;Portugal -- Economic conditions -- 19th century&quot;,&quot;Portugal -- Politics and government -- 19th century&quot;],&quot;Primary&quot;:&quot;31656.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cunha, J. G. de Barros e (João Gualberto de Barros), -1882&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;31656&quot;});" class='title'>Os factos</a>
+<div class='author'>Cunha, J. G. de Barros e (João Gualberto de Barros), -1882</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32001, {&quot;Title&quot;:&quot;Delenda est Carthago!&quot;,&quot;Topics&quot;:[&quot;Secret societies -- Portugal&quot;],&quot;Primary&quot;:&quot;32001.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pereira, Eduardo C. N. (Eduardo Clemente Nunes), 1887-&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;32001&quot;});" class='title'>Delenda est Carthago!</a>
+<div class='author'>Pereira, Eduardo C. N. (Eduardo Clemente Nunes), 1887-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32255, {&quot;Title&quot;:&quot;Cathedral Cities of Spain: 60 Reproductions from Original Water Colours&quot;,&quot;Topics&quot;:[&quot;Spain -- Description and travel&quot;,&quot;Cathedrals -- Spain&quot;],&quot;Primary&quot;:&quot;32255.htm&quot;,&quot;CreatorNames&quot;:[&quot;Collins, W. W. (William Wiehe), 1862-1951&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;32255&quot;});" class='title'>Cathedral Cities of Spain:<br><span class='subtitle'>60 Reproductions from Original Water Colours</span></a>
+<div class='author'>Collins, W. W. (William Wiehe), 1862-1951</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32378, {&quot;Title&quot;:&quot;O Marquez de Pombal - Lance d&#39;olhos sobre a sua sciencia; politica e systema de administração; ideias liberaes que o dominavam; plano e primeiras tentativas democraticas&quot;,&quot;Topics&quot;:[&quot;Pombal, Sebastião José de Carvalho e Melo, Marquês de, 1699-1782&quot;],&quot;Primary&quot;:&quot;32378.htm&quot;,&quot;CreatorNames&quot;:[&quot;Garcia, Manuel Emídio, 1838-1904&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;32378&quot;});" class='title'>O Marquez de Pombal -<br><span class='subtitle'>Lance d'olhos sobre a sua sciencia; politica e systema de administração; ideias liberaes que o dominavam; plano e primeiras tentativas democraticas</span></a>
+<div class='author'>Garcia, Manuel Emídio, 1838-1904</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32600, {&quot;Title&quot;:&quot;History of the Reign of Philip the Second, King of Spain, Vols. 1 and 2&quot;,&quot;Topics&quot;:[&quot;Spain -- History -- Philip II, 1556-1598&quot;,&quot;Philip II, King of Spain, 1527-1598&quot;],&quot;Primary&quot;:&quot;32600.htm&quot;,&quot;CreatorNames&quot;:[&quot;Prescott, William Hickling, 1796-1859&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;32600&quot;});" class='title'>History of the Reign of Philip the Second, King of Spain, Vols. 1 and 2</a>
+<div class='author'>Prescott, William Hickling, 1796-1859</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32792, {&quot;Title&quot;:&quot;Um contemporaneo do Infante D. Henrique&quot;,&quot;Topics&quot;:[&quot;Abranches, Alvaro Vaz de Almada, conde de, -1449&quot;],&quot;Primary&quot;:&quot;32792.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pimentel, Alberto, 1849-1925&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;32792&quot;});" class='title'>Um contemporaneo do Infante D. Henrique</a>
+<div class='author'>Pimentel, Alberto, 1849-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32821, {&quot;Title&quot;:&quot;The Picturesque Antiquities of Spain - Described in a series of letters, with illustrations representing Moorish palaces, cathedrals, and other monuments of art, contained in the cities of Burgos, Valladolid, Toledo, and Seville.&quot;,&quot;Topics&quot;:[&quot;Art, Islamic&quot;,&quot;Architecture -- Spain&quot;,&quot;Architecture, Islamic&quot;,&quot;Spain -- Antiquities&quot;],&quot;Primary&quot;:&quot;32821.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wells, Nathaniel Armstrong&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;32821&quot;});" class='title'>The Picturesque Antiquities of Spain -<br><span class='subtitle'>Described in a series of letters, with illustrations representing Moorish palaces, cathedrals, and other monuments of art, contained in the cities of Burgos, Valladolid, Toledo, and Seville.</span></a>
+<div class='author'>Wells, Nathaniel Armstrong</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32869, {&quot;Title&quot;:&quot;Factos Notaveis da Historia Portugueza e Biographia do Marquez de Pombal&quot;,&quot;Topics&quot;:[&quot;Pombal, Sebastião José de Carvalho e Melo, Marquês de, 1699-1782&quot;],&quot;Primary&quot;:&quot;32869.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pinto Carneiro Perestrello, Josephina&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;32869&quot;});" class='title'>Factos Notaveis da Historia Portugueza e Biographia do Marquez de Pombal</a>
+<div class='author'>Pinto Carneiro Perestrello, Josephina</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32872, {&quot;Title&quot;:&quot;Liga Patriotica do Norte&quot;,&quot;Topics&quot;:[&quot;Portugal -- Politics and government -- 1889-1908&quot;,&quot;Liga Patriotica do Norte&quot;],&quot;Primary&quot;:&quot;32872.htm&quot;,&quot;CreatorNames&quot;:[&quot;Quental, Antero de, 1842-1891&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;32872&quot;});" class='title'>Liga Patriotica do Norte</a>
+<div class='author'>Quental, Antero de, 1842-1891</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32873, {&quot;Title&quot;:&quot;Portugal perante a revolução de Hespanha - Considerações sobre o futuro da politica portugueza no ponto de vista da democracia iberica&quot;,&quot;Topics&quot;:[&quot;Spain -- Politics and government -- 1868-1875&quot;,&quot;Portugal -- Politics and government&quot;],&quot;Primary&quot;:&quot;32873.htm&quot;,&quot;CreatorNames&quot;:[&quot;Quental, Antero de, 1842-1891&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;32873&quot;});" class='title'>Portugal perante a revolução de Hespanha -<br><span class='subtitle'>Considerações sobre o futuro da politica portugueza no ponto de vista da democracia iberica</span></a>
+<div class='author'>Quental, Antero de, 1842-1891</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3293, {&quot;Title&quot;:&quot;Chronicle of the Conquest of Granada, from the mss. of Fray Antonio Agapida&quot;,&quot;Topics&quot;:[&quot;Granada (Spain : Reino) -- History -- Spanish Conquest, 1476-1492&quot;],&quot;Primary&quot;:&quot;3293.htm&quot;,&quot;CreatorNames&quot;:[&quot;Irving, Washington, 1783-1859&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;3293&quot;});" class='title'>Chronicle of the Conquest of Granada, from the mss. of Fray Antonio Agapida</a>
+<div class='author'>Irving, Washington, 1783-1859</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33057, {&quot;Title&quot;:&quot;O Marquez de Pombal (folheto para poucos)&quot;,&quot;Topics&quot;:[&quot;Pombal, Sebastião José de Carvalho e Melo, Marquês de, 1699-1782&quot;],&quot;Primary&quot;:&quot;33057.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cordeiro, Manoel Caldas, 1869-1914&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;33057&quot;});" class='title'>O Marquez de Pombal (folheto para poucos)</a>
+<div class='author'>Cordeiro, Manoel Caldas, 1869-1914</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33067, {&quot;Title&quot;:&quot;Chronicas de Viagem&quot;,&quot;Topics&quot;:[&quot;Portugal -- Description and travel&quot;],&quot;Primary&quot;:&quot;33067.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pimentel, Alberto, 1849-1925&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;33067&quot;});" class='title'>Chronicas de Viagem</a>
+<div class='author'>Pimentel, Alberto, 1849-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33157, {&quot;Title&quot;:&quot;Voyage en Espagne&quot;,&quot;Topics&quot;:[&quot;Spain -- Description and travel&quot;,&quot;Spain -- Social life and customs -- 19th century&quot;,&quot;Gautier, Théophile, 1811-1872 -- Travel -- Spain&quot;],&quot;Primary&quot;:&quot;33157.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gautier, Théophile, 1811-1872&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;33157&quot;});" class='title'>Voyage en Espagne</a>
+<div class='author'>Gautier, Théophile, 1811-1872</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33833, {&quot;Title&quot;:&quot;Glories of Spain&quot;,&quot;Topics&quot;:[&quot;Spain -- Description and travel&quot;],&quot;Primary&quot;:&quot;33833.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wood, Charles W. (Charles William), 1850?-&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;33833&quot;});" class='title'>Glories of Spain</a>
+<div class='author'>Wood, Charles W. (Charles William), 1850?-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33885, {&quot;Title&quot;:&quot;Historia de los Judíos en España - desde los tiempos de su establecimiento hasta principios del present siglo&quot;,&quot;Topics&quot;:[&quot;Jews -- Spain -- History&quot;],&quot;Primary&quot;:&quot;33885.htm&quot;,&quot;CreatorNames&quot;:[&quot;Castro, Adolfo de, 1823-1898&quot;],&quot;LoCC&quot;:[&quot;DP&quot;,&quot;DS&quot;],&quot;PG_ID&quot;:&quot;33885&quot;});" class='title'>Historia de los Judíos en España -<br><span class='subtitle'>desde los tiempos de su establecimiento hasta principios del present siglo</span></a>
+<div class='author'>Castro, Adolfo de, 1823-1898</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34203, {&quot;Title&quot;:&quot;History of the Reign of Philip the Second King of Spain, Vol. 3 - And Biographical &amp; Critical Miscellanies&quot;,&quot;Topics&quot;:[&quot;Spain -- History -- Philip II, 1556-1598&quot;,&quot;Philip II, King of Spain, 1527-1598&quot;],&quot;Primary&quot;:&quot;34203.htm&quot;,&quot;CreatorNames&quot;:[&quot;Prescott, William Hickling, 1796-1859&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;34203&quot;});" class='title'>History of the Reign of Philip the Second King of Spain, Vol. 3 -<br><span class='subtitle'>And Biographical & Critical Miscellanies</span></a>
+<div class='author'>Prescott, William Hickling, 1796-1859</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34274, {&quot;Title&quot;:&quot;Liberdade de Imprensa&quot;,&quot;Topics&quot;:[&quot;Freedom of the press -- Portugal&quot;],&quot;Primary&quot;:&quot;34274.htm&quot;,&quot;CreatorNames&quot;:[&quot;Magalhães, José Maria Barbosa de&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;34274&quot;});" class='title'>Liberdade de Imprensa</a>
+<div class='author'>Magalhães, José Maria Barbosa de</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34290, {&quot;Title&quot;:&quot;A Situação Política - Conferência realizada no Salão Nobre da Liga Naval Portuguesa, na noite de 26 Fevereiro de 1918&quot;,&quot;Topics&quot;:[&quot;Portugal -- History -- Revolution, 1910&quot;,&quot;Portugal -- Politics and government -- 1910-1926&quot;],&quot;Primary&quot;:&quot;34290.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pimenta, Alfredo, 1882-1950&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;34290&quot;});" class='title'>A Situação Política -<br><span class='subtitle'>Conferência realizada no Salão Nobre da Liga Naval Portuguesa, na noite de 26 Fevereiro de 1918</span></a>
+<div class='author'>Pimenta, Alfredo, 1882-1950</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34291, {&quot;Title&quot;:&quot;Quanto basta a respeito do dia 25 de abril de 1828&quot;,&quot;Topics&quot;:[&quot;Portugal -- History -- 1826-1853&quot;,&quot;Portugal -- History -- Miguel I, 1828-1834&quot;],&quot;Primary&quot;:&quot;34291.htm&quot;,&quot;CreatorNames&quot;:[&quot;Costa, Manuel Cipriano da, -1834&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;34291&quot;});" class='title'>Quanto basta a respeito do dia 25 de abril de 1828</a>
+<div class='author'>Costa, Manuel Cipriano da, -1834</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34387, {&quot;Title&quot;:&quot;Historia de Portugal: Tomo I&quot;,&quot;Topics&quot;:[&quot;Portugal -- History&quot;],&quot;Primary&quot;:&quot;34387.htm&quot;,&quot;CreatorNames&quot;:[&quot;Oliveira Martins, J. P. (Joaquim Pedro), 1845-1894&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;34387&quot;});" class='title'>Historia de Portugal:<br><span class='subtitle'>Tomo I</span></a>
+<div class='author'>Oliveira Martins, J. P. (Joaquim Pedro), 1845-1894</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34753, {&quot;Title&quot;:&quot;Romantic Spain: A Record of Personal Experiences (Vol. I)&quot;,&quot;Topics&quot;:[&quot;Spain -- Description and travel&quot;],&quot;Primary&quot;:&quot;34753.htm&quot;,&quot;CreatorNames&quot;:[&quot;O&#39;Shea, John Augustus, 1840-1905&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;34753&quot;});" class='title'>Romantic Spain:<br><span class='subtitle'>A Record of Personal Experiences (Vol. I)</span></a>
+<div class='author'>O'Shea, John Augustus, 1840-1905</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34755, {&quot;Title&quot;:&quot;O Romance da Rainha Mercedes&quot;,&quot;Topics&quot;:[&quot;María de las Mercedes, Queen, consort of Alfonso XII, King of Spain, 1860-1878&quot;],&quot;Primary&quot;:&quot;34755.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pimentel, Alberto, 1849-1925&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;34755&quot;});" class='title'>O Romance da Rainha Mercedes</a>
+<div class='author'>Pimentel, Alberto, 1849-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34875, {&quot;Title&quot;:&quot;Spain&quot;,&quot;Topics&quot;:[&quot;Spain -- Description and travel&quot;,&quot;Spain -- Social life and customs&quot;,&quot;Spain -- History&quot;],&quot;Primary&quot;:&quot;34875.htm&quot;,&quot;CreatorNames&quot;:[&quot;Webster, Wentworth, 1829-1907&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;34875&quot;});" class='title'>Spain</a>
+<div class='author'>Webster, Wentworth, 1829-1907</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34960, {&quot;Title&quot;:&quot;A Verdade a Passo Lento ou Guerra do Escaravelho contra a Borboleta Constitucional do Porto&quot;,&quot;Topics&quot;:[&quot;Portugal -- History -- 19th century&quot;,&quot;Letters to the editor -- Portugal&quot;],&quot;Primary&quot;:&quot;34960.htm&quot;,&quot;CreatorNames&quot;:[&quot;Unknown&quot;,&quot;Esteves, João Nunes [Editor]&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;34960&quot;});" class='title'>A Verdade a Passo Lento ou Guerra do Escaravelho contra a Borboleta Constitucional do Porto</a>
+<div class='author'>Unknown, Esteves, João Nunes [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35324, {&quot;Title&quot;:&quot;Isabel d&#39;Aragão a Rainha Santa - Historia sucinta da sua vida, morte e excelsas virtudes&quot;,&quot;Topics&quot;:[&quot;Isabel, Queen, consort of Dinis, King of Portugal, 1271-1336&quot;],&quot;Primary&quot;:&quot;35324.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;35324&quot;});" class='title'>Isabel d'Aragão a Rainha Santa -<br><span class='subtitle'>Historia sucinta da sua vida, morte e excelsas virtudes</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35642, {&quot;Title&quot;:&quot;The Bible in Spain, Vol. 1 [of 2] - Or, the Journeys, Adventures, and Imprisonments of an Englishman in an Attempt to Circulate the Scriptures in the Peninsula&quot;,&quot;Topics&quot;:[&quot;Spain -- Description and travel&quot;,&quot;Borrow, George, 1803-1881 -- Travel -- Spain&quot;,&quot;Spain -- History -- 19th century&quot;],&quot;Primary&quot;:&quot;35642.htm&quot;,&quot;CreatorNames&quot;:[&quot;Borrow, George, 1803-1881&quot;,&quot;Burke, Ulick Ralph, 1845-1895 [Editor]&quot;,&quot;Greene, Herbert W. (Herbert Wilson), 1857-1933 [Editor]&quot;],&quot;LoCC&quot;:[&quot;DP&quot;,&quot;PR&quot;],&quot;PG_ID&quot;:&quot;35642&quot;});" class='title'>The Bible in Spain, Vol. 1 [of 2] -<br><span class='subtitle'>Or, the Journeys, Adventures, and Imprisonments of an Englishman in an Attempt to Circulate the Scriptures in the Peninsula</span></a>
+<div class='author'>Borrow, George, 1803-1881, Burke, Ulick Ralph, 1845-1895 [Editor], Greene, Herbert W. (Herbert Wilson), 1857-1933 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35676, {&quot;Title&quot;:&quot;The Bible in Spain, Vol. 2 [of 2] - Or, the Journeys, Adventures, and Imprisonments of an Englishman in an Attempt to Circulate the Scriptures in the Peninsula&quot;,&quot;Topics&quot;:[&quot;Spain -- Description and travel&quot;,&quot;Borrow, George, 1803-1881 -- Travel -- Spain&quot;,&quot;Spain -- History -- 19th century&quot;],&quot;Primary&quot;:&quot;35676.htm&quot;,&quot;CreatorNames&quot;:[&quot;Borrow, George, 1803-1881&quot;,&quot;Burke, Ulick Ralph, 1845-1895 [Editor]&quot;,&quot;Greene, Herbert W. (Herbert Wilson), 1857-1933 [Editor]&quot;],&quot;LoCC&quot;:[&quot;DP&quot;,&quot;PR&quot;],&quot;PG_ID&quot;:&quot;35676&quot;});" class='title'>The Bible in Spain, Vol. 2 [of 2] -<br><span class='subtitle'>Or, the Journeys, Adventures, and Imprisonments of an Englishman in an Attempt to Circulate the Scriptures in the Peninsula</span></a>
+<div class='author'>Borrow, George, 1803-1881, Burke, Ulick Ralph, 1845-1895 [Editor], Greene, Herbert W. (Herbert Wilson), 1857-1933 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35882, {&quot;Title&quot;:&quot;A vuela pluma: colección de artículos literarios y políticos&quot;,&quot;Topics&quot;:[&quot;Literature&quot;,&quot;Political science&quot;,&quot;Spain&quot;,&quot;Spanish literature&quot;,&quot;Spain -- Politics and government&quot;],&quot;Primary&quot;:&quot;35882.htm&quot;,&quot;CreatorNames&quot;:[&quot;Valera, Juan, 1824-1905&quot;],&quot;LoCC&quot;:[&quot;DP&quot;,&quot;PN&quot;],&quot;PG_ID&quot;:&quot;35882&quot;});" class='title'>A vuela pluma:<br><span class='subtitle'>colección de artículos literarios y políticos</span></a>
+<div class='author'>Valera, Juan, 1824-1905</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35905, {&quot;Title&quot;:&quot;Cosas nuevas y viejas (apuntes sevillanos)&quot;,&quot;Topics&quot;:[&quot;Seville (Spain) -- History&quot;,&quot;Seville (Spain) -- Biography&quot;],&quot;Primary&quot;:&quot;35905.htm&quot;,&quot;CreatorNames&quot;:[&quot;Chaves Rey, Manuel, 1870-1914&quot;,&quot;Nogales, José, 1860-1908 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;35905&quot;});" class='title'>Cosas nuevas y viejas (apuntes sevillanos)</a>
+<div class='author'>Chaves Rey, Manuel, 1870-1914, Nogales, José, 1860-1908 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36318, {&quot;Title&quot;:&quot;Curiosidades antiguas sevillanas - (serie segunda)&quot;,&quot;Topics&quot;:[&quot;Andalusia (Spain)&quot;],&quot;Primary&quot;:&quot;36318.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gestoso y Pérez, José, 1852-1917&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;36318&quot;});" class='title'>Curiosidades antiguas sevillanas -<br><span class='subtitle'>(serie segunda)</span></a>
+<div class='author'>Gestoso y Pérez, José, 1852-1917</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37223, {&quot;Title&quot;:&quot;The Moors in Spain&quot;,&quot;Topics&quot;:[&quot;Spain -- History -- 711-1516&quot;,&quot;Muslims -- Spain -- History&quot;,&quot;Islamic civilization&quot;],&quot;Primary&quot;:&quot;37223.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lane-Poole, Stanley, 1854-1931&quot;,&quot;Gilman, Arthur, 1837-1909 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;37223&quot;});" class='title'>The Moors in Spain</a>
+<div class='author'>Lane-Poole, Stanley, 1854-1931, Gilman, Arthur, 1837-1909 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37590, {&quot;Title&quot;:&quot;Córdoba&quot;,&quot;Topics&quot;:[&quot;Córdoba (Spain) -- Description and travel&quot;],&quot;Primary&quot;:&quot;37590.htm&quot;,&quot;CreatorNames&quot;:[&quot;Madrazo, Pedro D., 1816-1898&quot;,&quot;Parcerisa, F. J. (Francisco Javier) [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;37590&quot;});" class='title'>Córdoba</a>
+<div class='author'>Madrazo, Pedro D., 1816-1898, Parcerisa, F. J. (Francisco Javier) [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37944, {&quot;Title&quot;:&quot;Southern Spain, Painted by Trevor Haddon, Described by A. F. Calvert&quot;,&quot;Topics&quot;:[&quot;Spain -- Description and travel&quot;],&quot;Primary&quot;:&quot;37944.htm&quot;,&quot;CreatorNames&quot;:[&quot;Calvert, Albert Frederick, 1872-1946&quot;,&quot;Haddon, Trevor [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;37944&quot;});" class='title'>Southern Spain, Painted by Trevor Haddon, Described by A. F. Calvert</a>
+<div class='author'>Calvert, Albert Frederick, 1872-1946, Haddon, Trevor [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38009, {&quot;Title&quot;:&quot;The Story of Seville&quot;,&quot;Topics&quot;:[&quot;Seville (Spain)&quot;],&quot;Primary&quot;:&quot;38009.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gallichan, Walter M. (Walter Matthew), 1861-1946&quot;,&quot;Hartley, C. Gasquoine (Catherine Gasquoine), 1867-1928 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;38009&quot;});" class='title'>The Story of Seville</a>
+<div class='author'>Gallichan, Walter M. (Walter Matthew), 1861-1946, Hartley, C. Gasquoine (Catherine Gasquoine), 1867-1928 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38192, {&quot;Title&quot;:&quot;Alhambra&quot;,&quot;Topics&quot;:[&quot;Spain -- Social life and customs -- Fiction&quot;,&quot;Alhambra (Granada, Spain)&quot;],&quot;Primary&quot;:&quot;38192.htm&quot;,&quot;CreatorNames&quot;:[&quot;Irving, Washington, 1783-1859&quot;,&quot;Mellin, Robert, 1826-1880 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DP&quot;,&quot;PS&quot;],&quot;PG_ID&quot;:&quot;38192&quot;});" class='title'>Alhambra</a>
+<div class='author'>Irving, Washington, 1783-1859, Mellin, Robert, 1826-1880 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38767, {&quot;Title&quot;:&quot;Spanish Highways and Byways&quot;,&quot;Topics&quot;:[&quot;Spain -- Description and travel&quot;],&quot;Primary&quot;:&quot;38767.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bates, Katharine Lee, 1859-1929&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;38767&quot;});" class='title'>Spanish Highways and Byways</a>
+<div class='author'>Bates, Katharine Lee, 1859-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39199, {&quot;Title&quot;:&quot;The Fortunate Isles: Life and Travel in Majorca, Minorca and Iviza&quot;,&quot;Topics&quot;:[&quot;Majorca (Spain) -- Description and travel&quot;,&quot;Minorca (Spain) -- Description and travel&quot;,&quot;Ibiza Island (Spain) -- Description and travel&quot;],&quot;Primary&quot;:&quot;39199.htm&quot;,&quot;CreatorNames&quot;:[&quot;Boyd, Mary Stuart, -1937&quot;,&quot;Boyd, A. S. (Alexander Stuart), 1854-1930 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;39199&quot;});" class='title'>The Fortunate Isles:<br><span class='subtitle'>Life and Travel in Majorca, Minorca and Iviza</span></a>
+<div class='author'>Boyd, Mary Stuart, -1937, Boyd, A. S. (Alexander Stuart), 1854-1930 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39246, {&quot;Title&quot;:&quot;Heroic Spain&quot;,&quot;Topics&quot;:[&quot;Spain -- Description and travel&quot;],&quot;Primary&quot;:&quot;39246.htm&quot;,&quot;CreatorNames&quot;:[&quot;O&#39;Reilly, Elizabeth Boyle, 1874-&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;39246&quot;});" class='title'>Heroic Spain</a>
+<div class='author'>O'Reilly, Elizabeth Boyle, 1874-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39654, {&quot;Title&quot;:&quot;Histoire des Musulmans d&#39;Espagne, t. 1/4 - jusqu&#39;à la conquête de l&#39;Andalouisie par les Almoravides (711-1100)&quot;,&quot;Topics&quot;:[&quot;Spain -- History -- 711-1516&quot;,&quot;Muslims -- Spain -- History&quot;,&quot;Islamic civilization&quot;],&quot;Primary&quot;:&quot;39654.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dozy, Reinhart Pieter Anne, 1820-1883&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;39654&quot;});" class='title'>Histoire des Musulmans d'Espagne, t. 1/4 -<br><span class='subtitle'>jusqu'à la conquête de l'Andalouisie par les Almoravides (711-1100)</span></a>
+<div class='author'>Dozy, Reinhart Pieter Anne, 1820-1883</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40066, {&quot;Title&quot;:&quot;Páginas sevillanas - Sucesos Históricos, Personajes Célebres, Monumentos Notables, Tradiciones Populares, Cuentos Viejos, Leyendas y Curiosidades.&quot;,&quot;Topics&quot;:[&quot;Seville (Spain) -- History&quot;,&quot;Seville (Spain) -- Social life and customs&quot;],&quot;Primary&quot;:&quot;40066.htm&quot;,&quot;CreatorNames&quot;:[&quot;Chaves Rey, Manuel, 1870-1914&quot;,&quot;Gestoso y Pérez, José, 1852-1917 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;40066&quot;});" class='title'>Páginas sevillanas -<br><span class='subtitle'>Sucesos Históricos, Personajes Célebres, Monumentos Notables, Tradiciones Populares, Cuentos Viejos, Leyendas y Curiosidades.</span></a>
+<div class='author'>Chaves Rey, Manuel, 1870-1914, Gestoso y Pérez, José, 1852-1917 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40201, {&quot;Title&quot;:&quot;Things seen in Spain&quot;,&quot;Topics&quot;:[&quot;Spain -- Social life and customs&quot;],&quot;Primary&quot;:&quot;40201.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hartley, C. Gasquoine (Catherine Gasquoine), 1867-1928&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;40201&quot;});" class='title'>Things seen in Spain</a>
+<div class='author'>Hartley, C. Gasquoine (Catherine Gasquoine), 1867-1928</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40356, {&quot;Title&quot;:&quot;Cathedral Cities of Spain&quot;,&quot;Topics&quot;:[&quot;Spain -- Description and travel&quot;,&quot;Cathedrals -- Spain&quot;],&quot;Primary&quot;:&quot;40356.htm&quot;,&quot;CreatorNames&quot;:[&quot;Collins, W. W. (William Wiehe), 1862-1951&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;40356&quot;});" class='title'>Cathedral Cities of Spain</a>
+<div class='author'>Collins, W. W. (William Wiehe), 1862-1951</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40357, {&quot;Title&quot;:&quot;Four Months Afoot in Spain&quot;,&quot;Topics&quot;:[&quot;Spain -- Description and travel&quot;],&quot;Primary&quot;:&quot;40357.htm&quot;,&quot;CreatorNames&quot;:[&quot;Franck, Harry Alverson, 1881-1962&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;40357&quot;});" class='title'>Four Months Afoot in Spain</a>
+<div class='author'>Franck, Harry Alverson, 1881-1962</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40528, {&quot;Title&quot;:&quot;Spanish Vistas&quot;,&quot;Topics&quot;:[&quot;Spain -- Description and travel&quot;],&quot;Primary&quot;:&quot;40528.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lathrop, George Parsons, 1851-1898&quot;,&quot;Reinhart, Charles Stanley, 1844-1896 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;40528&quot;});" class='title'>Spanish Vistas</a>
+<div class='author'>Lathrop, George Parsons, 1851-1898, Reinhart, Charles Stanley, 1844-1896 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40646, {&quot;Title&quot;:&quot;A History of Spain - founded on the Historia de España y de la civilización española of Rafael Altamira&quot;,&quot;Topics&quot;:[&quot;Spain -- History&quot;,&quot;Spain -- Civilization&quot;],&quot;Primary&quot;:&quot;40646.htm&quot;,&quot;CreatorNames&quot;:[&quot;Altamira, Rafael, 1866-1951&quot;,&quot;Chapman, Charles E. (Charles Edward), 1880-1941&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;40646&quot;});" class='title'>A History of Spain -<br><span class='subtitle'>founded on the Historia de España y de la civilización española of Rafael Altamira</span></a>
+<div class='author'>Altamira, Rafael, 1866-1951, Chapman, Charles E. (Charles Edward), 1880-1941</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40776, {&quot;Title&quot;:&quot;Poor Folk in Spain&quot;,&quot;Topics&quot;:[&quot;Spain -- Description and travel&quot;,&quot;Spain -- Social life and customs&quot;],&quot;Primary&quot;:&quot;40776.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gordon, Cora, 1879-1950&quot;,&quot;Gordon, Jan, 1882-1944&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;40776&quot;});" class='title'>Poor Folk in Spain</a>
+<div class='author'>Gordon, Cora, 1879-1950, Gordon, Jan, 1882-1944</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41150, {&quot;Title&quot;:&quot;Italy; with sketches of Spain and Portugal&quot;,&quot;Topics&quot;:[&quot;Spain -- Description and travel&quot;,&quot;Italy -- Description and travel&quot;,&quot;Portugal -- Description and travel&quot;],&quot;Primary&quot;:&quot;41150.htm&quot;,&quot;CreatorNames&quot;:[&quot;Beckford, William, 1760-1844&quot;],&quot;LoCC&quot;:[&quot;DG&quot;,&quot;DP&quot;],&quot;PG_ID&quot;:&quot;41150&quot;});" class='title'>Italy;<br><span class='subtitle'>with sketches of Spain and Portugal</span></a>
+<div class='author'>Beckford, William, 1760-1844</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41208, {&quot;Title&quot;:&quot;Histoire des Musulmans d&#39;Espagne, t. 3/4 - jusqu&#39;à la conquête de l&#39;Andalouisie par les Almoravides (711-1100)&quot;,&quot;Topics&quot;:[&quot;Spain -- History -- 711-1516&quot;,&quot;Muslims -- Spain -- History&quot;,&quot;Islamic civilization&quot;],&quot;Primary&quot;:&quot;41208.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dozy, Reinhart Pieter Anne, 1820-1883&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;41208&quot;});" class='title'>Histoire des Musulmans d'Espagne, t. 3/4 -<br><span class='subtitle'>jusqu'à la conquête de l'Andalouisie par les Almoravides (711-1100)</span></a>
+<div class='author'>Dozy, Reinhart Pieter Anne, 1820-1883</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41389, {&quot;Title&quot;:&quot;Memoria sobre o melhoramento da cultura da Beira e da navegação do Mondego&quot;,&quot;Topics&quot;:[&quot;Mondego River (Portugal)&quot;],&quot;Primary&quot;:&quot;41389.htm&quot;,&quot;CreatorNames&quot;:[&quot;Almeida, António de, 1821-&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;41389&quot;});" class='title'>Memoria sobre o melhoramento da cultura da Beira e da navegação do Mondego</a>
+<div class='author'>Almeida, António de, 1821-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(415, {&quot;Title&quot;:&quot;The Bible in Spain - Or, the Journeys, Adventures, and Imprisonments of an Englishman, in an Attempt to Circulate the Scriptures in the Peninsula&quot;,&quot;Topics&quot;:[&quot;Spain -- Description and travel&quot;,&quot;Borrow, George, 1803-1881 -- Travel -- Spain&quot;,&quot;Spain -- History -- 19th century&quot;],&quot;Primary&quot;:&quot;415.htm&quot;,&quot;CreatorNames&quot;:[&quot;Borrow, George, 1803-1881&quot;],&quot;LoCC&quot;:[&quot;DP&quot;,&quot;PR&quot;],&quot;PG_ID&quot;:&quot;415&quot;});" class='title'>The Bible in Spain -<br><span class='subtitle'>Or, the Journeys, Adventures, and Imprisonments of an Englishman, in an Attempt to Circulate the Scriptures in the Peninsula</span></a>
+<div class='author'>Borrow, George, 1803-1881</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41593, {&quot;Title&quot;:&quot;Unexplored Spain&quot;,&quot;Topics&quot;:[&quot;Spain -- Description and travel&quot;,&quot;Hunting -- Spain&quot;,&quot;Natural history -- Spain&quot;],&quot;Primary&quot;:&quot;41593.htm&quot;,&quot;CreatorNames&quot;:[&quot;Buck, Walter John&quot;,&quot;Chapman, Abel, 1851-1929&quot;,&quot;Caldwell, E. (Edmund G.) [Illustrator]&quot;,&quot;Crawhall, Joseph, 1821-1896 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DP&quot;,&quot;SK&quot;],&quot;PG_ID&quot;:&quot;41593&quot;});" class='title'>Unexplored Spain</a>
+<div class='author'>Buck, Walter John, Chapman, Abel, 1851-1929, Caldwell, E. (Edmund G.) [Illustrator], Crawhall, Joseph, 1821-1896 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41611, {&quot;Title&quot;:&quot;Gatherings from Spain&quot;,&quot;Topics&quot;:[&quot;Spain -- Description and travel&quot;],&quot;Primary&quot;:&quot;41611.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ford, Richard, 1796-1858&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;41611&quot;});" class='title'>Gatherings from Spain</a>
+<div class='author'>Ford, Richard, 1796-1858</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41692, {&quot;Title&quot;:&quot;Histoire des Musulmans d&#39;Espagne, t. 4/4 - jusqu&#39;à la conquête de l&#39;Andalouisie par les Almoravides (711-1100)&quot;,&quot;Topics&quot;:[&quot;Spain -- History -- 711-1516&quot;,&quot;Muslims -- Spain -- History&quot;,&quot;Islamic civilization&quot;],&quot;Primary&quot;:&quot;41692.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dozy, Reinhart Pieter Anne, 1820-1883&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;41692&quot;});" class='title'>Histoire des Musulmans d'Espagne, t. 4/4 -<br><span class='subtitle'>jusqu'à la conquête de l'Andalouisie par les Almoravides (711-1100)</span></a>
+<div class='author'>Dozy, Reinhart Pieter Anne, 1820-1883</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42762, {&quot;Title&quot;:&quot;Memoria historica sobre as ilhas dos Açores - como parte componente da Monarchia Portugueza, com ideias politicas relativas à reforma do Governo Portuguez, e sua nova constituição&quot;,&quot;Topics&quot;:[&quot;Azores&quot;],&quot;Primary&quot;:&quot;42762.htm&quot;,&quot;CreatorNames&quot;:[&quot;Costa Chaves E Mello, Francisco Affonso Da&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;42762&quot;});" class='title'>Memoria historica sobre as ilhas dos Açores -<br><span class='subtitle'>como parte componente da Monarchia Portugueza, com ideias politicas relativas à reforma do Governo Portuguez, e sua nova constituição</span></a>
+<div class='author'>Costa Chaves E Mello, Francisco Affonso Da</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43378, {&quot;Title&quot;:&quot;Excursions in the mountains of Ronda and Granada, with characteristic sketches of the inhabitants of southern Spain, vol. 1/2&quot;,&quot;Topics&quot;:[&quot;Spain -- Description and travel&quot;],&quot;Primary&quot;:&quot;43378.htm&quot;,&quot;CreatorNames&quot;:[&quot;Scott, C. Rochfort‏ (Charles Rochfort), 1790-1872&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;43378&quot;});" class='title'>Excursions in the mountains of Ronda and Granada, with characteristic sketches of the inhabitants of southern Spain, vol. 1/2</a>
+<div class='author'>Scott, C. Rochfort‏ (Charles Rochfort), 1790-1872</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43476, {&quot;Title&quot;:&quot;Histoire des Musulmans d&#39;Espagne, t. 2/4 - jusqu&#39;a la conquête de l&#39;Andalouisie par les Almoravides (711-110)&quot;,&quot;Topics&quot;:[&quot;Spain -- History -- 711-1516&quot;,&quot;Muslims -- Spain -- History&quot;,&quot;Islamic civilization&quot;],&quot;Primary&quot;:&quot;43476.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dozy, Reinhart Pieter Anne, 1820-1883&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;43476&quot;});" class='title'>Histoire des Musulmans d'Espagne, t. 2/4 -<br><span class='subtitle'>jusqu'a la conquête de l'Andalouisie par les Almoravides (711-110)</span></a>
+<div class='author'>Dozy, Reinhart Pieter Anne, 1820-1883</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43705, {&quot;Title&quot;:&quot;Excursions in the mountains of Ronda and Granada, with characteristic sketches of the inhabitants of southern Spain, vol. 2/2&quot;,&quot;Topics&quot;:[&quot;Spain -- Description and travel&quot;],&quot;Primary&quot;:&quot;43705.htm&quot;,&quot;CreatorNames&quot;:[&quot;Scott, C. Rochfort‏ (Charles Rochfort), 1790-1872&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;43705&quot;});" class='title'>Excursions in the mountains of Ronda and Granada, with characteristic sketches of the inhabitants of southern Spain, vol. 2/2</a>
+<div class='author'>Scott, C. Rochfort‏ (Charles Rochfort), 1790-1872</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43852, {&quot;Title&quot;:&quot;The Revolutions of Portugal&quot;,&quot;Topics&quot;:[&quot;Portugal -- History -- Modern, 1580-&quot;,&quot;Portugal -- History -- Revolution, 1640&quot;],&quot;Primary&quot;:&quot;43852.htm&quot;,&quot;CreatorNames&quot;:[&quot;Vertot, abbé de, 1655-1735&quot;,&quot;Roussillon, Gabriel [Translator]&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;43852&quot;});" class='title'>The Revolutions of Portugal</a>
+<div class='author'>Vertot, abbé de, 1655-1735, Roussillon, Gabriel [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44490, {&quot;Title&quot;:&quot;Northern Spain&quot;,&quot;Topics&quot;:[&quot;Spain -- Description and travel&quot;],&quot;Primary&quot;:&quot;44490.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wigram, Edgar Thomas Ainger, 1864-1935&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;44490&quot;});" class='title'>Northern Spain</a>
+<div class='author'>Wigram, Edgar Thomas Ainger, 1864-1935</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44543, {&quot;Title&quot;:&quot;Le Tour de l&#39;Espagne en Automobile - Etude de Tourisme&quot;,&quot;Topics&quot;:[&quot;Spain -- Description and travel&quot;,&quot;Automobile travel&quot;],&quot;Primary&quot;:&quot;44543.htm&quot;,&quot;CreatorNames&quot;:[&quot;Marge, Pierre, 1874-&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;44543&quot;});" class='title'>Le Tour de l'Espagne en Automobile -<br><span class='subtitle'>Etude de Tourisme</span></a>
+<div class='author'>Marge, Pierre, 1874-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45441, {&quot;Title&quot;:&quot;In Sunny Spain with Pilarica and Rafael&quot;,&quot;Topics&quot;:[&quot;Children -- Spain -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;45441.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bates, Katharine Lee, 1859-1929&quot;,&quot;Beard, Alice, 1867-1949 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DP&quot;,&quot;PZ&quot;],&quot;PG_ID&quot;:&quot;45441&quot;});" class='title'>In Sunny Spain with Pilarica and Rafael</a>
+<div class='author'>Bates, Katharine Lee, 1859-1929, Beard, Alice, 1867-1949 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45471, {&quot;Title&quot;:&quot;The History of the Revolutions of Portugal&quot;,&quot;Topics&quot;:[&quot;Portugal -- History -- Revolution, 1640&quot;],&quot;Primary&quot;:&quot;45471.htm&quot;,&quot;CreatorNames&quot;:[&quot;Boisgelin de Kerdu, Pierre Marie Louis de, 1758-1816&quot;,&quot;Vertot, abbé de, 1655-1735&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;45471&quot;});" class='title'>The History of the Revolutions of Portugal</a>
+<div class='author'>Boisgelin de Kerdu, Pierre Marie Louis de, 1758-1816, Vertot, abbé de, 1655-1735</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45581, {&quot;Title&quot;:&quot;The Story of the Nations: Portugal&quot;,&quot;Topics&quot;:[&quot;Portugal -- History&quot;],&quot;Primary&quot;:&quot;45581.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stephens, H. Morse (Henry Morse), 1857-1919&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;45581&quot;});" class='title'>The Story of the Nations:<br><span class='subtitle'>Portugal</span></a>
+<div class='author'>Stephens, H. Morse (Henry Morse), 1857-1919</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45797, {&quot;Title&quot;:&quot;Jose: Our Little Portuguese Cousin&quot;,&quot;Topics&quot;:[&quot;Children -- Portugal -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;45797.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sawyer, Edith A. (Edith Augusta), 1869-&quot;,&quot;Marlowe, Diantha Horne [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DP&quot;,&quot;PZ&quot;],&quot;PG_ID&quot;:&quot;45797&quot;});" class='title'>Jose:<br><span class='subtitle'>Our Little Portuguese Cousin</span></a>
+<div class='author'>Sawyer, Edith A. (Edith Augusta), 1869-, Marlowe, Diantha Horne [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45840, {&quot;Title&quot;:&quot;Historias de Reis e Principes&quot;,&quot;Topics&quot;:[&quot;Portuguese fiction -- 19th century&quot;],&quot;Primary&quot;:&quot;45840.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pimentel, Alberto, 1849-1925&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;45840&quot;});" class='title'>Historias de Reis e Principes</a>
+<div class='author'>Pimentel, Alberto, 1849-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46034, {&quot;Title&quot;:&quot;Gibraltar&quot;,&quot;Topics&quot;:[&quot;Gibraltar -- Description and travel&quot;],&quot;Primary&quot;:&quot;46034.htm&quot;,&quot;CreatorNames&quot;:[&quot;Field, Henry M. (Henry Martyn), 1822-1907&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;46034&quot;});" class='title'>Gibraltar</a>
+<div class='author'>Field, Henry M. (Henry Martyn), 1822-1907</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46301, {&quot;Title&quot;:&quot;Toledo, the Story of an Old Spanish Capital&quot;,&quot;Topics&quot;:[&quot;Toledo (Spain) -- History&quot;,&quot;Toledo (Spain) -- Description and travel&quot;],&quot;Primary&quot;:&quot;46301.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lynch, Hannah, 1859-1904&quot;,&quot;James, Helen M. [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;46301&quot;});" class='title'>Toledo, the Story of an Old Spanish Capital</a>
+<div class='author'>Lynch, Hannah, 1859-1904, James, Helen M. [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46485, {&quot;Title&quot;:&quot;Our Little Spanish Cousin&quot;,&quot;Topics&quot;:[&quot;Children -- Spain -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;46485.htm&quot;,&quot;CreatorNames&quot;:[&quot;Nixon-Roulet, Mary F., -1930&quot;,&quot;McManus, Blanche, 1869-1935 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DP&quot;,&quot;PZ&quot;],&quot;PG_ID&quot;:&quot;46485&quot;});" class='title'>Our Little Spanish Cousin</a>
+<div class='author'>Nixon-Roulet, Mary F., -1930, McManus, Blanche, 1869-1935 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47092, {&quot;Title&quot;:&quot;Historia de la decadencia de España&quot;,&quot;Topics&quot;:[&quot;Degeneration -- History -- 17th century&quot;,&quot;Spain -- History -- Philip III, 1598-1621&quot;,&quot;Spain -- History -- Philip IV, 1621-1665&quot;,&quot;Spain -- History -- Charles II, 1665-1700&quot;],&quot;Primary&quot;:&quot;47092.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cánovas del Castillo, Antonio, 1828-1897&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;47092&quot;});" class='title'>Historia de la decadencia de España</a>
+<div class='author'>Cánovas del Castillo, Antonio, 1828-1897</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47125, {&quot;Title&quot;:&quot;Spain&quot;,&quot;Topics&quot;:[&quot;Spain -- History&quot;],&quot;Primary&quot;:&quot;47125.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ober, Frederick A. (Frederick Albion), 1849-1913&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;47125&quot;});" class='title'>Spain</a>
+<div class='author'>Ober, Frederick A. (Frederick Albion), 1849-1913</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47628, {&quot;Title&quot;:&quot;A Corner of Spain&quot;,&quot;Topics&quot;:[&quot;Galicia (Spain : Region) -- Description and travel&quot;],&quot;Primary&quot;:&quot;47628.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wood, Walter, 1866-1961&quot;,&quot;Hume, Martin A. S. (Martin Andrew Sharp), 1847-1910 [Commentator]&quot;,&quot;Mason, Frank H. (Frank Henry), 1876-1965 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;47628&quot;});" class='title'>A Corner of Spain</a>
+<div class='author'>Wood, Walter, 1866-1961, Hume, Martin A. S. (Martin Andrew Sharp), 1847-1910 [Commentator], Mason, Frank H. (Frank Henry), 1876-1965 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48203, {&quot;Title&quot;:&quot;Letters from Spain&quot;,&quot;Topics&quot;:[&quot;Spain -- Description and travel&quot;],&quot;Primary&quot;:&quot;48203.htm&quot;,&quot;CreatorNames&quot;:[&quot;White, Joseph Blanco, 1775-1841&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;48203&quot;});" class='title'>Letters from Spain</a>
+<div class='author'>White, Joseph Blanco, 1775-1841</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49258, {&quot;Title&quot;:&quot;Crónica de la conquista de Granada (1 de 2)&quot;,&quot;Topics&quot;:[&quot;Granada (Spain : Reino) -- History -- Spanish Conquest, 1476-1492&quot;],&quot;Primary&quot;:&quot;49258.htm&quot;,&quot;CreatorNames&quot;:[&quot;Irving, Washington, 1783-1859&quot;,&quot;Montgomery, G. W. (George Washington), 1804-1841 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;49258&quot;});" class='title'>Crónica de la conquista de Granada (1 de 2)</a>
+<div class='author'>Irving, Washington, 1783-1859, Montgomery, G. W. (George Washington), 1804-1841 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49259, {&quot;Title&quot;:&quot;Crónica de la conquista de Granada (2 de 2)&quot;,&quot;Topics&quot;:[&quot;Granada (Spain : Reino) -- History -- Spanish Conquest, 1476-1492&quot;],&quot;Primary&quot;:&quot;49259.htm&quot;,&quot;CreatorNames&quot;:[&quot;Irving, Washington, 1783-1859&quot;,&quot;Montgomery, G. W. (George Washington), 1804-1841 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;49259&quot;});" class='title'>Crónica de la conquista de Granada (2 de 2)</a>
+<div class='author'>Irving, Washington, 1783-1859, Montgomery, G. W. (George Washington), 1804-1841 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49343, {&quot;Title&quot;:&quot;Old Court Life in Spain, vol. 1/2&quot;,&quot;Topics&quot;:[&quot;Spain -- Court and courtiers&quot;],&quot;Primary&quot;:&quot;49343.htm&quot;,&quot;CreatorNames&quot;:[&quot;Elliot, Frances Minto Dickinson, 1820-1898&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;49343&quot;});" class='title'>Old Court Life in Spain, vol. 1/2</a>
+<div class='author'>Elliot, Frances Minto Dickinson, 1820-1898</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49491, {&quot;Title&quot;:&quot;The Sunny South: An Autumn in Spain and Majorca&quot;,&quot;Topics&quot;:[&quot;Spain -- Description and travel&quot;,&quot;Majorca (Spain) -- Description and travel&quot;],&quot;Primary&quot;:&quot;49491.htm&quot;,&quot;CreatorNames&quot;:[&quot;Clayton, John William, 1833-&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;49491&quot;});" class='title'>The Sunny South:<br><span class='subtitle'>An Autumn in Spain and Majorca</span></a>
+<div class='author'>Clayton, John William, 1833-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49815, {&quot;Title&quot;:&quot;The Mentor: Spain and Gibraltar, Vol. 1, Num. 31, Serial No. 31, September 15, 1913&quot;,&quot;Topics&quot;:[&quot;Spain -- Description and travel&quot;,&quot;Gibraltar -- Description and travel&quot;],&quot;Primary&quot;:&quot;49815.htm&quot;,&quot;CreatorNames&quot;:[&quot;Elmendorf, Dwight L. (Dwight Lathrop), 1859-1929&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;49815&quot;});" class='title'>The Mentor:<br><span class='subtitle'>Spain and Gibraltar, Vol. 1, Num. 31, Serial No. 31, September 15, 1913</span></a>
+<div class='author'>Elmendorf, Dwight L. (Dwight Lathrop), 1859-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49872, {&quot;Title&quot;:&quot;The Alhambra&quot;,&quot;Topics&quot;:[&quot;Spain -- Social life and customs&quot;,&quot;Spain -- Social life and customs -- Fiction&quot;,&quot;Alhambra (Granada, Spain)&quot;,&quot;Irving, Washington, 1783-1859 -- Travel -- Spain&quot;,&quot;Alhambra (Granada, Spain) -- Fiction&quot;,&quot;Palaces -- Spain -- Granada&quot;,&quot;Palaces -- Spain -- Granada -- Fiction&quot;],&quot;Primary&quot;:&quot;49872.htm&quot;,&quot;CreatorNames&quot;:[&quot;Irving, Washington, 1783-1859&quot;,&quot;Pennell, Elizabeth Robins, 1855-1936 [Author of introduction, etc.]&quot;,&quot;Pennell, Joseph, 1857-1926 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DP&quot;,&quot;PS&quot;],&quot;PG_ID&quot;:&quot;49872&quot;});" class='title'>The Alhambra</a>
+<div class='author'>Irving, Washington, 1783-1859, Pennell, Elizabeth Robins, 1855-1936 [Author of introduction, etc.], Pennell, Joseph, 1857-1926 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49941, {&quot;Title&quot;:&quot;Old Court Life in Spain, vol. 2/2&quot;,&quot;Topics&quot;:[&quot;Spain -- Court and courtiers&quot;],&quot;Primary&quot;:&quot;49941.htm&quot;,&quot;CreatorNames&quot;:[&quot;Elliot, Frances Minto Dickinson, 1820-1898&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;49941&quot;});" class='title'>Old Court Life in Spain, vol. 2/2</a>
+<div class='author'>Elliot, Frances Minto Dickinson, 1820-1898</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49947, {&quot;Title&quot;:&quot;The Alhambra&quot;,&quot;Topics&quot;:[&quot;Spain -- Social life and customs&quot;,&quot;Spain -- Social life and customs -- Fiction&quot;,&quot;Alhambra (Granada, Spain)&quot;,&quot;Irving, Washington, 1783-1859 -- Travel -- Spain&quot;,&quot;Alhambra (Granada, Spain) -- Fiction&quot;,&quot;Palaces -- Spain -- Granada&quot;,&quot;Palaces -- Spain -- Granada -- Fiction&quot;],&quot;Primary&quot;:&quot;49947.htm&quot;,&quot;CreatorNames&quot;:[&quot;Irving, Washington, 1783-1859&quot;],&quot;LoCC&quot;:[&quot;DP&quot;,&quot;PS&quot;],&quot;PG_ID&quot;:&quot;49947&quot;});" class='title'>The Alhambra</a>
+<div class='author'>Irving, Washington, 1783-1859</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49962, {&quot;Title&quot;:&quot;Spain, v. 1 (of 2)&quot;,&quot;Topics&quot;:[&quot;Spain -- Description and travel&quot;],&quot;Primary&quot;:&quot;49962.htm&quot;,&quot;CreatorNames&quot;:[&quot;De Amicis, Edmondo, 1846-1908&quot;,&quot;Varnall, Stanley Rhoads [Translator]&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;49962&quot;});" class='title'>Spain, v. 1 (of 2)</a>
+<div class='author'>De Amicis, Edmondo, 1846-1908, Varnall, Stanley Rhoads [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50125, {&quot;Title&quot;:&quot;The Court of Philip IV.: Spain in Decadence&quot;,&quot;Topics&quot;:[&quot;Spain -- Court and courtiers&quot;,&quot;Spain -- History -- Philip IV, 1621-1665&quot;,&quot;Philip IV, King of Spain, 1605-1665&quot;],&quot;Primary&quot;:&quot;50125.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hume, Martin A. S. (Martin Andrew Sharp), 1847-1910&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;50125&quot;});" class='title'>The Court of Philip IV.:<br><span class='subtitle'>Spain in Decadence</span></a>
+<div class='author'>Hume, Martin A. S. (Martin Andrew Sharp), 1847-1910</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50261, {&quot;Title&quot;:&quot;Philip II. of Spain&quot;,&quot;Topics&quot;:[&quot;Spain -- History -- Philip II, 1556-1598&quot;,&quot;Philip II, King of Spain, 1527-1598&quot;],&quot;Primary&quot;:&quot;50261.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hume, Martin A. S. (Martin Andrew Sharp), 1847-1910&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;50261&quot;});" class='title'>Philip II. of Spain</a>
+<div class='author'>Hume, Martin A. S. (Martin Andrew Sharp), 1847-1910</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50352, {&quot;Title&quot;:&quot;Spanish Papers&quot;,&quot;Topics&quot;:[&quot;Spain -- History&quot;],&quot;Primary&quot;:&quot;50352.htm&quot;,&quot;CreatorNames&quot;:[&quot;Irving, Washington, 1783-1859&quot;],&quot;LoCC&quot;:[&quot;DP&quot;,&quot;PS&quot;],&quot;PG_ID&quot;:&quot;50352&quot;});" class='title'>Spanish Papers</a>
+<div class='author'>Irving, Washington, 1783-1859</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50727, {&quot;Title&quot;:&quot;Spain, v. 2 (of 2)&quot;,&quot;Topics&quot;:[&quot;Spain -- Description and travel&quot;],&quot;Primary&quot;:&quot;50727.htm&quot;,&quot;CreatorNames&quot;:[&quot;De Amicis, Edmondo, 1846-1908&quot;,&quot;Varnall, Stanley Rhoads [Translator]&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;50727&quot;});" class='title'>Spain, v. 2 (of 2)</a>
+<div class='author'>De Amicis, Edmondo, 1846-1908, Varnall, Stanley Rhoads [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52262, {&quot;Title&quot;:&quot;Cuentos de la Alhambra&quot;,&quot;Topics&quot;:[&quot;Spain -- Social life and customs&quot;,&quot;Spain -- Social life and customs -- Fiction&quot;,&quot;Alhambra (Granada, Spain)&quot;,&quot;Irving, Washington, 1783-1859 -- Travel -- Spain&quot;,&quot;Alhambra (Granada, Spain) -- Fiction&quot;,&quot;Palaces -- Spain -- Granada&quot;,&quot;Palaces -- Spain -- Granada -- Fiction&quot;],&quot;Primary&quot;:&quot;52262.htm&quot;,&quot;CreatorNames&quot;:[&quot;Irving, Washington, 1783-1859&quot;,&quot;Lamarca, Luis [Translator]&quot;],&quot;LoCC&quot;:[&quot;DP&quot;,&quot;PS&quot;],&quot;PG_ID&quot;:&quot;52262&quot;});" class='title'>Cuentos de la Alhambra</a>
+<div class='author'>Irving, Washington, 1783-1859, Lamarca, Luis [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52538, {&quot;Title&quot;:&quot;Galicia, the Switzerland of Spain&quot;,&quot;Topics&quot;:[&quot;Galicia (Spain : Region)&quot;],&quot;Primary&quot;:&quot;52538.htm&quot;,&quot;CreatorNames&quot;:[&quot;Meakin, Annette M. B., 1867-1959&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;52538&quot;});" class='title'>Galicia, the Switzerland of Spain</a>
+<div class='author'>Meakin, Annette M. B., 1867-1959</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52667, {&quot;Title&quot;:&quot;The Ingenious and Diverting Letters of the Lady ---- Travels into Spain - Describing the Devotions, Nunneries, Humours, Customs, Laws, Militia, Trade, Diet and Recreations of That People&quot;,&quot;Topics&quot;:[&quot;Spain -- Description and travel&quot;],&quot;Primary&quot;:&quot;52667.htm&quot;,&quot;CreatorNames&quot;:[&quot;Aulnoy, Madame d&#39; (Marie-Catherine), 1651?-1705&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;52667&quot;});" class='title'>The Ingenious and Diverting Letters of the Lady -<br><span class='subtitle'>--- Travels into Spain - Describing the Devotions, Nunneries, Humours, Customs, Laws, Militia, Trade, Diet and Recreations of That People</span></a>
+<div class='author'>Aulnoy, Madame d' (Marie-Catherine), 1651?-1705</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52763, {&quot;Title&quot;:&quot;Wanderings in Spain&quot;,&quot;Topics&quot;:[&quot;Spain -- Description and travel&quot;,&quot;Spain -- Social life and customs -- 19th century&quot;,&quot;Gautier, Théophile, 1811-1872 -- Travel -- Spain&quot;],&quot;Primary&quot;:&quot;52763.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gautier, Théophile, 1811-1872&quot;,&quot;McQuoid, Thomas Robert, 1820-1912 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;52763&quot;});" class='title'>Wanderings in Spain</a>
+<div class='author'>Gautier, Théophile, 1811-1872, McQuoid, Thomas Robert, 1820-1912 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52808, {&quot;Title&quot;:&quot;Vida de Don Duarte de Meneses, tercero Conde de Viana, y sucessos notables de Portugal en su tiempo&quot;,&quot;Topics&quot;:[&quot;Meneses, Duarte de, conde de Viana, 1414-1464&quot;,&quot;Portuguese -- Africa, North&quot;,&quot;Africa, North -- History -- 647-1517 -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;52808.htm&quot;,&quot;CreatorNames&quot;:[&quot;Vasconcelos, Agostinho Manuel de, 1584?-1641&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;52808&quot;});" class='title'>Vida de Don Duarte de Meneses, tercero Conde de Viana, y sucessos notables de Portugal en su tiempo</a>
+<div class='author'>Vasconcelos, Agostinho Manuel de, 1584?-1641</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52812, {&quot;Title&quot;:&quot;The Story of Majorca and Minorca&quot;,&quot;Topics&quot;:[&quot;Balearic Islands (Spain) -- History&quot;],&quot;Primary&quot;:&quot;52812.htm&quot;,&quot;CreatorNames&quot;:[&quot;Markham, Clements R. (Clements Robert), Sir, 1830-1916&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;52812&quot;});" class='title'>The Story of Majorca and Minorca</a>
+<div class='author'>Markham, Clements R. (Clements Robert), Sir, 1830-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53001, {&quot;Title&quot;:&quot;The Magic of Spain&quot;,&quot;Topics&quot;:[&quot;Spain -- Description and travel&quot;,&quot;Spanish literature -- History and criticism&quot;],&quot;Primary&quot;:&quot;53001.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bell, Aubrey F. G. (Aubrey Fitz Gerald), 1882-1950&quot;],&quot;LoCC&quot;:[&quot;DP&quot;,&quot;PQ&quot;],&quot;PG_ID&quot;:&quot;53001&quot;});" class='title'>The Magic of Spain</a>
+<div class='author'>Bell, Aubrey F. G. (Aubrey Fitz Gerald), 1882-1950</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54634, {&quot;Title&quot;:&quot;With a Camera in Majorca&quot;,&quot;Topics&quot;:[&quot;Majorca (Spain) -- Description and travel&quot;],&quot;Primary&quot;:&quot;54634.htm&quot;,&quot;CreatorNames&quot;:[&quot;D&#39;Este, Margaret&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;54634&quot;});" class='title'>With a Camera in Majorca</a>
+<div class='author'>D'Este, Margaret</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54934, {&quot;Title&quot;:&quot;España Contemporánea - Obras Completas Vol. XIX&quot;,&quot;Topics&quot;:[&quot;Spain -- Description and travel&quot;,&quot;Spain -- Social life and customs&quot;,&quot;Spanish literature -- History and criticism&quot;],&quot;Primary&quot;:&quot;54934.htm&quot;,&quot;CreatorNames&quot;:[&quot;Darío, Rubén, 1867-1916&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;54934&quot;});" class='title'>España Contemporánea -<br><span class='subtitle'>Obras Completas Vol. XIX</span></a>
+<div class='author'>Darío, Rubén, 1867-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55034, {&quot;Title&quot;:&quot;Through Portugal&quot;,&quot;Topics&quot;:[&quot;Portugal -- Description and travel&quot;],&quot;Primary&quot;:&quot;55034.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hume, Martin A. S. (Martin Andrew Sharp), 1847-1910&quot;,&quot;Forrest, A. S. (Archibald Stevenson), 1869-1963 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;55034&quot;});" class='title'>Through Portugal</a>
+<div class='author'>Hume, Martin A. S. (Martin Andrew Sharp), 1847-1910, Forrest, A. S. (Archibald Stevenson), 1869-1963 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55893, {&quot;Title&quot;:&quot;Peeps at Many Lands: Portugal&quot;,&quot;Topics&quot;:[&quot;Portugal -- Description and travel&quot;],&quot;Primary&quot;:&quot;55893.htm&quot;,&quot;CreatorNames&quot;:[&quot;Goodall, Agnes M.&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;55893&quot;});" class='title'>Peeps at Many Lands:<br><span class='subtitle'>Portugal</span></a>
+<div class='author'>Goodall, Agnes M.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56260, {&quot;Title&quot;:&quot;Through Spain to the Sahara&quot;,&quot;Topics&quot;:[&quot;Spain -- Description and travel&quot;,&quot;Algeria -- Description and travel&quot;],&quot;Primary&quot;:&quot;56260.htm&quot;,&quot;CreatorNames&quot;:[&quot;Betham-Edwards, Matilda, 1836-1919&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;56260&quot;});" class='title'>Through Spain to the Sahara</a>
+<div class='author'>Betham-Edwards, Matilda, 1836-1919</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56379, {&quot;Title&quot;:&quot;Spain from Within&quot;,&quot;Topics&quot;:[&quot;Spain -- Social life and customs&quot;,&quot;Shaw, Rafael&quot;,&quot;Spain -- Politics and government -- 1886-1931&quot;],&quot;Primary&quot;:&quot;56379.htm&quot;,&quot;CreatorNames&quot;:[&quot;Shaw, Rafael&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;56379&quot;});" class='title'>Spain from Within</a>
+<div class='author'>Shaw, Rafael</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56534, {&quot;Title&quot;:&quot;Spain in 1830, vol. 1&quot;,&quot;Topics&quot;:[&quot;Spain -- Description and travel&quot;],&quot;Primary&quot;:&quot;56534.htm&quot;,&quot;CreatorNames&quot;:[&quot;Inglis, Henry D. (Henry David), 1795-1835&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;56534&quot;});" class='title'>Spain in 1830, vol. 1</a>
+<div class='author'>Inglis, Henry D. (Henry David), 1795-1835</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56535, {&quot;Title&quot;:&quot;Spain in 1830, vol. 2&quot;,&quot;Topics&quot;:[&quot;Spain -- Description and travel&quot;],&quot;Primary&quot;:&quot;56535.htm&quot;,&quot;CreatorNames&quot;:[&quot;Inglis, Henry D. (Henry David), 1795-1835&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;56535&quot;});" class='title'>Spain in 1830, vol. 2</a>
+<div class='author'>Inglis, Henry D. (Henry David), 1795-1835</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57828, {&quot;Title&quot;:&quot;Cosas de España; tomo 1 - (El país de lo imprevisto)&quot;,&quot;Topics&quot;:[&quot;Spain -- Description and travel&quot;],&quot;Primary&quot;:&quot;57828.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ford, Richard, 1796-1858&quot;,&quot;Mesa y Rosales, Enrique de, 1879-1929 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;57828&quot;});" class='title'>Cosas de España;<br><span class='subtitle'>tomo 1 - (El país de lo imprevisto)</span></a>
+<div class='author'>Ford, Richard, 1796-1858, Mesa y Rosales, Enrique de, 1879-1929 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57982, {&quot;Title&quot;:&quot;España invertebrada: Bosquejo de algunos pensamientos históricos&quot;,&quot;Topics&quot;:[&quot;Spain -- Civilization -- Philosophy&quot;],&quot;Primary&quot;:&quot;57982.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ortega y Gasset, José, 1883-1955&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;57982&quot;});" class='title'>España invertebrada:<br><span class='subtitle'>Bosquejo de algunos pensamientos históricos</span></a>
+<div class='author'>Ortega y Gasset, José, 1883-1955</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58063, {&quot;Title&quot;:&quot;Voyage en Espagne d&#39;un Ambassadeur Marocain (1690-1691)&quot;,&quot;Topics&quot;:[&quot;Spain -- Description and travel&quot;,&quot;Diplomats -- Morocco -- Biography&quot;,&quot;Wazir al-Ghassani, Muhammad ibn Abd al-Wahhab, -1707 or 1708&quot;,&quot;Spain -- Foreign relations -- Morocco&quot;,&quot;Morocco -- Foreign relations -- Spain&quot;],&quot;Primary&quot;:&quot;58063.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wazir al-Ghassani, Muhammad ibn Abd al-Wahhab, -1708?&quot;,&quot;Sauvaire, Henri Joseph, 1831-1896 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;58063&quot;});" class='title'>Voyage en Espagne d'un Ambassadeur Marocain (1690-1691)</a>
+<div class='author'>Wazir al-Ghassani, Muhammad ibn Abd al-Wahhab, -1708?, Sauvaire, Henri Joseph, 1831-1896 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58402, {&quot;Title&quot;:&quot;Gibraltar and Its Sieges, with a Description of Its Natural Features.&quot;,&quot;Topics&quot;:[&quot;Gibraltar&quot;],&quot;Primary&quot;:&quot;58402.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stephens, Frederic George, 1827-1907&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;58402&quot;});" class='title'>Gibraltar and Its Sieges, with a Description of Its Natural Features.</a>
+<div class='author'>Stephens, Frederic George, 1827-1907</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58468, {&quot;Title&quot;:&quot;Sun and Shadow in Spain&quot;,&quot;Topics&quot;:[&quot;Spain -- Description and travel&quot;],&quot;Primary&quot;:&quot;58468.htm&quot;,&quot;CreatorNames&quot;:[&quot;Elliott, Maud Howe, 1854-1948&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;58468&quot;});" class='title'>Sun and Shadow in Spain</a>
+<div class='author'>Elliott, Maud Howe, 1854-1948</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58831, {&quot;Title&quot;:&quot;Cordova: A city of the Moors&quot;,&quot;Topics&quot;:[&quot;Arabs -- Spain&quot;,&quot;Córdoba (Spain) -- Description and travel&quot;,&quot;Córdoba (Spain) -- History&quot;],&quot;Primary&quot;:&quot;58831.htm&quot;,&quot;CreatorNames&quot;:[&quot;Calvert, Albert Frederick, 1872-1946&quot;,&quot;Gallichan, Walter M. (Walter Matthew), 1861-1946&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;58831&quot;});" class='title'>Cordova:<br><span class='subtitle'>A city of the Moors</span></a>
+<div class='author'>Calvert, Albert Frederick, 1872-1946, Gallichan, Walter M. (Walter Matthew), 1861-1946</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58916, {&quot;Title&quot;:&quot;Cosas de España; tomo 2 - (El país de lo imprevisto)&quot;,&quot;Topics&quot;:[&quot;Spain -- Description and travel&quot;],&quot;Primary&quot;:&quot;58916.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ford, Richard, 1796-1858&quot;,&quot;Mesa y Rosales, Enrique de, 1879-1929 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;58916&quot;});" class='title'>Cosas de España;<br><span class='subtitle'>tomo 2 - (El país de lo imprevisto)</span></a>
+<div class='author'>Ford, Richard, 1796-1858, Mesa y Rosales, Enrique de, 1879-1929 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59293, {&quot;Title&quot;:&quot;My Spanish Year&quot;,&quot;Topics&quot;:[&quot;Spain -- Description and travel&quot;,&quot;Spain -- Social life and customs&quot;,&quot;Whishaw, Ellen M. -- Travel -- Spain&quot;],&quot;Primary&quot;:&quot;59293.htm&quot;,&quot;CreatorNames&quot;:[&quot;Whishaw, Ellen M.&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;59293&quot;});" class='title'>My Spanish Year</a>
+<div class='author'>Whishaw, Ellen M.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59944, {&quot;Title&quot;:&quot;Impressions of Spain&quot;,&quot;Topics&quot;:[&quot;Spain -- Description and travel&quot;],&quot;Primary&quot;:&quot;59944.htm&quot;,&quot;CreatorNames&quot;:[&quot;Calvert, Albert Frederick, 1872-1946&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;59944&quot;});" class='title'>Impressions of Spain</a>
+<div class='author'>Calvert, Albert Frederick, 1872-1946</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60358, {&quot;Title&quot;:&quot;Vier Jahre in Spanien. Die Carlisten, ihre Erhebung, ihr Kampf und ihr Untergang.&quot;,&quot;Topics&quot;:[&quot;Spain -- Description and travel&quot;,&quot;Spain -- History -- Carlist War, 1833-1840&quot;],&quot;Primary&quot;:&quot;60358.htm&quot;,&quot;CreatorNames&quot;:[&quot;Goeben, August von, 1816-1880&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;60358&quot;});" class='title'>Vier Jahre in Spanien. Die Carlisten, ihre Erhebung, ihr Kampf und ihr Untergang.</a>
+<div class='author'>Goeben, August von, 1816-1880</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61022, {&quot;Title&quot;:&quot;Guerra de Granada: Hecha por el rey D. Felipe II, contra los Moriscos de aquel reino, sus rebeldes; Seguida de la vida del Lazarillo de Tormes, sus fortunas y adversidades&quot;,&quot;Topics&quot;:[&quot;Spain -- History -- Philip II, 1556-1598&quot;,&quot;Moriscos&quot;,&quot;Granada (Spain : Reino) -- History&quot;],&quot;Primary&quot;:&quot;61022.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hurtado de Mendoza, Diego, 1503-1575&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;61022&quot;});" class='title'>Guerra de Granada:<br><span class='subtitle'>Hecha por el rey D. Felipe II, contra los Moriscos de aquel reino, sus rebeldes; Seguida de la vida del Lazarillo de Tormes, sus fortunas y adversidades</span></a>
+<div class='author'>Hurtado de Mendoza, Diego, 1503-1575</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61339, {&quot;Title&quot;:&quot;Claros varones de Castilla, y Letras&quot;,&quot;Topics&quot;:[&quot;Nobility -- Spain -- Biography -- Early works to 1800&quot;,&quot;Spain -- History -- 711-1516 -- Biography&quot;],&quot;Primary&quot;:&quot;61339.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pulgar, Fernando del, 1436?-1492&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;61339&quot;});" class='title'>Claros varones de Castilla, y Letras</a>
+<div class='author'>Pulgar, Fernando del, 1436?-1492</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61361, {&quot;Title&quot;:&quot;Juicio razonado sobre los acontecimientos de Europa, situacion del Sumo Pontífice, y tambien sobre la ventajosa posicion en que se encuentra la España, respecto del resto de Europa&quot;,&quot;Topics&quot;:[&quot;Pius IX, Pope, 1792-1878&quot;,&quot;Spain -- Politics and government&quot;,&quot;Europe -- History -- 1848-1849&quot;],&quot;Primary&quot;:&quot;61361.htm&quot;,&quot;CreatorNames&quot;:[&quot;Villarragut y Aquiriano, Antonio&quot;],&quot;LoCC&quot;:[&quot;D&quot;,&quot;DP&quot;],&quot;PG_ID&quot;:&quot;61361&quot;});" class='title'>Juicio razonado sobre los acontecimientos de Europa, situacion del Sumo Pontífice, y tambien sobre la ventajosa posicion en que se encuentra la España, respecto del resto de Europa</a>
+<div class='author'>Villarragut y Aquiriano, Antonio</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61874, {&quot;Title&quot;:&quot;Alma vasca&quot;,&quot;Topics&quot;:[&quot;Basques&quot;],&quot;Primary&quot;:&quot;61874.htm&quot;,&quot;CreatorNames&quot;:[&quot;Salaverría, José María, 1873-1940&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;61874&quot;});" class='title'>Alma vasca</a>
+<div class='author'>Salaverría, José María, 1873-1940</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61930, {&quot;Title&quot;:&quot;Observations on the State of Religion and Literature in Spain&quot;,&quot;Topics&quot;:[&quot;Spain -- Description and travel&quot;,&quot;Catholic Church -- Spain&quot;,&quot;Spain -- Religion&quot;,&quot;Spanish literature -- 19th century -- History and criticism&quot;],&quot;Primary&quot;:&quot;61930.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bowring, John, 1792-1872&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;61930&quot;});" class='title'>Observations on the State of Religion and Literature in Spain</a>
+<div class='author'>Bowring, John, 1792-1872</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62766, {&quot;Title&quot;:&quot;As donatarias d&#39;Alemquer - Historia das Rainhas de Portugal e da sua casa e estado&quot;,&quot;Topics&quot;:[&quot;Queens -- Portugal&quot;,&quot;Alenquer (Portugal)&quot;],&quot;Primary&quot;:&quot;62766.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pereira Franco Monteiro, João&quot;,&quot;Oliveira Martins, J. P. (Joaquim Pedro), 1845-1894 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;62766&quot;});" class='title'>As donatarias d'Alemquer -<br><span class='subtitle'>Historia das Rainhas de Portugal e da sua casa e estado</span></a>
+<div class='author'>Pereira Franco Monteiro, João, Oliveira Martins, J. P. (Joaquim Pedro), 1845-1894 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62786, {&quot;Title&quot;:&quot;Spain and Her Colonies, Compiled from the Best Authorities&quot;,&quot;Topics&quot;:[&quot;Spain -- History&quot;],&quot;Primary&quot;:&quot;62786.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wilberforce, Archibald [Compiler]&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;62786&quot;});" class='title'>Spain and Her Colonies, Compiled from the Best Authorities</a>
+<div class='author'>Wilberforce, Archibald [Compiler]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63020, {&quot;Title&quot;:&quot;Madrid: an historical description and handbook of the Spanish capital&quot;,&quot;Topics&quot;:[&quot;Madrid (Spain) -- Description and travel&quot;,&quot;Art -- Spain -- Madrid&quot;],&quot;Primary&quot;:&quot;63020.htm&quot;,&quot;CreatorNames&quot;:[&quot;Calvert, Albert Frederick, 1872-1946&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;63020&quot;});" class='title'>Madrid:<br><span class='subtitle'>an historical description and handbook of the Spanish capital</span></a>
+<div class='author'>Calvert, Albert Frederick, 1872-1946</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63136, {&quot;Title&quot;:&quot;Valencia and Murcia, a glance at African Spain&quot;,&quot;Topics&quot;:[&quot;Valencia (Spain) -- Description and travel&quot;,&quot;Murcia (Spain) -- Description and travel&quot;],&quot;Primary&quot;:&quot;63136.htm&quot;,&quot;CreatorNames&quot;:[&quot;Calvert, Albert Frederick, 1872-1946&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;63136&quot;});" class='title'>Valencia and Murcia, a glance at African Spain</a>
+<div class='author'>Calvert, Albert Frederick, 1872-1946</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63255, {&quot;Title&quot;:&quot;Leon, Burgos and Salamanca: a historical and descriptive account&quot;,&quot;Topics&quot;:[&quot;Architecture -- Spain&quot;,&quot;León (Spain)&quot;,&quot;Burgos (Spain)&quot;,&quot;Salamanca (Spain)&quot;],&quot;Primary&quot;:&quot;63255.htm&quot;,&quot;CreatorNames&quot;:[&quot;Calvert, Albert Frederick, 1872-1946&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;63255&quot;});" class='title'>Leon, Burgos and Salamanca:<br><span class='subtitle'>a historical and descriptive account</span></a>
+<div class='author'>Calvert, Albert Frederick, 1872-1946</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63434, {&quot;Title&quot;:&quot;Rainha sem reino (Estudo historico do seculo XV)&quot;,&quot;Topics&quot;:[&quot;Juana, Infanta of Castile, 1462-1530&quot;],&quot;Primary&quot;:&quot;63434.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pimentel, Alberto, 1849-1925&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;63434&quot;});" class='title'>Rainha sem reino (Estudo historico do seculo XV)</a>
+<div class='author'>Pimentel, Alberto, 1849-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63587, {&quot;Title&quot;:&quot;Estampas de viaje: España en los días de la guerra&quot;,&quot;Topics&quot;:[&quot;Spain -- Description and travel&quot;],&quot;Primary&quot;:&quot;63587.htm&quot;,&quot;CreatorNames&quot;:[&quot;Urbina, Luis G. (Luis Gonzaga), 1864-1934&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;63587&quot;});" class='title'>Estampas de viaje:<br><span class='subtitle'>España en los días de la guerra</span></a>
+<div class='author'>Urbina, Luis G. (Luis Gonzaga), 1864-1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63655, {&quot;Title&quot;:&quot;Inicios da Renascença em Portugal: Quinta e Palacio da Bacalhôa em Azeitão, monographia historico-artistica&quot;,&quot;Topics&quot;:[&quot;Azeitão (Portugal). Bacalhoa&quot;,&quot;Decoration and ornament -- Portugal&quot;],&quot;Primary&quot;:&quot;63655.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rasteiro, Joaquim, 1834-1898&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;63655&quot;});" class='title'>Inicios da Renascença em Portugal:<br><span class='subtitle'>Quinta e Palacio da Bacalhôa em Azeitão, monographia historico-artistica</span></a>
+<div class='author'>Rasteiro, Joaquim, 1834-1898</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63831, {&quot;Title&quot;:&quot;Queens of old Spain&quot;,&quot;Topics&quot;:[&quot;Spain -- History&quot;,&quot;Women -- Political activity&quot;,&quot;Queens -- Spain&quot;],&quot;Primary&quot;:&quot;63831.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hume, Martin A. S. (Martin Andrew Sharp), 1847-1910&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;63831&quot;});" class='title'>Queens of old Spain</a>
+<div class='author'>Hume, Martin A. S. (Martin Andrew Sharp), 1847-1910</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64620, {&quot;Title&quot;:&quot;Granada and the Alhambra - A brief description of the ancient city of Granada, with a particular account of the Moorish palace&quot;,&quot;Topics&quot;:[&quot;Alhambra (Granada, Spain)&quot;,&quot;Art -- Spain -- Granada&quot;,&quot;Granada (Spain) -- Description and travel&quot;],&quot;Primary&quot;:&quot;64620.htm&quot;,&quot;CreatorNames&quot;:[&quot;Calvert, Albert Frederick, 1872-1946&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;64620&quot;});" class='title'>Granada and the Alhambra -<br><span class='subtitle'>A brief description of the ancient city of Granada, with a particular account of the Moorish palace</span></a>
+<div class='author'>Calvert, Albert Frederick, 1872-1946</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64900, {&quot;Title&quot;:&quot;Toledo: an historical and descriptive account of the \&quot;\&quot;City of generations\&quot;\&quot;&quot;,&quot;Topics&quot;:[&quot;Toledo (Spain) -- History&quot;,&quot;Toledo (Spain) -- Description and travel&quot;,&quot;Art -- Spain -- Toledo&quot;],&quot;Primary&quot;:&quot;64900.htm&quot;,&quot;CreatorNames&quot;:[&quot;Calvert, Albert Frederick, 1872-1946&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;64900&quot;});" class='title'>Toledo:<br><span class='subtitle'>an historical and descriptive account of the "City of generations"</span></a>
+<div class='author'>Calvert, Albert Frederick, 1872-1946</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64914, {&quot;Title&quot;:&quot;Seville: an historical and descriptive account of \&quot;\&quot;the pearl of Andalusia\&quot;\&quot;&quot;,&quot;Topics&quot;:[&quot;Painters -- Spain&quot;,&quot;Art -- Spain -- Seville&quot;,&quot;Seville (Spain) -- Description and travel&quot;],&quot;Primary&quot;:&quot;64914.htm&quot;,&quot;CreatorNames&quot;:[&quot;Calvert, Albert Frederick, 1872-1946&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;64914&quot;});" class='title'>Seville:<br><span class='subtitle'>an historical and descriptive account of "the pearl of Andalusia"</span></a>
+<div class='author'>Calvert, Albert Frederick, 1872-1946</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64923, {&quot;Title&quot;:&quot;Catalonia &amp; the Balearic Islands: an historical and desciptive account&quot;,&quot;Topics&quot;:[&quot;Catalonia (Spain) -- Description and travel&quot;,&quot;Balearic Islands (Spain) -- Description and travel&quot;],&quot;Primary&quot;:&quot;64923.htm&quot;,&quot;CreatorNames&quot;:[&quot;Calvert, Albert Frederick, 1872-1946&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;64923&quot;});" class='title'>Catalonia & the Balearic Islands:<br><span class='subtitle'>an historical and desciptive account</span></a>
+<div class='author'>Calvert, Albert Frederick, 1872-1946</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64959, {&quot;Title&quot;:&quot;Picturesque Spain: Architecture, landscape, life of the people.&quot;,&quot;Topics&quot;:[&quot;Spain -- Description and travel&quot;],&quot;Primary&quot;:&quot;64959.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hielscher, Kurt, 1881-1948&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;64959&quot;});" class='title'>Picturesque Spain:<br><span class='subtitle'>Architecture, landscape, life of the people.</span></a>
+<div class='author'>Hielscher, Kurt, 1881-1948</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64970, {&quot;Title&quot;:&quot;Valladolid, Oviedo, Segovia, Zamora, Avila &amp; Zaragoza - An Historical &amp; Descriptive Account&quot;,&quot;Topics&quot;:[&quot;Architecture -- Spain&quot;,&quot;Art -- Spain&quot;,&quot;Valladolid (Spain) -- Description and travel&quot;,&quot;Oviedo (Spain) -- Description and travel&quot;,&quot;Segovia (Spain) -- Description and travel&quot;,&quot;Zamora (Spain) -- Description and travel&quot;,&quot;Avila (Spain) -- Description and travel&quot;,&quot;Zaragoza (Spain) -- Description and travel&quot;,&quot;Spain -- Pictorial works&quot;],&quot;Primary&quot;:&quot;64970.htm&quot;,&quot;CreatorNames&quot;:[&quot;Calvert, Albert Frederick, 1872-1946&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;64970&quot;});" class='title'>Valladolid, Oviedo, Segovia, Zamora, Avila & Zaragoza -<br><span class='subtitle'>An Historical & Descriptive Account</span></a>
+<div class='author'>Calvert, Albert Frederick, 1872-1946</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66355, {&quot;Title&quot;:&quot;The Canary Islands&quot;,&quot;Topics&quot;:[&quot;Canary Islands -- Description and travel&quot;],&quot;Primary&quot;:&quot;66355.htm&quot;,&quot;CreatorNames&quot;:[&quot;Du Cane, Florence, 1869-1955&quot;,&quot;Du Cane, Ella, 1874-1943 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;66355&quot;});" class='title'>The Canary Islands</a>
+<div class='author'>Du Cane, Florence, 1869-1955, Du Cane, Ella, 1874-1943 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67903, {&quot;Title&quot;:&quot;The Pillars of Hercules: A Narrative of Travels in Spain and Morocco in 1848; vol. 1&quot;,&quot;Topics&quot;:[&quot;Spain -- Description and travel&quot;,&quot;Morocco -- Description and travel&quot;],&quot;Primary&quot;:&quot;67903.htm&quot;,&quot;CreatorNames&quot;:[&quot;Urquhart, David, 1805-1877&quot;],&quot;LoCC&quot;:[&quot;DP&quot;,&quot;DT&quot;],&quot;PG_ID&quot;:&quot;67903&quot;});" class='title'>The Pillars of Hercules:<br><span class='subtitle'>A Narrative of Travels in Spain and Morocco in 1848; vol. 1</span></a>
+<div class='author'>Urquhart, David, 1805-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68121, {&quot;Title&quot;:&quot;Pelos suburbios e visinhanças de Lisboa&quot;,&quot;Topics&quot;:[&quot;Portugal -- Description and travel&quot;,&quot;Bemfica, Portugal. São Domingos (Dominican monastery)&quot;,&quot;Carnide (Portugal)&quot;,&quot;Ericeira (Portugal)&quot;,&quot;Torres Vedras (Portugal)&quot;],&quot;Primary&quot;:&quot;68121.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pereira, Gabriel, 1847-1911&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;68121&quot;});" class='title'>Pelos suburbios e visinhanças de Lisboa</a>
+<div class='author'>Pereira, Gabriel, 1847-1911</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68210, {&quot;Title&quot;:&quot;Portuguese portraits&quot;,&quot;Topics&quot;:[&quot;Portugal -- Biography&quot;],&quot;Primary&quot;:&quot;68210.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bell, Aubrey F. G. (Aubrey Fitz Gerald), 1882-1950&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;68210&quot;});" class='title'>Portuguese portraits</a>
+<div class='author'>Bell, Aubrey F. G. (Aubrey Fitz Gerald), 1882-1950</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68978, {&quot;Title&quot;:&quot;Historia del levantamiento, guerra y revolución de España (1 de 5)&quot;,&quot;Topics&quot;:[&quot;Peninsular War, 1807-1814 -- Campaigns -- Spain&quot;,&quot;Spain -- History -- Napoleonic Conquest, 1808-1813&quot;],&quot;Primary&quot;:&quot;68978.htm&quot;,&quot;CreatorNames&quot;:[&quot;Toreno, José María Queipo de Llano Ruiz de Saravia, Conde de, 1786-1843&quot;],&quot;LoCC&quot;:[&quot;DC&quot;,&quot;DP&quot;],&quot;PG_ID&quot;:&quot;68978&quot;});" class='title'>Historia del levantamiento, guerra y revolución de España (1 de 5)</a>
+<div class='author'>Toreno, José María Queipo de Llano Ruiz de Saravia, Conde de, 1786-1843</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69159, {&quot;Title&quot;:&quot;Historia del levantamiento, guerra y revolución de España (2 de 5)&quot;,&quot;Topics&quot;:[&quot;Peninsular War, 1807-1814 -- Campaigns -- Spain&quot;,&quot;Spain -- History -- Napoleonic Conquest, 1808-1813&quot;],&quot;Primary&quot;:&quot;69159.htm&quot;,&quot;CreatorNames&quot;:[&quot;Toreno, José María Queipo de Llano Ruiz de Saravia, Conde de, 1786-1843&quot;],&quot;LoCC&quot;:[&quot;DC&quot;,&quot;DP&quot;],&quot;PG_ID&quot;:&quot;69159&quot;});" class='title'>Historia del levantamiento, guerra y revolución de España (2 de 5)</a>
+<div class='author'>Toreno, José María Queipo de Llano Ruiz de Saravia, Conde de, 1786-1843</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6918, {&quot;Title&quot;:&quot;The History of the Reign of Ferdinand and Isabella the Catholic — Volume 1&quot;,&quot;Topics&quot;:[&quot;Ferdinand V, King of Spain, 1452-1516&quot;,&quot;Isabella I, Queen of Spain, 1451-1504&quot;,&quot;Spain -- History -- Ferdinand and Isabella, 1479-1516&quot;],&quot;Primary&quot;:&quot;6918.txt&quot;,&quot;CreatorNames&quot;:[&quot;Prescott, William Hickling, 1796-1859&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;6918&quot;});" class='title'>The History of the Reign of Ferdinand and Isabella the Catholic — Volume 1</a>
+<div class='author'>Prescott, William Hickling, 1796-1859</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69343, {&quot;Title&quot;:&quot;Neves de antanho&quot;,&quot;Topics&quot;:[&quot;Portugal -- History&quot;,&quot;Women -- Portugal&quot;],&quot;Primary&quot;:&quot;69343.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sabugosa, António Maria José de Melo César e Meneses, conde de, 1854-1923&quot;],&quot;LoCC&quot;:[&quot;DP&quot;,&quot;HQ&quot;],&quot;PG_ID&quot;:&quot;69343&quot;});" class='title'>Neves de antanho</a>
+<div class='author'>Sabugosa, António Maria José de Melo César e Meneses, conde de, 1854-1923</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69384, {&quot;Title&quot;:&quot;Omwandelingen door een gedeelte van Spanje - De Aarde en haar volken, 1868&quot;,&quot;Topics&quot;:[&quot;Spain -- Description and travel&quot;],&quot;Primary&quot;:&quot;69384.htm&quot;,&quot;CreatorNames&quot;:[&quot;Davillier, Ch. (Charles), baron, 1823-1883&quot;,&quot;Doré, Gustave, 1832-1883 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;69384&quot;});" class='title'>Omwandelingen door een gedeelte van Spanje -<br><span class='subtitle'>De Aarde en haar volken, 1868</span></a>
+<div class='author'>Davillier, Ch. (Charles), baron, 1823-1883, Doré, Gustave, 1832-1883 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69411, {&quot;Title&quot;:&quot;Historia del levantamiento, guerra y revolución de España (3 de 5)&quot;,&quot;Topics&quot;:[&quot;Peninsular War, 1807-1814 -- Campaigns -- Spain&quot;,&quot;Spain -- History -- Napoleonic Conquest, 1808-1813&quot;],&quot;Primary&quot;:&quot;69411.htm&quot;,&quot;CreatorNames&quot;:[&quot;Toreno, José María Queipo de Llano Ruiz de Saravia, Conde de, 1786-1843&quot;],&quot;LoCC&quot;:[&quot;DC&quot;,&quot;DP&quot;],&quot;PG_ID&quot;:&quot;69411&quot;});" class='title'>Historia del levantamiento, guerra y revolución de España (3 de 5)</a>
+<div class='author'>Toreno, José María Queipo de Llano Ruiz de Saravia, Conde de, 1786-1843</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69459, {&quot;Title&quot;:&quot;Noticias de Portugal&quot;,&quot;Topics&quot;:[&quot;Numismatics -- Portugal&quot;,&quot;Portugal&quot;],&quot;Primary&quot;:&quot;69459.htm&quot;,&quot;CreatorNames&quot;:[&quot;Faria, Manoel Severim de, 1583-1655&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;69459&quot;});" class='title'>Noticias de Portugal</a>
+<div class='author'>Faria, Manoel Severim de, 1583-1655</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69660, {&quot;Title&quot;:&quot;Historia del levantamiento, guerra y revolución de España (4 de 5)&quot;,&quot;Topics&quot;:[&quot;Peninsular War, 1807-1814 -- Campaigns -- Spain&quot;,&quot;Spain -- History -- Napoleonic Conquest, 1808-1813&quot;],&quot;Primary&quot;:&quot;69660.htm&quot;,&quot;CreatorNames&quot;:[&quot;Toreno, José María Queipo de Llano Ruiz de Saravia, Conde de, 1786-1843&quot;],&quot;LoCC&quot;:[&quot;DC&quot;,&quot;DP&quot;],&quot;PG_ID&quot;:&quot;69660&quot;});" class='title'>Historia del levantamiento, guerra y revolución de España (4 de 5)</a>
+<div class='author'>Toreno, José María Queipo de Llano Ruiz de Saravia, Conde de, 1786-1843</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6967, {&quot;Title&quot;:&quot;The History of the Reign of Ferdinand and Isabella the Catholic — Volume 2&quot;,&quot;Topics&quot;:[&quot;Ferdinand V, King of Spain, 1452-1516&quot;,&quot;Isabella I, Queen of Spain, 1451-1504&quot;,&quot;Spain -- History -- Ferdinand and Isabella, 1479-1516&quot;],&quot;Primary&quot;:&quot;6967.txt&quot;,&quot;CreatorNames&quot;:[&quot;Prescott, William Hickling, 1796-1859&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;6967&quot;});" class='title'>The History of the Reign of Ferdinand and Isabella the Catholic — Volume 2</a>
+<div class='author'>Prescott, William Hickling, 1796-1859</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6968, {&quot;Title&quot;:&quot;The History of the Reign of Ferdinand and Isabella the Catholic — Volume 3&quot;,&quot;Topics&quot;:[&quot;Ferdinand V, King of Spain, 1452-1516&quot;,&quot;Isabella I, Queen of Spain, 1451-1504&quot;,&quot;Spain -- History -- Ferdinand and Isabella, 1479-1516&quot;],&quot;Primary&quot;:&quot;6968.txt&quot;,&quot;CreatorNames&quot;:[&quot;Prescott, William Hickling, 1796-1859&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;6968&quot;});" class='title'>The History of the Reign of Ferdinand and Isabella the Catholic — Volume 3</a>
+<div class='author'>Prescott, William Hickling, 1796-1859</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69878, {&quot;Title&quot;:&quot;Mappa de Portugal antigo, e moderno, tomo 1 (of 3): Parte I, II&quot;,&quot;Topics&quot;:[&quot;Portugal -- History&quot;,&quot;Portugal -- Geography -- Early works to 1800&quot;,&quot;Lisbon (Portugal) -- Description and travel -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;69878.htm&quot;,&quot;CreatorNames&quot;:[&quot;Castro, João Bautista de, 1700-1775&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;69878&quot;});" class='title'>Mappa de Portugal antigo, e moderno, tomo 1 (of 3):<br><span class='subtitle'>Parte I, II</span></a>
+<div class='author'>Castro, João Bautista de, 1700-1775</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70153, {&quot;Title&quot;:&quot;Historia del levantamiento, guerra y revolución de España (5 de 5)&quot;,&quot;Topics&quot;:[&quot;Peninsular War, 1807-1814 -- Campaigns -- Spain&quot;,&quot;Spain -- History -- Napoleonic Conquest, 1808-1813&quot;],&quot;Primary&quot;:&quot;70153.htm&quot;,&quot;CreatorNames&quot;:[&quot;Toreno, José María Queipo de Llano Ruiz de Saravia, Conde de, 1786-1843&quot;],&quot;LoCC&quot;:[&quot;DC&quot;,&quot;DP&quot;],&quot;PG_ID&quot;:&quot;70153&quot;});" class='title'>Historia del levantamiento, guerra y revolución de España (5 de 5)</a>
+<div class='author'>Toreno, José María Queipo de Llano Ruiz de Saravia, Conde de, 1786-1843</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7430, {&quot;Title&quot;:&quot;Familiar Spanish Travels&quot;,&quot;Topics&quot;:[&quot;Spain -- Description and travel&quot;],&quot;Primary&quot;:&quot;7430.htm&quot;,&quot;CreatorNames&quot;:[&quot;Howells, William Dean, 1837-1920&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;7430&quot;});" class='title'>Familiar Spanish Travels</a>
+<div class='author'>Howells, William Dean, 1837-1920</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7470, {&quot;Title&quot;:&quot;Castilian Days&quot;,&quot;Topics&quot;:[&quot;Spain -- Description and travel&quot;,&quot;Spain -- Social life and customs&quot;],&quot;Primary&quot;:&quot;7470.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hay, John, 1838-1905&quot;],&quot;LoCC&quot;:[&quot;DP&quot;],&quot;PG_ID&quot;:&quot;7470&quot;});" class='title'>Castilian Days</a>
+<div class='author'>Hay, John, 1838-1905</div>
+</div>
+</ul></div>
+</body></html>

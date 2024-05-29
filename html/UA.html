@@ -1,0 +1,398 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Organization, distrubution, military situation (UA)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(10629, {&quot;Title&quot;:&quot;Britain at Bay&quot;,&quot;Topics&quot;:[&quot;War&quot;,&quot;Great Britain -- Defenses&quot;,&quot;Great Britain -- Foreign relations&quot;],&quot;Primary&quot;:&quot;10629.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wilkinson, Spenser, 1853-1937&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;10629&quot;});" class='title'>Britain at Bay</a>
+<div class='author'>Wilkinson, Spenser, 1853-1937</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(11352, {&quot;Title&quot;:&quot;Germany and the Next War&quot;,&quot;Topics&quot;:[&quot;Germany. Heer&quot;,&quot;Germany. Kriegsmarine&quot;,&quot;Imaginary wars and battles&quot;,&quot;Germany -- Foreign relations&quot;],&quot;Primary&quot;:&quot;11352.txt&quot;,&quot;CreatorNames&quot;:[&quot;Bernhardi, Friedrich von, 1849-1930&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;11352&quot;});" class='title'>Germany and the Next War</a>
+<div class='author'>Bernhardi, Friedrich von, 1849-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15158, {&quot;Title&quot;:&quot;In Time of Emergency - A Citizen&#39;s Handbook on Nuclear Attack, Natural Disasters (1968)&quot;,&quot;Topics&quot;:[&quot;Civil defense -- Handbooks, manuals, etc.&quot;,&quot;Disasters -- Handbooks, manuals, etc.&quot;],&quot;Primary&quot;:&quot;15158.htm&quot;,&quot;CreatorNames&quot;:[&quot;United States. Office of Civil Defense&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;15158&quot;});" class='title'>In Time of Emergency -<br><span class='subtitle'>A Citizen's Handbook on Nuclear Attack, Natural Disasters (1968)</span></a>
+<div class='author'>United States. Office of Civil Defense</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25522, {&quot;Title&quot;:&quot;Freedom In Service - Six Essays on Matters Concerning Britain&#39;s Safety and Good Government&quot;,&quot;Topics&quot;:[&quot;Great Britain -- Politics and government&quot;,&quot;Draft&quot;,&quot;Great Britain -- Defenses&quot;],&quot;Primary&quot;:&quot;25522.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hearnshaw, F. J. C. (Fossey John Cobb), 1869-1946&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;25522&quot;});" class='title'>Freedom In Service -<br><span class='subtitle'>Six Essays on Matters Concerning Britain's Safety and Good Government</span></a>
+<div class='author'>Hearnshaw, F. J. C. (Fossey John Cobb), 1869-1946</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29984, {&quot;Title&quot;:&quot;The History of the First West India Regiment&quot;,&quot;Topics&quot;:[&quot;Great Britain. Army. West India regiment, 1st&quot;],&quot;Primary&quot;:&quot;29984.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ellis, A. B. (Alfred Burdon), 1852-1894&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;29984&quot;});" class='title'>The History of the First West India Regiment</a>
+<div class='author'>Ellis, A. B. (Alfred Burdon), 1852-1894</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36155, {&quot;Title&quot;:&quot;The Invasion&quot;,&quot;Topics&quot;:[&quot;Imaginary wars and battles&quot;,&quot;Great Britain -- Defenses&quot;],&quot;Primary&quot;:&quot;36155.htm&quot;,&quot;CreatorNames&quot;:[&quot;Le Queux, William, 1864-1927&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;36155&quot;});" class='title'>The Invasion</a>
+<div class='author'>Le Queux, William, 1864-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36778, {&quot;Title&quot;:&quot;Twenty-Five Years in the Rifle Brigade&quot;,&quot;Topics&quot;:[&quot;Napoleon I, Emperor of the French, 1769-1821 -- Contemporaries&quot;,&quot;Great Britain. Army. Rifle Brigade (Prince Consort&#39;s Own) -- Biography&quot;,&quot;Peninsular War, 1807-1814 -- Personal narratives, British&quot;,&quot;Napoleonic Wars, 1800-1815 -- Personal narratives, British&quot;,&quot;Surtees, William, 1781-1830&quot;,&quot;United States -- History -- War of 1812 -- Personal narratives, British&quot;],&quot;Primary&quot;:&quot;36778.htm&quot;,&quot;CreatorNames&quot;:[&quot;Surtees, William, 1781-1830&quot;],&quot;LoCC&quot;:[&quot;U&quot;,&quot;UA&quot;],&quot;PG_ID&quot;:&quot;36778&quot;});" class='title'>Twenty-Five Years in the Rifle Brigade</a>
+<div class='author'>Surtees, William, 1781-1830</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37470, {&quot;Title&quot;:&quot;The Great War in England in 1897&quot;,&quot;Topics&quot;:[&quot;Imaginary wars and battles&quot;,&quot;Great Britain -- Defenses&quot;],&quot;Primary&quot;:&quot;37470.htm&quot;,&quot;CreatorNames&quot;:[&quot;Le Queux, William, 1864-1927&quot;,&quot;Crowther, T. S. C. [Illustrator]&quot;,&quot;Field, Cyril, 1859-1942 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;37470&quot;});" class='title'>The Great War in England in 1897</a>
+<div class='author'>Le Queux, William, 1864-1927, Crowther, T. S. C. [Illustrator], Field, Cyril, 1859-1942 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38288, {&quot;Title&quot;:&quot;Our National Defense: The Patriotism of Peace&quot;,&quot;Topics&quot;:[&quot;United States -- Defenses&quot;],&quot;Primary&quot;:&quot;38288.htm&quot;,&quot;CreatorNames&quot;:[&quot;Maxwell, George Hebard, 1860-1946&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;38288&quot;});" class='title'>Our National Defense:<br><span class='subtitle'>The Patriotism of Peace</span></a>
+<div class='author'>Maxwell, George Hebard, 1860-1946</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39893, {&quot;Title&quot;:&quot;Defenseless America&quot;,&quot;Topics&quot;:[&quot;War&quot;,&quot;United States -- Defenses&quot;],&quot;Primary&quot;:&quot;39893.htm&quot;,&quot;CreatorNames&quot;:[&quot;Maxim, Hudson, 1853-1927&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;39893&quot;});" class='title'>Defenseless America</a>
+<div class='author'>Maxim, Hudson, 1853-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40479, {&quot;Title&quot;:&quot;In the Foreign Legion&quot;,&quot;Topics&quot;:[&quot;Algeria -- History -- 1830-1962&quot;,&quot;France. Armée. Légion étrangère&quot;,&quot;Rosen, Erwin, 1876-1923&quot;],&quot;Primary&quot;:&quot;40479.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rosen, Erwin, 1876-1923&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;40479&quot;});" class='title'>In the Foreign Legion</a>
+<div class='author'>Rosen, Erwin, 1876-1923</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41043, {&quot;Title&quot;:&quot;The Old First Massachusetts Coast Artillery in War and Peace&quot;,&quot;Topics&quot;:[&quot;Massachusetts artillery -- 1st coast artillery regt. -- 1784-&quot;],&quot;Primary&quot;:&quot;41043.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cutler, Frederick Morse, 1874-1944&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;41043&quot;});" class='title'>The Old First Massachusetts Coast Artillery in War and Peace</a>
+<div class='author'>Cutler, Frederick Morse, 1874-1944</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46823, {&quot;Title&quot;:&quot;Ten Years in India, in the 16th Queen&#39;s Lancers, and Three Years in South Africa, in the Cape Corps Levies&quot;,&quot;Topics&quot;:[&quot;South Africa -- Description and travel&quot;,&quot;India -- Description and travel&quot;,&quot;India -- History -- British occupation, 1765-1947&quot;,&quot;Gould, W. J. D.&quot;,&quot;Great Britain. Army -- Colonial forces -- India&quot;,&quot;Korana War, 1st, 1868-1870 -- Personal narratives&quot;],&quot;Primary&quot;:&quot;46823.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gould, W. J. D.&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;46823&quot;});" class='title'>Ten Years in India, in the 16th Queen's Lancers, and Three Years in South Africa, in the Cape Corps Levies</a>
+<div class='author'>Gould, W. J. D.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47437, {&quot;Title&quot;:&quot;East-West Trade Trends - Mutual Defense Assistance Control Act of 1951 (the Battle Act); Fourth Report to Congress, Second Half of 1953&quot;,&quot;Topics&quot;:[&quot;Mutual security program, 1951-&quot;,&quot;Military assistance&quot;,&quot;United States -- Commercial policy&quot;],&quot;Primary&quot;:&quot;47437.htm&quot;,&quot;CreatorNames&quot;:[&quot;United States. Foreign Operations Administration&quot;,&quot;Stassen, Harold E. (Harold Edward), 1907-2001 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;47437&quot;});" class='title'>East-West Trade Trends -<br><span class='subtitle'>Mutual Defense Assistance Control Act of 1951 (the Battle Act); Fourth Report to Congress, Second Half of 1953</span></a>
+<div class='author'>United States. Foreign Operations Administration, Stassen, Harold E. (Harold Edward), 1907-2001 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49348, {&quot;Title&quot;:&quot;Regimental Nicknames and Traditions of the British Army&quot;,&quot;Topics&quot;:[&quot;Great Britain. Army&quot;],&quot;Primary&quot;:&quot;49348.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;49348&quot;});" class='title'>Regimental Nicknames and Traditions of the British Army</a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49488, {&quot;Title&quot;:&quot;The History of the 2nd Dragoons: \&quot;\&quot;Royal Scots Greys\&quot;\&quot;&quot;,&quot;Topics&quot;:[&quot;Great Britain. Army. Dragoons, 2nd (Royal Scots Greys)&quot;],&quot;Primary&quot;:&quot;49488.htm&quot;,&quot;CreatorNames&quot;:[&quot;Almack, Edward, 1852-1917&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;49488&quot;});" class='title'>The History of the 2nd Dragoons:<br><span class='subtitle'>"Royal Scots Greys"</span></a>
+<div class='author'>Almack, Edward, 1852-1917</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49570, {&quot;Title&quot;:&quot;Historical Record of the First, or Royal Regiment of Foot - Containing an Account of the Origin of the Regiment in the Reign of King James VI. of Scotland, and of Its Subsequent Services to 1846&quot;,&quot;Topics&quot;:[&quot;Great Britain. Army. Regiment of Foot, 1st (Royal Scots)&quot;],&quot;Primary&quot;:&quot;49570.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cannon, Richard, 1779-1865&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;49570&quot;});" class='title'>Historical Record of the First, or Royal Regiment of Foot -<br><span class='subtitle'>Containing an Account of the Origin of the Regiment in the Reign of King James VI. of Scotland, and of Its Subsequent Services to 1846</span></a>
+<div class='author'>Cannon, Richard, 1779-1865</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50421, {&quot;Title&quot;:&quot;Historical Record of the Third, Or the King&#39;s Own Regiment of Light Dragoons - Containing an Account of the Formation of the Regiment in 1685, and of Its Subsequent Services to 1846.&quot;,&quot;Topics&quot;:[&quot;Great Britain. Army. Light Dragoons, 3rd&quot;],&quot;Primary&quot;:&quot;50421.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cannon, Richard, 1779-1865&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;50421&quot;});" class='title'>Historical Record of the Third, Or the King's Own Regiment of Light Dragoons -<br><span class='subtitle'>Containing an Account of the Formation of the Regiment in 1685, and of Its Subsequent Services to 1846.</span></a>
+<div class='author'>Cannon, Richard, 1779-1865</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51026, {&quot;Title&quot;:&quot;Germany&#39;s Fighting Machine - Her Army, her Navy, her Air-ships and Why She Arrayed Them Against the Allied Powers of Europe&quot;,&quot;Topics&quot;:[&quot;World War, 1914-1918&quot;,&quot;Germany. Heer&quot;,&quot;Germany. Kriegsmarine&quot;],&quot;Primary&quot;:&quot;51026.htm&quot;,&quot;CreatorNames&quot;:[&quot;Henderson, Ernest F. (Ernest Flagg), 1861-1928&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;51026&quot;});" class='title'>Germany's Fighting Machine -<br><span class='subtitle'>Her Army, her Navy, her Air-ships and Why She Arrayed Them Against the Allied Powers of Europe</span></a>
+<div class='author'>Henderson, Ernest F. (Ernest Flagg), 1861-1928</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51087, {&quot;Title&quot;:&quot;History of the Scottish Regiments in the British Army&quot;,&quot;Topics&quot;:[&quot;Great Britain. Army -- History&quot;],&quot;Primary&quot;:&quot;51087.htm&quot;,&quot;CreatorNames&quot;:[&quot;Murray, Archibald K.&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;51087&quot;});" class='title'>History of the Scottish Regiments in the British Army</a>
+<div class='author'>Murray, Archibald K.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51165, {&quot;Title&quot;:&quot;The Regimental Records of the British Army - A historical résumé chronologically arranged of titles, campaigns, honours, uniforms, facings, badges, nicknames, etc.&quot;,&quot;Topics&quot;:[&quot;Great Britain. Army -- History&quot;],&quot;Primary&quot;:&quot;51165.htm&quot;,&quot;CreatorNames&quot;:[&quot;Farmer, John S.&quot;,&quot;Farmer, John Stephen, 1854-1916&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;51165&quot;});" class='title'>The Regimental Records of the British Army -<br><span class='subtitle'>A historical résumé chronologically arranged of titles, campaigns, honours, uniforms, facings, badges, nicknames, etc.</span></a>
+<div class='author'>Farmer, John S., Farmer, John Stephen, 1854-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51376, {&quot;Title&quot;:&quot;Historical Record of the Fourth, or Royal Irish Regiment of Dragoon Guards. - Containing an Account of the Formation of the Regiment in 1685; and of Its Subsequent Services to 1838&quot;,&quot;Topics&quot;:[&quot;Great Britain. Army. Royal Irish Dragoon Guards, 4th&quot;],&quot;Primary&quot;:&quot;51376.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cannon, Richard, 1779-1865&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;51376&quot;});" class='title'>Historical Record of the Fourth, or Royal Irish Regiment of Dragoon Guards. -<br><span class='subtitle'>Containing an Account of the Formation of the Regiment in 1685; and of Its Subsequent Services to 1838</span></a>
+<div class='author'>Cannon, Richard, 1779-1865</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51905, {&quot;Title&quot;:&quot;The Invasion of 1910, with a full account of the siege of London&quot;,&quot;Topics&quot;:[&quot;Imaginary wars and battles&quot;,&quot;Great Britain -- Defenses&quot;],&quot;Primary&quot;:&quot;51905.htm&quot;,&quot;CreatorNames&quot;:[&quot;Le Queux, William, 1864-1927&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;51905&quot;});" class='title'>The Invasion of 1910, with a full account of the siege of London</a>
+<div class='author'>Le Queux, William, 1864-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52038, {&quot;Title&quot;:&quot;The Invasion of America: a fact story based on the inexorable mathematics of war&quot;,&quot;Topics&quot;:[&quot;Imaginary wars and battles&quot;,&quot;United States -- Defenses&quot;],&quot;Primary&quot;:&quot;52038.htm&quot;,&quot;CreatorNames&quot;:[&quot;Muller, J. W. (Julius Washington), 1867-1930&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;52038&quot;});" class='title'>The Invasion of America:<br><span class='subtitle'>a fact story based on the inexorable mathematics of war</span></a>
+<div class='author'>Muller, J. W. (Julius Washington), 1867-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52249, {&quot;Title&quot;:&quot;Historical Record of the Third, or Prince of Wales&#39; Regiment of Dragoon Guards - Containing an Account of the Formation of the Regiment in 1685, and of Its Subsequent Services to 1838&quot;,&quot;Topics&quot;:[&quot;Great Britain. Army. Regiment of Dragoon Guards, 3rd&quot;],&quot;Primary&quot;:&quot;52249.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cannon, Richard, 1779-1865&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;52249&quot;});" class='title'>Historical Record of the Third, or Prince of Wales' Regiment of Dragoon Guards -<br><span class='subtitle'>Containing an Account of the Formation of the Regiment in 1685, and of Its Subsequent Services to 1838</span></a>
+<div class='author'>Cannon, Richard, 1779-1865</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52258, {&quot;Title&quot;:&quot;History of the Royal Regiment of Artillery, Vol. 1 - Compiled from the Original Records&quot;,&quot;Topics&quot;:[&quot;Great Britain. Army. Royal Regiment of Artillery&quot;],&quot;Primary&quot;:&quot;52258.htm&quot;,&quot;CreatorNames&quot;:[&quot;Duncan, Francis, 1836-1888&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;52258&quot;});" class='title'>History of the Royal Regiment of Artillery, Vol. 1 -<br><span class='subtitle'>Compiled from the Original Records</span></a>
+<div class='author'>Duncan, Francis, 1836-1888</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52723, {&quot;Title&quot;:&quot;The Story of the British Army&quot;,&quot;Topics&quot;:[&quot;Great Britain. Army -- History&quot;],&quot;Primary&quot;:&quot;52723.htm&quot;,&quot;CreatorNames&quot;:[&quot;King, Charles Cooper&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;52723&quot;});" class='title'>The Story of the British Army</a>
+<div class='author'>King, Charles Cooper</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52793, {&quot;Title&quot;:&quot;Historical Record of the Seventeenth, or the Leicestershire Regiment of Foot - Containing an Account of the Formation of the Regiment in 1688, and of Its Subsequent Services to 1848&quot;,&quot;Topics&quot;:[&quot;Great Britain. Army. Royal Leicestershire Regiment&quot;],&quot;Primary&quot;:&quot;52793.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cannon, Richard, 1779-1865&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;52793&quot;});" class='title'>Historical Record of the Seventeenth, or the Leicestershire Regiment of Foot -<br><span class='subtitle'>Containing an Account of the Formation of the Regiment in 1688, and of Its Subsequent Services to 1848</span></a>
+<div class='author'>Cannon, Richard, 1779-1865</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52974, {&quot;Title&quot;:&quot;The British Army from Within&quot;,&quot;Topics&quot;:[&quot;Great Britain. Army&quot;],&quot;Primary&quot;:&quot;52974.htm&quot;,&quot;CreatorNames&quot;:[&quot;Vivian, Evelyn Charles, 1882-1947&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;52974&quot;});" class='title'>The British Army from Within</a>
+<div class='author'>Vivian, Evelyn Charles, 1882-1947</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53308, {&quot;Title&quot;:&quot;Historical Record of the Eighteenth, or the Royal Irish Regiment of Foot - Containing an Account of the Formation of the Regiment in 1684, and of Its Subsequent Services to 1848.&quot;,&quot;Topics&quot;:[&quot;Great Britain. Army. Regiment of Foot, 18th (Royal Irish)&quot;],&quot;Primary&quot;:&quot;53308.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cannon, Richard, 1779-1865&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;53308&quot;});" class='title'>Historical Record of the Eighteenth, or the Royal Irish Regiment of Foot -<br><span class='subtitle'>Containing an Account of the Formation of the Regiment in 1684, and of Its Subsequent Services to 1848.</span></a>
+<div class='author'>Cannon, Richard, 1779-1865</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53417, {&quot;Title&quot;:&quot;The French Army from Within&quot;,&quot;Topics&quot;:[&quot;France. Armée&quot;],&quot;Primary&quot;:&quot;53417.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;53417&quot;});" class='title'>The French Army from Within</a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53507, {&quot;Title&quot;:&quot;The New Army in Training&quot;,&quot;Topics&quot;:[&quot;World War, 1914-1918 -- Great Britain&quot;,&quot;Great Britain. Army&quot;,&quot;Great Britain. Army -- History -- World War, 1914-1918&quot;,&quot;Basic training (Military education) -- Great Britain -- History&quot;],&quot;Primary&quot;:&quot;53507.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kipling, Rudyard, 1865-1936&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;53507&quot;});" class='title'>The New Army in Training</a>
+<div class='author'>Kipling, Rudyard, 1865-1936</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53900, {&quot;Title&quot;:&quot;Historical Record of the Seventh, or the Queen&#39;s Own Regiment of Hussars - Containing an Account of the Origin of the Regiment in 1690, and of Its Subsequent Services to 1842&quot;,&quot;Topics&quot;:[&quot;Great Britain. Army. Queen&#39;s Own Hussars, 7th&quot;],&quot;Primary&quot;:&quot;53900.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cannon, Richard, 1779-1865&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;53900&quot;});" class='title'>Historical Record of the Seventh, or the Queen's Own Regiment of Hussars -<br><span class='subtitle'>Containing an Account of the Origin of the Regiment in 1690, and of Its Subsequent Services to 1842</span></a>
+<div class='author'>Cannon, Richard, 1779-1865</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54029, {&quot;Title&quot;:&quot;Historical Record of the Twenty-first Regiment, or the Royal North British Fusiliers - Containing an Account of the Formation of the Regiment in 1678, and of Its Subsequent Services to 1849&quot;,&quot;Topics&quot;:[&quot;Great Britain. Army. Royal Scots Fusiliers&quot;],&quot;Primary&quot;:&quot;54029.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cannon, Richard, 1779-1865&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;54029&quot;});" class='title'>Historical Record of the Twenty-first Regiment, or the Royal North British Fusiliers -<br><span class='subtitle'>Containing an Account of the Formation of the Regiment in 1678, and of Its Subsequent Services to 1849</span></a>
+<div class='author'>Cannon, Richard, 1779-1865</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54054, {&quot;Title&quot;:&quot;Historical Record of the Twelfth, or the East Suffolk, Regiment of Foot - Containing an Account of the Formation of the Regiment in 1685, and of Its Subsequent Services to 1847&quot;,&quot;Topics&quot;:[&quot;Great Britain. Army. Suffolk Regiment&quot;],&quot;Primary&quot;:&quot;54054.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cannon, Richard, 1779-1865&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;54054&quot;});" class='title'>Historical Record of the Twelfth, or the East Suffolk, Regiment of Foot -<br><span class='subtitle'>Containing an Account of the Formation of the Regiment in 1685, and of Its Subsequent Services to 1847</span></a>
+<div class='author'>Cannon, Richard, 1779-1865</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54107, {&quot;Title&quot;:&quot;Historical Record of the Fourteenth, or, the Buckinghamshire Regiment of Foot - Containing an Account of the Formation of the Regiment in 1685, and of Its Subsequent Services to 1845&quot;,&quot;Topics&quot;:[&quot;Great Britain. Army. Regiment of Foot, 14th (Buckinghamshire)&quot;],&quot;Primary&quot;:&quot;54107.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cannon, Richard, 1779-1865&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;54107&quot;});" class='title'>Historical Record of the Fourteenth, or, the Buckinghamshire Regiment of Foot -<br><span class='subtitle'>Containing an Account of the Formation of the Regiment in 1685, and of Its Subsequent Services to 1845</span></a>
+<div class='author'>Cannon, Richard, 1779-1865</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54607, {&quot;Title&quot;:&quot;Historical Record of the Fifth, or Princess Charlotte of Wales&#39;s Regiment of Dragoon Guards - Containing an Account of the Formation of the Regiment in 1685; with Its Subsequent Services to 1838&quot;,&quot;Topics&quot;:[&quot;Great Britain. Army. Princess Charlotte of Wales&#39;s Dragoon Guards, 5th&quot;],&quot;Primary&quot;:&quot;54607.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cannon, Richard, 1779-1865&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;54607&quot;});" class='title'>Historical Record of the Fifth, or Princess Charlotte of Wales's Regiment of Dragoon Guards -<br><span class='subtitle'>Containing an Account of the Formation of the Regiment in 1685; with Its Subsequent Services to 1838</span></a>
+<div class='author'>Cannon, Richard, 1779-1865</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54859, {&quot;Title&quot;:&quot;Organization: How Armies are Formed for War&quot;,&quot;Topics&quot;:[&quot;Armies -- Organization&quot;],&quot;Primary&quot;:&quot;54859.htm&quot;,&quot;CreatorNames&quot;:[&quot;Foster, Hubert, 1855-&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;54859&quot;});" class='title'>Organization:<br><span class='subtitle'>How Armies are Formed for War</span></a>
+<div class='author'>Foster, Hubert, 1855-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54891, {&quot;Title&quot;:&quot;Historical Record of the First, or the Royal Regiment of Dragoons - Containing an Account of Its Formation in the Reign of King Charles the Second, and of Its Subsequent Services to 1839&quot;,&quot;Topics&quot;:[&quot;Great Britain. Army. Dragoons, 1st (Royal)&quot;],&quot;Primary&quot;:&quot;54891.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cannon, Richard, 1779-1865&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;54891&quot;});" class='title'>Historical Record of the First, or the Royal Regiment of Dragoons -<br><span class='subtitle'>Containing an Account of Its Formation in the Reign of King Charles the Second, and of Its Subsequent Services to 1839</span></a>
+<div class='author'>Cannon, Richard, 1779-1865</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54908, {&quot;Title&quot;:&quot;Historical Record of the Thirteenth Regiment of Light Dragoons - Containing an Account of the Formation of the Regiment in 1715, and of Its Subsequent Services to 1842&quot;,&quot;Topics&quot;:[&quot;Great Britain. Army. Regiment of Light Dragoons, 13th&quot;],&quot;Primary&quot;:&quot;54908.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cannon, Richard, 1779-1865&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;54908&quot;});" class='title'>Historical Record of the Thirteenth Regiment of Light Dragoons -<br><span class='subtitle'>Containing an Account of the Formation of the Regiment in 1715, and of Its Subsequent Services to 1842</span></a>
+<div class='author'>Cannon, Richard, 1779-1865</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54939, {&quot;Title&quot;:&quot;Historical Record of the Fourteenth, or the King&#39;s, Regiment of Light Dragoons - Containing an Account of the Formation of the Regiment and of Its Subsequent Services&quot;,&quot;Topics&quot;:[&quot;Great Britain. Army. Regiment of Light Dragoons, 14th&quot;],&quot;Primary&quot;:&quot;54939.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cannon, Richard, 1779-1865&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;54939&quot;});" class='title'>Historical Record of the Fourteenth, or the King's, Regiment of Light Dragoons -<br><span class='subtitle'>Containing an Account of the Formation of the Regiment and of Its Subsequent Services</span></a>
+<div class='author'>Cannon, Richard, 1779-1865</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55019, {&quot;Title&quot;:&quot;Historical Record of the Fifteenth, or, the Yorkshire East Riding, Regiment of Foot - Containing an Account of the Formation of the Regiment in 1685, and of Its Subsequent Services to 1848&quot;,&quot;Topics&quot;:[&quot;Great Britain. Army. East Yorkshire Regiment&quot;],&quot;Primary&quot;:&quot;55019.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cannon, Richard, 1779-1865&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;55019&quot;});" class='title'>Historical Record of the Fifteenth, or, the Yorkshire East Riding, Regiment of Foot -<br><span class='subtitle'>Containing an Account of the Formation of the Regiment in 1685, and of Its Subsequent Services to 1848</span></a>
+<div class='author'>Cannon, Richard, 1779-1865</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55036, {&quot;Title&quot;:&quot;Historical Record of the Sixteenth, or, the Bedfordshire Regiment of Foot - Containing an Account of the Formation of the Regiment in 1688, and of Its Subsequent Services to 1848&quot;,&quot;Topics&quot;:[&quot;Great Britain. Army. Regiment of Foot, 16th (Bedfordshire)&quot;],&quot;Primary&quot;:&quot;55036.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cannon, Richard, 1779-1865&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;55036&quot;});" class='title'>Historical Record of the Sixteenth, or, the Bedfordshire Regiment of Foot -<br><span class='subtitle'>Containing an Account of the Formation of the Regiment in 1688, and of Its Subsequent Services to 1848</span></a>
+<div class='author'>Cannon, Richard, 1779-1865</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55087, {&quot;Title&quot;:&quot;Historical Record of the Forty-sixth or South Devonshire Regiment of Foot - Containing an Account of the Formation of the Regiment in 1741 and of Its Subsequent Services to 1851&quot;,&quot;Topics&quot;:[&quot;Great Britain. Army. Regiment of Foot, 46th (South Devonshire)&quot;],&quot;Primary&quot;:&quot;55087.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cannon, Richard, 1779-1865&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;55087&quot;});" class='title'>Historical Record of the Forty-sixth or South Devonshire Regiment of Foot -<br><span class='subtitle'>Containing an Account of the Formation of the Regiment in 1741 and of Its Subsequent Services to 1851</span></a>
+<div class='author'>Cannon, Richard, 1779-1865</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55109, {&quot;Title&quot;:&quot;Blue Shirt and Khaki: A Comparison&quot;,&quot;Topics&quot;:[&quot;Military art and science&quot;,&quot;South African War, 1899-1902&quot;,&quot;Great Britain. Army&quot;,&quot;United States. Army&quot;],&quot;Primary&quot;:&quot;55109.htm&quot;,&quot;CreatorNames&quot;:[&quot;Archibald, James F. J. (Francis Jewell), 1871-&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;55109&quot;});" class='title'>Blue Shirt and Khaki:<br><span class='subtitle'>A Comparison</span></a>
+<div class='author'>Archibald, James F. J. (Francis Jewell), 1871-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55235, {&quot;Title&quot;:&quot;Lord Roberts&#39; Message to the Nation&quot;,&quot;Topics&quot;:[&quot;Great Britain -- Defenses&quot;,&quot;Great Britain. Army&quot;],&quot;Primary&quot;:&quot;55235.htm&quot;,&quot;CreatorNames&quot;:[&quot;Roberts, Frederick Sleigh Roberts, Earl, 1832-1914&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;55235&quot;});" class='title'>Lord Roberts' Message to the Nation</a>
+<div class='author'>Roberts, Frederick Sleigh Roberts, Earl, 1832-1914</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55295, {&quot;Title&quot;:&quot;Historical Record of the Second, or Queen&#39;s Royal Regiment of Foot - Containing an Account of the Formation of the Regiment in the Year 1661, and of Its Subsequent Services to 1837&quot;,&quot;Topics&quot;:[&quot;Great Britain. Army. Queen&#39;s Royal Regiment (West Surrey)&quot;],&quot;Primary&quot;:&quot;55295.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cannon, Richard, 1779-1865&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;55295&quot;});" class='title'>Historical Record of the Second, or Queen's Royal Regiment of Foot -<br><span class='subtitle'>Containing an Account of the Formation of the Regiment in the Year 1661, and of Its Subsequent Services to 1837</span></a>
+<div class='author'>Cannon, Richard, 1779-1865</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55391, {&quot;Title&quot;:&quot;Historical Record of the Fourth, or the King&#39;s Own, Regiment of Foot - Containing an Account of the Formation of the Regiment in 1680, and of Its Subsequent Services to 1839&quot;,&quot;Topics&quot;:[&quot;Great Britain. Army. King&#39;s Own Royal Regiment (Lancaster)&quot;],&quot;Primary&quot;:&quot;55391.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cannon, Richard, 1779-1865&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;55391&quot;});" class='title'>Historical Record of the Fourth, or the King's Own, Regiment of Foot -<br><span class='subtitle'>Containing an Account of the Formation of the Regiment in 1680, and of Its Subsequent Services to 1839</span></a>
+<div class='author'>Cannon, Richard, 1779-1865</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55437, {&quot;Title&quot;:&quot;Historical Record of the Fifth Regiment of Foot, or Northumberland Fusiliers - Containing an Account of the Formation of the Regiment in 1674, and of Its Subsequent Services to 1837&quot;,&quot;Topics&quot;:[&quot;Great Britain. Army. Northumberland Fusiliers&quot;],&quot;Primary&quot;:&quot;55437.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cannon, Richard, 1779-1865&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;55437&quot;});" class='title'>Historical Record of the Fifth Regiment of Foot, or Northumberland Fusiliers -<br><span class='subtitle'>Containing an Account of the Formation of the Regiment in 1674, and of Its Subsequent Services to 1837</span></a>
+<div class='author'>Cannon, Richard, 1779-1865</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55536, {&quot;Title&quot;:&quot;Historical Record of the Sixth, or Inniskilling Regiment of Dragoons - Containing an Account of the Formation of the Regiment in 1689, and of Its Subsequent Services to 1846&quot;,&quot;Topics&quot;:[&quot;Great Britain. Army. Inniskilling Dragoons, 6th&quot;],&quot;Primary&quot;:&quot;55536.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cannon, Richard, 1779-1865&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;55536&quot;});" class='title'>Historical Record of the Sixth, or Inniskilling Regiment of Dragoons -<br><span class='subtitle'>Containing an Account of the Formation of the Regiment in 1689, and of Its Subsequent Services to 1846</span></a>
+<div class='author'>Cannon, Richard, 1779-1865</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55629, {&quot;Title&quot;:&quot;Historical Record of the Sixth, or Royal First Warwickshire Regiment of Foot - Containing an Account of the Formation of the Regiment in the Year 1674, and of Its Subsequent Services to 1838&quot;,&quot;Topics&quot;:[&quot;Great Britain. Army. Infantry. 6th Regiment (Royal 1st Warwickshire)&quot;],&quot;Primary&quot;:&quot;55629.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cannon, Richard, 1779-1865&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;55629&quot;});" class='title'>Historical Record of the Sixth, or Royal First Warwickshire Regiment of Foot -<br><span class='subtitle'>Containing an Account of the Formation of the Regiment in the Year 1674, and of Its Subsequent Services to 1838</span></a>
+<div class='author'>Cannon, Richard, 1779-1865</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55968, {&quot;Title&quot;:&quot;A History of the British Army, Vol. 1 - First Part—to the Close of the Seven Years&#39; War&quot;,&quot;Topics&quot;:[&quot;Great Britain. Army -- History&quot;,&quot;Great Britain -- History, Military&quot;],&quot;Primary&quot;:&quot;55968.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fortescue, J. W. (John William), Sir, 1859-1933&quot;],&quot;LoCC&quot;:[&quot;DA&quot;,&quot;UA&quot;],&quot;PG_ID&quot;:&quot;55968&quot;});" class='title'>A History of the British Army, Vol. 1 -<br><span class='subtitle'>First Part—to the Close of the Seven Years' War</span></a>
+<div class='author'>Fortescue, J. W. (John William), Sir, 1859-1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56220, {&quot;Title&quot;:&quot;Historical record of the Seventh Regiment, or the Royal Fusiliers - Containing an Account of the Formation of the Regiment in 1685, and of Its Subsequent Services to 1846.&quot;,&quot;Topics&quot;:[&quot;Great Britain. Army. Royal Fusiliers (City of London Regiment)&quot;],&quot;Primary&quot;:&quot;56220.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cannon, Richard, 1779-1865&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;56220&quot;});" class='title'>Historical record of the Seventh Regiment, or the Royal Fusiliers -<br><span class='subtitle'>Containing an Account of the Formation of the Regiment in 1685, and of Its Subsequent Services to 1846.</span></a>
+<div class='author'>Cannon, Richard, 1779-1865</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56293, {&quot;Title&quot;:&quot;Historical Record of the Tenth, or the North Lincolnshire, Regiment of Foot, - Containing an Account of the Formation of the Regiment in 1685, and of its Subsequent Services to 1847&quot;,&quot;Topics&quot;:[&quot;Great Britain. Army. North Lincolnshire Regiment of Foot&quot;],&quot;Primary&quot;:&quot;56293.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cannon, Richard, 1779-1865&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;56293&quot;});" class='title'>Historical Record of the Tenth, or the North Lincolnshire, Regiment of Foot, -<br><span class='subtitle'>Containing an Account of the Formation of the Regiment in 1685, and of its Subsequent Services to 1847</span></a>
+<div class='author'>Cannon, Richard, 1779-1865</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56294, {&quot;Title&quot;:&quot;Historical Record of the Twelfth, or the Prince of Wales&#39;s Royal Regiment of Lancers - Containing an Account of the Formation of the Regiment in 1715, and of Its Subsequent Services to 1848.&quot;,&quot;Topics&quot;:[&quot;Great Britain. Army. Royal Lancers, 12th&quot;],&quot;Primary&quot;:&quot;56294.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cannon, Richard, 1779-1865&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;56294&quot;});" class='title'>Historical Record of the Twelfth, or the Prince of Wales's Royal Regiment of Lancers -<br><span class='subtitle'>Containing an Account of the Formation of the Regiment in 1715, and of Its Subsequent Services to 1848.</span></a>
+<div class='author'>Cannon, Richard, 1779-1865</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56409, {&quot;Title&quot;:&quot;Historical record of the Seventeenth Regiment of Light Dragoons;—Lancers - Containing an account of the formation of the regiment in 1759 and of its subsequent services to 1841.&quot;,&quot;Topics&quot;:[&quot;Great Britain. Army. Lancers, 17th -- History&quot;],&quot;Primary&quot;:&quot;56409.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cannon, Richard, 1779-1865&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;56409&quot;});" class='title'>Historical record of the Seventeenth Regiment of Light Dragoons;<br><span class='subtitle'>—Lancers - Containing an account of the formation of the regiment in 1759 and of its subsequent services to 1841.</span></a>
+<div class='author'>Cannon, Richard, 1779-1865</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56609, {&quot;Title&quot;:&quot;A History of the British Army, Vol. 2 - First Part—to the Close of the Seven Years&#39; War&quot;,&quot;Topics&quot;:[&quot;Great Britain. Army -- History&quot;,&quot;Great Britain -- History, Military&quot;],&quot;Primary&quot;:&quot;56609.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fortescue, J. W. (John William), Sir, 1859-1933&quot;],&quot;LoCC&quot;:[&quot;DA&quot;,&quot;UA&quot;],&quot;PG_ID&quot;:&quot;56609&quot;});" class='title'>A History of the British Army, Vol. 2 -<br><span class='subtitle'>First Part—to the Close of the Seven Years' War</span></a>
+<div class='author'>Fortescue, J. W. (John William), Sir, 1859-1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56837, {&quot;Title&quot;:&quot;Historical Record of the Fifty-Third, or the Shropshire Regiment of Foot - Containing an account of the formation of the regiment in 1755 and of its subsequent services to 1848&quot;,&quot;Topics&quot;:[&quot;Great Britain. Army. Regiment of Foot, 53rd -- History&quot;],&quot;Primary&quot;:&quot;56837.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cannon, Richard, 1779-1865&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;56837&quot;});" class='title'>Historical Record of the Fifty-Third, or the Shropshire Regiment of Foot -<br><span class='subtitle'>Containing an account of the formation of the regiment in 1755 and of its subsequent services to 1848</span></a>
+<div class='author'>Cannon, Richard, 1779-1865</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57663, {&quot;Title&quot;:&quot;Historical record of the Sixty-Seventh, or the South Hampshire Regiment - Containing an account of the formation of the regiment in 1758, and of its subsequent services to 1849&quot;,&quot;Topics&quot;:[&quot;Great Britain. Army. Regiment of Foot, 67th (South Hampshire)&quot;],&quot;Primary&quot;:&quot;57663.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cannon, Richard, 1779-1865&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;57663&quot;});" class='title'>Historical record of the Sixty-Seventh, or the South Hampshire Regiment -<br><span class='subtitle'>Containing an account of the formation of the regiment in 1758, and of its subsequent services to 1849</span></a>
+<div class='author'>Cannon, Richard, 1779-1865</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57761, {&quot;Title&quot;:&quot;A Brief History of the King&#39;s Royal Rifle Corps&quot;,&quot;Topics&quot;:[&quot;Great Britain. Army. King&#39;s Royal Rifle Corps&quot;],&quot;Primary&quot;:&quot;57761.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hutton, Edward, Sir, 1848-1923 [Editor]&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;57761&quot;});" class='title'>A Brief History of the King's Royal Rifle Corps</a>
+<div class='author'>Hutton, Edward, Sir, 1848-1923 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57897, {&quot;Title&quot;:&quot;The Story of the Highland Regiments&quot;,&quot;Topics&quot;:[&quot;Great Britain. Army&quot;],&quot;Primary&quot;:&quot;57897.htm&quot;,&quot;CreatorNames&quot;:[&quot;Watson, Frederick, 1885-1935&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;57897&quot;});" class='title'>The Story of the Highland Regiments</a>
+<div class='author'>Watson, Frederick, 1885-1935</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58209, {&quot;Title&quot;:&quot;History of the Royal Regiment of Artillery Vol. 2 - Compiled from the Original Records&quot;,&quot;Topics&quot;:[&quot;Great Britain. Army. Royal Regiment of Artillery&quot;],&quot;Primary&quot;:&quot;58209.htm&quot;,&quot;CreatorNames&quot;:[&quot;Duncan, Francis, 1836-1888&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;58209&quot;});" class='title'>History of the Royal Regiment of Artillery Vol. 2 -<br><span class='subtitle'>Compiled from the Original Records</span></a>
+<div class='author'>Duncan, Francis, 1836-1888</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58852, {&quot;Title&quot;:&quot;A History of the Coldstream Guards, from 1815 to 1895&quot;,&quot;Topics&quot;:[&quot;Great Britain -- History -- Victoria, 1837-1901&quot;,&quot;Great Britain. Army. Coldstream Guards&quot;],&quot;Primary&quot;:&quot;58852.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ross, J. (John), 1848-1926&quot;,&quot;Wilkinson, Nevile Rodwell, Sir, 1869-1940 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;58852&quot;});" class='title'>A History of the Coldstream Guards, from 1815 to 1895</a>
+<div class='author'>Ross, J. (John), 1848-1926, Wilkinson, Nevile Rodwell, Sir, 1869-1940 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59779, {&quot;Title&quot;:&quot;The Campaigns and History of the Royal Irish Regiment, [v. 1,] from 1684 to 1902&quot;,&quot;Topics&quot;:[&quot;Great Britain. Army. Royal Irish Regiment&quot;],&quot;Primary&quot;:&quot;59779.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gretton, G. le M. (George Le Mesurier), -1934&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;59779&quot;});" class='title'>The Campaigns and History of the Royal Irish Regiment, [v. 1,] from 1684 to 1902</a>
+<div class='author'>Gretton, G. le M. (George Le Mesurier), -1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60048, {&quot;Title&quot;:&quot;The History of the Rifle Brigade (the Prince Consort&#39;s Own) Formerly the 95th&quot;,&quot;Topics&quot;:[&quot;Great Britain. Army. Rifle Brigade (Prince Consort&#39;s Own)&quot;],&quot;Primary&quot;:&quot;60048.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cope, William Henry, 1811-1892&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;60048&quot;});" class='title'>The History of the Rifle Brigade (the Prince Consort's Own) Formerly the 95th</a>
+<div class='author'>Cope, William Henry, 1811-1892</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60290, {&quot;Title&quot;:&quot;The Nineteenth and Their Times - Being an Account of the Four Cavalry Regiments in the British Army That Have Borne the Number Nineteen and of the Campaigns in Which They Served&quot;,&quot;Topics&quot;:[&quot;Great Britain. Army. Cavalry. 19th Regiment, 1759-1763&quot;,&quot;Great Britain. Army. Cavalry. 19th Regiment, 1779-1783&quot;,&quot;Great Britain. Army. Cavalry. 23rd Light Dragoons, 1781-1786&quot;,&quot;Great Britain. Army. Cavalry. 19th Light Dragoons, 1786-1821&quot;,&quot;Great Britain. Army. Royal Hussars, 19th (Queen Alexandra&#39;s Own)&quot;,&quot;United States -- History -- War of 1812 -- Regimental histories, British&quot;],&quot;Primary&quot;:&quot;60290.htm&quot;,&quot;CreatorNames&quot;:[&quot;Biddulph, J. (John), 1840-1921&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;60290&quot;});" class='title'>The Nineteenth and Their Times -<br><span class='subtitle'>Being an Account of the Four Cavalry Regiments in the British Army That Have Borne the Number Nineteen and of the Campaigns in Which They Served</span></a>
+<div class='author'>Biddulph, J. (John), 1840-1921</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60449, {&quot;Title&quot;:&quot;Historical Record of the Seventy-first Regiment, Highland Light Infantry - Containing an Account of the Formation of the Regiment in 1777, and of Its Subsequent Services to 1852&quot;,&quot;Topics&quot;:[&quot;Great Britain. Army. Regiment of Foot, 71st (Highland Light Infantry)&quot;],&quot;Primary&quot;:&quot;60449.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cannon, Richard, 1779-1865&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;60449&quot;});" class='title'>Historical Record of the Seventy-first Regiment, Highland Light Infantry -<br><span class='subtitle'>Containing an Account of the Formation of the Regiment in 1777, and of Its Subsequent Services to 1852</span></a>
+<div class='author'>Cannon, Richard, 1779-1865</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61125, {&quot;Title&quot;:&quot;Historical Record of the Nineteenth, or the First Yorkshire North Riding Regiment of Foot - Containing an account of the formation of the regiment in 1688, and of its subsequent services to 1848&quot;,&quot;Topics&quot;:[&quot;Great Britain. Army. Green Howards&quot;],&quot;Primary&quot;:&quot;61125.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cannon, Richard, 1779-1865&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;61125&quot;});" class='title'>Historical Record of the Nineteenth, or the First Yorkshire North Riding Regiment of Foot -<br><span class='subtitle'>Containing an account of the formation of the regiment in 1688, and of its subsequent services to 1848</span></a>
+<div class='author'>Cannon, Richard, 1779-1865</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61365, {&quot;Title&quot;:&quot;The Armies of Europe&quot;,&quot;Topics&quot;:[&quot;Armies -- Europe -- History -- 19th century&quot;,&quot;Europe -- Armed Forces -- History -- 19th century&quot;],&quot;Primary&quot;:&quot;61365.htm&quot;,&quot;CreatorNames&quot;:[&quot;Köppen, Fedor von, 1830-1904&quot;,&quot;Knötel, Richard, 1857-1914 [Illustrator]&quot;,&quot;Gleichen, Edward, Lord, 1863-1937 [Translator]&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;61365&quot;});" class='title'>The Armies of Europe</a>
+<div class='author'>Köppen, Fedor von, 1830-1904, Knötel, Richard, 1857-1914 [Illustrator], Gleichen, Edward, Lord, 1863-1937 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63490, {&quot;Title&quot;:&quot;The Altar of Freedom&quot;,&quot;Topics&quot;:[&quot;Draft&quot;,&quot;United States -- Defenses&quot;],&quot;Primary&quot;:&quot;63490.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rinehart, Mary Roberts, 1876-1958&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;63490&quot;});" class='title'>The Altar of Freedom</a>
+<div class='author'>Rinehart, Mary Roberts, 1876-1958</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64581, {&quot;Title&quot;:&quot;Historical record of the Twenty-second, or the Cheshire Regiment of Foot - containing an account of the formation of the regiment in 1689, and of its subsequent services to 1849&quot;,&quot;Topics&quot;:[&quot;Great Britain. Army. Regiment of Foot, 22nd (Cheshire)&quot;],&quot;Primary&quot;:&quot;64581.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cannon, Richard, 1779-1865&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;64581&quot;});" class='title'>Historical record of the Twenty-second, or the Cheshire Regiment of Foot -<br><span class='subtitle'>containing an account of the formation of the regiment in 1689, and of its subsequent services to 1849</span></a>
+<div class='author'>Cannon, Richard, 1779-1865</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66429, {&quot;Title&quot;:&quot;Historical record of the Thirteenth, First Somerset, or the Prince Albert&#39;s  Regiment of Light Infantry - containing an account of the formation of the regiment in 1685, and of its subsequent services to 1848.&quot;,&quot;Topics&quot;:[&quot;Great Britain. Army. Somerset Light Infantry&quot;],&quot;Primary&quot;:&quot;66429.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cannon, Richard, 1779-1865&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;66429&quot;});" class='title'>Historical record of the Thirteenth, First Somerset, or the Prince Albert's  Regiment of Light Infantry -<br><span class='subtitle'>containing an account of the formation of the regiment in 1685, and of its subsequent services to 1848.</span></a>
+<div class='author'>Cannon, Richard, 1779-1865</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66459, {&quot;Title&quot;:&quot;Historical Record of the Thirty-fourth, or the Cumberland Regiment of Foot - containing an account of the formation of the regiment in 1702 and of its subsequent services to 1844&quot;,&quot;Topics&quot;:[&quot;Great Britain. Army. Infantry. 34th Regiment (Cumberland)&quot;],&quot;Primary&quot;:&quot;66459.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cannon, Richard, 1779-1865&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;66459&quot;});" class='title'>Historical Record of the Thirty-fourth, or the Cumberland Regiment of Foot -<br><span class='subtitle'>containing an account of the formation of the regiment in 1702 and of its subsequent services to 1844</span></a>
+<div class='author'>Cannon, Richard, 1779-1865</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66598, {&quot;Title&quot;:&quot;Historical Record of the Thirty-sixth, or the Herefordshire Regiment of Foot: containing an account of the formation of the regiment in 1701, and of its subsequent services to 1852&quot;,&quot;Topics&quot;:[&quot;Great Britain. Army. Regiment of Foot, 36th -- History&quot;,&quot;Great Britain. Army. Herefordshire Light Infantry -- History&quot;],&quot;Primary&quot;:&quot;66598.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cannon, Richard, 1779-1865&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;66598&quot;});" class='title'>Historical Record of the Thirty-sixth, or the Herefordshire Regiment of Foot:<br><span class='subtitle'>containing an account of the formation of the regiment in 1701, and of its subsequent services to 1852</span></a>
+<div class='author'>Cannon, Richard, 1779-1865</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66614, {&quot;Title&quot;:&quot;Historical Record of the Thirty-ninth, or the Dorsetshire Regiment of Foot: containing an account of the formation of the regiment in 1702, and of its subsequent services to 1853.&quot;,&quot;Topics&quot;:[&quot;Great Britain. Army. Dorset Regiment -- History&quot;,&quot;Great Britain. Army. Regiment of Foot, 39th (Dorsetshire) -- History&quot;],&quot;Primary&quot;:&quot;66614.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cannon, Richard, 1779-1865&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;66614&quot;});" class='title'>Historical Record of the Thirty-ninth, or the Dorsetshire Regiment of Foot:<br><span class='subtitle'>containing an account of the formation of the regiment in 1702, and of its subsequent services to 1853.</span></a>
+<div class='author'>Cannon, Richard, 1779-1865</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66621, {&quot;Title&quot;:&quot;Historical Record of the Fifty-sixth, or the West Essex Regiment of Foot - Containing an account of the formation of the regiment in 1755, and of its subsequent services to 1844.&quot;,&quot;Topics&quot;:[&quot;Great Britain. Army. Regiment of Foot, 56th (West Essex) -- History&quot;],&quot;Primary&quot;:&quot;66621.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cannon, Richard, 1779-1865&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;66621&quot;});" class='title'>Historical Record of the Fifty-sixth, or the West Essex Regiment of Foot -<br><span class='subtitle'>Containing an account of the formation of the regiment in 1755, and of its subsequent services to 1844.</span></a>
+<div class='author'>Cannon, Richard, 1779-1865</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66629, {&quot;Title&quot;:&quot;Historical Record of the Sixty-first, or the South Gloucestershire Regiment of Foot - Containing an account of the formation of the regiment in 1758, and of its subsequent services to 1844.&quot;,&quot;Topics&quot;:[&quot;Great Britain. Army. Regiment of Foot, 61st -- History&quot;,&quot;Great Britain. Army. Regiment of Foot, 61st (South Gloucestershire) -- History&quot;],&quot;Primary&quot;:&quot;66629.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cannon, Richard, 1779-1865&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;66629&quot;});" class='title'>Historical Record of the Sixty-first, or the South Gloucestershire Regiment of Foot -<br><span class='subtitle'>Containing an account of the formation of the regiment in 1758, and of its subsequent services to 1844.</span></a>
+<div class='author'>Cannon, Richard, 1779-1865</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66719, {&quot;Title&quot;:&quot;Historical Record of the Seventieth, or, the Surrey Regiment of Foot - Containing an account of the formation of the regiment in 1758, and of its  subsequent services to 1848&quot;,&quot;Topics&quot;:[&quot;Great Britain. Army. Regiment of Foot, 70th (Surrey)&quot;],&quot;Primary&quot;:&quot;66719.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cannon, Richard, 1779-1865&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;66719&quot;});" class='title'>Historical Record of the Seventieth, or, the Surrey Regiment of Foot -<br><span class='subtitle'>Containing an account of the formation of the regiment in 1758, and of its  subsequent services to 1848</span></a>
+<div class='author'>Cannon, Richard, 1779-1865</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66796, {&quot;Title&quot;:&quot;Historical Record of the Thirty-first, or, the Huntingdonshire Regiment of Foot; - containing an account of the formation of the regiment in 1702,  and of its subsequent services to 1850&quot;,&quot;Topics&quot;:[&quot;Great Britain. Army -- History&quot;,&quot;Great Britain. Army. Regiment of Foot, 31st&quot;],&quot;Primary&quot;:&quot;66796.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cannon, Richard, 1779-1865&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;66796&quot;});" class='title'>Historical Record of the Thirty-first, or, the Huntingdonshire Regiment of Foot;<br><span class='subtitle'>- containing an account of the formation of the regiment in 1702,  and of its subsequent services to 1850</span></a>
+<div class='author'>Cannon, Richard, 1779-1865</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66858, {&quot;Title&quot;:&quot;History of the Cape Mounted Riflemen - With a Brief Account of the Colony of the Cape of Good Hope&quot;,&quot;Topics&quot;:[&quot;Cape of Good Hope (South Africa) -- History&quot;,&quot;Great Britain. Army. Cape Mounted Riflemen -- History&quot;],&quot;Primary&quot;:&quot;66858.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cannon, Richard, 1779-1865&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;66858&quot;});" class='title'>History of the Cape Mounted Riflemen -<br><span class='subtitle'>With a Brief Account of the Colony of the Cape of Good Hope</span></a>
+<div class='author'>Cannon, Richard, 1779-1865</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66945, {&quot;Title&quot;:&quot;Memoirs and Services of the Eighty-third Regiment, County of Dublin, from 1793 to 1907 - Including the Campaigns of the Regiment in the West Indies, Africa, the Peninsula, Ceylon, Canada, and India&quot;,&quot;Topics&quot;:[&quot;Great Britain -- History, Military&quot;,&quot;Great Britain. Army. Regiment of Foot, 83rd (County of Dublin) -- History&quot;,&quot;Great Britain. Army. Royal Irish Rifles. Battalion, 1st -- History&quot;],&quot;Primary&quot;:&quot;66945.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bray, Edward William, 1823-1891&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;66945&quot;});" class='title'>Memoirs and Services of the Eighty-third Regiment, County of Dublin, from 1793 to 1907 -<br><span class='subtitle'>Including the Campaigns of the Regiment in the West Indies, Africa, the Peninsula, Ceylon, Canada, and India</span></a>
+<div class='author'>Bray, Edward William, 1823-1891</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66993, {&quot;Title&quot;:&quot;Historical Record of the Seventy-Second Regiment, or the Duke of Albany&#39;s Own Highlanders - Containing an account of the formation of the regiment in 1778,  and of its subsequent services to 1848&quot;,&quot;Topics&quot;:[&quot;Great Britain. Army. Seaforth Highlanders -- History&quot;,&quot;Great Britain. Army. Regiment of Foot, 72nd -- History&quot;],&quot;Primary&quot;:&quot;66993.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cannon, Richard, 1779-1865&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;66993&quot;});" class='title'>Historical Record of the Seventy-Second Regiment, or the Duke of Albany's Own Highlanders -<br><span class='subtitle'>Containing an account of the formation of the regiment in 1778,  and of its subsequent services to 1848</span></a>
+<div class='author'>Cannon, Richard, 1779-1865</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67001, {&quot;Title&quot;:&quot;Historical Record of the Seventy-Third Regiment - Containing an account of the formation of the Regiment from the period of its being raised as the Second Battalion of the Forty-Second Royal Highlanders in 1780 and of its subsequent services to 1851&quot;,&quot;Topics&quot;:[&quot;Great Britain. Army. Regiment of Foot, 73rd -- History&quot;],&quot;Primary&quot;:&quot;67001.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cannon, Richard, 1779-1865&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;67001&quot;});" class='title'>Historical Record of the Seventy-Third Regiment -<br><span class='subtitle'>Containing an account of the formation of the Regiment from the period of its being raised as the Second Battalion of the Forty-Second Royal Highlanders in 1780 and of its subsequent services to 1851</span></a>
+<div class='author'>Cannon, Richard, 1779-1865</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68212, {&quot;Title&quot;:&quot;Historical record of the Eighty-Sixth, or the Royal County Down Regiment of Foot - Containing an account of the formation of the regiment in 1793, and of its subsequent services to 1842.&quot;,&quot;Topics&quot;:[&quot;Great Britain. Army. Royal County Down Regiment -- History&quot;,&quot;Great Britain. Army. Regiment of Foot, 86th -- History&quot;],&quot;Primary&quot;:&quot;68212.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cannon, Richard, 1779-1865&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;68212&quot;});" class='title'>Historical record of the Eighty-Sixth, or the Royal County Down Regiment of Foot -<br><span class='subtitle'>Containing an account of the formation of the regiment in 1793, and of its subsequent services to 1842.</span></a>
+<div class='author'>Cannon, Richard, 1779-1865</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68270, {&quot;Title&quot;:&quot;A History of the 17th Lancers (Duke of Cambridge&#39;s Own)&quot;,&quot;Topics&quot;:[&quot;Great Britain. Army. Lancers, 17th -- History&quot;],&quot;Primary&quot;:&quot;68270.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fortescue, J. W. (John William), Sir, 1859-1933&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;68270&quot;});" class='title'>A History of the 17th Lancers (Duke of Cambridge's Own)</a>
+<div class='author'>Fortescue, J. W. (John William), Sir, 1859-1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69447, {&quot;Title&quot;:&quot;The regiments of the British Army, chronologically arranged&quot;,&quot;Topics&quot;:[&quot;Great Britain. Army&quot;],&quot;Primary&quot;:&quot;69447.htm&quot;,&quot;CreatorNames&quot;:[&quot;Trimen, Richard [Compiler]&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;69447&quot;});" class='title'>The regiments of the British Army, chronologically arranged</a>
+<div class='author'>Trimen, Richard [Compiler]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70056, {&quot;Title&quot;:&quot;Historical record of the 71st Regiment Highland Light Infantry -&quot;,&quot;Topics&quot;:[&quot;Great Britain. Army. Regiment of Foot, 71st (Highland Light Infantry)&quot;],&quot;Primary&quot;:&quot;70056.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hildyard, Henry John Thoroton, 1846-1916&quot;],&quot;LoCC&quot;:[&quot;UA&quot;],&quot;PG_ID&quot;:&quot;70056&quot;});" class='title'>Historical record of the 71st Regiment Highland Light Infantry -<br><span class='subtitle'></span></a>
+<div class='author'>Hildyard, Henry John Thoroton, 1846-1916</div>
+</div>
+</ul></div>
+</body></html>

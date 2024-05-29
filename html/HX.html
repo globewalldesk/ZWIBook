@@ -1,0 +1,626 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Socialism, Communism, Anarchism (HX)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(1017, {&quot;Title&quot;:&quot;The Soul of Man under Socialism&quot;,&quot;Topics&quot;:[&quot;Socialism&quot;],&quot;Primary&quot;:&quot;1017.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wilde, Oscar, 1854-1900&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;1017&quot;});" class='title'>The Soul of Man under Socialism</a>
+<div class='author'>Wilde, Oscar, 1854-1900</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(11009, {&quot;Title&quot;:&quot;Labor&#39;s Martyrs: Haymarket 1887, Sacco and Vanzetti 1927&quot;,&quot;Topics&quot;:[&quot;Sacco, Nicola, 1891-1927&quot;,&quot;Vanzetti, Bartolomeo, 1888-1927&quot;,&quot;Sacco-Vanzetti Trial, Dedham, Mass., 1921&quot;,&quot;Haymarket Square Riot, Chicago, Ill., 1886&quot;],&quot;Primary&quot;:&quot;11009.htm&quot;,&quot;CreatorNames&quot;:[&quot;Marcantonio, Vito, 1902-1954&quot;,&quot;Foster, William Z., 1881-1961 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;11009&quot;});" class='title'>Labor's Martyrs:<br><span class='subtitle'>Haymarket 1887, Sacco and Vanzetti 1927</span></a>
+<div class='author'>Marcantonio, Vito, 1902-1954, Foster, William Z., 1881-1961 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(11380, {&quot;Title&quot;:&quot;Le socialisme en danger&quot;,&quot;Topics&quot;:[&quot;Socialism&quot;],&quot;Primary&quot;:&quot;11380.txt&quot;,&quot;CreatorNames&quot;:[&quot;Domela Nieuwenhuis, Ferdinand, 1846-1919&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;11380&quot;});" class='title'>Le socialisme en danger</a>
+<div class='author'>Domela Nieuwenhuis, Ferdinand, 1846-1919</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(11739, {&quot;Title&quot;:&quot;Individualisme en socialisme&quot;,&quot;Topics&quot;:[&quot;Socialism&quot;],&quot;Primary&quot;:&quot;11739.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wilde, Oscar, 1854-1900&quot;,&quot;Boutens, P. C., 1870-1943 [Translator]&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;11739&quot;});" class='title'>Individualisme en socialisme</a>
+<div class='author'>Wilde, Oscar, 1854-1900, Boutens, P. C., 1870-1943 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12267, {&quot;Title&quot;:&quot;Aus meinem Leben — Erster Teil&quot;,&quot;Topics&quot;:[&quot;Autobiographies&quot;,&quot;Politicians -- Germany -- Biography&quot;,&quot;Socialists -- Germany -- Biography&quot;,&quot;Bebel, August, 1840-1913&quot;],&quot;Primary&quot;:&quot;12267.txt&quot;,&quot;CreatorNames&quot;:[&quot;Bebel, August, 1840-1913&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;HX&quot;],&quot;PG_ID&quot;:&quot;12267&quot;});" class='title'>Aus meinem Leben — Erster Teil</a>
+<div class='author'>Bebel, August, 1840-1913</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13690, {&quot;Title&quot;:&quot;Aus meinem Leben — Zweiter Teil&quot;,&quot;Topics&quot;:[&quot;Autobiographies&quot;,&quot;Politicians -- Germany -- Biography&quot;,&quot;Socialists -- Germany -- Biography&quot;,&quot;Bebel, August, 1840-1913&quot;],&quot;Primary&quot;:&quot;13690.txt&quot;,&quot;CreatorNames&quot;:[&quot;Bebel, August, 1840-1913&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;HX&quot;],&quot;PG_ID&quot;:&quot;13690&quot;});" class='title'>Aus meinem Leben — Zweiter Teil</a>
+<div class='author'>Bebel, August, 1840-1913</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13706, {&quot;Title&quot;:&quot;Socialism and American ideals&quot;,&quot;Topics&quot;:[&quot;Socialism&quot;,&quot;Socialism -- United States&quot;],&quot;Primary&quot;:&quot;13706.htm&quot;,&quot;CreatorNames&quot;:[&quot;Myers, William Starr, 1877-1956&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;13706&quot;});" class='title'>Socialism and American ideals</a>
+<div class='author'>Myers, William Starr, 1877-1956</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13715, {&quot;Title&quot;:&quot;The History of the Fabian Society&quot;,&quot;Topics&quot;:[&quot;Socialism -- Great Britain&quot;,&quot;Fabian Society (Great Britain)&quot;],&quot;Primary&quot;:&quot;13715.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pease, Edward R. (Edward Reynolds), 1857-1955&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;13715&quot;});" class='title'>The History of the Fabian Society</a>
+<div class='author'>Pease, Edward R. (Edward Reynolds), 1857-1955</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14770, {&quot;Title&quot;:&quot;Life in a Thousand Worlds&quot;,&quot;Topics&quot;:[&quot;Utopias&quot;],&quot;Primary&quot;:&quot;14770.htm&quot;,&quot;CreatorNames&quot;:[&quot;Harris, W. S. (William Shuler), 1865-&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;14770&quot;});" class='title'>Life in a Thousand Worlds</a>
+<div class='author'>Harris, W. S. (William Shuler), 1865-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16503, {&quot;Title&quot;:&quot;Another World: Fragments from the Star City of Montalluyah&quot;,&quot;Topics&quot;:[&quot;Utopias&quot;],&quot;Primary&quot;:&quot;16503.txt&quot;,&quot;CreatorNames&quot;:[&quot;Lumley, Benjamin, 1812-1875&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;16503&quot;});" class='title'>Another World:<br><span class='subtitle'>Fragments from the Star City of Montalluyah</span></a>
+<div class='author'>Lumley, Benjamin, 1812-1875</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17350, {&quot;Title&quot;:&quot;The Practice and Theory of Bolshevism&quot;,&quot;Topics&quot;:[&quot;Soviet Union -- Social conditions&quot;,&quot;Communism -- Soviet Union -- History&quot;],&quot;Primary&quot;:&quot;17350.htm&quot;,&quot;CreatorNames&quot;:[&quot;Russell, Bertrand, 1872-1970&quot;],&quot;LoCC&quot;:[&quot;DK&quot;,&quot;HX&quot;],&quot;PG_ID&quot;:&quot;17350&quot;});" class='title'>The Practice and Theory of Bolshevism</a>
+<div class='author'>Russell, Bertrand, 1872-1970</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17416, {&quot;Title&quot;:&quot;A Critical Examination of Socialism&quot;,&quot;Topics&quot;:[&quot;Socialism&quot;,&quot;Communism&quot;],&quot;Primary&quot;:&quot;17416.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mallock, W. H. (William Hurrell), 1849-1923&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;17416&quot;});" class='title'>A Critical Examination of Socialism</a>
+<div class='author'>Mallock, W. H. (William Hurrell), 1849-1923</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17881, {&quot;Title&quot;:&quot;From the Bottom Up: The Life Story of Alexander Irvine&quot;,&quot;Topics&quot;:[&quot;Socialism&quot;,&quot;Irvine, Alexander, 1863-1941&quot;],&quot;Primary&quot;:&quot;17881.htm&quot;,&quot;CreatorNames&quot;:[&quot;Irvine, Alexander, 1863-1941&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;17881&quot;});" class='title'>From the Bottom Up:<br><span class='subtitle'>The Life Story of Alexander Irvine</span></a>
+<div class='author'>Irvine, Alexander, 1863-1941</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17912, {&quot;Title&quot;:&quot;Kommunistinen yhteiskunta vuonna 2000 - Jatkoa ja vastaus Edward Bellamyn romaaniin \&quot;\&quot;Vuonna 2000\&quot;\&quot;&quot;,&quot;Topics&quot;:[&quot;Utopias -- Fiction&quot;,&quot;Utopian fiction&quot;,&quot;Bellamy, Edward, 1850-1898. Looking backward&quot;,&quot;Utopias in literature&quot;],&quot;Primary&quot;:&quot;17912.txt&quot;,&quot;CreatorNames&quot;:[&quot;Michaelis, Richard, 1839-1909&quot;],&quot;LoCC&quot;:[&quot;HX&quot;,&quot;PS&quot;],&quot;PG_ID&quot;:&quot;17912&quot;});" class='title'>Kommunistinen yhteiskunta vuonna 2000 -<br><span class='subtitle'>Jatkoa ja vastaus Edward Bellamyn romaaniin "Vuonna 2000"</span></a>
+<div class='author'>Michaelis, Richard, 1839-1909</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18397, {&quot;Title&quot;:&quot;Socialism and Modern Science (Darwin, Spencer, Marx)&quot;,&quot;Topics&quot;:[&quot;Socialism&quot;,&quot;Evolution&quot;,&quot;Spencer, Herbert, 1820-1903&quot;],&quot;Primary&quot;:&quot;18397.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ferri, Enrico, 1856-1929&quot;,&quot;La Monte, Robert Rives [Translator]&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;18397&quot;});" class='title'>Socialism and Modern Science (Darwin, Spencer, Marx)</a>
+<div class='author'>Ferri, Enrico, 1856-1929, La Monte, Robert Rives [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18638, {&quot;Title&quot;:&quot;Ideal Commonwealths&quot;,&quot;Topics&quot;:[&quot;Utopias&quot;],&quot;Primary&quot;:&quot;18638.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bacon, Francis, 1561-1626 [Contributor]&quot;,&quot;Campanella, Tommaso, 1568-1639 [Contributor]&quot;,&quot;Hall, Joseph, 1574-1656 [Contributor]&quot;,&quot;More, Thomas, Saint, 1478-1535 [Contributor]&quot;,&quot;Plutarch, 46-120? [Contributor]&quot;,&quot;Morley, Henry, 1822-1894 [Editor]&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;18638&quot;});" class='title'>Ideal Commonwealths</a>
+<div class='author'>Bacon, Francis, 1561-1626 [Contributor], Campanella, Tommaso, 1568-1639 [Contributor], Hall, Joseph, 1574-1656 [Contributor], More, Thomas, Saint, 1478-1535 [Contributor], Plutarch, 46-120? [Contributor], Morley, Henry, 1822-1894 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19150, {&quot;Title&quot;:&quot;The Red Conspiracy&quot;,&quot;Topics&quot;:[&quot;Socialism&quot;,&quot;Communism&quot;,&quot;Industrial Workers of the World&quot;],&quot;Primary&quot;:&quot;19150.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mereto, Joseph J.&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;19150&quot;});" class='title'>The Red Conspiracy</a>
+<div class='author'>Mereto, Joseph J.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19468, {&quot;Title&quot;:&quot;Mediaeval Socialism&quot;,&quot;Topics&quot;:[&quot;Civilization, Medieval&quot;,&quot;Socialism -- History&quot;,&quot;Middle Ages&quot;],&quot;Primary&quot;:&quot;19468.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jarrett, Bede, 1881-1934&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;19468&quot;});" class='title'>Mediaeval Socialism</a>
+<div class='author'>Jarrett, Bede, 1881-1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19596, {&quot;Title&quot;:&quot;Charles Fourier: Sein Leben und seine Theorien.&quot;,&quot;Topics&quot;:[&quot;Socialism&quot;,&quot;Socialists -- France -- Biography&quot;,&quot;Fourier, Charles, 1772-1837&quot;],&quot;Primary&quot;:&quot;19596.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bebel, August, 1840-1913&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;HX&quot;],&quot;PG_ID&quot;:&quot;19596&quot;});" class='title'>Charles Fourier:<br><span class='subtitle'>Sein Leben und seine Theorien.</span></a>
+<div class='author'>Bebel, August, 1840-1913</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20490, {&quot;Title&quot;:&quot;L&#39;A. B. C. du libertaire&quot;,&quot;Topics&quot;:[&quot;Libertarianism&quot;],&quot;Primary&quot;:&quot;20490.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lermina, Jules, 1839-1915&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;20490&quot;});" class='title'>L'A. B. C. du libertaire</a>
+<div class='author'>Lermina, Jules, 1839-1915</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20666, {&quot;Title&quot;:&quot;The Debs Decision&quot;,&quot;Topics&quot;:[&quot;United States. Supreme Court&quot;,&quot;Debs, Eugene V. (Eugene Victor), 1855-1926&quot;],&quot;Primary&quot;:&quot;20666.htm&quot;,&quot;CreatorNames&quot;:[&quot;Nearing, Scott, 1883-1983&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;20666&quot;});" class='title'>The Debs Decision</a>
+<div class='author'>Nearing, Scott, 1883-1983</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20816, {&quot;Title&quot;:&quot;Socialism As It Is - A Survey of The World-Wide Revolutionary Movement&quot;,&quot;Topics&quot;:[&quot;Socialism&quot;],&quot;Primary&quot;:&quot;20816.htm&quot;,&quot;CreatorNames&quot;:[&quot;Walling, William English, 1877-1936&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;20816&quot;});" class='title'>Socialism As It Is -<br><span class='subtitle'>A Survey of The World-Wide Revolutionary Movement</span></a>
+<div class='author'>Walling, William English, 1877-1936</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2130, {&quot;Title&quot;:&quot;Utopia&quot;,&quot;Topics&quot;:[&quot;Utopias -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;2130.htm&quot;,&quot;CreatorNames&quot;:[&quot;More, Thomas, Saint, 1478-1535&quot;,&quot;Morley, Henry, 1822-1894 [Editor]&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;2130&quot;});" class='title'>Utopia</a>
+<div class='author'>More, Thomas, Saint, 1478-1535, Morley, Henry, 1822-1894 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2162, {&quot;Title&quot;:&quot;Anarchism and Other Essays&quot;,&quot;Topics&quot;:[&quot;Feminism&quot;,&quot;Women -- Social and moral questions&quot;,&quot;Anarchism&quot;],&quot;Primary&quot;:&quot;2162.htm&quot;,&quot;CreatorNames&quot;:[&quot;Goldman, Emma, 1869-1940&quot;,&quot;Havel, Hippolyte, 1871-1950 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;2162&quot;});" class='title'>Anarchism and Other Essays</a>
+<div class='author'>Goldman, Emma, 1869-1940, Havel, Hippolyte, 1871-1950 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22733, {&quot;Title&quot;:&quot;Socialism: A Summary and Interpretation of Socialist Principles&quot;,&quot;Topics&quot;:[&quot;Socialism&quot;],&quot;Primary&quot;:&quot;22733.htm&quot;,&quot;CreatorNames&quot;:[&quot;Spargo, John, 1876-1966&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;22733&quot;});" class='title'>Socialism:<br><span class='subtitle'>A Summary and Interpretation of Socialist Principles</span></a>
+<div class='author'>Spargo, John, 1876-1966</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23428, {&quot;Title&quot;:&quot;The Conquest of Bread&quot;,&quot;Topics&quot;:[&quot;Communism&quot;,&quot;Anarchism&quot;],&quot;Primary&quot;:&quot;23428.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kropotkin, Petr Alekseevich, kniaz, 1842-1921&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;23428&quot;});" class='title'>The Conquest of Bread</a>
+<div class='author'>Kropotkin, Petr Alekseevich, kniaz, 1842-1921</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2352, {&quot;Title&quot;:&quot;Eurasia&quot;,&quot;Topics&quot;:[&quot;Utopias&quot;],&quot;Primary&quot;:&quot;2352.htm&quot;,&quot;CreatorNames&quot;:[&quot;Evans, Christopher, 1847-1917&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;2352&quot;});" class='title'>Eurasia</a>
+<div class='author'>Evans, Christopher, 1847-1917</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23574, {&quot;Title&quot;:&quot;Socialism: Positive and Negative&quot;,&quot;Topics&quot;:[&quot;Socialism&quot;],&quot;Primary&quot;:&quot;23574.htm&quot;,&quot;CreatorNames&quot;:[&quot;La Monte, Robert Rives&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;23574&quot;});" class='title'>Socialism:<br><span class='subtitle'>Positive and Negative</span></a>
+<div class='author'>La Monte, Robert Rives</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2434, {&quot;Title&quot;:&quot;New Atlantis&quot;,&quot;Topics&quot;:[&quot;Utopias -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;2434.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bacon, Francis, 1561-1626&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;2434&quot;});" class='title'>New Atlantis</a>
+<div class='author'>Bacon, Francis, 1561-1626</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24340, {&quot;Title&quot;:&quot;The Common Sense of Socialism - A Series of Letters Addressed to Jonathan Edwards, of Pittsburg&quot;,&quot;Topics&quot;:[&quot;Socialism&quot;],&quot;Primary&quot;:&quot;24340.htm&quot;,&quot;CreatorNames&quot;:[&quot;Spargo, John, 1876-1966&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;24340&quot;});" class='title'>The Common Sense of Socialism -<br><span class='subtitle'>A Series of Letters Addressed to Jonathan Edwards, of Pittsburg</span></a>
+<div class='author'>Spargo, John, 1876-1966</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24523, {&quot;Title&quot;:&quot;Der Sozialismus einst und jetzt - Streitfragen des Sozialismus in Vergangenheit und Gegenwart&quot;,&quot;Topics&quot;:[&quot;Socialism -- History&quot;],&quot;Primary&quot;:&quot;24523.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bernstein, Eduard, 1850-1932&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;24523&quot;});" class='title'>Der Sozialismus einst und jetzt -<br><span class='subtitle'>Streitfragen des Sozialismus in Vergangenheit und Gegenwart</span></a>
+<div class='author'>Bernstein, Eduard, 1850-1932</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24701, {&quot;Title&quot;:&quot;A dissolução do regimen capitalista&quot;,&quot;Topics&quot;:[&quot;Socialism&quot;,&quot;Capitalism&quot;],&quot;Primary&quot;:&quot;24701.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bastos, Teixeira, 1857-1902&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;24701&quot;});" class='title'>A dissolução do regimen capitalista</a>
+<div class='author'>Bastos, Teixeira, 1857-1902</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25285, {&quot;Title&quot;:&quot;Dal cellulare a Finalborgo&quot;,&quot;Topics&quot;:[&quot;Anarchists -- Italy -- Biography&quot;],&quot;Primary&quot;:&quot;25285.txt&quot;,&quot;CreatorNames&quot;:[&quot;Valera, Paolo, 1850-1926&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;25285&quot;});" class='title'>Dal cellulare a Finalborgo</a>
+<div class='author'>Valera, Paolo, 1850-1926</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26051, {&quot;Title&quot;:&quot;Bolshevism: A Curse &amp; Danger to the Workers&quot;,&quot;Topics&quot;:[&quot;Communism&quot;,&quot;Soviet Union -- History -- Revolution, 1917-1921&quot;],&quot;Primary&quot;:&quot;26051.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lee, H. W. (Henry William), 1865-1932&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;26051&quot;});" class='title'>Bolshevism:<br><span class='subtitle'>A Curse & Danger to the Workers</span></a>
+<div class='author'>Lee, H. W. (Henry William), 1865-1932</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26600, {&quot;Title&quot;:&quot;Mother Earth, Vol. 1 No. 1, March 1906&quot;,&quot;Topics&quot;:[&quot;Anarchism -- Periodicals&quot;],&quot;Primary&quot;:&quot;26600.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;,&quot;Goldman, Emma, 1869-1940 [Editor]&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;26600&quot;});" class='title'>Mother Earth, Vol. 1 No. 1, March 1906</a>
+<div class='author'>Various, Goldman, Emma, 1869-1940 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26964, {&quot;Title&quot;:&quot;Briefe aus dem Gefängnis&quot;,&quot;Topics&quot;:[&quot;Luxemburg, Rosa, 1871-1919&quot;,&quot;Communists -- Germany -- Correspondence&quot;],&quot;Primary&quot;:&quot;26964.htm&quot;,&quot;CreatorNames&quot;:[&quot;Luxemburg, Rosa, 1871-1919&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;26964&quot;});" class='title'>Briefe aus dem Gefängnis</a>
+<div class='author'>Luxemburg, Rosa, 1871-1919</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26971, {&quot;Title&quot;:&quot;Utopia&quot;,&quot;Topics&quot;:[&quot;Utopias -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;26971.htm&quot;,&quot;CreatorNames&quot;:[&quot;More, Thomas, Saint, 1478-1535&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;26971&quot;});" class='title'>Utopia</a>
+<div class='author'>More, Thomas, Saint, 1478-1535</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27118, {&quot;Title&quot;:&quot;Mother Earth, Vol. 1 No. 2, April 1906 - Monthly Magazine Devoted to Social Science and Literature&quot;,&quot;Topics&quot;:[&quot;Anarchism -- Periodicals&quot;],&quot;Primary&quot;:&quot;27118.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;,&quot;Goldman, Emma, 1869-1940 [Editor]&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;27118&quot;});" class='title'>Mother Earth, Vol. 1 No. 2, April 1906 -<br><span class='subtitle'>Monthly Magazine Devoted to Social Science and Literature</span></a>
+<div class='author'>Various, Goldman, Emma, 1869-1940 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27262, {&quot;Title&quot;:&quot;Mother Earth, Vol. 1 No. 3, May 1906 - Monthly Magazine Devoted to Social Science and Literature&quot;,&quot;Topics&quot;:[&quot;Anarchism -- Periodicals&quot;],&quot;Primary&quot;:&quot;27262.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;,&quot;Goldman, Emma, 1869-1940 [Editor]&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;27262&quot;});" class='title'>Mother Earth, Vol. 1 No. 3, May 1906 -<br><span class='subtitle'>Monthly Magazine Devoted to Social Science and Literature</span></a>
+<div class='author'>Various, Goldman, Emma, 1869-1940 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27341, {&quot;Title&quot;:&quot;Mother Earth, Vol. 1 No. 4, June 1906 - Monthly Magazine Devoted to Social Science and Literature&quot;,&quot;Topics&quot;:[&quot;Anarchism -- Periodicals&quot;],&quot;Primary&quot;:&quot;27341.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;,&quot;Goldman, Emma, 1869-1940 [Editor]&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;27341&quot;});" class='title'>Mother Earth, Vol. 1 No. 4, June 1906 -<br><span class='subtitle'>Monthly Magazine Devoted to Social Science and Literature</span></a>
+<div class='author'>Various, Goldman, Emma, 1869-1940 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2801, {&quot;Title&quot;:&quot;The Commonwealth of Oceana&quot;,&quot;Topics&quot;:[&quot;Utopias -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;2801.htm&quot;,&quot;CreatorNames&quot;:[&quot;Harrington, James, 1611-1677&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;2801&quot;});" class='title'>The Commonwealth of Oceana</a>
+<div class='author'>Harrington, James, 1611-1677</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2816, {&quot;Title&quot;:&quot;The City of the Sun&quot;,&quot;Topics&quot;:[&quot;Utopias -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;2816.htm&quot;,&quot;CreatorNames&quot;:[&quot;Campanella, Tommaso, 1568-1639&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;2816&quot;});" class='title'>The City of the Sun</a>
+<div class='author'>Campanella, Tommaso, 1568-1639</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28361, {&quot;Title&quot;:&quot;British Socialism - An Examination of Its Doctrines, Policy, Aims and Practical Proposals&quot;,&quot;Topics&quot;:[&quot;Socialism&quot;,&quot;Socialism -- Great Britain&quot;],&quot;Primary&quot;:&quot;28361.htm&quot;,&quot;CreatorNames&quot;:[&quot;Barker, J. Ellis, 1870-1948&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;28361&quot;});" class='title'>British Socialism -<br><span class='subtitle'>An Examination of Its Doctrines, Policy, Aims and Practical Proposals</span></a>
+<div class='author'>Barker, J. Ellis, 1870-1948</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29590, {&quot;Title&quot;:&quot;Uit Sowjet-Rusland: Beelden en beschouwingen&quot;,&quot;Topics&quot;:[&quot;Women -- Soviet Union -- Social conditions&quot;,&quot;Soviet Union -- Description and travel&quot;,&quot;Soviet Union -- Social conditions&quot;],&quot;Primary&quot;:&quot;29590.htm&quot;,&quot;CreatorNames&quot;:[&quot;Roland Holst-Van der Schalk, Henriette, 1869-1952&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;29590&quot;});" class='title'>Uit Sowjet-Rusland:<br><span class='subtitle'>Beelden en beschouwingen</span></a>
+<div class='author'>Roland Holst-Van der Schalk, Henriette, 1869-1952</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30506, {&quot;Title&quot;:&quot;Anarchism and Socialism&quot;,&quot;Topics&quot;:[&quot;Socialism&quot;,&quot;Anarchism&quot;],&quot;Primary&quot;:&quot;30506.htm&quot;,&quot;CreatorNames&quot;:[&quot;Plekhanov, Georgii Valentinovich, 1856-1918&quot;,&quot;Aveling, Eleanor Marx, 1855-1898 [Translator]&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;30506&quot;});" class='title'>Anarchism and Socialism</a>
+<div class='author'>Plekhanov, Georgii Valentinovich, 1856-1918, Aveling, Eleanor Marx, 1855-1898 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3053, {&quot;Title&quot;:&quot;Signs of Change&quot;,&quot;Topics&quot;:[&quot;Socialism&quot;,&quot;Art&quot;,&quot;Socialism -- Great Britain&quot;],&quot;Primary&quot;:&quot;3053.htm&quot;,&quot;CreatorNames&quot;:[&quot;Morris, William, 1834-1896&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;3053&quot;});" class='title'>Signs of Change</a>
+<div class='author'>Morris, William, 1834-1896</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30538, {&quot;Title&quot;:&quot;New worlds for old: A plain account of modern socialism&quot;,&quot;Topics&quot;:[&quot;Socialism&quot;],&quot;Primary&quot;:&quot;30538.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wells, H. G. (Herbert George), 1866-1946&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;30538&quot;});" class='title'>New worlds for old:<br><span class='subtitle'>A plain account of modern socialism</span></a>
+<div class='author'>Wells, H. G. (Herbert George), 1866-1946</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30646, {&quot;Title&quot;:&quot;Woman under socialism&quot;,&quot;Topics&quot;:[&quot;Women and socialism&quot;],&quot;Primary&quot;:&quot;30646.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bebel, August, 1840-1913&quot;,&quot;De Leon, Daniel, 1852-1914 [Translator]&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;30646&quot;});" class='title'>Woman under socialism</a>
+<div class='author'>Bebel, August, 1840-1913, De Leon, Daniel, 1852-1914 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30758, {&quot;Title&quot;:&quot;Communism and Christianism - Analyzed and Contrasted from the Marxian and Darwinian Points of View&quot;,&quot;Topics&quot;:[&quot;Communism&quot;,&quot;Christian socialism&quot;,&quot;Communism and Christianity&quot;],&quot;Primary&quot;:&quot;30758.htm&quot;,&quot;CreatorNames&quot;:[&quot;Brown, William Montgomery, 1855-1937&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;30758&quot;});" class='title'>Communism and Christianism -<br><span class='subtitle'>Analyzed and Contrasted from the Marxian and Darwinian Points of View</span></a>
+<div class='author'>Brown, William Montgomery, 1855-1937</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31104, {&quot;Title&quot;:&quot;The Place of Anarchism in Socialistic Evolution - An Address Delivered in Paris&quot;,&quot;Topics&quot;:[&quot;Anarchists&quot;,&quot;Anarchism -- History&quot;],&quot;Primary&quot;:&quot;31104.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kropotkin, Petr Alekseevich, kniaz, 1842-1921&quot;,&quot;Glasse, Henry [Translator]&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;31104&quot;});" class='title'>The Place of Anarchism in Socialistic Evolution -<br><span class='subtitle'>An Address Delivered in Paris</span></a>
+<div class='author'>Kropotkin, Petr Alekseevich, kniaz, 1842-1921, Glasse, Henry [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31108, {&quot;Title&quot;:&quot;Violence and the Labor Movement&quot;,&quot;Topics&quot;:[&quot;Anarchism&quot;,&quot;Syndicalism&quot;,&quot;Labor movement&quot;],&quot;Primary&quot;:&quot;31108.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hunter, Robert, 1874-1942&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;31108&quot;});" class='title'>Violence and the Labor Movement</a>
+<div class='author'>Hunter, Robert, 1874-1942</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31171, {&quot;Title&quot;:&quot;1931: A Glance at the Twentieth Century&quot;,&quot;Topics&quot;:[&quot;Utopias&quot;,&quot;Twentieth century -- Forecasts&quot;,&quot;Prophecies&quot;],&quot;Primary&quot;:&quot;31171.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hartshorne, Henry, 1823-1897&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;31171&quot;});" class='title'>1931:<br><span class='subtitle'>A Glance at the Twentieth Century</span></a>
+<div class='author'>Hartshorne, Henry, 1823-1897</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31193, {&quot;Title&quot;:&quot;Manifesto of the Communist Party&quot;,&quot;Topics&quot;:[&quot;Socialism&quot;,&quot;Communism&quot;],&quot;Primary&quot;:&quot;31193.htm&quot;,&quot;CreatorNames&quot;:[&quot;Engels, Friedrich, 1820-1895&quot;,&quot;Marx, Karl, 1818-1883&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;31193&quot;});" class='title'>Manifesto of the Communist Party</a>
+<div class='author'>Engels, Friedrich, 1820-1895, Marx, Karl, 1818-1883</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31297, {&quot;Title&quot;:&quot;Van strak gespannen snaren&quot;,&quot;Topics&quot;:[&quot;Rudolph, R. J. W. (Roelof Jan Willem), 1862-1914&quot;,&quot;Socialism and Christianity -- Netherlands&quot;],&quot;Primary&quot;:&quot;31297.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rudolph, R. J. W. (Roelof Jan Willem), 1862-1914&quot;,&quot;Kuyper, Abraham, 1837-1920 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;31297&quot;});" class='title'>Van strak gespannen snaren</a>
+<div class='author'>Rudolph, R. J. W. (Roelof Jan Willem), 1862-1914, Kuyper, Abraham, 1837-1920 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31373, {&quot;Title&quot;:&quot;Solaris Farm: A Story of the Twentieth Century&quot;,&quot;Topics&quot;:[&quot;Utopias&quot;,&quot;Cooperation&quot;,&quot;Agriculture, Cooperative&quot;],&quot;Primary&quot;:&quot;31373.htm&quot;,&quot;CreatorNames&quot;:[&quot;Edson, Milan C.&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;31373&quot;});" class='title'>Solaris Farm:<br><span class='subtitle'>A Story of the Twentieth Century</span></a>
+<div class='author'>Edson, Milan C.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31903, {&quot;Title&quot;:&quot;Anarchism: A Criticism and History of the Anarchist Theory&quot;,&quot;Topics&quot;:[&quot;Anarchism&quot;],&quot;Primary&quot;:&quot;31903.htm&quot;,&quot;CreatorNames&quot;:[&quot;Zenker, E. V. (Ernst Viktor), 1865-1940&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;31903&quot;});" class='title'>Anarchism:<br><span class='subtitle'>A Criticism and History of the Anarchist Theory</span></a>
+<div class='author'>Zenker, E. V. (Ernst Viktor), 1865-1940</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31933, {&quot;Title&quot;:&quot;Landmarks of Scientific Socialism: \&quot;\&quot;Anti-Duehring\&quot;\&quot;&quot;,&quot;Topics&quot;:[&quot;Socialism&quot;,&quot;Philosophy&quot;,&quot;Economics&quot;,&quot;Dialectical materialism&quot;,&quot;Dühring, E. (Eugen), 1833-1921&quot;],&quot;Primary&quot;:&quot;31933.htm&quot;,&quot;CreatorNames&quot;:[&quot;Engels, Friedrich, 1820-1895&quot;,&quot;Lewis, Austin [Editor]&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;31933&quot;});" class='title'>Landmarks of Scientific Socialism:<br><span class='subtitle'>"Anti-Duehring"</span></a>
+<div class='author'>Engels, Friedrich, 1820-1895, Lewis, Austin [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32379, {&quot;Title&quot;:&quot;O Primeiro de Maio&quot;,&quot;Topics&quot;:[&quot;Socialism -- Europe&quot;],&quot;Primary&quot;:&quot;32379.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lima, S. de Magalhães (Sebastião de Magalhães), 1850-1928&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;32379&quot;});" class='title'>O Primeiro de Maio</a>
+<div class='author'>Lima, S. de Magalhães (Sebastião de Magalhães), 1850-1928</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3261, {&quot;Title&quot;:&quot;News from Nowhere; Or, An Epoch of Rest - Being Some Chapters from a Utopian Romance&quot;,&quot;Topics&quot;:[&quot;Utopias&quot;],&quot;Primary&quot;:&quot;3261.htm&quot;,&quot;CreatorNames&quot;:[&quot;Morris, William, 1834-1896&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;3261&quot;});" class='title'>News from Nowhere;<br><span class='subtitle'>Or, An Epoch of Rest - Being Some Chapters from a Utopian Romance</span></a>
+<div class='author'>Morris, William, 1834-1896</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32644, {&quot;Title&quot;:&quot;Essays on the Materialistic Conception of History&quot;,&quot;Topics&quot;:[&quot;Socialism&quot;,&quot;History -- Philosophy&quot;,&quot;Materialism&quot;,&quot;Marx, Karl, 1818-1883. Manifest der Kommunistischen Partei&quot;],&quot;Primary&quot;:&quot;32644.htm&quot;,&quot;CreatorNames&quot;:[&quot;Labriola, Antonio, 1843-1904&quot;,&quot;Kerr, Charles H., 1860-1944 [Translator]&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;32644&quot;});" class='title'>Essays on the Materialistic Conception of History</a>
+<div class='author'>Labriola, Antonio, 1843-1904, Kerr, Charles H., 1860-1944 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33549, {&quot;Title&quot;:&quot;Underground Man&quot;,&quot;Topics&quot;:[&quot;Civilization, Modern&quot;],&quot;Primary&quot;:&quot;33549.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tarde, Gabriel de, 1843-1904&quot;,&quot;Wells, H. G. (Herbert George), 1866-1946 [Author of introduction, etc.]&quot;,&quot;Brereton, Cloudesley, 1863-1937 [Translator]&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;33549&quot;});" class='title'>Underground Man</a>
+<div class='author'>Tarde, Gabriel de, 1843-1904, Wells, H. G. (Herbert George), 1866-1946 [Author of introduction, etc.], Brereton, Cloudesley, 1863-1937 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33628, {&quot;Title&quot;:&quot;Emma Goldman: Biographical Sketch&quot;,&quot;Topics&quot;:[&quot;Goldman, Emma, 1869-1940&quot;,&quot;Women anarchists -- United States -- Biography&quot;,&quot;Women communists -- United States -- Biography&quot;],&quot;Primary&quot;:&quot;33628.htm&quot;,&quot;CreatorNames&quot;:[&quot;Madison, Charles Allan, 1895-1985&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;33628&quot;});" class='title'>Emma Goldman:<br><span class='subtitle'>Biographical Sketch</span></a>
+<div class='author'>Madison, Charles Allan, 1895-1985</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33979, {&quot;Title&quot;:&quot;Miscellaneous Aphorisms; The Soul of Man&quot;,&quot;Topics&quot;:[&quot;Socialism&quot;,&quot;Aphorisms and apothegms&quot;],&quot;Primary&quot;:&quot;33979.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wilde, Oscar, 1854-1900&quot;],&quot;LoCC&quot;:[&quot;HX&quot;,&quot;PR&quot;],&quot;PG_ID&quot;:&quot;33979&quot;});" class='title'>Miscellaneous Aphorisms;<br><span class='subtitle'>The Soul of Man</span></a>
+<div class='author'>Wilde, Oscar, 1854-1900</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34012, {&quot;Title&quot;:&quot;Labor and Freedom: The Voice and Pen of Eugene V. Debs&quot;,&quot;Topics&quot;:[&quot;Socialism -- United States&quot;,&quot;Working class -- United States&quot;,&quot;Socialist Party (U.S.)&quot;,&quot;Labor -- United States&quot;],&quot;Primary&quot;:&quot;34012.htm&quot;,&quot;CreatorNames&quot;:[&quot;Debs, Eugene V. (Eugene Victor), 1855-1926&quot;],&quot;LoCC&quot;:[&quot;HD&quot;,&quot;HX&quot;],&quot;PG_ID&quot;:&quot;34012&quot;});" class='title'>Labor and Freedom:<br><span class='subtitle'>The Voice and Pen of Eugene V. Debs</span></a>
+<div class='author'>Debs, Eugene V. (Eugene Victor), 1855-1926</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34406, {&quot;Title&quot;:&quot;Prison Memoirs of an Anarchist&quot;,&quot;Topics&quot;:[&quot;Berkman, Alexander, 1870-1936&quot;,&quot;State Penitentiary for the Western District of Pennsylvania&quot;,&quot;Anarchists -- United States -- Biography&quot;,&quot;Prisoners -- Pennsylvania -- Biography&quot;],&quot;Primary&quot;:&quot;34406.htm&quot;,&quot;CreatorNames&quot;:[&quot;Berkman, Alexander, 1870-1936&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;34406&quot;});" class='title'>Prison Memoirs of an Anarchist</a>
+<div class='author'>Berkman, Alexander, 1870-1936</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34534, {&quot;Title&quot;:&quot;Britain for the British&quot;,&quot;Topics&quot;:[&quot;Socialism&quot;,&quot;Socialism -- Great Britain&quot;],&quot;Primary&quot;:&quot;34534.htm&quot;,&quot;CreatorNames&quot;:[&quot;Blatchford, Robert, 1851-1943&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;34534&quot;});" class='title'>Britain for the British</a>
+<div class='author'>Blatchford, Robert, 1851-1943</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34649, {&quot;Title&quot;:&quot;The Right to Ignore the State&quot;,&quot;Topics&quot;:[&quot;Individualism&quot;,&quot;Anarchism&quot;,&quot;State, The&quot;],&quot;Primary&quot;:&quot;34649.htm&quot;,&quot;CreatorNames&quot;:[&quot;Spencer, Herbert, 1820-1903&quot;],&quot;LoCC&quot;:[&quot;HX&quot;,&quot;JC&quot;],&quot;PG_ID&quot;:&quot;34649&quot;});" class='title'>The Right to Ignore the State</a>
+<div class='author'>Spencer, Herbert, 1820-1903</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34745, {&quot;Title&quot;:&quot;Comrade Kropotkin&quot;,&quot;Topics&quot;:[&quot;Kropotkin, Petr Alekseevich, kniaz&#39;, 1842-1921&quot;],&quot;Primary&quot;:&quot;34745.htm&quot;,&quot;CreatorNames&quot;:[&quot;Robinson, Victor, 1886-1947&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;34745&quot;});" class='title'>Comrade Kropotkin</a>
+<div class='author'>Robinson, Victor, 1886-1947</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34979, {&quot;Title&quot;:&quot;Twentieth Century Socialism: What It Is Not; What It Is: How It May Come&quot;,&quot;Topics&quot;:[&quot;Socialism&quot;],&quot;Primary&quot;:&quot;34979.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kelly, Edmond, 1851-1909&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;34979&quot;});" class='title'>Twentieth Century Socialism:<br><span class='subtitle'>What It Is Not; What It Is: How It May Come</span></a>
+<div class='author'>Kelly, Edmond, 1851-1909</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35210, {&quot;Title&quot;:&quot;Socialism and the Social Movement in the 19th Century&quot;,&quot;Topics&quot;:[&quot;Socialism&quot;],&quot;Primary&quot;:&quot;35210.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sombart, Werner, 1863-1941&quot;,&quot;Atterbury, Anson Phelps, 1854-1931 [Translator]&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;35210&quot;});" class='title'>Socialism and the Social Movement in the 19th Century</a>
+<div class='author'>Sombart, Werner, 1863-1941, Atterbury, Anson Phelps, 1854-1931 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35572, {&quot;Title&quot;:&quot;Socialism and Democracy in Europe&quot;,&quot;Topics&quot;:[&quot;Socialism&quot;,&quot;Democracy&quot;],&quot;Primary&quot;:&quot;35572.htm&quot;,&quot;CreatorNames&quot;:[&quot;Orth, Samuel Peter, 1873-1922&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;35572&quot;});" class='title'>Socialism and Democracy in Europe</a>
+<div class='author'>Orth, Samuel Peter, 1873-1922</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35687, {&quot;Title&quot;:&quot;History of American Socialisms&quot;,&quot;Topics&quot;:[&quot;Socialism -- United States&quot;,&quot;Communism -- United States&quot;],&quot;Primary&quot;:&quot;35687.htm&quot;,&quot;CreatorNames&quot;:[&quot;Noyes, John Humphrey, 1811-1886&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;35687&quot;});" class='title'>History of American Socialisms</a>
+<div class='author'>Noyes, John Humphrey, 1811-1886</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35962, {&quot;Title&quot;:&quot;Socialism, Revolution and Internationalism&quot;,&quot;Topics&quot;:[&quot;Socialism&quot;],&quot;Primary&quot;:&quot;35962.htm&quot;,&quot;CreatorNames&quot;:[&quot;Deville, Gabriel Pierre, 1854-1940&quot;,&quot;La Monte, Robert Rives [Translator]&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;35962&quot;});" class='title'>Socialism, Revolution and Internationalism</a>
+<div class='author'>Deville, Gabriel Pierre, 1854-1940, La Monte, Robert Rives [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36272, {&quot;Title&quot;:&quot;Some Objections To Socialism - From \&quot;\&quot;The Atheistic Platform\&quot;\&quot;, Twelve Lectures&quot;,&quot;Topics&quot;:[&quot;Socialism -- Great Britain -- History -- 19th century&quot;],&quot;Primary&quot;:&quot;36272.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bradlaugh, Charles, 1833-1891&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;36272&quot;});" class='title'>Some Objections To Socialism -<br><span class='subtitle'>From "The Atheistic Platform", Twelve Lectures</span></a>
+<div class='author'>Bradlaugh, Charles, 1833-1891</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36568, {&quot;Title&quot;:&quot;God and the State&quot;,&quot;Topics&quot;:[&quot;Christianity -- Controversial literature&quot;,&quot;Atheism&quot;,&quot;Anarchism&quot;],&quot;Primary&quot;:&quot;36568.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bakunin, Mikhail Aleksandrovich, 1814-1876&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;36568&quot;});" class='title'>God and the State</a>
+<div class='author'>Bakunin, Mikhail Aleksandrovich, 1814-1876</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36690, {&quot;Title&quot;:&quot;Anarchism&quot;,&quot;Topics&quot;:[&quot;Anarchists&quot;,&quot;Anarchism&quot;],&quot;Primary&quot;:&quot;36690.htm&quot;,&quot;CreatorNames&quot;:[&quot;Eltzbacher, Paul, 1868-1928&quot;,&quot;Byington, Steven T. (Steven Tracy), 1868-1957 [Translator]&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;36690&quot;});" class='title'>Anarchism</a>
+<div class='author'>Eltzbacher, Paul, 1868-1928, Byington, Steven T. (Steven Tracy), 1868-1957 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37141, {&quot;Title&quot;:&quot;Why I am in favor of socialism&quot;,&quot;Topics&quot;:[&quot;Socialism&quot;],&quot;Primary&quot;:&quot;37141.htm&quot;,&quot;CreatorNames&quot;:[&quot;Silvin, Edward, 1877- [Compiler]&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;37141&quot;});" class='title'>Why I am in favor of socialism</a>
+<div class='author'>Silvin, Edward, 1877- [Compiler]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37196, {&quot;Title&quot;:&quot;Женское международное движение: Сборник статей&quot;,&quot;Topics&quot;:[&quot;Women&#39;s rights&quot;,&quot;Women and socialism&quot;],&quot;Primary&quot;:&quot;37196.txt&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;37196&quot;});" class='title'>Женское международное движение:<br><span class='subtitle'>Сборник статей</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37246, {&quot;Title&quot;:&quot;Why I am opposed to socialism&quot;,&quot;Topics&quot;:[&quot;Socialism&quot;],&quot;Primary&quot;:&quot;37246.htm&quot;,&quot;CreatorNames&quot;:[&quot;Silvin, Edward, 1877- [Compiler]&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;37246&quot;});" class='title'>Why I am opposed to socialism</a>
+<div class='author'>Silvin, Edward, 1877- [Compiler]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37351, {&quot;Title&quot;:&quot;Contemporary Socialism&quot;,&quot;Topics&quot;:[&quot;Socialism&quot;,&quot;Socialism -- History&quot;],&quot;Primary&quot;:&quot;37351.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rae, John, 1845-1915&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;37351&quot;});" class='title'>Contemporary Socialism</a>
+<div class='author'>Rae, John, 1845-1915</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38138, {&quot;Title&quot;:&quot;Socialism&quot;,&quot;Topics&quot;:[&quot;Socialism&quot;,&quot;Utilitarianism&quot;],&quot;Primary&quot;:&quot;38138.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mill, John Stuart, 1806-1873&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;38138&quot;});" class='title'>Socialism</a>
+<div class='author'>Mill, John Stuart, 1806-1873</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38982, {&quot;Title&quot;:&quot;Dictatorship vs. Democracy (Terrorism and Communism): a reply to Karl Kantsky&quot;,&quot;Topics&quot;:[&quot;Revolutions&quot;,&quot;Communism -- Russia&quot;,&quot;Kautsky, Karl, 1854-1938. Terrorismus und Kommunismus&quot;],&quot;Primary&quot;:&quot;38982.htm&quot;,&quot;CreatorNames&quot;:[&quot;Trotsky, Leon, 1879-1940&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;38982&quot;});" class='title'>Dictatorship vs. Democracy (Terrorism and Communism):<br><span class='subtitle'>a reply to Karl Kantsky</span></a>
+<div class='author'>Trotsky, Leon, 1879-1940</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39257, {&quot;Title&quot;:&quot;Socialism, Utopian and Scientific&quot;,&quot;Topics&quot;:[&quot;Socialism&quot;],&quot;Primary&quot;:&quot;39257.htm&quot;,&quot;CreatorNames&quot;:[&quot;Engels, Friedrich, 1820-1895&quot;,&quot;Aveling, Edward B., 1849-1898 [Translator]&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;39257&quot;});" class='title'>Socialism, Utopian and Scientific</a>
+<div class='author'>Engels, Friedrich, 1820-1895, Aveling, Edward B., 1849-1898 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39930, {&quot;Title&quot;:&quot;El proletario en España y el Negro en Cuba&quot;,&quot;Topics&quot;:[&quot;Spain -- Social life and customs&quot;,&quot;Slavery -- Cuba&quot;,&quot;Cuba -- Social life and customs&quot;],&quot;Primary&quot;:&quot;39930.htm&quot;,&quot;CreatorNames&quot;:[&quot;Espinosa, Ramón J.&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;39930&quot;});" class='title'>El proletario en España y el Negro en Cuba</a>
+<div class='author'>Espinosa, Ramón J.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40365, {&quot;Title&quot;:&quot;Anarchy&quot;,&quot;Topics&quot;:[&quot;Anarchism&quot;],&quot;Primary&quot;:&quot;40365.htm&quot;,&quot;CreatorNames&quot;:[&quot;Malatesta, Errico, 1853-1932&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;40365&quot;});" class='title'>Anarchy</a>
+<div class='author'>Malatesta, Errico, 1853-1932</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40456, {&quot;Title&quot;:&quot;L&#39;anarchie&quot;,&quot;Topics&quot;:[&quot;Anarchism&quot;],&quot;Primary&quot;:&quot;40456.htm&quot;,&quot;CreatorNames&quot;:[&quot;Reclus, Elisée, 1830-1905&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;40456&quot;});" class='title'>L'anarchie</a>
+<div class='author'>Reclus, Elisée, 1830-1905</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40865, {&quot;Title&quot;:&quot;Paris and the Social Revolution - A Study of the Revolutionary Elements in the Various Classes of Parisian Society&quot;,&quot;Topics&quot;:[&quot;Revolutions&quot;,&quot;Quartier latin (Paris, France)&quot;,&quot;Anarchism -- France&quot;,&quot;Socialism -- France&quot;,&quot;Paris (France) -- Politics and government&quot;],&quot;Primary&quot;:&quot;40865.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sanborn, Alvan F. (Alvan Francis), 1866-1966&quot;,&quot;Trowbridge, Vaughan, 1869-1945 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;40865&quot;});" class='title'>Paris and the Social Revolution -<br><span class='subtitle'>A Study of the Revolutionary Elements in the Various Classes of Parisian Society</span></a>
+<div class='author'>Sanborn, Alvan F. (Alvan Francis), 1866-1966, Trowbridge, Vaughan, 1869-1945 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4290, {&quot;Title&quot;:&quot;The Dominion in 1983&quot;,&quot;Topics&quot;:[&quot;Utopias -- Canada&quot;],&quot;Primary&quot;:&quot;4290.txt&quot;,&quot;CreatorNames&quot;:[&quot;Centennius, Ralph&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;4290&quot;});" class='title'>The Dominion in 1983</a>
+<div class='author'>Centennius, Ralph</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43543, {&quot;Title&quot;:&quot;Adventures in the Moon, and Other Worlds&quot;,&quot;Topics&quot;:[&quot;Utopias&quot;],&quot;Primary&quot;:&quot;43543.htm&quot;,&quot;CreatorNames&quot;:[&quot;Russell, John Russell, Earl, 1792-1878&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;43543&quot;});" class='title'>Adventures in the Moon, and Other Worlds</a>
+<div class='author'>Russell, John Russell, Earl, 1792-1878</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44598, {&quot;Title&quot;:&quot;Ein Blick in die Zukunft - Eine Antwort auf: Ein Rückblick von Edward Bellamy&quot;,&quot;Topics&quot;:[&quot;Utopias -- Fiction&quot;,&quot;Utopian fiction&quot;,&quot;Bellamy, Edward, 1850-1898. Looking backward&quot;,&quot;Utopias in literature&quot;],&quot;Primary&quot;:&quot;44598.htm&quot;,&quot;CreatorNames&quot;:[&quot;Michaelis, Richard, 1839-1909&quot;],&quot;LoCC&quot;:[&quot;HX&quot;,&quot;PS&quot;],&quot;PG_ID&quot;:&quot;44598&quot;});" class='title'>Ein Blick in die Zukunft -<br><span class='subtitle'>Eine Antwort auf: Ein Rückblick von Edward Bellamy</span></a>
+<div class='author'>Michaelis, Richard, 1839-1909</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44722, {&quot;Title&quot;:&quot;Ferdinand Lassalle: Eine Würdigung des Lehrers und Kämpfers&quot;,&quot;Topics&quot;:[&quot;Lassalle, Ferdinand, 1825-1864&quot;],&quot;Primary&quot;:&quot;44722.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bernstein, Eduard, 1850-1932&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;44722&quot;});" class='title'>Ferdinand Lassalle:<br><span class='subtitle'>Eine Würdigung des Lehrers und Kämpfers</span></a>
+<div class='author'>Bernstein, Eduard, 1850-1932</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45350, {&quot;Title&quot;:&quot;Anno Domini 2071 - Translated from the Dutch Original&quot;,&quot;Topics&quot;:[&quot;Utopias&quot;,&quot;Prophecies&quot;],&quot;Primary&quot;:&quot;45350.htm&quot;,&quot;CreatorNames&quot;:[&quot;Harting, Pieter, 1812-1885&quot;,&quot;Bikkers, Alexander V. W. [Translator]&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;45350&quot;});" class='title'>Anno Domini 2071 -<br><span class='subtitle'>Translated from the Dutch Original</span></a>
+<div class='author'>Harting, Pieter, 1812-1885, Bikkers, Alexander V. W. [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45827, {&quot;Title&quot;:&quot;The Impossibilities of Anarchism&quot;,&quot;Topics&quot;:[&quot;Socialism&quot;,&quot;Anarchism&quot;],&quot;Primary&quot;:&quot;45827.htm&quot;,&quot;CreatorNames&quot;:[&quot;Shaw, Bernard, 1856-1950&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;45827&quot;});" class='title'>The Impossibilities of Anarchism</a>
+<div class='author'>Shaw, Bernard, 1856-1950</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47244, {&quot;Title&quot;:&quot;Woman and Socialism&quot;,&quot;Topics&quot;:[&quot;Socialism&quot;,&quot;Women -- Social and moral questions&quot;,&quot;Women and socialism&quot;],&quot;Primary&quot;:&quot;47244.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bebel, August, 1840-1913&quot;,&quot;Lilienthal, Meta Stern, 1876-1948 [Translator]&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;47244&quot;});" class='title'>Woman and Socialism</a>
+<div class='author'>Bebel, August, 1840-1913, Lilienthal, Meta Stern, 1876-1948 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47573, {&quot;Title&quot;:&quot;Sosialismi ja individualismi&quot;,&quot;Topics&quot;:[&quot;Socialism&quot;],&quot;Primary&quot;:&quot;47573.txt&quot;,&quot;CreatorNames&quot;:[&quot;Wilde, Oscar, 1854-1900&quot;,&quot;Vehkamäki, J. H. [Translator]&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;47573&quot;});" class='title'>Sosialismi ja individualismi</a>
+<div class='author'>Wilde, Oscar, 1854-1900, Vehkamäki, J. H. [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48292, {&quot;Title&quot;:&quot;Fra Contadini&quot;,&quot;Topics&quot;:[&quot;Communism&quot;,&quot;Anarchism&quot;,&quot;Working class&quot;,&quot;Anarchism -- Italy&quot;,&quot;Anarchists -- Italy&quot;,&quot;Peasants&quot;],&quot;Primary&quot;:&quot;48292.htm&quot;,&quot;CreatorNames&quot;:[&quot;Malatesta, Errico, 1853-1932&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;48292&quot;});" class='title'>Fra Contadini</a>
+<div class='author'>Malatesta, Errico, 1853-1932</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49842, {&quot;Title&quot;:&quot;The Rise and Fall of Anarchy in America - From its Incipient Stage to the First Bomb Thrown in Chicago&quot;,&quot;Topics&quot;:[&quot;Anarchists -- United States&quot;,&quot;Haymarket Square Riot, Chicago, Ill., 1886&quot;],&quot;Primary&quot;:&quot;49842.htm&quot;,&quot;CreatorNames&quot;:[&quot;McLean, George N.&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;49842&quot;});" class='title'>The Rise and Fall of Anarchy in America -<br><span class='subtitle'>From its Incipient Stage to the First Bomb Thrown in Chicago</span></a>
+<div class='author'>McLean, George N.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49854, {&quot;Title&quot;:&quot;A Critique of Socialism - Read Before The Ruskin Club of Oakland California, 1905&quot;,&quot;Topics&quot;:[&quot;Socialism&quot;],&quot;Primary&quot;:&quot;49854.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sims, George R., 1847-1922&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;49854&quot;});" class='title'>A Critique of Socialism -<br><span class='subtitle'>Read Before The Ruskin Club of Oakland California, 1905</span></a>
+<div class='author'>Sims, George R., 1847-1922</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50690, {&quot;Title&quot;:&quot;The Remedy for Unemployment&quot;,&quot;Topics&quot;:[&quot;Unemployed -- Great Britain&quot;,&quot;Socialism -- Great Britain&quot;,&quot;Working class -- Great Britain&quot;],&quot;Primary&quot;:&quot;50690.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wallace, Alfred Russel, 1823-1913&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;50690&quot;});" class='title'>The Remedy for Unemployment</a>
+<div class='author'>Wallace, Alfred Russel, 1823-1913</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52117, {&quot;Title&quot;:&quot;Der Kollektivismus und die soziale Monarchie&quot;,&quot;Topics&quot;:[&quot;Monarchy&quot;,&quot;Collectivism&quot;],&quot;Primary&quot;:&quot;52117.htm&quot;,&quot;CreatorNames&quot;:[&quot;Neupauer, Josef von, 1810?-1902&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;52117&quot;});" class='title'>Der Kollektivismus und die soziale Monarchie</a>
+<div class='author'>Neupauer, Josef von, 1810?-1902</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52811, {&quot;Title&quot;:&quot;Anarchy and Anarchists - A History of the Red Terror and the Social Revolution in America and Europe; Communism, Socialism, and Nihilism in Doctrine and in Deed; The Chicago Haymarket Conspiracy and the Detection and Trial of the Conspirators&quot;,&quot;Topics&quot;:[&quot;Anarchism&quot;,&quot;Haymarket Square Riot, Chicago, Ill., 1886&quot;,&quot;Anarchists -- Illinois -- Chicago&quot;],&quot;Primary&quot;:&quot;52811.htm&quot;,&quot;CreatorNames&quot;:[&quot;Schaack, Michael J.&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;52811&quot;});" class='title'>Anarchy and Anarchists -<br><span class='subtitle'>A History of the Red Terror and the Social Revolution in America and Europe; Communism, Socialism, and Nihilism in Doctrine and in Deed; The Chicago Haymarket Conspiracy and the Detection and Trial of the Conspirators</span></a>
+<div class='author'>Schaack, Michael J.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53193, {&quot;Title&quot;:&quot;Intermere&quot;,&quot;Topics&quot;:[&quot;Utopias&quot;,&quot;Utopian fiction&quot;],&quot;Primary&quot;:&quot;53193.htm&quot;,&quot;CreatorNames&quot;:[&quot;Taylor, William Alexander, 1837-1912&quot;],&quot;LoCC&quot;:[&quot;HX&quot;,&quot;PS&quot;],&quot;PG_ID&quot;:&quot;53193&quot;});" class='title'>Intermere</a>
+<div class='author'>Taylor, William Alexander, 1837-1912</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53516, {&quot;Title&quot;:&quot;This Misery of Boots&quot;,&quot;Topics&quot;:[&quot;Socialism&quot;],&quot;Primary&quot;:&quot;53516.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wells, H. G. (Herbert George), 1866-1946&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;53516&quot;});" class='title'>This Misery of Boots</a>
+<div class='author'>Wells, H. G. (Herbert George), 1866-1946</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53664, {&quot;Title&quot;:&quot;Viimeinen tuomio&quot;,&quot;Topics&quot;:[&quot;Socialism&quot;,&quot;United States -- Social conditions -- 1865-1918&quot;,&quot;United States -- Economic conditions -- 1865-1918&quot;],&quot;Primary&quot;:&quot;53664.txt&quot;,&quot;CreatorNames&quot;:[&quot;Sinclair, Upton, 1878-1968&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;53664&quot;});" class='title'>Viimeinen tuomio</a>
+<div class='author'>Sinclair, Upton, 1878-1968</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54282, {&quot;Title&quot;:&quot;Socialismo y ciencia positiva (Darwin-Spencer-Marx)&quot;,&quot;Topics&quot;:[&quot;Socialism&quot;,&quot;Evolution&quot;,&quot;Spencer, Herbert, 1820-1903&quot;],&quot;Primary&quot;:&quot;54282.txt&quot;,&quot;CreatorNames&quot;:[&quot;Ferri, Enrico, 1856-1929&quot;,&quot;Payró, Roberto Jorge, 1867-1928 [Translator]&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;54282&quot;});" class='title'>Socialismo y ciencia positiva (Darwin-Spencer-Marx)</a>
+<div class='author'>Ferri, Enrico, 1856-1929, Payró, Roberto Jorge, 1867-1928 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54666, {&quot;Title&quot;:&quot;International May Day and American Labor Day - A Holiday Expressing Working Class Emancipation Versus a Holiday Exalting Labor&#39;s Chains&quot;,&quot;Topics&quot;:[&quot;Socialism&quot;,&quot;May Day (Labor holiday)&quot;,&quot;Labor Day&quot;,&quot;Working class -- Political activity&quot;],&quot;Primary&quot;:&quot;54666.htm&quot;,&quot;CreatorNames&quot;:[&quot;Reinstein, Boris&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;54666&quot;});" class='title'>International May Day and American Labor Day -<br><span class='subtitle'>A Holiday Expressing Working Class Emancipation Versus a Holiday Exalting Labor's Chains</span></a>
+<div class='author'>Reinstein, Boris</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55269, {&quot;Title&quot;:&quot;A Description of the Famous Kingdome of Macaria - Shewing its Excellent Government: Wherein The Inhabitants Live in Great Prosperity, Health and Happinesse; the King Obeyed, the Nobles Honoured; and All Good Men Respected, Vice Punished, and Vertue Rewarded&quot;,&quot;Topics&quot;:[&quot;Utopias -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;55269.htm&quot;,&quot;CreatorNames&quot;:[&quot;Plattes, Gabriel, 1600?-1644&quot;,&quot;Constable, Francis, -1647 [Other]&quot;,&quot;Hartlib, Samuel, 1600?-1662 [Other]&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;55269&quot;});" class='title'>A Description of the Famous Kingdome of Macaria -<br><span class='subtitle'>Shewing its Excellent Government: Wherein The Inhabitants Live in Great Prosperity, Health and Happinesse; the King Obeyed, the Nobles Honoured; and All Good Men Respected, Vice Punished, and Vertue Rewarded</span></a>
+<div class='author'>Plattes, Gabriel, 1600?-1644, Constable, Francis, -1647 [Other], Hartlib, Samuel, 1600?-1662 [Other]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55301, {&quot;Title&quot;:&quot;Freiland: Ein sociales Zukunftsbild&quot;,&quot;Topics&quot;:[&quot;Utopias&quot;],&quot;Primary&quot;:&quot;55301.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hertzka, Theodor, 1845-1924&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;55301&quot;});" class='title'>Freiland:<br><span class='subtitle'>Ein sociales Zukunftsbild</span></a>
+<div class='author'>Hertzka, Theodor, 1845-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55356, {&quot;Title&quot;:&quot;Bolshevismi ja olot Venäjällä&quot;,&quot;Topics&quot;:[&quot;Communism -- Soviet Union&quot;,&quot;Soviet Union -- Social conditions&quot;,&quot;Soviet Union -- History&quot;],&quot;Primary&quot;:&quot;55356.txt&quot;,&quot;CreatorNames&quot;:[&quot;Rauhala, K. N. (Kalle Nikodemus), 1887-1937&quot;],&quot;LoCC&quot;:[&quot;DK&quot;,&quot;HX&quot;],&quot;PG_ID&quot;:&quot;55356&quot;});" class='title'>Bolshevismi ja olot Venäjällä</a>
+<div class='author'>Rauhala, K. N. (Kalle Nikodemus), 1887-1937</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55633, {&quot;Title&quot;:&quot;Eine Reise nach Freiland&quot;,&quot;Topics&quot;:[&quot;Utopias&quot;,&quot;Collective settlements&quot;],&quot;Primary&quot;:&quot;55633.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hertzka, Theodor, 1845-1924&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;55633&quot;});" class='title'>Eine Reise nach Freiland</a>
+<div class='author'>Hertzka, Theodor, 1845-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5624, {&quot;Title&quot;:&quot;The Inhumanity of Socialism&quot;,&quot;Topics&quot;:[&quot;Socialism&quot;],&quot;Primary&quot;:&quot;5624.htm&quot;,&quot;CreatorNames&quot;:[&quot;Adams, Edward F. (Edward Francis), 1839-1929&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;5624&quot;});" class='title'>The Inhumanity of Socialism</a>
+<div class='author'>Adams, Edward F. (Edward Francis), 1839-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56383, {&quot;Title&quot;:&quot;Investigation of Communist Activities in Seattle, Wash., Area, Hearings,  Part 1&quot;,&quot;Topics&quot;:[&quot;Communism -- Washington (State) -- Seattle&quot;],&quot;Primary&quot;:&quot;56383.htm&quot;,&quot;CreatorNames&quot;:[&quot;United States. Congress. House. Committee on Un-American Activities&quot;],&quot;LoCC&quot;:[&quot;HX&quot;,&quot;KF&quot;],&quot;PG_ID&quot;:&quot;56383&quot;});" class='title'>Investigation of Communist Activities in Seattle, Wash., Area, Hearings,  Part 1</a>
+<div class='author'>United States. Congress. House. Committee on Un-American Activities</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56384, {&quot;Title&quot;:&quot;Investigation of Communist activities in Seattle, Wash., Area, Hearings, Part 2&quot;,&quot;Topics&quot;:[&quot;Communism -- Washington (State) -- Seattle&quot;],&quot;Primary&quot;:&quot;56384.htm&quot;,&quot;CreatorNames&quot;:[&quot;United States. Congress. House. Committee on Un-American Activities&quot;],&quot;LoCC&quot;:[&quot;HX&quot;,&quot;KF&quot;],&quot;PG_ID&quot;:&quot;56384&quot;});" class='title'>Investigation of Communist activities in Seattle, Wash., Area, Hearings, Part 2</a>
+<div class='author'>United States. Congress. House. Committee on Un-American Activities</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56388, {&quot;Title&quot;:&quot;Investigation of Communist activities in Seattle, Wash., area. Hearings, Part 3&quot;,&quot;Topics&quot;:[&quot;Communism -- Washington (State) -- Seattle&quot;],&quot;Primary&quot;:&quot;56388.htm&quot;,&quot;CreatorNames&quot;:[&quot;United States. Congress. House. Committee on Un-American Activities&quot;],&quot;LoCC&quot;:[&quot;HX&quot;,&quot;KF&quot;],&quot;PG_ID&quot;:&quot;56388&quot;});" class='title'>Investigation of Communist activities in Seattle, Wash., area. Hearings, Part 3</a>
+<div class='author'>United States. Congress. House. Committee on Un-American Activities</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56639, {&quot;Title&quot;:&quot;The Republic of the Future; or, Socialism a Reality&quot;,&quot;Topics&quot;:[&quot;Utopias&quot;],&quot;Primary&quot;:&quot;56639.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dodd, Anna Bowman, 1855-1929&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;56639&quot;});" class='title'>The Republic of the Future;<br><span class='subtitle'>or, Socialism a Reality</span></a>
+<div class='author'>Dodd, Anna Bowman, 1855-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56979, {&quot;Title&quot;:&quot;The Man from Mars: His Morals, Politics and Religion&quot;,&quot;Topics&quot;:[&quot;Utopias&quot;,&quot;Social problems&quot;],&quot;Primary&quot;:&quot;56979.htm&quot;,&quot;CreatorNames&quot;:[&quot;Simpson, William, 1828-1910&quot;],&quot;LoCC&quot;:[&quot;HX&quot;,&quot;PS&quot;],&quot;PG_ID&quot;:&quot;56979&quot;});" class='title'>The Man from Mars:<br><span class='subtitle'>His Morals, Politics and Religion</span></a>
+<div class='author'>Simpson, William, 1828-1910</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57219, {&quot;Title&quot;:&quot;Sosialismin historia - Uudemman sosiaismin edeltäjät. 1. Platonista uudestikastajiin&quot;,&quot;Topics&quot;:[&quot;Socialism -- History&quot;,&quot;Socialism -- Philosophy -- History&quot;],&quot;Primary&quot;:&quot;57219.txt&quot;,&quot;CreatorNames&quot;:[&quot;Kautsky, Karl, 1854-1938&quot;,&quot;Jokinen, Wäinö, 1879-1920 [Translator]&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;57219&quot;});" class='title'>Sosialismin historia -<br><span class='subtitle'>Uudemman sosiaismin edeltäjät. 1. Platonista uudestikastajiin</span></a>
+<div class='author'>Kautsky, Karl, 1854-1938, Jokinen, Wäinö, 1879-1920 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59110, {&quot;Title&quot;:&quot;Debs: His Life, Writings and Speeches, with a Department of Appreciations&quot;,&quot;Topics&quot;:[&quot;Socialism -- United States&quot;,&quot;Socialist Party (U.S.)&quot;],&quot;Primary&quot;:&quot;59110.htm&quot;,&quot;CreatorNames&quot;:[&quot;Debs, Eugene V. (Eugene Victor), 1855-1926&quot;,&quot;Rogers, Bruce, 1876- [Compiler]&quot;,&quot;Reynolds, Stephen Marion [Contributor]&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;59110&quot;});" class='title'>Debs:<br><span class='subtitle'>His Life, Writings and Speeches, with a Department of Appreciations</span></a>
+<div class='author'>Debs, Eugene V. (Eugene Victor), 1855-1926, Rogers, Bruce, 1876- [Compiler], Reynolds, Stephen Marion [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59330, {&quot;Title&quot;:&quot;Looking Further Forward - An Answer to Looking Backward by Edward Bellamy&quot;,&quot;Topics&quot;:[&quot;Utopias -- Fiction&quot;,&quot;Utopian fiction&quot;,&quot;Bellamy, Edward, 1850-1898. Looking backward&quot;,&quot;Utopias in literature&quot;],&quot;Primary&quot;:&quot;59330.htm&quot;,&quot;CreatorNames&quot;:[&quot;Michaelis, Richard, 1839-1909&quot;],&quot;LoCC&quot;:[&quot;HX&quot;,&quot;PS&quot;],&quot;PG_ID&quot;:&quot;59330&quot;});" class='title'>Looking Further Forward -<br><span class='subtitle'>An Answer to Looking Backward by Edward Bellamy</span></a>
+<div class='author'>Michaelis, Richard, 1839-1909</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59815, {&quot;Title&quot;:&quot;French and German Socialism in Modern Times&quot;,&quot;Topics&quot;:[&quot;Socialism -- France&quot;,&quot;Socialism -- Germany&quot;],&quot;Primary&quot;:&quot;59815.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ely, Richard T. (Richard Theodore), 1854-1943&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;59815&quot;});" class='title'>French and German Socialism in Modern Times</a>
+<div class='author'>Ely, Richard T. (Richard Theodore), 1854-1943</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60274, {&quot;Title&quot;:&quot;Yhdenvertaisuus&quot;,&quot;Topics&quot;:[&quot;Science fiction&quot;,&quot;Utopias -- Fiction&quot;,&quot;Political fiction&quot;,&quot;Utopian fiction&quot;,&quot;Socialism -- Fiction&quot;],&quot;Primary&quot;:&quot;60274.txt&quot;,&quot;CreatorNames&quot;:[&quot;Bellamy, Edward, 1850-1898&quot;],&quot;LoCC&quot;:[&quot;HX&quot;,&quot;PS&quot;],&quot;PG_ID&quot;:&quot;60274&quot;});" class='title'>Yhdenvertaisuus</a>
+<div class='author'>Bellamy, Edward, 1850-1898</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61, {&quot;Title&quot;:&quot;The Communist Manifesto&quot;,&quot;Topics&quot;:[&quot;Socialism&quot;,&quot;Communism&quot;],&quot;Primary&quot;:&quot;61.htm&quot;,&quot;CreatorNames&quot;:[&quot;Engels, Friedrich, 1820-1895&quot;,&quot;Marx, Karl, 1818-1883&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;61&quot;});" class='title'>The Communist Manifesto</a>
+<div class='author'>Engels, Friedrich, 1820-1895, Marx, Karl, 1818-1883</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61234, {&quot;Title&quot;:&quot;Common-Sense Country&quot;,&quot;Topics&quot;:[&quot;Utopias&quot;,&quot;Anarchism&quot;],&quot;Primary&quot;:&quot;61234.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bevington, L. S. (Louisa Sarah), 1845-1895&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;61234&quot;});" class='title'>Common-Sense Country</a>
+<div class='author'>Bevington, L. S. (Louisa Sarah), 1845-1895</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61347, {&quot;Title&quot;:&quot;Socialism and the family&quot;,&quot;Topics&quot;:[&quot;Socialism&quot;,&quot;Families&quot;,&quot;Middle class&quot;],&quot;Primary&quot;:&quot;61347.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wells, H. G. (Herbert George), 1866-1946&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;61347&quot;});" class='title'>Socialism and the family</a>
+<div class='author'>Wells, H. G. (Herbert George), 1866-1946</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62420, {&quot;Title&quot;:&quot;Talk about Socialism with an old shopmate&quot;,&quot;Topics&quot;:[&quot;Socialism and Christianity&quot;],&quot;Primary&quot;:&quot;62420.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;62420&quot;});" class='title'>Talk about Socialism with an old shopmate</a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62506, {&quot;Title&quot;:&quot;Socialism Exposed&quot;,&quot;Topics&quot;:[&quot;Socialism -- Great Britain&quot;,&quot;Christian socialism&quot;,&quot;Owen, Robert, 1771-1858. Book of the new moral world&quot;],&quot;Primary&quot;:&quot;62506.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mather, Joseph&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;62506&quot;});" class='title'>Socialism Exposed</a>
+<div class='author'>Mather, Joseph</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63362, {&quot;Title&quot;:&quot;Het Anarchisme in de Arbeidersbeweging&quot;,&quot;Topics&quot;:[&quot;Anarchists&quot;,&quot;Anarchism&quot;,&quot;Working class&quot;,&quot;Labor&quot;,&quot;Labor movement&quot;],&quot;Primary&quot;:&quot;63362.htm&quot;,&quot;CreatorNames&quot;:[&quot;Loopuit, Jos., 1864-1923&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;63362&quot;});" class='title'>Het Anarchisme in de Arbeidersbeweging</a>
+<div class='author'>Loopuit, Jos., 1864-1923</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6424, {&quot;Title&quot;:&quot;A Modern Utopia&quot;,&quot;Topics&quot;:[&quot;Utopias&quot;],&quot;Primary&quot;:&quot;6424.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wells, H. G. (Herbert George), 1866-1946&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;6424&quot;});" class='title'>A Modern Utopia</a>
+<div class='author'>Wells, H. G. (Herbert George), 1866-1946</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64327, {&quot;Title&quot;:&quot;Der Briefwechsel zwischen Friedrich Engels und Karl Marx 1844 bis 1883, Erster Band&quot;,&quot;Topics&quot;:[&quot;Socialism&quot;,&quot;Engels, Friedrich, 1820-1895 -- Correspondence&quot;,&quot;Marx, Karl, 1818-1883 -- Correspondence&quot;],&quot;Primary&quot;:&quot;64327.htm&quot;,&quot;CreatorNames&quot;:[&quot;Engels, Friedrich, 1820-1895&quot;,&quot;Marx, Karl, 1818-1883&quot;,&quot;Bebel, August, 1840-1913 [Editor]&quot;,&quot;Bernstein, Eduard, 1850-1932 [Editor]&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;64327&quot;});" class='title'>Der Briefwechsel zwischen Friedrich Engels und Karl Marx 1844 bis 1883, Erster Band</a>
+<div class='author'>Engels, Friedrich, 1820-1895, Marx, Karl, 1818-1883, Bebel, August, 1840-1913 [Editor], Bernstein, Eduard, 1850-1932 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64373, {&quot;Title&quot;:&quot;The industrial republic: a study of the America of ten years hence&quot;,&quot;Topics&quot;:[&quot;Socialism -- United States&quot;,&quot;United States -- Social conditions -- 1865-1918&quot;,&quot;United States -- Economic conditions -- 1865-1918&quot;],&quot;Primary&quot;:&quot;64373.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sinclair, Upton, 1878-1968&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;64373&quot;});" class='title'>The industrial republic:<br><span class='subtitle'>a study of the America of ten years hence</span></a>
+<div class='author'>Sinclair, Upton, 1878-1968</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66501, {&quot;Title&quot;:&quot;Ravachol und die Pariser Anarchisten&quot;,&quot;Topics&quot;:[&quot;Anarchism -- France -- Paris&quot;,&quot;Anarchists -- France -- Paris&quot;],&quot;Primary&quot;:&quot;66501.htm&quot;,&quot;CreatorNames&quot;:[&quot;Holitscher, Arthur, 1869-1941&quot;,&quot;Leonhard, Rudolf, 1889-1953 [Editor]&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;66501&quot;});" class='title'>Ravachol und die Pariser Anarchisten</a>
+<div class='author'>Holitscher, Arthur, 1869-1941, Leonhard, Rudolf, 1889-1953 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6711, {&quot;Title&quot;:&quot;Philip Dru: Administrator; A Story of Tomorrow, 1920-1935&quot;,&quot;Topics&quot;:[&quot;Utopias&quot;],&quot;Primary&quot;:&quot;6711.htm&quot;,&quot;CreatorNames&quot;:[&quot;House, Edward Mandell, 1858-1938&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;6711&quot;});" class='title'>Philip Dru:<br><span class='subtitle'>Administrator; A Story of Tomorrow, 1920-1935</span></a>
+<div class='author'>House, Edward Mandell, 1858-1938</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67321, {&quot;Title&quot;:&quot;The Co-opolitan: A Story of the Co-operative Commonwealth of Idaho&quot;,&quot;Topics&quot;:[&quot;Utopias -- Fiction&quot;,&quot;Utopian fiction&quot;,&quot;Idaho -- Fiction&quot;,&quot;Cooperative societies -- Fiction&quot;],&quot;Primary&quot;:&quot;67321.htm&quot;,&quot;CreatorNames&quot;:[&quot;Forbush, Zebina&quot;],&quot;LoCC&quot;:[&quot;HX&quot;,&quot;PS&quot;],&quot;PG_ID&quot;:&quot;67321&quot;});" class='title'>The Co-opolitan:<br><span class='subtitle'>A Story of the Co-operative Commonwealth of Idaho</span></a>
+<div class='author'>Forbush, Zebina</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68442, {&quot;Title&quot;:&quot;Deportation, its meaning and menace - Last message to the people of America by Alexander Berkman and Emma Goldman&quot;,&quot;Topics&quot;:[&quot;Anarchism&quot;,&quot;Deportation&quot;],&quot;Primary&quot;:&quot;68442.htm&quot;,&quot;CreatorNames&quot;:[&quot;Berkman, Alexander, 1870-1936&quot;,&quot;Goldman, Emma, 1869-1940&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;68442&quot;});" class='title'>Deportation, its meaning and menace -<br><span class='subtitle'>Last message to the people of America by Alexander Berkman and Emma Goldman</span></a>
+<div class='author'>Berkman, Alexander, 1870-1936, Goldman, Emma, 1869-1940</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68755, {&quot;Title&quot;:&quot;Your pay envelope&quot;,&quot;Topics&quot;:[&quot;Socialism&quot;],&quot;Primary&quot;:&quot;68755.htm&quot;,&quot;CreatorNames&quot;:[&quot;Meader, John Richard, 1870-&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;68755&quot;});" class='title'>Your pay envelope</a>
+<div class='author'>Meader, John Richard, 1870-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69088, {&quot;Title&quot;:&quot;Fabian Essays in Socialism&quot;,&quot;Topics&quot;:[&quot;Socialism&quot;,&quot;Socialism -- Great Britain&quot;],&quot;Primary&quot;:&quot;69088.htm&quot;,&quot;CreatorNames&quot;:[&quot;Besant, Annie, 1847-1933 [Contributor]&quot;,&quot;Bland, Hubert, 1856-1914 [Contributor]&quot;,&quot;Clarke, William, 1852-1901 [Contributor]&quot;,&quot;Olivier, Sydney Haldane Olivier, Baron, 1859-1943 [Contributor]&quot;,&quot;Wallas, Graham, 1858-1932 [Contributor]&quot;,&quot;Webb, Sidney, 1859-1947 [Contributor]&quot;,&quot;Shaw, Bernard, 1856-1950 [Editor]&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;69088&quot;});" class='title'>Fabian Essays in Socialism</a>
+<div class='author'>Besant, Annie, 1847-1933 [Contributor], Bland, Hubert, 1856-1914 [Contributor], Clarke, William, 1852-1901 [Contributor], Olivier, Sydney Haldane Olivier, Baron, 1859-1943 [Contributor], Wallas, Graham, 1858-1932 [Contributor], Webb, Sidney, 1859-1947 [Contributor], Shaw, Bernard, 1856-1950 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69480, {&quot;Title&quot;:&quot;The truth about socialism&quot;,&quot;Topics&quot;:[&quot;Socialism&quot;],&quot;Primary&quot;:&quot;69480.htm&quot;,&quot;CreatorNames&quot;:[&quot;Benson, Allan L. (Allan Louis), 1871-1940&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;69480&quot;});" class='title'>The truth about socialism</a>
+<div class='author'>Benson, Allan L. (Allan Louis), 1871-1940</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70311, {&quot;Title&quot;:&quot;Uusia maailmoita vanhojen sijaan&quot;,&quot;Topics&quot;:[&quot;Socialism&quot;],&quot;Primary&quot;:&quot;70311.txt&quot;,&quot;CreatorNames&quot;:[&quot;Wells, H. G. (Herbert George), 1866-1946&quot;,&quot;Hollo, J. A. (Juho Aukusti), 1885-1967 [Translator]&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;70311&quot;});" class='title'>Uusia maailmoita vanhojen sijaan</a>
+<div class='author'>Wells, H. G. (Herbert George), 1866-1946, Hollo, J. A. (Juho Aukusti), 1885-1967 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7302, {&quot;Title&quot;:&quot;My Friends at Brook Farm&quot;,&quot;Topics&quot;:[&quot;Brook Farm Phalanx (West Roxbury, Boston, Mass.)&quot;],&quot;Primary&quot;:&quot;7302.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sears, John Van der Zee, 1835-&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;7302&quot;});" class='title'>My Friends at Brook Farm</a>
+<div class='author'>Sears, John Van der Zee, 1835-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7303, {&quot;Title&quot;:&quot;Equality&quot;,&quot;Topics&quot;:[&quot;Science fiction&quot;,&quot;Utopias -- Fiction&quot;,&quot;Political fiction&quot;,&quot;Utopian fiction&quot;,&quot;Socialism -- Fiction&quot;],&quot;Primary&quot;:&quot;7303.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bellamy, Edward, 1850-1898&quot;],&quot;LoCC&quot;:[&quot;HX&quot;,&quot;PS&quot;],&quot;PG_ID&quot;:&quot;7303&quot;});" class='title'>Equality</a>
+<div class='author'>Bellamy, Edward, 1850-1898</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7932, {&quot;Title&quot;:&quot;Brook Farm: Historic and Personal Memoirs&quot;,&quot;Topics&quot;:[&quot;Brook Farm Phalanx (West Roxbury, Boston, Mass.)&quot;],&quot;Primary&quot;:&quot;7932.txt&quot;,&quot;CreatorNames&quot;:[&quot;Codman, John Thomas&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;7932&quot;});" class='title'>Brook Farm:<br><span class='subtitle'>Historic and Personal Memoirs</span></a>
+<div class='author'>Codman, John Thomas</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(8116, {&quot;Title&quot;:&quot;The Communistic Societies of the United States - From Personal Visit and Observation&quot;,&quot;Topics&quot;:[&quot;Collective settlements -- United States&quot;],&quot;Primary&quot;:&quot;8116.txt&quot;,&quot;CreatorNames&quot;:[&quot;Nordhoff, Charles, 1830-1901&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;8116&quot;});" class='title'>The Communistic Societies of the United States -<br><span class='subtitle'>From Personal Visit and Observation</span></a>
+<div class='author'>Nordhoff, Charles, 1830-1901</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(8520, {&quot;Title&quot;:&quot;Voyage d&#39;un Habitant de la Lune à Paris à la Fin du XVIIIe Siècle&quot;,&quot;Topics&quot;:[&quot;Utopias&quot;],&quot;Primary&quot;:&quot;8520.txt&quot;,&quot;CreatorNames&quot;:[&quot;Gallet, Pierre&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;8520&quot;});" class='title'>Voyage d'un Habitant de la Lune à Paris à la Fin du XVIIIe Siècle</a>
+<div class='author'>Gallet, Pierre</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(9866, {&quot;Title&quot;:&quot;Freeland: A Social Anticipation&quot;,&quot;Topics&quot;:[&quot;Utopias&quot;],&quot;Primary&quot;:&quot;9866.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hertzka, Theodor, 1845-1924&quot;,&quot;Ransom, Arthur, 1831-1912 [Translator]&quot;],&quot;LoCC&quot;:[&quot;HX&quot;],&quot;PG_ID&quot;:&quot;9866&quot;});" class='title'>Freeland:<br><span class='subtitle'>A Social Anticipation</span></a>
+<div class='author'>Hertzka, Theodor, 1845-1924, Ransom, Arthur, 1831-1912 [Translator]</div>
+</div>
+</ul></div>
+</body></html>

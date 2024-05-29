@@ -1,0 +1,234 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Speculative philosophy (BD)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(11261, {&quot;Title&quot;:&quot;Cyclopedia of Philosophy&quot;,&quot;Topics&quot;:[&quot;Philosophy&quot;],&quot;Primary&quot;:&quot;11261.txt&quot;,&quot;CreatorNames&quot;:[&quot;Vaknin, Samuel, 1961-&quot;,&quot;Rangelovska, Lidija [Editor]&quot;],&quot;LoCC&quot;:[&quot;BD&quot;],&quot;PG_ID&quot;:&quot;11261&quot;});" class='title'>Cyclopedia of Philosophy</a>
+<div class='author'>Vaknin, Samuel, 1961-, Rangelovska, Lidija [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12264, {&quot;Title&quot;:&quot;Father Payne&quot;,&quot;Topics&quot;:[&quot;Philosophy&quot;,&quot;Ethics&quot;,&quot;Life&quot;],&quot;Primary&quot;:&quot;12264.txt&quot;,&quot;CreatorNames&quot;:[&quot;Benson, Arthur Christopher, 1862-1925&quot;],&quot;LoCC&quot;:[&quot;BD&quot;],&quot;PG_ID&quot;:&quot;12264&quot;});" class='title'>Father Payne</a>
+<div class='author'>Benson, Arthur Christopher, 1862-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13766, {&quot;Title&quot;:&quot;Cobwebs of Thought&quot;,&quot;Topics&quot;:[&quot;Philosophy&quot;],&quot;Primary&quot;:&quot;13766.txt&quot;,&quot;CreatorNames&quot;:[&quot;Arachne&quot;],&quot;LoCC&quot;:[&quot;BD&quot;],&quot;PG_ID&quot;:&quot;13766&quot;});" class='title'>Cobwebs of Thought</a>
+<div class='author'>Arachne</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15898, {&quot;Title&quot;:&quot;Stufen: Eine Entwickelung in Aphorismen und Tagebuch-Notizen&quot;,&quot;Topics&quot;:[&quot;Autobiographies&quot;,&quot;Aphorisms and apothegms&quot;],&quot;Primary&quot;:&quot;15898.htm&quot;,&quot;CreatorNames&quot;:[&quot;Morgenstern, Christian, 1871-1914&quot;],&quot;LoCC&quot;:[&quot;BD&quot;,&quot;PT&quot;],&quot;PG_ID&quot;:&quot;15898&quot;});" class='title'>Stufen:<br><span class='subtitle'>Eine Entwickelung in Aphorismen und Tagebuch-Notizen</span></a>
+<div class='author'>Morgenstern, Christian, 1871-1914</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16406, {&quot;Title&quot;:&quot;An Introduction to Philosophy&quot;,&quot;Topics&quot;:[&quot;Philosophy&quot;],&quot;Primary&quot;:&quot;16406.txt&quot;,&quot;CreatorNames&quot;:[&quot;Fullerton, George Stuart, 1859-1925&quot;],&quot;LoCC&quot;:[&quot;BD&quot;],&quot;PG_ID&quot;:&quot;16406&quot;});" class='title'>An Introduction to Philosophy</a>
+<div class='author'>Fullerton, George Stuart, 1859-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17007, {&quot;Title&quot;:&quot;Imaginäre Brücken: Studien und Aufsätze&quot;,&quot;Topics&quot;:[&quot;Essays&quot;,&quot;Literature&quot;],&quot;Primary&quot;:&quot;17007.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wassermann, Jakob, 1873-1934&quot;],&quot;LoCC&quot;:[&quot;BD&quot;,&quot;PT&quot;],&quot;PG_ID&quot;:&quot;17007&quot;});" class='title'>Imaginäre Brücken:<br><span class='subtitle'>Studien und Aufsätze</span></a>
+<div class='author'>Wassermann, Jakob, 1873-1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17239, {&quot;Title&quot;:&quot;The Destiny of Man, Viewed in the Light of His Origin&quot;,&quot;Topics&quot;:[&quot;Human beings&quot;,&quot;Immortality&quot;],&quot;Primary&quot;:&quot;17239.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fiske, John, 1842-1901&quot;],&quot;LoCC&quot;:[&quot;BD&quot;],&quot;PG_ID&quot;:&quot;17239&quot;});" class='title'>The Destiny of Man, Viewed in the Light of His Origin</a>
+<div class='author'>Fiske, John, 1842-1901</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20757, {&quot;Title&quot;:&quot;Darwinismus und Sozialismus: Der Kampf um das Dasein und die Moderne Gesellschaft&quot;,&quot;Topics&quot;:[&quot;Socialism&quot;,&quot;Materialism&quot;],&quot;Primary&quot;:&quot;20757.htm&quot;,&quot;CreatorNames&quot;:[&quot;Büchner, Ludwig, 1824-1899&quot;],&quot;LoCC&quot;:[&quot;BD&quot;],&quot;PG_ID&quot;:&quot;20757&quot;});" class='title'>Darwinismus und Sozialismus:<br><span class='subtitle'>Der Kampf um das Dasein und die Moderne Gesellschaft</span></a>
+<div class='author'>Büchner, Ludwig, 1824-1899</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(21668, {&quot;Title&quot;:&quot;The Complex Vision&quot;,&quot;Topics&quot;:[&quot;Philosophy&quot;,&quot;Life&quot;],&quot;Primary&quot;:&quot;21668.htm&quot;,&quot;CreatorNames&quot;:[&quot;Powys, John Cowper, 1872-1963&quot;],&quot;LoCC&quot;:[&quot;BD&quot;],&quot;PG_ID&quot;:&quot;21668&quot;});" class='title'>The Complex Vision</a>
+<div class='author'>Powys, John Cowper, 1872-1963</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(21789, {&quot;Title&quot;:&quot;A Discourse of Life and Death, by Mornay; and  Antonius by Garnier&quot;,&quot;Topics&quot;:[&quot;Antonius, Marcus, 83 B.C.?-30 B.C. -- Drama&quot;,&quot;Death -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;21789.htm&quot;,&quot;CreatorNames&quot;:[&quot;Garnier, Robert, 1544-1590&quot;,&quot;Mornay, Philippe de, seigneur du Plessis-Marly, 1549-1623&quot;,&quot;Pembroke, Mary Sidney Herbert, Countess of, 1561-1621 [Translator]&quot;],&quot;LoCC&quot;:[&quot;BD&quot;,&quot;PQ&quot;],&quot;PG_ID&quot;:&quot;21789&quot;});" class='title'>A Discourse of Life and Death, by Mornay;<br><span class='subtitle'>and  Antonius by Garnier</span></a>
+<div class='author'>Garnier, Robert, 1544-1590, Mornay, Philippe de, seigneur du Plessis-Marly, 1549-1623, Pembroke, Mary Sidney Herbert, Countess of, 1561-1621 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22283, {&quot;Title&quot;:&quot;Mind and Motion and Monism&quot;,&quot;Topics&quot;:[&quot;Monism&quot;],&quot;Primary&quot;:&quot;22283.htm&quot;,&quot;CreatorNames&quot;:[&quot;Romanes, George John, 1848-1894&quot;],&quot;LoCC&quot;:[&quot;BD&quot;],&quot;PG_ID&quot;:&quot;22283&quot;});" class='title'>Mind and Motion and Monism</a>
+<div class='author'>Romanes, George John, 1848-1894</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24406, {&quot;Title&quot;:&quot;The Price of a Soul&quot;,&quot;Topics&quot;:[&quot;Soul&quot;],&quot;Primary&quot;:&quot;24406.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bryan, William Jennings, 1860-1925&quot;],&quot;LoCC&quot;:[&quot;BD&quot;],&quot;PG_ID&quot;:&quot;24406&quot;});" class='title'>The Price of a Soul</a>
+<div class='author'>Bryan, William Jennings, 1860-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24899, {&quot;Title&quot;:&quot;Platons Gastmahl&quot;,&quot;Topics&quot;:[&quot;Classical literature&quot;,&quot;Philosophy&quot;,&quot;Plato&quot;],&quot;Primary&quot;:&quot;24899.htm&quot;,&quot;CreatorNames&quot;:[&quot;Plato, 427? BCE-347? BCE&quot;,&quot;Kassner, Rudolf, 1873-1959 [Translator]&quot;],&quot;LoCC&quot;:[&quot;BD&quot;],&quot;PG_ID&quot;:&quot;24899&quot;});" class='title'>Platons Gastmahl</a>
+<div class='author'>Plato, 427? BCE-347? BCE, Kassner, Rudolf, 1873-1959 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25009, {&quot;Title&quot;:&quot;The World&#39;s Greatest Books — Volume 14 — Philosophy and Economics&quot;,&quot;Topics&quot;:[&quot;Philosophy&quot;,&quot;Economics&quot;],&quot;Primary&quot;:&quot;25009.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hammerton, J. A. (John Alexander), 1871-1949 [Editor]&quot;,&quot;Mee, Arthur, 1875-1943 [Editor]&quot;],&quot;LoCC&quot;:[&quot;BD&quot;],&quot;PG_ID&quot;:&quot;25009&quot;});" class='title'>The World's Greatest Books — Volume 14 — Philosophy and Economics</a>
+<div class='author'>Hammerton, J. A. (John Alexander), 1871-1949 [Editor], Mee, Arthur, 1875-1943 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25110, {&quot;Title&quot;:&quot;The Approach to Philosophy&quot;,&quot;Topics&quot;:[&quot;Philosophy&quot;],&quot;Primary&quot;:&quot;25110.htm&quot;,&quot;CreatorNames&quot;:[&quot;Perry, Ralph Barton, 1876-1957&quot;],&quot;LoCC&quot;:[&quot;BD&quot;],&quot;PG_ID&quot;:&quot;25110&quot;});" class='title'>The Approach to Philosophy</a>
+<div class='author'>Perry, Ralph Barton, 1876-1957</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26321, {&quot;Title&quot;:&quot;Life and Matter: A Criticism of Professor Haeckel&#39;s \&quot;\&quot;Riddle of the Universe\&quot;\&quot;&quot;,&quot;Topics&quot;:[&quot;Philosophy and religion&quot;,&quot;Monism&quot;,&quot;Life -- Origin&quot;,&quot;Haeckel, Ernst, 1834-1919. Welträthsel&quot;],&quot;Primary&quot;:&quot;26321.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lodge, Oliver, Sir, 1851-1940&quot;],&quot;LoCC&quot;:[&quot;BD&quot;],&quot;PG_ID&quot;:&quot;26321&quot;});" class='title'>Life and Matter:<br><span class='subtitle'>A Criticism of Professor Haeckel's "Riddle of the Universe"</span></a>
+<div class='author'>Lodge, Oliver, Sir, 1851-1940</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31354, {&quot;Title&quot;:&quot;Death&quot;,&quot;Topics&quot;:[&quot;Death&quot;],&quot;Primary&quot;:&quot;31354.htm&quot;,&quot;CreatorNames&quot;:[&quot;Maeterlinck, Maurice, 1862-1949&quot;,&quot;Teixeira de Mattos, Alexander, 1865-1921 [Translator]&quot;],&quot;LoCC&quot;:[&quot;BD&quot;],&quot;PG_ID&quot;:&quot;31354&quot;});" class='title'>Death</a>
+<div class='author'>Maeterlinck, Maurice, 1862-1949, Teixeira de Mattos, Alexander, 1865-1921 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35722, {&quot;Title&quot;:&quot;Ontology, or the Theory of Being&quot;,&quot;Topics&quot;:[&quot;Ontology&quot;],&quot;Primary&quot;:&quot;35722.htm&quot;,&quot;CreatorNames&quot;:[&quot;Coffey, P. (Peter), 1876-1943&quot;],&quot;LoCC&quot;:[&quot;BD&quot;],&quot;PG_ID&quot;:&quot;35722&quot;});" class='title'>Ontology, or the Theory of Being</a>
+<div class='author'>Coffey, P. (Peter), 1876-1943</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35875, {&quot;Title&quot;:&quot;Reflections on War and Death&quot;,&quot;Topics&quot;:[&quot;Psychoanalysis&quot;,&quot;Psychoanalysis and culture&quot;,&quot;War -- Psychological aspects&quot;,&quot;Death -- Psychological aspects&quot;,&quot;Civilization -- Philosophy&quot;],&quot;Primary&quot;:&quot;35875.htm&quot;,&quot;CreatorNames&quot;:[&quot;Freud, Sigmund, 1856-1939&quot;,&quot;Brill, A. A. (Abraham Arden), 1874-1948 [Translator]&quot;,&quot;Kuttner, Alfred B. (Alfred Booth), 1886- [Translator]&quot;],&quot;LoCC&quot;:[&quot;BD&quot;,&quot;BF&quot;],&quot;PG_ID&quot;:&quot;35875&quot;});" class='title'>Reflections on War and Death</a>
+<div class='author'>Freud, Sigmund, 1856-1939, Brill, A. A. (Abraham Arden), 1874-1948 [Translator], Kuttner, Alfred B. (Alfred Booth), 1886- [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37864, {&quot;Title&quot;:&quot;Know the Truth: A Critique on the Hamiltonian Theory of Limitation - Including Some Strictures Upon the Theories of Rev. Henry L. Mansel and Mr. Herbert Spencer&quot;,&quot;Topics&quot;:[&quot;Theism&quot;,&quot;Hamilton, William, Sir, 1788-1856&quot;,&quot;Spencer, Herbert, 1820-1903&quot;,&quot;Mansel, Henry Longueville, 1820-1871&quot;],&quot;Primary&quot;:&quot;37864.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jones, Jesse Henry, 1836-1904&quot;],&quot;LoCC&quot;:[&quot;BD&quot;],&quot;PG_ID&quot;:&quot;37864&quot;});" class='title'>Know the Truth:<br><span class='subtitle'>A Critique on the Hamiltonian Theory of Limitation - Including Some Strictures Upon the Theories of Rev. Henry L. Mansel and Mr. Herbert Spencer</span></a>
+<div class='author'>Jones, Jesse Henry, 1836-1904</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38117, {&quot;Title&quot;:&quot;The Book of Life&quot;,&quot;Topics&quot;:[&quot;Hygiene&quot;,&quot;Love&quot;,&quot;Life&quot;],&quot;Primary&quot;:&quot;38117.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sinclair, Upton, 1878-1968&quot;],&quot;LoCC&quot;:[&quot;BD&quot;],&quot;PG_ID&quot;:&quot;38117&quot;});" class='title'>The Book of Life</a>
+<div class='author'>Sinclair, Upton, 1878-1968</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43618, {&quot;Title&quot;:&quot;Human Life&quot;,&quot;Topics&quot;:[&quot;Human beings&quot;,&quot;Life&quot;],&quot;Primary&quot;:&quot;43618.htm&quot;,&quot;CreatorNames&quot;:[&quot;Knight, Sherwood Sweet, 1876-&quot;],&quot;LoCC&quot;:[&quot;BD&quot;],&quot;PG_ID&quot;:&quot;43618&quot;});" class='title'>Human Life</a>
+<div class='author'>Knight, Sherwood Sweet, 1876-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43719, {&quot;Title&quot;:&quot;Life&#39;s Basis and Life&#39;s Ideal: The Fundamentals of a New Philosophy of Life&quot;,&quot;Topics&quot;:[&quot;Life&quot;,&quot;Ontology&quot;],&quot;Primary&quot;:&quot;43719.htm&quot;,&quot;CreatorNames&quot;:[&quot;Eucken, Rudolf, 1846-1926&quot;,&quot;Widgery, Alban G. (Alban Gregory), 1887-1968 [Translator]&quot;],&quot;LoCC&quot;:[&quot;BD&quot;],&quot;PG_ID&quot;:&quot;43719&quot;});" class='title'>Life's Basis and Life's Ideal:<br><span class='subtitle'>The Fundamentals of a New Philosophy of Life</span></a>
+<div class='author'>Eucken, Rudolf, 1846-1926, Widgery, Alban G. (Alban Gregory), 1887-1968 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44867, {&quot;Title&quot;:&quot;The Discovery of the Future&quot;,&quot;Topics&quot;:[&quot;History -- Philosophy&quot;,&quot;Time&quot;,&quot;Civilization -- Philosophy&quot;,&quot;Forecasting&quot;],&quot;Primary&quot;:&quot;44867.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wells, H. G. (Herbert George), 1866-1946&quot;],&quot;LoCC&quot;:[&quot;BD&quot;],&quot;PG_ID&quot;:&quot;44867&quot;});" class='title'>The Discovery of the Future</a>
+<div class='author'>Wells, H. G. (Herbert George), 1866-1946</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44883, {&quot;Title&quot;:&quot;The Drama of Love and Death: A Study of Human Evolution and Transfiguration&quot;,&quot;Topics&quot;:[&quot;Love&quot;,&quot;Death&quot;,&quot;Personality&quot;],&quot;Primary&quot;:&quot;44883.htm&quot;,&quot;CreatorNames&quot;:[&quot;Carpenter, Edward, 1844-1929&quot;],&quot;LoCC&quot;:[&quot;BD&quot;],&quot;PG_ID&quot;:&quot;44883&quot;});" class='title'>The Drama of Love and Death:<br><span class='subtitle'>A Study of Human Evolution and Transfiguration</span></a>
+<div class='author'>Carpenter, Edward, 1844-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46544, {&quot;Title&quot;:&quot;The Theistic Conception of the World - An Essay in Opposition to Certain Tendencies of Modern Thought&quot;,&quot;Topics&quot;:[&quot;Theism&quot;],&quot;Primary&quot;:&quot;46544.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cocker, B. F. (Benjamin Franklin), 1821-1883&quot;],&quot;LoCC&quot;:[&quot;BD&quot;],&quot;PG_ID&quot;:&quot;46544&quot;});" class='title'>The Theistic Conception of the World -<br><span class='subtitle'>An Essay in Opposition to Certain Tendencies of Modern Thought</span></a>
+<div class='author'>Cocker, B. F. (Benjamin Franklin), 1821-1883</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47658, {&quot;Title&quot;:&quot;The Problem of Truth&quot;,&quot;Topics&quot;:[&quot;Knowledge, Theory of&quot;,&quot;Truth&quot;],&quot;Primary&quot;:&quot;47658.htm&quot;,&quot;CreatorNames&quot;:[&quot;Carr, Herbert Wildon, 1857-1931&quot;],&quot;LoCC&quot;:[&quot;BD&quot;],&quot;PG_ID&quot;:&quot;47658&quot;});" class='title'>The Problem of Truth</a>
+<div class='author'>Carr, Herbert Wildon, 1857-1931</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52660, {&quot;Title&quot;:&quot;The Seekers&quot;,&quot;Topics&quot;:[&quot;Philosophy and religion -- Study and teaching (Secondary) -- United States&quot;],&quot;Primary&quot;:&quot;52660.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sampter, Jessie E. (Jessie Ethel), 1883-1938&quot;,&quot;Royce, Josiah, 1855-1916 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;BD&quot;],&quot;PG_ID&quot;:&quot;52660&quot;});" class='title'>The Seekers</a>
+<div class='author'>Sampter, Jessie E. (Jessie Ethel), 1883-1938, Royce, Josiah, 1855-1916 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53493, {&quot;Title&quot;:&quot;Die Philosophie der Freiheit: Grundzüge einer modernen Weltanschauung&quot;,&quot;Topics&quot;:[&quot;Knowledge, Theory of&quot;,&quot;Anthroposophy&quot;,&quot;Life&quot;,&quot;Free will and determinism&quot;],&quot;Primary&quot;:&quot;53493.htm&quot;,&quot;CreatorNames&quot;:[&quot;Steiner, Rudolf, 1861-1925&quot;],&quot;LoCC&quot;:[&quot;BD&quot;],&quot;PG_ID&quot;:&quot;53493&quot;});" class='title'>Die Philosophie der Freiheit:<br><span class='subtitle'>Grundzüge einer modernen Weltanschauung</span></a>
+<div class='author'>Steiner, Rudolf, 1861-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53556, {&quot;Title&quot;:&quot;Kuolema&quot;,&quot;Topics&quot;:[&quot;Death&quot;],&quot;Primary&quot;:&quot;53556.txt&quot;,&quot;CreatorNames&quot;:[&quot;Maeterlinck, Maurice, 1862-1949&quot;,&quot;Palola, Eino, 1885-1951 [Translator]&quot;],&quot;LoCC&quot;:[&quot;BD&quot;],&quot;PG_ID&quot;:&quot;53556&quot;});" class='title'>Kuolema</a>
+<div class='author'>Maeterlinck, Maurice, 1862-1949, Palola, Eino, 1885-1951 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55761, {&quot;Title&quot;:&quot;The Philosophy of Spiritual Activity - A Modern Philosophy of Life Developed by Scientific Methods&quot;,&quot;Topics&quot;:[&quot;Knowledge, Theory of&quot;,&quot;Anthroposophy&quot;,&quot;Life&quot;,&quot;Free will and determinism&quot;],&quot;Primary&quot;:&quot;55761.htm&quot;,&quot;CreatorNames&quot;:[&quot;Steiner, Rudolf, 1861-1925&quot;,&quot;Collison, Harry [Editor]&quot;,&quot;Hoernlé, Reinhold Friedrich Alfred, 1880-1943 [Translator]&quot;,&quot;Hoernlé, Winifred, 1885-1960 [Translator]&quot;],&quot;LoCC&quot;:[&quot;BD&quot;],&quot;PG_ID&quot;:&quot;55761&quot;});" class='title'>The Philosophy of Spiritual Activity -<br><span class='subtitle'>A Modern Philosophy of Life Developed by Scientific Methods</span></a>
+<div class='author'>Steiner, Rudolf, 1861-1925, Collison, Harry [Editor], Hoernlé, Reinhold Friedrich Alfred, 1880-1943 [Translator], Hoernlé, Winifred, 1885-1960 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57668, {&quot;Title&quot;:&quot;The Secret of Life, Death and Immortality - A startling proposition, with a chapter devoted to mental therapeutics and instructions for self healing&quot;,&quot;Topics&quot;:[&quot;Life&quot;,&quot;Immortality&quot;,&quot;Death&quot;],&quot;Primary&quot;:&quot;57668.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fleetwood, Henry&quot;],&quot;LoCC&quot;:[&quot;BD&quot;],&quot;PG_ID&quot;:&quot;57668&quot;});" class='title'>The Secret of Life, Death and Immortality -<br><span class='subtitle'>A startling proposition, with a chapter devoted to mental therapeutics and instructions for self healing</span></a>
+<div class='author'>Fleetwood, Henry</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57998, {&quot;Title&quot;:&quot;On Sameness and Identity: A Psychological Study - Being a Contribution to the Foundations of a Theory of Knowledge&quot;,&quot;Topics&quot;:[&quot;Knowledge, Theory of&quot;],&quot;Primary&quot;:&quot;57998.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fullerton, George Stuart, 1859-1925&quot;],&quot;LoCC&quot;:[&quot;BD&quot;],&quot;PG_ID&quot;:&quot;57998&quot;});" class='title'>On Sameness and Identity:<br><span class='subtitle'>A Psychological Study - Being a Contribution to the Foundations of a Theory of Knowledge</span></a>
+<div class='author'>Fullerton, George Stuart, 1859-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58215, {&quot;Title&quot;:&quot;Der Mensch der Zukunft&quot;,&quot;Topics&quot;:[&quot;Human beings&quot;],&quot;Primary&quot;:&quot;58215.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bölsche, Wilhelm, 1861-1939&quot;,&quot;Planck, Willy, 1870-1956 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;BD&quot;],&quot;PG_ID&quot;:&quot;58215&quot;});" class='title'>Der Mensch der Zukunft</a>
+<div class='author'>Bölsche, Wilhelm, 1861-1939, Planck, Willy, 1870-1956 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59091, {&quot;Title&quot;:&quot;The Sixth Sense: Its Cultivation and Use&quot;,&quot;Topics&quot;:[&quot;New Thought&quot;],&quot;Primary&quot;:&quot;59091.htm&quot;,&quot;CreatorNames&quot;:[&quot;Brent, Charles Henry, 1862-1929&quot;,&quot;Griggs, Edward Howard, 1868-1951 [Editor]&quot;],&quot;LoCC&quot;:[&quot;BD&quot;],&quot;PG_ID&quot;:&quot;59091&quot;});" class='title'>The Sixth Sense:<br><span class='subtitle'>Its Cultivation and Use</span></a>
+<div class='author'>Brent, Charles Henry, 1862-1929, Griggs, Edward Howard, 1868-1951 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59995, {&quot;Title&quot;:&quot;An Historical Sketch of the Conceptions of Memory among the Ancients&quot;,&quot;Topics&quot;:[&quot;Thesis (Ph. D.)&quot;,&quot;Memory (Philosophy) -- History&quot;],&quot;Primary&quot;:&quot;59995.htm&quot;,&quot;CreatorNames&quot;:[&quot;Burnham, William Henry, 1855-1941&quot;],&quot;LoCC&quot;:[&quot;BD&quot;],&quot;PG_ID&quot;:&quot;59995&quot;});" class='title'>An Historical Sketch of the Conceptions of Memory among the Ancients</a>
+<div class='author'>Burnham, William Henry, 1855-1941</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60068, {&quot;Title&quot;:&quot;An ethical philosophy of life presented in its main outlines&quot;,&quot;Topics&quot;:[&quot;Ethics&quot;,&quot;Philosophy, Modern&quot;],&quot;Primary&quot;:&quot;60068.htm&quot;,&quot;CreatorNames&quot;:[&quot;Adler, Felix, 1851-1933&quot;],&quot;LoCC&quot;:[&quot;BD&quot;],&quot;PG_ID&quot;:&quot;60068&quot;});" class='title'>An ethical philosophy of life presented in its main outlines</a>
+<div class='author'>Adler, Felix, 1851-1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63222, {&quot;Title&quot;:&quot;La Mort&quot;,&quot;Topics&quot;:[&quot;Death&quot;],&quot;Primary&quot;:&quot;63222.htm&quot;,&quot;CreatorNames&quot;:[&quot;Maeterlinck, Maurice, 1862-1949&quot;],&quot;LoCC&quot;:[&quot;BD&quot;],&quot;PG_ID&quot;:&quot;63222&quot;});" class='title'>La Mort</a>
+<div class='author'>Maeterlinck, Maurice, 1862-1949</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65714, {&quot;Title&quot;:&quot;The Dance of Life&quot;,&quot;Topics&quot;:[&quot;Philosophy&quot;,&quot;Ethics&quot;,&quot;Conduct of life&quot;,&quot;English essays -- 20th century&quot;],&quot;Primary&quot;:&quot;65714.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ellis, Havelock, 1859-1939&quot;],&quot;LoCC&quot;:[&quot;BD&quot;,&quot;PR&quot;],&quot;PG_ID&quot;:&quot;65714&quot;});" class='title'>The Dance of Life</a>
+<div class='author'>Ellis, Havelock, 1859-1939</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65720, {&quot;Title&quot;:&quot;The Place of Animals in Human Thought&quot;,&quot;Topics&quot;:[&quot;Animals -- Folklore&quot;,&quot;Animals -- Anecdotes&quot;,&quot;Animal welfare&quot;,&quot;Religions&quot;],&quot;Primary&quot;:&quot;65720.htm&quot;,&quot;CreatorNames&quot;:[&quot;Martinengo-Cesaresco, Evelyn Lilian Hazeldine Carrington, contessa, 1852-1931&quot;],&quot;LoCC&quot;:[&quot;BD&quot;],&quot;PG_ID&quot;:&quot;65720&quot;});" class='title'>The Place of Animals in Human Thought</a>
+<div class='author'>Martinengo-Cesaresco, Evelyn Lilian Hazeldine Carrington, contessa, 1852-1931</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66200, {&quot;Title&quot;:&quot;Bevezetés a filozófiába&quot;,&quot;Topics&quot;:[&quot;Philosophy&quot;],&quot;Primary&quot;:&quot;66200.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jerusalem, Wilhelm, 1854-1923&quot;,&quot;Schöpflin, Aladár, 1872-1950 [Translator]&quot;],&quot;LoCC&quot;:[&quot;BD&quot;],&quot;PG_ID&quot;:&quot;66200&quot;});" class='title'>Bevezetés a filozófiába</a>
+<div class='author'>Jerusalem, Wilhelm, 1854-1923, Schöpflin, Aladár, 1872-1950 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66315, {&quot;Title&quot;:&quot;Az élet könyve&quot;,&quot;Topics&quot;:[&quot;Life&quot;],&quot;Primary&quot;:&quot;66315.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kenedi, Géza, 1853-1935&quot;],&quot;LoCC&quot;:[&quot;BD&quot;],&quot;PG_ID&quot;:&quot;66315&quot;});" class='title'>Az élet könyve</a>
+<div class='author'>Kenedi, Géza, 1853-1935</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66589, {&quot;Title&quot;:&quot;Az élet értelme és értéke&quot;,&quot;Topics&quot;:[&quot;Philosophy&quot;,&quot;Life&quot;],&quot;Primary&quot;:&quot;66589.htm&quot;,&quot;CreatorNames&quot;:[&quot;Eucken, Rudolf, 1846-1926&quot;,&quot;Schöpflin, Aladár, 1872-1950 [Translator]&quot;],&quot;LoCC&quot;:[&quot;BD&quot;],&quot;PG_ID&quot;:&quot;66589&quot;});" class='title'>Az élet értelme és értéke</a>
+<div class='author'>Eucken, Rudolf, 1846-1926, Schöpflin, Aladár, 1872-1950 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67253, {&quot;Title&quot;:&quot;La naissance et l&#39;évanouissement de la matière&quot;,&quot;Topics&quot;:[&quot;Radioactivity&quot;,&quot;Matter -- Constitution&quot;],&quot;Primary&quot;:&quot;67253.htm&quot;,&quot;CreatorNames&quot;:[&quot;Le Bon, Gustave, 1841-1931&quot;,&quot;Bohn, Georges, 1868-1948 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;BD&quot;],&quot;PG_ID&quot;:&quot;67253&quot;});" class='title'>La naissance et l'évanouissement de la matière</a>
+<div class='author'>Le Bon, Gustave, 1841-1931, Bohn, Georges, 1868-1948 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(9160, {&quot;Title&quot;:&quot;Die Erziehung des Menschengeschlechts&quot;,&quot;Topics&quot;:[&quot;Education -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;9160.txt&quot;,&quot;CreatorNames&quot;:[&quot;Lessing, Gotthold Ephraim, 1729-1781&quot;],&quot;LoCC&quot;:[&quot;BD&quot;,&quot;L&quot;],&quot;PG_ID&quot;:&quot;9160&quot;});" class='title'>Die Erziehung des Menschengeschlechts</a>
+<div class='author'>Lessing, Gotthold Ephraim, 1729-1781</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(9326, {&quot;Title&quot;:&quot;Gespräche für Freimaurer&quot;,&quot;Topics&quot;:[&quot;Freemasonry&quot;],&quot;Primary&quot;:&quot;9326.txt&quot;,&quot;CreatorNames&quot;:[&quot;Lessing, Gotthold Ephraim, 1729-1781&quot;],&quot;LoCC&quot;:[&quot;BD&quot;],&quot;PG_ID&quot;:&quot;9326&quot;});" class='title'>Gespräche für Freimaurer</a>
+<div class='author'>Lessing, Gotthold Ephraim, 1729-1781</div>
+</div>
+</ul></div>
+</body></html>

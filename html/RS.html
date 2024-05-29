@@ -1,0 +1,118 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Pharmacy and materia medica (RS)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12522, {&quot;Title&quot;:&quot;An Account of the Extraordinary Medicinal Fluid, called Aether.&quot;,&quot;Topics&quot;:[&quot;Ether&quot;,&quot;Materia medica -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;12522.txt&quot;,&quot;CreatorNames&quot;:[&quot;Turner, Matthew, -1788?&quot;],&quot;LoCC&quot;:[&quot;RS&quot;],&quot;PG_ID&quot;:&quot;12522&quot;});" class='title'>An Account of the Extraordinary Medicinal Fluid, called Aether.</a>
+<div class='author'>Turner, Matthew, -1788?</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15910, {&quot;Title&quot;:&quot;A Short View of the Frauds and Abuses Committed by Apothecaries - As well in Relation to Patients, as Physicians: And Of the - only Remedy thereof by Physicians making their own - Medicines.&quot;,&quot;Topics&quot;:[&quot;Pharmacists&quot;,&quot;Pharmacy -- England&quot;],&quot;Primary&quot;:&quot;15910.htm&quot;,&quot;CreatorNames&quot;:[&quot;Merret, Christopher, 1614-1695&quot;],&quot;LoCC&quot;:[&quot;RS&quot;],&quot;PG_ID&quot;:&quot;15910&quot;});" class='title'>A Short View of the Frauds and Abuses Committed by Apothecaries -<br><span class='subtitle'>As well in Relation to Patients, as Physicians: And Of the - only Remedy thereof by Physicians making their own - Medicines.</span></a>
+<div class='author'>Merret, Christopher, 1614-1695</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26888, {&quot;Title&quot;:&quot;本草備要&quot;,&quot;Topics&quot;:[&quot;Materia medica -- China&quot;],&quot;Primary&quot;:&quot;26888.txt&quot;,&quot;CreatorNames&quot;:[&quot;Wang, Ang, 1615-&quot;],&quot;LoCC&quot;:[&quot;RS&quot;],&quot;PG_ID&quot;:&quot;26888&quot;});" class='title'>本草備要</a>
+<div class='author'>Wang, Ang, 1615-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41778, {&quot;Title&quot;:&quot;Epitome of the Pharmacopeia of the United States and the National Formulary - With Comments&quot;,&quot;Topics&quot;:[&quot;Pharmacopoeias -- United States&quot;,&quot;Medicine -- Formulae, receipts, prescriptions&quot;],&quot;Primary&quot;:&quot;41778.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hewlett, Albion Walter, 1874-1925&quot;,&quot;Puckner, William August, 1864-&quot;,&quot;Sollmann, Torald Hermann, 1874-1965&quot;,&quot;Wilbert, Martin I. (Martin Inventius), 1865-1916&quot;],&quot;LoCC&quot;:[&quot;RS&quot;],&quot;PG_ID&quot;:&quot;41778&quot;});" class='title'>Epitome of the Pharmacopeia of the United States and the National Formulary -<br><span class='subtitle'>With Comments</span></a>
+<div class='author'>Hewlett, Albion Walter, 1874-1925, Puckner, William August, 1864-, Sollmann, Torald Hermann, 1874-1965, Wilbert, Martin I. (Martin Inventius), 1865-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49513, {&quot;Title&quot;:&quot;The Complete Herbal - To which is now added, upwards of one hundred additional herbs, with a display of their medicinal and occult qualities physically applied to the cure of all disorders incident to mankind: to which are now first annexed, the English physician enlarged, and key to Physic.&quot;,&quot;Topics&quot;:[&quot;Botany, Medical&quot;,&quot;Materia medica, Vegetable&quot;,&quot;Medicinal plants -- England&quot;,&quot;Botany, Medical -- England&quot;,&quot;Herbs -- Therapeutic use&quot;,&quot;Medicinal plants&quot;],&quot;Primary&quot;:&quot;49513.htm&quot;,&quot;CreatorNames&quot;:[&quot;Culpeper, Nicholas, 1616-1654&quot;],&quot;LoCC&quot;:[&quot;RS&quot;],&quot;PG_ID&quot;:&quot;49513&quot;});" class='title'>The Complete Herbal -<br><span class='subtitle'>To which is now added, upwards of one hundred additional herbs, with a display of their medicinal and occult qualities physically applied to the cure of all disorders incident to mankind: to which are now first annexed, the English physician enlarged, and key to Physic.</span></a>
+<div class='author'>Culpeper, Nicholas, 1616-1654</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52116, {&quot;Title&quot;:&quot;The Canadian Druggist, Vol., 1, No. 2; August, 1889&quot;,&quot;Topics&quot;:[&quot;Pharmaceutical industry -- Periodicals&quot;],&quot;Primary&quot;:&quot;52116.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dyas, William J. [Editor]&quot;],&quot;LoCC&quot;:[&quot;RS&quot;],&quot;PG_ID&quot;:&quot;52116&quot;});" class='title'>The Canadian Druggist, Vol., 1, No. 2;<br><span class='subtitle'>August, 1889</span></a>
+<div class='author'>Dyas, William J. [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52434, {&quot;Title&quot;:&quot;Deadly Adulteration and Slow Poisoning Unmasked - Disease and Death in the Pot and Bottle&quot;,&quot;Topics&quot;:[&quot;Food adulteration and inspection&quot;,&quot;Drug adulteration&quot;],&quot;Primary&quot;:&quot;52434.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;RS&quot;,&quot;TX&quot;],&quot;PG_ID&quot;:&quot;52434&quot;});" class='title'>Deadly Adulteration and Slow Poisoning Unmasked -<br><span class='subtitle'>Disease and Death in the Pot and Bottle</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52969, {&quot;Title&quot;:&quot;The Dixie Druggist, May, 1913 - A Monthly Publication Issued to the Retail Drug Trade of the South&quot;,&quot;Topics&quot;:[&quot;Pharmaceutical industry -- Periodicals&quot;,&quot;Drugstores -- Southern States -- Periodicals&quot;],&quot;Primary&quot;:&quot;52969.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;RS&quot;],&quot;PG_ID&quot;:&quot;52969&quot;});" class='title'>The Dixie Druggist, May, 1913 -<br><span class='subtitle'>A Monthly Publication Issued to the Retail Drug Trade of the South</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53755, {&quot;Title&quot;:&quot;The Taleef Shereef; Or, Indian Materia Medica&quot;,&quot;Topics&quot;:[&quot;Materia medica -- India&quot;,&quot;Medicine, Ayurvedic&quot;],&quot;Primary&quot;:&quot;53755.htm&quot;,&quot;CreatorNames&quot;:[&quot;Playfair, George [Translator]&quot;],&quot;LoCC&quot;:[&quot;RS&quot;],&quot;PG_ID&quot;:&quot;53755&quot;});" class='title'>The Taleef Shereef;<br><span class='subtitle'>Or, Indian Materia Medica</span></a>
+<div class='author'>Playfair, George [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53828, {&quot;Title&quot;:&quot;New York Journal of Pharmacy, Volume 1 (of 3), 1852 - Published by Authority of the College of Pharmacy of the City of New York.&quot;,&quot;Topics&quot;:[&quot;Pharmacy -- Periodicals&quot;],&quot;Primary&quot;:&quot;53828.htm&quot;,&quot;CreatorNames&quot;:[&quot;College of Pharmacy of the City of New York&quot;,&quot;McCready, B. W. (Benjamin William), 1813-1892 [Editor]&quot;],&quot;LoCC&quot;:[&quot;RS&quot;],&quot;PG_ID&quot;:&quot;53828&quot;});" class='title'>New York Journal of Pharmacy, Volume 1 (of 3), 1852 -<br><span class='subtitle'>Published by Authority of the College of Pharmacy of the City of New York.</span></a>
+<div class='author'>College of Pharmacy of the City of New York, McCready, B. W. (Benjamin William), 1813-1892 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58490, {&quot;Title&quot;:&quot;The Apothecary in Eighteenth-Century Williamsburg - Being an Account of his medical and chirurgical Services, as well as of his trade Practices as a Chymist&quot;,&quot;Topics&quot;:[&quot;Pharmacists -- Virginia -- Williamsburg&quot;,&quot;Pharmacy -- Virginia -- Williamsburg&quot;],&quot;Primary&quot;:&quot;58490.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ford, Thomas K.&quot;,&quot;Gill, Harold B. [Contributor]&quot;],&quot;LoCC&quot;:[&quot;RS&quot;],&quot;PG_ID&quot;:&quot;58490&quot;});" class='title'>The Apothecary in Eighteenth-Century Williamsburg -<br><span class='subtitle'>Being an Account of his medical and chirurgical Services, as well as of his trade Practices as a Chymist</span></a>
+<div class='author'>Ford, Thomas K., Gill, Harold B. [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58525, {&quot;Title&quot;:&quot;Remarks on the Uses of some of the Bazaar Medicines and Common Medical Plants of India - With a full index of diseases, indicating their treatment by these and other agents procurable throughout India; to which are added directions for treatment in cases of drowning, snake-bites &amp;c.&quot;,&quot;Topics&quot;:[&quot;Medicinal plants -- India&quot;,&quot;Traditional medicine -- India&quot;,&quot;Botany, Medical -- India&quot;,&quot;Materia medica, Vegetable -- India&quot;],&quot;Primary&quot;:&quot;58525.htm&quot;,&quot;CreatorNames&quot;:[&quot;Waring, Edward John, 1819-1891&quot;],&quot;LoCC&quot;:[&quot;QK&quot;,&quot;RS&quot;],&quot;PG_ID&quot;:&quot;58525&quot;});" class='title'>Remarks on the Uses of some of the Bazaar Medicines and Common Medical Plants of India -<br><span class='subtitle'>With a full index of diseases, indicating their treatment by these and other agents procurable throughout India; to which are added directions for treatment in cases of drowning, snake-bites &c.</span></a>
+<div class='author'>Waring, Edward John, 1819-1891</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59296, {&quot;Title&quot;:&quot;The American Journal of Pharmacy, March, 1907&quot;,&quot;Topics&quot;:[&quot;Pharmacology -- Periodicals&quot;,&quot;Pharmacy -- Periodicals&quot;],&quot;Primary&quot;:&quot;59296.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;,&quot;Kraemer, Henry, 1868-1924 [Editor]&quot;],&quot;LoCC&quot;:[&quot;RS&quot;],&quot;PG_ID&quot;:&quot;59296&quot;});" class='title'>The American Journal of Pharmacy, March, 1907</a>
+<div class='author'>Various, Kraemer, Henry, 1868-1924 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62958, {&quot;Title&quot;:&quot;Pharmacologia - Fourth American, from the Seventh London Edition&quot;,&quot;Topics&quot;:[&quot;Pharmacy&quot;,&quot;Pharmacology&quot;,&quot;Pharmacognosy&quot;],&quot;Primary&quot;:&quot;62958.htm&quot;,&quot;CreatorNames&quot;:[&quot;Beck, John B. (John Brodhead), 1794-1851 [Annotator]&quot;,&quot;Paris, John Ayrton, 1785-1856&quot;],&quot;LoCC&quot;:[&quot;RS&quot;],&quot;PG_ID&quot;:&quot;62958&quot;});" class='title'>Pharmacologia -<br><span class='subtitle'>Fourth American, from the Seventh London Edition</span></a>
+<div class='author'>Beck, John B. (John Brodhead), 1794-1851 [Annotator], Paris, John Ayrton, 1785-1856</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65872, {&quot;Title&quot;:&quot;Chronicles of Pharmacy, Vol. 1 (of 2)&quot;,&quot;Topics&quot;:[&quot;Pharmacy -- History&quot;],&quot;Primary&quot;:&quot;65872.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wootton, A. C., -1910&quot;,&quot;MacEwan, Peter, 1856-1917 [Editor]&quot;],&quot;LoCC&quot;:[&quot;RS&quot;],&quot;PG_ID&quot;:&quot;65872&quot;});" class='title'>Chronicles of Pharmacy, Vol. 1 (of 2)</a>
+<div class='author'>Wootton, A. C., -1910, MacEwan, Peter, 1856-1917 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67414, {&quot;Title&quot;:&quot;Chronicles of Pharmacy, Vol. 2 (of 2)&quot;,&quot;Topics&quot;:[&quot;Pharmacy -- History&quot;],&quot;Primary&quot;:&quot;67414.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wootton, A. C., -1910&quot;,&quot;MacEwan, Peter, 1856-1917 [Editor]&quot;],&quot;LoCC&quot;:[&quot;RS&quot;],&quot;PG_ID&quot;:&quot;67414&quot;});" class='title'>Chronicles of Pharmacy, Vol. 2 (of 2)</a>
+<div class='author'>Wootton, A. C., -1910, MacEwan, Peter, 1856-1917 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67691, {&quot;Title&quot;:&quot;Pharmacographia - A history of the principal drugs of vegetable origin, met with in Great Britain and British India&quot;,&quot;Topics&quot;:[&quot;Botany, Medical&quot;,&quot;Materia medica, Vegetable&quot;,&quot;Materia medica, Vegetable -- India&quot;,&quot;Materia medica, Vegetable -- Great Britain&quot;],&quot;Primary&quot;:&quot;67691.htm&quot;,&quot;CreatorNames&quot;:[&quot;Flückiger, Friedrich A. (Friedrich August), 1828-1894&quot;,&quot;Hanbury, Daniel, 1825-1875&quot;],&quot;LoCC&quot;:[&quot;RS&quot;],&quot;PG_ID&quot;:&quot;67691&quot;});" class='title'>Pharmacographia -<br><span class='subtitle'>A history of the principal drugs of vegetable origin, met with in Great Britain and British India</span></a>
+<div class='author'>Flückiger, Friedrich A. (Friedrich August), 1828-1894, Hanbury, Daniel, 1825-1875</div>
+</div>
+</ul></div>
+</body></html>

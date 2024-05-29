@@ -1,0 +1,834 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Internal Medicine (RC)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(11962, {&quot;Title&quot;:&quot;A Mind That Found Itself: An Autobiography&quot;,&quot;Topics&quot;:[&quot;Autobiographies&quot;,&quot;Beers, Clifford Whittingham, 1876-1943&quot;,&quot;Psychiatric hospital care -- United States -- History&quot;,&quot;Mentally ill -- United States -- Biography&quot;],&quot;Primary&quot;:&quot;11962.htm&quot;,&quot;CreatorNames&quot;:[&quot;Beers, Clifford Whittingham, 1876-1943&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;RC&quot;],&quot;PG_ID&quot;:&quot;11962&quot;});" class='title'>A Mind That Found Itself:<br><span class='subtitle'>An Autobiography</span></a>
+<div class='author'>Beers, Clifford Whittingham, 1876-1943</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12699, {&quot;Title&quot;:&quot;The Works of Aristotle the Famous Philosopher - Containing his Complete Masterpiece and Family Physician; his Experienced Midwife, his Book of Problems and his Remarks on Physiognomy&quot;,&quot;Topics&quot;:[&quot;Human beings&quot;,&quot;Mind and body&quot;,&quot;Reproduction&quot;],&quot;Primary&quot;:&quot;12699.htm&quot;,&quot;CreatorNames&quot;:[&quot;Salmon, William [Adapter]&quot;],&quot;LoCC&quot;:[&quot;B&quot;,&quot;RC&quot;],&quot;PG_ID&quot;:&quot;12699&quot;});" class='title'>The Works of Aristotle the Famous Philosopher -<br><span class='subtitle'>Containing his Complete Masterpiece and Family Physician; his Experienced Midwife, his Book of Problems and his Remarks on Physiognomy</span></a>
+<div class='author'>Salmon, William [Adapter]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13197, {&quot;Title&quot;:&quot;Wear and Tear; Or, Hints for the Overworked&quot;,&quot;Topics&quot;:[&quot;Mental fatigue&quot;],&quot;Primary&quot;:&quot;13197.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mitchell, S. Weir (Silas Weir), 1829-1914&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;13197&quot;});" class='title'>Wear and Tear;<br><span class='subtitle'>Or, Hints for the Overworked</span></a>
+<div class='author'>Mitchell, S. Weir (Silas Weir), 1829-1914</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13332, {&quot;Title&quot;:&quot;Fifteen Years in Hell: An Autobiography&quot;,&quot;Topics&quot;:[&quot;Alcoholics -- United States -- Biography&quot;],&quot;Primary&quot;:&quot;13332.htm&quot;,&quot;CreatorNames&quot;:[&quot;Benson, Luther&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;13332&quot;});" class='title'>Fifteen Years in Hell:<br><span class='subtitle'>An Autobiography</span></a>
+<div class='author'>Benson, Luther</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14196, {&quot;Title&quot;:&quot;The Nervous Housewife&quot;,&quot;Topics&quot;:[&quot;Neurasthenia&quot;,&quot;Women -- Mental health&quot;],&quot;Primary&quot;:&quot;14196.htm&quot;,&quot;CreatorNames&quot;:[&quot;Myerson, Abraham, 1881-1948&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;14196&quot;});" class='title'>The Nervous Housewife</a>
+<div class='author'>Myerson, Abraham, 1881-1948</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14503, {&quot;Title&quot;:&quot;A Paranoia&quot;,&quot;Topics&quot;:[&quot;Paranoia&quot;],&quot;Primary&quot;:&quot;14503.txt&quot;,&quot;CreatorNames&quot;:[&quot;Matos, Júlio de, 1856-1922&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;14503&quot;});" class='title'>A Paranoia</a>
+<div class='author'>Matos, Júlio de, 1856-1922</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14743, {&quot;Title&quot;:&quot;The Fun of Getting Thin: How to Be Happy and Reduce the Waist Line&quot;,&quot;Topics&quot;:[&quot;Obesity&quot;,&quot;Weight loss&quot;],&quot;Primary&quot;:&quot;14743.txt&quot;,&quot;CreatorNames&quot;:[&quot;Blythe, Samuel G. (Samuel George), 1868-1947&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;14743&quot;});" class='title'>The Fun of Getting Thin:<br><span class='subtitle'>How to Be Happy and Reduce the Waist Line</span></a>
+<div class='author'>Blythe, Samuel G. (Samuel George), 1868-1947</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14901, {&quot;Title&quot;:&quot;Epilepsy, Hysteria, and Neurasthenia: Their Causes, Symptoms, &amp; Treatment&quot;,&quot;Topics&quot;:[&quot;Hysteria&quot;,&quot;Neurasthenia&quot;,&quot;Epilepsy&quot;,&quot;Nervous system -- Diseases&quot;],&quot;Primary&quot;:&quot;14901.htm&quot;,&quot;CreatorNames&quot;:[&quot;Briggs, Isaac George, 1892-&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;14901&quot;});" class='title'>Epilepsy, Hysteria, and Neurasthenia:<br><span class='subtitle'>Their Causes, Symptoms, & Treatment</span></a>
+<div class='author'>Briggs, Isaac George, 1892-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14980, {&quot;Title&quot;:&quot;Outwitting Our Nerves: A Primer of Psychotherapy&quot;,&quot;Topics&quot;:[&quot;Psychoanalysis&quot;,&quot;Nervous system -- Diseases&quot;,&quot;Therapeutics, Suggestive&quot;],&quot;Primary&quot;:&quot;14980.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jackson, Josephine A. (Josephine Agnes), 1865-1945&quot;,&quot;Salisbury, Helen M.&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;14980&quot;});" class='title'>Outwitting Our Nerves:<br><span class='subtitle'>A Primer of Psychotherapy</span></a>
+<div class='author'>Jackson, Josephine A. (Josephine Agnes), 1865-1945, Salisbury, Helen M.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15365, {&quot;Title&quot;:&quot;A Psychiatric Milestone: Bloomingdale Hospital Centenary, 1821-1921&quot;,&quot;Topics&quot;:[&quot;Bloomingdale Asylum for the Insane&quot;,&quot;Mental illness&quot;],&quot;Primary&quot;:&quot;15365.htm&quot;,&quot;CreatorNames&quot;:[&quot;Society of the New York Hospital [Editor]&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;15365&quot;});" class='title'>A Psychiatric Milestone:<br><span class='subtitle'>Bloomingdale Hospital Centenary, 1821-1921</span></a>
+<div class='author'>Society of the New York Hospital [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16230, {&quot;Title&quot;:&quot;Fat and Blood - An Essay on the Treatment of Certain Forms of Neurasthenia and Hysteria&quot;,&quot;Topics&quot;:[&quot;Hysteria&quot;,&quot;Neurasthenia&quot;,&quot;Rest&quot;],&quot;Primary&quot;:&quot;16230.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mitchell, S. Weir (Silas Weir), 1829-1914&quot;,&quot;Mitchell, John K. (John Kearsley), 1859-1917 [Editor]&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;16230&quot;});" class='title'>Fat and Blood -<br><span class='subtitle'>An Essay on the Treatment of Certain Forms of Neurasthenia and Hysteria</span></a>
+<div class='author'>Mitchell, S. Weir (Silas Weir), 1829-1914, Mitchell, John K. (John Kearsley), 1859-1917 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(1739, {&quot;Title&quot;:&quot;The Black Death, and The Dancing Mania&quot;,&quot;Topics&quot;:[&quot;Black Death&quot;,&quot;Chorea, Epidemic&quot;,&quot;Epidemics&quot;],&quot;Primary&quot;:&quot;1739.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hecker, J. F. C. (Justus Friedrich Carl), 1795-1850&quot;,&quot;Morley, Henry, 1822-1894 [Editor]&quot;,&quot;Babington, B. G. (Benjamin Guy), 1794-1866 [Translator]&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;1739&quot;});" class='title'>The Black Death, and The Dancing Mania</a>
+<div class='author'>Hecker, J. F. C. (Justus Friedrich Carl), 1795-1850, Morley, Henry, 1822-1894 [Editor], Babington, B. G. (Benjamin Guy), 1794-1866 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17439, {&quot;Title&quot;:&quot;Mother&#39;s Remedies - Over One Thousand Tried and Tested Remedies from Mothers of the United States and Canada&quot;,&quot;Topics&quot;:[&quot;Etiquette&quot;,&quot;Medicine, Popular&quot;,&quot;Formulas, recipes, etc.&quot;],&quot;Primary&quot;:&quot;17439.txt&quot;,&quot;CreatorNames&quot;:[&quot;Ritter, Thomas Jefferson, 1855-&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;17439&quot;});" class='title'>Mother's Remedies -<br><span class='subtitle'>Over One Thousand Tried and Tested Remedies from Mothers of the United States and Canada</span></a>
+<div class='author'>Ritter, Thomas Jefferson, 1855-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17479, {&quot;Title&quot;:&quot;Ang Mahusay na Paraan nang Pag-Gamot sa manga Maysaquit&quot;,&quot;Topics&quot;:[&quot;Medicine, Popular -- Early works to 1800&quot;,&quot;Hygiene -- Handbooks, manuals, etc. -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;17479.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tissot, S. A. D. (Samuel Auguste David), 1728-1797&quot;,&quot;Blanco, Manuel, 1778-1845 [Translator]&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;17479&quot;});" class='title'>Ang Mahusay na Paraan nang Pag-Gamot sa manga Maysaquit</a>
+<div class='author'>Tissot, S. A. D. (Samuel Auguste David), 1728-1797, Blanco, Manuel, 1778-1845 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18324, {&quot;Title&quot;:&quot;The Third Great Plague - A Discussion of Syphilis for Everyday People&quot;,&quot;Topics&quot;:[&quot;Syphilis&quot;],&quot;Primary&quot;:&quot;18324.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stokes, John H. (John Hinchman), 1885-1961&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;18324&quot;});" class='title'>The Third Great Plague -<br><span class='subtitle'>A Discussion of Syphilis for Everyday People</span></a>
+<div class='author'>Stokes, John H. (John Hinchman), 1885-1961</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18398, {&quot;Title&quot;:&quot;Diary Written in the Provincial Lunatic Asylum&quot;,&quot;Topics&quot;:[&quot;Provincial Lunatic Asylum (N.B.)&quot;,&quot;Mentally ill -- Care -- New Brunswick&quot;],&quot;Primary&quot;:&quot;18398.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pengilly, Mary Huestis&quot;],&quot;LoCC&quot;:[&quot;RC&quot;,&quot;F&quot;],&quot;PG_ID&quot;:&quot;18398&quot;});" class='title'>Diary Written in the Provincial Lunatic Asylum</a>
+<div class='author'>Pengilly, Mary Huestis</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18467, {&quot;Title&quot;:&quot;The People&#39;s Common Sense Medical Adviser in Plain English - or, Medicine Simplified, 54th ed., One Million, Six Hundred - and Fifty Thousand&quot;,&quot;Topics&quot;:[&quot;Medicine, Popular&quot;],&quot;Primary&quot;:&quot;18467.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pierce, Ray Vaughn, 1840-1914&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;18467&quot;});" class='title'>The People's Common Sense Medical Adviser in Plain English -<br><span class='subtitle'>or, Medicine Simplified, 54th ed., One Million, Six Hundred - and Fifty Thousand</span></a>
+<div class='author'>Pierce, Ray Vaughn, 1840-1914</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18935, {&quot;Title&quot;:&quot;Vanity, All Is Vanity: A Lecture on Tobacco and its effects&quot;,&quot;Topics&quot;:[&quot;Tobacco use&quot;],&quot;Primary&quot;:&quot;18935.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cranmer, J. J. [Editor]&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;18935&quot;});" class='title'>Vanity, All Is Vanity:<br><span class='subtitle'>A Lecture on Tobacco and its effects</span></a>
+<div class='author'>Cranmer, J. J. [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19261, {&quot;Title&quot;:&quot;Bronchoscopy and Esophagoscopy - A Manual of Peroral Endoscopy and Laryngeal Surgery&quot;,&quot;Topics&quot;:[&quot;Endoscopy&quot;,&quot;Respiratory organs -- Diseases -- Diagnosis&quot;,&quot;Esophagus -- Examination&quot;,&quot;Larynx -- Surgery&quot;],&quot;Primary&quot;:&quot;19261.txt&quot;,&quot;CreatorNames&quot;:[&quot;Jackson, Chevalier, 1865-1958&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;19261&quot;});" class='title'>Bronchoscopy and Esophagoscopy -<br><span class='subtitle'>A Manual of Peroral Endoscopy and Laryngeal Surgery</span></a>
+<div class='author'>Jackson, Chevalier, 1865-1958</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19667, {&quot;Title&quot;:&quot;An Essay on the Influence of Tobacco upon Life and Health&quot;,&quot;Topics&quot;:[&quot;Tobacco use&quot;],&quot;Primary&quot;:&quot;19667.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mussey, R. D. (Reuben Dimond), 1780-1866&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;19667&quot;});" class='title'>An Essay on the Influence of Tobacco upon Life and Health</a>
+<div class='author'>Mussey, R. D. (Reuben Dimond), 1780-1866</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19762, {&quot;Title&quot;:&quot;How to Eat: A Cure for \&quot;\&quot;Nerves\&quot;\&quot;&quot;,&quot;Topics&quot;:[&quot;Diet in disease&quot;,&quot;Nervous system -- Diseases&quot;,&quot;Nervous system -- Hygiene&quot;],&quot;Primary&quot;:&quot;19762.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hinkle, Thomas C. (Thomas Clark), 1876-1949&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;19762&quot;});" class='title'>How to Eat:<br><span class='subtitle'>A Cure for "Nerves"</span></a>
+<div class='author'>Hinkle, Thomas C. (Thomas Clark), 1876-1949</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(21560, {&quot;Title&quot;:&quot;Papers on Health&quot;,&quot;Topics&quot;:[&quot;Medicine, Popular&quot;],&quot;Primary&quot;:&quot;21560.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kirk, John, 1813-1886&quot;,&quot;Kirk, Edward Bruce [Editor]&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;21560&quot;});" class='title'>Papers on Health</a>
+<div class='author'>Kirk, John, 1813-1886, Kirk, Edward Bruce [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(21907, {&quot;Title&quot;:&quot;An Investigation into the Nature of Black Phthisis - or Ulceration Induced by Carbonaceous Accumulation in the Lungs of Coal Miners&quot;,&quot;Topics&quot;:[&quot;Miners&#39; phthisis&quot;,&quot;Lungs -- Dust diseases&quot;,&quot;Coal miners -- Diseases&quot;,&quot;Miners -- Diseases&quot;,&quot;Occupational diseases&quot;],&quot;Primary&quot;:&quot;21907.htm&quot;,&quot;CreatorNames&quot;:[&quot;Makellar, Archibald&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;21907&quot;});" class='title'>An Investigation into the Nature of Black Phthisis -<br><span class='subtitle'>or Ulceration Induced by Carbonaceous Accumulation in the Lungs of Coal Miners</span></a>
+<div class='author'>Makellar, Archibald</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(21965, {&quot;Title&quot;:&quot;Preventable Diseases&quot;,&quot;Topics&quot;:[&quot;Medicine&quot;,&quot;Hygiene&quot;],&quot;Primary&quot;:&quot;21965.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hutchinson, Woods, 1862-1930&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;21965&quot;});" class='title'>Preventable Diseases</a>
+<div class='author'>Hutchinson, Woods, 1862-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23468, {&quot;Title&quot;:&quot;Observations on the Causes, Symptoms, and Nature of Scrofula or King&#39;s Evil, Scurvy, and Cancer - With Cases Illustrative of a Peculiar Mode of Treatment&quot;,&quot;Topics&quot;:[&quot;Scrofula&quot;,&quot;Scurvy&quot;,&quot;Cancer&quot;],&quot;Primary&quot;:&quot;23468.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kent, John&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;23468&quot;});" class='title'>Observations on the Causes, Symptoms, and Nature of Scrofula or King's Evil, Scurvy, and Cancer -<br><span class='subtitle'>With Cases Illustrative of a Peculiar Mode of Treatment</span></a>
+<div class='author'>Kent, John</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23777, {&quot;Title&quot;:&quot;An Essay on the Shaking Palsy&quot;,&quot;Topics&quot;:[&quot;Parkinson&#39;s disease&quot;],&quot;Primary&quot;:&quot;23777.htm&quot;,&quot;CreatorNames&quot;:[&quot;Parkinson, James, 1755-1824&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;23777&quot;});" class='title'>An Essay on the Shaking Palsy</a>
+<div class='author'>Parkinson, James, 1755-1824</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24366, {&quot;Title&quot;:&quot;A Disquisition on the Evils of Using Tobacco - and the Necessity of Immediate and Entire Reformation&quot;,&quot;Topics&quot;:[&quot;Tobacco use&quot;],&quot;Primary&quot;:&quot;24366.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fowler, Orin, 1791-1852&quot;],&quot;LoCC&quot;:[&quot;HV&quot;,&quot;RC&quot;],&quot;PG_ID&quot;:&quot;24366&quot;});" class='title'>A Disquisition on the Evils of Using Tobacco -<br><span class='subtitle'>and the Necessity of Immediate and Entire Reformation</span></a>
+<div class='author'>Fowler, Orin, 1791-1852</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25123, {&quot;Title&quot;:&quot;脾胃論&quot;,&quot;Topics&quot;:[&quot;Medicine, Chinese -- Early works to 1800&quot;,&quot;Stomach -- Diseases -- Early works to 1800&quot;,&quot;Spleen -- Diseases -- Early works to 1800&quot;,&quot;Gastroenterology -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;25123.txt&quot;,&quot;CreatorNames&quot;:[&quot;Li, Gao, 1180-1251&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;25123&quot;});" class='title'>脾胃論</a>
+<div class='author'>Li, Gao, 1180-1251</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25184, {&quot;Title&quot;:&quot;A Dissertation on the Medical Properties and Injurious Effects of the Habitual Use of Tobacco&quot;,&quot;Topics&quot;:[&quot;Tobacco use&quot;],&quot;Primary&quot;:&quot;25184.htm&quot;,&quot;CreatorNames&quot;:[&quot;McAllister, A. (Alvan)&quot;,&quot;Stuart, Moses, 1780-1852 [Editor]&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;25184&quot;});" class='title'>A Dissertation on the Medical Properties and Injurious Effects of the Habitual Use of Tobacco</a>
+<div class='author'>McAllister, A. (Alvan), Stuart, Moses, 1780-1852 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26008, {&quot;Title&quot;:&quot;Hydriatic treatment of Scarlet Fever in its Different Forms&quot;,&quot;Topics&quot;:[&quot;Hydrotherapy&quot;,&quot;Scarlatina&quot;],&quot;Primary&quot;:&quot;26008.htm&quot;,&quot;CreatorNames&quot;:[&quot;Munde, Charles&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;26008&quot;});" class='title'>Hydriatic treatment of Scarlet Fever in its Different Forms</a>
+<div class='author'>Munde, Charles</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26058, {&quot;Title&quot;:&quot;The Starvation Treatment of Diabetes&quot;,&quot;Topics&quot;:[&quot;Diabetes&quot;,&quot;Diet in disease&quot;],&quot;Primary&quot;:&quot;26058.htm&quot;,&quot;CreatorNames&quot;:[&quot;Eckman, Rena Sarah, 1868-&quot;,&quot;Hill, Lewis Webb, 1889-1968&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;26058&quot;});" class='title'>The Starvation Treatment of Diabetes</a>
+<div class='author'>Eckman, Rena Sarah, 1868-, Hill, Lewis Webb, 1889-1968</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26365, {&quot;Title&quot;:&quot;Intestinal Ills - Chronic Constipation, Indigestion, Autogenetic Poisons, Diarrhea, Piles, Etc. Also Auto-Infection, Auto-Intoxication, Anemia, Emaciation, Etc. Due to Proctitis and Colitis&quot;,&quot;Topics&quot;:[&quot;Intestines -- Diseases&quot;,&quot;Rectum -- Diseases&quot;,&quot;Constipation&quot;,&quot;Gastroenterology&quot;],&quot;Primary&quot;:&quot;26365.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jamison, Alcinous B. (Alcinous Burton), 1851-&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;26365&quot;});" class='title'>Intestinal Ills -<br><span class='subtitle'>Chronic Constipation, Indigestion, Autogenetic Poisons, Diarrhea, Piles, Etc. Also Auto-Infection, Auto-Intoxication, Anemia, Emaciation, Etc. Due to Proctitis and Colitis</span></a>
+<div class='author'>Jamison, Alcinous B. (Alcinous Burton), 1851-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26836, {&quot;Title&quot;:&quot;Cases of Organic Diseases of the Heart&quot;,&quot;Topics&quot;:[&quot;Heart -- Diseases&quot;],&quot;Primary&quot;:&quot;26836.htm&quot;,&quot;CreatorNames&quot;:[&quot;Warren, John Collins, 1778-1856&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;26836&quot;});" class='title'>Cases of Organic Diseases of the Heart</a>
+<div class='author'>Warren, John Collins, 1778-1856</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27943, {&quot;Title&quot;:&quot;The Home Medical Library, Volume 1 (of 6)&quot;,&quot;Topics&quot;:[&quot;Medicine&quot;,&quot;Medicine, Popular&quot;],&quot;Primary&quot;:&quot;27943.htm&quot;,&quot;CreatorNames&quot;:[&quot;Winslow, Kenelm, 1863- [Editor]&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;27943&quot;});" class='title'>The Home Medical Library, Volume 1 (of 6)</a>
+<div class='author'>Winslow, Kenelm, 1863- [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27944, {&quot;Title&quot;:&quot;The Home Medical Library, Volume 2 (of 6)&quot;,&quot;Topics&quot;:[&quot;Medicine&quot;,&quot;Medicine, Popular&quot;],&quot;Primary&quot;:&quot;27944.htm&quot;,&quot;CreatorNames&quot;:[&quot;Winslow, Kenelm, 1863- [Editor]&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;27944&quot;});" class='title'>The Home Medical Library, Volume 2 (of 6)</a>
+<div class='author'>Winslow, Kenelm, 1863- [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27947, {&quot;Title&quot;:&quot;The Home Medical Library, Volume 5 (of 6)&quot;,&quot;Topics&quot;:[&quot;Medicine&quot;,&quot;Medicine, Popular&quot;],&quot;Primary&quot;:&quot;27947.htm&quot;,&quot;CreatorNames&quot;:[&quot;Winslow, Kenelm, 1863- [Editor]&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;27947&quot;});" class='title'>The Home Medical Library, Volume 5 (of 6)</a>
+<div class='author'>Winslow, Kenelm, 1863- [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28147, {&quot;Title&quot;:&quot;Letters on the Cholera Morbus. - Containing ample evidence that this disease, under whatever - name known, cannot be transmitted from the persons of those - labouring under it to other individuals, by contact—through - the medium of inanimate substances—or through the medium - of the atmosphere; and that all restrictions, by cordons - and quarantine regulations, are, as far as regards this - disease, not merely useless, but highly injurious to the - community.&quot;,&quot;Topics&quot;:[&quot;Gastroenteritis&quot;],&quot;Primary&quot;:&quot;28147.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fergusson, William, 1773-1846&quot;,&quot;Gillkrest, J. (James), -1853&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;28147&quot;});" class='title'>Letters on the Cholera Morbus. -<br><span class='subtitle'>Containing ample evidence that this disease, under whatever - name known, cannot be transmitted from the persons of those - labouring under it to other individuals, by contact—through - the medium of inanimate substances—or through the medium - of the atmosphere; and that all restrictions, by cordons - and quarantine regulations, are, as far as regards this - disease, not merely useless, but highly injurious to the - community.</span></a>
+<div class='author'>Fergusson, William, 1773-1846, Gillkrest, J. (James), -1853</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28177, {&quot;Title&quot;:&quot;Insects and Diseases - A Popular Account of the Way in Which Insects may Spread or Cause some of our Common Diseases&quot;,&quot;Topics&quot;:[&quot;Insects as carriers of disease&quot;,&quot;Insect pests&quot;],&quot;Primary&quot;:&quot;28177.htm&quot;,&quot;CreatorNames&quot;:[&quot;Doane, Rennie Wilbur, 1871-&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;28177&quot;});" class='title'>Insects and Diseases -<br><span class='subtitle'>A Popular Account of the Way in Which Insects may Spread or Cause some of our Common Diseases</span></a>
+<div class='author'>Doane, Rennie Wilbur, 1871-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2839, {&quot;Title&quot;:&quot;Franse Toestanden&quot;,&quot;Topics&quot;:[&quot;Cholera -- France -- Paris -- History -- 19th century&quot;],&quot;Primary&quot;:&quot;2839.txt&quot;,&quot;CreatorNames&quot;:[&quot;Heine, Heinrich, 1797-1856&quot;],&quot;LoCC&quot;:[&quot;PT&quot;,&quot;RC&quot;],&quot;PG_ID&quot;:&quot;2839&quot;});" class='title'>Franse Toestanden</a>
+<div class='author'>Heine, Heinrich, 1797-1856</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29414, {&quot;Title&quot;:&quot;An Inquiry into the Causes and Effects of the Variolae Vaccinae - A Disease Discovered in Some of the Western Counties of England, Particularly Gloucestershire, and Known by the Name of the Cow Pox&quot;,&quot;Topics&quot;:[&quot;Smallpox -- Vaccination -- Early works to 1800&quot;,&quot;Vaccinia -- Early works to 1800&quot;,&quot;Vaccination -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;29414.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jenner, Edward, 1749-1823&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;29414&quot;});" class='title'>An Inquiry into the Causes and Effects of the Variolae Vaccinae -<br><span class='subtitle'>A Disease Discovered in Some of the Western Counties of England, Particularly Gloucestershire, and Known by the Name of the Cow Pox</span></a>
+<div class='author'>Jenner, Edward, 1749-1823</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29737, {&quot;Title&quot;:&quot;The Leper in England: with some account of English lazar-houses&quot;,&quot;Topics&quot;:[&quot;Leprosy -- Great Britain -- History&quot;],&quot;Primary&quot;:&quot;29737.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hope, Robert Charles, 1855-1926&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;29737&quot;});" class='title'>The Leper in England:<br><span class='subtitle'>with some account of English lazar-houses</span></a>
+<div class='author'>Hope, Robert Charles, 1855-1926</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30065, {&quot;Title&quot;:&quot;Benign Stupors: A Study of a New Manic-Depressive Reaction Type&quot;,&quot;Topics&quot;:[&quot;Stupor&quot;,&quot;Manic-depressive illness&quot;],&quot;Primary&quot;:&quot;30065.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hoch, August, 1868-1919&quot;,&quot;MacCurdy, John T. (John Thompson), 1886- [Editor]&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;30065&quot;});" class='title'>Benign Stupors:<br><span class='subtitle'>A Study of a New Manic-Depressive Reaction Type</span></a>
+<div class='author'>Hoch, August, 1868-1919, MacCurdy, John T. (John Thompson), 1886- [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30099, {&quot;Title&quot;:&quot;Hypochondriasis: A Practical Treatise (1766)&quot;,&quot;Topics&quot;:[&quot;Medicine -- Early works to 1800&quot;,&quot;Hypochondria -- Early works to 1900&quot;],&quot;Primary&quot;:&quot;30099.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hill, John, 1714?-1775&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;30099&quot;});" class='title'>Hypochondriasis:<br><span class='subtitle'>A Practical Treatise (1766)</span></a>
+<div class='author'>Hill, John, 1714?-1775</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30152, {&quot;Title&quot;:&quot;Narcissistic and Psychopathic Leaders&quot;,&quot;Topics&quot;:[&quot;Narcissism&quot;],&quot;Primary&quot;:&quot;30152.txt&quot;,&quot;CreatorNames&quot;:[&quot;Vaknin, Samuel, 1961-&quot;,&quot;Rangelovska, Lidija [Editor]&quot;],&quot;LoCC&quot;:[&quot;BF&quot;,&quot;RC&quot;],&quot;PG_ID&quot;:&quot;30152&quot;});" class='title'>Narcissistic and Psychopathic Leaders</a>
+<div class='author'>Vaknin, Samuel, 1961-, Rangelovska, Lidija [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30487, {&quot;Title&quot;:&quot;Confessions of a Neurasthenic&quot;,&quot;Topics&quot;:[&quot;Neurasthenia&quot;],&quot;Primary&quot;:&quot;30487.htm&quot;,&quot;CreatorNames&quot;:[&quot;Marrs, William Taylor&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;30487&quot;});" class='title'>Confessions of a Neurasthenic</a>
+<div class='author'>Marrs, William Taylor</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31185, {&quot;Title&quot;:&quot;Chapters in the History of the Insane in the British Isles&quot;,&quot;Topics&quot;:[&quot;Mentally ill -- Care&quot;,&quot;Psychiatric hospitals -- Great Britain&quot;,&quot;Mental health laws -- Great Britain&quot;,&quot;Mental illness -- Great Britain&quot;],&quot;Primary&quot;:&quot;31185.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tuke, Daniel Hack, 1827-1895&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;31185&quot;});" class='title'>Chapters in the History of the Insane in the British Isles</a>
+<div class='author'>Tuke, Daniel Hack, 1827-1895</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31203, {&quot;Title&quot;:&quot;Medica Sacra - Or, A Commentary on the Most Remarkable Diseases Mentioned in the Holy Scriptures&quot;,&quot;Topics&quot;:[&quot;Medicine in the Bible&quot;],&quot;Primary&quot;:&quot;31203.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mead, Richard, 1673-1754&quot;,&quot;Stack, Thomas [Translator]&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;31203&quot;});" class='title'>Medica Sacra -<br><span class='subtitle'>Or, A Commentary on the Most Remarkable Diseases Mentioned in the Holy Scriptures</span></a>
+<div class='author'>Mead, Richard, 1673-1754, Stack, Thomas [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31338, {&quot;Title&quot;:&quot;An Account of the Diseases which were most frequent in the British military hospitals in Germany&quot;,&quot;Topics&quot;:[&quot;Seven Years&#39; War, 1756-1763 -- Medical care&quot;,&quot;Medicine, Military&quot;,&quot;Military hospitals&quot;,&quot;Military hygiene&quot;],&quot;Primary&quot;:&quot;31338.htm&quot;,&quot;CreatorNames&quot;:[&quot;Monro, Donald, 1727-1802&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;31338&quot;});" class='title'>An Account of the Diseases which were most frequent in the British military hospitals in Germany</a>
+<div class='author'>Monro, Donald, 1727-1802</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31548, {&quot;Title&quot;:&quot;A Succinct Account of the Plague at Marseilles - Its Symptoms and the Methods and Medicines Used for Curing It&quot;,&quot;Topics&quot;:[&quot;Plague -- France -- Marseille -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;31548.htm&quot;,&quot;CreatorNames&quot;:[&quot;Chicoyneau, François, 1672-1752&quot;,&quot;Soulier, Monsieur&quot;,&quot;Verny, Monsieur, active 1720-1721&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;31548&quot;});" class='title'>A Succinct Account of the Plague at Marseilles -<br><span class='subtitle'>Its Symptoms and the Methods and Medicines Used for Curing It</span></a>
+<div class='author'>Chicoyneau, François, 1672-1752, Soulier, Monsieur, Verny, Monsieur, active 1720-1721</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31807, {&quot;Title&quot;:&quot;The Plague at Marseilles Consider&#39;d - With Remarks Upon the Plague in General, Shewing Its Cause and Nature of Infection, with Necessary Precautions to Prevent the Speading of That Direful Distemper&quot;,&quot;Topics&quot;:[&quot;Plague -- France -- Marseille -- Early works to 1800&quot;,&quot;Plague -- England -- London -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;31807.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bradley, Richard, 1688-1732&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;31807&quot;});" class='title'>The Plague at Marseilles Consider'd -<br><span class='subtitle'>With Remarks Upon the Plague in General, Shewing Its Cause and Nature of Infection, with Necessary Precautions to Prevent the Speading of That Direful Distemper</span></a>
+<div class='author'>Bradley, Richard, 1688-1732</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32171, {&quot;Title&quot;:&quot;A Discourse on the Plague&quot;,&quot;Topics&quot;:[&quot;Plague -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;32171.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mead, Richard, 1673-1754&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;32171&quot;});" class='title'>A Discourse on the Plague</a>
+<div class='author'>Mead, Richard, 1673-1754</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33241, {&quot;Title&quot;:&quot;Letters of a Lunatic - A Brief Exposition of My University Life, During the Years 1853-54&quot;,&quot;Topics&quot;:[&quot;Mentally ill -- Commitment and detention&quot;,&quot;Bloomingdale Asylum for the Insane&quot;,&quot;Mental illness -- Personal narratives&quot;,&quot;Psychiatric hospitals -- New York&quot;,&quot;Adler, G. J. (George J.), 1821-1868 -- Correspondence&quot;],&quot;Primary&quot;:&quot;33241.htm&quot;,&quot;CreatorNames&quot;:[&quot;Adler, G. J. (George J.), 1821-1868&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;33241&quot;});" class='title'>Letters of a Lunatic -<br><span class='subtitle'>A Brief Exposition of My University Life, During the Years 1853-54</span></a>
+<div class='author'>Adler, G. J. (George J.), 1821-1868</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33503, {&quot;Title&quot;:&quot;The Sweating Sickness - A boke or counseill against the disease commonly called the sweate or sweatyng sicknesse&quot;,&quot;Topics&quot;:[&quot;Medicine -- Early works to 1800&quot;,&quot;Sweating-sickness -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;33503.htm&quot;,&quot;CreatorNames&quot;:[&quot;Caius, John, 1510-1573&quot;,&quot;Roberts, E. S. (Ernest Stewart), 1847-1912 [Editor]&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;33503&quot;});" class='title'>The Sweating Sickness -<br><span class='subtitle'>A boke or counseill against the disease commonly called the sweate or sweatyng sicknesse</span></a>
+<div class='author'>Caius, John, 1510-1573, Roberts, E. S. (Ernest Stewart), 1847-1912 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34279, {&quot;Title&quot;:&quot;Handbook of Medical Entomology&quot;,&quot;Topics&quot;:[&quot;Insects as carriers of disease&quot;,&quot;Insect pests&quot;,&quot;Medical parasitology&quot;],&quot;Primary&quot;:&quot;34279.htm&quot;,&quot;CreatorNames&quot;:[&quot;Johannsen, O. A. (Oskar Augustus), 1870-1961&quot;,&quot;Riley, William A. (William Albert), 1876-&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;34279&quot;});" class='title'>Handbook of Medical Entomology</a>
+<div class='author'>Johannsen, O. A. (Oskar Augustus), 1870-1961, Riley, William A. (William Albert), 1876-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35270, {&quot;Title&quot;:&quot;Habits that Handicap: The Menace of Opium, Alcohol, and Tobacco, and the Remedy&quot;,&quot;Topics&quot;:[&quot;Alcoholism&quot;,&quot;Tobacco use&quot;,&quot;Opium abuse -- United States&quot;],&quot;Primary&quot;:&quot;35270.htm&quot;,&quot;CreatorNames&quot;:[&quot;Towns, Charles Barnes, 1862-&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;35270&quot;});" class='title'>Habits that Handicap:<br><span class='subtitle'>The Menace of Opium, Alcohol, and Tobacco, and the Remedy</span></a>
+<div class='author'>Towns, Charles Barnes, 1862-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36006, {&quot;Title&quot;:&quot;Diphtheria - how to recognize the disease, how to keep from catching it, how to treat those who do catch it&quot;,&quot;Topics&quot;:[&quot;Diphtheria&quot;,&quot;Diphtheria -- Prevention&quot;],&quot;Primary&quot;:&quot;36006.htm&quot;,&quot;CreatorNames&quot;:[&quot;United States. Public Health Service&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;36006&quot;});" class='title'>Diphtheria -<br><span class='subtitle'>how to recognize the disease, how to keep from catching it, how to treat those who do catch it</span></a>
+<div class='author'>United States. Public Health Service</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36474, {&quot;Title&quot;:&quot;A Statistical Inquiry Into the Nature and Treatment of Epilepsy&quot;,&quot;Topics&quot;:[&quot;Epilepsy&quot;],&quot;Primary&quot;:&quot;36474.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bennett, Alexander Hughes, 1848-1901&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;36474&quot;});" class='title'>A Statistical Inquiry Into the Nature and Treatment of Epilepsy</a>
+<div class='author'>Bennett, Alexander Hughes, 1848-1901</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37057, {&quot;Title&quot;:&quot;Observations on Insanity - With Practical Remarks on the Disease and an Account of the Morbid Appearances on Dissection&quot;,&quot;Topics&quot;:[&quot;Mental illness&quot;],&quot;Primary&quot;:&quot;37057.htm&quot;,&quot;CreatorNames&quot;:[&quot;Haslam, John, 1764-1844&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;37057&quot;});" class='title'>Observations on Insanity -<br><span class='subtitle'>With Practical Remarks on the Disease and an Account of the Morbid Appearances on Dissection</span></a>
+<div class='author'>Haslam, John, 1764-1844</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37060, {&quot;Title&quot;:&quot;Through These Eyes - The courageous struggle to find meaning in a life stressed with cancer&quot;,&quot;Topics&quot;:[&quot;Cancer -- Patients -- Biography&quot;,&quot;Isaacson, Lauren Ann, 1961-1986&quot;],&quot;Primary&quot;:&quot;37060.txt&quot;,&quot;CreatorNames&quot;:[&quot;Isaacson, Lauren Ann, 1961-1986&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;37060&quot;});" class='title'>Through These Eyes -<br><span class='subtitle'>The courageous struggle to find meaning in a life stressed with cancer</span></a>
+<div class='author'>Isaacson, Lauren Ann, 1961-1986</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37065, {&quot;Title&quot;:&quot;Totem und Tabu - Einige Übereinstimmungen im Seelenleben der Wilden und der Neurotiker&quot;,&quot;Topics&quot;:[&quot;Psychoanalysis&quot;,&quot;Taboo&quot;,&quot;Neuroses&quot;,&quot;Ethnopsychology&quot;,&quot;Totemism&quot;],&quot;Primary&quot;:&quot;37065.htm&quot;,&quot;CreatorNames&quot;:[&quot;Freud, Sigmund, 1856-1939&quot;],&quot;LoCC&quot;:[&quot;BF&quot;,&quot;RC&quot;],&quot;PG_ID&quot;:&quot;37065&quot;});" class='title'>Totem und Tabu -<br><span class='subtitle'>Einige Übereinstimmungen im Seelenleben der Wilden und der Neurotiker</span></a>
+<div class='author'>Freud, Sigmund, 1856-1939</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37142, {&quot;Title&quot;:&quot;How to Care for the Insane: A Manual for Nurses&quot;,&quot;Topics&quot;:[&quot;Psychiatric nursing&quot;],&quot;Primary&quot;:&quot;37142.htm&quot;,&quot;CreatorNames&quot;:[&quot;Granger, William D.&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;37142&quot;});" class='title'>How to Care for the Insane:<br><span class='subtitle'>A Manual for Nurses</span></a>
+<div class='author'>Granger, William D.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37144, {&quot;Title&quot;:&quot;Observations on Madness and Melancholy - Including Practical Remarks on those Diseases together with Cases and an Account of the Morbid Appearances on Dissection&quot;,&quot;Topics&quot;:[&quot;Psychology, Pathological&quot;,&quot;Psychiatry -- Early works to 1900&quot;,&quot;Depression, Mental&quot;,&quot;Melancholy&quot;],&quot;Primary&quot;:&quot;37144.htm&quot;,&quot;CreatorNames&quot;:[&quot;Haslam, John, 1764-1844&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;37144&quot;});" class='title'>Observations on Madness and Melancholy -<br><span class='subtitle'>Including Practical Remarks on those Diseases together with Cases and an Account of the Morbid Appearances on Dissection</span></a>
+<div class='author'>Haslam, John, 1764-1844</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37222, {&quot;Title&quot;:&quot;Insanity: Its Causes and Prevention&quot;,&quot;Topics&quot;:[&quot;Psychiatry -- Early works to 1900&quot;],&quot;Primary&quot;:&quot;37222.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stearns, Henry Putnam, 1828-1905&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;37222&quot;});" class='title'>Insanity:<br><span class='subtitle'>Its Causes and Prevention</span></a>
+<div class='author'>Stearns, Henry Putnam, 1828-1905</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3731, {&quot;Title&quot;:&quot;Disturbances of the Heart - Discussion of the Treatment of the Heart in Its Various Disorders, With a Chapter on Blood Pressure&quot;,&quot;Topics&quot;:[&quot;Heart -- Diseases&quot;,&quot;Blood pressure&quot;],&quot;Primary&quot;:&quot;3731.txt&quot;,&quot;CreatorNames&quot;:[&quot;Osborne, Oliver T. (Oliver Thomas), 1862-1940&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;3731&quot;});" class='title'>Disturbances of the Heart -<br><span class='subtitle'>Discussion of the Treatment of the Heart in Its Various Disorders, With a Chapter on Blood Pressure</span></a>
+<div class='author'>Osborne, Oliver T. (Oliver Thomas), 1862-1940</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37592, {&quot;Title&quot;:&quot;Neuralgia and the diseases that resemble it&quot;,&quot;Topics&quot;:[&quot;Neuralgia&quot;],&quot;Primary&quot;:&quot;37592.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anstie, Francis Edmund, 1833-1874&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;37592&quot;});" class='title'>Neuralgia and the diseases that resemble it</a>
+<div class='author'>Anstie, Francis Edmund, 1833-1874</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37675, {&quot;Title&quot;:&quot;Arteriosclerosis and Hypertension, with Chapters on Blood Pressure - 3rd Edition.&quot;,&quot;Topics&quot;:[&quot;Blood pressure&quot;,&quot;Arteries -- Diseases&quot;],&quot;Primary&quot;:&quot;37675.htm&quot;,&quot;CreatorNames&quot;:[&quot;Warfield, Louis M. (Louis Marshall), 1876-&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;37675&quot;});" class='title'>Arteriosclerosis and Hypertension, with Chapters on Blood Pressure -<br><span class='subtitle'>3rd Edition.</span></a>
+<div class='author'>Warfield, Louis M. (Louis Marshall), 1876-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38090, {&quot;Title&quot;:&quot;Nurses&#39; Papers on Tuberculosis : - read before the Nurses&#39; Study Circle of the Dispensary Department, Chicago Municipal Tuberculosis Sanitarium&quot;,&quot;Topics&quot;:[&quot;Tuberculosis&quot;],&quot;Primary&quot;:&quot;38090.htm&quot;,&quot;CreatorNames&quot;:[&quot;Chicago (Ill.). Municipal Tuberculosis Sanitarium. Dispensary Department&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;38090&quot;});" class='title'>Nurses' Papers on Tuberculosis :<br><span class='subtitle'>- read before the Nurses' Study Circle of the Dispensary Department, Chicago Municipal Tuberculosis Sanitarium</span></a>
+<div class='author'>Chicago (Ill.). Municipal Tuberculosis Sanitarium. Dispensary Department</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38282, {&quot;Title&quot;:&quot;The Herriges Horror in Philadelphia - A Full History of the Whole Affair. A Man Kept in a Dark Cage Like a Wild Beast for Twenty Years, As Alleged, in His Own Mother&#39;s and Brother&#39;s House&quot;,&quot;Topics&quot;:[&quot;Mentally ill -- Commitment and detention&quot;,&quot;Mentally ill -- Care&quot;,&quot;Herriges, John&quot;,&quot;Mentally ill -- Family relationships&quot;],&quot;Primary&quot;:&quot;38282.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;38282&quot;});" class='title'>The Herriges Horror in Philadelphia -<br><span class='subtitle'>A Full History of the Whole Affair. A Man Kept in a Dark Cage Like a Wild Beast for Twenty Years, As Alleged, in His Own Mother's and Brother's House</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39036, {&quot;Title&quot;:&quot;Essays In Pastoral Medicine&quot;,&quot;Topics&quot;:[&quot;Medicine&quot;,&quot;First aid in illness and injury&quot;],&quot;Primary&quot;:&quot;39036.htm&quot;,&quot;CreatorNames&quot;:[&quot;O&#39;Malley, Austin, 1858-1932&quot;,&quot;Walsh, James J. (James Joseph), 1865-1942&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;39036&quot;});" class='title'>Essays In Pastoral Medicine</a>
+<div class='author'>O'Malley, Austin, 1858-1932, Walsh, James J. (James Joseph), 1865-1942</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39043, {&quot;Title&quot;:&quot;Die Kakomonade - Ein Nachlaß vom Doktor Panglos, als ein Supplement des Kandide&quot;,&quot;Topics&quot;:[&quot;Syphilis&quot;,&quot;Voltaire, 1694-1778. Candide&quot;,&quot;Sexually transmitted diseases&quot;],&quot;Primary&quot;:&quot;39043.htm&quot;,&quot;CreatorNames&quot;:[&quot;Linguet, Simon Nicolas Henri, 1736-1794&quot;],&quot;LoCC&quot;:[&quot;PQ&quot;,&quot;RC&quot;],&quot;PG_ID&quot;:&quot;39043&quot;});" class='title'>Die Kakomonade -<br><span class='subtitle'>Ein Nachlaß vom Doktor Panglos, als ein Supplement des Kandide</span></a>
+<div class='author'>Linguet, Simon Nicolas Henri, 1736-1794</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39044, {&quot;Title&quot;:&quot;Advice to the people in general, with regard to their health&quot;,&quot;Topics&quot;:[&quot;Medicine, Popular -- Early works to 1800&quot;,&quot;Hygiene -- Handbooks, manuals, etc. -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;39044.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tissot, S. A. D. (Samuel Auguste David), 1728-1797&quot;,&quot;Kirkpatrick, J. (James), 1696?-1770 [Translator]&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;39044&quot;});" class='title'>Advice to the people in general, with regard to their health</a>
+<div class='author'>Tissot, S. A. D. (Samuel Auguste David), 1728-1797, Kirkpatrick, J. (James), 1696?-1770 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39157, {&quot;Title&quot;:&quot;A System of Practical Medicine. By American Authors. Vol. 1 - Pathology and General Diseases&quot;,&quot;Topics&quot;:[&quot;Medicine -- Practice&quot;],&quot;Primary&quot;:&quot;39157.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pepper, William, 1843-1898 [Editor]&quot;,&quot;Starr, Louis, 1849-1925 [Editor]&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;39157&quot;});" class='title'>A System of Practical Medicine. By American Authors. Vol. 1 -<br><span class='subtitle'>Pathology and General Diseases</span></a>
+<div class='author'>Pepper, William, 1843-1898 [Editor], Starr, Louis, 1849-1925 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39670, {&quot;Title&quot;:&quot;The Idiot: His Place in Creation, and His Claims on Society&quot;,&quot;Topics&quot;:[&quot;Stupidity&quot;,&quot;Mental retardation&quot;],&quot;Primary&quot;:&quot;39670.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bateman, Frederick, Sir, 1824-1904&quot;],&quot;LoCC&quot;:[&quot;HV&quot;,&quot;RC&quot;],&quot;PG_ID&quot;:&quot;39670&quot;});" class='title'>The Idiot:<br><span class='subtitle'>His Place in Creation, and His Claims on Society</span></a>
+<div class='author'>Bateman, Frederick, Sir, 1824-1904</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39822, {&quot;Title&quot;:&quot;Tics and Their Treatment&quot;,&quot;Topics&quot;:[&quot;Tic disorders&quot;],&quot;Primary&quot;:&quot;39822.htm&quot;,&quot;CreatorNames&quot;:[&quot;Feindel, E. (Eugène), 1862-&quot;,&quot;Meige, Henry, 1866-1940&quot;,&quot;Brissaud, Édouard, 1852-1909 [Author of introduction, etc.]&quot;,&quot;Wilson, S. A. Kinnier (Samuel Alexander Kinnier), 1878-1937 [Translator]&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;39822&quot;});" class='title'>Tics and Their Treatment</a>
+<div class='author'>Feindel, E. (Eugène), 1862-, Meige, Henry, 1866-1940, Brissaud, Édouard, 1852-1909 [Author of introduction, etc.], Wilson, S. A. Kinnier (Samuel Alexander Kinnier), 1878-1937 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40106, {&quot;Title&quot;:&quot;Loimologia: Or, an Historical Account of the Plague in London in 1665 - With Precautionary Directions Against the Like Contagion&quot;,&quot;Topics&quot;:[&quot;Plague -- England -- London -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;40106.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hodges, Nathaniel, 1629-1688&quot;,&quot;Quincy, John, -1722&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;40106&quot;});" class='title'>Loimologia:<br><span class='subtitle'>Or, an Historical Account of the Plague in London in 1665 - With Precautionary Directions Against the Like Contagion</span></a>
+<div class='author'>Hodges, Nathaniel, 1629-1688, Quincy, John, -1722</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40184, {&quot;Title&quot;:&quot;The Natural Cure of Consumption, Constipation, Bright&#39;s Disease, Neuralgia, Rheumatism, \&quot;\&quot;Colds\&quot;\&quot; (Fevers), Etc. - How Sickness Originates, and How to Prevent It. A Health Manual for the People.&quot;,&quot;Topics&quot;:[&quot;Hygiene -- Popular works&quot;,&quot;Medicine, Popular&quot;],&quot;Primary&quot;:&quot;40184.htm&quot;,&quot;CreatorNames&quot;:[&quot;Page, C. E. (Charles Edward), 1840-&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;40184&quot;});" class='title'>The Natural Cure of Consumption, Constipation, Bright's Disease, Neuralgia, Rheumatism, "Colds" (Fevers), Etc. -<br><span class='subtitle'>How Sickness Originates, and How to Prevent It. A Health Manual for the People.</span></a>
+<div class='author'>Page, C. E. (Charles Edward), 1840-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40505, {&quot;Title&quot;:&quot;Scurvy, Past and Present&quot;,&quot;Topics&quot;:[&quot;Scurvy&quot;],&quot;Primary&quot;:&quot;40505.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hess, Alfred F., 1875-1933&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;40505&quot;});" class='title'>Scurvy, Past and Present</a>
+<div class='author'>Hess, Alfred F., 1875-1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41214, {&quot;Title&quot;:&quot;Totem and Taboo - Resemblances Between the Psychic Lives of Savages and Neurotics&quot;,&quot;Topics&quot;:[&quot;Psychoanalysis&quot;,&quot;Taboo&quot;,&quot;Neuroses&quot;,&quot;Ethnopsychology&quot;,&quot;Totemism&quot;],&quot;Primary&quot;:&quot;41214.htm&quot;,&quot;CreatorNames&quot;:[&quot;Freud, Sigmund, 1856-1939&quot;,&quot;Brill, A. A. (Abraham Arden), 1874-1948 [Translator]&quot;],&quot;LoCC&quot;:[&quot;BF&quot;,&quot;RC&quot;],&quot;PG_ID&quot;:&quot;41214&quot;});" class='title'>Totem and Taboo -<br><span class='subtitle'>Resemblances Between the Psychic Lives of Savages and Neurotics</span></a>
+<div class='author'>Freud, Sigmund, 1856-1939, Brill, A. A. (Abraham Arden), 1874-1948 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41334, {&quot;Title&quot;:&quot;My Experiences in a Lunatic Asylum - By a Sane Patient&quot;,&quot;Topics&quot;:[&quot;Insanity (Law)&quot;,&quot;Mentally ill -- Care&quot;],&quot;Primary&quot;:&quot;41334.htm&quot;,&quot;CreatorNames&quot;:[&quot;Merivale, Herman Charles, 1839-1906&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;41334&quot;});" class='title'>My Experiences in a Lunatic Asylum -<br><span class='subtitle'>By a Sane Patient</span></a>
+<div class='author'>Merivale, Herman Charles, 1839-1906</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41697, {&quot;Title&quot;:&quot;Merck&#39;s 1899 Manual of the Materia Medica&quot;,&quot;Topics&quot;:[&quot;Materia medica -- Handbooks, manuals, etc.&quot;,&quot;Therapeutics -- Handbooks, manuals, etc.&quot;,&quot;Pharmacology -- Handbooks, manuals, etc.&quot;,&quot;Drugs -- Handbooks, manuals, etc.&quot;],&quot;Primary&quot;:&quot;41697.htm&quot;,&quot;CreatorNames&quot;:[&quot;Merck &amp; Co.&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;41697&quot;});" class='title'>Merck's 1899 Manual of the Materia Medica</a>
+<div class='author'>Merck & Co.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4256, {&quot;Title&quot;:&quot;Stammering, Its Cause and Cure&quot;,&quot;Topics&quot;:[&quot;Stuttering&quot;],&quot;Primary&quot;:&quot;4256.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bogue, Benjamin Nathaniel&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;4256&quot;});" class='title'>Stammering, Its Cause and Cure</a>
+<div class='author'>Bogue, Benjamin Nathaniel</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43012, {&quot;Title&quot;:&quot;Opium Eating: An Autobiographical Sketch by an Habituate&quot;,&quot;Topics&quot;:[&quot;United States -- History -- Civil War, 1861-1865 -- Prisoners and prisons&quot;,&quot;Opium abuse -- United States&quot;],&quot;Primary&quot;:&quot;43012.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;43012&quot;});" class='title'>Opium Eating:<br><span class='subtitle'>An Autobiographical Sketch by an Habituate</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4314, {&quot;Title&quot;:&quot;Appendicitis: The Etiology, Hygenic and Dietetic Treatment&quot;,&quot;Topics&quot;:[&quot;Appendicitis&quot;],&quot;Primary&quot;:&quot;4314.txt&quot;,&quot;CreatorNames&quot;:[&quot;Tilden, J. H. (John Henry), 1851-1940&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;4314&quot;});" class='title'>Appendicitis:<br><span class='subtitle'>The Etiology, Hygenic and Dietetic Treatment</span></a>
+<div class='author'>Tilden, J. H. (John Henry), 1851-1940</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43415, {&quot;Title&quot;:&quot;Insomnia; and Other Disorders of Sleep&quot;,&quot;Topics&quot;:[&quot;Dreams&quot;,&quot;Sleepwalking&quot;,&quot;Insomnia&quot;],&quot;Primary&quot;:&quot;43415.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lyman, Henry M. (Henry Munson), 1835-1904&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;43415&quot;});" class='title'>Insomnia;<br><span class='subtitle'>and Other Disorders of Sleep</span></a>
+<div class='author'>Lyman, Henry M. (Henry Munson), 1835-1904</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43480, {&quot;Title&quot;:&quot;Smoking and Drinking&quot;,&quot;Topics&quot;:[&quot;Temperance&quot;,&quot;Smoking&quot;,&quot;Alcoholism -- Hospitals&quot;],&quot;Primary&quot;:&quot;43480.htm&quot;,&quot;CreatorNames&quot;:[&quot;Parton, James, 1822-1891&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;43480&quot;});" class='title'>Smoking and Drinking</a>
+<div class='author'>Parton, James, 1822-1891</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43481, {&quot;Title&quot;:&quot;Tobacco and Alcohol - I. It Does Pay to Smoke.  II. The Coming Man Will Drink Wine.&quot;,&quot;Topics&quot;:[&quot;Temperance&quot;,&quot;Smoking&quot;],&quot;Primary&quot;:&quot;43481.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fiske, John, 1842-1901&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;43481&quot;});" class='title'>Tobacco and Alcohol -<br><span class='subtitle'>I. It Does Pay to Smoke.  II. The Coming Man Will Drink Wine.</span></a>
+<div class='author'>Fiske, John, 1842-1901</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43780, {&quot;Title&quot;:&quot;The Lettsomian Lectures on Diseases and Disorders of the Heart and Arteries in Middle and Advanced Life [1900-1901]&quot;,&quot;Topics&quot;:[&quot;Heart -- Diseases&quot;,&quot;Arteries -- Diseases&quot;,&quot;Cardiovascular system -- Diseases&quot;,&quot;Middle-aged persons&quot;,&quot;Older people&quot;],&quot;Primary&quot;:&quot;43780.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bruce, J. Mitchell (John Mitchell), 1846-1929&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;43780&quot;});" class='title'>The Lettsomian Lectures on Diseases and Disorders of the Heart and Arteries in Middle and Advanced Life [1900-1901]</a>
+<div class='author'>Bruce, J. Mitchell (John Mitchell), 1846-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43942, {&quot;Title&quot;:&quot;Plague - Its Cause and the Manner of its Extension, Its Menace, Its Control and Suppression, Its Diagnosis and Treatment&quot;,&quot;Topics&quot;:[&quot;Plague&quot;,&quot;Rats as carriers of disease&quot;],&quot;Primary&quot;:&quot;43942.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jackson, Thomas Wright, 1869-&quot;,&quot;Schöbl, Otto [Contributor]&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;43942&quot;});" class='title'>Plague -<br><span class='subtitle'>Its Cause and the Manner of its Extension, Its Menace, Its Control and Suppression, Its Diagnosis and Treatment</span></a>
+<div class='author'>Jackson, Thomas Wright, 1869-, Schöbl, Otto [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44043, {&quot;Title&quot;:&quot;The Truth about Opium - Being a Refutation of the Fallacies of the Anti-Opium Society and a Defence of the Indo-China Opium Trade&quot;,&quot;Topics&quot;:[&quot;Opium trade -- China -- History -- 19th century&quot;,&quot;Opium trade -- India -- History -- 19th century&quot;,&quot;Opium trade -- Great Britain -- History -- 19th century&quot;,&quot;China -- Commerce -- India -- History -- 19th century&quot;,&quot;India -- Commerce -- China -- History -- 19th century&quot;,&quot;China -- Commerce -- Great Britain -- History -- 19th century&quot;,&quot;Great Britain -- Commerce -- China -- History -- 19th century&quot;,&quot;Opium abuse&quot;],&quot;Primary&quot;:&quot;44043.htm&quot;,&quot;CreatorNames&quot;:[&quot;Brereton, William H.&quot;],&quot;LoCC&quot;:[&quot;HV&quot;,&quot;RC&quot;],&quot;PG_ID&quot;:&quot;44043&quot;});" class='title'>The Truth about Opium -<br><span class='subtitle'>Being a Refutation of the Fallacies of the Anti-Opium Society and a Defence of the Indo-China Opium Trade</span></a>
+<div class='author'>Brereton, William H.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44926, {&quot;Title&quot;:&quot;When You Don&#39;t Know Where to Turn - A Self-Diagnosing Guide to Counseling and Therapy&quot;,&quot;Topics&quot;:[&quot;Psychotherapy&quot;,&quot;Counseling&quot;,&quot;Consumer education&quot;],&quot;Primary&quot;:&quot;44926.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bartlett, Steven J., 1945-&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;44926&quot;});" class='title'>When You Don't Know Where to Turn -<br><span class='subtitle'>A Self-Diagnosing Guide to Counseling and Therapy</span></a>
+<div class='author'>Bartlett, Steven J., 1945-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45313, {&quot;Title&quot;:&quot;A System of Practical Medicine. By American Authors. Vol. 2 - General Diseases (Continued) and Diseases of the Digestive System&quot;,&quot;Topics&quot;:[&quot;Medicine -- Practice&quot;],&quot;Primary&quot;:&quot;45313.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pepper, William, 1843-1898 [Editor]&quot;,&quot;Starr, Louis, 1849-1925 [Editor]&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;45313&quot;});" class='title'>A System of Practical Medicine. By American Authors. Vol. 2 -<br><span class='subtitle'>General Diseases (Continued) and Diseases of the Digestive System</span></a>
+<div class='author'>Pepper, William, 1843-1898 [Editor], Starr, Louis, 1849-1925 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45673, {&quot;Title&quot;:&quot;A brief Journal of what passed in the City of Marseilles, while it was afflicted with the Plague, in the Year 1720&quot;,&quot;Topics&quot;:[&quot;Plague -- France -- Marseille -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;45673.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pichatty de Croislainte&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;45673&quot;});" class='title'>A brief Journal of what passed in the City of Marseilles, while it was afflicted with the Plague, in the Year 1720</a>
+<div class='author'>Pichatty de Croislainte</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45815, {&quot;Title&quot;:&quot;The Great Pestilence (A.D. 1348-9), Now Commonly Known as the Black Death&quot;,&quot;Topics&quot;:[&quot;Black Death&quot;,&quot;Medicine, Medieval&quot;,&quot;Diseases and history&quot;],&quot;Primary&quot;:&quot;45815.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gasquet, Francis Aidan, 1846-1929&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;45815&quot;});" class='title'>The Great Pestilence (A.D. 1348-9), Now Commonly Known as the Black Death</a>
+<div class='author'>Gasquet, Francis Aidan, 1846-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46179, {&quot;Title&quot;:&quot;Two Years and Four Months in a Lunatic Asylum - from August 20th, 1863 to December 20th, 1865&quot;,&quot;Topics&quot;:[&quot;Chase, Hiram&quot;,&quot;Mentally ill -- Care -- New York (State) -- Utica&quot;,&quot;Mentally ill, Writings of the, American&quot;],&quot;Primary&quot;:&quot;46179.htm&quot;,&quot;CreatorNames&quot;:[&quot;Chase, Hiram&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;46179&quot;});" class='title'>Two Years and Four Months in a Lunatic Asylum -<br><span class='subtitle'>from August 20th, 1863 to December 20th, 1865</span></a>
+<div class='author'>Chase, Hiram</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4663, {&quot;Title&quot;:&quot;Malignant Self Love [Excerpts]&quot;,&quot;Topics&quot;:[&quot;Narcissism&quot;],&quot;Primary&quot;:&quot;4663.txt&quot;,&quot;CreatorNames&quot;:[&quot;Vaknin, Samuel, 1961-&quot;,&quot;Rangelovska, Lidija [Editor]&quot;],&quot;LoCC&quot;:[&quot;BF&quot;,&quot;RC&quot;],&quot;PG_ID&quot;:&quot;4663&quot;});" class='title'>Malignant Self Love [Excerpts]</a>
+<div class='author'>Vaknin, Samuel, 1961-, Rangelovska, Lidija [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46878, {&quot;Title&quot;:&quot;Ueber die Arsenikvergiftung ihre Hülfe und gerichtliche Ausmittelung&quot;,&quot;Topics&quot;:[&quot;Arsenic -- Toxicology&quot;],&quot;Primary&quot;:&quot;46878.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hahnemann, Samuel, 1755-1843&quot;],&quot;LoCC&quot;:[&quot;QD&quot;,&quot;RC&quot;],&quot;PG_ID&quot;:&quot;46878&quot;});" class='title'>Ueber die Arsenikvergiftung ihre Hülfe und gerichtliche Ausmittelung</a>
+<div class='author'>Hahnemann, Samuel, 1755-1843</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47106, {&quot;Title&quot;:&quot;Kompendium der Psychiatrie für Studierende und Ärzte&quot;,&quot;Topics&quot;:[&quot;Psychiatry -- Early works to 1900&quot;],&quot;Primary&quot;:&quot;47106.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dornblüth, Otto, 1860-1922&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;47106&quot;});" class='title'>Kompendium der Psychiatrie für Studierende und Ärzte</a>
+<div class='author'>Dornblüth, Otto, 1860-1922</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47366, {&quot;Title&quot;:&quot;Nervous Breakdowns and How to Avoid Them&quot;,&quot;Topics&quot;:[&quot;Mental health&quot;],&quot;Primary&quot;:&quot;47366.htm&quot;,&quot;CreatorNames&quot;:[&quot;Musgrove, Charles David&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;47366&quot;});" class='title'>Nervous Breakdowns and How to Avoid Them</a>
+<div class='author'>Musgrove, Charles David</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47387, {&quot;Title&quot;:&quot;Fissure of the Anus and Fistula in Ano&quot;,&quot;Topics&quot;:[&quot;Fistula&quot;,&quot;Fissure in Ano&quot;],&quot;Primary&quot;:&quot;47387.htm&quot;,&quot;CreatorNames&quot;:[&quot;Adler, Lewis H., Jr.&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;47387&quot;});" class='title'>Fissure of the Anus and Fistula in Ano</a>
+<div class='author'>Adler, Lewis H., Jr.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48072, {&quot;Title&quot;:&quot;The Modern Malady; Or, Sufferers from \&quot;\&quot;Nerves\&quot;\&quot;&quot;,&quot;Topics&quot;:[&quot;Neurasthenia&quot;],&quot;Primary&quot;:&quot;48072.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bennett, Cyril&quot;,&quot;Tibbits, Herbert, 1838-1907 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;48072&quot;});" class='title'>The Modern Malady;<br><span class='subtitle'>Or, Sufferers from "Nerves"</span></a>
+<div class='author'>Bennett, Cyril, Tibbits, Herbert, 1838-1907 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48455, {&quot;Title&quot;:&quot;Ten Years and Ten Months in Lunatic Asylums in Different States&quot;,&quot;Topics&quot;:[&quot;Mentally ill -- Care&quot;,&quot;Swan, Moses, 1812-&quot;,&quot;Psychiatric hospitals&quot;],&quot;Primary&quot;:&quot;48455.htm&quot;,&quot;CreatorNames&quot;:[&quot;Swan, Moses, 1812-&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;48455&quot;});" class='title'>Ten Years and Ten Months in Lunatic Asylums in Different States</a>
+<div class='author'>Swan, Moses, 1812-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48499, {&quot;Title&quot;:&quot;Jaundice: Its Pathology and Treatment - With the Application of Physiological Chemistry to the Detection and Treatment of Diseases of the Liver and Pancreas&quot;,&quot;Topics&quot;:[&quot;Jaundice&quot;],&quot;Primary&quot;:&quot;48499.htm&quot;,&quot;CreatorNames&quot;:[&quot;Harley, George, 1829-1896&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;48499&quot;});" class='title'>Jaundice:<br><span class='subtitle'>Its Pathology and Treatment - With the Application of Physiological Chemistry to the Detection and Treatment of Diseases of the Liver and Pancreas</span></a>
+<div class='author'>Harley, George, 1829-1896</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48929, {&quot;Title&quot;:&quot;Backwoods Surgery &amp; Medicine&quot;,&quot;Topics&quot;:[&quot;Medicine, Popular&quot;,&quot;First aid in illness and injury&quot;],&quot;Primary&quot;:&quot;48929.htm&quot;,&quot;CreatorNames&quot;:[&quot;Moody, Charles Stuart&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;48929&quot;});" class='title'>Backwoods Surgery & Medicine</a>
+<div class='author'>Moody, Charles Stuart</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49037, {&quot;Title&quot;:&quot;Health Service Support in a Nuclear, Biological, and Chemical Environment - Tactics, Techniques, and Procedures&quot;,&quot;Topics&quot;:[&quot;Weapons of mass destruction -- Health aspects -- Handbooks, manuals, etc.&quot;,&quot;Medical emergencies -- Handbooks, manuals, etc.&quot;,&quot;Chemical warfare -- Health aspects -- Handbooks, manuals, etc.&quot;,&quot;Biological warfare -- Health aspects -- Handbooks, manuals, etc.&quot;,&quot;Nuclear Warfare -- Health aspects -- Handbooks, manuals, etc.&quot;,&quot;Decontamination (from gases, chemicals, etc.) -- Handbooks, manuals, etc.&quot;,&quot;Emergency medical services -- Handbooks, manuals, etc.&quot;],&quot;Primary&quot;:&quot;49037.htm&quot;,&quot;CreatorNames&quot;:[&quot;United States. Department of the Army&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;49037&quot;});" class='title'>Health Service Support in a Nuclear, Biological, and Chemical Environment -<br><span class='subtitle'>Tactics, Techniques, and Procedures</span></a>
+<div class='author'>United States. Department of the Army</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49242, {&quot;Title&quot;:&quot;A Practical Treatise on Smallpox&quot;,&quot;Topics&quot;:[&quot;Smallpox&quot;],&quot;Primary&quot;:&quot;49242.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fox, George Henry, 1846-1937&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;49242&quot;});" class='title'>A Practical Treatise on Smallpox</a>
+<div class='author'>Fox, George Henry, 1846-1937</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49299, {&quot;Title&quot;:&quot;A Plain and Easie Method for Preserving (by God&#39;s Blessing) Those That Are Well from the Infection of the Plague, or Any Contagious Distemper, in City, Camp, Fleet, Etc., and for Curing Such as Are Infected with It.&quot;,&quot;Topics&quot;:[&quot;Plague -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;49299.htm&quot;,&quot;CreatorNames&quot;:[&quot;Willis, Thomas, 1621-1675&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;49299&quot;});" class='title'>A Plain and Easie Method for Preserving (by God's Blessing) Those That Are Well from the Infection of the Plague, or Any Contagious Distemper, in City, Camp, Fleet, Etc., and for Curing Such as Are Infected with It.</a>
+<div class='author'>Willis, Thomas, 1621-1675</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49319, {&quot;Title&quot;:&quot;An Essay on Contagious Diseases - more particularly on the small-pox, measles, putrid, malignant, and pestilential fevers&quot;,&quot;Topics&quot;:[&quot;Communicable diseases -- Early works to 1800&quot;,&quot;Smallpox -- Early works to 1800&quot;,&quot;Fever -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;49319.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wintringham, Clifton, 1689-1748&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;49319&quot;});" class='title'>An Essay on Contagious Diseases -<br><span class='subtitle'>more particularly on the small-pox, measles, putrid, malignant, and pestilential fevers</span></a>
+<div class='author'>Wintringham, Clifton, 1689-1748</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49475, {&quot;Title&quot;:&quot;An Estimate of the True Value of Vaccination as a Security Against Small Pox&quot;,&quot;Topics&quot;:[&quot;Smallpox -- Vaccination&quot;,&quot;Smallpox vaccine&quot;],&quot;Primary&quot;:&quot;49475.htm&quot;,&quot;CreatorNames&quot;:[&quot;Greenhow, T. M. (Thomas Michael), 1791-1881&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;49475&quot;});" class='title'>An Estimate of the True Value of Vaccination as a Security Against Small Pox</a>
+<div class='author'>Greenhow, T. M. (Thomas Michael), 1791-1881</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49567, {&quot;Title&quot;:&quot;An account of the plague which raged at Moscow, in 1771&quot;,&quot;Topics&quot;:[&quot;Plague -- Russia (Federation) -- Moscow -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;49567.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mertens, Charles de, 1737-1788&quot;,&quot;Pearson, Richard, 1765-1836 [Translator]&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;49567&quot;});" class='title'>An account of the plague which raged at Moscow, in 1771</a>
+<div class='author'>Mertens, Charles de, 1737-1788, Pearson, Richard, 1765-1836 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51147, {&quot;Title&quot;:&quot;Unser Familien-Arzt - Allöopathische, Homöopathische, Hydropathische, Eclectische und Kräuter-Heilmethode&quot;,&quot;Topics&quot;:[&quot;Medicine, Popular&quot;,&quot;Alternative medicine&quot;],&quot;Primary&quot;:&quot;51147.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stout, H. R. (Henry Rice), 1843-&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;51147&quot;});" class='title'>Unser Familien-Arzt -<br><span class='subtitle'>Allöopathische, Homöopathische, Hydropathische, Eclectische und Kräuter-Heilmethode</span></a>
+<div class='author'>Stout, H. R. (Henry Rice), 1843-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51930, {&quot;Title&quot;:&quot;Satyrische Abhandlung von den Krankheiten der Frauenspersonen, welche sie sich durch ihren Putz und Anzug zuziehen&quot;,&quot;Topics&quot;:[&quot;Women&#39;s clothing&quot;,&quot;Women -- Diseases -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;51930.htm&quot;,&quot;CreatorNames&quot;:[&quot;Reinhard, Christian Tobias Ephraim, 1719-1792&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;51930&quot;});" class='title'>Satyrische Abhandlung von den Krankheiten der Frauenspersonen, welche sie sich durch ihren Putz und Anzug zuziehen</a>
+<div class='author'>Reinhard, Christian Tobias Ephraim, 1719-1792</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52105, {&quot;Title&quot;:&quot;Shell-Shock and Other Neuropsychiatric Problems - Presented in Five Hundred and Eighty-nine Case Histories from the War Literature, 1914-1918&quot;,&quot;Topics&quot;:[&quot;World War, 1914-1918 -- Medical care&quot;,&quot;War neuroses&quot;,&quot;World War, 1914-1918 -- Psychological aspects&quot;],&quot;Primary&quot;:&quot;52105.htm&quot;,&quot;CreatorNames&quot;:[&quot;Southard, Elmer Ernest, 1876-1920&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;52105&quot;});" class='title'>Shell-Shock and Other Neuropsychiatric Problems -<br><span class='subtitle'>Presented in Five Hundred and Eighty-nine Case Histories from the War Literature, 1914-1918</span></a>
+<div class='author'>Southard, Elmer Ernest, 1876-1920</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52413, {&quot;Title&quot;:&quot;The Black Death in the Fourteenth Century&quot;,&quot;Topics&quot;:[&quot;Black Death&quot;],&quot;Primary&quot;:&quot;52413.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hecker, J. F. C. (Justus Friedrich Carl), 1795-1850&quot;,&quot;Babington, B. G. (Benjamin Guy), 1794-1866 [Translator]&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;52413&quot;});" class='title'>The Black Death in the Fourteenth Century</a>
+<div class='author'>Hecker, J. F. C. (Justus Friedrich Carl), 1795-1850, Babington, B. G. (Benjamin Guy), 1794-1866 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52593, {&quot;Title&quot;:&quot;Dissertatio medica inauguralis de ictero&quot;,&quot;Topics&quot;:[&quot;Jaundice&quot;],&quot;Primary&quot;:&quot;52593.htm&quot;,&quot;CreatorNames&quot;:[&quot;Macoubrey, William&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;52593&quot;});" class='title'>Dissertatio medica inauguralis de ictero</a>
+<div class='author'>Macoubrey, William</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52947, {&quot;Title&quot;:&quot;Dolæus upon the cure of the gout by milk-diet - To which is prefixed, an essay upon diet&quot;,&quot;Topics&quot;:[&quot;Gout -- Treatment -- Early works to 1800&quot;,&quot;Milk -- Diet therapy -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;52947.htm&quot;,&quot;CreatorNames&quot;:[&quot;Doläus, Johann, 1651-1707&quot;,&quot;Stephens, William, -1760&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;52947&quot;});" class='title'>Dolæus upon the cure of the gout by milk-diet -<br><span class='subtitle'>To which is prefixed, an essay upon diet</span></a>
+<div class='author'>Doläus, Johann, 1651-1707, Stephens, William, -1760</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53007, {&quot;Title&quot;:&quot;Observations on the Diseases of Seamen&quot;,&quot;Topics&quot;:[&quot;Sailors -- Diseases&quot;,&quot;Medicine, Naval -- Early Works To 1800&quot;],&quot;Primary&quot;:&quot;53007.htm&quot;,&quot;CreatorNames&quot;:[&quot;Blane, Gilbert, Sir, 1749-1834&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;53007&quot;});" class='title'>Observations on the Diseases of Seamen</a>
+<div class='author'>Blane, Gilbert, Sir, 1749-1834</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53305, {&quot;Title&quot;:&quot;A System of Practical Medicine. By American Authors. Vol. 3 - Diseases of the Respiratory, Circulatory, and Hæmatopoietic Systems&quot;,&quot;Topics&quot;:[&quot;Medicine -- Practice&quot;],&quot;Primary&quot;:&quot;53305.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pepper, William, 1843-1898 [Editor]&quot;,&quot;Starr, Louis, 1849-1925 [Editor]&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;53305&quot;});" class='title'>A System of Practical Medicine. By American Authors. Vol. 3 -<br><span class='subtitle'>Diseases of the Respiratory, Circulatory, and Hæmatopoietic Systems</span></a>
+<div class='author'>Pepper, William, 1843-1898 [Editor], Starr, Louis, 1849-1925 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53728, {&quot;Title&quot;:&quot;Asiatic Cholera: A treatise on its origin, pathology, treatment, and cure&quot;,&quot;Topics&quot;:[&quot;Cholera&quot;],&quot;Primary&quot;:&quot;53728.htm&quot;,&quot;CreatorNames&quot;:[&quot;Whitney, A. B.&quot;,&quot;Whitney, Elijah&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;53728&quot;});" class='title'>Asiatic Cholera:<br><span class='subtitle'>A treatise on its origin, pathology, treatment, and cure</span></a>
+<div class='author'>Whitney, A. B., Whitney, Elijah</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53823, {&quot;Title&quot;:&quot;Hygiene des Geschlechtslebens&quot;,&quot;Topics&quot;:[&quot;Sexual health&quot;],&quot;Primary&quot;:&quot;53823.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gruber, Max von, 1853-1927&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;53823&quot;});" class='title'>Hygiene des Geschlechtslebens</a>
+<div class='author'>Gruber, Max von, 1853-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53836, {&quot;Title&quot;:&quot;Intestinal Irrigation: Why, How and When to Flush the Colon&quot;,&quot;Topics&quot;:[&quot;Enema&quot;,&quot;Intestines -- Diseases&quot;],&quot;Primary&quot;:&quot;53836.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jamison, Alcinous B. (Alcinous Burton), 1851-&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;53836&quot;});" class='title'>Intestinal Irrigation:<br><span class='subtitle'>Why, How and When to Flush the Colon</span></a>
+<div class='author'>Jamison, Alcinous B. (Alcinous Burton), 1851-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53875, {&quot;Title&quot;:&quot;Madame Young&#39;s Guide to Health - Her experience and practice for nearly forty years; a true family herbal, wherein is displayed the true properties and medical virtues of all the roots, herbs, &amp;c., indigenous to the United States, and their combination in all the diseases the human body is heir to; also, an explanation of the human body, its liability to injuries through ignorance of its structure. Dedicated exclusively to her sex.&quot;,&quot;Topics&quot;:[&quot;Botany, Medical&quot;,&quot;Medicine, Popular&quot;,&quot;Materia medica, Vegetable&quot;,&quot;Women physicians&quot;],&quot;Primary&quot;:&quot;53875.htm&quot;,&quot;CreatorNames&quot;:[&quot;Young, Amelia&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;53875&quot;});" class='title'>Madame Young's Guide to Health -<br><span class='subtitle'>Her experience and practice for nearly forty years; a true family herbal, wherein is displayed the true properties and medical virtues of all the roots, herbs, &c., indigenous to the United States, and their combination in all the diseases the human body is heir to; also, an explanation of the human body, its liability to injuries through ignorance of its structure. Dedicated exclusively to her sex.</span></a>
+<div class='author'>Young, Amelia</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53880, {&quot;Title&quot;:&quot;Consumption Curable: Observations on the Treatment of Pulmonary Diseases&quot;,&quot;Topics&quot;:[&quot;Respiratory organs -- Diseases -- Treatment&quot;,&quot;Tuberculosis -- Treatment&quot;,&quot;Influenza -- Treatment&quot;],&quot;Primary&quot;:&quot;53880.htm&quot;,&quot;CreatorNames&quot;:[&quot;Congreve, Henry&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;53880&quot;});" class='title'>Consumption Curable:<br><span class='subtitle'>Observations on the Treatment of Pulmonary Diseases</span></a>
+<div class='author'>Congreve, Henry</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54216, {&quot;Title&quot;:&quot;The Mary Frances First Aid Book - With Ready Reference List of Ordinary Accidents and Illnesses, and Approved Home Remedies&quot;,&quot;Topics&quot;:[&quot;First aid in illness and injury&quot;,&quot;Mary Frances (Fictitious character) -- Juvenile fiction&quot;],&quot;Primary&quot;:&quot;54216.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fryer, Jane Eayre, 1876-&quot;,&quot;Boyer, Jane Allen [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;54216&quot;});" class='title'>The Mary Frances First Aid Book -<br><span class='subtitle'>With Ready Reference List of Ordinary Accidents and Illnesses, and Approved Home Remedies</span></a>
+<div class='author'>Fryer, Jane Eayre, 1876-, Boyer, Jane Allen [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54611, {&quot;Title&quot;:&quot;Mental diseases: a public health problem&quot;,&quot;Topics&quot;:[&quot;Psychology, Pathological&quot;,&quot;Mental health services&quot;],&quot;Primary&quot;:&quot;54611.htm&quot;,&quot;CreatorNames&quot;:[&quot;May, James Vance, 1873-1947&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;54611&quot;});" class='title'>Mental diseases:<br><span class='subtitle'>a public health problem</span></a>
+<div class='author'>May, James Vance, 1873-1947</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54713, {&quot;Title&quot;:&quot;A Treatise on the Diseases Produced By Onanism, Masturbation, Self-Pollution, and Other Excesses.&quot;,&quot;Topics&quot;:[&quot;Masturbation&quot;],&quot;Primary&quot;:&quot;54713.htm&quot;,&quot;CreatorNames&quot;:[&quot;Deslandes, L. (Léopold), 1796-1850&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;54713&quot;});" class='title'>A Treatise on the Diseases Produced By Onanism, Masturbation, Self-Pollution, and Other Excesses.</a>
+<div class='author'>Deslandes, L. (Léopold), 1796-1850</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54843, {&quot;Title&quot;:&quot;A Short Discourse Concerning Pestilential Contagion, and the Methods to Be Used to Prevent It&quot;,&quot;Topics&quot;:[&quot;Plague -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;54843.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mead, Richard, 1673-1754&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;54843&quot;});" class='title'>A Short Discourse Concerning Pestilential Contagion, and the Methods to Be Used to Prevent It</a>
+<div class='author'>Mead, Richard, 1673-1754</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54911, {&quot;Title&quot;:&quot;An Account of the Sore Throat Attended With Ulcers - A Disease Which Hath of Late Years Appeared in This City, and in Several Parts of the Nation&quot;,&quot;Topics&quot;:[&quot;Diphtheria&quot;],&quot;Primary&quot;:&quot;54911.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fothergill, John, 1712-1780&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;54911&quot;});" class='title'>An Account of the Sore Throat Attended With Ulcers -<br><span class='subtitle'>A Disease Which Hath of Late Years Appeared in This City, and in Several Parts of the Nation</span></a>
+<div class='author'>Fothergill, John, 1712-1780</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55104, {&quot;Title&quot;:&quot;Colony Treatment of the Insane and Other Defectives&quot;,&quot;Topics&quot;:[&quot;Mentally ill -- Care -- North Carolina&quot;,&quot;Psychiatric hospital care -- North Carolina&quot;],&quot;Primary&quot;:&quot;55104.htm&quot;,&quot;CreatorNames&quot;:[&quot;Murphy, P. L. (Patrick Livingston), 1848-1907&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;55104&quot;});" class='title'>Colony Treatment of the Insane and Other Defectives</a>
+<div class='author'>Murphy, P. L. (Patrick Livingston), 1848-1907</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55443, {&quot;Title&quot;:&quot;Psycho-Analysis and the War Neuroses&quot;,&quot;Topics&quot;:[&quot;Psychoanalysis&quot;,&quot;War neuroses&quot;],&quot;Primary&quot;:&quot;55443.htm&quot;,&quot;CreatorNames&quot;:[&quot;Abraham, Karl, 1877-1925&quot;,&quot;Ferenczi, Sándor, 1873-1933&quot;,&quot;Freud, Sigmund, 1856-1939&quot;,&quot;Jones, Ernest, 1879-1958&quot;,&quot;Simmel, Ernst, 1882-1947&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;55443&quot;});" class='title'>Psycho-Analysis and the War Neuroses</a>
+<div class='author'>Abraham, Karl, 1877-1925, Ferenczi, Sándor, 1873-1933, Freud, Sigmund, 1856-1939, Jones, Ernest, 1879-1958, Simmel, Ernst, 1882-1947</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56380, {&quot;Title&quot;:&quot;Doctor Mead&#39;s Short discourse explain&#39;d - Being a clearer account of pestilential contagion, and preventing.&quot;,&quot;Topics&quot;:[&quot;Plague -- Early works to 1800&quot;,&quot;Communicable diseases -- Early works to 1800&quot;,&quot;Mead, Richard, 1673-1754. Short discourse concerning pestilential contagion&quot;],&quot;Primary&quot;:&quot;56380.htm&quot;,&quot;CreatorNames&quot;:[&quot;Boreham, William [Publisher]&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;56380&quot;});" class='title'>Doctor Mead's Short discourse explain'd -<br><span class='subtitle'>Being a clearer account of pestilential contagion, and preventing.</span></a>
+<div class='author'>Boreham, William [Publisher]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56407, {&quot;Title&quot;:&quot;A Sketch of the Life of Elizabeth T. Stone and of Her Persecutions - With an Appendix of Her Treatment and Sufferings While in the Charlestown McLean Assylum, Where She Was Confined Under the Pretence of Insanity&quot;,&quot;Topics&quot;:[&quot;Mental illness -- Personal narratives&quot;,&quot;Stone, Elizabeth T., 1811-&quot;,&quot;McLean Hospital&quot;],&quot;Primary&quot;:&quot;56407.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stone, Elizabeth T., 1811-&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;56407&quot;});" class='title'>A Sketch of the Life of Elizabeth T. Stone and of Her Persecutions -<br><span class='subtitle'>With an Appendix of Her Treatment and Sufferings While in the Charlestown McLean Assylum, Where She Was Confined Under the Pretence of Insanity</span></a>
+<div class='author'>Stone, Elizabeth T., 1811-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56893, {&quot;Title&quot;:&quot;Nervous Ills, Their Cause and Cure&quot;,&quot;Topics&quot;:[&quot;Nervous system -- Diseases&quot;,&quot;Neuroses&quot;],&quot;Primary&quot;:&quot;56893.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sidis, Boris, 1867-1923&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;56893&quot;});" class='title'>Nervous Ills, Their Cause and Cure</a>
+<div class='author'>Sidis, Boris, 1867-1923</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57069, {&quot;Title&quot;:&quot;Obesity, or Excessive Corpulence: The Various Causes and the Rational Means of Cure&quot;,&quot;Topics&quot;:[&quot;Obesity&quot;,&quot;Weight loss&quot;],&quot;Primary&quot;:&quot;57069.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dancel, J.-F. (Jean-François), 1804-&quot;,&quot;Barrett, M. [Translator]&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;57069&quot;});" class='title'>Obesity, or Excessive Corpulence:<br><span class='subtitle'>The Various Causes and the Rational Means of Cure</span></a>
+<div class='author'>Dancel, J.-F. (Jean-François), 1804-, Barrett, M. [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57215, {&quot;Title&quot;:&quot;Some Medical Aspects of Old Age - Being the Linacre lecture, 1922, St. John&#39;s college, Cambridge&quot;,&quot;Topics&quot;:[&quot;Longevity&quot;,&quot;Linacre lecture, St. John&#39;s college, Cambridge&quot;,&quot;Geriatrics&quot;],&quot;Primary&quot;:&quot;57215.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rolleston, Humphry Davy, Sir, 1862-1944&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;57215&quot;});" class='title'>Some Medical Aspects of Old Age -<br><span class='subtitle'>Being the Linacre lecture, 1922, St. John's college, Cambridge</span></a>
+<div class='author'>Rolleston, Humphry Davy, Sir, 1862-1944</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57331, {&quot;Title&quot;:&quot;Sexual Neuroses&quot;,&quot;Topics&quot;:[&quot;Generative organs -- Diseases&quot;],&quot;Primary&quot;:&quot;57331.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kent, J. T. (James Tyler), 1849-1916&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;57331&quot;});" class='title'>Sexual Neuroses</a>
+<div class='author'>Kent, J. T. (James Tyler), 1849-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57459, {&quot;Title&quot;:&quot;Reprint of Two Tracts - 1. An essay on gleets. 2. An enquiry into the nature, cause, and cure of a singular disease of the eyes&quot;,&quot;Topics&quot;:[&quot;Sexually transmitted diseases&quot;,&quot;Eye -- Diseases&quot;,&quot;Gonorrhea&quot;,&quot;Urethra -- Diseases&quot;],&quot;Primary&quot;:&quot;57459.htm&quot;,&quot;CreatorNames&quot;:[&quot;Marat, Jean Paul, 1743-1793&quot;,&quot;Bailey, James Blake [Editor]&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;57459&quot;});" class='title'>Reprint of Two Tracts -<br><span class='subtitle'>1. An essay on gleets. 2. An enquiry into the nature, cause, and cure of a singular disease of the eyes</span></a>
+<div class='author'>Marat, Jean Paul, 1743-1793, Bailey, James Blake [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57535, {&quot;Title&quot;:&quot;Medical Sketches of the Expedition to Egypt, from India&quot;,&quot;Topics&quot;:[&quot;Medicine, Military&quot;,&quot;Great Britain. Army -- Sanitary affairs&quot;],&quot;Primary&quot;:&quot;57535.htm&quot;,&quot;CreatorNames&quot;:[&quot;McGrigor, James, Sir, 1771-1858&quot;],&quot;LoCC&quot;:[&quot;RC&quot;,&quot;UH&quot;],&quot;PG_ID&quot;:&quot;57535&quot;});" class='title'>Medical Sketches of the Expedition to Egypt, from India</a>
+<div class='author'>McGrigor, James, Sir, 1771-1858</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57545, {&quot;Title&quot;:&quot;Letter on Corpulence, Addressed to the Public&quot;,&quot;Topics&quot;:[&quot;Obesity&quot;],&quot;Primary&quot;:&quot;57545.htm&quot;,&quot;CreatorNames&quot;:[&quot;Banting, William, 1797-1878&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;57545&quot;});" class='title'>Letter on Corpulence, Addressed to the Public</a>
+<div class='author'>Banting, William, 1797-1878</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57713, {&quot;Title&quot;:&quot;The Animal Parasites of Man&quot;,&quot;Topics&quot;:[&quot;Medical parasitology&quot;],&quot;Primary&quot;:&quot;57713.htm&quot;,&quot;CreatorNames&quot;:[&quot;Braun, Max, 1850-1930&quot;,&quot;Fantham, Harold Benjamin, 1876-1937&quot;,&quot;Stephens, J. W. W. (John William Watson), 1865-1946&quot;,&quot;Theobald, Fred. V. (Frederick Vincent), 1868-1930&quot;,&quot;Seifert, Otto, 1853-1933 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;QL&quot;,&quot;RC&quot;],&quot;PG_ID&quot;:&quot;57713&quot;});" class='title'>The Animal Parasites of Man</a>
+<div class='author'>Braun, Max, 1850-1930, Fantham, Harold Benjamin, 1876-1937, Stephens, J. W. W. (John William Watson), 1865-1946, Theobald, Fred. V. (Frederick Vincent), 1868-1930, Seifert, Otto, 1853-1933 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58152, {&quot;Title&quot;:&quot;Essay on the Classification of the Insane&quot;,&quot;Topics&quot;:[&quot;Mental illness&quot;],&quot;Primary&quot;:&quot;58152.htm&quot;,&quot;CreatorNames&quot;:[&quot;Allen, M. (Physician)&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;58152&quot;});" class='title'>Essay on the Classification of the Insane</a>
+<div class='author'>Allen, M. (Physician)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58960, {&quot;Title&quot;:&quot;The pathology of influenza&quot;,&quot;Topics&quot;:[&quot;Influenza&quot;],&quot;Primary&quot;:&quot;58960.htm&quot;,&quot;CreatorNames&quot;:[&quot;McNamara, Frank P., 1884-&quot;,&quot;Wason, Isabel M., 1890-&quot;,&quot;Winternitz, M. C. (Milton C.), 1885-1959&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;58960&quot;});" class='title'>The pathology of influenza</a>
+<div class='author'>McNamara, Frank P., 1884-, Wason, Isabel M., 1890-, Winternitz, M. C. (Milton C.), 1885-1959</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59312, {&quot;Title&quot;:&quot;Cancer: Its Cause and Treatment, Volume 2 (of 2)&quot;,&quot;Topics&quot;:[&quot;Cancer&quot;],&quot;Primary&quot;:&quot;59312.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bulkley, Lucius Duncan, 1845-1928&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;59312&quot;});" class='title'>Cancer:<br><span class='subtitle'>Its Cause and Treatment, Volume 2 (of 2)</span></a>
+<div class='author'>Bulkley, Lucius Duncan, 1845-1928</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59425, {&quot;Title&quot;:&quot;The Seaman&#39;s Medical Instructor - In a Course of Lectures on Accidents and Diseases Incident to Seamen&quot;,&quot;Topics&quot;:[&quot;Medicine, Popular -- Early works to 1800&quot;,&quot;First aid in illness and injury -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;59425.htm&quot;,&quot;CreatorNames&quot;:[&quot;Falck, N. D. (Nikolai Detlef), 1736-1783&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;59425&quot;});" class='title'>The Seaman's Medical Instructor -<br><span class='subtitle'>In a Course of Lectures on Accidents and Diseases Incident to Seamen</span></a>
+<div class='author'>Falck, N. D. (Nikolai Detlef), 1736-1783</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59550, {&quot;Title&quot;:&quot;Cancer: Its Cause and Treatment, Volume 1 (of 2)&quot;,&quot;Topics&quot;:[&quot;Cancer&quot;],&quot;Primary&quot;:&quot;59550.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bulkley, Lucius Duncan, 1845-1928&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;59550&quot;});" class='title'>Cancer:<br><span class='subtitle'>Its Cause and Treatment, Volume 1 (of 2)</span></a>
+<div class='author'>Bulkley, Lucius Duncan, 1845-1928</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59899, {&quot;Title&quot;:&quot;Ten Days in a Mad-House; or, Nellie Bly&#39;s Experience on Blackwell&#39;s Island. - Feigning Insanity in Order to Reveal Asylum Horrors. The Trying Ordeal of the New York World&#39;s Girl Correspondent.&quot;,&quot;Topics&quot;:[&quot;N.Y. City Lunatic Asylum&quot;,&quot;Bly, Nellie, 1864-1922&quot;,&quot;Mentally ill -- Commitment and detention -- New York (State) -- History -- 19th century&quot;,&quot;Psychiatric hospitals -- New York (State) -- History -- 19th century&quot;,&quot;Psychiatric hospital care -- New York (State) -- History -- 19th century&quot;,&quot;Women -- Mental health services -- New York (State) -- History -- 19th century&quot;,&quot;Women patients -- New York (State) -- History -- 19th century&quot;],&quot;Primary&quot;:&quot;59899.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bly, Nellie, 1864-1922&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;59899&quot;});" class='title'>Ten Days in a Mad-House;<br><span class='subtitle'>or, Nellie Bly's Experience on Blackwell's Island. - Feigning Insanity in Order to Reveal Asylum Horrors. The Trying Ordeal of the New York World's Girl Correspondent.</span></a>
+<div class='author'>Bly, Nellie, 1864-1922</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5994, {&quot;Title&quot;:&quot;Our Nervous Friends — Illustrating the Mastery of Nervousness&quot;,&quot;Topics&quot;:[&quot;Nervous system -- Hygiene&quot;],&quot;Primary&quot;:&quot;5994.txt&quot;,&quot;CreatorNames&quot;:[&quot;Carroll, Robert S. (Robert Sproul), 1869-1949&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;5994&quot;});" class='title'>Our Nervous Friends — Illustrating the Mastery of Nervousness</a>
+<div class='author'>Carroll, Robert S. (Robert Sproul), 1869-1949</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60087, {&quot;Title&quot;:&quot;Influenza&quot;,&quot;Topics&quot;:[&quot;Influenza&quot;,&quot;Influenza Epidemic, 1918-1919&quot;],&quot;Primary&quot;:&quot;60087.htm&quot;,&quot;CreatorNames&quot;:[&quot;Provincial Board of Health of Ontario&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;60087&quot;});" class='title'>Influenza</a>
+<div class='author'>Provincial Board of Health of Ontario</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60338, {&quot;Title&quot;:&quot;An Enquiry Into the Origin and Intimate Nature of Malaria&quot;,&quot;Topics&quot;:[&quot;Malaria&quot;],&quot;Primary&quot;:&quot;60338.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wilson, Thomas, active 1795-1858&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;60338&quot;});" class='title'>An Enquiry Into the Origin and Intimate Nature of Malaria</a>
+<div class='author'>Wilson, Thomas, active 1795-1858</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60419, {&quot;Title&quot;:&quot;A Treatise on Fever&quot;,&quot;Topics&quot;:[&quot;Fever&quot;],&quot;Primary&quot;:&quot;60419.htm&quot;,&quot;CreatorNames&quot;:[&quot;Smith, Southwood, 1788-1861&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;60419&quot;});" class='title'>A Treatise on Fever</a>
+<div class='author'>Smith, Southwood, 1788-1861</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60822, {&quot;Title&quot;:&quot;Studies on Epidemic Influenza: Comprising Clinical and Laboratory Investigations&quot;,&quot;Topics&quot;:[&quot;Influenza&quot;,&quot;Influenza Epidemic, 1918-1919&quot;],&quot;Primary&quot;:&quot;60822.htm&quot;,&quot;CreatorNames&quot;:[&quot;University of Pittsburgh. School of Medicine&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;60822&quot;});" class='title'>Studies on Epidemic Influenza:<br><span class='subtitle'>Comprising Clinical and Laboratory Investigations</span></a>
+<div class='author'>University of Pittsburgh. School of Medicine</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61042, {&quot;Title&quot;:&quot;Die Kinder auf dem Abendberg: Eine Weihnachtsgabe&quot;,&quot;Topics&quot;:[&quot;Congenital hypothyroidism&quot;,&quot;Guggenbühl, Johann Jakob, -1863&quot;,&quot;Abendberg (Hospital)&quot;],&quot;Primary&quot;:&quot;61042.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hahn-Hahn, Ida, Gräfin, 1805-1880&quot;],&quot;LoCC&quot;:[&quot;PT&quot;,&quot;RC&quot;],&quot;PG_ID&quot;:&quot;61042&quot;});" class='title'>Die Kinder auf dem Abendberg:<br><span class='subtitle'>Eine Weihnachtsgabe</span></a>
+<div class='author'>Hahn-Hahn, Ida, Gräfin, 1805-1880</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61258, {&quot;Title&quot;:&quot;Avis au peuple sur sa santé - ou traité des maladies les plus fréquentes&quot;,&quot;Topics&quot;:[&quot;Medicine, Popular -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;61258.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tissot, S. A. D. (Samuel Auguste David), 1728-1797&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;61258&quot;});" class='title'>Avis au peuple sur sa santé -<br><span class='subtitle'>ou traité des maladies les plus fréquentes</span></a>
+<div class='author'>Tissot, S. A. D. (Samuel Auguste David), 1728-1797</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61537, {&quot;Title&quot;:&quot;The Charitable Pestmaster; Or, The Cure of the Plague - Conteining a few short and necessary instructions how to preserve the body from infection of the plagve, as also to cure those that are infected. Together with a little treatise concerning the cure of the small pox.&quot;,&quot;Topics&quot;:[&quot;Plague -- Early works to 1800&quot;,&quot;Smallpox -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;61537.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sherwood, Thomas, Practitioner in physick&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;61537&quot;});" class='title'>The Charitable Pestmaster;<br><span class='subtitle'>Or, The Cure of the Plague - Conteining a few short and necessary instructions how to preserve the body from infection of the plagve, as also to cure those that are infected. Together with a little treatise concerning the cure of the small pox.</span></a>
+<div class='author'>Sherwood, Thomas, Practitioner in physick</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61607, {&quot;Title&quot;:&quot;\&quot;\&quot;The Flu\&quot;\&quot;: a brief history of influenza in U.S. America, Europe, Hawaii&quot;,&quot;Topics&quot;:[&quot;Influenza&quot;],&quot;Primary&quot;:&quot;61607.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mouritz, A. A. St. M. (Arthur Albert St. M.), 1861-1943&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;61607&quot;});" class='title'>"The Flu":<br><span class='subtitle'>a brief history of influenza in U.S. America, Europe, Hawaii</span></a>
+<div class='author'>Mouritz, A. A. St. M. (Arthur Albert St. M.), 1861-1943</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61703, {&quot;Title&quot;:&quot;A Collection of Seven and Fifty approved Receipts Good against the Plague - Taken out of the five books of that renowned Dr. Don Alexes secrets, for the benefit of the poorer sort of people of these nations.&quot;,&quot;Topics&quot;:[&quot;Plague -- Prevention -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;61703.htm&quot;,&quot;CreatorNames&quot;:[&quot;Alessio, Piemontese, 1471?-&quot;,&quot;W. J.&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;61703&quot;});" class='title'>A Collection of Seven and Fifty approved Receipts Good against the Plague -<br><span class='subtitle'>Taken out of the five books of that renowned Dr. Don Alexes secrets, for the benefit of the poorer sort of people of these nations.</span></a>
+<div class='author'>Alessio, Piemontese, 1471?-, W. J.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61800, {&quot;Title&quot;:&quot;I-em-hotep and Ancient Egyptian medicine: II. Prevention of valvular disease - The Harveian Oration delivered before the Royal college of physicians on June 21, 1904&quot;,&quot;Topics&quot;:[&quot;Heart valves -- Diseases&quot;,&quot;Medicine, Egyptian&quot;],&quot;Primary&quot;:&quot;61800.htm&quot;,&quot;CreatorNames&quot;:[&quot;Caton, Richard, 1842-1926&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;61800&quot;});" class='title'>I-em-hotep and Ancient Egyptian medicine:<br><span class='subtitle'>II. Prevention of valvular disease - The Harveian Oration delivered before the Royal college of physicians on June 21, 1904</span></a>
+<div class='author'>Caton, Richard, 1842-1926</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62182, {&quot;Title&quot;:&quot;Good Councell against the plague - Shewing sundry present preseruatiues for the same, by wholsome fumes, drinks, vomits, and other inward receits: as also, the perfect cure (by implaysture) of any that are therewith infected. Now necessary to be obserued of euery housholder, to auoyde the infection, lately begun in some places of this cittie.&quot;,&quot;Topics&quot;:[&quot;Plague -- Prevention -- Early works to 1800&quot;,&quot;Plague -- Treatment -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;62182.htm&quot;,&quot;CreatorNames&quot;:[&quot;Learned phisition&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;62182&quot;});" class='title'>Good Councell against the plague -<br><span class='subtitle'>Shewing sundry present preseruatiues for the same, by wholsome fumes, drinks, vomits, and other inward receits: as also, the perfect cure (by implaysture) of any that are therewith infected. Now necessary to be obserued of euery housholder, to auoyde the infection, lately begun in some places of this cittie.</span></a>
+<div class='author'>Learned phisition</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62300, {&quot;Title&quot;:&quot;The Plague of Lust, Vol. 1 (of 2) - Being a History of Venereal Disease in Classical Antiquity&quot;,&quot;Topics&quot;:[&quot;Sexually transmitted diseases -- History&quot;],&quot;Primary&quot;:&quot;62300.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rosenbaum, Julius, 1807-1874&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;62300&quot;});" class='title'>The Plague of Lust, Vol. 1 (of 2) -<br><span class='subtitle'>Being a History of Venereal Disease in Classical Antiquity</span></a>
+<div class='author'>Rosenbaum, Julius, 1807-1874</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62429, {&quot;Title&quot;:&quot;Epidemic Respiratory Disease - The pneumonias and other infections of the repiratory tract accompanying influenza and measles&quot;,&quot;Topics&quot;:[&quot;Measles&quot;,&quot;Influenza&quot;,&quot;Respiratory organs -- Diseases&quot;,&quot;Pneumonia&quot;],&quot;Primary&quot;:&quot;62429.htm&quot;,&quot;CreatorNames&quot;:[&quot;Blake, Francis G. (Francis Gilman), 1887-1952&quot;,&quot;Opie, Eugene L. (Eugene Lindsay), 1873-1971&quot;,&quot;Rivers, Thomas M. (Thomas Milton), 1888-1962&quot;,&quot;Small, James C. (James Craig), 1888-&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;62429&quot;});" class='title'>Epidemic Respiratory Disease -<br><span class='subtitle'>The pneumonias and other infections of the repiratory tract accompanying influenza and measles</span></a>
+<div class='author'>Blake, Francis G. (Francis Gilman), 1887-1952, Opie, Eugene L. (Eugene Lindsay), 1873-1971, Rivers, Thomas M. (Thomas Milton), 1888-1962, Small, James C. (James Craig), 1888-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62492, {&quot;Title&quot;:&quot;The Art of Natural Sleep - With definite directions for the wholesome cure of sleeplessness: illustrated by cases treated in Northampton and elsewhere&quot;,&quot;Topics&quot;:[&quot;Insomnia&quot;,&quot;Sleep&quot;,&quot;Emmanuel movement&quot;],&quot;Primary&quot;:&quot;62492.htm&quot;,&quot;CreatorNames&quot;:[&quot;Powell, Lyman P. (Lyman Pierson), 1866-1946&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;62492&quot;});" class='title'>The Art of Natural Sleep -<br><span class='subtitle'>With definite directions for the wholesome cure of sleeplessness: illustrated by cases treated in Northampton and elsewhere</span></a>
+<div class='author'>Powell, Lyman P. (Lyman Pierson), 1866-1946</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62587, {&quot;Title&quot;:&quot;A System of Practical Medicine. By American Authors. Vol. 4 - Diseases of the Genito-Urinary and Cutaneous Systems.—Medical Ophthalmology, and Otology&quot;,&quot;Topics&quot;:[&quot;Medicine -- Practice&quot;],&quot;Primary&quot;:&quot;62587.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pepper, William, 1843-1898 [Editor]&quot;,&quot;Starr, Louis, 1849-1925 [Editor]&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;62587&quot;});" class='title'>A System of Practical Medicine. By American Authors. Vol. 4 -<br><span class='subtitle'>Diseases of the Genito-Urinary and Cutaneous Systems.—Medical Ophthalmology, and Otology</span></a>
+<div class='author'>Pepper, William, 1843-1898 [Editor], Starr, Louis, 1849-1925 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62608, {&quot;Title&quot;:&quot;Rat Proofing Buildings and Premises&quot;,&quot;Topics&quot;:[&quot;Building&quot;,&quot;Ratproof construction&quot;],&quot;Primary&quot;:&quot;62608.htm&quot;,&quot;CreatorNames&quot;:[&quot;Betts, M. C. (Morris Cotgrave), 1875-1936&quot;,&quot;Crouch, W. E. (Winney Elmer), 1891-1964&quot;,&quot;Silver, James, 1890-&quot;],&quot;LoCC&quot;:[&quot;RC&quot;,&quot;TH&quot;],&quot;PG_ID&quot;:&quot;62608&quot;});" class='title'>Rat Proofing Buildings and Premises</a>
+<div class='author'>Betts, M. C. (Morris Cotgrave), 1875-1936, Crouch, W. E. (Winney Elmer), 1891-1964, Silver, James, 1890-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62931, {&quot;Title&quot;:&quot;The Bubonic Plague&quot;,&quot;Topics&quot;:[&quot;Plague&quot;],&quot;Primary&quot;:&quot;62931.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mitra, A., active 19th century&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;62931&quot;});" class='title'>The Bubonic Plague</a>
+<div class='author'>Mitra, A., active 19th century</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63246, {&quot;Title&quot;:&quot;The Plague of Lust, Vol. 2 (of 2) - Being a History of Venereal Disease in Classical Antiquity&quot;,&quot;Topics&quot;:[&quot;Sexually transmitted diseases -- History&quot;],&quot;Primary&quot;:&quot;63246.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rosenbaum, Julius, 1807-1874&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;63246&quot;});" class='title'>The Plague of Lust, Vol. 2 (of 2) -<br><span class='subtitle'>Being a History of Venereal Disease in Classical Antiquity</span></a>
+<div class='author'>Rosenbaum, Julius, 1807-1874</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63313, {&quot;Title&quot;:&quot;Neurosyphilis - Modern Systematic Diagnosis and Treatment Presented in One Hundred and Thirty-Seven Case Histories&quot;,&quot;Topics&quot;:[&quot;Neurosyphilis&quot;],&quot;Primary&quot;:&quot;63313.htm&quot;,&quot;CreatorNames&quot;:[&quot;Solomon, Harry C. (Harry Caesar), 1889-1982&quot;,&quot;Southard, Elmer Ernest, 1876-1920&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;63313&quot;});" class='title'>Neurosyphilis -<br><span class='subtitle'>Modern Systematic Diagnosis and Treatment Presented in One Hundred and Thirty-Seven Case Histories</span></a>
+<div class='author'>Solomon, Harry C. (Harry Caesar), 1889-1982, Southard, Elmer Ernest, 1876-1920</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63376, {&quot;Title&quot;:&quot;The Sweating Sickness in England&quot;,&quot;Topics&quot;:[&quot;Sweating-sickness -- History&quot;],&quot;Primary&quot;:&quot;63376.htm&quot;,&quot;CreatorNames&quot;:[&quot;Webb, Francis Cornelius, 1826-1873&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;63376&quot;});" class='title'>The Sweating Sickness in England</a>
+<div class='author'>Webb, Francis Cornelius, 1826-1873</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63408, {&quot;Title&quot;:&quot;Report of the committee appointed to investigate the causes and extent of the late extraordinary sickness and mortality in the town of Mobile&quot;,&quot;Topics&quot;:[&quot;Yellow fever -- Alabama -- Mobile&quot;],&quot;Primary&quot;:&quot;63408.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mobile (Ala.). Committee on Causes and Extent of the Late Extraordinary Sickness and Mortality in the Town&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;63408&quot;});" class='title'>Report of the committee appointed to investigate the causes and extent of the late extraordinary sickness and mortality in the town of Mobile</a>
+<div class='author'>Mobile (Ala.). Committee on Causes and Extent of the Late Extraordinary Sickness and Mortality in the Town</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63848, {&quot;Title&quot;:&quot;Della peste e della pubblica amministrazione sanitaria&quot;,&quot;Topics&quot;:[&quot;Plague&quot;],&quot;Primary&quot;:&quot;63848.htm&quot;,&quot;CreatorNames&quot;:[&quot;Frari, A. A. (Angelo Antonio), 1780-1865&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;63848&quot;});" class='title'>Della peste e della pubblica amministrazione sanitaria</a>
+<div class='author'>Frari, A. A. (Angelo Antonio), 1780-1865</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64547, {&quot;Title&quot;:&quot;Plague and pestilence in literature and art&quot;,&quot;Topics&quot;:[&quot;Medicine in literature&quot;,&quot;Plague&quot;,&quot;Plague -- History&quot;,&quot;Medicine in art&quot;,&quot;Plague in literature&quot;,&quot;Epidemics in literature&quot;,&quot;Plague in art&quot;],&quot;Primary&quot;:&quot;64547.htm&quot;,&quot;CreatorNames&quot;:[&quot;Crawfurd, Raymond Henry Payne, Sir, 1865-1938&quot;],&quot;LoCC&quot;:[&quot;PN&quot;,&quot;RC&quot;],&quot;PG_ID&quot;:&quot;64547&quot;});" class='title'>Plague and pestilence in literature and art</a>
+<div class='author'>Crawfurd, Raymond Henry Payne, Sir, 1865-1938</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64785, {&quot;Title&quot;:&quot;The Spanish Influenza Pandemic of 1918 - An Account of Its Ravages in Luzerne County, Pennsylvania, and the Efforts Made to Combat and Subdue It&quot;,&quot;Topics&quot;:[&quot;Influenza Epidemic, 1918-1919 -- Pennsylvania -- Luzerne County&quot;,&quot;Public health -- Pennsylvania -- Luzerne County -- History -- 20th century -- Sources&quot;],&quot;Primary&quot;:&quot;64785.htm&quot;,&quot;CreatorNames&quot;:[&quot;Harvey, Oscar Jewell&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;64785&quot;});" class='title'>The Spanish Influenza Pandemic of 1918 -<br><span class='subtitle'>An Account of Its Ravages in Luzerne County, Pennsylvania, and the Efforts Made to Combat and Subdue It</span></a>
+<div class='author'>Harvey, Oscar Jewell</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65003, {&quot;Title&quot;:&quot;Porneiopathology - A Popular Treatise on Venereal and Other Diseases of the Male and Female Genital System; With Remarks on Impotence, Onanism, Sterility, Piles, and Gravel, and Prescriptions for Their Treatment&quot;,&quot;Topics&quot;:[&quot;Sexual health&quot;,&quot;Sexually transmitted diseases&quot;,&quot;Genitourinary organs -- Diseases&quot;],&quot;Primary&quot;:&quot;65003.htm&quot;,&quot;CreatorNames&quot;:[&quot;Culverwell, Robert James, 1802-1852&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;65003&quot;});" class='title'>Porneiopathology -<br><span class='subtitle'>A Popular Treatise on Venereal and Other Diseases of the Male and Female Genital System; With Remarks on Impotence, Onanism, Sterility, Piles, and Gravel, and Prescriptions for Their Treatment</span></a>
+<div class='author'>Culverwell, Robert James, 1802-1852</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65912, {&quot;Title&quot;:&quot;\&quot;\&quot;Swat the Fly!\&quot;\&quot;: A One-Act Fantasy&quot;,&quot;Topics&quot;:[&quot;American drama -- 20th century&quot;,&quot;Flies as carriers of disease&quot;],&quot;Primary&quot;:&quot;65912.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gates, Eleanor, 1875-1951&quot;],&quot;LoCC&quot;:[&quot;RC&quot;,&quot;PS&quot;],&quot;PG_ID&quot;:&quot;65912&quot;});" class='title'>"Swat the Fly!":<br><span class='subtitle'>A One-Act Fantasy</span></a>
+<div class='author'>Gates, Eleanor, 1875-1951</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66534, {&quot;Title&quot;:&quot;Senescence, the Last Half of Life&quot;,&quot;Topics&quot;:[&quot;Geriatrics&quot;],&quot;Primary&quot;:&quot;66534.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hall, G. Stanley (Granville Stanley), 1844-1924&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;66534&quot;});" class='title'>Senescence, the Last Half of Life</a>
+<div class='author'>Hall, G. Stanley (Granville Stanley), 1844-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66537, {&quot;Title&quot;:&quot;Del governo della peste e della maniera di guardarsene&quot;,&quot;Topics&quot;:[&quot;Plague -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;66537.htm&quot;,&quot;CreatorNames&quot;:[&quot;Muratori, Lodovico Antonio, 1672-1750&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;66537&quot;});" class='title'>Del governo della peste e della maniera di guardarsene</a>
+<div class='author'>Muratori, Lodovico Antonio, 1672-1750</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66660, {&quot;Title&quot;:&quot;\&quot;\&quot;Polio\&quot;\&quot;: Infantile Paralysis&quot;,&quot;Topics&quot;:[&quot;Poliomyelitis -- Popular works&quot;],&quot;Primary&quot;:&quot;66660.htm&quot;,&quot;CreatorNames&quot;:[&quot;Prudential Insurance Company of America&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;66660&quot;});" class='title'>"Polio":<br><span class='subtitle'>Infantile Paralysis</span></a>
+<div class='author'>Prudential Insurance Company of America</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66729, {&quot;Title&quot;:&quot;Pneumonia: Its Care and Prevention&quot;,&quot;Topics&quot;:[&quot;Pneumonia -- Popular works&quot;],&quot;Primary&quot;:&quot;66729.htm&quot;,&quot;CreatorNames&quot;:[&quot;John Hancock Mutual Life Insurance Company. Life Conservation Service&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;66729&quot;});" class='title'>Pneumonia:<br><span class='subtitle'>Its Care and Prevention</span></a>
+<div class='author'>John Hancock Mutual Life Insurance Company. Life Conservation Service</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67040, {&quot;Title&quot;:&quot;Address to the Inhabitants of Rugby about the Cholera Morbus&quot;,&quot;Topics&quot;:[&quot;Cholera -- Great Britain&quot;],&quot;Primary&quot;:&quot;67040.htm&quot;,&quot;CreatorNames&quot;:[&quot;Arnold, Thomas, 1795-1842&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;67040&quot;});" class='title'>Address to the Inhabitants of Rugby about the Cholera Morbus</a>
+<div class='author'>Arnold, Thomas, 1795-1842</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67041, {&quot;Title&quot;:&quot;Treatment of Cholera in the Royal Hospital, Haslar - during the months of July and August, 1849, with remarks on the name and origin of the disease.&quot;,&quot;Topics&quot;:[&quot;Cholera&quot;],&quot;Primary&quot;:&quot;67041.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wilson, John (Inspector of Naval Hospitals)&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;67041&quot;});" class='title'>Treatment of Cholera in the Royal Hospital, Haslar -<br><span class='subtitle'>during the months of July and August, 1849, with remarks on the name and origin of the disease.</span></a>
+<div class='author'>Wilson, John (Inspector of Naval Hospitals)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67063, {&quot;Title&quot;:&quot;Cottage scenes during the cholera - being extracts from a diary written in July and August, 1832&quot;,&quot;Topics&quot;:[&quot;Cholera -- Great Britain&quot;,&quot;Coppard, William Isaac -- Diaries&quot;],&quot;Primary&quot;:&quot;67063.htm&quot;,&quot;CreatorNames&quot;:[&quot;Coppard, William Isaac&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;67063&quot;});" class='title'>Cottage scenes during the cholera -<br><span class='subtitle'>being extracts from a diary written in July and August, 1832</span></a>
+<div class='author'>Coppard, William Isaac</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67453, {&quot;Title&quot;:&quot;A Treatise on the Plague and Yellow Fever - With an Appendix, containing histories of the plague at Athens in the time of the Peloponnesian War; at Constantinople in the time of Justinian; at London in 1665; at Marseilles in 1720&quot;,&quot;Topics&quot;:[&quot;Plague -- Early works to 1800&quot;,&quot;Yellow fever -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;67453.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tytler, James, 1745-1804&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;67453&quot;});" class='title'>A Treatise on the Plague and Yellow Fever -<br><span class='subtitle'>With an Appendix, containing histories of the plague at Athens in the time of the Peloponnesian War; at Constantinople in the time of Justinian; at London in 1665; at Marseilles in 1720</span></a>
+<div class='author'>Tytler, James, 1745-1804</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67640, {&quot;Title&quot;:&quot;The Tuberculosis Nurse: Her Function and Her Qualifications - A Handbook for Practical Workers in the Tuberculosis Campaign&quot;,&quot;Topics&quot;:[&quot;Tuberculosis -- Nursing&quot;,&quot;Tuberculosis -- Nursing -- United States -- History&quot;],&quot;Primary&quot;:&quot;67640.htm&quot;,&quot;CreatorNames&quot;:[&quot;La Motte, Ellen N. (Ellen Newbold), 1873-1961&quot;,&quot;Hamman, Louis, 1877-1946 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;67640&quot;});" class='title'>The Tuberculosis Nurse:<br><span class='subtitle'>Her Function and Her Qualifications - A Handbook for Practical Workers in the Tuberculosis Campaign</span></a>
+<div class='author'>La Motte, Ellen N. (Ellen Newbold), 1873-1961, Hamman, Louis, 1877-1946 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67734, {&quot;Title&quot;:&quot;Landmarks Medical and Surgical&quot;,&quot;Topics&quot;:[&quot;Human anatomy&quot;,&quot;Medicine -- Study and teaching&quot;,&quot;Palpation&quot;],&quot;Primary&quot;:&quot;67734.htm&quot;,&quot;CreatorNames&quot;:[&quot;Holden, Luther, 1815-1905&quot;,&quot;Shuter, James, 1846-1883&quot;],&quot;LoCC&quot;:[&quot;QM&quot;,&quot;RC&quot;],&quot;PG_ID&quot;:&quot;67734&quot;});" class='title'>Landmarks Medical and Surgical</a>
+<div class='author'>Holden, Luther, 1815-1905, Shuter, James, 1846-1883</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68032, {&quot;Title&quot;:&quot;Diabetes: Its Cause and Its Treatment With Insulin&quot;,&quot;Topics&quot;:[&quot;Diabetes&quot;,&quot;Insulin&quot;],&quot;Primary&quot;:&quot;68032.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wilder, Russell M. (Russell Morse), 1885-1959&quot;,&quot;Fishbein, Morris, 1889-1976 [Author of introduction, etc.]&quot;,&quot;Haldeman-Julius, E. (Emanuel), 1888-1951 [Editor]&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;68032&quot;});" class='title'>Diabetes:<br><span class='subtitle'>Its Cause and Its Treatment With Insulin</span></a>
+<div class='author'>Wilder, Russell M. (Russell Morse), 1885-1959, Fishbein, Morris, 1889-1976 [Author of introduction, etc.], Haldeman-Julius, E. (Emanuel), 1888-1951 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68077, {&quot;Title&quot;:&quot;Observations on the Operation and Use of Mercury in the Venereal Disease&quot;,&quot;Topics&quot;:[&quot;Sexually transmitted diseases -- Early works to 1800&quot;,&quot;Mercury -- Therapeutic use -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;68077.htm&quot;,&quot;CreatorNames&quot;:[&quot;Duncan, Andrew, 1744-1828&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;68077&quot;});" class='title'>Observations on the Operation and Use of Mercury in the Venereal Disease</a>
+<div class='author'>Duncan, Andrew, 1744-1828</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68414, {&quot;Title&quot;:&quot;The tryal of Mr. Daniel Sutton, for the high crime of preserving the lives of His Majesty&#39;s liege subjects, by means of inoculation&quot;,&quot;Topics&quot;:[&quot;Smallpox -- Vaccination -- Great Britain -- Early works to 1800&quot;,&quot;Sutton, Daniel, 1735-1819&quot;],&quot;Primary&quot;:&quot;68414.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sutton, Daniel, 1735-1819&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;68414&quot;});" class='title'>The tryal of Mr. Daniel Sutton, for the high crime of preserving the lives of His Majesty's liege subjects, by means of inoculation</a>
+<div class='author'>Sutton, Daniel, 1735-1819</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68772, {&quot;Title&quot;:&quot;An inaugural dissertation on pulmonary consumption&quot;,&quot;Topics&quot;:[&quot;Tuberculosis&quot;],&quot;Primary&quot;:&quot;68772.htm&quot;,&quot;CreatorNames&quot;:[&quot;Delafield, Edward, 1794-1875&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;68772&quot;});" class='title'>An inaugural dissertation on pulmonary consumption</a>
+<div class='author'>Delafield, Edward, 1794-1875</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69186, {&quot;Title&quot;:&quot;The narcotic drug problem&quot;,&quot;Topics&quot;:[&quot;Drug addiction&quot;],&quot;Primary&quot;:&quot;69186.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bishop, Ernest S. (Ernest Simons), 1876-1927&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;69186&quot;});" class='title'>The narcotic drug problem</a>
+<div class='author'>Bishop, Ernest S. (Ernest Simons), 1876-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69288, {&quot;Title&quot;:&quot;Treatment of hemorrhoids, and other non-malignant rectal diseases&quot;,&quot;Topics&quot;:[&quot;Rectum -- Diseases&quot;,&quot;Hemorrhoids&quot;],&quot;Primary&quot;:&quot;69288.htm&quot;,&quot;CreatorNames&quot;:[&quot;Agnew, W. P. (William Penn)&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;69288&quot;});" class='title'>Treatment of hemorrhoids, and other non-malignant rectal diseases</a>
+<div class='author'>Agnew, W. P. (William Penn)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69874, {&quot;Title&quot;:&quot;Gout, with a section on ocular disease in the gouty&quot;,&quot;Topics&quot;:[&quot;Gout&quot;,&quot;Eye -- Diseases&quot;],&quot;Primary&quot;:&quot;69874.htm&quot;,&quot;CreatorNames&quot;:[&quot;Llewellyn, Llewellyn J. (Llewellyn Jones), 1870?-1934&quot;,&quot;Beaumont, W. M. (William Mardon), 1851-1928 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;69874&quot;});" class='title'>Gout, with a section on ocular disease in the gouty</a>
+<div class='author'>Llewellyn, Llewellyn J. (Llewellyn Jones), 1870?-1934, Beaumont, W. M. (William Mardon), 1851-1928 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69927, {&quot;Title&quot;:&quot;Case of Filaria loa&quot;,&quot;Topics&quot;:[&quot;Filarial worms&quot;,&quot;Loaiasis&quot;],&quot;Primary&quot;:&quot;69927.htm&quot;,&quot;CreatorNames&quot;:[&quot;Robertson, Douglas Argyll, 1837-1909&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;69927&quot;});" class='title'>Case of Filaria loa</a>
+<div class='author'>Robertson, Douglas Argyll, 1837-1909</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70133, {&quot;Title&quot;:&quot;The suppression of tuberculosis -&quot;,&quot;Topics&quot;:[&quot;Tuberculosis -- Prevention&quot;],&quot;Primary&quot;:&quot;70133.htm&quot;,&quot;CreatorNames&quot;:[&quot;Behring, Emil von, 1854-1917&quot;,&quot;Bolduan, Charles, 1873-1950 [Translator]&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;70133&quot;});" class='title'>The suppression of tuberculosis -<br><span class='subtitle'></span></a>
+<div class='author'>Behring, Emil von, 1854-1917, Bolduan, Charles, 1873-1950 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70298, {&quot;Title&quot;:&quot;The deformities of the fingers and toes&quot;,&quot;Topics&quot;:[&quot;Abnormalities, Human&quot;,&quot;Fingers -- Abnormalities&quot;,&quot;Toes -- Abnormalities&quot;],&quot;Primary&quot;:&quot;70298.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anderson, William, 1842-1900&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;70298&quot;});" class='title'>The deformities of the fingers and toes</a>
+<div class='author'>Anderson, William, 1842-1900</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70301, {&quot;Title&quot;:&quot;My leper friends&quot;,&quot;Topics&quot;:[&quot;Leprosy -- Hospitals&quot;,&quot;Leprosy -- India&quot;],&quot;Primary&quot;:&quot;70301.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hayes, Alice M., 1863?-1913&quot;,&quot;Maclaren, G. G. (George Gilbert) [Contributor]&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;70301&quot;});" class='title'>My leper friends</a>
+<div class='author'>Hayes, Alice M., 1863?-1913, Maclaren, G. G. (George Gilbert) [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70335, {&quot;Title&quot;:&quot;La peste di Milano del 1630&quot;,&quot;Topics&quot;:[&quot;Plague -- Early works to 1800&quot;,&quot;Plague -- Italy -- Milan -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;70335.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ripamonti, Giuseppe, 1577-1643&quot;,&quot;Cusani, Francesco, 1802-1879 [Translator]&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;70335&quot;});" class='title'>La peste di Milano del 1630</a>
+<div class='author'>Ripamonti, Giuseppe, 1577-1643, Cusani, Francesco, 1802-1879 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7293, {&quot;Title&quot;:&quot;The Opium Habit&quot;,&quot;Topics&quot;:[&quot;Opium abuse -- United States&quot;],&quot;Primary&quot;:&quot;7293.txt&quot;,&quot;CreatorNames&quot;:[&quot;Day, Horace B., 1819-1870&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;7293&quot;});" class='title'>The Opium Habit</a>
+<div class='author'>Day, Horace B., 1819-1870</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(9172, {&quot;Title&quot;:&quot;A Study of Association in Insanity&quot;,&quot;Topics&quot;:[&quot;Psychology, Pathological&quot;,&quot;Association of ideas&quot;],&quot;Primary&quot;:&quot;9172.txt&quot;,&quot;CreatorNames&quot;:[&quot;Kent, Grace Helen, 1875-1973&quot;,&quot;Rosanoff, A. J. (Aaron Joshua), 1878-1943&quot;],&quot;LoCC&quot;:[&quot;RC&quot;],&quot;PG_ID&quot;:&quot;9172&quot;});" class='title'>A Study of Association in Insanity</a>
+<div class='author'>Kent, Grace Helen, 1875-1973, Rosanoff, A. J. (Aaron Joshua), 1878-1943</div>
+</div>
+</ul></div>
+</body></html>

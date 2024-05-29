@@ -1,0 +1,666 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Physics (QC)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(10773, {&quot;Title&quot;:&quot;Ancient and Modern Physics&quot;,&quot;Topics&quot;:[&quot;Physics -- Philosophy&quot;],&quot;Primary&quot;:&quot;10773.txt&quot;,&quot;CreatorNames&quot;:[&quot;Willson, Thomas Edgar, 1846-1901&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;10773&quot;});" class='title'>Ancient and Modern Physics</a>
+<div class='author'>Willson, Thomas Edgar, 1846-1901</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(11335, {&quot;Title&quot;:&quot;The Einstein Theory of Relativity: A Concise Statement&quot;,&quot;Topics&quot;:[&quot;Relativity (Physics)&quot;,&quot;Einstein, Albert, 1879-1955&quot;],&quot;Primary&quot;:&quot;11335.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lorentz, H. A. (Hendrik Antoon), 1853-1928&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;11335&quot;});" class='title'>The Einstein Theory of Relativity:<br><span class='subtitle'>A Concise Statement</span></a>
+<div class='author'>Lorentz, H. A. (Hendrik Antoon), 1853-1928</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(11753, {&quot;Title&quot;:&quot;Experimental Determination of the Velocity of Light - Made at the U.S. Naval Academy, Annapolis&quot;,&quot;Topics&quot;:[&quot;Light -- Speed&quot;],&quot;Primary&quot;:&quot;11753.htm&quot;,&quot;CreatorNames&quot;:[&quot;Michelson, Albert A. (Albert Abraham), 1852-1931&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;11753&quot;});" class='title'>Experimental Determination of the Velocity of Light -<br><span class='subtitle'>Made at the U.S. Naval Academy, Annapolis</span></a>
+<div class='author'>Michelson, Albert A. (Albert Abraham), 1852-1931</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(1225, {&quot;Title&quot;:&quot;Faraday as a Discoverer&quot;,&quot;Topics&quot;:[&quot;Faraday, Michael, 1791-1867&quot;,&quot;Physicists -- Great Britain -- Biography&quot;],&quot;Primary&quot;:&quot;1225.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tyndall, John, 1820-1893&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;1225&quot;});" class='title'>Faraday as a Discoverer</a>
+<div class='author'>Tyndall, John, 1820-1893</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13476, {&quot;Title&quot;:&quot;Experiments with Alternate Currents of High Potential and High Frequency - A Lecture Delivered before the Institution of Electrical Engineers, London&quot;,&quot;Topics&quot;:[&quot;Electric currents, Alternating&quot;,&quot;Electric discharges&quot;,&quot;Incandescent lamps&quot;,&quot;Telegraph, Wireless&quot;],&quot;Primary&quot;:&quot;13476.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tesla, Nikola, 1856-1943&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;13476&quot;});" class='title'>Experiments with Alternate Currents of High Potential and High Frequency -<br><span class='subtitle'>A Lecture Delivered before the Institution of Electrical Engineers, London</span></a>
+<div class='author'>Tesla, Nikola, 1856-1943</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14000, {&quot;Title&quot;:&quot;Six Lectures on Light - Delivered In The United States In 1872-1873&quot;,&quot;Topics&quot;:[&quot;Light&quot;],&quot;Primary&quot;:&quot;14000.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tyndall, John, 1820-1893&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;14000&quot;});" class='title'>Six Lectures on Light -<br><span class='subtitle'>Delivered In The United States In 1872-1873</span></a>
+<div class='author'>Tyndall, John, 1820-1893</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14504, {&quot;Title&quot;:&quot;Experiments and Considerations Touching Colours (1664)&quot;,&quot;Topics&quot;:[&quot;Color -- Early works to 1800&quot;,&quot;Colors -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;14504.htm&quot;,&quot;CreatorNames&quot;:[&quot;Boyle, Robert, 1627-1691&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;14504&quot;});" class='title'>Experiments and Considerations Touching Colours (1664)</a>
+<div class='author'>Boyle, Robert, 1627-1691</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14725, {&quot;Title&quot;:&quot;Treatise on Light - In which are explained the causes of that which occurs in reflexion, &amp; in refraction and particularly in the strange refraction of Iceland crystal&quot;,&quot;Topics&quot;:[&quot;Wave theory of light&quot;,&quot;Refraction, Double&quot;],&quot;Primary&quot;:&quot;14725.htm&quot;,&quot;CreatorNames&quot;:[&quot;Huygens, Christiaan, 1629-1695&quot;,&quot;Thompson, Silvanus P. (Silvanus Phillips), 1851-1916 [Translator]&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;14725&quot;});" class='title'>Treatise on Light -<br><span class='subtitle'>In which are explained the causes of that which occurs in reflexion, & in refraction and particularly in the strange refraction of Iceland crystal</span></a>
+<div class='author'>Huygens, Christiaan, 1629-1695, Thompson, Silvanus P. (Silvanus Phillips), 1851-1916 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14986, {&quot;Title&quot;:&quot;Experimental Researches in Electricity, Volume 1&quot;,&quot;Topics&quot;:[&quot;Electricity&quot;,&quot;Electricity -- Early works to 1850&quot;],&quot;Primary&quot;:&quot;14986.htm&quot;,&quot;CreatorNames&quot;:[&quot;Faraday, Michael, 1791-1867&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;14986&quot;});" class='title'>Experimental Researches in Electricity, Volume 1</a>
+<div class='author'>Faraday, Michael, 1791-1867</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15207, {&quot;Title&quot;:&quot;The New Physics and Its Evolution&quot;,&quot;Topics&quot;:[&quot;Physics&quot;],&quot;Primary&quot;:&quot;15207.htm&quot;,&quot;CreatorNames&quot;:[&quot;Poincaré, Lucien, 1862-1920&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;15207&quot;});" class='title'>The New Physics and Its Evolution</a>
+<div class='author'>Poincaré, Lucien, 1862-1920</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17986, {&quot;Title&quot;:&quot;Dialogo sopra la generatione de venti, baleni, tuoni, fulgori, fiumi, laghi, valli et montagne&quot;,&quot;Topics&quot;:[&quot;Meteorology -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;17986.txt&quot;,&quot;CreatorNames&quot;:[&quot;Agrippa, Camillo, -1595?&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;17986&quot;});" class='title'>Dialogo sopra la generatione de venti, baleni, tuoni, fulgori, fiumi, laghi, valli et montagne</a>
+<div class='author'>Agrippa, Camillo, -1595?</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18534, {&quot;Title&quot;:&quot;The Hurricane Guide - Being an Attempt to Connect the Rotary Gale or Revolving Storm with Atmospheric Waves.&quot;,&quot;Topics&quot;:[&quot;Storms&quot;],&quot;Primary&quot;:&quot;18534.htm&quot;,&quot;CreatorNames&quot;:[&quot;Birt, William Radcliff, 1804-1881&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;18534&quot;});" class='title'>The Hurricane Guide -<br><span class='subtitle'>Being an Attempt to Connect the Rotary Gale or Revolving Storm with Atmospheric Waves.</span></a>
+<div class='author'>Birt, William Radcliff, 1804-1881</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18791, {&quot;Title&quot;:&quot;Outlines of a Mechanical Theory of Storms - Containing the True Law of Lunar Influence&quot;,&quot;Topics&quot;:[&quot;Weather&quot;],&quot;Primary&quot;:&quot;18791.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bassnett, Thomas, 1808-&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;18791&quot;});" class='title'>Outlines of a Mechanical Theory of Storms -<br><span class='subtitle'>Containing the True Law of Lunar Influence</span></a>
+<div class='author'>Bassnett, Thomas, 1808-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22156, {&quot;Title&quot;:&quot;The Boy with the U. S. Weather Men&quot;,&quot;Topics&quot;:[&quot;United States. Weather Bureau -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;22156.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rolt-Wheeler, Francis, 1876-1960&quot;],&quot;LoCC&quot;:[&quot;PZ&quot;,&quot;QC&quot;],&quot;PG_ID&quot;:&quot;22156&quot;});" class='title'>The Boy with the U. S. Weather Men</a>
+<div class='author'>Rolt-Wheeler, Francis, 1876-1960</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22472, {&quot;Title&quot;:&quot;The Book of the Damned&quot;,&quot;Topics&quot;:[&quot;Meteorology -- Miscellanea&quot;,&quot;Astronomy -- Miscellanea&quot;],&quot;Primary&quot;:&quot;22472.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fort, Charles, 1874-1932&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;22472&quot;});" class='title'>The Book of the Damned</a>
+<div class='author'>Fort, Charles, 1874-1932</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23921, {&quot;Title&quot;:&quot;Barometer and Weather Guide&quot;,&quot;Topics&quot;:[&quot;Weather forecasting&quot;],&quot;Primary&quot;:&quot;23921.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fitzroy, Robert, 1805-1865 [Compiler]&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;23921&quot;});" class='title'>Barometer and Weather Guide</a>
+<div class='author'>Fitzroy, Robert, 1805-1865 [Compiler]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24163, {&quot;Title&quot;:&quot;The Shepherd of Banbury&#39;s Rules to Judge of the Changes of the Weather, Grounded on Forty Years&#39; Experience&quot;,&quot;Topics&quot;:[&quot;Weather -- Folklore&quot;,&quot;Weather forecasting&quot;],&quot;Primary&quot;:&quot;24163.htm&quot;,&quot;CreatorNames&quot;:[&quot;Claridge, John&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;24163&quot;});" class='title'>The Shepherd of Banbury's Rules to Judge of the Changes of the Weather, Grounded on Forty Years' Experience</a>
+<div class='author'>Claridge, John</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24527, {&quot;Title&quot;:&quot;Fragments of Science: A Series of Detached Essays, Addresses, and Reviews. V. 1-2&quot;,&quot;Topics&quot;:[&quot;Science&quot;,&quot;Chemistry&quot;,&quot;Physics&quot;],&quot;Primary&quot;:&quot;24527.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tyndall, John, 1820-1893&quot;],&quot;LoCC&quot;:[&quot;Q&quot;,&quot;QC&quot;,&quot;QD&quot;],&quot;PG_ID&quot;:&quot;24527&quot;});" class='title'>Fragments of Science:<br><span class='subtitle'>A Series of Detached Essays, Addresses, and Reviews. V. 1-2</span></a>
+<div class='author'>Tyndall, John, 1820-1893</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24667, {&quot;Title&quot;:&quot;Aether and Gravitation&quot;,&quot;Topics&quot;:[&quot;Force and energy&quot;,&quot;Ether (Space)&quot;,&quot;Gravitation&quot;,&quot;Matter&quot;],&quot;Primary&quot;:&quot;24667.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hooper, William George&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;24667&quot;});" class='title'>Aether and Gravitation</a>
+<div class='author'>Hooper, William George</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24883, {&quot;Title&quot;:&quot;New and Original Theories of the Great Physical Forces&quot;,&quot;Topics&quot;:[&quot;Astronomy&quot;,&quot;Physics&quot;],&quot;Primary&quot;:&quot;24883.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rogers, Henry Raymond, 1822-1901&quot;],&quot;LoCC&quot;:[&quot;QB&quot;,&quot;QC&quot;],&quot;PG_ID&quot;:&quot;24883&quot;});" class='title'>New and Original Theories of the Great Physical Forces</a>
+<div class='author'>Rogers, Henry Raymond, 1822-1901</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25206, {&quot;Title&quot;:&quot;Rollo&#39;s Philosophy. [Air]&quot;,&quot;Topics&quot;:[&quot;Air -- Juvenile literature&quot;,&quot;Atmosphere -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;25206.htm&quot;,&quot;CreatorNames&quot;:[&quot;Abbott, Jacob, 1803-1879&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;25206&quot;});" class='title'>Rollo's Philosophy. [Air]</a>
+<div class='author'>Abbott, Jacob, 1803-1879</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26363, {&quot;Title&quot;:&quot;Arago et sa vie scientifique&quot;,&quot;Topics&quot;:[&quot;Arago, F. (François), 1786-1853&quot;,&quot;Physicists -- France -- Biography&quot;],&quot;Primary&quot;:&quot;26363.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bertrand, Joseph, 1822-1900&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;QC&quot;],&quot;PG_ID&quot;:&quot;26363&quot;});" class='title'>Arago et sa vie scientifique</a>
+<div class='author'>Bertrand, Joseph, 1822-1900</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26535, {&quot;Title&quot;:&quot;The Standard Electrical Dictionary - A Popular Dictionary of Words and Terms Used in the Practice of Electrical Engineering&quot;,&quot;Topics&quot;:[&quot;Electricity -- Dictionaries&quot;],&quot;Primary&quot;:&quot;26535.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sloane, T. O&#39;Conor (Thomas O&#39;Conor), 1851-1940&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;26535&quot;});" class='title'>The Standard Electrical Dictionary -<br><span class='subtitle'>A Popular Dictionary of Words and Terms Used in the Practice of Electrical Engineering</span></a>
+<div class='author'>Sloane, T. O'Conor (Thomas O'Conor), 1851-1940</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27125, {&quot;Title&quot;:&quot;The Splash of a Drop&quot;,&quot;Topics&quot;:[&quot;Splashes&quot;],&quot;Primary&quot;:&quot;27125.htm&quot;,&quot;CreatorNames&quot;:[&quot;Worthington, A. M. (Arthur Mason), 1852-1916&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;27125&quot;});" class='title'>The Splash of a Drop</a>
+<div class='author'>Worthington, A. M. (Arthur Mason), 1852-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27610, {&quot;Title&quot;:&quot;Expériences et observations sur l&#39;électricité faites à Philadelphie en Amérique&quot;,&quot;Topics&quot;:[&quot;Nollet, abbé (Jean Antoine), 1700-1770. Lettres sur l&#39;électricité&quot;,&quot;Electricity -- Early works to 1850&quot;,&quot;Electricity -- History&quot;],&quot;Primary&quot;:&quot;27610.htm&quot;,&quot;CreatorNames&quot;:[&quot;Franklin, Benjamin, 1706-1790&quot;,&quot;Canton, John, 1718-1772 [Contributor]&quot;,&quot;Colden, David, 1733-1784 [Contributor]&quot;,&quot;Dalibard, Thomas François, 1703-1799 [Translator]&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;27610&quot;});" class='title'>Expériences et observations sur l'électricité faites à Philadelphie en Amérique</a>
+<div class='author'>Franklin, Benjamin, 1706-1790, Canton, John, 1718-1772 [Contributor], Colden, David, 1733-1784 [Contributor], Dalibard, Thomas François, 1703-1799 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(277, {&quot;Title&quot;:&quot;Trinity Site&quot;,&quot;Topics&quot;:[&quot;Manhattan Project (U.S.)&quot;,&quot;Atomic bomb -- New Mexico -- Testing -- History&quot;],&quot;Primary&quot;:&quot;277.htm&quot;,&quot;CreatorNames&quot;:[&quot;National Atomic Museum (U.S.)&quot;],&quot;LoCC&quot;:[&quot;QC&quot;,&quot;U&quot;,&quot;D&quot;],&quot;PG_ID&quot;:&quot;277&quot;});" class='title'>Trinity Site</a>
+<div class='author'>National Atomic Museum (U.S.)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(278, {&quot;Title&quot;:&quot;Trinity Site: 1945-1995. - A National Historic Landmark, White Sands Missile Range, New Mexico&quot;,&quot;Topics&quot;:[&quot;Manhattan Project (U.S.)&quot;,&quot;Atomic bomb -- New Mexico -- Los Alamos -- Testing -- History&quot;],&quot;Primary&quot;:&quot;278.htm&quot;,&quot;CreatorNames&quot;:[&quot;White Sands Missile Range (N.M.). Public Affairs Office&quot;],&quot;LoCC&quot;:[&quot;QC&quot;,&quot;U&quot;,&quot;D&quot;],&quot;PG_ID&quot;:&quot;278&quot;});" class='title'>Trinity Site:<br><span class='subtitle'>1945-1995. - A National Historic Landmark, White Sands Missile Range, New Mexico</span></a>
+<div class='author'>White Sands Missile Range (N.M.). Public Affairs Office</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(279, {&quot;Title&quot;:&quot;Photos and Maps of Trinity (Atomic Test) Site&quot;,&quot;Topics&quot;:[&quot;Manhattan Project (U.S.)&quot;,&quot;Atomic bomb -- New Mexico -- Los Alamos -- Testing -- History&quot;],&quot;Primary&quot;:&quot;279.htm&quot;,&quot;CreatorNames&quot;:[&quot;White Sands Missile Range (N.M.). Public Affairs Office [Contributor]&quot;],&quot;LoCC&quot;:[&quot;QC&quot;,&quot;U&quot;,&quot;D&quot;],&quot;PG_ID&quot;:&quot;279&quot;});" class='title'>Photos and Maps of Trinity (Atomic Test) Site</a>
+<div class='author'>White Sands Missile Range (N.M.). Public Affairs Office [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28335, {&quot;Title&quot;:&quot;How Two Boys Made Their Own Electrical Apparatus - Containing Complete Directions for Making All Kinds of Simple Apparatus for the Study of Elementary Electricity&quot;,&quot;Topics&quot;:[&quot;Electric apparatus and appliances&quot;],&quot;Primary&quot;:&quot;28335.htm&quot;,&quot;CreatorNames&quot;:[&quot;St. John, Thomas M. (Thomas Matthew), 1865-&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;28335&quot;});" class='title'>How Two Boys Made Their Own Electrical Apparatus -<br><span class='subtitle'>Containing Complete Directions for Making All Kinds of Simple Apparatus for the Study of Elementary Electricity</span></a>
+<div class='author'>St. John, Thomas M. (Thomas Matthew), 1865-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29444, {&quot;Title&quot;:&quot;The Machinery of the Universe: Mechanical Conceptions of Physical Phenomena&quot;,&quot;Topics&quot;:[&quot;Force and energy&quot;],&quot;Primary&quot;:&quot;29444.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dolbear, A. E. (Amos Emerson), 1837-1910&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;29444&quot;});" class='title'>The Machinery of the Universe:<br><span class='subtitle'>Mechanical Conceptions of Physical Phenomena</span></a>
+<div class='author'>Dolbear, A. E. (Amos Emerson), 1837-1910</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30155, {&quot;Title&quot;:&quot;Relativity: The Special and General Theory&quot;,&quot;Topics&quot;:[&quot;Relativity (Physics)&quot;],&quot;Primary&quot;:&quot;30155.htm&quot;,&quot;CreatorNames&quot;:[&quot;Einstein, Albert, 1879-1955&quot;,&quot;Lawson, Robert W. (Robert William) [Translator]&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;30155&quot;});" class='title'>Relativity:<br><span class='subtitle'>The Special and General Theory</span></a>
+<div class='author'>Einstein, Albert, 1879-1955, Lawson, Robert W. (Robert William) [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30706, {&quot;Title&quot;:&quot;The Rain Cloud - or, An Account of the Nature, Properties, Dangers and Uses of Rain in Various Parts of the World&quot;,&quot;Topics&quot;:[&quot;Weather&quot;,&quot;Rain and rainfall&quot;,&quot;Clouds&quot;],&quot;Primary&quot;:&quot;30706.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tomlinson, Charles, 1808-1897&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;30706&quot;});" class='title'>The Rain Cloud -<br><span class='subtitle'>or, An Account of the Nature, Properties, Dangers and Uses of Rain in Various Parts of the World</span></a>
+<div class='author'>Tomlinson, Charles, 1808-1897</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31190, {&quot;Title&quot;:&quot;Tratado das Cores - Que consta de tres partes: analytica, synthetica, hermeneutica&quot;,&quot;Topics&quot;:[&quot;Colors&quot;],&quot;Primary&quot;:&quot;31190.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sampaio, Diogo de Carvalho e, 1750-1807&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;31190&quot;});" class='title'>Tratado das Cores -<br><span class='subtitle'>Que consta de tres partes: analytica, synthetica, hermeneutica</span></a>
+<div class='author'>Sampaio, Diogo de Carvalho e, 1750-1807</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31999, {&quot;Title&quot;:&quot;The Natural Philosophy of William Gilbert and His Predecessors&quot;,&quot;Topics&quot;:[&quot;Gilbert, William, 1544-1603&quot;,&quot;Magnetism -- History&quot;],&quot;Primary&quot;:&quot;31999.htm&quot;,&quot;CreatorNames&quot;:[&quot;King, W. James (William James), 1915-&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;31999&quot;});" class='title'>The Natural Philosophy of William Gilbert and His Predecessors</a>
+<div class='author'>King, W. James (William James), 1915-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32307, {&quot;Title&quot;:&quot;A Brief Account of Radio-activity&quot;,&quot;Topics&quot;:[&quot;Radioactivity&quot;],&quot;Primary&quot;:&quot;32307.htm&quot;,&quot;CreatorNames&quot;:[&quot;Venable, F. P. (Francis Preston), 1856-1934&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;32307&quot;});" class='title'>A Brief Account of Radio-activity</a>
+<div class='author'>Venable, F. P. (Francis Preston), 1856-1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33370, {&quot;Title&quot;:&quot;Soap-Bubbles and the Forces Which Mould Them&quot;,&quot;Topics&quot;:[&quot;Surface tension&quot;,&quot;Bubbles&quot;,&quot;Capillarity&quot;],&quot;Primary&quot;:&quot;33370.htm&quot;,&quot;CreatorNames&quot;:[&quot;Boys, C. V. (Charles Vernon), 1855-1944&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;33370&quot;});" class='title'>Soap-Bubbles and the Forces Which Mould Them</a>
+<div class='author'>Boys, C. V. (Charles Vernon), 1855-1944</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33397, {&quot;Title&quot;:&quot;LRL Accelerators, The 184-Inch Synchrocyclotron&quot;,&quot;Topics&quot;:[&quot;Cyclotrons&quot;,&quot;Particle Accelerators&quot;],&quot;Primary&quot;:&quot;33397.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lawrence Radiation Laboratory&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;33397&quot;});" class='title'>LRL Accelerators, The 184-Inch Synchrocyclotron</a>
+<div class='author'>Lawrence Radiation Laboratory</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33429, {&quot;Title&quot;:&quot;The Philosophy of the Weather. And a Guide to Its Changes&quot;,&quot;Topics&quot;:[&quot;Weather forecasting&quot;,&quot;Weather&quot;],&quot;Primary&quot;:&quot;33429.htm&quot;,&quot;CreatorNames&quot;:[&quot;Butler, T. B. (Thomas Belden), 1806-1873&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;33429&quot;});" class='title'>The Philosophy of the Weather. And a Guide to Its Changes</a>
+<div class='author'>Butler, T. B. (Thomas Belden), 1806-1873</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33504, {&quot;Title&quot;:&quot;Opticks - Or, A Treatise of the Reflections, Refractions, Inflections, and Colours of Light&quot;,&quot;Topics&quot;:[&quot;Optics -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;33504.htm&quot;,&quot;CreatorNames&quot;:[&quot;Newton, Isaac, 1642-1727&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;33504&quot;});" class='title'>Opticks -<br><span class='subtitle'>Or, A Treatise of the Reflections, Refractions, Inflections, and Colours of Light</span></a>
+<div class='author'>Newton, Isaac, 1642-1727</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33810, {&quot;Title&quot;:&quot;On the magnet, magnetick bodies also, and on the great magnet the earth - a new physiology, demonstrated by many arguments &amp; experiments&quot;,&quot;Topics&quot;:[&quot;Magnetism -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;33810.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gilbert, William, 1544-1603 [Adapter]&quot;,&quot;Thompson, Silvanus P. (Silvanus Phillips), 1851-1916 [Translator]&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;33810&quot;});" class='title'>On the magnet, magnetick bodies also, and on the great magnet the earth -<br><span class='subtitle'>a new physiology, demonstrated by many arguments & experiments</span></a>
+<div class='author'>Gilbert, William, 1544-1603 [Adapter], Thompson, Silvanus P. (Silvanus Phillips), 1851-1916 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34221, {&quot;Title&quot;:&quot;Electricity and Magnetism&quot;,&quot;Topics&quot;:[&quot;Science&quot;,&quot;Electricity&quot;,&quot;Magnetism&quot;],&quot;Primary&quot;:&quot;34221.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gray, Elisha, 1835-1901&quot;],&quot;LoCC&quot;:[&quot;Q&quot;,&quot;QC&quot;],&quot;PG_ID&quot;:&quot;34221&quot;});" class='title'>Electricity and Magnetism</a>
+<div class='author'>Gray, Elisha, 1835-1901</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36252, {&quot;Title&quot;:&quot;Sounding the Ocean of Air - Being Six Lectures Delivered Before the Lowell Institute of Boston, in December 1898&quot;,&quot;Topics&quot;:[&quot;Balloons&quot;,&quot;Clouds&quot;,&quot;Atmosphere&quot;,&quot;Kites (Meteorology)&quot;],&quot;Primary&quot;:&quot;36252.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rotch, Abbott Lawrence, 1861-1912&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;36252&quot;});" class='title'>Sounding the Ocean of Air -<br><span class='subtitle'>Being Six Lectures Delivered Before the Lowell Institute of Boston, in December 1898</span></a>
+<div class='author'>Rotch, Abbott Lawrence, 1861-1912</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36344, {&quot;Title&quot;:&quot;The Mentor: The Weather - Serial Number 110; 1 July, 1916&quot;,&quot;Topics&quot;:[&quot;Weather&quot;,&quot;Meteorology&quot;],&quot;Primary&quot;:&quot;36344.htm&quot;,&quot;CreatorNames&quot;:[&quot;Talman, Charles Fitzhugh, 1874-1936&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;36344&quot;});" class='title'>The Mentor:<br><span class='subtitle'>The Weather - Serial Number 110; 1 July, 1916</span></a>
+<div class='author'>Talman, Charles Fitzhugh, 1874-1936</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36456, {&quot;Title&quot;:&quot;The Autobiography of an Electron - Wherein the Scientific Ideas of the Present Time Are Explained in an Interesting and Novel Fashion&quot;,&quot;Topics&quot;:[&quot;Electricity&quot;,&quot;Electrons&quot;],&quot;Primary&quot;:&quot;36456.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gibson, Charles R. (Charles Robert), 1870-1931&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;36456&quot;});" class='title'>The Autobiography of an Electron -<br><span class='subtitle'>Wherein the Scientific Ideas of the Present Time Are Explained in an Interesting and Novel Fashion</span></a>
+<div class='author'>Gibson, Charles R. (Charles Robert), 1870-1931</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36457, {&quot;Title&quot;:&quot;A Treatise on Meteorological Instruments - Explanatory of Their Scientific Principles, Method of Construction, and Practical Utility&quot;,&quot;Topics&quot;:[&quot;Meteorological instruments&quot;,&quot;Meteorology&quot;,&quot;Scientific apparatus and instruments&quot;],&quot;Primary&quot;:&quot;36457.htm&quot;,&quot;CreatorNames&quot;:[&quot;Negretti, Enrico Angelo Lodovico, 1818-1879&quot;,&quot;Zambra, Joseph, 1822-1897&quot;],&quot;LoCC&quot;:[&quot;Q&quot;,&quot;QC&quot;],&quot;PG_ID&quot;:&quot;36457&quot;});" class='title'>A Treatise on Meteorological Instruments -<br><span class='subtitle'>Explanatory of Their Scientific Principles, Method of Construction, and Practical Utility</span></a>
+<div class='author'>Negretti, Enrico Angelo Lodovico, 1818-1879, Zambra, Joseph, 1822-1897</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36691, {&quot;Title&quot;:&quot;Conversations on Natural Philosophy, in which the Elements of that Science are Familiarly Explained&quot;,&quot;Topics&quot;:[&quot;Physics&quot;],&quot;Primary&quot;:&quot;36691.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jones, Thomas P.&quot;,&quot;Marcet, Mrs. (Jane Haldimand), 1769-1858&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;36691&quot;});" class='title'>Conversations on Natural Philosophy, in which the Elements of that Science are Familiarly Explained</a>
+<div class='author'>Jones, Thomas P., Marcet, Mrs. (Jane Haldimand), 1769-1858</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37729, {&quot;Title&quot;:&quot;A Discourse Presented to the Most Serene Don Cosimo II., Great Duke of Tuscany, Concerning the Natation of Bodies Vpon, and Submersion In, the Water.&quot;,&quot;Topics&quot;:[&quot;Hydrostatics&quot;,&quot;Specific gravity&quot;],&quot;Primary&quot;:&quot;37729.htm&quot;,&quot;CreatorNames&quot;:[&quot;Galilei, Galileo, 1564-1642&quot;,&quot;Salusbury, Thomas [Translator]&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;37729&quot;});" class='title'>A Discourse Presented to the Most Serene Don Cosimo II., Great Duke of Tuscany, Concerning the Natation of Bodies Vpon, and Submersion In, the Water.</a>
+<div class='author'>Galilei, Galileo, 1564-1642, Salusbury, Thomas [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37855, {&quot;Title&quot;:&quot;Climatic Changes: Their Nature and Causes&quot;,&quot;Topics&quot;:[&quot;Climatology&quot;,&quot;Paleoclimatology&quot;,&quot;Climatic changes&quot;],&quot;Primary&quot;:&quot;37855.htm&quot;,&quot;CreatorNames&quot;:[&quot;Huntington, Ellsworth, 1876-1947&quot;,&quot;Visher, Stephen Sargent, 1887-1967&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;37855&quot;});" class='title'>Climatic Changes:<br><span class='subtitle'>Their Nature and Causes</span></a>
+<div class='author'>Huntington, Ellsworth, 1876-1947, Visher, Stephen Sargent, 1887-1967</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37939, {&quot;Title&quot;:&quot;Liquid Drops and Globules, Their Formation and Movements - Three lectures delivered to popular audiences&quot;,&quot;Topics&quot;:[&quot;Surface tension&quot;,&quot;Liquids&quot;,&quot;Drops&quot;],&quot;Primary&quot;:&quot;37939.htm&quot;,&quot;CreatorNames&quot;:[&quot;Darling, Charles R. (Charles Robert), 1870-&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;37939&quot;});" class='title'>Liquid Drops and Globules, Their Formation and Movements -<br><span class='subtitle'>Three lectures delivered to popular audiences</span></a>
+<div class='author'>Darling, Charles R. (Charles Robert), 1870-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37945, {&quot;Title&quot;:&quot;Untersuchungen über die radioaktiven Substanzen von Marie Curie, übersetzt und mit Litteratur-Ergänzungen versehen von W. Kaufmann&quot;,&quot;Topics&quot;:[&quot;Radioactivity&quot;,&quot;Radioactive substances&quot;],&quot;Primary&quot;:&quot;37945.htm&quot;,&quot;CreatorNames&quot;:[&quot;Curie, Marie, 1867-1934&quot;,&quot;Kaufmann, Walter, 1871-1947 [Translator]&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;37945&quot;});" class='title'>Untersuchungen über die radioaktiven Substanzen von Marie Curie, übersetzt und mit Litteratur-Ergänzungen versehen von W. Kaufmann</a>
+<div class='author'>Curie, Marie, 1867-1934, Kaufmann, Walter, 1871-1947 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38036, {&quot;Title&quot;:&quot;Electricity for the 4-H Scientist&quot;,&quot;Topics&quot;:[&quot;Electricity -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;38036.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wilson, Eric B.&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;38036&quot;});" class='title'>Electricity for the 4-H Scientist</a>
+<div class='author'>Wilson, Eric B.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38072, {&quot;Title&quot;:&quot;Wind and Weather&quot;,&quot;Topics&quot;:[&quot;Weather forecasting&quot;,&quot;Meteorology&quot;,&quot;Winds&quot;],&quot;Primary&quot;:&quot;38072.htm&quot;,&quot;CreatorNames&quot;:[&quot;McAdie, Alexander, 1863-1943&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;38072&quot;});" class='title'>Wind and Weather</a>
+<div class='author'>McAdie, Alexander, 1863-1943</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38348, {&quot;Title&quot;:&quot;The Energy System of Matter: A Deduction from Terrestrial Energy Phenomena&quot;,&quot;Topics&quot;:[&quot;Force and energy&quot;],&quot;Primary&quot;:&quot;38348.htm&quot;,&quot;CreatorNames&quot;:[&quot;Weir, James, active 1883-1912&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;38348&quot;});" class='title'>The Energy System of Matter:<br><span class='subtitle'>A Deduction from Terrestrial Energy Phenomena</span></a>
+<div class='author'>Weir, James, active 1883-1912</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38583, {&quot;Title&quot;:&quot;Heroes of Science: Physicists&quot;,&quot;Topics&quot;:[&quot;Physicists&quot;],&quot;Primary&quot;:&quot;38583.htm&quot;,&quot;CreatorNames&quot;:[&quot;Garnett, William, 1850-1932&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;38583&quot;});" class='title'>Heroes of Science:<br><span class='subtitle'>Physicists</span></a>
+<div class='author'>Garnett, William, 1850-1932</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38928, {&quot;Title&quot;:&quot;Meteorology; or, Weather Explained&quot;,&quot;Topics&quot;:[&quot;Meteorology&quot;],&quot;Primary&quot;:&quot;38928.htm&quot;,&quot;CreatorNames&quot;:[&quot;M&#39;Pherson, J. G. (John Gordon), 1843-1909&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;38928&quot;});" class='title'>Meteorology;<br><span class='subtitle'>or, Weather Explained</span></a>
+<div class='author'>M'Pherson, J. G. (John Gordon), 1843-1909</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38984, {&quot;Title&quot;:&quot;Colour Measurement and Mixture&quot;,&quot;Topics&quot;:[&quot;Color&quot;],&quot;Primary&quot;:&quot;38984.htm&quot;,&quot;CreatorNames&quot;:[&quot;Abney, William de Wiveleslie, Sir, 1843-1920&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;38984&quot;});" class='title'>Colour Measurement and Mixture</a>
+<div class='author'>Abney, William de Wiveleslie, Sir, 1843-1920</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39373, {&quot;Title&quot;:&quot;Lord Kelvin: An account of his scientific life and work&quot;,&quot;Topics&quot;:[&quot;Kelvin, William Thomson, Baron, 1824-1907&quot;],&quot;Primary&quot;:&quot;39373.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gray, Andrew, 1847-1925&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;39373&quot;});" class='title'>Lord Kelvin:<br><span class='subtitle'>An account of his scientific life and work</span></a>
+<div class='author'>Gray, Andrew, 1847-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39466, {&quot;Title&quot;:&quot;Reading the Weather&quot;,&quot;Topics&quot;:[&quot;Weather forecasting&quot;],&quot;Primary&quot;:&quot;39466.htm&quot;,&quot;CreatorNames&quot;:[&quot;Longstreth, Thomas Morris, 1886-&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;39466&quot;});" class='title'>Reading the Weather</a>
+<div class='author'>Longstreth, Thomas Morris, 1886-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39508, {&quot;Title&quot;:&quot;Popular scientific lectures&quot;,&quot;Topics&quot;:[&quot;Physics&quot;],&quot;Primary&quot;:&quot;39508.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mach, Ernst, 1838-1916&quot;,&quot;McCormack, Thomas J. (Thomas Joseph), 1865-1932 [Translator]&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;39508&quot;});" class='title'>Popular scientific lectures</a>
+<div class='author'>Mach, Ernst, 1838-1916, McCormack, Thomas J. (Thomas Joseph), 1865-1932 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39566, {&quot;Title&quot;:&quot;Curiosities of Heat&quot;,&quot;Topics&quot;:[&quot;Religion and science&quot;,&quot;Heat&quot;],&quot;Primary&quot;:&quot;39566.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tefft, Lyman Beecher, 1833-&quot;],&quot;LoCC&quot;:[&quot;BR&quot;,&quot;QC&quot;],&quot;PG_ID&quot;:&quot;39566&quot;});" class='title'>Curiosities of Heat</a>
+<div class='author'>Tefft, Lyman Beecher, 1833-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39831, {&quot;Title&quot;:&quot;A Study of Splashes&quot;,&quot;Topics&quot;:[&quot;Splashes&quot;],&quot;Primary&quot;:&quot;39831.htm&quot;,&quot;CreatorNames&quot;:[&quot;Worthington, A. M. (Arthur Mason), 1852-1916&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;39831&quot;});" class='title'>A Study of Splashes</a>
+<div class='author'>Worthington, A. M. (Arthur Mason), 1852-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40119, {&quot;Title&quot;:&quot;Curiosities of Light and Sight&quot;,&quot;Topics&quot;:[&quot;Light&quot;,&quot;Vision&quot;],&quot;Primary&quot;:&quot;40119.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bidwell, Shelford, 1848-1909&quot;],&quot;LoCC&quot;:[&quot;QC&quot;,&quot;QP&quot;],&quot;PG_ID&quot;:&quot;40119&quot;});" class='title'>Curiosities of Light and Sight</a>
+<div class='author'>Bidwell, Shelford, 1848-1909</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40175, {&quot;Title&quot;:&quot;Physics&quot;,&quot;Topics&quot;:[&quot;Physics&quot;],&quot;Primary&quot;:&quot;40175.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cope, Thomas D. (Thomas Darlington), 1880-1964&quot;,&quot;Smith, Charles H. (Charles Henry), 1861-1926&quot;,&quot;Tower, Willis E. (Willis Eugene), 1871-&quot;,&quot;Turton, Charles M. (Charles Mark), 1861-1937&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;40175&quot;});" class='title'>Physics</a>
+<div class='author'>Cope, Thomas D. (Thomas Darlington), 1880-1964, Smith, Charles H. (Charles Henry), 1861-1926, Tower, Willis E. (Willis Eugene), 1871-, Turton, Charles M. (Charles Mark), 1861-1937</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40911, {&quot;Title&quot;:&quot;The Ether of Space&quot;,&quot;Topics&quot;:[&quot;Ether (Space)&quot;],&quot;Primary&quot;:&quot;40911.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lodge, Oliver, Sir, 1851-1940&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;40911&quot;});" class='title'>The Ether of Space</a>
+<div class='author'>Lodge, Oliver, Sir, 1851-1940</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41063, {&quot;Title&quot;:&quot;The Storm. An Essay.&quot;,&quot;Topics&quot;:[&quot;Great Britain&quot;,&quot;Storms -- Great Britain -- Early works to 1800&quot;,&quot;Hurricanes -- Great Britain -- Early works to 1800&quot;,&quot;Cyclones -- Great Britain -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;41063.htm&quot;,&quot;CreatorNames&quot;:[&quot;Defoe, Daniel, 1661?-1731&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;41063&quot;});" class='title'>The Storm. An Essay.</a>
+<div class='author'>Defoe, Daniel, 1661?-1731</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41351, {&quot;Title&quot;:&quot;Practical Exercises in Elementary Meteorology&quot;,&quot;Topics&quot;:[&quot;Meteorology&quot;],&quot;Primary&quot;:&quot;41351.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ward, Robert DeCourcy, 1867-1931&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;41351&quot;});" class='title'>Practical Exercises in Elementary Meteorology</a>
+<div class='author'>Ward, Robert DeCourcy, 1867-1931</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41903, {&quot;Title&quot;:&quot;Einstein et l&#39;univers: Une lueur dans le mystère des choses&quot;,&quot;Topics&quot;:[&quot;Relativity (Physics)&quot;,&quot;Gravitation&quot;,&quot;Einstein, Albert, 1879-1955&quot;],&quot;Primary&quot;:&quot;41903.htm&quot;,&quot;CreatorNames&quot;:[&quot;Nordmann, Charles, 1881-1940&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;41903&quot;});" class='title'>Einstein et l'univers:<br><span class='subtitle'>Une lueur dans le mystère des choses</span></a>
+<div class='author'>Nordmann, Charles, 1881-1940</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42234, {&quot;Title&quot;:&quot;The Storm - or, a Collection of the most Remarkable Casualties and Disasters which Happen&#39;d in the Late Dreadful Tempest, both by Sea and Land&quot;,&quot;Topics&quot;:[&quot;Storms -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;42234.txt&quot;,&quot;CreatorNames&quot;:[&quot;Defoe, Daniel, 1661?-1731&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;42234&quot;});" class='title'>The Storm -<br><span class='subtitle'>or, a Collection of the most Remarkable Casualties and Disasters which Happen'd in the Late Dreadful Tempest, both by Sea and Land</span></a>
+<div class='author'>Defoe, Daniel, 1661?-1731</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42245, {&quot;Title&quot;:&quot;Thunder and Lightning&quot;,&quot;Topics&quot;:[&quot;Lightning&quot;],&quot;Primary&quot;:&quot;42245.htm&quot;,&quot;CreatorNames&quot;:[&quot;Flammarion, Camille, 1842-1925&quot;,&quot;Mostyn, Walter [Translator]&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;42245&quot;});" class='title'>Thunder and Lightning</a>
+<div class='author'>Flammarion, Camille, 1842-1925, Mostyn, Walter [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42613, {&quot;Title&quot;:&quot;On-Line Data-Acquisition Systems in Nuclear Physics, 1969&quot;,&quot;Topics&quot;:[&quot;Nuclear physics -- Information services&quot;,&quot;Nuclear physics -- Computer programs&quot;,&quot;Online data processing&quot;],&quot;Primary&quot;:&quot;42613.htm&quot;,&quot;CreatorNames&quot;:[&quot;National Research Council (U.S.). Ad Hoc Panel on On-line Computers in Nuclear Research&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;42613&quot;});" class='title'>On-Line Data-Acquisition Systems in Nuclear Physics, 1969</a>
+<div class='author'>National Research Council (U.S.). Ad Hoc Panel on On-line Computers in Nuclear Research</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42626, {&quot;Title&quot;:&quot;Careers in Atomic Energy&quot;,&quot;Topics&quot;:[&quot;Nuclear physics -- Vocational guidance&quot;],&quot;Primary&quot;:&quot;42626.htm&quot;,&quot;CreatorNames&quot;:[&quot;McIlhenny, Loyce J.&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;42626&quot;});" class='title'>Careers in Atomic Energy</a>
+<div class='author'>McIlhenny, Loyce J.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43233, {&quot;Title&quot;:&quot;Recherches sur les substances radioactives&quot;,&quot;Topics&quot;:[&quot;Radioactivity&quot;,&quot;Radioactive substances&quot;],&quot;Primary&quot;:&quot;43233.htm&quot;,&quot;CreatorNames&quot;:[&quot;Curie, Marie, 1867-1934&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;43233&quot;});" class='title'>Recherches sur les substances radioactives</a>
+<div class='author'>Curie, Marie, 1867-1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43760, {&quot;Title&quot;:&quot;Les grands froids&quot;,&quot;Topics&quot;:[&quot;Winter&quot;,&quot;Polar regions&quot;,&quot;Cold -- Physiological effect&quot;,&quot;France -- Climate&quot;],&quot;Primary&quot;:&quot;43760.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bouant, Emile, 1847-1926&quot;,&quot;Weber, Theodore [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;43760&quot;});" class='title'>Les grands froids</a>
+<div class='author'>Bouant, Emile, 1847-1926, Weber, Theodore [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44019, {&quot;Title&quot;:&quot;A Course of Mechanical, Magnetical, Optical, Hydrostatical and Pneumatical Experiments - perform&#39;d by Francis Hauksbee, and the Explanatory Lectures read by William Whiston, M.A.&quot;,&quot;Topics&quot;:[&quot;Physics -- Early works to 1800&quot;,&quot;Physical instruments&quot;,&quot;Physics -- Experiments&quot;],&quot;Primary&quot;:&quot;44019.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hauksbee, Francis, 1687-1763&quot;,&quot;Whiston, William, 1667-1752&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;44019&quot;});" class='title'>A Course of Mechanical, Magnetical, Optical, Hydrostatical and Pneumatical Experiments -<br><span class='subtitle'>perform'd by Francis Hauksbee, and the Explanatory Lectures read by William Whiston, M.A.</span></a>
+<div class='author'>Hauksbee, Francis, 1687-1763, Whiston, William, 1667-1752</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44665, {&quot;Title&quot;:&quot;Things a Boy Should Know About Electricity - Second Edition&quot;,&quot;Topics&quot;:[&quot;Electricity&quot;],&quot;Primary&quot;:&quot;44665.htm&quot;,&quot;CreatorNames&quot;:[&quot;St. John, Thomas M. (Thomas Matthew), 1865-&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;44665&quot;});" class='title'>Things a Boy Should Know About Electricity -<br><span class='subtitle'>Second Edition</span></a>
+<div class='author'>St. John, Thomas M. (Thomas Matthew), 1865-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45446, {&quot;Title&quot;:&quot;Makers of Electricity&quot;,&quot;Topics&quot;:[&quot;Electricity -- Biography&quot;],&quot;Primary&quot;:&quot;45446.htm&quot;,&quot;CreatorNames&quot;:[&quot;Potamian, Brother, 1837-1917&quot;,&quot;Walsh, James J. (James Joseph), 1865-1942&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;45446&quot;});" class='title'>Makers of Electricity</a>
+<div class='author'>Potamian, Brother, 1837-1917, Walsh, James J. (James Joseph), 1865-1942</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45515, {&quot;Title&quot;:&quot;Experiments and Observations on Electricity Made at Philadelphia in America&quot;,&quot;Topics&quot;:[&quot;Electricity -- Early works to 1850&quot;],&quot;Primary&quot;:&quot;45515.htm&quot;,&quot;CreatorNames&quot;:[&quot;Franklin, Benjamin, 1706-1790&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;45515&quot;});" class='title'>Experiments and Observations on Electricity Made at Philadelphia in America</a>
+<div class='author'>Franklin, Benjamin, 1706-1790</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45893, {&quot;Title&quot;:&quot;William Gilbert, and Terrestial Magnetism in the Time of Queen Elizabeth - A Discourse&quot;,&quot;Topics&quot;:[&quot;Gilbert, William, 1544-1603&quot;,&quot;Magnetism -- History&quot;],&quot;Primary&quot;:&quot;45893.htm&quot;,&quot;CreatorNames&quot;:[&quot;Thompson, Silvanus P. (Silvanus Phillips), 1851-1916&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;45893&quot;});" class='title'>William Gilbert, and Terrestial Magnetism in the Time of Queen Elizabeth -<br><span class='subtitle'>A Discourse</span></a>
+<div class='author'>Thompson, Silvanus P. (Silvanus Phillips), 1851-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45955, {&quot;Title&quot;:&quot;A-B-C of Electricity&quot;,&quot;Topics&quot;:[&quot;Electricity&quot;],&quot;Primary&quot;:&quot;45955.htm&quot;,&quot;CreatorNames&quot;:[&quot;Meadowcroft, Wm. H. (William Henry), 1853-&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;45955&quot;});" class='title'>A-B-C of Electricity</a>
+<div class='author'>Meadowcroft, Wm. H. (William Henry), 1853-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46168, {&quot;Title&quot;:&quot;Experiments and Observations Tending to Illustrate the Nature and Properties of Electricity - In One Letter to Martin Folkes, Esq; President, and Two to the Royal Society&quot;,&quot;Topics&quot;:[&quot;Electricity -- Early works to 1850&quot;],&quot;Primary&quot;:&quot;46168.htm&quot;,&quot;CreatorNames&quot;:[&quot;Watson, William, Sir, 1715-1787&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;46168&quot;});" class='title'>Experiments and Observations Tending to Illustrate the Nature and Properties of Electricity -<br><span class='subtitle'>In One Letter to Martin Folkes, Esq; President, and Two to the Royal Society</span></a>
+<div class='author'>Watson, William, Sir, 1715-1787</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46338, {&quot;Title&quot;:&quot;A Medley of Weather Lore&quot;,&quot;Topics&quot;:[&quot;Weather -- Folklore&quot;],&quot;Primary&quot;:&quot;46338.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wright, M. E. S. [Compiler]&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;46338&quot;});" class='title'>A Medley of Weather Lore</a>
+<div class='author'>Wright, M. E. S. [Compiler]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46763, {&quot;Title&quot;:&quot;Michael Faraday, Man of Science&quot;,&quot;Topics&quot;:[&quot;Faraday, Michael, 1791-1867&quot;,&quot;Physicists -- Great Britain -- Biography&quot;],&quot;Primary&quot;:&quot;46763.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jerrold, Walter, 1865-1929&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;46763&quot;});" class='title'>Michael Faraday, Man of Science</a>
+<div class='author'>Jerrold, Walter, 1865-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47059, {&quot;Title&quot;:&quot;Meteorology: The Science of the Atmosphere&quot;,&quot;Topics&quot;:[&quot;Meteorology&quot;],&quot;Primary&quot;:&quot;47059.htm&quot;,&quot;CreatorNames&quot;:[&quot;Talman, Charles Fitzhugh, 1874-1936&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;47059&quot;});" class='title'>Meteorology:<br><span class='subtitle'>The Science of the Atmosphere</span></a>
+<div class='author'>Talman, Charles Fitzhugh, 1874-1936</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4710, {&quot;Title&quot;:&quot;The Story of Electricity&quot;,&quot;Topics&quot;:[&quot;Electricity&quot;],&quot;Primary&quot;:&quot;4710.txt&quot;,&quot;CreatorNames&quot;:[&quot;Munro, John, 1849-1930&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;4710&quot;});" class='title'>The Story of Electricity</a>
+<div class='author'>Munro, John, 1849-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47330, {&quot;Title&quot;:&quot;Weather Warnings for Watchers&quot;,&quot;Topics&quot;:[&quot;Weather forecasting&quot;],&quot;Primary&quot;:&quot;47330.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;47330&quot;});" class='title'>Weather Warnings for Watchers</a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47396, {&quot;Title&quot;:&quot;Michael Faraday - Third Edition, with Portrait&quot;,&quot;Topics&quot;:[&quot;Faraday, Michael, 1791-1867&quot;],&quot;Primary&quot;:&quot;47396.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gladstone, J. H. (John Hall), 1827-1902&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;47396&quot;});" class='title'>Michael Faraday -<br><span class='subtitle'>Third Edition, with Portrait</span></a>
+<div class='author'>Gladstone, J. H. (John Hall), 1827-1902</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48038, {&quot;Title&quot;:&quot;Atoms, Nature, and Man: Man-made Radioactivity in the Environment&quot;,&quot;Topics&quot;:[&quot;Nuclear energy&quot;],&quot;Primary&quot;:&quot;48038.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hines, Neal O.&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;48038&quot;});" class='title'>Atoms, Nature, and Man:<br><span class='subtitle'>Man-made Radioactivity in the Environment</span></a>
+<div class='author'>Hines, Neal O.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48041, {&quot;Title&quot;:&quot;The Study of Elementary Electricity and Magnetism by Experiment - Containing Two Hundred Experiments Performed with Simple, Home-made Apparatus&quot;,&quot;Topics&quot;:[&quot;Electricity -- Experiments&quot;,&quot;Magnetism -- Experiments&quot;],&quot;Primary&quot;:&quot;48041.htm&quot;,&quot;CreatorNames&quot;:[&quot;St. John, Thomas M. (Thomas Matthew), 1865-&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;48041&quot;});" class='title'>The Study of Elementary Electricity and Magnetism by Experiment -<br><span class='subtitle'>Containing Two Hundred Experiments Performed with Simple, Home-made Apparatus</span></a>
+<div class='author'>St. John, Thomas M. (Thomas Matthew), 1865-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48352, {&quot;Title&quot;:&quot;Discorso sopra la calamita&quot;,&quot;Topics&quot;:[&quot;Magnetism&quot;],&quot;Primary&quot;:&quot;48352.htm&quot;,&quot;CreatorNames&quot;:[&quot;Castelli, Benedetto, 1578?-1643&quot;,&quot;Favaro, Antonio, 1847-1922 [Editor]&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;48352&quot;});" class='title'>Discorso sopra la calamita</a>
+<div class='author'>Castelli, Benedetto, 1578?-1643, Favaro, Antonio, 1847-1922 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49070, {&quot;Title&quot;:&quot;Nuclear Clocks - Revised&quot;,&quot;Topics&quot;:[&quot;Radioactive dating&quot;],&quot;Primary&quot;:&quot;49070.htm&quot;,&quot;CreatorNames&quot;:[&quot;Faul, Henry, 1920-1981&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;49070&quot;});" class='title'>Nuclear Clocks -<br><span class='subtitle'>Revised</span></a>
+<div class='author'>Faul, Henry, 1920-1981</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4908, {&quot;Title&quot;:&quot;Five of Maxwell&#39;s Papers&quot;,&quot;Topics&quot;:[&quot;Mathematics&quot;,&quot;Physics&quot;],&quot;Primary&quot;:&quot;4908.txt&quot;,&quot;CreatorNames&quot;:[&quot;Maxwell, James Clerk, 1831-1879&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;4908&quot;});" class='title'>Five of Maxwell's Papers</a>
+<div class='author'>Maxwell, James Clerk, 1831-1879</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49467, {&quot;Title&quot;:&quot;Radiation&quot;,&quot;Topics&quot;:[&quot;Radiation&quot;],&quot;Primary&quot;:&quot;49467.htm&quot;,&quot;CreatorNames&quot;:[&quot;Phillips, Percy&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;49467&quot;});" class='title'>Radiation</a>
+<div class='author'>Phillips, Percy</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49819, {&quot;Title&quot;:&quot;Worlds Within Worlds: The Story of Nuclear Energy, Volume 1 (of 3) - Atomic Weights; Energy; Electricity&quot;,&quot;Topics&quot;:[&quot;Nuclear energy -- Popular works&quot;],&quot;Primary&quot;:&quot;49819.htm&quot;,&quot;CreatorNames&quot;:[&quot;Asimov, Isaac, 1920-1992&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;49819&quot;});" class='title'>Worlds Within Worlds:<br><span class='subtitle'>The Story of Nuclear Energy, Volume 1 (of 3) - Atomic Weights; Energy; Electricity</span></a>
+<div class='author'>Asimov, Isaac, 1920-1992</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49820, {&quot;Title&quot;:&quot;Worlds Within Worlds: The Story of Nuclear Energy, Volume 2 (of 3) - Mass and Energy; The Neutron; The Structure of the Nucleus&quot;,&quot;Topics&quot;:[&quot;Nuclear energy -- Popular works&quot;],&quot;Primary&quot;:&quot;49820.htm&quot;,&quot;CreatorNames&quot;:[&quot;Asimov, Isaac, 1920-1992&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;49820&quot;});" class='title'>Worlds Within Worlds:<br><span class='subtitle'>The Story of Nuclear Energy, Volume 2 (of 3) - Mass and Energy; The Neutron; The Structure of the Nucleus</span></a>
+<div class='author'>Asimov, Isaac, 1920-1992</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49821, {&quot;Title&quot;:&quot;Worlds Within Worlds: The Story of Nuclear Energy, Volume 3 (of 3) - Nuclear Fission; Nuclear Fusion; Beyond Fusion&quot;,&quot;Topics&quot;:[&quot;Nuclear energy -- Popular works&quot;],&quot;Primary&quot;:&quot;49821.htm&quot;,&quot;CreatorNames&quot;:[&quot;Asimov, Isaac, 1920-1992&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;49821&quot;});" class='title'>Worlds Within Worlds:<br><span class='subtitle'>The Story of Nuclear Energy, Volume 3 (of 3) - Nuclear Fission; Nuclear Fusion; Beyond Fusion</span></a>
+<div class='author'>Asimov, Isaac, 1920-1992</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50340, {&quot;Title&quot;:&quot;Elémens de la philosophie de Neuton: Mis à la portée de tout le monde&quot;,&quot;Topics&quot;:[&quot;Mathematics -- Early works to 1800&quot;,&quot;Science -- Early works to 1800&quot;,&quot;Physics -- Early works to 1800&quot;,&quot;Newton, Isaac, Sir, 1642-1727&quot;],&quot;Primary&quot;:&quot;50340.htm&quot;,&quot;CreatorNames&quot;:[&quot;Voltaire, 1694-1778&quot;],&quot;LoCC&quot;:[&quot;QA&quot;,&quot;QC&quot;],&quot;PG_ID&quot;:&quot;50340&quot;});" class='title'>Elémens de la philosophie de Neuton:<br><span class='subtitle'>Mis à la portée de tout le monde</span></a>
+<div class='author'>Voltaire, 1694-1778</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50524, {&quot;Title&quot;:&quot;The Letter of Petrus Peregrinus on the Magnet, A.D. 1269&quot;,&quot;Topics&quot;:[&quot;Magnetism -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;50524.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pierre, de Maricourt, active 13th century&quot;,&quot;Arnold, Brother, 1868- [Translator]&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;50524&quot;});" class='title'>The Letter of Petrus Peregrinus on the Magnet, A.D. 1269</a>
+<div class='author'>Pierre, de Maricourt, active 13th century, Arnold, Brother, 1868- [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50572, {&quot;Title&quot;:&quot;Goethe&#39;s Theory of Colours&quot;,&quot;Topics&quot;:[&quot;Color&quot;],&quot;Primary&quot;:&quot;50572.htm&quot;,&quot;CreatorNames&quot;:[&quot;Goethe, Johann Wolfgang von, 1749-1832&quot;,&quot;Eastlake, Charles Lock, Sir, 1793-1865 [Translator]&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;50572&quot;});" class='title'>Goethe's Theory of Colours</a>
+<div class='author'>Goethe, Johann Wolfgang von, 1749-1832, Eastlake, Charles Lock, Sir, 1793-1865 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51045, {&quot;Title&quot;:&quot;Ephemerides Barometricae Mutinenses (anni M.DC.XCIV) - Cum Disquisitione Causae ascensus ac descensus Mercurii in Torricelliana fistula iuxta diversum Aeris statum&quot;,&quot;Topics&quot;:[&quot;Meteorology -- Early works to 1800&quot;,&quot;Barometers -- Early works to 1800&quot;,&quot;Atmospheric pressure -- Italy -- Modena -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;51045.htm&quot;,&quot;CreatorNames&quot;:[&quot;Boccabadati, Giovan Battista, 1635-1696&quot;,&quot;Ramazzini, Bernardino, 1633-1714&quot;,&quot;Torti, Francesco, 1658-1741&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;51045&quot;});" class='title'>Ephemerides Barometricae Mutinenses (anni M.DC.XCIV) -<br><span class='subtitle'>Cum Disquisitione Causae ascensus ac descensus Mercurii in Torricelliana fistula iuxta diversum Aeris statum</span></a>
+<div class='author'>Boccabadati, Giovan Battista, 1635-1696, Ramazzini, Bernardino, 1633-1714, Torti, Francesco, 1658-1741</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52293, {&quot;Title&quot;:&quot;On the various forces of nature and their relations to each other&quot;,&quot;Topics&quot;:[&quot;Physics&quot;],&quot;Primary&quot;:&quot;52293.htm&quot;,&quot;CreatorNames&quot;:[&quot;Faraday, Michael, 1791-1867&quot;,&quot;Crookes, William, 1832-1919 [Editor]&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;52293&quot;});" class='title'>On the various forces of nature and their relations to each other</a>
+<div class='author'>Faraday, Michael, 1791-1867, Crookes, William, 1832-1919 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52439, {&quot;Title&quot;:&quot;An Essay to Shew the Cause of Electricity; and Why Some Things are Non-Electricable. - In Which Is Also Consider&#39;d Its Influence in the Blasts on Human Bodies, in the Blights on Trees, in the Damps in Mines; And as It May Affect the Sensitive Plant, &amp;c.&quot;,&quot;Topics&quot;:[&quot;Electricity -- Early works to 1850&quot;,&quot;Martin, Benjamin, 1705-1782. Essay on electricity&quot;],&quot;Primary&quot;:&quot;52439.htm&quot;,&quot;CreatorNames&quot;:[&quot;Freke, John, 1688-1756&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;52439&quot;});" class='title'>An Essay to Shew the Cause of Electricity;<br><span class='subtitle'>and Why Some Things are Non-Electricable. - In Which Is Also Consider'd Its Influence in the Blasts on Human Bodies, in the Blights on Trees, in the Damps in Mines; And as It May Affect the Sensitive Plant, &c.</span></a>
+<div class='author'>Freke, John, 1688-1756</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52754, {&quot;Title&quot;:&quot;Profits from scrap&quot;,&quot;Topics&quot;:[&quot;Storage batteries&quot;,&quot;Lead&quot;],&quot;Primary&quot;:&quot;52754.htm&quot;,&quot;CreatorNames&quot;:[&quot;American Bureau of Engineering, Chicago&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;52754&quot;});" class='title'>Profits from scrap</a>
+<div class='author'>American Bureau of Engineering, Chicago</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53311, {&quot;Title&quot;:&quot;The Life of Sir Isaac Newton&quot;,&quot;Topics&quot;:[&quot;Newton, Isaac, Sir, 1642-1727&quot;],&quot;Primary&quot;:&quot;53311.htm&quot;,&quot;CreatorNames&quot;:[&quot;Brewster, David, 1781-1868&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;53311&quot;});" class='title'>The Life of Sir Isaac Newton</a>
+<div class='author'>Brewster, David, 1781-1868</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53393, {&quot;Title&quot;:&quot;Natuurkunde in de Huiskamer: ongeveer 100 proeven met huishoudelijke voorwerpen.&quot;,&quot;Topics&quot;:[&quot;Scientific recreations&quot;,&quot;Physics -- Experiments&quot;],&quot;Primary&quot;:&quot;53393.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tit, Tom, 1853-1928&quot;,&quot;Cocheret, D. H. [Translator]&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;53393&quot;});" class='title'>Natuurkunde in de Huiskamer:<br><span class='subtitle'>ongeveer 100 proeven met huishoudelijke voorwerpen.</span></a>
+<div class='author'>Tit, Tom, 1853-1928, Cocheret, D. H. [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53778, {&quot;Title&quot;:&quot;First Lessons in Natural Philosophy for Beginners&quot;,&quot;Topics&quot;:[&quot;Physics&quot;],&quot;Primary&quot;:&quot;53778.htm&quot;,&quot;CreatorNames&quot;:[&quot;Martindale, Joseph C. (Joseph Comly), 1833-1872&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;53778&quot;});" class='title'>First Lessons in Natural Philosophy for Beginners</a>
+<div class='author'>Martindale, Joseph C. (Joseph Comly), 1833-1872</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54208, {&quot;Title&quot;:&quot;Standard Measures of United States, Great Britain and France - History and actual comparisons. With appendix on introduction of the mètre&quot;,&quot;Topics&quot;:[&quot;Weights and measures -- History&quot;,&quot;Metric system&quot;],&quot;Primary&quot;:&quot;54208.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wurtele, Arthur S. C., 1826-1886&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;54208&quot;});" class='title'>Standard Measures of United States, Great Britain and France -<br><span class='subtitle'>History and actual comparisons. With appendix on introduction of the mètre</span></a>
+<div class='author'>Wurtele, Arthur S. C., 1826-1886</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54221, {&quot;Title&quot;:&quot;Induction Coils, How to Make, Use, and Repair Them. - Including Ruhmkorff, Tesla, and Medical Coils, Roentgen Radiography, Etc. Etc.&quot;,&quot;Topics&quot;:[&quot;Induction coils&quot;],&quot;Primary&quot;:&quot;54221.htm&quot;,&quot;CreatorNames&quot;:[&quot;Norrie, H. S.&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;54221&quot;});" class='title'>Induction Coils, How to Make, Use, and Repair Them. -<br><span class='subtitle'>Including Ruhmkorff, Tesla, and Medical Coils, Roentgen Radiography, Etc. Etc.</span></a>
+<div class='author'>Norrie, H. S.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54357, {&quot;Title&quot;:&quot;Lehrbuch der Physik zum Schulgebrauche.&quot;,&quot;Topics&quot;:[&quot;Physics -- Textbooks&quot;],&quot;Primary&quot;:&quot;54357.htm&quot;,&quot;CreatorNames&quot;:[&quot;Winter, Wilhelm&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;54357&quot;});" class='title'>Lehrbuch der Physik zum Schulgebrauche.</a>
+<div class='author'>Winter, Wilhelm</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(548, {&quot;Title&quot;:&quot;Project Trinity, 1945-1946&quot;,&quot;Topics&quot;:[&quot;Nuclear weapons -- Testing&quot;,&quot;Atomic bomb -- New Mexico -- Testing&quot;,&quot;Radioactive fallout -- New Mexico&quot;],&quot;Primary&quot;:&quot;548.txt&quot;,&quot;CreatorNames&quot;:[&quot;Maag, Carl R.&quot;,&quot;Rohrer, Steve&quot;],&quot;LoCC&quot;:[&quot;QC&quot;,&quot;U&quot;],&quot;PG_ID&quot;:&quot;548&quot;});" class='title'>Project Trinity, 1945-1946</a>
+<div class='author'>Maag, Carl R., Rohrer, Steve</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55126, {&quot;Title&quot;:&quot;Cloud Studies&quot;,&quot;Topics&quot;:[&quot;Clouds&quot;],&quot;Primary&quot;:&quot;55126.htm&quot;,&quot;CreatorNames&quot;:[&quot;Clayden, Arthur William, 1855-1944&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;55126&quot;});" class='title'>Cloud Studies</a>
+<div class='author'>Clayden, Arthur William, 1855-1944</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55774, {&quot;Title&quot;:&quot;The Law of Storms - The various phenomena by which their approach can be ascertained with certainty, and practical directions to mariners for the avoidance of their fury, compiled from various sources&quot;,&quot;Topics&quot;:[&quot;Storms&quot;],&quot;Primary&quot;:&quot;55774.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ross, John&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;55774&quot;});" class='title'>The Law of Storms -<br><span class='subtitle'>The various phenomena by which their approach can be ascertained with certainty, and practical directions to mariners for the avoidance of their fury, compiled from various sources</span></a>
+<div class='author'>Ross, John</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56159, {&quot;Title&quot;:&quot;Auroræ: Their Characters and Spectra&quot;,&quot;Topics&quot;:[&quot;Auroras&quot;],&quot;Primary&quot;:&quot;56159.htm&quot;,&quot;CreatorNames&quot;:[&quot;Capron, J. Rand, 1829-1888&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;56159&quot;});" class='title'>Auroræ:<br><span class='subtitle'>Their Characters and Spectra</span></a>
+<div class='author'>Capron, J. Rand, 1829-1888</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56290, {&quot;Title&quot;:&quot;Men and Measures&quot;,&quot;Topics&quot;:[&quot;Weights and measures -- History&quot;],&quot;Primary&quot;:&quot;56290.htm&quot;,&quot;CreatorNames&quot;:[&quot;Nicholson, Edward&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;56290&quot;});" class='title'>Men and Measures</a>
+<div class='author'>Nicholson, Edward</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56353, {&quot;Title&quot;:&quot;Pyrometry: A Practical Treatise on the Measurement of High Temperatures&quot;,&quot;Topics&quot;:[&quot;Pyrometry&quot;],&quot;Primary&quot;:&quot;56353.htm&quot;,&quot;CreatorNames&quot;:[&quot;Darling, Charles R. (Charles Robert), 1870-&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;56353&quot;});" class='title'>Pyrometry:<br><span class='subtitle'>A Practical Treatise on the Measurement of High Temperatures</span></a>
+<div class='author'>Darling, Charles R. (Charles Robert), 1870-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56572, {&quot;Title&quot;:&quot;Water Wonders Every Child Should Know - Little Studies of Dew, Frost, Snow, Ice, and Rain&quot;,&quot;Topics&quot;:[&quot;Meteorology -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;56572.htm&quot;,&quot;CreatorNames&quot;:[&quot;Thompson, Jean M. (Jean May), 1865-&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;56572&quot;});" class='title'>Water Wonders Every Child Should Know -<br><span class='subtitle'>Little Studies of Dew, Frost, Snow, Ice, and Rain</span></a>
+<div class='author'>Thompson, Jean M. (Jean May), 1865-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57240, {&quot;Title&quot;:&quot;Relativitätstheorie und Erkenntnis Apriori&quot;,&quot;Topics&quot;:[&quot;Relativity (Physics)&quot;,&quot;Einstein, Albert, 1879-1955&quot;],&quot;Primary&quot;:&quot;57240.htm&quot;,&quot;CreatorNames&quot;:[&quot;Reichenbach, Hans, 1891-1953&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;57240&quot;});" class='title'>Relativitätstheorie und Erkenntnis Apriori</a>
+<div class='author'>Reichenbach, Hans, 1891-1953</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57267, {&quot;Title&quot;:&quot;An Account of the Late Improvements in Galvanism - With a Series of Curious and Interesting Experiments Performed Before the Commissioners of the French National Institute, and Repeated Lately in the Anatomical Theatres of London&quot;,&quot;Topics&quot;:[&quot;Electricity -- Early works to 1850&quot;],&quot;Primary&quot;:&quot;57267.htm&quot;,&quot;CreatorNames&quot;:[&quot;Aldini, Giovanni, 1762-1834&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;57267&quot;});" class='title'>An Account of the Late Improvements in Galvanism -<br><span class='subtitle'>With a Series of Curious and Interesting Experiments Performed Before the Commissioners of the French National Institute, and Repeated Lately in the Anatomical Theatres of London</span></a>
+<div class='author'>Aldini, Giovanni, 1762-1834</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57335, {&quot;Title&quot;:&quot;Light and Colour Theories, and their relation to light and colour standardization&quot;,&quot;Topics&quot;:[&quot;Color&quot;,&quot;Light&quot;],&quot;Primary&quot;:&quot;57335.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lovibond, Joseph W. (Joseph Williams), 1835-1918&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;57335&quot;});" class='title'>Light and Colour Theories, and their relation to light and colour standardization</a>
+<div class='author'>Lovibond, Joseph W. (Joseph Williams), 1835-1918</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57973, {&quot;Title&quot;:&quot;The Hurricane Hunters&quot;,&quot;Topics&quot;:[&quot;Hurricanes&quot;,&quot;Typhoons&quot;,&quot;Aeronautics in meteorology&quot;],&quot;Primary&quot;:&quot;57973.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tannehill, Ivan Ray, 1890-1959&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;57973&quot;});" class='title'>The Hurricane Hunters</a>
+<div class='author'>Tannehill, Ivan Ray, 1890-1959</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58404, {&quot;Title&quot;:&quot;Grounds of Natural Philosophy: Divided into Thirteen Parts - The Second Edition, much altered from the First, which went under the Name of Philosophical and Physical Opinions&quot;,&quot;Topics&quot;:[&quot;Physics -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;58404.htm&quot;,&quot;CreatorNames&quot;:[&quot;Newcastle, Margaret Cavendish, Duchess of, 1624?-1674&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;58404&quot;});" class='title'>Grounds of Natural Philosophy:<br><span class='subtitle'>Divided into Thirteen Parts - The Second Edition, much altered from the First, which went under the Name of Philosophical and Physical Opinions</span></a>
+<div class='author'>Newcastle, Margaret Cavendish, Duchess of, 1624?-1674</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59230, {&quot;Title&quot;:&quot;Ye Magick Mirrour of Old Japan&quot;,&quot;Topics&quot;:[&quot;Magic mirrors -- Japan&quot;],&quot;Primary&quot;:&quot;59230.htm&quot;,&quot;CreatorNames&quot;:[&quot;Thompson, Silvanus P. (Silvanus Phillips), 1851-1916&quot;],&quot;LoCC&quot;:[&quot;QC&quot;,&quot;NK&quot;],&quot;PG_ID&quot;:&quot;59230&quot;});" class='title'>Ye Magick Mirrour of Old Japan</a>
+<div class='author'>Thompson, Silvanus P. (Silvanus Phillips), 1851-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59910, {&quot;Title&quot;:&quot;Collezione dell&#39;opere del Cavaliere Conte Alessandro Volta - Tomo I, Parte I&quot;,&quot;Topics&quot;:[&quot;Electricity -- Early works to 1850&quot;,&quot;Gases&quot;],&quot;Primary&quot;:&quot;59910.htm&quot;,&quot;CreatorNames&quot;:[&quot;Volta, Alessandro, 1745-1827&quot;,&quot;Antinori, Vincenzio, 1792-1865 [Editor]&quot;],&quot;LoCC&quot;:[&quot;QC&quot;,&quot;QD&quot;],&quot;PG_ID&quot;:&quot;59910&quot;});" class='title'>Collezione dell'opere del Cavaliere Conte Alessandro Volta -<br><span class='subtitle'>Tomo I, Parte I</span></a>
+<div class='author'>Volta, Alessandro, 1745-1827, Antinori, Vincenzio, 1792-1865 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60271, {&quot;Title&quot;:&quot;From Newton to Einstein: Changing Conceptions of the Universe&quot;,&quot;Topics&quot;:[&quot;Relativity (Physics)&quot;,&quot;Ether (Space)&quot;,&quot;Gravitation&quot;,&quot;Einstein, Albert, 1879-1955&quot;,&quot;Newton, Isaac, Sir, 1642-1727&quot;],&quot;Primary&quot;:&quot;60271.htm&quot;,&quot;CreatorNames&quot;:[&quot;Harrow, Benjamin, 1888-1970&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;60271&quot;});" class='title'>From Newton to Einstein:<br><span class='subtitle'>Changing Conceptions of the Universe</span></a>
+<div class='author'>Harrow, Benjamin, 1888-1970</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60392, {&quot;Title&quot;:&quot;A Treatise on Electricity - Wherein its various phænomena are accounted for, and the cause of the attraction and gravitation of solids, assigned. To which is added, a short account, how the electrical effluvia act upon the animal frame, and in what disorders the same may probably be applied with success, and in what not.&quot;,&quot;Topics&quot;:[&quot;Electricity -- Early works to 1850&quot;,&quot;Electrotherapeutics -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;60392.htm&quot;,&quot;CreatorNames&quot;:[&quot;Penrose, Francis, 1718-1798&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;60392&quot;});" class='title'>A Treatise on Electricity -<br><span class='subtitle'>Wherein its various phænomena are accounted for, and the cause of the attraction and gravitation of solids, assigned. To which is added, a short account, how the electrical effluvia act upon the animal frame, and in what disorders the same may probably be applied with success, and in what not.</span></a>
+<div class='author'>Penrose, Francis, 1718-1798</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60564, {&quot;Title&quot;:&quot;Radio-Active Substances&quot;,&quot;Topics&quot;:[&quot;Radioactivity&quot;,&quot;Radioactive substances&quot;],&quot;Primary&quot;:&quot;60564.htm&quot;,&quot;CreatorNames&quot;:[&quot;Curie, Marie, 1867-1934&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;60564&quot;});" class='title'>Radio-Active Substances</a>
+<div class='author'>Curie, Marie, 1867-1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61574, {&quot;Title&quot;:&quot;Selenium cells - The construction, care and use of selenium cells with special reference to the Fritts cell&quot;,&quot;Topics&quot;:[&quot;Selenium cells&quot;],&quot;Primary&quot;:&quot;61574.htm&quot;,&quot;CreatorNames&quot;:[&quot;Benson, Thomas William, 1894-&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;61574&quot;});" class='title'>Selenium cells -<br><span class='subtitle'>The construction, care and use of selenium cells with special reference to the Fritts cell</span></a>
+<div class='author'>Benson, Thomas William, 1894-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61732, {&quot;Title&quot;:&quot;Experimental Mechanics - A Course of Lectures Delivered at the Royal College of Science for Ireland&quot;,&quot;Topics&quot;:[&quot;Mechanics&quot;],&quot;Primary&quot;:&quot;61732.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ball, Robert S. (Robert Stawell), 1840-1913&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;61732&quot;});" class='title'>Experimental Mechanics -<br><span class='subtitle'>A Course of Lectures Delivered at the Royal College of Science for Ireland</span></a>
+<div class='author'>Ball, Robert S. (Robert Stawell), 1840-1913</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61873, {&quot;Title&quot;:&quot;Warum und Weil. Physikalischer Teil. - Fragen und Antworten aus den wichtigsten Gebieten der gesammten Naturlehre.&quot;,&quot;Topics&quot;:[&quot;Physics&quot;],&quot;Primary&quot;:&quot;61873.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ule, Otto, 1820-1876&quot;,&quot;Langhoff, F. [Editor]&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;61873&quot;});" class='title'>Warum und Weil. Physikalischer Teil. -<br><span class='subtitle'>Fragen und Antworten aus den wichtigsten Gebieten der gesammten Naturlehre.</span></a>
+<div class='author'>Ule, Otto, 1820-1876, Langhoff, F. [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63087, {&quot;Title&quot;:&quot;Color Standards and Color Nomenclature - With fifty-three colored plates and eleven hundred and fifteen named colors&quot;,&quot;Topics&quot;:[&quot;Colors&quot;],&quot;Primary&quot;:&quot;63087.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ridgway, Robert, 1850-1929&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;63087&quot;});" class='title'>Color Standards and Color Nomenclature -<br><span class='subtitle'>With fifty-three colored plates and eleven hundred and fifteen named colors</span></a>
+<div class='author'>Ridgway, Robert, 1850-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63122, {&quot;Title&quot;:&quot;Geography of the Air&quot;,&quot;Topics&quot;:[&quot;Geography&quot;,&quot;Meteorology&quot;],&quot;Primary&quot;:&quot;63122.htm&quot;,&quot;CreatorNames&quot;:[&quot;Greely, A. W. (Adolphus Washington), 1844-1935&quot;],&quot;LoCC&quot;:[&quot;G&quot;,&quot;QC&quot;],&quot;PG_ID&quot;:&quot;63122&quot;});" class='title'>Geography of the Air</a>
+<div class='author'>Greely, A. W. (Adolphus Washington), 1844-1935</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63372, {&quot;Title&quot;:&quot;Einstein&#39;s Theories of Relativity and Gravitation - A selection of material from the essays submitted in the competition for the Eugene Higgins prize of $5,000&quot;,&quot;Topics&quot;:[&quot;Relativity (Physics)&quot;],&quot;Primary&quot;:&quot;63372.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bird, J. Malcolm (James Malcolm), 1886-1964&quot;,&quot;Einstein, Albert, 1879-1955 [Other]&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;63372&quot;});" class='title'>Einstein's Theories of Relativity and Gravitation -<br><span class='subtitle'>A selection of material from the essays submitted in the competition for the Eugene Higgins prize of $5,000</span></a>
+<div class='author'>Bird, J. Malcolm (James Malcolm), 1886-1964, Einstein, Albert, 1879-1955 [Other]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63422, {&quot;Title&quot;:&quot;Roentgen Rays and Phenomena of the Anode and Cathode.&quot;,&quot;Topics&quot;:[&quot;X-rays&quot;],&quot;Primary&quot;:&quot;63422.htm&quot;,&quot;CreatorNames&quot;:[&quot;Thompson, Edward P. (Edward Pruden)&quot;,&quot;Anthony, William A. (William Arnold), 1835-1903 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;63422&quot;});" class='title'>Roentgen Rays and Phenomena of the Anode and Cathode.</a>
+<div class='author'>Thompson, Edward P. (Edward Pruden), Anthony, William A. (William Arnold), 1835-1903 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64592, {&quot;Title&quot;:&quot;Harper&#39;s Electricity Book for Boys&quot;,&quot;Topics&quot;:[&quot;Electricity -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;64592.htm&quot;,&quot;CreatorNames&quot;:[&quot;Adams, Joseph H. (Joseph Henry), 1867-1941&quot;,&quot;Baker, Joseph B. [Contributor]&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;64592&quot;});" class='title'>Harper's Electricity Book for Boys</a>
+<div class='author'>Adams, Joseph H. (Joseph Henry), 1867-1941, Baker, Joseph B. [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64693, {&quot;Title&quot;:&quot;Radio-Activity&quot;,&quot;Topics&quot;:[&quot;Radioactivity&quot;],&quot;Primary&quot;:&quot;64693.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rutherford, Ernest, 1871-1937&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;64693&quot;});" class='title'>Radio-Activity</a>
+<div class='author'>Rutherford, Ernest, 1871-1937</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65114, {&quot;Title&quot;:&quot;The Wonders of Optics&quot;,&quot;Topics&quot;:[&quot;Physical optics&quot;],&quot;Primary&quot;:&quot;65114.htm&quot;,&quot;CreatorNames&quot;:[&quot;Marion, Fulgence&quot;,&quot;Quin, Charles W. (Charles William) [Translator]&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;65114&quot;});" class='title'>The Wonders of Optics</a>
+<div class='author'>Marion, Fulgence, Quin, Charles W. (Charles William) [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65151, {&quot;Title&quot;:&quot;How Old Is It? The Story of Dating in Archeaology&quot;,&quot;Topics&quot;:[&quot;Radiocarbon dating&quot;,&quot;Archaeological dating&quot;,&quot;Dendrochronology&quot;],&quot;Primary&quot;:&quot;65151.htm&quot;,&quot;CreatorNames&quot;:[&quot;Schoenwetter, James, 1935-2015&quot;,&quot;Hughes, Phyllis, 1908-1994 [Illustrator]&quot;,&quot;Spencer, Mary [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;65151&quot;});" class='title'>How Old Is It? The Story of Dating in Archeaology</a>
+<div class='author'>Schoenwetter, James, 1935-2015, Hughes, Phyllis, 1908-1994 [Illustrator], Spencer, Mary [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65359, {&quot;Title&quot;:&quot;James Clerk Maxwell and Modern Physics&quot;,&quot;Topics&quot;:[&quot;Physics -- History&quot;,&quot;Maxwell, James Clerk, 1831-1879&quot;],&quot;Primary&quot;:&quot;65359.htm&quot;,&quot;CreatorNames&quot;:[&quot;Glazebrook, Richard, 1854-1935&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;65359&quot;});" class='title'>James Clerk Maxwell and Modern Physics</a>
+<div class='author'>Glazebrook, Richard, 1854-1935</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65735, {&quot;Title&quot;:&quot;Michael Faraday, His Life and Work&quot;,&quot;Topics&quot;:[&quot;Faraday, Michael, 1791-1867&quot;,&quot;Electricity -- History&quot;],&quot;Primary&quot;:&quot;65735.htm&quot;,&quot;CreatorNames&quot;:[&quot;Thompson, Silvanus P. (Silvanus Phillips), 1851-1916&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;65735&quot;});" class='title'>Michael Faraday, His Life and Work</a>
+<div class='author'>Thompson, Silvanus P. (Silvanus Phillips), 1851-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66078, {&quot;Title&quot;:&quot;A Treatise on Mechanics&quot;,&quot;Topics&quot;:[&quot;Mechanics&quot;],&quot;Primary&quot;:&quot;66078.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kater, Henry, 1777-1835&quot;,&quot;Lardner, Dionysius, 1793-1859&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;66078&quot;});" class='title'>A Treatise on Mechanics</a>
+<div class='author'>Kater, Henry, 1777-1835, Lardner, Dionysius, 1793-1859</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66246, {&quot;Title&quot;:&quot;Our Atomic World: The Story of Atomic Energy&quot;,&quot;Topics&quot;:[&quot;Nuclear energy -- Popular works&quot;],&quot;Primary&quot;:&quot;66246.htm&quot;,&quot;CreatorNames&quot;:[&quot;Craven, C. Jackson (Claude Jackson), 1908-&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;66246&quot;});" class='title'>Our Atomic World:<br><span class='subtitle'>The Story of Atomic Energy</span></a>
+<div class='author'>Craven, C. Jackson (Claude Jackson), 1908-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66408, {&quot;Title&quot;:&quot;Our Nuclear Future: Facts, Dangers and Opportunities&quot;,&quot;Topics&quot;:[&quot;Nuclear energy -- Popular works&quot;,&quot;Radioactivity -- Physiological effect&quot;,&quot;Nuclear weapons&quot;],&quot;Primary&quot;:&quot;66408.htm&quot;,&quot;CreatorNames&quot;:[&quot;Latter, Albert L.&quot;,&quot;Teller, Edward, 1908-2003&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;66408&quot;});" class='title'>Our Nuclear Future:<br><span class='subtitle'>Facts, Dangers and Opportunities</span></a>
+<div class='author'>Latter, Albert L., Teller, Edward, 1908-2003</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66944, {&quot;Title&quot;:&quot;The Principle of Relativity&quot;,&quot;Topics&quot;:[&quot;Relativity (Physics)&quot;],&quot;Primary&quot;:&quot;66944.htm&quot;,&quot;CreatorNames&quot;:[&quot;Einstein, Albert, 1879-1955&quot;,&quot;Minkowski, H. (Hermann), 1864-1909&quot;,&quot;Mahalanobis, P. C. (Prasanta Chandra), 1893-1972 [Author of introduction, etc.]&quot;,&quot;Bose, Satyendranath, 1894-1974 [Translator]&quot;,&quot;Saha, Meghnad, 1893-1956 [Translator]&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;66944&quot;});" class='title'>The Principle of Relativity</a>
+<div class='author'>Einstein, Albert, 1879-1955, Minkowski, H. (Hermann), 1864-1909, Mahalanobis, P. C. (Prasanta Chandra), 1893-1972 [Author of introduction, etc.], Bose, Satyendranath, 1894-1974 [Translator], Saha, Meghnad, 1893-1956 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67104, {&quot;Title&quot;:&quot;The A B C of Relativity&quot;,&quot;Topics&quot;:[&quot;Relativity (Physics)&quot;],&quot;Primary&quot;:&quot;67104.htm&quot;,&quot;CreatorNames&quot;:[&quot;Russell, Bertrand, 1872-1970&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;67104&quot;});" class='title'>The A B C of Relativity</a>
+<div class='author'>Russell, Bertrand, 1872-1970</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67391, {&quot;Title&quot;:&quot;Gilbert Weather Bureau (Meteorology) for Boys&quot;,&quot;Topics&quot;:[&quot;Meteorology -- Juvenile literature&quot;,&quot;Weather -- Juvenile literature&quot;,&quot;Meteorology -- Problems, exercises, etc.&quot;],&quot;Primary&quot;:&quot;67391.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gilbert, A. C. (Alfred Carlton), 1884-1961&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;67391&quot;});" class='title'>Gilbert Weather Bureau (Meteorology) for Boys</a>
+<div class='author'>Gilbert, A. C. (Alfred Carlton), 1884-1961</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68462, {&quot;Title&quot;:&quot;Einstein and the universe: A popular exposition of the famous theory&quot;,&quot;Topics&quot;:[&quot;Relativity (Physics)&quot;,&quot;Gravitation&quot;,&quot;Einstein, Albert, 1879-1955&quot;],&quot;Primary&quot;:&quot;68462.htm&quot;,&quot;CreatorNames&quot;:[&quot;Nordmann, Charles, 1881-1940&quot;,&quot;Haldane, R. B. Haldane (Richard Burdon Haldane), Viscount, 1856-1928 [Author of introduction, etc.]&quot;,&quot;McCabe, Joseph, 1867-1955 [Translator]&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;68462&quot;});" class='title'>Einstein and the universe:<br><span class='subtitle'>A popular exposition of the famous theory</span></a>
+<div class='author'>Nordmann, Charles, 1881-1940, Haldane, R. B. Haldane (Richard Burdon Haldane), Viscount, 1856-1928 [Author of introduction, etc.], McCabe, Joseph, 1867-1955 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68994, {&quot;Title&quot;:&quot;Lightning, Thunder and Lightning Conductors&quot;,&quot;Topics&quot;:[&quot;Lightning&quot;,&quot;Lightning conductors&quot;,&quot;Thunderstorms&quot;],&quot;Primary&quot;:&quot;68994.htm&quot;,&quot;CreatorNames&quot;:[&quot;Molloy, Gerald, 1834-1906&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;68994&quot;});" class='title'>Lightning, Thunder and Lightning Conductors</a>
+<div class='author'>Molloy, Gerald, 1834-1906</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69053, {&quot;Title&quot;:&quot;The conservation of energy&quot;,&quot;Topics&quot;:[&quot;Force and energy&quot;],&quot;Primary&quot;:&quot;69053.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stewart, Balfour, 1828-1887&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;69053&quot;});" class='title'>The conservation of energy</a>
+<div class='author'>Stewart, Balfour, 1828-1887</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69253, {&quot;Title&quot;:&quot;Signalling across space without wires - being a description of the work of Hertz &amp; his successors&quot;,&quot;Topics&quot;:[&quot;Telegraph, Wireless&quot;,&quot;Electric waves&quot;],&quot;Primary&quot;:&quot;69253.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lodge, Oliver, Sir, 1851-1940&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;69253&quot;});" class='title'>Signalling across space without wires -<br><span class='subtitle'>being a description of the work of Hertz & his successors</span></a>
+<div class='author'>Lodge, Oliver, Sir, 1851-1940</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69522, {&quot;Title&quot;:&quot;Elektrotechnisches Experimentierbuch: Eine Anleitung zur Ausführung elektrotechnischer Experimente unter Verwendung einfachster, meist selbst herzustellender Hilfsmittel&quot;,&quot;Topics&quot;:[&quot;Electricity -- Experiments&quot;],&quot;Primary&quot;:&quot;69522.htm&quot;,&quot;CreatorNames&quot;:[&quot;Schnetzler, Eberhard&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;69522&quot;});" class='title'>Elektrotechnisches Experimentierbuch:<br><span class='subtitle'>Eine Anleitung zur Ausführung elektrotechnischer Experimente unter Verwendung einfachster, meist selbst herzustellender Hilfsmittel</span></a>
+<div class='author'>Schnetzler, Eberhard</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69551, {&quot;Title&quot;:&quot;The natural and artificial disintegration of the elements - An address by Professor Sir Ernest Rutherford&quot;,&quot;Topics&quot;:[&quot;Chemical elements&quot;,&quot;Radioactivity&quot;,&quot;Atoms&quot;],&quot;Primary&quot;:&quot;69551.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rutherford, Ernest, 1871-1937&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;69551&quot;});" class='title'>The natural and artificial disintegration of the elements -<br><span class='subtitle'>An address by Professor Sir Ernest Rutherford</span></a>
+<div class='author'>Rutherford, Ernest, 1871-1937</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70047, {&quot;Title&quot;:&quot;The peaceful atom&quot;,&quot;Topics&quot;:[&quot;Atoms&quot;,&quot;Atoms -- Juvenile literature&quot;,&quot;Nuclear energy -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;70047.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hunt, Bernice Kohn, 1920-&quot;,&quot;Onyshkewych, Zenowij, 1929-2018 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;70047&quot;});" class='title'>The peaceful atom</a>
+<div class='author'>Hunt, Bernice Kohn, 1920-, Onyshkewych, Zenowij, 1929-2018 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70272, {&quot;Title&quot;:&quot;The theory of relativity and its influence on scientific thought&quot;,&quot;Topics&quot;:[&quot;Relativity (Physics)&quot;,&quot;Science -- Philosophy&quot;],&quot;Primary&quot;:&quot;70272.htm&quot;,&quot;CreatorNames&quot;:[&quot;Eddington, Arthur Stanley, Sir, 1882-1944&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;70272&quot;});" class='title'>The theory of relativity and its influence on scientific thought</a>
+<div class='author'>Eddington, Arthur Stanley, Sir, 1882-1944</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70453, {&quot;Title&quot;:&quot;Clerk Maxwell&#39;s electromagnetic theory&quot;,&quot;Topics&quot;:[&quot;Maxwell, James Clerk, 1831-1879&quot;,&quot;Electromagnetic theory&quot;],&quot;Primary&quot;:&quot;70453.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lorentz, H. A. (Hendrik Antoon), 1853-1928&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;70453&quot;});" class='title'>Clerk Maxwell's electromagnetic theory</a>
+<div class='author'>Lorentz, H. A. (Hendrik Antoon), 1853-1928</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7333, {&quot;Title&quot;:&quot;Sidelights on Relativity&quot;,&quot;Topics&quot;:[&quot;Relativity (Physics)&quot;],&quot;Primary&quot;:&quot;7333.htm&quot;,&quot;CreatorNames&quot;:[&quot;Einstein, Albert, 1879-1955&quot;],&quot;LoCC&quot;:[&quot;QC&quot;],&quot;PG_ID&quot;:&quot;7333&quot;});" class='title'>Sidelights on Relativity</a>
+<div class='author'>Einstein, Albert, 1879-1955</div>
+</div>
+</ul></div>
+</body></html>

@@ -1,0 +1,618 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Islam, Bahai Faith (BP)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(10163, {&quot;Title&quot;:&quot;Mohammedanism - Lectures on Its Origin, Its Religious and Political Growth, and Its Present State&quot;,&quot;Topics&quot;:[&quot;Islam&quot;],&quot;Primary&quot;:&quot;10163.txt&quot;,&quot;CreatorNames&quot;:[&quot;Snouck Hurgronje, C. (Christiaan), 1857-1936&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;10163&quot;});" class='title'>Mohammedanism -<br><span class='subtitle'>Lectures on Its Origin, Its Religious and Political Growth, and Its Present State</span></a>
+<div class='author'>Snouck Hurgronje, C. (Christiaan), 1857-1936</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(10738, {&quot;Title&quot;:&quot;Mahomet, Founder of Islam&quot;,&quot;Topics&quot;:[&quot;Islam&quot;,&quot;Muhammad, Prophet, -632&quot;],&quot;Primary&quot;:&quot;10738.txt&quot;,&quot;CreatorNames&quot;:[&quot;Draycott, Gladys M.&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;10738&quot;});" class='title'>Mahomet, Founder of Islam</a>
+<div class='author'>Draycott, Gladys M.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(11198, {&quot;Title&quot;:&quot;Christianity and Islam&quot;,&quot;Topics&quot;:[&quot;Islam -- Relations -- Christianity&quot;,&quot;Christianity and other religions -- Islam&quot;],&quot;Primary&quot;:&quot;11198.txt&quot;,&quot;CreatorNames&quot;:[&quot;Becker, Carl Heinrich, 1876-1933&quot;,&quot;Chaytor, H. J. (Henry John), 1871-1954 [Translator]&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;11198&quot;});" class='title'>Christianity and Islam</a>
+<div class='author'>Becker, Carl Heinrich, 1876-1933, Chaytor, H. J. (Henry John), 1871-1954 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(11376, {&quot;Title&quot;:&quot;Autobiographical Sketches&quot;,&quot;Topics&quot;:[&quot;Women authors, English -- Biography&quot;,&quot;Besant, Annie, 1847-1933&quot;,&quot;Women social reformers -- Great Britain -- Biography&quot;,&quot;Women&#39;s rights -- Great Britain -- History -- 19th century&quot;],&quot;Primary&quot;:&quot;11376.txt&quot;,&quot;CreatorNames&quot;:[&quot;Besant, Annie, 1847-1933&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;11376&quot;});" class='title'>Autobiographical Sketches</a>
+<div class='author'>Besant, Annie, 1847-1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12010, {&quot;Title&quot;:&quot;The Fourth-Dimensional Reaches of the Exposition: San Francisco, 1915&quot;,&quot;Topics&quot;:[&quot;Panama-Pacific International Exposition (1915 : San Francisco, Calif.)&quot;],&quot;Primary&quot;:&quot;12010.txt&quot;,&quot;CreatorNames&quot;:[&quot;Williams, Cora Lenore, 1865-1937&quot;],&quot;LoCC&quot;:[&quot;BP&quot;,&quot;TC&quot;],&quot;PG_ID&quot;:&quot;12010&quot;});" class='title'>The Fourth-Dimensional Reaches of the Exposition:<br><span class='subtitle'>San Francisco, 1915</span></a>
+<div class='author'>Williams, Cora Lenore, 1865-1937</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12085, {&quot;Title&quot;:&quot;Annie Besant: An Autobiography&quot;,&quot;Topics&quot;:[&quot;Besant, Annie, 1847-1933&quot;,&quot;Theosophists -- Biography&quot;],&quot;Primary&quot;:&quot;12085.htm&quot;,&quot;CreatorNames&quot;:[&quot;Besant, Annie, 1847-1933&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;12085&quot;});" class='title'>Annie Besant:<br><span class='subtitle'>An Autobiography</span></a>
+<div class='author'>Besant, Annie, 1847-1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12756, {&quot;Title&quot;:&quot;Vier Voordrachten over Theosofie&quot;,&quot;Topics&quot;:[&quot;Theosophy&quot;],&quot;Primary&quot;:&quot;12756.htm&quot;,&quot;CreatorNames&quot;:[&quot;Besant, Annie, 1847-1933&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;12756&quot;});" class='title'>Vier Voordrachten over Theosofie</a>
+<div class='author'>Besant, Annie, 1847-1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12902, {&quot;Title&quot;:&quot;A Textbook of Theosophy&quot;,&quot;Topics&quot;:[&quot;Theosophy&quot;],&quot;Primary&quot;:&quot;12902.txt&quot;,&quot;CreatorNames&quot;:[&quot;Leadbeater, C. W. (Charles Webster), 1854-1934&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;12902&quot;});" class='title'>A Textbook of Theosophy</a>
+<div class='author'>Leadbeater, C. W. (Charles Webster), 1854-1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13142, {&quot;Title&quot;:&quot;Self-Development and the Way to Power&quot;,&quot;Topics&quot;:[&quot;Theosophy&quot;],&quot;Primary&quot;:&quot;13142.txt&quot;,&quot;CreatorNames&quot;:[&quot;Rogers, L. W. (Louis William), 1859-1953&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;13142&quot;});" class='title'>Self-Development and the Way to Power</a>
+<div class='author'>Rogers, L. W. (Louis William), 1859-1953</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14002, {&quot;Title&quot;:&quot;Cosmic Consciousness: The Man-God Whom We Await&quot;,&quot;Topics&quot;:[&quot;Theosophy&quot;],&quot;Primary&quot;:&quot;14002.txt&quot;,&quot;CreatorNames&quot;:[&quot;McIvor-Tyndall, Alexander J. (Alexander James), -1940&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;14002&quot;});" class='title'>Cosmic Consciousness:<br><span class='subtitle'>The Man-God Whom We Await</span></a>
+<div class='author'>McIvor-Tyndall, Alexander J. (Alexander James), -1940</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14064, {&quot;Title&quot;:&quot;Mohammed, The Prophet of Islam&quot;,&quot;Topics&quot;:[&quot;Muhammad, Prophet, -632&quot;],&quot;Primary&quot;:&quot;14064.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hayes, Herbert E. E. (Herbert Edward Elton)&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;14064&quot;});" class='title'>Mohammed, The Prophet of Islam</a>
+<div class='author'>Hayes, Herbert E. E. (Herbert Edward Elton)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14378, {&quot;Title&quot;:&quot;Five Years of Theosophy&quot;,&quot;Topics&quot;:[&quot;Theosophy&quot;],&quot;Primary&quot;:&quot;14378.txt&quot;,&quot;CreatorNames&quot;:[&quot;Mead, G. R. S. (George Robert Stow), 1863-1933 [Editor]&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;14378&quot;});" class='title'>Five Years of Theosophy</a>
+<div class='author'>Mead, G. R. S. (George Robert Stow), 1863-1933 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14587, {&quot;Title&quot;:&quot;The Crest-Wave of Evolution - A Course of Lectures in History, Given to the Graduates&#39; Class in the Raja-Yoga College, Point Loma, in the College-Year 1918-19&quot;,&quot;Topics&quot;:[&quot;Theosophy&quot;],&quot;Primary&quot;:&quot;14587.txt&quot;,&quot;CreatorNames&quot;:[&quot;Morris, Kenneth, 1879-1937&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;14587&quot;});" class='title'>The Crest-Wave of Evolution -<br><span class='subtitle'>A Course of Lectures in History, Given to the Graduates' Class in the Raja-Yoga College, Point Loma, in the College-Year 1918-19</span></a>
+<div class='author'>Morris, Kenneth, 1879-1937</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14599, {&quot;Title&quot;:&quot;Light on the Path and Through the Gates of Gold&quot;,&quot;Topics&quot;:[&quot;New Thought&quot;,&quot;Theosophy&quot;],&quot;Primary&quot;:&quot;14599.txt&quot;,&quot;CreatorNames&quot;:[&quot;Collins, Mabel, 1851-1927&quot;],&quot;LoCC&quot;:[&quot;BF&quot;,&quot;BP&quot;],&quot;PG_ID&quot;:&quot;14599&quot;});" class='title'>Light on the Path and Through the Gates of Gold</a>
+<div class='author'>Collins, Mabel, 1851-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15545, {&quot;Title&quot;:&quot;The Basis of Morality&quot;,&quot;Topics&quot;:[&quot;Theosophy&quot;],&quot;Primary&quot;:&quot;15545.htm&quot;,&quot;CreatorNames&quot;:[&quot;Besant, Annie, 1847-1933&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;15545&quot;});" class='title'>The Basis of Morality</a>
+<div class='author'>Besant, Annie, 1847-1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16269, {&quot;Title&quot;:&quot;Thought-Forms&quot;,&quot;Topics&quot;:[&quot;Theosophy -- Doctrines&quot;,&quot;Thought and thinking -- Religious aspects -- Theosophy&quot;],&quot;Primary&quot;:&quot;16269.htm&quot;,&quot;CreatorNames&quot;:[&quot;Besant, Annie, 1847-1933&quot;,&quot;Leadbeater, C. W. (Charles Webster), 1854-1934&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;16269&quot;});" class='title'>Thought-Forms</a>
+<div class='author'>Besant, Annie, 1847-1933, Leadbeater, C. W. (Charles Webster), 1854-1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16523, {&quot;Title&quot;:&quot;The Kitáb-i-Aqdas&quot;,&quot;Topics&quot;:[&quot;Bahai Faith&quot;],&quot;Primary&quot;:&quot;16523.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bahá&#39;u&#39;lláh, 1817-1892&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;16523&quot;});" class='title'>The Kitáb-i-Aqdas</a>
+<div class='author'>Bahá'u'lláh, 1817-1892</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16697, {&quot;Title&quot;:&quot;Epistle to the Son of the Wolf&quot;,&quot;Topics&quot;:[&quot;Bahai Faith&quot;],&quot;Primary&quot;:&quot;16697.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bahá&#39;u&#39;lláh, 1817-1892&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;16697&quot;});" class='title'>Epistle to the Son of the Wolf</a>
+<div class='author'>Bahá'u'lláh, 1817-1892</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16939, {&quot;Title&quot;:&quot;Gems of Divine Mysteries&quot;,&quot;Topics&quot;:[&quot;Bahai Faith&quot;],&quot;Primary&quot;:&quot;16939.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bahá&#39;u&#39;lláh, 1817-1892&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;16939&quot;});" class='title'>Gems of Divine Mysteries</a>
+<div class='author'>Bahá'u'lláh, 1817-1892</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16940, {&quot;Title&quot;:&quot;Gleanings from the Writings of Bahá&#39;u&#39;lláh&quot;,&quot;Topics&quot;:[&quot;Bahai Faith -- Doctrines&quot;],&quot;Primary&quot;:&quot;16940.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bahá&#39;u&#39;lláh, 1817-1892&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;16940&quot;});" class='title'>Gleanings from the Writings of Bahá'u'lláh</a>
+<div class='author'>Bahá'u'lláh, 1817-1892</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16941, {&quot;Title&quot;:&quot;The Hidden Words of Bahá&#39;u&#39;lláh&quot;,&quot;Topics&quot;:[&quot;Bahai Faith -- Doctrines&quot;],&quot;Primary&quot;:&quot;16941.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bahá&#39;u&#39;lláh, 1817-1892&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;16941&quot;});" class='title'>The Hidden Words of Bahá'u'lláh</a>
+<div class='author'>Bahá'u'lláh, 1817-1892</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16955, {&quot;Title&quot;:&quot;Three Translations of The Koran (Al-Qur&#39;an) side by side&quot;,&quot;Topics&quot;:[&quot;Qur&#39;an&quot;],&quot;Primary&quot;:&quot;16955.txt&quot;,&quot;CreatorNames&quot;:[&quot;Ali, Abdullah Yusuf, 1872-1952 [Translator]&quot;,&quot;Pickthall, Marmaduke William, 1875-1936 [Translator]&quot;,&quot;Shakir, M. H. (Mohammad Habib), 1866-1939 [Translator]&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;16955&quot;});" class='title'>Three Translations of The Koran (Al-Qur'an) side by side</a>
+<div class='author'>Ali, Abdullah Yusuf, 1872-1952 [Translator], Pickthall, Marmaduke William, 1875-1936 [Translator], Shakir, M. H. (Mohammad Habib), 1866-1939 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16983, {&quot;Title&quot;:&quot;The Kitáb-i-Íqán&quot;,&quot;Topics&quot;:[&quot;Bahai Faith -- Doctrines&quot;],&quot;Primary&quot;:&quot;16983.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bahá&#39;u&#39;lláh, 1817-1892&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;16983&quot;});" class='title'>The Kitáb-i-<br><span class='subtitle'>Íqán</span></a>
+<div class='author'>Bahá'u'lláh, 1817-1892</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16984, {&quot;Title&quot;:&quot;Prayers and Meditations&quot;,&quot;Topics&quot;:[&quot;Bahai Faith -- Prayers and devotions&quot;],&quot;Primary&quot;:&quot;16984.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bahá&#39;u&#39;lláh, 1817-1892&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;16984&quot;});" class='title'>Prayers and Meditations</a>
+<div class='author'>Bahá'u'lláh, 1817-1892</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16985, {&quot;Title&quot;:&quot;The Proclamation of Bahá&#39;u&#39;lláh&quot;,&quot;Topics&quot;:[&quot;Bahai Faith&quot;,&quot;Bahá&#39;u&#39;lláh, 1817-1892 -- Correspondence&quot;],&quot;Primary&quot;:&quot;16985.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bahá&#39;u&#39;lláh, 1817-1892&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;16985&quot;});" class='title'>The Proclamation of Bahá'u'lláh</a>
+<div class='author'>Bahá'u'lláh, 1817-1892</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16986, {&quot;Title&quot;:&quot;The Seven Valleys and the Four Valleys&quot;,&quot;Topics&quot;:[&quot;Bahai Faith -- Doctrines&quot;],&quot;Primary&quot;:&quot;16986.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bahá&#39;u&#39;lláh, 1817-1892&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;16986&quot;});" class='title'>The Seven Valleys and the Four Valleys</a>
+<div class='author'>Bahá'u'lláh, 1817-1892</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17213, {&quot;Title&quot;:&quot;The Future of Islam&quot;,&quot;Topics&quot;:[&quot;Islam&quot;,&quot;Middle East -- History -- 1517-&quot;],&quot;Primary&quot;:&quot;17213.htm&quot;,&quot;CreatorNames&quot;:[&quot;Blunt, Wilfrid Scawen, 1840-1922&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;17213&quot;});" class='title'>The Future of Islam</a>
+<div class='author'>Blunt, Wilfrid Scawen, 1840-1922</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17309, {&quot;Title&quot;:&quot;The Summons of the Lord of Hosts&quot;,&quot;Topics&quot;:[&quot;Bahai Faith -- Doctrines&quot;],&quot;Primary&quot;:&quot;17309.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bahá&#39;u&#39;lláh, 1817-1892&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;17309&quot;});" class='title'>The Summons of the Lord of Hosts</a>
+<div class='author'>Bahá'u'lláh, 1817-1892</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17310, {&quot;Title&quot;:&quot;Tablets of Bahá&#39;u&#39;lláh Revealed after the Kitab-i-Aqdas&quot;,&quot;Topics&quot;:[&quot;Bahai Faith -- Doctrines&quot;],&quot;Primary&quot;:&quot;17310.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bahá&#39;u&#39;lláh, 1817-1892&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;17310&quot;});" class='title'>Tablets of Bahá'u'lláh Revealed after the Kitab-i-Aqdas</a>
+<div class='author'>Bahá'u'lláh, 1817-1892</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18266, {&quot;Title&quot;:&quot;Death—and After?&quot;,&quot;Topics&quot;:[&quot;Theosophy&quot;,&quot;Death&quot;,&quot;Future life&quot;],&quot;Primary&quot;:&quot;18266.htm&quot;,&quot;CreatorNames&quot;:[&quot;Besant, Annie, 1847-1933&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;18266&quot;});" class='title'>Death—and After?</a>
+<div class='author'>Besant, Annie, 1847-1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18828, {&quot;Title&quot;:&quot;Selections From the Writings of the Báb&quot;,&quot;Topics&quot;:[&quot;Bahai Faith&quot;,&quot;Babism&quot;],&quot;Primary&quot;:&quot;18828.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bab, `Ali Muhammad Shirazi, 1819-1850&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;18828&quot;});" class='title'>Selections From the Writings of the Báb</a>
+<div class='author'>Bab, `Ali Muhammad Shirazi, 1819-1850</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19236, {&quot;Title&quot;:&quot;Japan Will Turn Ablaze!&quot;,&quot;Topics&quot;:[&quot;Alexander, Agnes B. (Agnes Baldwin), 1875-1970&quot;,&quot;Augur, George Jacob, 1853-1927&quot;,&quot;Yamamoto, Kanichi, 1879-1961&quot;,&quot;Bahais -- Japan&quot;,&quot;Bahais -- United States&quot;],&quot;Primary&quot;:&quot;19236.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sims, Barbara R. (Barbara Rutledge), 1918-2002 [Editor]&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;19236&quot;});" class='title'>Japan Will Turn Ablaze!</a>
+<div class='author'>Sims, Barbara R. (Barbara Rutledge), 1918-2002 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19237, {&quot;Title&quot;:&quot;The Secret of Divine Civilization&quot;,&quot;Topics&quot;:[&quot;Civilization&quot;,&quot;Bahai Faith&quot;,&quot;Iran&quot;],&quot;Primary&quot;:&quot;19237.htm&quot;,&quot;CreatorNames&quot;:[&quot;`Abdu&#39;l-Bahá, 1844-1921&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;19237&quot;});" class='title'>The Secret of Divine Civilization</a>
+<div class='author'>`Abdu'l-Bahá, 1844-1921</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19238, {&quot;Title&quot;:&quot;Foundations of World Unity&quot;,&quot;Topics&quot;:[&quot;Bahai Faith&quot;],&quot;Primary&quot;:&quot;19238.htm&quot;,&quot;CreatorNames&quot;:[&quot;`Abdu&#39;l-Bahá, 1844-1921&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;19238&quot;});" class='title'>Foundations of World Unity</a>
+<div class='author'>`Abdu'l-Bahá, 1844-1921</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19239, {&quot;Title&quot;:&quot;Bahá&#39;í World Faith&quot;,&quot;Topics&quot;:[&quot;Bahai Faith&quot;],&quot;Primary&quot;:&quot;19239.htm&quot;,&quot;CreatorNames&quot;:[&quot;`Abdu&#39;l-Bahá, 1844-1921&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;19239&quot;});" class='title'>Bahá'í World Faith</a>
+<div class='author'>`Abdu'l-Bahá, 1844-1921</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19240, {&quot;Title&quot;:&quot;Bahá&#39;í Prayers - A Selection of Prayers Revealed by Bahá&#39;u&#39;lláh, the Báb, and ‘Abdu&#39;l-Bahá&quot;,&quot;Topics&quot;:[&quot;Bahai Faith -- Prayers and devotions&quot;],&quot;Primary&quot;:&quot;19240.htm&quot;,&quot;CreatorNames&quot;:[&quot;`Abdu&#39;l-Bahá, 1844-1921&quot;,&quot;Bab, `Ali Muhammad Shirazi, 1819-1850&quot;,&quot;Bahá&#39;u&#39;lláh, 1817-1892&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;19240&quot;});" class='title'>Bahá'í Prayers -<br><span class='subtitle'>A Selection of Prayers Revealed by Bahá'u'lláh, the Báb, and ‘Abdu'l-Bahá</span></a>
+<div class='author'>`Abdu'l-Bahá, 1844-1921, Bab, `Ali Muhammad Shirazi, 1819-1850, Bahá'u'lláh, 1817-1892</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19241, {&quot;Title&quot;:&quot;Bahá&#39;u&#39;lláh and the New Era&quot;,&quot;Topics&quot;:[&quot;Bahai Faith&quot;,&quot;Bahá&#39;u&#39;lláh, 1817-1892&quot;],&quot;Primary&quot;:&quot;19241.htm&quot;,&quot;CreatorNames&quot;:[&quot;Esslemont, J. E. (John Ebenezer), 1874-1925&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;19241&quot;});" class='title'>Bahá'u'lláh and the New Era</a>
+<div class='author'>Esslemont, J. E. (John Ebenezer), 1874-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19242, {&quot;Title&quot;:&quot;Bahíyyih Khánum&quot;,&quot;Topics&quot;:[&quot;Bahai Faith&quot;,&quot;Bahíyyih, Khánum&quot;,&quot;Bahíyyih, Khánum -- Correspondence&quot;],&quot;Primary&quot;:&quot;19242.htm&quot;,&quot;CreatorNames&quot;:[&quot;Baha&#39;i World Centre&quot;,&quot;`Abdu&#39;l-Bahá, 1844-1921 [Contributor]&quot;,&quot;Bahá&#39;u&#39;lláh, 1817-1892 [Contributor]&quot;,&quot;Bahíyyih, Khánum [Contributor]&quot;,&quot;Shoghi, Effendi, 1897-1957 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;19242&quot;});" class='title'>Bahíyyih Khánum</a>
+<div class='author'>Baha'i World Centre, `Abdu'l-Bahá, 1844-1921 [Contributor], Bahá'u'lláh, 1817-1892 [Contributor], Bahíyyih, Khánum [Contributor], Shoghi, Effendi, 1897-1957 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19243, {&quot;Title&quot;:&quot;The Advent of Divine Justice&quot;,&quot;Topics&quot;:[&quot;Shoghi, Effendi, 1897-1957 -- Correspondence&quot;,&quot;Bahai Faith -- North America&quot;],&quot;Primary&quot;:&quot;19243.htm&quot;,&quot;CreatorNames&quot;:[&quot;Shoghi, Effendi, 1897-1957&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;19243&quot;});" class='title'>The Advent of Divine Justice</a>
+<div class='author'>Shoghi, Effendi, 1897-1957</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19244, {&quot;Title&quot;:&quot;The Light of Divine Guidance (Volume 1)&quot;,&quot;Topics&quot;:[&quot;Shoghi, Effendi, 1897-1957 -- Correspondence&quot;,&quot;Bahai Faith -- Germany&quot;,&quot;Bahai Faith -- Austria&quot;],&quot;Primary&quot;:&quot;19244.htm&quot;,&quot;CreatorNames&quot;:[&quot;Shoghi, Effendi, 1897-1957&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;19244&quot;});" class='title'>The Light of Divine Guidance (Volume 1)</a>
+<div class='author'>Shoghi, Effendi, 1897-1957</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19245, {&quot;Title&quot;:&quot;The Light of Divine Guidance (Volume 2)&quot;,&quot;Topics&quot;:[&quot;Shoghi, Effendi, 1897-1957 -- Correspondence&quot;,&quot;Bahai Faith -- Germany&quot;,&quot;Bahai Faith -- Austria&quot;],&quot;Primary&quot;:&quot;19245.htm&quot;,&quot;CreatorNames&quot;:[&quot;Shoghi, Effendi, 1897-1957&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;19245&quot;});" class='title'>The Light of Divine Guidance (Volume 2)</a>
+<div class='author'>Shoghi, Effendi, 1897-1957</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19250, {&quot;Title&quot;:&quot;`Abdu&#39;l-Bahá in London&quot;,&quot;Topics&quot;:[&quot;Bahai Faith -- Doctrines&quot;],&quot;Primary&quot;:&quot;19250.htm&quot;,&quot;CreatorNames&quot;:[&quot;`Abdu&#39;l-Bahá, 1844-1921&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;19250&quot;});" class='title'>`Abdu'l-Bahá in London</a>
+<div class='author'>`Abdu'l-Bahá, 1844-1921</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19251, {&quot;Title&quot;:&quot;Arohanui: Letters from Shoghi Effendi to New Zealand&quot;,&quot;Topics&quot;:[&quot;Shoghi, Effendi, 1897-1957 -- Correspondence&quot;,&quot;Bahai Faith -- New Zealand&quot;],&quot;Primary&quot;:&quot;19251.htm&quot;,&quot;CreatorNames&quot;:[&quot;Shoghi, Effendi, 1897-1957&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;19251&quot;});" class='title'>Arohanui:<br><span class='subtitle'>Letters from Shoghi Effendi to New Zealand</span></a>
+<div class='author'>Shoghi, Effendi, 1897-1957</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19252, {&quot;Title&quot;:&quot;Bahá&#39;í Administration&quot;,&quot;Topics&quot;:[&quot;Shoghi, Effendi, 1897-1957 -- Correspondence&quot;,&quot;Bahai Faith -- Government&quot;],&quot;Primary&quot;:&quot;19252.htm&quot;,&quot;CreatorNames&quot;:[&quot;Shoghi, Effendi, 1897-1957&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;19252&quot;});" class='title'>Bahá'í Administration</a>
+<div class='author'>Shoghi, Effendi, 1897-1957</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19253, {&quot;Title&quot;:&quot;A Compilation on Bahá&#39;í Education&quot;,&quot;Topics&quot;:[&quot;Bahai Faith&quot;,&quot;Bahai education of children&quot;],&quot;Primary&quot;:&quot;19253.htm&quot;,&quot;CreatorNames&quot;:[&quot;Universal House of Justice&quot;,&quot;`Abdu&#39;l-Bahá, 1844-1921 [Contributor]&quot;,&quot;Bahá&#39;u&#39;lláh, 1817-1892 [Contributor]&quot;,&quot;Shoghi, Effendi, 1897-1957 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;19253&quot;});" class='title'>A Compilation on Bahá'í Education</a>
+<div class='author'>Universal House of Justice, `Abdu'l-Bahá, 1844-1921 [Contributor], Bahá'u'lláh, 1817-1892 [Contributor], Shoghi, Effendi, 1897-1957 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19254, {&quot;Title&quot;:&quot;Citadel of Faith&quot;,&quot;Topics&quot;:[&quot;Shoghi, Effendi, 1897-1957 -- Correspondence&quot;,&quot;Bahai Faith -- North America&quot;],&quot;Primary&quot;:&quot;19254.htm&quot;,&quot;CreatorNames&quot;:[&quot;Shoghi, Effendi, 1897-1957&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;19254&quot;});" class='title'>Citadel of Faith</a>
+<div class='author'>Shoghi, Effendi, 1897-1957</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19267, {&quot;Title&quot;:&quot;Century of Light&quot;,&quot;Topics&quot;:[&quot;Bahai Faith -- History -- 20th century&quot;],&quot;Primary&quot;:&quot;19267.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bahá&#39;í International Community&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;19267&quot;});" class='title'>Century of Light</a>
+<div class='author'>Bahá'í International Community</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19268, {&quot;Title&quot;:&quot;Compilation on Peace&quot;,&quot;Topics&quot;:[&quot;Bahai Faith -- Doctrines&quot;,&quot;Peace -- Religious aspects -- Bahai Faith&quot;],&quot;Primary&quot;:&quot;19268.htm&quot;,&quot;CreatorNames&quot;:[&quot;Universal House of Justice&quot;,&quot;`Abdu&#39;l-Bahá, 1844-1921 [Contributor]&quot;,&quot;Bahá&#39;u&#39;lláh, 1817-1892 [Contributor]&quot;,&quot;Shoghi, Effendi, 1897-1957 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;19268&quot;});" class='title'>Compilation on Peace</a>
+<div class='author'>Universal House of Justice, `Abdu'l-Bahá, 1844-1921 [Contributor], Bahá'u'lláh, 1817-1892 [Contributor], Shoghi, Effendi, 1897-1957 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19269, {&quot;Title&quot;:&quot;A Compilaton on Women&quot;,&quot;Topics&quot;:[&quot;Bahai Faith&quot;,&quot;Women in the Bahai Faith&quot;,&quot;Women -- Religious aspects&quot;],&quot;Primary&quot;:&quot;19269.htm&quot;,&quot;CreatorNames&quot;:[&quot;Universal House of Justice&quot;,&quot;`Abdu&#39;l-Bahá, 1844-1921 [Contributor]&quot;,&quot;Bahá&#39;u&#39;lláh, 1817-1892 [Contributor]&quot;,&quot;Shoghi, Effendi, 1897-1957 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;19269&quot;});" class='title'>A Compilaton on Women</a>
+<div class='author'>Universal House of Justice, `Abdu'l-Bahá, 1844-1921 [Contributor], Bahá'u'lláh, 1817-1892 [Contributor], Shoghi, Effendi, 1897-1957 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19270, {&quot;Title&quot;:&quot;Directives from the Guardian&quot;,&quot;Topics&quot;:[&quot;Bahai Faith&quot;],&quot;Primary&quot;:&quot;19270.htm&quot;,&quot;CreatorNames&quot;:[&quot;Shoghi, Effendi, 1897-1957&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;19270&quot;});" class='title'>Directives from the Guardian</a>
+<div class='author'>Shoghi, Effendi, 1897-1957</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19271, {&quot;Title&quot;:&quot;Dawn of a New Day&quot;,&quot;Topics&quot;:[&quot;Bahai Faith&quot;],&quot;Primary&quot;:&quot;19271.htm&quot;,&quot;CreatorNames&quot;:[&quot;Shoghi, Effendi, 1897-1957&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;19271&quot;});" class='title'>Dawn of a New Day</a>
+<div class='author'>Shoghi, Effendi, 1897-1957</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19274, {&quot;Title&quot;:&quot;Letters from the Guardian to Australia and New Zealand&quot;,&quot;Topics&quot;:[&quot;Shoghi, Effendi, 1897-1957 -- Correspondence&quot;,&quot;Bahai Faith -- Australia&quot;,&quot;Bahai Faith -- New Zealand&quot;],&quot;Primary&quot;:&quot;19274.htm&quot;,&quot;CreatorNames&quot;:[&quot;Shoghi, Effendi, 1897-1957&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;19274&quot;});" class='title'>Letters from the Guardian to Australia and New Zealand</a>
+<div class='author'>Shoghi, Effendi, 1897-1957</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19275, {&quot;Title&quot;:&quot;God Passes By&quot;,&quot;Topics&quot;:[&quot;Bahai Faith -- History&quot;],&quot;Primary&quot;:&quot;19275.htm&quot;,&quot;CreatorNames&quot;:[&quot;Shoghi, Effendi, 1897-1957&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;19275&quot;});" class='title'>God Passes By</a>
+<div class='author'>Shoghi, Effendi, 1897-1957</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19276, {&quot;Title&quot;:&quot;High Endeavours: Messages to Alaska&quot;,&quot;Topics&quot;:[&quot;Shoghi, Effendi, 1897-1957 -- Correspondence&quot;,&quot;Bahai Faith -- Alaska&quot;],&quot;Primary&quot;:&quot;19276.htm&quot;,&quot;CreatorNames&quot;:[&quot;Shoghi, Effendi, 1897-1957&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;19276&quot;});" class='title'>High Endeavours:<br><span class='subtitle'>Messages to Alaska</span></a>
+<div class='author'>Shoghi, Effendi, 1897-1957</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19277, {&quot;Title&quot;:&quot;Messages to America - Selected Letters and Cablegrams Addressed to the Bahá&#39;í&#39;s of North America 1932–1946&quot;,&quot;Topics&quot;:[&quot;Shoghi, Effendi, 1897-1957 -- Correspondence&quot;,&quot;Bahai Faith -- North America&quot;],&quot;Primary&quot;:&quot;19277.htm&quot;,&quot;CreatorNames&quot;:[&quot;Shoghi, Effendi, 1897-1957&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;19277&quot;});" class='title'>Messages to America -<br><span class='subtitle'>Selected Letters and Cablegrams Addressed to the Bahá'í's of North America 1932–1946</span></a>
+<div class='author'>Shoghi, Effendi, 1897-1957</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19278, {&quot;Title&quot;:&quot;Messages to Canada&quot;,&quot;Topics&quot;:[&quot;Shoghi, Effendi, 1897-1957 -- Correspondence&quot;,&quot;Bahai Faith -- Canada&quot;],&quot;Primary&quot;:&quot;19278.htm&quot;,&quot;CreatorNames&quot;:[&quot;Shoghi, Effendi, 1897-1957&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;19278&quot;});" class='title'>Messages to Canada</a>
+<div class='author'>Shoghi, Effendi, 1897-1957</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19279, {&quot;Title&quot;:&quot;Memorials of the Faithful&quot;,&quot;Topics&quot;:[&quot;Bahai Faith&quot;,&quot;Bahais -- Biography&quot;],&quot;Primary&quot;:&quot;19279.htm&quot;,&quot;CreatorNames&quot;:[&quot;`Abdu&#39;l-Bahá, 1844-1921&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;19279&quot;});" class='title'>Memorials of the Faithful</a>
+<div class='author'>`Abdu'l-Bahá, 1844-1921</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19280, {&quot;Title&quot;:&quot;Messages to the Bahá&#39;í World: 1950–1957&quot;,&quot;Topics&quot;:[&quot;Bahai Faith&quot;,&quot;Shoghi, Effendi, 1897-1957 -- Correspondence&quot;],&quot;Primary&quot;:&quot;19280.htm&quot;,&quot;CreatorNames&quot;:[&quot;Shoghi, Effendi, 1897-1957&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;19280&quot;});" class='title'>Messages to the Bahá'í World:<br><span class='subtitle'>1950–1957</span></a>
+<div class='author'>Shoghi, Effendi, 1897-1957</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19281, {&quot;Title&quot;:&quot;One Common Faith&quot;,&quot;Topics&quot;:[&quot;Bahai Faith -- Doctrines&quot;,&quot;Bahai Faith -- Relations&quot;,&quot;Religions -- Relations&quot;],&quot;Primary&quot;:&quot;19281.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bahá&#39;í International Community&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;19281&quot;});" class='title'>One Common Faith</a>
+<div class='author'>Bahá'í International Community</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19282, {&quot;Title&quot;:&quot;The Promised Day Is Come&quot;,&quot;Topics&quot;:[&quot;Kings and rulers&quot;,&quot;Bahai Faith&quot;,&quot;Shoghi, Effendi, 1897-1957 -- Correspondence&quot;],&quot;Primary&quot;:&quot;19282.htm&quot;,&quot;CreatorNames&quot;:[&quot;Shoghi, Effendi, 1897-1957&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;19282&quot;});" class='title'>The Promised Day Is Come</a>
+<div class='author'>Shoghi, Effendi, 1897-1957</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19283, {&quot;Title&quot;:&quot;The Prosperity of Humankind&quot;,&quot;Topics&quot;:[&quot;Bahai Faith -- Doctrines&quot;,&quot;Peace -- Religious aspects -- Bahai Faith&quot;],&quot;Primary&quot;:&quot;19283.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bahá&#39;í International Community&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;19283&quot;});" class='title'>The Prosperity of Humankind</a>
+<div class='author'>Bahá'í International Community</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19284, {&quot;Title&quot;:&quot;Paris Talks&quot;,&quot;Topics&quot;:[&quot;Bahai Faith&quot;],&quot;Primary&quot;:&quot;19284.htm&quot;,&quot;CreatorNames&quot;:[&quot;`Abdu&#39;l-Bahá, 1844-1921&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;19284&quot;});" class='title'>Paris Talks</a>
+<div class='author'>`Abdu'l-Bahá, 1844-1921</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19285, {&quot;Title&quot;:&quot;The Promulgation of Universal Peace&quot;,&quot;Topics&quot;:[&quot;Bahai Faith&quot;,&quot;Peace -- Religious aspects -- Bahai Faith&quot;],&quot;Primary&quot;:&quot;19285.htm&quot;,&quot;CreatorNames&quot;:[&quot;`Abdu&#39;l-Bahá, 1844-1921&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;19285&quot;});" class='title'>The Promulgation of Universal Peace</a>
+<div class='author'>`Abdu'l-Bahá, 1844-1921</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19286, {&quot;Title&quot;:&quot;The Promise of World Peace&quot;,&quot;Topics&quot;:[&quot;Bahai Faith -- Doctrines&quot;,&quot;Peace -- Religious aspects -- Bahai Faith&quot;],&quot;Primary&quot;:&quot;19286.htm&quot;,&quot;CreatorNames&quot;:[&quot;Universal House of Justice&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;19286&quot;});" class='title'>The Promise of World Peace</a>
+<div class='author'>Universal House of Justice</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19287, {&quot;Title&quot;:&quot;Selections from the Writings of `Abdu&#39;l-Bahá&quot;,&quot;Topics&quot;:[&quot;Bahai Faith&quot;],&quot;Primary&quot;:&quot;19287.htm&quot;,&quot;CreatorNames&quot;:[&quot;`Abdu&#39;l-Bahá, 1844-1921&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;19287&quot;});" class='title'>Selections from the Writings of `Abdu'l-Bahá</a>
+<div class='author'>`Abdu'l-Bahá, 1844-1921</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19289, {&quot;Title&quot;:&quot;Some Answered Questions&quot;,&quot;Topics&quot;:[&quot;Bahai Faith -- Doctrines&quot;],&quot;Primary&quot;:&quot;19289.htm&quot;,&quot;CreatorNames&quot;:[&quot;`Abdu&#39;l-Bahá, 1844-1921&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;19289&quot;});" class='title'>Some Answered Questions</a>
+<div class='author'>`Abdu'l-Bahá, 1844-1921</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19290, {&quot;Title&quot;:&quot;Statement on Bahá&#39;u&#39;lláh&quot;,&quot;Topics&quot;:[&quot;Bahai Faith&quot;,&quot;Bahá&#39;u&#39;lláh, 1817-1892&quot;],&quot;Primary&quot;:&quot;19290.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bahá&#39;í International Community&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;19290&quot;});" class='title'>Statement on Bahá'u'lláh</a>
+<div class='author'>Bahá'í International Community</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19291, {&quot;Title&quot;:&quot;Extracts from the Writings of Bahá&#39;u&#39;lláh and `Abdu&#39;l-Bahá and from the Letters of Shoghi Effendi and the Universal House of Justice on Scholarship&quot;,&quot;Topics&quot;:[&quot;Bahai Faith&quot;],&quot;Primary&quot;:&quot;19291.htm&quot;,&quot;CreatorNames&quot;:[&quot;Universal House of Justice&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;19291&quot;});" class='title'>Extracts from the Writings of Bahá'u'lláh and `Abdu'l-Bahá and from the Letters of Shoghi Effendi and the Universal House of Justice on Scholarship</a>
+<div class='author'>Universal House of Justice</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19292, {&quot;Title&quot;:&quot;`Abdu&#39;l-Bahá&#39;s Tablet to Dr. Forel&quot;,&quot;Topics&quot;:[&quot;Bahai Faith&quot;],&quot;Primary&quot;:&quot;19292.htm&quot;,&quot;CreatorNames&quot;:[&quot;`Abdu&#39;l-Bahá, 1844-1921&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;19292&quot;});" class='title'>`Abdu'l-Bahá's Tablet to Dr. Forel</a>
+<div class='author'>`Abdu'l-Bahá, 1844-1921</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19296, {&quot;Title&quot;:&quot;Tablets of the Divine Plan&quot;,&quot;Topics&quot;:[&quot;Bahai Faith&quot;],&quot;Primary&quot;:&quot;19296.htm&quot;,&quot;CreatorNames&quot;:[&quot;`Abdu&#39;l-Bahá, 1844-1921&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;19296&quot;});" class='title'>Tablets of the Divine Plan</a>
+<div class='author'>`Abdu'l-Bahá, 1844-1921</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19297, {&quot;Title&quot;:&quot;The Unfolding Destiny of the British Bahá&#39;í Community : the Messages from the Guardian of the Bahá&#39;í Faith to the Bahá&#39;ís of the British Isles&quot;,&quot;Topics&quot;:[&quot;Shoghi, Effendi, 1897-1957 -- Correspondence&quot;,&quot;Bahai Faith -- Great Britain -- History -- Sources&quot;],&quot;Primary&quot;:&quot;19297.htm&quot;,&quot;CreatorNames&quot;:[&quot;Shoghi, Effendi, 1897-1957&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;19297&quot;});" class='title'>The Unfolding Destiny of the British Bahá'í Community :<br><span class='subtitle'>the Messages from the Guardian of the Bahá'í Faith to the Bahá'ís of the British Isles</span></a>
+<div class='author'>Shoghi, Effendi, 1897-1957</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19298, {&quot;Title&quot;:&quot;The World Order of Bahá&#39;u&#39;lláh&quot;,&quot;Topics&quot;:[&quot;Bahai Faith&quot;,&quot;Shoghi, Effendi, 1897-1957 -- Correspondence&quot;],&quot;Primary&quot;:&quot;19298.htm&quot;,&quot;CreatorNames&quot;:[&quot;Shoghi, Effendi, 1897-1957&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;19298&quot;});" class='title'>The World Order of Bahá'u'lláh</a>
+<div class='author'>Shoghi, Effendi, 1897-1957</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19299, {&quot;Title&quot;:&quot;The Will And Testament of ‘Abdu&#39;l-Bahá&quot;,&quot;Topics&quot;:[&quot;Bahai Faith&quot;,&quot;`Abdu&#39;l-Bahá, 1844-1921&quot;],&quot;Primary&quot;:&quot;19299.htm&quot;,&quot;CreatorNames&quot;:[&quot;`Abdu&#39;l-Bahá, 1844-1921&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;19299&quot;});" class='title'>The Will And Testament of ‘Abdu'l-Bahá</a>
+<div class='author'>`Abdu'l-Bahá, 1844-1921</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19300, {&quot;Title&quot;:&quot;A Traveler&#39;s Narrative Written to Illustrate the Episode of the Báb&quot;,&quot;Topics&quot;:[&quot;Bahai Faith&quot;,&quot;Babism&quot;],&quot;Primary&quot;:&quot;19300.htm&quot;,&quot;CreatorNames&quot;:[&quot;`Abdu&#39;l-Bahá, 1844-1921&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;19300&quot;});" class='title'>A Traveler's Narrative Written to Illustrate the Episode of the Báb</a>
+<div class='author'>`Abdu'l-Bahá, 1844-1921</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19312, {&quot;Title&quot;:&quot;Tablets of Abdul-Baha Abbas&quot;,&quot;Topics&quot;:[&quot;Bahai Faith&quot;],&quot;Primary&quot;:&quot;19312.htm&quot;,&quot;CreatorNames&quot;:[&quot;`Abdu&#39;l-Bahá, 1844-1921&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;19312&quot;});" class='title'>Tablets of Abdul-Baha Abbas</a>
+<div class='author'>`Abdu'l-Bahá, 1844-1921</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19786, {&quot;Title&quot;:&quot;De Koran - Voorafgegaan door het leven van Mahomed, eene inleiding - omtrent de Godsdienstgebruiken der Mahomedanen, enz.&quot;,&quot;Topics&quot;:[&quot;Qur&#39;an&quot;,&quot;Islam&quot;,&quot;Muhammad, Prophet, -632&quot;],&quot;Primary&quot;:&quot;19786.htm&quot;,&quot;CreatorNames&quot;:[&quot;Japikse, Nicolaas, 1872-1944 [Contributor]&quot;,&quot;Keyzer, Salomo, 1823-1868 [Editor]&quot;,&quot;Kazimirski Biberstein, Albin de, 1808-1887 [Translator]&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;19786&quot;});" class='title'>De Koran -<br><span class='subtitle'>Voorafgegaan door het leven van Mahomed, eene inleiding - omtrent de Godsdienstgebruiken der Mahomedanen, enz.</span></a>
+<div class='author'>Japikse, Nicolaas, 1872-1944 [Contributor], Keyzer, Salomo, 1823-1868 [Editor], Kazimirski Biberstein, Albin de, 1808-1887 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20394, {&quot;Title&quot;:&quot;Correspondence Relating to Executions in Turkey for Apostacy from Islamism&quot;,&quot;Topics&quot;:[&quot;Apostasy -- Islam&quot;,&quot;Executions (Islamic law)&quot;],&quot;Primary&quot;:&quot;20394.txt&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;20394&quot;});" class='title'>Correspondence Relating to Executions in Turkey for Apostacy from Islamism</a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20502, {&quot;Title&quot;:&quot;De Groote Pyramide&quot;,&quot;Topics&quot;:[&quot;Theosophy&quot;,&quot;Pyramids&quot;],&quot;Primary&quot;:&quot;20502.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ginkel, H. J. van&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;20502&quot;});" class='title'>De Groote Pyramide</a>
+<div class='author'>Ginkel, H. J. van</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20660, {&quot;Title&quot;:&quot;The Faith of Islam&quot;,&quot;Topics&quot;:[&quot;Islam&quot;],&quot;Primary&quot;:&quot;20660.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sell, Edward, 1839-1932&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;20660&quot;});" class='title'>The Faith of Islam</a>
+<div class='author'>Sell, Edward, 1839-1932</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20800, {&quot;Title&quot;:&quot;London Lectures of 1907&quot;,&quot;Topics&quot;:[&quot;Religions&quot;,&quot;Theosophy&quot;],&quot;Primary&quot;:&quot;20800.htm&quot;,&quot;CreatorNames&quot;:[&quot;Besant, Annie, 1847-1933&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;20800&quot;});" class='title'>London Lectures of 1907</a>
+<div class='author'>Besant, Annie, 1847-1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20927, {&quot;Title&quot;:&quot;A Critical Exposition of the Popular &#39;Jihád&#39; - Showing that all the Wars of Mohammad Were Defensive; and - that Aggressive War, or Compulsory Conversion, is not - Allowed in The Koran - 1885&quot;,&quot;Topics&quot;:[&quot;War -- Religious aspects -- Islam&quot;,&quot;Islam -- Relations&quot;,&quot;Jihad&quot;,&quot;Islam -- Apologetic works&quot;],&quot;Primary&quot;:&quot;20927.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cherágh Ali, 1844-1895&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;20927&quot;});" class='title'>A Critical Exposition of the Popular 'Jihád' -<br><span class='subtitle'>Showing that all the Wars of Mohammad Were Defensive; and - that Aggressive War, or Compulsory Conversion, is not - Allowed in The Koran - 1885</span></a>
+<div class='author'>Cherágh Ali, 1844-1895</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(21080, {&quot;Title&quot;:&quot;The Astral Plane - Its Scenery, Inhabitants and Phenomena&quot;,&quot;Topics&quot;:[&quot;Theosophy&quot;,&quot;Astral body&quot;],&quot;Primary&quot;:&quot;21080.htm&quot;,&quot;CreatorNames&quot;:[&quot;Leadbeater, C. W. (Charles Webster), 1854-1934&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;21080&quot;});" class='title'>The Astral Plane -<br><span class='subtitle'>Its Scenery, Inhabitants and Phenomena</span></a>
+<div class='author'>Leadbeater, C. W. (Charles Webster), 1854-1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(21533, {&quot;Title&quot;:&quot;Reincarnation: A Study in Human Evolution&quot;,&quot;Topics&quot;:[&quot;Reincarnation&quot;,&quot;Theosophy&quot;],&quot;Primary&quot;:&quot;21533.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pascal, Théophile, 1860-1909&quot;,&quot;Rothwell, Fred, 1869-1934 [Translator]&quot;],&quot;LoCC&quot;:[&quot;BL&quot;,&quot;BP&quot;],&quot;PG_ID&quot;:&quot;21533&quot;});" class='title'>Reincarnation:<br><span class='subtitle'>A Study in Human Evolution</span></a>
+<div class='author'>Pascal, Théophile, 1860-1909, Rothwell, Fred, 1869-1934 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24314, {&quot;Title&quot;:&quot;Mystics and Saints of Islam&quot;,&quot;Topics&quot;:[&quot;Muslim saints&quot;,&quot;Mysticism -- Islam&quot;,&quot;Sufism&quot;],&quot;Primary&quot;:&quot;24314.htm&quot;,&quot;CreatorNames&quot;:[&quot;Field, Claud, 1863-1941&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;24314&quot;});" class='title'>Mystics and Saints of Islam</a>
+<div class='author'>Field, Claud, 1863-1941</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24315, {&quot;Title&quot;:&quot;The Silesian Horseherd - Questions of the Hour&quot;,&quot;Topics&quot;:[&quot;Religion&quot;,&quot;Church history&quot;,&quot;Christianity&quot;,&quot;Logos (Philosophy)&quot;,&quot;Logos (Christian theology)&quot;],&quot;Primary&quot;:&quot;24315.htm&quot;,&quot;CreatorNames&quot;:[&quot;Müller, F. Max (Friedrich Max), 1823-1900&quot;],&quot;LoCC&quot;:[&quot;BP&quot;,&quot;BX&quot;],&quot;PG_ID&quot;:&quot;24315&quot;});" class='title'>The Silesian Horseherd -<br><span class='subtitle'>Questions of the Hour</span></a>
+<div class='author'>Müller, F. Max (Friedrich Max), 1823-1900</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25254, {&quot;Title&quot;:&quot;Notes on Islam&quot;,&quot;Topics&quot;:[&quot;Islam&quot;],&quot;Primary&quot;:&quot;25254.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hussain, Ahmed, Sir, 1863-&quot;,&quot;Hussain, Khaja Muhammad, 1858- [Editor]&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;25254&quot;});" class='title'>Notes on Islam</a>
+<div class='author'>Hussain, Ahmed, Sir, 1863-, Hussain, Khaja Muhammad, 1858- [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26938, {&quot;Title&quot;:&quot;Esoteric Christianity, or The Lesser Mysteries&quot;,&quot;Topics&quot;:[&quot;Mysticism&quot;,&quot;Theosophy&quot;,&quot;Christianity -- Miscellanea&quot;],&quot;Primary&quot;:&quot;26938.htm&quot;,&quot;CreatorNames&quot;:[&quot;Besant, Annie, 1847-1933&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;26938&quot;});" class='title'>Esoteric Christianity, or The Lesser Mysteries</a>
+<div class='author'>Besant, Annie, 1847-1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2800, {&quot;Title&quot;:&quot;The Koran (Al-Qur&#39;an)&quot;,&quot;Topics&quot;:[&quot;Qur&#39;an&quot;],&quot;Primary&quot;:&quot;2800.txt&quot;,&quot;CreatorNames&quot;:[&quot;Margoliouth, G. (George), 1853-1924 [Author of introduction, etc.]&quot;,&quot;Rodwell, J. M. (John Medows), 1808-1900 [Translator]&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;2800&quot;});" class='title'>The Koran (Al-Qur'an)</a>
+<div class='author'>Margoliouth, G. (George), 1853-1924 [Author of introduction, etc.], Rodwell, J. M. (John Medows), 1808-1900 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28262, {&quot;Title&quot;:&quot;Avatâras - Four lectures delivered at the twenty-fourth anniversary - meeting of the Theosophical Society at Adyar, Madras, - December, 1899&quot;,&quot;Topics&quot;:[&quot;Theosophy&quot;,&quot;Avatars (Religion)&quot;],&quot;Primary&quot;:&quot;28262.htm&quot;,&quot;CreatorNames&quot;:[&quot;Besant, Annie, 1847-1933&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;28262&quot;});" class='title'>Avatâras -<br><span class='subtitle'>Four lectures delivered at the twenty-fourth anniversary - meeting of the Theosophical Society at Adyar, Madras, - December, 1899</span></a>
+<div class='author'>Besant, Annie, 1847-1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29399, {&quot;Title&quot;:&quot;Clairvoyance&quot;,&quot;Topics&quot;:[&quot;Theosophy&quot;,&quot;Clairvoyance&quot;],&quot;Primary&quot;:&quot;29399.htm&quot;,&quot;CreatorNames&quot;:[&quot;Leadbeater, C. W. (Charles Webster), 1854-1934&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;29399&quot;});" class='title'>Clairvoyance</a>
+<div class='author'>Leadbeater, C. W. (Charles Webster), 1854-1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30134, {&quot;Title&quot;:&quot;Elementary Theosophy&quot;,&quot;Topics&quot;:[&quot;Theosophy&quot;],&quot;Primary&quot;:&quot;30134.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rogers, L. W. (Louis William), 1859-1953&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;30134&quot;});" class='title'>Elementary Theosophy</a>
+<div class='author'>Rogers, L. W. (Louis William), 1859-1953</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30718, {&quot;Title&quot;:&quot;An Outline of Occult Science&quot;,&quot;Topics&quot;:[&quot;Occultism&quot;,&quot;Anthroposophy&quot;,&quot;Theosophy&quot;],&quot;Primary&quot;:&quot;30718.htm&quot;,&quot;CreatorNames&quot;:[&quot;Steiner, Rudolf, 1861-1925&quot;],&quot;LoCC&quot;:[&quot;BF&quot;,&quot;BP&quot;],&quot;PG_ID&quot;:&quot;30718&quot;});" class='title'>An Outline of Occult Science</a>
+<div class='author'>Steiner, Rudolf, 1861-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3434, {&quot;Title&quot;:&quot;The Koran (Al-Qur&#39;an)&quot;,&quot;Topics&quot;:[&quot;Qur&#39;an&quot;],&quot;Primary&quot;:&quot;3434.txt&quot;,&quot;CreatorNames&quot;:[&quot;Rodwell, J. M. (John Medows), 1808-1900 [Translator]&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;3434&quot;});" class='title'>The Koran (Al-Qur'an)</a>
+<div class='author'>Rodwell, J. M. (John Medows), 1808-1900 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36373, {&quot;Title&quot;:&quot;H. P. Blavatsky; A Great Betrayal&quot;,&quot;Topics&quot;:[&quot;Blavatsky, H. P. (Helena Petrovna), 1831-1891&quot;,&quot;Besant, Annie, 1847-1933&quot;,&quot;Leadbeater, C. W. (Charles Webster), 1854-1934&quot;,&quot;Theosophical Society (Chennai, India)&quot;],&quot;Primary&quot;:&quot;36373.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cleather, Alice Leighton&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;36373&quot;});" class='title'>H. P. Blavatsky;<br><span class='subtitle'>A Great Betrayal</span></a>
+<div class='author'>Cleather, Alice Leighton</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36585, {&quot;Title&quot;:&quot;Bahaism and Its Claims - A Study of the Religion Promulgated by Baha Ullah and Abdul Baha&quot;,&quot;Topics&quot;:[&quot;Bahai Faith -- Controversial literature&quot;],&quot;Primary&quot;:&quot;36585.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wilson, Samuel Graham, 1858-1916&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;36585&quot;});" class='title'>Bahaism and Its Claims -<br><span class='subtitle'>A Study of the Religion Promulgated by Baha Ullah and Abdul Baha</span></a>
+<div class='author'>Wilson, Samuel Graham, 1858-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38114, {&quot;Title&quot;:&quot;Islam, Her Moral And Spiritual Value: A Rational And Pyschological Study&quot;,&quot;Topics&quot;:[&quot;Islam&quot;],&quot;Primary&quot;:&quot;38114.htm&quot;,&quot;CreatorNames&quot;:[&quot;Leonard, Arthur Glyn&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;38114&quot;});" class='title'>Islam, Her Moral And Spiritual Value:<br><span class='subtitle'>A Rational And Pyschological Study</span></a>
+<div class='author'>Leonard, Arthur Glyn</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39523, {&quot;Title&quot;:&quot;The Life of Mohammad, the Prophet of Allah&quot;,&quot;Topics&quot;:[&quot;Muhammad, Prophet, -632&quot;],&quot;Primary&quot;:&quot;39523.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ben Ibrahim, Sliman&quot;,&quot;Dinet, Etienne, 1861-1929&quot;,&quot;Rasim, Muhammad, 1896-1975 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;39523&quot;});" class='title'>The Life of Mohammad, the Prophet of Allah</a>
+<div class='author'>Ben Ibrahim, Sliman, Dinet, Etienne, 1861-1929, Rasim, Muhammad, 1896-1975 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39986, {&quot;Title&quot;:&quot;The Way of Initiation; or, How to Attain Knowledge of the Higher Worlds&quot;,&quot;Topics&quot;:[&quot;Theosophy&quot;],&quot;Primary&quot;:&quot;39986.htm&quot;,&quot;CreatorNames&quot;:[&quot;Steiner, Rudolf, 1861-1925&quot;,&quot;Schuré, Edouard, 1841-1929 [Contributor]&quot;,&quot;Gysi, Max [Translator]&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;39986&quot;});" class='title'>The Way of Initiation;<br><span class='subtitle'>or, How to Attain Knowledge of the Higher Worlds</span></a>
+<div class='author'>Steiner, Rudolf, 1861-1925, Schuré, Edouard, 1841-1929 [Contributor], Gysi, Max [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40224, {&quot;Title&quot;:&quot;Evolution of Life and Form - Four lectures delivered at the twenty-third anniversary meeting of the Theosophical Society at Adyar, Madras, 1898&quot;,&quot;Topics&quot;:[&quot;Evolution&quot;,&quot;Theosophy&quot;,&quot;Life -- Origin&quot;],&quot;Primary&quot;:&quot;40224.htm&quot;,&quot;CreatorNames&quot;:[&quot;Besant, Annie, 1847-1933&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;40224&quot;});" class='title'>Evolution of Life and Form -<br><span class='subtitle'>Four lectures delivered at the twenty-third anniversary meeting of the Theosophical Society at Adyar, Madras, 1898</span></a>
+<div class='author'>Besant, Annie, 1847-1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44515, {&quot;Title&quot;:&quot;Selections from the Kur-an&quot;,&quot;Topics&quot;:[&quot;Qur&#39;an&quot;],&quot;Primary&quot;:&quot;44515.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lane-Poole, Stanley, 1854-1931 [Author of introduction, etc.]&quot;,&quot;Lane, Edward William, 1801-1876 [Editor]&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;44515&quot;});" class='title'>Selections from the Kur-an</a>
+<div class='author'>Lane-Poole, Stanley, 1854-1931 [Author of introduction, etc.], Lane, Edward William, 1801-1876 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47749, {&quot;Title&quot;:&quot;Letters from a Sûfî Teacher&quot;,&quot;Topics&quot;:[&quot;Sufism -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;47749.htm&quot;,&quot;CreatorNames&quot;:[&quot;Maniri, Sharaf al-Din Ahmad ibn Yahya, -1380?&quot;,&quot;Singh, Baijnath [Translator]&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;47749&quot;});" class='title'>Letters from a Sûfî Teacher</a>
+<div class='author'>Maniri, Sharaf al-Din Ahmad ibn Yahya, -1380?, Singh, Baijnath [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47963, {&quot;Title&quot;:&quot;La doctrine de l&#39;Islam&quot;,&quot;Topics&quot;:[&quot;Islam&quot;,&quot;Islam -- Essence, genius, nature&quot;],&quot;Primary&quot;:&quot;47963.htm&quot;,&quot;CreatorNames&quot;:[&quot;Carra de Vaux, Bernard, 1867-1953&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;47963&quot;});" class='title'>La doctrine de l'Islam</a>
+<div class='author'>Carra de Vaux, Bernard, 1867-1953</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49257, {&quot;Title&quot;:&quot;The Báb: The Herald of the Day of Days&quot;,&quot;Topics&quot;:[&quot;Bahai Faith&quot;,&quot;Bab, Ali Muhammad Shirazi, 1819-1850&quot;],&quot;Primary&quot;:&quot;49257.htm&quot;,&quot;CreatorNames&quot;:[&quot;Balyuzi, H. M., 1908-1980&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;49257&quot;});" class='title'>The Báb:<br><span class='subtitle'>The Herald of the Day of Days</span></a>
+<div class='author'>Balyuzi, H. M., 1908-1980</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54260, {&quot;Title&quot;:&quot;The Spiritual Guidance of Man and of Mankind&quot;,&quot;Topics&quot;:[&quot;Anthroposophy&quot;,&quot;Theosophy&quot;,&quot;Jesus Christ -- Anthroposophical interpretations&quot;],&quot;Primary&quot;:&quot;54260.htm&quot;,&quot;CreatorNames&quot;:[&quot;Steiner, Rudolf, 1861-1925&quot;,&quot;Collison, Harry [Editor]&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;54260&quot;});" class='title'>The Spiritual Guidance of Man and of Mankind</a>
+<div class='author'>Steiner, Rudolf, 1861-1925, Collison, Harry [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54268, {&quot;Title&quot;:&quot;The Ocean of Theosophy&quot;,&quot;Topics&quot;:[&quot;Theosophy&quot;],&quot;Primary&quot;:&quot;54268.htm&quot;,&quot;CreatorNames&quot;:[&quot;Judge, William Quan, 1851-1896&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;54268&quot;});" class='title'>The Ocean of Theosophy</a>
+<div class='author'>Judge, William Quan, 1851-1896</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54488, {&quot;Title&quot;:&quot;The Secret Doctrine, Vol. 2 of 4 - The Synthesis of Science, Religion, and Philosophy&quot;,&quot;Topics&quot;:[&quot;Theosophy&quot;],&quot;Primary&quot;:&quot;54488.htm&quot;,&quot;CreatorNames&quot;:[&quot;Blavatsky, H. P. (Helena Petrovna), 1831-1891&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;54488&quot;});" class='title'>The Secret Doctrine, Vol. 2 of 4 -<br><span class='subtitle'>The Synthesis of Science, Religion, and Philosophy</span></a>
+<div class='author'>Blavatsky, H. P. (Helena Petrovna), 1831-1891</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54810, {&quot;Title&quot;:&quot;Nederland en de Islâm&quot;,&quot;Topics&quot;:[&quot;Islam -- Relations -- Christianity&quot;,&quot;Islam -- Indonesia&quot;],&quot;Primary&quot;:&quot;54810.htm&quot;,&quot;CreatorNames&quot;:[&quot;Snouck Hurgronje, C. (Christiaan), 1857-1936&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;54810&quot;});" class='title'>Nederland en de Islâm</a>
+<div class='author'>Snouck Hurgronje, C. (Christiaan), 1857-1936</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54824, {&quot;Title&quot;:&quot;The Secret Doctrine, Vol. 1 of 4 - The Synthesis of Science, Religion, and Philosophy&quot;,&quot;Topics&quot;:[&quot;Theosophy&quot;],&quot;Primary&quot;:&quot;54824.htm&quot;,&quot;CreatorNames&quot;:[&quot;Blavatsky, H. P. (Helena Petrovna), 1831-1891&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;54824&quot;});" class='title'>The Secret Doctrine, Vol. 1 of 4 -<br><span class='subtitle'>The Synthesis of Science, Religion, and Philosophy</span></a>
+<div class='author'>Blavatsky, H. P. (Helena Petrovna), 1831-1891</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55618, {&quot;Title&quot;:&quot;The Key to Theosophy - Being a Clear Exposition, in the Form of Question and Answer, of the Ethics, Science and Philosophy for the Study of Which the Theosophical Society Has Been Founded&quot;,&quot;Topics&quot;:[&quot;Theosophy&quot;],&quot;Primary&quot;:&quot;55618.htm&quot;,&quot;CreatorNames&quot;:[&quot;Blavatsky, H. P. (Helena Petrovna), 1831-1891&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;55618&quot;});" class='title'>The Key to Theosophy -<br><span class='subtitle'>Being a Clear Exposition, in the Form of Question and Answer, of the Ethics, Science and Philosophy for the Study of Which the Theosophical Society Has Been Founded</span></a>
+<div class='author'>Blavatsky, H. P. (Helena Petrovna), 1831-1891</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55833, {&quot;Title&quot;:&quot;Letters That Have Helped Me&quot;,&quot;Topics&quot;:[&quot;Theosophy&quot;,&quot;Judge, William Quan, 1851-1896&quot;,&quot;Theosophists -- United States -- Correspondence&quot;],&quot;Primary&quot;:&quot;55833.htm&quot;,&quot;CreatorNames&quot;:[&quot;Judge, William Quan, 1851-1896&quot;,&quot;Keightley, Julia Wharton Lewis Campbell Ver Planck&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;55833&quot;});" class='title'>Letters That Have Helped Me</a>
+<div class='author'>Judge, William Quan, 1851-1896, Keightley, Julia Wharton Lewis Campbell Ver Planck</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55940, {&quot;Title&quot;:&quot;Theosophy and Life&#39;s Deeper Problems - Being the Four Convention Lectures Delivered in Bombay at the Fortieth Anniversary of the Theosophical Society, December, 1915&quot;,&quot;Topics&quot;:[&quot;Theosophy&quot;],&quot;Primary&quot;:&quot;55940.htm&quot;,&quot;CreatorNames&quot;:[&quot;Besant, Annie, 1847-1933&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;55940&quot;});" class='title'>Theosophy and Life's Deeper Problems -<br><span class='subtitle'>Being the Four Convention Lectures Delivered in Bombay at the Fortieth Anniversary of the Theosophical Society, December, 1915</span></a>
+<div class='author'>Besant, Annie, 1847-1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5641, {&quot;Title&quot;:&quot;Man or Matter - Introduction to a Spiritual Understanding of Nature on the Basis of Goethe&#39;s Method of Training Observation and Thought&quot;,&quot;Topics&quot;:[&quot;Goethe, Johann Wolfgang von, 1749-1832&quot;,&quot;Anthroposophy&quot;,&quot;Cosmology&quot;],&quot;Primary&quot;:&quot;5641.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lehrs, Ernst, 1894-1979&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;5641&quot;});" class='title'>Man or Matter -<br><span class='subtitle'>Introduction to a Spiritual Understanding of Nature on the Basis of Goethe's Method of Training Observation and Thought</span></a>
+<div class='author'>Lehrs, Ernst, 1894-1979</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56761, {&quot;Title&quot;:&quot;Universal Brotherhood, Volume XIII, No. 10, January 1899 - A Magazine Devoted to the Brotherhood of Humanity, the Theosophical Movement, Philosophy, Science and Art&quot;,&quot;Topics&quot;:[&quot;Theosophy -- Periodicals&quot;],&quot;Primary&quot;:&quot;56761.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;,&quot;Neresheimer, E. August [Editor]&quot;,&quot;Tingley, Katherine Augusta Westcott, 1847-1929 [Editor]&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;56761&quot;});" class='title'>Universal Brotherhood, Volume XIII, No. 10, January 1899 -<br><span class='subtitle'>A Magazine Devoted to the Brotherhood of Humanity, the Theosophical Movement, Philosophy, Science and Art</span></a>
+<div class='author'>Various, Neresheimer, E. August [Editor], Tingley, Katherine Augusta Westcott, 1847-1929 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56880, {&quot;Title&quot;:&quot;The Secret Doctrine, Vol. 3 of 4 - The Synthesis of Science, Religion, and Philosophy&quot;,&quot;Topics&quot;:[&quot;Theosophy&quot;],&quot;Primary&quot;:&quot;56880.htm&quot;,&quot;CreatorNames&quot;:[&quot;Blavatsky, H. P. (Helena Petrovna), 1831-1891&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;56880&quot;});" class='title'>The Secret Doctrine, Vol. 3 of 4 -<br><span class='subtitle'>The Synthesis of Science, Religion, and Philosophy</span></a>
+<div class='author'>Blavatsky, H. P. (Helena Petrovna), 1831-1891</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57292, {&quot;Title&quot;:&quot;Echoes From The Orient: A Broad Outline of Theosophical Doctrines&quot;,&quot;Topics&quot;:[&quot;Theosophy&quot;],&quot;Primary&quot;:&quot;57292.htm&quot;,&quot;CreatorNames&quot;:[&quot;Judge, William Quan, 1851-1896&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;57292&quot;});" class='title'>Echoes From The Orient:<br><span class='subtitle'>A Broad Outline of Theosophical Doctrines</span></a>
+<div class='author'>Judge, William Quan, 1851-1896</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57667, {&quot;Title&quot;:&quot;The changing world, and lectures to theosophical students. - Fifteen lectures delivered in London during May, June, and July, 1909&quot;,&quot;Topics&quot;:[&quot;Theosophy&quot;,&quot;Theosophy -- Study and teaching&quot;],&quot;Primary&quot;:&quot;57667.htm&quot;,&quot;CreatorNames&quot;:[&quot;Besant, Annie, 1847-1933&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;57667&quot;});" class='title'>The changing world, and lectures to theosophical students. -<br><span class='subtitle'>Fifteen lectures delivered in London during May, June, and July, 1909</span></a>
+<div class='author'>Besant, Annie, 1847-1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5772, {&quot;Title&quot;:&quot;AE in the Irish Theosophist&quot;,&quot;Topics&quot;:[&quot;Theosophy&quot;],&quot;Primary&quot;:&quot;5772.txt&quot;,&quot;CreatorNames&quot;:[&quot;Russell, George William, 1867-1935&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;5772&quot;});" class='title'>AE in the Irish Theosophist</a>
+<div class='author'>Russell, George William, 1867-1935</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57855, {&quot;Title&quot;:&quot;Universal Brotherhood, Volume XIII, No. 11, February 1899 - A Magazine Devoted to the Brotherhood of Humanity, the Theosophical Movement, Philosophy, Science and Art&quot;,&quot;Topics&quot;:[&quot;Theosophy -- Periodicals&quot;],&quot;Primary&quot;:&quot;57855.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;,&quot;Neresheimer, E. August [Editor]&quot;,&quot;Tingley, Katherine Augusta Westcott, 1847-1929 [Editor]&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;57855&quot;});" class='title'>Universal Brotherhood, Volume XIII, No. 11, February 1899 -<br><span class='subtitle'>A Magazine Devoted to the Brotherhood of Humanity, the Theosophical Movement, Philosophy, Science and Art</span></a>
+<div class='author'>Various, Neresheimer, E. August [Editor], Tingley, Katherine Augusta Westcott, 1847-1929 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58424, {&quot;Title&quot;:&quot;The Islam of Mohamed&quot;,&quot;Topics&quot;:[&quot;Islam&quot;],&quot;Primary&quot;:&quot;58424.htm&quot;,&quot;CreatorNames&quot;:[&quot;Khuda Bukhsh, S. (Salahuddin), 1877-1931&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;58424&quot;});" class='title'>The Islam of Mohamed</a>
+<div class='author'>Khuda Bukhsh, S. (Salahuddin), 1877-1931</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58426, {&quot;Title&quot;:&quot;The Speeches &amp; Table-Talk of the Prophet Mohammad&quot;,&quot;Topics&quot;:[&quot;Muhammad, Prophet, -632 -- Teachings&quot;,&quot;Religious life -- Islam&quot;],&quot;Primary&quot;:&quot;58426.htm&quot;,&quot;CreatorNames&quot;:[&quot;Muhammad, Prophet, -632&quot;,&quot;Lane-Poole, Stanley, 1854-1931 [Editor]&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;58426&quot;});" class='title'>The Speeches & Table-Talk of the Prophet Mohammad</a>
+<div class='author'>Muhammad, Prophet, -632, Lane-Poole, Stanley, 1854-1931 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58977, {&quot;Title&quot;:&quot;The Confessions of Al Ghazzali&quot;,&quot;Topics&quot;:[&quot;Islamic philosophy -- Early works to 1800&quot;,&quot;Sufism -- Early works to 1800&quot;,&quot;Ghazzali, 1058-1111&quot;],&quot;Primary&quot;:&quot;58977.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ghazzali, 1058-1111&quot;,&quot;Cranmer-Byng, L. (Launcelot), 1872-1945 [Editor]&quot;,&quot;Kapadia, S. A. (Shaporji Aspaniarji), 1857-1941 [Editor]&quot;,&quot;Field, Claud, 1863-1941 [Translator]&quot;],&quot;LoCC&quot;:[&quot;B&quot;,&quot;BP&quot;],&quot;PG_ID&quot;:&quot;58977&quot;});" class='title'>The Confessions of Al Ghazzali</a>
+<div class='author'>Ghazzali, 1058-1111, Cranmer-Byng, L. (Launcelot), 1872-1945 [Editor], Kapadia, S. A. (Shaporji Aspaniarji), 1857-1941 [Editor], Field, Claud, 1863-1941 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59038, {&quot;Title&quot;:&quot;The Path, Vol. I.—1886-&#39;7. - A Magazine Devoted to the Brotherhood of Humanity, Theosophy in America, and the Study of Occult Science, Philosophy, and Aryan Literature.&quot;,&quot;Topics&quot;:[&quot;Theosophy -- Periodicals&quot;],&quot;Primary&quot;:&quot;59038.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;,&quot;Judge, William Quan, 1851-1896 [Editor]&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;59038&quot;});" class='title'>The Path, Vol. I.—1886-<br><span class='subtitle'>'7. - A Magazine Devoted to the Brotherhood of Humanity, Theosophy in America, and the Study of Occult Science, Philosophy, and Aryan Literature.</span></a>
+<div class='author'>Various, Judge, William Quan, 1851-1896 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59135, {&quot;Title&quot;:&quot;Development of Muslim Theology, Jurisprudence, and Constitutional Theory&quot;,&quot;Topics&quot;:[&quot;Islam -- Doctrines -- History&quot;,&quot;Islamic law -- History&quot;,&quot;Islam and state -- History&quot;,&quot;Constitutional law (Islamic law)&quot;],&quot;Primary&quot;:&quot;59135.htm&quot;,&quot;CreatorNames&quot;:[&quot;MacDonald, Duncan Black, 1863-1943&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;59135&quot;});" class='title'>Development of Muslim Theology, Jurisprudence, and Constitutional Theory</a>
+<div class='author'>MacDonald, Duncan Black, 1863-1943</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60119, {&quot;Title&quot;:&quot;Isis very much unveiled, being the story of the great Mahatma hoax&quot;,&quot;Topics&quot;:[&quot;Blavatsky, H. P. (Helena Petrovna), 1831-1891&quot;,&quot;Besant, Annie, 1847-1933&quot;,&quot;Judge, William Quan, 1851-1896&quot;,&quot;Theosophy -- Controversial literature&quot;,&quot;Olcott, Henry Steel, 1832-1907&quot;],&quot;Primary&quot;:&quot;60119.htm&quot;,&quot;CreatorNames&quot;:[&quot;Garrett, Fydell Edmund, 1865-1907&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;60119&quot;});" class='title'>Isis very much unveiled, being the story of the great Mahatma hoax</a>
+<div class='author'>Garrett, Fydell Edmund, 1865-1907</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60852, {&quot;Title&quot;:&quot;Lucifer: A Theosophical Magazine. Volume I. September 1887-February 1888.&quot;,&quot;Topics&quot;:[&quot;Theosophy -- Periodicals&quot;],&quot;Primary&quot;:&quot;60852.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;,&quot;Blavatsky, H. P. (Helena Petrovna), 1831-1891 [Editor]&quot;,&quot;Collins, Mabel, 1851-1927 [Editor]&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;60852&quot;});" class='title'>Lucifer:<br><span class='subtitle'>A Theosophical Magazine. Volume I. September 1887-February 1888.</span></a>
+<div class='author'>Various, Blavatsky, H. P. (Helena Petrovna), 1831-1891 [Editor], Collins, Mabel, 1851-1927 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61526, {&quot;Title&quot;:&quot;A Dictionary of Islam - Being a cyclopedia of the doctrines, rites, ceremonies, and customs, together with the technical and theological terms, of the Muhammadan religion.&quot;,&quot;Topics&quot;:[&quot;Islam -- Dictionaries&quot;],&quot;Primary&quot;:&quot;61526.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hughes, Thomas Patrick, 1838-1911&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;61526&quot;});" class='title'>A Dictionary of Islam -<br><span class='subtitle'>Being a cyclopedia of the doctrines, rites, ceremonies, and customs, together with the technical and theological terms, of the Muhammadan religion.</span></a>
+<div class='author'>Hughes, Thomas Patrick, 1838-1911</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61626, {&quot;Title&quot;:&quot;The Secret Doctrine, Vol. 4 of 4 - The Synthesis of Science, Religion, and Philosophy&quot;,&quot;Topics&quot;:[&quot;Theosophy&quot;],&quot;Primary&quot;:&quot;61626.htm&quot;,&quot;CreatorNames&quot;:[&quot;Blavatsky, H. P. (Helena Petrovna), 1831-1891&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;61626&quot;});" class='title'>The Secret Doctrine, Vol. 4 of 4 -<br><span class='subtitle'>The Synthesis of Science, Religion, and Philosophy</span></a>
+<div class='author'>Blavatsky, H. P. (Helena Petrovna), 1831-1891</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61806, {&quot;Title&quot;:&quot;When the Word is Given... - A Report on Elijah Muhammad, Malcolm X, and the Black Muslim World&quot;,&quot;Topics&quot;:[&quot;Black Muslims&quot;],&quot;Primary&quot;:&quot;61806.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lomax, Louis E., 1922-1970&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;61806&quot;});" class='title'>When the Word is Given... -<br><span class='subtitle'>A Report on Elijah Muhammad, Malcolm X, and the Black Muslim World</span></a>
+<div class='author'>Lomax, Louis E., 1922-1970</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62990, {&quot;Title&quot;:&quot;Islam&quot;,&quot;Topics&quot;:[&quot;Islam&quot;,&quot;Christianity and other religions -- Islam&quot;],&quot;Primary&quot;:&quot;62990.htm&quot;,&quot;CreatorNames&quot;:[&quot;Small, Annie H., 1857-1945&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;62990&quot;});" class='title'>Islam</a>
+<div class='author'>Small, Annie H., 1857-1945</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64121, {&quot;Title&quot;:&quot;The Theosophical Path Illustrated Monthly Volume 1, July-December, 1911&quot;,&quot;Topics&quot;:[&quot;Theosophy -- Periodicals&quot;],&quot;Primary&quot;:&quot;64121.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tingley, Katherine Augusta Westcott, 1847-1929 [Editor]&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;64121&quot;});" class='title'>The Theosophical Path Illustrated Monthly Volume 1, July-December, 1911</a>
+<div class='author'>Tingley, Katherine Augusta Westcott, 1847-1929 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64786, {&quot;Title&quot;:&quot;The Kashf al-mahjúb: The oldest Persian treatise on Súfiism&quot;,&quot;Topics&quot;:[&quot;Sufism -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;64786.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hujviri, ‘Ali ibn ‘Usman, -1072?&quot;,&quot;Nicholson, Reynold Alleyne, 1868-1945 [Translator]&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;64786&quot;});" class='title'>The Kashf al-mahjúb:<br><span class='subtitle'>The oldest Persian treatise on Súfiism</span></a>
+<div class='author'>Hujviri, ‘Ali ibn ‘Usman, -1072?, Nicholson, Reynold Alleyne, 1868-1945 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6687, {&quot;Title&quot;:&quot;From the Caves and Jungles of Hindostan&quot;,&quot;Topics&quot;:[&quot;India -- Description and travel&quot;,&quot;India -- Religion&quot;,&quot;Blavatsky, H. P. (Helena Petrovna), 1831-1891&quot;],&quot;Primary&quot;:&quot;6687.htm&quot;,&quot;CreatorNames&quot;:[&quot;Blavatsky, H. P. (Helena Petrovna), 1831-1891&quot;],&quot;LoCC&quot;:[&quot;BP&quot;,&quot;DS&quot;],&quot;PG_ID&quot;:&quot;6687&quot;});" class='title'>From the Caves and Jungles of Hindostan</a>
+<div class='author'>Blavatsky, H. P. (Helena Petrovna), 1831-1891</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66960, {&quot;Title&quot;:&quot;The Preaching of Islam: A History of the Propagation of the Muslim Faith&quot;,&quot;Topics&quot;:[&quot;Islam -- Relations&quot;,&quot;Islam -- History&quot;,&quot;Islam -- Missions -- History&quot;],&quot;Primary&quot;:&quot;66960.htm&quot;,&quot;CreatorNames&quot;:[&quot;Arnold, Thomas Walker, Sir, 1864-1930&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;66960&quot;});" class='title'>The Preaching of Islam:<br><span class='subtitle'>A History of the Propagation of the Muslim Faith</span></a>
+<div class='author'>Arnold, Thomas Walker, Sir, 1864-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67388, {&quot;Title&quot;:&quot;The Mystics of Islam&quot;,&quot;Topics&quot;:[&quot;Mysticism -- Islam&quot;,&quot;Sufism&quot;,&quot;Philosophy, Arab&quot;],&quot;Primary&quot;:&quot;67388.htm&quot;,&quot;CreatorNames&quot;:[&quot;Nicholson, Reynold Alleyne, 1868-1945&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;67388&quot;});" class='title'>The Mystics of Islam</a>
+<div class='author'>Nicholson, Reynold Alleyne, 1868-1945</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68705, {&quot;Title&quot;:&quot;Isis unveiled, Volume 1 (of 2), Science - A master-key to mysteries of ancient and modern science and theology&quot;,&quot;Topics&quot;:[&quot;Theosophy&quot;],&quot;Primary&quot;:&quot;68705.htm&quot;,&quot;CreatorNames&quot;:[&quot;Blavatsky, H. P. (Helena Petrovna), 1831-1891&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;68705&quot;});" class='title'>Isis unveiled, Volume 1 (of 2), Science -<br><span class='subtitle'>A master-key to mysteries of ancient and modern science and theology</span></a>
+<div class='author'>Blavatsky, H. P. (Helena Petrovna), 1831-1891</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68729, {&quot;Title&quot;:&quot;The Independent Church of God of the Juda Tribe of Israel: The Black Jews - As a fade from black to pure white&quot;,&quot;Topics&quot;:[&quot;African Americans -- Colonization -- Africa&quot;,&quot;Southern States -- Race relations&quot;,&quot;Black Hebrews&quot;],&quot;Primary&quot;:&quot;68729.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cook, Allan Wilson, 1872-&quot;,&quot;Winston, Robert W. (Robert Watson), 1860-1944 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;BP&quot;,&quot;E&quot;],&quot;PG_ID&quot;:&quot;68729&quot;});" class='title'>The Independent Church of God of the Juda Tribe of Israel:<br><span class='subtitle'>The Black Jews - As a fade from black to pure white</span></a>
+<div class='author'>Cook, Allan Wilson, 1872-, Winston, Robert W. (Robert Watson), 1860-1944 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69276, {&quot;Title&quot;:&quot;The story of Islam&quot;,&quot;Topics&quot;:[&quot;Islam -- History&quot;],&quot;Primary&quot;:&quot;69276.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lunt, Theodore R. W., 1878-1951&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;69276&quot;});" class='title'>The story of Islam</a>
+<div class='author'>Lunt, Theodore R. W., 1878-1951</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70074, {&quot;Title&quot;:&quot;Invisible helpers&quot;,&quot;Topics&quot;:[&quot;Theosophy&quot;],&quot;Primary&quot;:&quot;70074.htm&quot;,&quot;CreatorNames&quot;:[&quot;Leadbeater, C. W. (Charles Webster), 1854-1934&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;70074&quot;});" class='title'>Invisible helpers</a>
+<div class='author'>Leadbeater, C. W. (Charles Webster), 1854-1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70136, {&quot;Title&quot;:&quot;Islâm&quot;,&quot;Topics&quot;:[&quot;Islam&quot;],&quot;Primary&quot;:&quot;70136.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ali, Syed Ameer, 1849-1928&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;70136&quot;});" class='title'>Islâm</a>
+<div class='author'>Ali, Syed Ameer, 1849-1928</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7440, {&quot;Title&quot;:&quot;The Koran (Al-Qur&#39;an)&quot;,&quot;Topics&quot;:[&quot;Qur&#39;an&quot;],&quot;Primary&quot;:&quot;7440.txt&quot;,&quot;CreatorNames&quot;:[&quot;Sale, George, 1697?-1736 [Translator]&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;7440&quot;});" class='title'>The Koran (Al-Qur'an)</a>
+<div class='author'>Sale, George, 1697?-1736 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7452, {&quot;Title&quot;:&quot;Autobiography of a Yogi&quot;,&quot;Topics&quot;:[&quot;Yogananda, Paramahansa, 1893-1952&quot;,&quot;Yogis -- India -- Biography&quot;],&quot;Primary&quot;:&quot;7452.htm&quot;,&quot;CreatorNames&quot;:[&quot;Yogananda, Paramahansa, 1893-1952&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;7452&quot;});" class='title'>Autobiography of a Yogi</a>
+<div class='author'>Yogananda, Paramahansa, 1893-1952</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7995, {&quot;Title&quot;:&quot;The Reconciliation of Races and Religions&quot;,&quot;Topics&quot;:[&quot;Bahais&quot;],&quot;Primary&quot;:&quot;7995.txt&quot;,&quot;CreatorNames&quot;:[&quot;Cheyne, T. K. (Thomas Kelly), 1841-1915&quot;],&quot;LoCC&quot;:[&quot;BP&quot;],&quot;PG_ID&quot;:&quot;7995&quot;});" class='title'>The Reconciliation of Races and Religions</a>
+<div class='author'>Cheyne, T. K. (Thomas Kelly), 1841-1915</div>
+</div>
+</ul></div>
+</body></html>

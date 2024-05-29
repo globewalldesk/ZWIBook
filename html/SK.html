@@ -1,0 +1,514 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Hunting sports (SK)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(10009, {&quot;Title&quot;:&quot;Wild Northern Scenes; Or, Sporting Adventures with the Rifle and the Rod&quot;,&quot;Topics&quot;:[&quot;Fishing -- New York (State)&quot;,&quot;Hunting -- New York (State)&quot;],&quot;Primary&quot;:&quot;10009.txt&quot;,&quot;CreatorNames&quot;:[&quot;Hammond, S. H. (Samuel H.), 1809-1878&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;10009&quot;});" class='title'>Wild Northern Scenes;<br><span class='subtitle'>Or, Sporting Adventures with the Rifle and the Rod</span></a>
+<div class='author'>Hammond, S. H. (Samuel H.), 1809-1878</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(10445, {&quot;Title&quot;:&quot;American Big Game in Its Haunts: The Book of the Boone and Crockett Club&quot;,&quot;Topics&quot;:[&quot;Big game hunting -- United States&quot;],&quot;Primary&quot;:&quot;10445.txt&quot;,&quot;CreatorNames&quot;:[&quot;Grinnell, George Bird, 1849-1938 [Editor]&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;10445&quot;});" class='title'>American Big Game in Its Haunts:<br><span class='subtitle'>The Book of the Boone and Crockett Club</span></a>
+<div class='author'>Grinnell, George Bird, 1849-1938 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(10818, {&quot;Title&quot;:&quot;Sport and Work on the Nepaul Frontier - Twelve Years Sporting Reminiscences of an Indigo Planter&quot;,&quot;Topics&quot;:[&quot;Inglis, James, 1845-1908&quot;,&quot;Hunting -- India -- Bihar&quot;,&quot;Hunting -- Nepal&quot;],&quot;Primary&quot;:&quot;10818.htm&quot;,&quot;CreatorNames&quot;:[&quot;Inglis, James, 1845-1908&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;10818&quot;});" class='title'>Sport and Work on the Nepaul Frontier -<br><span class='subtitle'>Twelve Years Sporting Reminiscences of an Indigo Planter</span></a>
+<div class='author'>Inglis, James, 1845-1908</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13249, {&quot;Title&quot;:&quot;Our Vanishing Wild Life: Its Extermination and Preservation&quot;,&quot;Topics&quot;:[&quot;Wildlife conservation -- United States&quot;,&quot;Game-laws -- United States&quot;],&quot;Primary&quot;:&quot;13249.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hornaday, William T. (William Temple), 1854-1937&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;13249&quot;});" class='title'>Our Vanishing Wild Life:<br><span class='subtitle'>Its Extermination and Preservation</span></a>
+<div class='author'>Hornaday, William T. (William Temple), 1854-1937</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13730, {&quot;Title&quot;:&quot;The Amateur Poacher&quot;,&quot;Topics&quot;:[&quot;Hunting&quot;,&quot;Shooting&quot;],&quot;Primary&quot;:&quot;13730.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jefferies, Richard, 1848-1887&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;13730&quot;});" class='title'>The Amateur Poacher</a>
+<div class='author'>Jefferies, Richard, 1848-1887</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(1378, {&quot;Title&quot;:&quot;The Land of Footprints&quot;,&quot;Topics&quot;:[&quot;Africa, East -- Description and travel&quot;,&quot;Hunting -- Africa, East&quot;],&quot;Primary&quot;:&quot;1378.htm&quot;,&quot;CreatorNames&quot;:[&quot;White, Stewart Edward, 1873-1946&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;1378&quot;});" class='title'>The Land of Footprints</a>
+<div class='author'>White, Stewart Edward, 1873-1946</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14759, {&quot;Title&quot;:&quot;Camping For Boys&quot;,&quot;Topics&quot;:[&quot;Camping&quot;],&quot;Primary&quot;:&quot;14759.txt&quot;,&quot;CreatorNames&quot;:[&quot;Gibson, H. W. (Henry William), 1867-&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;14759&quot;});" class='title'>Camping For Boys</a>
+<div class='author'>Gibson, H. W. (Henry William), 1867-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15003, {&quot;Title&quot;:&quot;Draft of a Plan for Beginning Animal Sanctuaries in Labrador&quot;,&quot;Topics&quot;:[&quot;Wildlife conservation -- Newfoundland and Labrador -- Labrador&quot;,&quot;Game protection -- Newfoundland and Labrador -- Labrador&quot;],&quot;Primary&quot;:&quot;15003.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wood, William, 1864-1947&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;15003&quot;});" class='title'>Draft of a Plan for Beginning Animal Sanctuaries in Labrador</a>
+<div class='author'>Wood, William, 1864-1947</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15276, {&quot;Title&quot;:&quot;Bears I Have Met—and Others&quot;,&quot;Topics&quot;:[&quot;Bears&quot;,&quot;Hunting -- West (U.S.)&quot;],&quot;Primary&quot;:&quot;15276.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kelly, Allen, 1855-1916&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;15276&quot;});" class='title'>Bears I Have Met—and Others</a>
+<div class='author'>Kelly, Allen, 1855-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17093, {&quot;Title&quot;:&quot;Camp Life in the Woods and the Tricks of Trapping and Trap Making&quot;,&quot;Topics&quot;:[&quot;Camping&quot;,&quot;Trapping&quot;],&quot;Primary&quot;:&quot;17093.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gibson, W. Hamilton (William Hamilton), 1850-1896&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;17093&quot;});" class='title'>Camp Life in the Woods and the Tricks of Trapping and Trap Making</a>
+<div class='author'>Gibson, W. Hamilton (William Hamilton), 1850-1896</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17575, {&quot;Title&quot;:&quot;How to Camp Out&quot;,&quot;Topics&quot;:[&quot;Camping&quot;],&quot;Primary&quot;:&quot;17575.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gould, John Mead, 1839-1930&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;17575&quot;});" class='title'>How to Camp Out</a>
+<div class='author'>Gould, John Mead, 1839-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18525, {&quot;Title&quot;:&quot;On the Trail: An Outdoor Book for Girls&quot;,&quot;Topics&quot;:[&quot;Camping&quot;,&quot;Outdoor life&quot;],&quot;Primary&quot;:&quot;18525.htm&quot;,&quot;CreatorNames&quot;:[&quot;Beard, Adelia B. (Adelia Belle), 1857-1920&quot;,&quot;Beard, Lina, -1933&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;18525&quot;});" class='title'>On the Trail:<br><span class='subtitle'>An Outdoor Book for Girls</span></a>
+<div class='author'>Beard, Adelia B. (Adelia Belle), 1857-1920, Beard, Lina, -1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19730, {&quot;Title&quot;:&quot;Warwick Woodlands: Things as they Were There Twenty Years Ago&quot;,&quot;Topics&quot;:[&quot;Shooting&quot;,&quot;New York (State) -- Description and travel&quot;],&quot;Primary&quot;:&quot;19730.htm&quot;,&quot;CreatorNames&quot;:[&quot;Herbert, Henry William, 1807-1858&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;19730&quot;});" class='title'>Warwick Woodlands:<br><span class='subtitle'>Things as they Were There Twenty Years Ago</span></a>
+<div class='author'>Herbert, Henry William, 1807-1858</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20528, {&quot;Title&quot;:&quot;Round About a Great Estate&quot;,&quot;Topics&quot;:[&quot;Great Britain -- Description and travel&quot;,&quot;Country life -- England&quot;],&quot;Primary&quot;:&quot;20528.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jefferies, Richard, 1848-1887&quot;],&quot;LoCC&quot;:[&quot;PR&quot;,&quot;SK&quot;],&quot;PG_ID&quot;:&quot;20528&quot;});" class='title'>Round About a Great Estate</a>
+<div class='author'>Jefferies, Richard, 1848-1887</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(21254, {&quot;Title&quot;:&quot;In Africa: Hunting Adventures in the Big Game Country&quot;,&quot;Topics&quot;:[&quot;Africa, East -- Description and travel&quot;,&quot;Hunting -- Africa, East&quot;],&quot;Primary&quot;:&quot;21254.htm&quot;,&quot;CreatorNames&quot;:[&quot;McCutcheon, John T. (John Tinney), 1870-1949&quot;],&quot;LoCC&quot;:[&quot;DT&quot;,&quot;SK&quot;],&quot;PG_ID&quot;:&quot;21254&quot;});" class='title'>In Africa:<br><span class='subtitle'>Hunting Adventures in the Big Game Country</span></a>
+<div class='author'>McCutcheon, John T. (John Tinney), 1870-1949</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24579, {&quot;Title&quot;:&quot;Woodcraft&quot;,&quot;Topics&quot;:[&quot;Camping&quot;],&quot;Primary&quot;:&quot;24579.txt&quot;,&quot;CreatorNames&quot;:[&quot;Sears, George Washington, 1821-1890&quot;],&quot;LoCC&quot;:[&quot;GV&quot;,&quot;SK&quot;],&quot;PG_ID&quot;:&quot;24579&quot;});" class='title'>Woodcraft</a>
+<div class='author'>Sears, George Washington, 1821-1890</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26615, {&quot;Title&quot;:&quot;Black Beaver, the Trapper&quot;,&quot;Topics&quot;:[&quot;Trapping&quot;],&quot;Primary&quot;:&quot;26615.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lewis, George Edward&quot;,&quot;Lewis, James Campbell, 1879-&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;26615&quot;});" class='title'>Black Beaver, the Trapper</a>
+<div class='author'>Lewis, George Edward, Lewis, James Campbell, 1879-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29039, {&quot;Title&quot;:&quot;Um brado contra as monterias de cerco aos Lobos na Provincia do Alemtejo&quot;,&quot;Topics&quot;:[&quot;Wolf hunting&quot;],&quot;Primary&quot;:&quot;29039.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mira, José Paulo de, 1808-&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;29039&quot;});" class='title'>Um brado contra as monterias de cerco aos Lobos na Provincia do Alemtejo</a>
+<div class='author'>Mira, José Paulo de, 1808-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3231, {&quot;Title&quot;:&quot;The Rifle and the Hound in Ceylon&quot;,&quot;Topics&quot;:[&quot;Hunting -- Sri Lanka&quot;,&quot;Sri Lanka -- Description and travel&quot;],&quot;Primary&quot;:&quot;3231.htm&quot;,&quot;CreatorNames&quot;:[&quot;Baker, Samuel White, Sir, 1821-1893&quot;],&quot;LoCC&quot;:[&quot;DS&quot;,&quot;SK&quot;],&quot;PG_ID&quot;:&quot;3231&quot;});" class='title'>The Rifle and the Hound in Ceylon</a>
+<div class='author'>Baker, Samuel White, Sir, 1821-1893</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32558, {&quot;Title&quot;:&quot;Sporting Scenes amongst the Kaffirs of South Africa&quot;,&quot;Topics&quot;:[&quot;South Africa -- Description and travel&quot;,&quot;Hunting -- South Africa&quot;],&quot;Primary&quot;:&quot;32558.htm&quot;,&quot;CreatorNames&quot;:[&quot;Drayson, Alfred W. (Alfred Wilks), 1827-1901&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;32558&quot;});" class='title'>Sporting Scenes amongst the Kaffirs of South Africa</a>
+<div class='author'>Drayson, Alfred W. (Alfred Wilks), 1827-1901</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32950, {&quot;Title&quot;:&quot;Camp and Trail&quot;,&quot;Topics&quot;:[&quot;Camping&quot;],&quot;Primary&quot;:&quot;32950.htm&quot;,&quot;CreatorNames&quot;:[&quot;White, Stewart Edward, 1873-1946&quot;,&quot;Lungren, Fernand, 1857-1932 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;32950&quot;});" class='title'>Camp and Trail</a>
+<div class='author'>White, Stewart Edward, 1873-1946, Lungren, Fernand, 1857-1932 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3337, {&quot;Title&quot;:&quot;Hunting the Grisly and Other Sketches - An Account of the Big Game of the United States and its Chase with Horse, Hound, and Rifle&quot;,&quot;Topics&quot;:[&quot;Hunting -- United States&quot;],&quot;Primary&quot;:&quot;3337.htm&quot;,&quot;CreatorNames&quot;:[&quot;Roosevelt, Theodore, 1858-1919&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;3337&quot;});" class='title'>Hunting the Grisly and Other Sketches -<br><span class='subtitle'>An Account of the Big Game of the United States and its Chase with Horse, Hound, and Rifle</span></a>
+<div class='author'>Roosevelt, Theodore, 1858-1919</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33767, {&quot;Title&quot;:&quot;Campward Ho! A Manual for Girl Scout Camps&quot;,&quot;Topics&quot;:[&quot;Camping&quot;,&quot;Girl Scouts&quot;],&quot;Primary&quot;:&quot;33767.htm&quot;,&quot;CreatorNames&quot;:[&quot;Girl Scouts of the United States of America&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;33767&quot;});" class='title'>Campward Ho! A Manual for Girl Scout Camps</a>
+<div class='author'>Girl Scouts of the United States of America</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34063, {&quot;Title&quot;:&quot;Fifty Years a Hunter and Trapper - Autobiography, experiences and observations of Eldred Nathaniel Woodcock during his fifty years of hunting and trapping.&quot;,&quot;Topics&quot;:[&quot;Hunting&quot;,&quot;Trapping&quot;],&quot;Primary&quot;:&quot;34063.htm&quot;,&quot;CreatorNames&quot;:[&quot;Woodcock, E. N. (Eldred Nathaniel), 1846-1917&quot;,&quot;Harding, A. R. (Arthur Robert), 1871-1930 [Editor]&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;34063&quot;});" class='title'>Fifty Years a Hunter and Trapper -<br><span class='subtitle'>Autobiography, experiences and observations of Eldred Nathaniel Woodcock during his fifty years of hunting and trapping.</span></a>
+<div class='author'>Woodcock, E. N. (Eldred Nathaniel), 1846-1917, Harding, A. R. (Arthur Robert), 1871-1930 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34076, {&quot;Title&quot;:&quot;Fox Trapping: A Book of Instruction Telling How to Trap, Snare, Poison and Shoot - A Valuable Book for Trappers&quot;,&quot;Topics&quot;:[&quot;Fox trapping&quot;],&quot;Primary&quot;:&quot;34076.htm&quot;,&quot;CreatorNames&quot;:[&quot;Harding, A. R. (Arthur Robert), 1871-1930&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;34076&quot;});" class='title'>Fox Trapping:<br><span class='subtitle'>A Book of Instruction Telling How to Trap, Snare, Poison and Shoot - A Valuable Book for Trappers</span></a>
+<div class='author'>Harding, A. R. (Arthur Robert), 1871-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34093, {&quot;Title&quot;:&quot;Mink Trapping: A Book of Instruction Giving Many Methods of Trapping - A Valuable Book for Trappers.&quot;,&quot;Topics&quot;:[&quot;Mink trapping&quot;],&quot;Primary&quot;:&quot;34093.htm&quot;,&quot;CreatorNames&quot;:[&quot;Harding, A. R. (Arthur Robert), 1871-1930&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;34093&quot;});" class='title'>Mink Trapping:<br><span class='subtitle'>A Book of Instruction Giving Many Methods of Trapping - A Valuable Book for Trappers.</span></a>
+<div class='author'>Harding, A. R. (Arthur Robert), 1871-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34098, {&quot;Title&quot;:&quot;Science of Trapping - Describes the Fur Bearing Animals, Their Nature, Habits and Distribution, with Practical Methods for Their Capture&quot;,&quot;Topics&quot;:[&quot;Trapping&quot;],&quot;Primary&quot;:&quot;34098.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kreps, Elmer Harry, 1880-&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;34098&quot;});" class='title'>Science of Trapping -<br><span class='subtitle'>Describes the Fur Bearing Animals, Their Nature, Habits and Distribution, with Practical Methods for Their Capture</span></a>
+<div class='author'>Kreps, Elmer Harry, 1880-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34110, {&quot;Title&quot;:&quot;Deadfalls and Snares - A Book of Instruction for Trappers About These and Other Home-Made Traps&quot;,&quot;Topics&quot;:[&quot;Animal traps&quot;,&quot;Animal traps -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;34110.htm&quot;,&quot;CreatorNames&quot;:[&quot;Harding, A. R. (Arthur Robert), 1871-1930&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;34110&quot;});" class='title'>Deadfalls and Snares -<br><span class='subtitle'>A Book of Instruction for Trappers About These and Other Home-Made Traps</span></a>
+<div class='author'>Harding, A. R. (Arthur Robert), 1871-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34173, {&quot;Title&quot;:&quot;Canadian Wilds - Tells About the Hudson&#39;s Bay Company, Northern Indians and Their Modes of Hunting, Trapping, Etc.&quot;,&quot;Topics&quot;:[&quot;Hudson&#39;s Bay Company&quot;,&quot;Hunting -- Canada&quot;],&quot;Primary&quot;:&quot;34173.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hunter, Martin&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;34173&quot;});" class='title'>Canadian Wilds -<br><span class='subtitle'>Tells About the Hudson's Bay Company, Northern Indians and Their Modes of Hunting, Trapping, Etc.</span></a>
+<div class='author'>Hunter, Martin</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34228, {&quot;Title&quot;:&quot;The Accomplished Muskrat Trapper: A Book on Trapping for Amateurs&quot;,&quot;Topics&quot;:[&quot;Trapping&quot;],&quot;Primary&quot;:null,&quot;CreatorNames&quot;:[&quot;Schmidt, Arno Erdman&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;34228&quot;});" class='title'>The Accomplished Muskrat Trapper:<br><span class='subtitle'>A Book on Trapping for Amateurs</span></a>
+<div class='author'>Schmidt, Arno Erdman</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34229, {&quot;Title&quot;:&quot;Steel Traps - Describes the Various Makes and Tells How to Use Them, Also Chapters on Care of Pelts, Etc.&quot;,&quot;Topics&quot;:[&quot;Trapping&quot;],&quot;Primary&quot;:&quot;34229.htm&quot;,&quot;CreatorNames&quot;:[&quot;Harding, A. R. (Arthur Robert), 1871-1930&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;34229&quot;});" class='title'>Steel Traps -<br><span class='subtitle'>Describes the Various Makes and Tells How to Use Them, Also Chapters on Care of Pelts, Etc.</span></a>
+<div class='author'>Harding, A. R. (Arthur Robert), 1871-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34501, {&quot;Title&quot;:&quot;Wolf and Coyote Trapping: An Up-to-Date Wolf Hunter&#39;s Guide - Giving the Most Successful Methods of Experienced \&quot;\&quot;Wolfers\&quot;\&quot; for Hunting and Trapping These Animals, Also Gives Their Habits in Detail.&quot;,&quot;Topics&quot;:[&quot;Wolf hunting&quot;,&quot;Coyote&quot;],&quot;Primary&quot;:&quot;34501.htm&quot;,&quot;CreatorNames&quot;:[&quot;Harding, A. R. (Arthur Robert), 1871-1930&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;34501&quot;});" class='title'>Wolf and Coyote Trapping:<br><span class='subtitle'>An Up-to-Date Wolf Hunter's Guide - Giving the Most Successful Methods of Experienced "Wolfers" for Hunting and Trapping These Animals, Also Gives Their Habits in Detail.</span></a>
+<div class='author'>Harding, A. R. (Arthur Robert), 1871-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34607, {&quot;Title&quot;:&quot;Woodcraft and Camping&quot;,&quot;Topics&quot;:[&quot;Camping&quot;],&quot;Primary&quot;:&quot;34607.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sears, George Washington, 1821-1890&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;34607&quot;});" class='title'>Woodcraft and Camping</a>
+<div class='author'>Sears, George Washington, 1821-1890</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34670, {&quot;Title&quot;:&quot;Camping at Cherry Pond&quot;,&quot;Topics&quot;:[&quot;Camping&quot;],&quot;Primary&quot;:&quot;34670.htm&quot;,&quot;CreatorNames&quot;:[&quot;Abbott, Henry, 1850-1943&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;34670&quot;});" class='title'>Camping at Cherry Pond</a>
+<div class='author'>Abbott, Henry, 1850-1943</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34671, {&quot;Title&quot;:&quot;Camps and Trails&quot;,&quot;Topics&quot;:[&quot;Camping&quot;],&quot;Primary&quot;:&quot;34671.htm&quot;,&quot;CreatorNames&quot;:[&quot;Abbott, Henry, 1850-1943&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;34671&quot;});" class='title'>Camps and Trails</a>
+<div class='author'>Abbott, Henry, 1850-1943</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34773, {&quot;Title&quot;:&quot;Woodcraft&quot;,&quot;Topics&quot;:[&quot;Camping&quot;,&quot;Outdoor life&quot;],&quot;Primary&quot;:&quot;34773.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kreps, Elmer Harry, 1880-&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;34773&quot;});" class='title'>Woodcraft</a>
+<div class='author'>Kreps, Elmer Harry, 1880-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35351, {&quot;Title&quot;:&quot;Fishing and Shooting Sketches&quot;,&quot;Topics&quot;:[&quot;Fishing&quot;,&quot;Hunting&quot;],&quot;Primary&quot;:&quot;35351.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cleveland, Grover, 1837-1908&quot;,&quot;Watson, Hy S. (Henry Summer), 1868-1933 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;SH&quot;,&quot;SK&quot;],&quot;PG_ID&quot;:&quot;35351&quot;});" class='title'>Fishing and Shooting Sketches</a>
+<div class='author'>Cleveland, Grover, 1837-1908, Watson, Hy S. (Henry Summer), 1868-1933 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35521, {&quot;Title&quot;:&quot;Riding Recollections, 5th ed.&quot;,&quot;Topics&quot;:[&quot;Horsemanship&quot;,&quot;Hunt riding&quot;],&quot;Primary&quot;:&quot;35521.htm&quot;,&quot;CreatorNames&quot;:[&quot;Whyte-Melville, G. J. (George John), 1821-1878&quot;,&quot;Giberne, Edgar [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;SF&quot;,&quot;SK&quot;],&quot;PG_ID&quot;:&quot;35521&quot;});" class='title'>Riding Recollections, 5th ed.</a>
+<div class='author'>Whyte-Melville, G. J. (George John), 1821-1878, Giberne, Edgar [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3657, {&quot;Title&quot;:&quot;Wild Beasts and Their Ways, Reminiscences of Europe, Asia, Africa and America — Volume 1&quot;,&quot;Topics&quot;:[&quot;Hunting&quot;,&quot;Animal behavior&quot;],&quot;Primary&quot;:&quot;3657.txt&quot;,&quot;CreatorNames&quot;:[&quot;Baker, Samuel White, Sir, 1821-1893&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;3657&quot;});" class='title'>Wild Beasts and Their Ways, Reminiscences of Europe, Asia, Africa and America — Volume 1</a>
+<div class='author'>Baker, Samuel White, Sir, 1821-1893</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36654, {&quot;Title&quot;:&quot;Cruisings in the Cascades - A Narrative of Travel, Exploration, Amateur Photography, - Hunting, and Fishing&quot;,&quot;Topics&quot;:[&quot;Hunting -- United States&quot;,&quot;Fishing -- United States&quot;],&quot;Primary&quot;:&quot;36654.htm&quot;,&quot;CreatorNames&quot;:[&quot;Shields, G. O. (George O.), 1846-1925&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;36654&quot;});" class='title'>Cruisings in the Cascades -<br><span class='subtitle'>A Narrative of Travel, Exploration, Amateur Photography, - Hunting, and Fishing</span></a>
+<div class='author'>Shields, G. O. (George O.), 1846-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36821, {&quot;Title&quot;:&quot;Maxims and Hints on Angling, Chess, Shooting, and Other Matters - Also, Miseries of Fishing&quot;,&quot;Topics&quot;:[&quot;Fishing&quot;,&quot;Chess&quot;,&quot;Maxims&quot;,&quot;Shooting&quot;],&quot;Primary&quot;:&quot;36821.htm&quot;,&quot;CreatorNames&quot;:[&quot;Penn, Richard, 1784-1863&quot;],&quot;LoCC&quot;:[&quot;GV&quot;,&quot;SH&quot;,&quot;SK&quot;],&quot;PG_ID&quot;:&quot;36821&quot;});" class='title'>Maxims and Hints on Angling, Chess, Shooting, and Other Matters -<br><span class='subtitle'>Also, Miseries of Fishing</span></a>
+<div class='author'>Penn, Richard, 1784-1863</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36948, {&quot;Title&quot;:&quot;The Gamekeeper at Home: Sketches of Natural History and Rural Life&quot;,&quot;Topics&quot;:[&quot;Hunting&quot;,&quot;Country life&quot;],&quot;Primary&quot;:&quot;36948.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jefferies, Richard, 1848-1887&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;36948&quot;});" class='title'>The Gamekeeper at Home:<br><span class='subtitle'>Sketches of Natural History and Rural Life</span></a>
+<div class='author'>Jefferies, Richard, 1848-1887</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36951, {&quot;Title&quot;:&quot;Jock of the Bushveld&quot;,&quot;Topics&quot;:[&quot;Dogs -- Folklore&quot;,&quot;Dogs -- Biography&quot;,&quot;Hunting -- South Africa -- Transvaal&quot;,&quot;Transvaal (South Africa) -- Description and travel&quot;],&quot;Primary&quot;:&quot;36951.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fitzpatrick, Percy, 1862-1931&quot;,&quot;Caldwell, E. (Edmund G.) [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;36951&quot;});" class='title'>Jock of the Bushveld</a>
+<div class='author'>Fitzpatrick, Percy, 1862-1931, Caldwell, E. (Edmund G.) [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36970, {&quot;Title&quot;:&quot;The Confessions of a Poacher&quot;,&quot;Topics&quot;:[&quot;Hunting&quot;,&quot;Poaching&quot;],&quot;Primary&quot;:&quot;36970.htm&quot;,&quot;CreatorNames&quot;:[&quot;Watson, John, F.L.S., -1928&quot;,&quot;West, James, active 19th century [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;36970&quot;});" class='title'>The Confessions of a Poacher</a>
+<div class='author'>Watson, John, F.L.S., -1928, West, James, active 19th century [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37122, {&quot;Title&quot;:&quot;Hunting in Many Lands: The Book of the Boone and Crockett Club&quot;,&quot;Topics&quot;:[&quot;Hunting&quot;],&quot;Primary&quot;:&quot;37122.htm&quot;,&quot;CreatorNames&quot;:[&quot;Grinnell, George Bird, 1849-1938 [Editor]&quot;,&quot;Roosevelt, Theodore, 1858-1919 [Editor]&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;37122&quot;});" class='title'>Hunting in Many Lands:<br><span class='subtitle'>The Book of the Boone and Crockett Club</span></a>
+<div class='author'>Grinnell, George Bird, 1849-1938 [Editor], Roosevelt, Theodore, 1858-1919 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37151, {&quot;Title&quot;:&quot;Habits, Haunts and Anecdotes of the Moose and Illustrations from Life&quot;,&quot;Topics&quot;:[&quot;Animal behavior&quot;,&quot;Moose&quot;],&quot;Primary&quot;:&quot;37151.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jones, Charles Albert&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;37151&quot;});" class='title'>Habits, Haunts and Anecdotes of the Moose and Illustrations from Life</a>
+<div class='author'>Jones, Charles Albert</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37373, {&quot;Title&quot;:&quot;Indian Scout Talks: A Guide for Boy Scouts and Camp Fire Girls&quot;,&quot;Topics&quot;:[&quot;Boy Scouts&quot;,&quot;Indians of North America -- Social life and customs&quot;,&quot;Outdoor life&quot;,&quot;Camp Fire Girls&quot;],&quot;Primary&quot;:&quot;37373.htm&quot;,&quot;CreatorNames&quot;:[&quot;Eastman, Charles A., 1858-1939&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;37373&quot;});" class='title'>Indian Scout Talks:<br><span class='subtitle'>A Guide for Boy Scouts and Camp Fire Girls</span></a>
+<div class='author'>Eastman, Charles A., 1858-1939</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3810, {&quot;Title&quot;:&quot;The Man-Eaters of Tsavo, and Other East African Adventures&quot;,&quot;Topics&quot;:[&quot;Africa, East -- Description and travel&quot;,&quot;Uganda Railway&quot;,&quot;Hunting -- Africa, East&quot;],&quot;Primary&quot;:&quot;3810.htm&quot;,&quot;CreatorNames&quot;:[&quot;Patterson, J. H. (John Henry), 1867-1947&quot;,&quot;Selous, Frederick Courteney, 1851-1917 [Commentator]&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;3810&quot;});" class='title'>The Man-Eaters of Tsavo, and Other East African Adventures</a>
+<div class='author'>Patterson, J. H. (John Henry), 1867-1947, Selous, Frederick Courteney, 1851-1917 [Commentator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38201, {&quot;Title&quot;:&quot;Wild Spain (España agreste) - Records of Sport with Rifle, Rod, and Gun, Natural History Exploration&quot;,&quot;Topics&quot;:[&quot;Hunting -- Spain&quot;,&quot;Game and game-birds -- Spain&quot;],&quot;Primary&quot;:&quot;38201.htm&quot;,&quot;CreatorNames&quot;:[&quot;Buck, Walter John&quot;,&quot;Chapman, Abel, 1851-1929&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;38201&quot;});" class='title'>Wild Spain (España agreste) -<br><span class='subtitle'>Records of Sport with Rifle, Rod, and Gun, Natural History Exploration</span></a>
+<div class='author'>Buck, Walter John, Chapman, Abel, 1851-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39025, {&quot;Title&quot;:&quot;Ladies in the Field: Sketches of Sport&quot;,&quot;Topics&quot;:[&quot;Sports&quot;,&quot;Women athletes&quot;,&quot;Women hunters&quot;],&quot;Primary&quot;:&quot;39025.htm&quot;,&quot;CreatorNames&quot;:[&quot;Greville, Violet, Lady, 1842-1932 [Editor]&quot;],&quot;LoCC&quot;:[&quot;GV&quot;,&quot;SK&quot;],&quot;PG_ID&quot;:&quot;39025&quot;});" class='title'>Ladies in the Field:<br><span class='subtitle'>Sketches of Sport</span></a>
+<div class='author'>Greville, Violet, Lady, 1842-1932 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39581, {&quot;Title&quot;:&quot;Life of Frederick Courtenay Selous, D.S.O., Capt. 25th Royal Fusiliers&quot;,&quot;Topics&quot;:[&quot;Selous, Frederick Courteney, 1851-1917&quot;,&quot;World War, 1914-1918 -- Campaigns -- Africa&quot;],&quot;Primary&quot;:&quot;39581.htm&quot;,&quot;CreatorNames&quot;:[&quot;Millais, John Guille, 1865-1931&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;39581&quot;});" class='title'>Life of Frederick Courtenay Selous, D.S.O., Capt. 25th Royal Fusiliers</a>
+<div class='author'>Millais, John Guille, 1865-1931</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39965, {&quot;Title&quot;:&quot;American Big-Game Hunting: The Book of the Boone and Crockett Club&quot;,&quot;Topics&quot;:[&quot;Big game hunting -- United States&quot;],&quot;Primary&quot;:&quot;39965.htm&quot;,&quot;CreatorNames&quot;:[&quot;Boone and Crockett Club&quot;,&quot;Grinnell, George Bird, 1849-1938 [Editor]&quot;,&quot;Roosevelt, Theodore, 1858-1919 [Editor]&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;39965&quot;});" class='title'>American Big-Game Hunting:<br><span class='subtitle'>The Book of the Boone and Crockett Club</span></a>
+<div class='author'>Boone and Crockett Club, Grinnell, George Bird, 1849-1938 [Editor], Roosevelt, Theodore, 1858-1919 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40301, {&quot;Title&quot;:&quot;Sporting Society; or, Sporting Chat and Sporting Memories, Vol. 1 (of 2)&quot;,&quot;Topics&quot;:[&quot;Fishing -- Great Britain&quot;,&quot;Fox hunting -- Great Britain&quot;,&quot;Horse racing -- Great Britain&quot;,&quot;Hunting -- Great Britain&quot;],&quot;Primary&quot;:&quot;40301.htm&quot;,&quot;CreatorNames&quot;:[&quot;Russell, Fox [Editor]&quot;,&quot;Caldecott, Randolph, 1846-1886 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;40301&quot;});" class='title'>Sporting Society;<br><span class='subtitle'>or, Sporting Chat and Sporting Memories, Vol. 1 (of 2)</span></a>
+<div class='author'>Russell, Fox [Editor], Caldecott, Randolph, 1846-1886 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40302, {&quot;Title&quot;:&quot;Sporting Society; or, Sporting Chat and Sporting Memories, Vol. 2 (of 2)&quot;,&quot;Topics&quot;:[&quot;Fishing -- Great Britain&quot;,&quot;Fox hunting -- Great Britain&quot;,&quot;Horse racing -- Great Britain&quot;,&quot;Hunting -- Great Britain&quot;],&quot;Primary&quot;:&quot;40302.htm&quot;,&quot;CreatorNames&quot;:[&quot;Russell, Fox [Editor]&quot;,&quot;Caldecott, Randolph, 1846-1886 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;40302&quot;});" class='title'>Sporting Society;<br><span class='subtitle'>or, Sporting Chat and Sporting Memories, Vol. 2 (of 2)</span></a>
+<div class='author'>Russell, Fox [Editor], Caldecott, Randolph, 1846-1886 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41166, {&quot;Title&quot;:&quot;Trails and Tramps in Alaska and Newfoundland&quot;,&quot;Topics&quot;:[&quot;Birds&quot;,&quot;Alaska -- Description and travel&quot;,&quot;Newfoundland and Labrador -- Description and travel&quot;,&quot;Hunting -- Alaska&quot;],&quot;Primary&quot;:&quot;41166.htm&quot;,&quot;CreatorNames&quot;:[&quot;Thomas, William S., 1858-&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;41166&quot;});" class='title'>Trails and Tramps in Alaska and Newfoundland</a>
+<div class='author'>Thomas, William S., 1858-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41593, {&quot;Title&quot;:&quot;Unexplored Spain&quot;,&quot;Topics&quot;:[&quot;Spain -- Description and travel&quot;,&quot;Hunting -- Spain&quot;,&quot;Natural history -- Spain&quot;],&quot;Primary&quot;:&quot;41593.htm&quot;,&quot;CreatorNames&quot;:[&quot;Buck, Walter John&quot;,&quot;Chapman, Abel, 1851-1929&quot;,&quot;Caldwell, E. (Edmund G.) [Illustrator]&quot;,&quot;Crawhall, Joseph, 1821-1896 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DP&quot;,&quot;SK&quot;],&quot;PG_ID&quot;:&quot;41593&quot;});" class='title'>Unexplored Spain</a>
+<div class='author'>Buck, Walter John, Chapman, Abel, 1851-1929, Caldwell, E. (Edmund G.) [Illustrator], Crawhall, Joseph, 1821-1896 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41937, {&quot;Title&quot;:&quot;Camping&quot;,&quot;Topics&quot;:[&quot;Camping&quot;],&quot;Primary&quot;:&quot;41937.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lockwine, Alexandra Agusta Guttman, 1863-&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;41937&quot;});" class='title'>Camping</a>
+<div class='author'>Lockwine, Alexandra Agusta Guttman, 1863-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42628, {&quot;Title&quot;:&quot;Poachers and Poaching&quot;,&quot;Topics&quot;:[&quot;Poaching -- Great Britain&quot;,&quot;Poachers -- Great Britain&quot;],&quot;Primary&quot;:&quot;42628.htm&quot;,&quot;CreatorNames&quot;:[&quot;Watson, John, F.L.S., -1928&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;42628&quot;});" class='title'>Poachers and Poaching</a>
+<div class='author'>Watson, John, F.L.S., -1928</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43452, {&quot;Title&quot;:&quot;The Master of Game: The Oldest English Book on Hunting&quot;,&quot;Topics&quot;:[&quot;Hunting -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;43452.htm&quot;,&quot;CreatorNames&quot;:[&quot;Edward, of Norwich, 1373?-1415&quot;,&quot;Gaston III Phoebus, count of Foix, 1331-1391&quot;,&quot;Roosevelt, Theodore, 1858-1919 [Author of introduction, etc.]&quot;,&quot;Baillie-Grohman, F. (Florence) [Editor]&quot;,&quot;Baillie-Grohman, William A. (William Adolph), 1851-1921 [Editor]&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;43452&quot;});" class='title'>The Master of Game:<br><span class='subtitle'>The Oldest English Book on Hunting</span></a>
+<div class='author'>Edward, of Norwich, 1373?-1415, Gaston III Phoebus, count of Foix, 1331-1391, Roosevelt, Theodore, 1858-1919 [Author of introduction, etc.], Baillie-Grohman, F. (Florence) [Editor], Baillie-Grohman, William A. (William Adolph), 1851-1921 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44120, {&quot;Title&quot;:&quot;La Caza de La Perdiz Con Escopeta, Al Vuelo y con Perro de Muestra&quot;,&quot;Topics&quot;:[&quot;Partridge shooting -- Spain&quot;],&quot;Primary&quot;:&quot;44120.htm&quot;,&quot;CreatorNames&quot;:[&quot;Saurí, Manuel&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;44120&quot;});" class='title'>La Caza de La Perdiz Con Escopeta, Al Vuelo y con Perro de Muestra</a>
+<div class='author'>Saurí, Manuel</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44720, {&quot;Title&quot;:&quot;Packing and Portaging&quot;,&quot;Topics&quot;:[&quot;Transportation&quot;,&quot;Camping -- Equipment and supplies&quot;],&quot;Primary&quot;:&quot;44720.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wallace, Dillon, 1863-1939&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;44720&quot;});" class='title'>Packing and Portaging</a>
+<div class='author'>Wallace, Dillon, 1863-1939</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45578, {&quot;Title&quot;:&quot;Tracks and Tracking&quot;,&quot;Topics&quot;:[&quot;Hunting&quot;],&quot;Primary&quot;:&quot;45578.htm&quot;,&quot;CreatorNames&quot;:[&quot;Brunner, Josef&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;45578&quot;});" class='title'>Tracks and Tracking</a>
+<div class='author'>Brunner, Josef</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45796, {&quot;Title&quot;:&quot;Twenty-Six Years Reminiscences of Scotch Grouse Moors&quot;,&quot;Topics&quot;:[&quot;Grouse shooting -- Scotland&quot;,&quot;Fowling&quot;],&quot;Primary&quot;:&quot;45796.htm&quot;,&quot;CreatorNames&quot;:[&quot;Adams, William Alexander&quot;,&quot;Whymper, Charles, 1853-1941 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;45796&quot;});" class='title'>Twenty-Six Years Reminiscences of Scotch Grouse Moors</a>
+<div class='author'>Adams, William Alexander, Whymper, Charles, 1853-1941 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46030, {&quot;Title&quot;:&quot;Of Walks and Walking Tours: An Attempt to find a Philosophy and a Creed&quot;,&quot;Topics&quot;:[&quot;Walking&quot;,&quot;Outdoor life&quot;],&quot;Primary&quot;:&quot;46030.htm&quot;,&quot;CreatorNames&quot;:[&quot;Haultain, Arnold, 1857-1941&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;46030&quot;});" class='title'>Of Walks and Walking Tours:<br><span class='subtitle'>An Attempt to find a Philosophy and a Creed</span></a>
+<div class='author'>Haultain, Arnold, 1857-1941</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46542, {&quot;Title&quot;:&quot;The Wild Turkey and Its Hunting&quot;,&quot;Topics&quot;:[&quot;Turkeys&quot;],&quot;Primary&quot;:&quot;46542.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jordan, Charles L., -1909&quot;,&quot;McIlhenny, Edward Avery, 1872-1949&quot;,&quot;Shufeldt, Robert W. (Robert Wilson), 1850-1934 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;46542&quot;});" class='title'>The Wild Turkey and Its Hunting</a>
+<div class='author'>Jordan, Charles L., -1909, McIlhenny, Edward Avery, 1872-1949, Shufeldt, Robert W. (Robert Wilson), 1850-1934 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47224, {&quot;Title&quot;:&quot;The Black Moose in Pennsylvania&quot;,&quot;Topics&quot;:[&quot;Moose&quot;],&quot;Primary&quot;:&quot;47224.htm&quot;,&quot;CreatorNames&quot;:[&quot;Shoemaker, Henry W., 1880-1958&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;47224&quot;});" class='title'>The Black Moose in Pennsylvania</a>
+<div class='author'>Shoemaker, Henry W., 1880-1958</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47253, {&quot;Title&quot;:&quot;Sport in Vancouver and Newfoundland&quot;,&quot;Topics&quot;:[&quot;Newfoundland and Labrador -- Description and travel&quot;,&quot;Hunting -- British Columbia -- Vancouver Island&quot;,&quot;Hunting -- Newfoundland and Labrador&quot;,&quot;Vancouver Island (B.C.) -- Description and travel&quot;],&quot;Primary&quot;:&quot;47253.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rogers, John Godfrey, Sir, 1850-&quot;],&quot;LoCC&quot;:[&quot;SK&quot;,&quot;F&quot;],&quot;PG_ID&quot;:&quot;47253&quot;});" class='title'>Sport in Vancouver and Newfoundland</a>
+<div class='author'>Rogers, John Godfrey, Sir, 1850-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47450, {&quot;Title&quot;:&quot;The Gamekeeper at Home: Sketches of natural history and rural life (Illustrated)&quot;,&quot;Topics&quot;:[&quot;Country life&quot;,&quot;Hunting -- Great Britain&quot;,&quot;Gamekeepers -- Great Britain&quot;],&quot;Primary&quot;:&quot;47450.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jefferies, Richard, 1848-1887&quot;,&quot;Whymper, Charles, 1853-1941 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;PR&quot;,&quot;SK&quot;],&quot;PG_ID&quot;:&quot;47450&quot;});" class='title'>The Gamekeeper at Home:<br><span class='subtitle'>Sketches of natural history and rural life (Illustrated)</span></a>
+<div class='author'>Jefferies, Richard, 1848-1887, Whymper, Charles, 1853-1941 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47639, {&quot;Title&quot;:&quot;Hints on Wolf and Coyote Trapping&quot;,&quot;Topics&quot;:[&quot;Trapping&quot;,&quot;Wolves -- Control&quot;,&quot;Coyote -- Control&quot;],&quot;Primary&quot;:&quot;47639.htm&quot;,&quot;CreatorNames&quot;:[&quot;Young, Stanley Paul, 1889-1969&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;47639&quot;});" class='title'>Hints on Wolf and Coyote Trapping</a>
+<div class='author'>Young, Stanley Paul, 1889-1969</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47758, {&quot;Title&quot;:&quot;Altes und Neues über Karl Stülpner - mit Benutzung der Schönberg&#39;schen Aufzeichnungen&quot;,&quot;Topics&quot;:[&quot;Stülpner, Karl Heinrich&quot;],&quot;Primary&quot;:&quot;47758.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lungwitz, Hermann, 1845-1927&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;47758&quot;});" class='title'>Altes und Neues über Karl Stülpner -<br><span class='subtitle'>mit Benutzung der Schönberg'schen Aufzeichnungen</span></a>
+<div class='author'>Lungwitz, Hermann, 1845-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48437, {&quot;Title&quot;:&quot;The Art and Practice of Hawking&quot;,&quot;Topics&quot;:[&quot;Falconry&quot;],&quot;Primary&quot;:&quot;48437.htm&quot;,&quot;CreatorNames&quot;:[&quot;Michell, E. B. (Edward Blair), 1843-&quot;,&quot;Lodge, George Edward, 1860-1954 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;48437&quot;});" class='title'>The Art and Practice of Hawking</a>
+<div class='author'>Michell, E. B. (Edward Blair), 1843-, Lodge, George Edward, 1860-1954 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48584, {&quot;Title&quot;:&quot;Big Game Shooting, volume 1 (of 2)&quot;,&quot;Topics&quot;:[&quot;Hunting&quot;,&quot;Game and game-birds&quot;],&quot;Primary&quot;:&quot;48584.htm&quot;,&quot;CreatorNames&quot;:[&quot;Phillipps-Wolley, Clive, 1854-1918&quot;,&quot;Whymper, Charles, 1853-1941 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;48584&quot;});" class='title'>Big Game Shooting, volume 1 (of 2)</a>
+<div class='author'>Phillipps-Wolley, Clive, 1854-1918, Whymper, Charles, 1853-1941 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48694, {&quot;Title&quot;:&quot;Musk-Ox, Bison, Sheep and Goat&quot;,&quot;Topics&quot;:[&quot;Hunting&quot;,&quot;American bison&quot;,&quot;Mountain goat&quot;,&quot;Muskox&quot;,&quot;Mountain sheep&quot;],&quot;Primary&quot;:&quot;48694.htm&quot;,&quot;CreatorNames&quot;:[&quot;Grinnell, George Bird, 1849-1938&quot;,&quot;Whitney, Caspar, 1862-1929&quot;,&quot;Wister, Owen, 1860-1938&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;48694&quot;});" class='title'>Musk-Ox, Bison, Sheep and Goat</a>
+<div class='author'>Grinnell, George Bird, 1849-1938, Whitney, Caspar, 1862-1929, Wister, Owen, 1860-1938</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48708, {&quot;Title&quot;:&quot;Den Hunting as a Means of Coyote Control&quot;,&quot;Topics&quot;:[&quot;Coyote -- Control&quot;],&quot;Primary&quot;:&quot;48708.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dobyns, Harold Warren, 1896-&quot;,&quot;Young, Stanley Paul, 1889-1969&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;48708&quot;});" class='title'>Den Hunting as a Means of Coyote Control</a>
+<div class='author'>Dobyns, Harold Warren, 1896-, Young, Stanley Paul, 1889-1969</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48709, {&quot;Title&quot;:&quot;Information for the Guidance of Field Men and Cooperators of the Bureau of Biological Survey Engaged in the Control of Injurious Rodents and Predatory Animals&quot;,&quot;Topics&quot;:[&quot;Rodents -- Control -- United States&quot;,&quot;Predatory animals -- Control -- United States&quot;],&quot;Primary&quot;:&quot;48709.htm&quot;,&quot;CreatorNames&quot;:[&quot;Redington, Paul G. (Paul Goodwin), 1878-1942&quot;,&quot;Young, Stanley Paul, 1889-1969&quot;],&quot;LoCC&quot;:[&quot;S&quot;,&quot;SK&quot;],&quot;PG_ID&quot;:&quot;48709&quot;});" class='title'>Information for the Guidance of Field Men and Cooperators of the Bureau of Biological Survey Engaged in the Control of Injurious Rodents and Predatory Animals</a>
+<div class='author'>Redington, Paul G. (Paul Goodwin), 1878-1942, Young, Stanley Paul, 1889-1969</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48710, {&quot;Title&quot;:&quot;Hints on Bobcat Trapping&quot;,&quot;Topics&quot;:[&quot;Trapping&quot;,&quot;Animal traps&quot;,&quot;Bobcat -- Control&quot;],&quot;Primary&quot;:&quot;48710.htm&quot;,&quot;CreatorNames&quot;:[&quot;Young, Stanley Paul, 1889-1969&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;48710&quot;});" class='title'>Hints on Bobcat Trapping</a>
+<div class='author'>Young, Stanley Paul, 1889-1969</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48711, {&quot;Title&quot;:&quot;Hints on Mountain-Lion Trapping&quot;,&quot;Topics&quot;:[&quot;Trapping&quot;,&quot;Animal traps&quot;,&quot;Puma -- Control&quot;],&quot;Primary&quot;:&quot;48711.htm&quot;,&quot;CreatorNames&quot;:[&quot;Young, Stanley Paul, 1889-1969&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;48711&quot;});" class='title'>Hints on Mountain-Lion Trapping</a>
+<div class='author'>Young, Stanley Paul, 1889-1969</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48816, {&quot;Title&quot;:&quot;Big Game Shooting, volume 2 (of 2)&quot;,&quot;Topics&quot;:[&quot;Hunting&quot;,&quot;Game and game-birds&quot;],&quot;Primary&quot;:&quot;48816.htm&quot;,&quot;CreatorNames&quot;:[&quot;Phillipps-Wolley, Clive, 1854-1918&quot;,&quot;Whymper, Charles, 1853-1941 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;48816&quot;});" class='title'>Big Game Shooting, volume 2 (of 2)</a>
+<div class='author'>Phillipps-Wolley, Clive, 1854-1918, Whymper, Charles, 1853-1941 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48835, {&quot;Title&quot;:&quot;Sport in the Crimea and Caucasus&quot;,&quot;Topics&quot;:[&quot;Caucasus -- Description and travel&quot;,&quot;Crimea (Ukraine) -- Description and travel&quot;,&quot;Hunting -- Ukraine -- Crimea&quot;,&quot;Hunting -- Caucasus&quot;],&quot;Primary&quot;:&quot;48835.htm&quot;,&quot;CreatorNames&quot;:[&quot;Phillipps-Wolley, Clive, 1854-1918&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;48835&quot;});" class='title'>Sport in the Crimea and Caucasus</a>
+<div class='author'>Phillipps-Wolley, Clive, 1854-1918</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49097, {&quot;Title&quot;:&quot;Killing for Sport: Essays by Various Writers&quot;,&quot;Topics&quot;:[&quot;Animal welfare&quot;,&quot;Hunting -- Religious aspects&quot;,&quot;Hunting -- Moral and ethical aspects&quot;],&quot;Primary&quot;:&quot;49097.htm&quot;,&quot;CreatorNames&quot;:[&quot;Shaw, Bernard, 1856-1950 [Author of introduction, etc.]&quot;,&quot;Salt, Henry S., 1851-1939 [Editor]&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;49097&quot;});" class='title'>Killing for Sport:<br><span class='subtitle'>Essays by Various Writers</span></a>
+<div class='author'>Shaw, Bernard, 1856-1950 [Author of introduction, etc.], Salt, Henry S., 1851-1939 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49270, {&quot;Title&quot;:&quot;African Nature Notes and Reminiscences&quot;,&quot;Topics&quot;:[&quot;Natural history -- South Africa&quot;,&quot;Selous, Frederick Courteney, 1851-1917 -- Anecdotes&quot;,&quot;Big game hunting -- South Africa -- Anecdotes&quot;,&quot;Hunters -- South Africa -- Anecdotes&quot;],&quot;Primary&quot;:&quot;49270.htm&quot;,&quot;CreatorNames&quot;:[&quot;Selous, Frederick Courteney, 1851-1917&quot;,&quot;Roosevelt, Theodore, 1858-1919 [Author of introduction, etc.]&quot;,&quot;Caldwell, E. (Edmund G.) [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;49270&quot;});" class='title'>African Nature Notes and Reminiscences</a>
+<div class='author'>Selous, Frederick Courteney, 1851-1917, Roosevelt, Theodore, 1858-1919 [Author of introduction, etc.], Caldwell, E. (Edmund G.) [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49639, {&quot;Title&quot;:&quot;The Mentor: Game Animals of America, Vol. 4, Num. 13, Serial No. 113, August 15, 1916&quot;,&quot;Topics&quot;:[&quot;Wildlife conservation -- United States&quot;,&quot;Game and game-birds -- United States&quot;],&quot;Primary&quot;:&quot;49639.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hornaday, William T. (William Temple), 1854-1937&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;49639&quot;});" class='title'>The Mentor:<br><span class='subtitle'>Game Animals of America, Vol. 4, Num. 13, Serial No. 113, August 15, 1916</span></a>
+<div class='author'>Hornaday, William T. (William Temple), 1854-1937</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49744, {&quot;Title&quot;:&quot;A Trip to Pilawin, the Deer-park of Count Joseph Potocki in Volhynia, Russia&quot;,&quot;Topics&quot;:[&quot;Game reserves&quot;,&quot;Pilawin (Volhynia, Ukraine)&quot;],&quot;Primary&quot;:&quot;49744.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lydekker, Richard, 1849-1915&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;49744&quot;});" class='title'>A Trip to Pilawin, the Deer-park of Count Joseph Potocki in Volhynia, Russia</a>
+<div class='author'>Lydekker, Richard, 1849-1915</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49876, {&quot;Title&quot;:&quot;The Mentor: Game Birds of America, Vol. 1, Num. 34, Serial No. 34&quot;,&quot;Topics&quot;:[&quot;Game and game-birds -- United States&quot;,&quot;Game and game-birds -- North America&quot;],&quot;Primary&quot;:&quot;49876.htm&quot;,&quot;CreatorNames&quot;:[&quot;Forbush, Edward Howe, 1858-1929&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;49876&quot;});" class='title'>The Mentor:<br><span class='subtitle'>Game Birds of America, Vol. 1, Num. 34, Serial No. 34</span></a>
+<div class='author'>Forbush, Edward Howe, 1858-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50600, {&quot;Title&quot;:&quot;How to Make and Set Traps - Including Hints on How to Trap Moles, Weasels, Otter, Rats, Squirrels and Birds; Also How to Cure Skins&quot;,&quot;Topics&quot;:[&quot;Trapping&quot;],&quot;Primary&quot;:&quot;50600.htm&quot;,&quot;CreatorNames&quot;:[&quot;Keene, J. Harrington (John Harrington)&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;50600&quot;});" class='title'>How to Make and Set Traps -<br><span class='subtitle'>Including Hints on How to Trap Moles, Weasels, Otter, Rats, Squirrels and Birds; Also How to Cure Skins</span></a>
+<div class='author'>Keene, J. Harrington (John Harrington)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52071, {&quot;Title&quot;:&quot;The Book of the Otter: A manual for sportsmen and naturalists&quot;,&quot;Topics&quot;:[&quot;Hunting -- England&quot;,&quot;Otters&quot;],&quot;Primary&quot;:&quot;52071.htm&quot;,&quot;CreatorNames&quot;:[&quot;Clapham, Richard, 1878-&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;52071&quot;});" class='title'>The Book of the Otter:<br><span class='subtitle'>A manual for sportsmen and naturalists</span></a>
+<div class='author'>Clapham, Richard, 1878-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53691, {&quot;Title&quot;:&quot;Men We Meet in the Field; or, The Bullshire Hounds&quot;,&quot;Topics&quot;:[&quot;Hunting -- Great Britain&quot;,&quot;Hunting -- Anecdotes&quot;,&quot;Hunting -- Humor&quot;],&quot;Primary&quot;:&quot;53691.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bagot, A. G.&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;53691&quot;});" class='title'>Men We Meet in the Field;<br><span class='subtitle'>or, The Bullshire Hounds</span></a>
+<div class='author'>Bagot, A. G.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53702, {&quot;Title&quot;:&quot;The Field Book: or, Sports and pastimes of the United Kingdom - compiled from the best authorities, ancient and modern&quot;,&quot;Topics&quot;:[&quot;Sports -- Great Britain&quot;,&quot;Sports -- Dictionaries&quot;,&quot;Amusements -- Great Britain&quot;],&quot;Primary&quot;:&quot;53702.htm&quot;,&quot;CreatorNames&quot;:[&quot;Maxwell, W. H. (William Hamilton), 1792-1850&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;53702&quot;});" class='title'>The Field Book:<br><span class='subtitle'>or, Sports and pastimes of the United Kingdom - compiled from the best authorities, ancient and modern</span></a>
+<div class='author'>Maxwell, W. H. (William Hamilton), 1792-1850</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54501, {&quot;Title&quot;:&quot;Two Dianas in Somaliland: The Record of a Shooting Trip&quot;,&quot;Topics&quot;:[&quot;Horn of Africa -- Description and travel&quot;,&quot;Hunting -- Horn of Africa&quot;],&quot;Primary&quot;:&quot;54501.htm&quot;,&quot;CreatorNames&quot;:[&quot;Herbert, Agnes, 1873-1960&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;54501&quot;});" class='title'>Two Dianas in Somaliland:<br><span class='subtitle'>The Record of a Shooting Trip</span></a>
+<div class='author'>Herbert, Agnes, 1873-1960</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54922, {&quot;Title&quot;:&quot;In Wildest Africa, Vol. 1&quot;,&quot;Topics&quot;:[&quot;Africa, Central -- Description and travel&quot;,&quot;Hunting -- Africa&quot;,&quot;Natural history -- Africa&quot;,&quot;Nature photography&quot;],&quot;Primary&quot;:&quot;54922.htm&quot;,&quot;CreatorNames&quot;:[&quot;Schillings, C. G. (Carl Georg), 1865-1921&quot;,&quot;Whyte, Frederic, 1867-1941 [Translator]&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;54922&quot;});" class='title'>In Wildest Africa, Vol. 1</a>
+<div class='author'>Schillings, C. G. (Carl Georg), 1865-1921, Whyte, Frederic, 1867-1941 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54923, {&quot;Title&quot;:&quot;In Wildest Africa, Vol. 2&quot;,&quot;Topics&quot;:[&quot;Africa, Central -- Description and travel&quot;,&quot;Hunting -- Africa&quot;,&quot;Natural history -- Africa&quot;,&quot;Nature photography&quot;],&quot;Primary&quot;:&quot;54923.htm&quot;,&quot;CreatorNames&quot;:[&quot;Schillings, C. G. (Carl Georg), 1865-1921&quot;,&quot;Whyte, Frederic, 1867-1941 [Translator]&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;54923&quot;});" class='title'>In Wildest Africa, Vol. 2</a>
+<div class='author'>Schillings, C. G. (Carl Georg), 1865-1921, Whyte, Frederic, 1867-1941 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55110, {&quot;Title&quot;:&quot;Vacation Camping for Girls&quot;,&quot;Topics&quot;:[&quot;Camping&quot;],&quot;Primary&quot;:&quot;55110.htm&quot;,&quot;CreatorNames&quot;:[&quot;Marks, Jeannette Augustus, 1875-1964&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;55110&quot;});" class='title'>Vacation Camping for Girls</a>
+<div class='author'>Marks, Jeannette Augustus, 1875-1964</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55478, {&quot;Title&quot;:&quot;The Game-Birds of the Coasts and Lakes of the Northern States of America - A full account of the sporting along our sea-shores and inland waters, with a comparison of the merits of breech-loaders and muzzle-loaders&quot;,&quot;Topics&quot;:[&quot;Game and game-birds -- North America&quot;,&quot;Shotguns&quot;,&quot;Hunting -- North America&quot;],&quot;Primary&quot;:&quot;55478.htm&quot;,&quot;CreatorNames&quot;:[&quot;Roosevelt, Robert Barnwell, 1829-1906&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;55478&quot;});" class='title'>The Game-Birds of the Coasts and Lakes of the Northern States of America -<br><span class='subtitle'>A full account of the sporting along our sea-shores and inland waters, with a comparison of the merits of breech-loaders and muzzle-loaders</span></a>
+<div class='author'>Roosevelt, Robert Barnwell, 1829-1906</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57007, {&quot;Title&quot;:&quot;Foxhunting on the Lakeland Fells&quot;,&quot;Topics&quot;:[&quot;Fox hunting&quot;,&quot;Hunting -- Great Britain&quot;],&quot;Primary&quot;:&quot;57007.htm&quot;,&quot;CreatorNames&quot;:[&quot;Clapham, Richard, 1878-&quot;,&quot;Ullswater, James William Lowther, Viscount, 1855-1949 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;57007&quot;});" class='title'>Foxhunting on the Lakeland Fells</a>
+<div class='author'>Clapham, Richard, 1878-, Ullswater, James William Lowther, Viscount, 1855-1949 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57367, {&quot;Title&quot;:&quot;Freiluftleben&quot;,&quot;Topics&quot;:[&quot;Outdoor life&quot;],&quot;Primary&quot;:&quot;57367.htm&quot;,&quot;CreatorNames&quot;:[&quot;Nansen, Fridtjof, 1861-1930&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;57367&quot;});" class='title'>Freiluftleben</a>
+<div class='author'>Nansen, Fridtjof, 1861-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57906, {&quot;Title&quot;:&quot;Wild Life at the Land&#39;s End - Observations of the Habits and Haunts of the Fox, Badger, Otter, Seal, Hare and of Their Pursuers in Cornwall&quot;,&quot;Topics&quot;:[&quot;Hunting -- England -- Cornwall (County)&quot;,&quot;Game and game-birds -- England -- Cornwall (County)&quot;],&quot;Primary&quot;:&quot;57906.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tregarthen, J. C. (John Coulson), 1854-1933&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;57906&quot;});" class='title'>Wild Life at the Land's End -<br><span class='subtitle'>Observations of the Habits and Haunts of the Fox, Badger, Otter, Seal, Hare and of Their Pursuers in Cornwall</span></a>
+<div class='author'>Tregarthen, J. C. (John Coulson), 1854-1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58769, {&quot;Title&quot;:&quot;The Life of a Fox, Written by Himself&quot;,&quot;Topics&quot;:[&quot;Fox hunting&quot;],&quot;Primary&quot;:&quot;58769.htm&quot;,&quot;CreatorNames&quot;:[&quot;Smith, Thomas, 1790-1878&quot;,&quot;Willoughby de Broke, Richard Greville Verney, baron, 1869-1923 [Author of introduction, etc.]&quot;,&quot;Alken, Henry Thomas, 1784-1851 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;58769&quot;});" class='title'>The Life of a Fox, Written by Himself</a>
+<div class='author'>Smith, Thomas, 1790-1878, Willoughby de Broke, Richard Greville Verney, baron, 1869-1923 [Author of introduction, etc.], Alken, Henry Thomas, 1784-1851 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58839, {&quot;Title&quot;:&quot;Advice on Fox-Hunting&quot;,&quot;Topics&quot;:[&quot;Fox hunting&quot;],&quot;Primary&quot;:&quot;58839.htm&quot;,&quot;CreatorNames&quot;:[&quot;Willoughby de Broke, Henry Verney, baron, 1844-1902&quot;,&quot;Willoughby de Broke, Richard Greville Verney, baron, 1869-1923 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;58839&quot;});" class='title'>Advice on Fox-Hunting</a>
+<div class='author'>Willoughby de Broke, Henry Verney, baron, 1844-1902, Willoughby de Broke, Richard Greville Verney, baron, 1869-1923 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59071, {&quot;Title&quot;:&quot;Inter-Ocean Hunting Tales&quot;,&quot;Topics&quot;:[&quot;Hunting -- United States&quot;],&quot;Primary&quot;:&quot;59071.htm&quot;,&quot;CreatorNames&quot;:[&quot;Randolph, Edgar Fritz, 1861-&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;59071&quot;});" class='title'>Inter-Ocean Hunting Tales</a>
+<div class='author'>Randolph, Edgar Fritz, 1861-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59076, {&quot;Title&quot;:&quot;The Sporting Dictionary, and Rural Repository, Volume 1 (of 2) - Of General Information upon Every Subject Appertaining to the Sports of the Field&quot;,&quot;Topics&quot;:[&quot;Sports -- Dictionaries&quot;,&quot;Hunting -- Dictionaries&quot;],&quot;Primary&quot;:&quot;59076.htm&quot;,&quot;CreatorNames&quot;:[&quot;Taplin, William, 1740?-1807&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;59076&quot;});" class='title'>The Sporting Dictionary, and Rural Repository, Volume 1 (of 2) -<br><span class='subtitle'>Of General Information upon Every Subject Appertaining to the Sports of the Field</span></a>
+<div class='author'>Taplin, William, 1740?-1807</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59291, {&quot;Title&quot;:&quot;The Sporting Dictionary and Rural Repository, Volume 2 (of 2) - Of General Information upon Every Subject Appertaining to the Sports of the Field&quot;,&quot;Topics&quot;:[&quot;Sports -- Dictionaries&quot;,&quot;Hunting -- Dictionaries&quot;],&quot;Primary&quot;:&quot;59291.htm&quot;,&quot;CreatorNames&quot;:[&quot;Taplin, William, 1740?-1807&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;59291&quot;});" class='title'>The Sporting Dictionary and Rural Repository, Volume 2 (of 2) -<br><span class='subtitle'>Of General Information upon Every Subject Appertaining to the Sports of the Field</span></a>
+<div class='author'>Taplin, William, 1740?-1807</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59850, {&quot;Title&quot;:&quot;Hunting Reminiscences&quot;,&quot;Topics&quot;:[&quot;Hunting&quot;],&quot;Primary&quot;:&quot;59850.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pease, Alfred E. (Alfred Edward), Sir, 1857-1939&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;59850&quot;});" class='title'>Hunting Reminiscences</a>
+<div class='author'>Pease, Alfred E. (Alfred Edward), Sir, 1857-1939</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61111, {&quot;Title&quot;:&quot;The Complete English Wing Shot&quot;,&quot;Topics&quot;:[&quot;Shooting&quot;,&quot;Hunting -- Great Britain&quot;,&quot;Game and game-birds&quot;],&quot;Primary&quot;:&quot;61111.htm&quot;,&quot;CreatorNames&quot;:[&quot;Teasdale-Buckell, George Teasdale&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;61111&quot;});" class='title'>The Complete English Wing Shot</a>
+<div class='author'>Teasdale-Buckell, George Teasdale</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61935, {&quot;Title&quot;:&quot;Outdoor pastimes of an American hunter&quot;,&quot;Topics&quot;:[&quot;Hunting -- United States&quot;,&quot;Hunting -- West (U.S.)&quot;],&quot;Primary&quot;:&quot;61935.htm&quot;,&quot;CreatorNames&quot;:[&quot;Roosevelt, Theodore, 1858-1919&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;61935&quot;});" class='title'>Outdoor pastimes of an American hunter</a>
+<div class='author'>Roosevelt, Theodore, 1858-1919</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63104, {&quot;Title&quot;:&quot;Amid the High Hills&quot;,&quot;Topics&quot;:[&quot;Fishing -- Scotland&quot;,&quot;Spanish American literature -- History and criticism&quot;,&quot;Hunting -- Scotland&quot;,&quot;Salmon fishing -- Great Britain&quot;],&quot;Primary&quot;:&quot;63104.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fraser, Hugh, Sir, 1860-1927&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;63104&quot;});" class='title'>Amid the High Hills</a>
+<div class='author'>Fraser, Hugh, Sir, 1860-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63805, {&quot;Title&quot;:&quot;Old Sports and Sportsmen; or, the Willey Country - with sketches of Squire Forester and his whipper-in Tom Moody&quot;,&quot;Topics&quot;:[&quot;Shropshire (England) -- History&quot;,&quot;Hunting -- England -- Shropshire&quot;,&quot;Forester, George, -1811&quot;],&quot;Primary&quot;:&quot;63805.htm&quot;,&quot;CreatorNames&quot;:[&quot;Randall, John, 1810-1910&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;63805&quot;});" class='title'>Old Sports and Sportsmen;<br><span class='subtitle'>or, the Willey Country - with sketches of Squire Forester and his whipper-in Tom Moody</span></a>
+<div class='author'>Randall, John, 1810-1910</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64079, {&quot;Title&quot;:&quot;The Happy Hunting-Grounds&quot;,&quot;Topics&quot;:[&quot;Hunting&quot;,&quot;Roosevelt, Theodore, 1858-1919&quot;],&quot;Primary&quot;:&quot;64079.htm&quot;,&quot;CreatorNames&quot;:[&quot;Roosevelt, Kermit, 1889-1943&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;64079&quot;});" class='title'>The Happy Hunting-Grounds</a>
+<div class='author'>Roosevelt, Kermit, 1889-1943</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65173, {&quot;Title&quot;:&quot;Migration of Birds (1950)&quot;,&quot;Topics&quot;:[&quot;Birds&quot;,&quot;Birds -- Migration&quot;],&quot;Primary&quot;:&quot;65173.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lincoln, Frederick Charles, 1892-1960&quot;,&quot;Hines, Bob, 1912-1994 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;QL&quot;,&quot;SK&quot;],&quot;PG_ID&quot;:&quot;65173&quot;});" class='title'>Migration of Birds (1950)</a>
+<div class='author'>Lincoln, Frederick Charles, 1892-1960, Hines, Bob, 1912-1994 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65222, {&quot;Title&quot;:&quot;Migration of Birds (1979)&quot;,&quot;Topics&quot;:[&quot;Birds&quot;,&quot;Birds -- Migration&quot;],&quot;Primary&quot;:&quot;65222.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lincoln, Frederick Charles, 1892-1960&quot;,&quot;Peterson, Steven R.&quot;,&quot;Anastasi, Peter A. [Editor]&quot;,&quot;Hines, Bob, 1912-1994 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;QL&quot;,&quot;SK&quot;],&quot;PG_ID&quot;:&quot;65222&quot;});" class='title'>Migration of Birds (1979)</a>
+<div class='author'>Lincoln, Frederick Charles, 1892-1960, Peterson, Steven R., Anastasi, Peter A. [Editor], Hines, Bob, 1912-1994 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66885, {&quot;Title&quot;:&quot;A Gamekeeper&#39;s Note-book&quot;,&quot;Topics&quot;:[&quot;Gamekeepers -- Great Britain&quot;,&quot;Game and game-birds -- Great Britain&quot;,&quot;Natural history -- Great Britain&quot;],&quot;Primary&quot;:&quot;66885.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jones, Owen (Gamekeeper)&quot;,&quot;Woodward, Marcus&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;66885&quot;});" class='title'>A Gamekeeper's Note-book</a>
+<div class='author'>Jones, Owen (Gamekeeper), Woodward, Marcus</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67632, {&quot;Title&quot;:&quot;Good hunting; in pursuit of big game in the West&quot;,&quot;Topics&quot;:[&quot;Hunting -- United States&quot;],&quot;Primary&quot;:&quot;67632.htm&quot;,&quot;CreatorNames&quot;:[&quot;Roosevelt, Theodore, 1858-1919&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;67632&quot;});" class='title'>Good hunting;<br><span class='subtitle'>in pursuit of big game in the West</span></a>
+<div class='author'>Roosevelt, Theodore, 1858-1919</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68044, {&quot;Title&quot;:&quot;The Wanderings of an Elephant Hunter&quot;,&quot;Topics&quot;:[&quot;Elephant hunting&quot;],&quot;Primary&quot;:&quot;68044.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bell, Walter Dalrymple Maitland, 1880-1954&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;68044&quot;});" class='title'>The Wanderings of an Elephant Hunter</a>
+<div class='author'>Bell, Walter Dalrymple Maitland, 1880-1954</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69162, {&quot;Title&quot;:&quot;Hunters three: Sport and adventure in South Africa&quot;,&quot;Topics&quot;:[&quot;Hunting -- South Africa&quot;],&quot;Primary&quot;:&quot;69162.htm&quot;,&quot;CreatorNames&quot;:[&quot;Knox, Thomas Wallace, 1835-1896&quot;,&quot;Cary, William de la Montagne, 1840-1922 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;69162&quot;});" class='title'>Hunters three:<br><span class='subtitle'>Sport and adventure in South Africa</span></a>
+<div class='author'>Knox, Thomas Wallace, 1835-1896, Cary, William de la Montagne, 1840-1922 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(8084, {&quot;Title&quot;:&quot;Hunting with the Bow &amp; Arrow&quot;,&quot;Topics&quot;:[&quot;Archery&quot;,&quot;Bow and arrow&quot;],&quot;Primary&quot;:&quot;8084.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pope, Saxton T. (Saxton Temple), 1875-1926&quot;],&quot;LoCC&quot;:[&quot;GV&quot;,&quot;SK&quot;],&quot;PG_ID&quot;:&quot;8084&quot;});" class='title'>Hunting with the Bow & Arrow</a>
+<div class='author'>Pope, Saxton T. (Saxton Temple), 1875-1926</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(814, {&quot;Title&quot;:&quot;Hunting Sketches&quot;,&quot;Topics&quot;:[&quot;Essays&quot;,&quot;Fox hunting&quot;],&quot;Primary&quot;:&quot;814.htm&quot;,&quot;CreatorNames&quot;:[&quot;Trollope, Anthony, 1815-1882&quot;],&quot;LoCC&quot;:[&quot;PR&quot;,&quot;SK&quot;],&quot;PG_ID&quot;:&quot;814&quot;});" class='title'>Hunting Sketches</a>
+<div class='author'>Trollope, Anthony, 1815-1882</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(9376, {&quot;Title&quot;:&quot;The Forest&quot;,&quot;Topics&quot;:[&quot;Outdoor life&quot;],&quot;Primary&quot;:&quot;9376.htm&quot;,&quot;CreatorNames&quot;:[&quot;White, Stewart Edward, 1873-1946&quot;],&quot;LoCC&quot;:[&quot;SK&quot;],&quot;PG_ID&quot;:&quot;9376&quot;});" class='title'>The Forest</a>
+<div class='author'>White, Stewart Edward, 1873-1946</div>
+</div>
+</ul></div>
+</body></html>

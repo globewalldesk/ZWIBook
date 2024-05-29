@@ -1,0 +1,718 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Theory and practice of education (LB)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(10042, {&quot;Title&quot;:&quot;The Child Under Eight&quot;,&quot;Topics&quot;:[&quot;Education&quot;,&quot;Child development&quot;,&quot;Child psychology&quot;],&quot;Primary&quot;:&quot;10042.txt&quot;,&quot;CreatorNames&quot;:[&quot;Murray, E. R. (Elsie Riach), 1861-1932&quot;,&quot;Smith, Henrietta Brown, 1868-&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;10042&quot;});" class='title'>The Child Under Eight</a>
+<div class='author'>Murray, E. R. (Elsie Riach), 1861-1932, Smith, Henrietta Brown, 1868-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(10674, {&quot;Title&quot;:&quot;How to Use Your Mind - A Psychology of Study: Being a Manual for the Use of Students and Teachers in the Administration of Supervised Study&quot;,&quot;Topics&quot;:[&quot;Study skills&quot;],&quot;Primary&quot;:&quot;10674.txt&quot;,&quot;CreatorNames&quot;:[&quot;Kitson, Harry Dexter, 1886-1959&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;10674&quot;});" class='title'>How to Use Your Mind -<br><span class='subtitle'>A Psychology of Study: Being a Manual for the Use of Students and Teachers in the Administration of Supervised Study</span></a>
+<div class='author'>Kitson, Harry Dexter, 1886-1959</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(10985, {&quot;Title&quot;:&quot;The Infant System - For Developing the Intellectual and Moral Powers of all Children, from One to Seven years of Age&quot;,&quot;Topics&quot;:[&quot;Education&quot;],&quot;Primary&quot;:&quot;10985.txt&quot;,&quot;CreatorNames&quot;:[&quot;Wilderspin, Samuel, 1791-1866&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;10985&quot;});" class='title'>The Infant System -<br><span class='subtitle'>For Developing the Intellectual and Moral Powers of all Children, from One to Seven years of Age</span></a>
+<div class='author'>Wilderspin, Samuel, 1791-1866</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(11453, {&quot;Title&quot;:&quot;La Suggestibilité&quot;,&quot;Topics&quot;:[&quot;Mental suggestion&quot;],&quot;Primary&quot;:&quot;11453.htm&quot;,&quot;CreatorNames&quot;:[&quot;Binet, Alfred, 1857-1911&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;11453&quot;});" class='title'>La Suggestibilité</a>
+<div class='author'>Binet, Alfred, 1857-1911</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(11667, {&quot;Title&quot;:&quot;Gentle Measures in the Management and Training of the Young - Or, the Principles on Which a Firm Parental Authority May Be Established and Maintained, Without Violence or Anger, and the Right Development of the Moral and Mental Capacities Be Promoted by Methods in Harmony with the Structure and the Characteristics of the Juvenile Mind&quot;,&quot;Topics&quot;:[&quot;Child rearing&quot;,&quot;Education, Primary&quot;,&quot;Discipline of children&quot;],&quot;Primary&quot;:&quot;11667.txt&quot;,&quot;CreatorNames&quot;:[&quot;Abbott, Jacob, 1803-1879&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;11667&quot;});" class='title'>Gentle Measures in the Management and Training of the Young -<br><span class='subtitle'>Or, the Principles on Which a Firm Parental Authority May Be Established and Maintained, Without Violence or Anger, and the Right Development of the Moral and Mental Capacities Be Promoted by Methods in Harmony with the Structure and the Characteristics of the Juvenile Mind</span></a>
+<div class='author'>Abbott, Jacob, 1803-1879</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12291, {&quot;Title&quot;:&quot;The Teacher - Moral Influences Employed in the Instruction and Government of the Young&quot;,&quot;Topics&quot;:[&quot;Teaching&quot;,&quot;Moral education&quot;],&quot;Primary&quot;:&quot;12291.htm&quot;,&quot;CreatorNames&quot;:[&quot;Abbott, Jacob, 1803-1879&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;12291&quot;});" class='title'>The Teacher -<br><span class='subtitle'>Moral Influences Employed in the Instruction and Government of the Young</span></a>
+<div class='author'>Abbott, Jacob, 1803-1879</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12769, {&quot;Title&quot;:&quot;How to Teach&quot;,&quot;Topics&quot;:[&quot;Teaching&quot;,&quot;Educational psychology&quot;],&quot;Primary&quot;:&quot;12769.htm&quot;,&quot;CreatorNames&quot;:[&quot;Norsworthy, Naomi, 1877-1916&quot;,&quot;Strayer, George D. (George Drayton), 1876-1962&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;12769&quot;});" class='title'>How to Teach</a>
+<div class='author'>Norsworthy, Naomi, 1877-1916, Strayer, George D. (George Drayton), 1876-1962</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12864, {&quot;Title&quot;:&quot;A Collection of College Words and Customs&quot;,&quot;Topics&quot;:[&quot;Slang&quot;,&quot;English language -- United States -- Slang&quot;,&quot;College students -- United States -- Language&quot;],&quot;Primary&quot;:&quot;12864.txt&quot;,&quot;CreatorNames&quot;:[&quot;Hall, Benjamin Homer, 1830-1893&quot;],&quot;LoCC&quot;:[&quot;LA&quot;,&quot;LB&quot;],&quot;PG_ID&quot;:&quot;12864&quot;});" class='title'>A Collection of College Words and Customs</a>
+<div class='author'>Hall, Benjamin Homer, 1830-1893</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13049, {&quot;Title&quot;:&quot;Reveries of a Schoolmaster&quot;,&quot;Topics&quot;:[&quot;Teaching&quot;,&quot;Teachers -- Biography&quot;,&quot;Pearson, Francis B. (Francis Bail), 1853-&quot;],&quot;Primary&quot;:&quot;13049.txt&quot;,&quot;CreatorNames&quot;:[&quot;Pearson, Francis B. (Francis Bail), 1853-1938&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;13049&quot;});" class='title'>Reveries of a Schoolmaster</a>
+<div class='author'>Pearson, Francis B. (Francis Bail), 1853-1938</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13301, {&quot;Title&quot;:&quot;The New Ideal in Education - An Address Given Before the League of the Empire on July 16th, 1916&quot;,&quot;Topics&quot;:[&quot;World War, 1914-1918&quot;,&quot;Education&quot;],&quot;Primary&quot;:&quot;13301.htm&quot;,&quot;CreatorNames&quot;:[&quot;Velimirović, Nikolaj, 1880-1956&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;13301&quot;});" class='title'>The New Ideal in Education -<br><span class='subtitle'>An Address Given Before the League of the Empire on July 16th, 1916</span></a>
+<div class='author'>Velimirović, Nikolaj, 1880-1956</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13398, {&quot;Title&quot;:&quot;The Evolution of \&quot;\&quot;Dodd\&quot;\&quot; - A pedagogical story giving his struggle for the survival of the fittest, tracing his chances, his changes, and how he came out&quot;,&quot;Topics&quot;:[&quot;Teaching&quot;],&quot;Primary&quot;:&quot;13398.txt&quot;,&quot;CreatorNames&quot;:[&quot;Smith, William Hawley, 1845-1922&quot;],&quot;LoCC&quot;:[&quot;LB&quot;,&quot;PS&quot;],&quot;PG_ID&quot;:&quot;13398&quot;});" class='title'>The Evolution of "Dodd" -<br><span class='subtitle'>A pedagogical story giving his struggle for the survival of the fittest, tracing his chances, his changes, and how he came out</span></a>
+<div class='author'>Smith, William Hawley, 1845-1922</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13467, {&quot;Title&quot;:&quot;Study of Child Life&quot;,&quot;Topics&quot;:[&quot;Education&quot;],&quot;Primary&quot;:&quot;13467.htm&quot;,&quot;CreatorNames&quot;:[&quot;Washburne, Marion Foster, 1863-&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;13467&quot;});" class='title'>Study of Child Life</a>
+<div class='author'>Washburne, Marion Foster, 1863-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13548, {&quot;Title&quot;:&quot;Cambridge Essays on Education&quot;,&quot;Topics&quot;:[&quot;Education&quot;],&quot;Primary&quot;:&quot;13548.htm&quot;,&quot;CreatorNames&quot;:[&quot;Benson, Arthur Christopher, 1862-1925 [Editor]&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;13548&quot;});" class='title'>Cambridge Essays on Education</a>
+<div class='author'>Benson, Arthur Christopher, 1862-1925 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13666, {&quot;Title&quot;:&quot;A Study of Fairy Tales&quot;,&quot;Topics&quot;:[&quot;Fairy tales -- History and criticism&quot;],&quot;Primary&quot;:&quot;13666.txt&quot;,&quot;CreatorNames&quot;:[&quot;Kready, Laura Fry, 1874-&quot;,&quot;Suzzallo, Henry, 1875-1933 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;13666&quot;});" class='title'>A Study of Fairy Tales</a>
+<div class='author'>Kready, Laura Fry, 1874-, Suzzallo, Henry, 1875-1933 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14567, {&quot;Title&quot;:&quot;The Reconstructed School&quot;,&quot;Topics&quot;:[&quot;Teaching&quot;,&quot;Education -- United States&quot;],&quot;Primary&quot;:&quot;14567.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pearson, Francis B. (Francis Bail), 1853-1938&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;14567&quot;});" class='title'>The Reconstructed School</a>
+<div class='author'>Pearson, Francis B. (Francis Bail), 1853-1938</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15683, {&quot;Title&quot;:&quot;The High School Failures - A Study of the School Records of Pupils Failing in Academic or Commercial High School Subjects&quot;,&quot;Topics&quot;:[&quot;Underachievers&quot;,&quot;Academic achievement&quot;,&quot;High school dropouts&quot;],&quot;Primary&quot;:&quot;15683.htm&quot;,&quot;CreatorNames&quot;:[&quot;O&#39;Brien, F. P., 1885-&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;15683&quot;});" class='title'>The High School Failures -<br><span class='subtitle'>A Study of the School Records of Pupils Failing in Academic or Commercial High School Subjects</span></a>
+<div class='author'>O'Brien, F. P., 1885-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16287, {&quot;Title&quot;:&quot;Talks To Teachers On Psychology; And To Students On Some Of Life&#39;s Ideals&quot;,&quot;Topics&quot;:[&quot;Educational psychology&quot;,&quot;College students -- Conduct of life&quot;,&quot;Teachers -- Professional ethics&quot;],&quot;Primary&quot;:&quot;16287.htm&quot;,&quot;CreatorNames&quot;:[&quot;James, William, 1842-1910&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;16287&quot;});" class='title'>Talks To Teachers On Psychology;<br><span class='subtitle'>And To Students On Some Of Life's Ideals</span></a>
+<div class='author'>James, William, 1842-1910</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16434, {&quot;Title&quot;:&quot;Autobiography of Friedrich Froebel $c translated and annotated by Emilie Michaelis ... and H. Keatley Moore.&quot;,&quot;Topics&quot;:[&quot;Fröbel, Friedrich, 1782-1852&quot;],&quot;Primary&quot;:&quot;16434.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fröbel, Friedrich, 1782-1852&quot;,&quot;Michaelis, Emilie [Translator]&quot;,&quot;Moore, Henry Keatley, 1846- [Translator]&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;16434&quot;});" class='title'>Autobiography of Friedrich Froebel $c translated and annotated by Emilie Michaelis ... and H. Keatley Moore.</a>
+<div class='author'>Fröbel, Friedrich, 1782-1852, Michaelis, Emilie [Translator], Moore, Henry Keatley, 1846- [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16693, {&quot;Title&quot;:&quot;Stories to Tell Children - Fifty-Four Stories With Some Suggestions For Telling&quot;,&quot;Topics&quot;:[&quot;Storytelling&quot;,&quot;Children&#39;s stories&quot;,&quot;Storytelling -- Study and teaching&quot;],&quot;Primary&quot;:&quot;16693.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bryant, Sara Cone, 1873-&quot;],&quot;LoCC&quot;:[&quot;LB&quot;,&quot;PZ&quot;],&quot;PG_ID&quot;:&quot;16693&quot;});" class='title'>Stories to Tell Children -<br><span class='subtitle'>Fifty-Four Stories With Some Suggestions For Telling</span></a>
+<div class='author'>Bryant, Sara Cone, 1873-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16987, {&quot;Title&quot;:&quot;Craftsmanship in Teaching&quot;,&quot;Topics&quot;:[&quot;Education&quot;,&quot;Teaching&quot;],&quot;Primary&quot;:&quot;16987.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bagley, William C. (William Chandler), 1874-1946&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;16987&quot;});" class='title'>Craftsmanship in Teaching</a>
+<div class='author'>Bagley, William C. (William Chandler), 1874-1946</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17268, {&quot;Title&quot;:&quot;Ontario Teachers&#39; Manuals: History&quot;,&quot;Topics&quot;:[&quot;History -- Study and teaching&quot;],&quot;Primary&quot;:&quot;17268.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ontario. Department of Education&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;17268&quot;});" class='title'>Ontario Teachers' Manuals:<br><span class='subtitle'>History</span></a>
+<div class='author'>Ontario. Department of Education</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17588, {&quot;Title&quot;:&quot;The Vitalized School&quot;,&quot;Topics&quot;:[&quot;Teaching&quot;],&quot;Primary&quot;:&quot;17588.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pearson, Francis B. (Francis Bail), 1853-1938&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;17588&quot;});" class='title'>The Vitalized School</a>
+<div class='author'>Pearson, Francis B. (Francis Bail), 1853-1938</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18451, {&quot;Title&quot;:&quot;Ontario Normal School Manuals: Science of Education&quot;,&quot;Topics&quot;:[&quot;Education&quot;,&quot;Educational psychology&quot;],&quot;Primary&quot;:&quot;18451.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ontario. Department of Education&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;18451&quot;});" class='title'>Ontario Normal School Manuals:<br><span class='subtitle'>Science of Education</span></a>
+<div class='author'>Ontario. Department of Education</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18477, {&quot;Title&quot;:&quot;The Science of Human Nature: A Psychology for Beginners&quot;,&quot;Topics&quot;:[&quot;Psychology&quot;,&quot;Educational psychology&quot;],&quot;Primary&quot;:&quot;18477.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pyle, William Henry, 1875-1946&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;18477&quot;});" class='title'>The Science of Human Nature:<br><span class='subtitle'>A Psychology for Beginners</span></a>
+<div class='author'>Pyle, William Henry, 1875-1946</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18698, {&quot;Title&quot;:&quot;The Recitation&quot;,&quot;Topics&quot;:[&quot;Teaching&quot;],&quot;Primary&quot;:&quot;18698.htm&quot;,&quot;CreatorNames&quot;:[&quot;Betts, George Herbert, 1868-1934&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;18698&quot;});" class='title'>The Recitation</a>
+<div class='author'>Betts, George Herbert, 1868-1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19013, {&quot;Title&quot;:&quot;Sciências Naturaes - Pela Redacção da «Educação Nacional»&quot;,&quot;Topics&quot;:[&quot;Science -- Study and teaching&quot;],&quot;Primary&quot;:&quot;19013.txt&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;LB&quot;,&quot;Q&quot;],&quot;PG_ID&quot;:&quot;19013&quot;});" class='title'>Sciências Naturaes -<br><span class='subtitle'>Pela Redacção da «Educação Nacional»</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19056, {&quot;Title&quot;:&quot;Thoughts on Educational Topics and Institutions&quot;,&quot;Topics&quot;:[&quot;Education&quot;],&quot;Primary&quot;:&quot;19056.htm&quot;,&quot;CreatorNames&quot;:[&quot;Boutwell, George S. (George Sewall), 1818-1905&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;19056&quot;});" class='title'>Thoughts on Educational Topics and Institutions</a>
+<div class='author'>Boutwell, George S. (George Sewall), 1818-1905</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19549, {&quot;Title&quot;:&quot;The Mind of the Child, Part II - The Development of the Intellect, International Education - Series Edited By William T. Harris, Volume IX.&quot;,&quot;Topics&quot;:[&quot;Child development&quot;,&quot;Child psychology&quot;],&quot;Primary&quot;:&quot;19549.htm&quot;,&quot;CreatorNames&quot;:[&quot;Preyer, William T., 1841-1897&quot;,&quot;Brown, Henry W. [Translator]&quot;],&quot;LoCC&quot;:[&quot;BF&quot;,&quot;LB&quot;],&quot;PG_ID&quot;:&quot;19549&quot;});" class='title'>The Mind of the Child, Part II -<br><span class='subtitle'>The Development of the Intellect, International Education - Series Edited By William T. Harris, Volume IX.</span></a>
+<div class='author'>Preyer, William T., 1841-1897, Brown, Henry W. [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19659, {&quot;Title&quot;:&quot;The Elements of General Method, Based on the Principles of Herbart&quot;,&quot;Topics&quot;:[&quot;Education&quot;,&quot;Teaching&quot;,&quot;Herbart, Johann Friedrich, 1776-1841&quot;],&quot;Primary&quot;:&quot;19659.txt&quot;,&quot;CreatorNames&quot;:[&quot;McMurry, Charles A. (Charles Alexander), 1857-1929&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;19659&quot;});" class='title'>The Elements of General Method, Based on the Principles of Herbart</a>
+<div class='author'>McMurry, Charles A. (Charles Alexander), 1857-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20220, {&quot;Title&quot;:&quot;The Mind and Its Education&quot;,&quot;Topics&quot;:[&quot;Educational psychology&quot;],&quot;Primary&quot;:&quot;20220.htm&quot;,&quot;CreatorNames&quot;:[&quot;Betts, George Herbert, 1868-1934&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;20220&quot;});" class='title'>The Mind and Its Education</a>
+<div class='author'>Betts, George Herbert, 1868-1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20555, {&quot;Title&quot;:&quot;What Is and What Might Be - A Study of Education in General and Elementary Education in Particular&quot;,&quot;Topics&quot;:[&quot;Education&quot;],&quot;Primary&quot;:&quot;20555.htm&quot;,&quot;CreatorNames&quot;:[&quot;Holmes, Edmond, 1850-1936&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;20555&quot;});" class='title'>What Is and What Might Be -<br><span class='subtitle'>A Study of Education in General and Elementary Education in Particular</span></a>
+<div class='author'>Holmes, Edmond, 1850-1936</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20662, {&quot;Title&quot;:&quot;The Measurement of Intelligence - An Explanation of and a Complete Guide for the Use of the - Stanford Revision and Extension of the Binet-Simon - Intelligence Scale&quot;,&quot;Topics&quot;:[&quot;Psychophysiology&quot;,&quot;Child development&quot;,&quot;Intelligence tests&quot;],&quot;Primary&quot;:&quot;20662.htm&quot;,&quot;CreatorNames&quot;:[&quot;Terman, Lewis M. (Lewis Madison), 1877-1956&quot;,&quot;Cubberley, Ellwood Patterson, 1868-1941 [Editor]&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;20662&quot;});" class='title'>The Measurement of Intelligence -<br><span class='subtitle'>An Explanation of and a Complete Guide for the Use of the - Stanford Revision and Extension of the Binet-Simon - Intelligence Scale</span></a>
+<div class='author'>Terman, Lewis M. (Lewis Madison), 1877-1956, Cubberley, Ellwood Patterson, 1868-1941 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(21045, {&quot;Title&quot;:&quot;Education and the Higher Life&quot;,&quot;Topics&quot;:[&quot;Education&quot;],&quot;Primary&quot;:&quot;21045.htm&quot;,&quot;CreatorNames&quot;:[&quot;Spalding, John Lancaster, 1840-1916&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;21045&quot;});" class='title'>Education and the Higher Life</a>
+<div class='author'>Spalding, John Lancaster, 1840-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(21213, {&quot;Title&quot;:&quot;New Ideals in Rural Schools&quot;,&quot;Topics&quot;:[&quot;Public schools&quot;],&quot;Primary&quot;:&quot;21213.htm&quot;,&quot;CreatorNames&quot;:[&quot;Betts, George Herbert, 1868-1934&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;21213&quot;});" class='title'>New Ideals in Rural Schools</a>
+<div class='author'>Betts, George Herbert, 1868-1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(21919, {&quot;Title&quot;:&quot;Teachers&#39; Outlines for Studies in English - Based on the Requirements for Admission to College&quot;,&quot;Topics&quot;:[&quot;English language -- Study and teaching&quot;],&quot;Primary&quot;:&quot;21919.htm&quot;,&quot;CreatorNames&quot;:[&quot;Blakely, Gilbert Sykes&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;21919&quot;});" class='title'>Teachers' Outlines for Studies in English -<br><span class='subtitle'>Based on the Requirements for Admission to College</span></a>
+<div class='author'>Blakely, Gilbert Sykes</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(21951, {&quot;Title&quot;:&quot;Jan Amos Komenský - Johano Amos Comenius&quot;,&quot;Topics&quot;:[&quot;Comenius, Johann Amos, 1592-1670&quot;],&quot;Primary&quot;:&quot;21951.htm&quot;,&quot;CreatorNames&quot;:[&quot;Novák, Jan Václav, 1853-1920&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;21951&quot;});" class='title'>Jan Amos Komenský -<br><span class='subtitle'>Johano Amos Comenius</span></a>
+<div class='author'>Novák, Jan Václav, 1853-1920</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22251, {&quot;Title&quot;:&quot;The Teacher - Or, Moral Influences Employed in the Instruction and Government of the Young&quot;,&quot;Topics&quot;:[&quot;Teaching&quot;,&quot;Moral education&quot;],&quot;Primary&quot;:&quot;22251.htm&quot;,&quot;CreatorNames&quot;:[&quot;Abbott, Jacob, 1803-1879&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;22251&quot;});" class='title'>The Teacher -<br><span class='subtitle'>Or, Moral Influences Employed in the Instruction and Government of the Young</span></a>
+<div class='author'>Abbott, Jacob, 1803-1879</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22425, {&quot;Title&quot;:&quot;Stanford Achievement Test, Ed. 1922 - Advanced Examination, Form A, for Grades 4-8&quot;,&quot;Topics&quot;:[&quot;Psychological tests&quot;],&quot;Primary&quot;:&quot;22425.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kelley, Truman Lee, 1884-1961&quot;,&quot;Ruch, G. M. (Giles Murrel), 1892-1943&quot;,&quot;Terman, Lewis M. (Lewis Madison), 1877-1956&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;22425&quot;});" class='title'>Stanford Achievement Test, Ed. 1922 -<br><span class='subtitle'>Advanced Examination, Form A, for Grades 4-8</span></a>
+<div class='author'>Kelley, Truman Lee, 1884-1961, Ruch, G. M. (Giles Murrel), 1892-1943, Terman, Lewis M. (Lewis Madison), 1877-1956</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23919, {&quot;Title&quot;:&quot;Cartas sobre a educação da mocidade&quot;,&quot;Topics&quot;:[&quot;Education -- Portugal&quot;],&quot;Primary&quot;:&quot;23919.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sanches, António Nunes Ribeiro, 1699-1783&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;23919&quot;});" class='title'>Cartas sobre a educação da mocidade</a>
+<div class='author'>Sanches, António Nunes Ribeiro, 1699-1783</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24526, {&quot;Title&quot;:&quot;The Idea of a University Defined and Illustrated - In Nine Discourses Delivered to the Catholics of Dublin&quot;,&quot;Topics&quot;:[&quot;Universities and colleges&quot;,&quot;Education, Higher&quot;],&quot;Primary&quot;:&quot;24526.htm&quot;,&quot;CreatorNames&quot;:[&quot;Newman, John Henry, 1801-1890&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;24526&quot;});" class='title'>The Idea of a University Defined and Illustrated -<br><span class='subtitle'>In Nine Discourses Delivered to the Catholics of Dublin</span></a>
+<div class='author'>Newman, John Henry, 1801-1890</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24727, {&quot;Title&quot;:&quot;Spontaneous Activity in Education&quot;,&quot;Topics&quot;:[&quot;Montessori method of education&quot;],&quot;Primary&quot;:&quot;24727.htm&quot;,&quot;CreatorNames&quot;:[&quot;Montessori, Maria, 1870-1952&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;24727&quot;});" class='title'>Spontaneous Activity in Education</a>
+<div class='author'>Montessori, Maria, 1870-1952</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24912, {&quot;Title&quot;:&quot;Finger plays for nursery and kindergarten&quot;,&quot;Topics&quot;:[&quot;Games&quot;,&quot;Games with music&quot;,&quot;Children&#39;s songs&quot;,&quot;Finger play&quot;],&quot;Primary&quot;:&quot;24912.htm&quot;,&quot;CreatorNames&quot;:[&quot;Poulsson, Emilie, 1853-1939&quot;,&quot;Bridgman, L. J. (Lewis Jesse), 1857-1931 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;GV&quot;,&quot;LB&quot;],&quot;PG_ID&quot;:&quot;24912&quot;});" class='title'>Finger plays for nursery and kindergarten</a>
+<div class='author'>Poulsson, Emilie, 1853-1939, Bridgman, L. J. (Lewis Jesse), 1857-1931 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24974, {&quot;Title&quot;:&quot;Ontario Teachers&#39; Manuals: Literature&quot;,&quot;Topics&quot;:[&quot;Education&quot;,&quot;Literature -- Study and teaching&quot;,&quot;Children -- Books and reading&quot;,&quot;Reading (Elementary)&quot;],&quot;Primary&quot;:&quot;24974.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ontario. Department of Education&quot;],&quot;LoCC&quot;:[&quot;LB&quot;,&quot;P&quot;,&quot;Z&quot;],&quot;PG_ID&quot;:&quot;24974&quot;});" class='title'>Ontario Teachers' Manuals:<br><span class='subtitle'>Literature</span></a>
+<div class='author'>Ontario. Department of Education</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26139, {&quot;Title&quot;:&quot;Ontario Teachers&#39; Manuals: Nature Study&quot;,&quot;Topics&quot;:[&quot;Science -- Study and teaching (Elementary) -- Ontario&quot;,&quot;Nature study&quot;],&quot;Primary&quot;:&quot;26139.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ontario. Department of Education&quot;],&quot;LoCC&quot;:[&quot;LB&quot;,&quot;Q&quot;],&quot;PG_ID&quot;:&quot;26139&quot;});" class='title'>Ontario Teachers' Manuals:<br><span class='subtitle'>Nature Study</span></a>
+<div class='author'>Ontario. Department of Education</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26919, {&quot;Title&quot;:&quot;The New Education - A Review of Progressive Educational Movements of the Day (1915)&quot;,&quot;Topics&quot;:[&quot;Education&quot;],&quot;Primary&quot;:&quot;26919.htm&quot;,&quot;CreatorNames&quot;:[&quot;Nearing, Scott, 1883-1983&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;26919&quot;});" class='title'>The New Education -<br><span class='subtitle'>A Review of Progressive Educational Movements of the Day (1915)</span></a>
+<div class='author'>Nearing, Scott, 1883-1983</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27075, {&quot;Title&quot;:&quot;Here and Now Story Book - Two- to seven-year-olds&quot;,&quot;Topics&quot;:[&quot;Children&#39;s stories, American&quot;],&quot;Primary&quot;:&quot;27075.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mitchell, Lucy Sprague, 1878-1967&quot;,&quot;Van Loon, Hendrik Willem, 1882-1944 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;LB&quot;,&quot;PZ&quot;],&quot;PG_ID&quot;:&quot;27075&quot;});" class='title'>Here and Now Story Book -<br><span class='subtitle'>Two- to seven-year-olds</span></a>
+<div class='author'>Mitchell, Lucy Sprague, 1878-1967, Van Loon, Hendrik Willem, 1882-1944 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27746, {&quot;Title&quot;:&quot;Schedule of Salaries for Teachers, members of the Supervising staff and others. - January 1-August 31, 1920, inclusive&quot;,&quot;Topics&quot;:[&quot;Teachers -- Salaries, etc. -- Massachusetts -- Boston&quot;],&quot;Primary&quot;:&quot;27746.htm&quot;,&quot;CreatorNames&quot;:[&quot;Boston (Mass.). School Committee&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;27746&quot;});" class='title'>Schedule of Salaries for Teachers, members of the Supervising staff and others. -<br><span class='subtitle'>January 1-August 31, 1920, inclusive</span></a>
+<div class='author'>Boston (Mass.). School Committee</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27790, {&quot;Title&quot;:&quot;A Practical Enquiry into the Philosophy of Education&quot;,&quot;Topics&quot;:[&quot;Education&quot;],&quot;Primary&quot;:&quot;27790.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gall, James, 1784?-1874&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;27790&quot;});" class='title'>A Practical Enquiry into the Philosophy of Education</a>
+<div class='author'>Gall, James, 1784?-1874</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28146, {&quot;Title&quot;:&quot;On the Future of our Educational Institutions&quot;,&quot;Topics&quot;:[&quot;Education -- Philosophy&quot;,&quot;Nietzsche, Friedrich Wilhelm, 1844-1900 -- Views on education&quot;,&quot;Educational change -- Germany&quot;],&quot;Primary&quot;:&quot;28146.htm&quot;,&quot;CreatorNames&quot;:[&quot;Nietzsche, Friedrich Wilhelm, 1844-1900&quot;,&quot;Levy, Oscar, 1867-1946 [Editor]&quot;,&quot;Kennedy, J. M. (John McFarland) [Translator]&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;28146&quot;});" class='title'>On the Future of our Educational Institutions</a>
+<div class='author'>Nietzsche, Friedrich Wilhelm, 1844-1900, Levy, Oscar, 1867-1946 [Editor], Kennedy, J. M. (John McFarland) [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28466, {&quot;Title&quot;:&quot;A Catalogue of Play Equipment&quot;,&quot;Topics&quot;:[&quot;Play&quot;],&quot;Primary&quot;:&quot;28466.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hunt, Jean Lee&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;28466&quot;});" class='title'>A Catalogue of Play Equipment</a>
+<div class='author'>Hunt, Jean Lee</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28501, {&quot;Title&quot;:&quot;Construction Work for Rural and Elementary Schools&quot;,&quot;Topics&quot;:[&quot;Education&quot;,&quot;Creative activities and seat work&quot;],&quot;Primary&quot;:&quot;28501.htm&quot;,&quot;CreatorNames&quot;:[&quot;McGaw, Virginia&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;28501&quot;});" class='title'>Construction Work for Rural and Elementary Schools</a>
+<div class='author'>McGaw, Virginia</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28708, {&quot;Title&quot;:&quot;Practical Education, Volume I&quot;,&quot;Topics&quot;:[&quot;Education&quot;],&quot;Primary&quot;:&quot;28708.htm&quot;,&quot;CreatorNames&quot;:[&quot;Edgeworth, Maria, 1767-1849&quot;,&quot;Edgeworth, Richard Lovell, 1744-1817&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;28708&quot;});" class='title'>Practical Education, Volume I</a>
+<div class='author'>Edgeworth, Maria, 1767-1849, Edgeworth, Richard Lovell, 1744-1817</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28709, {&quot;Title&quot;:&quot;Practical Education, Volume II&quot;,&quot;Topics&quot;:[&quot;Education&quot;],&quot;Primary&quot;:&quot;28709.htm&quot;,&quot;CreatorNames&quot;:[&quot;Edgeworth, Maria, 1767-1849&quot;,&quot;Edgeworth, Richard Lovell, 1744-1817&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;28709&quot;});" class='title'>Practical Education, Volume II</a>
+<div class='author'>Edgeworth, Maria, 1767-1849, Edgeworth, Richard Lovell, 1744-1817</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29163, {&quot;Title&quot;:&quot;The Aural System - Being the Most Direct, the Straight-Line Method for the Simultaneous Fourfold Mastery of a Foreign Language.&quot;,&quot;Topics&quot;:[&quot;Languages, Modern -- Study and teaching&quot;],&quot;Primary&quot;:&quot;29163.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hardy, Charles&quot;],&quot;LoCC&quot;:[&quot;LB&quot;,&quot;PB&quot;],&quot;PG_ID&quot;:&quot;29163&quot;});" class='title'>The Aural System -<br><span class='subtitle'>Being the Most Direct, the Straight-Line Method for the Simultaneous Fourfold Mastery of a Foreign Language.</span></a>
+<div class='author'>Hardy, Charles</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29259, {&quot;Title&quot;:&quot;The Child and the Curriculum&quot;,&quot;Topics&quot;:[&quot;Education&quot;],&quot;Primary&quot;:&quot;29259.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dewey, John, 1859-1952&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;29259&quot;});" class='title'>The Child and the Curriculum</a>
+<div class='author'>Dewey, John, 1859-1952</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29343, {&quot;Title&quot;:&quot;Three Addresses to Girls at School&quot;,&quot;Topics&quot;:[&quot;Speeches, addresses, etc.&quot;],&quot;Primary&quot;:&quot;29343.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wilson, J. M. (James Maurice), 1836-1931&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;29343&quot;});" class='title'>Three Addresses to Girls at School</a>
+<div class='author'>Wilson, J. M. (James Maurice), 1836-1931</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29600, {&quot;Title&quot;:&quot;Rural Life and the Rural School&quot;,&quot;Topics&quot;:[&quot;Country life&quot;,&quot;Rural schools&quot;],&quot;Primary&quot;:&quot;29600.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kennedy, Joseph, 1858-1937&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;29600&quot;});" class='title'>Rural Life and the Rural School</a>
+<div class='author'>Kennedy, Joseph, 1858-1937</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29604, {&quot;Title&quot;:&quot;College Teaching - Studies in Methods of Teaching in the College&quot;,&quot;Topics&quot;:[&quot;Teaching&quot;,&quot;Universities and colleges -- United States&quot;],&quot;Primary&quot;:&quot;29604.htm&quot;,&quot;CreatorNames&quot;:[&quot;Klapper, Paul, 1885-1952&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;29604&quot;});" class='title'>College Teaching -<br><span class='subtitle'>Studies in Methods of Teaching in the College</span></a>
+<div class='author'>Klapper, Paul, 1885-1952</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29630, {&quot;Title&quot;:&quot;The Curse of Education&quot;,&quot;Topics&quot;:[&quot;Education&quot;],&quot;Primary&quot;:&quot;29630.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gorst, Harold Edward, 1868-1950&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;29630&quot;});" class='title'>The Curse of Education</a>
+<div class='author'>Gorst, Harold Edward, 1868-1950</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29635, {&quot;Title&quot;:&quot;Dr. Montessori&#39;s Own Handbook&quot;,&quot;Topics&quot;:[&quot;Montessori method of education&quot;],&quot;Primary&quot;:&quot;29635.htm&quot;,&quot;CreatorNames&quot;:[&quot;Montessori, Maria, 1870-1952&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;29635&quot;});" class='title'>Dr. Montessori's Own Handbook</a>
+<div class='author'>Montessori, Maria, 1870-1952</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30296, {&quot;Title&quot;:&quot;The Philosophy of Teaching - The Teacher, The Pupil, The School&quot;,&quot;Topics&quot;:[&quot;Teaching&quot;],&quot;Primary&quot;:&quot;30296.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sands, Nathaniel&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;30296&quot;});" class='title'>The Philosophy of Teaching -<br><span class='subtitle'>The Teacher, The Pupil, The School</span></a>
+<div class='author'>Sands, Nathaniel</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30309, {&quot;Title&quot;:&quot;How to Study&quot;,&quot;Topics&quot;:[&quot;Study skills&quot;],&quot;Primary&quot;:&quot;30309.htm&quot;,&quot;CreatorNames&quot;:[&quot;Swain, George Fillmore, 1857-1931&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;30309&quot;});" class='title'>How to Study</a>
+<div class='author'>Swain, George Fillmore, 1857-1931</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30433, {&quot;Title&quot;:&quot;Émile; Or, Concerning Education; Extracts&quot;,&quot;Topics&quot;:[&quot;Education&quot;],&quot;Primary&quot;:&quot;30433.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rousseau, Jean-Jacques, 1712-1778&quot;,&quot;Steeg, Jules, 1836-1898 [Editor]&quot;,&quot;Worthington, Eleanor [Translator]&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;30433&quot;});" class='title'>Émile;<br><span class='subtitle'>Or, Concerning Education; Extracts</span></a>
+<div class='author'>Rousseau, Jean-Jacques, 1712-1778, Steeg, Jules, 1836-1898 [Editor], Worthington, Eleanor [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30661, {&quot;Title&quot;:&quot;Pedagogics as a System&quot;,&quot;Topics&quot;:[&quot;Education&quot;],&quot;Primary&quot;:&quot;30661.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rosenkranz, Karl, 1805-1879&quot;,&quot;Brackett, Anna C. (Anna Callender), 1836-1911 [Translator]&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;30661&quot;});" class='title'>Pedagogics as a System</a>
+<div class='author'>Rosenkranz, Karl, 1805-1879, Brackett, Anna C. (Anna Callender), 1836-1911 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30957, {&quot;Title&quot;:&quot;Adequate Preparation for the Teacher of Biological Sciences in Secondary Schools&quot;,&quot;Topics&quot;:[&quot;Teachers -- Training of&quot;],&quot;Primary&quot;:&quot;30957.htm&quot;,&quot;CreatorNames&quot;:[&quot;McDonald, J. Daley (James Daley), 1892-&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;30957&quot;});" class='title'>Adequate Preparation for the Teacher of Biological Sciences in Secondary Schools</a>
+<div class='author'>McDonald, J. Daley (James Daley), 1892-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31067, {&quot;Title&quot;:&quot;In the School-Room: Chapters in the Philosophy of Education&quot;,&quot;Topics&quot;:[&quot;Teaching&quot;],&quot;Primary&quot;:&quot;31067.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hart, John S. (John Seely), 1810-1877&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;31067&quot;});" class='title'>In the School-Room:<br><span class='subtitle'>Chapters in the Philosophy of Education</span></a>
+<div class='author'>Hart, John S. (John Seely), 1810-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31097, {&quot;Title&quot;:&quot;Froebel&#39;s Gifts&quot;,&quot;Topics&quot;:[&quot;Kindergarten -- Methods and manuals&quot;,&quot;Kindergarten&quot;],&quot;Primary&quot;:&quot;31097.htm&quot;,&quot;CreatorNames&quot;:[&quot;Smith, Nora Archibald, 1859-1934&quot;,&quot;Wiggin, Kate Douglas Smith, 1856-1923&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;31097&quot;});" class='title'>Froebel's Gifts</a>
+<div class='author'>Smith, Nora Archibald, 1859-1934, Wiggin, Kate Douglas Smith, 1856-1923</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31107, {&quot;Title&quot;:&quot;Jeugdherinneringen&quot;,&quot;Topics&quot;:[&quot;Ligthart, Jan, 1859-1916&quot;,&quot;Educators -- Netherlands -- Biography&quot;],&quot;Primary&quot;:&quot;31107.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ligthart, Jan, 1859-1916&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;31107&quot;});" class='title'>Jeugdherinneringen</a>
+<div class='author'>Ligthart, Jan, 1859-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31388, {&quot;Title&quot;:&quot;Mother Truth&#39;s Melodies. Common Sense For Children. A Kindergarten&quot;,&quot;Topics&quot;:[&quot;Children&#39;s songs&quot;],&quot;Primary&quot;:&quot;31388.htm&quot;,&quot;CreatorNames&quot;:[&quot;Miller, E. P., Mrs., 1831-&quot;],&quot;LoCC&quot;:[&quot;LB&quot;,&quot;PZ&quot;],&quot;PG_ID&quot;:&quot;31388&quot;});" class='title'>Mother Truth's Melodies. Common Sense For Children. A Kindergarten</a>
+<div class='author'>Miller, E. P., Mrs., 1831-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32072, {&quot;Title&quot;:&quot;Algumas lições de psicologia e pedologia&quot;,&quot;Topics&quot;:[&quot;Child psychology&quot;,&quot;Educational psychology&quot;],&quot;Primary&quot;:&quot;32072.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ferreira, António Aurélio da Costa, 1879-1922&quot;],&quot;LoCC&quot;:[&quot;BF&quot;,&quot;LB&quot;],&quot;PG_ID&quot;:&quot;32072&quot;});" class='title'>Algumas lições de psicologia e pedologia</a>
+<div class='author'>Ferreira, António Aurélio da Costa, 1879-1922</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32309, {&quot;Title&quot;:&quot;Practical High School Speller&quot;,&quot;Topics&quot;:[&quot;Spellers&quot;],&quot;Primary&quot;:&quot;32309.htm&quot;,&quot;CreatorNames&quot;:[&quot;Chew, Tobias O. (Tobias Otterbein), 1885- [Compiler]&quot;],&quot;LoCC&quot;:[&quot;LB&quot;,&quot;PE&quot;],&quot;PG_ID&quot;:&quot;32309&quot;});" class='title'>Practical High School Speller</a>
+<div class='author'>Chew, Tobias O. (Tobias Otterbein), 1885- [Compiler]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32803, {&quot;Title&quot;:&quot;Letters from a Father to His Son Entering College&quot;,&quot;Topics&quot;:[&quot;College ethics&quot;],&quot;Primary&quot;:&quot;32803.htm&quot;,&quot;CreatorNames&quot;:[&quot;Thwing, Charles Franklin, 1853-1937&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;32803&quot;});" class='title'>Letters from a Father to His Son Entering College</a>
+<div class='author'>Thwing, Charles Franklin, 1853-1937</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33860, {&quot;Title&quot;:&quot;The Autobiography of Thomas Platter, a schoolmaster of the sixteenth century.&quot;,&quot;Topics&quot;:[&quot;Platter, Thomas, 1499-1582&quot;,&quot;Educators -- Switzerland -- Biography&quot;,&quot;Education -- Switzerland -- History -- 16th century&quot;],&quot;Primary&quot;:&quot;33860.htm&quot;,&quot;CreatorNames&quot;:[&quot;Platter, Thomas, 1499-1582&quot;,&quot;Finn, Elizabeth Anne McCaul, 1825-1921 [Translator]&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;33860&quot;});" class='title'>The Autobiography of Thomas Platter, a schoolmaster of the sixteenth century.</a>
+<div class='author'>Platter, Thomas, 1499-1582, Finn, Elizabeth Anne McCaul, 1825-1921 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33923, {&quot;Title&quot;:&quot;Special Method in Primary Reading and Oral Work with Stories&quot;,&quot;Topics&quot;:[&quot;Reading (Elementary)&quot;],&quot;Primary&quot;:&quot;33923.htm&quot;,&quot;CreatorNames&quot;:[&quot;McMurry, Charles A. (Charles Alexander), 1857-1929&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;33923&quot;});" class='title'>Special Method in Primary Reading and Oral Work with Stories</a>
+<div class='author'>McMurry, Charles A. (Charles Alexander), 1857-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34200, {&quot;Title&quot;:&quot;Story Lessons on Character-Building (Morals) and Manners&quot;,&quot;Topics&quot;:[&quot;Etiquette&quot;,&quot;Character&quot;,&quot;Moral education&quot;],&quot;Primary&quot;:&quot;34200.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bates, Loïs&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;34200&quot;});" class='title'>Story Lessons on Character-Building (Morals) and Manners</a>
+<div class='author'>Bates, Loïs</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34257, {&quot;Title&quot;:&quot;Means and Ends of Education&quot;,&quot;Topics&quot;:[&quot;Education&quot;,&quot;Culture&quot;],&quot;Primary&quot;:&quot;34257.htm&quot;,&quot;CreatorNames&quot;:[&quot;Spalding, John Lancaster, 1840-1916&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;34257&quot;});" class='title'>Means and Ends of Education</a>
+<div class='author'>Spalding, John Lancaster, 1840-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34307, {&quot;Title&quot;:&quot;Condensed Guide for the Stanford Revision of the Binet-Simon Intelligence Tests&quot;,&quot;Topics&quot;:[&quot;Intelligence tests&quot;,&quot;Stanford-Binet Test&quot;,&quot;Binet-Simon Test&quot;],&quot;Primary&quot;:&quot;34307.htm&quot;,&quot;CreatorNames&quot;:[&quot;Terman, Lewis M. (Lewis Madison), 1877-1956&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;34307&quot;});" class='title'>Condensed Guide for the Stanford Revision of the Binet-Simon Intelligence Tests</a>
+<div class='author'>Terman, Lewis M. (Lewis Madison), 1877-1956</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34938, {&quot;Title&quot;:&quot;Education: How Old The New&quot;,&quot;Topics&quot;:[&quot;Education -- History&quot;],&quot;Primary&quot;:&quot;34938.htm&quot;,&quot;CreatorNames&quot;:[&quot;Walsh, James J. (James Joseph), 1865-1942&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;34938&quot;});" class='title'>Education:<br><span class='subtitle'>How Old The New</span></a>
+<div class='author'>Walsh, James J. (James Joseph), 1865-1942</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35341, {&quot;Title&quot;:&quot;Literature in the Elementary School&quot;,&quot;Topics&quot;:[&quot;Literature -- Study and teaching&quot;],&quot;Primary&quot;:&quot;35341.htm&quot;,&quot;CreatorNames&quot;:[&quot;MacClintock, Porter Lander, 1873-1939&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;35341&quot;});" class='title'>Literature in the Elementary School</a>
+<div class='author'>MacClintock, Porter Lander, 1873-1939</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35677, {&quot;Title&quot;:&quot;Education in the Home, the Kindergarten, and the Primary School&quot;,&quot;Topics&quot;:[&quot;Parent and child&quot;,&quot;Education, Primary&quot;,&quot;Kindergarten&quot;,&quot;Education, Preschool&quot;,&quot;Religious education of children&quot;],&quot;Primary&quot;:&quot;35677.htm&quot;,&quot;CreatorNames&quot;:[&quot;Peabody, Elizabeth Palmer, 1804-1894&quot;,&quot;Manning, E. (Elizabeth) Adelaide, 1828-1905 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;35677&quot;});" class='title'>Education in the Home, the Kindergarten, and the Primary School</a>
+<div class='author'>Peabody, Elizabeth Palmer, 1804-1894, Manning, E. (Elizabeth) Adelaide, 1828-1905 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36555, {&quot;Title&quot;:&quot;Guide to the Kindergarten and Intermediate Class; and Moral Culture of Infancy.&quot;,&quot;Topics&quot;:[&quot;Kindergarten -- Methods and manuals&quot;],&quot;Primary&quot;:&quot;36555.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mann, Mary Tyler Peabody, 1806-1887&quot;,&quot;Peabody, Elizabeth Palmer, 1804-1894&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;36555&quot;});" class='title'>Guide to the Kindergarten and Intermediate Class;<br><span class='subtitle'>and Moral Culture of Infancy.</span></a>
+<div class='author'>Mann, Mary Tyler Peabody, 1806-1887, Peabody, Elizabeth Palmer, 1804-1894</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36762, {&quot;Title&quot;:&quot;The Reform of Education&quot;,&quot;Topics&quot;:[&quot;Education&quot;,&quot;Education -- Philosophy&quot;,&quot;Gentile, Giovanni, 1875-1944&quot;],&quot;Primary&quot;:&quot;36762.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gentile, Giovanni, 1875-1944&quot;,&quot;Croce, Benedetto, 1866-1952 [Author of introduction, etc.]&quot;,&quot;Bigongiari, Dino, 1883- [Translator]&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;36762&quot;});" class='title'>The Reform of Education</a>
+<div class='author'>Gentile, Giovanni, 1875-1944, Croce, Benedetto, 1866-1952 [Author of introduction, etc.], Bigongiari, Dino, 1883- [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36774, {&quot;Title&quot;:&quot;The Teacher: Essays and Addresses on Education&quot;,&quot;Topics&quot;:[&quot;Education&quot;,&quot;Education, Higher&quot;,&quot;Women -- Education&quot;],&quot;Primary&quot;:&quot;36774.htm&quot;,&quot;CreatorNames&quot;:[&quot;Palmer, Alice Freeman, 1855-1902&quot;,&quot;Palmer, George Herbert, 1842-1933&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;36774&quot;});" class='title'>The Teacher:<br><span class='subtitle'>Essays and Addresses on Education</span></a>
+<div class='author'>Palmer, Alice Freeman, 1855-1902, Palmer, George Herbert, 1842-1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37020, {&quot;Title&quot;:&quot;Children&#39;s Ways - Being selections from the author&#39;s \&quot;\&quot;Studies of childhood,\&quot;\&quot; with some additional matter&quot;,&quot;Topics&quot;:[&quot;Child development&quot;,&quot;Child psychology&quot;],&quot;Primary&quot;:&quot;37020.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sully, James, 1842-1923&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;37020&quot;});" class='title'>Children's Ways -<br><span class='subtitle'>Being selections from the author's "Studies of childhood," with some additional matter</span></a>
+<div class='author'>Sully, James, 1842-1923</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37612, {&quot;Title&quot;:&quot;Bill&#39;s School and Mine: A Collection of Essays on Education&quot;,&quot;Topics&quot;:[&quot;Education&quot;],&quot;Primary&quot;:&quot;37612.htm&quot;,&quot;CreatorNames&quot;:[&quot;Franklin, William S. (William Suddards), 1863-1930&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;37612&quot;});" class='title'>Bill's School and Mine:<br><span class='subtitle'>A Collection of Essays on Education</span></a>
+<div class='author'>Franklin, William S. (William Suddards), 1863-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39086, {&quot;Title&quot;:&quot;Educação nova: As bases&quot;,&quot;Topics&quot;:[&quot;Education -- Portugal&quot;],&quot;Primary&quot;:&quot;39086.htm&quot;,&quot;CreatorNames&quot;:[&quot;Alves dos Santos, Augusto Joaquim, 1866-1924&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;39086&quot;});" class='title'>Educação nova:<br><span class='subtitle'>As bases</span></a>
+<div class='author'>Alves dos Santos, Augusto Joaquim, 1866-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39256, {&quot;Title&quot;:&quot;Petit traité des punitions et des récompenses à l&#39;usage des maîtres et des parents&quot;,&quot;Topics&quot;:[&quot;Child rearing&quot;,&quot;Discipline of children&quot;,&quot;Rewards and punishments in education&quot;,&quot;School discipline&quot;],&quot;Primary&quot;:&quot;39256.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hément, Félix, 1827-1891&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;39256&quot;});" class='title'>Petit traité des punitions et des récompenses à l'usage des maîtres et des parents</a>
+<div class='author'>Hément, Félix, 1827-1891</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39863, {&quot;Title&quot;:&quot;The Montessori Method - Scientific Pedagogy as Applied to Child Education in &#39;The Children&#39;s Houses&#39; with Additions and Revisions by the Author&quot;,&quot;Topics&quot;:[&quot;Montessori method of education&quot;],&quot;Primary&quot;:&quot;39863.htm&quot;,&quot;CreatorNames&quot;:[&quot;Montessori, Maria, 1870-1952&quot;,&quot;Holmes, Henry W. (Henry Wyman), 1880-1960 [Author of introduction, etc.]&quot;,&quot;George, Anne E., 1882- [Translator]&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;39863&quot;});" class='title'>The Montessori Method -<br><span class='subtitle'>Scientific Pedagogy as Applied to Child Education in 'The Children's Houses' with Additions and Revisions by the Author</span></a>
+<div class='author'>Montessori, Maria, 1870-1952, Holmes, Henry W. (Henry Wyman), 1880-1960 [Author of introduction, etc.], George, Anne E., 1882- [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41240, {&quot;Title&quot;:&quot;Kinderen uit m&#39;n klas&quot;,&quot;Topics&quot;:[&quot;School children -- Netherlands&quot;],&quot;Primary&quot;:&quot;41240.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cohen de Vries, P. J.&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;41240&quot;});" class='title'>Kinderen uit m'n klas</a>
+<div class='author'>Cohen de Vries, P. J.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42467, {&quot;Title&quot;:&quot;The College Freshman&#39;s Don&#39;t Book - in the interests of freshmen at large, especially those whose remaining at large uninstructed &amp; unguided appears a worry and a menace to college &amp; university society these remarks and hints are set forth by G. F. E. (A. B.) a sympathizer&quot;,&quot;Topics&quot;:[&quot;College freshmen -- United States -- Life skills guides&quot;],&quot;Primary&quot;:&quot;42467.htm&quot;,&quot;CreatorNames&quot;:[&quot;Evans, George Fullerton&quot;,&quot;Carter, Raymond [Illustrator]&quot;,&quot;Ingerson, Frank [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;42467&quot;});" class='title'>The College Freshman's Don't Book -<br><span class='subtitle'>in the interests of freshmen at large, especially those whose remaining at large uninstructed & unguided appears a worry and a menace to college & university society these remarks and hints are set forth by G. F. E. (A. B.) a sympathizer</span></a>
+<div class='author'>Evans, George Fullerton, Carter, Raymond [Illustrator], Ingerson, Frank [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42869, {&quot;Title&quot;:&quot;The Montessori Elementary Material - The Advanced Montessori Method&quot;,&quot;Topics&quot;:[&quot;Montessori method of education&quot;],&quot;Primary&quot;:&quot;42869.htm&quot;,&quot;CreatorNames&quot;:[&quot;Montessori, Maria, 1870-1952&quot;,&quot;Livingston, Arthur, 1883-1944 [Translator]&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;42869&quot;});" class='title'>The Montessori Elementary Material -<br><span class='subtitle'>The Advanced Montessori Method</span></a>
+<div class='author'>Montessori, Maria, 1870-1952, Livingston, Arthur, 1883-1944 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43613, {&quot;Title&quot;:&quot;Die Welt im Kinderköpfchen&quot;,&quot;Topics&quot;:[&quot;Child psychology&quot;],&quot;Primary&quot;:&quot;43613.htm&quot;,&quot;CreatorNames&quot;:[&quot;Siebe, Josephine, 1870-1941&quot;,&quot;Prüfer, Johannes, 1882-1947 [Editor]&quot;],&quot;LoCC&quot;:[&quot;BF&quot;,&quot;LB&quot;],&quot;PG_ID&quot;:&quot;43613&quot;});" class='title'>Die Welt im Kinderköpfchen</a>
+<div class='author'>Siebe, Josephine, 1870-1941, Prüfer, Johannes, 1882-1947 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44102, {&quot;Title&quot;:&quot;School Credit for Home Work&quot;,&quot;Topics&quot;:[&quot;Grading and marking (Students)&quot;],&quot;Primary&quot;:&quot;44102.htm&quot;,&quot;CreatorNames&quot;:[&quot;Alderman, L. R. (Lewis Raymond), 1872-1965&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;44102&quot;});" class='title'>School Credit for Home Work</a>
+<div class='author'>Alderman, L. R. (Lewis Raymond), 1872-1965</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44905, {&quot;Title&quot;:&quot;Outlines of Educational Doctrine&quot;,&quot;Topics&quot;:[&quot;Education -- Philosophy&quot;],&quot;Primary&quot;:&quot;44905.htm&quot;,&quot;CreatorNames&quot;:[&quot;De Garmo, Charles, 1849-1934 [Annotator]&quot;,&quot;Herbart, Johann Friedrich, 1776-1841&quot;,&quot;Lange, Alexis Frederick, 1862-1924 [Translator]&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;44905&quot;});" class='title'>Outlines of Educational Doctrine</a>
+<div class='author'>De Garmo, Charles, 1849-1934 [Annotator], Herbart, Johann Friedrich, 1776-1841, Lange, Alexis Frederick, 1862-1924 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45746, {&quot;Title&quot;:&quot;Learning to Be a Schoolmaster&quot;,&quot;Topics&quot;:[&quot;Teachers -- Training of&quot;],&quot;Primary&quot;:&quot;45746.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cole, Thomas R. (Thomas Raymond), 1881-1970&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;45746&quot;});" class='title'>Learning to Be a Schoolmaster</a>
+<div class='author'>Cole, Thomas R. (Thomas Raymond), 1881-1970</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46018, {&quot;Title&quot;:&quot;Loyola and the Educational System of the Jesuits&quot;,&quot;Topics&quot;:[&quot;Education -- History&quot;,&quot;Ignatius, of Loyola, Saint, 1491-1556&quot;,&quot;Jesuits&quot;],&quot;Primary&quot;:&quot;46018.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hughes, Thomas, 1849-1939&quot;,&quot;Butler, Nicholas Murray, 1862-1947 [Editor]&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;46018&quot;});" class='title'>Loyola and the Educational System of the Jesuits</a>
+<div class='author'>Hughes, Thomas, 1849-1939, Butler, Nicholas Murray, 1862-1947 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46108, {&quot;Title&quot;:&quot;The Playwork Book&quot;,&quot;Topics&quot;:[&quot;Toys&quot;],&quot;Primary&quot;:&quot;46108.htm&quot;,&quot;CreatorNames&quot;:[&quot;Macbeth, Ann&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;46108&quot;});" class='title'>The Playwork Book</a>
+<div class='author'>Macbeth, Ann</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46340, {&quot;Title&quot;:&quot;Émile eli Kasvatuksesta&quot;,&quot;Topics&quot;:[&quot;Education -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;46340.txt&quot;,&quot;CreatorNames&quot;:[&quot;Rousseau, Jean-Jacques, 1712-1778&quot;,&quot;Hahl, Jalmari, 1869-1929 [Translator]&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;46340&quot;});" class='title'>Émile eli Kasvatuksesta</a>
+<div class='author'>Rousseau, Jean-Jacques, 1712-1778, Hahl, Jalmari, 1869-1929 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46413, {&quot;Title&quot;:&quot;Special Days and Their Observance - September 1919&quot;,&quot;Topics&quot;:[&quot;Schools -- Exercises and recreations -- New Jersey&quot;,&quot;Holidays -- United States&quot;],&quot;Primary&quot;:&quot;46413.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;46413&quot;});" class='title'>Special Days and Their Observance -<br><span class='subtitle'>September 1919</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46643, {&quot;Title&quot;:&quot;Pedagogical Anthropology&quot;,&quot;Topics&quot;:[&quot;Anthropology&quot;,&quot;Physical anthropology&quot;],&quot;Primary&quot;:&quot;46643.htm&quot;,&quot;CreatorNames&quot;:[&quot;Montessori, Maria, 1870-1952&quot;,&quot;Cooper, Frederic Taber, 1864-1937 [Translator]&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;46643&quot;});" class='title'>Pedagogical Anthropology</a>
+<div class='author'>Montessori, Maria, 1870-1952, Cooper, Frederic Taber, 1864-1937 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(473, {&quot;Title&quot;:&quot;Stories to Tell to Children&quot;,&quot;Topics&quot;:[&quot;Storytelling&quot;,&quot;Children&#39;s stories&quot;],&quot;Primary&quot;:&quot;473.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bryant, Sara Cone, 1873-&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;473&quot;});" class='title'>Stories to Tell to Children</a>
+<div class='author'>Bryant, Sara Cone, 1873-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(474, {&quot;Title&quot;:&quot;How to Tell Stories to Children, and Some Stories to Tell&quot;,&quot;Topics&quot;:[&quot;Storytelling&quot;,&quot;Children&#39;s stories&quot;],&quot;Primary&quot;:&quot;474.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bryant, Sara Cone, 1873-&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;474&quot;});" class='title'>How to Tell Stories to Children, and Some Stories to Tell</a>
+<div class='author'>Bryant, Sara Cone, 1873-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48906, {&quot;Title&quot;:&quot;Schools of to-morrow&quot;,&quot;Topics&quot;:[&quot;Education -- United States&quot;],&quot;Primary&quot;:&quot;48906.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dewey, Evelyn, 1889-&quot;,&quot;Dewey, John, 1859-1952&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;48906&quot;});" class='title'>Schools of to-morrow</a>
+<div class='author'>Dewey, Evelyn, 1889-, Dewey, John, 1859-1952</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50338, {&quot;Title&quot;:&quot;Huxley and education - Address at the Opening of the College Year, Columbia University, September 28, 1910&quot;,&quot;Topics&quot;:[&quot;Education&quot;,&quot;Huxley, Thomas Henry, 1825-1895&quot;],&quot;Primary&quot;:&quot;50338.htm&quot;,&quot;CreatorNames&quot;:[&quot;Osborn, Henry Fairfield, 1857-1935&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;50338&quot;});" class='title'>Huxley and education -<br><span class='subtitle'>Address at the Opening of the College Year, Columbia University, September 28, 1910</span></a>
+<div class='author'>Osborn, Henry Fairfield, 1857-1935</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50691, {&quot;Title&quot;:&quot;Ameisenbüchlein; oder, Anweisung zu einer vernünftigen Erziehung der Erzieher&quot;,&quot;Topics&quot;:[&quot;Education -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;50691.htm&quot;,&quot;CreatorNames&quot;:[&quot;Salzmann, Christian Gotthilf, 1744-1811&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;50691&quot;});" class='title'>Ameisenbüchlein;<br><span class='subtitle'>oder, Anweisung zu einer vernünftigen Erziehung der Erzieher</span></a>
+<div class='author'>Salzmann, Christian Gotthilf, 1744-1811</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51580, {&quot;Title&quot;:&quot;On the Future of our Educational Institutions; Homer and Classical Philology - Complete Works, Volume Three&quot;,&quot;Topics&quot;:[&quot;Homer&quot;,&quot;Classical philology&quot;,&quot;Education -- Philosophy&quot;,&quot;Nietzsche, Friedrich Wilhelm, 1844-1900 -- Views on education&quot;,&quot;Educational change -- Germany&quot;],&quot;Primary&quot;:&quot;51580.htm&quot;,&quot;CreatorNames&quot;:[&quot;Nietzsche, Friedrich Wilhelm, 1844-1900&quot;,&quot;Levy, Oscar, 1867-1946 [Editor]&quot;,&quot;Kennedy, J. M. (John McFarland) [Translator]&quot;],&quot;LoCC&quot;:[&quot;LB&quot;,&quot;PA&quot;],&quot;PG_ID&quot;:&quot;51580&quot;});" class='title'>On the Future of our Educational Institutions;<br><span class='subtitle'>Homer and Classical Philology - Complete Works, Volume Three</span></a>
+<div class='author'>Nietzsche, Friedrich Wilhelm, 1844-1900, Levy, Oscar, 1867-1946 [Editor], Kennedy, J. M. (John McFarland) [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52292, {&quot;Title&quot;:&quot;Report of the Committee of Fifteen - Read at the Cleveland Meeting of the Department of Superintendence, February 19-21, 1884, with the Debate&quot;,&quot;Topics&quot;:[&quot;Teachers -- Training of -- United States&quot;,&quot;Education, Elementary -- United States&quot;],&quot;Primary&quot;:&quot;52292.htm&quot;,&quot;CreatorNames&quot;:[&quot;Draper, A. S. (Andrew Sloan), 1848-1913&quot;,&quot;Harris, William Torrey, 1835-1909&quot;,&quot;Tarbell, H. S. (Horace Sumner), 1838-1904&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;52292&quot;});" class='title'>Report of the Committee of Fifteen -<br><span class='subtitle'>Read at the Cleveland Meeting of the Department of Superintendence, February 19-21, 1884, with the Debate</span></a>
+<div class='author'>Draper, A. S. (Andrew Sloan), 1848-1913, Harris, William Torrey, 1835-1909, Tarbell, H. S. (Horace Sumner), 1838-1904</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53910, {&quot;Title&quot;:&quot;The School and Society - Being three lectures&quot;,&quot;Topics&quot;:[&quot;Education&quot;,&quot;Educational psychology&quot;,&quot;Education -- Philosophy&quot;,&quot;University of Chicago. University Elementary School&quot;],&quot;Primary&quot;:&quot;53910.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dewey, John, 1859-1952&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;53910&quot;});" class='title'>The School and Society -<br><span class='subtitle'>Being three lectures</span></a>
+<div class='author'>Dewey, John, 1859-1952</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54114, {&quot;Title&quot;:&quot;The Story in Primary Instruction: Sixteen Stories and How to Use Them&quot;,&quot;Topics&quot;:[&quot;Teaching&quot;],&quot;Primary&quot;:&quot;54114.htm&quot;,&quot;CreatorNames&quot;:[&quot;Allison, Samuel B. (Samuel Buell), 1861-&quot;,&quot;Perdue, H. Avis (Hannah Avis), 1858-&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;54114&quot;});" class='title'>The Story in Primary Instruction:<br><span class='subtitle'>Sixteen Stories and How to Use Them</span></a>
+<div class='author'>Allison, Samuel B. (Samuel Buell), 1861-, Perdue, H. Avis (Hannah Avis), 1858-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5427, {&quot;Title&quot;:&quot;Emile&quot;,&quot;Topics&quot;:[&quot;Education -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;5427.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rousseau, Jean-Jacques, 1712-1778&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;5427&quot;});" class='title'>Emile</a>
+<div class='author'>Rousseau, Jean-Jacques, 1712-1778</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54277, {&quot;Title&quot;:&quot;Froebel as a pioneer in modern psychology&quot;,&quot;Topics&quot;:[&quot;Psychology&quot;,&quot;Fröbel, Friedrich, 1782-1852&quot;],&quot;Primary&quot;:&quot;54277.htm&quot;,&quot;CreatorNames&quot;:[&quot;Murray, E. R. (Elsie Riach), 1861-1932&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;54277&quot;});" class='title'>Froebel as a pioneer in modern psychology</a>
+<div class='author'>Murray, E. R. (Elsie Riach), 1861-1932</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54302, {&quot;Title&quot;:&quot;College Men Without Money&quot;,&quot;Topics&quot;:[&quot;Universities and colleges&quot;,&quot;Students -- United States&quot;],&quot;Primary&quot;:&quot;54302.htm&quot;,&quot;CreatorNames&quot;:[&quot;Riddle, Carl Brown&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;54302&quot;});" class='title'>College Men Without Money</a>
+<div class='author'>Riddle, Carl Brown</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55057, {&quot;Title&quot;:&quot;Daily Lesson Plans in English&quot;,&quot;Topics&quot;:[&quot;English language -- Study and teaching&quot;],&quot;Primary&quot;:&quot;55057.htm&quot;,&quot;CreatorNames&quot;:[&quot;Griffin, Caroline Stearns, 1868-&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;55057&quot;});" class='title'>Daily Lesson Plans in English</a>
+<div class='author'>Griffin, Caroline Stearns, 1868-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55786, {&quot;Title&quot;:&quot;World Stories Retold for Modern Boys and Girls - One Hundred and Eighty-seven Five-minute Classic Stories for Retelling in Home, Sunday School, Children&#39;s Services, Public School Grades and \&quot;\&quot;The Story-hour\&quot;\&quot; in Public Libraries&quot;,&quot;Topics&quot;:[&quot;Storytelling&quot;],&quot;Primary&quot;:&quot;55786.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sly, William James, 1867-1940&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;55786&quot;});" class='title'>World Stories Retold for Modern Boys and Girls -<br><span class='subtitle'>One Hundred and Eighty-seven Five-minute Classic Stories for Retelling in Home, Sunday School, Children's Services, Public School Grades and "The Story-hour" in Public Libraries</span></a>
+<div class='author'>Sly, William James, 1867-1940</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55999, {&quot;Title&quot;:&quot;Die schöpferische Pause&quot;,&quot;Topics&quot;:[&quot;Education&quot;,&quot;Educational psychology&quot;,&quot;Human beings -- Constitution&quot;],&quot;Primary&quot;:&quot;55999.htm&quot;,&quot;CreatorNames&quot;:[&quot;Klatt, Fritz, 1888-1945&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;55999&quot;});" class='title'>Die schöpferische Pause</a>
+<div class='author'>Klatt, Fritz, 1888-1945</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56903, {&quot;Title&quot;:&quot;Introduction to the scientific study of education&quot;,&quot;Topics&quot;:[&quot;Education&quot;,&quot;School management and organization&quot;],&quot;Primary&quot;:&quot;56903.htm&quot;,&quot;CreatorNames&quot;:[&quot;Judd, Charles Hubbard, 1873-1946&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;56903&quot;});" class='title'>Introduction to the scientific study of education</a>
+<div class='author'>Judd, Charles Hubbard, 1873-1946</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57313, {&quot;Title&quot;:&quot;The Feeding of School Children&quot;,&quot;Topics&quot;:[&quot;School children -- Food&quot;],&quot;Primary&quot;:&quot;57313.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bulkley, M. E. (Mildred Emily)&quot;,&quot;Tawney, R. H. (Richard Henry), 1880-1962 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;57313&quot;});" class='title'>The Feeding of School Children</a>
+<div class='author'>Bulkley, M. E. (Mildred Emily), Tawney, R. H. (Richard Henry), 1880-1962 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57398, {&quot;Title&quot;:&quot;Education of Women&quot;,&quot;Topics&quot;:[&quot;Women -- Education -- United States&quot;],&quot;Primary&quot;:&quot;57398.htm&quot;,&quot;CreatorNames&quot;:[&quot;Thomas, M. Carey (Martha Carey), 1857-1935&quot;,&quot;Butler, Nicholas Murray, 1862-1947 [Editor]&quot;],&quot;LoCC&quot;:[&quot;HQ&quot;,&quot;LB&quot;],&quot;PG_ID&quot;:&quot;57398&quot;});" class='title'>Education of Women</a>
+<div class='author'>Thomas, M. Carey (Martha Carey), 1857-1935, Butler, Nicholas Murray, 1862-1947 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57569, {&quot;Title&quot;:&quot;Hints on Child-training&quot;,&quot;Topics&quot;:[&quot;Child rearing&quot;,&quot;Home schooling&quot;],&quot;Primary&quot;:&quot;57569.htm&quot;,&quot;CreatorNames&quot;:[&quot;Trumbull, H. Clay (Henry Clay), 1830-1903&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;57569&quot;});" class='title'>Hints on Child-training</a>
+<div class='author'>Trumbull, H. Clay (Henry Clay), 1830-1903</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57949, {&quot;Title&quot;:&quot;Were You Ever a Child?&quot;,&quot;Topics&quot;:[&quot;Education&quot;],&quot;Primary&quot;:&quot;57949.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dell, Floyd, 1887-1969&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;57949&quot;});" class='title'>Were You Ever a Child?</a>
+<div class='author'>Dell, Floyd, 1887-1969</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58107, {&quot;Title&quot;:&quot;For the Story Teller: Story Telling and Stories to Tell&quot;,&quot;Topics&quot;:[&quot;Storytelling&quot;,&quot;Children&#39;s stories&quot;,&quot;Activity programs in education&quot;],&quot;Primary&quot;:&quot;58107.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bailey, Carolyn Sherwin, 1875-1961&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;58107&quot;});" class='title'>For the Story Teller:<br><span class='subtitle'>Story Telling and Stories to Tell</span></a>
+<div class='author'>Bailey, Carolyn Sherwin, 1875-1961</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58255, {&quot;Title&quot;:&quot;Educating by Story-Telling - Showing the Value of Story-Telling as an Educational Tool for the Use of All Workers with Children&quot;,&quot;Topics&quot;:[&quot;Storytelling&quot;,&quot;Children&#39;s stories&quot;],&quot;Primary&quot;:&quot;58255.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cather, Katherine Dunlap, Mrs.&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;58255&quot;});" class='title'>Educating by Story-Telling -<br><span class='subtitle'>Showing the Value of Story-Telling as an Educational Tool for the Use of All Workers with Children</span></a>
+<div class='author'>Cather, Katherine Dunlap, Mrs.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58379, {&quot;Title&quot;:&quot;Montessori children&quot;,&quot;Topics&quot;:[&quot;Montessori method of education&quot;],&quot;Primary&quot;:&quot;58379.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bailey, Carolyn Sherwin, 1875-1961&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;58379&quot;});" class='title'>Montessori children</a>
+<div class='author'>Bailey, Carolyn Sherwin, 1875-1961</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58461, {&quot;Title&quot;:&quot;Reading: How to Teach It&quot;,&quot;Topics&quot;:[&quot;Reading (Elementary)&quot;],&quot;Primary&quot;:&quot;58461.htm&quot;,&quot;CreatorNames&quot;:[&quot;Arnold, Sarah Louise, 1859-1943&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;58461&quot;});" class='title'>Reading:<br><span class='subtitle'>How to Teach It</span></a>
+<div class='author'>Arnold, Sarah Louise, 1859-1943</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58483, {&quot;Title&quot;:&quot;Comenius and the Beginnings of Educational Reform&quot;,&quot;Topics&quot;:[&quot;Education -- History&quot;,&quot;Comenius, Johann Amos, 1592-1670&quot;,&quot;Educational change -- History&quot;],&quot;Primary&quot;:&quot;58483.htm&quot;,&quot;CreatorNames&quot;:[&quot;Monroe, W. S. (Will Seymour), 1863-1939&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;58483&quot;});" class='title'>Comenius and the Beginnings of Educational Reform</a>
+<div class='author'>Monroe, W. S. (Will Seymour), 1863-1939</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5957, {&quot;Title&quot;:&quot;The Art of the Story-Teller&quot;,&quot;Topics&quot;:[&quot;Storytelling&quot;,&quot;Children -- Books and reading&quot;,&quot;Children&#39;s literature -- Bibliography&quot;,&quot;Children&#39;s stories -- Bibliography&quot;],&quot;Primary&quot;:&quot;5957.htm&quot;,&quot;CreatorNames&quot;:[&quot;Shedlock, Marie L., 1854-1935&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;5957&quot;});" class='title'>The Art of the Story-Teller</a>
+<div class='author'>Shedlock, Marie L., 1854-1935</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59891, {&quot;Title&quot;:&quot;Reginald Bateman, Teacher and Soldier - A Memorial Volume of Selections from His Lectures and Other Writings&quot;,&quot;Topics&quot;:[&quot;World War, 1914-1918&quot;,&quot;English literature -- History and criticism&quot;,&quot;Bateman, Reginald, 1884?-1918&quot;],&quot;Primary&quot;:&quot;59891.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bateman, Reginald, 1884?-1918&quot;],&quot;LoCC&quot;:[&quot;LB&quot;,&quot;PR&quot;],&quot;PG_ID&quot;:&quot;59891&quot;});" class='title'>Reginald Bateman, Teacher and Soldier -<br><span class='subtitle'>A Memorial Volume of Selections from His Lectures and Other Writings</span></a>
+<div class='author'>Bateman, Reginald, 1884?-1918</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60717, {&quot;Title&quot;:&quot;Practical School Discipline: Introductory Course&quot;,&quot;Topics&quot;:[&quot;School discipline&quot;,&quot;Teachers&quot;],&quot;Primary&quot;:&quot;60717.htm&quot;,&quot;CreatorNames&quot;:[&quot;Beery, Ray Coppock, 1892-&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;60717&quot;});" class='title'>Practical School Discipline:<br><span class='subtitle'>Introductory Course</span></a>
+<div class='author'>Beery, Ray Coppock, 1892-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60893, {&quot;Title&quot;:&quot;Thinking and learning to think&quot;,&quot;Topics&quot;:[&quot;Thought and thinking&quot;],&quot;Primary&quot;:&quot;60893.htm&quot;,&quot;CreatorNames&quot;:[&quot;Schaeffer, Nathan Christ, 1849-1919&quot;,&quot;Brumbaugh, Martin Grove, 1862-1930 [Editor]&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;60893&quot;});" class='title'>Thinking and learning to think</a>
+<div class='author'>Schaeffer, Nathan Christ, 1849-1919, Brumbaugh, Martin Grove, 1862-1930 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61045, {&quot;Title&quot;:&quot;A Montessori Mother&quot;,&quot;Topics&quot;:[&quot;Montessori method of education&quot;],&quot;Primary&quot;:&quot;61045.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fisher, Dorothy Canfield, 1879-1958&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;61045&quot;});" class='title'>A Montessori Mother</a>
+<div class='author'>Fisher, Dorothy Canfield, 1879-1958</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6109, {&quot;Title&quot;:&quot;How to Study and Teaching How to Study&quot;,&quot;Topics&quot;:[&quot;Teaching&quot;,&quot;Study skills&quot;],&quot;Primary&quot;:&quot;6109.txt&quot;,&quot;CreatorNames&quot;:[&quot;McMurry, Frank M. (Frank Morton), 1862-1936&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;6109&quot;});" class='title'>How to Study and Teaching How to Study</a>
+<div class='author'>McMurry, Frank M. (Frank Morton), 1862-1936</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61212, {&quot;Title&quot;:&quot;English as She is Taught - Being Genuine Answers to Examination Questions in Our Public Schools&quot;,&quot;Topics&quot;:[&quot;English language -- Errors of usage -- Humor&quot;],&quot;Primary&quot;:&quot;61212.htm&quot;,&quot;CreatorNames&quot;:[&quot;Twain, Mark, 1835-1910 [Commentator]&quot;,&quot;Le Row, Caroline B. (Caroline Bigelow), 1843- [Compiler]&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;61212&quot;});" class='title'>English as She is Taught -<br><span class='subtitle'>Being Genuine Answers to Examination Questions in Our Public Schools</span></a>
+<div class='author'>Twain, Mark, 1835-1910 [Commentator], Le Row, Caroline B. (Caroline Bigelow), 1843- [Compiler]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61340, {&quot;Title&quot;:&quot;The Art of Story-Telling&quot;,&quot;Topics&quot;:[&quot;Storytelling&quot;],&quot;Primary&quot;:&quot;61340.htm&quot;,&quot;CreatorNames&quot;:[&quot;Shedlock, Marie L., 1854-1935&quot;,&quot;Adams, John, 1857-1934 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;61340&quot;});" class='title'>The Art of Story-Telling</a>
+<div class='author'>Shedlock, Marie L., 1854-1935, Adams, John, 1857-1934 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61531, {&quot;Title&quot;:&quot;Muutamia mietteitä kasvatuksesta&quot;,&quot;Topics&quot;:[&quot;Education -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;61531.txt&quot;,&quot;CreatorNames&quot;:[&quot;Locke, John, 1632-1704&quot;,&quot;Lehtonen, J. V., 1883-1948 [Translator]&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;61531&quot;});" class='title'>Muutamia mietteitä kasvatuksesta</a>
+<div class='author'>Locke, John, 1632-1704, Lehtonen, J. V., 1883-1948 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61727, {&quot;Title&quot;:&quot;How to Teach Reading in the Public Schools&quot;,&quot;Topics&quot;:[&quot;Reading&quot;],&quot;Primary&quot;:&quot;61727.htm&quot;,&quot;CreatorNames&quot;:[&quot;Clark, S. H. (Solomon Henry), 1861-1927&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;61727&quot;});" class='title'>How to Teach Reading in the Public Schools</a>
+<div class='author'>Clark, S. H. (Solomon Henry), 1861-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61900, {&quot;Title&quot;:&quot;The Educational Writings of Richard Mulcaster&quot;,&quot;Topics&quot;:[&quot;Education -- History&quot;],&quot;Primary&quot;:&quot;61900.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mulcaster, Richard, 1530?-1611&quot;,&quot;Oliphant, James, 1855-1921 [Editor]&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;61900&quot;});" class='title'>The Educational Writings of Richard Mulcaster</a>
+<div class='author'>Mulcaster, Richard, 1530?-1611, Oliphant, James, 1855-1921 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62025, {&quot;Title&quot;:&quot;Positions&quot;,&quot;Topics&quot;:[&quot;Education -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;62025.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mulcaster, Richard, 1530?-1611&quot;,&quot;Quick, Robert Hebert, 1831-1891 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;62025&quot;});" class='title'>Positions</a>
+<div class='author'>Mulcaster, Richard, 1530?-1611, Quick, Robert Hebert, 1831-1891 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62102, {&quot;Title&quot;:&quot;Education&quot;,&quot;Topics&quot;:[&quot;Education&quot;],&quot;Primary&quot;:&quot;62102.htm&quot;,&quot;CreatorNames&quot;:[&quot;White, Ellen Gould Harmon, 1827-1915&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;62102&quot;});" class='title'>Education</a>
+<div class='author'>White, Ellen Gould Harmon, 1827-1915</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62175, {&quot;Title&quot;:&quot;Studies of childhood&quot;,&quot;Topics&quot;:[&quot;Child development&quot;],&quot;Primary&quot;:&quot;62175.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sully, James, 1842-1923&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;62175&quot;});" class='title'>Studies of childhood</a>
+<div class='author'>Sully, James, 1842-1923</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62752, {&quot;Title&quot;:&quot;Mietteitä kasvatuksesta&quot;,&quot;Topics&quot;:[&quot;Education&quot;],&quot;Primary&quot;:&quot;62752.txt&quot;,&quot;CreatorNames&quot;:[&quot;Kellner, Lorenz, 1811-1892&quot;,&quot;Lilius, Hjalmar Filip, 1858-1918 [Translator]&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;62752&quot;});" class='title'>Mietteitä kasvatuksesta</a>
+<div class='author'>Kellner, Lorenz, 1811-1892, Lilius, Hjalmar Filip, 1858-1918 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63067, {&quot;Title&quot;:&quot;The Story Hour, Vol. I, No. 1, November, 1908 - A Magazine of Methods and Materials for Story Tellers&quot;,&quot;Topics&quot;:[&quot;Storytelling -- Periodicals&quot;],&quot;Primary&quot;:&quot;63067.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;,&quot;Ruediger, William Carl, 1874- [Editor]&quot;,&quot;Wyche, Richard Thomas [Editor]&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;63067&quot;});" class='title'>The Story Hour, Vol. I, No. 1, November, 1908 -<br><span class='subtitle'>A Magazine of Methods and Materials for Story Tellers</span></a>
+<div class='author'>Various, Ruediger, William Carl, 1874- [Editor], Wyche, Richard Thomas [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63450, {&quot;Title&quot;:&quot;Course of Study of the Oakland High School&quot;,&quot;Topics&quot;:[&quot;Education, Secondary -- Curricula -- California -- Oakland&quot;],&quot;Primary&quot;:&quot;63450.htm&quot;,&quot;CreatorNames&quot;:[&quot;Oakland (Calif.). Board of Education&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;63450&quot;});" class='title'>Course of Study of the Oakland High School</a>
+<div class='author'>Oakland (Calif.). Board of Education</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63669, {&quot;Title&quot;:&quot;The Story Tellers&#39; Magazine, Vol. I, No. 1, June 1913&quot;,&quot;Topics&quot;:[&quot;Storytelling -- Periodicals&quot;],&quot;Primary&quot;:&quot;63669.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;,&quot;Wyche, Richard Thomas [Editor]&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;63669&quot;});" class='title'>The Story Tellers' Magazine, Vol. I, No. 1, June 1913</a>
+<div class='author'>Various, Wyche, Richard Thomas [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63750, {&quot;Title&quot;:&quot;The Story Tellers&#39; Magazine, Vol. I, No. 2, July 1913&quot;,&quot;Topics&quot;:[&quot;Storytelling -- Periodicals&quot;],&quot;Primary&quot;:&quot;63750.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;,&quot;Wyche, Richard Thomas [Editor]&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;63750&quot;});" class='title'>The Story Tellers' Magazine, Vol. I, No. 2, July 1913</a>
+<div class='author'>Various, Wyche, Richard Thomas [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63780, {&quot;Title&quot;:&quot;The Story Hour, Vol. I, No. 2, December, 1908 - A Magazine of Methods and Materials for Story Tellers&quot;,&quot;Topics&quot;:[&quot;Storytelling -- Periodicals&quot;],&quot;Primary&quot;:&quot;63780.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;,&quot;Ruediger, William Carl, 1874- [Editor]&quot;,&quot;Wyche, Richard Thomas [Editor]&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;63780&quot;});" class='title'>The Story Hour, Vol. I, No. 2, December, 1908 -<br><span class='subtitle'>A Magazine of Methods and Materials for Story Tellers</span></a>
+<div class='author'>Various, Ruediger, William Carl, 1874- [Editor], Wyche, Richard Thomas [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65152, {&quot;Title&quot;:&quot;Practical School Discipline: Applied Methods, Part 1&quot;,&quot;Topics&quot;:[&quot;School discipline&quot;,&quot;Teachers&quot;],&quot;Primary&quot;:&quot;65152.htm&quot;,&quot;CreatorNames&quot;:[&quot;Beery, Ray Coppock, 1892-&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;65152&quot;});" class='title'>Practical School Discipline:<br><span class='subtitle'>Applied Methods, Part 1</span></a>
+<div class='author'>Beery, Ray Coppock, 1892-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65441, {&quot;Title&quot;:&quot;Learning to Spell: A Manual for Teachers Using the Aldine Speller&quot;,&quot;Topics&quot;:[&quot;Spellers&quot;,&quot;Spellers -- Textbooks&quot;],&quot;Primary&quot;:&quot;65441.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bryce, Catherine T. (Catherine Turner), 1871-1951&quot;,&quot;Kallom, Arthur W.&quot;,&quot;Sherman, Frank J.&quot;],&quot;LoCC&quot;:[&quot;LB&quot;,&quot;PE&quot;],&quot;PG_ID&quot;:&quot;65441&quot;});" class='title'>Learning to Spell:<br><span class='subtitle'>A Manual for Teachers Using the Aldine Speller</span></a>
+<div class='author'>Bryce, Catherine T. (Catherine Turner), 1871-1951, Kallom, Arthur W., Sherman, Frank J.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65635, {&quot;Title&quot;:&quot;Work and Play in Girls&#39; Schools - By Three Head Mistresses&quot;,&quot;Topics&quot;:[&quot;Teaching&quot;,&quot;Women -- Education&quot;],&quot;Primary&quot;:&quot;65635.htm&quot;,&quot;CreatorNames&quot;:[&quot;Beale, Dorothea, 1831-1906&quot;,&quot;Dove, J. F. (Jane Frances), 1847-1942&quot;,&quot;Soulsby, Lucy Helen Muriel, 1856-1927&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;65635&quot;});" class='title'>Work and Play in Girls' Schools -<br><span class='subtitle'>By Three Head Mistresses</span></a>
+<div class='author'>Beale, Dorothea, 1831-1906, Dove, J. F. (Jane Frances), 1847-1942, Soulsby, Lucy Helen Muriel, 1856-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66273, {&quot;Title&quot;:&quot;Stories and Story-telling&quot;,&quot;Topics&quot;:[&quot;Storytelling&quot;],&quot;Primary&quot;:&quot;66273.htm&quot;,&quot;CreatorNames&quot;:[&quot;Keyes, Angela M. (Angela Mary)&quot;],&quot;LoCC&quot;:[&quot;GR&quot;,&quot;LB&quot;],&quot;PG_ID&quot;:&quot;66273&quot;});" class='title'>Stories and Story-telling</a>
+<div class='author'>Keyes, Angela M. (Angela Mary)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66303, {&quot;Title&quot;:&quot;The Art of Story-Telling, with nearly half a hundred stories&quot;,&quot;Topics&quot;:[&quot;Storytelling&quot;,&quot;Children&#39;s stories&quot;],&quot;Primary&quot;:&quot;66303.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cowles, Julia Darrow, 1862-1919&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;66303&quot;});" class='title'>The Art of Story-Telling, with nearly half a hundred stories</a>
+<div class='author'>Cowles, Julia Darrow, 1862-1919</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66369, {&quot;Title&quot;:&quot;An Essay Towards a Philosophy of Education: A Liberal Education for All&quot;,&quot;Topics&quot;:[&quot;Education&quot;,&quot;Education -- Philosophy&quot;,&quot;Education -- Great Britain&quot;,&quot;Parents National Educational Union (London, England)&quot;],&quot;Primary&quot;:&quot;66369.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mason, Charlotte M. (Charlotte Maria), 1842-1923&quot;,&quot;Lyttelton, Edward, Hon., 1855-1942 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;66369&quot;});" class='title'>An Essay Towards a Philosophy of Education:<br><span class='subtitle'>A Liberal Education for All</span></a>
+<div class='author'>Mason, Charlotte M. (Charlotte Maria), 1842-1923, Lyttelton, Edward, Hon., 1855-1942 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66667, {&quot;Title&quot;:&quot;Penmanship: Teaching and Supervision&quot;,&quot;Topics&quot;:[&quot;Penmanship&quot;],&quot;Primary&quot;:&quot;66667.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hiles, Leta Severance&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;66667&quot;});" class='title'>Penmanship:<br><span class='subtitle'>Teaching and Supervision</span></a>
+<div class='author'>Hiles, Leta Severance</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6685, {&quot;Title&quot;:&quot;Story Hour Readers — Book Three&quot;,&quot;Topics&quot;:[&quot;Readers&quot;,&quot;Reading&quot;],&quot;Primary&quot;:&quot;6685.htm&quot;,&quot;CreatorNames&quot;:[&quot;Coe, Ida&quot;,&quot;Dillon, Alice Christie, 1876-&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;6685&quot;});" class='title'>Story Hour Readers — Book Three</a>
+<div class='author'>Coe, Ida, Dillon, Alice Christie, 1876-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66903, {&quot;Title&quot;:&quot;Emil, vagy a nevelésről&quot;,&quot;Topics&quot;:[&quot;Education -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;66903.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rousseau, Jean-Jacques, 1712-1778&quot;,&quot;Schöpflin, Aladár, 1872-1950 [Translator]&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;66903&quot;});" class='title'>Emil, vagy a nevelésről</a>
+<div class='author'>Rousseau, Jean-Jacques, 1712-1778, Schöpflin, Aladár, 1872-1950 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67039, {&quot;Title&quot;:&quot;Mind and Hand: Manual Training the Chief Factor in Education&quot;,&quot;Topics&quot;:[&quot;Manual training&quot;],&quot;Primary&quot;:&quot;67039.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ham, Charles H. (Charles Henry), 1831-1902&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;67039&quot;});" class='title'>Mind and Hand:<br><span class='subtitle'>Manual Training the Chief Factor in Education</span></a>
+<div class='author'>Ham, Charles H. (Charles Henry), 1831-1902</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67088, {&quot;Title&quot;:&quot;Why go to College?&quot;,&quot;Topics&quot;:[&quot;Universities and colleges&quot;,&quot;Students&quot;],&quot;Primary&quot;:&quot;67088.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cooper, Clayton Sedgwick, 1869-1936&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;67088&quot;});" class='title'>Why go to College?</a>
+<div class='author'>Cooper, Clayton Sedgwick, 1869-1936</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67315, {&quot;Title&quot;:&quot;Twenty Talks to Teachers&quot;,&quot;Topics&quot;:[&quot;Teaching&quot;,&quot;Teachers&quot;],&quot;Primary&quot;:&quot;67315.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sanders, Thomas E., 1868-&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;67315&quot;});" class='title'>Twenty Talks to Teachers</a>
+<div class='author'>Sanders, Thomas E., 1868-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68750, {&quot;Title&quot;:&quot;Through the school: The experiences of a mill boy in securing an education&quot;,&quot;Topics&quot;:[&quot;Education&quot;],&quot;Primary&quot;:&quot;68750.htm&quot;,&quot;CreatorNames&quot;:[&quot;Brown, Frederic Kenyon, 1882-&quot;,&quot;Benda, Wladyslaw T. (Wladyslaw Theodore), 1873-1948 [Illustrator]&quot;,&quot;Merrill, Frank T., 1848-1923 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;68750&quot;});" class='title'>Through the school:<br><span class='subtitle'>The experiences of a mill boy in securing an education</span></a>
+<div class='author'>Brown, Frederic Kenyon, 1882-, Benda, Wladyslaw T. (Wladyslaw Theodore), 1873-1948 [Illustrator], Merrill, Frank T., 1848-1923 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68912, {&quot;Title&quot;:&quot;Education and living&quot;,&quot;Topics&quot;:[&quot;Education&quot;],&quot;Primary&quot;:&quot;68912.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bourne, Randolph Silliman, 1886-1918&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;68912&quot;});" class='title'>Education and living</a>
+<div class='author'>Bourne, Randolph Silliman, 1886-1918</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69236, {&quot;Title&quot;:&quot;The high school course in English&quot;,&quot;Topics&quot;:[&quot;English language -- Study and teaching (Secondary)&quot;,&quot;English literature -- Study and teaching (Secondary)&quot;],&quot;Primary&quot;:&quot;69236.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bleyer, Willard Grosvenor, 1873-1935&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;69236&quot;});" class='title'>The high school course in English</a>
+<div class='author'>Bleyer, Willard Grosvenor, 1873-1935</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69672, {&quot;Title&quot;:&quot;The Summers readers: Manual, first lessons in reading&quot;,&quot;Topics&quot;:[&quot;Reading (Elementary)&quot;],&quot;Primary&quot;:&quot;69672.htm&quot;,&quot;CreatorNames&quot;:[&quot;Summers, Maud&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;69672&quot;});" class='title'>The Summers readers:<br><span class='subtitle'>Manual, first lessons in reading</span></a>
+<div class='author'>Summers, Maud</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69766, {&quot;Title&quot;:&quot;The training of teachers in the United States of America&quot;,&quot;Topics&quot;:[&quot;Teachers -- Training of -- United States&quot;],&quot;Primary&quot;:&quot;69766.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bramwell, Amy Blanche&quot;,&quot;Hughes, H. Millicent, 1863-1942&quot;,&quot;Roberts, R. D., 1851-1911 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;69766&quot;});" class='title'>The training of teachers in the United States of America</a>
+<div class='author'>Bramwell, Amy Blanche, Hughes, H. Millicent, 1863-1942, Roberts, R. D., 1851-1911 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69896, {&quot;Title&quot;:&quot;The book of the child: An attempt to set down what is in the mind of children&quot;,&quot;Topics&quot;:[&quot;Child psychology&quot;],&quot;Primary&quot;:&quot;69896.htm&quot;,&quot;CreatorNames&quot;:[&quot;How, F. D. (Frederick Douglas), 1853-1936&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;69896&quot;});" class='title'>The book of the child:<br><span class='subtitle'>An attempt to set down what is in the mind of children</span></a>
+<div class='author'>How, F. D. (Frederick Douglas), 1853-1936</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70302, {&quot;Title&quot;:&quot;Education and the good life&quot;,&quot;Topics&quot;:[&quot;Education&quot;,&quot;Educational psychology&quot;,&quot;Moral education&quot;],&quot;Primary&quot;:&quot;70302.htm&quot;,&quot;CreatorNames&quot;:[&quot;Russell, Bertrand, 1872-1970&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;70302&quot;});" class='title'>Education and the good life</a>
+<div class='author'>Russell, Bertrand, 1872-1970</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(852, {&quot;Title&quot;:&quot;Democracy and Education: An Introduction to the Philosophy of Education&quot;,&quot;Topics&quot;:[&quot;Education -- Social aspects&quot;,&quot;Education -- Philosophy&quot;],&quot;Primary&quot;:&quot;852.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dewey, John, 1859-1952&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;852&quot;});" class='title'>Democracy and Education:<br><span class='subtitle'>An Introduction to the Philosophy of Education</span></a>
+<div class='author'>Dewey, John, 1859-1952</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(9173, {&quot;Title&quot;:&quot;Youth: Its Education, Regimen, and Hygiene&quot;,&quot;Topics&quot;:[&quot;Adolescence&quot;,&quot;Educational psychology&quot;,&quot;Children -- Health and hygiene&quot;],&quot;Primary&quot;:&quot;9173.txt&quot;,&quot;CreatorNames&quot;:[&quot;Hall, G. Stanley (Granville Stanley), 1844-1924&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;9173&quot;});" class='title'>Youth:<br><span class='subtitle'>Its Education, Regimen, and Hygiene</span></a>
+<div class='author'>Hall, G. Stanley (Granville Stanley), 1844-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(988, {&quot;Title&quot;:&quot;The Education of the Child&quot;,&quot;Topics&quot;:[&quot;Education&quot;],&quot;Primary&quot;:&quot;988.txt&quot;,&quot;CreatorNames&quot;:[&quot;Key, Ellen, 1849-1926&quot;],&quot;LoCC&quot;:[&quot;LB&quot;],&quot;PG_ID&quot;:&quot;988&quot;});" class='title'>The Education of the Child</a>
+<div class='author'>Key, Ellen, 1849-1926</div>
+</div>
+</ul></div>
+</body></html>

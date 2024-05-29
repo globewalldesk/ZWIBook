@@ -1,0 +1,1182 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Recreation, Leisure (GV)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(10028, {&quot;Title&quot;:&quot;Spalding&#39;s Official Baseball Guide - 1913&quot;,&quot;Topics&quot;:[&quot;Baseball&quot;],&quot;Primary&quot;:&quot;10028.htm&quot;,&quot;CreatorNames&quot;:[&quot;Foster, John B. (John Buckingham), 1863-1941 [Editor]&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;10028&quot;});" class='title'>Spalding's Official Baseball Guide -<br><span class='subtitle'>1913</span></a>
+<div class='author'>Foster, John B. (John Buckingham), 1863-1941 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(10672, {&quot;Title&quot;:&quot;Game and Playe of the Chesse - A Verbatim Reprint of the First Edition, 1474&quot;,&quot;Topics&quot;:[&quot;Chess -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;10672.htm&quot;,&quot;CreatorNames&quot;:[&quot;Caxton, William, 1422?-1492?&quot;,&quot;Jacobus, de Cessolis, active 1288-1322&quot;,&quot;Axon, William E. A. (William Edward Armytage), 1846-1913 [Editor]&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;10672&quot;});" class='title'>Game and Playe of the Chesse -<br><span class='subtitle'>A Verbatim Reprint of the First Edition, 1474</span></a>
+<div class='author'>Caxton, William, 1422?-1492?, Jacobus, de Cessolis, active 1288-1322, Axon, William E. A. (William Edward Armytage), 1846-1913 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(10961, {&quot;Title&quot;:&quot;Lawn Tennis for Ladies&quot;,&quot;Topics&quot;:[&quot;Tennis&quot;],&quot;Primary&quot;:&quot;10961.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lambert Chambers, Mrs., 1878-1960&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;10961&quot;});" class='title'>Lawn Tennis for Ladies</a>
+<div class='author'>Lambert Chambers, Mrs., 1878-1960</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(10969, {&quot;Title&quot;:&quot;Ski-running&quot;,&quot;Topics&quot;:[&quot;Skis and skiing&quot;],&quot;Primary&quot;:&quot;10969.txt&quot;,&quot;CreatorNames&quot;:[&quot;Furse, Katharine, 1875-1952&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;10969&quot;});" class='title'>Ski-running</a>
+<div class='author'>Furse, Katharine, 1875-1952</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(11550, {&quot;Title&quot;:&quot;Squash Tennis&quot;,&quot;Topics&quot;:[&quot;Squash (Game)&quot;],&quot;Primary&quot;:&quot;11550.htm&quot;,&quot;CreatorNames&quot;:[&quot;Squires, Richard C.&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;11550&quot;});" class='title'>Squash Tennis</a>
+<div class='author'>Squires, Richard C.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(11883, {&quot;Title&quot;:&quot;Entertaining Made Easy&quot;,&quot;Topics&quot;:[&quot;Entertaining&quot;],&quot;Primary&quot;:&quot;11883.txt&quot;,&quot;CreatorNames&quot;:[&quot;Burt, Emily Rose&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;11883&quot;});" class='title'>Entertaining Made Easy</a>
+<div class='author'>Burt, Emily Rose</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12343, {&quot;Title&quot;:&quot;The Art of Iugling or Legerdemaine - Wherein is Deciphered All the Conueyances of Legerdemaine and Iugling, How They Are Effected, and Wherin They Chiefly Consist; Cautions to Beware of Cheating at Cardes and Dice, the Detection of the Beggerly Art of Alcumistry, and the Foppery of Foolish Cousoning Charmes, All Tending to Mirth and Recreation, Especially for Those That Desire to Haue the Insight and Priuate Practise Thereof&quot;,&quot;Topics&quot;:[&quot;Juggling -- Early works to 1800&quot;,&quot;Magic tricks -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;12343.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rid, Samuel&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;12343&quot;});" class='title'>The Art of Iugling or Legerdemaine -<br><span class='subtitle'>Wherein is Deciphered All the Conueyances of Legerdemaine and Iugling, How They Are Effected, and Wherin They Chiefly Consist; Cautions to Beware of Cheating at Cardes and Dice, the Detection of the Beggerly Art of Alcumistry, and the Foppery of Foolish Cousoning Charmes, All Tending to Mirth and Recreation, Especially for Those That Desire to Haue the Insight and Priuate Practise Thereof</span></a>
+<div class='author'>Rid, Samuel</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12430, {&quot;Title&quot;:&quot;A Lecture on Physical Development, and its Relations to Mental and Spiritual Development, delivered before the American Institute of Instruction, at their Twenty-Ninth Annual Meeting, in Norwich, Conn., August 20, 1858&quot;,&quot;Topics&quot;:[&quot;Physical education and training&quot;],&quot;Primary&quot;:&quot;12430.txt&quot;,&quot;CreatorNames&quot;:[&quot;Calthrop, S. R. (Samuel Robert), 1829-1917&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;12430&quot;});" class='title'>A Lecture on Physical Development, and its Relations to Mental and Spiritual Development, delivered before the American Institute of Instruction, at their Twenty-Ninth Annual Meeting, in Norwich, Conn., August 20, 1858</a>
+<div class='author'>Calthrop, S. R. (Samuel Robert), 1829-1917</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12926, {&quot;Title&quot;:&quot;The Morris Book, Part 1 - A History of Morris Dancing, With a Description of Eleven Dances as Performed by the Morris-Men of England&quot;,&quot;Topics&quot;:[&quot;Morris dance&quot;],&quot;Primary&quot;:&quot;12926.htm&quot;,&quot;CreatorNames&quot;:[&quot;MacIlwaine, Herbert C.&quot;,&quot;Sharp, Cecil J. (Cecil James), 1859-1924&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;12926&quot;});" class='title'>The Morris Book, Part 1 -<br><span class='subtitle'>A History of Morris Dancing, With a Description of Eleven Dances as Performed by the Morris-Men of England</span></a>
+<div class='author'>MacIlwaine, Herbert C., Sharp, Cecil J. (Cecil James), 1859-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12942, {&quot;Title&quot;:&quot;The Highland Fling and How to Teach it&quot;,&quot;Topics&quot;:[&quot;Highland fling (Dance) -- Handbooks, manuals, etc.&quot;,&quot;Dance Instruction and Technical Manuals&quot;,&quot;Theatrical Dance&quot;],&quot;Primary&quot;:&quot;12942.htm&quot;,&quot;CreatorNames&quot;:[&quot;Grant, Horatio N.&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;12942&quot;});" class='title'>The Highland Fling and How to Teach it</a>
+<div class='author'>Grant, Horatio N.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13022, {&quot;Title&quot;:&quot;My Book of Indoor Games&quot;,&quot;Topics&quot;:[&quot;Games&quot;],&quot;Primary&quot;:&quot;13022.htm&quot;,&quot;CreatorNames&quot;:[&quot;Squareman, Clarence&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;13022&quot;});" class='title'>My Book of Indoor Games</a>
+<div class='author'>Squareman, Clarence</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13284, {&quot;Title&quot;:&quot;Influence morale des sports athlétiques - Discours Prononcé au Congrès Olympique du Havre, Le 29 Juillet 1897.&quot;,&quot;Topics&quot;:[&quot;Sports -- Moral and ethical aspects&quot;],&quot;Primary&quot;:&quot;13284.htm&quot;,&quot;CreatorNames&quot;:[&quot;Didon, père (Henri), 1840-1900&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;13284&quot;});" class='title'>Influence morale des sports athlétiques -<br><span class='subtitle'>Discours Prononcé au Congrès Olympique du Havre, Le 29 Juillet 1897.</span></a>
+<div class='author'>Didon, père (Henri), 1840-1900</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14183, {&quot;Title&quot;:&quot;There is No Harm in Dancing&quot;,&quot;Topics&quot;:[&quot;Dance -- Moral and ethical aspects&quot;,&quot;Antidance Literature&quot;],&quot;Primary&quot;:&quot;14183.htm&quot;,&quot;CreatorNames&quot;:[&quot;Penn, W. E. (William Evander), 1832-1895&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;14183&quot;});" class='title'>There is No Harm in Dancing</a>
+<div class='author'>Penn, W. E. (William Evander), 1832-1895</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(1451, {&quot;Title&quot;:&quot;The Art of Lawn Tennis&quot;,&quot;Topics&quot;:[&quot;Tennis&quot;],&quot;Primary&quot;:&quot;1451.txt&quot;,&quot;CreatorNames&quot;:[&quot;Tilden, William T. (William Tatem), 1893-1953&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;1451&quot;});" class='title'>The Art of Lawn Tennis</a>
+<div class='author'>Tilden, William T. (William Tatem), 1893-1953</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15201, {&quot;Title&quot;:&quot;Szachy i Warcaby: Droga do mistrzostwa&quot;,&quot;Topics&quot;:[&quot;Chess&quot;,&quot;Checkers&quot;],&quot;Primary&quot;:&quot;15201.txt&quot;,&quot;CreatorNames&quot;:[&quot;Lasker, Edward, 1885-1981&quot;,&quot;Oziminski, Wojciech [Translator]&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;15201&quot;});" class='title'>Szachy i Warcaby:<br><span class='subtitle'>Droga do mistrzostwa</span></a>
+<div class='author'>Lasker, Edward, 1885-1981, Oziminski, Wojciech [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(1576, {&quot;Title&quot;:&quot;A Unique Story of a Marvellous Career: Life of Hon. Phineas T. Barnum&quot;,&quot;Topics&quot;:[&quot;Barnum, P. T. (Phineas Taylor), 1810-1891&quot;,&quot;Circus owners -- United States -- Biography&quot;,&quot;Barnum&#39;s American Museum&quot;],&quot;Primary&quot;:&quot;1576.txt&quot;,&quot;CreatorNames&quot;:[&quot;Benton, Joel, 1832-1911&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;1576&quot;});" class='title'>A Unique Story of a Marvellous Career:<br><span class='subtitle'>Life of Hon. Phineas T. Barnum</span></a>
+<div class='author'>Benton, Joel, 1832-1911</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16316, {&quot;Title&quot;:&quot;Outdoor Sports and Games&quot;,&quot;Topics&quot;:[&quot;Games&quot;,&quot;Outdoor life&quot;,&quot;Sports&quot;],&quot;Primary&quot;:&quot;16316.htm&quot;,&quot;CreatorNames&quot;:[&quot;Miller, Claude Harris, 1875-&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;16316&quot;});" class='title'>Outdoor Sports and Games</a>
+<div class='author'>Miller, Claude Harris, 1875-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16377, {&quot;Title&quot;:&quot;The Blue Book of Chess - Teaching the Rudiments of the Game, and Giving an Analysis of All the Recognized Openings&quot;,&quot;Topics&quot;:[&quot;Chess&quot;],&quot;Primary&quot;:&quot;16377.htm&quot;,&quot;CreatorNames&quot;:[&quot;Staunton, Howard, 1810-1874&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;16377&quot;});" class='title'>The Blue Book of Chess -<br><span class='subtitle'>Teaching the Rudiments of the Game, and Giving an Analysis of All the Recognized Openings</span></a>
+<div class='author'>Staunton, Howard, 1810-1874</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16599, {&quot;Title&quot;:&quot;School, Church, and Home Games&quot;,&quot;Topics&quot;:[&quot;Games&quot;],&quot;Primary&quot;:&quot;16599.htm&quot;,&quot;CreatorNames&quot;:[&quot;Draper, George Orrin, 1884-&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;16599&quot;});" class='title'>School, Church, and Home Games</a>
+<div class='author'>Draper, George Orrin, 1884-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17289, {&quot;Title&quot;:&quot;The Dance (by An Antiquary) - Historic Illustrations of Dancing from 3300 B.C. to 1911 A.D.&quot;,&quot;Topics&quot;:[&quot;Dance -- History&quot;],&quot;Primary&quot;:&quot;17289.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;17289&quot;});" class='title'>The Dance (by An Antiquary) -<br><span class='subtitle'>Historic Illustrations of Dancing from 3300 B.C. to 1911 A.D.</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17727, {&quot;Title&quot;:&quot;The School of Recreation (1696 edition) - Or a Guide to the Most Ingenious Exercises of Hunting, Riding, Racing, Fireworks, Military Discipline, the Science of Defence&quot;,&quot;Topics&quot;:[&quot;Recreation -- Early works to 1800&quot;,&quot;Physical education and training -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;17727.htm&quot;,&quot;CreatorNames&quot;:[&quot;R. H. (Robert Howlett)&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;17727&quot;});" class='title'>The School of Recreation (1696 edition) -<br><span class='subtitle'>Or a Guide to the Most Ingenious Exercises of Hunting, Riding, Racing, Fireworks, Military Discipline, the Science of Defence</span></a>
+<div class='author'>R. H. (Robert Howlett)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18048, {&quot;Title&quot;:&quot;Football Days - Memories of the Game and of the Men behind the Ball&quot;,&quot;Topics&quot;:[&quot;Football&quot;],&quot;Primary&quot;:&quot;18048.htm&quot;,&quot;CreatorNames&quot;:[&quot;Edwards, William H. (William Hanford), 1876-&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;18048&quot;});" class='title'>Football Days -<br><span class='subtitle'>Memories of the Game and of the Men behind the Ball</span></a>
+<div class='author'>Edwards, William H. (William Hanford), 1876-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18759, {&quot;Title&quot;:&quot;From the Ball-Room to Hell&quot;,&quot;Topics&quot;:[&quot;Dance&quot;],&quot;Primary&quot;:&quot;18759.htm&quot;,&quot;CreatorNames&quot;:[&quot;Faulkner, Thomas A.&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;18759&quot;});" class='title'>From the Ball-Room to Hell</a>
+<div class='author'>Faulkner, Thomas A.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18907, {&quot;Title&quot;:&quot;Holidays at the Grange; or, A Week&#39;s Delight - Games and Stories for Parlor and Fireside&quot;,&quot;Topics&quot;:[&quot;Children&#39;s stories&quot;,&quot;Amusements -- Juvenile literature&quot;,&quot;Indoor games -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;18907.htm&quot;,&quot;CreatorNames&quot;:[&quot;Higgins, Emily Mayer&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;18907&quot;});" class='title'>Holidays at the Grange;<br><span class='subtitle'>or, A Week's Delight - Games and Stories for Parlor and Fireside</span></a>
+<div class='author'>Higgins, Emily Mayer</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19065, {&quot;Title&quot;:&quot;Swimming Scientifically Taught: A Practical Manual for Young and Old&quot;,&quot;Topics&quot;:[&quot;Swimming&quot;],&quot;Primary&quot;:&quot;19065.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dalton, Frank Eugen&quot;,&quot;Dalton, Louis C.&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;19065&quot;});" class='title'>Swimming Scientifically Taught:<br><span class='subtitle'>A Practical Manual for Young and Old</span></a>
+<div class='author'>Dalton, Frank Eugen, Dalton, Louis C.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19169, {&quot;Title&quot;:&quot;Baseball ABC&quot;,&quot;Topics&quot;:[&quot;Baseball -- Juvenile literature&quot;,&quot;English language -- Alphabet -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;19169.htm&quot;,&quot;CreatorNames&quot;:&quot;&quot;,&quot;LoCC&quot;:[&quot;GV&quot;,&quot;PZ&quot;],&quot;PG_ID&quot;:&quot;19169&quot;});" class='title'>Baseball ABC</a>
+<div class='author'></div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19208, {&quot;Title&quot;:&quot;Vitality Supreme&quot;,&quot;Topics&quot;:[&quot;Hygiene&quot;,&quot;Physical education and training&quot;],&quot;Primary&quot;:&quot;19208.htm&quot;,&quot;CreatorNames&quot;:[&quot;Macfadden, Bernarr, 1868-1955&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;19208&quot;});" class='title'>Vitality Supreme</a>
+<div class='author'>Macfadden, Bernarr, 1868-1955</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19230, {&quot;Title&quot;:&quot;The Story of Paul Boyton: Voyages on All the Great Rivers of the World&quot;,&quot;Topics&quot;:[&quot;Voyages and travels&quot;,&quot;Boyton, Paul, 1848-1924&quot;],&quot;Primary&quot;:&quot;19230.txt&quot;,&quot;CreatorNames&quot;:[&quot;Boyton, Paul, 1848-1924&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;19230&quot;});" class='title'>The Story of Paul Boyton:<br><span class='subtitle'>Voyages on All the Great Rivers of the World</span></a>
+<div class='author'>Boyton, Paul, 1848-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19652, {&quot;Title&quot;:&quot;A Ball Player&#39;s Career - Being the Personal Experiences and Reminiscensces of Adrian C. Anson&quot;,&quot;Topics&quot;:[&quot;Baseball&quot;],&quot;Primary&quot;:&quot;19652.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anson, Adrian C. (Adrian Constantine), 1852-1922&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;19652&quot;});" class='title'>A Ball Player's Career -<br><span class='subtitle'>Being the Personal Experiences and Reminiscensces of Adrian C. Anson</span></a>
+<div class='author'>Anson, Adrian C. (Adrian Constantine), 1852-1922</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19862, {&quot;Title&quot;:&quot;Les sports à la mode&quot;,&quot;Topics&quot;:[&quot;Sports&quot;],&quot;Primary&quot;:&quot;19862.txt&quot;,&quot;CreatorNames&quot;:[&quot;Meillac, Camille&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;19862&quot;});" class='title'>Les sports à la mode</a>
+<div class='author'>Meillac, Camille</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19975, {&quot;Title&quot;:&quot;Base-Ball - How to Become a Player, With the Origin, History and Explanation of the Game&quot;,&quot;Topics&quot;:[&quot;Baseball&quot;],&quot;Primary&quot;:&quot;19975.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ward, John Montgomery, 1860-1925&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;19975&quot;});" class='title'>Base-Ball -<br><span class='subtitle'>How to Become a Player, With the Origin, History and Explanation of the Game</span></a>
+<div class='author'>Ward, John Montgomery, 1860-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20375, {&quot;Title&quot;:&quot;Watch Yourself Go By&quot;,&quot;Topics&quot;:[&quot;Wit and humor&quot;,&quot;Field, Al. G. (Alfred Griffith), 1848-1921&quot;,&quot;Circus performers -- United States -- Biography&quot;],&quot;Primary&quot;:&quot;20375.htm&quot;,&quot;CreatorNames&quot;:[&quot;Field, Al. G. (Alfred Griffith), 1852-&quot;,&quot;Warden, Ben W. [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;20375&quot;});" class='title'>Watch Yourself Go By</a>
+<div class='author'>Field, Al. G. (Alfred Griffith), 1852-, Warden, Ben W. [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20506, {&quot;Title&quot;:&quot;The Laws of Euchre - As adopted by the Somerset Club of Boston, March 1, 1888&quot;,&quot;Topics&quot;:[&quot;Euchre&quot;],&quot;Primary&quot;:&quot;20506.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dwight, James, 1852-1917&quot;,&quot;Leeds, Herbert Corey, 1855-1930&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;20506&quot;});" class='title'>The Laws of Euchre -<br><span class='subtitle'>As adopted by the Somerset Club of Boston, March 1, 1888</span></a>
+<div class='author'>Dwight, James, 1852-1917, Leeds, Herbert Corey, 1855-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(21642, {&quot;Title&quot;:&quot;Lady Cadogan&#39;s Illustrated Games of Solitaire or Patience - New Revised Edition, including American Games&quot;,&quot;Topics&quot;:[&quot;Solitaire (Game)&quot;],&quot;Primary&quot;:&quot;21642.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cadogan, Adelaide, Lady&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;21642&quot;});" class='title'>Lady Cadogan's Illustrated Games of Solitaire or Patience -<br><span class='subtitle'>New Revised Edition, including American Games</span></a>
+<div class='author'>Cadogan, Adelaide, Lady</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(21984, {&quot;Title&quot;:&quot;Kemps Nine Daies Wonder: Performed in a Daunce from London to Norwich&quot;,&quot;Topics&quot;:[&quot;Dance -- England&quot;,&quot;Morris dance&quot;],&quot;Primary&quot;:&quot;21984.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kemp, William, active 1600&quot;,&quot;Dyce, Alexander, 1798-1869 [Editor]&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;21984&quot;});" class='title'>Kemps Nine Daies Wonder:<br><span class='subtitle'>Performed in a Daunce from London to Norwich</span></a>
+<div class='author'>Kemp, William, active 1600, Dyce, Alexander, 1798-1869 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23086, {&quot;Title&quot;:&quot;Auction of To-day&quot;,&quot;Topics&quot;:[&quot;Auction bridge&quot;],&quot;Primary&quot;:&quot;23086.htm&quot;,&quot;CreatorNames&quot;:[&quot;Work, Milton C. (Milton Cooper), 1864-1934&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;23086&quot;});" class='title'>Auction of To-day</a>
+<div class='author'>Work, Milton C. (Milton Cooper), 1864-1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23776, {&quot;Title&quot;:&quot;The School of Recreation (1684 edition) - Or, The Gentlemans Tutor, to those Most Ingenious Exercises of Hunting, Racing, Hawking, Riding, Cock-fighting, Fowling, Fishing&quot;,&quot;Topics&quot;:[&quot;Sports&quot;,&quot;Recreation -- Handbooks, manuals, etc.&quot;],&quot;Primary&quot;:&quot;23776.htm&quot;,&quot;CreatorNames&quot;:[&quot;R. H. (Robert Howlett)&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;23776&quot;});" class='title'>The School of Recreation (1684 edition) -<br><span class='subtitle'>Or, The Gentlemans Tutor, to those Most Ingenious Exercises of Hunting, Racing, Hawking, Riding, Cock-fighting, Fowling, Fishing</span></a>
+<div class='author'>R. H. (Robert Howlett)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24579, {&quot;Title&quot;:&quot;Woodcraft&quot;,&quot;Topics&quot;:[&quot;Camping&quot;],&quot;Primary&quot;:&quot;24579.txt&quot;,&quot;CreatorNames&quot;:[&quot;Sears, George Washington, 1821-1890&quot;],&quot;LoCC&quot;:[&quot;GV&quot;,&quot;SK&quot;],&quot;PG_ID&quot;:&quot;24579&quot;});" class='title'>Woodcraft</a>
+<div class='author'>Sears, George Washington, 1821-1890</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24597, {&quot;Title&quot;:&quot;Games for All Occasions&quot;,&quot;Topics&quot;:[&quot;Games&quot;],&quot;Primary&quot;:&quot;24597.htm&quot;,&quot;CreatorNames&quot;:[&quot;Blain, Mary E., 1872-&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;24597&quot;});" class='title'>Games for All Occasions</a>
+<div class='author'>Blain, Mary E., 1872-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24643, {&quot;Title&quot;:&quot;A Treatise on the Art of Dancing&quot;,&quot;Topics&quot;:[&quot;Theater -- History&quot;,&quot;Dance -- Early works to 1800&quot;,&quot;Dance -- History -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;24643.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gallini, Giovanni-Andrea, 1728-1805&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;24643&quot;});" class='title'>A Treatise on the Art of Dancing</a>
+<div class='author'>Gallini, Giovanni-Andrea, 1728-1805</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24786, {&quot;Title&quot;:&quot;Games and Play for School Morale - A Course of Graded Games for School and Community Recreation&quot;,&quot;Topics&quot;:[&quot;Games&quot;,&quot;Schools -- Exercises and recreations&quot;],&quot;Primary&quot;:&quot;24786.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sheppard, Melvin W. [Editor]&quot;,&quot;Vaughan, Anna [Editor]&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;24786&quot;});" class='title'>Games and Play for School Morale -<br><span class='subtitle'>A Course of Graded Games for School and Community Recreation</span></a>
+<div class='author'>Sheppard, Melvin W. [Editor], Vaughan, Anna [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24912, {&quot;Title&quot;:&quot;Finger plays for nursery and kindergarten&quot;,&quot;Topics&quot;:[&quot;Games&quot;,&quot;Games with music&quot;,&quot;Children&#39;s songs&quot;,&quot;Finger play&quot;],&quot;Primary&quot;:&quot;24912.htm&quot;,&quot;CreatorNames&quot;:[&quot;Poulsson, Emilie, 1853-1939&quot;,&quot;Bridgman, L. J. (Lewis Jesse), 1857-1931 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;GV&quot;,&quot;LB&quot;],&quot;PG_ID&quot;:&quot;24912&quot;});" class='title'>Finger plays for nursery and kindergarten</a>
+<div class='author'>Poulsson, Emilie, 1853-1939, Bridgman, L. J. (Lewis Jesse), 1857-1931 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25068, {&quot;Title&quot;:&quot;The Book of Sports: - Containing Out-door Sports, Amusements and Recreations, Including Gymnastics, Gardening &amp; Carpentering&quot;,&quot;Topics&quot;:[&quot;Sports -- Juvenile literature&quot;,&quot;Amusements -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;25068.htm&quot;,&quot;CreatorNames&quot;:[&quot;Martin, William, 1801-1867&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;25068&quot;});" class='title'>The Book of Sports:<br><span class='subtitle'>- Containing Out-door Sports, Amusements and Recreations, Including Gymnastics, Gardening & Carpentering</span></a>
+<div class='author'>Martin, William, 1801-1867</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25462, {&quot;Title&quot;:&quot;Little Folks&#39; Handy Book&quot;,&quot;Topics&quot;:[&quot;Games&quot;,&quot;Amusements&quot;],&quot;Primary&quot;:&quot;25462.htm&quot;,&quot;CreatorNames&quot;:[&quot;Beard, Adelia B. (Adelia Belle), 1857-1920&quot;,&quot;Beard, Lina, -1933&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;25462&quot;});" class='title'>Little Folks' Handy Book</a>
+<div class='author'>Beard, Adelia B. (Adelia Belle), 1857-1920, Beard, Lina, -1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25660, {&quot;Title&quot;:&quot;Games for the Playground, Home, School and Gymnasium&quot;,&quot;Topics&quot;:[&quot;Games&quot;],&quot;Primary&quot;:&quot;25660.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bancroft, Jessie Hubbell, 1867-&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;25660&quot;});" class='title'>Games for the Playground, Home, School and Gymnasium</a>
+<div class='author'>Bancroft, Jessie Hubbell, 1867-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25662, {&quot;Title&quot;:&quot;A report on the feasibility and advisability of some policy to inaugurate a system of rifle practice throughout the public schools of the country&quot;,&quot;Topics&quot;:[&quot;Rifle practice&quot;,&quot;Shooting -- Study and teaching&quot;],&quot;Primary&quot;:&quot;25662.htm&quot;,&quot;CreatorNames&quot;:[&quot;Critchfield, Ammon B.&quot;,&quot;National Board for the Promotion of Rifle Practice&quot;,&quot;Wingate, George Wood, 1840-1928&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;25662&quot;});" class='title'>A report on the feasibility and advisability of some policy to inaugurate a system of rifle practice throughout the public schools of the country</a>
+<div class='author'>Critchfield, Ammon B., National Board for the Promotion of Rifle Practice, Wingate, George Wood, 1840-1928</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26339, {&quot;Title&quot;:&quot;Cupology: How to Be Entertaining&quot;,&quot;Topics&quot;:[&quot;Amusements&quot;,&quot;Fortune-telling&quot;],&quot;Primary&quot;:&quot;26339.htm&quot;,&quot;CreatorNames&quot;:[&quot;Clara&quot;],&quot;LoCC&quot;:[&quot;BF&quot;,&quot;GV&quot;],&quot;PG_ID&quot;:&quot;26339&quot;});" class='title'>Cupology:<br><span class='subtitle'>How to Be Entertaining</span></a>
+<div class='author'>Clara</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27235, {&quot;Title&quot;:&quot;The Voyage Alone in the Yawl \&quot;\&quot;Rob Roy\&quot;\&quot;&quot;,&quot;Topics&quot;:[&quot;Rob Roy (Yawl)&quot;,&quot;Yachts&quot;,&quot;Yachting&quot;],&quot;Primary&quot;:&quot;27235.htm&quot;,&quot;CreatorNames&quot;:[&quot;MacGregor, John, 1825-1892&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;27235&quot;});" class='title'>The Voyage Alone in the Yawl "Rob Roy"</a>
+<div class='author'>MacGregor, John, 1825-1892</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27318, {&quot;Title&quot;:&quot;Pung Chow - The Game of a Hundred Intelligences. Also known as Mah-Diao, Mah-Jong, Mah-Cheuk, Mah-Juck and Pe-Ling&quot;,&quot;Topics&quot;:[&quot;Mah jong&quot;],&quot;Primary&quot;:&quot;27318.htm&quot;,&quot;CreatorNames&quot;:[&quot;Harr, Lew Lysle, 1882-&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;27318&quot;});" class='title'>Pung Chow -<br><span class='subtitle'>The Game of a Hundred Intelligences. Also known as Mah-Diao, Mah-Jong, Mah-Cheuk, Mah-Juck and Pe-Ling</span></a>
+<div class='author'>Harr, Lew Lysle, 1882-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27353, {&quot;Title&quot;:&quot;Indian Conjuring&quot;,&quot;Topics&quot;:[&quot;Magic tricks&quot;],&quot;Primary&quot;:&quot;27353.htm&quot;,&quot;CreatorNames&quot;:[&quot;Branson, L. H. (Lionel Hugh), 1879-1946&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;27353&quot;});" class='title'>Indian Conjuring</a>
+<div class='author'>Branson, L. H. (Lionel Hugh), 1879-1946</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27367, {&quot;Title&quot;:&quot;The Art of Stage Dancing - The Story of a Beautiful and Profitable Profession&quot;,&quot;Topics&quot;:[&quot;Dance&quot;],&quot;Primary&quot;:&quot;27367.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wayburn, Ned, 1874-1942&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;27367&quot;});" class='title'>The Art of Stage Dancing -<br><span class='subtitle'>The Story of a Beautiful and Profitable Profession</span></a>
+<div class='author'>Wayburn, Ned, 1874-1942</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27635, {&quot;Title&quot;:&quot;The Canterbury Puzzles, and Other Curious Problems&quot;,&quot;Topics&quot;:[&quot;Puzzles&quot;,&quot;Riddles&quot;],&quot;Primary&quot;:&quot;27635.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dudeney, Henry Ernest, 1857-1930&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;27635&quot;});" class='title'>The Canterbury Puzzles, and Other Curious Problems</a>
+<div class='author'>Dudeney, Henry Ernest, 1857-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27819, {&quot;Title&quot;:&quot;Round Games with Cards - A Practical Treatise on All the Most Popular Games, with Their Different Variations, and Hints for Their Practice&quot;,&quot;Topics&quot;:[&quot;Card games&quot;],&quot;Primary&quot;:&quot;27819.htm&quot;,&quot;CreatorNames&quot;:[&quot;Peel, W. H.&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;27819&quot;});" class='title'>Round Games with Cards -<br><span class='subtitle'>A Practical Treatise on All the Most Popular Games, with Their Different Variations, and Hints for Their Practice</span></a>
+<div class='author'>Peel, W. H.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28028, {&quot;Title&quot;:&quot;Scottish Football Reminiscences and Sketches&quot;,&quot;Topics&quot;:[&quot;Football&quot;],&quot;Primary&quot;:&quot;28028.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bone, David Drummond&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;28028&quot;});" class='title'>Scottish Football Reminiscences and Sketches</a>
+<div class='author'>Bone, David Drummond</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28107, {&quot;Title&quot;:&quot;The Complete Golfer&quot;,&quot;Topics&quot;:[&quot;Golf&quot;],&quot;Primary&quot;:&quot;28107.htm&quot;,&quot;CreatorNames&quot;:[&quot;Vardon, Harry, 1870-1937&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;28107&quot;});" class='title'>The Complete Golfer</a>
+<div class='author'>Vardon, Harry, 1870-1937</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28788, {&quot;Title&quot;:&quot;Jeux et exercices des jeunes filles&quot;,&quot;Topics&quot;:[&quot;Games&quot;,&quot;Young women&quot;],&quot;Primary&quot;:&quot;28788.htm&quot;,&quot;CreatorNames&quot;:[&quot;Du Parquet, Marguerite, active 19th century&quot;,&quot;Fath, Georges, 1818-1900 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;GV&quot;,&quot;HQ&quot;],&quot;PG_ID&quot;:&quot;28788&quot;});" class='title'>Jeux et exercices des jeunes filles</a>
+<div class='author'>Du Parquet, Marguerite, active 19th century, Fath, Georges, 1818-1900 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31186, {&quot;Title&quot;:&quot;What Shall We Do Now?: Five Hundred Games and Pastimes&quot;,&quot;Topics&quot;:[&quot;Games&quot;,&quot;Amusements&quot;],&quot;Primary&quot;:&quot;31186.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fisher, Dorothy Canfield, 1879-1958&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;31186&quot;});" class='title'>What Shall We Do Now?:<br><span class='subtitle'>Five Hundred Games and Pastimes</span></a>
+<div class='author'>Fisher, Dorothy Canfield, 1879-1958</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31214, {&quot;Title&quot;:&quot;Broad-Sword and Single-Stick - With Chapters on Quarter-Staff, Bayonet, Cudgel, Shillalah, Walking-Stick, Umbrella and Other Weapons of Self-Defence&quot;,&quot;Topics&quot;:[&quot;Fencing&quot;,&quot;Swords&quot;,&quot;Self-defense&quot;,&quot;Weapons&quot;],&quot;Primary&quot;:&quot;31214.htm&quot;,&quot;CreatorNames&quot;:[&quot;Headley, Rowland George Allanson-Winn, Baron, 1855-1935&quot;,&quot;Phillipps-Wolley, Clive, 1854-1918&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;31214&quot;});" class='title'>Broad-Sword and Single-Stick -<br><span class='subtitle'>With Chapters on Quarter-Staff, Bayonet, Cudgel, Shillalah, Walking-Stick, Umbrella and Other Weapons of Self-Defence</span></a>
+<div class='author'>Headley, Rowland George Allanson-Winn, Baron, 1855-1935, Phillipps-Wolley, Clive, 1854-1918</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32368, {&quot;Title&quot;:&quot;Peerless Prestidigitation - Being a collection of entirely new ideas and effects in the fascinating art of modern magic&quot;,&quot;Topics&quot;:[&quot;Magic tricks -- Handbooks, manuals, etc.&quot;],&quot;Primary&quot;:&quot;32368.htm&quot;,&quot;CreatorNames&quot;:[&quot;De Caston, Herbert&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;32368&quot;});" class='title'>Peerless Prestidigitation -<br><span class='subtitle'>Being a collection of entirely new ideas and effects in the fascinating art of modern magic</span></a>
+<div class='author'>De Caston, Herbert</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32753, {&quot;Title&quot;:&quot;Croquet: As played by the Newport Croquet Club&quot;,&quot;Topics&quot;:[&quot;Croquet&quot;],&quot;Primary&quot;:&quot;32753.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;32753&quot;});" class='title'>Croquet:<br><span class='subtitle'>As played by the Newport Croquet Club</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32788, {&quot;Title&quot;:&quot;More Conjuring: Simple Tricks for Social Gatherings&quot;,&quot;Topics&quot;:[&quot;Magic tricks -- Handbooks, manuals, etc.&quot;],&quot;Primary&quot;:&quot;32788.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hercat, 1843-1914&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;32788&quot;});" class='title'>More Conjuring:<br><span class='subtitle'>Simple Tricks for Social Gatherings</span></a>
+<div class='author'>Hercat, 1843-1914</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32838, {&quot;Title&quot;:&quot;The Canadian Curler&#39;s Manual - Or, an account of curling, as practised in Canada: with remarks on the history of the game&quot;,&quot;Topics&quot;:[&quot;Curling -- Canada -- Handbooks, manuals, etc&quot;,&quot;Curling -- History&quot;,&quot;Curling -- Canada -- History -- 19th century&quot;],&quot;Primary&quot;:&quot;32838.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bicket, James&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;32838&quot;});" class='title'>The Canadian Curler's Manual -<br><span class='subtitle'>Or, an account of curling, as practised in Canada: with remarks on the history of the game</span></a>
+<div class='author'>Bicket, James</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33120, {&quot;Title&quot;:&quot;The Forward Pass in Football&quot;,&quot;Topics&quot;:[&quot;Football&quot;],&quot;Primary&quot;:&quot;33120.htm&quot;,&quot;CreatorNames&quot;:[&quot;Berry, Elmer, 1879-&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;33120&quot;});" class='title'>The Forward Pass in Football</a>
+<div class='author'>Berry, Elmer, 1879-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33291, {&quot;Title&quot;:&quot;Pitching in a Pinch; or, Baseball from the Inside&quot;,&quot;Topics&quot;:[&quot;Mathewson, Christy, 1880-1925&quot;,&quot;Pitching (Baseball)&quot;,&quot;Baseball -- United States -- History&quot;],&quot;Primary&quot;:&quot;33291.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mathewson, Christy, 1880-1925&quot;,&quot;Wheeler, John N. (John Neville), 1886- [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;33291&quot;});" class='title'>Pitching in a Pinch;<br><span class='subtitle'>or, Baseball from the Inside</span></a>
+<div class='author'>Mathewson, Christy, 1880-1925, Wheeler, John N. (John Neville), 1886- [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33870, {&quot;Title&quot;:&quot;Chess Fundamentals&quot;,&quot;Topics&quot;:[&quot;Chess&quot;],&quot;Primary&quot;:&quot;33870.htm&quot;,&quot;CreatorNames&quot;:[&quot;Capablanca, José Raúl, 1888-1942&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;33870&quot;});" class='title'>Chess Fundamentals</a>
+<div class='author'>Capablanca, José Raúl, 1888-1942</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34180, {&quot;Title&quot;:&quot;The Exploits and Triumphs, in Europe, of Paul Morphy, the Chess Champion&quot;,&quot;Topics&quot;:[&quot;Chess&quot;,&quot;Morphy, Paul Charles, 1837-1884&quot;],&quot;Primary&quot;:&quot;34180.htm&quot;,&quot;CreatorNames&quot;:[&quot;Edge, Frederick Milnes&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;34180&quot;});" class='title'>The Exploits and Triumphs, in Europe, of Paul Morphy, the Chess Champion</a>
+<div class='author'>Edge, Frederick Milnes</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34375, {&quot;Title&quot;:&quot;Hocus Pocus Junior: The Anatomie of Legerdemain - Or, the art of jugling set forth in his proper colours, fully, plainly, and exactly, so that an ignorant person may thereby learn the full perfection of the same, after a little practise.&quot;,&quot;Topics&quot;:[&quot;Magic tricks -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;34375.htm&quot;,&quot;CreatorNames&quot;:[&quot;Unknown&quot;,&quot;Harper, Thomas, -1656 [Printer]&quot;,&quot;Mab, Ralph [Publisher]&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;34375&quot;});" class='title'>Hocus Pocus Junior:<br><span class='subtitle'>The Anatomie of Legerdemain - Or, the art of jugling set forth in his proper colours, fully, plainly, and exactly, so that an ignorant person may thereby learn the full perfection of the same, after a little practise.</span></a>
+<div class='author'>Unknown, Harper, Thomas, -1656 [Printer], Mab, Ralph [Publisher]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34950, {&quot;Title&quot;:&quot;Rowing&quot;,&quot;Topics&quot;:[&quot;Rowing&quot;],&quot;Primary&quot;:&quot;34950.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lehmann, R. C. (Rudolf Chambers), 1856-1929&quot;,&quot;Blackmore, Edwin Gordon, 1837- [Contributor]&quot;,&quot;Crum, W. E. (Walter Ewing), 1865-1944 [Contributor]&quot;,&quot;Davis, G. L. [Contributor]&quot;,&quot;Nickalls, Guy, 1866-1935 [Contributor]&quot;,&quot;Pitman, C. M. [Contributor]&quot;,&quot;Robinson, Bertram, 1870-1907 [Editor]&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;34950&quot;});" class='title'>Rowing</a>
+<div class='author'>Lehmann, R. C. (Rudolf Chambers), 1856-1929, Blackmore, Edwin Gordon, 1837- [Contributor], Crum, W. E. (Walter Ewing), 1865-1944 [Contributor], Davis, G. L. [Contributor], Nickalls, Guy, 1866-1935 [Contributor], Pitman, C. M. [Contributor], Robinson, Bertram, 1870-1907 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35683, {&quot;Title&quot;:&quot;Association Football, and How To Play It&quot;,&quot;Topics&quot;:[&quot;Soccer&quot;],&quot;Primary&quot;:&quot;35683.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cameron, John, 1872-1935&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;35683&quot;});" class='title'>Association Football, and How To Play It</a>
+<div class='author'>Cameron, John, 1872-1935</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36219, {&quot;Title&quot;:&quot;Sawdust &amp; Spangles: Stories &amp; Secrets of the Circus&quot;,&quot;Topics&quot;:[&quot;Circus&quot;],&quot;Primary&quot;:&quot;36219.htm&quot;,&quot;CreatorNames&quot;:[&quot;Coup, W. C. (William Cameron), 1836-1895&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;36219&quot;});" class='title'>Sawdust & Spangles:<br><span class='subtitle'>Stories & Secrets of the Circus</span></a>
+<div class='author'>Coup, W. C. (William Cameron), 1836-1895</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36418, {&quot;Title&quot;:&quot;Voetbal-Sport: over haar voor- en nadeelen, eenige harer strijdvragen en haar rationeele beoefening&quot;,&quot;Topics&quot;:[&quot;Soccer&quot;],&quot;Primary&quot;:&quot;36418.htm&quot;,&quot;CreatorNames&quot;:[&quot;Samson, Jac.&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;36418&quot;});" class='title'>Voetbal-Sport:<br><span class='subtitle'>over haar voor- en nadeelen, eenige harer strijdvragen en haar rationeele beoefening</span></a>
+<div class='author'>Samson, Jac.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36513, {&quot;Title&quot;:&quot;Water Wizardry: A collection of tricks in which water is the chief agent&quot;,&quot;Topics&quot;:[&quot;Magic tricks&quot;],&quot;Primary&quot;:&quot;36513.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ainslie, Arthur&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;36513&quot;});" class='title'>Water Wizardry:<br><span class='subtitle'>A collection of tricks in which water is the chief agent</span></a>
+<div class='author'>Ainslie, Arthur</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36557, {&quot;Title&quot;:&quot;How to Get Strong and How to Stay So&quot;,&quot;Topics&quot;:[&quot;Physical education and training&quot;],&quot;Primary&quot;:&quot;36557.htm&quot;,&quot;CreatorNames&quot;:[&quot;Blaikie, William, 1843-1904&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;36557&quot;});" class='title'>How to Get Strong and How to Stay So</a>
+<div class='author'>Blaikie, William, 1843-1904</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36659, {&quot;Title&quot;:&quot;Magic - In which are given clear and concise explanations of all the well-known illusions as well as many new ones.&quot;,&quot;Topics&quot;:[&quot;Magic tricks&quot;],&quot;Primary&quot;:&quot;36659.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stanyon, Ellis, 1870-1951&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;36659&quot;});" class='title'>Magic -<br><span class='subtitle'>In which are given clear and concise explanations of all the well-known illusions as well as many new ones.</span></a>
+<div class='author'>Stanyon, Ellis, 1870-1951</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36667, {&quot;Title&quot;:&quot;A Discourse on the Evils of Dancing&quot;,&quot;Topics&quot;:[&quot;Sermons, American -- 19th century&quot;,&quot;Dance -- Moral and ethical aspects&quot;,&quot;Antidance Literature&quot;],&quot;Primary&quot;:&quot;36667.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mesick, John F.&quot;],&quot;LoCC&quot;:[&quot;BV&quot;,&quot;GV&quot;],&quot;PG_ID&quot;:&quot;36667&quot;});" class='title'>A Discourse on the Evils of Dancing</a>
+<div class='author'>Mesick, John F.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36821, {&quot;Title&quot;:&quot;Maxims and Hints on Angling, Chess, Shooting, and Other Matters - Also, Miseries of Fishing&quot;,&quot;Topics&quot;:[&quot;Fishing&quot;,&quot;Chess&quot;,&quot;Maxims&quot;,&quot;Shooting&quot;],&quot;Primary&quot;:&quot;36821.htm&quot;,&quot;CreatorNames&quot;:[&quot;Penn, Richard, 1784-1863&quot;],&quot;LoCC&quot;:[&quot;GV&quot;,&quot;SH&quot;,&quot;SK&quot;],&quot;PG_ID&quot;:&quot;36821&quot;});" class='title'>Maxims and Hints on Angling, Chess, Shooting, and Other Matters -<br><span class='subtitle'>Also, Miseries of Fishing</span></a>
+<div class='author'>Penn, Richard, 1784-1863</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3690, {&quot;Title&quot;:&quot;Floor Games; a companion volume to \&quot;\&quot;Little Wars\&quot;\&quot;&quot;,&quot;Topics&quot;:[&quot;Games&quot;,&quot;Games -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;3690.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wells, H. G. (Herbert George), 1866-1946&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;3690&quot;});" class='title'>Floor Games;<br><span class='subtitle'>a companion volume to "Little Wars"</span></a>
+<div class='author'>Wells, H. G. (Herbert George), 1866-1946</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37136, {&quot;Title&quot;:&quot;The Happy Golfer - Being Some Experiences, Reflections, and a Few Deductions of a Wandering Golfer&quot;,&quot;Topics&quot;:[&quot;Golf&quot;],&quot;Primary&quot;:&quot;37136.htm&quot;,&quot;CreatorNames&quot;:[&quot;Leach, Henry, 1874-&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;37136&quot;});" class='title'>The Happy Golfer -<br><span class='subtitle'>Being Some Experiences, Reflections, and a Few Deductions of a Wandering Golfer</span></a>
+<div class='author'>Leach, Henry, 1874-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37165, {&quot;Title&quot;:&quot;Games Without Music for Children&quot;,&quot;Topics&quot;:[&quot;Games&quot;],&quot;Primary&quot;:&quot;37165.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bates, Loïs&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;37165&quot;});" class='title'>Games Without Music for Children</a>
+<div class='author'>Bates, Loïs</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37394, {&quot;Title&quot;:&quot;Fifty Years of Golf&quot;,&quot;Topics&quot;:[&quot;Golf&quot;],&quot;Primary&quot;:&quot;37394.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hutchinson, Horace G. (Horace Gordon), 1859-1932&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;37394&quot;});" class='title'>Fifty Years of Golf</a>
+<div class='author'>Hutchinson, Horace G. (Horace Gordon), 1859-1932</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37443, {&quot;Title&quot;:&quot;The Fascinating Boston - How to Dance and How to Teach the Popular New Social Favorite&quot;,&quot;Topics&quot;:[&quot;Boston (Dance)&quot;],&quot;Primary&quot;:&quot;37443.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sheafe, Alfonso Josephs&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;37443&quot;});" class='title'>The Fascinating Boston -<br><span class='subtitle'>How to Dance and How to Teach the Popular New Social Favorite</span></a>
+<div class='author'>Sheafe, Alfonso Josephs</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37462, {&quot;Title&quot;:&quot;Boating&quot;,&quot;Topics&quot;:[&quot;Rowing&quot;],&quot;Primary&quot;:&quot;37462.htm&quot;,&quot;CreatorNames&quot;:[&quot;Woodgate, Walter Bradford, 1842-1920&quot;,&quot;Dadd, Frank, 1851-1929 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;37462&quot;});" class='title'>Boating</a>
+<div class='author'>Woodgate, Walter Bradford, 1842-1920, Dadd, Frank, 1851-1929 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37562, {&quot;Title&quot;:&quot;Wrestling and Wrestlers - Biographical Sketches of Celebrated Athletes of the Northern Ring; to Which is Added Notes on Bull and Badger Baiting&quot;,&quot;Topics&quot;:[&quot;Wrestlers&quot;,&quot;Wrestling&quot;],&quot;Primary&quot;:&quot;37562.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gilpin, Sidney, -1892&quot;,&quot;Robinson, Jacob&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;37562&quot;});" class='title'>Wrestling and Wrestlers -<br><span class='subtitle'>Biographical Sketches of Celebrated Athletes of the Northern Ring; to Which is Added Notes on Bull and Badger Baiting</span></a>
+<div class='author'>Gilpin, Sidney, -1892, Robinson, Jacob</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38000, {&quot;Title&quot;:&quot;Bridge; its Principles and Rules of Play - with Illustrative Hands and the Club Code of Bridge Laws&quot;,&quot;Topics&quot;:[&quot;Bridge whist&quot;],&quot;Primary&quot;:&quot;38000.htm&quot;,&quot;CreatorNames&quot;:[&quot;Elwell, J. B. (Joseph Bowne), 1874-1920&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;38000&quot;});" class='title'>Bridge;<br><span class='subtitle'>its Principles and Rules of Play - with Illustrative Hands and the Club Code of Bridge Laws</span></a>
+<div class='author'>Elwell, J. B. (Joseph Bowne), 1874-1920</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38120, {&quot;Title&quot;:&quot;Bridge Axioms and Laws&quot;,&quot;Topics&quot;:[&quot;Bridge whist&quot;],&quot;Primary&quot;:&quot;38120.htm&quot;,&quot;CreatorNames&quot;:[&quot;Elwell, J. B. (Joseph Bowne), 1874-1920&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;38120&quot;});" class='title'>Bridge Axioms and Laws</a>
+<div class='author'>Elwell, J. B. (Joseph Bowne), 1874-1920</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38546, {&quot;Title&quot;:&quot;Het kaatsspel - handleiding met historische aanteekeningen en kaatszangen&quot;,&quot;Topics&quot;:[&quot;Handball&quot;],&quot;Primary&quot;:&quot;38546.htm&quot;,&quot;CreatorNames&quot;:[&quot;Westra, Willem&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;38546&quot;});" class='title'>Het kaatsspel -<br><span class='subtitle'>handleiding met historische aanteekeningen en kaatszangen</span></a>
+<div class='author'>Westra, Willem</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38977, {&quot;Title&quot;:&quot;Wings and the Child; Or, The Building of Magic Cities&quot;,&quot;Topics&quot;:[&quot;Education&quot;,&quot;Games&quot;,&quot;Amusements&quot;],&quot;Primary&quot;:&quot;38977.htm&quot;,&quot;CreatorNames&quot;:[&quot;Nesbit, E. (Edith), 1858-1924&quot;,&quot;Barraud, George [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;38977&quot;});" class='title'>Wings and the Child;<br><span class='subtitle'>Or, The Building of Magic Cities</span></a>
+<div class='author'>Nesbit, E. (Edith), 1858-1924, Barraud, George [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39025, {&quot;Title&quot;:&quot;Ladies in the Field: Sketches of Sport&quot;,&quot;Topics&quot;:[&quot;Sports&quot;,&quot;Women athletes&quot;,&quot;Women hunters&quot;],&quot;Primary&quot;:&quot;39025.htm&quot;,&quot;CreatorNames&quot;:[&quot;Greville, Violet, Lady, 1842-1932 [Editor]&quot;],&quot;LoCC&quot;:[&quot;GV&quot;,&quot;SK&quot;],&quot;PG_ID&quot;:&quot;39025&quot;});" class='title'>Ladies in the Field:<br><span class='subtitle'>Sketches of Sport</span></a>
+<div class='author'>Greville, Violet, Lady, 1842-1932 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39035, {&quot;Title&quot;:&quot;Nederlandsch handboek voor roeisport&quot;,&quot;Topics&quot;:[&quot;Rowing&quot;],&quot;Primary&quot;:&quot;39035.htm&quot;,&quot;CreatorNames&quot;:[&quot;Damsté, Pieter Helbert, 1860-1943&quot;,&quot;Rijcken, Frans Eduard Pels&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;39035&quot;});" class='title'>Nederlandsch handboek voor roeisport</a>
+<div class='author'>Damsté, Pieter Helbert, 1860-1943, Rijcken, Frans Eduard Pels</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39445, {&quot;Title&quot;:&quot;Hoyle&#39;s Games Modernized&quot;,&quot;Topics&quot;:[&quot;Card games&quot;,&quot;Indoor games&quot;],&quot;Primary&quot;:&quot;39445.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hoffmann, Professor, 1839-1919&quot;,&quot;Hoyle, Edmond, 1672-1769&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;39445&quot;});" class='title'>Hoyle's Games Modernized</a>
+<div class='author'>Hoffmann, Professor, 1839-1919, Hoyle, Edmond, 1672-1769</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39663, {&quot;Title&quot;:&quot;Home Occupations for Boys and Girls&quot;,&quot;Topics&quot;:[&quot;Games&quot;,&quot;Amusements&quot;],&quot;Primary&quot;:&quot;39663.htm&quot;,&quot;CreatorNames&quot;:[&quot;Johnston, B. (Bertha), 1864-&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;39663&quot;});" class='title'>Home Occupations for Boys and Girls</a>
+<div class='author'>Johnston, B. (Bertha), 1864-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39743, {&quot;Title&quot;:&quot;American Football&quot;,&quot;Topics&quot;:[&quot;Football&quot;],&quot;Primary&quot;:&quot;39743.htm&quot;,&quot;CreatorNames&quot;:[&quot;Camp, Walter, 1859-1925&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;39743&quot;});" class='title'>American Football</a>
+<div class='author'>Camp, Walter, 1859-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39805, {&quot;Title&quot;:&quot;Practical Boat-Sailing: A Concise and Simple Treatise&quot;,&quot;Topics&quot;:[&quot;Sailing&quot;],&quot;Primary&quot;:&quot;39805.htm&quot;,&quot;CreatorNames&quot;:[&quot;Frazar, Douglas, 1836-1896&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;39805&quot;});" class='title'>Practical Boat-Sailing:<br><span class='subtitle'>A Concise and Simple Treatise</span></a>
+<div class='author'>Frazar, Douglas, 1836-1896</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40309, {&quot;Title&quot;:&quot;The Art of Amusing - Being a Collection of Graceful Arts, Merry Games, Odd Tricks, Curious Puzzles, and New Charades. Together with Suggestions for Private Theatricals, Tableaux, and All Sorts of Parlor and Family Amusements.&quot;,&quot;Topics&quot;:[&quot;Amusements&quot;,&quot;Family recreation&quot;,&quot;Tricks&quot;],&quot;Primary&quot;:&quot;40309.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bellew, Frank, 1828-1888&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;40309&quot;});" class='title'>The Art of Amusing -<br><span class='subtitle'>Being a Collection of Graceful Arts, Merry Games, Odd Tricks, Curious Puzzles, and New Charades. Together with Suggestions for Private Theatricals, Tableaux, and All Sorts of Parlor and Family Amusements.</span></a>
+<div class='author'>Bellew, Frank, 1828-1888</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40855, {&quot;Title&quot;:&quot;Confidences et Révélations: Comment on devient sorcier&quot;,&quot;Topics&quot;:[&quot;Robert-Houdin, Jean-Eugène, 1805-1871&quot;,&quot;Magicians -- France -- Biography&quot;],&quot;Primary&quot;:&quot;40855.htm&quot;,&quot;CreatorNames&quot;:[&quot;Robert-Houdin, Jean-Eugène, 1805-1871&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;40855&quot;});" class='title'>Confidences et Révélations:<br><span class='subtitle'>Comment on devient sorcier</span></a>
+<div class='author'>Robert-Houdin, Jean-Eugène, 1805-1871</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41149, {&quot;Title&quot;:&quot;The Soul of Golf&quot;,&quot;Topics&quot;:[&quot;Golf&quot;],&quot;Primary&quot;:&quot;41149.htm&quot;,&quot;CreatorNames&quot;:[&quot;Vaile, P. A. (Percy Adolphus), 1866-&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;41149&quot;});" class='title'>The Soul of Golf</a>
+<div class='author'>Vaile, P. A. (Percy Adolphus), 1866-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41169, {&quot;Title&quot;:&quot;Sharps and Flats - A Complete Revelation of the Secrets of Cheating at Games of Chance and Skill&quot;,&quot;Topics&quot;:[&quot;Gambling&quot;,&quot;Cardsharping&quot;],&quot;Primary&quot;:&quot;41169.htm&quot;,&quot;CreatorNames&quot;:[&quot;Maskelyne, John Nevil, 1839-1917&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;41169&quot;});" class='title'>Sharps and Flats -<br><span class='subtitle'>A Complete Revelation of the Secrets of Cheating at Games of Chance and Skill</span></a>
+<div class='author'>Maskelyne, John Nevil, 1839-1917</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41234, {&quot;Title&quot;:&quot;Scrambles Amongst the Alps in the Years 1860-69&quot;,&quot;Topics&quot;:[&quot;Alps -- Description and travel&quot;,&quot;Whymper, Edward, 1840-1911&quot;,&quot;Mountaineering -- Alps -- History -- 19th century&quot;,&quot;Mountaineers -- Biography&quot;],&quot;Primary&quot;:&quot;41234.htm&quot;,&quot;CreatorNames&quot;:[&quot;Whymper, Edward, 1840-1911&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;41234&quot;});" class='title'>Scrambles Amongst the Alps in the Years 1860-69</a>
+<div class='author'>Whymper, Edward, 1840-1911</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41335, {&quot;Title&quot;:&quot;Automatic Pistol Shooting - Together with Information on Handling the Duelling Pistol and Revolver&quot;,&quot;Topics&quot;:[&quot;Shooting&quot;,&quot;Pistols&quot;],&quot;Primary&quot;:&quot;41335.htm&quot;,&quot;CreatorNames&quot;:[&quot;Winans, Walter, 1852-1920&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;41335&quot;});" class='title'>Automatic Pistol Shooting -<br><span class='subtitle'>Together with Information on Handling the Duelling Pistol and Revolver</span></a>
+<div class='author'>Winans, Walter, 1852-1920</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41388, {&quot;Title&quot;:&quot;The Modern American Pistol and Revolver&quot;,&quot;Topics&quot;:[&quot;Revolvers&quot;,&quot;Pistols&quot;,&quot;Target practice&quot;],&quot;Primary&quot;:&quot;41388.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gould, Arthur Corbin, 1850-1903&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;41388&quot;});" class='title'>The Modern American Pistol and Revolver</a>
+<div class='author'>Gould, Arthur Corbin, 1850-1903</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41436, {&quot;Title&quot;:&quot;The Sportswoman&#39;s Library, Vol. 1 of 2&quot;,&quot;Topics&quot;:[&quot;Sports&quot;],&quot;Primary&quot;:&quot;41436.htm&quot;,&quot;CreatorNames&quot;:[&quot;Slaughter, Frances E. (Frances Elizabeth), 1851- [Editor]&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;41436&quot;});" class='title'>The Sportswoman's Library, Vol. 1 of 2</a>
+<div class='author'>Slaughter, Frances E. (Frances Elizabeth), 1851- [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41535, {&quot;Title&quot;:&quot;Pistol and Revolver Shooting&quot;,&quot;Topics&quot;:[&quot;Revolvers&quot;,&quot;Pistols&quot;],&quot;Primary&quot;:&quot;41535.htm&quot;,&quot;CreatorNames&quot;:[&quot;Himmelwright, A. L. A. (Abraham Lincoln Artman), 1865-&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;41535&quot;});" class='title'>Pistol and Revolver Shooting</a>
+<div class='author'>Himmelwright, A. L. A. (Abraham Lincoln Artman), 1865-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41610, {&quot;Title&quot;:&quot;The Modern Pistol and How to Shoot It&quot;,&quot;Topics&quot;:[&quot;Pistols&quot;],&quot;Primary&quot;:&quot;41610.htm&quot;,&quot;CreatorNames&quot;:[&quot;Winans, Walter, 1852-1920&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;41610&quot;});" class='title'>The Modern Pistol and How to Shoot It</a>
+<div class='author'>Winans, Walter, 1852-1920</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41643, {&quot;Title&quot;:&quot;The Theory and Practice of Archery&quot;,&quot;Topics&quot;:[&quot;Archery&quot;],&quot;Primary&quot;:&quot;41643.htm&quot;,&quot;CreatorNames&quot;:[&quot;Butt, W.&quot;,&quot;Ford, Horace A. (Horace Alfred), 1822-&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;41643&quot;});" class='title'>The Theory and Practice of Archery</a>
+<div class='author'>Butt, W., Ford, Horace A. (Horace Alfred), 1822-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41669, {&quot;Title&quot;:&quot;Home-made Toys for Girls and Boys - Wooden and Cardboard Toys, Mechanical and Electric Toys&quot;,&quot;Topics&quot;:[&quot;Handicraft&quot;,&quot;Toys&quot;],&quot;Primary&quot;:&quot;41669.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hall, A. Neely (Albert Neely), 1883-&quot;,&quot;Hall, N. P. [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;41669&quot;});" class='title'>Home-made Toys for Girls and Boys -<br><span class='subtitle'>Wooden and Cardboard Toys, Mechanical and Electric Toys</span></a>
+<div class='author'>Hall, A. Neely (Albert Neely), 1883-, Hall, N. P. [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41961, {&quot;Title&quot;:&quot;The Old Showmen and the Old London Fairs&quot;,&quot;Topics&quot;:[&quot;London (England) -- Social life and customs&quot;,&quot;Fairs -- England -- London&quot;],&quot;Primary&quot;:&quot;41961.htm&quot;,&quot;CreatorNames&quot;:[&quot;Frost, Thomas, 1821-1908&quot;],&quot;LoCC&quot;:[&quot;GT&quot;,&quot;GV&quot;],&quot;PG_ID&quot;:&quot;41961&quot;});" class='title'>The Old Showmen and the Old London Fairs</a>
+<div class='author'>Frost, Thomas, 1821-1908</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41971, {&quot;Title&quot;:&quot;Yachting, Vol. 1&quot;,&quot;Topics&quot;:[&quot;Yachts&quot;,&quot;Yachting&quot;,&quot;Yacht racing&quot;],&quot;Primary&quot;:&quot;41971.htm&quot;,&quot;CreatorNames&quot;:[&quot;Brassey, Thomas Brassey, Earl, 1836-1918&quot;,&quot;Pritchett, R. T. (Robert Taylor), 1828-1907&quot;,&quot;Seth-Smith, C. E.&quot;,&quot;Sullivan, Edward, Sir, 1852-1928&quot;,&quot;Watson. G. L. (George Lennox), 1851-1904&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;41971&quot;});" class='title'>Yachting, Vol. 1</a>
+<div class='author'>Brassey, Thomas Brassey, Earl, 1836-1918, Pritchett, R. T. (Robert Taylor), 1828-1907, Seth-Smith, C. E., Sullivan, Edward, Sir, 1852-1928, Watson. G. L. (George Lennox), 1851-1904</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41973, {&quot;Title&quot;:&quot;Yachting, Vol. 2&quot;,&quot;Topics&quot;:[&quot;Yachts&quot;,&quot;Yachting&quot;,&quot;Yacht racing&quot;],&quot;Primary&quot;:&quot;41973.htm&quot;,&quot;CreatorNames&quot;:[&quot;Blake, G. L.&quot;,&quot;Dufferin and Ava, Frederick Temple Blackwood, Marquis of, 1826-1902&quot;,&quot;McFerran, James&quot;,&quot;Middleton, T. B.&quot;,&quot;Pritchett, R. T. (Robert Taylor), 1828-1907&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;41973&quot;});" class='title'>Yachting, Vol. 2</a>
+<div class='author'>Blake, G. L., Dufferin and Ava, Frederick Temple Blackwood, Marquis of, 1826-1902, McFerran, James, Middleton, T. B., Pritchett, R. T. (Robert Taylor), 1828-1907</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42172, {&quot;Title&quot;:&quot;Every Boy&#39;s Book: A Complete Encyclopædia of Sports and Amusements&quot;,&quot;Topics&quot;:[&quot;Amusements&quot;,&quot;Handicraft for boys&quot;,&quot;Sports&quot;],&quot;Primary&quot;:&quot;42172.htm&quot;,&quot;CreatorNames&quot;:[&quot;Routledge, Edmund, 1843-1899 [Editor]&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;42172&quot;});" class='title'>Every Boy's Book:<br><span class='subtitle'>A Complete Encyclopædia of Sports and Amusements</span></a>
+<div class='author'>Routledge, Edmund, 1843-1899 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42255, {&quot;Title&quot;:&quot;A Little Fleet&quot;,&quot;Topics&quot;:[&quot;Ship models -- Juvenile literature&quot;,&quot;Boats and boating -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;42255.htm&quot;,&quot;CreatorNames&quot;:[&quot;Yeats, Jack B. (Jack Butler), 1871-1957&quot;],&quot;LoCC&quot;:[&quot;GV&quot;,&quot;VM&quot;],&quot;PG_ID&quot;:&quot;42255&quot;});" class='title'>A Little Fleet</a>
+<div class='author'>Yeats, Jack B. (Jack Butler), 1871-1957</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42278, {&quot;Title&quot;:&quot;Toy-Making at Home: How to Make a Hundred Toys from Odds and Ends&quot;,&quot;Topics&quot;:[&quot;Toys&quot;],&quot;Primary&quot;:&quot;42278.htm&quot;,&quot;CreatorNames&quot;:[&quot;Adams, Morley&quot;],&quot;LoCC&quot;:[&quot;GV&quot;,&quot;TT&quot;],&quot;PG_ID&quot;:&quot;42278&quot;});" class='title'>Toy-Making at Home:<br><span class='subtitle'>How to Make a Hundred Toys from Odds and Ends</span></a>
+<div class='author'>Adams, Morley</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42348, {&quot;Title&quot;:&quot;The Spirit of the Links&quot;,&quot;Topics&quot;:[&quot;Golf -- Anecdotes&quot;],&quot;Primary&quot;:&quot;42348.htm&quot;,&quot;CreatorNames&quot;:[&quot;Leach, Henry, 1874-&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;42348&quot;});" class='title'>The Spirit of the Links</a>
+<div class='author'>Leach, Henry, 1874-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42549, {&quot;Title&quot;:&quot;Indoor and Outdoor Recreations for Girls&quot;,&quot;Topics&quot;:[&quot;Games&quot;,&quot;Amusements&quot;],&quot;Primary&quot;:&quot;42549.htm&quot;,&quot;CreatorNames&quot;:[&quot;Beard, Adelia B. (Adelia Belle), 1857-1920&quot;,&quot;Beard, Lina, -1933&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;42549&quot;});" class='title'>Indoor and Outdoor Recreations for Girls</a>
+<div class='author'>Beard, Adelia B. (Adelia Belle), 1857-1920, Beard, Lina, -1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42723, {&quot;Title&quot;:&quot;The Unmasking of Robert-Houdin&quot;,&quot;Topics&quot;:[&quot;Magic tricks -- History&quot;,&quot;Robert-Houdin, Jean-Eugène, 1805-1871&quot;,&quot;Magicians -- France -- Biography&quot;],&quot;Primary&quot;:&quot;42723.htm&quot;,&quot;CreatorNames&quot;:[&quot;Houdini, Harry, 1874-1926&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;42723&quot;});" class='title'>The Unmasking of Robert-Houdin</a>
+<div class='author'>Houdini, Harry, 1874-1926</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42863, {&quot;Title&quot;:&quot;Bright Ideas for Entertaining&quot;,&quot;Topics&quot;:[&quot;Amusements&quot;,&quot;Entertaining&quot;],&quot;Primary&quot;:&quot;42863.htm&quot;,&quot;CreatorNames&quot;:[&quot;Linscott, Herbert B., Mrs.&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;42863&quot;});" class='title'>Bright Ideas for Entertaining</a>
+<div class='author'>Linscott, Herbert B., Mrs.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42916, {&quot;Title&quot;:&quot;Memoirs of Robert-Houdin, ambassador, author and conjurer&quot;,&quot;Topics&quot;:[&quot;Robert-Houdin, Jean-Eugène, 1805-1871&quot;,&quot;Magicians -- France -- Biography&quot;],&quot;Primary&quot;:&quot;42916.htm&quot;,&quot;CreatorNames&quot;:[&quot;Robert-Houdin, Jean-Eugène, 1805-1871&quot;,&quot;Mackenzie, R. Shelton (Robert Shelton), 1809-1880 [Editor]&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;42916&quot;});" class='title'>Memoirs of Robert-Houdin, ambassador, author and conjurer</a>
+<div class='author'>Robert-Houdin, Jean-Eugène, 1805-1871, Mackenzie, R. Shelton (Robert Shelton), 1809-1880 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42950, {&quot;Title&quot;:&quot;Prophetical, Educational and Playing Cards&quot;,&quot;Topics&quot;:[&quot;Playing cards -- History&quot;,&quot;Fortune-telling by cards -- History&quot;],&quot;Primary&quot;:&quot;42950.htm&quot;,&quot;CreatorNames&quot;:[&quot;Van Rensselaer, John King, Mrs., 1848-1925&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;42950&quot;});" class='title'>Prophetical, Educational and Playing Cards</a>
+<div class='author'>Van Rensselaer, John King, Mrs., 1848-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43246, {&quot;Title&quot;:&quot;The Motor Routes of England: Western Section&quot;,&quot;Topics&quot;:[&quot;England -- Description and travel&quot;],&quot;Primary&quot;:&quot;43246.htm&quot;,&quot;CreatorNames&quot;:[&quot;Home, Gordon, 1878-1969&quot;,&quot;Ashdown, Charles Henry [Contributor]&quot;],&quot;LoCC&quot;:[&quot;DA&quot;,&quot;GV&quot;],&quot;PG_ID&quot;:&quot;43246&quot;});" class='title'>The Motor Routes of England:<br><span class='subtitle'>Western Section</span></a>
+<div class='author'>Home, Gordon, 1878-1969, Ashdown, Charles Henry [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(435, {&quot;Title&quot;:&quot;Miracle Mongers and Their Methods - A Complete Exposé of the Modus Operandi of Fire Eaters, Heat Resisters, Poison Eaters, Venomous Reptile Defiers, Sword Swallowers, Human Ostriches, Strong Men, Etc.&quot;,&quot;Topics&quot;:[&quot;Magic tricks -- History&quot;,&quot;Magicians -- Biography&quot;],&quot;Primary&quot;:&quot;435.htm&quot;,&quot;CreatorNames&quot;:[&quot;Houdini, Harry, 1874-1926&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;435&quot;});" class='title'>Miracle Mongers and Their Methods -<br><span class='subtitle'>A Complete Exposé of the Modus Operandi of Fire Eaters, Heat Resisters, Poison Eaters, Venomous Reptile Defiers, Sword Swallowers, Human Ostriches, Strong Men, Etc.</span></a>
+<div class='author'>Houdini, Harry, 1874-1926</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43516, {&quot;Title&quot;:&quot;Making a Tennis Court&quot;,&quot;Topics&quot;:[&quot;Tennis courts&quot;],&quot;Primary&quot;:&quot;43516.htm&quot;,&quot;CreatorNames&quot;:[&quot;Walsh, George E.&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;43516&quot;});" class='title'>Making a Tennis Court</a>
+<div class='author'>Walsh, George E.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44215, {&quot;Title&quot;:&quot;The Book of Camp-Lore and Woodcraft&quot;,&quot;Topics&quot;:[&quot;Camping&quot;,&quot;Camping -- Equipment and supplies&quot;],&quot;Primary&quot;:&quot;44215.htm&quot;,&quot;CreatorNames&quot;:[&quot;Beard, Daniel Carter, 1850-1941&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;44215&quot;});" class='title'>The Book of Camp-Lore and Woodcraft</a>
+<div class='author'>Beard, Daniel Carter, 1850-1941</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44230, {&quot;Title&quot;:&quot;On Yachts and Yacht Handling&quot;,&quot;Topics&quot;:[&quot;Yachting&quot;],&quot;Primary&quot;:&quot;44230.htm&quot;,&quot;CreatorNames&quot;:[&quot;Day, Thomas Fleming, 1861-1927&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;44230&quot;});" class='title'>On Yachts and Yacht Handling</a>
+<div class='author'>Day, Thomas Fleming, 1861-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44440, {&quot;Title&quot;:&quot;Mother Nature&#39;s Toy-Shop&quot;,&quot;Topics&quot;:[&quot;Amusements&quot;,&quot;Toys&quot;],&quot;Primary&quot;:&quot;44440.htm&quot;,&quot;CreatorNames&quot;:[&quot;Beard, Adelia B. (Adelia Belle), 1857-1920&quot;,&quot;Beard, Lina, -1933&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;44440&quot;});" class='title'>Mother Nature's Toy-Shop</a>
+<div class='author'>Beard, Adelia B. (Adelia Belle), 1857-1920, Beard, Lina, -1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44623, {&quot;Title&quot;:&quot;The Golf Courses of the British Isles&quot;,&quot;Topics&quot;:[&quot;Golf courses -- Great Britain&quot;],&quot;Primary&quot;:&quot;44623.htm&quot;,&quot;CreatorNames&quot;:[&quot;Darwin, Bernard, 1876-1961&quot;,&quot;Rountree, Harry, 1878- [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;44623&quot;});" class='title'>The Golf Courses of the British Isles</a>
+<div class='author'>Darwin, Bernard, 1876-1961, Rountree, Harry, 1878- [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45030, {&quot;Title&quot;:&quot;A.B.C. of Snap Shooting: Sporting, Exhibition, and Military&quot;,&quot;Topics&quot;:[&quot;Trapshooting&quot;],&quot;Primary&quot;:&quot;45030.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fletcher, Horace, 1849-1919&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;45030&quot;});" class='title'>A.B.C. of Snap Shooting:<br><span class='subtitle'>Sporting, Exhibition, and Military</span></a>
+<div class='author'>Fletcher, Horace, 1849-1919</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45235, {&quot;Title&quot;:&quot;Magic, Stage Illusions and Scientific Diversions, Including Trick Photography&quot;,&quot;Topics&quot;:[&quot;Magic tricks&quot;],&quot;Primary&quot;:&quot;45235.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hopkins, Albert A. (Albert Allis), 1869-1939&quot;,&quot;Evans, Henry Ridgely, 1861-1949 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;45235&quot;});" class='title'>Magic, Stage Illusions and Scientific Diversions, Including Trick Photography</a>
+<div class='author'>Hopkins, Albert A. (Albert Allis), 1869-1939, Evans, Henry Ridgely, 1861-1949 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45299, {&quot;Title&quot;:&quot;The Russian Ballet&quot;,&quot;Topics&quot;:[&quot;Ballet&quot;,&quot;Dance -- Russia&quot;],&quot;Primary&quot;:&quot;45299.htm&quot;,&quot;CreatorNames&quot;:[&quot;Terry, Ellen, 1847-1928&quot;,&quot;Smith, Pamela Colman, 1878-1951 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;45299&quot;});" class='title'>The Russian Ballet</a>
+<div class='author'>Terry, Ellen, 1847-1928, Smith, Pamela Colman, 1878-1951 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45370, {&quot;Title&quot;:&quot;The Adventurous Life of a Versatile Artist: Houdini&quot;,&quot;Topics&quot;:[&quot;Houdini, Harry, 1874-1926&quot;,&quot;Magicians -- United States -- Biography&quot;],&quot;Primary&quot;:&quot;45370.htm&quot;,&quot;CreatorNames&quot;:[&quot;Unknown&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;45370&quot;});" class='title'>The Adventurous Life of a Versatile Artist:<br><span class='subtitle'>Houdini</span></a>
+<div class='author'>Unknown</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4542, {&quot;Title&quot;:&quot;Checkmates for Three Pieces&quot;,&quot;Topics&quot;:[&quot;Chess&quot;],&quot;Primary&quot;:&quot;4542.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fishburne, William Brett&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;4542&quot;});" class='title'>Checkmates for Three Pieces</a>
+<div class='author'>Fishburne, William Brett</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45493, {&quot;Title&quot;:&quot;On Yacht Sailing - A Simple Treatise for Beginners upon the Art of Handling Small Yachts and Boats&quot;,&quot;Topics&quot;:[&quot;Yachting&quot;],&quot;Primary&quot;:&quot;45493.htm&quot;,&quot;CreatorNames&quot;:[&quot;Day, Thomas Fleming, 1861-1927&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;45493&quot;});" class='title'>On Yacht Sailing -<br><span class='subtitle'>A Simple Treatise for Beginners upon the Art of Handling Small Yachts and Boats</span></a>
+<div class='author'>Day, Thomas Fleming, 1861-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45584, {&quot;Title&quot;:&quot;Facts and Speculations on the Origin and History of Playing Cards&quot;,&quot;Topics&quot;:[&quot;Playing cards -- History&quot;],&quot;Primary&quot;:&quot;45584.htm&quot;,&quot;CreatorNames&quot;:[&quot;Chatto, William Andrew, 1799-1864&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;45584&quot;});" class='title'>Facts and Speculations on the Origin and History of Playing Cards</a>
+<div class='author'>Chatto, William Andrew, 1799-1864</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45587, {&quot;Title&quot;:&quot;Acrobats and Mountebanks&quot;,&quot;Topics&quot;:[&quot;Fairs&quot;,&quot;Acrobatics&quot;,&quot;Acrobats&quot;],&quot;Primary&quot;:&quot;45587.htm&quot;,&quot;CreatorNames&quot;:[&quot;Garnier, Jules, 1847-1889&quot;,&quot;Le Roux, Hugues, 1860-1925&quot;,&quot;Morton, A. P. [Translator]&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;45587&quot;});" class='title'>Acrobats and Mountebanks</a>
+<div class='author'>Garnier, Jules, 1847-1889, Le Roux, Hugues, 1860-1925, Morton, A. P. [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45762, {&quot;Title&quot;:&quot;Games and Songs of American Children&quot;,&quot;Topics&quot;:[&quot;Games with music&quot;,&quot;Children&#39;s songs -- United States&quot;],&quot;Primary&quot;:&quot;45762.htm&quot;,&quot;CreatorNames&quot;:[&quot;Newell, William Wells, 1839-1907 [Compiler]&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;45762&quot;});" class='title'>Games and Songs of American Children</a>
+<div class='author'>Newell, William Wells, 1839-1907 [Compiler]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46067, {&quot;Title&quot;:&quot;How To Ski and How Not To&quot;,&quot;Topics&quot;:[&quot;Skis and skiing&quot;],&quot;Primary&quot;:&quot;46067.htm&quot;,&quot;CreatorNames&quot;:[&quot;Caulfeild, Vivian, 1874-1958&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;46067&quot;});" class='title'>How To Ski and How Not To</a>
+<div class='author'>Caulfeild, Vivian, 1874-1958</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46093, {&quot;Title&quot;:&quot;Secrets of the Sword&quot;,&quot;Topics&quot;:[&quot;Fencing&quot;],&quot;Primary&quot;:&quot;46093.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bazancourt, César Lecat, baron de, 1810-1865&quot;,&quot;Townsend, F. H. (Frederick Henry), 1868-1920 [Illustrator]&quot;,&quot;Clay, Charles Felix, 1861-1947 [Translator]&quot;],&quot;LoCC&quot;:[&quot;GV&quot;,&quot;U&quot;],&quot;PG_ID&quot;:&quot;46093&quot;});" class='title'>Secrets of the Sword</a>
+<div class='author'>Bazancourt, César Lecat, baron de, 1810-1865, Townsend, F. H. (Frederick Henry), 1868-1920 [Illustrator], Clay, Charles Felix, 1861-1947 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46139, {&quot;Title&quot;:&quot;The Autobiography of a Clown&quot;,&quot;Topics&quot;:[&quot;Turnour, Jules, -1931&quot;,&quot;Clowns&quot;],&quot;Primary&quot;:&quot;46139.htm&quot;,&quot;CreatorNames&quot;:[&quot;Marcosson, Isaac Frederick, 1876-1961&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;46139&quot;});" class='title'>The Autobiography of a Clown</a>
+<div class='author'>Marcosson, Isaac Frederick, 1876-1961</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46266, {&quot;Title&quot;:&quot;The Sharper Detected and Exposed&quot;,&quot;Topics&quot;:[&quot;Gambling&quot;,&quot;Cardsharping&quot;],&quot;Primary&quot;:&quot;46266.htm&quot;,&quot;CreatorNames&quot;:[&quot;Robert-Houdin, Jean-Eugène, 1805-1871&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;46266&quot;});" class='title'>The Sharper Detected and Exposed</a>
+<div class='author'>Robert-Houdin, Jean-Eugène, 1805-1871</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46438, {&quot;Title&quot;:&quot;Archery Rules&quot;,&quot;Topics&quot;:[&quot;Archery&quot;],&quot;Primary&quot;:&quot;46438.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hinrichs, Charles F. A.&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;46438&quot;});" class='title'>Archery Rules</a>
+<div class='author'>Hinrichs, Charles F. A.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(466, {&quot;Title&quot;:&quot;The Gaming Table: Its Votaries and Victims. Volume 1 (of 2)&quot;,&quot;Topics&quot;:[&quot;Gambling&quot;],&quot;Primary&quot;:&quot;466.htm&quot;,&quot;CreatorNames&quot;:[&quot;Steinmetz, Andrew, 1816-1877&quot;],&quot;LoCC&quot;:[&quot;GV&quot;,&quot;HV&quot;],&quot;PG_ID&quot;:&quot;466&quot;});" class='title'>The Gaming Table:<br><span class='subtitle'>Its Votaries and Victims. Volume 1 (of 2)</span></a>
+<div class='author'>Steinmetz, Andrew, 1816-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47243, {&quot;Title&quot;:&quot;The Sportswoman&#39;s Library, Vol. 2 of 2&quot;,&quot;Topics&quot;:[&quot;Sports&quot;],&quot;Primary&quot;:&quot;47243.htm&quot;,&quot;CreatorNames&quot;:[&quot;Slaughter, Frances E. (Frances Elizabeth), 1851- [Editor]&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;47243&quot;});" class='title'>The Sportswoman's Library, Vol. 2 of 2</a>
+<div class='author'>Slaughter, Frances E. (Frances Elizabeth), 1851- [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47254, {&quot;Title&quot;:&quot;Handbook of Summer Athletic Sports - Comprising: Walking, Running, Jumping, Hare and Hounds, Bicycling, Archery, Etc.&quot;,&quot;Topics&quot;:[&quot;Sports&quot;,&quot;Athletics&quot;],&quot;Primary&quot;:&quot;47254.htm&quot;,&quot;CreatorNames&quot;:[&quot;Whittaker, Fred [Editor]&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;47254&quot;});" class='title'>Handbook of Summer Athletic Sports -<br><span class='subtitle'>Comprising: Walking, Running, Jumping, Hare and Hounds, Bicycling, Archery, Etc.</span></a>
+<div class='author'>Whittaker, Fred [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47760, {&quot;Title&quot;:&quot;Three Hundred Things a Bright Boy Can Do&quot;,&quot;Topics&quot;:[&quot;Games&quot;,&quot;Amusements&quot;,&quot;Sports&quot;,&quot;Handicraft&quot;],&quot;Primary&quot;:&quot;47760.htm&quot;,&quot;CreatorNames&quot;:[&quot;Armitage, Harold, 1867- [Editor]&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;47760&quot;});" class='title'>Three Hundred Things a Bright Boy Can Do</a>
+<div class='author'>Armitage, Harold, 1867- [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47906, {&quot;Title&quot;:&quot;Touring Afoot&quot;,&quot;Topics&quot;:[&quot;Walking&quot;,&quot;Camping&quot;],&quot;Primary&quot;:&quot;47906.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fordyce, Claude P. (Claude Powell), 1883-&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;47906&quot;});" class='title'>Touring Afoot</a>
+<div class='author'>Fordyce, Claude P. (Claude Powell), 1883-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48468, {&quot;Title&quot;:&quot;A \&quot;\&quot;Bawl\&quot;\&quot; for American Cricket&quot;,&quot;Topics&quot;:[&quot;Cricket&quot;],&quot;Primary&quot;:&quot;48468.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wister, Jones, 1839-1917&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;48468&quot;});" class='title'>A "Bawl" for American Cricket</a>
+<div class='author'>Wister, Jones, 1839-1917</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48844, {&quot;Title&quot;:&quot;The Story of Captain, the Horse with the Human Brain&quot;,&quot;Topics&quot;:[&quot;Telepathy -- Fiction&quot;,&quot;Captain (horse)&quot;,&quot;Horses -- Biography&quot;,&quot;Horses -- Psychology&quot;],&quot;Primary&quot;:&quot;48844.htm&quot;,&quot;CreatorNames&quot;:[&quot;James, George Wharton, 1858-1923&quot;],&quot;LoCC&quot;:[&quot;GV&quot;,&quot;QL&quot;],&quot;PG_ID&quot;:&quot;48844&quot;});" class='title'>The Story of Captain, the Horse with the Human Brain</a>
+<div class='author'>James, George Wharton, 1858-1923</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48978, {&quot;Title&quot;:&quot;Things Worth Doing and How To Do Them&quot;,&quot;Topics&quot;:[&quot;Games&quot;,&quot;Amusements&quot;],&quot;Primary&quot;:&quot;48978.htm&quot;,&quot;CreatorNames&quot;:[&quot;Beard, Adelia B. (Adelia Belle), 1857-1920&quot;,&quot;Beard, Lina, -1933&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;48978&quot;});" class='title'>Things Worth Doing and How To Do Them</a>
+<div class='author'>Beard, Adelia B. (Adelia Belle), 1857-1920, Beard, Lina, -1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48983, {&quot;Title&quot;:&quot;The Sports and Pastimes of the People of England - Including the Rural and Domestic Recreations, May Games, Mummeries, Shows, Processions, Pageants, and Pompous Spectacles from the Earliest Period to the Present Time&quot;,&quot;Topics&quot;:[&quot;England -- Social life and customs&quot;,&quot;Popular culture -- England&quot;,&quot;Games -- England -- History&quot;,&quot;Sports -- England -- History&quot;,&quot;Pageants -- England -- History&quot;,&quot;Processions -- England -- History&quot;],&quot;Primary&quot;:&quot;48983.htm&quot;,&quot;CreatorNames&quot;:[&quot;Strutt, Joseph, 1749-1802&quot;,&quot;Hone, William, 1780-1842 [Editor]&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;48983&quot;});" class='title'>The Sports and Pastimes of the People of England -<br><span class='subtitle'>Including the Rural and Domestic Recreations, May Games, Mummeries, Shows, Processions, Pageants, and Pompous Spectacles from the Earliest Period to the Present Time</span></a>
+<div class='author'>Strutt, Joseph, 1749-1802, Hone, William, 1780-1842 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4902, {&quot;Title&quot;:&quot;Chess History and Reminiscences&quot;,&quot;Topics&quot;:[&quot;Chess&quot;],&quot;Primary&quot;:&quot;4902.txt&quot;,&quot;CreatorNames&quot;:[&quot;Bird, H. E. (Henry Edward), 1830-1906&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;4902&quot;});" class='title'>Chess History and Reminiscences</a>
+<div class='author'>Bird, H. E. (Henry Edward), 1830-1906</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4913, {&quot;Title&quot;:&quot;Chess and Checkers : the Way to Mastership&quot;,&quot;Topics&quot;:[&quot;Chess&quot;,&quot;Checkers&quot;],&quot;Primary&quot;:&quot;4913.txt&quot;,&quot;CreatorNames&quot;:[&quot;Lasker, Edward, 1885-1981&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;4913&quot;});" class='title'>Chess and Checkers :<br><span class='subtitle'>the Way to Mastership</span></a>
+<div class='author'>Lasker, Edward, 1885-1981</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49137, {&quot;Title&quot;:&quot;Cassell&#39;s Book of In-door Amusements, Card Games, and Fireside Fun&quot;,&quot;Topics&quot;:[&quot;Games&quot;,&quot;Amusements&quot;,&quot;Card games&quot;,&quot;Indoor games&quot;],&quot;Primary&quot;:&quot;49137.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;49137&quot;});" class='title'>Cassell's Book of In-door Amusements, Card Games, and Fireside Fun</a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49349, {&quot;Title&quot;:&quot;Catlin&#39;s Historic Origin of the Playing Cards - Their original design and subsequent use&quot;,&quot;Topics&quot;:[&quot;Playing cards -- History&quot;,&quot;Guest (Game)&quot;],&quot;Primary&quot;:&quot;49349.htm&quot;,&quot;CreatorNames&quot;:[&quot;Catlin, H. D.&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;49349&quot;});" class='title'>Catlin's Historic Origin of the Playing Cards -<br><span class='subtitle'>Their original design and subsequent use</span></a>
+<div class='author'>Catlin, H. D.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49415, {&quot;Title&quot;:&quot;The Boy&#39;s Own Book of Indoor Games and Recreations - A Popular Encyclopædia for Boys&quot;,&quot;Topics&quot;:[&quot;Amusements -- Juvenile literature&quot;,&quot;Games -- Juvenile literature&quot;,&quot;Steam-engines -- Juvenile literature&quot;,&quot;Music -- History and criticism -- Juvenile literature&quot;,&quot;Electricity -- Juvenile literature&quot;,&quot;Chess -- Juvenile literature&quot;,&quot;Dance -- Juvenile literature&quot;,&quot;Gymnastics -- Juvenile literature&quot;,&quot;Magic tricks -- Juvenile literature&quot;,&quot;Ventriloquism -- Juvenile literature&quot;,&quot;Woodwork -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;49415.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hicks, C. Stansfeld&quot;,&quot;Maskelyne, John Nevil, 1839-1917&quot;,&quot;Stables, Gordon, 1840-1910&quot;,&quot;Hutchison, G. Andrew, 1841-1913 [Editor]&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;49415&quot;});" class='title'>The Boy's Own Book of Indoor Games and Recreations -<br><span class='subtitle'>A Popular Encyclopædia for Boys</span></a>
+<div class='author'>Hicks, C. Stansfeld, Maskelyne, John Nevil, 1839-1917, Stables, Gordon, 1840-1910, Hutchison, G. Andrew, 1841-1913 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49448, {&quot;Title&quot;:&quot;When Mother Lets Us Give a Party - A book that tells little folk how best to entertain and amuse their little friends&quot;,&quot;Topics&quot;:[&quot;Games&quot;,&quot;Amusements&quot;],&quot;Primary&quot;:&quot;49448.htm&quot;,&quot;CreatorNames&quot;:[&quot;Yale, Elsie Duncan, 1873-1956&quot;,&quot;Budell, Ada [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;49448&quot;});" class='title'>When Mother Lets Us Give a Party -<br><span class='subtitle'>A book that tells little folk how best to entertain and amuse their little friends</span></a>
+<div class='author'>Yale, Elsie Duncan, 1873-1956, Budell, Ada [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49547, {&quot;Title&quot;:&quot;Twenty Years of Spoof and Bluff&quot;,&quot;Topics&quot;:[&quot;Carlton, 1881-1941&quot;,&quot;Magicians -- Great Britain -- Biography&quot;],&quot;Primary&quot;:&quot;49547.htm&quot;,&quot;CreatorNames&quot;:[&quot;Carlton, 1881-1942&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;49547&quot;});" class='title'>Twenty Years of Spoof and Bluff</a>
+<div class='author'>Carlton, 1881-1942</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49616, {&quot;Title&quot;:&quot;Lady Hollyhock and Her Friends: A Book of Nature Dolls and Others&quot;,&quot;Topics&quot;:[&quot;Amusements&quot;,&quot;Creative activities and seat work&quot;,&quot;Dolls&quot;],&quot;Primary&quot;:&quot;49616.htm&quot;,&quot;CreatorNames&quot;:[&quot;Walker, Margaret Coulson&quot;,&quot;Hunt, Mary Isabel [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;49616&quot;});" class='title'>Lady Hollyhock and Her Friends:<br><span class='subtitle'>A Book of Nature Dolls and Others</span></a>
+<div class='author'>Walker, Margaret Coulson, Hunt, Mary Isabel [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49617, {&quot;Title&quot;:&quot;The Good Crow&#39;s Happy Shop&quot;,&quot;Topics&quot;:[&quot;Amusements&quot;],&quot;Primary&quot;:&quot;49617.htm&quot;,&quot;CreatorNames&quot;:[&quot;Beard, Patten&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;49617&quot;});" class='title'>The Good Crow's Happy Shop</a>
+<div class='author'>Beard, Patten</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50056, {&quot;Title&quot;:&quot;The Dance: Its Place in Art and Life&quot;,&quot;Topics&quot;:[&quot;Dance&quot;],&quot;Primary&quot;:&quot;50056.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kinney, Margaret West, 1872-1952&quot;,&quot;Kinney, Troy, 1871-1938&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;50056&quot;});" class='title'>The Dance:<br><span class='subtitle'>Its Place in Art and Life</span></a>
+<div class='author'>Kinney, Margaret West, 1872-1952, Kinney, Troy, 1871-1938</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50059, {&quot;Title&quot;:&quot;How to Behave and How to Amuse: A Handy Manual of Etiquette and Parlor Games&quot;,&quot;Topics&quot;:[&quot;Etiquette&quot;,&quot;Games&quot;,&quot;Amusements&quot;],&quot;Primary&quot;:&quot;50059.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sandison, George H. (George Henry), 1850-&quot;],&quot;LoCC&quot;:[&quot;BJ&quot;,&quot;GV&quot;],&quot;PG_ID&quot;:&quot;50059&quot;});" class='title'>How to Behave and How to Amuse:<br><span class='subtitle'>A Handy Manual of Etiquette and Parlor Games</span></a>
+<div class='author'>Sandison, George H. (George Henry), 1850-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50100, {&quot;Title&quot;:&quot;How to Do Chemical Tricks - Containing Over One Hundred Highly Amusing and Instructive Tricks With Chemicals&quot;,&quot;Topics&quot;:[&quot;Scientific recreations -- Handbooks, manuals, etc.&quot;,&quot;Chemistry -- Experiments -- Handbooks, manuals, etc.&quot;,&quot;Tricks -- Handbooks, manuals, etc.&quot;],&quot;Primary&quot;:&quot;50100.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anderson, A., active 1894-1902&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;50100&quot;});" class='title'>How to Do Chemical Tricks -<br><span class='subtitle'>Containing Over One Hundred Highly Amusing and Instructive Tricks With Chemicals</span></a>
+<div class='author'>Anderson, A., active 1894-1902</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50115, {&quot;Title&quot;:&quot;Struggles and Triumphs: or, Forty Years&#39; Recollections of P. T. Barnum&quot;,&quot;Topics&quot;:[&quot;Barnum, P. T. (Phineas Taylor), 1810-1891&quot;,&quot;Circus owners -- United States -- Biography&quot;],&quot;Primary&quot;:&quot;50115.htm&quot;,&quot;CreatorNames&quot;:[&quot;Barnum, P. T. (Phineas Taylor), 1810-1891&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;50115&quot;});" class='title'>Struggles and Triumphs:<br><span class='subtitle'>or, Forty Years' Recollections of P. T. Barnum</span></a>
+<div class='author'>Barnum, P. T. (Phineas Taylor), 1810-1891</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50373, {&quot;Title&quot;:&quot;Cricket&quot;,&quot;Topics&quot;:[&quot;Cricket&quot;],&quot;Primary&quot;:&quot;50373.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hutchinson, Horace G. (Horace Gordon), 1859-1932 [Editor]&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;50373&quot;});" class='title'>Cricket</a>
+<div class='author'>Hutchinson, Horace G. (Horace Gordon), 1859-1932 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50404, {&quot;Title&quot;:&quot;Parlour Magic&quot;,&quot;Topics&quot;:[&quot;Magic tricks -- Juvenile literature&quot;,&quot;Scientific recreations -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;50404.htm&quot;,&quot;CreatorNames&quot;:[&quot;Perkins, Henry, 1803-1889 [Publisher]&quot;],&quot;LoCC&quot;:[&quot;GV&quot;,&quot;Q&quot;],&quot;PG_ID&quot;:&quot;50404&quot;});" class='title'>Parlour Magic</a>
+<div class='author'>Perkins, Henry, 1803-1889 [Publisher]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50603, {&quot;Title&quot;:&quot;Minute Mysteries [Detectograms]&quot;,&quot;Topics&quot;:[&quot;Detective and mystery stories&quot;,&quot;Puzzles&quot;],&quot;Primary&quot;:&quot;50603.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ripley, H. A. (Harold Austin), 1896-&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;50603&quot;});" class='title'>Minute Mysteries [Detectograms]</a>
+<div class='author'>Ripley, H. A. (Harold Austin), 1896-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50631, {&quot;Title&quot;:&quot;Around the World on Wheels, for The Inter Ocean - The Travels and Adventures in Foreign Lands of Mr. and Mrs. H. Darwin McIlrath&quot;,&quot;Topics&quot;:[&quot;Voyages around the world&quot;,&quot;Bicycle touring&quot;],&quot;Primary&quot;:&quot;50631.htm&quot;,&quot;CreatorNames&quot;:[&quot;McIlrath, H. Darwin&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;50631&quot;});" class='title'>Around the World on Wheels, for The Inter Ocean -<br><span class='subtitle'>The Travels and Adventures in Foreign Lands of Mr. and Mrs. H. Darwin McIlrath</span></a>
+<div class='author'>McIlrath, H. Darwin</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50903, {&quot;Title&quot;:&quot;Sleight of Hand: A Practical Manual of Legerdemain for Amateurs &amp; Others&quot;,&quot;Topics&quot;:[&quot;Magic tricks&quot;],&quot;Primary&quot;:&quot;50903.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sachs, Edwin Thomas, -1910&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;50903&quot;});" class='title'>Sleight of Hand:<br><span class='subtitle'>A Practical Manual of Legerdemain for Amateurs & Others</span></a>
+<div class='author'>Sachs, Edwin Thomas, -1910</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51039, {&quot;Title&quot;:&quot;The Laws and Principles of Whist Stated and Explained, - and its practice illustrated on an original system by means of hands played completely through. 18th edition&quot;,&quot;Topics&quot;:[&quot;Whist&quot;],&quot;Primary&quot;:&quot;51039.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cavendish, 1831-1899&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;51039&quot;});" class='title'>The Laws and Principles of Whist Stated and Explained, -<br><span class='subtitle'>and its practice illustrated on an original system by means of hands played completely through. 18th edition</span></a>
+<div class='author'>Cavendish, 1831-1899</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51216, {&quot;Title&quot;:&quot;Advanced Bridge; The Higher Principles of the Game Analysed and Explained&quot;,&quot;Topics&quot;:[&quot;Bridge whist&quot;],&quot;Primary&quot;:&quot;51216.htm&quot;,&quot;CreatorNames&quot;:[&quot;Elwell, J. B. (Joseph Bowne), 1874-1920&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;51216&quot;});" class='title'>Advanced Bridge;<br><span class='subtitle'>The Higher Principles of the Game Analysed and Explained</span></a>
+<div class='author'>Elwell, J. B. (Joseph Bowne), 1874-1920</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51315, {&quot;Title&quot;:&quot;How? or, Spare Hours Made Profitable for Boys and Girls&quot;,&quot;Topics&quot;:[&quot;Amusements&quot;,&quot;Handicraft&quot;],&quot;Primary&quot;:&quot;51315.htm&quot;,&quot;CreatorNames&quot;:[&quot;Holbrook, Kennedy&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;51315&quot;});" class='title'>How? or, Spare Hours Made Profitable for Boys and Girls</a>
+<div class='author'>Holbrook, Kennedy</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51540, {&quot;Title&quot;:&quot;Fun for the Household: A Book of Games&quot;,&quot;Topics&quot;:[&quot;Amusements&quot;],&quot;Primary&quot;:&quot;51540.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gray, Emma J.&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;51540&quot;});" class='title'>Fun for the Household:<br><span class='subtitle'>A Book of Games</span></a>
+<div class='author'>Gray, Emma J.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51645, {&quot;Title&quot;:&quot;Letters on Natural Magic; Addressed to Sir Walter Scott, Bart.&quot;,&quot;Topics&quot;:[&quot;Scientific recreations&quot;],&quot;Primary&quot;:&quot;51645.htm&quot;,&quot;CreatorNames&quot;:[&quot;Brewster, David, 1781-1868&quot;],&quot;LoCC&quot;:[&quot;GV&quot;,&quot;Q&quot;],&quot;PG_ID&quot;:&quot;51645&quot;});" class='title'>Letters on Natural Magic;<br><span class='subtitle'>Addressed to Sir Walter Scott, Bart.</span></a>
+<div class='author'>Brewster, David, 1781-1868</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51896, {&quot;Title&quot;:&quot;Popular Pastimes for Field and Fireside, or Amusements for young and old&quot;,&quot;Topics&quot;:[&quot;Games&quot;,&quot;Amusements&quot;,&quot;Handicraft&quot;],&quot;Primary&quot;:&quot;51896.htm&quot;,&quot;CreatorNames&quot;:[&quot;Smith, Caroline L.&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;51896&quot;});" class='title'>Popular Pastimes for Field and Fireside, or Amusements for young and old</a>
+<div class='author'>Smith, Caroline L.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52022, {&quot;Title&quot;:&quot;The Cricket Field: Or, the History and Science of the Game of Cricket&quot;,&quot;Topics&quot;:[&quot;Cricket&quot;],&quot;Primary&quot;:&quot;52022.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pycroft, James, 1813-1895&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;52022&quot;});" class='title'>The Cricket Field:<br><span class='subtitle'>Or, the History and Science of the Game of Cricket</span></a>
+<div class='author'>Pycroft, James, 1813-1895</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52051, {&quot;Title&quot;:&quot;How to Amuse Yourself and Others: The American Girl&#39;s Handy Book&quot;,&quot;Topics&quot;:[&quot;Amusements -- Juvenile literature&quot;,&quot;Handicraft -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;52051.htm&quot;,&quot;CreatorNames&quot;:[&quot;Beard, Adelia B. (Adelia Belle), 1857-1920&quot;,&quot;Beard, Lina, -1933&quot;],&quot;LoCC&quot;:[&quot;GV&quot;,&quot;TT&quot;],&quot;PG_ID&quot;:&quot;52051&quot;});" class='title'>How to Amuse Yourself and Others:<br><span class='subtitle'>The American Girl's Handy Book</span></a>
+<div class='author'>Beard, Adelia B. (Adelia Belle), 1857-1920, Beard, Lina, -1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52052, {&quot;Title&quot;:&quot;The Puzzle King - Amusing arithmetic, book-keeping blunders, commercial comicalities, curious \&quot;\&quot;catches\&quot;\&quot;, peculiar problems, perplexing paradoxes, quaint questions, queer quibbles, school stories, interesting items, tricks with figures, cards, draughts, dice, dominoes, etc., etc., etc.&quot;,&quot;Topics&quot;:[&quot;Amusements&quot;,&quot;Mathematical recreations&quot;,&quot;Puzzles&quot;],&quot;Primary&quot;:&quot;52052.htm&quot;,&quot;CreatorNames&quot;:[&quot;Scott, John&quot;],&quot;LoCC&quot;:[&quot;GV&quot;,&quot;QA&quot;],&quot;PG_ID&quot;:&quot;52052&quot;});" class='title'>The Puzzle King -<br><span class='subtitle'>Amusing arithmetic, book-keeping blunders, commercial comicalities, curious "catches", peculiar problems, perplexing paradoxes, quaint questions, queer quibbles, school stories, interesting items, tricks with figures, cards, draughts, dice, dominoes, etc., etc., etc.</span></a>
+<div class='author'>Scott, John</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52197, {&quot;Title&quot;:&quot;Home Arts for Old and Young&quot;,&quot;Topics&quot;:[&quot;Amusements&quot;,&quot;Handicraft&quot;],&quot;Primary&quot;:&quot;52197.htm&quot;,&quot;CreatorNames&quot;:[&quot;Smith, Caroline L.&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;52197&quot;});" class='title'>Home Arts for Old and Young</a>
+<div class='author'>Smith, Caroline L.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52324, {&quot;Title&quot;:&quot;Hints to Young Yacht Skippers&quot;,&quot;Topics&quot;:[&quot;Yachting&quot;,&quot;Sailing&quot;],&quot;Primary&quot;:&quot;52324.htm&quot;,&quot;CreatorNames&quot;:[&quot;Day, Thomas Fleming, 1861-1927&quot;,&quot;Sheppard, Warren [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;52324&quot;});" class='title'>Hints to Young Yacht Skippers</a>
+<div class='author'>Day, Thomas Fleming, 1861-1927, Sheppard, Warren [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52684, {&quot;Title&quot;:&quot;Cricket&quot;,&quot;Topics&quot;:[&quot;Cricket&quot;],&quot;Primary&quot;:&quot;52684.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lyttelton, R. H. (Robert Henry), 1854-1939&quot;,&quot;Steel, A. G. (Allan Gibson), 1858-1914&quot;,&quot;Gale, Frederick, 1823-1904 [Contributor]&quot;,&quot;Grace, W. G. (William Gilbert), 1848-1915 [Contributor]&quot;,&quot;Lang, Andrew, 1844-1912 [Contributor]&quot;,&quot;Mitchell, Richard Arthur Henry, 1843- [Contributor]&quot;,&quot;Davis, Lucien, 1860-1941 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;52684&quot;});" class='title'>Cricket</a>
+<div class='author'>Lyttelton, R. H. (Robert Henry), 1854-1939, Steel, A. G. (Allan Gibson), 1858-1914, Gale, Frederick, 1823-1904 [Contributor], Grace, W. G. (William Gilbert), 1848-1915 [Contributor], Lang, Andrew, 1844-1912 [Contributor], Mitchell, Richard Arthur Henry, 1843- [Contributor], Davis, Lucien, 1860-1941 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52799, {&quot;Title&quot;:&quot;Home Entertaining: Amusements for Every One&quot;,&quot;Topics&quot;:[&quot;Amusements&quot;],&quot;Primary&quot;:&quot;52799.htm&quot;,&quot;CreatorNames&quot;:[&quot;Chenery, William Eastman, 1859-&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;52799&quot;});" class='title'>Home Entertaining:<br><span class='subtitle'>Amusements for Every One</span></a>
+<div class='author'>Chenery, William Eastman, 1859-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(531, {&quot;Title&quot;:&quot;The Gaming Table: Its Votaries and Victims. Volume 2 (of 2)&quot;,&quot;Topics&quot;:[&quot;Gambling&quot;],&quot;Primary&quot;:&quot;531.htm&quot;,&quot;CreatorNames&quot;:[&quot;Steinmetz, Andrew, 1816-1877&quot;],&quot;LoCC&quot;:[&quot;GV&quot;,&quot;HV&quot;],&quot;PG_ID&quot;:&quot;531&quot;});" class='title'>The Gaming Table:<br><span class='subtitle'>Its Votaries and Victims. Volume 2 (of 2)</span></a>
+<div class='author'>Steinmetz, Andrew, 1816-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53235, {&quot;Title&quot;:&quot;The Practical Magician and Ventriloquist&#39;s Guide - A practical manual of fireside magic and conjuring illusions, containing also complete instructions for acquiring and practising the art of ventriloquism.&quot;,&quot;Topics&quot;:[&quot;Magic tricks -- Handbooks, manuals, etc.&quot;,&quot;Ventriloquism -- Handbooks, manuals, etc.&quot;],&quot;Primary&quot;:&quot;53235.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;53235&quot;});" class='title'>The Practical Magician and Ventriloquist's Guide -<br><span class='subtitle'>A practical manual of fireside magic and conjuring illusions, containing also complete instructions for acquiring and practising the art of ventriloquism.</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53391, {&quot;Title&quot;:&quot;Home Amusements&quot;,&quot;Topics&quot;:[&quot;Amusements&quot;],&quot;Primary&quot;:&quot;53391.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sherwood, M. E. W. (Mary Elizabeth Wilson), 1826-1903&quot;],&quot;LoCC&quot;:[&quot;GV&quot;,&quot;HQ&quot;],&quot;PG_ID&quot;:&quot;53391&quot;});" class='title'>Home Amusements</a>
+<div class='author'>Sherwood, M. E. W. (Mary Elizabeth Wilson), 1826-1903</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53462, {&quot;Title&quot;:&quot;Discursos sobre el arte del dançado - y sus exelencias y primer origen, reprobando las acciones deshonestas&quot;,&quot;Topics&quot;:[&quot;Dance -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;53462.htm&quot;,&quot;CreatorNames&quot;:[&quot;Esquivel Navarro, Juan de, active 17th century&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;53462&quot;});" class='title'>Discursos sobre el arte del dançado -<br><span class='subtitle'>y sus exelencias y primer origen, reprobando las acciones deshonestas</span></a>
+<div class='author'>Esquivel Navarro, Juan de, active 17th century</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53472, {&quot;Title&quot;:&quot;Myers&#39; Grand Hippodrome&quot;,&quot;Topics&quot;:[&quot;Circus&quot;,&quot;Myers, James Washington, 1823-1892&quot;],&quot;Primary&quot;:&quot;53472.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;53472&quot;});" class='title'>Myers' Grand Hippodrome</a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53705, {&quot;Title&quot;:&quot;Harper&#39;s Outdoor Book for Boys&quot;,&quot;Topics&quot;:[&quot;Games&quot;,&quot;Amusements&quot;],&quot;Primary&quot;:&quot;53705.htm&quot;,&quot;CreatorNames&quot;:[&quot;Adams, Joseph H. (Joseph Henry), 1867-1941&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;53705&quot;});" class='title'>Harper's Outdoor Book for Boys</a>
+<div class='author'>Adams, Joseph H. (Joseph Henry), 1867-1941</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53847, {&quot;Title&quot;:&quot;Merry&#39;s Book of Puzzles&quot;,&quot;Topics&quot;:[&quot;Puzzles&quot;],&quot;Primary&quot;:&quot;53847.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stearns, J. N. (John Newton), 1829-1895&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;53847&quot;});" class='title'>Merry's Book of Puzzles</a>
+<div class='author'>Stearns, J. N. (John Newton), 1829-1895</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53881, {&quot;Title&quot;:&quot;Foster&#39;s Complete Hoyle: An Encyclopedia of Games - Including all indoor games played to-day. With suggestions for good play, illustrative hands, and all official laws to date&quot;,&quot;Topics&quot;:[&quot;Games&quot;,&quot;Indoor games&quot;],&quot;Primary&quot;:&quot;53881.htm&quot;,&quot;CreatorNames&quot;:[&quot;Foster, R. F. (Robert Frederick), 1853-1945&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;53881&quot;});" class='title'>Foster's Complete Hoyle:<br><span class='subtitle'>An Encyclopedia of Games - Including all indoor games played to-day. With suggestions for good play, illustrative hands, and all official laws to date</span></a>
+<div class='author'>Foster, R. F. (Robert Frederick), 1853-1945</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54051, {&quot;Title&quot;:&quot;The Book of the Sailboat: How to rig, sail and handle small boats&quot;,&quot;Topics&quot;:[&quot;Boats and boating&quot;,&quot;Sailing&quot;],&quot;Primary&quot;:&quot;54051.htm&quot;,&quot;CreatorNames&quot;:[&quot;Verrill, A. Hyatt (Alpheus Hyatt), 1871-1954&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;54051&quot;});" class='title'>The Book of the Sailboat:<br><span class='subtitle'>How to rig, sail and handle small boats</span></a>
+<div class='author'>Verrill, A. Hyatt (Alpheus Hyatt), 1871-1954</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54135, {&quot;Title&quot;:&quot;Whist; or, Bumblepuppy? Thirteen Lectures Addressed to Children&quot;,&quot;Topics&quot;:[&quot;Whist&quot;],&quot;Primary&quot;:&quot;54135.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hewby, John Petch, 1835-1896&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;54135&quot;});" class='title'>Whist;<br><span class='subtitle'>or, Bumblepuppy? Thirteen Lectures Addressed to Children</span></a>
+<div class='author'>Hewby, John Petch, 1835-1896</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54145, {&quot;Title&quot;:&quot;The Decline and Fall of Whist: An Old Fashioned View of New Fangled Play&quot;,&quot;Topics&quot;:[&quot;Whist&quot;],&quot;Primary&quot;:&quot;54145.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hewby, John Petch, 1835-1896&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;54145&quot;});" class='title'>The Decline and Fall of Whist:<br><span class='subtitle'>An Old Fashioned View of New Fangled Play</span></a>
+<div class='author'>Hewby, John Petch, 1835-1896</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54163, {&quot;Title&quot;:&quot;Ski-runs in the High Alps&quot;,&quot;Topics&quot;:[&quot;Alps -- Description and travel&quot;,&quot;Skis and skiing -- Alps&quot;,&quot;Mountaineering -- Alps&quot;],&quot;Primary&quot;:&quot;54163.htm&quot;,&quot;CreatorNames&quot;:[&quot;Roget, F. F. (François Frédéric), 1859-&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;54163&quot;});" class='title'>Ski-runs in the High Alps</a>
+<div class='author'>Roget, F. F. (François Frédéric), 1859-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54590, {&quot;Title&quot;:&quot;Talk of Uncle George to His Nephew about Draw Poker - Containing valuable suggestions in connection with this great American game. Also, instruction and directions to clubs and social card parties, whose members play only for recreation and pastime, with timely warnings to young players.&quot;,&quot;Topics&quot;:[&quot;Poker&quot;],&quot;Primary&quot;:&quot;54590.htm&quot;,&quot;CreatorNames&quot;:[&quot;Uncle George, active 19th century&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;54590&quot;});" class='title'>Talk of Uncle George to His Nephew about Draw Poker -<br><span class='subtitle'>Containing valuable suggestions in connection with this great American game. Also, instruction and directions to clubs and social card parties, whose members play only for recreation and pastime, with timely warnings to young players.</span></a>
+<div class='author'>Uncle George, active 19th century</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54707, {&quot;Title&quot;:&quot;Going Afoot: A book on walking.&quot;,&quot;Topics&quot;:[&quot;Walking&quot;],&quot;Primary&quot;:&quot;54707.htm&quot;,&quot;CreatorNames&quot;:[&quot;Christy, Bayard Henderson, 1872-&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;54707&quot;});" class='title'>Going Afoot:<br><span class='subtitle'>A book on walking.</span></a>
+<div class='author'>Christy, Bayard Henderson, 1872-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54775, {&quot;Title&quot;:&quot;Circus Life and Circus Celebrities&quot;,&quot;Topics&quot;:[&quot;Circus -- England&quot;],&quot;Primary&quot;:&quot;54775.htm&quot;,&quot;CreatorNames&quot;:[&quot;Frost, Thomas, 1821-1908&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;54775&quot;});" class='title'>Circus Life and Circus Celebrities</a>
+<div class='author'>Frost, Thomas, 1821-1908</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55018, {&quot;Title&quot;:&quot;Good Times with the Juniors&quot;,&quot;Topics&quot;:[&quot;Amusements&quot;],&quot;Primary&quot;:&quot;55018.htm&quot;,&quot;CreatorNames&quot;:[&quot;Heath, Lilian M.&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;55018&quot;});" class='title'>Good Times with the Juniors</a>
+<div class='author'>Heath, Lilian M.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55209, {&quot;Title&quot;:&quot;Voimistelun käsikirja&quot;,&quot;Topics&quot;:[&quot;Gymnastics&quot;],&quot;Primary&quot;:&quot;55209.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wilskman, Ivar, 1854-1932&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;55209&quot;});" class='title'>Voimistelun käsikirja</a>
+<div class='author'>Wilskman, Ivar, 1854-1932</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55278, {&quot;Title&quot;:&quot;Chess Generalship, Vol. I. Grand Reconnaissance&quot;,&quot;Topics&quot;:[&quot;Chess&quot;],&quot;Primary&quot;:&quot;55278.htm&quot;,&quot;CreatorNames&quot;:[&quot;Young, Franklin K.‏ (Franklin Knowles), 1857-1931&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;55278&quot;});" class='title'>Chess Generalship, Vol. I. Grand Reconnaissance</a>
+<div class='author'>Young, Franklin K.‏ (Franklin Knowles), 1857-1931</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55279, {&quot;Title&quot;:&quot;Latest Magic, Being original conjuring tricks&quot;,&quot;Topics&quot;:[&quot;Magic tricks -- Handbooks, manuals, etc.&quot;],&quot;Primary&quot;:&quot;55279.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hoffmann, Professor, 1839-1919&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;55279&quot;});" class='title'>Latest Magic, Being original conjuring tricks</a>
+<div class='author'>Hoffmann, Professor, 1839-1919</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55472, {&quot;Title&quot;:&quot;Ski-running&quot;,&quot;Topics&quot;:[&quot;Skis and skiing&quot;],&quot;Primary&quot;:&quot;55472.htm&quot;,&quot;CreatorNames&quot;:[&quot;Crichton Somerville, D. M. M.&quot;,&quot;Richardson, E. C., 1871-1954&quot;,&quot;Rickmers, Willi Rickmer, 1873-1965&quot;,&quot;Richardson, E. C., 1871-1954 [Editor]&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;55472&quot;});" class='title'>Ski-running</a>
+<div class='author'>Crichton Somerville, D. M. M., Richardson, E. C., 1871-1954, Rickmers, Willi Rickmer, 1873-1965, Richardson, E. C., 1871-1954 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55644, {&quot;Title&quot;:&quot;Pedestrianism; or, An Account of the Performances of Celebrated Pedestrians During the Last and Present Century. - With a full narrative of Captain Barclay&#39;s public and private matches; and an essay on training.&quot;,&quot;Topics&quot;:[&quot;Walking&quot;],&quot;Primary&quot;:&quot;55644.htm&quot;,&quot;CreatorNames&quot;:[&quot;Thom, Walter, 1770-1824&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;55644&quot;});" class='title'>Pedestrianism;<br><span class='subtitle'>or, An Account of the Performances of Celebrated Pedestrians During the Last and Present Century. - With a full narrative of Captain Barclay's public and private matches; and an essay on training.</span></a>
+<div class='author'>Thom, Walter, 1770-1824</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55750, {&quot;Title&quot;:&quot;Ground Tumbling&quot;,&quot;Topics&quot;:[&quot;Acrobatics&quot;],&quot;Primary&quot;:&quot;55750.htm&quot;,&quot;CreatorNames&quot;:[&quot;Worth, Henry Walter&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;55750&quot;});" class='title'>Ground Tumbling</a>
+<div class='author'>Worth, Henry Walter</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55846, {&quot;Title&quot;:&quot;Boat Sailing in Fair Weather and Foul, 6th ed.&quot;,&quot;Topics&quot;:[&quot;Boats and boating&quot;,&quot;Sailing&quot;],&quot;Primary&quot;:&quot;55846.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kenealy, A. J. (Ahmed John), 1854-&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;55846&quot;});" class='title'>Boat Sailing in Fair Weather and Foul, 6th ed.</a>
+<div class='author'>Kenealy, A. J. (Ahmed John), 1854-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56134, {&quot;Title&quot;:&quot;Girls and Athletics - Giving a brief summary of the activity, rules and method of administration of the following games in girls&#39; schools and colleges, women&#39;s clubs, etc.: archery, basket ball, cricket, fencing, field day, field hockey, gymnastics, golf, hand ball, ice hockey, indoor base ball, rowing, soccer, skating, swimming, tennis, track athletics, volley ball, walking, water polo, water basket ball.&quot;,&quot;Topics&quot;:[&quot;Athletics&quot;,&quot;Physical education for women&quot;],&quot;Primary&quot;:&quot;56134.htm&quot;,&quot;CreatorNames&quot;:[&quot;Morgan, Mary C. [Editor]&quot;],&quot;LoCC&quot;:[&quot;GV&quot;,&quot;HQ&quot;],&quot;PG_ID&quot;:&quot;56134&quot;});" class='title'>Girls and Athletics -<br><span class='subtitle'>Giving a brief summary of the activity, rules and method of administration of the following games in girls' schools and colleges, women's clubs, etc.: archery, basket ball, cricket, fencing, field day, field hockey, gymnastics, golf, hand ball, ice hockey, indoor base ball, rowing, soccer, skating, swimming, tennis, track athletics, volley ball, walking, water polo, water basket ball.</span></a>
+<div class='author'>Morgan, Mary C. [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5614, {&quot;Title&quot;:&quot;Chess Strategy&quot;,&quot;Topics&quot;:[&quot;Chess&quot;],&quot;Primary&quot;:&quot;5614.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lasker, Edward, 1885-1981&quot;,&quot;Du Mont, J. (Jules), 1881- [Translator]&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;5614&quot;});" class='title'>Chess Strategy</a>
+<div class='author'>Lasker, Edward, 1885-1981, Du Mont, J. (Jules), 1881- [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56352, {&quot;Title&quot;:&quot;Mastro da Ballo&quot;,&quot;Topics&quot;:[&quot;Dance -- Early works to 1800&quot;,&quot;Dance -- Italy -- History -- 17th century -- Sources&quot;],&quot;Primary&quot;:&quot;56352.htm&quot;,&quot;CreatorNames&quot;:[&quot;Santucci Perugino, Ercole&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;56352&quot;});" class='title'>Mastro da Ballo</a>
+<div class='author'>Santucci Perugino, Ercole</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56394, {&quot;Title&quot;:&quot;Sailing&quot;,&quot;Topics&quot;:[&quot;Yachting&quot;,&quot;Sailing&quot;],&quot;Primary&quot;:&quot;56394.htm&quot;,&quot;CreatorNames&quot;:[&quot;Knight, E. F. (Edward Frederick), 1852-1925&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;56394&quot;});" class='title'>Sailing</a>
+<div class='author'>Knight, E. F. (Edward Frederick), 1852-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56398, {&quot;Title&quot;:&quot;Practical Training for Running, Walking, Rowing, Wrestling, Boxing, Jumping, and All Kinds of Athletic Feats - Together with tables of proportional measurement for height and weight of men in and out of condition; etc. etc.&quot;,&quot;Topics&quot;:[&quot;Physical education and training&quot;,&quot;Athletics&quot;],&quot;Primary&quot;:&quot;56398.htm&quot;,&quot;CreatorNames&quot;:[&quot;James, Ed.&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;56398&quot;});" class='title'>Practical Training for Running, Walking, Rowing, Wrestling, Boxing, Jumping, and All Kinds of Athletic Feats -<br><span class='subtitle'>Together with tables of proportional measurement for height and weight of men in and out of condition; etc. etc.</span></a>
+<div class='author'>James, Ed.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56584, {&quot;Title&quot;:&quot;Daily Training&quot;,&quot;Topics&quot;:[&quot;Physical education and training&quot;],&quot;Primary&quot;:&quot;56584.htm&quot;,&quot;CreatorNames&quot;:[&quot;Benson, E. F. (Edward Frederic), 1867-1940&quot;,&quot;Miles, Eustace, 1868-1948&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;56584&quot;});" class='title'>Daily Training</a>
+<div class='author'>Benson, E. F. (Edward Frederic), 1867-1940, Miles, Eustace, 1868-1948</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56588, {&quot;Title&quot;:&quot;New Ideas for Work and Play: What a Girl Can Make and Do&quot;,&quot;Topics&quot;:[&quot;Amusements&quot;],&quot;Primary&quot;:&quot;56588.htm&quot;,&quot;CreatorNames&quot;:[&quot;Beard, Adelia B. (Adelia Belle), 1857-1920&quot;,&quot;Beard, Lina, -1933&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;56588&quot;});" class='title'>New Ideas for Work and Play:<br><span class='subtitle'>What a Girl Can Make and Do</span></a>
+<div class='author'>Beard, Adelia B. (Adelia Belle), 1857-1920, Beard, Lina, -1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56803, {&quot;Title&quot;:&quot;Physical Amusements and Diverting Experiments - Composed and Performed in Different Capitals of Europe, and in London&quot;,&quot;Topics&quot;:[&quot;Magic tricks&quot;],&quot;Primary&quot;:&quot;56803.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pinetti, Giuseppe, 1750-1800&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;56803&quot;});" class='title'>Physical Amusements and Diverting Experiments -<br><span class='subtitle'>Composed and Performed in Different Capitals of Europe, and in London</span></a>
+<div class='author'>Pinetti, Giuseppe, 1750-1800</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57055, {&quot;Title&quot;:&quot;Baily&#39;s Magazine of Sports and Pastimes, Volume 85 - January to June, 1906&quot;,&quot;Topics&quot;:[&quot;Recreation -- Periodicals&quot;,&quot;Sports -- Periodicals&quot;],&quot;Primary&quot;:&quot;57055.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;57055&quot;});" class='title'>Baily's Magazine of Sports and Pastimes, Volume 85 -<br><span class='subtitle'>January to June, 1906</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57057, {&quot;Title&quot;:&quot;Healthful Sports for Young Ladies&quot;,&quot;Topics&quot;:[&quot;Women -- Health and hygiene&quot;,&quot;Games for girls&quot;,&quot;Sports for girls&quot;,&quot;Sports for women&quot;,&quot;Girls -- Recreation&quot;,&quot;Women -- Recreation&quot;,&quot;Girls -- Health and hygiene&quot;],&quot;Primary&quot;:&quot;57057.htm&quot;,&quot;CreatorNames&quot;:[&quot;St. Sernin, Mademoiselle&quot;,&quot;Dugourc, J. D. (Jean Démosthène), 1749-1825 [Illustrator]&quot;,&quot;Combe, William, 1742-1823 [Translator]&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;57057&quot;});" class='title'>Healthful Sports for Young Ladies</a>
+<div class='author'>St. Sernin, Mademoiselle, Dugourc, J. D. (Jean Démosthène), 1749-1825 [Illustrator], Combe, William, 1742-1823 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57077, {&quot;Title&quot;:&quot;The Old and the New Magic&quot;,&quot;Topics&quot;:[&quot;Magic tricks&quot;,&quot;Magicians -- Biography&quot;],&quot;Primary&quot;:&quot;57077.htm&quot;,&quot;CreatorNames&quot;:[&quot;Evans, Henry Ridgely, 1861-1949&quot;,&quot;Carus, Paul, 1852-1919 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;57077&quot;});" class='title'>The Old and the New Magic</a>
+<div class='author'>Evans, Henry Ridgely, 1861-1949, Carus, Paul, 1852-1919 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57133, {&quot;Title&quot;:&quot;The Motor Routes of France - To the Châteaux of Touraine, Biarritz, the Pyrenees, the Riviera, &amp; the Rhone Valley&quot;,&quot;Topics&quot;:[&quot;France -- Description and travel&quot;,&quot;Automobile travel -- France -- Guidebooks&quot;],&quot;Primary&quot;:&quot;57133.htm&quot;,&quot;CreatorNames&quot;:[&quot;Home, Gordon, 1878-1969&quot;],&quot;LoCC&quot;:[&quot;DC&quot;,&quot;GV&quot;],&quot;PG_ID&quot;:&quot;57133&quot;});" class='title'>The Motor Routes of France -<br><span class='subtitle'>To the Châteaux of Touraine, Biarritz, the Pyrenees, the Riviera, & the Rhone Valley</span></a>
+<div class='author'>Home, Gordon, 1878-1969</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57217, {&quot;Title&quot;:&quot;Hocus Pocus; or The Whole Art of Legerdemain, in Perfection. - By which the meanest capacity may perform the whole without the help of a teacher. Together with the Use of all the Instruments belonging thereto.&quot;,&quot;Topics&quot;:[&quot;Magic tricks -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;57217.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dean, Henry&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;57217&quot;});" class='title'>Hocus Pocus;<br><span class='subtitle'>or The Whole Art of Legerdemain, in Perfection. - By which the meanest capacity may perform the whole without the help of a teacher. Together with the Use of all the Instruments belonging thereto.</span></a>
+<div class='author'>Dean, Henry</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57329, {&quot;Title&quot;:&quot;Knuckles and Gloves&quot;,&quot;Topics&quot;:[&quot;Boxing&quot;],&quot;Primary&quot;:&quot;57329.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lynch, Bohun, 1884-1928&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;57329&quot;});" class='title'>Knuckles and Gloves</a>
+<div class='author'>Lynch, Bohun, 1884-1928</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57337, {&quot;Title&quot;:&quot;Bowling Catalog E&quot;,&quot;Topics&quot;:[&quot;Bowling -- Equipment and supplies -- Catalogs&quot;,&quot;Bowling alleys -- Catalogs&quot;],&quot;Primary&quot;:&quot;57337.htm&quot;,&quot;CreatorNames&quot;:[&quot;Narragansett Machine Company&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;57337&quot;});" class='title'>Bowling Catalog E</a>
+<div class='author'>Narragansett Machine Company</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57487, {&quot;Title&quot;:&quot;The Juggler&#39;s Oracle; or, The Whole Art of Legerdemain Laid Open - Consisting of all the newest and most surprising tricks and experiments with cards, cups and balls, conveyance of money and rings, boxes, fire, strings and knots; with many curious experiments by optical illusion, chymical changes, and magical cards, &amp;c.&quot;,&quot;Topics&quot;:[&quot;Magic tricks&quot;,&quot;Tricks&quot;],&quot;Primary&quot;:&quot;57487.htm&quot;,&quot;CreatorNames&quot;:[&quot;Boaz, H. (Herman)&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;57487&quot;});" class='title'>The Juggler's Oracle;<br><span class='subtitle'>or, The Whole Art of Legerdemain Laid Open - Consisting of all the newest and most surprising tricks and experiments with cards, cups and balls, conveyance of money and rings, boxes, fire, strings and knots; with many curious experiments by optical illusion, chymical changes, and magical cards, &c.</span></a>
+<div class='author'>Boaz, H. (Herman)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57894, {&quot;Title&quot;:&quot;How to Do Mechanical Tricks - Containing Complete Instruction for Performing Over Sixty Ingenious Mechanical Tricks&quot;,&quot;Topics&quot;:[&quot;Magic tricks -- Handbooks, manuals, etc.&quot;],&quot;Primary&quot;:&quot;57894.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anderson, A., active 1894-1902&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;57894&quot;});" class='title'>How to Do Mechanical Tricks -<br><span class='subtitle'>Containing Complete Instruction for Performing Over Sixty Ingenious Mechanical Tricks</span></a>
+<div class='author'>Anderson, A., active 1894-1902</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58057, {&quot;Title&quot;:&quot;Modern Magic: A Practical Treatise on the Art of Conjuring&quot;,&quot;Topics&quot;:[&quot;Magic tricks&quot;],&quot;Primary&quot;:&quot;58057.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hoffmann, Professor, 1839-1919&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;58057&quot;});" class='title'>Modern Magic:<br><span class='subtitle'>A Practical Treatise on the Art of Conjuring</span></a>
+<div class='author'>Hoffmann, Professor, 1839-1919</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58137, {&quot;Title&quot;:&quot;Lawn-tennis&quot;,&quot;Topics&quot;:[&quot;Tennis&quot;],&quot;Primary&quot;:&quot;58137.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dwight, James, 1852-1917&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;58137&quot;});" class='title'>Lawn-tennis</a>
+<div class='author'>Dwight, James, 1852-1917</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58702, {&quot;Title&quot;:&quot;The Cricket of Abel, Hirst, and Shrewsbury&quot;,&quot;Topics&quot;:[&quot;Cricket&quot;],&quot;Primary&quot;:&quot;58702.htm&quot;,&quot;CreatorNames&quot;:[&quot;Benson, E. F. (Edward Frederic), 1867-1940 [Editor]&quot;,&quot;Miles, Eustace, 1868-1948 [Editor]&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;58702&quot;});" class='title'>The Cricket of Abel, Hirst, and Shrewsbury</a>
+<div class='author'>Benson, E. F. (Edward Frederic), 1867-1940 [Editor], Miles, Eustace, 1868-1948 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58956, {&quot;Title&quot;:&quot;The Woman and the Car - A Chatty Little Handbook for All Women Who Motor or Who Want to Motor&quot;,&quot;Topics&quot;:[&quot;Women automobile drivers&quot;,&quot;Women automobile drivers -- History&quot;],&quot;Primary&quot;:&quot;58956.htm&quot;,&quot;CreatorNames&quot;:[&quot;Levitt, Dorothy, 1882-1922&quot;,&quot;Byng-Hall, C. [Editor]&quot;,&quot;Nicholls, Horace W. (Horace Walter), 1867-1941 [Photographer]&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;58956&quot;});" class='title'>The Woman and the Car -<br><span class='subtitle'>A Chatty Little Handbook for All Women Who Motor or Who Want to Motor</span></a>
+<div class='author'>Levitt, Dorothy, 1882-1922, Byng-Hall, C. [Editor], Nicholls, Horace W. (Horace Walter), 1867-1941 [Photographer]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59067, {&quot;Title&quot;:&quot;Dancing Without an Instructor&quot;,&quot;Topics&quot;:[&quot;Dance&quot;,&quot;Ballroom dancing&quot;],&quot;Primary&quot;:&quot;59067.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wilkinson, Professor&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;59067&quot;});" class='title'>Dancing Without an Instructor</a>
+<div class='author'>Wilkinson, Professor</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59104, {&quot;Title&quot;:&quot;The Dance&quot;,&quot;Topics&quot;:[&quot;Dance -- History&quot;,&quot;Dance&quot;],&quot;Primary&quot;:&quot;59104.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pavlova, Anna, 1881-1931 [Author of introduction, etc.]&quot;,&quot;Mason, Daniel Gregory, 1873-1953 [Editor]&quot;,&quot;Narodny, Ivan, 1869-1953 [Editor]&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;59104&quot;});" class='title'>The Dance</a>
+<div class='author'>Pavlova, Anna, 1881-1931 [Author of introduction, etc.], Mason, Daniel Gregory, 1873-1953 [Editor], Narodny, Ivan, 1869-1953 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59143, {&quot;Title&quot;:&quot;Modern Billiards - A Complete Text-Book of the Game, Containing Plain and Practical Instructions How to Play and Acquire Skill at This Scientific Amusement&quot;,&quot;Topics&quot;:[&quot;Billiards&quot;],&quot;Primary&quot;:&quot;59143.htm&quot;,&quot;CreatorNames&quot;:[&quot;Garno, Benjamin, 1840-&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;59143&quot;});" class='title'>Modern Billiards -<br><span class='subtitle'>A Complete Text-Book of the Game, Containing Plain and Practical Instructions How to Play and Acquire Skill at This Scientific Amusement</span></a>
+<div class='author'>Garno, Benjamin, 1840-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59465, {&quot;Title&quot;:&quot;Pugilistica: The History of British Boxing, Volume 1 (of 3) - Containing Lives of the Most Celebrated Pugilists; Full Reports of Their Battles from Contemporary Newspapers, With Authentic Portraits, Personal Anecdotes, and Sketches of the Principal Patrons of the Prize Ring, Forming a Complete History of the Ring from Fig and Broughton, 1719-40, to the Last Championship Battle Between King and Heenan, in December 1863&quot;,&quot;Topics&quot;:[&quot;Boxing&quot;],&quot;Primary&quot;:&quot;59465.htm&quot;,&quot;CreatorNames&quot;:[&quot;Miles, Henry Downes, 1806-1889&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;59465&quot;});" class='title'>Pugilistica:<br><span class='subtitle'>The History of British Boxing, Volume 1 (of 3) - Containing Lives of the Most Celebrated Pugilists; Full Reports of Their Battles from Contemporary Newspapers, With Authentic Portraits, Personal Anecdotes, and Sketches of the Principal Patrons of the Prize Ring, Forming a Complete History of the Ring from Fig and Broughton, 1719-40, to the Last Championship Battle Between King and Heenan, in December 1863</span></a>
+<div class='author'>Miles, Henry Downes, 1806-1889</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59952, {&quot;Title&quot;:&quot;Greek Athletic Sports and Festivals&quot;,&quot;Topics&quot;:[&quot;Athletics -- Greece&quot;,&quot;Sports -- Greece&quot;,&quot;Olympic games (Ancient)&quot;,&quot;Festivals -- Greece&quot;],&quot;Primary&quot;:&quot;59952.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gardiner, E. Norman (Edward Norman), 1864-1930&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;59952&quot;});" class='title'>Greek Athletic Sports and Festivals</a>
+<div class='author'>Gardiner, E. Norman (Edward Norman), 1864-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60153, {&quot;Title&quot;:&quot;Winter Sports in Switzerland&quot;,&quot;Topics&quot;:[&quot;Switzerland -- Description and travel&quot;,&quot;Winter sports -- Switzerland&quot;,&quot;Winter resorts -- Switzerland&quot;],&quot;Primary&quot;:&quot;60153.htm&quot;,&quot;CreatorNames&quot;:[&quot;Benson, E. F. (Edward Frederic), 1867-1940&quot;,&quot;Williams, C. Fleming [Illustrator]&quot;,&quot;Le Blond, Aubrey, Mrs., 1861-1934 [Photographer]&quot;],&quot;LoCC&quot;:[&quot;DQ&quot;,&quot;GV&quot;],&quot;PG_ID&quot;:&quot;60153&quot;});" class='title'>Winter Sports in Switzerland</a>
+<div class='author'>Benson, E. F. (Edward Frederic), 1867-1940, Williams, C. Fleming [Illustrator], Le Blond, Aubrey, Mrs., 1861-1934 [Photographer]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60356, {&quot;Title&quot;:&quot;A Wheel Within a Wheel - How I Learned to Ride the Bicycle, With Some Reflections by the Way&quot;,&quot;Topics&quot;:[&quot;Willard, Frances E. (Frances Elizabeth), 1839-1898&quot;,&quot;Cycling for women&quot;],&quot;Primary&quot;:&quot;60356.htm&quot;,&quot;CreatorNames&quot;:[&quot;Willard, Frances E. (Frances Elizabeth), 1839-1898&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;60356&quot;});" class='title'>A Wheel Within a Wheel -<br><span class='subtitle'>How I Learned to Ride the Bicycle, With Some Reflections by the Way</span></a>
+<div class='author'>Willard, Frances E. (Frances Elizabeth), 1839-1898</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60420, {&quot;Title&quot;:&quot;Observations on the Automaton Chess Player Now Exhibited in London, at 4 Spring Gardens&quot;,&quot;Topics&quot;:[&quot;Automaton chess players&quot;],&quot;Primary&quot;:&quot;60420.htm&quot;,&quot;CreatorNames&quot;:[&quot;Oxford graduate&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;60420&quot;});" class='title'>Observations on the Automaton Chess Player Now Exhibited in London, at 4 Spring Gardens</a>
+<div class='author'>Oxford graduate</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60661, {&quot;Title&quot;:&quot;Haney&#39;s Art of Training Animals - A Practical Guide for Amateur or Professional Trainers.  Giving Full Instructions for Breaking, Taming and Teaching All Kinds of Animals Including an Improved Method of Horse Breaking, Management of Farm Animals, Training of Sporting Dogs; Serpent Charming, Care and Tuition of Talking, Singing and Performing Birds; and Detailed Instructions for Teaching All Circus Tricks, and Many Other Wonderful Feats.&quot;,&quot;Topics&quot;:[&quot;Animal training&quot;],&quot;Primary&quot;:&quot;60661.htm&quot;,&quot;CreatorNames&quot;:[&quot;Burroughs, W. H.&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;60661&quot;});" class='title'>Haney's Art of Training Animals -<br><span class='subtitle'>A Practical Guide for Amateur or Professional Trainers.  Giving Full Instructions for Breaking, Taming and Teaching All Kinds of Animals Including an Improved Method of Horse Breaking, Management of Farm Animals, Training of Sporting Dogs; Serpent Charming, Care and Tuition of Talking, Singing and Performing Birds; and Detailed Instructions for Teaching All Circus Tricks, and Many Other Wonderful Feats.</span></a>
+<div class='author'>Burroughs, W. H.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60687, {&quot;Title&quot;:&quot;The Magician&#39;s Own Book, or, the Whole Art of Conjuring - Being a complete hand-book of parlor magic, and containing over one thousand optical, chemical, mechanical, magnetical, and magical experiments, amusing transmutations, astonishing sleights and subtleties, celebrated card deceptions, ingenious tricks with numbers, curious and entertaining puzzles, together with all the most noted tricks of modern performers.&quot;,&quot;Topics&quot;:[&quot;Magic tricks -- Handbooks, manuals, etc.&quot;,&quot;Tricks -- Handbooks, manuals, etc.&quot;],&quot;Primary&quot;:&quot;60687.htm&quot;,&quot;CreatorNames&quot;:[&quot;Arnold, George, 1834-1865&quot;,&quot;Cahill, Frank&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;60687&quot;});" class='title'>The Magician's Own Book, or, the Whole Art of Conjuring -<br><span class='subtitle'>Being a complete hand-book of parlor magic, and containing over one thousand optical, chemical, mechanical, magnetical, and magical experiments, amusing transmutations, astonishing sleights and subtleties, celebrated card deceptions, ingenious tricks with numbers, curious and entertaining puzzles, together with all the most noted tricks of modern performers.</span></a>
+<div class='author'>Arnold, George, 1834-1865, Cahill, Frank</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61229, {&quot;Title&quot;:&quot;Holiday Frolics; Or, Endless Amusement for the Christmas Fireside - Containing, the Most Astonishing Feats of Legerdemain, and Astounding Conjurings; Entertaining Experiments in Various Branches of Science; Tricks With Cards &amp; Dice. Art of Making Fireworks; Together With an Excellent Collection of Puzzles, Conundrums, Riddles, Charades, &amp;c. &amp;c. The Whole Admirably Calculated to Beguile the Leisure Hours of Our Holiday Friends. Embellished With a Copper-plate Engraving&quot;,&quot;Topics&quot;:[&quot;Magic tricks&quot;,&quot;Amusements&quot;,&quot;Formulas, recipes, etc.&quot;],&quot;Primary&quot;:&quot;61229.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;61229&quot;});" class='title'>Holiday Frolics;<br><span class='subtitle'>Or, Endless Amusement for the Christmas Fireside - Containing, the Most Astonishing Feats of Legerdemain, and Astounding Conjurings; Entertaining Experiments in Various Branches of Science; Tricks With Cards & Dice. Art of Making Fireworks; Together With an Excellent Collection of Puzzles, Conundrums, Riddles, Charades, &c. &c. The Whole Admirably Calculated to Beguile the Leisure Hours of Our Holiday Friends. Embellished With a Copper-plate Engraving</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6129, {&quot;Title&quot;:&quot;Healthful Sports for Boys&quot;,&quot;Topics&quot;:[&quot;Games&quot;,&quot;Amusements&quot;],&quot;Primary&quot;:&quot;6129.txt&quot;,&quot;CreatorNames&quot;:[&quot;Calhoun, A. R. (Alfred Rochefort), 1844-&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;6129&quot;});" class='title'>Healthful Sports for Boys</a>
+<div class='author'>Calhoun, A. R. (Alfred Rochefort), 1844-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61410, {&quot;Title&quot;:&quot;An Attempt to Analyse the Automaton Chess Player of Mr. De Kempelen - To Which is Added, a Copious Collection of the Knight&#39;s Moves over the Chess Board&quot;,&quot;Topics&quot;:[&quot;Automaton chess players&quot;,&quot;Kempelen, Wolfgang von, 1734-1804&quot;],&quot;Primary&quot;:&quot;61410.htm&quot;,&quot;CreatorNames&quot;:[&quot;Willis, Robert, 1800-1875&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;61410&quot;});" class='title'>An Attempt to Analyse the Automaton Chess Player of Mr. De Kempelen -<br><span class='subtitle'>To Which is Added, a Copious Collection of the Knight's Moves over the Chess Board</span></a>
+<div class='author'>Willis, Robert, 1800-1875</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61589, {&quot;Title&quot;:&quot;The Training of Wild Animals&quot;,&quot;Topics&quot;:[&quot;Animal training&quot;],&quot;Primary&quot;:&quot;61589.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bostock, Frank Charles, 1866-1912&quot;,&quot;Velvin, Ellen, -1918 [Editor]&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;61589&quot;});" class='title'>The Training of Wild Animals</a>
+<div class='author'>Bostock, Frank Charles, 1866-1912, Velvin, Ellen, -1918 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61649, {&quot;Title&quot;:&quot;Pugilistica: The History of British Boxing, Volume 2 (of 3) - Containing Lives of the Most Celebrated Pugilists; Full Reports of Their Battles from Contemporary Newspapers, With Authentic Portraits, Personal Anecdotes, and Sketches of the Principal Patrons of the Prize Ring, Forming a Complete History of the Ring from Fig and Broughton, 1719-1740, to the Last Championship Battle Between King and Heenan, in December 1863&quot;,&quot;Topics&quot;:[&quot;Boxing&quot;],&quot;Primary&quot;:&quot;61649.htm&quot;,&quot;CreatorNames&quot;:[&quot;Miles, Henry Downes, 1806-1889&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;61649&quot;});" class='title'>Pugilistica:<br><span class='subtitle'>The History of British Boxing, Volume 2 (of 3) - Containing Lives of the Most Celebrated Pugilists; Full Reports of Their Battles from Contemporary Newspapers, With Authentic Portraits, Personal Anecdotes, and Sketches of the Principal Patrons of the Prize Ring, Forming a Complete History of the Ring from Fig and Broughton, 1719-1740, to the Last Championship Battle Between King and Heenan, in December 1863</span></a>
+<div class='author'>Miles, Henry Downes, 1806-1889</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61685, {&quot;Title&quot;:&quot;Home Fun&quot;,&quot;Topics&quot;:[&quot;Amusements&quot;],&quot;Primary&quot;:&quot;61685.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bullivant, Cecil Henry, 1882-1981&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;61685&quot;});" class='title'>Home Fun</a>
+<div class='author'>Bullivant, Cecil Henry, 1882-1981</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61693, {&quot;Title&quot;:&quot;Hippodrome Skating Book - Practical Illustrated Lessons in the Art of Figure Skating&quot;,&quot;Topics&quot;:[&quot;Figure skating -- Handbooks, manuals, etc.&quot;],&quot;Primary&quot;:&quot;61693.htm&quot;,&quot;CreatorNames&quot;:[&quot;Oelschlager, Charlotte, 1898-1984&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;61693&quot;});" class='title'>Hippodrome Skating Book -<br><span class='subtitle'>Practical Illustrated Lessons in the Art of Figure Skating</span></a>
+<div class='author'>Oelschlager, Charlotte, 1898-1984</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62113, {&quot;Title&quot;:&quot;On the Road With a Circus&quot;,&quot;Topics&quot;:[&quot;Circus&quot;],&quot;Primary&quot;:&quot;62113.htm&quot;,&quot;CreatorNames&quot;:[&quot;Thompson, William Carter&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;62113&quot;});" class='title'>On the Road With a Circus</a>
+<div class='author'>Thompson, William Carter</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62227, {&quot;Title&quot;:&quot;Bicycling for Ladies - The Common Sense of Bicycling; with Hints as to the Art of Wheeling—Advice to Beginners—Dress—Care of the Bicycle—Mechanics—Training—Exercise, etc., etc.&quot;,&quot;Topics&quot;:[&quot;Cycling for women&quot;,&quot;Cycling&quot;],&quot;Primary&quot;:&quot;62227.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ward, Maria E., 1863-&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;62227&quot;});" class='title'>Bicycling for Ladies -<br><span class='subtitle'>The Common Sense of Bicycling; with Hints as to the Art of Wheeling—Advice to Beginners—Dress—Care of the Bicycle—Mechanics—Training—Exercise, etc., etc.</span></a>
+<div class='author'>Ward, Maria E., 1863-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62283, {&quot;Title&quot;:&quot;Tumbling for Amateurs&quot;,&quot;Topics&quot;:[&quot;Acrobatics&quot;],&quot;Primary&quot;:&quot;62283.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gwathmey, James Tayloe, 1862-1944&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;62283&quot;});" class='title'>Tumbling for Amateurs</a>
+<div class='author'>Gwathmey, James Tayloe, 1862-1944</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62600, {&quot;Title&quot;:&quot;The Russian Ballet&quot;,&quot;Topics&quot;:[&quot;Ballet -- Russia&quot;],&quot;Primary&quot;:&quot;62600.htm&quot;,&quot;CreatorNames&quot;:[&quot;Johnson, A. E. (Alfred Edwin), 1879-&quot;,&quot;Bull, René, 1872-1942 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;62600&quot;});" class='title'>The Russian Ballet</a>
+<div class='author'>Johnson, A. E. (Alfred Edwin), 1879-, Bull, René, 1872-1942 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62811, {&quot;Title&quot;:&quot;Our Western Hills: How to reach them; And the Views from their Summits - By a Glasgow Pedestrian&quot;,&quot;Topics&quot;:[&quot;Scotland -- Description and travel&quot;,&quot;Hiking -- Scotland&quot;],&quot;Primary&quot;:&quot;62811.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;DA&quot;,&quot;GV&quot;],&quot;PG_ID&quot;:&quot;62811&quot;});" class='title'>Our Western Hills:<br><span class='subtitle'>How to reach them; And the Views from their Summits - By a Glasgow Pedestrian</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63030, {&quot;Title&quot;:&quot;Tauromaquia completa, ó sea, El arte de torear en plaza&quot;,&quot;Topics&quot;:[&quot;Bullfights -- Spain&quot;],&quot;Primary&quot;:&quot;63030.htm&quot;,&quot;CreatorNames&quot;:[&quot;Montes, Francisco, 1805-1851&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;63030&quot;});" class='title'>Tauromaquia completa, ó sea, El arte de torear en plaza</a>
+<div class='author'>Montes, Francisco, 1805-1851</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63550, {&quot;Title&quot;:&quot;The Art of Ballet&quot;,&quot;Topics&quot;:[&quot;Ballet&quot;],&quot;Primary&quot;:&quot;63550.htm&quot;,&quot;CreatorNames&quot;:[&quot;Perugini, Mark Edward, 1876?-1948&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;63550&quot;});" class='title'>The Art of Ballet</a>
+<div class='author'>Perugini, Mark Edward, 1876?-1948</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63842, {&quot;Title&quot;:&quot;Spectropia; or, Surprising Spectral Illusions - Showing Ghosts Everywhere, and of Any Colour&quot;,&quot;Topics&quot;:[&quot;Ghosts&quot;,&quot;Optical illusions&quot;],&quot;Primary&quot;:&quot;63842.htm&quot;,&quot;CreatorNames&quot;:[&quot;Brown, J. H.&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;63842&quot;});" class='title'>Spectropia;<br><span class='subtitle'>or, Surprising Spectral Illusions - Showing Ghosts Everywhere, and of Any Colour</span></a>
+<div class='author'>Brown, J. H.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63884, {&quot;Title&quot;:&quot;Twentieth Century Standard Puzzle Book - Three Parts in One Volume&quot;,&quot;Topics&quot;:[&quot;Amusements&quot;,&quot;Puzzles&quot;],&quot;Primary&quot;:&quot;63884.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pearson, A. Cyril (Arthur Cyril), 1838-1916 [Editor]&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;63884&quot;});" class='title'>Twentieth Century Standard Puzzle Book -<br><span class='subtitle'>Three Parts in One Volume</span></a>
+<div class='author'>Pearson, A. Cyril (Arthur Cyril), 1838-1916 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64034, {&quot;Title&quot;:&quot;Souvenirs du célèbre marcheur Gallot, le roi des marcheurs. Première partie&quot;,&quot;Topics&quot;:[&quot;Walking&quot;,&quot;Gallot, Yves, 1863-1936&quot;],&quot;Primary&quot;:&quot;64034.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gallot, Yves, 1863-1936&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;64034&quot;});" class='title'>Souvenirs du célèbre marcheur Gallot, le roi des marcheurs. Première partie</a>
+<div class='author'>Gallot, Yves, 1863-1936</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64061, {&quot;Title&quot;:&quot;War-Chess, or the Game of Battle&quot;,&quot;Topics&quot;:[&quot;War chess (Game)&quot;,&quot;Board games&quot;],&quot;Primary&quot;:&quot;64061.htm&quot;,&quot;CreatorNames&quot;:[&quot;Richardson, Charles, of New York&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;64061&quot;});" class='title'>War-Chess, or the Game of Battle</a>
+<div class='author'>Richardson, Charles, of New York</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64111, {&quot;Title&quot;:&quot;Pugilistica: The History of British Boxing, Volume 3 (of 3) - Containing Lives of the Most Celebrated Pugilists; Full Reports of Their Battles from Contemporary Newspapers, With Authentic Portraits, Personal Anecdotes, and Sketches of the Principal Patrons of the Prize Ring, Forming a Complete History of the Ring from Fig and Broughton, 1719-40, to the Last Championship Battle Between King and Heenan, in December 1863&quot;,&quot;Topics&quot;:[&quot;Boxing&quot;],&quot;Primary&quot;:&quot;64111.htm&quot;,&quot;CreatorNames&quot;:[&quot;Miles, Henry Downes, 1806-1889&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;64111&quot;});" class='title'>Pugilistica:<br><span class='subtitle'>The History of British Boxing, Volume 3 (of 3) - Containing Lives of the Most Celebrated Pugilists; Full Reports of Their Battles from Contemporary Newspapers, With Authentic Portraits, Personal Anecdotes, and Sketches of the Principal Patrons of the Prize Ring, Forming a Complete History of the Ring from Fig and Broughton, 1719-40, to the Last Championship Battle Between King and Heenan, in December 1863</span></a>
+<div class='author'>Miles, Henry Downes, 1806-1889</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6416, {&quot;Title&quot;:&quot;Entertainments for Home, Church and School&quot;,&quot;Topics&quot;:[&quot;Games&quot;,&quot;Amusements&quot;],&quot;Primary&quot;:&quot;6416.txt&quot;,&quot;CreatorNames&quot;:[&quot;Seeger, Frederica&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;6416&quot;});" class='title'>Entertainments for Home, Church and School</a>
+<div class='author'>Seeger, Frederica</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65121, {&quot;Title&quot;:&quot;Hindu Magic: An Expose of the Tricks of the Yogis and Fakirs of India&quot;,&quot;Topics&quot;:[&quot;Magic tricks -- India&quot;],&quot;Primary&quot;:&quot;65121.htm&quot;,&quot;CreatorNames&quot;:[&quot;Carrington, Hereward, 1880-1959&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;65121&quot;});" class='title'>Hindu Magic:<br><span class='subtitle'>An Expose of the Tricks of the Yogis and Fakirs of India</span></a>
+<div class='author'>Carrington, Hereward, 1880-1959</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65319, {&quot;Title&quot;:&quot;Golf Architecture: Economy in Course Construction and Green-Keeping&quot;,&quot;Topics&quot;:[&quot;Golf courses -- Design and construction&quot;],&quot;Primary&quot;:&quot;65319.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mackenzie, A. (Alexander), 1870-1934&quot;,&quot;Colt, Henry Shapland, 1869-1951 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;65319&quot;});" class='title'>Golf Architecture:<br><span class='subtitle'>Economy in Course Construction and Green-Keeping</span></a>
+<div class='author'>Mackenzie, A. (Alexander), 1870-1934, Colt, Henry Shapland, 1869-1951 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65554, {&quot;Title&quot;:&quot;Greek Athletics&quot;,&quot;Topics&quot;:[&quot;Athletics&quot;,&quot;Sports -- Greece -- History -- To 1500&quot;,&quot;Physical education and training -- Greece -- History -- To 1500&quot;],&quot;Primary&quot;:&quot;65554.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wright, F. A. (Frederick Adam), 1869-1946&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;65554&quot;});" class='title'>Greek Athletics</a>
+<div class='author'>Wright, F. A. (Frederick Adam), 1869-1946</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65987, {&quot;Title&quot;:&quot;Strength and How to Obtain It&quot;,&quot;Topics&quot;:[&quot;Sandow, Eugen, 1867-1925&quot;,&quot;Physical education and training -- Popular works&quot;,&quot;Exercise -- Popular works&quot;,&quot;Bodybuilders -- Biography&quot;],&quot;Primary&quot;:&quot;65987.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sandow, Eugen, 1867-1925&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;65987&quot;});" class='title'>Strength and How to Obtain It</a>
+<div class='author'>Sandow, Eugen, 1867-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66220, {&quot;Title&quot;:&quot;Mancala, the National Game of Africa&quot;,&quot;Topics&quot;:[&quot;Games -- Africa&quot;,&quot;Mancala (Game)&quot;,&quot;Board games -- Africa&quot;],&quot;Primary&quot;:&quot;66220.htm&quot;,&quot;CreatorNames&quot;:[&quot;Culin, Stewart, 1858-1929&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;66220&quot;});" class='title'>Mancala, the National Game of Africa</a>
+<div class='author'>Culin, Stewart, 1858-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66449, {&quot;Title&quot;:&quot;Modern dancing and dancers&quot;,&quot;Topics&quot;:[&quot;Dance&quot;,&quot;Ballet&quot;,&quot;Dancers&quot;],&quot;Primary&quot;:&quot;66449.htm&quot;,&quot;CreatorNames&quot;:[&quot;Flitch, J. E. Crawford (John Ernest Crawford), 1881-1946&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;66449&quot;});" class='title'>Modern dancing and dancers</a>
+<div class='author'>Flitch, J. E. Crawford (John Ernest Crawford), 1881-1946</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66630, {&quot;Title&quot;:&quot;»Sie« am Seil&quot;,&quot;Topics&quot;:[&quot;Walking&quot;,&quot;Mountaineering&quot;,&quot;Skis and skiing&quot;],&quot;Primary&quot;:&quot;66630.htm&quot;,&quot;CreatorNames&quot;:[&quot;Baudissin, Eva Gräfin von, 1869-1943&quot;,&quot;Engelhart, Josef, 1864-1941 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;GV&quot;,&quot;PT&quot;],&quot;PG_ID&quot;:&quot;66630&quot;});" class='title'>»Sie« am Seil</a>
+<div class='author'>Baudissin, Eva Gräfin von, 1869-1943, Engelhart, Josef, 1864-1941 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66632, {&quot;Title&quot;:&quot;The Game of Go: The National Game of Japan&quot;,&quot;Topics&quot;:[&quot;Go (Game)&quot;],&quot;Primary&quot;:&quot;66632.htm&quot;,&quot;CreatorNames&quot;:[&quot;Smith, Arthur, 1870-1929&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;66632&quot;});" class='title'>The Game of Go:<br><span class='subtitle'>The National Game of Japan</span></a>
+<div class='author'>Smith, Arthur, 1870-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66727, {&quot;Title&quot;:&quot;The Velocipede: Its History, Varieties, and Practice&quot;,&quot;Topics&quot;:[&quot;Bicycles -- History&quot;,&quot;Tricycles -- History&quot;],&quot;Primary&quot;:&quot;66727.htm&quot;,&quot;CreatorNames&quot;:[&quot;Goddard, J. T.&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;66727&quot;});" class='title'>The Velocipede:<br><span class='subtitle'>Its History, Varieties, and Practice</span></a>
+<div class='author'>Goddard, J. T.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66988, {&quot;Title&quot;:&quot;Motor Camping&quot;,&quot;Topics&quot;:[&quot;Camping&quot;,&quot;Automobile travel&quot;],&quot;Primary&quot;:&quot;66988.htm&quot;,&quot;CreatorNames&quot;:[&quot;Long, J. C. (John Cuthbert), 1892-&quot;,&quot;Long, John D. (John Dietrich), 1860-&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;66988&quot;});" class='title'>Motor Camping</a>
+<div class='author'>Long, J. C. (John Cuthbert), 1892-, Long, John D. (John Dietrich), 1860-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67257, {&quot;Title&quot;:&quot;Lessons in Sabre, Singlestick, Sabre &amp; Bayonet, and Sword Feats - or, How to use a cut and thrust sword&quot;,&quot;Topics&quot;:[&quot;Fencing&quot;,&quot;Sabers&quot;,&quot;Single-stick&quot;],&quot;Primary&quot;:&quot;67257.htm&quot;,&quot;CreatorNames&quot;:[&quot;Waite, J. M. (John Musgrave), 1820?-1884&quot;],&quot;LoCC&quot;:[&quot;GV&quot;,&quot;U&quot;],&quot;PG_ID&quot;:&quot;67257&quot;});" class='title'>Lessons in Sabre, Singlestick, Sabre & Bayonet, and Sword Feats -<br><span class='subtitle'>or, How to use a cut and thrust sword</span></a>
+<div class='author'>Waite, J. M. (John Musgrave), 1820?-1884</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67886, {&quot;Title&quot;:&quot;Pictured Puzzles and Word Play - A Companion to the Twentieth Century Standard Puzzle Book&quot;,&quot;Topics&quot;:[&quot;Charades&quot;,&quot;Puzzles&quot;,&quot;Picture puzzles&quot;],&quot;Primary&quot;:&quot;67886.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pearson, A. Cyril (Arthur Cyril), 1838-1916&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;67886&quot;});" class='title'>Pictured Puzzles and Word Play -<br><span class='subtitle'>A Companion to the Twentieth Century Standard Puzzle Book</span></a>
+<div class='author'>Pearson, A. Cyril (Arthur Cyril), 1838-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68267, {&quot;Title&quot;:&quot;The cross word puzzle book&quot;,&quot;Topics&quot;:[&quot;Puzzles&quot;,&quot;Crossword puzzles&quot;],&quot;Primary&quot;:&quot;68267.htm&quot;,&quot;CreatorNames&quot;:[&quot;Buranelli, Prosper, 1890-1960 [Editor]&quot;,&quot;Farrar, Margaret Petherbridge, 1897-1984 [Editor]&quot;,&quot;Hartswick, F. Gregory (Frederic Gregory), 1891- [Editor]&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;68267&quot;});" class='title'>The cross word puzzle book</a>
+<div class='author'>Buranelli, Prosper, 1890-1960 [Editor], Farrar, Margaret Petherbridge, 1897-1984 [Editor], Hartswick, F. Gregory (Frederic Gregory), 1891- [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68289, {&quot;Title&quot;:&quot;Billiards&quot;,&quot;Topics&quot;:[&quot;Billiards&quot;],&quot;Primary&quot;:&quot;68289.htm&quot;,&quot;CreatorNames&quot;:[&quot;Broadfoot, William, 1841-1922&quot;,&quot;Boyd, Archibald H. [Contributor]&quot;,&quot;Dixon, Sydenham [Contributor]&quot;,&quot;Ford, William Justice, 1853- [Contributor]&quot;,&quot;Pontifex, Dudley David, 1855-1934 [Contributor]&quot;,&quot;Rimington-Wilson, Reginald Henry Rimington, 1852-1927 [Contributor]&quot;,&quot;Walker, Russell D. [Contributor]&quot;,&quot;Davis, Lucien, 1860-1941 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;68289&quot;});" class='title'>Billiards</a>
+<div class='author'>Broadfoot, William, 1841-1922, Boyd, Archibald H. [Contributor], Dixon, Sydenham [Contributor], Ford, William Justice, 1853- [Contributor], Pontifex, Dudley David, 1855-1934 [Contributor], Rimington-Wilson, Reginald Henry Rimington, 1852-1927 [Contributor], Walker, Russell D. [Contributor], Davis, Lucien, 1860-1941 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68367, {&quot;Title&quot;:&quot;The Devil&#39;s picture-books&quot;,&quot;Topics&quot;:[&quot;Playing cards -- History&quot;],&quot;Primary&quot;:&quot;68367.htm&quot;,&quot;CreatorNames&quot;:[&quot;Van Rensselaer, John King, Mrs., 1848-1925&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;68367&quot;});" class='title'>The Devil's picture-books</a>
+<div class='author'>Van Rensselaer, John King, Mrs., 1848-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68386, {&quot;Title&quot;:&quot;Book of parlor tricks: How to perform them&quot;,&quot;Topics&quot;:[&quot;Magic tricks&quot;,&quot;Tricks&quot;],&quot;Primary&quot;:&quot;68386.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;68386&quot;});" class='title'>Book of parlor tricks:<br><span class='subtitle'>How to perform them</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68466, {&quot;Title&quot;:&quot;Building a championship football team&quot;,&quot;Topics&quot;:[&quot;Football&quot;],&quot;Primary&quot;:&quot;68466.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bryant, Paul W., 1913-1983&quot;,&quot;Gregory, Lloyd Jefferson, 1899-1978 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;68466&quot;});" class='title'>Building a championship football team</a>
+<div class='author'>Bryant, Paul W., 1913-1983, Gregory, Lloyd Jefferson, 1899-1978 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68681, {&quot;Title&quot;:&quot;The cross word puzzle book: Second series&quot;,&quot;Topics&quot;:[&quot;Puzzles&quot;,&quot;Crossword puzzles&quot;],&quot;Primary&quot;:&quot;68681.htm&quot;,&quot;CreatorNames&quot;:[&quot;Buranelli, Prosper, 1890-1960 [Editor]&quot;,&quot;Farrar, Margaret Petherbridge, 1897-1984 [Editor]&quot;,&quot;Hartswick, F. Gregory (Frederic Gregory), 1891- [Editor]&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;68681&quot;});" class='title'>The cross word puzzle book:<br><span class='subtitle'>Second series</span></a>
+<div class='author'>Buranelli, Prosper, 1890-1960 [Editor], Farrar, Margaret Petherbridge, 1897-1984 [Editor], Hartswick, F. Gregory (Frederic Gregory), 1891- [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68737, {&quot;Title&quot;:&quot;A climber in New Zealand&quot;,&quot;Topics&quot;:[&quot;New Zealand -- Description and travel&quot;,&quot;Mountaineering&quot;],&quot;Primary&quot;:&quot;68737.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ross, Malcolm, 1862-1930&quot;,&quot;Bryce, James Bryce, Viscount, 1838-1922 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;DU&quot;,&quot;GV&quot;],&quot;PG_ID&quot;:&quot;68737&quot;});" class='title'>A climber in New Zealand</a>
+<div class='author'>Ross, Malcolm, 1862-1930, Bryce, James Bryce, Viscount, 1838-1922 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68792, {&quot;Title&quot;:&quot;The cross word puzzle book: Third series&quot;,&quot;Topics&quot;:[&quot;Puzzles&quot;,&quot;Crossword puzzles&quot;],&quot;Primary&quot;:&quot;68792.htm&quot;,&quot;CreatorNames&quot;:[&quot;Von Phul, Ruth, 1904-1986 [Contributor]&quot;,&quot;Buranelli, Prosper, 1890-1960 [Editor]&quot;,&quot;Farrar, Margaret Petherbridge, 1897-1984 [Editor]&quot;,&quot;Hartswick, F. Gregory (Frederic Gregory), 1891- [Editor]&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;68792&quot;});" class='title'>The cross word puzzle book:<br><span class='subtitle'>Third series</span></a>
+<div class='author'>Von Phul, Ruth, 1904-1986 [Contributor], Buranelli, Prosper, 1890-1960 [Editor], Farrar, Margaret Petherbridge, 1897-1984 [Editor], Hartswick, F. Gregory (Frederic Gregory), 1891- [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68861, {&quot;Title&quot;:&quot;S. Hurok Presents; A Memoir of the Dance World&quot;,&quot;Topics&quot;:[&quot;Ballet -- History&quot;],&quot;Primary&quot;:&quot;68861.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hurok, Sol, 1888-1974&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;68861&quot;});" class='title'>S. Hurok Presents;<br><span class='subtitle'>A Memoir of the Dance World</span></a>
+<div class='author'>Hurok, Sol, 1888-1974</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69080, {&quot;Title&quot;:&quot;Walker&#39;s manly exercises - Containing rowing, sailing, riding, driving, racing, hunting, shooting, and other manly sports&quot;,&quot;Topics&quot;:[&quot;Sports&quot;,&quot;Athletics&quot;],&quot;Primary&quot;:&quot;69080.htm&quot;,&quot;CreatorNames&quot;:[&quot;Walker, Donald&quot;,&quot;Carleton, John William, -1856 [Editor]&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;69080&quot;});" class='title'>Walker's manly exercises -<br><span class='subtitle'>Containing rowing, sailing, riding, driving, racing, hunting, shooting, and other manly sports</span></a>
+<div class='author'>Walker, Donald, Carleton, John William, -1856 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69266, {&quot;Title&quot;:&quot;Jaakkoo lähti Pariisihi...: Kuvaus Pariisin olympialaiskisoista v. 1924&quot;,&quot;Topics&quot;:[&quot;Athletes -- Finland&quot;,&quot;Olympic Games (8th : 1924 : Paris, France)&quot;],&quot;Primary&quot;:&quot;69266.txt&quot;,&quot;CreatorNames&quot;:[&quot;Ikola, Jaakko, 1887-1951&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;69266&quot;});" class='title'>Jaakkoo lähti Pariisihi...:<br><span class='subtitle'>Kuvaus Pariisin olympialaiskisoista v. 1924</span></a>
+<div class='author'>Ikola, Jaakko, 1887-1951</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69528, {&quot;Title&quot;:&quot;Nuts to crack: A galaxy of puzzles, riddles, conundrums, etc.&quot;,&quot;Topics&quot;:[&quot;Puzzles&quot;,&quot;Riddles&quot;],&quot;Primary&quot;:&quot;69528.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;GV&quot;,&quot;PN&quot;],&quot;PG_ID&quot;:&quot;69528&quot;});" class='title'>Nuts to crack:<br><span class='subtitle'>A galaxy of puzzles, riddles, conundrums, etc.</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70397, {&quot;Title&quot;:&quot;How to swim&quot;,&quot;Topics&quot;:[&quot;Swimming&quot;],&quot;Primary&quot;:&quot;70397.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sterrett, James H.&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;70397&quot;});" class='title'>How to swim</a>
+<div class='author'>Sterrett, James H.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(8084, {&quot;Title&quot;:&quot;Hunting with the Bow &amp; Arrow&quot;,&quot;Topics&quot;:[&quot;Archery&quot;,&quot;Bow and arrow&quot;],&quot;Primary&quot;:&quot;8084.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pope, Saxton T. (Saxton Temple), 1875-1926&quot;],&quot;LoCC&quot;:[&quot;GV&quot;,&quot;SK&quot;],&quot;PG_ID&quot;:&quot;8084&quot;});" class='title'>Hunting with the Bow & Arrow</a>
+<div class='author'>Pope, Saxton T. (Saxton Temple), 1875-1926</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(8439, {&quot;Title&quot;:&quot;Games for Everybody&quot;,&quot;Topics&quot;:[&quot;Games&quot;],&quot;Primary&quot;:&quot;8439.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hofmann, Mary Christiana, 1884-&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;8439&quot;});" class='title'>Games for Everybody</a>
+<div class='author'>Hofmann, Mary Christiana, 1884-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(9177, {&quot;Title&quot;:&quot;The Royal Game of the Ombre - Written at the Request of divers Honourable Persons—1665&quot;,&quot;Topics&quot;:[&quot;Ombre (Game) -- Early works to 1800&quot;,&quot;Games -- England -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;9177.txt&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;9177&quot;});" class='title'>The Royal Game of the Ombre -<br><span class='subtitle'>Written at the Request of divers Honourable Persons—1665</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(9454, {&quot;Title&quot;:&quot;Orchesography, or, the Art of Dancing - The Art of Dancing by Characters and Demonstrative Figures&quot;,&quot;Topics&quot;:[&quot;Dance -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;9454.htm&quot;,&quot;CreatorNames&quot;:[&quot;Feuillet, Raoul-Auger, 1660?-1710&quot;,&quot;Weaver, John, 1673-1760 [Translator]&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;9454&quot;});" class='title'>Orchesography, or, the Art of Dancing -<br><span class='subtitle'>The Art of Dancing by Characters and Demonstrative Figures</span></a>
+<div class='author'>Feuillet, Raoul-Auger, 1660?-1710, Weaver, John, 1673-1760 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(9477, {&quot;Title&quot;:&quot;Spalding&#39;s Baseball Guide and Official League Book for 1889&quot;,&quot;Topics&quot;:[&quot;Baseball -- Periodicals&quot;],&quot;Primary&quot;:&quot;9477.txt&quot;,&quot;CreatorNames&quot;:[&quot;Chadwick, Henry, 1824-1908 [Editor]&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;9477&quot;});" class='title'>Spalding's Baseball Guide and Official League Book for 1889</a>
+<div class='author'>Chadwick, Henry, 1824-1908 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(9916, {&quot;Title&quot;:&quot;Spalding&#39;s Baseball Guide and Official League Book for 1895&quot;,&quot;Topics&quot;:[&quot;Baseball -- Periodicals&quot;],&quot;Primary&quot;:&quot;9916.txt&quot;,&quot;CreatorNames&quot;:[&quot;Chadwick, Henry, 1824-1908 [Editor]&quot;],&quot;LoCC&quot;:[&quot;GV&quot;],&quot;PG_ID&quot;:&quot;9916&quot;});" class='title'>Spalding's Baseball Guide and Official League Book for 1895</a>
+<div class='author'>Chadwick, Henry, 1824-1908 [Editor]</div>
+</div>
+</ul></div>
+</body></html>

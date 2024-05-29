@@ -1,0 +1,118 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Gypsies (DX)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16358, {&quot;Title&quot;:&quot;The English Gipsies and Their Language&quot;,&quot;Topics&quot;:[&quot;Romanies -- England&quot;,&quot;English language -- Slang&quot;,&quot;Romani language&quot;],&quot;Primary&quot;:&quot;16358.htm&quot;,&quot;CreatorNames&quot;:[&quot;Leland, Charles Godfrey, 1824-1903&quot;],&quot;LoCC&quot;:[&quot;DX&quot;],&quot;PG_ID&quot;:&quot;16358&quot;});" class='title'>The English Gipsies and Their Language</a>
+<div class='author'>Leland, Charles Godfrey, 1824-1903</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19852, {&quot;Title&quot;:&quot;The Gipsies&#39; Advocate - Or, Observations on the Origin, Character, Manners, and Habits of the English Gipsies&quot;,&quot;Topics&quot;:[&quot;Romanies -- England&quot;],&quot;Primary&quot;:&quot;19852.htm&quot;,&quot;CreatorNames&quot;:[&quot;Crabb, James, 1774-1851&quot;],&quot;LoCC&quot;:[&quot;DX&quot;],&quot;PG_ID&quot;:&quot;19852&quot;});" class='title'>The Gipsies' Advocate -<br><span class='subtitle'>Or, Observations on the Origin, Character, Manners, and Habits of the English Gipsies</span></a>
+<div class='author'>Crabb, James, 1774-1851</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22939, {&quot;Title&quot;:&quot;The Gypsies&quot;,&quot;Topics&quot;:[&quot;Romanies&quot;],&quot;Primary&quot;:&quot;22939.htm&quot;,&quot;CreatorNames&quot;:[&quot;Leland, Charles Godfrey, 1824-1903&quot;],&quot;LoCC&quot;:[&quot;DX&quot;],&quot;PG_ID&quot;:&quot;22939&quot;});" class='title'>The Gypsies</a>
+<div class='author'>Leland, Charles Godfrey, 1824-1903</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25796, {&quot;Title&quot;:&quot;Blicke in das Leben der Zigeuner - Von einem Zigeuner&quot;,&quot;Topics&quot;:[&quot;Romanies&quot;],&quot;Primary&quot;:&quot;25796.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wittich, Engelbert, 1878-1937&quot;],&quot;LoCC&quot;:[&quot;DX&quot;],&quot;PG_ID&quot;:&quot;25796&quot;});" class='title'>Blicke in das Leben der Zigeuner -<br><span class='subtitle'>Von einem Zigeuner</span></a>
+<div class='author'>Wittich, Engelbert, 1878-1937</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2733, {&quot;Title&quot;:&quot;Romano Lavo-Lil: Word Book of the Romany; Or, English Gypsy Language - With Specimens of Gypsy Poetry, and an Account of Certain Gypsyries or Places Inhabited by Them, and of Various Things Relating to Gypsy Life in England&quot;,&quot;Topics&quot;:[&quot;Romanies -- England&quot;,&quot;Romanies -- Languages&quot;,&quot;Romani poetry&quot;],&quot;Primary&quot;:&quot;2733.htm&quot;,&quot;CreatorNames&quot;:[&quot;Borrow, George, 1803-1881&quot;],&quot;LoCC&quot;:[&quot;DX&quot;],&quot;PG_ID&quot;:&quot;2733&quot;});" class='title'>Romano Lavo-Lil:<br><span class='subtitle'>Word Book of the Romany; Or, English Gypsy Language - With Specimens of Gypsy Poetry, and an Account of Certain Gypsyries or Places Inhabited by Them, and of Various Things Relating to Gypsy Life in England</span></a>
+<div class='author'>Borrow, George, 1803-1881</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28548, {&quot;Title&quot;:&quot;Gipsy Life - Being an account of our Gipsies and their children, with suggestions for their improvement&quot;,&quot;Topics&quot;:[&quot;Romanies -- Great Britain&quot;],&quot;Primary&quot;:&quot;28548.htm&quot;,&quot;CreatorNames&quot;:[&quot;Smith, George, 1831-1895&quot;,&quot;Overend, William Heysham, 1851-1898 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DX&quot;],&quot;PG_ID&quot;:&quot;28548&quot;});" class='title'>Gipsy Life -<br><span class='subtitle'>Being an account of our Gipsies and their children, with suggestions for their improvement</span></a>
+<div class='author'>Smith, George, 1831-1895, Overend, William Heysham, 1851-1898 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29063, {&quot;Title&quot;:&quot;A Historical Survey of the Customs, Habits, &amp; Present State of the Gypsies&quot;,&quot;Topics&quot;:[&quot;Romanies&quot;],&quot;Primary&quot;:&quot;29063.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hoyland, John, 1750-1831&quot;],&quot;LoCC&quot;:[&quot;DX&quot;],&quot;PG_ID&quot;:&quot;29063&quot;});" class='title'>A Historical Survey of the Customs, Habits, & Present State of the Gypsies</a>
+<div class='author'>Hoyland, John, 1750-1831</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39665, {&quot;Title&quot;:&quot;A History of the Gipsies: with Specimens of the Gipsy Language&quot;,&quot;Topics&quot;:[&quot;Romanies -- Languages&quot;,&quot;Romanies&quot;],&quot;Primary&quot;:&quot;39665.htm&quot;,&quot;CreatorNames&quot;:[&quot;Simson, Walter&quot;,&quot;Simson, James, 1826- [Editor]&quot;],&quot;LoCC&quot;:[&quot;DX&quot;],&quot;PG_ID&quot;:&quot;39665&quot;});" class='title'>A History of the Gipsies:<br><span class='subtitle'>with Specimens of the Gipsy Language</span></a>
+<div class='author'>Simson, Walter, Simson, James, 1826- [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46015, {&quot;Title&quot;:&quot;The Gypsy&#39;s Parson: his experiences and adventures&quot;,&quot;Topics&quot;:[&quot;Romanies -- England&quot;],&quot;Primary&quot;:&quot;46015.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hall, George, rector of Ruckland, Lincolnshire, 1863-1918&quot;],&quot;LoCC&quot;:[&quot;DX&quot;],&quot;PG_ID&quot;:&quot;46015&quot;});" class='title'>The Gypsy's Parson:<br><span class='subtitle'>his experiences and adventures</span></a>
+<div class='author'>Hall, George, rector of Ruckland, Lincolnshire, 1863-1918</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50639, {&quot;Title&quot;:&quot;Romany Life - Experienced and Observed during many Years of Friendly Intercourse with the Gypsies&quot;,&quot;Topics&quot;:[&quot;Romanies -- England&quot;],&quot;Primary&quot;:&quot;50639.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cuttriss, Frank&quot;],&quot;LoCC&quot;:[&quot;DX&quot;],&quot;PG_ID&quot;:&quot;50639&quot;});" class='title'>Romany Life -<br><span class='subtitle'>Experienced and Observed during many Years of Friendly Intercourse with the Gypsies</span></a>
+<div class='author'>Cuttriss, Frank</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51454, {&quot;Title&quot;:&quot;John Bunyan and the Gipsies&quot;,&quot;Topics&quot;:[&quot;Romanies&quot;,&quot;Leland, Charles Godfrey, 1824-1903&quot;,&quot;Bunyan, John, 1628-1688 -- Relations with Romanies&quot;],&quot;Primary&quot;:&quot;51454.htm&quot;,&quot;CreatorNames&quot;:[&quot;Simson, James, 1826-&quot;],&quot;LoCC&quot;:[&quot;DX&quot;],&quot;PG_ID&quot;:&quot;51454&quot;});" class='title'>John Bunyan and the Gipsies</a>
+<div class='author'>Simson, James, 1826-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52647, {&quot;Title&quot;:&quot;Incidents in a Gipsy&#39;s Life&quot;,&quot;Topics&quot;:[&quot;Smith, George, 1830-&quot;,&quot;Romanies -- Great Britain -- Biography&quot;],&quot;Primary&quot;:&quot;52647.htm&quot;,&quot;CreatorNames&quot;:[&quot;Smith, George, 1830-&quot;],&quot;LoCC&quot;:[&quot;DX&quot;],&quot;PG_ID&quot;:&quot;52647&quot;});" class='title'>Incidents in a Gipsy's Life</a>
+<div class='author'>Smith, George, 1830-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(565, {&quot;Title&quot;:&quot;The Zincali: An Account of the Gypsies of Spain&quot;,&quot;Topics&quot;:[&quot;Romanies -- Languages&quot;,&quot;Romanies -- Spain&quot;],&quot;Primary&quot;:&quot;565.htm&quot;,&quot;CreatorNames&quot;:[&quot;Borrow, George, 1803-1881&quot;],&quot;LoCC&quot;:[&quot;DX&quot;],&quot;PG_ID&quot;:&quot;565&quot;});" class='title'>The Zincali:<br><span class='subtitle'>An Account of the Gypsies of Spain</span></a>
+<div class='author'>Borrow, George, 1803-1881</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58465, {&quot;Title&quot;:&quot;Gypsy Sorcery and Fortune Telling - Illustrated by numerous incantations, specimens of medical magic, anecdotes and tales&quot;,&quot;Topics&quot;:[&quot;Romanies&quot;,&quot;Fortune-telling&quot;,&quot;Magic, Romani&quot;],&quot;Primary&quot;:&quot;58465.htm&quot;,&quot;CreatorNames&quot;:[&quot;Leland, Charles Godfrey, 1824-1903&quot;],&quot;LoCC&quot;:[&quot;DX&quot;],&quot;PG_ID&quot;:&quot;58465&quot;});" class='title'>Gypsy Sorcery and Fortune Telling -<br><span class='subtitle'>Illustrated by numerous incantations, specimens of medical magic, anecdotes and tales</span></a>
+<div class='author'>Leland, Charles Godfrey, 1824-1903</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62269, {&quot;Title&quot;:&quot;Gypsy Coppersmiths in Liverpool and Birkenhead&quot;,&quot;Topics&quot;:[&quot;Romanies&quot;],&quot;Primary&quot;:&quot;62269.htm&quot;,&quot;CreatorNames&quot;:[&quot;Macfie, R. A. Scott (Robert Andrew Scott), 1868-1935&quot;],&quot;LoCC&quot;:[&quot;DX&quot;],&quot;PG_ID&quot;:&quot;62269&quot;});" class='title'>Gypsy Coppersmiths in Liverpool and Birkenhead</a>
+<div class='author'>Macfie, R. A. Scott (Robert Andrew Scott), 1868-1935</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62432, {&quot;Title&quot;:&quot;I&#39;ve been a Gipsying - or, Rambles among our Gipsies and their children in their tents and vans&quot;,&quot;Topics&quot;:[&quot;Romanies -- England&quot;],&quot;Primary&quot;:&quot;62432.htm&quot;,&quot;CreatorNames&quot;:[&quot;Smith, George, 1831-1895&quot;],&quot;LoCC&quot;:[&quot;DX&quot;],&quot;PG_ID&quot;:&quot;62432&quot;});" class='title'>I've been a Gipsying -<br><span class='subtitle'>or, Rambles among our Gipsies and their children in their tents and vans</span></a>
+<div class='author'>Smith, George, 1831-1895</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62745, {&quot;Title&quot;:&quot;Dissertation on the Gipseys - Representing their manner of life, family economy, occupations &amp; trades, marriages &amp; education, sickness, death, &amp; burial, religion, language, sciences &amp; arts, &amp;c. &amp;c. &amp;c.; with an historical enquiry concerning their origin &amp; first appearance in Europe&quot;,&quot;Topics&quot;:[&quot;Romanies&quot;],&quot;Primary&quot;:&quot;62745.htm&quot;,&quot;CreatorNames&quot;:[&quot;Grellmann, Heinrich Moritz Gottlieb, 1756-1804&quot;,&quot;Raper, Matthew, -1778 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DX&quot;],&quot;PG_ID&quot;:&quot;62745&quot;});" class='title'>Dissertation on the Gipseys -<br><span class='subtitle'>Representing their manner of life, family economy, occupations & trades, marriages & education, sickness, death, & burial, religion, language, sciences & arts, &c. &c. &c.; with an historical enquiry concerning their origin & first appearance in Europe</span></a>
+<div class='author'>Grellmann, Heinrich Moritz Gottlieb, 1756-1804, Raper, Matthew, -1778 [Translator]</div>
+</div>
+</ul></div>
+</body></html>

@@ -1,0 +1,382 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Chemistry (QD)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(1234, {&quot;Title&quot;:&quot;Organic Syntheses - An Annual Publication of Satisfactory Methods for the Preparation of Organic Chemicals&quot;,&quot;Topics&quot;:[&quot;Organic compounds -- Synthesis&quot;,&quot;Chemistry, Organic&quot;],&quot;Primary&quot;:&quot;1234.txt&quot;,&quot;CreatorNames&quot;:[&quot;Conant, James Bryant, 1893-1978 [Editor]&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;1234&quot;});" class='title'>Organic Syntheses -<br><span class='subtitle'>An Annual Publication of Satisfactory Methods for the Preparation of Organic Chemicals</span></a>
+<div class='author'>Conant, James Bryant, 1893-1978 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12787, {&quot;Title&quot;:&quot;An Introductory Course of Quantitative Chemical Analysis - With Explanatory Notes&quot;,&quot;Topics&quot;:[&quot;Chemistry, Analytic -- Quantitative&quot;],&quot;Primary&quot;:&quot;12787.txt&quot;,&quot;CreatorNames&quot;:[&quot;Talbot, Henry Paul, 1864-1927&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;12787&quot;});" class='title'>An Introductory Course of Quantitative Chemical Analysis -<br><span class='subtitle'>With Explanatory Notes</span></a>
+<div class='author'>Talbot, Henry Paul, 1864-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14144, {&quot;Title&quot;:&quot;Carl Wilhelm Scheele ett minnesblad på hundrade årsdagen af hans död&quot;,&quot;Topics&quot;:[&quot;Scheele, Carl Wilhelm, 1742-1786&quot;],&quot;Primary&quot;:&quot;14144.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cleve, P. T. (Per Teodor), 1840-1905&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;14144&quot;});" class='title'>Carl Wilhelm Scheele ett minnesblad på hundrade årsdagen af hans död</a>
+<div class='author'>Cleve, P. T. (Per Teodor), 1840-1905</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14218, {&quot;Title&quot;:&quot;The Story of Alchemy and the Beginnings of Chemistry&quot;,&quot;Topics&quot;:[&quot;Alchemy&quot;,&quot;Chemistry -- History&quot;],&quot;Primary&quot;:&quot;14218.htm&quot;,&quot;CreatorNames&quot;:[&quot;Muir, M. M. Pattison (Matthew Moncrieff Pattison), 1848-1931&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;14218&quot;});" class='title'>The Story of Alchemy and the Beginnings of Chemistry</a>
+<div class='author'>Muir, M. M. Pattison (Matthew Moncrieff Pattison), 1848-1931</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14474, {&quot;Title&quot;:&quot;The Chemical History of a Candle&quot;,&quot;Topics&quot;:[&quot;Chemistry&quot;,&quot;Candles&quot;],&quot;Primary&quot;:&quot;14474.txt&quot;,&quot;CreatorNames&quot;:[&quot;Faraday, Michael, 1791-1867&quot;,&quot;Crookes, William, 1832-1919 [Editor]&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;14474&quot;});" class='title'>The Chemical History of a Candle</a>
+<div class='author'>Faraday, Michael, 1791-1867, Crookes, William, 1832-1919 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14641, {&quot;Title&quot;:&quot;The Golden Calf, Which the World Adores, and Desires - In Which Is Handled the Most Rare and Incomparable Wonder of Nature, in Transmuting Metals; viz. How the Intire Substance of Lead, Was in One Moment Transmuted in Gold-Obrizon, with an Exceeding Small Particle of the True Philosophick Stone&quot;,&quot;Topics&quot;:[&quot;Alchemy&quot;],&quot;Primary&quot;:&quot;14641.htm&quot;,&quot;CreatorNames&quot;:[&quot;Helvetius, Johann Friedrich, -1709&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;14641&quot;});" class='title'>The Golden Calf, Which the World Adores, and Desires -<br><span class='subtitle'>In Which Is Handled the Most Rare and Incomparable Wonder of Nature, in Transmuting Metals; viz. How the Intire Substance of Lead, Was in One Moment Transmuted in Gold-Obrizon, with an Exceeding Small Particle of the True Philosophick Stone</span></a>
+<div class='author'>Helvetius, Johann Friedrich, -1709</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15576, {&quot;Title&quot;:&quot;A System of Instruction in the Practical Use of the Blowpipe - Being A Graduated Course Of Analysis For The Use Of Students And All Those Engaged In The Examination Of Metallic Combinations&quot;,&quot;Topics&quot;:[&quot;Blowpipe&quot;],&quot;Primary&quot;:&quot;15576.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;15576&quot;});" class='title'>A System of Instruction in the Practical Use of the Blowpipe -<br><span class='subtitle'>Being A Graduated Course Of Analysis For The Use Of Students And All Those Engaged In The Examination Of Metallic Combinations</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16562, {&quot;Title&quot;:&quot;Chemiam artibus academicis jure esse inserendam&quot;,&quot;Topics&quot;:[&quot;Chemistry -- Early works to 1800&quot;,&quot;Chemistry -- Study and teaching -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;16562.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gaubius, Hieronymus David, 1705?-1780&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;16562&quot;});" class='title'>Chemiam artibus academicis jure esse inserendam</a>
+<div class='author'>Gaubius, Hieronymus David, 1705?-1780</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16718, {&quot;Title&quot;:&quot;Mineralogia Polyglotta&quot;,&quot;Topics&quot;:[&quot;Mineralogy&quot;],&quot;Primary&quot;:&quot;16718.htm&quot;,&quot;CreatorNames&quot;:[&quot;Keferstein, Christian, 1784-1866&quot;],&quot;LoCC&quot;:[&quot;QD&quot;,&quot;QE&quot;],&quot;PG_ID&quot;:&quot;16718&quot;});" class='title'>Mineralogia Polyglotta</a>
+<div class='author'>Keferstein, Christian, 1784-1866</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17753, {&quot;Title&quot;:&quot;On the Antiquity of the Chemical Art&quot;,&quot;Topics&quot;:[&quot;Chemistry -- History&quot;],&quot;Primary&quot;:&quot;17753.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mactear, James&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;17753&quot;});" class='title'>On the Antiquity of the Chemical Art</a>
+<div class='author'>Mactear, James</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18147, {&quot;Title&quot;:&quot;Inaugureele Rede - Waarin wordt Aangetoond dat de Scheikunde met recht een - plaats verdient onder de Akademische Wetenschappen&quot;,&quot;Topics&quot;:[&quot;Chemistry -- Early works to 1800&quot;,&quot;Chemistry -- Study and teaching -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;18147.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gaubius, Hieronymus David, 1705?-1780&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;18147&quot;});" class='title'>Inaugureele Rede -<br><span class='subtitle'>Waarin wordt Aangetoond dat de Scheikunde met recht een - plaats verdient onder de Akademische Wetenschappen</span></a>
+<div class='author'>Gaubius, Hieronymus David, 1705?-1780</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20751, {&quot;Title&quot;:&quot;Priestley in America, 1794-1804&quot;,&quot;Topics&quot;:[&quot;Priestley, Joseph, 1733-1804&quot;,&quot;Chemists -- England -- Biography&quot;],&quot;Primary&quot;:&quot;20751.htm&quot;,&quot;CreatorNames&quot;:[&quot;Smith, Edgar Fahs, 1854-1928&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;20751&quot;});" class='title'>Priestley in America, 1794-1804</a>
+<div class='author'>Smith, Edgar Fahs, 1854-1928</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20848, {&quot;Title&quot;:&quot;An Elementary Study of Chemistry&quot;,&quot;Topics&quot;:[&quot;Chemistry&quot;],&quot;Primary&quot;:&quot;20848.htm&quot;,&quot;CreatorNames&quot;:[&quot;Henderson, William Edwards, 1870-&quot;,&quot;McPherson, William, 1864-1951&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;20848&quot;});" class='title'>An Elementary Study of Chemistry</a>
+<div class='author'>Henderson, William Edwards, 1870-, McPherson, William, 1864-1951</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(21916, {&quot;Title&quot;:&quot;Villkor och möjligheter för kemisk storindustri i Sverige&quot;,&quot;Topics&quot;:[&quot;Chemical industry -- Sweden&quot;],&quot;Primary&quot;:&quot;21916.htm&quot;,&quot;CreatorNames&quot;:[&quot;Larsson, Ernst&quot;],&quot;LoCC&quot;:[&quot;HD&quot;,&quot;QD&quot;],&quot;PG_ID&quot;:&quot;21916&quot;});" class='title'>Villkor och möjligheter för kemisk storindustri i Sverige</a>
+<div class='author'>Larsson, Ernst</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22620, {&quot;Title&quot;:&quot;Researches on Cellulose, 1895-1900&quot;,&quot;Topics&quot;:[&quot;Cellulose&quot;],&quot;Primary&quot;:&quot;22620.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bevan, E. J. (Edward John), 1856-1921&quot;,&quot;Cross, C. F. (Charles Frederick), 1855-1935&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;22620&quot;});" class='title'>Researches on Cellulose, 1895-1900</a>
+<div class='author'>Bevan, E. J. (Edward John), 1856-1921, Cross, C. F. (Charles Frederick), 1855-1935</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22914, {&quot;Title&quot;:&quot;The Sceptical Chymist - or Chymico-Physical Doubts &amp; Paradoxes, Touching the Spagyrist&#39;s Principles Commonly call&#39;d Hypostatical; As they are wont to be Propos&#39;d and Defended by the Generality of Alchymists. Whereunto is præmis&#39;d Part of another Discourse relating to the same Subject.&quot;,&quot;Topics&quot;:[&quot;Chemistry -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;22914.htm&quot;,&quot;CreatorNames&quot;:[&quot;Boyle, Robert, 1627-1691&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;22914&quot;});" class='title'>The Sceptical Chymist -<br><span class='subtitle'>or Chymico-Physical Doubts & Paradoxes, Touching the Spagyrist's Principles Commonly call'd Hypostatical; As they are wont to be Propos'd and Defended by the Generality of Alchymists. Whereunto is præmis'd Part of another Discourse relating to the same Subject.</span></a>
+<div class='author'>Boyle, Robert, 1627-1691</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24510, {&quot;Title&quot;:&quot;The Production of Vinegar from Honey&quot;,&quot;Topics&quot;:[&quot;Vinegar&quot;,&quot;Honey&quot;],&quot;Primary&quot;:&quot;24510.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bancks, Gerard W.&quot;],&quot;LoCC&quot;:[&quot;QD&quot;,&quot;TP&quot;,&quot;TX&quot;],&quot;PG_ID&quot;:&quot;24510&quot;});" class='title'>The Production of Vinegar from Honey</a>
+<div class='author'>Bancks, Gerard W.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24527, {&quot;Title&quot;:&quot;Fragments of Science: A Series of Detached Essays, Addresses, and Reviews. V. 1-2&quot;,&quot;Topics&quot;:[&quot;Science&quot;,&quot;Chemistry&quot;,&quot;Physics&quot;],&quot;Primary&quot;:&quot;24527.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tyndall, John, 1820-1893&quot;],&quot;LoCC&quot;:[&quot;Q&quot;,&quot;QC&quot;,&quot;QD&quot;],&quot;PG_ID&quot;:&quot;24527&quot;});" class='title'>Fragments of Science:<br><span class='subtitle'>A Series of Detached Essays, Addresses, and Reviews. V. 1-2</span></a>
+<div class='author'>Tyndall, John, 1820-1893</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24591, {&quot;Title&quot;:&quot;Experiments upon magnesia alba, Quicklime, and some other Alcaline Substances&quot;,&quot;Topics&quot;:[&quot;Chemistry -- Early works to 1800&quot;,&quot;Alkalies&quot;,&quot;Carbon dioxide&quot;,&quot;Phlogiston&quot;],&quot;Primary&quot;:&quot;24591.htm&quot;,&quot;CreatorNames&quot;:[&quot;Black, Joseph, 1728-1799&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;24591&quot;});" class='title'>Experiments upon magnesia alba, Quicklime, and some other Alcaline Substances</a>
+<div class='author'>Black, Joseph, 1728-1799</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24706, {&quot;Title&quot;:&quot;James Cutbush, an American Chemist, 1788-1823&quot;,&quot;Topics&quot;:[&quot;Chemists -- United States -- Biography&quot;,&quot;Cutbush, James, 1788-1823&quot;],&quot;Primary&quot;:&quot;24706.htm&quot;,&quot;CreatorNames&quot;:[&quot;Smith, Edgar Fahs, 1854-1928&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;QD&quot;],&quot;PG_ID&quot;:&quot;24706&quot;});" class='title'>James Cutbush, an American Chemist, 1788-1823</a>
+<div class='author'>Smith, Edgar Fahs, 1854-1928</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26243, {&quot;Title&quot;:&quot;Discovery of Oxygen, Part 2&quot;,&quot;Topics&quot;:[&quot;Phlogiston&quot;,&quot;Oxygen&quot;],&quot;Primary&quot;:&quot;26243.htm&quot;,&quot;CreatorNames&quot;:[&quot;Scheele, Carl Wilhelm, 1742-1786&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;26243&quot;});" class='title'>Discovery of Oxygen, Part 2</a>
+<div class='author'>Scheele, Carl Wilhelm, 1742-1786</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26340, {&quot;Title&quot;:&quot;Of Natural and Supernatural Things - Also of the first Tincture, Root, and Spirit of Metals and Minerals, how the same are Conceived, Generated, Brought forth, Changed, and Augmented.&quot;,&quot;Topics&quot;:[&quot;Alchemy -- Early works to 1800&quot;,&quot;Antimony -- Therapeutic use -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;26340.htm&quot;,&quot;CreatorNames&quot;:[&quot;Basilius Valentinus&quot;,&quot;Cable, Daniel [Translator]&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;26340&quot;});" class='title'>Of Natural and Supernatural Things -<br><span class='subtitle'>Also of the first Tincture, Root, and Spirit of Metals and Minerals, how the same are Conceived, Generated, Brought forth, Changed, and Augmented.</span></a>
+<div class='author'>Basilius Valentinus, Cable, Daniel [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26908, {&quot;Title&quot;:&quot;Conversations on Chemistry, V. 1-2 - In Which the Elements of that Science Are Familiarly Explained and Illustrated by Experiments&quot;,&quot;Topics&quot;:[&quot;Chemistry&quot;],&quot;Primary&quot;:&quot;26908.htm&quot;,&quot;CreatorNames&quot;:[&quot;Marcet, Mrs. (Jane Haldimand), 1769-1858&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;26908&quot;});" class='title'>Conversations on Chemistry, V. 1-2 -<br><span class='subtitle'>In Which the Elements of that Science Are Familiarly Explained and Illustrated by Experiments</span></a>
+<div class='author'>Marcet, Mrs. (Jane Haldimand), 1769-1858</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27254, {&quot;Title&quot;:&quot;Die Romantik der Chemie&quot;,&quot;Topics&quot;:[&quot;Chemistry&quot;],&quot;Primary&quot;:&quot;27254.htm&quot;,&quot;CreatorNames&quot;:[&quot;Nagel, Oskar, 1874-&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;27254&quot;});" class='title'>Die Romantik der Chemie</a>
+<div class='author'>Nagel, Oskar, 1874-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29734, {&quot;Title&quot;:&quot;Experiments and Observations on Different Kinds of Air&quot;,&quot;Topics&quot;:[&quot;Chemistry -- Early works to 1800&quot;,&quot;Air -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;29734.htm&quot;,&quot;CreatorNames&quot;:[&quot;Priestley, Joseph, 1733-1804&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;29734&quot;});" class='title'>Experiments and Observations on Different Kinds of Air</a>
+<div class='author'>Priestley, Joseph, 1733-1804</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29757, {&quot;Title&quot;:&quot;The Story of a Tinder-box&quot;,&quot;Topics&quot;:[&quot;Combustion&quot;],&quot;Primary&quot;:&quot;29757.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tidy, Charles Meymott, 1843-1892&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;29757&quot;});" class='title'>The Story of a Tinder-box</a>
+<div class='author'>Tidy, Charles Meymott, 1843-1892</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30066, {&quot;Title&quot;:&quot;Laboratory Manual of Glass-Blowing&quot;,&quot;Topics&quot;:[&quot;Glass blowing and working&quot;],&quot;Primary&quot;:&quot;30066.htm&quot;,&quot;CreatorNames&quot;:[&quot;Frary, Francis C. (Francis Cowles), 1884-&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;30066&quot;});" class='title'>Laboratory Manual of Glass-Blowing</a>
+<div class='author'>Frary, Francis C. (Francis Cowles), 1884-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30775, {&quot;Title&quot;:&quot;Elements of Chemistry, - In a New Systematic Order, Containing all the Modern Discoveries&quot;,&quot;Topics&quot;:[&quot;Chemistry -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;30775.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lavoisier, Antoine Laurent, 1743-1794&quot;,&quot;Kerr, Robert, 1755-1813 [Translator]&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;30775&quot;});" class='title'>Elements of Chemistry, -<br><span class='subtitle'>In a New Systematic Order, Containing all the Modern Discoveries</span></a>
+<div class='author'>Lavoisier, Antoine Laurent, 1743-1794, Kerr, Robert, 1755-1813 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31624, {&quot;Title&quot;:&quot;A Brief History of Element Discovery, Synthesis, and Analysis&quot;,&quot;Topics&quot;:[&quot;Chemistry -- History&quot;,&quot;Chemical elements&quot;,&quot;Transuranium elements -- Synthesis&quot;],&quot;Primary&quot;:&quot;31624.htm&quot;,&quot;CreatorNames&quot;:[&quot;Watson, Glen W.&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;31624&quot;});" class='title'>A Brief History of Element Discovery, Synthesis, and Analysis</a>
+<div class='author'>Watson, Glen W.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32974, {&quot;Title&quot;:&quot;The Elements of Blowpipe Analysis&quot;,&quot;Topics&quot;:[&quot;Blowpipe&quot;],&quot;Primary&quot;:&quot;32974.htm&quot;,&quot;CreatorNames&quot;:[&quot;Getman, Frederick Hutton, 1877-1941&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;32974&quot;});" class='title'>The Elements of Blowpipe Analysis</a>
+<div class='author'>Getman, Frederick Hutton, 1877-1941</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33941, {&quot;Title&quot;:&quot;The Methods of Glass Blowing and of Working Silica in the Oxy-Gas Flame - For the use of chemical and physical students&quot;,&quot;Topics&quot;:[&quot;Glass blowing and working&quot;],&quot;Primary&quot;:&quot;33941.htm&quot;,&quot;CreatorNames&quot;:[&quot;Shenstone, W. A. (William Ashwell), 1850-1908&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;33941&quot;});" class='title'>The Methods of Glass Blowing and of Working Silica in the Oxy-Gas Flame -<br><span class='subtitle'>For the use of chemical and physical students</span></a>
+<div class='author'>Shenstone, W. A. (William Ashwell), 1850-1908</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34457, {&quot;Title&quot;:&quot;The Phase Rule and Its Applications&quot;,&quot;Topics&quot;:[&quot;Chemistry, Physical and theoretical&quot;,&quot;Phase rule and equilibrium&quot;,&quot;Solution (Chemistry)&quot;],&quot;Primary&quot;:&quot;34457.htm&quot;,&quot;CreatorNames&quot;:[&quot;Findlay, Alexander, 1874-1966&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;34457&quot;});" class='title'>The Phase Rule and Its Applications</a>
+<div class='author'>Findlay, Alexander, 1874-1966</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3708, {&quot;Title&quot;:&quot;An Introduction to Chemical Science&quot;,&quot;Topics&quot;:[&quot;Chemistry&quot;],&quot;Primary&quot;:&quot;3708.txt&quot;,&quot;CreatorNames&quot;:[&quot;Williams, Rufus P. (Rufus Phillips), 1851-1911&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;3708&quot;});" class='title'>An Introduction to Chemical Science</a>
+<div class='author'>Williams, Rufus P. (Rufus Phillips), 1851-1911</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37283, {&quot;Title&quot;:&quot;The Whole Secret Laid Open, Or the Complete Art of Making the Chemical Fulminating Objects, - Such as the Lace, or Girt of Security, Fulminating Letters, Balls, Bombs, Garters, Cards, Spiders, Segars, Chairs, Drawers, Boots, Shoes, &amp;c. &amp;c.&quot;,&quot;Topics&quot;:[&quot;Chemistry&quot;,&quot;Explosives&quot;,&quot;Silver compounds&quot;],&quot;Primary&quot;:&quot;37283.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;37283&quot;});" class='title'>The Whole Secret Laid Open, Or the Complete Art of Making the Chemical Fulminating Objects, -<br><span class='subtitle'>Such as the Lace, or Girt of Security, Fulminating Letters, Balls, Bombs, Garters, Cards, Spiders, Segars, Chairs, Drawers, Boots, Shoes, &c. &c.</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37682, {&quot;Title&quot;:&quot;Heads of Lectures on a Course of Experimental Philosophy: Particularly Including Chemistry&quot;,&quot;Topics&quot;:[&quot;Chemistry -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;37682.htm&quot;,&quot;CreatorNames&quot;:[&quot;Priestley, Joseph, 1733-1804&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;37682&quot;});" class='title'>Heads of Lectures on a Course of Experimental Philosophy:<br><span class='subtitle'>Particularly Including Chemistry</span></a>
+<div class='author'>Priestley, Joseph, 1733-1804</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38246, {&quot;Title&quot;:&quot;Heroes of Science: Chemists&quot;,&quot;Topics&quot;:[&quot;Chemistry -- History&quot;,&quot;Chemists&quot;],&quot;Primary&quot;:&quot;38246.htm&quot;,&quot;CreatorNames&quot;:[&quot;Muir, M. M. Pattison (Matthew Moncrieff Pattison), 1848-1931&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;38246&quot;});" class='title'>Heroes of Science:<br><span class='subtitle'>Chemists</span></a>
+<div class='author'>Muir, M. M. Pattison (Matthew Moncrieff Pattison), 1848-1931</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43240, {&quot;Title&quot;:&quot;Alchemy: Ancient and Modern - Being a Brief Account of the Alchemistic Doctrines, and Their Relations, to Mysticism on the One Hand, and to Recent Discoveries in Physical Science on the Other Hand; Together with Some Particulars Regarding the Lives and Teachings of the Most Noted Alchemists&quot;,&quot;Topics&quot;:[&quot;Alchemy -- History&quot;],&quot;Primary&quot;:&quot;43240.htm&quot;,&quot;CreatorNames&quot;:[&quot;Redgrove, H. Stanley (Herbert Stanley), 1887-1943&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;43240&quot;});" class='title'>Alchemy:<br><span class='subtitle'>Ancient and Modern - Being a Brief Account of the Alchemistic Doctrines, and Their Relations, to Mysticism on the One Hand, and to Recent Discoveries in Physical Science on the Other Hand; Together with Some Particulars Regarding the Lives and Teachings of the Most Noted Alchemists</span></a>
+<div class='author'>Redgrove, H. Stanley (Herbert Stanley), 1887-1943</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44986, {&quot;Title&quot;:&quot;The Elements of Qualitative Chemical Analysis, vol. 1, parts 1 and 2. - With Special Consideration of the Application of the Laws of Equilibrium and of the Modern Theories of Solution.&quot;,&quot;Topics&quot;:[&quot;Chemistry, Analytic -- Qualitative&quot;],&quot;Primary&quot;:&quot;44986.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stieglitz, Julius, 1867-1937&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;44986&quot;});" class='title'>The Elements of Qualitative Chemical Analysis, vol. 1, parts 1 and 2. -<br><span class='subtitle'>With Special Consideration of the Application of the Laws of Equilibrium and of the Modern Theories of Solution.</span></a>
+<div class='author'>Stieglitz, Julius, 1867-1937</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4524, {&quot;Title&quot;:&quot;Familiar Letters on Chemistry, and Its Relation to Commerce, Physiology, and Agriculture&quot;,&quot;Topics&quot;:[&quot;Chemistry&quot;],&quot;Primary&quot;:&quot;4524.htm&quot;,&quot;CreatorNames&quot;:[&quot;Liebig, Justus, Freiherr von, 1803-1873&quot;,&quot;Gardner, John, 1804-1880 [Editor]&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;4524&quot;});" class='title'>Familiar Letters on Chemistry, and Its Relation to Commerce, Physiology, and Agriculture</a>
+<div class='author'>Liebig, Justus, Freiherr von, 1803-1873, Gardner, John, 1804-1880 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45394, {&quot;Title&quot;:&quot;The Life of Sir Humphry Davy, Bart. LL.D., Volume 1 (of 2)&quot;,&quot;Topics&quot;:[&quot;Chemists -- England -- Biography&quot;,&quot;Davy, Humphry, Sir, 1778-1829&quot;],&quot;Primary&quot;:&quot;45394.htm&quot;,&quot;CreatorNames&quot;:[&quot;Paris, John Ayrton, 1785-1856&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;45394&quot;});" class='title'>The Life of Sir Humphry Davy, Bart. LL.D., Volume 1 (of 2)</a>
+<div class='author'>Paris, John Ayrton, 1785-1856</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45395, {&quot;Title&quot;:&quot;The Life of Sir Humphry Davy, Bart. LL.D., Volume 2 (of 2)&quot;,&quot;Topics&quot;:[&quot;Chemists -- England -- Biography&quot;,&quot;Davy, Humphry, Sir, 1778-1829&quot;],&quot;Primary&quot;:&quot;45395.htm&quot;,&quot;CreatorNames&quot;:[&quot;Paris, John Ayrton, 1785-1856&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;45395&quot;});" class='title'>The Life of Sir Humphry Davy, Bart. LL.D., Volume 2 (of 2)</a>
+<div class='author'>Paris, John Ayrton, 1785-1856</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46143, {&quot;Title&quot;:&quot;Experiments and Observations on the Following Subjects - 1. On the preparation, calcination, and medicinal uses of Magnesia Alba. 2. On the solvent qualities of calcined Magnesia. 3. On the variety in the solvent powers of quick-lime, when used in different quantities. 4. On various absorbents, as promoting or retarding putrefaction. 5. On the comparative antiseptic powers of vegetable infusions prepared with lime, &amp;c. 6. On the sweetening properties of fixed air.&quot;,&quot;Topics&quot;:[&quot;Magnesium carbonate -- Early works to 1800&quot;,&quot;Magnesium carbonate -- Therapeutic use -- Early works to 1800&quot;,&quot;Lime -- Early works to 1800&quot;,&quot;Putrefaction -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;46143.htm&quot;,&quot;CreatorNames&quot;:[&quot;Henry, Thomas, 1734-1816&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;46143&quot;});" class='title'>Experiments and Observations on the Following Subjects -<br><span class='subtitle'>1. On the preparation, calcination, and medicinal uses of Magnesia Alba. 2. On the solvent qualities of calcined Magnesia. 3. On the variety in the solvent powers of quick-lime, when used in different quantities. 4. On various absorbents, as promoting or retarding putrefaction. 5. On the comparative antiseptic powers of vegetable infusions prepared with lime, &c. 6. On the sweetening properties of fixed air.</span></a>
+<div class='author'>Henry, Thomas, 1734-1816</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46714, {&quot;Title&quot;:&quot;Synthesis of 2-methyl-4-selenoquinazolone, 2-phenylbenzoselenazole, and its derivatives - Dissertation submitted in partial fulfillment of the requirements for the degree of Doctor of Philosophy in the Faculty of Pure Science of Columbia University&quot;,&quot;Topics&quot;:[&quot;Thesis (Ph. D.)&quot;,&quot;Organic compounds -- Synthesis&quot;,&quot;Selenium&quot;],&quot;Primary&quot;:&quot;46714.htm&quot;,&quot;CreatorNames&quot;:[&quot;Chen, Yü-Gwan, 1893-&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;46714&quot;});" class='title'>Synthesis of 2-methyl-4-selenoquinazolone, 2-phenylbenzoselenazole, and its derivatives -<br><span class='subtitle'>Dissertation submitted in partial fulfillment of the requirements for the degree of Doctor of Philosophy in the Faculty of Pure Science of Columbia University</span></a>
+<div class='author'>Chen, Yü-Gwan, 1893-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46878, {&quot;Title&quot;:&quot;Ueber die Arsenikvergiftung ihre Hülfe und gerichtliche Ausmittelung&quot;,&quot;Topics&quot;:[&quot;Arsenic -- Toxicology&quot;],&quot;Primary&quot;:&quot;46878.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hahnemann, Samuel, 1755-1843&quot;],&quot;LoCC&quot;:[&quot;QD&quot;,&quot;RC&quot;],&quot;PG_ID&quot;:&quot;46878&quot;});" class='title'>Ueber die Arsenikvergiftung ihre Hülfe und gerichtliche Ausmittelung</a>
+<div class='author'>Hahnemann, Samuel, 1755-1843</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46998, {&quot;Title&quot;:&quot;Elements of the Theory and Practice of Chymistry, 5th ed.&quot;,&quot;Topics&quot;:[&quot;Chemistry -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;46998.htm&quot;,&quot;CreatorNames&quot;:[&quot;Macquer, Pierre Joseph, 1718-1784&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;46998&quot;});" class='title'>Elements of the Theory and Practice of Chymistry, 5th ed.</a>
+<div class='author'>Macquer, Pierre Joseph, 1718-1784</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47365, {&quot;Title&quot;:&quot;A Discovrse of Fire and Salt - Discovering Many Secret Mysteries as well Philosophicall, as Theologicall&quot;,&quot;Topics&quot;:[&quot;Alchemy -- Early works to 1800&quot;,&quot;Fire -- Early works to 1800&quot;,&quot;Salt -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;47365.htm&quot;,&quot;CreatorNames&quot;:[&quot;Vigenère, Blaise de, 1523-1596&quot;,&quot;Stephens, Edward, active 1649 [Translator]&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;47365&quot;});" class='title'>A Discovrse of Fire and Salt -<br><span class='subtitle'>Discovering Many Secret Mysteries as well Philosophicall, as Theologicall</span></a>
+<div class='author'>Vigenère, Blaise de, 1523-1596, Stephens, Edward, active 1649 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47843, {&quot;Title&quot;:&quot;Anleitung zur quantitativen chemischen Analyse&quot;,&quot;Topics&quot;:[&quot;Chemistry, Analytic -- Quantitative&quot;],&quot;Primary&quot;:&quot;47843.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fresenius, C. Remigius, 1818-1897&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;47843&quot;});" class='title'>Anleitung zur quantitativen chemischen Analyse</a>
+<div class='author'>Fresenius, C. Remigius, 1818-1897</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48406, {&quot;Title&quot;:&quot;The Atomic Fingerprint: Neutron Activation Analysis&quot;,&quot;Topics&quot;:[&quot;Nuclear activation analysis&quot;],&quot;Primary&quot;:&quot;48406.htm&quot;,&quot;CreatorNames&quot;:[&quot;Keisch, Bernard, 1932-&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;48406&quot;});" class='title'>The Atomic Fingerprint:<br><span class='subtitle'>Neutron Activation Analysis</span></a>
+<div class='author'>Keisch, Bernard, 1932-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48914, {&quot;Title&quot;:&quot;The Growth of a Crystal - Being the eighteenth Robert Boyle lecture&quot;,&quot;Topics&quot;:[&quot;Crystallography&quot;],&quot;Primary&quot;:&quot;48914.htm&quot;,&quot;CreatorNames&quot;:[&quot;Miers, Henry Alex, 1858-1942&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;48914&quot;});" class='title'>The Growth of a Crystal -<br><span class='subtitle'>Being the eighteenth Robert Boyle lecture</span></a>
+<div class='author'>Miers, Henry Alex, 1858-1942</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50531, {&quot;Title&quot;:&quot;On Sulphonfluoresceïn and Some of Its Derivatives&quot;,&quot;Topics&quot;:[&quot;Thesis (Ph. D.)&quot;,&quot;Sulfonefluorescein&quot;],&quot;Primary&quot;:&quot;50531.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hayes, C. W. (Charles Willard), 1859-1916&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;50531&quot;});" class='title'>On Sulphonfluoresceïn and Some of Its Derivatives</a>
+<div class='author'>Hayes, C. W. (Charles Willard), 1859-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50565, {&quot;Title&quot;:&quot;The History of Chemistry, Volume 1 (of 2)&quot;,&quot;Topics&quot;:[&quot;Chemistry -- History&quot;],&quot;Primary&quot;:&quot;50565.htm&quot;,&quot;CreatorNames&quot;:[&quot;Thomson, Thomas, 1773-1852&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;50565&quot;});" class='title'>The History of Chemistry, Volume 1 (of 2)</a>
+<div class='author'>Thomson, Thomas, 1773-1852</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51326, {&quot;Title&quot;:&quot;The Principles of Chemistry, Volume I&quot;,&quot;Topics&quot;:[&quot;Chemistry&quot;,&quot;Periodic law&quot;,&quot;Argon&quot;],&quot;Primary&quot;:&quot;51326.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mendeleyev, Dmitry Ivanovich, 1834-1907&quot;,&quot;Lawson, T. A. (Thomas Atkinson) [Editor]&quot;,&quot;Kamensky, George [Translator]&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;51326&quot;});" class='title'>The Principles of Chemistry, Volume I</a>
+<div class='author'>Mendeleyev, Dmitry Ivanovich, 1834-1907, Lawson, T. A. (Thomas Atkinson) [Editor], Kamensky, George [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51756, {&quot;Title&quot;:&quot;The History of Chemistry, Volume 2 (of 2)&quot;,&quot;Topics&quot;:[&quot;Chemistry -- History&quot;],&quot;Primary&quot;:&quot;51756.htm&quot;,&quot;CreatorNames&quot;:[&quot;Thomson, Thomas, 1773-1852&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;51756&quot;});" class='title'>The History of Chemistry, Volume 2 (of 2)</a>
+<div class='author'>Thomson, Thomas, 1773-1852</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52162, {&quot;Title&quot;:&quot;On the Existence of Active Oxygen - Thesis Presented for the Attainment of the Degree of Doctor of Philosophy at the Johns Hopkins University&quot;,&quot;Topics&quot;:[&quot;Thesis (Ph. D.)&quot;,&quot;Oxygen&quot;],&quot;Primary&quot;:&quot;52162.htm&quot;,&quot;CreatorNames&quot;:[&quot;Keiser, Edward Harrison, 1861-&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;52162&quot;});" class='title'>On the Existence of Active Oxygen -<br><span class='subtitle'>Thesis Presented for the Attainment of the Degree of Doctor of Philosophy at the Johns Hopkins University</span></a>
+<div class='author'>Keiser, Edward Harrison, 1861-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52487, {&quot;Title&quot;:&quot;Traité élémentaire de chimie, tome 1 - Présenté dans un ordre nouveau et d&#39;après les découvertes modernes; avec Figures&quot;,&quot;Topics&quot;:[&quot;Chemistry&quot;],&quot;Primary&quot;:&quot;52487.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lavoisier, Antoine Laurent, 1743-1794&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;52487&quot;});" class='title'>Traité élémentaire de chimie, tome 1 -<br><span class='subtitle'>Présenté dans un ordre nouveau et d'après les découvertes modernes; avec Figures</span></a>
+<div class='author'>Lavoisier, Antoine Laurent, 1743-1794</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52488, {&quot;Title&quot;:&quot;Traité élémentaire de chimie, tome 2 - Présenté dans un ordre nouveau et d&#39;après les découvertes modernes; avec Figures&quot;,&quot;Topics&quot;:[&quot;Chemistry&quot;],&quot;Primary&quot;:&quot;52488.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lavoisier, Antoine Laurent, 1743-1794&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;52488&quot;});" class='title'>Traité élémentaire de chimie, tome 2 -<br><span class='subtitle'>Présenté dans un ordre nouveau et d'après les découvertes modernes; avec Figures</span></a>
+<div class='author'>Lavoisier, Antoine Laurent, 1743-1794</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52489, {&quot;Title&quot;:&quot;Traité élémentaire de chimie, tomes 1 &amp; 2 - Présenté dans un ordre nouveau et d&#39;après les découvertes modernes; avec Figures&quot;,&quot;Topics&quot;:[&quot;Chemistry&quot;],&quot;Primary&quot;:&quot;52489.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lavoisier, Antoine Laurent, 1743-1794&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;52489&quot;});" class='title'>Traité élémentaire de chimie, tomes 1 & 2 -<br><span class='subtitle'>Présenté dans un ordre nouveau et d'après les découvertes modernes; avec Figures</span></a>
+<div class='author'>Lavoisier, Antoine Laurent, 1743-1794</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52778, {&quot;Title&quot;:&quot;The Gases of the Atmosphere: The History of Their Discovery&quot;,&quot;Topics&quot;:[&quot;Chemistry -- History&quot;,&quot;Argon&quot;,&quot;Air&quot;],&quot;Primary&quot;:&quot;52778.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ramsay, William, 1852-1916&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;52778&quot;});" class='title'>The Gases of the Atmosphere:<br><span class='subtitle'>The History of Their Discovery</span></a>
+<div class='author'>Ramsay, William, 1852-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54210, {&quot;Title&quot;:&quot;The Principles of Chemistry, Volume II&quot;,&quot;Topics&quot;:[&quot;Chemistry&quot;,&quot;Periodic law&quot;,&quot;Argon&quot;],&quot;Primary&quot;:&quot;54210.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mendeleyev, Dmitry Ivanovich, 1834-1907&quot;,&quot;Lawson, T. A. (Thomas Atkinson) [Editor]&quot;,&quot;Kamensky, George [Translator]&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;54210&quot;});" class='title'>The Principles of Chemistry, Volume II</a>
+<div class='author'>Mendeleyev, Dmitry Ivanovich, 1834-1907, Lawson, T. A. (Thomas Atkinson) [Editor], Kamensky, George [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54862, {&quot;Title&quot;:&quot;Humphry Davy, Poet and Philosopher&quot;,&quot;Topics&quot;:[&quot;Davy, Humphry, Sir, 1778-1829&quot;],&quot;Primary&quot;:&quot;54862.htm&quot;,&quot;CreatorNames&quot;:[&quot;Thorpe, T. E. (Thomas Edward), 1845-1925&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;54862&quot;});" class='title'>Humphry Davy, Poet and Philosopher</a>
+<div class='author'>Thorpe, T. E. (Thomas Edward), 1845-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54976, {&quot;Title&quot;:&quot;The Molecular Tactics of a Crystal&quot;,&quot;Topics&quot;:[&quot;Crystallography, Mathematical&quot;],&quot;Primary&quot;:&quot;54976.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kelvin, William Thomson, Baron, 1824-1907&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;54976&quot;});" class='title'>The Molecular Tactics of a Crystal</a>
+<div class='author'>Kelvin, William Thomson, Baron, 1824-1907</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55630, {&quot;Title&quot;:&quot;History of Chemistry, Volume 1 (of 2) - From the earliest time to the middle of the nineteenth century&quot;,&quot;Topics&quot;:[&quot;Chemistry -- History&quot;],&quot;Primary&quot;:&quot;55630.htm&quot;,&quot;CreatorNames&quot;:[&quot;Thorpe, T. E. (Thomas Edward), 1845-1925&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;55630&quot;});" class='title'>History of Chemistry, Volume 1 (of 2) -<br><span class='subtitle'>From the earliest time to the middle of the nineteenth century</span></a>
+<div class='author'>Thorpe, T. E. (Thomas Edward), 1845-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55631, {&quot;Title&quot;:&quot;History of Chemistry, Volume 2 (of 2) - From 1850 to 1910&quot;,&quot;Topics&quot;:[&quot;Chemistry -- History&quot;],&quot;Primary&quot;:&quot;55631.htm&quot;,&quot;CreatorNames&quot;:[&quot;Thorpe, T. E. (Thomas Edward), 1845-1925&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;55631&quot;});" class='title'>History of Chemistry, Volume 2 (of 2) -<br><span class='subtitle'>From 1850 to 1910</span></a>
+<div class='author'>Thorpe, T. E. (Thomas Edward), 1845-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56569, {&quot;Title&quot;:&quot;The Right Honourable Sir Henry Enfield Roscoe P.C., D.C.L., F.R.S. - A Biographical Sketch&quot;,&quot;Topics&quot;:[&quot;Roscoe, Henry E. (Henry Enfield), 1833-1915&quot;],&quot;Primary&quot;:&quot;56569.htm&quot;,&quot;CreatorNames&quot;:[&quot;Thorpe, T. E. (Thomas Edward), 1845-1925&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;56569&quot;});" class='title'>The Right Honourable Sir Henry Enfield Roscoe P.C., D.C.L., F.R.S. -<br><span class='subtitle'>A Biographical Sketch</span></a>
+<div class='author'>Thorpe, T. E. (Thomas Edward), 1845-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56663, {&quot;Title&quot;:&quot;Joseph Priestley&quot;,&quot;Topics&quot;:[&quot;Priestley, Joseph, 1733-1804&quot;,&quot;Chemists -- England -- Biography&quot;],&quot;Primary&quot;:&quot;56663.htm&quot;,&quot;CreatorNames&quot;:[&quot;Thorpe, T. E. (Thomas Edward), 1845-1925&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;56663&quot;});" class='title'>Joseph Priestley</a>
+<div class='author'>Thorpe, T. E. (Thomas Edward), 1845-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57089, {&quot;Title&quot;:&quot;Meta Toluene Sulphonic Acid and Related Compounds&quot;,&quot;Topics&quot;:[&quot;Organic compounds -- Synthesis&quot;,&quot;Sulfonic acids&quot;],&quot;Primary&quot;:&quot;57089.htm&quot;,&quot;CreatorNames&quot;:[&quot;Allen, C. F. H. (Charles Francis Hitchcock), 1895-1979&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;57089&quot;});" class='title'>Meta Toluene Sulphonic Acid and Related Compounds</a>
+<div class='author'>Allen, C. F. H. (Charles Francis Hitchcock), 1895-1979</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59910, {&quot;Title&quot;:&quot;Collezione dell&#39;opere del Cavaliere Conte Alessandro Volta - Tomo I, Parte I&quot;,&quot;Topics&quot;:[&quot;Electricity -- Early works to 1850&quot;,&quot;Gases&quot;],&quot;Primary&quot;:&quot;59910.htm&quot;,&quot;CreatorNames&quot;:[&quot;Volta, Alessandro, 1745-1827&quot;,&quot;Antinori, Vincenzio, 1792-1865 [Editor]&quot;],&quot;LoCC&quot;:[&quot;QC&quot;,&quot;QD&quot;],&quot;PG_ID&quot;:&quot;59910&quot;});" class='title'>Collezione dell'opere del Cavaliere Conte Alessandro Volta -<br><span class='subtitle'>Tomo I, Parte I</span></a>
+<div class='author'>Volta, Alessandro, 1745-1827, Antinori, Vincenzio, 1792-1865 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60980, {&quot;Title&quot;:&quot;Remarks of the President in Presenting to Madam Curie a Gift of Radium from the American People&quot;,&quot;Topics&quot;:[&quot;Speeches, addresses, etc.&quot;,&quot;Curie, Marie, 1867-1934&quot;,&quot;Radium&quot;],&quot;Primary&quot;:&quot;60980.htm&quot;,&quot;CreatorNames&quot;:[&quot;Harding, Warren G. (Warren Gamaliel), 1865-1923&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;60980&quot;});" class='title'>Remarks of the President in Presenting to Madam Curie a Gift of Radium from the American People</a>
+<div class='author'>Harding, Warren G. (Warren Gamaliel), 1865-1923</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61112, {&quot;Title&quot;:&quot;A New Light of Alchymie - Taken out of the Fountaine of Nature, and Manuall Experience.  Etc.&quot;,&quot;Topics&quot;:[&quot;Alchemy -- Early works to 1800&quot;,&quot;Sulfur&quot;],&quot;Primary&quot;:&quot;61112.htm&quot;,&quot;CreatorNames&quot;:[&quot;Paracelsus, 1493-1541&quot;,&quot;Sedziwój, Michal, 1556?-1646?&quot;,&quot;French, John, 1616-1657 [Translator]&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;61112&quot;});" class='title'>A New Light of Alchymie -<br><span class='subtitle'>Taken out of the Fountaine of Nature, and Manuall Experience.  Etc.</span></a>
+<div class='author'>Paracelsus, 1493-1541, Sedziwój, Michal, 1556?-1646?, French, John, 1616-1657 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61462, {&quot;Title&quot;:&quot;Standard methods for the examination of water and sewage&quot;,&quot;Topics&quot;:[&quot;Water -- Analysis&quot;,&quot;Sewage -- Analysis&quot;],&quot;Primary&quot;:&quot;61462.htm&quot;,&quot;CreatorNames&quot;:[&quot;American Chemical Society&quot;,&quot;American Public Health Association. Laboratory Section&quot;,&quot;Association of Official Agricultural Chemists (U.S.)&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;61462&quot;});" class='title'>Standard methods for the examination of water and sewage</a>
+<div class='author'>American Chemical Society, American Public Health Association. Laboratory Section, Association of Official Agricultural Chemists (U.S.)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61622, {&quot;Title&quot;:&quot;The Discovery of Radium - Address by Madame M. Curie at Vassar College&quot;,&quot;Topics&quot;:[&quot;Radium&quot;],&quot;Primary&quot;:&quot;61622.htm&quot;,&quot;CreatorNames&quot;:[&quot;Curie, Marie, 1867-1934&quot;,&quot;Carter, Edna, 1872-1963 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;61622&quot;});" class='title'>The Discovery of Radium -<br><span class='subtitle'>Address by Madame M. Curie at Vassar College</span></a>
+<div class='author'>Curie, Marie, 1867-1934, Carter, Edna, 1872-1963 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62923, {&quot;Title&quot;:&quot;The Rare Earths: Their Occurrence, Chemistry, and Technology&quot;,&quot;Topics&quot;:[&quot;Rare earths&quot;],&quot;Primary&quot;:&quot;62923.htm&quot;,&quot;CreatorNames&quot;:[&quot;Levy, Stanley Isaac&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;62923&quot;});" class='title'>The Rare Earths:<br><span class='subtitle'>Their Occurrence, Chemistry, and Technology</span></a>
+<div class='author'>Levy, Stanley Isaac</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63318, {&quot;Title&quot;:&quot;Some Experiments Concerning Mercury&quot;,&quot;Topics&quot;:[&quot;Mercury&quot;],&quot;Primary&quot;:&quot;63318.htm&quot;,&quot;CreatorNames&quot;:[&quot;Boerhaave, Herman, 1668-1738&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;63318&quot;});" class='title'>Some Experiments Concerning Mercury</a>
+<div class='author'>Boerhaave, Herman, 1668-1738</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66255, {&quot;Title&quot;:&quot;Voorstel tot uitbreiding der tegenwoordig in de scheikunde gebruikte structuur-formules in de ruimte - Benevens een daarmeê samenhangende opmerking omtrent het verband tusschen optisch actief vermogen en chemische constitutie van organische verbindingen&quot;,&quot;Topics&quot;:[&quot;Stereochemistry&quot;],&quot;Primary&quot;:&quot;66255.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hoff, J. H. van &#39;t (Jacobus Henricus), 1852-1911&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;66255&quot;});" class='title'>Voorstel tot uitbreiding der tegenwoordig in de scheikunde gebruikte structuur-formules in de ruimte -<br><span class='subtitle'>Benevens een daarmeê samenhangende opmerking omtrent het verband tusschen optisch actief vermogen en chemische constitutie van organische verbindingen</span></a>
+<div class='author'>Hoff, J. H. van 't (Jacobus Henricus), 1852-1911</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66955, {&quot;Title&quot;:&quot;Researches Chemical and Philosophical; Chiefly concerning nitrous oxide - or dephlogisticated nitrous air and its respiration&quot;,&quot;Topics&quot;:[&quot;Nitrous oxide&quot;],&quot;Primary&quot;:&quot;66955.htm&quot;,&quot;CreatorNames&quot;:[&quot;Davy, Humphry, Sir, 1778-1829&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;66955&quot;});" class='title'>Researches Chemical and Philosophical;<br><span class='subtitle'>Chiefly concerning nitrous oxide - or dephlogisticated nitrous air and its respiration</span></a>
+<div class='author'>Davy, Humphry, Sir, 1778-1829</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67396, {&quot;Title&quot;:&quot;Determination of the Atomic Weight of Cadmium and the Preparation of Certain of Its Sub-Compounds&quot;,&quot;Topics&quot;:[&quot;Thesis (Ph. D.)&quot;,&quot;Atomic weights&quot;,&quot;Cadmium&quot;],&quot;Primary&quot;:&quot;67396.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jones, Harry C. (Harry Clary), 1865-1916&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;67396&quot;});" class='title'>Determination of the Atomic Weight of Cadmium and the Preparation of Certain of Its Sub-Compounds</a>
+<div class='author'>Jones, Harry C. (Harry Clary), 1865-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67736, {&quot;Title&quot;:&quot;The Chemical Constituents of Piper Methysticum - Or, The Chemical Constituents of the Active Principle of the Ava Root&quot;,&quot;Topics&quot;:[&quot;Kava plant&quot;],&quot;Primary&quot;:&quot;67736.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ball, Alice A., 1892-1916&quot;],&quot;LoCC&quot;:[&quot;QD&quot;,&quot;QK&quot;],&quot;PG_ID&quot;:&quot;67736&quot;});" class='title'>The Chemical Constituents of Piper Methysticum -<br><span class='subtitle'>Or, The Chemical Constituents of the Active Principle of the Ava Root</span></a>
+<div class='author'>Ball, Alice A., 1892-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67920, {&quot;Title&quot;:&quot;A Further Investigation of the Symmetrical Chloride of Paranitroorthosulphobenzoic Acid&quot;,&quot;Topics&quot;:[&quot;Thesis (Ph. D.)&quot;,&quot;Ortho-sulfobenzoic acid&quot;],&quot;Primary&quot;:&quot;67920.htm&quot;,&quot;CreatorNames&quot;:[&quot;Henderson, William Edwards, 1870-&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;67920&quot;});" class='title'>A Further Investigation of the Symmetrical Chloride of Paranitroorthosulphobenzoic Acid</a>
+<div class='author'>Henderson, William Edwards, 1870-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68530, {&quot;Title&quot;:&quot;Crystals&quot;,&quot;Topics&quot;:[&quot;Crystallography&quot;],&quot;Primary&quot;:&quot;68530.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tutton, A. E. H. (Alfred Edwin Howard), 1864-1938&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;68530&quot;});" class='title'>Crystals</a>
+<div class='author'>Tutton, A. E. H. (Alfred Edwin Howard), 1864-1938</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68687, {&quot;Title&quot;:&quot;Lives of alchemystical philosophers - To which is added a bibliography of alchemy and hermetic philosophy&quot;,&quot;Topics&quot;:[&quot;Alchemy -- History&quot;,&quot;Alchemists -- Biography&quot;,&quot;Alchemy -- Bibliography&quot;],&quot;Primary&quot;:&quot;68687.htm&quot;,&quot;CreatorNames&quot;:[&quot;Barrett, Francis&quot;,&quot;Waite, Arthur Edward, 1857-1942&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;68687&quot;});" class='title'>Lives of alchemystical philosophers -<br><span class='subtitle'>To which is added a bibliography of alchemy and hermetic philosophy</span></a>
+<div class='author'>Barrett, Francis, Waite, Arthur Edward, 1857-1942</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68838, {&quot;Title&quot;:&quot;Der Graf von Saint-Germain: Das Leben eines Alchimisten&quot;,&quot;Topics&quot;:[&quot;Alchemists -- Biography&quot;,&quot;Saint-Germain, comte de, -1784&quot;],&quot;Primary&quot;:&quot;68838.htm&quot;,&quot;CreatorNames&quot;:[&quot;Volz, Gustav Berthold, 1871-1938&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;68838&quot;});" class='title'>Der Graf von Saint-Germain:<br><span class='subtitle'>Das Leben eines Alchimisten</span></a>
+<div class='author'>Volz, Gustav Berthold, 1871-1938</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69141, {&quot;Title&quot;:&quot;On adipocire, and its formation&quot;,&quot;Topics&quot;:[&quot;Adipocere&quot;,&quot;Fatty acids&quot;,&quot;Postmortem changes&quot;],&quot;Primary&quot;:&quot;69141.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wetherill, Charles Mayer, 1825-1871&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;69141&quot;});" class='title'>On adipocire, and its formation</a>
+<div class='author'>Wetherill, Charles Mayer, 1825-1871</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69617, {&quot;Title&quot;:&quot;Pierre Curie&quot;,&quot;Topics&quot;:[&quot;Physicists -- France -- Biography&quot;,&quot;Curie, Pierre, 1859-1906&quot;,&quot;Chemists -- France -- Biography&quot;],&quot;Primary&quot;:&quot;69617.htm&quot;,&quot;CreatorNames&quot;:[&quot;Curie, Marie, 1867-1934&quot;,&quot;Meloney, Marie Mattingly, 1883-1943 [Author of introduction, etc.]&quot;,&quot;Kellogg, Charlotte, 1874-1960 [Translator]&quot;,&quot;Kellogg, Vernon L. (Vernon Lyman), 1867-1937 [Translator]&quot;],&quot;LoCC&quot;:[&quot;QD&quot;],&quot;PG_ID&quot;:&quot;69617&quot;});" class='title'>Pierre Curie</a>
+<div class='author'>Curie, Marie, 1867-1934, Meloney, Marie Mattingly, 1883-1943 [Author of introduction, etc.], Kellogg, Charlotte, 1874-1960 [Translator], Kellogg, Vernon L. (Vernon Lyman), 1867-1937 [Translator]</div>
+</div>
+</ul></div>
+</body></html>

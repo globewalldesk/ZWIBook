@@ -1,0 +1,806 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Drawing, Design, Illustration (NC)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12834, {&quot;Title&quot;:&quot;Social Pictorial Satire&quot;,&quot;Topics&quot;:[&quot;Leech, John, 1817-1864&quot;,&quot;Keene, Charles, 1823-1891&quot;,&quot;Caricature -- England&quot;],&quot;Primary&quot;:&quot;12834.txt&quot;,&quot;CreatorNames&quot;:[&quot;Du Maurier, George, 1834-1896&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;12834&quot;});" class='title'>Social Pictorial Satire</a>
+<div class='author'>Du Maurier, George, 1834-1896</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13517, {&quot;Title&quot;:&quot;In Bohemia with Du Maurier: The First of a Series of Reminiscences&quot;,&quot;Topics&quot;:[&quot;Du Maurier, George, 1834-1896&quot;,&quot;Moscheles, Felix, 1833-1917&quot;,&quot;Artists -- Correspondence, reminiscences, etc.&quot;],&quot;Primary&quot;:&quot;13517.htm&quot;,&quot;CreatorNames&quot;:[&quot;Moscheles, Felix, 1833-1917&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;13517&quot;});" class='title'>In Bohemia with Du Maurier:<br><span class='subtitle'>The First of a Series of Reminiscences</span></a>
+<div class='author'>Moscheles, Felix, 1833-1917</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14238, {&quot;Title&quot;:&quot;Frank Reynolds, R.I.&quot;,&quot;Topics&quot;:[&quot;Reynolds, Frank, 1876-1953&quot;],&quot;Primary&quot;:&quot;14238.htm&quot;,&quot;CreatorNames&quot;:[&quot;Johnson, A. E. (Alfred Edwin), 1879-&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;14238&quot;});" class='title'>Frank Reynolds, R.I.</a>
+<div class='author'>Johnson, A. E. (Alfred Edwin), 1879-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14264, {&quot;Title&quot;:&quot;The Practice and Science of Drawing&quot;,&quot;Topics&quot;:[&quot;Drawing&quot;],&quot;Primary&quot;:&quot;14264.htm&quot;,&quot;CreatorNames&quot;:[&quot;Speed, Harold, 1873-1957&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;14264&quot;});" class='title'>The Practice and Science of Drawing</a>
+<div class='author'>Speed, Harold, 1873-1957</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14392, {&quot;Title&quot;:&quot;George Du Maurier, the Satirist of the Victorians&quot;,&quot;Topics&quot;:[&quot;Du Maurier, George, 1834-1896&quot;],&quot;Primary&quot;:&quot;14392.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wood, T. Martin, 1875-1919&quot;],&quot;LoCC&quot;:[&quot;NC&quot;,&quot;PR&quot;],&quot;PG_ID&quot;:&quot;14392&quot;});" class='title'>George Du Maurier, the Satirist of the Victorians</a>
+<div class='author'>Wood, T. Martin, 1875-1919</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17502, {&quot;Title&quot;:&quot;Pen Drawing: An Illustrated Treatise&quot;,&quot;Topics&quot;:[&quot;Pen drawing&quot;],&quot;Primary&quot;:&quot;17502.htm&quot;,&quot;CreatorNames&quot;:[&quot;Maginnis, Charles Donagh, 1867-1955&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;17502&quot;});" class='title'>Pen Drawing:<br><span class='subtitle'>An Illustrated Treatise</span></a>
+<div class='author'>Maginnis, Charles Donagh, 1867-1955</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18344, {&quot;Title&quot;:&quot;The Song of Sixpence - Picture Book&quot;,&quot;Topics&quot;:[&quot;Fairy tales&quot;,&quot;Nursery rhymes&quot;,&quot;Picture books for children&quot;],&quot;Primary&quot;:&quot;18344.htm&quot;,&quot;CreatorNames&quot;:[&quot;Crane, Walter, 1845-1915&quot;],&quot;LoCC&quot;:[&quot;NC&quot;,&quot;PZ&quot;],&quot;PG_ID&quot;:&quot;18344&quot;});" class='title'>The Song of Sixpence -<br><span class='subtitle'>Picture Book</span></a>
+<div class='author'>Crane, Walter, 1845-1915</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20086, {&quot;Title&quot;:&quot;Rome: A Sketch-Book&quot;,&quot;Topics&quot;:[&quot;Architecture -- Rome&quot;,&quot;Architecture, Roman -- Italy&quot;,&quot;Architecture -- Sketch-books&quot;,&quot;Rome (Italy) -- Pictorial works&quot;],&quot;Primary&quot;:&quot;20086.htm&quot;,&quot;CreatorNames&quot;:[&quot;Richards, Fred, 1878-1932&quot;],&quot;LoCC&quot;:[&quot;DG&quot;,&quot;NC&quot;],&quot;PG_ID&quot;:&quot;20086&quot;});" class='title'>Rome:<br><span class='subtitle'>A Sketch-Book</span></a>
+<div class='author'>Richards, Fred, 1878-1932</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20165, {&quot;Title&quot;:&quot;The Theory and Practice of Perspective&quot;,&quot;Topics&quot;:[&quot;Perspective&quot;,&quot;Drawing -- Technique&quot;],&quot;Primary&quot;:&quot;20165.htm&quot;,&quot;CreatorNames&quot;:[&quot;Storey, G. A. (George Adolphus), 1834-1919&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;20165&quot;});" class='title'>The Theory and Practice of Perspective</a>
+<div class='author'>Storey, G. A. (George Adolphus), 1834-1919</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22689, {&quot;Title&quot;:&quot;The Confessions of a Caricaturist, Vol. 2&quot;,&quot;Topics&quot;:[&quot;Furniss, Harry, 1854-1925&quot;,&quot;Cartoonists -- Great Britain -- Biography&quot;],&quot;Primary&quot;:&quot;22689.htm&quot;,&quot;CreatorNames&quot;:[&quot;Furniss, Harry, 1854-1925&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;22689&quot;});" class='title'>The Confessions of a Caricaturist, Vol. 2</a>
+<div class='author'>Furniss, Harry, 1854-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23611, {&quot;Title&quot;:&quot;Why They Married&quot;,&quot;Topics&quot;:[&quot;Humorous poetry&quot;,&quot;Wit and humor, Pictorial&quot;,&quot;Marriage -- Humor&quot;],&quot;Primary&quot;:&quot;23611.htm&quot;,&quot;CreatorNames&quot;:[&quot;Flagg, James Montgomery, 1877-1960&quot;],&quot;LoCC&quot;:[&quot;NC&quot;,&quot;PS&quot;],&quot;PG_ID&quot;:&quot;23611&quot;});" class='title'>Why They Married</a>
+<div class='author'>Flagg, James Montgomery, 1877-1960</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24015, {&quot;Title&quot;:&quot;A Masque of Days - From the Last Essays of Elia: Newly Dressed &amp; Decorated&quot;,&quot;Topics&quot;:[&quot;Holidays -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;24015.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lamb, Charles, 1775-1834&quot;,&quot;Crane, Walter, 1845-1915 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;NC&quot;,&quot;PZ&quot;],&quot;PG_ID&quot;:&quot;24015&quot;});" class='title'>A Masque of Days -<br><span class='subtitle'>From the Last Essays of Elia: Newly Dressed & Decorated</span></a>
+<div class='author'>Lamb, Charles, 1775-1834, Crane, Walter, 1845-1915 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24485, {&quot;Title&quot;:&quot;A Floral Fantasy in an Old English Garden&quot;,&quot;Topics&quot;:[&quot;Flowers -- Juvenile poetry&quot;,&quot;Gardens, English -- Juvenile poetry&quot;,&quot;Fairy poetry&quot;],&quot;Primary&quot;:&quot;24485.htm&quot;,&quot;CreatorNames&quot;:[&quot;Crane, Walter, 1845-1915&quot;],&quot;LoCC&quot;:[&quot;NC&quot;,&quot;PZ&quot;],&quot;PG_ID&quot;:&quot;24485&quot;});" class='title'>A Floral Fantasy in an Old English Garden</a>
+<div class='author'>Crane, Walter, 1845-1915</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24915, {&quot;Title&quot;:&quot;Voyages et Aventures Surprenantes de Robinson Crusoé&quot;,&quot;Topics&quot;:[&quot;Defoe, Daniel, 1661?-1731. Robinson Crusoe -- Illustrations&quot;],&quot;Primary&quot;:&quot;24915.htm&quot;,&quot;CreatorNames&quot;:[&quot;Defoe, Daniel, 1661?-1731&quot;,&quot;Dumoulin, F. A. L. (François Aimé Louis), 1753-1834 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;24915&quot;});" class='title'>Voyages et Aventures Surprenantes de Robinson Crusoé</a>
+<div class='author'>Defoe, Daniel, 1661?-1731, Dumoulin, F. A. L. (François Aimé Louis), 1753-1834 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25290, {&quot;Title&quot;:&quot;Line and Form (1900)&quot;,&quot;Topics&quot;:[&quot;Decoration and ornament&quot;,&quot;Drawing&quot;],&quot;Primary&quot;:&quot;25290.htm&quot;,&quot;CreatorNames&quot;:[&quot;Crane, Walter, 1845-1915&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;25290&quot;});" class='title'>Line and Form (1900)</a>
+<div class='author'>Crane, Walter, 1845-1915</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26388, {&quot;Title&quot;:&quot;A Humorous History of England&quot;,&quot;Topics&quot;:[&quot;Caricatures and cartoons -- Great Britain&quot;,&quot;English wit and humor&quot;,&quot;Humorous poetry&quot;,&quot;Great Britain -- History -- Humor&quot;],&quot;Primary&quot;:&quot;26388.htm&quot;,&quot;CreatorNames&quot;:[&quot;Harrison, Charles, -1943&quot;],&quot;LoCC&quot;:[&quot;NC&quot;,&quot;PR&quot;],&quot;PG_ID&quot;:&quot;26388&quot;});" class='title'>A Humorous History of England</a>
+<div class='author'>Harrison, Charles, -1943</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2648, {&quot;Title&quot;:&quot;George Cruikshank&quot;,&quot;Topics&quot;:[&quot;Caricatures and cartoons -- Great Britain&quot;,&quot;English wit and humor, Pictorial&quot;,&quot;Cruikshank, George, 1792-1878&quot;],&quot;Primary&quot;:&quot;2648.htm&quot;,&quot;CreatorNames&quot;:[&quot;Thackeray, William Makepeace, 1811-1863&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;2648&quot;});" class='title'>George Cruikshank</a>
+<div class='author'>Thackeray, William Makepeace, 1811-1863</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26638, {&quot;Title&quot;:&quot;Pictorial Composition and the Critical Judgment of Pictures&quot;,&quot;Topics&quot;:[&quot;Art criticism&quot;,&quot;Composition (Art)&quot;],&quot;Primary&quot;:&quot;26638.htm&quot;,&quot;CreatorNames&quot;:[&quot;Poore, Henry Rankin, 1859-1940&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;26638&quot;});" class='title'>Pictorial Composition and the Critical Judgment of Pictures</a>
+<div class='author'>Poore, Henry Rankin, 1859-1940</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27112, {&quot;Title&quot;:&quot;Children&#39;s Books and Their Illustrators&quot;,&quot;Topics&quot;:[&quot;Children&#39;s literature&quot;,&quot;Illustration of books&quot;,&quot;Illustrators&quot;,&quot;Illustrated books&quot;],&quot;Primary&quot;:&quot;27112.htm&quot;,&quot;CreatorNames&quot;:[&quot;White, Gleeson, 1851-1898&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;27112&quot;});" class='title'>Children's Books and Their Illustrators</a>
+<div class='author'>White, Gleeson, 1851-1898</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27340, {&quot;Title&quot;:&quot;Outdoor Sketching - Four Talks Given before the Art Institute of Chicago; The Scammon Lectures, 1914&quot;,&quot;Topics&quot;:[&quot;Landscape painting&quot;,&quot;Landscape drawing&quot;],&quot;Primary&quot;:&quot;27340.htm&quot;,&quot;CreatorNames&quot;:[&quot;Smith, Francis Hopkinson, 1838-1915&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;27340&quot;});" class='title'>Outdoor Sketching -<br><span class='subtitle'>Four Talks Given before the Art Institute of Chicago; The Scammon Lectures, 1914</span></a>
+<div class='author'>Smith, Francis Hopkinson, 1838-1915</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29425, {&quot;Title&quot;:&quot;The Confessions of a Caricaturist, Vol. 1&quot;,&quot;Topics&quot;:[&quot;Furniss, Harry, 1854-1925&quot;,&quot;Cartoonists -- Great Britain -- Biography&quot;],&quot;Primary&quot;:&quot;29425.htm&quot;,&quot;CreatorNames&quot;:[&quot;Furniss, Harry, 1854-1925&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;29425&quot;});" class='title'>The Confessions of a Caricaturist, Vol. 1</a>
+<div class='author'>Furniss, Harry, 1854-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29463, {&quot;Title&quot;:&quot;The Foreign Tour of Messrs. Brown, Jones and Robinson - Being the History of What They Saw, and Did, in Belgium, Germany, Switzerland &amp; Italy.&quot;,&quot;Topics&quot;:[&quot;Europe -- Description and travel&quot;,&quot;Caricatures and cartoons -- Great Britain&quot;,&quot;English wit and humor, Pictorial&quot;],&quot;Primary&quot;:&quot;29463.htm&quot;,&quot;CreatorNames&quot;:[&quot;Doyle, Richard, 1824-1883&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;29463&quot;});" class='title'>The Foreign Tour of Messrs. Brown, Jones and Robinson -<br><span class='subtitle'>Being the History of What They Saw, and Did, in Belgium, Germany, Switzerland & Italy.</span></a>
+<div class='author'>Doyle, Richard, 1824-1883</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29560, {&quot;Title&quot;:&quot;M. P.&#39;s in Session: From Mr. Punch&#39;s Parliamentary Portrait Gallery&quot;,&quot;Topics&quot;:[&quot;Caricatures and cartoons -- Great Britain&quot;,&quot;Great Britain -- Politics and government -- 1837-1901&quot;,&quot;Great Britain. Parliament -- Biography -- Portraits&quot;],&quot;Primary&quot;:&quot;29560.htm&quot;,&quot;CreatorNames&quot;:[&quot;Furniss, Harry, 1854-1925&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;29560&quot;});" class='title'>M. P.'s in Session:<br><span class='subtitle'>From Mr. Punch's Parliamentary Portrait Gallery</span></a>
+<div class='author'>Furniss, Harry, 1854-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29647, {&quot;Title&quot;:&quot;The Eighteenth Century in English Caricature&quot;,&quot;Topics&quot;:[&quot;Caricatures and cartoons -- Great Britain&quot;],&quot;Primary&quot;:&quot;29647.htm&quot;,&quot;CreatorNames&quot;:[&quot;Brinton, Selwyn, 1859-1940&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;29647&quot;});" class='title'>The Eighteenth Century in English Caricature</a>
+<div class='author'>Brinton, Selwyn, 1859-1940</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30248, {&quot;Title&quot;:&quot;Crayon Portraiture - Complete Instructions for Making Crayon Portraits on Crayon Paper and on Platinum, Silver and Bromide Enlargements&quot;,&quot;Topics&quot;:[&quot;Colors&quot;,&quot;Crayon drawing&quot;,&quot;Photographs -- Coloring&quot;],&quot;Primary&quot;:&quot;30248.htm&quot;,&quot;CreatorNames&quot;:[&quot;Barhydt, Jerome A.&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;30248&quot;});" class='title'>Crayon Portraiture -<br><span class='subtitle'>Complete Instructions for Making Crayon Portraits on Crayon Paper and on Platinum, Silver and Bromide Enlargements</span></a>
+<div class='author'>Barhydt, Jerome A.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30325, {&quot;Title&quot;:&quot;The Elements of Drawing, in Three Letters to Beginners&quot;,&quot;Topics&quot;:[&quot;Drawing&quot;],&quot;Primary&quot;:&quot;30325.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ruskin, John, 1819-1900&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;30325&quot;});" class='title'>The Elements of Drawing, in Three Letters to Beginners</a>
+<div class='author'>Ruskin, John, 1819-1900</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30526, {&quot;Title&quot;:&quot;Illustrations of The Book of Job&quot;,&quot;Topics&quot;:[&quot;Bible. Job -- Illustrations&quot;],&quot;Primary&quot;:&quot;30526.htm&quot;,&quot;CreatorNames&quot;:[&quot;Blake, William, 1757-1827&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;30526&quot;});" class='title'>Illustrations of The Book of Job</a>
+<div class='author'>Blake, William, 1757-1827</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30678, {&quot;Title&quot;:&quot;Supplement to \&quot;Punch\&quot;, 16th December 1914 - The Unspeakable Turk&quot;,&quot;Topics&quot;:[&quot;Turkey -- Politics and government -- Caricatures and cartoons&quot;],&quot;Primary&quot;:&quot;30678.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;DR&quot;,&quot;NC&quot;],&quot;PG_ID&quot;:&quot;30678&quot;});" class='title'>Supplement to "Punch", 16th December 1914 -<br><span class='subtitle'>The Unspeakable Turk</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31195, {&quot;Title&quot;:&quot;English Caricaturists and Graphic Humourists of the Nineteenth Century. - How they Illustrated and Interpreted their Times.&quot;,&quot;Topics&quot;:[&quot;Caricature -- Great Britain&quot;,&quot;Illustration of books -- Great Britain -- 19th century&quot;],&quot;Primary&quot;:&quot;31195.htm&quot;,&quot;CreatorNames&quot;:[&quot;Everitt, Graham&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;31195&quot;});" class='title'>English Caricaturists and Graphic Humourists of the Nineteenth Century. -<br><span class='subtitle'>How they Illustrated and Interpreted their Times.</span></a>
+<div class='author'>Everitt, Graham</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31591, {&quot;Title&quot;:&quot;Language of Flowers&quot;,&quot;Topics&quot;:[&quot;Flowers -- Poetry&quot;,&quot;Flower language&quot;],&quot;Primary&quot;:&quot;31591.htm&quot;,&quot;CreatorNames&quot;:[&quot;Greenaway, Kate, 1846-1901&quot;],&quot;LoCC&quot;:[&quot;GR&quot;,&quot;NC&quot;],&quot;PG_ID&quot;:&quot;31591&quot;});" class='title'>Language of Flowers</a>
+<div class='author'>Greenaway, Kate, 1846-1901</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32320, {&quot;Title&quot;:&quot;The Art of Illustration - 2nd ed.&quot;,&quot;Topics&quot;:[&quot;Illustration of books&quot;],&quot;Primary&quot;:&quot;32320.htm&quot;,&quot;CreatorNames&quot;:[&quot;Blackburn, Henry, 1830-1897&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;32320&quot;});" class='title'>The Art of Illustration -<br><span class='subtitle'>2nd ed.</span></a>
+<div class='author'>Blackburn, Henry, 1830-1897</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32372, {&quot;Title&quot;:&quot;Dickens&#39;s Children: Ten Drawings&quot;,&quot;Topics&quot;:[&quot;Dickens, Charles, 1812-1870 -- Illustrations&quot;],&quot;Primary&quot;:&quot;32372.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dickens, Charles, 1812-1870 [Contributor]&quot;,&quot;Smith, Jessie Willcox, 1863-1935 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;32372&quot;});" class='title'>Dickens's Children:<br><span class='subtitle'>Ten Drawings</span></a>
+<div class='author'>Dickens, Charles, 1812-1870 [Contributor], Smith, Jessie Willcox, 1863-1935 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32781, {&quot;Title&quot;:&quot;Blackboard Drawing&quot;,&quot;Topics&quot;:[&quot;Blackboard drawing&quot;],&quot;Primary&quot;:&quot;32781.htm&quot;,&quot;CreatorNames&quot;:[&quot;Whitney, Frederick, 1858-1949&quot;,&quot;Bailey, Henry Turner, 1865-1931 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;32781&quot;});" class='title'>Blackboard Drawing</a>
+<div class='author'>Whitney, Frederick, 1858-1949, Bailey, Henry Turner, 1865-1931 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32967, {&quot;Title&quot;:&quot;A Sketch-Book of R. Caldecott&#39;s&quot;,&quot;Topics&quot;:[&quot;Artists&#39; preparatory studies&quot;,&quot;Drawing, English&quot;],&quot;Primary&quot;:&quot;32967.htm&quot;,&quot;CreatorNames&quot;:[&quot;Evans, Edmund, 1826-1905 [Engraver]&quot;,&quot;Caldecott, Randolph, 1846-1886 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;32967&quot;});" class='title'>A Sketch-Book of R. Caldecott's</a>
+<div class='author'>Evans, Edmund, 1826-1905 [Engraver], Caldecott, Randolph, 1846-1886 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33347, {&quot;Title&quot;:&quot;Aubrey Beardsley&quot;,&quot;Topics&quot;:[&quot;Beardsley, Aubrey, 1872-1898&quot;,&quot;Artists -- England -- Biography&quot;],&quot;Primary&quot;:&quot;33347.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ross, Robert Baldwin, 1869-1918&quot;,&quot;Vallance, Aymer, 1862-1943 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;33347&quot;});" class='title'>Aubrey Beardsley</a>
+<div class='author'>Ross, Robert Baldwin, 1869-1918, Vallance, Aymer, 1862-1943 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33682, {&quot;Title&quot;:&quot;Old Coloured Books&quot;,&quot;Topics&quot;:[&quot;Color prints&quot;,&quot;Illustrators -- Great Britain&quot;,&quot;Illustration of books -- Great Britain&quot;],&quot;Primary&quot;:&quot;33682.htm&quot;,&quot;CreatorNames&quot;:[&quot;Paston, George, 1860-1936&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;33682&quot;});" class='title'>Old Coloured Books</a>
+<div class='author'>Paston, George, 1860-1936</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33723, {&quot;Title&quot;:&quot;\&quot;\&quot;Phiz\&quot;\&quot; (Hablot Knight Browne), a Memoir.&quot;,&quot;Topics&quot;:[&quot;Browne, Hablot Knight, 1815-1882&quot;],&quot;Primary&quot;:&quot;33723.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kitton, Frederic George, 1856-1904&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;33723&quot;});" class='title'>"Phiz" (Hablot Knight Browne), a Memoir.</a>
+<div class='author'>Kitton, Frederic George, 1856-1904</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34115, {&quot;Title&quot;:&quot;Our Battalion - Being Some Slight Impressions of His Majesty&#39;s Auxiliary Forces, in Camp and Elsewhere&quot;,&quot;Topics&quot;:[&quot;Caricatures and cartoons -- Great Britain&quot;,&quot;Armies -- Caricatures and cartoons&quot;],&quot;Primary&quot;:&quot;34115.htm&quot;,&quot;CreatorNames&quot;:[&quot;Raven-Hill, L. (Leonard), 1867-1942&quot;],&quot;LoCC&quot;:[&quot;NC&quot;,&quot;U&quot;],&quot;PG_ID&quot;:&quot;34115&quot;});" class='title'>Our Battalion -<br><span class='subtitle'>Being Some Slight Impressions of His Majesty's Auxiliary Forces, in Camp and Elsewhere</span></a>
+<div class='author'>Raven-Hill, L. (Leonard), 1867-1942</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34588, {&quot;Title&quot;:&quot;Some of Æsop&#39;s Fables with Modern Instances&quot;,&quot;Topics&quot;:[&quot;Fables, Greek -- Translations into English&quot;,&quot;Aesop&#39;s fables -- Translations into English&quot;,&quot;English wit and humor, Pictorial&quot;,&quot;Fables, Greek -- Illustrations&quot;],&quot;Primary&quot;:&quot;34588.htm&quot;,&quot;CreatorNames&quot;:[&quot;Aesop, 620? BCE-564? BCE&quot;,&quot;Caldecott, Randolph, 1846-1886 [Illustrator]&quot;,&quot;Caldecott, Alfred, 1850-1936 [Translator]&quot;],&quot;LoCC&quot;:[&quot;NC&quot;,&quot;PA&quot;],&quot;PG_ID&quot;:&quot;34588&quot;});" class='title'>Some of Æsop's Fables with Modern Instances</a>
+<div class='author'>Aesop, 620? BCE-564? BCE, Caldecott, Randolph, 1846-1886 [Illustrator], Caldecott, Alfred, 1850-1936 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35289, {&quot;Title&quot;:&quot;Hospital Sketches&quot;,&quot;Topics&quot;:[&quot;Quotations&quot;,&quot;Imaginary places -- Drawings&quot;],&quot;Primary&quot;:&quot;35289.htm&quot;,&quot;CreatorNames&quot;:[&quot;Peabody, Robert Swain, 1845-1917&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;35289&quot;});" class='title'>Hospital Sketches</a>
+<div class='author'>Peabody, Robert Swain, 1845-1917</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35753, {&quot;Title&quot;:&quot;War Posters Issued by Belligerent and Neutral Nations 1914-1919&quot;,&quot;Topics&quot;:[&quot;Posters&quot;,&quot;War posters&quot;,&quot;World War, 1914-1918 -- Posters&quot;],&quot;Primary&quot;:&quot;35753.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hardie, Martin, 1875-1952 [Editor]&quot;,&quot;Sabin, Arthur K. (Arthur Knowles), 1879-1959 [Editor]&quot;],&quot;LoCC&quot;:[&quot;NC&quot;,&quot;D&quot;],&quot;PG_ID&quot;:&quot;35753&quot;});" class='title'>War Posters Issued by Belligerent and Neutral Nations 1914-1919</a>
+<div class='author'>Hardie, Martin, 1875-1952 [Editor], Sabin, Arthur K. (Arthur Knowles), 1879-1959 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36348, {&quot;Title&quot;:&quot;Our Artist in Cuba, Peru, Spain and Algiers - Leaves from The Sketch-Book of a Traveller, 1864-1868&quot;,&quot;Topics&quot;:[&quot;Algeria -- Social life and customs -- Pictorial works&quot;,&quot;American wit and humor, Pictorial&quot;,&quot;Cuba -- Social life and customs -- Pictorial works&quot;,&quot;Peru -- Social life and customs -- Pictorial works&quot;,&quot;Spain -- Social life and customs -- Pictorial works&quot;],&quot;Primary&quot;:&quot;36348.htm&quot;,&quot;CreatorNames&quot;:[&quot;Carleton, George Washington, 1832-1901&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;36348&quot;});" class='title'>Our Artist in Cuba, Peru, Spain and Algiers -<br><span class='subtitle'>Leaves from The Sketch-Book of a Traveller, 1864-1868</span></a>
+<div class='author'>Carleton, George Washington, 1832-1901</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36417, {&quot;Title&quot;:&quot;The Pictorial Press: Its Origin and Progress&quot;,&quot;Topics&quot;:[&quot;Illustration of books&quot;,&quot;Newspapers -- Illustrations&quot;],&quot;Primary&quot;:&quot;36417.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jackson, Mason, 1819-1903&quot;],&quot;LoCC&quot;:[&quot;NC&quot;,&quot;PN&quot;],&quot;PG_ID&quot;:&quot;36417&quot;});" class='title'>The Pictorial Press:<br><span class='subtitle'>Its Origin and Progress</span></a>
+<div class='author'>Jackson, Mason, 1819-1903</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36663, {&quot;Title&quot;:&quot;John Leech, His Life and Work. Vol. 1 [of 2]&quot;,&quot;Topics&quot;:[&quot;Leech, John, 1817-1864&quot;],&quot;Primary&quot;:&quot;36663.htm&quot;,&quot;CreatorNames&quot;:[&quot;Frith, William Powell, 1819-1909&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;36663&quot;});" class='title'>John Leech, His Life and Work. Vol. 1 [of 2]</a>
+<div class='author'>Frith, William Powell, 1819-1909</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37603, {&quot;Title&quot;:&quot;The History of the Nineteenth Century in Caricature&quot;,&quot;Topics&quot;:[&quot;History, Modern -- 19th century -- Caricatures and cartoons&quot;,&quot;Nineteenth century -- Caricatures and cartoons&quot;,&quot;Caricature -- History&quot;],&quot;Primary&quot;:&quot;37603.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cooper, Frederic Taber, 1864-1937&quot;,&quot;Maurice, Arthur Bartlett, 1873-1946&quot;],&quot;LoCC&quot;:[&quot;D&quot;,&quot;NC&quot;],&quot;PG_ID&quot;:&quot;37603&quot;});" class='title'>The History of the Nineteenth Century in Caricature</a>
+<div class='author'>Cooper, Frederic Taber, 1864-1937, Maurice, Arthur Bartlett, 1873-1946</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37745, {&quot;Title&quot;:&quot;Manners &amp; Cvstoms of ye Englyshe - Drawn from ye Qvick&quot;,&quot;Topics&quot;:[&quot;Caricatures and cartoons -- Great Britain&quot;,&quot;England -- Social life and customs -- Pictorial works&quot;],&quot;Primary&quot;:&quot;37745.htm&quot;,&quot;CreatorNames&quot;:[&quot;Doyle, Richard, 1824-1883&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;37745&quot;});" class='title'>Manners & Cvstoms of ye Englyshe -<br><span class='subtitle'>Drawn from ye Qvick</span></a>
+<div class='author'>Doyle, Richard, 1824-1883</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37767, {&quot;Title&quot;:&quot;The Phil May Album&quot;,&quot;Topics&quot;:[&quot;Caricatures and cartoons -- Great Britain&quot;,&quot;May, Phil, 1864-1903&quot;],&quot;Primary&quot;:&quot;37767.htm&quot;,&quot;CreatorNames&quot;:[&quot;May, Phil, 1864-1903&quot;,&quot;Moore, Augustus M. [Compiler]&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;37767&quot;});" class='title'>The Phil May Album</a>
+<div class='author'>May, Phil, 1864-1903, Moore, Augustus M. [Compiler]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38111, {&quot;Title&quot;:&quot;English Society&quot;,&quot;Topics&quot;:[&quot;English wit and humor, Pictorial&quot;,&quot;England -- Social life and customs -- Pictorial works&quot;,&quot;England -- Social life and customs -- Illustrations&quot;],&quot;Primary&quot;:&quot;38111.htm&quot;,&quot;CreatorNames&quot;:[&quot;Du Maurier, George, 1834-1896&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;38111&quot;});" class='title'>English Society</a>
+<div class='author'>Du Maurier, George, 1834-1896</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38315, {&quot;Title&quot;:&quot;Artistic Anatomy of Animals&quot;,&quot;Topics&quot;:[&quot;Zoological illustration&quot;,&quot;Anatomy, Artistic&quot;,&quot;Animals in art&quot;],&quot;Primary&quot;:&quot;38315.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cuyer, Édouard, 1852-&quot;],&quot;LoCC&quot;:[&quot;NC&quot;,&quot;QL&quot;],&quot;PG_ID&quot;:&quot;38315&quot;});" class='title'>Artistic Anatomy of Animals</a>
+<div class='author'>Cuyer, Édouard, 1852-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38318, {&quot;Title&quot;:&quot;George Cruikshank&quot;,&quot;Topics&quot;:[&quot;Cruikshank, George, 1792-1878&quot;],&quot;Primary&quot;:&quot;38318.htm&quot;,&quot;CreatorNames&quot;:[&quot;Chesson, W. H. (Wilfrid Hugh)&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;38318&quot;});" class='title'>George Cruikshank</a>
+<div class='author'>Chesson, W. H. (Wilfrid Hugh)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39110, {&quot;Title&quot;:&quot;Phil May&#39;s Gutter-Snipes: 50 Original Sketches in Pen &amp; Ink&quot;,&quot;Topics&quot;:[&quot;Caricatures and cartoons -- Great Britain&quot;],&quot;Primary&quot;:&quot;39110.htm&quot;,&quot;CreatorNames&quot;:[&quot;May, Phil, 1864-1903 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;39110&quot;});" class='title'>Phil May's Gutter-Snipes:<br><span class='subtitle'>50 Original Sketches in Pen & Ink</span></a>
+<div class='author'>May, Phil, 1864-1903 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39347, {&quot;Title&quot;:&quot;Caricature and Other Comic Art in All Times and Many Lands.&quot;,&quot;Topics&quot;:[&quot;Caricature -- History&quot;],&quot;Primary&quot;:&quot;39347.htm&quot;,&quot;CreatorNames&quot;:[&quot;Parton, James, 1822-1891&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;39347&quot;});" class='title'>Caricature and Other Comic Art in All Times and Many Lands.</a>
+<div class='author'>Parton, James, 1822-1891</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39604, {&quot;Title&quot;:&quot;Burlesques&quot;,&quot;Topics&quot;:[&quot;English wit and humor, Pictorial&quot;],&quot;Primary&quot;:&quot;39604.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bateman, H. M. (Henry Mayo), 1887-1970&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;39604&quot;});" class='title'>Burlesques</a>
+<div class='author'>Bateman, H. M. (Henry Mayo), 1887-1970</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40322, {&quot;Title&quot;:&quot;Modern Illustration&quot;,&quot;Topics&quot;:[&quot;Illustration of books&quot;],&quot;Primary&quot;:&quot;40322.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pennell, Joseph, 1857-1926&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;40322&quot;});" class='title'>Modern Illustration</a>
+<div class='author'>Pennell, Joseph, 1857-1926</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41018, {&quot;Title&quot;:&quot;John Leech, His Life and Work, Vol. 2 [of 2]&quot;,&quot;Topics&quot;:[&quot;Leech, John, 1817-1864&quot;],&quot;Primary&quot;:&quot;41018.htm&quot;,&quot;CreatorNames&quot;:[&quot;Frith, William Powell, 1819-1909&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;41018&quot;});" class='title'>John Leech, His Life and Work, Vol. 2 [of 2]</a>
+<div class='author'>Frith, William Powell, 1819-1909</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41057, {&quot;Title&quot;:&quot;Our People - From the Collection of \&quot;\&quot;Mr. Punch\&quot;\&quot;&quot;,&quot;Topics&quot;:[&quot;English wit and humor, Pictorial&quot;],&quot;Primary&quot;:&quot;41057.htm&quot;,&quot;CreatorNames&quot;:[&quot;Keene, Charles, 1823-1891&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;41057&quot;});" class='title'>Our People -<br><span class='subtitle'>From the Collection of "Mr. Punch"</span></a>
+<div class='author'>Keene, Charles, 1823-1891</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41086, {&quot;Title&quot;:&quot;Randolph Caldecott: A Personal Memoir of His Early Art Career&quot;,&quot;Topics&quot;:[&quot;Caldecott, Randolph, 1846-1886&quot;],&quot;Primary&quot;:&quot;41086.htm&quot;,&quot;CreatorNames&quot;:[&quot;Blackburn, Henry, 1830-1897&quot;,&quot;Caldecott, Randolph, 1846-1886 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;41086&quot;});" class='title'>Randolph Caldecott:<br><span class='subtitle'>A Personal Memoir of His Early Art Career</span></a>
+<div class='author'>Blackburn, Henry, 1830-1897, Caldecott, Randolph, 1846-1886 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42402, {&quot;Title&quot;:&quot;Horse Laughs&quot;,&quot;Topics&quot;:[&quot;English wit and humor, Pictorial&quot;,&quot;Horses&quot;,&quot;Horses -- Caricatures and cartoons&quot;,&quot;Horsemanship -- Caricatures and cartoons&quot;],&quot;Primary&quot;:&quot;42402.htm&quot;,&quot;CreatorNames&quot;:[&quot;Marshall, Charles Hunt&quot;],&quot;LoCC&quot;:[&quot;NC&quot;,&quot;SF&quot;],&quot;PG_ID&quot;:&quot;42402&quot;});" class='title'>Horse Laughs</a>
+<div class='author'>Marshall, Charles Hunt</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44346, {&quot;Title&quot;:&quot;Lendemains de Guerre des Flandres à la Meuse&quot;,&quot;Topics&quot;:[&quot;World War, 1914-1918&quot;,&quot;World War, 1914-1918 -- Pictorial works&quot;],&quot;Primary&quot;:&quot;44346.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tatin, Émile [Artist]&quot;,&quot;Gobillot, René, 1882-1978 [Commentator]&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;44346&quot;});" class='title'>Lendemains de Guerre des Flandres à la Meuse</a>
+<div class='author'>Tatin, Émile [Artist], Gobillot, René, 1882-1978 [Commentator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44431, {&quot;Title&quot;:&quot;Four Hundred Humorous Illustrations, Vol. 1 (of 2) - With Portrait and Biographical Sketch&quot;,&quot;Topics&quot;:[&quot;English wit and humor, Pictorial&quot;],&quot;Primary&quot;:&quot;44431.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cruikshank, George, 1792-1878 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;44431&quot;});" class='title'>Four Hundred Humorous Illustrations, Vol. 1 (of 2) -<br><span class='subtitle'>With Portrait and Biographical Sketch</span></a>
+<div class='author'>Cruikshank, George, 1792-1878 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44432, {&quot;Title&quot;:&quot;Four Hundred Humorous Illustrations, Vol. 2 (of 2) - With Portrait and Biographical Sketch&quot;,&quot;Topics&quot;:[&quot;English wit and humor, Pictorial&quot;],&quot;Primary&quot;:&quot;44432.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cruikshank, George, 1792-1878 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;44432&quot;});" class='title'>Four Hundred Humorous Illustrations, Vol. 2 (of 2) -<br><span class='subtitle'>With Portrait and Biographical Sketch</span></a>
+<div class='author'>Cruikshank, George, 1792-1878 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44434, {&quot;Title&quot;:&quot;The Bachelor&#39;s Own Book - Being Twenty-Four Passages in the Life of Mr. Lambkin, (Gent.)&quot;,&quot;Topics&quot;:[&quot;English wit and humor, Pictorial&quot;],&quot;Primary&quot;:&quot;44434.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cruikshank, George, 1792-1878 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;44434&quot;});" class='title'>The Bachelor's Own Book -<br><span class='subtitle'>Being Twenty-Four Passages in the Life of Mr. Lambkin, (Gent.)</span></a>
+<div class='author'>Cruikshank, George, 1792-1878 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44566, {&quot;Title&quot;:&quot;A History of Caricature and Grotesque in Literature and Art&quot;,&quot;Topics&quot;:[&quot;Caricature -- History&quot;],&quot;Primary&quot;:&quot;44566.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wright, Thomas, 1810-1877&quot;,&quot;Fairholt, F. W. (Frederick William), 1814-1866 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;44566&quot;});" class='title'>A History of Caricature and Grotesque in Literature and Art</a>
+<div class='author'>Wright, Thomas, 1810-1877, Fairholt, F. W. (Frederick William), 1814-1866 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44740, {&quot;Title&quot;:&quot;New Readings of Old Authors. Shakspeare. King Henry 5th&quot;,&quot;Topics&quot;:[&quot;Caricatures and cartoons -- Great Britain&quot;,&quot;Shakespeare, William, 1564-1616 -- Quotations&quot;],&quot;Primary&quot;:&quot;44740.htm&quot;,&quot;CreatorNames&quot;:[&quot;Shakespeare, William, 1564-1616 [Contributor]&quot;,&quot;Cruikshank, George, 1792-1878 [Illustrator]&quot;,&quot;Seymour, Robert, 1798-1836 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;NC&quot;,&quot;PR&quot;],&quot;PG_ID&quot;:&quot;44740&quot;});" class='title'>New Readings of Old Authors. Shakspeare. King Henry 5th</a>
+<div class='author'>Shakespeare, William, 1564-1616 [Contributor], Cruikshank, George, 1792-1878 [Illustrator], Seymour, Robert, 1798-1836 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44741, {&quot;Title&quot;:&quot;The Life of George Cruikshank in Two Epochs, Vol. 1. (of 2)&quot;,&quot;Topics&quot;:[&quot;Cruikshank, George, 1792-1878&quot;],&quot;Primary&quot;:&quot;44741.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jerrold, Blanchard, 1826-1884&quot;,&quot;Cruikshank, George, 1792-1878 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;44741&quot;});" class='title'>The Life of George Cruikshank in Two Epochs, Vol. 1. (of 2)</a>
+<div class='author'>Jerrold, Blanchard, 1826-1884, Cruikshank, George, 1792-1878 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44742, {&quot;Title&quot;:&quot;The Life of George Cruikshank in Two Epochs, Vol. 2. (of 2)&quot;,&quot;Topics&quot;:[&quot;Cruikshank, George, 1792-1878&quot;],&quot;Primary&quot;:&quot;44742.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jerrold, Blanchard, 1826-1884&quot;,&quot;Cruikshank, George, 1792-1878 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;44742&quot;});" class='title'>The Life of George Cruikshank in Two Epochs, Vol. 2. (of 2)</a>
+<div class='author'>Jerrold, Blanchard, 1826-1884, Cruikshank, George, 1792-1878 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44743, {&quot;Title&quot;:&quot;My Sketch Book&quot;,&quot;Topics&quot;:[&quot;Caricatures and cartoons -- Great Britain&quot;],&quot;Primary&quot;:&quot;44743.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cruikshank, George, 1792-1878 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;44743&quot;});" class='title'>My Sketch Book</a>
+<div class='author'>Cruikshank, George, 1792-1878 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44801, {&quot;Title&quot;:&quot;Four Hundred Humorous Illustrations - With Portrait and Biographical Sketch&quot;,&quot;Topics&quot;:[&quot;Caricatures and cartoons -- Great Britain&quot;,&quot;English wit and humor, Pictorial&quot;],&quot;Primary&quot;:&quot;44801.htm&quot;,&quot;CreatorNames&quot;:[&quot;Leech, John, 1817-1864 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;44801&quot;});" class='title'>Four Hundred Humorous Illustrations -<br><span class='subtitle'>With Portrait and Biographical Sketch</span></a>
+<div class='author'>Leech, John, 1817-1864 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44806, {&quot;Title&quot;:&quot;Portraits of Children of the Mobility&quot;,&quot;Topics&quot;:[&quot;Caricatures and cartoons -- Great Britain&quot;,&quot;London (England) -- Social life and customs -- Pictorial works&quot;],&quot;Primary&quot;:&quot;44806.htm&quot;,&quot;CreatorNames&quot;:[&quot;Leigh, Percival, 1813-1889&quot;,&quot;Leech, John, 1817-1864 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;44806&quot;});" class='title'>Portraits of Children of the Mobility</a>
+<div class='author'>Leigh, Percival, 1813-1889, Leech, John, 1817-1864 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45426, {&quot;Title&quot;:&quot;English Illustration &#39;The Sixties&#39;: 1855-70 - With Numerous Illustrations by Ford Madox Brown: A. Boyd Houghton: Arthur Hughes: Charles Keene: M. J. Lawless: Lord Leighton, P.R.A.: Sir J. E. Millais, P.R.A.: G. Du Maurier: J. W. North, R.A.: G. J. Pinwell: Dante Gabriel Rossetti: W. Small: Frederick Sandys: J. Mcneill Whistler: Frederick Walker, A.R.A.: and Others&quot;,&quot;Topics&quot;:[&quot;Illustration of books -- Great Britain -- 19th century&quot;,&quot;Illustration of books, Victorian -- Great Britain&quot;,&quot;Illustrated books -- Great Britain -- History -- 19th century -- Bibliography&quot;],&quot;Primary&quot;:&quot;45426.htm&quot;,&quot;CreatorNames&quot;:[&quot;White, Gleeson, 1851-1898&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;45426&quot;});" class='title'>English Illustration 'The Sixties':<br><span class='subtitle'>1855-70 - With Numerous Illustrations by Ford Madox Brown: A. Boyd Houghton: Arthur Hughes: Charles Keene: M. J. Lawless: Lord Leighton, P.R.A.: Sir J. E. Millais, P.R.A.: G. Du Maurier: J. W. North, R.A.: G. J. Pinwell: Dante Gabriel Rossetti: W. Small: Frederick Sandys: J. Mcneill Whistler: Frederick Walker, A.R.A.: and Others</span></a>
+<div class='author'>White, Gleeson, 1851-1898</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45555, {&quot;Title&quot;:&quot;Picture Posters - A Short History of the Illustrated Placard with Many Reproductions of the Most Artistic Examples in all Countries&quot;,&quot;Topics&quot;:[&quot;Posters -- History&quot;],&quot;Primary&quot;:&quot;45555.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hiatt, Charles, 1869-1904&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;45555&quot;});" class='title'>Picture Posters -<br><span class='subtitle'>A Short History of the Illustrated Placard with Many Reproductions of the Most Artistic Examples in all Countries</span></a>
+<div class='author'>Hiatt, Charles, 1869-1904</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45784, {&quot;Title&quot;:&quot;Gallery of Comicalities; Embracing Humorous Sketches&quot;,&quot;Topics&quot;:[&quot;English wit and humor, Pictorial&quot;],&quot;Primary&quot;:&quot;45784.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cruikshank, George, 1792-1878&quot;,&quot;Cruikshank, Robert, 1789-1856&quot;,&quot;Seymour, Robert, 1798-1836&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;45784&quot;});" class='title'>Gallery of Comicalities;<br><span class='subtitle'>Embracing Humorous Sketches</span></a>
+<div class='author'>Cruikshank, George, 1792-1878, Cruikshank, Robert, 1789-1856, Seymour, Robert, 1798-1836</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45813, {&quot;Title&quot;:&quot;John Leech&#39;s Pictures of Life and Character, Vol. 3 (of 3) - From the Collection of \&quot;\&quot;Mr. Punch\&quot;\&quot;&quot;,&quot;Topics&quot;:[&quot;English wit and humor, Pictorial&quot;],&quot;Primary&quot;:&quot;45813.htm&quot;,&quot;CreatorNames&quot;:[&quot;Leech, John, 1817-1864&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;45813&quot;});" class='title'>John Leech's Pictures of Life and Character, Vol. 3 (of 3) -<br><span class='subtitle'>From the Collection of "Mr. Punch"</span></a>
+<div class='author'>Leech, John, 1817-1864</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45980, {&quot;Title&quot;:&quot;Rowlandson the Caricaturist; a Selection from His Works. Vol. 1&quot;,&quot;Topics&quot;:[&quot;English wit and humor, Pictorial&quot;,&quot;Rowlandson, Thomas, 1756-1827&quot;],&quot;Primary&quot;:&quot;45980.htm&quot;,&quot;CreatorNames&quot;:[&quot;Grego, Joseph, 1843-1908&quot;,&quot;Rowlandson, Thomas, 1756-1827 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;45980&quot;});" class='title'>Rowlandson the Caricaturist;<br><span class='subtitle'>a Selection from His Works. Vol. 1</span></a>
+<div class='author'>Grego, Joseph, 1843-1908, Rowlandson, Thomas, 1756-1827 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45981, {&quot;Title&quot;:&quot;Rowlandson the Caricaturist; a Selection from His Works. Vol. 2&quot;,&quot;Topics&quot;:[&quot;English wit and humor, Pictorial&quot;,&quot;Rowlandson, Thomas, 1756-1827&quot;],&quot;Primary&quot;:&quot;45981.htm&quot;,&quot;CreatorNames&quot;:[&quot;Grego, Joseph, 1843-1908&quot;,&quot;Rowlandson, Thomas, 1756-1827 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;45981&quot;});" class='title'>Rowlandson the Caricaturist;<br><span class='subtitle'>a Selection from His Works. Vol. 2</span></a>
+<div class='author'>Grego, Joseph, 1843-1908, Rowlandson, Thomas, 1756-1827 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46087, {&quot;Title&quot;:&quot;Drawings of Rossetti&quot;,&quot;Topics&quot;:[&quot;Rossetti, Dante Gabriel, 1828-1882&quot;],&quot;Primary&quot;:&quot;46087.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wood, T. Martin, 1875-1919&quot;,&quot;Rossetti, Dante Gabriel, 1828-1882 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;46087&quot;});" class='title'>Drawings of Rossetti</a>
+<div class='author'>Wood, T. Martin, 1875-1919, Rossetti, Dante Gabriel, 1828-1882 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46349, {&quot;Title&quot;:&quot;John Leech&#39;s Pictures of Life and Character, Vol. 1 (of 3) - From the Collection of \&quot;\&quot;Mr. Punch\&quot;\&quot;&quot;,&quot;Topics&quot;:[&quot;English wit and humor, Pictorial&quot;],&quot;Primary&quot;:&quot;46349.htm&quot;,&quot;CreatorNames&quot;:[&quot;Leech, John, 1817-1864&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;46349&quot;});" class='title'>John Leech's Pictures of Life and Character, Vol. 1 (of 3) -<br><span class='subtitle'>From the Collection of "Mr. Punch"</span></a>
+<div class='author'>Leech, John, 1817-1864</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46374, {&quot;Title&quot;:&quot;\&quot;Mr. Punch&#39;s\&quot; Book of Arms&quot;,&quot;Topics&quot;:[&quot;English wit and humor&quot;,&quot;English wit and humor, Pictorial&quot;,&quot;Heraldry -- Humor&quot;],&quot;Primary&quot;:&quot;46374.htm&quot;,&quot;CreatorNames&quot;:[&quot;Reed, Edward Tennyson, 1860-1933&quot;],&quot;LoCC&quot;:[&quot;CR&quot;,&quot;NC&quot;],&quot;PG_ID&quot;:&quot;46374&quot;});" class='title'>"Mr. Punch's" Book of Arms</a>
+<div class='author'>Reed, Edward Tennyson, 1860-1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47176, {&quot;Title&quot;:&quot;Drawn at a Venture: A Collection of Drawings&quot;,&quot;Topics&quot;:[&quot;English wit and humor, Pictorial&quot;],&quot;Primary&quot;:&quot;47176.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fougasse, 1887-1965&quot;,&quot;Milne, A. A. (Alan Alexander), 1882-1956 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;47176&quot;});" class='title'>Drawn at a Venture:<br><span class='subtitle'>A Collection of Drawings</span></a>
+<div class='author'>Fougasse, 1887-1965, Milne, A. A. (Alan Alexander), 1882-1956 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47400, {&quot;Title&quot;:&quot;George Cruikshank&#39;s Omnibus&quot;,&quot;Topics&quot;:[&quot;Caricatures and cartoons -- Great Britain&quot;,&quot;English wit and humor&quot;,&quot;English wit and humor, Pictorial&quot;],&quot;Primary&quot;:&quot;47400.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cruikshank, George, 1792-1878&quot;,&quot;Blanchard, Laman, 1804-1845 [Editor]&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;47400&quot;});" class='title'>George Cruikshank's Omnibus</a>
+<div class='author'>Cruikshank, George, 1792-1878, Blanchard, Laman, 1804-1845 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47502, {&quot;Title&quot;:&quot;Lehrbuch der Perspective&quot;,&quot;Topics&quot;:[&quot;Perspective&quot;],&quot;Primary&quot;:&quot;47502.htm&quot;,&quot;CreatorNames&quot;:[&quot;Conz, Gustav, 1832-1914&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;47502&quot;});" class='title'>Lehrbuch der Perspective</a>
+<div class='author'>Conz, Gustav, 1832-1914</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47735, {&quot;Title&quot;:&quot;The Bull Calf, and Other Tales&quot;,&quot;Topics&quot;:[&quot;Wit and humor, Pictorial&quot;],&quot;Primary&quot;:&quot;47735.htm&quot;,&quot;CreatorNames&quot;:[&quot;Frost, A. B. (Arthur Burdett), 1851-1928&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;47735&quot;});" class='title'>The Bull Calf, and Other Tales</a>
+<div class='author'>Frost, A. B. (Arthur Burdett), 1851-1928</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47907, {&quot;Title&quot;:&quot;Mr. Punch&#39;s \&quot;\&quot;Animal Land\&quot;\&quot;&quot;,&quot;Topics&quot;:[&quot;Caricatures and cartoons -- Great Britain&quot;,&quot;English wit and humor&quot;,&quot;English wit and humor, Pictorial&quot;],&quot;Primary&quot;:&quot;47907.htm&quot;,&quot;CreatorNames&quot;:[&quot;Reed, Edward Tennyson, 1860-1933&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;47907&quot;});" class='title'>Mr. Punch's "Animal Land"</a>
+<div class='author'>Reed, Edward Tennyson, 1860-1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47998, {&quot;Title&quot;:&quot;Choffard&quot;,&quot;Topics&quot;:[&quot;Choffard, Pierre-Philippe, 1730-1809 -- Catalogs&quot;,&quot;Illustration of books -- France&quot;,&quot;Illustrated books -- France -- History -- 18th century -- Bibliography -- Catalogs&quot;],&quot;Primary&quot;:&quot;47998.htm&quot;,&quot;CreatorNames&quot;:[&quot;Salomons, Vera&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;47998&quot;});" class='title'>Choffard</a>
+<div class='author'>Salomons, Vera</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48362, {&quot;Title&quot;:&quot;The Western Front - Drawings by Muirhead Bone&quot;,&quot;Topics&quot;:[&quot;World War, 1914-1918 -- Pictorial works&quot;,&quot;World War, 1914-1918 -- Art and the war&quot;,&quot;Bone, Muirhead, Sir, 1876-1953&quot;],&quot;Primary&quot;:&quot;48362.htm&quot;,&quot;CreatorNames&quot;:[&quot;Haig, Douglas Haig, Earl, 1861-1928 [Author of introduction, etc.]&quot;,&quot;Bone, Muirhead, Sir, 1876-1953 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;NC&quot;,&quot;D&quot;],&quot;PG_ID&quot;:&quot;48362&quot;});" class='title'>The Western Front -<br><span class='subtitle'>Drawings by Muirhead Bone</span></a>
+<div class='author'>Haig, Douglas Haig, Earl, 1861-1928 [Author of introduction, etc.], Bone, Muirhead, Sir, 1876-1953 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49683, {&quot;Title&quot;:&quot;Cruikshank&#39;s Water Colours&quot;,&quot;Topics&quot;:[&quot;Watercolor painting, British&quot;,&quot;Cruikshank, George, 1792-1878&quot;,&quot;Illustration of books -- Great Britain -- 19th century&quot;],&quot;Primary&quot;:&quot;49683.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ainsworth, William Harrison, 1805-1882&quot;,&quot;Dickens, Charles, 1812-1870&quot;,&quot;Maxwell, W. H. (William Hamilton), 1792-1850&quot;,&quot;Grego, Joseph, 1843-1908 [Author of introduction, etc.]&quot;,&quot;Cruikshank, George, 1792-1878 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;49683&quot;});" class='title'>Cruikshank's Water Colours</a>
+<div class='author'>Ainsworth, William Harrison, 1805-1882, Dickens, Charles, 1812-1870, Maxwell, W. H. (William Hamilton), 1792-1850, Grego, Joseph, 1843-1908 [Author of introduction, etc.], Cruikshank, George, 1792-1878 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50171, {&quot;Title&quot;:&quot;The Art of Aubrey Beardsley&quot;,&quot;Topics&quot;:[&quot;Beardsley, Aubrey, 1872-1898&quot;],&quot;Primary&quot;:&quot;50171.htm&quot;,&quot;CreatorNames&quot;:[&quot;Symons, Arthur, 1865-1945&quot;,&quot;Beardsley, Aubrey, 1872-1898 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;50171&quot;});" class='title'>The Art of Aubrey Beardsley</a>
+<div class='author'>Symons, Arthur, 1865-1945, Beardsley, Aubrey, 1872-1898 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50428, {&quot;Title&quot;:&quot;John Leech&#39;s Pictures of Life and Character, Vol. 2 (of 3) - From the Collection of \&quot;\&quot;Mr. Punch\&quot;\&quot;&quot;,&quot;Topics&quot;:[&quot;English wit and humor, Pictorial&quot;],&quot;Primary&quot;:&quot;50428.htm&quot;,&quot;CreatorNames&quot;:[&quot;Leech, John, 1817-1864&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;50428&quot;});" class='title'>John Leech's Pictures of Life and Character, Vol. 2 (of 3) -<br><span class='subtitle'>From the Collection of "Mr. Punch"</span></a>
+<div class='author'>Leech, John, 1817-1864</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50614, {&quot;Title&quot;:&quot;Walter Crane&#39;s Painting Book - Containing twelve coloured and twelve outline full-page plates&quot;,&quot;Topics&quot;:[&quot;Coloring books -- Specimens&quot;,&quot;Color in art -- Juvenile literature&quot;,&quot;Nursery rhymes -- Illustrations&quot;],&quot;Primary&quot;:&quot;50614.htm&quot;,&quot;CreatorNames&quot;:[&quot;Crane, Walter, 1845-1915&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;50614&quot;});" class='title'>Walter Crane's Painting Book -<br><span class='subtitle'>Containing twelve coloured and twelve outline full-page plates</span></a>
+<div class='author'>Crane, Walter, 1845-1915</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51700, {&quot;Title&quot;:&quot;Gift Card Designing&quot;,&quot;Topics&quot;:[&quot;Decoration and ornament&quot;,&quot;Christmas cards&quot;],&quot;Primary&quot;:&quot;51700.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lemos, Pedro J. (Pedro Joseph), 1882-1954&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;51700&quot;});" class='title'>Gift Card Designing</a>
+<div class='author'>Lemos, Pedro J. (Pedro Joseph), 1882-1954</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51778, {&quot;Title&quot;:&quot;The Illustration of Books - A Manual for the Use of Students, Notes for a Course of Lectures at the Slade School, University College&quot;,&quot;Topics&quot;:[&quot;Illustration of books&quot;,&quot;Illustration of books -- Handbooks, manuals, etc.&quot;],&quot;Primary&quot;:&quot;51778.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pennell, Joseph, 1857-1926&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;51778&quot;});" class='title'>The Illustration of Books -<br><span class='subtitle'>A Manual for the Use of Students, Notes for a Course of Lectures at the Slade School, University College</span></a>
+<div class='author'>Pennell, Joseph, 1857-1926</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52185, {&quot;Title&quot;:&quot;Die deutsche Karikatur im 19. Jahrhundert&quot;,&quot;Topics&quot;:[&quot;Caricatures and cartoons -- Germany -- History -- 19th century&quot;,&quot;German wit and humor, Pictorial&quot;],&quot;Primary&quot;:&quot;52185.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hermann, Georg, 1871-1943&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;52185&quot;});" class='title'>Die deutsche Karikatur im 19. Jahrhundert</a>
+<div class='author'>Hermann, Georg, 1871-1943</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53561, {&quot;Title&quot;:&quot;Drawing for Printers. - A practical treatise on the art of designing and illustrating in connection with typography. Containing complete instruction, fully illustrated, concerning the art of drawing, for the beginner as well as the more advanced student.&quot;,&quot;Topics&quot;:[&quot;Lettering&quot;,&quot;Drawing&quot;,&quot;Illustration of books&quot;,&quot;Wood-engraving&quot;],&quot;Primary&quot;:&quot;53561.htm&quot;,&quot;CreatorNames&quot;:[&quot;Knaufft, Ernest, 1864-&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;53561&quot;});" class='title'>Drawing for Printers. -<br><span class='subtitle'>A practical treatise on the art of designing and illustrating in connection with typography. Containing complete instruction, fully illustrated, concerning the art of drawing, for the beginner as well as the more advanced student.</span></a>
+<div class='author'>Knaufft, Ernest, 1864-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53619, {&quot;Title&quot;:&quot;A Flower Wedding - Described by Two Wallflowers&quot;,&quot;Topics&quot;:[&quot;Children&#39;s poetry&quot;,&quot;Nursery rhymes&quot;,&quot;Flowers -- Juvenile poetry&quot;,&quot;Costume&quot;,&quot;Decoration and ornament -- Plant forms&quot;,&quot;Weddings -- Juvenile poetry&quot;],&quot;Primary&quot;:&quot;53619.htm&quot;,&quot;CreatorNames&quot;:[&quot;Crane, Walter, 1845-1915&quot;],&quot;LoCC&quot;:[&quot;NC&quot;,&quot;PZ&quot;],&quot;PG_ID&quot;:&quot;53619&quot;});" class='title'>A Flower Wedding -<br><span class='subtitle'>Described by Two Wallflowers</span></a>
+<div class='author'>Crane, Walter, 1845-1915</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54197, {&quot;Title&quot;:&quot;Cambridge: A Sketch-Book&quot;,&quot;Topics&quot;:[&quot;Cambridge (England) -- Pictorial works&quot;],&quot;Primary&quot;:&quot;54197.htm&quot;,&quot;CreatorNames&quot;:[&quot;Keesey, Walter M., 1887-1970&quot;],&quot;LoCC&quot;:[&quot;DA&quot;,&quot;NC&quot;],&quot;PG_ID&quot;:&quot;54197&quot;});" class='title'>Cambridge:<br><span class='subtitle'>A Sketch-Book</span></a>
+<div class='author'>Keesey, Walter M., 1887-1970</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54198, {&quot;Title&quot;:&quot;Canterbury: A Sketch Book&quot;,&quot;Topics&quot;:[&quot;Canterbury (England) -- Pictorial works&quot;],&quot;Primary&quot;:&quot;54198.htm&quot;,&quot;CreatorNames&quot;:[&quot;Keesey, Walter M., 1887-1970&quot;],&quot;LoCC&quot;:[&quot;DA&quot;,&quot;NC&quot;],&quot;PG_ID&quot;:&quot;54198&quot;});" class='title'>Canterbury:<br><span class='subtitle'>A Sketch Book</span></a>
+<div class='author'>Keesey, Walter M., 1887-1970</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54199, {&quot;Title&quot;:&quot;Florence: A Sketch-Book&quot;,&quot;Topics&quot;:[&quot;Florence (Italy) -- Pictorial works&quot;],&quot;Primary&quot;:&quot;54199.htm&quot;,&quot;CreatorNames&quot;:[&quot;Richards, Fred, 1878-1932&quot;],&quot;LoCC&quot;:[&quot;DG&quot;,&quot;NC&quot;],&quot;PG_ID&quot;:&quot;54199&quot;});" class='title'>Florence:<br><span class='subtitle'>A Sketch-Book</span></a>
+<div class='author'>Richards, Fred, 1878-1932</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54220, {&quot;Title&quot;:&quot;Oxford: A Sketch-Book&quot;,&quot;Topics&quot;:[&quot;University of Oxford -- Pictorial works&quot;],&quot;Primary&quot;:&quot;54220.htm&quot;,&quot;CreatorNames&quot;:[&quot;Richards, Fred, 1878-1932&quot;],&quot;LoCC&quot;:[&quot;LF&quot;,&quot;NC&quot;],&quot;PG_ID&quot;:&quot;54220&quot;});" class='title'>Oxford:<br><span class='subtitle'>A Sketch-Book</span></a>
+<div class='author'>Richards, Fred, 1878-1932</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54224, {&quot;Title&quot;:&quot;Venice: A Sketch-Book&quot;,&quot;Topics&quot;:[&quot;Venice (Italy) -- Pictorial works&quot;],&quot;Primary&quot;:&quot;54224.htm&quot;,&quot;CreatorNames&quot;:[&quot;Richards, Fred, 1878-1932&quot;],&quot;LoCC&quot;:[&quot;DG&quot;,&quot;NC&quot;],&quot;PG_ID&quot;:&quot;54224&quot;});" class='title'>Venice:<br><span class='subtitle'>A Sketch-Book</span></a>
+<div class='author'>Richards, Fred, 1878-1932</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54313, {&quot;Title&quot;:&quot;Ampleforth College: A Sketch-Book&quot;,&quot;Topics&quot;:[&quot;Ampleforth College -- Pictorial works&quot;],&quot;Primary&quot;:&quot;54313.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pike, Joseph, 1883-1956&quot;],&quot;LoCC&quot;:[&quot;BX&quot;,&quot;NC&quot;],&quot;PG_ID&quot;:&quot;54313&quot;});" class='title'>Ampleforth College:<br><span class='subtitle'>A Sketch-Book</span></a>
+<div class='author'>Pike, Joseph, 1883-1956</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54314, {&quot;Title&quot;:&quot;Bruges: A Sketch-Book&quot;,&quot;Topics&quot;:[&quot;Bruges (Belgium) -- Pictorial works&quot;],&quot;Primary&quot;:&quot;54314.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pike, Joseph, 1883-1956&quot;],&quot;LoCC&quot;:[&quot;DH&quot;,&quot;NC&quot;],&quot;PG_ID&quot;:&quot;54314&quot;});" class='title'>Bruges:<br><span class='subtitle'>A Sketch-Book</span></a>
+<div class='author'>Pike, Joseph, 1883-1956</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54315, {&quot;Title&quot;:&quot;Cardiff: A Sketch-Book&quot;,&quot;Topics&quot;:[&quot;Cardiff (Wales) -- Pictorial works&quot;],&quot;Primary&quot;:&quot;54315.htm&quot;,&quot;CreatorNames&quot;:[&quot;Andrews, D. S. (Douglas S.)&quot;],&quot;LoCC&quot;:[&quot;DA&quot;,&quot;NC&quot;],&quot;PG_ID&quot;:&quot;54315&quot;});" class='title'>Cardiff:<br><span class='subtitle'>A Sketch-Book</span></a>
+<div class='author'>Andrews, D. S. (Douglas S.)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54316, {&quot;Title&quot;:&quot;Durham: A Sketch-Book&quot;,&quot;Topics&quot;:[&quot;Durham (England) -- Pictorial works&quot;],&quot;Primary&quot;:&quot;54316.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bertram, Robert J. S.&quot;],&quot;LoCC&quot;:[&quot;DA&quot;,&quot;NC&quot;],&quot;PG_ID&quot;:&quot;54316&quot;});" class='title'>Durham:<br><span class='subtitle'>A Sketch-Book</span></a>
+<div class='author'>Bertram, Robert J. S.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54317, {&quot;Title&quot;:&quot;Isle of Wight: A Sketch-Book&quot;,&quot;Topics&quot;:[&quot;Isle of Wight (England) -- Pictorial works&quot;],&quot;Primary&quot;:&quot;54317.htm&quot;,&quot;CreatorNames&quot;:[&quot;Woollard, Dorothy, 1886-1986&quot;],&quot;LoCC&quot;:[&quot;DA&quot;,&quot;NC&quot;],&quot;PG_ID&quot;:&quot;54317&quot;});" class='title'>Isle of Wight:<br><span class='subtitle'>A Sketch-Book</span></a>
+<div class='author'>Woollard, Dorothy, 1886-1986</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54318, {&quot;Title&quot;:&quot;The English Lakes: A Sketch-Book&quot;,&quot;Topics&quot;:[&quot;Lake District (England) -- Pictorial works&quot;],&quot;Primary&quot;:&quot;54318.htm&quot;,&quot;CreatorNames&quot;:[&quot;Home, Gordon, 1878-1969&quot;],&quot;LoCC&quot;:[&quot;DA&quot;,&quot;NC&quot;],&quot;PG_ID&quot;:&quot;54318&quot;});" class='title'>The English Lakes:<br><span class='subtitle'>A Sketch-Book</span></a>
+<div class='author'>Home, Gordon, 1878-1969</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54319, {&quot;Title&quot;:&quot;Liverpool: A Sketch Book&quot;,&quot;Topics&quot;:[&quot;Liverpool (England) -- Pictorial works&quot;],&quot;Primary&quot;:&quot;54319.htm&quot;,&quot;CreatorNames&quot;:[&quot;Brown, Samuel J. M. (Samuel John Milton), 1873-1965&quot;],&quot;LoCC&quot;:[&quot;DA&quot;,&quot;NC&quot;],&quot;PG_ID&quot;:&quot;54319&quot;});" class='title'>Liverpool:<br><span class='subtitle'>A Sketch Book</span></a>
+<div class='author'>Brown, Samuel J. M. (Samuel John Milton), 1873-1965</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54320, {&quot;Title&quot;:&quot;London: A Sketch-Book&quot;,&quot;Topics&quot;:[&quot;London (England) -- Pictorial works&quot;],&quot;Primary&quot;:&quot;54320.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hornby, Lester G. (Lester George), 1882-1956&quot;],&quot;LoCC&quot;:[&quot;DA&quot;,&quot;NC&quot;],&quot;PG_ID&quot;:&quot;54320&quot;});" class='title'>London:<br><span class='subtitle'>A Sketch-Book</span></a>
+<div class='author'>Hornby, Lester G. (Lester George), 1882-1956</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54321, {&quot;Title&quot;:&quot;Newcastle-Upon-Tyne: A Sketch-Book&quot;,&quot;Topics&quot;:[&quot;Newcastle upon Tyne (England) -- Pictorial works&quot;],&quot;Primary&quot;:&quot;54321.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bertram, Robert J. S.&quot;],&quot;LoCC&quot;:[&quot;DA&quot;,&quot;NC&quot;],&quot;PG_ID&quot;:&quot;54321&quot;});" class='title'>Newcastle-Upon-Tyne:<br><span class='subtitle'>A Sketch-Book</span></a>
+<div class='author'>Bertram, Robert J. S.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54322, {&quot;Title&quot;:&quot;Norwich: A Sketch Book&quot;,&quot;Topics&quot;:[&quot;Norwich (England) -- Pictorial works&quot;],&quot;Primary&quot;:&quot;54322.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cole, Elsie Vera, 1885-&quot;],&quot;LoCC&quot;:[&quot;DA&quot;,&quot;NC&quot;],&quot;PG_ID&quot;:&quot;54322&quot;});" class='title'>Norwich:<br><span class='subtitle'>A Sketch Book</span></a>
+<div class='author'>Cole, Elsie Vera, 1885-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54323, {&quot;Title&quot;:&quot;Paris: A Sketch Book&quot;,&quot;Topics&quot;:[&quot;Paris (France) -- Pictorial works&quot;],&quot;Primary&quot;:&quot;54323.htm&quot;,&quot;CreatorNames&quot;:[&quot;Béjot, Eugène, 1867-1931&quot;],&quot;LoCC&quot;:[&quot;DC&quot;,&quot;NC&quot;],&quot;PG_ID&quot;:&quot;54323&quot;});" class='title'>Paris:<br><span class='subtitle'>A Sketch Book</span></a>
+<div class='author'>Béjot, Eugène, 1867-1931</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54324, {&quot;Title&quot;:&quot;Stratford-on-Avon: A Sketch-Book&quot;,&quot;Topics&quot;:[&quot;Stratford-upon-Avon (England) -- Pictorial works&quot;],&quot;Primary&quot;:&quot;54324.htm&quot;,&quot;CreatorNames&quot;:[&quot;Home, Gordon, 1878-1969&quot;],&quot;LoCC&quot;:[&quot;DA&quot;,&quot;NC&quot;],&quot;PG_ID&quot;:&quot;54324&quot;});" class='title'>Stratford-on-Avon:<br><span class='subtitle'>A Sketch-Book</span></a>
+<div class='author'>Home, Gordon, 1878-1969</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54325, {&quot;Title&quot;:&quot;Surrey: A Sketch-Book&quot;,&quot;Topics&quot;:[&quot;Surrey (England) -- Pictorial works&quot;],&quot;Primary&quot;:&quot;54325.htm&quot;,&quot;CreatorNames&quot;:[&quot;Austin, Robert, 1895-1973&quot;],&quot;LoCC&quot;:[&quot;DA&quot;,&quot;NC&quot;],&quot;PG_ID&quot;:&quot;54325&quot;});" class='title'>Surrey:<br><span class='subtitle'>A Sketch-Book</span></a>
+<div class='author'>Austin, Robert, 1895-1973</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54326, {&quot;Title&quot;:&quot;The Thames: A Sketch-Book&quot;,&quot;Topics&quot;:[&quot;Thames River (England) -- Pictorial works&quot;,&quot;Thames Valley (England) -- Pictorial works&quot;],&quot;Primary&quot;:&quot;54326.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sharpley, R. (Reginald)&quot;],&quot;LoCC&quot;:[&quot;DA&quot;,&quot;NC&quot;],&quot;PG_ID&quot;:&quot;54326&quot;});" class='title'>The Thames:<br><span class='subtitle'>A Sketch-Book</span></a>
+<div class='author'>Sharpley, R. (Reginald)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54327, {&quot;Title&quot;:&quot;Winchester: A Sketch-Book&quot;,&quot;Topics&quot;:[&quot;Winchester (England) -- Pictorial works&quot;],&quot;Primary&quot;:&quot;54327.htm&quot;,&quot;CreatorNames&quot;:[&quot;Home, Gordon, 1878-1969&quot;],&quot;LoCC&quot;:[&quot;DA&quot;,&quot;NC&quot;],&quot;PG_ID&quot;:&quot;54327&quot;});" class='title'>Winchester:<br><span class='subtitle'>A Sketch-Book</span></a>
+<div class='author'>Home, Gordon, 1878-1969</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54328, {&quot;Title&quot;:&quot;York: A Sketch-Book&quot;,&quot;Topics&quot;:[&quot;York (England) -- Pictorial works&quot;],&quot;Primary&quot;:&quot;54328.htm&quot;,&quot;CreatorNames&quot;:[&quot;Home, Gordon, 1878-1969&quot;],&quot;LoCC&quot;:[&quot;DA&quot;,&quot;NC&quot;],&quot;PG_ID&quot;:&quot;54328&quot;});" class='title'>York:<br><span class='subtitle'>A Sketch-Book</span></a>
+<div class='author'>Home, Gordon, 1878-1969</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54336, {&quot;Title&quot;:&quot;Bath and Wells: A Sketch-Book&quot;,&quot;Topics&quot;:[&quot;Bath (England) -- Pictorial works&quot;,&quot;Wells (England) -- Pictorial works&quot;],&quot;Primary&quot;:&quot;54336.htm&quot;,&quot;CreatorNames&quot;:[&quot;Andrews, D. S. (Douglas S.)&quot;],&quot;LoCC&quot;:[&quot;DA&quot;,&quot;NC&quot;],&quot;PG_ID&quot;:&quot;54336&quot;});" class='title'>Bath and Wells:<br><span class='subtitle'>A Sketch-Book</span></a>
+<div class='author'>Andrews, D. S. (Douglas S.)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54344, {&quot;Title&quot;:&quot;Bristol: A Sketch Book&quot;,&quot;Topics&quot;:[&quot;Bristol (England) -- Pictorial works&quot;],&quot;Primary&quot;:&quot;54344.htm&quot;,&quot;CreatorNames&quot;:[&quot;Woollard, Dorothy, 1886-1986&quot;],&quot;LoCC&quot;:[&quot;DA&quot;,&quot;NC&quot;],&quot;PG_ID&quot;:&quot;54344&quot;});" class='title'>Bristol:<br><span class='subtitle'>A Sketch Book</span></a>
+<div class='author'>Woollard, Dorothy, 1886-1986</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54354, {&quot;Title&quot;:&quot;Glasgow: A Sketch Book&quot;,&quot;Topics&quot;:[&quot;Glasgow (Scotland) -- Pictorial works&quot;],&quot;Primary&quot;:&quot;54354.htm&quot;,&quot;CreatorNames&quot;:[&quot;Nisbet, John, 1868-1951&quot;],&quot;LoCC&quot;:[&quot;DA&quot;,&quot;NC&quot;],&quot;PG_ID&quot;:&quot;54354&quot;});" class='title'>Glasgow:<br><span class='subtitle'>A Sketch Book</span></a>
+<div class='author'>Nisbet, John, 1868-1951</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54355, {&quot;Title&quot;:&quot;Harrow: A Sketch Book&quot;,&quot;Topics&quot;:[&quot;Harrow (London, England) -- Pictorial works&quot;],&quot;Primary&quot;:&quot;54355.htm&quot;,&quot;CreatorNames&quot;:[&quot;Keesey, Walter M., 1887-1970&quot;],&quot;LoCC&quot;:[&quot;DA&quot;,&quot;NC&quot;],&quot;PG_ID&quot;:&quot;54355&quot;});" class='title'>Harrow:<br><span class='subtitle'>A Sketch Book</span></a>
+<div class='author'>Keesey, Walter M., 1887-1970</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54448, {&quot;Title&quot;:&quot;Hastings &amp; Environs: A Sketch-Book&quot;,&quot;Topics&quot;:[&quot;Hastings (England) -- Pictorial works&quot;],&quot;Primary&quot;:&quot;54448.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hampton, H. G.&quot;],&quot;LoCC&quot;:[&quot;DA&quot;,&quot;NC&quot;],&quot;PG_ID&quot;:&quot;54448&quot;});" class='title'>Hastings & Environs:<br><span class='subtitle'>A Sketch-Book</span></a>
+<div class='author'>Hampton, H. G.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54492, {&quot;Title&quot;:&quot;Chester: A Sketch-Book&quot;,&quot;Topics&quot;:[&quot;Chester (England) -- Pictorial works&quot;],&quot;Primary&quot;:&quot;54492.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pike, Joseph, 1883-1956&quot;],&quot;LoCC&quot;:[&quot;DA&quot;,&quot;NC&quot;],&quot;PG_ID&quot;:&quot;54492&quot;});" class='title'>Chester:<br><span class='subtitle'>A Sketch-Book</span></a>
+<div class='author'>Pike, Joseph, 1883-1956</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54809, {&quot;Title&quot;:&quot;Warwick, Leamington &amp; Kenilworth: A Sketch-Book&quot;,&quot;Topics&quot;:[&quot;Warwick (England) -- Pictorial works&quot;,&quot;Leamington (England) -- Pictorial works&quot;,&quot;Kenilworth (England) -- Pictorial works&quot;],&quot;Primary&quot;:&quot;54809.htm&quot;,&quot;CreatorNames&quot;:[&quot;Austin, Robert, 1895-1973&quot;],&quot;LoCC&quot;:[&quot;DA&quot;,&quot;NC&quot;],&quot;PG_ID&quot;:&quot;54809&quot;});" class='title'>Warwick, Leamington & Kenilworth:<br><span class='subtitle'>A Sketch-Book</span></a>
+<div class='author'>Austin, Robert, 1895-1973</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54972, {&quot;Title&quot;:&quot;Les fleurs animées - Tome 1&quot;,&quot;Topics&quot;:[&quot;Botany&quot;,&quot;Flowers&quot;,&quot;Floriculture&quot;,&quot;Flowers in art&quot;],&quot;Primary&quot;:&quot;54972.htm&quot;,&quot;CreatorNames&quot;:[&quot;Grandville, J. J., 1803-1847&quot;,&quot;Delord, Taxile, 1815-1877 [Contributor]&quot;,&quot;Karr, Alphonse, 1808-1890 [Contributor]&quot;,&quot;Raban, 1795-1870 [Contributor]&quot;,&quot;Maubert [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;54972&quot;});" class='title'>Les fleurs animées -<br><span class='subtitle'>Tome 1</span></a>
+<div class='author'>Grandville, J. J., 1803-1847, Delord, Taxile, 1815-1877 [Contributor], Karr, Alphonse, 1808-1890 [Contributor], Raban, 1795-1870 [Contributor], Maubert [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55500, {&quot;Title&quot;:&quot;Twenty Drawings&quot;,&quot;Topics&quot;:[&quot;Gibran, Kahlil, 1883-1931&quot;],&quot;Primary&quot;:&quot;55500.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gibran, Kahlil, 1883-1931 [Artist]&quot;,&quot;Raphael, Alice, 1887-1975 [Commentator]&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;55500&quot;});" class='title'>Twenty Drawings</a>
+<div class='author'>Gibran, Kahlil, 1883-1931 [Artist], Raphael, Alice, 1887-1975 [Commentator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55690, {&quot;Title&quot;:&quot;William Hamilton Gibson: artist—naturalist—author&quot;,&quot;Topics&quot;:[&quot;Gibson, W. Hamilton (William Hamilton), 1850-1896&quot;,&quot;Illustrators -- United States -- Biography&quot;],&quot;Primary&quot;:&quot;55690.htm&quot;,&quot;CreatorNames&quot;:[&quot;Adams, John Coleman, 1849-1922&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;55690&quot;});" class='title'>William Hamilton Gibson:<br><span class='subtitle'>artist—naturalist—author</span></a>
+<div class='author'>Adams, John Coleman, 1849-1922</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55791, {&quot;Title&quot;:&quot;Grundzüge der Perspektive nebst Anwendungen&quot;,&quot;Topics&quot;:[&quot;Perspective&quot;],&quot;Primary&quot;:&quot;55791.htm&quot;,&quot;CreatorNames&quot;:[&quot;Doehlemann, Karl, 1864-1926&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;55791&quot;});" class='title'>Grundzüge der Perspektive nebst Anwendungen</a>
+<div class='author'>Doehlemann, Karl, 1864-1926</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55874, {&quot;Title&quot;:&quot;Der Weg zur Zeichenkunst - Ein Büchlein für theoretische und praktische Selbstbildung&quot;,&quot;Topics&quot;:[&quot;Drawing&quot;],&quot;Primary&quot;:&quot;55874.htm&quot;,&quot;CreatorNames&quot;:[&quot;Weber, Ernst, 1873-1948&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;55874&quot;});" class='title'>Der Weg zur Zeichenkunst -<br><span class='subtitle'>Ein Büchlein für theoretische und praktische Selbstbildung</span></a>
+<div class='author'>Weber, Ernst, 1873-1948</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56197, {&quot;Title&quot;:&quot;Cupid&#39;s Fair-Weather Booke - Including an Almanack for Any Two Years (True Love Ought to Last That Long)&quot;,&quot;Topics&quot;:[&quot;Love in art&quot;,&quot;Months in art&quot;,&quot;Zodiac in art&quot;],&quot;Primary&quot;:&quot;56197.htm&quot;,&quot;CreatorNames&quot;:[&quot;Clay, John Cecil, 1875-1930&quot;,&quot;Herford, Oliver, 1863-1935&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;56197&quot;});" class='title'>Cupid's Fair-Weather Booke -<br><span class='subtitle'>Including an Almanack for Any Two Years (True Love Ought to Last That Long)</span></a>
+<div class='author'>Clay, John Cecil, 1875-1930, Herford, Oliver, 1863-1935</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56312, {&quot;Title&quot;:&quot;Rules and Examples of Perspective proper for Painters and Architects, etc. - In English and Latin: Containing a most easie and expeditious method to delineate in perspective all designs relating to architecture&quot;,&quot;Topics&quot;:[&quot;Perspective -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;56312.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pozzo, Andrea, 1642-1709&quot;,&quot;Sturt, John, 1658-1730 [Engraver]&quot;,&quot;James, John, -1746 [Translator]&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;56312&quot;});" class='title'>Rules and Examples of Perspective proper for Painters and Architects, etc. -<br><span class='subtitle'>In English and Latin: Containing a most easie and expeditious method to delineate in perspective all designs relating to architecture</span></a>
+<div class='author'>Pozzo, Andrea, 1642-1709, Sturt, John, 1658-1730 [Engraver], James, John, -1746 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5645, {&quot;Title&quot;:&quot;Sketches by Seymour — Volume 01&quot;,&quot;Topics&quot;:[&quot;Caricatures and cartoons -- Great Britain&quot;],&quot;Primary&quot;:&quot;5645.htm&quot;,&quot;CreatorNames&quot;:[&quot;Seymour, Robert, 1798-1836&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;5645&quot;});" class='title'>Sketches by Seymour — Volume 01</a>
+<div class='author'>Seymour, Robert, 1798-1836</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5646, {&quot;Title&quot;:&quot;Sketches by Seymour — Volume 02&quot;,&quot;Topics&quot;:[&quot;Caricatures and cartoons -- Great Britain&quot;],&quot;Primary&quot;:&quot;5646.htm&quot;,&quot;CreatorNames&quot;:[&quot;Seymour, Robert, 1798-1836&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;5646&quot;});" class='title'>Sketches by Seymour — Volume 02</a>
+<div class='author'>Seymour, Robert, 1798-1836</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5647, {&quot;Title&quot;:&quot;Sketches by Seymour — Volume 03&quot;,&quot;Topics&quot;:[&quot;Caricatures and cartoons -- Great Britain&quot;],&quot;Primary&quot;:&quot;5647.htm&quot;,&quot;CreatorNames&quot;:[&quot;Seymour, Robert, 1798-1836&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;5647&quot;});" class='title'>Sketches by Seymour — Volume 03</a>
+<div class='author'>Seymour, Robert, 1798-1836</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5648, {&quot;Title&quot;:&quot;Sketches by Seymour — Volume 04&quot;,&quot;Topics&quot;:[&quot;Caricatures and cartoons -- Great Britain&quot;],&quot;Primary&quot;:&quot;5648.htm&quot;,&quot;CreatorNames&quot;:[&quot;Seymour, Robert, 1798-1836&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;5648&quot;});" class='title'>Sketches by Seymour — Volume 04</a>
+<div class='author'>Seymour, Robert, 1798-1836</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5649, {&quot;Title&quot;:&quot;Sketches by Seymour — Volume 05&quot;,&quot;Topics&quot;:[&quot;Caricatures and cartoons -- Great Britain&quot;],&quot;Primary&quot;:&quot;5649.htm&quot;,&quot;CreatorNames&quot;:[&quot;Seymour, Robert, 1798-1836&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;5649&quot;});" class='title'>Sketches by Seymour — Volume 05</a>
+<div class='author'>Seymour, Robert, 1798-1836</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5650, {&quot;Title&quot;:&quot;Sketches by Seymour — Complete&quot;,&quot;Topics&quot;:[&quot;Caricatures and cartoons -- Great Britain&quot;],&quot;Primary&quot;:&quot;5650.htm&quot;,&quot;CreatorNames&quot;:[&quot;Seymour, Robert, 1798-1836&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;5650&quot;});" class='title'>Sketches by Seymour — Complete</a>
+<div class='author'>Seymour, Robert, 1798-1836</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56739, {&quot;Title&quot;:&quot;High Society - Advice as to Social Campaigning, and Hints on the Management of Dowagers, Dinners, Debutantes, Dances, and the Thousand and One Diversions of Persons of Quality&quot;,&quot;Topics&quot;:[&quot;American wit and humor&quot;,&quot;English wit and humor, Pictorial&quot;,&quot;Caricatures and cartoons -- England&quot;],&quot;Primary&quot;:&quot;56739.htm&quot;,&quot;CreatorNames&quot;:[&quot;Chappell, George S. (George Shepard), 1877-1946&quot;,&quot;Crowninshield, Frank, 1872-1947&quot;,&quot;Parker, Dorothy, 1893-1967&quot;,&quot;Fish, Anne Harriet, 1890-1964 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;56739&quot;});" class='title'>High Society -<br><span class='subtitle'>Advice as to Social Campaigning, and Hints on the Management of Dowagers, Dinners, Debutantes, Dances, and the Thousand and One Diversions of Persons of Quality</span></a>
+<div class='author'>Chappell, George S. (George Shepard), 1877-1946, Crowninshield, Frank, 1872-1947, Parker, Dorothy, 1893-1967, Fish, Anne Harriet, 1890-1964 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56844, {&quot;Title&quot;:&quot;The Drawings of Leonardo da Vinci&quot;,&quot;Topics&quot;:[&quot;Leonardo, da Vinci, 1452-1519&quot;],&quot;Primary&quot;:&quot;56844.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hind, C. Lewis (Charles Lewis), 1862-1927 [Author of introduction, etc.]&quot;,&quot;Leonardo, da Vinci, 1452-1519 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;56844&quot;});" class='title'>The Drawings of Leonardo da Vinci</a>
+<div class='author'>Hind, C. Lewis (Charles Lewis), 1862-1927 [Author of introduction, etc.], Leonardo, da Vinci, 1452-1519 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57177, {&quot;Title&quot;:&quot;Australia at War - A Winter Record Made by Will Dyson on the Somme and at Ypres, During the Campaigns of 1916 and 1917&quot;,&quot;Topics&quot;:[&quot;Australia. Australian Army. Australian Imperial Force (1914-1921)&quot;,&quot;Australia. Australian Army. Australian Imperial Force (1914-1921) -- Pictorial works&quot;,&quot;World War, 1914-1918 -- Campaigns -- France -- Somme -- Pictorial works&quot;,&quot;World War, 1914-1918 -- Campaigns -- Belgium -- Ieper -- Pictorial works&quot;,&quot;World War, 1914-1918 -- Campaigns -- France -- Somme&quot;,&quot;World War, 1914-1918 -- Campaigns -- Belgium -- Ieper&quot;],&quot;Primary&quot;:&quot;57177.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dyson, Will, 1880-1938&quot;,&quot;Chesterton, G. K. (Gilbert Keith), 1874-1936 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;NC&quot;,&quot;D&quot;],&quot;PG_ID&quot;:&quot;57177&quot;});" class='title'>Australia at War -<br><span class='subtitle'>A Winter Record Made by Will Dyson on the Somme and at Ypres, During the Campaigns of 1916 and 1917</span></a>
+<div class='author'>Dyson, Will, 1880-1938, Chesterton, G. K. (Gilbert Keith), 1874-1936 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57419, {&quot;Title&quot;:&quot;La guerre&quot;,&quot;Topics&quot;:[&quot;World War, 1914-1918 -- Art and the war&quot;,&quot;War in art&quot;,&quot;Steinlen, Théophile Alexandre, 1859-1923&quot;],&quot;Primary&quot;:&quot;57419.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mauclair, Camille, 1872-1945&quot;,&quot;Steinlen, Théophile Alexandre, 1859-1923 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;NC&quot;,&quot;D&quot;],&quot;PG_ID&quot;:&quot;57419&quot;});" class='title'>La guerre</a>
+<div class='author'>Mauclair, Camille, 1872-1945, Steinlen, Théophile Alexandre, 1859-1923 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58661, {&quot;Title&quot;:&quot;Histoire de la caricature au moyen âge et sous la renaissance&quot;,&quot;Topics&quot;:[&quot;Caricature -- History&quot;,&quot;Caricature -- France -- History&quot;],&quot;Primary&quot;:&quot;58661.htm&quot;,&quot;CreatorNames&quot;:[&quot;Champfleury, 1821-1889&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;58661&quot;});" class='title'>Histoire de la caricature au moyen âge et sous la renaissance</a>
+<div class='author'>Champfleury, 1821-1889</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58715, {&quot;Title&quot;:&quot;Drawings of Old London&quot;,&quot;Topics&quot;:[&quot;Drawing -- England -- London -- Catalogs&quot;,&quot;London (England) -- Pictorial works -- Catalogs&quot;],&quot;Primary&quot;:&quot;58715.htm&quot;,&quot;CreatorNames&quot;:[&quot;Norman, Philip, 1842-1931&quot;,&quot;Smith, Cecil Harcourt-, Sir, 1859-1944 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;DA&quot;,&quot;NC&quot;],&quot;PG_ID&quot;:&quot;58715&quot;});" class='title'>Drawings of Old London</a>
+<div class='author'>Norman, Philip, 1842-1931, Smith, Cecil Harcourt-, Sir, 1859-1944 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58878, {&quot;Title&quot;:&quot;Donahey&#39;s Cartoons&quot;,&quot;Topics&quot;:[&quot;Caricatures and cartoons -- United States&quot;,&quot;American wit and humor, Pictorial&quot;],&quot;Primary&quot;:&quot;58878.htm&quot;,&quot;CreatorNames&quot;:[&quot;Donahey, J. H. (James Harrison), 1875-1949&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;58878&quot;});" class='title'>Donahey's Cartoons</a>
+<div class='author'>Donahey, J. H. (James Harrison), 1875-1949</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59070, {&quot;Title&quot;:&quot;Index of the Project Gutenberg Works of Gustave Doré&quot;,&quot;Topics&quot;:[&quot;Indexes&quot;],&quot;Primary&quot;:&quot;59070.htm&quot;,&quot;CreatorNames&quot;:[&quot;Doré, Gustave, 1832-1883&quot;,&quot;Widger, David, 1932-2021? [Editor]&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;59070&quot;});" class='title'>Index of the Project Gutenberg Works of Gustave Doré</a>
+<div class='author'>Doré, Gustave, 1832-1883, Widger, David, 1932-2021? [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59145, {&quot;Title&quot;:&quot;Index of the Project Gutenberg Works of John Leech&quot;,&quot;Topics&quot;:[&quot;Indexes&quot;],&quot;Primary&quot;:&quot;59145.htm&quot;,&quot;CreatorNames&quot;:[&quot;Leech, John, 1817-1864&quot;,&quot;Widger, David, 1932-2021? [Editor]&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;59145&quot;});" class='title'>Index of the Project Gutenberg Works of John Leech</a>
+<div class='author'>Leech, John, 1817-1864, Widger, David, 1932-2021? [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59146, {&quot;Title&quot;:&quot;Index of the Project Gutenberg Works of George Cruikshank&quot;,&quot;Topics&quot;:[&quot;Indexes&quot;],&quot;Primary&quot;:&quot;59146.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cruikshank, George, 1792-1878&quot;,&quot;Widger, David, 1932-2021? [Editor]&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;59146&quot;});" class='title'>Index of the Project Gutenberg Works of George Cruikshank</a>
+<div class='author'>Cruikshank, George, 1792-1878, Widger, David, 1932-2021? [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59604, {&quot;Title&quot;:&quot;A Selection of Cartoons from Puck&quot;,&quot;Topics&quot;:[&quot;American wit and humor, Pictorial&quot;],&quot;Primary&quot;:&quot;59604.htm&quot;,&quot;CreatorNames&quot;:[&quot;Keppler, Joseph Ferdinand, 1838-1894&quot;,&quot;Bunner, H. C. (Henry Cuyler), 1855-1896 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;59604&quot;});" class='title'>A Selection of Cartoons from Puck</a>
+<div class='author'>Keppler, Joseph Ferdinand, 1838-1894, Bunner, H. C. (Henry Cuyler), 1855-1896 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59669, {&quot;Title&quot;:&quot;Index of the Project Gutenberg Works of Frederic Remington&quot;,&quot;Topics&quot;:[&quot;Indexes&quot;],&quot;Primary&quot;:&quot;59669.htm&quot;,&quot;CreatorNames&quot;:[&quot;Remington, Frederic, 1861-1909&quot;,&quot;Widger, David, 1932-2021? [Editor]&quot;],&quot;LoCC&quot;:[&quot;NC&quot;,&quot;PS&quot;],&quot;PG_ID&quot;:&quot;59669&quot;});" class='title'>Index of the Project Gutenberg Works of Frederic Remington</a>
+<div class='author'>Remington, Frederic, 1861-1909, Widger, David, 1932-2021? [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59801, {&quot;Title&quot;:&quot;Cartoons by Sir John Tenniel, Selected from the Pages of \&quot;\&quot;Punch\&quot;\&quot;&quot;,&quot;Topics&quot;:[&quot;Caricatures and cartoons&quot;],&quot;Primary&quot;:&quot;59801.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tenniel, John, 1820-1914&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;59801&quot;});" class='title'>Cartoons by Sir John Tenniel, Selected from the Pages of "Punch"</a>
+<div class='author'>Tenniel, John, 1820-1914</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60074, {&quot;Title&quot;:&quot;The Mysterious Stranger and Other Cartoons&quot;,&quot;Topics&quot;:[&quot;American wit and humor, Pictorial&quot;],&quot;Primary&quot;:&quot;60074.htm&quot;,&quot;CreatorNames&quot;:[&quot;McCutcheon, John T. (John Tinney), 1870-1949&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;60074&quot;});" class='title'>The Mysterious Stranger and Other Cartoons</a>
+<div class='author'>McCutcheon, John T. (John Tinney), 1870-1949</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60214, {&quot;Title&quot;:&quot;Ernesto Garcia Cabral: A Mexican Cartoonist&quot;,&quot;Topics&quot;:[&quot;García Cabral, Ernesto, 1890-1968&quot;,&quot;Cartoonists -- Mexico&quot;],&quot;Primary&quot;:&quot;60214.htm&quot;,&quot;CreatorNames&quot;:[&quot;Conway, G. R. G. (George Robert Graham), 1873-1951&quot;,&quot;García Cabral, Ernesto, 1890-1968 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;60214&quot;});" class='title'>Ernesto Garcia Cabral:<br><span class='subtitle'>A Mexican Cartoonist</span></a>
+<div class='author'>Conway, G. R. G. (George Robert Graham), 1873-1951, García Cabral, Ernesto, 1890-1968 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60394, {&quot;Title&quot;:&quot;Choix de cinquante dessins de Michel-Angelo&quot;,&quot;Topics&quot;:[&quot;Drawing, Italian&quot;],&quot;Primary&quot;:&quot;60394.htm&quot;,&quot;CreatorNames&quot;:[&quot;Michelangelo Buonarroti, 1475-1564&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;60394&quot;});" class='title'>Choix de cinquante dessins de Michel-Angelo</a>
+<div class='author'>Michelangelo Buonarroti, 1475-1564</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60404, {&quot;Title&quot;:&quot;The First Book of Eve&quot;,&quot;Topics&quot;:[&quot;Wit and humor, Pictorial&quot;],&quot;Primary&quot;:&quot;60404.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fowl, 1877-1941&quot;,&quot;King, Richard, 1879-1947 [Author of introduction, etc.]&quot;,&quot;Fish, Anne Harriet, 1890-1964 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;60404&quot;});" class='title'>The First Book of Eve</a>
+<div class='author'>Fowl, 1877-1941, King, Richard, 1879-1947 [Author of introduction, etc.], Fish, Anne Harriet, 1890-1964 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60816, {&quot;Title&quot;:&quot;The Elements of Perspective - arranged for the use of schools and intended to be read in connection with the first three books of Euclid&quot;,&quot;Topics&quot;:[&quot;Perspective&quot;],&quot;Primary&quot;:&quot;60816.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ruskin, John, 1819-1900&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;60816&quot;});" class='title'>The Elements of Perspective -<br><span class='subtitle'>arranged for the use of schools and intended to be read in connection with the first three books of Euclid</span></a>
+<div class='author'>Ruskin, John, 1819-1900</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60972, {&quot;Title&quot;:&quot;A Practical Hand-book of Drawing for Modern Methods of Reproduction&quot;,&quot;Topics&quot;:[&quot;Illustration of books&quot;,&quot;Illustrated books&quot;],&quot;Primary&quot;:&quot;60972.htm&quot;,&quot;CreatorNames&quot;:[&quot;Harper, Charles G. (Charles George), 1863-1943&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;60972&quot;});" class='title'>A Practical Hand-book of Drawing for Modern Methods of Reproduction</a>
+<div class='author'>Harper, Charles G. (Charles George), 1863-1943</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62570, {&quot;Title&quot;:&quot;Drawings&quot;,&quot;Topics&quot;:[&quot;West (U.S.) -- Pictorial works&quot;],&quot;Primary&quot;:&quot;62570.htm&quot;,&quot;CreatorNames&quot;:[&quot;Remington, Frederic, 1861-1909&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;62570&quot;});" class='title'>Drawings</a>
+<div class='author'>Remington, Frederic, 1861-1909</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62700, {&quot;Title&quot;:&quot;Pictures of People&quot;,&quot;Topics&quot;:[&quot;Caricatures and cartoons -- United States&quot;,&quot;American wit and humor, Pictorial&quot;,&quot;Drawing, American&quot;,&quot;Women -- Caricatures and cartoons&quot;],&quot;Primary&quot;:&quot;62700.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gibson, Charles Dana, 1867-1944&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;62700&quot;});" class='title'>Pictures of People</a>
+<div class='author'>Gibson, Charles Dana, 1867-1944</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62724, {&quot;Title&quot;:&quot;Americans, Drawn by Charles Dana Gibson&quot;,&quot;Topics&quot;:[&quot;Caricatures and cartoons -- United States&quot;,&quot;American wit and humor, Pictorial&quot;,&quot;Drawing, American&quot;,&quot;United States -- Social life and customs -- 1865-1918 -- Humor -- Pictorial works&quot;],&quot;Primary&quot;:&quot;62724.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gibson, Charles Dana, 1867-1944&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;62724&quot;});" class='title'>Americans, Drawn by Charles Dana Gibson</a>
+<div class='author'>Gibson, Charles Dana, 1867-1944</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62738, {&quot;Title&quot;:&quot;London as seen by Charles Dana Gibson&quot;,&quot;Topics&quot;:[&quot;London (England) -- Pictorial works&quot;],&quot;Primary&quot;:&quot;62738.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gibson, Charles Dana, 1867-1944&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;62738&quot;});" class='title'>London as seen by Charles Dana Gibson</a>
+<div class='author'>Gibson, Charles Dana, 1867-1944</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62750, {&quot;Title&quot;:&quot;Pictures by Phil May&quot;,&quot;Topics&quot;:[&quot;Caricatures and cartoons -- Great Britain&quot;,&quot;English wit and humor, Pictorial&quot;],&quot;Primary&quot;:&quot;62750.htm&quot;,&quot;CreatorNames&quot;:[&quot;May, Phil, 1864-1903&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;62750&quot;});" class='title'>Pictures by Phil May</a>
+<div class='author'>May, Phil, 1864-1903</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62865, {&quot;Title&quot;:&quot;Gibson: New Cartoons; A book of Charles Dana Gibson&#39;s latest drawings&quot;,&quot;Topics&quot;:[&quot;Caricatures and cartoons -- United States&quot;,&quot;American wit and humor, Pictorial&quot;,&quot;Drawing, American&quot;],&quot;Primary&quot;:&quot;62865.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gibson, Charles Dana, 1867-1944&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;62865&quot;});" class='title'>Gibson:<br><span class='subtitle'>New Cartoons; A book of Charles Dana Gibson's latest drawings</span></a>
+<div class='author'>Gibson, Charles Dana, 1867-1944</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62895, {&quot;Title&quot;:&quot;Cartoons by McCutcheon - A selection of one hundred drawings&quot;,&quot;Topics&quot;:[&quot;Caricatures and cartoons -- United States&quot;,&quot;American wit and humor, Pictorial&quot;],&quot;Primary&quot;:&quot;62895.htm&quot;,&quot;CreatorNames&quot;:[&quot;McCutcheon, John T. (John Tinney), 1870-1949&quot;,&quot;Ade, George, 1866-1944 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;62895&quot;});" class='title'>Cartoons by McCutcheon -<br><span class='subtitle'>A selection of one hundred drawings</span></a>
+<div class='author'>McCutcheon, John T. (John Tinney), 1870-1949, Ade, George, 1866-1944 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62920, {&quot;Title&quot;:&quot;Sketches and Cartoons&quot;,&quot;Topics&quot;:[&quot;Caricatures and cartoons -- United States&quot;,&quot;American wit and humor, Pictorial&quot;,&quot;Drawing, American&quot;],&quot;Primary&quot;:&quot;62920.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gibson, Charles Dana, 1867-1944&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;62920&quot;});" class='title'>Sketches and Cartoons</a>
+<div class='author'>Gibson, Charles Dana, 1867-1944</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62934, {&quot;Title&quot;:&quot;Drawings by Charles Dana Gibson&quot;,&quot;Topics&quot;:[&quot;Caricatures and cartoons -- United States&quot;,&quot;American wit and humor, Pictorial&quot;,&quot;Drawing, American&quot;],&quot;Primary&quot;:&quot;62934.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gibson, Charles Dana, 1867-1944&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;62934&quot;});" class='title'>Drawings by Charles Dana Gibson</a>
+<div class='author'>Gibson, Charles Dana, 1867-1944</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62969, {&quot;Title&quot;:&quot;Humorists of the Pencil: Phil May&quot;,&quot;Topics&quot;:[&quot;Caricatures and cartoons -- Great Britain&quot;,&quot;English wit and humor, Pictorial&quot;],&quot;Primary&quot;:&quot;62969.htm&quot;,&quot;CreatorNames&quot;:[&quot;May, Phil, 1864-1903&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;62969&quot;});" class='title'>Humorists of the Pencil:<br><span class='subtitle'>Phil May</span></a>
+<div class='author'>May, Phil, 1864-1903</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64102, {&quot;Title&quot;:&quot;Flowers from Shakespeare&#39;s Garden: A Posy from the Plays&quot;,&quot;Topics&quot;:[&quot;Shakespeare, William, 1564-1616 -- Illustrations&quot;,&quot;English drama -- Illustrations&quot;,&quot;Flowers in literature&quot;],&quot;Primary&quot;:&quot;64102.htm&quot;,&quot;CreatorNames&quot;:[&quot;Shakespeare, William, 1564-1616&quot;,&quot;Crane, Walter, 1845-1915 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;64102&quot;});" class='title'>Flowers from Shakespeare's Garden:<br><span class='subtitle'>A Posy from the Plays</span></a>
+<div class='author'>Shakespeare, William, 1564-1616, Crane, Walter, 1845-1915 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64312, {&quot;Title&quot;:&quot;Turner&#39;s Sketches and Drawings&quot;,&quot;Topics&quot;:[&quot;Turner, J. M. W. (Joseph Mallord William), 1775-1851&quot;],&quot;Primary&quot;:&quot;64312.htm&quot;,&quot;CreatorNames&quot;:[&quot;Finberg, A. J. (Alexander Joseph), 1866-1939&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;64312&quot;});" class='title'>Turner's Sketches and Drawings</a>
+<div class='author'>Finberg, A. J. (Alexander Joseph), 1866-1939</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64316, {&quot;Title&quot;:&quot;Drawings of David Cox&quot;,&quot;Topics&quot;:[&quot;Cox, David, 1783-1859&quot;],&quot;Primary&quot;:&quot;64316.htm&quot;,&quot;CreatorNames&quot;:[&quot;Finberg, A. J. (Alexander Joseph), 1866-1939&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;64316&quot;});" class='title'>Drawings of David Cox</a>
+<div class='author'>Finberg, A. J. (Alexander Joseph), 1866-1939</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64374, {&quot;Title&quot;:&quot;Twenty-Seven Drawings by William Blake - Being Illustrations for Paradise Lost, Comus, and the Bible&quot;,&quot;Topics&quot;:[&quot;Bible -- Illustrations&quot;,&quot;Milton, John, 1608-1674. Paradise lost -- Illustrations&quot;,&quot;Milton, John, 1608-1674. Comus -- Illustrations&quot;],&quot;Primary&quot;:&quot;64374.htm&quot;,&quot;CreatorNames&quot;:[&quot;Blake, William, 1757-1827&quot;,&quot;Smalley, Carl J. [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;64374&quot;});" class='title'>Twenty-Seven Drawings by William Blake -<br><span class='subtitle'>Being Illustrations for Paradise Lost, Comus, and the Bible</span></a>
+<div class='author'>Blake, William, 1757-1827, Smalley, Carl J. [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64526, {&quot;Title&quot;:&quot;Pictures by Gavarni&quot;,&quot;Topics&quot;:[&quot;Caricatures and cartoons -- France&quot;,&quot;French wit and humor, Pictorial&quot;],&quot;Primary&quot;:&quot;64526.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gavarni, Paul, 1804-1866&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;64526&quot;});" class='title'>Pictures by Gavarni</a>
+<div class='author'>Gavarni, Paul, 1804-1866</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64604, {&quot;Title&quot;:&quot;The Gibson Book: A Collection of Published Works of Charles Dana Gibson. Vol. II&quot;,&quot;Topics&quot;:[&quot;Caricatures and cartoons&quot;,&quot;American wit and humor, Pictorial&quot;,&quot;Drawing, American&quot;],&quot;Primary&quot;:&quot;64604.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gibson, Charles Dana, 1867-1944&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;64604&quot;});" class='title'>The Gibson Book:<br><span class='subtitle'>A Collection of Published Works of Charles Dana Gibson. Vol. II</span></a>
+<div class='author'>Gibson, Charles Dana, 1867-1944</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64738, {&quot;Title&quot;:&quot;Phil May: Sketches from \&quot;\&quot;Punch.\&quot;\&quot;&quot;,&quot;Topics&quot;:[&quot;Caricatures and cartoons -- Great Britain&quot;,&quot;English wit and humor, Pictorial&quot;,&quot;May, Phil, 1864-1903&quot;],&quot;Primary&quot;:&quot;64738.htm&quot;,&quot;CreatorNames&quot;:[&quot;May, Phil, 1864-1903&quot;,&quot;Seaman, Owen, 1861-1936 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;64738&quot;});" class='title'>Phil May:<br><span class='subtitle'>Sketches from "Punch."</span></a>
+<div class='author'>May, Phil, 1864-1903, Seaman, Owen, 1861-1936 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65026, {&quot;Title&quot;:&quot;The Social Ladder - Drawings by Charles Dana Gibson&quot;,&quot;Topics&quot;:[&quot;Caricatures and cartoons -- United States&quot;,&quot;American wit and humor, Pictorial&quot;,&quot;Drawing, American&quot;],&quot;Primary&quot;:&quot;65026.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gibson, Charles Dana, 1867-1944&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;65026&quot;});" class='title'>The Social Ladder -<br><span class='subtitle'>Drawings by Charles Dana Gibson</span></a>
+<div class='author'>Gibson, Charles Dana, 1867-1944</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65836, {&quot;Title&quot;:&quot;Drawings in pen &amp; pencil from Dürer&#39;s day to ours, with notes and appreciations&quot;,&quot;Topics&quot;:[&quot;Drawing&quot;],&quot;Primary&quot;:&quot;65836.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sheringham, George, 1884-1937&quot;,&quot;Holme, C. Geoffrey (Charles Geoffrey), 1887-1954 [Editor]&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;65836&quot;});" class='title'>Drawings in pen & pencil from Dürer's day to ours, with notes and appreciations</a>
+<div class='author'>Sheringham, George, 1884-1937, Holme, C. Geoffrey (Charles Geoffrey), 1887-1954 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65929, {&quot;Title&quot;:&quot;The Illustrators of Montmartre&quot;,&quot;Topics&quot;:[&quot;Illustrators -- France -- Biography&quot;,&quot;Montmartre (Paris, France) -- Biography&quot;],&quot;Primary&quot;:&quot;65929.htm&quot;,&quot;CreatorNames&quot;:[&quot;Emanuel, Frank L. (Frank Lewis), 1865-1948&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;65929&quot;});" class='title'>The Illustrators of Montmartre</a>
+<div class='author'>Emanuel, Frank L. (Frank Lewis), 1865-1948</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65994, {&quot;Title&quot;:&quot;Modern book illustrators and their work&quot;,&quot;Topics&quot;:[&quot;Illustration of books -- Great Britain&quot;],&quot;Primary&quot;:&quot;65994.htm&quot;,&quot;CreatorNames&quot;:[&quot;Salaman, Malcolm C. (Malcolm Charles), 1855-1940 [Contributor]&quot;,&quot;Halton, Ernest G., 1887-1954 [Editor]&quot;,&quot;Holme, C. Geoffrey (Charles Geoffrey), 1887-1954 [Editor]&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;65994&quot;});" class='title'>Modern book illustrators and their work</a>
+<div class='author'>Salaman, Malcolm C. (Malcolm Charles), 1855-1940 [Contributor], Halton, Ernest G., 1887-1954 [Editor], Holme, C. Geoffrey (Charles Geoffrey), 1887-1954 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66822, {&quot;Title&quot;:&quot;Fifty Great Cartoons&quot;,&quot;Topics&quot;:[&quot;Christian life&quot;,&quot;Caricatures and cartoons -- United States&quot;],&quot;Primary&quot;:&quot;66822.htm&quot;,&quot;CreatorNames&quot;:[&quot;Beard, Frank, 1842-1905&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;66822&quot;});" class='title'>Fifty Great Cartoons</a>
+<div class='author'>Beard, Frank, 1842-1905</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66839, {&quot;Title&quot;:&quot;Les fleurs animées - Tome 2&quot;,&quot;Topics&quot;:[&quot;Botany&quot;,&quot;Flowers&quot;,&quot;Floriculture&quot;,&quot;Flowers in art&quot;],&quot;Primary&quot;:&quot;66839.htm&quot;,&quot;CreatorNames&quot;:[&quot;Grandville, J. J., 1803-1847&quot;,&quot;Delord, Taxile, 1815-1877 [Contributor]&quot;,&quot;Karr, Alphonse, 1808-1890 [Contributor]&quot;,&quot;Raban, 1795-1870 [Contributor]&quot;,&quot;Maubert [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;66839&quot;});" class='title'>Les fleurs animées -<br><span class='subtitle'>Tome 2</span></a>
+<div class='author'>Grandville, J. J., 1803-1847, Delord, Taxile, 1815-1877 [Contributor], Karr, Alphonse, 1808-1890 [Contributor], Raban, 1795-1870 [Contributor], Maubert [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67167, {&quot;Title&quot;:&quot;Old Songs&quot;,&quot;Topics&quot;:[&quot;Songs, English -- Texts&quot;],&quot;Primary&quot;:&quot;67167.htm&quot;,&quot;CreatorNames&quot;:[&quot;Spenser, Edmund, 1552?-1599 [Contributor]&quot;,&quot;Wither, George, 1588-1667 [Contributor]&quot;,&quot;Abbey, Edwin Austin, 1852-1911 [Illustrator]&quot;,&quot;Parsons, Alfred, 1847-1920 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;NC&quot;,&quot;PR&quot;],&quot;PG_ID&quot;:&quot;67167&quot;});" class='title'>Old Songs</a>
+<div class='author'>Spenser, Edmund, 1552?-1599 [Contributor], Wither, George, 1588-1667 [Contributor], Abbey, Edwin Austin, 1852-1911 [Illustrator], Parsons, Alfred, 1847-1920 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67494, {&quot;Title&quot;:&quot;Blackboard Sketching&quot;,&quot;Topics&quot;:[&quot;Blackboard drawing&quot;],&quot;Primary&quot;:&quot;67494.htm&quot;,&quot;CreatorNames&quot;:[&quot;Whitney, Frederick, 1858-1949&quot;,&quot;Sargent, Walter, 1868-1929 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;67494&quot;});" class='title'>Blackboard Sketching</a>
+<div class='author'>Whitney, Frederick, 1858-1949, Sargent, Walter, 1868-1929 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67566, {&quot;Title&quot;:&quot;War, 52 Carey Cartoons&quot;,&quot;Topics&quot;:[&quot;World War, 1914-1918 -- Caricatures and cartoons&quot;],&quot;Primary&quot;:&quot;67566.htm&quot;,&quot;CreatorNames&quot;:[&quot;Smith, Ray [Editor]&quot;],&quot;LoCC&quot;:[&quot;NC&quot;,&quot;D&quot;],&quot;PG_ID&quot;:&quot;67566&quot;});" class='title'>War, 52 Carey Cartoons</a>
+<div class='author'>Smith, Ray [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68375, {&quot;Title&quot;:&quot;Ludwig Richter-Büchlein: Mit vielen schönen Holzschnitten des Meisters: von Haus und Hof Weib Kind und Kegel&quot;,&quot;Topics&quot;:[&quot;Richter, Ludwig, 1803-1884&quot;,&quot;Drawing, German&quot;,&quot;Folk songs, German&quot;],&quot;Primary&quot;:&quot;68375.htm&quot;,&quot;CreatorNames&quot;:[&quot;Blumtritt, Walter, 1878-1957 [Editor]&quot;,&quot;Richter, Ludwig, 1803-1884 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;68375&quot;});" class='title'>Ludwig Richter-Büchlein:<br><span class='subtitle'>Mit vielen schönen Holzschnitten des Meisters: von Haus und Hof Weib Kind und Kegel</span></a>
+<div class='author'>Blumtritt, Walter, 1878-1957 [Editor], Richter, Ludwig, 1803-1884 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68401, {&quot;Title&quot;:&quot;Ludwig Richter&quot;,&quot;Topics&quot;:[&quot;Richter, Ludwig, 1803-1884&quot;],&quot;Primary&quot;:&quot;68401.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mohn, V. Paul (Viktor Paul), 1842-1911&quot;,&quot;Knackfuss, H. (Hermann), 1848-1915 [Editor]&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;68401&quot;});" class='title'>Ludwig Richter</a>
+<div class='author'>Mohn, V. Paul (Viktor Paul), 1842-1911, Knackfuss, H. (Hermann), 1848-1915 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68657, {&quot;Title&quot;:&quot;A book of images&quot;,&quot;Topics&quot;:[&quot;Horton, W. T. (William Thomas), 1864-1919&quot;],&quot;Primary&quot;:&quot;68657.htm&quot;,&quot;CreatorNames&quot;:[&quot;Yeats, W. B. (William Butler), 1865-1939 [Author of introduction, etc.]&quot;,&quot;Horton, W. T. (William Thomas), 1864-1919 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;68657&quot;});" class='title'>A book of images</a>
+<div class='author'>Yeats, W. B. (William Butler), 1865-1939 [Author of introduction, etc.], Horton, W. T. (William Thomas), 1864-1919 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68826, {&quot;Title&quot;:&quot;Das Haus in der Sonne&quot;,&quot;Topics&quot;:[&quot;Sweden -- Social life and customs&quot;,&quot;Watercolor painting, Swedish&quot;,&quot;Drawing, Swedish&quot;],&quot;Primary&quot;:&quot;68826.htm&quot;,&quot;CreatorNames&quot;:[&quot;Larsson, Carl, 1853-1919&quot;,&quot;Jungbeck-Grönland, Ellen‏ [Translator]&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;68826&quot;});" class='title'>Das Haus in der Sonne</a>
+<div class='author'>Larsson, Carl, 1853-1919, Jungbeck-Grönland, Ellen‏ [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68989, {&quot;Title&quot;:&quot;Catalogue of a collection of early drawings and pictures of London: With some contemporary furniture&quot;,&quot;Topics&quot;:[&quot;Art -- Exhibitions&quot;,&quot;London (England) -- Pictorial works -- Catalogs&quot;],&quot;Primary&quot;:&quot;68989.htm&quot;,&quot;CreatorNames&quot;:[&quot;Norman, Philip, 1842-1931 [Author of introduction, etc.]&quot;,&quot;Burlington Fine Arts Club&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;68989&quot;});" class='title'>Catalogue of a collection of early drawings and pictures of London:<br><span class='subtitle'>With some contemporary furniture</span></a>
+<div class='author'>Norman, Philip, 1842-1931 [Author of introduction, etc.], Burlington Fine Arts Club</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69012, {&quot;Title&quot;:&quot;Drawing in charcoal and crayon for the use of students and schools&quot;,&quot;Topics&quot;:[&quot;Crayon drawing&quot;,&quot;Charcoal drawing&quot;],&quot;Primary&quot;:&quot;69012.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fowler, Frank, 1852-1910&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;69012&quot;});" class='title'>Drawing in charcoal and crayon for the use of students and schools</a>
+<div class='author'>Fowler, Frank, 1852-1910</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69273, {&quot;Title&quot;:&quot;The history of silhouettes&quot;,&quot;Topics&quot;:[&quot;Silhouettes&quot;],&quot;Primary&quot;:&quot;69273.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jackson, Emily, 1861-1947&quot;,&quot;Nevill, Dorothy, Lady, 1826-1913 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;69273&quot;});" class='title'>The history of silhouettes</a>
+<div class='author'>Jackson, Emily, 1861-1947, Nevill, Dorothy, Lady, 1826-1913 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69745, {&quot;Title&quot;:&quot;The Grip cartoons: vols. I &amp; II, May 1873 to May 1874&quot;,&quot;Topics&quot;:[&quot;Canadian wit and humor, Pictorial&quot;,&quot;Canada -- Politics and government -- 1867-1914 -- Caricatures and cartoons&quot;],&quot;Primary&quot;:&quot;69745.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bengough, J. W. (John Wilson), 1851-1923&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;69745&quot;});" class='title'>The Grip cartoons:<br><span class='subtitle'>vols. I & II, May 1873 to May 1874</span></a>
+<div class='author'>Bengough, J. W. (John Wilson), 1851-1923</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70493, {&quot;Title&quot;:&quot;The Prince of Wales and other famous Americans&quot;,&quot;Topics&quot;:[&quot;Caricatures and cartoons -- United States&quot;],&quot;Primary&quot;:&quot;70493.htm&quot;,&quot;CreatorNames&quot;:[&quot;Covarrubias, Miguel, 1904-1957 [Artist]&quot;,&quot;Van Vechten, Carl, 1880-1964 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;NC&quot;],&quot;PG_ID&quot;:&quot;70493&quot;});" class='title'>The Prince of Wales and other famous Americans</a>
+<div class='author'>Covarrubias, Miguel, 1904-1957 [Artist], Van Vechten, Carl, 1880-1964 [Author of introduction, etc.]</div>
+</div>
+</ul></div>
+</body></html>

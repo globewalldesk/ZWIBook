@@ -1,0 +1,450 @@
+<html>
+<head>
+<title>Category</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+<!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+      <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+      <button id="findButton">Find</button>
+  </div>
+</div>
+<div id="header">
+  <div id="header-content">
+    <div class="header-container">
+      <a id="backBtn" class="header-btn" href="#">
+          <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+      </a>
+      <a id="search" class="header-btn" href="../search.html">
+          <img src="../images/icons/search.svg" title="Search book titles">
+      </a>
+    </div>
+    <h1 id="headTitle">Category: Medicine (R)</h1>
+    <div class="header-container">
+      <a id="sortBtn" class="header-btn" href="#">
+        <img src="../images/icons/sort.svg" title="Re-sort books">
+      </a>
+      <div id="sortDropdown" class="dropdown" style="display: none">
+        <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+        <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+        <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+        <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+      </div>
+      <a class="header-btn" href="categories.html">
+        <img src="../images/icons/categories.svg" title="Browse categories">
+      </a>
+      <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+          <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+      </a>
+    </div>
+  </div>
+</div>
+<div id="body">
+<ul>
+<li><a href='RA.html'>Public aspects of medicine (RA)</a> <span class='count'>114</span></li>
+<li><a href='RB.html'>Pathology (RB)</a> <span class='count'>7</span></li>
+<li><a href='RC.html'>Internal Medicine (RC)</a> <span class='count'>196</span></li>
+<li><a href='RD.html'>Surgery (RD)</a> <span class='count'>33</span></li>
+<li><a href='RE.html'>Ophthalmology (RE)</a> <span class='count'>5</span></li>
+<li><a href='RF.html'>Otorhinolaryngology (Ear, Nose, Throat) (RF)</a> <span class='count'>4</span></li>
+<li><a href='RG.html'>Gynecology and obstetrics (RG)</a> <span class='count'>34</span></li>
+<li><a href='RJ.html'>Pediatrics (RJ)</a> <span class='count'>14</span></li>
+<li><a href='RK.html'>Dentistry (RK)</a> <span class='count'>6</span></li>
+<li><a href='RL.html'>Dermatology (RL)</a> <span class='count'>2</span></li>
+<li><a href='RM.html'>Therapeutics. Pharmacology (RM)</a> <span class='count'>79</span></li>
+<li><a href='RS.html'>Pharmacy and materia medica (RS)</a> <span class='count'>17</span></li>
+<li><a href='RT.html'>Nursing (RT)</a> <span class='count'>11</span></li>
+<li><a href='RV.html'>Botanic, Thomsonian, and Eclectic Medicine (RV)</a> <span class='count'>1</span></li>
+<li><a href='RX.html'>Homeopathy (RX)</a> <span class='count'>10</span></li>
+<li><a href='RZ.html'>Other systems of medicine (RZ)</a> <span class='count'>8</span></li>
+<p>&nbsp;</p>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15004, {&quot;Title&quot;:&quot;Doctor and Patient&quot;,&quot;Topics&quot;:[&quot;Medicine&quot;,&quot;Physician and patient&quot;],&quot;Primary&quot;:&quot;15004.txt&quot;,&quot;CreatorNames&quot;:[&quot;Mitchell, S. Weir (Silas Weir), 1829-1914&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;15004&quot;});" class='title'>Doctor and Patient</a>
+<div class='author'>Mitchell, S. Weir (Silas Weir), 1829-1914</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(1566, {&quot;Title&quot;:&quot;The Evolution of Modern Medicine - A Series of Lectures Delivered at Yale University on the Silliman Foundation in April, 1913&quot;,&quot;Topics&quot;:[&quot;Medicine -- History&quot;],&quot;Primary&quot;:&quot;1566.htm&quot;,&quot;CreatorNames&quot;:[&quot;Osler, William, 1849-1919&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;1566&quot;});" class='title'>The Evolution of Modern Medicine -<br><span class='subtitle'>A Series of Lectures Delivered at Yale University on the Silliman Foundation in April, 1913</span></a>
+<div class='author'>Osler, William, 1849-1919</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15680, {&quot;Title&quot;:&quot;De Usu Ratiocinii Mechanici in Medicina&quot;,&quot;Topics&quot;:[&quot;Medicine -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;15680.htm&quot;,&quot;CreatorNames&quot;:[&quot;Boerhaave, Herman, 1668-1738&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;15680&quot;});" class='title'>De Usu Ratiocinii Mechanici in Medicina</a>
+<div class='author'>Boerhaave, Herman, 1668-1738</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15690, {&quot;Title&quot;:&quot;Het Nut der Mechanistische Methode in de Geneeskunde&quot;,&quot;Topics&quot;:[&quot;Medicine -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;15690.htm&quot;,&quot;CreatorNames&quot;:[&quot;Boerhaave, Herman, 1668-1738&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;15690&quot;});" class='title'>Het Nut der Mechanistische Methode in de Geneeskunde</a>
+<div class='author'>Boerhaave, Herman, 1668-1738</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16155, {&quot;Title&quot;:&quot;Gilbertus Anglicus: Medicine of the Thirteenth Century&quot;,&quot;Topics&quot;:[&quot;Physicians -- Biography&quot;,&quot;Gilbertus, Anglicus&quot;,&quot;Medicine, Medieval&quot;],&quot;Primary&quot;:&quot;16155.htm&quot;,&quot;CreatorNames&quot;:[&quot;Handerson, Henry E. (Henry Ebenezer), 1837-1918&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;16155&quot;});" class='title'>Gilbertus Anglicus:<br><span class='subtitle'>Medicine of the Thirteenth Century</span></a>
+<div class='author'>Handerson, Henry E. (Henry Ebenezer), 1837-1918</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16234, {&quot;Title&quot;:&quot;Introduction à l&#39;étude de la médecine expérimentale&quot;,&quot;Topics&quot;:[&quot;Medicine, Experimental&quot;],&quot;Primary&quot;:&quot;16234.txt&quot;,&quot;CreatorNames&quot;:[&quot;Bernard, Claude, 1813-1878&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;16234&quot;});" class='title'>Introduction à l'étude de la médecine expérimentale</a>
+<div class='author'>Bernard, Claude, 1813-1878</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18331, {&quot;Title&quot;:&quot;De Graecorum Medicis Publicis&quot;,&quot;Topics&quot;:[&quot;Medicine, Greek and Roman&quot;],&quot;Primary&quot;:&quot;18331.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pohl, Rudolf, 1879-&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;18331&quot;});" class='title'>De Graecorum Medicis Publicis</a>
+<div class='author'>Pohl, Rudolf, 1879-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18530, {&quot;Title&quot;:&quot;Elsie Inglis: The Woman with the Torch&quot;,&quot;Topics&quot;:[&quot;Inglis, Elsie Maud, 1864-1917&quot;,&quot;Physicians -- Scotland -- Biography&quot;],&quot;Primary&quot;:&quot;18530.htm&quot;,&quot;CreatorNames&quot;:[&quot;McLaren, Eva Shaw&quot;,&quot;Ashwell, Lena, 1872-1957 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;18530&quot;});" class='title'>Elsie Inglis:<br><span class='subtitle'>The Woman with the Torch</span></a>
+<div class='author'>McLaren, Eva Shaw, Ashwell, Lena, 1872-1957 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18616, {&quot;Title&quot;:&quot;Moral Principles and Medical Practice: The Basis of Medical Jurisprudence&quot;,&quot;Topics&quot;:[&quot;Medical jurisprudence&quot;,&quot;Medical ethics&quot;],&quot;Primary&quot;:&quot;18616.htm&quot;,&quot;CreatorNames&quot;:[&quot;Coppens, Charles, 1835-1920&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;18616&quot;});" class='title'>Moral Principles and Medical Practice:<br><span class='subtitle'>The Basis of Medical Jurisprudence</span></a>
+<div class='author'>Coppens, Charles, 1835-1920</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18976, {&quot;Title&quot;:&quot;Encomium Artis Medicae: De Lof Der Geneeskunde&quot;,&quot;Topics&quot;:[&quot;Philosophy, Medical&quot;],&quot;Primary&quot;:&quot;18976.htm&quot;,&quot;CreatorNames&quot;:[&quot;Erasmus, Desiderius, 1469-1536&quot;,&quot;Hillesum, L. [Translator]&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;18976&quot;});" class='title'>Encomium Artis Medicae:<br><span class='subtitle'>De Lof Der Geneeskunde</span></a>
+<div class='author'>Erasmus, Desiderius, 1469-1536, Hillesum, L. [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19072, {&quot;Title&quot;:&quot;Opuscula Selecta Neerlandicorum - Nederlandsch Tijdschrift voor Geneeskunde&quot;,&quot;Topics&quot;:[&quot;Medicine -- Netherlands -- History&quot;],&quot;Primary&quot;:&quot;19072.htm&quot;,&quot;CreatorNames&quot;:[&quot;Boerhaave, Herman, 1668-1738 [Contributor]&quot;,&quot;Donders, F. C. (Franciscus Cornelis), 1818-1889 [Contributor]&quot;,&quot;Erasmus, Desiderius, 1469-1536 [Contributor]&quot;,&quot;Gaubius, Hieronymus David, 1705?-1780 [Contributor]&quot;,&quot;Leeuwenhoek, Antoni van, 1632-1723 [Contributor]&quot;,&quot;Swammerdam, Jan, 1637-1680 [Contributor]&quot;,&quot;Treub, Hector, 1856-1920 [Editor]&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;19072&quot;});" class='title'>Opuscula Selecta Neerlandicorum -<br><span class='subtitle'>Nederlandsch Tijdschrift voor Geneeskunde</span></a>
+<div class='author'>Boerhaave, Herman, 1668-1738 [Contributor], Donders, F. C. (Franciscus Cornelis), 1818-1889 [Contributor], Erasmus, Desiderius, 1469-1536 [Contributor], Gaubius, Hieronymus David, 1705?-1780 [Contributor], Leeuwenhoek, Antoni van, 1632-1723 [Contributor], Swammerdam, Jan, 1637-1680 [Contributor], Treub, Hector, 1856-1920 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20216, {&quot;Title&quot;:&quot;Old-Time Makers of Medicine - The Story of The Students And Teachers of the Sciences Related to Medicine During the Middle Ages&quot;,&quot;Topics&quot;:[&quot;Physicians&quot;,&quot;Medicine, Medieval&quot;],&quot;Primary&quot;:&quot;20216.htm&quot;,&quot;CreatorNames&quot;:[&quot;Walsh, James J. (James Joseph), 1865-1942&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;20216&quot;});" class='title'>Old-Time Makers of Medicine -<br><span class='subtitle'>The Story of The Students And Teachers of the Sciences Related to Medicine During the Middle Ages</span></a>
+<div class='author'>Walsh, James J. (James Joseph), 1865-1942</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(21325, {&quot;Title&quot;:&quot;Outlines of Greek and Roman Medicine&quot;,&quot;Topics&quot;:[&quot;Medicine, Greek and Roman&quot;],&quot;Primary&quot;:&quot;21325.htm&quot;,&quot;CreatorNames&quot;:[&quot;Elliott, James, Sir, 1880-1959&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;21325&quot;});" class='title'>Outlines of Greek and Roman Medicine</a>
+<div class='author'>Elliott, James, Sir, 1880-1959</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23293, {&quot;Title&quot;:&quot;Primitive Psycho-Therapy and Quackery&quot;,&quot;Topics&quot;:[&quot;Medicine -- History&quot;,&quot;Mental healing&quot;,&quot;Medical misconceptions&quot;,&quot;Quacks and quackery&quot;],&quot;Primary&quot;:&quot;23293.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lawrence, Robert Means, 1847-1935&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;23293&quot;});" class='title'>Primitive Psycho-Therapy and Quackery</a>
+<div class='author'>Lawrence, Robert Means, 1847-1935</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24272, {&quot;Title&quot;:&quot;傷寒論&quot;,&quot;Topics&quot;:[&quot;Medicine, Chinese -- Early works to 1800&quot;,&quot;Medicine, Chinese -- Formulae, receipts, prescriptions&quot;,&quot;Medicine, Ancient&quot;,&quot;Medicine, Chinese -- Terminology&quot;],&quot;Primary&quot;:&quot;24272.txt&quot;,&quot;CreatorNames&quot;:[&quot;Zhang, Zhongjing, active 168-196&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;24272&quot;});" class='title'>傷寒論</a>
+<div class='author'>Zhang, Zhongjing, active 168-196</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24699, {&quot;Title&quot;:&quot;Some Personal Recollections of Dr. Janeway&quot;,&quot;Topics&quot;:[&quot;Physicians -- United States -- Biography&quot;,&quot;Janeway, Edward Gamaliel, 1841-1911&quot;],&quot;Primary&quot;:&quot;24699.htm&quot;,&quot;CreatorNames&quot;:[&quot;Clark, James Bayard, 1869-&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;R&quot;],&quot;PG_ID&quot;:&quot;24699&quot;});" class='title'>Some Personal Recollections of Dr. Janeway</a>
+<div class='author'>Clark, James Bayard, 1869-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24893, {&quot;Title&quot;:&quot;In Mesopotamia&quot;,&quot;Topics&quot;:[&quot;Medicine -- History -- 20th century -- Mesopotamia&quot;,&quot;World War, 1914-1918 -- Campaigns -- Turkey and the Near East -- Mesopotamia&quot;],&quot;Primary&quot;:&quot;24893.htm&quot;,&quot;CreatorNames&quot;:[&quot;Nicoll, Maurice, 1884-1953&quot;],&quot;LoCC&quot;:[&quot;R&quot;,&quot;D&quot;],&quot;PG_ID&quot;:&quot;24893&quot;});" class='title'>In Mesopotamia</a>
+<div class='author'>Nicoll, Maurice, 1884-1953</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28322, {&quot;Title&quot;:&quot;Pioneer Surgery in Kentucky: A Sketch&quot;,&quot;Topics&quot;:[&quot;Surgeons -- Kentucky&quot;,&quot;Surgery -- Kentucky -- History&quot;],&quot;Primary&quot;:&quot;28322.htm&quot;,&quot;CreatorNames&quot;:[&quot;Yandell, David Wendel, 1826-1898&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;28322&quot;});" class='title'>Pioneer Surgery in Kentucky:<br><span class='subtitle'>A Sketch</span></a>
+<div class='author'>Yandell, David Wendel, 1826-1898</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28390, {&quot;Title&quot;:&quot;Medicine in Virginia, 1607-1699&quot;,&quot;Topics&quot;:[&quot;Virginia -- History -- Colonial period, ca. 1600-1775&quot;,&quot;Medicine -- Virginia&quot;],&quot;Primary&quot;:&quot;28390.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hughes, Thomas Proctor, 1905-&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;28390&quot;});" class='title'>Medicine in Virginia, 1607-1699</a>
+<div class='author'>Hughes, Thomas Proctor, 1905-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29307, {&quot;Title&quot;:&quot;North American Medical and Surgical Journal, Vol. 2, No. 3, July, 1826&quot;,&quot;Topics&quot;:[&quot;Medicine -- Periodicals&quot;],&quot;Primary&quot;:&quot;29307.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;,&quot;Bache, Franklin, 1792-1864 [Editor]&quot;,&quot;Coates, Benjamin Hornor, 1797-1881 [Editor]&quot;,&quot;Hodge, Hugh L. (Hugh Lenox), 1796-1873 [Editor]&quot;,&quot;La Roche, R. (René), 1795-1872 [Editor]&quot;,&quot;Meigs, Charles D. (Charles Delucena), 1792-1869 [Editor]&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;29307&quot;});" class='title'>North American Medical and Surgical Journal, Vol. 2, No. 3, July, 1826</a>
+<div class='author'>Various, Bache, Franklin, 1792-1864 [Editor], Coates, Benjamin Hornor, 1797-1881 [Editor], Hodge, Hugh L. (Hugh Lenox), 1796-1873 [Editor], La Roche, R. (René), 1795-1872 [Editor], Meigs, Charles D. (Charles Delucena), 1792-1869 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31816, {&quot;Title&quot;:&quot;The History of the Medical Department of Transylvania University&quot;,&quot;Topics&quot;:[&quot;Transylvania University. Medical Department&quot;,&quot;Medicine -- Kentucky -- History&quot;,&quot;Medicine -- Kentucky&quot;],&quot;Primary&quot;:&quot;31816.htm&quot;,&quot;CreatorNames&quot;:[&quot;Peter, Robert, 1805-1894&quot;,&quot;Peter, Johanna, 1845-1935 [Editor]&quot;],&quot;LoCC&quot;:[&quot;F&quot;,&quot;R&quot;],&quot;PG_ID&quot;:&quot;31816&quot;});" class='title'>The History of the Medical Department of Transylvania University</a>
+<div class='author'>Peter, Robert, 1805-1894, Peter, Johanna, 1845-1935 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33155, {&quot;Title&quot;:&quot;Medicina Flagellata; Or, The Doctor Scarify&#39;d&quot;,&quot;Topics&quot;:[&quot;Hygiene&quot;,&quot;Quacks and quackery&quot;,&quot;Plague -- Early works to 1800&quot;,&quot;Medicine -- Practice -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;33155.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;33155&quot;});" class='title'>Medicina Flagellata;<br><span class='subtitle'>Or, The Doctor Scarify'd</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34038, {&quot;Title&quot;:&quot;Forty Years in the Wilderness of Pills and Powders - Cogitations and Confessions of an Aged Physician&quot;,&quot;Topics&quot;:[&quot;Medicine -- Anecdotes&quot;],&quot;Primary&quot;:&quot;34038.htm&quot;,&quot;CreatorNames&quot;:[&quot;Alcott, William A. (William Andrus), 1798-1859&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;34038&quot;});" class='title'>Forty Years in the Wilderness of Pills and Powders -<br><span class='subtitle'>Cogitations and Confessions of an Aged Physician</span></a>
+<div class='author'>Alcott, William A. (William Andrus), 1798-1859</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34128, {&quot;Title&quot;:&quot;Sir James Young Simpson and Chloroform (1811-1870) - Masters of Medicine&quot;,&quot;Topics&quot;:[&quot;Simpson, James Young, 1811-1870&quot;,&quot;Chloroform&quot;,&quot;Anesthetics&quot;],&quot;Primary&quot;:&quot;34128.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gordon, H. Laing (Henry Laing)&quot;,&quot;Hart, Ernest Abraham, 1835-1898 [Editor]&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;34128&quot;});" class='title'>Sir James Young Simpson and Chloroform (1811-1870) -<br><span class='subtitle'>Masters of Medicine</span></a>
+<div class='author'>Gordon, H. Laing (Henry Laing), Hart, Ernest Abraham, 1835-1898 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34625, {&quot;Title&quot;:&quot;Juizo Verdadeiro sobre a carta contra os Medicos, Cirurgioens e Boticarios&quot;,&quot;Topics&quot;:[&quot;Medicine&quot;],&quot;Primary&quot;:&quot;34625.htm&quot;,&quot;CreatorNames&quot;:[&quot;Morganti, Bento, 1709-&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;34625&quot;});" class='title'>Juizo Verdadeiro sobre a carta contra os Medicos, Cirurgioens e Boticarios</a>
+<div class='author'>Morganti, Bento, 1709-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34626, {&quot;Title&quot;:&quot;Sustos da Vida nos Perigos da Cura&quot;,&quot;Topics&quot;:[&quot;Medicine&quot;],&quot;Primary&quot;:&quot;34626.htm&quot;,&quot;CreatorNames&quot;:[&quot;Morganti, Bento, 1709-&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;34626&quot;});" class='title'>Sustos da Vida nos Perigos da Cura</a>
+<div class='author'>Morganti, Bento, 1709-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35477, {&quot;Title&quot;:&quot;Makers of Modern Medicine&quot;,&quot;Topics&quot;:[&quot;Medicine -- Biography&quot;],&quot;Primary&quot;:&quot;35477.htm&quot;,&quot;CreatorNames&quot;:[&quot;Walsh, James J. (James Joseph), 1865-1942&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;35477&quot;});" class='title'>Makers of Modern Medicine</a>
+<div class='author'>Walsh, James J. (James Joseph), 1865-1942</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36926, {&quot;Title&quot;:&quot;Man&#39;s Redemption of Man: A Lay Sermon&quot;,&quot;Topics&quot;:[&quot;Medicine&quot;],&quot;Primary&quot;:&quot;36926.htm&quot;,&quot;CreatorNames&quot;:[&quot;Osler, William, 1849-1919&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;36926&quot;});" class='title'>Man's Redemption of Man:<br><span class='subtitle'>A Lay Sermon</span></a>
+<div class='author'>Osler, William, 1849-1919</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38224, {&quot;Title&quot;:&quot;Suomalaisen talonpojan koti-lääkäri&quot;,&quot;Topics&quot;:[&quot;Medicine&quot;],&quot;Primary&quot;:&quot;38224.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lönnrot, Elias, 1802-1884&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;38224&quot;});" class='title'>Suomalaisen talonpojan koti-lääkäri</a>
+<div class='author'>Lönnrot, Elias, 1802-1884</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38752, {&quot;Title&quot;:&quot;The Story of a Doctor&#39;s Telephone—Told by His Wife&quot;,&quot;Topics&quot;:[&quot;Wit and humor&quot;,&quot;Physicians -- Anecdotes&quot;],&quot;Primary&quot;:&quot;38752.htm&quot;,&quot;CreatorNames&quot;:[&quot;Firebaugh, Ellen M.&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;38752&quot;});" class='title'>The Story of a Doctor's Telephone—Told by His Wife</a>
+<div class='author'>Firebaugh, Ellen M.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38929, {&quot;Title&quot;:&quot;Quacks and Grafters&quot;,&quot;Topics&quot;:[&quot;Osteopathic medicine&quot;,&quot;Quacks and quackery&quot;],&quot;Primary&quot;:&quot;38929.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;,&quot;Strohbach, George, 1872- [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;38929&quot;});" class='title'>Quacks and Grafters</a>
+<div class='author'>Anonymous, Strohbach, George, 1872- [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39074, {&quot;Title&quot;:&quot;Curiosities of Medical Experience&quot;,&quot;Topics&quot;:[&quot;Medicine&quot;],&quot;Primary&quot;:&quot;39074.htm&quot;,&quot;CreatorNames&quot;:[&quot;Millingen, J. G. (John Gideon), 1782-1862&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;39074&quot;});" class='title'>Curiosities of Medical Experience</a>
+<div class='author'>Millingen, J. G. (John Gideon), 1782-1862</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39514, {&quot;Title&quot;:&quot;The Doctor in History, Literature, Folk-Lore, Etc.&quot;,&quot;Topics&quot;:[&quot;Physicians&quot;,&quot;Physicians in literature&quot;,&quot;Literature and medicine&quot;],&quot;Primary&quot;:&quot;39514.htm&quot;,&quot;CreatorNames&quot;:[&quot;Andrews, William, 1848-1908 [Editor]&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;39514&quot;});" class='title'>The Doctor in History, Literature, Folk-Lore, Etc.</a>
+<div class='author'>Andrews, William, 1848-1908 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40161, {&quot;Title&quot;:&quot;A Book About Doctors&quot;,&quot;Topics&quot;:[&quot;Medicine -- Anecdotes&quot;,&quot;Physicians -- Great Britain&quot;],&quot;Primary&quot;:&quot;40161.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jeaffreson, John Cordy, 1831-1901&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;40161&quot;});" class='title'>A Book About Doctors</a>
+<div class='author'>Jeaffreson, John Cordy, 1831-1901</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41595, {&quot;Title&quot;:&quot;The Funny Side of Physic - Or, The Mysteries of Medicine, Presenting the Humorous and Serious Sides of Medical Practice. An Exposé of Medical Humbugs, Quacks, and Charlatans in All Ages and All Countries.&quot;,&quot;Topics&quot;:[&quot;Medicine -- Anecdotes&quot;,&quot;Quacks and quackery&quot;],&quot;Primary&quot;:&quot;41595.htm&quot;,&quot;CreatorNames&quot;:[&quot;Crabtre, Addison Darre&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;41595&quot;});" class='title'>The Funny Side of Physic -<br><span class='subtitle'>Or, The Mysteries of Medicine, Presenting the Humorous and Serious Sides of Medical Practice. An Exposé of Medical Humbugs, Quacks, and Charlatans in All Ages and All Countries.</span></a>
+<div class='author'>Crabtre, Addison Darre</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42764, {&quot;Title&quot;:&quot;The Ethics of Medical Homicide and Mutilation&quot;,&quot;Topics&quot;:[&quot;Medical ethics&quot;],&quot;Primary&quot;:&quot;42764.htm&quot;,&quot;CreatorNames&quot;:[&quot;O&#39;Malley, Austin, 1858-1932&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;42764&quot;});" class='title'>The Ethics of Medical Homicide and Mutilation</a>
+<div class='author'>O'Malley, Austin, 1858-1932</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43300, {&quot;Title&quot;:&quot;Medieval Medicine&quot;,&quot;Topics&quot;:[&quot;Medicine, Medieval&quot;],&quot;Primary&quot;:&quot;43300.htm&quot;,&quot;CreatorNames&quot;:[&quot;Walsh, James J. (James Joseph), 1865-1942&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;43300&quot;});" class='title'>Medieval Medicine</a>
+<div class='author'>Walsh, James J. (James Joseph), 1865-1942</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4343, {&quot;Title&quot;:&quot;How and When to Be Your Own Doctor&quot;,&quot;Topics&quot;:[&quot;Hygiene&quot;,&quot;Diet&quot;,&quot;Therapeutics, Physiological&quot;],&quot;Primary&quot;:&quot;4343.htm&quot;,&quot;CreatorNames&quot;:[&quot;Moser, Isabel A.&quot;,&quot;Solomon, Steve, 1942-&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;4343&quot;});" class='title'>How and When to Be Your Own Doctor</a>
+<div class='author'>Moser, Isabel A., Solomon, Steve, 1942-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44744, {&quot;Title&quot;:&quot;Superstition in Medicine&quot;,&quot;Topics&quot;:[&quot;Medicine -- History&quot;,&quot;Astrology&quot;,&quot;Medical misconceptions&quot;],&quot;Primary&quot;:&quot;44744.htm&quot;,&quot;CreatorNames&quot;:[&quot;Magnus, Hugo, 1842-1907&quot;,&quot;Salinger, Julius L. (Julius Lincoln) [Translator]&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;44744&quot;});" class='title'>Superstition in Medicine</a>
+<div class='author'>Magnus, Hugo, 1842-1907, Salinger, Julius L. (Julius Lincoln) [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46664, {&quot;Title&quot;:&quot;William Harvey&quot;,&quot;Topics&quot;:[&quot;Harvey, William, 1578-1657&quot;,&quot;Physicians -- England -- Biography&quot;],&quot;Primary&quot;:&quot;46664.htm&quot;,&quot;CreatorNames&quot;:[&quot;Power, D&#39;Arcy, Sir, 1855-1941&quot;],&quot;LoCC&quot;:[&quot;QP&quot;,&quot;R&quot;],&quot;PG_ID&quot;:&quot;46664&quot;});" class='title'>William Harvey</a>
+<div class='author'>Power, D'Arcy, Sir, 1855-1941</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46727, {&quot;Title&quot;:&quot;An Epitome of the History of Medicine&quot;,&quot;Topics&quot;:[&quot;Medicine -- History&quot;],&quot;Primary&quot;:&quot;46727.htm&quot;,&quot;CreatorNames&quot;:[&quot;Park, Roswell, 1852-1914&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;46727&quot;});" class='title'>An Epitome of the History of Medicine</a>
+<div class='author'>Park, Roswell, 1852-1914</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47004, {&quot;Title&quot;:&quot;The Mystery and Romance of Alchemy and Pharmacy&quot;,&quot;Topics&quot;:[&quot;Alchemy&quot;,&quot;Medicine, Magic, mystic, and spagiric&quot;,&quot;Pharmacy -- History&quot;],&quot;Primary&quot;:&quot;47004.htm&quot;,&quot;CreatorNames&quot;:[&quot;Thompson, C. J. S. (Charles John Samuel), 1862-1943&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;47004&quot;});" class='title'>The Mystery and Romance of Alchemy and Pharmacy</a>
+<div class='author'>Thompson, C. J. S. (Charles John Samuel), 1862-1943</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47343, {&quot;Title&quot;:&quot;Little Masterpieces of Science: Health and Healing&quot;,&quot;Topics&quot;:[&quot;Medicine -- History&quot;],&quot;Primary&quot;:&quot;47343.htm&quot;,&quot;CreatorNames&quot;:[&quot;Iles, George, 1852-1942 [Editor]&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;47343&quot;});" class='title'>Little Masterpieces of Science:<br><span class='subtitle'>Health and Healing</span></a>
+<div class='author'>Iles, George, 1852-1942 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48341, {&quot;Title&quot;:&quot;Gunshot Roentgenograms - A Collection of Roentgenograms Taken in Constantinople During the Turko-Balkan War, 1912-1913, Illustrating Some Gunshot Wounds in the Turkish Army&quot;,&quot;Topics&quot;:[&quot;Gunshot wounds&quot;,&quot;X-rays&quot;,&quot;Balkan Peninsula -- History -- War of 1912-1913 -- Medical care&quot;],&quot;Primary&quot;:&quot;48341.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ford, Clyde S. (Clyde Sinclair), 1867-&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;48341&quot;});" class='title'>Gunshot Roentgenograms -<br><span class='subtitle'>A Collection of Roentgenograms Taken in Constantinople During the Turko-Balkan War, 1912-1913, Illustrating Some Gunshot Wounds in the Turkish Army</span></a>
+<div class='author'>Ford, Clyde S. (Clyde Sinclair), 1867-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48343, {&quot;Title&quot;:&quot;Clergymen and Doctors: Curious Facts and Characteristic Sketches.&quot;,&quot;Topics&quot;:[&quot;Medicine -- Anecdotes&quot;,&quot;Physicians&quot;,&quot;Clergy&quot;,&quot;Medicine -- Humor&quot;,&quot;Pastoral theology -- Anecdotes&quot;],&quot;Primary&quot;:&quot;48343.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;BV&quot;,&quot;R&quot;],&quot;PG_ID&quot;:&quot;48343&quot;});" class='title'>Clergymen and Doctors:<br><span class='subtitle'>Curious Facts and Characteristic Sketches.</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49549, {&quot;Title&quot;:&quot;Portraits of Dr. William Harvey&quot;,&quot;Topics&quot;:[&quot;Harvey, William, 1578-1657 -- Portraits&quot;],&quot;Primary&quot;:&quot;49549.htm&quot;,&quot;CreatorNames&quot;:[&quot;Royal Society of Medicine (Great Britain)&quot;],&quot;LoCC&quot;:[&quot;QP&quot;,&quot;R&quot;],&quot;PG_ID&quot;:&quot;49549&quot;});" class='title'>Portraits of Dr. William Harvey</a>
+<div class='author'>Royal Society of Medicine (Great Britain)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5069, {&quot;Title&quot;:&quot;The Doctor&#39;s Dilemma: Preface on Doctors&quot;,&quot;Topics&quot;:[&quot;Physicians&quot;],&quot;Primary&quot;:&quot;5069.htm&quot;,&quot;CreatorNames&quot;:[&quot;Shaw, Bernard, 1856-1950&quot;],&quot;LoCC&quot;:[&quot;PR&quot;,&quot;R&quot;],&quot;PG_ID&quot;:&quot;5069&quot;});" class='title'>The Doctor's Dilemma:<br><span class='subtitle'>Preface on Doctors</span></a>
+<div class='author'>Shaw, Bernard, 1856-1950</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51410, {&quot;Title&quot;:&quot;Dr. Elsie Inglis&quot;,&quot;Topics&quot;:[&quot;Inglis, Elsie Maud, 1864-1917&quot;,&quot;Women physicians -- Scotland -- Biography&quot;,&quot;Suffragists -- Scotland -- Biography&quot;,&quot;World War, 1914-1918 -- Women -- Biography&quot;,&quot;World War, 1914-1918 -- Women -- Scotland&quot;,&quot;Scottish Women&#39;s Hospitals (Organization)&quot;,&quot;World War, 1914-1918 -- Medical care -- Russia&quot;,&quot;World War, 1914-1918 -- Medical care -- Scotland&quot;],&quot;Primary&quot;:&quot;51410.htm&quot;,&quot;CreatorNames&quot;:[&quot;Balfour, Frances, Lady, 1858-1931&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;51410&quot;});" class='title'>Dr. Elsie Inglis</a>
+<div class='author'>Balfour, Frances, Lady, 1858-1931</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52297, {&quot;Title&quot;:&quot;Medical Women: Two Essays&quot;,&quot;Topics&quot;:[&quot;Women in medicine&quot;],&quot;Primary&quot;:&quot;52297.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jex-Blake, Sophia, 1840-1912&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;52297&quot;});" class='title'>Medical Women:<br><span class='subtitle'>Two Essays</span></a>
+<div class='author'>Jex-Blake, Sophia, 1840-1912</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52858, {&quot;Title&quot;:&quot;The Cholera Gazette, Vol. I. No. 4. Wednesday, August 1st, 1832.&quot;,&quot;Topics&quot;:[&quot;Cholera -- Periodicals&quot;],&quot;Primary&quot;:&quot;52858.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;52858&quot;});" class='title'>The Cholera Gazette, Vol. I. No. 4. Wednesday, August 1st, 1832.</a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52859, {&quot;Title&quot;:&quot;The Cholera Gazette, Vol. I. No. 5. Wednesday, August 8th, 1832.&quot;,&quot;Topics&quot;:[&quot;Cholera -- Periodicals&quot;],&quot;Primary&quot;:&quot;52859.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;52859&quot;});" class='title'>The Cholera Gazette, Vol. I. No. 5. Wednesday, August 8th, 1832.</a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52874, {&quot;Title&quot;:&quot;The Cleveland Medical Gazette, Vol. 1, No. 3, January 1886&quot;,&quot;Topics&quot;:[&quot;Medicine -- Periodicals&quot;,&quot;Surgery -- Periodicals&quot;],&quot;Primary&quot;:&quot;52874.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;,&quot;Baker, A. R. [Editor]&quot;,&quot;Kelley, Samuel Walter, 1855-1929 [Editor]&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;52874&quot;});" class='title'>The Cleveland Medical Gazette, Vol. 1, No. 3, January 1886</a>
+<div class='author'>Various, Baker, A. R. [Editor], Kelley, Samuel Walter, 1855-1929 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52967, {&quot;Title&quot;:&quot;The Hospital Bulletin, Vol. V, No. 3, May 15, 1909&quot;,&quot;Topics&quot;:[&quot;Medicine -- Periodicals&quot;,&quot;Medical colleges -- Alumni and alumnae -- Maryland -- Baltimore -- Periodicals&quot;],&quot;Primary&quot;:&quot;52967.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;52967&quot;});" class='title'>The Hospital Bulletin, Vol. V, No. 3, May 15, 1909</a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52983, {&quot;Title&quot;:&quot;The Cleveland Medical Gazette, Vol. 1, No. 4, February 1886&quot;,&quot;Topics&quot;:[&quot;Medicine -- Periodicals&quot;,&quot;Surgery -- Periodicals&quot;],&quot;Primary&quot;:&quot;52983.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;,&quot;Baker, A. R. [Editor]&quot;,&quot;Kelley, Samuel Walter, 1855-1929 [Editor]&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;52983&quot;});" class='title'>The Cleveland Medical Gazette, Vol. 1, No. 4, February 1886</a>
+<div class='author'>Various, Baker, A. R. [Editor], Kelley, Samuel Walter, 1855-1929 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53325, {&quot;Title&quot;:&quot;The Cleveland Medical Gazette, Vol. 1, No. 5, March 1886&quot;,&quot;Topics&quot;:[&quot;Medicine -- Periodicals&quot;,&quot;Surgery -- Periodicals&quot;],&quot;Primary&quot;:&quot;53325.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;,&quot;Baker, A. R. [Editor]&quot;,&quot;Kelley, Samuel Walter, 1855-1929 [Editor]&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;53325&quot;});" class='title'>The Cleveland Medical Gazette, Vol. 1, No. 5, March 1886</a>
+<div class='author'>Various, Baker, A. R. [Editor], Kelley, Samuel Walter, 1855-1929 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53450, {&quot;Title&quot;:&quot;The London Medical Gazette; December 27, 1828 - Being a Weekly Journal of Medicine and the Collateral Sciences&quot;,&quot;Topics&quot;:[&quot;Medicine -- Periodicals&quot;],&quot;Primary&quot;:&quot;53450.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;53450&quot;});" class='title'>The London Medical Gazette;<br><span class='subtitle'>December 27, 1828 - Being a Weekly Journal of Medicine and the Collateral Sciences</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53557, {&quot;Title&quot;:&quot;The Gold-Headed Cane&quot;,&quot;Topics&quot;:[&quot;Physicians -- England -- Biography&quot;,&quot;Radcliffe, John, 1650-1714&quot;,&quot;Mead, Richard, 1673-1754&quot;,&quot;Askew, Anthony, 1722-1774&quot;,&quot;Pitcairn, David, 1749-1809&quot;,&quot;Baillie, Matthew, 1761-1823&quot;],&quot;Primary&quot;:&quot;53557.htm&quot;,&quot;CreatorNames&quot;:[&quot;Macmichael, William, 1783-1839&quot;,&quot;Osler, William, 1849-1919 [Author of introduction, etc.]&quot;,&quot;Packard, Francis R. (Francis Randolph), 1870-1950 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;53557&quot;});" class='title'>The Gold-Headed Cane</a>
+<div class='author'>Macmichael, William, 1783-1839, Osler, William, 1849-1919 [Author of introduction, etc.], Packard, Francis R. (Francis Randolph), 1870-1950 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53827, {&quot;Title&quot;:&quot;The Hospital Bulletin, Vol. V, No. 2, April 15, 1909&quot;,&quot;Topics&quot;:[&quot;Medicine -- Periodicals&quot;,&quot;Medical colleges -- Alumni and alumnae -- Maryland -- Baltimore -- Periodicals&quot;],&quot;Primary&quot;:&quot;53827.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;53827&quot;});" class='title'>The Hospital Bulletin, Vol. V, No. 2, April 15, 1909</a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54215, {&quot;Title&quot;:&quot;The Life of Sophia Jex-Blake&quot;,&quot;Topics&quot;:[&quot;Jex-Blake, Sophia, 1840-1912&quot;],&quot;Primary&quot;:&quot;54215.htm&quot;,&quot;CreatorNames&quot;:[&quot;Travers, Graham, 1859-1918&quot;],&quot;LoCC&quot;:[&quot;HQ&quot;,&quot;R&quot;],&quot;PG_ID&quot;:&quot;54215&quot;});" class='title'>The Life of Sophia Jex-Blake</a>
+<div class='author'>Travers, Graham, 1859-1918</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54332, {&quot;Title&quot;:&quot;The Æsculapian Labyrinth Explored; Or, Medical Mystery Illustrated&quot;,&quot;Topics&quot;:[&quot;Medicine -- Anecdotes&quot;,&quot;Medicine -- Humor&quot;,&quot;Physicians -- Early works to 1800&quot;,&quot;Pharmacists -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;54332.htm&quot;,&quot;CreatorNames&quot;:[&quot;Taplin, William, 1740?-1807&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;54332&quot;});" class='title'>The Æsculapian Labyrinth Explored;<br><span class='subtitle'>Or, Medical Mystery Illustrated</span></a>
+<div class='author'>Taplin, William, 1740?-1807</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56400, {&quot;Title&quot;:&quot;Memoirs of John Abernethy - With a View of His Lectures, His Writings, and Character; with Additional Extracts from Original Documents, Now First Published&quot;,&quot;Topics&quot;:[&quot;Abernethy, John, 1764-1831&quot;,&quot;Physicians -- Great Britain -- Biography&quot;],&quot;Primary&quot;:&quot;56400.htm&quot;,&quot;CreatorNames&quot;:[&quot;Macilwain, George, 1797-1882&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;56400&quot;});" class='title'>Memoirs of John Abernethy -<br><span class='subtitle'>With a View of His Lectures, His Writings, and Character; with Additional Extracts from Original Documents, Now First Published</span></a>
+<div class='author'>Macilwain, George, 1797-1882</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58454, {&quot;Title&quot;:&quot;Joseph Rogers, M.D.: Reminiscences of a Workhouse Medical Officer&quot;,&quot;Topics&quot;:[&quot;Poor laws -- Great Britain&quot;,&quot;Charities, Medical -- Great Britain&quot;],&quot;Primary&quot;:&quot;58454.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rogers, Joseph, 1821-1889&quot;,&quot;Rogers, James E. Thorold (James Edwin Thorold), 1823-1890 [Editor]&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;58454&quot;});" class='title'>Joseph Rogers, M.D.:<br><span class='subtitle'>Reminiscences of a Workhouse Medical Officer</span></a>
+<div class='author'>Rogers, Joseph, 1821-1889, Rogers, James E. Thorold (James Edwin Thorold), 1823-1890 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58859, {&quot;Title&quot;:&quot;Medical Inquiries and Observations, Vol. 1 - The Second Edition, Revised and Enlarged by the Author&quot;,&quot;Topics&quot;:[&quot;Medicine&quot;,&quot;Yellow fever -- Pennsylvania -- Philadelphia&quot;],&quot;Primary&quot;:&quot;58859.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rush, Benjamin, 1746-1813&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;58859&quot;});" class='title'>Medical Inquiries and Observations, Vol. 1 -<br><span class='subtitle'>The Second Edition, Revised and Enlarged by the Author</span></a>
+<div class='author'>Rush, Benjamin, 1746-1813</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58860, {&quot;Title&quot;:&quot;Medical Inquiries and Observations, Vol. 2 - The Second Edition, Revised and Enlarged by the Author&quot;,&quot;Topics&quot;:[&quot;Medicine&quot;,&quot;Yellow fever -- Pennsylvania -- Philadelphia&quot;],&quot;Primary&quot;:&quot;58860.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rush, Benjamin, 1746-1813&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;58860&quot;});" class='title'>Medical Inquiries and Observations, Vol. 2 -<br><span class='subtitle'>The Second Edition, Revised and Enlarged by the Author</span></a>
+<div class='author'>Rush, Benjamin, 1746-1813</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58861, {&quot;Title&quot;:&quot;Medical Inquiries and Observations, Vol. 3 - The Second Edition, Revised and Enlarged by the Author&quot;,&quot;Topics&quot;:[&quot;Medicine&quot;,&quot;Yellow fever -- Pennsylvania -- Philadelphia&quot;],&quot;Primary&quot;:&quot;58861.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rush, Benjamin, 1746-1813&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;58861&quot;});" class='title'>Medical Inquiries and Observations, Vol. 3 -<br><span class='subtitle'>The Second Edition, Revised and Enlarged by the Author</span></a>
+<div class='author'>Rush, Benjamin, 1746-1813</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58862, {&quot;Title&quot;:&quot;Medical Inquiries and Observations, Vol. 4 - The Second Edition, Revised and Enlarged by the Author&quot;,&quot;Topics&quot;:[&quot;Medicine&quot;,&quot;Yellow fever -- Pennsylvania -- Philadelphia&quot;],&quot;Primary&quot;:&quot;58862.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rush, Benjamin, 1746-1813&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;58862&quot;});" class='title'>Medical Inquiries and Observations, Vol. 4 -<br><span class='subtitle'>The Second Edition, Revised and Enlarged by the Author</span></a>
+<div class='author'>Rush, Benjamin, 1746-1813</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58978, {&quot;Title&quot;:&quot;Galeni pergamensis de temperamentis, et de inaequali intemperie&quot;,&quot;Topics&quot;:[&quot;Pathology&quot;,&quot;Temperament&quot;],&quot;Primary&quot;:&quot;58978.htm&quot;,&quot;CreatorNames&quot;:[&quot;Galen&quot;,&quot;Payne, Joseph Frank, 1840-1910 [Editor]&quot;,&quot;Linacre, Thomas, 1460-1524 [Translator]&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;58978&quot;});" class='title'>Galeni pergamensis de temperamentis, et de inaequali intemperie</a>
+<div class='author'>Galen, Payne, Joseph Frank, 1840-1910 [Editor], Linacre, Thomas, 1460-1524 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59175, {&quot;Title&quot;:&quot;Nashville Journal of Medicine and Surgery, Vol. CX. March, 1916. No. 3&quot;,&quot;Topics&quot;:[&quot;Medicine -- Periodicals&quot;],&quot;Primary&quot;:&quot;59175.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;,&quot;Briggs, Charles S. (Charles Stubbins), 1851-1920 [Editor]&quot;,&quot;Briggs, W. T. (William Thompson), 1829-1894 [Editor]&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;59175&quot;});" class='title'>Nashville Journal of Medicine and Surgery, Vol. CX. March, 1916. No. 3</a>
+<div class='author'>Various, Briggs, Charles S. (Charles Stubbins), 1851-1920 [Editor], Briggs, W. T. (William Thompson), 1829-1894 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59331, {&quot;Title&quot;:&quot;The Origin and Growth of the Healing Art - A Popular History of Medicine in All Ages and Countries&quot;,&quot;Topics&quot;:[&quot;Medicine -- History&quot;],&quot;Primary&quot;:&quot;59331.htm&quot;,&quot;CreatorNames&quot;:[&quot;Berdoe, Edward, 1836-1916&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;59331&quot;});" class='title'>The Origin and Growth of the Healing Art -<br><span class='subtitle'>A Popular History of Medicine in All Ages and Countries</span></a>
+<div class='author'>Berdoe, Edward, 1836-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59337, {&quot;Title&quot;:&quot;Geschichte der Medizin. I. Band&quot;,&quot;Topics&quot;:[&quot;Medicine -- History&quot;],&quot;Primary&quot;:&quot;59337.htm&quot;,&quot;CreatorNames&quot;:[&quot;Neuburger, Max, 1868-1955&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;59337&quot;});" class='title'>Geschichte der Medizin. I. Band</a>
+<div class='author'>Neuburger, Max, 1868-1955</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59338, {&quot;Title&quot;:&quot;Geschichte der Medizin. II. Band, Erster Teil&quot;,&quot;Topics&quot;:[&quot;Medicine -- History&quot;],&quot;Primary&quot;:&quot;59338.htm&quot;,&quot;CreatorNames&quot;:[&quot;Neuburger, Max, 1868-1955&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;59338&quot;});" class='title'>Geschichte der Medizin. II. Band, Erster Teil</a>
+<div class='author'>Neuburger, Max, 1868-1955</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59865, {&quot;Title&quot;:&quot;The Elephant Man and Other Reminiscences&quot;,&quot;Topics&quot;:[&quot;Physicians -- Correspondence&quot;],&quot;Primary&quot;:&quot;59865.htm&quot;,&quot;CreatorNames&quot;:[&quot;Treves, Frederick, 1853-1923&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;59865&quot;});" class='title'>The Elephant Man and Other Reminiscences</a>
+<div class='author'>Treves, Frederick, 1853-1923</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59888, {&quot;Title&quot;:&quot;Termini medici in lingua fennica occurrentes - Dissertatio academica&quot;,&quot;Topics&quot;:[&quot;Medicine -- Terminology&quot;,&quot;Finnish language -- Foreign words and phrases -- Latin&quot;],&quot;Primary&quot;:&quot;59888.txt&quot;,&quot;CreatorNames&quot;:[&quot;Törngren, Johannes Agapetus, 1772-1859&quot;],&quot;LoCC&quot;:[&quot;PH&quot;,&quot;R&quot;],&quot;PG_ID&quot;:&quot;59888&quot;});" class='title'>Termini medici in lingua fennica occurrentes -<br><span class='subtitle'>Dissertatio academica</span></a>
+<div class='author'>Törngren, Johannes Agapetus, 1772-1859</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59916, {&quot;Title&quot;:&quot;North Carolina Medical Journal. Vol. 3. No. 4. April, 1879&quot;,&quot;Topics&quot;:[&quot;Medicine -- Periodicals&quot;,&quot;Medicine -- North Carolina -- Periodicals&quot;],&quot;Primary&quot;:&quot;59916.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;,&quot;De Rosset, Moses John, 1838-1881 [Editor]&quot;,&quot;Wood, Thomas Fanning, 1841-1892 [Editor]&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;59916&quot;});" class='title'>North Carolina Medical Journal. Vol. 3. No. 4. April, 1879</a>
+<div class='author'>Various, De Rosset, Moses John, 1838-1881 [Editor], Wood, Thomas Fanning, 1841-1892 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60101, {&quot;Title&quot;:&quot;Large Fees and How to Get Them: A book for the private use of physicians&quot;,&quot;Topics&quot;:[&quot;Medical fees&quot;],&quot;Primary&quot;:&quot;60101.htm&quot;,&quot;CreatorNames&quot;:[&quot;Harmon, Albert V.&quot;,&quot;Lydston, G. Frank (George Frank), 1858-1923 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;60101&quot;});" class='title'>Large Fees and How to Get Them:<br><span class='subtitle'>A book for the private use of physicians</span></a>
+<div class='author'>Harmon, Albert V., Lydston, G. Frank (George Frank), 1858-1923 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60493, {&quot;Title&quot;:&quot;The Brooklyn Medical Journal. Vol. II. No. 2. Aug., 1888&quot;,&quot;Topics&quot;:[&quot;Medicine -- Periodicals&quot;],&quot;Primary&quot;:&quot;60493.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;,&quot;Bailey, Fred. D. [Editor]&quot;,&quot;Butler, Glentworth Reeve, 1855-1926 [Editor]&quot;,&quot;Hunt, Joseph Hill, 1848-1911 [Editor]&quot;,&quot;Hutchins, Alexander, 1835-1906 [Editor]&quot;,&quot;Raymond, Joseph H. (Joseph Howard), 1845-1915 [Editor]&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;60493&quot;});" class='title'>The Brooklyn Medical Journal. Vol. II. No. 2. Aug., 1888</a>
+<div class='author'>Various, Bailey, Fred. D. [Editor], Butler, Glentworth Reeve, 1855-1926 [Editor], Hunt, Joseph Hill, 1848-1911 [Editor], Hutchins, Alexander, 1835-1906 [Editor], Raymond, Joseph H. (Joseph Howard), 1845-1915 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60511, {&quot;Title&quot;:&quot;The American Practitioner and News. Vol. XXV. No. 3. Feb. 1, 1898 - A Semi-Monthly Journal of Medicine and Surgery&quot;,&quot;Topics&quot;:[&quot;Medicine -- Periodicals&quot;],&quot;Primary&quot;:&quot;60511.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;,&quot;Cottell, H. A. (Henry A.), 1847- [Editor]&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;60511&quot;});" class='title'>The American Practitioner and News. Vol. XXV. No. 3. Feb. 1, 1898 -<br><span class='subtitle'>A Semi-Monthly Journal of Medicine and Surgery</span></a>
+<div class='author'>Various, Cottell, H. A. (Henry A.), 1847- [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61196, {&quot;Title&quot;:&quot;The Dawn of Modern Medicine - An Account of the Revival of the Science and Art of Medicine Which Took Place in Western Europe During the Latter Half of the Eighteenth Century and the First Part of the Nineteenth&quot;,&quot;Topics&quot;:[&quot;Medicine -- History -- 18th century&quot;,&quot;Medicine -- History -- 19th century&quot;,&quot;Medicine -- Europe -- History&quot;,&quot;Physicians -- Europe -- Biography&quot;],&quot;Primary&quot;:&quot;61196.htm&quot;,&quot;CreatorNames&quot;:[&quot;Buck, Albert H. (Albert Henry), 1842-1922&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;61196&quot;});" class='title'>The Dawn of Modern Medicine -<br><span class='subtitle'>An Account of the Revival of the Science and Art of Medicine Which Took Place in Western Europe During the Latter Half of the Eighteenth Century and the First Part of the Nineteenth</span></a>
+<div class='author'>Buck, Albert H. (Albert Henry), 1842-1922</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63938, {&quot;Title&quot;:&quot;Medicine in the Middle Ages - Extracts from \&quot;\&quot;Le Moyen Age Medical\&quot;\&quot; by Dr. Edmond Dupouy; translated by T. C. Minor&quot;,&quot;Topics&quot;:[&quot;Medicine, Medieval&quot;],&quot;Primary&quot;:&quot;63938.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dupouy, Edmond, 1838-1920&quot;,&quot;Minor, Thomas C. (Thomas Chalmers), 1847?-1912 [Translator]&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;63938&quot;});" class='title'>Medicine in the Middle Ages -<br><span class='subtitle'>Extracts from "Le Moyen Age Medical" by Dr. Edmond Dupouy; translated by T. C. Minor</span></a>
+<div class='author'>Dupouy, Edmond, 1838-1920, Minor, Thomas C. (Thomas Chalmers), 1847?-1912 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64207, {&quot;Title&quot;:&quot;Of Medicine, in Eight Books&quot;,&quot;Topics&quot;:[&quot;Medicine, Greek and Roman&quot;],&quot;Primary&quot;:&quot;64207.htm&quot;,&quot;CreatorNames&quot;:[&quot;Celsus, Aulus Cornelius, 25? BCE-50?&quot;,&quot;Greive, James, -1773 [Translator]&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;64207&quot;});" class='title'>Of Medicine, in Eight Books</a>
+<div class='author'>Celsus, Aulus Cornelius, 25? BCE-50?, Greive, James, -1773 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65496, {&quot;Title&quot;:&quot;Pioneer Work in Opening the Medical Profession to Women&quot;,&quot;Topics&quot;:[&quot;Blackwell, Elizabeth, 1821-1910&quot;,&quot;Women physicians -- United States -- Biography&quot;],&quot;Primary&quot;:&quot;65496.htm&quot;,&quot;CreatorNames&quot;:[&quot;Blackwell, Elizabeth, 1821-1910&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;65496&quot;});" class='title'>Pioneer Work in Opening the Medical Profession to Women</a>
+<div class='author'>Blackwell, Elizabeth, 1821-1910</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65823, {&quot;Title&quot;:&quot;The Journal-Lancet, Vol. XXXV, No. 5, March 1, 1915 - The Journal of the Minnesota State Medical Association and Official Organ of the North Dakota and South Dakota State Medical Associations&quot;,&quot;Topics&quot;:[&quot;Medicine -- Periodicals&quot;],&quot;Primary&quot;:&quot;65823.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;,&quot;Jones, W. A. [Editor]&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;65823&quot;});" class='title'>The Journal-Lancet, Vol. XXXV, No. 5, March 1, 1915 -<br><span class='subtitle'>The Journal of the Minnesota State Medical Association and Official Organ of the North Dakota and South Dakota State Medical Associations</span></a>
+<div class='author'>Various, Jones, W. A. [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67504, {&quot;Title&quot;:&quot;A Woman&#39;s Quest: The life of Marie E. Zakrzewska, M.D.&quot;,&quot;Topics&quot;:[&quot;Women physicians -- United States -- Biography&quot;,&quot;Zakrzewska, Marie E. (Marie Elizabeth), 1829-1902&quot;],&quot;Primary&quot;:&quot;67504.htm&quot;,&quot;CreatorNames&quot;:[&quot;Zakrzewska, Marie E. (Marie Elizabeth), 1829-1902&quot;,&quot;Vietor, Agnes C. (Agnes Cæcilia) [Editor]&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;67504&quot;});" class='title'>A Woman's Quest:<br><span class='subtitle'>The life of Marie E. Zakrzewska, M.D.</span></a>
+<div class='author'>Zakrzewska, Marie E. (Marie Elizabeth), 1829-1902, Vietor, Agnes C. (Agnes Cæcilia) [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67704, {&quot;Title&quot;:&quot;Doctors - An Address delivered to the Students of the Medical School of the Middlesex Hospital, 1st October, 1908&quot;,&quot;Topics&quot;:[&quot;Physicians&quot;],&quot;Primary&quot;:&quot;67704.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kipling, Rudyard, 1865-1936&quot;,&quot;Lucas, Reginald, 1865-1914 [Author of introduction, etc.]&quot;,&quot;Holmes, Oliver Wendell, 1809-1894 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;67704&quot;});" class='title'>Doctors -<br><span class='subtitle'>An Address delivered to the Students of the Medical School of the Middlesex Hospital, 1st October, 1908</span></a>
+<div class='author'>Kipling, Rudyard, 1865-1936, Lucas, Reginald, 1865-1914 [Author of introduction, etc.], Holmes, Oliver Wendell, 1809-1894 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67833, {&quot;Title&quot;:&quot;The growth of medicine from the earliest times to about 1800&quot;,&quot;Topics&quot;:[&quot;Medicine -- History&quot;],&quot;Primary&quot;:&quot;67833.htm&quot;,&quot;CreatorNames&quot;:[&quot;Buck, Albert H. (Albert Henry), 1842-1922&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;67833&quot;});" class='title'>The growth of medicine from the earliest times to about 1800</a>
+<div class='author'>Buck, Albert H. (Albert Henry), 1842-1922</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69197, {&quot;Title&quot;:&quot;Sketches from the history of medicine, ancient and modern - An oration delivered before the Hunterian Society&quot;,&quot;Topics&quot;:[&quot;Medicine -- History&quot;,&quot;Speeches, addresses, etc., English&quot;],&quot;Primary&quot;:&quot;69197.htm&quot;,&quot;CreatorNames&quot;:[&quot;Saunders, W. Sedgwick (William Sedgwick), 1824-1901&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;69197&quot;});" class='title'>Sketches from the history of medicine, ancient and modern -<br><span class='subtitle'>An oration delivered before the Hunterian Society</span></a>
+<div class='author'>Saunders, W. Sedgwick (William Sedgwick), 1824-1901</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69392, {&quot;Title&quot;:&quot;Eminent doctors: Their lives and their work; Vol. 2 of 2&quot;,&quot;Topics&quot;:[&quot;Physicians -- Great Britain&quot;,&quot;Medicine -- Great Britain -- History&quot;],&quot;Primary&quot;:&quot;69392.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bettany, G. T. (George Thomas), 1850-1891&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;69392&quot;});" class='title'>Eminent doctors:<br><span class='subtitle'>Their lives and their work; Vol. 2 of 2</span></a>
+<div class='author'>Bettany, G. T. (George Thomas), 1850-1891</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69406, {&quot;Title&quot;:&quot;Eminent doctors: Their lives and their work; Vol. 1 of 2&quot;,&quot;Topics&quot;:[&quot;Physicians -- Great Britain&quot;,&quot;Medicine -- Great Britain -- History&quot;],&quot;Primary&quot;:&quot;69406.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bettany, G. T. (George Thomas), 1850-1891&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;69406&quot;});" class='title'>Eminent doctors:<br><span class='subtitle'>Their lives and their work; Vol. 1 of 2</span></a>
+<div class='author'>Bettany, G. T. (George Thomas), 1850-1891</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69442, {&quot;Title&quot;:&quot;Medical symbolism in connection with historical studies in the arts of healing and hygiene&quot;,&quot;Topics&quot;:[&quot;Symbolism in medicine&quot;],&quot;Primary&quot;:&quot;69442.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sozinskey, Thomas S., 1852?-1889&quot;,&quot;Power, Edward S. [Contributor]&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;69442&quot;});" class='title'>Medical symbolism in connection with historical studies in the arts of healing and hygiene</a>
+<div class='author'>Sozinskey, Thomas S., 1852?-1889, Power, Edward S. [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69621, {&quot;Title&quot;:&quot;Les causeries du docteur&quot;,&quot;Topics&quot;:[&quot;Medicine -- Anecdotes&quot;],&quot;Primary&quot;:&quot;69621.htm&quot;,&quot;CreatorNames&quot;:[&quot;Joulin, Désiré Joseph, 1821-1874&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;69621&quot;});" class='title'>Les causeries du docteur</a>
+<div class='author'>Joulin, Désiré Joseph, 1821-1874</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70530, {&quot;Title&quot;:&quot;Physician and patient&quot;,&quot;Topics&quot;:[&quot;Physicians&quot;,&quot;Physician and patient&quot;,&quot;Medical ethics&quot;,&quot;Quacks and quackery&quot;],&quot;Primary&quot;:&quot;70530.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hooker, Worthington, 1806-1867&quot;,&quot;Burder, Thomas Harrison, 1789-1843 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;70530&quot;});" class='title'>Physician and patient</a>
+<div class='author'>Hooker, Worthington, 1806-1867, Burder, Thomas Harrison, 1789-1843 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70531, {&quot;Title&quot;:&quot;The seven books of Paulus Ægineta, volume 1 (of 3)&quot;,&quot;Topics&quot;:[&quot;Medicine&quot;,&quot;Medicine, Greek and Roman&quot;,&quot;Medicine, Arab&quot;],&quot;Primary&quot;:&quot;70531.htm&quot;,&quot;CreatorNames&quot;:[&quot;Paulus, Aegineta, 625?-690?&quot;,&quot;Adams, Francis, 1796-1861 [Translator]&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;70531&quot;});" class='title'>The seven books of Paulus Ægineta, volume 1 (of 3)</a>
+<div class='author'>Paulus, Aegineta, 625?-690?, Adams, Francis, 1796-1861 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70532, {&quot;Title&quot;:&quot;The seven books of Paulus Ægineta, volume 2 (of 3)&quot;,&quot;Topics&quot;:[&quot;Medicine&quot;,&quot;Medicine, Greek and Roman&quot;,&quot;Medicine, Arab&quot;],&quot;Primary&quot;:&quot;70532.htm&quot;,&quot;CreatorNames&quot;:[&quot;Paulus, Aegineta, 625?-690?&quot;,&quot;Adams, Francis, 1796-1861 [Translator]&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;70532&quot;});" class='title'>The seven books of Paulus Ægineta, volume 2 (of 3)</a>
+<div class='author'>Paulus, Aegineta, 625?-690?, Adams, Francis, 1796-1861 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70533, {&quot;Title&quot;:&quot;The seven books of Paulus Ægineta, volume 3 (of 3)&quot;,&quot;Topics&quot;:[&quot;Medicine&quot;,&quot;Medicine, Greek and Roman&quot;,&quot;Medicine, Arab&quot;],&quot;Primary&quot;:&quot;70533.htm&quot;,&quot;CreatorNames&quot;:[&quot;Paulus, Aegineta, 625?-690?&quot;,&quot;Adams, Francis, 1796-1861 [Translator]&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;70533&quot;});" class='title'>The seven books of Paulus Ægineta, volume 3 (of 3)</a>
+<div class='author'>Paulus, Aegineta, 625?-690?, Adams, Francis, 1796-1861 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(747, {&quot;Title&quot;:&quot;Anomalies and Curiosities of Medicine&quot;,&quot;Topics&quot;:[&quot;Medicine -- Anecdotes&quot;,&quot;Abnormalities, Human&quot;],&quot;Primary&quot;:&quot;747.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gould, George M. (George Milbrey), 1848-1922&quot;,&quot;Pyle, Walter L. (Walter Lytle), 1871-1921&quot;],&quot;LoCC&quot;:[&quot;R&quot;],&quot;PG_ID&quot;:&quot;747&quot;});" class='title'>Anomalies and Curiosities of Medicine</a>
+<div class='author'>Gould, George M. (George Milbrey), 1848-1922, Pyle, Walter L. (Walter Lytle), 1871-1921</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(8420, {&quot;Title&quot;:&quot;Issues in Population and Bioethics&quot;,&quot;Topics&quot;:[&quot;Bioethics&quot;],&quot;Primary&quot;:null,&quot;CreatorNames&quot;:[&quot;Vaknin, Samuel, 1961-&quot;,&quot;Rangelovska, Lidija [Editor]&quot;],&quot;LoCC&quot;:[&quot;QH&quot;,&quot;R&quot;],&quot;PG_ID&quot;:&quot;8420&quot;});" class='title'>Issues in Population and Bioethics</a>
+<div class='author'>Vaknin, Samuel, 1961-, Rangelovska, Lidija [Editor]</div>
+</div>
+</ul></div>
+</body></html>

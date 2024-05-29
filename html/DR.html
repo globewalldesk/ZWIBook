@@ -1,0 +1,470 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Balkan Peninsula (DR)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(11676, {&quot;Title&quot;:&quot;The Balkan Wars: 1912-1913 - Third Edition&quot;,&quot;Topics&quot;:[&quot;Balkan Peninsula -- History -- War of 1912-1913&quot;],&quot;Primary&quot;:&quot;11676.txt&quot;,&quot;CreatorNames&quot;:[&quot;Schurman, Jacob Gould, 1854-1942&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;11676&quot;});" class='title'>The Balkan Wars:<br><span class='subtitle'>1912-1913 - Third Edition</span></a>
+<div class='author'>Schurman, Jacob Gould, 1854-1942</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(11716, {&quot;Title&quot;:&quot;The Balkans: A History of Bulgaria—Serbia—Greece—Rumania—Turkey&quot;,&quot;Topics&quot;:[&quot;Balkan Peninsula -- History&quot;,&quot;Eastern question (Balkan)&quot;],&quot;Primary&quot;:&quot;11716.htm&quot;,&quot;CreatorNames&quot;:[&quot;Forbes, Nevill, 1883-1929&quot;,&quot;Hogarth, D. G. (David George), 1862-1927&quot;,&quot;Mitrany, David, 1888-1975&quot;,&quot;Toynbee, Arnold, 1889-1975&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;11716&quot;});" class='title'>The Balkans:<br><span class='subtitle'>A History of Bulgaria—Serbia—Greece—Rumania—Turkey</span></a>
+<div class='author'>Forbes, Nevill, 1883-1929, Hogarth, D. G. (David George), 1862-1927, Mitrany, David, 1888-1975, Toynbee, Arnold, 1889-1975</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12752, {&quot;Title&quot;:&quot;Les hommes de la guerre d&#39;Orient 11: Le prince du Montenegro&quot;,&quot;Topics&quot;:[&quot;Danilo I Petrovic Njegos, Prince of Montenegro, 1826-1860&quot;,&quot;Montenegro -- History -- Danilo I, 1851-1860&quot;],&quot;Primary&quot;:&quot;12752.htm&quot;,&quot;CreatorNames&quot;:[&quot;Texier, Edmond, 1816-1887&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;12752&quot;});" class='title'>Les hommes de la guerre d'Orient 11:<br><span class='subtitle'>Le prince du Montenegro</span></a>
+<div class='author'>Texier, Edmond, 1816-1887</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13219, {&quot;Title&quot;:&quot;Les Ordres De Chevalerie: les ordres serbes&quot;,&quot;Topics&quot;:[&quot;Orders of knighthood and chivalry -- Serbia&quot;,&quot;Decorations of honor -- Serbia&quot;,&quot;Balkan Peninsula -- History&quot;,&quot;Medals -- Serbia&quot;],&quot;Primary&quot;:&quot;13219.htm&quot;,&quot;CreatorNames&quot;:[&quot;Brasier, L. (Léon)&quot;,&quot;Brunet, J. L. (J. Louis), 1870-&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;13219&quot;});" class='title'>Les Ordres De Chevalerie:<br><span class='subtitle'>les ordres serbes</span></a>
+<div class='author'>Brasier, L. (Léon), Brunet, J. L. (J. Louis), 1870-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13676, {&quot;Title&quot;:&quot;Au jeune royaume d&#39;Albanie&quot;,&quot;Topics&quot;:[&quot;Albania -- Description and travel&quot;],&quot;Primary&quot;:&quot;13676.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jaray, Gabriel Louis, 1878-1954&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;13676&quot;});" class='title'>Au jeune royaume d'Albanie</a>
+<div class='author'>Jaray, Gabriel Louis, 1878-1954</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13869, {&quot;Title&quot;:&quot;In Roemenië - De Aarde en haar Volken, 1906&quot;,&quot;Topics&quot;:[&quot;Romania -- Description and travel&quot;],&quot;Primary&quot;:&quot;13869.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hebbelynck, Th.&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;13869&quot;});" class='title'>In Roemenië -<br><span class='subtitle'>De Aarde en haar Volken, 1906</span></a>
+<div class='author'>Hebbelynck, Th.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14160, {&quot;Title&quot;:&quot;In het Balkanbergland van Bulgarije - De Aarde en haar Volken, 1906&quot;,&quot;Topics&quot;:[&quot;Bulgaria -- Description and travel&quot;],&quot;Primary&quot;:&quot;14160.htm&quot;,&quot;CreatorNames&quot;:[&quot;Launay, L. de (Louis), 1860-1938&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;14160&quot;});" class='title'>In het Balkanbergland van Bulgarije -<br><span class='subtitle'>De Aarde en haar Volken, 1906</span></a>
+<div class='author'>Launay, L. de (Louis), 1860-1938</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15734, {&quot;Title&quot;:&quot;Aus Kroatien: Skizzen und Erzählungen&quot;,&quot;Topics&quot;:[&quot;Short stories&quot;,&quot;Balkan Peninsula -- Description and travel&quot;,&quot;Balkan Peninsula -- Fiction&quot;],&quot;Primary&quot;:&quot;15734.txt&quot;,&quot;CreatorNames&quot;:[&quot;Achleitner, Arthur, 1858-1927&quot;],&quot;LoCC&quot;:[&quot;DR&quot;,&quot;PT&quot;],&quot;PG_ID&quot;:&quot;15734&quot;});" class='title'>Aus Kroatien:<br><span class='subtitle'>Skizzen und Erzählungen</span></a>
+<div class='author'>Achleitner, Arthur, 1858-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16999, {&quot;Title&quot;:&quot;Servia, Youngest Member of the European Family - or, A Residence in Belgrade and Travels in the Highlands and Woodlands of the Interior, during the years 1843 and 1844.&quot;,&quot;Topics&quot;:[&quot;Serbia -- Description and travel&quot;],&quot;Primary&quot;:&quot;16999.htm&quot;,&quot;CreatorNames&quot;:[&quot;Paton, A. A. (Andrew Archibald), 1811-1874&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;16999&quot;});" class='title'>Servia, Youngest Member of the European Family -<br><span class='subtitle'>or, A Residence in Belgrade and Travels in the Highlands and Woodlands of the Interior, during the years 1843 and 1844.</span></a>
+<div class='author'>Paton, A. A. (Andrew Archibald), 1811-1874</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17561, {&quot;Title&quot;:&quot;Confédération Balkanique&quot;,&quot;Topics&quot;:[&quot;Eastern question (Balkan)&quot;,&quot;Balkan Peninsula -- Politics and government&quot;],&quot;Primary&quot;:&quot;17561.htm&quot;,&quot;CreatorNames&quot;:[&quot;Perić, Živojin, 1868-1953&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;17561&quot;});" class='title'>Confédération Balkanique</a>
+<div class='author'>Perić, Živojin, 1868-1953</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17613, {&quot;Title&quot;:&quot;The Land of the Black Mountain: The Adventures of Two Englishmen in Montenegro&quot;,&quot;Topics&quot;:[&quot;Montenegro -- Description and travel&quot;],&quot;Primary&quot;:&quot;17613.htm&quot;,&quot;CreatorNames&quot;:[&quot;Prance, Gerald&quot;,&quot;Wyon, Reginald, 1872-1921&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;17613&quot;});" class='title'>The Land of the Black Mountain:<br><span class='subtitle'>The Adventures of Two Englishmen in Montenegro</span></a>
+<div class='author'>Prance, Gerald, Wyon, Reginald, 1872-1921</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18240, {&quot;Title&quot;:&quot;Roumania Past and Present&quot;,&quot;Topics&quot;:[&quot;Romania -- Description and travel&quot;,&quot;Romania -- History&quot;],&quot;Primary&quot;:&quot;18240.htm&quot;,&quot;CreatorNames&quot;:[&quot;Samuelson, James, 1829-&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;18240&quot;});" class='title'>Roumania Past and Present</a>
+<div class='author'>Samuelson, James, 1829-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18243, {&quot;Title&quot;:&quot;Bezoek aan den berg Athos - De Aarde en haar Volken, 1873&quot;,&quot;Topics&quot;:[&quot;Athos (Greece) -- Description and travel&quot;],&quot;Primary&quot;:&quot;18243.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;18243&quot;});" class='title'>Bezoek aan den berg Athos -<br><span class='subtitle'>De Aarde en haar Volken, 1873</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19669, {&quot;Title&quot;:&quot;Twenty Years of Balkan Tangle&quot;,&quot;Topics&quot;:[&quot;Balkan Peninsula -- Description and travel&quot;,&quot;Balkan Peninsula -- History&quot;,&quot;Eastern question (Balkan)&quot;],&quot;Primary&quot;:&quot;19669.txt&quot;,&quot;CreatorNames&quot;:[&quot;Durham, M. E. (Mary Edith), 1863-1944&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;19669&quot;});" class='title'>Twenty Years of Balkan Tangle</a>
+<div class='author'>Durham, M. E. (Mary Edith), 1863-1944</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19820, {&quot;Title&quot;:&quot;La Péninsule Des Balkans — Tome I - Vienne, Croatie, Bosnie, Serbie, Bulgarie, Roumélie, Turquie, Roumanie&quot;,&quot;Topics&quot;:[&quot;Eastern question (Balkan)&quot;,&quot;Balkan Peninsula&quot;],&quot;Primary&quot;:&quot;19820.htm&quot;,&quot;CreatorNames&quot;:[&quot;Laveleye, Emile de, 1822-1892&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;19820&quot;});" class='title'>La Péninsule Des Balkans — Tome I -<br><span class='subtitle'>Vienne, Croatie, Bosnie, Serbie, Bulgarie, Roumélie, Turquie, Roumanie</span></a>
+<div class='author'>Laveleye, Emile de, 1822-1892</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19871, {&quot;Title&quot;:&quot;Serbia in Light and Darkness - With Preface by the Archbishop of Canterbury, (1916)&quot;,&quot;Topics&quot;:[&quot;Proverbs, Serbian&quot;,&quot;Serbian poetry -- Translations into English&quot;,&quot;Serbia&quot;],&quot;Primary&quot;:&quot;19871.htm&quot;,&quot;CreatorNames&quot;:[&quot;Velimirović, Nikolaj, 1880-1956&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;19871&quot;});" class='title'>Serbia in Light and Darkness -<br><span class='subtitle'>With Preface by the Archbishop of Canterbury, (1916)</span></a>
+<div class='author'>Velimirović, Nikolaj, 1880-1956</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22257, {&quot;Title&quot;:&quot;Bulgaria&quot;,&quot;Topics&quot;:[&quot;Bulgaria -- Description and travel&quot;],&quot;Primary&quot;:&quot;22257.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fox, Frank, 1874-1960&quot;,&quot;Mrkvicka, Jan Vaclav, 1856-1938 [Illustrator]&quot;,&quot;Pocock, Noel [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;22257&quot;});" class='title'>Bulgaria</a>
+<div class='author'>Fox, Frank, 1874-1960, Mrkvicka, Jan Vaclav, 1856-1938 [Illustrator], Pocock, Noel [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22414, {&quot;Title&quot;:&quot;The Birth of Yugoslavia, Volume 1&quot;,&quot;Topics&quot;:[&quot;Yugoslavia&quot;],&quot;Primary&quot;:&quot;22414.htm&quot;,&quot;CreatorNames&quot;:[&quot;Baerlein, Henry, 1875-1960&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;22414&quot;});" class='title'>The Birth of Yugoslavia, Volume 1</a>
+<div class='author'>Baerlein, Henry, 1875-1960</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24781, {&quot;Title&quot;:&quot;The Birth of Yugoslavia, Volume 2&quot;,&quot;Topics&quot;:[&quot;Yugoslavia&quot;],&quot;Primary&quot;:&quot;24781.htm&quot;,&quot;CreatorNames&quot;:[&quot;Baerlein, Henry, 1875-1960&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;24781&quot;});" class='title'>The Birth of Yugoslavia, Volume 2</a>
+<div class='author'>Baerlein, Henry, 1875-1960</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25069, {&quot;Title&quot;:&quot;Vääpeli Lemminkäisen päiväkirja - Suomen kaartin retkestä Konstantinopolin muurien edustalle - vuosina 1877-1878&quot;,&quot;Topics&quot;:[&quot;Russo-Turkish War, 1877-1878&quot;],&quot;Primary&quot;:&quot;25069.txt&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;25069&quot;});" class='title'>Vääpeli Lemminkäisen päiväkirja -<br><span class='subtitle'>Suomen kaartin retkestä Konstantinopolin muurien edustalle - vuosina 1877-1878</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27484, {&quot;Title&quot;:&quot;Journal of a Visit to Constantinople and Some of the Greek Islands in the Spring and Summer of 1833&quot;,&quot;Topics&quot;:[&quot;Greece -- Description and travel&quot;,&quot;Russians -- Turkey&quot;,&quot;Turkey -- Social life and customs&quot;,&quot;Istanbul (Turkey) -- Description and travel&quot;],&quot;Primary&quot;:&quot;27484.htm&quot;,&quot;CreatorNames&quot;:[&quot;Auldjo, John, -1857&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;27484&quot;});" class='title'>Journal of a Visit to Constantinople and Some of the Greek Islands in the Spring and Summer of 1833</a>
+<div class='author'>Auldjo, John, -1857</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27659, {&quot;Title&quot;:&quot;Op het Balkan-schiereiland - De Aarde en haar Volken, 1909&quot;,&quot;Topics&quot;:[&quot;Balkan Peninsula -- Description and travel&quot;],&quot;Primary&quot;:&quot;27659.htm&quot;,&quot;CreatorNames&quot;:[&quot;Henderson, Percy E. (Percy Edward), 1852-&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;27659&quot;});" class='title'>Op het Balkan-schiereiland -<br><span class='subtitle'>De Aarde en haar Volken, 1909</span></a>
+<div class='author'>Henderson, Percy E. (Percy Edward), 1852-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28181, {&quot;Title&quot;:&quot;Van Smyrna naar Holland in oorlogstijd - De Aarde en haar Volken, 1917&quot;,&quot;Topics&quot;:[&quot;Voyages and travels&quot;,&quot;Turkey -- Description and travel&quot;],&quot;Primary&quot;:&quot;28181.htm&quot;,&quot;CreatorNames&quot;:[&quot;Poel, Betsy van der&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;28181&quot;});" class='title'>Van Smyrna naar Holland in oorlogstijd -<br><span class='subtitle'>De Aarde en haar Volken, 1917</span></a>
+<div class='author'>Poel, Betsy van der</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29905, {&quot;Title&quot;:&quot;Viribus unitis: Wie könnte die europäische Cultur nach Bosnien verpflanzt werden?&quot;,&quot;Topics&quot;:[&quot;Eastern question (Balkan)&quot;,&quot;Bosnia and Herzegovina -- Politics and government -- 19th century&quot;],&quot;Primary&quot;:&quot;29905.htm&quot;,&quot;CreatorNames&quot;:[&quot;Neupauer, Josef von, 1810?-1902&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;29905&quot;});" class='title'>Viribus unitis:<br><span class='subtitle'>Wie könnte die europäische Cultur nach Bosnien verpflanzt werden?</span></a>
+<div class='author'>Neupauer, Josef von, 1810?-1902</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30151, {&quot;Title&quot;:&quot;Macedonia: A Nation at a Crossroads&quot;,&quot;Topics&quot;:[&quot;Macedonia (Republic)&quot;],&quot;Primary&quot;:null,&quot;CreatorNames&quot;:[&quot;Vaknin, Samuel, 1961-&quot;,&quot;Rangelovska, Lidija [Editor]&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;30151&quot;});" class='title'>Macedonia:<br><span class='subtitle'>A Nation at a Crossroads</span></a>
+<div class='author'>Vaknin, Samuel, 1961-, Rangelovska, Lidija [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30678, {&quot;Title&quot;:&quot;Supplement to \&quot;\&quot;Punch\&quot;\&quot;, 16th December 1914 - The Unspeakable Turk&quot;,&quot;Topics&quot;:[&quot;Turkey -- Politics and government -- Caricatures and cartoons&quot;],&quot;Primary&quot;:&quot;30678.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;DR&quot;,&quot;NC&quot;],&quot;PG_ID&quot;:&quot;30678&quot;});" class='title'>Supplement to "Punch", 16th December 1914 -<br><span class='subtitle'>The Unspeakable Turk</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32129, {&quot;Title&quot;:&quot;Area Handbook for Albania&quot;,&quot;Topics&quot;:[&quot;Albania&quot;],&quot;Primary&quot;:&quot;32129.htm&quot;,&quot;CreatorNames&quot;:[&quot;Elpern, Sarah Jane&quot;,&quot;Giloane, William&quot;,&quot;Keefe, Eugene K., 1922-&quot;,&quot;Moore, James M.&quot;,&quot;Peters, Stephen&quot;,&quot;White, Eston T.&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;32129&quot;});" class='title'>Area Handbook for Albania</a>
+<div class='author'>Elpern, Sarah Jane, Giloane, William, Keefe, Eugene K., 1922-, Moore, James M., Peters, Stephen, White, Eston T.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32627, {&quot;Title&quot;:&quot;Area Handbook for Bulgaria&quot;,&quot;Topics&quot;:[&quot;Bulgaria&quot;],&quot;Primary&quot;:&quot;32627.htm&quot;,&quot;CreatorNames&quot;:[&quot;Baluyut, Violeta D.&quot;,&quot;Giloane, William&quot;,&quot;Keefe, Eugene K., 1922-&quot;,&quot;Long, Anne K.&quot;,&quot;Moore, James M.&quot;,&quot;Walpole, Neda A.&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;32627&quot;});" class='title'>Area Handbook for Bulgaria</a>
+<div class='author'>Baluyut, Violeta D., Giloane, William, Keefe, Eugene K., 1922-, Long, Anne K., Moore, James M., Walpole, Neda A.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32700, {&quot;Title&quot;:&quot;Area Handbook for Romania&quot;,&quot;Topics&quot;:[&quot;Romania&quot;],&quot;Primary&quot;:&quot;32700.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bernier, Donald W.&quot;,&quot;Brenneman, Lyle E., 1934-&quot;,&quot;Giloane, William&quot;,&quot;Keefe, Eugene K., 1922-&quot;,&quot;Moore, James M.&quot;,&quot;Walpole, Neda A.&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;32700&quot;});" class='title'>Area Handbook for Romania</a>
+<div class='author'>Bernier, Donald W., Brenneman, Lyle E., 1934-, Giloane, William, Keefe, Eugene K., 1922-, Moore, James M., Walpole, Neda A.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35231, {&quot;Title&quot;:&quot;Serbia: A Sketch&quot;,&quot;Topics&quot;:[&quot;Serbia&quot;],&quot;Primary&quot;:&quot;35231.htm&quot;,&quot;CreatorNames&quot;:[&quot;Reed, Helen Leah, 1860?-1926&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;35231&quot;});" class='title'>Serbia:<br><span class='subtitle'>A Sketch</span></a>
+<div class='author'>Reed, Helen Leah, 1860?-1926</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36117, {&quot;Title&quot;:&quot;Konstantinopel en het Serail - De Aarde en haar Volken, 1865&quot;,&quot;Topics&quot;:[&quot;Istanbul (Turkey) -- Description and travel&quot;,&quot;Eminönü (Istanbul, Turkey)&quot;],&quot;Primary&quot;:&quot;36117.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;36117&quot;});" class='title'>Konstantinopel en het Serail -<br><span class='subtitle'>De Aarde en haar Volken, 1865</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36192, {&quot;Title&quot;:&quot;The Balkan Wars: 1912-1913 - Second Edition&quot;,&quot;Topics&quot;:[&quot;Balkan Peninsula -- History -- War of 1912-1913&quot;],&quot;Primary&quot;:&quot;36192.htm&quot;,&quot;CreatorNames&quot;:[&quot;Schurman, Jacob Gould, 1854-1942&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;36192&quot;});" class='title'>The Balkan Wars:<br><span class='subtitle'>1912-1913 - Second Edition</span></a>
+<div class='author'>Schurman, Jacob Gould, 1854-1942</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37475, {&quot;Title&quot;:&quot;Peeps at Many Lands: Turkey&quot;,&quot;Topics&quot;:[&quot;Turkey -- Description and travel&quot;],&quot;Primary&quot;:&quot;37475.htm&quot;,&quot;CreatorNames&quot;:[&quot;Van Millingen, Julius R.&quot;,&quot;Goble, Warwick, 1862-1943 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;37475&quot;});" class='title'>Peeps at Many Lands:<br><span class='subtitle'>Turkey</span></a>
+<div class='author'>Van Millingen, Julius R., Goble, Warwick, 1862-1943 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37889, {&quot;Title&quot;:&quot;Incidents of Travel in Greece, Turkey, Russia, and Poland, Vol. 1 (of 2)&quot;,&quot;Topics&quot;:[&quot;Europe -- Description and travel&quot;,&quot;Greece -- Description and travel&quot;,&quot;Russia -- Description and travel&quot;,&quot;Turkey -- Description and travel&quot;,&quot;Poland -- Description and travel&quot;],&quot;Primary&quot;:&quot;37889.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stephens, John L., 1805-1852&quot;],&quot;LoCC&quot;:[&quot;DF&quot;,&quot;DK&quot;,&quot;DR&quot;],&quot;PG_ID&quot;:&quot;37889&quot;});" class='title'>Incidents of Travel in Greece, Turkey, Russia, and Poland, Vol. 1 (of 2)</a>
+<div class='author'>Stephens, John L., 1805-1852</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37947, {&quot;Title&quot;:&quot;Incidents of Travel in Greece, Turkey, Russia, and Poland, Vol. 2 (of 2)&quot;,&quot;Topics&quot;:[&quot;Europe -- Description and travel&quot;,&quot;Greece -- Description and travel&quot;,&quot;Russia -- Description and travel&quot;,&quot;Turkey -- Description and travel&quot;,&quot;Poland -- Description and travel&quot;],&quot;Primary&quot;:&quot;37947.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stephens, John L., 1805-1852&quot;],&quot;LoCC&quot;:[&quot;DF&quot;,&quot;DK&quot;,&quot;DR&quot;],&quot;PG_ID&quot;:&quot;37947&quot;});" class='title'>Incidents of Travel in Greece, Turkey, Russia, and Poland, Vol. 2 (of 2)</a>
+<div class='author'>Stephens, John L., 1805-1852</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39620, {&quot;Title&quot;:&quot;Constantinople, painted by Warwick Goble, described by Alexander Van Millingen&quot;,&quot;Topics&quot;:[&quot;Istanbul (Turkey) -- Description and travel&quot;,&quot;Istanbul (Turkey) -- History&quot;],&quot;Primary&quot;:&quot;39620.htm&quot;,&quot;CreatorNames&quot;:[&quot;Van Millingen, Alexander, 1840-1915&quot;,&quot;Goble, Warwick, 1862-1943 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;39620&quot;});" class='title'>Constantinople, painted by Warwick Goble, described by Alexander Van Millingen</a>
+<div class='author'>Van Millingen, Alexander, 1840-1915, Goble, Warwick, 1862-1943 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39684, {&quot;Title&quot;:&quot;Albania: A Narrative of Recent Travel&quot;,&quot;Topics&quot;:[&quot;Albania -- Description and travel&quot;],&quot;Primary&quot;:&quot;39684.htm&quot;,&quot;CreatorNames&quot;:[&quot;Knight, E. F. (Edward Frederick), 1852-1925&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;39684&quot;});" class='title'>Albania:<br><span class='subtitle'>A Narrative of Recent Travel</span></a>
+<div class='author'>Knight, E. F. (Edward Frederick), 1852-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39688, {&quot;Title&quot;:&quot;The Balkan Peninsula&quot;,&quot;Topics&quot;:[&quot;Balkan Peninsula -- History&quot;,&quot;Eastern question (Balkan)&quot;],&quot;Primary&quot;:&quot;39688.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fox, Frank, 1874-1960&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;39688&quot;});" class='title'>The Balkan Peninsula</a>
+<div class='author'>Fox, Frank, 1874-1960</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40182, {&quot;Title&quot;:&quot;Oriente&quot;,&quot;Topics&quot;:[&quot;Europe -- Description and travel&quot;,&quot;Istanbul (Turkey) -- Description and travel&quot;,&quot;Blasco Ibáñez, Vicente, 1867-1928 -- Travel -- Europe&quot;],&quot;Primary&quot;:&quot;40182.htm&quot;,&quot;CreatorNames&quot;:[&quot;Blasco Ibáñez, Vicente, 1867-1928&quot;],&quot;LoCC&quot;:[&quot;D&quot;,&quot;DR&quot;],&quot;PG_ID&quot;:&quot;40182&quot;});" class='title'>Oriente</a>
+<div class='author'>Blasco Ibáñez, Vicente, 1867-1928</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41391, {&quot;Title&quot;:&quot;Constantinople: The Story of the Old Capital of the Empire&quot;,&quot;Topics&quot;:[&quot;Istanbul (Turkey)&quot;],&quot;Primary&quot;:&quot;41391.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hutton, William Holden, 1860-1930&quot;,&quot;Cooper, Sydney [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;41391&quot;});" class='title'>Constantinople:<br><span class='subtitle'>The Story of the Old Capital of the Empire</span></a>
+<div class='author'>Hutton, William Holden, 1860-1930, Cooper, Sydney [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41499, {&quot;Title&quot;:&quot;Through the Land of the Serb&quot;,&quot;Topics&quot;:[&quot;Montenegro -- Description and travel&quot;,&quot;Serbia -- Description and travel&quot;],&quot;Primary&quot;:&quot;41499.htm&quot;,&quot;CreatorNames&quot;:[&quot;Durham, M. E. (Mary Edith), 1863-1944&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;41499&quot;});" class='title'>Through the Land of the Serb</a>
+<div class='author'>Durham, M. E. (Mary Edith), 1863-1944</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41948, {&quot;Title&quot;:&quot;Guida delle Prealpi Giulie - Distretti di Gemona, Tarcento, S. Daniele, Cividale e S. Pietro&quot;,&quot;Topics&quot;:[&quot;Julian Alps (Slovenia and Italy) -- Description and travel&quot;,&quot;Julian Alps (Slovenia and Italy) -- Guidebooks&quot;],&quot;Primary&quot;:&quot;41948.htm&quot;,&quot;CreatorNames&quot;:[&quot;Marinelli, Olinto, 1874-1926&quot;,&quot;Pontini, Antonio, 1832-1918 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;41948&quot;});" class='title'>Guida delle Prealpi Giulie -<br><span class='subtitle'>Distretti di Gemona, Tarcento, S. Daniele, Cividale e S. Pietro</span></a>
+<div class='author'>Marinelli, Olinto, 1874-1926, Pontini, Antonio, 1832-1918 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42202, {&quot;Title&quot;:&quot;Under the Red Crescent - Adventures of an English Surgeon with the Turkish Army at Plevna and Erzeroum 1877-1878&quot;,&quot;Topics&quot;:[&quot;Russo-Turkish War, 1877-1878 -- Personal narratives&quot;],&quot;Primary&quot;:&quot;42202.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ryan, Charles S. (Charles Snodgrass), 1853-1926&quot;,&quot;Sandes, John, 1863-&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;42202&quot;});" class='title'>Under the Red Crescent -<br><span class='subtitle'>Adventures of an English Surgeon with the Turkish Army at Plevna and Erzeroum 1877-1878</span></a>
+<div class='author'>Ryan, Charles S. (Charles Snodgrass), 1853-1926, Sandes, John, 1863-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42204, {&quot;Title&quot;:&quot;Our Little Turkish Cousin&quot;,&quot;Topics&quot;:[&quot;Children -- Turkey -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;42204.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wade, Mary Hazelton Blanchard, 1860-1936&quot;,&quot;Bridgman, L. J. (Lewis Jesse), 1857-1931 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DR&quot;,&quot;PZ&quot;],&quot;PG_ID&quot;:&quot;42204&quot;});" class='title'>Our Little Turkish Cousin</a>
+<div class='author'>Wade, Mary Hazelton Blanchard, 1860-1936, Bridgman, L. J. (Lewis Jesse), 1857-1931 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43637, {&quot;Title&quot;:&quot;Our Little Roumanian Cousin&quot;,&quot;Topics&quot;:[&quot;Children -- Romania -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;43637.htm&quot;,&quot;CreatorNames&quot;:[&quot;Winlow, Clara Vostrovsky, 1876-&quot;,&quot;Meister, Charles E. [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DR&quot;,&quot;PZ&quot;],&quot;PG_ID&quot;:&quot;43637&quot;});" class='title'>Our Little Roumanian Cousin</a>
+<div class='author'>Winlow, Clara Vostrovsky, 1876-, Meister, Charles E. [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45976, {&quot;Title&quot;:&quot;My Country&quot;,&quot;Topics&quot;:[&quot;Romania -- Description and travel&quot;,&quot;Romania -- Social life and customs&quot;],&quot;Primary&quot;:&quot;45976.htm&quot;,&quot;CreatorNames&quot;:[&quot;Marie, Queen, consort of Ferdinand I, King of Romania, 1875-1938&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;45976&quot;});" class='title'>My Country</a>
+<div class='author'>Marie, Queen, consort of Ferdinand I, King of Romania, 1875-1938</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46235, {&quot;Title&quot;:&quot;The Passing of the Turkish Empire in Europe&quot;,&quot;Topics&quot;:[&quot;Turkey -- Description and travel&quot;,&quot;Turkey -- History&quot;,&quot;Balkan Peninsula -- History -- War of 1912-1913&quot;,&quot;Songs, Greek&quot;],&quot;Primary&quot;:&quot;46235.htm&quot;,&quot;CreatorNames&quot;:[&quot;Baker, B. Granville (Bernard Granville), 1870-1957&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;46235&quot;});" class='title'>The Passing of the Turkish Empire in Europe</a>
+<div class='author'>Baker, B. Granville (Bernard Granville), 1870-1957</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46353, {&quot;Title&quot;:&quot;The Walls of Constantinople&quot;,&quot;Topics&quot;:[&quot;Istanbul (Turkey) -- Description and travel&quot;,&quot;Istanbul (Turkey) -- History&quot;,&quot;City walls -- Turkey -- Istanbul -- History&quot;,&quot;Istanbul (Turkey) -- Antiquities, Byzantine&quot;,&quot;Turkey -- Antiquities, Byzantine&quot;],&quot;Primary&quot;:&quot;46353.htm&quot;,&quot;CreatorNames&quot;:[&quot;Baker, B. Granville (Bernard Granville), 1870-1957&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;46353&quot;});" class='title'>The Walls of Constantinople</a>
+<div class='author'>Baker, B. Granville (Bernard Granville), 1870-1957</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46481, {&quot;Title&quot;:&quot;The Turkish Empire, Its Growth and Decay&quot;,&quot;Topics&quot;:[&quot;Turkey -- History&quot;],&quot;Primary&quot;:&quot;46481.htm&quot;,&quot;CreatorNames&quot;:[&quot;Eversley, G. Shaw-Lefevre (George Shaw-Lefevre), Baron, 1832-1928&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;46481&quot;});" class='title'>The Turkish Empire, Its Growth and Decay</a>
+<div class='author'>Eversley, G. Shaw-Lefevre (George Shaw-Lefevre), Baron, 1832-1928</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46608, {&quot;Title&quot;:&quot;Shall Turkey Live or Die?&quot;,&quot;Topics&quot;:[&quot;Europe -- Politics and government -- 1815-1871&quot;,&quot;Turkey -- Foreign relations&quot;,&quot;Turkey -- History -- 1829-1878&quot;],&quot;Primary&quot;:&quot;46608.htm&quot;,&quot;CreatorNames&quot;:[&quot;Carlyle, Thomas, 1795-1881&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;46608&quot;});" class='title'>Shall Turkey Live or Die?</a>
+<div class='author'>Carlyle, Thomas, 1795-1881</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47522, {&quot;Title&quot;:&quot;Légendes démocratiques du Nord&quot;,&quot;Topics&quot;:[&quot;Kościuszko, Tadeusz, 1746-1817&quot;,&quot;Romania -- History&quot;,&quot;Russia -- Politics and government -- 1801-1825&quot;,&quot;Europe, Eastern -- History&quot;],&quot;Primary&quot;:&quot;47522.htm&quot;,&quot;CreatorNames&quot;:[&quot;Michelet, Jules, 1798-1874&quot;],&quot;LoCC&quot;:[&quot;DK&quot;,&quot;DR&quot;],&quot;PG_ID&quot;:&quot;47522&quot;});" class='title'>Légendes démocratiques du Nord</a>
+<div class='author'>Michelet, Jules, 1798-1874</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48330, {&quot;Title&quot;:&quot;Ferdinand of Bulgaria: The Amazing Career of a Shoddy Czar&quot;,&quot;Topics&quot;:[&quot;Ferdinand I, Czar of Bulgaria, 1861-1948&quot;],&quot;Primary&quot;:&quot;48330.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;48330&quot;});" class='title'>Ferdinand of Bulgaria:<br><span class='subtitle'>The Amazing Career of a Shoddy Czar</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48427, {&quot;Title&quot;:&quot;Supplement to Commerce Reports Daily Consular and Trade Reports: Turkey, Harput&quot;,&quot;Topics&quot;:[&quot;Harput (Turkey) -- Economic conditions -- 20th century&quot;,&quot;Turkey -- Commerce -- United States&quot;,&quot;United States -- Commerce -- Turkey&quot;],&quot;Primary&quot;:&quot;48427.htm&quot;,&quot;CreatorNames&quot;:[&quot;Davis, Leslie A., 1876-1960&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;48427&quot;});" class='title'>Supplement to Commerce Reports Daily Consular and Trade Reports:<br><span class='subtitle'>Turkey, Harput</span></a>
+<div class='author'>Davis, Leslie A., 1876-1960</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48509, {&quot;Title&quot;:&quot;Reminiscences of the King of Roumania&quot;,&quot;Topics&quot;:[&quot;Eastern question (Balkan)&quot;,&quot;Carol I, King of Romania, 1839-1914&quot;,&quot;Jews -- Romania&quot;,&quot;Romania -- History -- Charles I, 1866-1914&quot;],&quot;Primary&quot;:&quot;48509.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kremnitz, Mite, 1852-1916&quot;,&quot;Whitman, Sidney, -1925 [Editor]&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;48509&quot;});" class='title'>Reminiscences of the King of Roumania</a>
+<div class='author'>Kremnitz, Mite, 1852-1916, Whitman, Sidney, -1925 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48737, {&quot;Title&quot;:&quot;Turkish Harems &amp; Circassian Homes&quot;,&quot;Topics&quot;:[&quot;Harems&quot;,&quot;Crimea (Ukraine) -- Social life and customs&quot;,&quot;Circassia (Russia) -- Social life and customs&quot;],&quot;Primary&quot;:&quot;48737.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hope, Andrée, -1898&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;48737&quot;});" class='title'>Turkish Harems & Circassian Homes</a>
+<div class='author'>Hope, Andrée, -1898</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48789, {&quot;Title&quot;:&quot;Speaking of the Turks&quot;,&quot;Topics&quot;:[&quot;Istanbul (Turkey) -- Description and travel&quot;,&quot;Istanbul (Turkey) -- Social life and customs&quot;],&quot;Primary&quot;:&quot;48789.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mufti-zada, K. Ziya, bey&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;48789&quot;});" class='title'>Speaking of the Turks</a>
+<div class='author'>Mufti-zada, K. Ziya, bey</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49139, {&quot;Title&quot;:&quot;The Life of Carmen Sylva (Queen of Roumania)&quot;,&quot;Topics&quot;:[&quot;Sylva, Carmen, 1843-1916&quot;],&quot;Primary&quot;:&quot;49139.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stackelberg, Natalie&quot;,&quot;Deichmann, Hilda, 1848- [Translator]&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;49139&quot;});" class='title'>The Life of Carmen Sylva (Queen of Roumania)</a>
+<div class='author'>Stackelberg, Natalie, Deichmann, Hilda, 1848- [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49691, {&quot;Title&quot;:&quot;Constantinople and the Scenery of the Seven Churches of Asia Minor - Series One and Series Two in one Volume&quot;,&quot;Topics&quot;:[&quot;Istanbul (Turkey) -- History&quot;,&quot;Istanbul (Turkey) -- Pictorial works&quot;],&quot;Primary&quot;:&quot;49691.htm&quot;,&quot;CreatorNames&quot;:[&quot;Walsh, R. (Robert), 1772-1852&quot;,&quot;Allom, Thomas, 1804-1872 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;49691&quot;});" class='title'>Constantinople and the Scenery of the Seven Churches of Asia Minor -<br><span class='subtitle'>Series One and Series Two in one Volume</span></a>
+<div class='author'>Walsh, R. (Robert), 1772-1852, Allom, Thomas, 1804-1872 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50048, {&quot;Title&quot;:&quot;The Diary of a Turk&quot;,&quot;Topics&quot;:[&quot;Turkey -- Social life and customs&quot;],&quot;Primary&quot;:&quot;50048.htm&quot;,&quot;CreatorNames&quot;:[&quot;Çerkesseyhizade Halil Halit, 1869-1931&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;50048&quot;});" class='title'>The Diary of a Turk</a>
+<div class='author'>Çerkesseyhizade Halil Halit, 1869-1931</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50540, {&quot;Title&quot;:&quot;A Turkish Woman&#39;s European Impressions&quot;,&quot;Topics&quot;:[&quot;Turkey -- Social life and customs&quot;,&quot;Europe -- Social life and customs&quot;,&quot;Women -- Turkey&quot;],&quot;Primary&quot;:&quot;50540.htm&quot;,&quot;CreatorNames&quot;:[&quot;Zeyneb, hanoum&quot;,&quot;Ellison, Grace, 1880-1935 [Editor]&quot;,&quot;Rodin, Auguste, 1840-1917 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;D&quot;,&quot;DR&quot;],&quot;PG_ID&quot;:&quot;50540&quot;});" class='title'>A Turkish Woman's European Impressions</a>
+<div class='author'>Zeyneb, hanoum, Ellison, Grace, 1880-1935 [Editor], Rodin, Auguste, 1840-1917 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50805, {&quot;Title&quot;:&quot;À Angora auprès de Mustafa Kemal&quot;,&quot;Topics&quot;:[&quot;Turkey -- Description and travel&quot;,&quot;Atatürk, Kemal, 1881-1938&quot;,&quot;Kemalism&quot;,&quot;Turkey -- Politics and government -- 1918-1960&quot;],&quot;Primary&quot;:&quot;50805.htm&quot;,&quot;CreatorNames&quot;:[&quot;Haïdar, Alaeddine&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;50805&quot;});" class='title'>À Angora auprès de Mustafa Kemal</a>
+<div class='author'>Haïdar, Alaeddine</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50821, {&quot;Title&quot;:&quot;The Causes of the Successes of the Ottoman Turks&quot;,&quot;Topics&quot;:[&quot;Turkey -- History -- 1288-1453&quot;],&quot;Primary&quot;:&quot;50821.htm&quot;,&quot;CreatorNames&quot;:[&quot;Phillpotts, J. Surtees (James Surtees), 1839-1930&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;50821&quot;});" class='title'>The Causes of the Successes of the Ottoman Turks</a>
+<div class='author'>Phillpotts, J. Surtees (James Surtees), 1839-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50860, {&quot;Title&quot;:&quot;The Ottoman Turks and the Routes of Oriental Trade - from The English Historical Review, October 1915&quot;,&quot;Topics&quot;:[&quot;Commerce -- History&quot;,&quot;Turkey -- History&quot;,&quot;Trade routes&quot;],&quot;Primary&quot;:&quot;50860.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lybyer, Albert Howe, 1876-1949&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;50860&quot;});" class='title'>The Ottoman Turks and the Routes of Oriental Trade -<br><span class='subtitle'>from The English Historical Review, October 1915</span></a>
+<div class='author'>Lybyer, Albert Howe, 1876-1949</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51243, {&quot;Title&quot;:&quot;The life of Midhat Pasha; a record of his services, political reforms, banishment, and judicial murder&quot;,&quot;Topics&quot;:[&quot;Midhat Paşa, 1822-1884&quot;,&quot;Statesmen -- Turkey -- Biography&quot;,&quot;Turkey -- History -- 19th century&quot;],&quot;Primary&quot;:&quot;51243.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ali Haydar Mithat, 1872-1950&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;51243&quot;});" class='title'>The life of Midhat Pasha;<br><span class='subtitle'>a record of his services, political reforms, banishment, and judicial murder</span></a>
+<div class='author'>Ali Haydar Mithat, 1872-1950</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51299, {&quot;Title&quot;:&quot;Ibrahim Pasha: Grand Vizir of Suleiman the Magnificent&quot;,&quot;Topics&quot;:[&quot;Ibrahim Pasa, 1493?-1536&quot;],&quot;Primary&quot;:&quot;51299.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jenkins, Hester Donaldson, 1869-1941&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;51299&quot;});" class='title'>Ibrahim Pasha:<br><span class='subtitle'>Grand Vizir of Suleiman the Magnificent</span></a>
+<div class='author'>Jenkins, Hester Donaldson, 1869-1941</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51329, {&quot;Title&quot;:&quot;Turkey; the Awakening of Turkey; the Turkish Revolution of 1908&quot;,&quot;Topics&quot;:[&quot;Eastern question (Balkan)&quot;,&quot;Turkey -- History -- 1878-1909&quot;,&quot;Turkey -- Politics and government -- 1878-1909&quot;],&quot;Primary&quot;:&quot;51329.htm&quot;,&quot;CreatorNames&quot;:[&quot;Knight, E. F. (Edward Frederick), 1852-1925&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;51329&quot;});" class='title'>Turkey;<br><span class='subtitle'>the Awakening of Turkey; the Turkish Revolution of 1908</span></a>
+<div class='author'>Knight, E. F. (Edward Frederick), 1852-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51674, {&quot;Title&quot;:&quot;From Memory&#39;s Shrine: The Reminscences of Carmen Sylva&quot;,&quot;Topics&quot;:[&quot;Sylva, Carmen, 1843-1916&quot;,&quot;Queens -- Romania -- Biography&quot;],&quot;Primary&quot;:&quot;51674.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sylva, Carmen, 1843-1916&quot;,&quot;Hopkirk, Edith [Translator]&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;51674&quot;});" class='title'>From Memory's Shrine:<br><span class='subtitle'>The Reminscences of Carmen Sylva</span></a>
+<div class='author'>Sylva, Carmen, 1843-1916, Hopkirk, Edith [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51728, {&quot;Title&quot;:&quot;Constantinople, v. 1 (of 2)&quot;,&quot;Topics&quot;:[&quot;Istanbul (Turkey) -- Description and travel&quot;,&quot;De Amicis, Edmondo, 1846-1908 -- Travel -- Turkey -- Istanbul&quot;],&quot;Primary&quot;:&quot;51728.htm&quot;,&quot;CreatorNames&quot;:[&quot;De Amicis, Edmondo, 1846-1908&quot;,&quot;Lansdale, Maria Hornor, 1860- [Translator]&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;51728&quot;});" class='title'>Constantinople, v. 1 (of 2)</a>
+<div class='author'>De Amicis, Edmondo, 1846-1908, Lansdale, Maria Hornor, 1860- [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51878, {&quot;Title&quot;:&quot;The City of the Sultan; and Domestic Manners of the Turks, in 1836, Vol. 1 (of 2)&quot;,&quot;Topics&quot;:[&quot;Turkey -- Social life and customs&quot;],&quot;Primary&quot;:&quot;51878.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pardoe, Miss (Julia), 1804?-1862&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;51878&quot;});" class='title'>The City of the Sultan;<br><span class='subtitle'>and Domestic Manners of the Turks, in 1836, Vol. 1 (of 2)</span></a>
+<div class='author'>Pardoe, Miss (Julia), 1804?-1862</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51879, {&quot;Title&quot;:&quot;The City of the Sultan; and Domestic Manners of the Turks, in 1836, Vol. 2 (of 2)&quot;,&quot;Topics&quot;:[&quot;Turkey -- Social life and customs&quot;],&quot;Primary&quot;:&quot;51879.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pardoe, Miss (Julia), 1804?-1862&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;51879&quot;});" class='title'>The City of the Sultan;<br><span class='subtitle'>and Domestic Manners of the Turks, in 1836, Vol. 2 (of 2)</span></a>
+<div class='author'>Pardoe, Miss (Julia), 1804?-1862</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52251, {&quot;Title&quot;:&quot;Constantinople, v. 2 (of 2)&quot;,&quot;Topics&quot;:[&quot;Istanbul (Turkey) -- Description and travel&quot;,&quot;De Amicis, Edmondo, 1846-1908 -- Travel -- Turkey -- Istanbul&quot;],&quot;Primary&quot;:&quot;52251.htm&quot;,&quot;CreatorNames&quot;:[&quot;De Amicis, Edmondo, 1846-1908&quot;,&quot;Lansdale, Maria Hornor, 1860- [Translator]&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;52251&quot;});" class='title'>Constantinople, v. 2 (of 2)</a>
+<div class='author'>De Amicis, Edmondo, 1846-1908, Lansdale, Maria Hornor, 1860- [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53083, {&quot;Title&quot;:&quot;The Antiquities of Constantinople - With a Description of Its Situation, the Conveniencies of Its Port, Its Publick Buildings, the Statuary, Sculpture, Architecture, and Other Curiosities of That City&quot;,&quot;Topics&quot;:[&quot;Istanbul (Turkey) -- Description and travel&quot;,&quot;Turkey -- Antiquities&quot;,&quot;Istanbul (Turkey) -- Antiquities&quot;],&quot;Primary&quot;:&quot;53083.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gilles, Pierre, 1490-1555&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;53083&quot;});" class='title'>The Antiquities of Constantinople -<br><span class='subtitle'>With a Description of Its Situation, the Conveniencies of Its Port, Its Publick Buildings, the Statuary, Sculpture, Architecture, and Other Curiosities of That City</span></a>
+<div class='author'>Gilles, Pierre, 1490-1555</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53452, {&quot;Title&quot;:&quot;The History of the Life and Death of Sultan Solyman the Magnificent, Emperor of the Turks, and of His son Mustapha&quot;,&quot;Topics&quot;:[&quot;Süleyman I, Sultan of the Turks, 1494 or 1495-1566&quot;,&quot;Turkey -- History -- Süleyman I, 1520-1566&quot;],&quot;Primary&quot;:&quot;53452.htm&quot;,&quot;CreatorNames&quot;:[&quot;Unknown&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;53452&quot;});" class='title'>The History of the Life and Death of Sultan Solyman the Magnificent, Emperor of the Turks, and of His son Mustapha</a>
+<div class='author'>Unknown</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53597, {&quot;Title&quot;:&quot;Narrative of Travels in Europe, Asia, and Africa, in the Seventeenth Century, Vol. I&quot;,&quot;Topics&quot;:[&quot;Istanbul (Turkey) -- Description and travel&quot;,&quot;Turkey -- History&quot;,&quot;Caucasus, South -- Description and travel&quot;],&quot;Primary&quot;:&quot;53597.htm&quot;,&quot;CreatorNames&quot;:[&quot;Evliya Çelebi, 1611?-1682?&quot;,&quot;Hammer-Purgstall, Joseph, Freiherr von, 1774-1856 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DR&quot;,&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;53597&quot;});" class='title'>Narrative of Travels in Europe, Asia, and Africa, in the Seventeenth Century, Vol. I</a>
+<div class='author'>Evliya Çelebi, 1611?-1682?, Hammer-Purgstall, Joseph, Freiherr von, 1774-1856 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53813, {&quot;Title&quot;:&quot;The History of the Maritime Wars of the Turks. Chapters I. to IV.&quot;,&quot;Topics&quot;:[&quot;Turkey -- History, Naval&quot;,&quot;Turkey -- History -- 1453-1683&quot;],&quot;Primary&quot;:&quot;53813.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kâtip Çelebi, 1609-1657&quot;,&quot;Mitchell, James [Translator]&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;53813&quot;});" class='title'>The History of the Maritime Wars of the Turks. Chapters I. to IV.</a>
+<div class='author'>Kâtip Çelebi, 1609-1657, Mitchell, James [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54255, {&quot;Title&quot;:&quot;Narrative of Travels in Europe, Asia, and Africa, in the Seventeenth Century, Vol. II&quot;,&quot;Topics&quot;:[&quot;Istanbul (Turkey) -- Description and travel&quot;,&quot;Turkey -- History&quot;,&quot;Caucasus, South -- Description and travel&quot;],&quot;Primary&quot;:&quot;54255.htm&quot;,&quot;CreatorNames&quot;:[&quot;Evliya Çelebi, 1611?-1682?&quot;,&quot;Hammer-Purgstall, Joseph, Freiherr von, 1774-1856 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DR&quot;,&quot;PJ&quot;],&quot;PG_ID&quot;:&quot;54255&quot;});" class='title'>Narrative of Travels in Europe, Asia, and Africa, in the Seventeenth Century, Vol. II</a>
+<div class='author'>Evliya Çelebi, 1611?-1682?, Hammer-Purgstall, Joseph, Freiherr von, 1774-1856 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54757, {&quot;Title&quot;:&quot;The Sultan and His People&quot;,&quot;Topics&quot;:[&quot;Turkey -- Social life and customs&quot;,&quot;Turkey -- Description and travel&quot;],&quot;Primary&quot;:&quot;54757.htm&quot;,&quot;CreatorNames&quot;:[&quot;Oscanyan, C. (Christopher), 1818-1895&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;54757&quot;});" class='title'>The Sultan and His People</a>
+<div class='author'>Oscanyan, C. (Christopher), 1818-1895</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54893, {&quot;Title&quot;:&quot;The Secrets of the Harem&quot;,&quot;Topics&quot;:[&quot;Harems&quot;,&quot;Women -- Turkey&quot;],&quot;Primary&quot;:&quot;54893.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;54893&quot;});" class='title'>The Secrets of the Harem</a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56023, {&quot;Title&quot;:&quot;Vienna 1683 - The History and Consequences of the Defeat of the Turks before Vienna, September 12, 1683, by John Sobieski, King of Poland, and Charles Leopold, Duke of Lorraine&quot;,&quot;Topics&quot;:[&quot;Vienna (Austria) -- History -- Siege, 1683&quot;],&quot;Primary&quot;:&quot;56023.htm&quot;,&quot;CreatorNames&quot;:[&quot;Malden, Henry Elliot, 1849-1931&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;56023&quot;});" class='title'>Vienna 1683 -<br><span class='subtitle'>The History and Consequences of the Defeat of the Turks before Vienna, September 12, 1683, by John Sobieski, King of Poland, and Charles Leopold, Duke of Lorraine</span></a>
+<div class='author'>Malden, Henry Elliot, 1849-1931</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56836, {&quot;Title&quot;:&quot;The Foundation of the Ottoman Empire; a history of the Osmanlis up to the death of Bayezid I (1300-1403)&quot;,&quot;Topics&quot;:[&quot;Turkey -- History -- 1288-1453&quot;],&quot;Primary&quot;:&quot;56836.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gibbons, Herbert Adams, 1880-1934&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;56836&quot;});" class='title'>The Foundation of the Ottoman Empire;<br><span class='subtitle'>a history of the Osmanlis up to the death of Bayezid I (1300-1403)</span></a>
+<div class='author'>Gibbons, Herbert Adams, 1880-1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57400, {&quot;Title&quot;:&quot;Rambles in Istria, Dalmatia and Montenegro&quot;,&quot;Topics&quot;:[&quot;Montenegro -- Description and travel&quot;,&quot;Istria (Croatia and Slovenia) -- Description and travel&quot;,&quot;Dalmatia (Croatia) -- Description and travel&quot;],&quot;Primary&quot;:&quot;57400.htm&quot;,&quot;CreatorNames&quot;:[&quot;R. H. R.&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;57400&quot;});" class='title'>Rambles in Istria, Dalmatia and Montenegro</a>
+<div class='author'>R. H. R.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58738, {&quot;Title&quot;:&quot;On Horseback Through Asia Minor, Volume 2 (of 2)&quot;,&quot;Topics&quot;:[&quot;Turkey -- Description and travel&quot;],&quot;Primary&quot;:&quot;58738.htm&quot;,&quot;CreatorNames&quot;:[&quot;Burnaby, Fred, 1842-1885 [Adapter]&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;58738&quot;});" class='title'>On Horseback Through Asia Minor, Volume 2 (of 2)</a>
+<div class='author'>Burnaby, Fred, 1842-1885 [Adapter]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58768, {&quot;Title&quot;:&quot;On Horseback Through Asia Minor, Volume 1 (of 2)&quot;,&quot;Topics&quot;:[&quot;Turkey -- Description and travel&quot;],&quot;Primary&quot;:&quot;58768.htm&quot;,&quot;CreatorNames&quot;:[&quot;Burnaby, Fred, 1842-1885&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;58768&quot;});" class='title'>On Horseback Through Asia Minor, Volume 1 (of 2)</a>
+<div class='author'>Burnaby, Fred, 1842-1885</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59130, {&quot;Title&quot;:&quot;Turkish Memories&quot;,&quot;Topics&quot;:[&quot;National characteristics, Turkish&quot;,&quot;Turkey&quot;],&quot;Primary&quot;:&quot;59130.htm&quot;,&quot;CreatorNames&quot;:[&quot;Whitman, Sidney, -1925&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;59130&quot;});" class='title'>Turkish Memories</a>
+<div class='author'>Whitman, Sidney, -1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60151, {&quot;Title&quot;:&quot;Annals of the Turkish Empire, from 1591 to 1659&quot;,&quot;Topics&quot;:[&quot;Turkey -- History -- 1453-1683&quot;],&quot;Primary&quot;:&quot;60151.htm&quot;,&quot;CreatorNames&quot;:[&quot;Naima, Mustafa, 1655-1716&quot;,&quot;Fraser, Charles [Translator]&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;60151&quot;});" class='title'>Annals of the Turkish Empire, from 1591 to 1659</a>
+<div class='author'>Naima, Mustafa, 1655-1716, Fraser, Charles [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61475, {&quot;Title&quot;:&quot;Byzantine Constantinople, the walls of the city and adjoining historical sites&quot;,&quot;Topics&quot;:[&quot;Istanbul (Turkey)&quot;,&quot;Istanbul (Turkey) -- Antiquities&quot;],&quot;Primary&quot;:&quot;61475.htm&quot;,&quot;CreatorNames&quot;:[&quot;Van Millingen, Alexander, 1840-1915&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;61475&quot;});" class='title'>Byzantine Constantinople, the walls of the city and adjoining historical sites</a>
+<div class='author'>Van Millingen, Alexander, 1840-1915</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61583, {&quot;Title&quot;:&quot;Daybreak in Turkey - Second Edition&quot;,&quot;Topics&quot;:[&quot;Turkey&quot;],&quot;Primary&quot;:&quot;61583.htm&quot;,&quot;CreatorNames&quot;:[&quot;Barton, James L. (James Levi), 1855-1936&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;61583&quot;});" class='title'>Daybreak in Turkey -<br><span class='subtitle'>Second Edition</span></a>
+<div class='author'>Barton, James L. (James Levi), 1855-1936</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62731, {&quot;Title&quot;:&quot;The Lands of the Tamed Turk; or, the Balkan States of to-day - A narrative of travel through Servia, Bulgaria, Montenegro, Dalmatia and the recently acquired Austrian provinces of Bosnia and the Herzegovina; with observations of the peoples, their races, creeds, institutions and politics, and of the geographical, historical and commercial aspects of the several countries&quot;,&quot;Topics&quot;:[&quot;Balkan Peninsula&quot;],&quot;Primary&quot;:&quot;62731.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jaekel, Blair, 1881-&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;62731&quot;});" class='title'>The Lands of the Tamed Turk;<br><span class='subtitle'>or, the Balkan States of to-day - A narrative of travel through Servia, Bulgaria, Montenegro, Dalmatia and the recently acquired Austrian provinces of Bosnia and the Herzegovina; with observations of the peoples, their races, creeds, institutions and politics, and of the geographical, historical and commercial aspects of the several countries</span></a>
+<div class='author'>Jaekel, Blair, 1881-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62905, {&quot;Title&quot;:&quot;Muistelmia viimeisestä Wenäjän ja Turkin välisestä sodasta - Päiväkirja-muistelmien ja muiden hyväksyttyjen lähteitten mukaan&quot;,&quot;Topics&quot;:[&quot;Russo-Turkish War, 1877-1878 -- Personal narratives&quot;],&quot;Primary&quot;:&quot;62905.txt&quot;,&quot;CreatorNames&quot;:[&quot;Lempiranta, Arvo, 1860-1914 [Editor]&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;62905&quot;});" class='title'>Muistelmia viimeisestä Wenäjän ja Turkin välisestä sodasta -<br><span class='subtitle'>Päiväkirja-muistelmien ja muiden hyväksyttyjen lähteitten mukaan</span></a>
+<div class='author'>Lempiranta, Arvo, 1860-1914 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62947, {&quot;Title&quot;:&quot;The Balkan Trail&quot;,&quot;Topics&quot;:[&quot;Balkan Peninsula -- Description and travel&quot;,&quot;Turkey -- Politics and government -- 1878-1909&quot;],&quot;Primary&quot;:&quot;62947.htm&quot;,&quot;CreatorNames&quot;:[&quot;Moore, Frederick Ferdinand, 1881-1947&quot;,&quot;Holiday, Gilbert, 1879-1937 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;62947&quot;});" class='title'>The Balkan Trail</a>
+<div class='author'>Moore, Frederick Ferdinand, 1881-1947, Holiday, Gilbert, 1879-1937 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63887, {&quot;Title&quot;:&quot;Turquie agonisante&quot;,&quot;Topics&quot;:[&quot;Balkan Peninsula -- History -- War of 1912-1913&quot;,&quot;Turkey -- History -- Mehmed V, 1909-1918&quot;,&quot;Turkey -- History -- 20th century&quot;],&quot;Primary&quot;:&quot;63887.htm&quot;,&quot;CreatorNames&quot;:[&quot;Loti, Pierre, 1850-1923&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;63887&quot;});" class='title'>Turquie agonisante</a>
+<div class='author'>Loti, Pierre, 1850-1923</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64131, {&quot;Title&quot;:&quot;Under the Turk in Constantinople: A record of Sir John Finch&#39;s Embassy, 1674-1681&quot;,&quot;Topics&quot;:[&quot;Great Britain -- Foreign relations -- Turkey&quot;,&quot;Turkey -- Foreign relations -- Great Britain&quot;,&quot;Finch, John, Sir, 1626-1682&quot;],&quot;Primary&quot;:&quot;64131.htm&quot;,&quot;CreatorNames&quot;:[&quot;Abbott, G. F. (George Frederick), 1874-1947&quot;,&quot;Bryce, James Bryce, Viscount, 1838-1922 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;64131&quot;});" class='title'>Under the Turk in Constantinople:<br><span class='subtitle'>A record of Sir John Finch's Embassy, 1674-1681</span></a>
+<div class='author'>Abbott, G. F. (George Frederick), 1874-1947, Bryce, James Bryce, Viscount, 1838-1922 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64348, {&quot;Title&quot;:&quot;Travels in Turkey and back to England&quot;,&quot;Topics&quot;:[&quot;Turkey -- Description and travel -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;64348.htm&quot;,&quot;CreatorNames&quot;:[&quot;Chishull, Edmund, 1671-1733&quot;,&quot;Mead, Richard, 1673-1754 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;64348&quot;});" class='title'>Travels in Turkey and back to England</a>
+<div class='author'>Chishull, Edmund, 1671-1733, Mead, Richard, 1673-1754 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65248, {&quot;Title&quot;:&quot;\&quot;\&quot;The Murderous Tyranny of the Turks\&quot;\&quot;&quot;,&quot;Topics&quot;:[&quot;Eastern question&quot;,&quot;Turkey -- Politics and government&quot;],&quot;Primary&quot;:&quot;65248.htm&quot;,&quot;CreatorNames&quot;:[&quot;Toynbee, Arnold, 1889-1975&quot;,&quot;Bryce, James Bryce, Viscount, 1838-1922 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;65248&quot;});" class='title'>"The Murderous Tyranny of the Turks"</a>
+<div class='author'>Toynbee, Arnold, 1889-1975, Bryce, James Bryce, Viscount, 1838-1922 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65414, {&quot;Title&quot;:&quot;Travels into Turkey - Containing the most accurate account of the Turks, and neighbouring nations, their manners, customs, religion, superstition, policy, riches, coins, &amp;c.&quot;,&quot;Topics&quot;:[&quot;Turkey -- Description and travel -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;65414.htm&quot;,&quot;CreatorNames&quot;:[&quot;Busbecq, Ogier Ghislain de, 1522-1592&quot;,&quot;Bayle, Pierre, 1647-1706 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;65414&quot;});" class='title'>Travels into Turkey -<br><span class='subtitle'>Containing the most accurate account of the Turks, and neighbouring nations, their manners, customs, religion, superstition, policy, riches, coins, &c.</span></a>
+<div class='author'>Busbecq, Ogier Ghislain de, 1522-1592, Bayle, Pierre, 1647-1706 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65436, {&quot;Title&quot;:&quot;The Rebirth of Turkey&quot;,&quot;Topics&quot;:[&quot;Turkey -- Foreign relations&quot;,&quot;Atatürk, Kemal, 1881-1938&quot;,&quot;Turkey -- Politics and government&quot;,&quot;Ittihat ve Terakki Cemiyeti&quot;,&quot;Reconstruction (1914-1939) -- Turkey&quot;],&quot;Primary&quot;:&quot;65436.htm&quot;,&quot;CreatorNames&quot;:[&quot;Price, Clair&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;65436&quot;});" class='title'>The Rebirth of Turkey</a>
+<div class='author'>Price, Clair</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65565, {&quot;Title&quot;:&quot;Țara mea&quot;,&quot;Topics&quot;:[&quot;Romania -- Description and travel&quot;,&quot;Romania -- Social life and customs&quot;],&quot;Primary&quot;:&quot;65565.htm&quot;,&quot;CreatorNames&quot;:[&quot;Marie, Queen, consort of Ferdinand I, King of Romania, 1875-1938&quot;,&quot;Iorga, Nicolae, 1871-1940 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;65565&quot;});" class='title'>Țara mea</a>
+<div class='author'>Marie, Queen, consort of Ferdinand I, King of Romania, 1875-1938, Iorga, Nicolae, 1871-1940 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65749, {&quot;Title&quot;:&quot;An Englishwoman in Angora&quot;,&quot;Topics&quot;:[&quot;Turkey -- Description and travel&quot;,&quot;Atatürk, Kemal, 1881-1938&quot;,&quot;Turkey -- Politics and government -- 1918-1960&quot;],&quot;Primary&quot;:&quot;65749.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ellison, Grace, 1880-1935&quot;,&quot;Raven-Hill, L. (Leonard), 1867-1942 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;65749&quot;});" class='title'>An Englishwoman in Angora</a>
+<div class='author'>Ellison, Grace, 1880-1935, Raven-Hill, L. (Leonard), 1867-1942 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65766, {&quot;Title&quot;:&quot;An Observer in the Near East&quot;,&quot;Topics&quot;:[&quot;Balkan Peninsula -- Description and travel&quot;,&quot;Eastern question (Balkan)&quot;],&quot;Primary&quot;:&quot;65766.htm&quot;,&quot;CreatorNames&quot;:[&quot;Le Queux, William, 1864-1927&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;65766&quot;});" class='title'>An Observer in the Near East</a>
+<div class='author'>Le Queux, William, 1864-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66019, {&quot;Title&quot;:&quot;A Child of the Orient&quot;,&quot;Topics&quot;:[&quot;Women -- United States -- Biography&quot;,&quot;Immigrants -- United States -- Biography&quot;,&quot;Vaka, Demetra, 1877-1946&quot;,&quot;Greeks -- Turkey -- 19th century -- Biography&quot;,&quot;Girls -- Turkey -- 19th century -- Biography&quot;,&quot;Christians -- Turkey -- 19th century -- Biography&quot;,&quot;Turkey -- History -- Ottoman Empire, 1288-1918&quot;],&quot;Primary&quot;:&quot;66019.htm&quot;,&quot;CreatorNames&quot;:[&quot;Vaka, Demetra, 1877-1946&quot;],&quot;LoCC&quot;:[&quot;DR&quot;,&quot;PS&quot;],&quot;PG_ID&quot;:&quot;66019&quot;});" class='title'>A Child of the Orient</a>
+<div class='author'>Vaka, Demetra, 1877-1946</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66261, {&quot;Title&quot;:&quot;Constantinople de Byzance à  Stamboul.&quot;,&quot;Topics&quot;:[&quot;Istanbul (Turkey) -- Antiquities, Byzantine&quot;,&quot;Architecture, Byzantine -- Turkey -- Istanbul&quot;,&quot;Art, Byzantine -- Turkey -- Istanbul&quot;,&quot;Istanbul (Turkey) -- Buildings, structures, etc.&quot;],&quot;Primary&quot;:&quot;66261.htm&quot;,&quot;CreatorNames&quot;:[&quot;Arseven, Celâl Esad, 1876-1972&quot;],&quot;LoCC&quot;:[&quot;DR&quot;,&quot;NA&quot;],&quot;PG_ID&quot;:&quot;66261&quot;});" class='title'>Constantinople de Byzance à  Stamboul.</a>
+<div class='author'>Arseven, Celâl Esad, 1876-1972</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67568, {&quot;Title&quot;:&quot;Peaks of Shala&quot;,&quot;Topics&quot;:[&quot;Albania -- Description and travel&quot;,&quot;Lane, Rose Wilder, 1886-1968&quot;,&quot;Albania -- Social life and customs&quot;],&quot;Primary&quot;:&quot;67568.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lane, Rose Wilder, 1886-1968&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;67568&quot;});" class='title'>Peaks of Shala</a>
+<div class='author'>Lane, Rose Wilder, 1886-1968</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67626, {&quot;Title&quot;:&quot;Twenty Years&#39; Residence among the People of Turkey: Bulgarians, Greeks, Albanians, Turks, and Armenians&quot;,&quot;Topics&quot;:[&quot;Turkey -- Social life and customs&quot;,&quot;Eastern question (Balkan)&quot;,&quot;Women -- Turkey&quot;,&quot;Balkan Peninsula -- Social life and customs&quot;,&quot;Turkey -- Population&quot;,&quot;Women -- Education -- Turkey&quot;,&quot;Land tenure -- Turkey&quot;],&quot;Primary&quot;:&quot;67626.htm&quot;,&quot;CreatorNames&quot;:[&quot;Blunt, Fanny Janet Sandison, 1840-1926&quot;,&quot;Lane-Poole, Stanley, 1854-1931 [Editor]&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;67626&quot;});" class='title'>Twenty Years' Residence among the People of Turkey:<br><span class='subtitle'>Bulgarians, Greeks, Albanians, Turks, and Armenians</span></a>
+<div class='author'>Blunt, Fanny Janet Sandison, 1840-1926, Lane-Poole, Stanley, 1854-1931 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68612, {&quot;Title&quot;:&quot;An account of the principalities of Wallachia and Moldavia - with various political observations relating to them&quot;,&quot;Topics&quot;:[&quot;Eastern question (Balkan)&quot;,&quot;Romania&quot;,&quot;Wallachia&quot;,&quot;Moldavia&quot;],&quot;Primary&quot;:&quot;68612.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wilkinson, William, -1836&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;68612&quot;});" class='title'>An account of the principalities of Wallachia and Moldavia -<br><span class='subtitle'>with various political observations relating to them</span></a>
+<div class='author'>Wilkinson, William, -1836</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69537, {&quot;Title&quot;:&quot;The holy war \&quot;\&quot;made in Germany\&quot;\&quot;&quot;,&quot;Topics&quot;:[&quot;Eastern question&quot;,&quot;Panislamism&quot;,&quot;Turkey -- Foreign relations -- Germany&quot;,&quot;Germany -- Foreign relations -- Turkey&quot;,&quot;Jihad&quot;],&quot;Primary&quot;:&quot;69537.htm&quot;,&quot;CreatorNames&quot;:[&quot;Snouck Hurgronje, C. (Christiaan), 1857-1936&quot;,&quot;Gottheil, Richard J. H. (Richard James Horatio), 1862-1936 [Author of introduction, etc.]&quot;,&quot;Gillet, Joseph E. (Joseph Eugene), 1888-1958 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DR&quot;],&quot;PG_ID&quot;:&quot;69537&quot;});" class='title'>The holy war "made in Germany"</a>
+<div class='author'>Snouck Hurgronje, C. (Christiaan), 1857-1936, Gottheil, Richard J. H. (Richard James Horatio), 1862-1936 [Author of introduction, etc.], Gillet, Joseph E. (Joseph Eugene), 1888-1958 [Translator]</div>
+</div>
+</ul></div>
+</body></html>

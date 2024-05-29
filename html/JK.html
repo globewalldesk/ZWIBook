@@ -1,0 +1,486 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Political institutions and public administration - United States (JK)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(1, {&quot;Title&quot;:&quot;The Declaration of Independence of the United States of America&quot;,&quot;Topics&quot;:[&quot;United States -- History -- Revolution, 1775-1783 -- Sources&quot;,&quot;United States. Declaration of Independence&quot;],&quot;Primary&quot;:&quot;1.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jefferson, Thomas, 1743-1826&quot;],&quot;LoCC&quot;:[&quot;E&quot;,&quot;JK&quot;],&quot;PG_ID&quot;:&quot;1&quot;});" class='title'>The Declaration of Independence of the United States of America</a>
+<div class='author'>Jefferson, Thomas, 1743-1826</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(10065, {&quot;Title&quot;:&quot;The Constitution of the United States - A Brief Study of the Genesis, Formulation and Political Philosophy of the Constitution&quot;,&quot;Topics&quot;:[&quot;Constitutional law -- United States&quot;,&quot;United States. Constitution&quot;],&quot;Primary&quot;:&quot;10065.txt&quot;,&quot;CreatorNames&quot;:[&quot;Beck, James M. (James Montgomery), 1861-1936&quot;],&quot;LoCC&quot;:[&quot;JK&quot;,&quot;KF&quot;],&quot;PG_ID&quot;:&quot;10065&quot;});" class='title'>The Constitution of the United States -<br><span class='subtitle'>A Brief Study of the Genesis, Formulation and Political Philosophy of the Constitution</span></a>
+<div class='author'>Beck, James M. (James Montgomery), 1861-1936</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(10112, {&quot;Title&quot;:&quot;American Political Ideas Viewed from the Standpoint of Universal History&quot;,&quot;Topics&quot;:[&quot;United States -- Politics and government&quot;,&quot;United States -- History -- Philosophy&quot;],&quot;Primary&quot;:&quot;10112.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fiske, John, 1842-1901&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;10112&quot;});" class='title'>American Political Ideas Viewed from the Standpoint of Universal History</a>
+<div class='author'>Fiske, John, 1842-1901</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(10485, {&quot;Title&quot;:&quot;Experiments in Government and the Essentials of the Constitution&quot;,&quot;Topics&quot;:[&quot;United States -- Politics and government&quot;],&quot;Primary&quot;:&quot;10485.htm&quot;,&quot;CreatorNames&quot;:[&quot;Root, Elihu, 1845-1937&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;10485&quot;});" class='title'>Experiments in Government and the Essentials of the Constitution</a>
+<div class='author'>Root, Elihu, 1845-1937</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(10733, {&quot;Title&quot;:&quot;Studies in Civics&quot;,&quot;Topics&quot;:[&quot;United States -- Politics and government -- Handbooks, manuals, etc.&quot;],&quot;Primary&quot;:&quot;10733.txt&quot;,&quot;CreatorNames&quot;:[&quot;McCleary, J. T. (James Thompson), 1853-1924&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;10733&quot;});" class='title'>Studies in Civics</a>
+<div class='author'>McCleary, J. T. (James Thompson), 1853-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(11114, {&quot;Title&quot;:&quot;Debate on Woman Suffrage in the Senate of the United States, - 2d Session, 49th Congress, December 8, 1886, and January 25, 1887&quot;,&quot;Topics&quot;:[&quot;Women -- Suffrage -- United States&quot;],&quot;Primary&quot;:&quot;11114.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;11114&quot;});" class='title'>Debate on Woman Suffrage in the Senate of the United States, -<br><span class='subtitle'>2d Session, 49th Congress, December 8, 1886, and January 25, 1887</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(11276, {&quot;Title&quot;:&quot;Civil Government in the United States Considered with Some Reference to Its Origins&quot;,&quot;Topics&quot;:[&quot;United States -- Politics and government&quot;],&quot;Primary&quot;:&quot;11276.txt&quot;,&quot;CreatorNames&quot;:[&quot;Fiske, John, 1842-1901&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;11276&quot;});" class='title'>Civil Government in the United States Considered with Some Reference to Its Origins</a>
+<div class='author'>Fiske, John, 1842-1901</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(11982, {&quot;Title&quot;:&quot;Eighty Years and More; Reminiscences 1815-1897&quot;,&quot;Topics&quot;:[&quot;Women -- Suffrage -- United States -- History -- 19th century&quot;,&quot;Stanton, Elizabeth Cady, 1815-1902&quot;,&quot;Suffragists -- United States -- Biography&quot;,&quot;Feminism -- United States -- History -- 19th century&quot;],&quot;Primary&quot;:&quot;11982.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stanton, Elizabeth Cady, 1815-1902&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;11982&quot;});" class='title'>Eighty Years and More;<br><span class='subtitle'>Reminiscences 1815-1897</span></a>
+<div class='author'>Stanton, Elizabeth Cady, 1815-1902</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12071, {&quot;Title&quot;:&quot;The Torch Bearer - A Look Forward and Back at the Woman&#39;s Journal, the Organ of the Woman&#39;s Movement&quot;,&quot;Topics&quot;:[&quot;Women -- Suffrage -- United States&quot;,&quot;Woman&#39;s journal (Boston, Mass. : 1870)&quot;],&quot;Primary&quot;:&quot;12071.txt&quot;,&quot;CreatorNames&quot;:[&quot;Ryan, Agnes E., 1878-1954&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;12071&quot;});" class='title'>The Torch Bearer -<br><span class='subtitle'>A Look Forward and Back at the Woman's Journal, the Organ of the Woman's Movement</span></a>
+<div class='author'>Ryan, Agnes E., 1878-1954</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12136, {&quot;Title&quot;:&quot;Government and Administration of the United States&quot;,&quot;Topics&quot;:[&quot;United States -- Politics and government&quot;],&quot;Primary&quot;:&quot;12136.txt&quot;,&quot;CreatorNames&quot;:[&quot;Willoughby, Westel Woodbury, 1867-1945&quot;,&quot;Willoughby, William F. (William Franklin), 1867-1960&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;12136&quot;});" class='title'>Government and Administration of the United States</a>
+<div class='author'>Willoughby, Westel Woodbury, 1867-1945, Willoughby, William F. (William Franklin), 1867-1960</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12968, {&quot;Title&quot;:&quot;Our Government: Local, State, and National: Idaho Edition&quot;,&quot;Topics&quot;:[&quot;United States -- Politics and government&quot;,&quot;Idaho -- Politics and government&quot;],&quot;Primary&quot;:&quot;12968.htm&quot;,&quot;CreatorNames&quot;:[&quot;James, James Alton, 1864-1962&quot;,&quot;Sanford, Albert Hart, 1866-&quot;,&quot;Worlton, James Timbrell, 1877- [Contributor]&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;12968&quot;});" class='title'>Our Government:<br><span class='subtitle'>Local, State, and National: Idaho Edition</span></a>
+<div class='author'>James, James Alton, 1864-1962, Sanford, Albert Hart, 1866-, Worlton, James Timbrell, 1877- [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(1404, {&quot;Title&quot;:&quot;The Federalist Papers&quot;,&quot;Topics&quot;:[&quot;Constitutional history -- United States -- Sources&quot;,&quot;Constitutional law -- United States&quot;],&quot;Primary&quot;:&quot;1404.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hamilton, Alexander, 1757-1804&quot;,&quot;Jay, John, 1745-1829&quot;,&quot;Madison, James, 1751-1836&quot;],&quot;LoCC&quot;:[&quot;JK&quot;,&quot;KF&quot;],&quot;PG_ID&quot;:&quot;1404&quot;});" class='title'>The Federalist Papers</a>
+<div class='author'>Hamilton, Alexander, 1757-1804, Jay, John, 1745-1829, Madison, James, 1751-1836</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14104, {&quot;Title&quot;:&quot;Our Changing Constitution&quot;,&quot;Topics&quot;:[&quot;Constitutional history -- United States&quot;,&quot;United States -- Politics and government&quot;],&quot;Primary&quot;:&quot;14104.txt&quot;,&quot;CreatorNames&quot;:[&quot;Pierson, Charles W. (Charles Wheeler), 1864-1934&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;14104&quot;});" class='title'>Our Changing Constitution</a>
+<div class='author'>Pierson, Charles W. (Charles Wheeler), 1864-1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14811, {&quot;Title&quot;:&quot;The New Freedom: A Call For the Emancipation of the Generous Energies of a People&quot;,&quot;Topics&quot;:[&quot;United States -- Politics and government -- 1913-1921&quot;,&quot;United States -- Social conditions -- 1865-1918&quot;],&quot;Primary&quot;:&quot;14811.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wilson, Woodrow, 1856-1924&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;14811&quot;});" class='title'>The New Freedom:<br><span class='subtitle'>A Call For the Emancipation of the Generous Energies of a People</span></a>
+<div class='author'>Wilson, Woodrow, 1856-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15018, {&quot;Title&quot;:&quot;Elements of Civil Government - A Text-Book for Use in Public Schools, High Schools and Normal Schools and a Manual of Reference for Teachers&quot;,&quot;Topics&quot;:[&quot;United States -- Politics and government -- Handbooks, manuals, etc.&quot;,&quot;Georgia -- Politics and government&quot;],&quot;Primary&quot;:&quot;15018.htm&quot;,&quot;CreatorNames&quot;:[&quot;Peterman, Alexander L.&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;15018&quot;});" class='title'>Elements of Civil Government -<br><span class='subtitle'>A Text-Book for Use in Public Schools, High Schools and Normal Schools and a Manual of Reference for Teachers</span></a>
+<div class='author'>Peterman, Alexander L.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15220, {&quot;Title&quot;:&quot;The Life and Work of Susan B. Anthony (Volume 1 of 2) - Including Public Addresses, Her Own Letters and Many From Her Contemporaries During Fifty Years&quot;,&quot;Topics&quot;:[&quot;Anthony, Susan B. (Susan Brownell), 1820-1906&quot;],&quot;Primary&quot;:&quot;15220.htm&quot;,&quot;CreatorNames&quot;:[&quot;Harper, Ida Husted, 1851-1931&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;15220&quot;});" class='title'>The Life and Work of Susan B. Anthony (Volume 1 of 2) -<br><span class='subtitle'>Including Public Addresses, Her Own Letters and Many From Her Contemporaries During Fifty Years</span></a>
+<div class='author'>Harper, Ida Husted, 1851-1931</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15319, {&quot;Title&quot;:&quot;The government class book - Designed for the instruction of youth in the principles of constitutional government and the rights and duties of citizens.&quot;,&quot;Topics&quot;:[&quot;United States -- Politics and government -- Handbooks, manuals, etc.&quot;],&quot;Primary&quot;:&quot;15319.htm&quot;,&quot;CreatorNames&quot;:[&quot;Young, Andrew W. (Andrew White), 1802-1877&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;15319&quot;});" class='title'>The government class book -<br><span class='subtitle'>Designed for the instruction of youth in the principles of constitutional government and the rights and duties of citizens.</span></a>
+<div class='author'>Young, Andrew W. (Andrew White), 1802-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15691, {&quot;Title&quot;:&quot;Woman in Modern Society&quot;,&quot;Topics&quot;:[&quot;Women -- Social and moral questions&quot;,&quot;Women -- Employment -- United States&quot;,&quot;Women in politics -- United States&quot;],&quot;Primary&quot;:&quot;15691.htm&quot;,&quot;CreatorNames&quot;:[&quot;Barnes, Earl, 1861-1935&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;15691&quot;});" class='title'>Woman in Modern Society</a>
+<div class='author'>Barnes, Earl, 1861-1935</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16780, {&quot;Title&quot;:&quot;The Declaration of Independence of The United States of America&quot;,&quot;Topics&quot;:[&quot;United States -- History -- Revolution, 1775-1783 -- Sources&quot;,&quot;United States. Declaration of Independence&quot;],&quot;Primary&quot;:&quot;16780.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jefferson, Thomas, 1743-1826&quot;],&quot;LoCC&quot;:[&quot;E&quot;,&quot;JK&quot;],&quot;PG_ID&quot;:&quot;16780&quot;});" class='title'>The Declaration of Independence of The United States of America</a>
+<div class='author'>Jefferson, Thomas, 1743-1826</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18, {&quot;Title&quot;:&quot;The Federalist Papers&quot;,&quot;Topics&quot;:[&quot;Constitutional history -- United States -- Sources&quot;,&quot;Constitutional law -- United States&quot;],&quot;Primary&quot;:&quot;18.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hamilton, Alexander, 1757-1804&quot;,&quot;Jay, John, 1745-1829&quot;,&quot;Madison, James, 1751-1836&quot;],&quot;LoCC&quot;:[&quot;JK&quot;,&quot;KF&quot;],&quot;PG_ID&quot;:&quot;18&quot;});" class='title'>The Federalist Papers</a>
+<div class='author'>Hamilton, Alexander, 1757-1804, Jay, John, 1745-1829, Madison, James, 1751-1836</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2, {&quot;Title&quot;:&quot;The United States Bill of Rights - The Ten Original Amendments to the Constitution of the United States&quot;,&quot;Topics&quot;:[&quot;Civil rights -- United States -- Sources&quot;,&quot;United States. Constitution. 1st-10th Amendments&quot;],&quot;Primary&quot;:&quot;2.htm&quot;,&quot;CreatorNames&quot;:[&quot;United States&quot;],&quot;LoCC&quot;:[&quot;JK&quot;,&quot;KF&quot;],&quot;PG_ID&quot;:&quot;2&quot;});" class='title'>The United States Bill of Rights -<br><span class='subtitle'>The Ten Original Amendments to the Constitution of the United States</span></a>
+<div class='author'>United States</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20066, {&quot;Title&quot;:&quot;Ethics in Service&quot;,&quot;Topics&quot;:[&quot;United States -- Politics and government&quot;,&quot;Legal ethics&quot;,&quot;Presidents -- United States&quot;],&quot;Primary&quot;:&quot;20066.htm&quot;,&quot;CreatorNames&quot;:[&quot;Taft, William H. (William Howard), 1857-1930&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;20066&quot;});" class='title'>Ethics in Service</a>
+<div class='author'>Taft, William H. (William Howard), 1857-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20439, {&quot;Title&quot;:&quot;Susan B. Anthony - Rebel, Crusader, Humanitarian&quot;,&quot;Topics&quot;:[&quot;Anthony, Susan B. (Susan Brownell), 1820-1906&quot;],&quot;Primary&quot;:&quot;20439.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lutz, Alma&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;20439&quot;});" class='title'>Susan B. Anthony -<br><span class='subtitle'>Rebel, Crusader, Humanitarian</span></a>
+<div class='author'>Lutz, Alma</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2053, {&quot;Title&quot;:&quot;The American Republic: Its Constitution, Tendencies, and Destiny&quot;,&quot;Topics&quot;:[&quot;Constitutional history -- United States&quot;,&quot;Reconstruction (U.S. history, 1865-1877)&quot;,&quot;Secession -- United States&quot;,&quot;United States -- Politics and government -- 1815-1861 -- Philosophy&quot;],&quot;Primary&quot;:&quot;2053.htm&quot;,&quot;CreatorNames&quot;:[&quot;Brownson, Orestes Augustus, 1803-1876&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;2053&quot;});" class='title'>The American Republic:<br><span class='subtitle'>Its Constitution, Tendencies, and Destiny</span></a>
+<div class='author'>Brownson, Orestes Augustus, 1803-1876</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2157, {&quot;Title&quot;:&quot;Female Suffrage: A Letter to the Christian Women of America&quot;,&quot;Topics&quot;:[&quot;Women&#39;s rights -- United States&quot;,&quot;Women -- Suffrage -- United States -- History -- 19th century&quot;,&quot;Women -- Suffrage -- United States -- History -- 19th century -- Sources&quot;,&quot;Christian women -- Conduct of life&quot;,&quot;Women -- United States -- History&quot;],&quot;Primary&quot;:&quot;2157.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cooper, Susan Fenimore, 1813-1894&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;2157&quot;});" class='title'>Female Suffrage:<br><span class='subtitle'>A Letter to the Christian Women of America</span></a>
+<div class='author'>Cooper, Susan Fenimore, 1813-1894</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22959, {&quot;Title&quot;:&quot;Political Recollections - 1840 to 1872&quot;,&quot;Topics&quot;:[&quot;United States -- Politics and government&quot;,&quot;Republican Party (U.S. : 1854- ) -- History&quot;],&quot;Primary&quot;:&quot;22959.txt&quot;,&quot;CreatorNames&quot;:[&quot;Julian, George Washington, 1817-1899&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;22959&quot;});" class='title'>Political Recollections -<br><span class='subtitle'>1840 to 1872</span></a>
+<div class='author'>Julian, George Washington, 1817-1899</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(251, {&quot;Title&quot;:&quot;1995 United States Congressional Address Book&quot;,&quot;Topics&quot;:[&quot;United States. Congress&quot;],&quot;Primary&quot;:&quot;251.txt&quot;,&quot;CreatorNames&quot;:[&quot;United States&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;251&quot;});" class='title'>1995 United States Congressional Address Book</a>
+<div class='author'>United States</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25598, {&quot;Title&quot;:&quot;Citizenship: A Manual for Voters&quot;,&quot;Topics&quot;:[&quot;Women -- Suffrage -- United States&quot;,&quot;United States -- Politics and government -- Handbooks, manuals, etc.&quot;,&quot;Kentucky -- Politics and government&quot;],&quot;Primary&quot;:&quot;25598.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cromwell, Emma Guy, 1865-1952&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;25598&quot;});" class='title'>Citizenship:<br><span class='subtitle'>A Manual for Voters</span></a>
+<div class='author'>Cromwell, Emma Guy, 1865-1952</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27192, {&quot;Title&quot;:&quot;Political Women, Vol. 1&quot;,&quot;Topics&quot;:[&quot;Women -- Biography&quot;,&quot;Women in politics -- Biography&quot;],&quot;Primary&quot;:&quot;27192.htm&quot;,&quot;CreatorNames&quot;:[&quot;Menzies, Sutherland, active 1840-1883&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;27192&quot;});" class='title'>Political Women, Vol. 1</a>
+<div class='author'>Menzies, Sutherland, active 1840-1883</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27506, {&quot;Title&quot;:&quot;Political Women, Vol. 2&quot;,&quot;Topics&quot;:[&quot;Women -- Biography&quot;,&quot;Women in politics -- Biography&quot;],&quot;Primary&quot;:&quot;27506.htm&quot;,&quot;CreatorNames&quot;:[&quot;Menzies, Sutherland, active 1840-1883&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;27506&quot;});" class='title'>Political Women, Vol. 2</a>
+<div class='author'>Menzies, Sutherland, active 1840-1883</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27528, {&quot;Title&quot;:&quot;Rules and regulations governing maternity hospitals and homes ... September, 1922&quot;,&quot;Topics&quot;:[&quot;Women&#39;s hospitals&quot;,&quot;Hospitals -- Maternity services&quot;],&quot;Primary&quot;:&quot;27528.htm&quot;,&quot;CreatorNames&quot;:[&quot;California. State Board of Charities and Corrections&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;27528&quot;});" class='title'>Rules and regulations governing maternity hospitals and homes ... September, 1922</a>
+<div class='author'>California. State Board of Charities and Corrections</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28020, {&quot;Title&quot;:&quot;History of Woman Suffrage, Volume I&quot;,&quot;Topics&quot;:[&quot;Women -- Suffrage -- United States -- History&quot;,&quot;Women -- Suffrage -- History&quot;,&quot;Women&#39;s rights -- United States -- History&quot;,&quot;Women&#39;s rights -- History&quot;],&quot;Primary&quot;:&quot;28020.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anthony, Susan B. (Susan Brownell), 1820-1906 [Editor]&quot;,&quot;Gage, Matilda Joslyn, 1826-1898 [Editor]&quot;,&quot;Stanton, Elizabeth Cady, 1815-1902 [Editor]&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;28020&quot;});" class='title'>History of Woman Suffrage, Volume I</a>
+<div class='author'>Anthony, Susan B. (Susan Brownell), 1820-1906 [Editor], Gage, Matilda Joslyn, 1826-1898 [Editor], Stanton, Elizabeth Cady, 1815-1902 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28039, {&quot;Title&quot;:&quot;History of Woman Suffrage, Volume II&quot;,&quot;Topics&quot;:[&quot;Women -- Suffrage -- United States -- History&quot;,&quot;Women -- Suffrage -- History&quot;,&quot;Women&#39;s rights -- United States -- History&quot;,&quot;Women&#39;s rights -- History&quot;],&quot;Primary&quot;:&quot;28039.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anthony, Susan B. (Susan Brownell), 1820-1906 [Editor]&quot;,&quot;Gage, Matilda Joslyn, 1826-1898 [Editor]&quot;,&quot;Stanton, Elizabeth Cady, 1815-1902 [Editor]&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;28039&quot;});" class='title'>History of Woman Suffrage, Volume II</a>
+<div class='author'>Anthony, Susan B. (Susan Brownell), 1820-1906 [Editor], Gage, Matilda Joslyn, 1826-1898 [Editor], Stanton, Elizabeth Cady, 1815-1902 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28067, {&quot;Title&quot;:&quot;The Spirit of American Government - A Study Of The Constitution: Its Origin, Influence And - Relation To Democracy&quot;,&quot;Topics&quot;:[&quot;Constitutional history -- United States&quot;,&quot;United States -- Politics and government&quot;],&quot;Primary&quot;:&quot;28067.htm&quot;,&quot;CreatorNames&quot;:[&quot;Smith, J. Allen (James Allen), 1860-1926&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;28067&quot;});" class='title'>The Spirit of American Government -<br><span class='subtitle'>A Study Of The Constitution: Its Origin, Influence And - Relation To Democracy</span></a>
+<div class='author'>Smith, J. Allen (James Allen), 1860-1926</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2810, {&quot;Title&quot;:&quot;Plunkitt of Tammany Hall: a series of very plain talks on very practical politics, delivered by ex-Senator George Washington Plunkitt, the Tammany philosopher, from his rostrum—the New York County court house bootblack stand; Recorded by William L. Riordon&quot;,&quot;Topics&quot;:[&quot;Plunkitt, George Washington, 1842-1924&quot;,&quot;Tammany Hall&quot;],&quot;Primary&quot;:&quot;2810.htm&quot;,&quot;CreatorNames&quot;:[&quot;Plunkitt, George Washington, 1842-1924&quot;,&quot;Riordon, William L., 1861-1909 [Editor]&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;2810&quot;});" class='title'>Plunkitt of Tammany Hall:<br><span class='subtitle'>a series of very plain talks on very practical politics, delivered by ex-Senator George Washington Plunkitt, the Tammany philosopher, from his rostrum—the New York County court house bootblack stand; Recorded by William L. Riordon</span></a>
+<div class='author'>Plunkitt, George Washington, 1842-1924, Riordon, William L., 1861-1909 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28556, {&quot;Title&quot;:&quot;History of Woman Suffrage, Volume III&quot;,&quot;Topics&quot;:[&quot;Women -- Suffrage -- United States -- History&quot;,&quot;Women -- Suffrage -- History&quot;,&quot;Women&#39;s rights -- United States -- History&quot;,&quot;Women&#39;s rights -- History&quot;],&quot;Primary&quot;:&quot;28556.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anthony, Susan B. (Susan Brownell), 1820-1906 [Editor]&quot;,&quot;Gage, Matilda Joslyn, 1826-1898 [Editor]&quot;,&quot;Stanton, Elizabeth Cady, 1815-1902 [Editor]&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;28556&quot;});" class='title'>History of Woman Suffrage, Volume III</a>
+<div class='author'>Anthony, Susan B. (Susan Brownell), 1820-1906 [Editor], Gage, Matilda Joslyn, 1826-1898 [Editor], Stanton, Elizabeth Cady, 1815-1902 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29460, {&quot;Title&quot;:&quot;The Electoral Votes of 1876 - Who Should Count Them, What Should Be Counted, and the Remedy for a Wrong Count&quot;,&quot;Topics&quot;:[&quot;Presidents -- United States -- Election -- 1876&quot;],&quot;Primary&quot;:&quot;29460.htm&quot;,&quot;CreatorNames&quot;:[&quot;Field, David Dudley, 1805-1894&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;29460&quot;});" class='title'>The Electoral Votes of 1876 -<br><span class='subtitle'>Who Should Count Them, What Should Be Counted, and the Remedy for a Wrong Count</span></a>
+<div class='author'>Field, David Dudley, 1805-1894</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29870, {&quot;Title&quot;:&quot;The History of Woman Suffrage, Volume IV&quot;,&quot;Topics&quot;:[&quot;Women -- Suffrage -- United States -- History&quot;,&quot;Women -- Suffrage -- History&quot;,&quot;Women&#39;s rights -- United States -- History&quot;,&quot;Women&#39;s rights -- History&quot;],&quot;Primary&quot;:&quot;29870.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anthony, Susan B. (Susan Brownell), 1820-1906 [Editor]&quot;,&quot;Harper, Ida Husted, 1851-1931 [Editor]&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;29870&quot;});" class='title'>The History of Woman Suffrage, Volume IV</a>
+<div class='author'>Anthony, Susan B. (Susan Brownell), 1820-1906 [Editor], Harper, Ida Husted, 1851-1931 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29878, {&quot;Title&quot;:&quot;The History of Woman Suffrage, Volume V&quot;,&quot;Topics&quot;:[&quot;Women -- Suffrage -- United States -- History&quot;,&quot;Women -- Suffrage -- History&quot;,&quot;Women&#39;s rights -- United States -- History&quot;,&quot;Women&#39;s rights -- History&quot;],&quot;Primary&quot;:&quot;29878.htm&quot;,&quot;CreatorNames&quot;:[&quot;Harper, Ida Husted, 1851-1931 [Editor]&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;29878&quot;});" class='title'>The History of Woman Suffrage, Volume V</a>
+<div class='author'>Harper, Ida Husted, 1851-1931 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(300, {&quot;Title&quot;:&quot;United States Declaration of Independence&quot;,&quot;Topics&quot;:[&quot;United States -- History -- Revolution, 1775-1783 -- Sources&quot;],&quot;Primary&quot;:&quot;300.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jefferson, Thomas, 1743-1826&quot;],&quot;LoCC&quot;:[&quot;E&quot;,&quot;JK&quot;],&quot;PG_ID&quot;:&quot;300&quot;});" class='title'>United States Declaration of Independence</a>
+<div class='author'>Jefferson, Thomas, 1743-1826</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30051, {&quot;Title&quot;:&quot;The History of Woman Suffrage, Volume VI&quot;,&quot;Topics&quot;:[&quot;Women -- Suffrage -- United States -- History&quot;,&quot;Women -- Suffrage -- History&quot;,&quot;Women&#39;s rights -- United States -- History&quot;,&quot;Women&#39;s rights -- History&quot;],&quot;Primary&quot;:&quot;30051.htm&quot;,&quot;CreatorNames&quot;:[&quot;Harper, Ida Husted, 1851-1931 [Editor]&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;30051&quot;});" class='title'>The History of Woman Suffrage, Volume VI</a>
+<div class='author'>Harper, Ida Husted, 1851-1931 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30231, {&quot;Title&quot;:&quot;The Vote That Made the President&quot;,&quot;Topics&quot;:[&quot;Presidents -- United States -- Election -- 1876&quot;],&quot;Primary&quot;:&quot;30231.htm&quot;,&quot;CreatorNames&quot;:[&quot;Field, David Dudley, 1805-1894&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;30231&quot;});" class='title'>The Vote That Made the President</a>
+<div class='author'>Field, David Dudley, 1805-1894</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30513, {&quot;Title&quot;:&quot;De la Démocratie en Amérique, tome premier - et augmentée d&#39;un Avertissement et d&#39;un Examen comparatif - de la Démocratie aux États-Unis et en Suisse&quot;,&quot;Topics&quot;:[&quot;United States -- Politics and government&quot;,&quot;United States -- Social conditions&quot;,&quot;Democracy -- United States&quot;],&quot;Primary&quot;:&quot;30513.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tocqueville, Alexis de, 1805-1859&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;30513&quot;});" class='title'>De la Démocratie en Amérique, tome premier -<br><span class='subtitle'>et augmentée d'un Avertissement et d'un Examen comparatif - de la Démocratie aux États-Unis et en Suisse</span></a>
+<div class='author'>Tocqueville, Alexis de, 1805-1859</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30514, {&quot;Title&quot;:&quot;De la Démocratie en Amérique, tome deuxième&quot;,&quot;Topics&quot;:[&quot;United States -- Politics and government&quot;,&quot;United States -- Social conditions&quot;,&quot;Democracy -- United States&quot;],&quot;Primary&quot;:&quot;30514.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tocqueville, Alexis de, 1805-1859&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;30514&quot;});" class='title'>De la Démocratie en Amérique, tome deuxième</a>
+<div class='author'>Tocqueville, Alexis de, 1805-1859</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30515, {&quot;Title&quot;:&quot;De la Démocratie en Amérique, tome troisième&quot;,&quot;Topics&quot;:[&quot;United States -- Politics and government&quot;,&quot;United States -- Social conditions&quot;,&quot;Democracy -- United States&quot;],&quot;Primary&quot;:&quot;30515.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tocqueville, Alexis de, 1805-1859&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;30515&quot;});" class='title'>De la Démocratie en Amérique, tome troisième</a>
+<div class='author'>Tocqueville, Alexis de, 1805-1859</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30516, {&quot;Title&quot;:&quot;De la Démocratie en Amérique, tome quatrième&quot;,&quot;Topics&quot;:[&quot;United States -- Politics and government&quot;,&quot;United States -- Social conditions&quot;,&quot;Democracy -- United States&quot;],&quot;Primary&quot;:&quot;30516.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tocqueville, Alexis de, 1805-1859&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;30516&quot;});" class='title'>De la Démocratie en Amérique, tome quatrième</a>
+<div class='author'>Tocqueville, Alexis de, 1805-1859</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31125, {&quot;Title&quot;:&quot;The Life and Work of Susan B. Anthony (Volume 2 of 2) - Including Public Addresses, Her Own Letters and Many From Her Contemporaries During Fifty Years&quot;,&quot;Topics&quot;:[&quot;Anthony, Susan B. (Susan Brownell), 1820-1906&quot;],&quot;Primary&quot;:&quot;31125.htm&quot;,&quot;CreatorNames&quot;:[&quot;Harper, Ida Husted, 1851-1931&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;31125&quot;});" class='title'>The Life and Work of Susan B. Anthony (Volume 2 of 2) -<br><span class='subtitle'>Including Public Addresses, Her Own Letters and Many From Her Contemporaries During Fifty Years</span></a>
+<div class='author'>Harper, Ida Husted, 1851-1931</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31335, {&quot;Title&quot;:&quot;History of the Constitutions of Iowa&quot;,&quot;Topics&quot;:[&quot;Constitutions -- Iowa&quot;,&quot;Constitutional history -- Iowa&quot;],&quot;Primary&quot;:&quot;31335.htm&quot;,&quot;CreatorNames&quot;:[&quot;Shambaugh, Benjamin Franklin, 1871-1940&quot;],&quot;LoCC&quot;:[&quot;JK&quot;,&quot;KF&quot;],&quot;PG_ID&quot;:&quot;31335&quot;});" class='title'>History of the Constitutions of Iowa</a>
+<div class='author'>Shambaugh, Benjamin Franklin, 1871-1940</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3316, {&quot;Title&quot;:&quot;How Members of Congress Are Bribed&quot;,&quot;Topics&quot;:[&quot;United States. Congress&quot;,&quot;Bribery&quot;],&quot;Primary&quot;:&quot;3316.htm&quot;,&quot;CreatorNames&quot;:[&quot;Moore, J. Hampton (Joseph Hampton), 1864-1950&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;3316&quot;});" class='title'>How Members of Congress Are Bribed</a>
+<div class='author'>Moore, J. Hampton (Joseph Hampton), 1864-1950</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33584, {&quot;Title&quot;:&quot;Women as World Builders: Studies in Modern Feminism&quot;,&quot;Topics&quot;:[&quot;Feminism&quot;],&quot;Primary&quot;:&quot;33584.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dell, Floyd, 1887-1969&quot;],&quot;LoCC&quot;:[&quot;HQ&quot;,&quot;JK&quot;],&quot;PG_ID&quot;:&quot;33584&quot;});" class='title'>Women as World Builders:<br><span class='subtitle'>Studies in Modern Feminism</span></a>
+<div class='author'>Dell, Floyd, 1887-1969</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33638, {&quot;Title&quot;:&quot;Constitution of the State of North Carolina and Copy of the Act of the General Assembly Entitled An Act to Amend the Constitution of the State of North Carolina&quot;,&quot;Topics&quot;:[&quot;Constitutions -- North Carolina&quot;],&quot;Primary&quot;:&quot;33638.htm&quot;,&quot;CreatorNames&quot;:[&quot;North Carolina&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;33638&quot;});" class='title'>Constitution of the State of North Carolina and Copy of the Act of the General Assembly Entitled An Act to Amend the Constitution of the State of North Carolina</a>
+<div class='author'>North Carolina</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34455, {&quot;Title&quot;:&quot;Give Me Liberty: The Struggle for Self-Government in Virginia&quot;,&quot;Topics&quot;:[&quot;Virginia -- Politics and government -- To 1775&quot;],&quot;Primary&quot;:&quot;34455.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wertenbaker, Thomas Jefferson, 1879-1966&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;34455&quot;});" class='title'>Give Me Liberty:<br><span class='subtitle'>The Struggle for Self-Government in Virginia</span></a>
+<div class='author'>Wertenbaker, Thomas Jefferson, 1879-1966</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34839, {&quot;Title&quot;:&quot;The Short Constitution&quot;,&quot;Topics&quot;:[&quot;United States. Constitution&quot;],&quot;Primary&quot;:&quot;34839.htm&quot;,&quot;CreatorNames&quot;:[&quot;Meyerholz, Charles H. (Charles Henry), 1876- [Annotator]&quot;,&quot;Russell, William F. (William Fletcher), 1890-1956&quot;,&quot;Wade, Martin J. (Martin Joseph), 1861-1931&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;34839&quot;});" class='title'>The Short Constitution</a>
+<div class='author'>Meyerholz, Charles H. (Charles Henry), 1876- [Annotator], Russell, William F. (William Fletcher), 1890-1956, Wade, Martin J. (Martin Joseph), 1861-1931</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35016, {&quot;Title&quot;:&quot;A Letter to Grover Cleveland - On His False Inaugural Address, The Usurpations and Crimes of Lawmakers and Judges, and the Consequent Poverty, Ignorance, and Servitude Of The People&quot;,&quot;Topics&quot;:[&quot;United States -- Politics and government&quot;,&quot;Cleveland, Grover, 1837-1908&quot;],&quot;Primary&quot;:&quot;35016.htm&quot;,&quot;CreatorNames&quot;:[&quot;Spooner, Lysander, 1808-1887&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;35016&quot;});" class='title'>A Letter to Grover Cleveland -<br><span class='subtitle'>On His False Inaugural Address, The Usurpations and Crimes of Lawmakers and Judges, and the Consequent Poverty, Ignorance, and Servitude Of The People</span></a>
+<div class='author'>Spooner, Lysander, 1808-1887</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(354, {&quot;Title&quot;:&quot;The Story of a Pioneer&quot;,&quot;Topics&quot;:[&quot;Shaw, Anna Howard, 1847-1919&quot;,&quot;Women -- Suffrage -- United States&quot;,&quot;Women social reformers -- United States -- Biography&quot;,&quot;Women&#39;s rights -- United States&quot;],&quot;Primary&quot;:&quot;354.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jordan, Elizabeth Garver, 1867-1947&quot;,&quot;Shaw, Anna Howard, 1847-1919&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;354&quot;});" class='title'>The Story of a Pioneer</a>
+<div class='author'>Jordan, Elizabeth Garver, 1867-1947, Shaw, Anna Howard, 1847-1919</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35689, {&quot;Title&quot;:&quot;Anti-Suffrage Essays&quot;,&quot;Topics&quot;:[&quot;Women -- Suffrage -- United States&quot;,&quot;Women -- Massachusetts&quot;,&quot;Women&#39;s Anti-Suffrage Association of Massachusetts&quot;],&quot;Primary&quot;:&quot;35689.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bernbaum, Ernest, 1879-1958 [Editor]&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;35689&quot;});" class='title'>Anti-Suffrage Essays</a>
+<div class='author'>Bernbaum, Ernest, 1879-1958 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35861, {&quot;Title&quot;:&quot;Congressional Government: A Study in American Politics&quot;,&quot;Topics&quot;:[&quot;United States -- Politics and government&quot;,&quot;United States. Congress&quot;,&quot;Executive power -- United States&quot;],&quot;Primary&quot;:&quot;35861.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wilson, Woodrow, 1856-1924&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;35861&quot;});" class='title'>Congressional Government:<br><span class='subtitle'>A Study in American Politics</span></a>
+<div class='author'>Wilson, Woodrow, 1856-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35932, {&quot;Title&quot;:&quot;Inquiry Into the Origin and Course of Political Parties in the United States&quot;,&quot;Topics&quot;:[&quot;Political parties -- United States&quot;],&quot;Primary&quot;:&quot;35932.htm&quot;,&quot;CreatorNames&quot;:[&quot;Van Buren, Martin, 1782-1862&quot;,&quot;Van Buren, Abraham, 1807-1873 [Editor]&quot;,&quot;Van Buren, John, 1810-1866 [Editor]&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;35932&quot;});" class='title'>Inquiry Into the Origin and Course of Political Parties in the United States</a>
+<div class='author'>Van Buren, Martin, 1782-1862, Van Buren, Abraham, 1807-1873 [Editor], Van Buren, John, 1810-1866 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3604, {&quot;Title&quot;:&quot;Jailed for Freedom&quot;,&quot;Topics&quot;:[&quot;Women -- Suffrage -- United States&quot;,&quot;Suffragists -- United States&quot;],&quot;Primary&quot;:&quot;3604.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stevens, Doris, 1888-1963&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;3604&quot;});" class='title'>Jailed for Freedom</a>
+<div class='author'>Stevens, Doris, 1888-1963</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36579, {&quot;Title&quot;:&quot;Teaching the Child Patriotism&quot;,&quot;Topics&quot;:[&quot;Patriotism&quot;],&quot;Primary&quot;:&quot;36579.htm&quot;,&quot;CreatorNames&quot;:[&quot;Clark, Kate Upson, 1851-1935&quot;,&quot;O&#39;Brien, Harriet [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;36579&quot;});" class='title'>Teaching the Child Patriotism</a>
+<div class='author'>Clark, Kate Upson, 1851-1935, O'Brien, Harriet [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37737, {&quot;Title&quot;:&quot;A History of the Republican Party&quot;,&quot;Topics&quot;:[&quot;Republican Party (U.S. : 1854- ) -- History&quot;],&quot;Primary&quot;:&quot;37737.txt&quot;,&quot;CreatorNames&quot;:[&quot;Platt, George Washington, 1875-&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;37737&quot;});" class='title'>A History of the Republican Party</a>
+<div class='author'>Platt, George Washington, 1875-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38014, {&quot;Title&quot;:&quot;Government in the United States, National, State and Local&quot;,&quot;Topics&quot;:[&quot;United States -- Politics and government&quot;],&quot;Primary&quot;:&quot;38014.htm&quot;,&quot;CreatorNames&quot;:[&quot;Garner, James Wilford, 1871-1938&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;38014&quot;});" class='title'>Government in the United States, National, State and Local</a>
+<div class='author'>Garner, James Wilford, 1871-1938</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40499, {&quot;Title&quot;:&quot;Abridgment of the Debates of Congress, from 1789 to 1856, Vol. 1 (of 16)&quot;,&quot;Topics&quot;:[&quot;United States -- Politics and government&quot;,&quot;Law -- United States&quot;],&quot;Primary&quot;:&quot;40499.htm&quot;,&quot;CreatorNames&quot;:[&quot;United States. Congress&quot;,&quot;Benton, Thomas Hart, 1782-1858 [Editor]&quot;],&quot;LoCC&quot;:[&quot;JK&quot;,&quot;KF&quot;],&quot;PG_ID&quot;:&quot;40499&quot;});" class='title'>Abridgment of the Debates of Congress, from 1789 to 1856, Vol. 1 (of 16)</a>
+<div class='author'>United States. Congress, Benton, Thomas Hart, 1782-1858 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40851, {&quot;Title&quot;:&quot;Abridgment of the Debates of Congress, from 1789 to 1856, Vol. 2 (of 16)&quot;,&quot;Topics&quot;:[&quot;United States -- Politics and government&quot;,&quot;Law -- United States&quot;],&quot;Primary&quot;:&quot;40851.htm&quot;,&quot;CreatorNames&quot;:[&quot;United States. Congress&quot;,&quot;Benton, Thomas Hart, 1782-1858 [Editor]&quot;],&quot;LoCC&quot;:[&quot;JK&quot;,&quot;KF&quot;],&quot;PG_ID&quot;:&quot;40851&quot;});" class='title'>Abridgment of the Debates of Congress, from 1789 to 1856, Vol. 2 (of 16)</a>
+<div class='author'>United States. Congress, Benton, Thomas Hart, 1782-1858 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40904, {&quot;Title&quot;:&quot;The Mystery of the Pinckney Draught&quot;,&quot;Topics&quot;:[&quot;Constitutional history -- United States&quot;,&quot;Pinckney, Charles, 1757-1824&quot;],&quot;Primary&quot;:&quot;40904.htm&quot;,&quot;CreatorNames&quot;:[&quot;Nott, Charles C., 1827-1916&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;40904&quot;});" class='title'>The Mystery of the Pinckney Draught</a>
+<div class='author'>Nott, Charles C., 1827-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41673, {&quot;Title&quot;:&quot;Nullification, Secession, Webster&#39;s Argument, and the Kentucky and Virginia Resolutions - Considered in Reference to the Constitution and Historically&quot;,&quot;Topics&quot;:[&quot;Nullification (States&#39; rights)&quot;,&quot;Secession&quot;],&quot;Primary&quot;:&quot;41673.htm&quot;,&quot;CreatorNames&quot;:[&quot;Loring, Caleb William, 1819-1897&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;41673&quot;});" class='title'>Nullification, Secession, Webster's Argument, and the Kentucky and Virginia Resolutions -<br><span class='subtitle'>Considered in Reference to the Constitution and Historically</span></a>
+<div class='author'>Loring, Caleb William, 1819-1897</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47110, {&quot;Title&quot;:&quot;Pamphlets on the Constitution of the United States - Published During Its Discussion by the People 1787-1788&quot;,&quot;Topics&quot;:[&quot;United States -- Politics and government -- 1783-1789&quot;,&quot;Constitutional history -- United States -- Sources&quot;,&quot;United States. Constitution&quot;,&quot;United States. Constitution -- Bibliography&quot;,&quot;Constitutional law -- United States -- Popular works&quot;],&quot;Primary&quot;:&quot;47110.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ford, Paul Leicester, 1865-1902 [Editor]&quot;],&quot;LoCC&quot;:[&quot;JK&quot;,&quot;KF&quot;],&quot;PG_ID&quot;:&quot;47110&quot;});" class='title'>Pamphlets on the Constitution of the United States -<br><span class='subtitle'>Published During Its Discussion by the People 1787-1788</span></a>
+<div class='author'>Ford, Paul Leicester, 1865-1902 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47289, {&quot;Title&quot;:&quot;Abridgment of the Debates of Congress, from 1789 to 1856, Vol. 4 (of 16)&quot;,&quot;Topics&quot;:[&quot;United States -- Politics and government&quot;,&quot;Law -- United States&quot;],&quot;Primary&quot;:&quot;47289.htm&quot;,&quot;CreatorNames&quot;:[&quot;United States. Congress&quot;,&quot;Benton, Thomas Hart, 1782-1858 [Editor]&quot;],&quot;LoCC&quot;:[&quot;JK&quot;,&quot;KF&quot;],&quot;PG_ID&quot;:&quot;47289&quot;});" class='title'>Abridgment of the Debates of Congress, from 1789 to 1856, Vol. 4 (of 16)</a>
+<div class='author'>United States. Congress, Benton, Thomas Hart, 1782-1858 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4762, {&quot;Title&quot;:&quot;Civil Government of Virginia - A Text-book for Schools Based Upon the Constitution of 1902 and Conforming to the Laws Enacted in Accordance Therewith&quot;,&quot;Topics&quot;:[&quot;Virginia -- Politics and government&quot;],&quot;Primary&quot;:&quot;4762.txt&quot;,&quot;CreatorNames&quot;:[&quot;Fox, William Fayette, 1836-1909&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;4762&quot;});" class='title'>Civil Government of Virginia -<br><span class='subtitle'>A Text-book for Schools Based Upon the Constitution of 1902 and Conforming to the Laws Enacted in Accordance Therewith</span></a>
+<div class='author'>Fox, William Fayette, 1836-1909</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4938, {&quot;Title&quot;:&quot;U.S. Presidential Inaugural Addresses&quot;,&quot;Topics&quot;:[&quot;Presidents -- United States -- Inaugural addresses&quot;],&quot;Primary&quot;:&quot;4938.htm&quot;,&quot;CreatorNames&quot;:[&quot;United States. Presidents&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;4938&quot;});" class='title'>U.S. Presidential Inaugural Addresses</a>
+<div class='author'>United States. Presidents</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49456, {&quot;Title&quot;:&quot;The Mentor: Uncle Sam, Vol. 7, Num. 11, Serial No. 183, July 15, 1919&quot;,&quot;Topics&quot;:[&quot;United States -- Politics and government&quot;],&quot;Primary&quot;:&quot;49456.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hart, Albert Bushnell, 1854-1943&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;49456&quot;});" class='title'>The Mentor:<br><span class='subtitle'>Uncle Sam, Vol. 7, Num. 11, Serial No. 183, July 15, 1919</span></a>
+<div class='author'>Hart, Albert Bushnell, 1854-1943</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5, {&quot;Title&quot;:&quot;The United States Constitution&quot;,&quot;Topics&quot;:[&quot;United States -- Politics and government -- 1783-1789 -- Sources&quot;,&quot;United States. Constitution&quot;],&quot;Primary&quot;:&quot;5.htm&quot;,&quot;CreatorNames&quot;:[&quot;United States&quot;],&quot;LoCC&quot;:[&quot;JK&quot;,&quot;KF&quot;],&quot;PG_ID&quot;:&quot;5&quot;});" class='title'>The United States Constitution</a>
+<div class='author'>United States</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5065, {&quot;Title&quot;:&quot;Civil Government for Common Schools - Prepared as a Manual for Public Instruction in the State of New York&quot;,&quot;Topics&quot;:[&quot;United States -- Politics and government -- Handbooks, manuals, etc.&quot;,&quot;New York (State) -- Politics and government&quot;],&quot;Primary&quot;:&quot;5065.txt&quot;,&quot;CreatorNames&quot;:[&quot;Northam, Henry C.&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;5065&quot;});" class='title'>Civil Government for Common Schools -<br><span class='subtitle'>Prepared as a Manual for Public Instruction in the State of New York</span></a>
+<div class='author'>Northam, Henry C.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5088, {&quot;Title&quot;:&quot;Community Civics and Rural Life&quot;,&quot;Topics&quot;:[&quot;United States -- Politics and government&quot;,&quot;United States -- Social conditions&quot;,&quot;Country life&quot;],&quot;Primary&quot;:&quot;5088.txt&quot;,&quot;CreatorNames&quot;:[&quot;Dunn, Arthur William, 1868-1927&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;5088&quot;});" class='title'>Community Civics and Rural Life</a>
+<div class='author'>Dunn, Arthur William, 1868-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51861, {&quot;Title&quot;:&quot;Victoria C. Woodhull: A Biographical Sketch&quot;,&quot;Topics&quot;:[&quot;Feminists -- United States -- Biography&quot;,&quot;Suffragists -- United States -- Biography&quot;,&quot;Woodhull, Victoria C. (Victoria Claflin), 1838-1927&quot;,&quot;Spiritualists -- United States -- Biography&quot;],&quot;Primary&quot;:&quot;51861.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tilton, Theodore, 1835-1907&quot;],&quot;LoCC&quot;:[&quot;HQ&quot;,&quot;JK&quot;],&quot;PG_ID&quot;:&quot;51861&quot;});" class='title'>Victoria C. Woodhull:<br><span class='subtitle'>A Biographical Sketch</span></a>
+<div class='author'>Tilton, Theodore, 1835-1907</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52634, {&quot;Title&quot;:&quot;Women&#39;s Work&quot;,&quot;Topics&quot;:[&quot;Women -- Employment&quot;],&quot;Primary&quot;:&quot;52634.htm&quot;,&quot;CreatorNames&quot;:[&quot;Brooke, A. A. (Agnes Amy), 1852-1939&quot;,&quot;Whitley, Margaret&quot;,&quot;Dilke, Emilia Francis Strong, Lady, 1840-1904 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;HD&quot;,&quot;JK&quot;],&quot;PG_ID&quot;:&quot;52634&quot;});" class='title'>Women's Work</a>
+<div class='author'>Brooke, A. A. (Agnes Amy), 1852-1939, Whitley, Margaret, Dilke, Emilia Francis Strong, Lady, 1840-1904 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53115, {&quot;Title&quot;:&quot;The History of Tammany Hall - Second Edition&quot;,&quot;Topics&quot;:[&quot;New York (N.Y.) -- Politics and government&quot;,&quot;Tammany Hall (Political organization)&quot;],&quot;Primary&quot;:&quot;53115.htm&quot;,&quot;CreatorNames&quot;:[&quot;Myers, Gustavus, 1872-1942&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;53115&quot;});" class='title'>The History of Tammany Hall -<br><span class='subtitle'>Second Edition</span></a>
+<div class='author'>Myers, Gustavus, 1872-1942</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53534, {&quot;Title&quot;:&quot;Josephine E. Butler: An Autobiographical Memoir&quot;,&quot;Topics&quot;:[&quot;Women social reformers -- Great Britain -- Biography&quot;,&quot;Social reformers -- Great Britain -- Biography&quot;,&quot;Butler, Josephine Elizabeth Grey, 1828-1906&quot;],&quot;Primary&quot;:&quot;53534.htm&quot;,&quot;CreatorNames&quot;:[&quot;Butler, Josephine Elizabeth Grey, 1828-1906&quot;,&quot;Stuart, James, 1843-1913 [Author of introduction, etc.]&quot;,&quot;Johnson, George William, 1857-1926 [Editor]&quot;,&quot;Johnson, Lucy A. Nutter [Editor]&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;53534&quot;});" class='title'>Josephine E. Butler:<br><span class='subtitle'>An Autobiographical Memoir</span></a>
+<div class='author'>Butler, Josephine Elizabeth Grey, 1828-1906, Stuart, James, 1843-1913 [Author of introduction, etc.], Johnson, George William, 1857-1926 [Editor], Johnson, Lucy A. Nutter [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54345, {&quot;Title&quot;:&quot;Abridgment of the Debates of Congress, from 1789 to 1856, Vol. 3 (of 16)&quot;,&quot;Topics&quot;:[&quot;United States -- Politics and government&quot;,&quot;Law -- United States&quot;],&quot;Primary&quot;:&quot;54345.htm&quot;,&quot;CreatorNames&quot;:[&quot;United States. Congress&quot;,&quot;Benton, Thomas Hart, 1782-1858 [Editor]&quot;],&quot;LoCC&quot;:[&quot;JK&quot;,&quot;KF&quot;],&quot;PG_ID&quot;:&quot;54345&quot;});" class='title'>Abridgment of the Debates of Congress, from 1789 to 1856, Vol. 3 (of 16)</a>
+<div class='author'>United States. Congress, Benton, Thomas Hart, 1782-1858 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56060, {&quot;Title&quot;:&quot;Presidential Problems&quot;,&quot;Topics&quot;:[&quot;United States -- Politics and government&quot;],&quot;Primary&quot;:&quot;56060.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cleveland, Grover, 1837-1908&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;56060&quot;});" class='title'>Presidential Problems</a>
+<div class='author'>Cleveland, Grover, 1837-1908</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5639, {&quot;Title&quot;:&quot;The Progressive Democracy of James M. Cox&quot;,&quot;Topics&quot;:[&quot;United States -- Politics and government -- 1913-1921&quot;,&quot;Cox, James M. (James Middleton), 1870-1957&quot;,&quot;Legislators -- United States -- Biography&quot;,&quot;Politicians -- United States -- Biography&quot;],&quot;Primary&quot;:&quot;5639.txt&quot;,&quot;CreatorNames&quot;:[&quot;Morris, Charles E. (Charles Eugene), 1884-&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;5639&quot;});" class='title'>The Progressive Democracy of James M. Cox</a>
+<div class='author'>Morris, Charles E. (Charles Eugene), 1884-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56701, {&quot;Title&quot;:&quot;The Story of the Woman&#39;s Party&quot;,&quot;Topics&quot;:[&quot;Women -- Suffrage -- United States&quot;,&quot;Paul, Alice, 1885-1977&quot;,&quot;National Woman&#39;s Party&quot;],&quot;Primary&quot;:&quot;56701.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gillmore, Inez Haynes, 1873-1970&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;56701&quot;});" class='title'>The Story of the Woman's Party</a>
+<div class='author'>Gillmore, Inez Haynes, 1873-1970</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57783, {&quot;Title&quot;:&quot;The Legislative Manual, of the State of Colorado - Comprising the History of Colorado, Annals of the Legislature, Manual of Customs, Precedents and Forms, Rules of Parliamentary Parliamentary Practice, and the Constitutions of the United States and the History of Colorado, Annals of the Legislature, Manual of Customs, Precedents and Forms, Rules of Parliamentary Practice, and the Constitutions of the United States and the State of Colorado. Also, Chronological Table of American History, Lists and Tables for Reference, Biographies, Etc.&quot;,&quot;Topics&quot;:[&quot;Colorado. General Assembly -- Handbooks, manuals, etc.&quot;,&quot;Colorado. General Assembly -- Rules and practice&quot;,&quot;Colorado -- Politics and government -- 1876-1950&quot;],&quot;Primary&quot;:&quot;57783.htm&quot;,&quot;CreatorNames&quot;:[&quot;Corbett, Thomas B.&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;57783&quot;});" class='title'>The Legislative Manual, of the State of Colorado -<br><span class='subtitle'>Comprising the History of Colorado, Annals of the Legislature, Manual of Customs, Precedents and Forms, Rules of Parliamentary Parliamentary Practice, and the Constitutions of the United States and the History of Colorado, Annals of the Legislature, Manual of Customs, Precedents and Forms, Rules of Parliamentary Practice, and the Constitutions of the United States and the State of Colorado. Also, Chronological Table of American History, Lists and Tables for Reference, Biographies, Etc.</span></a>
+<div class='author'>Corbett, Thomas B.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57862, {&quot;Title&quot;:&quot;Popular misgovernment in the United States&quot;,&quot;Topics&quot;:[&quot;United States -- Politics and government&quot;,&quot;Suffrage -- United States&quot;],&quot;Primary&quot;:&quot;57862.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cruikshank, Alfred Byron, 1847-1933&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;57862&quot;});" class='title'>Popular misgovernment in the United States</a>
+<div class='author'>Cruikshank, Alfred Byron, 1847-1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58644, {&quot;Title&quot;:&quot;Index of the Project Gutenberg Works of Alexis de Tocqueville&quot;,&quot;Topics&quot;:[&quot;Indexes&quot;],&quot;Primary&quot;:&quot;58644.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tocqueville, Alexis de, 1805-1859&quot;,&quot;Widger, David, 1932-2021? [Editor]&quot;],&quot;LoCC&quot;:[&quot;DC&quot;,&quot;JK&quot;],&quot;PG_ID&quot;:&quot;58644&quot;});" class='title'>Index of the Project Gutenberg Works of Alexis de Tocqueville</a>
+<div class='author'>Tocqueville, Alexis de, 1805-1859, Widger, David, 1932-2021? [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59675, {&quot;Title&quot;:&quot;Index of the Project Gutenberg Works on Women&#39;s Suffrage - Four volumes edited by Elizabeth Cady Stanton, Susan B. Anthony, and Matilda Joslyn Gage&quot;,&quot;Topics&quot;:[&quot;Indexes&quot;,&quot;Women -- Suffrage -- United States -- History&quot;,&quot;Women -- Suffrage -- History&quot;,&quot;Women&#39;s rights -- United States -- History&quot;,&quot;Women&#39;s rights -- History&quot;],&quot;Primary&quot;:&quot;59675.htm&quot;,&quot;CreatorNames&quot;:[&quot;Widger, David, 1932-2021? [Compiler]&quot;,&quot;Anthony, Susan B. (Susan Brownell), 1820-1906 [Editor]&quot;,&quot;Gage, Matilda Joslyn, 1826-1898 [Editor]&quot;,&quot;Harper, Ida Husted, 1851-1931 [Editor]&quot;,&quot;Stanton, Elizabeth Cady, 1815-1902 [Editor]&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;59675&quot;});" class='title'>Index of the Project Gutenberg Works on Women's Suffrage -<br><span class='subtitle'>Four volumes edited by Elizabeth Cady Stanton, Susan B. Anthony, and Matilda Joslyn Gage</span></a>
+<div class='author'>Widger, David, 1932-2021? [Compiler], Anthony, Susan B. (Susan Brownell), 1820-1906 [Editor], Gage, Matilda Joslyn, 1826-1898 [Editor], Harper, Ida Husted, 1851-1931 [Editor], Stanton, Elizabeth Cady, 1815-1902 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60576, {&quot;Title&quot;:&quot;Americans by Choice&quot;,&quot;Topics&quot;:[&quot;Immigrants -- United States&quot;,&quot;Americanization&quot;,&quot;Aliens -- United States&quot;,&quot;Civics&quot;,&quot;Naturalization -- United States&quot;],&quot;Primary&quot;:&quot;60576.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gavit, John Palmer, 1868-1954&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;60576&quot;});" class='title'>Americans by Choice</a>
+<div class='author'>Gavit, John Palmer, 1868-1954</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60744, {&quot;Title&quot;:&quot;The Footprints of Time - And a Complete Analysis of Our American System of Government, with a Concise History of the Original Colonies and of the United States, in Chronological Order&quot;,&quot;Topics&quot;:[&quot;United States -- Politics and government&quot;,&quot;United States -- History&quot;],&quot;Primary&quot;:&quot;60744.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bancroft, Charles&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;60744&quot;});" class='title'>The Footprints of Time -<br><span class='subtitle'>And a Complete Analysis of Our American System of Government, with a Concise History of the Original Colonies and of the United States, in Chronological Order</span></a>
+<div class='author'>Bancroft, Charles</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6158, {&quot;Title&quot;:&quot;The True Citizen: How to Become One&quot;,&quot;Topics&quot;:[&quot;Readers -- Citizenship&quot;,&quot;Citizenship -- Problems, exercises, etc.&quot;,&quot;Conduct of life -- Problems, exercises, etc.&quot;],&quot;Primary&quot;:&quot;6158.txt&quot;,&quot;CreatorNames&quot;:[&quot;Markwick, William Fisher, 1848-1911&quot;,&quot;Smith, William Alexander, 1866-&quot;],&quot;LoCC&quot;:[&quot;JK&quot;,&quot;PE&quot;],&quot;PG_ID&quot;:&quot;6158&quot;});" class='title'>The True Citizen:<br><span class='subtitle'>How to Become One</span></a>
+<div class='author'>Markwick, William Fisher, 1848-1911, Smith, William Alexander, 1866-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62103, {&quot;Title&quot;:&quot;The American Spirit in the Writings of Americans of Foreign Birth&quot;,&quot;Topics&quot;:[&quot;American literature&quot;,&quot;Americanization&quot;,&quot;Aliens -- United States&quot;],&quot;Primary&quot;:&quot;62103.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stauffer, Robert Elihu, 1884- [Editor]&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;62103&quot;});" class='title'>The American Spirit in the Writings of Americans of Foreign Birth</a>
+<div class='author'>Stauffer, Robert Elihu, 1884- [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63298, {&quot;Title&quot;:&quot;The New Democracy: A handbook for Democratic speakers and workers&quot;,&quot;Topics&quot;:[&quot;Politics, Practical&quot;,&quot;Campaign literature, 1900 -- Democratic&quot;],&quot;Primary&quot;:&quot;63298.htm&quot;,&quot;CreatorNames&quot;:[&quot;Vrooman, Walter, 1869-&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;63298&quot;});" class='title'>The New Democracy:<br><span class='subtitle'>A handbook for Democratic speakers and workers</span></a>
+<div class='author'>Vrooman, Walter, 1869-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6460, {&quot;Title&quot;:&quot;Problems in American Democracy&quot;,&quot;Topics&quot;:[&quot;United States -- Politics and government&quot;,&quot;United States -- Social conditions&quot;,&quot;Social problems&quot;,&quot;United States -- Economic conditions -- 1918-1945&quot;],&quot;Primary&quot;:&quot;6460.txt&quot;,&quot;CreatorNames&quot;:[&quot;Williamson, Thames, 1894-1961&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;6460&quot;});" class='title'>Problems in American Democracy</a>
+<div class='author'>Williamson, Thames, 1894-1961</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66610, {&quot;Title&quot;:&quot;Practical Agitation&quot;,&quot;Topics&quot;:[&quot;United States -- Politics and government&quot;,&quot;Political ethics&quot;,&quot;Politics, Practical -- United States&quot;],&quot;Primary&quot;:&quot;66610.htm&quot;,&quot;CreatorNames&quot;:[&quot;Chapman, John Jay, 1862-1933&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;66610&quot;});" class='title'>Practical Agitation</a>
+<div class='author'>Chapman, John Jay, 1862-1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66890, {&quot;Title&quot;:&quot;A Square Deal&quot;,&quot;Topics&quot;:[&quot;Social sciences&quot;,&quot;United States -- Politics and government -- 1901-1909&quot;],&quot;Primary&quot;:&quot;66890.htm&quot;,&quot;CreatorNames&quot;:[&quot;Roosevelt, Theodore, 1858-1919&quot;,&quot;Markley, Horace [Compiler]&quot;],&quot;LoCC&quot;:[&quot;H&quot;,&quot;JK&quot;],&quot;PG_ID&quot;:&quot;66890&quot;});" class='title'>A Square Deal</a>
+<div class='author'>Roosevelt, Theodore, 1858-1919, Markley, Horace [Compiler]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68152, {&quot;Title&quot;:&quot;Americanism&quot;,&quot;Topics&quot;:[&quot;Speeches, addresses, etc.&quot;,&quot;Americanization&quot;,&quot;Citizenship&quot;],&quot;Primary&quot;:&quot;68152.htm&quot;,&quot;CreatorNames&quot;:[&quot;Roosevelt, Theodore, 1858-1919&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;68152&quot;});" class='title'>Americanism</a>
+<div class='author'>Roosevelt, Theodore, 1858-1919</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68159, {&quot;Title&quot;:&quot;Good citizenship&quot;,&quot;Topics&quot;:[&quot;Holidays&quot;,&quot;National characteristics, American&quot;,&quot;Patriotism&quot;,&quot;Citizenship&quot;],&quot;Primary&quot;:&quot;68159.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cleveland, Grover, 1837-1908&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;68159&quot;});" class='title'>Good citizenship</a>
+<div class='author'>Cleveland, Grover, 1837-1908</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68928, {&quot;Title&quot;:&quot;Unpopular government in the United States&quot;,&quot;Topics&quot;:[&quot;United States -- Politics and government&quot;],&quot;Primary&quot;:&quot;68928.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kales, Albert Martin, 1875-1922&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;68928&quot;});" class='title'>Unpopular government in the United States</a>
+<div class='author'>Kales, Albert Martin, 1875-1922</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69409, {&quot;Title&quot;:&quot;Straight America, a call to national service&quot;,&quot;Topics&quot;:[&quot;United States -- Defenses&quot;,&quot;National service -- United States&quot;],&quot;Primary&quot;:&quot;69409.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kellor, Frances, 1873-1952&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;69409&quot;});" class='title'>Straight America, a call to national service</a>
+<div class='author'>Kellor, Frances, 1873-1952</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69959, {&quot;Title&quot;:&quot;Your vote and how to use it&quot;,&quot;Topics&quot;:[&quot;United States -- Politics and government&quot;,&quot;New York (State) -- Politics and government&quot;],&quot;Primary&quot;:&quot;69959.htm&quot;,&quot;CreatorNames&quot;:[&quot;Brown, Gertrude Foster, 1867-1956&quot;,&quot;Catt, Carrie Chapman, 1859-1947 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;69959&quot;});" class='title'>Your vote and how to use it</a>
+<div class='author'>Brown, Gertrude Foster, 1867-1956, Catt, Carrie Chapman, 1859-1947 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70368, {&quot;Title&quot;:&quot;Washington cover-up&quot;,&quot;Topics&quot;:[&quot;Government information -- United States&quot;,&quot;Executive privilege (Government information) -- United States&quot;],&quot;Primary&quot;:&quot;70368.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mollenhoff, Clark R. (Clark Raymond), 1921-1991&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;70368&quot;});" class='title'>Washington cover-up</a>
+<div class='author'>Mollenhoff, Clark R. (Clark Raymond), 1921-1991</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7300, {&quot;Title&quot;:&quot;Woman and the Republic - A Survey of the Woman-Suffrage Movement in the United States and a Discussion of the Claims and Arguments of Its Foremost Advocates&quot;,&quot;Topics&quot;:[&quot;Women -- Suffrage -- United States&quot;,&quot;Women -- Legal status, laws, etc. -- United States&quot;],&quot;Primary&quot;:&quot;7300.txt&quot;,&quot;CreatorNames&quot;:[&quot;Johnson, Helen Kendrick, 1844-1917&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;7300&quot;});" class='title'>Woman and the Republic -<br><span class='subtitle'>A Survey of the Woman-Suffrage Movement in the United States and a Discussion of the Claims and Arguments of Its Foremost Advocates</span></a>
+<div class='author'>Johnson, Helen Kendrick, 1844-1917</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(739, {&quot;Title&quot;:&quot;Henry Clay&#39;s Remarks in House and Senate&quot;,&quot;Topics&quot;:[&quot;United States -- Politics and government -- 1815-1861&quot;,&quot;Arbuthnot, Alexander, 1748?-1818&quot;,&quot;Ambrister, Robert Christie, 1785?-1818&quot;,&quot;Seminole War, 1st, 1817-1818&quot;],&quot;Primary&quot;:&quot;739.txt&quot;,&quot;CreatorNames&quot;:[&quot;Clay, Henry, 1777-1852&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;739&quot;});" class='title'>Henry Clay's Remarks in House and Senate</a>
+<div class='author'>Clay, Henry, 1777-1852</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(740, {&quot;Title&quot;:&quot;Remarks of Mr. Calhoun of South Carolina on the bill to prevent the interference of certain federal officers in elections: delivered in the Senate of the United States February 22, 1839&quot;,&quot;Topics&quot;:[&quot;Nullification (States&#39; rights)&quot;,&quot;United States -- Politics and government -- 1837-1841&quot;,&quot;Election law -- United States -- Speeches in Congress&quot;,&quot;Constitutional law -- United States&quot;],&quot;Primary&quot;:&quot;740.txt&quot;,&quot;CreatorNames&quot;:[&quot;Calhoun, John C. (John Caldwell), 1782-1850&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;740&quot;});" class='title'>Remarks of Mr. Calhoun of South Carolina on the bill to prevent the interference of certain federal officers in elections:<br><span class='subtitle'>delivered in the Senate of the United States February 22, 1839</span></a>
+<div class='author'>Calhoun, John C. (John Caldwell), 1782-1850</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(741, {&quot;Title&quot;:&quot;Thomas Hart Benton&#39;s Remarks to the Senate on the Expunging Resolution&quot;,&quot;Topics&quot;:[&quot;Jackson, Andrew, 1767-1845&quot;,&quot;United States -- Politics and government -- 1837-1841&quot;],&quot;Primary&quot;:&quot;741.txt&quot;,&quot;CreatorNames&quot;:[&quot;Benton, Thomas Hart, 1782-1858&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;741&quot;});" class='title'>Thomas Hart Benton's Remarks to the Senate on the Expunging Resolution</a>
+<div class='author'>Benton, Thomas Hart, 1782-1858</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(815, {&quot;Title&quot;:&quot;Democracy in America — Volume 1&quot;,&quot;Topics&quot;:[&quot;United States -- Politics and government&quot;,&quot;United States -- Social conditions&quot;,&quot;Democracy -- United States&quot;],&quot;Primary&quot;:&quot;815.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tocqueville, Alexis de, 1805-1859&quot;,&quot;Reeve, Henry, 1813-1895 [Translator]&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;815&quot;});" class='title'>Democracy in America — Volume 1</a>
+<div class='author'>Tocqueville, Alexis de, 1805-1859, Reeve, Henry, 1813-1895 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(816, {&quot;Title&quot;:&quot;Democracy in America — Volume 2&quot;,&quot;Topics&quot;:[&quot;United States -- Politics and government&quot;,&quot;United States -- Social conditions&quot;,&quot;Democracy -- United States&quot;],&quot;Primary&quot;:&quot;816.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tocqueville, Alexis de, 1805-1859&quot;,&quot;Reeve, Henry, 1813-1895 [Translator]&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;816&quot;});" class='title'>Democracy in America — Volume 2</a>
+<div class='author'>Tocqueville, Alexis de, 1805-1859, Reeve, Henry, 1813-1895 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(8690, {&quot;Title&quot;:&quot;American Institutions and Their Influence&quot;,&quot;Topics&quot;:[&quot;United States -- Politics and government&quot;,&quot;Democracy&quot;],&quot;Primary&quot;:&quot;8690.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tocqueville, Alexis de, 1805-1859&quot;,&quot;Spencer, John C. (John Canfield), 1788-1855 [Editor]&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;8690&quot;});" class='title'>American Institutions and Their Influence</a>
+<div class='author'>Tocqueville, Alexis de, 1805-1859, Spencer, John C. (John Canfield), 1788-1855 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(896, {&quot;Title&quot;:&quot;The Jubilee of the Constitution - Delivered at New York, April 30, 1839, Before the New York Historical Society&quot;,&quot;Topics&quot;:[&quot;United States -- Politics and government -- 1775-1783&quot;,&quot;United States -- Politics and government -- 1783-1789&quot;,&quot;Washington, George, 1732-1799 -- Anniversaries, etc.&quot;,&quot;United States. Constitution&quot;],&quot;Primary&quot;:&quot;896.htm&quot;,&quot;CreatorNames&quot;:[&quot;Adams, John Quincy, 1767-1848&quot;],&quot;LoCC&quot;:[&quot;E&quot;,&quot;JK&quot;],&quot;PG_ID&quot;:&quot;896&quot;});" class='title'>The Jubilee of the Constitution -<br><span class='subtitle'>Delivered at New York, April 30, 1839, Before the New York Historical Society</span></a>
+<div class='author'>Adams, John Quincy, 1767-1848</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(925, {&quot;Title&quot;:&quot;United States Presidents&#39; Inaugural Speeches: From Washington to George W. Bush&quot;,&quot;Topics&quot;:[&quot;Presidents -- United States -- Inaugural addresses&quot;],&quot;Primary&quot;:&quot;925.htm&quot;,&quot;CreatorNames&quot;:[&quot;United States. Presidents&quot;],&quot;LoCC&quot;:[&quot;JK&quot;],&quot;PG_ID&quot;:&quot;925&quot;});" class='title'>United States Presidents' Inaugural Speeches:<br><span class='subtitle'>From Washington to George W. Bush</span></a>
+<div class='author'>United States. Presidents</div>
+</div>
+</ul></div>
+</body></html>

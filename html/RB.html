@@ -1,0 +1,78 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Pathology (RB)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12105, {&quot;Title&quot;:&quot;La lutte pour la santé: essai de pathologie générale&quot;,&quot;Topics&quot;:[&quot;Pathology&quot;],&quot;Primary&quot;:&quot;12105.htm&quot;,&quot;CreatorNames&quot;:[&quot;Burlureaux, Charles, 1851-1927&quot;],&quot;LoCC&quot;:[&quot;RB&quot;],&quot;PG_ID&quot;:&quot;12105&quot;});" class='title'>La lutte pour la santé:<br><span class='subtitle'>essai de pathologie générale</span></a>
+<div class='author'>Burlureaux, Charles, 1851-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15283, {&quot;Title&quot;:&quot;Disease and Its Causes&quot;,&quot;Topics&quot;:[&quot;Diseases -- Causes and theories of causation&quot;],&quot;Primary&quot;:&quot;15283.htm&quot;,&quot;CreatorNames&quot;:[&quot;Councilman, W. T. (William Thomas), 1854-1933&quot;],&quot;LoCC&quot;:[&quot;RB&quot;],&quot;PG_ID&quot;:&quot;15283&quot;});" class='title'>Disease and Its Causes</a>
+<div class='author'>Councilman, W. T. (William Thomas), 1854-1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29842, {&quot;Title&quot;:&quot;Histology of the Blood, Normal and Pathological&quot;,&quot;Topics&quot;:[&quot;Blood -- Examination&quot;,&quot;Blood Physiology&quot;,&quot;Blood cells -- Anatomy and histology&quot;,&quot;Hematologic Diseases -- Pathology&quot;],&quot;Primary&quot;:&quot;29842.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ehrlich, Paul, 1854-1915&quot;,&quot;Lazarus, Adolf, 1867-1925&quot;,&quot;Woodhead, G. Sims, (German Sims), Sir, 1855-1921 [Commentator]&quot;,&quot;Myers, W. [Translator]&quot;],&quot;LoCC&quot;:[&quot;RB&quot;],&quot;PG_ID&quot;:&quot;29842&quot;});" class='title'>Histology of the Blood, Normal and Pathological</a>
+<div class='author'>Ehrlich, Paul, 1854-1915, Lazarus, Adolf, 1867-1925, Woodhead, G. Sims, (German Sims), Sir, 1855-1921 [Commentator], Myers, W. [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44921, {&quot;Title&quot;:&quot;Die Cellularpathologie - in ihrer Begründung auf physiologische und pathologische Gewebelehre&quot;,&quot;Topics&quot;:[&quot;Pathology, Cellular&quot;,&quot;Histology, Pathological&quot;],&quot;Primary&quot;:&quot;44921.htm&quot;,&quot;CreatorNames&quot;:[&quot;Virchow, Rudolf, 1821-1902&quot;],&quot;LoCC&quot;:[&quot;RB&quot;],&quot;PG_ID&quot;:&quot;44921&quot;});" class='title'>Die Cellularpathologie -<br><span class='subtitle'>in ihrer Begründung auf physiologische und pathologische Gewebelehre</span></a>
+<div class='author'>Virchow, Rudolf, 1821-1902</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47078, {&quot;Title&quot;:&quot;A Manual of Clinical Diagnosis&quot;,&quot;Topics&quot;:[&quot;Diagnosis, Laboratory&quot;],&quot;Primary&quot;:&quot;47078.htm&quot;,&quot;CreatorNames&quot;:[&quot;Todd, James Campbell, 1874-1928&quot;],&quot;LoCC&quot;:[&quot;RB&quot;],&quot;PG_ID&quot;:&quot;47078&quot;});" class='title'>A Manual of Clinical Diagnosis</a>
+<div class='author'>Todd, James Campbell, 1874-1928</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47234, {&quot;Title&quot;:&quot;On the origin of inflammation of the veins - and of the causes, consequences, and treatment of purulent deposits&quot;,&quot;Topics&quot;:[&quot;Veins -- Diseases&quot;,&quot;Blood&quot;],&quot;Primary&quot;:&quot;47234.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lee, Henry, M.D., 1817-1898&quot;],&quot;LoCC&quot;:[&quot;RB&quot;],&quot;PG_ID&quot;:&quot;47234&quot;});" class='title'>On the origin of inflammation of the veins -<br><span class='subtitle'>and of the causes, consequences, and treatment of purulent deposits</span></a>
+<div class='author'>Lee, Henry, M.D., 1817-1898</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59578, {&quot;Title&quot;:&quot;Dissertations on Inflammation, Vol. 2&quot;,&quot;Topics&quot;:[&quot;Inflammation&quot;],&quot;Primary&quot;:&quot;59578.htm&quot;,&quot;CreatorNames&quot;:[&quot;Burns, John, 1774-1850&quot;],&quot;LoCC&quot;:[&quot;RB&quot;],&quot;PG_ID&quot;:&quot;59578&quot;});" class='title'>Dissertations on Inflammation, Vol. 2</a>
+<div class='author'>Burns, John, 1774-1850</div>
+</div>
+</ul></div>
+</body></html>

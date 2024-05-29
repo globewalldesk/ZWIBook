@@ -1,0 +1,921 @@
+<html>
+<head>
+<title>Category</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+<!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+      <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+      <button id="findButton">Find</button>
+  </div>
+</div>
+<div id="header">
+  <div id="header-content">
+    <div class="header-container">
+      <a id="backBtn" class="header-btn" href="#">
+          <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+      </a>
+      <a id="search" class="header-btn" href="../search.html">
+          <img src="../images/icons/search.svg" title="Search book titles">
+      </a>
+    </div>
+    <h1 id="headTitle">Category: Visual Arts (N)</h1>
+    <div class="header-container">
+      <a id="sortBtn" class="header-btn" href="#">
+        <img src="../images/icons/sort.svg" title="Re-sort books">
+      </a>
+      <div id="sortDropdown" class="dropdown" style="display: none">
+        <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+        <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+        <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+        <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+      </div>
+      <a class="header-btn" href="categories.html">
+        <img src="../images/icons/categories.svg" title="Browse categories">
+      </a>
+      <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+          <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+      </a>
+    </div>
+  </div>
+</div>
+<div id="body">
+<ul>
+<li><a href='NA.html'>Architexture (NA)</a> <span class='count'>252</span></li>
+<li><a href='NB.html'>Sculpture (NB)</a> <span class='count'>33</span></li>
+<li><a href='NC.html'>Drawing, Design, Illustration (NC)</a> <span class='count'>189</span></li>
+<li><a href='ND.html'>Painting (ND)</a> <span class='count'>301</span></li>
+<li><a href='NE.html'>Print Media (NE)</a> <span class='count'>49</span></li>
+<li><a href='NK.html'>Decorative arts (NK)</a> <span class='count'>155</span></li>
+<li><a href='NX.html'>Arts in general (NX)</a> <span class='count'>5</span></li>
+<p>&nbsp;</p>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(10841, {&quot;Title&quot;:&quot;L&#39;archéologie égyptienne&quot;,&quot;Topics&quot;:[&quot;Egypt -- Antiquities&quot;,&quot;Art -- Egypt&quot;],&quot;Primary&quot;:&quot;10841.htm&quot;,&quot;CreatorNames&quot;:[&quot;Maspero, G. (Gaston), 1846-1916&quot;],&quot;LoCC&quot;:[&quot;DT&quot;,&quot;N&quot;],&quot;PG_ID&quot;:&quot;10841&quot;});" class='title'>L'archéologie égyptienne</a>
+<div class='author'>Maspero, G. (Gaston), 1846-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(11242, {&quot;Title&quot;:&quot;The Life of Michelangelo Buonarroti&quot;,&quot;Topics&quot;:[&quot;Michelangelo Buonarroti, 1475-1564&quot;],&quot;Primary&quot;:&quot;11242.txt&quot;,&quot;CreatorNames&quot;:[&quot;Symonds, John Addington, 1840-1893&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;11242&quot;});" class='title'>The Life of Michelangelo Buonarroti</a>
+<div class='author'>Symonds, John Addington, 1840-1893</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(11391, {&quot;Title&quot;:&quot;Lectures on Art&quot;,&quot;Topics&quot;:[&quot;Art&quot;],&quot;Primary&quot;:&quot;11391.htm&quot;,&quot;CreatorNames&quot;:[&quot;Allston, Washington, 1779-1843&quot;,&quot;Dana, Richard Henry, 1815-1882 [Editor]&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;11391&quot;});" class='title'>Lectures on Art</a>
+<div class='author'>Allston, Washington, 1779-1843, Dana, Richard Henry, 1815-1882 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12045, {&quot;Title&quot;:&quot;Women in the fine arts, from the Seventh Century B.C. to the Twentieth Century A.D.&quot;,&quot;Topics&quot;:[&quot;Women artists -- Biography&quot;],&quot;Primary&quot;:&quot;12045.htm&quot;,&quot;CreatorNames&quot;:[&quot;Waters, Clara Erskine Clement, 1834-1916&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;12045&quot;});" class='title'>Women in the fine arts, from the Seventh Century B.C. to the Twentieth Century A.D.</a>
+<div class='author'>Waters, Clara Erskine Clement, 1834-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12047, {&quot;Title&quot;:&quot;Legends of the Madonna as Represented in the Fine Arts&quot;,&quot;Topics&quot;:[&quot;Mary, Blessed Virgin, Saint -- Art&quot;,&quot;Mary, Blessed Virgin, Saint -- Legends&quot;,&quot;Christian saints in art&quot;],&quot;Primary&quot;:&quot;12047.txt&quot;,&quot;CreatorNames&quot;:[&quot;Jameson, Mrs. (Anna), 1794-1860&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;12047&quot;});" class='title'>Legends of the Madonna as Represented in the Fine Arts</a>
+<div class='author'>Jameson, Mrs. (Anna), 1794-1860</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13296, {&quot;Title&quot;:&quot;Promenades of an Impressionist&quot;,&quot;Topics&quot;:[&quot;Art&quot;,&quot;Artists&quot;],&quot;Primary&quot;:&quot;13296.txt&quot;,&quot;CreatorNames&quot;:[&quot;Huneker, James, 1857-1921&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;13296&quot;});" class='title'>Promenades of an Impressionist</a>
+<div class='author'>Huneker, James, 1857-1921</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13485, {&quot;Title&quot;:&quot;An Enquiry Concerning the Principles of Taste, and of the Origin of our Ideas of Beauty, etc.&quot;,&quot;Topics&quot;:[&quot;Aesthetics&quot;,&quot;Art -- Philosophy&quot;],&quot;Primary&quot;:&quot;13485.txt&quot;,&quot;CreatorNames&quot;:[&quot;Reynolds, Frances, 1729-1807&quot;,&quot;Clifford, James L. (James Lowry), 1901-1978 [Commentator]&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;13485&quot;});" class='title'>An Enquiry Concerning the Principles of Taste, and of the Origin of our Ideas of Beauty, etc.</a>
+<div class='author'>Reynolds, Frances, 1729-1807, Clifford, James L. (James Lowry), 1901-1978 [Commentator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14400, {&quot;Title&quot;:&quot;Manual of Egyptian Archaeology and Guide to the Study of Antiquities in Egypt&quot;,&quot;Topics&quot;:[&quot;Egypt -- Antiquities&quot;,&quot;Art -- Egypt&quot;],&quot;Primary&quot;:&quot;14400.htm&quot;,&quot;CreatorNames&quot;:[&quot;Maspero, G. (Gaston), 1846-1916&quot;,&quot;Edwards, Amelia Ann Blanford, 1831-1892 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DT&quot;,&quot;N&quot;],&quot;PG_ID&quot;:&quot;14400&quot;});" class='title'>Manual of Egyptian Archaeology and Guide to the Study of Antiquities in Egypt</a>
+<div class='author'>Maspero, G. (Gaston), 1846-1916, Edwards, Amelia Ann Blanford, 1831-1892 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15092, {&quot;Title&quot;:&quot;The Aldine, Vol. 5, No. 1., January, 1872 - A Typographic Art Journal&quot;,&quot;Topics&quot;:[&quot;Art -- Periodicals&quot;],&quot;Primary&quot;:&quot;15092.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;15092&quot;});" class='title'>The Aldine, Vol. 5, No. 1., January, 1872 -<br><span class='subtitle'>A Typographic Art Journal</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15813, {&quot;Title&quot;:&quot;Michelangelo Gedichte und Briefe - In Auswahl herausgegeben von R. A. Guardini&quot;,&quot;Topics&quot;:[&quot;Artists -- Correspondence&quot;,&quot;Italian poetry -- 16th century -- Translations into German&quot;,&quot;Michelangelo Buonarroti, 1475-1564. Correspondence&quot;],&quot;Primary&quot;:&quot;15813.htm&quot;,&quot;CreatorNames&quot;:[&quot;Michelangelo Buonarroti, 1475-1564&quot;,&quot;Guardini, Romano, 1885-1968 [Editor]&quot;,&quot;Grasberger, Hans, 1836-1898 [Translator]&quot;,&quot;Guardini, Romano, 1885-1968 [Translator]&quot;,&quot;Hasenclever, Sophie, 1824-1892 [Translator]&quot;,&quot;Jacobson, Bettina, 1841-1922 [Translator]&quot;,&quot;Witte, Johann Heinrich Friedrich Karl, 1800-1883 [Translator]&quot;],&quot;LoCC&quot;:[&quot;N&quot;,&quot;PQ&quot;],&quot;PG_ID&quot;:&quot;15813&quot;});" class='title'>Michelangelo Gedichte und Briefe -<br><span class='subtitle'>In Auswahl herausgegeben von R. A. Guardini</span></a>
+<div class='author'>Michelangelo Buonarroti, 1475-1564, Guardini, Romano, 1885-1968 [Editor], Grasberger, Hans, 1836-1898 [Translator], Guardini, Romano, 1885-1968 [Translator], Hasenclever, Sophie, 1824-1892 [Translator], Jacobson, Bettina, 1841-1922 [Translator], Witte, Johann Heinrich Friedrich Karl, 1800-1883 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16178, {&quot;Title&quot;:&quot;Essays on Art&quot;,&quot;Topics&quot;:[&quot;Art&quot;],&quot;Primary&quot;:&quot;16178.htm&quot;,&quot;CreatorNames&quot;:[&quot;Clutton-Brock, A. (Arthur), 1868-1924&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;16178&quot;});" class='title'>Essays on Art</a>
+<div class='author'>Clutton-Brock, A. (Arthur), 1868-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16655, {&quot;Title&quot;:&quot;Artist and Public, and Other Essays on Art Subjects&quot;,&quot;Topics&quot;:[&quot;Art&quot;],&quot;Primary&quot;:&quot;16655.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cox, Kenyon, 1856-1919&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;16655&quot;});" class='title'>Artist and Public, and Other Essays on Art Subjects</a>
+<div class='author'>Cox, Kenyon, 1856-1919</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16917, {&quot;Title&quot;:&quot;Art&quot;,&quot;Topics&quot;:[&quot;Aesthetics&quot;,&quot;Art&quot;,&quot;Art -- History&quot;],&quot;Primary&quot;:&quot;16917.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bell, Clive, 1881-1964&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;16917&quot;});" class='title'>Art</a>
+<div class='author'>Bell, Clive, 1881-1964</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17004, {&quot;Title&quot;:&quot;Histoire des plus célèbres amateurs italiens et de leurs relations avec les artistes - Tome IV&quot;,&quot;Topics&quot;:[&quot;Art -- Collectors and collecting&quot;,&quot;Castiglione, Baldassarre, conte, 1478-1529&quot;,&quot;Aretino, Pietro, 1492-1556&quot;,&quot;Dal Pozzo, Cassiano, 1588-1657&quot;,&quot;Carlo, Ferrante, 1575-1641&quot;],&quot;Primary&quot;:&quot;17004.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dumesnil, Antoine Jules, 1805-1891&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;17004&quot;});" class='title'>Histoire des plus célèbres amateurs italiens et de leurs relations avec les artistes -<br><span class='subtitle'>Tome IV</span></a>
+<div class='author'>Dumesnil, Antoine Jules, 1805-1891</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17212, {&quot;Title&quot;:&quot;Michelangelo - A Collection of Fifteen Pictures and a Portrait of the Master, with Introduction and Interpretation&quot;,&quot;Topics&quot;:[&quot;Michelangelo Buonarroti, 1475-1564&quot;],&quot;Primary&quot;:&quot;17212.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hurll, Estelle M. (Estelle May), 1863-1924&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;17212&quot;});" class='title'>Michelangelo -<br><span class='subtitle'>A Collection of Fifteen Pictures and a Portrait of the Master, with Introduction and Interpretation</span></a>
+<div class='author'>Hurll, Estelle M. (Estelle May), 1863-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17244, {&quot;Title&quot;:&quot;French Art: Classic and Contemporary Painting and Sculpture&quot;,&quot;Topics&quot;:[&quot;Art, French&quot;,&quot;Painting, French&quot;,&quot;Sculpture, French&quot;],&quot;Primary&quot;:&quot;17244.htm&quot;,&quot;CreatorNames&quot;:[&quot;Brownell, W. C. (William Crary), 1851-1928&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;17244&quot;});" class='title'>French Art:<br><span class='subtitle'>Classic and Contemporary Painting and Sculpture</span></a>
+<div class='author'>Brownell, W. C. (William Crary), 1851-1928</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17373, {&quot;Title&quot;:&quot;The Madonna in Art&quot;,&quot;Topics&quot;:[&quot;Mary, Blessed Virgin, Saint -- Art&quot;],&quot;Primary&quot;:&quot;17373.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hurll, Estelle M. (Estelle May), 1863-1924&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;17373&quot;});" class='title'>The Madonna in Art</a>
+<div class='author'>Hurll, Estelle M. (Estelle May), 1863-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18383, {&quot;Title&quot;:&quot;Anecdotes of Painters, Engravers, Sculptors and Architects, and Curiosities of Art (Vol. 3 of 3)&quot;,&quot;Topics&quot;:[&quot;Art -- Anecdotes&quot;,&quot;Artists -- Anecdotes&quot;],&quot;Primary&quot;:&quot;18383.htm&quot;,&quot;CreatorNames&quot;:[&quot;Spooner, Shearjashub, 1809-1859&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;18383&quot;});" class='title'>Anecdotes of Painters, Engravers, Sculptors and Architects, and Curiosities of Art (Vol. 3 of 3)</a>
+<div class='author'>Spooner, Shearjashub, 1809-1859</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18436, {&quot;Title&quot;:&quot;Arnold Böcklin&quot;,&quot;Topics&quot;:[&quot;Biography&quot;,&quot;Painters -- Switzerland&quot;],&quot;Primary&quot;:&quot;18436.htm&quot;,&quot;CreatorNames&quot;:[&quot;Schmid, Heinrich Alfred, 1863-1951&quot;,&quot;Böcklin, Arnold, 1827-1901 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;N&quot;],&quot;PG_ID&quot;:&quot;18436&quot;});" class='title'>Arnold Böcklin</a>
+<div class='author'>Schmid, Heinrich Alfred, 1863-1951, Böcklin, Arnold, 1827-1901 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18653, {&quot;Title&quot;:&quot;The Mind of the Artist - Thoughts and Sayings of Painters and Sculptors on Their Art&quot;,&quot;Topics&quot;:[&quot;Sculpture&quot;,&quot;Painting&quot;],&quot;Primary&quot;:&quot;18653.htm&quot;,&quot;CreatorNames&quot;:[&quot;Binyon, Cicely Margaret Powell [Editor]&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;18653&quot;});" class='title'>The Mind of the Artist -<br><span class='subtitle'>Thoughts and Sayings of Painters and Sculptors on Their Art</span></a>
+<div class='author'>Binyon, Cicely Margaret Powell [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18749, {&quot;Title&quot;:&quot;L&#39;art russe: Ses origines, ses éléments constitutifs, son apogée, son avenir&quot;,&quot;Topics&quot;:[&quot;Art -- Russia&quot;],&quot;Primary&quot;:&quot;18749.htm&quot;,&quot;CreatorNames&quot;:[&quot;Viollet-le-Duc, Eugène-Emmanuel, 1814-1879&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;18749&quot;});" class='title'>L'art russe:<br><span class='subtitle'>Ses origines, ses éléments constitutifs, son apogée, son avenir</span></a>
+<div class='author'>Viollet-le-Duc, Eugène-Emmanuel, 1814-1879</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19164, {&quot;Title&quot;:&quot;Lectures on Art, Delivered Before the University of Oxford in Hilary Term, 1870&quot;,&quot;Topics&quot;:[&quot;Art&quot;],&quot;Primary&quot;:&quot;19164.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ruskin, John, 1819-1900&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;19164&quot;});" class='title'>Lectures on Art, Delivered Before the University of Oxford in Hilary Term, 1870</a>
+<div class='author'>Ruskin, John, 1819-1900</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19332, {&quot;Title&quot;:&quot;Michael Angelo Buonarroti - With Translations Of The Life Of The Master By His Scholar, Ascanio Condivi, And Three Dialogues From The Portugese By Francisco d&#39;Ollanda&quot;,&quot;Topics&quot;:[&quot;Michelangelo Buonarroti, 1475-1564&quot;,&quot;Artists -- Italy -- Biography&quot;],&quot;Primary&quot;:&quot;19332.htm&quot;,&quot;CreatorNames&quot;:[&quot;Holroyd, Charles, 1861-1917&quot;,&quot;Condivi, Ascanio, 1520?- [Contributor]&quot;,&quot;Hollanda, Francisco de, 1517-1584 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;19332&quot;});" class='title'>Michael Angelo Buonarroti -<br><span class='subtitle'>With Translations Of The Life Of The Master By His Scholar, Ascanio Condivi, And Three Dialogues From The Portugese By Francisco d'Ollanda</span></a>
+<div class='author'>Holroyd, Charles, 1861-1917, Condivi, Ascanio, 1520?- [Contributor], Hollanda, Francisco de, 1517-1584 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19460, {&quot;Title&quot;:&quot;Handbuch der deutschen Kunstdenkmäler, Bd.1, Mitteldeutschland, 1914&quot;,&quot;Topics&quot;:[&quot;Art -- Germany&quot;,&quot;Architecture -- Germany&quot;,&quot;Germany -- Guidebooks&quot;],&quot;Primary&quot;:&quot;19460.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dehio, Georg, 1850-1932&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;19460&quot;});" class='title'>Handbuch der deutschen Kunstdenkmäler, Bd.1, Mitteldeutschland, 1914</a>
+<div class='author'>Dehio, Georg, 1850-1932</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19980, {&quot;Title&quot;:&quot;A Joy For Ever (and Its Price in the Market)&quot;,&quot;Topics&quot;:[&quot;Art&quot;],&quot;Primary&quot;:&quot;19980.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ruskin, John, 1819-1900&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;19980&quot;});" class='title'>A Joy For Ever (and Its Price in the Market)</a>
+<div class='author'>Ruskin, John, 1819-1900</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20237, {&quot;Title&quot;:&quot;Art in England: Notes and Studies&quot;,&quot;Topics&quot;:[&quot;Art -- England&quot;],&quot;Primary&quot;:&quot;20237.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cook, Dutton, 1829-1883&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;20237&quot;});" class='title'>Art in England:<br><span class='subtitle'>Notes and Studies</span></a>
+<div class='author'>Cook, Dutton, 1829-1883</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(21198, {&quot;Title&quot;:&quot;Anecdotes of Painters, Engravers, Sculptors  and Architects, and Curiosities of Art (Vol. 2 of 3)&quot;,&quot;Topics&quot;:[&quot;Art -- Anecdotes&quot;,&quot;Artists -- Anecdotes&quot;],&quot;Primary&quot;:&quot;21198.htm&quot;,&quot;CreatorNames&quot;:[&quot;Spooner, Shearjashub, 1809-1859&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;21198&quot;});" class='title'>Anecdotes of Painters, Engravers, Sculptors  and Architects, and Curiosities of Art (Vol. 2 of 3)</a>
+<div class='author'>Spooner, Shearjashub, 1809-1859</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(21212, {&quot;Title&quot;:&quot;The Lives of the Painters, Sculptors &amp; Architects, Volume 1 (of 8)&quot;,&quot;Topics&quot;:[&quot;Artists -- Italy -- Biography&quot;,&quot;Art, Italian&quot;],&quot;Primary&quot;:&quot;21212.txt&quot;,&quot;CreatorNames&quot;:[&quot;Vasari, Giorgio, 1511-1574&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;21212&quot;});" class='title'>The Lives of the Painters, Sculptors & Architects, Volume 1 (of 8)</a>
+<div class='author'>Vasari, Giorgio, 1511-1574</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2176, {&quot;Title&quot;:&quot;Seven Discourses on Art&quot;,&quot;Topics&quot;:[&quot;Art&quot;],&quot;Primary&quot;:&quot;2176.htm&quot;,&quot;CreatorNames&quot;:[&quot;Reynolds, Joshua, Sir, 1723-1792&quot;,&quot;Morley, Henry, 1822-1894 [Editor]&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;2176&quot;});" class='title'>Seven Discourses on Art</a>
+<div class='author'>Reynolds, Joshua, Sir, 1723-1792, Morley, Henry, 1822-1894 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(21790, {&quot;Title&quot;:&quot;The Dance of Death&quot;,&quot;Topics&quot;:[&quot;Dance of death&quot;,&quot;Holbein, Hans, 1497-1543&quot;],&quot;Primary&quot;:&quot;21790.htm&quot;,&quot;CreatorNames&quot;:[&quot;Corrozet, Gilles, 1510-1568&quot;,&quot;Vauzelles, Jean de&quot;,&quot;Dobson, Austin, 1840-1921 [Commentator]&quot;,&quot;Lützelburger, Hans, 1495?-1526 [Engraver]&quot;,&quot;Holbein, Hans, 1497-1543 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;N&quot;,&quot;NE&quot;],&quot;PG_ID&quot;:&quot;21790&quot;});" class='title'>The Dance of Death</a>
+<div class='author'>Corrozet, Gilles, 1510-1568, Vauzelles, Jean de, Dobson, Austin, 1840-1921 [Commentator], Lützelburger, Hans, 1495?-1526 [Engraver], Holbein, Hans, 1497-1543 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22564, {&quot;Title&quot;:&quot;Great Artists, Vol 1.: Raphael, Rubens, Murillo, and Durer&quot;,&quot;Topics&quot;:[&quot;Artists&quot;],&quot;Primary&quot;:&quot;22564.htm&quot;,&quot;CreatorNames&quot;:[&quot;Keysor, Jennie Ellis, 1860-&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;22564&quot;});" class='title'>Great Artists, Vol 1.:<br><span class='subtitle'>Raphael, Rubens, Murillo, and Durer</span></a>
+<div class='author'>Keysor, Jennie Ellis, 1860-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22969, {&quot;Title&quot;:&quot;Exposição Amadeo de Souza Cardoso - Liga Naval de Lisboa&quot;,&quot;Topics&quot;:[&quot;Sousa-Cardoso, Amadeu de, 1887-1918 -- Exhibitions&quot;],&quot;Primary&quot;:&quot;22969.txt&quot;,&quot;CreatorNames&quot;:[&quot;Almada Negreiros, José de, 1893-1970&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;22969&quot;});" class='title'>Exposição Amadeo de Souza Cardoso -<br><span class='subtitle'>Liga Naval de Lisboa</span></a>
+<div class='author'>Almada Negreiros, José de, 1893-1970</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23238, {&quot;Title&quot;:&quot;Sexueele Zeden in Woord en Beeld: Liefde en Zinnelijkheid&quot;,&quot;Topics&quot;:[&quot;Love in art -- History&quot;,&quot;Nude in art -- History&quot;,&quot;Sex -- Caricatures and cartoons&quot;],&quot;Primary&quot;:&quot;23238.htm&quot;,&quot;CreatorNames&quot;:[&quot;Vloten Elderinck, D. Ph. van&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;23238&quot;});" class='title'>Sexueele Zeden in Woord en Beeld:<br><span class='subtitle'>Liefde en Zinnelijkheid</span></a>
+<div class='author'>Vloten Elderinck, D. Ph. van</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23593, {&quot;Title&quot;:&quot;Lectures on Architecture and Painting, Delivered at Edinburgh in November 1853&quot;,&quot;Topics&quot;:[&quot;Painting&quot;,&quot;Architecture&quot;,&quot;Turner, J. M. W. (Joseph Mallord William), 1775-1851&quot;,&quot;Pre-Raphaelitism&quot;],&quot;Primary&quot;:&quot;23593.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ruskin, John, 1819-1900&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;23593&quot;});" class='title'>Lectures on Architecture and Painting, Delivered at Edinburgh in November 1853</a>
+<div class='author'>Ruskin, John, 1819-1900</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24726, {&quot;Title&quot;:&quot;A History of Art for Beginners and Students: Painting, Sculpture, Architecture&quot;,&quot;Topics&quot;:[&quot;Art -- History&quot;],&quot;Primary&quot;:&quot;24726.htm&quot;,&quot;CreatorNames&quot;:[&quot;Waters, Clara Erskine Clement, 1834-1916&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;24726&quot;});" class='title'>A History of Art for Beginners and Students:<br><span class='subtitle'>Painting, Sculpture, Architecture</span></a>
+<div class='author'>Waters, Clara Erskine Clement, 1834-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24844, {&quot;Title&quot;:&quot;O Ensino da Historia da Arte nos Lyceus e as excursões escolares&quot;,&quot;Topics&quot;:[&quot;Art -- History -- Study and teaching&quot;],&quot;Primary&quot;:&quot;24844.htm&quot;,&quot;CreatorNames&quot;:[&quot;Vasconcellos, Joaquim de, 1849-1936&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;24844&quot;});" class='title'>O Ensino da Historia da Arte nos Lyceus e as excursões escolares</a>
+<div class='author'>Vasconcellos, Joaquim de, 1849-1936</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(249, {&quot;Title&quot;:&quot;French Cave Paintings&quot;,&quot;Topics&quot;:[&quot;Cave paintings -- France -- Vallon-Pont-d&#39;Arc&quot;,&quot;Art, Prehistoric -- France -- Vallon-Pont-d&#39;Arc&quot;,&quot;Chauvet Cave (France)&quot;],&quot;Primary&quot;:&quot;249.htm&quot;,&quot;CreatorNames&quot;:&quot;&quot;,&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;249&quot;});" class='title'>French Cave Paintings</a>
+<div class='author'></div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24961, {&quot;Title&quot;:&quot;Der Teufel und die Hölle - in der darstellenden Kunst von den Anfängen bis zum Zeitalter Dante&#39;s und Giotto&#39;s&quot;,&quot;Topics&quot;:[&quot;Mythology&quot;,&quot;Christian ethics&quot;,&quot;Devil in art&quot;,&quot;Hell&quot;],&quot;Primary&quot;:&quot;24961.htm&quot;,&quot;CreatorNames&quot;:[&quot;Köppen, Alfred, 1869-1940&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;24961&quot;});" class='title'>Der Teufel und die Hölle -<br><span class='subtitle'>in der darstellenden Kunst von den Anfängen bis zum Zeitalter Dante's und Giotto's</span></a>
+<div class='author'>Köppen, Alfred, 1869-1940</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25268, {&quot;Title&quot;:&quot;Child-life in Art&quot;,&quot;Topics&quot;:[&quot;Children in art&quot;],&quot;Primary&quot;:&quot;25268.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hurll, Estelle M. (Estelle May), 1863-1924&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;25268&quot;});" class='title'>Child-life in Art</a>
+<div class='author'>Hurll, Estelle M. (Estelle May), 1863-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25326, {&quot;Title&quot;:&quot;Lives of the Most Eminent Painters Sculptors and Architects, Vol. 01 (of 10) - Cimabue to Agnolo Gaddi&quot;,&quot;Topics&quot;:[&quot;Artists -- Italy -- Biography&quot;,&quot;Art, Italian&quot;],&quot;Primary&quot;:&quot;25326.htm&quot;,&quot;CreatorNames&quot;:[&quot;Vasari, Giorgio, 1511-1574&quot;,&quot;De Vere, Gaston du C. [Translator]&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;25326&quot;});" class='title'>Lives of the Most Eminent Painters Sculptors and Architects, Vol. 01 (of 10) -<br><span class='subtitle'>Cimabue to Agnolo Gaddi</span></a>
+<div class='author'>Vasari, Giorgio, 1511-1574, De Vere, Gaston du C. [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25632, {&quot;Title&quot;:&quot;A History of Art for Beginners and Students: Painting, Sculpture, Architecture&quot;,&quot;Topics&quot;:[&quot;Art -- History&quot;],&quot;Primary&quot;:&quot;25632.htm&quot;,&quot;CreatorNames&quot;:[&quot;Waters, Clara Erskine Clement, 1834-1916&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;25632&quot;});" class='title'>A History of Art for Beginners and Students:<br><span class='subtitle'>Painting, Sculpture, Architecture</span></a>
+<div class='author'>Waters, Clara Erskine Clement, 1834-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25759, {&quot;Title&quot;:&quot;Lives of the Most Eminent Painters Sculptors and Architects, Vol. 02 (of 10) - Berna to Michelozzo Michelozzi&quot;,&quot;Topics&quot;:[&quot;Artists -- Italy -- Biography&quot;,&quot;Art, Italian&quot;],&quot;Primary&quot;:&quot;25759.htm&quot;,&quot;CreatorNames&quot;:[&quot;Vasari, Giorgio, 1511-1574&quot;,&quot;De Vere, Gaston du C. [Translator]&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;25759&quot;});" class='title'>Lives of the Most Eminent Painters Sculptors and Architects, Vol. 02 (of 10) -<br><span class='subtitle'>Berna to Michelozzo Michelozzi</span></a>
+<div class='author'>Vasari, Giorgio, 1511-1574, De Vere, Gaston du C. [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26211, {&quot;Title&quot;:&quot;Histoire des Plus Célèbres Amateurs Étrangers - Espagnols, Anglais, Flamands, Hollandais et Allemands et de leurs relations avec les artistes&quot;,&quot;Topics&quot;:[&quot;Art -- Collectors and collecting&quot;,&quot;Art patronage&quot;],&quot;Primary&quot;:&quot;26211.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dumesnil, Antoine Jules, 1805-1891&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;26211&quot;});" class='title'>Histoire des Plus Célèbres Amateurs Étrangers -<br><span class='subtitle'>Espagnols, Anglais, Flamands, Hollandais et Allemands et de leurs relations avec les artistes</span></a>
+<div class='author'>Dumesnil, Antoine Jules, 1805-1891</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26449, {&quot;Title&quot;:&quot;Rambles of an Archaeologist Among Old Books and in Old Places - Being Papers on Art, in Relation to Archaeology, Painting, Art-Decoration, and Art-Manufacture&quot;,&quot;Topics&quot;:[&quot;Art&quot;,&quot;Decoration and ornament&quot;,&quot;Rings&quot;,&quot;Jewelry&quot;,&quot;Dürer, Albrecht, 1471-1528&quot;],&quot;Primary&quot;:&quot;26449.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fairholt, F. W. (Frederick William), 1814-1866&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;26449&quot;});" class='title'>Rambles of an Archaeologist Among Old Books and in Old Places -<br><span class='subtitle'>Being Papers on Art, in Relation to Archaeology, Painting, Art-Decoration, and Art-Manufacture</span></a>
+<div class='author'>Fairholt, F. W. (Frederick William), 1814-1866</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26473, {&quot;Title&quot;:&quot;The Arts of Persia &amp; Other Countries of Islam&quot;,&quot;Topics&quot;:[&quot;Art, Islamic&quot;,&quot;Art, Iranian&quot;,&quot;Art objects -- Exhibitions&quot;,&quot;Illumination of books and manuscripts -- Iran&quot;],&quot;Primary&quot;:&quot;26473.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kevorkian, Hagop K.&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;26473&quot;});" class='title'>The Arts of Persia & Other Countries of Islam</a>
+<div class='author'>Kevorkian, Hagop K.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26860, {&quot;Title&quot;:&quot;Lives of the Most Eminent Painters Sculptors and Architects, Vol. 03 (of 10) - Filarete and Simone to Mantegna&quot;,&quot;Topics&quot;:[&quot;Artists -- Italy -- Biography&quot;,&quot;Art, Italian&quot;],&quot;Primary&quot;:&quot;26860.htm&quot;,&quot;CreatorNames&quot;:[&quot;Vasari, Giorgio, 1511-1574&quot;,&quot;De Vere, Gaston du C. [Translator]&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;26860&quot;});" class='title'>Lives of the Most Eminent Painters Sculptors and Architects, Vol. 03 (of 10) -<br><span class='subtitle'>Filarete and Simone to Mantegna</span></a>
+<div class='author'>Vasari, Giorgio, 1511-1574, De Vere, Gaston du C. [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27183, {&quot;Title&quot;:&quot;The Gate of Appreciation: Studies in the Relation of Art to Life&quot;,&quot;Topics&quot;:[&quot;Aesthetics&quot;,&quot;Art criticism&quot;,&quot;Art appreciation&quot;],&quot;Primary&quot;:&quot;27183.htm&quot;,&quot;CreatorNames&quot;:[&quot;Noyes, Carleton Eldredge, 1872-1950&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;27183&quot;});" class='title'>The Gate of Appreciation:<br><span class='subtitle'>Studies in the Relation of Art to Life</span></a>
+<div class='author'>Noyes, Carleton Eldredge, 1872-1950</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27194, {&quot;Title&quot;:&quot;The Enjoyment of Art&quot;,&quot;Topics&quot;:[&quot;Aesthetics&quot;,&quot;Art criticism&quot;],&quot;Primary&quot;:&quot;27194.htm&quot;,&quot;CreatorNames&quot;:[&quot;Noyes, Carleton Eldredge, 1872-1950&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;27194&quot;});" class='title'>The Enjoyment of Art</a>
+<div class='author'>Noyes, Carleton Eldredge, 1872-1950</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27859, {&quot;Title&quot;:&quot;Amo&quot;,&quot;Topics&quot;:[&quot;Aesthetics&quot;,&quot;Art -- Philosophy&quot;],&quot;Primary&quot;:&quot;27859.htm&quot;,&quot;CreatorNames&quot;:[&quot;Velde, Henry van de, 1863-1957&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;27859&quot;});" class='title'>Amo</a>
+<div class='author'>Velde, Henry van de, 1863-1957</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27939, {&quot;Title&quot;:&quot;Laurus Nobilis: Chapters on Art and Life&quot;,&quot;Topics&quot;:[&quot;Aesthetics&quot;],&quot;Primary&quot;:&quot;27939.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lee, Vernon, 1856-1935&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;27939&quot;});" class='title'>Laurus Nobilis:<br><span class='subtitle'>Chapters on Art and Life</span></a>
+<div class='author'>Lee, Vernon, 1856-1935</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28072, {&quot;Title&quot;:&quot;A History of Art in Chaldæa &amp; Assyria, v. 1&quot;,&quot;Topics&quot;:[&quot;Babylonia -- Antiquities&quot;,&quot;Art -- Iraq -- Babylonia&quot;,&quot;Art -- Assyria -- History&quot;,&quot;Assyria -- Antiquities&quot;],&quot;Primary&quot;:&quot;28072.htm&quot;,&quot;CreatorNames&quot;:[&quot;Chipiez, Charles, 1835-1901&quot;,&quot;Perrot, Georges, 1832-1914&quot;,&quot;Armstrong, Walter, Sir, 1850-1918 [Translator]&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;28072&quot;});" class='title'>A History of Art in Chaldæa & Assyria, v. 1</a>
+<div class='author'>Chipiez, Charles, 1835-1901, Perrot, Georges, 1832-1914, Armstrong, Walter, Sir, 1850-1918 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28420, {&quot;Title&quot;:&quot;Lives of the Most Eminent Painters Sculptors and Architects, Vol. 04 (of 10) - Filippino Lippi to Domenico Puligo&quot;,&quot;Topics&quot;:[&quot;Artists -- Italy -- Biography&quot;,&quot;Art, Italian&quot;],&quot;Primary&quot;:&quot;28420.htm&quot;,&quot;CreatorNames&quot;:[&quot;Vasari, Giorgio, 1511-1574&quot;,&quot;De Vere, Gaston du C. [Translator]&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;28420&quot;});" class='title'>Lives of the Most Eminent Painters Sculptors and Architects, Vol. 04 (of 10) -<br><span class='subtitle'>Filippino Lippi to Domenico Puligo</span></a>
+<div class='author'>Vasari, Giorgio, 1511-1574, De Vere, Gaston du C. [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28421, {&quot;Title&quot;:&quot;Lives of the Most Eminent Painters Sculptors and Architects, Vol. 05 (of 10) - Andrea da Fiesole to Lorenzo Lotto&quot;,&quot;Topics&quot;:[&quot;Artists -- Italy -- Biography&quot;,&quot;Art, Italian&quot;],&quot;Primary&quot;:&quot;28421.htm&quot;,&quot;CreatorNames&quot;:[&quot;Vasari, Giorgio, 1511-1574&quot;,&quot;De Vere, Gaston du C. [Translator]&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;28421&quot;});" class='title'>Lives of the Most Eminent Painters Sculptors and Architects, Vol. 05 (of 10) -<br><span class='subtitle'>Andrea da Fiesole to Lorenzo Lotto</span></a>
+<div class='author'>Vasari, Giorgio, 1511-1574, De Vere, Gaston du C. [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28422, {&quot;Title&quot;:&quot;Lives of the most Eminent Painters Sculptors and Architects, Vol. 06 (of 10) - Fra Giocondo to Niccolo Soggi&quot;,&quot;Topics&quot;:[&quot;Artists -- Italy -- Biography&quot;,&quot;Art, Italian&quot;],&quot;Primary&quot;:&quot;28422.htm&quot;,&quot;CreatorNames&quot;:[&quot;Vasari, Giorgio, 1511-1574&quot;,&quot;De Vere, Gaston du C. [Translator]&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;28422&quot;});" class='title'>Lives of the most Eminent Painters Sculptors and Architects, Vol. 06 (of 10) -<br><span class='subtitle'>Fra Giocondo to Niccolo Soggi</span></a>
+<div class='author'>Vasari, Giorgio, 1511-1574, De Vere, Gaston du C. [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2901, {&quot;Title&quot;:&quot;Studies and Essays: Censorship and Art&quot;,&quot;Topics&quot;:[&quot;Art&quot;,&quot;Art -- Censorship&quot;,&quot;Art -- Philosophy&quot;],&quot;Primary&quot;:&quot;2901.txt&quot;,&quot;CreatorNames&quot;:[&quot;Galsworthy, John, 1867-1933&quot;],&quot;LoCC&quot;:[&quot;N&quot;,&quot;PR&quot;],&quot;PG_ID&quot;:&quot;2901&quot;});" class='title'>Studies and Essays:<br><span class='subtitle'>Censorship and Art</span></a>
+<div class='author'>Galsworthy, John, 1867-1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30456, {&quot;Title&quot;:&quot;O culto da arte em Portugal&quot;,&quot;Topics&quot;:[&quot;Art, Portuguese&quot;,&quot;Art -- Portugal&quot;],&quot;Primary&quot;:&quot;30456.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ortigão, Ramalho, 1836-1915&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;30456&quot;});" class='title'>O culto da arte em Portugal</a>
+<div class='author'>Ortigão, Ramalho, 1836-1915</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30548, {&quot;Title&quot;:&quot;The Shores of the Adriatic - The Austrian Side, The Küstenlande, Istria, and Dalmatia&quot;,&quot;Topics&quot;:[&quot;Art -- Istria (Croatia and Slovenia)&quot;,&quot;Architecture -- Istria (Croatia and Slovenia)&quot;,&quot;Art -- Croatia -- Dalmatia&quot;,&quot;Architecture -- Croatia -- Dalmatia&quot;,&quot;Istria (Croatia and Slovenia) -- Description and travel&quot;,&quot;Dalmatia (Croatia) -- Description and travel&quot;,&quot;Adriatic Sea&quot;],&quot;Primary&quot;:&quot;30548.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jackson, F. Hamilton (Frederick Hamilton), 1848-1923&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;30548&quot;});" class='title'>The Shores of the Adriatic -<br><span class='subtitle'>The Austrian Side, The Küstenlande, Istria, and Dalmatia</span></a>
+<div class='author'>Jackson, F. Hamilton (Frederick Hamilton), 1848-1923</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30693, {&quot;Title&quot;:&quot;Renaissance Fancies and Studies - Being a Sequel to Euphorion&quot;,&quot;Topics&quot;:[&quot;Art, Renaissance -- Italy&quot;,&quot;Art, Italian&quot;],&quot;Primary&quot;:&quot;30693.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lee, Vernon, 1856-1935&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;30693&quot;});" class='title'>Renaissance Fancies and Studies -<br><span class='subtitle'>Being a Sequel to Euphorion</span></a>
+<div class='author'>Lee, Vernon, 1856-1935</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30926, {&quot;Title&quot;:&quot;Notas d&#39;arte&quot;,&quot;Topics&quot;:[&quot;Art, Portuguese&quot;,&quot;Art -- Portugal&quot;],&quot;Primary&quot;:&quot;30926.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lemos, António de, 1864-1931&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;30926&quot;});" class='title'>Notas d'arte</a>
+<div class='author'>Lemos, António de, 1864-1931</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31045, {&quot;Title&quot;:&quot;Frondes Agrestes: Readings in &#39;Modern Painters&#39;&quot;,&quot;Topics&quot;:[&quot;Art&quot;,&quot;Painting&quot;],&quot;Primary&quot;:&quot;31045.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ruskin, John, 1819-1900&quot;,&quot;Beever, Susanna, -1893 [Compiler]&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;31045&quot;});" class='title'>Frondes Agrestes:<br><span class='subtitle'>Readings in 'Modern Painters'</span></a>
+<div class='author'>Ruskin, John, 1819-1900, Beever, Susanna, -1893 [Compiler]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31411, {&quot;Title&quot;:&quot;Stories Pictures Tell. Book 4&quot;,&quot;Topics&quot;:[&quot;Painters&quot;,&quot;Painting&quot;],&quot;Primary&quot;:&quot;31411.htm&quot;,&quot;CreatorNames&quot;:[&quot;Carpenter, Flora L. (Flora Leona), 1880-&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;31411&quot;});" class='title'>Stories Pictures Tell. Book 4</a>
+<div class='author'>Carpenter, Flora L. (Flora Leona), 1880-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3151, {&quot;Title&quot;:&quot;The City of Domes : a walk with an architect about the courts and palaces of the Panama-Pacific International Exposition, with a discussion of its architecture, its sculpture, its mural decorations, its coloring and its lighting, preceded by a history of its growth&quot;,&quot;Topics&quot;:[&quot;Panama-Pacific International Exposition (1915 : San Francisco, Calif.)&quot;],&quot;Primary&quot;:&quot;3151.txt&quot;,&quot;CreatorNames&quot;:[&quot;Barry, John D. (John Daniel), 1866-1942&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;3151&quot;});" class='title'>The City of Domes :<br><span class='subtitle'>a walk with an architect about the courts and palaces of the Panama-Pacific International Exposition, with a discussion of its architecture, its sculpture, its mural decorations, its coloring and its lighting, preceded by a history of its growth</span></a>
+<div class='author'>Barry, John D. (John Daniel), 1866-1942</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31845, {&quot;Title&quot;:&quot;Lives of the most Eminent Painters Sculptors and Architects, Vol. 07 (of 10) - Tribolo to Il Sodoma&quot;,&quot;Topics&quot;:[&quot;Artists -- Italy -- Biography&quot;,&quot;Art, Italian&quot;],&quot;Primary&quot;:&quot;31845.htm&quot;,&quot;CreatorNames&quot;:[&quot;Vasari, Giorgio, 1511-1574&quot;,&quot;De Vere, Gaston du C. [Translator]&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;31845&quot;});" class='title'>Lives of the most Eminent Painters Sculptors and Architects, Vol. 07 (of 10) -<br><span class='subtitle'>Tribolo to Il Sodoma</span></a>
+<div class='author'>Vasari, Giorgio, 1511-1574, De Vere, Gaston du C. [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31938, {&quot;Title&quot;:&quot;Lives of the most Eminent Painters Sculptors and Architects, Vol. 08 (of 10) - Bastiano to Taddeo Zucchero&quot;,&quot;Topics&quot;:[&quot;Artists -- Italy -- Biography&quot;,&quot;Art, Italian&quot;],&quot;Primary&quot;:&quot;31938.htm&quot;,&quot;CreatorNames&quot;:[&quot;Vasari, Giorgio, 1511-1574&quot;,&quot;De Vere, Gaston du C. [Translator]&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;31938&quot;});" class='title'>Lives of the most Eminent Painters Sculptors and Architects, Vol. 08 (of 10) -<br><span class='subtitle'>Bastiano to Taddeo Zucchero</span></a>
+<div class='author'>Vasari, Giorgio, 1511-1574, De Vere, Gaston du C. [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31940, {&quot;Title&quot;:&quot;Artists Past and Present; Random Studies&quot;,&quot;Topics&quot;:[&quot;Artists&quot;],&quot;Primary&quot;:&quot;31940.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cary, Elisabeth Luther, 1867-1936&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;31940&quot;});" class='title'>Artists Past and Present;<br><span class='subtitle'>Random Studies</span></a>
+<div class='author'>Cary, Elisabeth Luther, 1867-1936</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32362, {&quot;Title&quot;:&quot;Lives of the Most Eminent Painters, Sculptors and Architects, Vol. 09 (of 10) - Michelagnolo to the Flemings&quot;,&quot;Topics&quot;:[&quot;Artists -- Italy -- Biography&quot;,&quot;Art, Italian&quot;],&quot;Primary&quot;:&quot;32362.htm&quot;,&quot;CreatorNames&quot;:[&quot;Vasari, Giorgio, 1511-1574&quot;,&quot;De Vere, Gaston du C. [Translator]&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;32362&quot;});" class='title'>Lives of the Most Eminent Painters, Sculptors and Architects, Vol. 09 (of 10) -<br><span class='subtitle'>Michelagnolo to the Flemings</span></a>
+<div class='author'>Vasari, Giorgio, 1511-1574, De Vere, Gaston du C. [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32471, {&quot;Title&quot;:&quot;Stories Pictures Tell. Book 1&quot;,&quot;Topics&quot;:[&quot;Painters&quot;,&quot;Painting&quot;],&quot;Primary&quot;:&quot;32471.htm&quot;,&quot;CreatorNames&quot;:[&quot;Carpenter, Flora L. (Flora Leona), 1880-&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;32471&quot;});" class='title'>Stories Pictures Tell. Book 1</a>
+<div class='author'>Carpenter, Flora L. (Flora Leona), 1880-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32489, {&quot;Title&quot;:&quot;Stories Pictures Tell. Book 2&quot;,&quot;Topics&quot;:[&quot;Painters&quot;,&quot;Painting&quot;],&quot;Primary&quot;:&quot;32489.htm&quot;,&quot;CreatorNames&quot;:[&quot;Carpenter, Flora L. (Flora Leona), 1880-&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;32489&quot;});" class='title'>Stories Pictures Tell. Book 2</a>
+<div class='author'>Carpenter, Flora L. (Flora Leona), 1880-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32599, {&quot;Title&quot;:&quot;Il dolore nell&#39;arte: discorso&quot;,&quot;Topics&quot;:[&quot;Art&quot;,&quot;Grief&quot;],&quot;Primary&quot;:&quot;32599.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fogazzaro, Antonio, 1842-1911&quot;],&quot;LoCC&quot;:[&quot;N&quot;,&quot;PQ&quot;],&quot;PG_ID&quot;:&quot;32599&quot;});" class='title'>Il dolore nell'arte:<br><span class='subtitle'>discorso</span></a>
+<div class='author'>Fogazzaro, Antonio, 1842-1911</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32762, {&quot;Title&quot;:&quot;Michelangelo&quot;,&quot;Topics&quot;:[&quot;Michelangelo Buonarroti, 1475-1564&quot;],&quot;Primary&quot;:&quot;32762.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rolland, Romain, 1866-1944&quot;,&quot;Street, Frederick [Translator]&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;32762&quot;});" class='title'>Michelangelo</a>
+<div class='author'>Rolland, Romain, 1866-1944, Street, Frederick [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33203, {&quot;Title&quot;:&quot;Lives of the most Eminent Painters Sculptors and Architects, Vol. 10 (of 10) - Bronzino to Vasari, &amp; General Index.&quot;,&quot;Topics&quot;:[&quot;Artists -- Italy -- Biography&quot;,&quot;Art, Italian&quot;,&quot;Painters -- Italy -- Biography&quot;],&quot;Primary&quot;:&quot;33203.htm&quot;,&quot;CreatorNames&quot;:[&quot;Vasari, Giorgio, 1511-1574&quot;,&quot;De Vere, Gaston du C. [Translator]&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;33203&quot;});" class='title'>Lives of the most Eminent Painters Sculptors and Architects, Vol. 10 (of 10) -<br><span class='subtitle'>Bronzino to Vasari, & General Index.</span></a>
+<div class='author'>Vasari, Giorgio, 1511-1574, De Vere, Gaston du C. [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34422, {&quot;Title&quot;:&quot;Lautrec; ou, Quinze ans de mœurs Parisiennes, 1885-1900&quot;,&quot;Topics&quot;:[&quot;Toulouse-Lautrec, Henri de, 1864-1901&quot;],&quot;Primary&quot;:&quot;34422.htm&quot;,&quot;CreatorNames&quot;:[&quot;Coquiot, Gustave, 1865-1926&quot;],&quot;LoCC&quot;:[&quot;N&quot;,&quot;PQ&quot;],&quot;PG_ID&quot;:&quot;34422&quot;});" class='title'>Lautrec;<br><span class='subtitle'>ou, Quinze ans de mœurs Parisiennes, 1885-1900</span></a>
+<div class='author'>Coquiot, Gustave, 1865-1926</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35269, {&quot;Title&quot;:&quot;Handbook of the Minneapolis Institute of Arts - With 143 Illustrations&quot;,&quot;Topics&quot;:[&quot;Art -- Minnesota -- Minneapolis&quot;,&quot;Sculpture -- Minnesota -- Minneapolis&quot;],&quot;Primary&quot;:&quot;35269.htm&quot;,&quot;CreatorNames&quot;:[&quot;Breck, Joseph, 1885-1933&quot;,&quot;Wehle, Harry B. (Harry Brandeis), 1887-1969&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;35269&quot;});" class='title'>Handbook of the Minneapolis Institute of Arts -<br><span class='subtitle'>With 143 Illustrations</span></a>
+<div class='author'>Breck, Joseph, 1885-1933, Wehle, Harry B. (Harry Brandeis), 1887-1969</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36427, {&quot;Title&quot;:&quot;Art Principles with Special Reference to Painting - Together with Notes on the Illusions Produced by the Painter&quot;,&quot;Topics&quot;:[&quot;Art&quot;,&quot;Painting&quot;],&quot;Primary&quot;:&quot;36427.htm&quot;,&quot;CreatorNames&quot;:[&quot;Govett, Ernest&quot;],&quot;LoCC&quot;:[&quot;N&quot;,&quot;ND&quot;],&quot;PG_ID&quot;:&quot;36427&quot;});" class='title'>Art Principles with Special Reference to Painting -<br><span class='subtitle'>Together with Notes on the Illusions Produced by the Painter</span></a>
+<div class='author'>Govett, Ernest</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37313, {&quot;Title&quot;:&quot;The Standard Galleries - Holland&quot;,&quot;Topics&quot;:[&quot;Art museums -- Netherlands&quot;,&quot;Painting, Dutch&quot;],&quot;Primary&quot;:&quot;37313.htm&quot;,&quot;CreatorNames&quot;:[&quot;Singleton, Esther, 1865-1930&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;37313&quot;});" class='title'>The Standard Galleries -<br><span class='subtitle'>Holland</span></a>
+<div class='author'>Singleton, Esther, 1865-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37495, {&quot;Title&quot;:&quot;Text books of art education, v. 2 of 7. Book II, Second Year&quot;,&quot;Topics&quot;:[&quot;Art -- Textbooks&quot;,&quot;Art -- Study and teaching&quot;],&quot;Primary&quot;:&quot;37495.htm&quot;,&quot;CreatorNames&quot;:[&quot;Froehlich, Hugo B., 1862-1925&quot;,&quot;Snow, Bonnie E., -1925&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;37495&quot;});" class='title'>Text books of art education, v. 2 of 7. Book II, Second Year</a>
+<div class='author'>Froehlich, Hugo B., 1862-1925, Snow, Bonnie E., -1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3751, {&quot;Title&quot;:&quot;The Psychology of Beauty&quot;,&quot;Topics&quot;:[&quot;Aesthetics&quot;],&quot;Primary&quot;:&quot;3751.txt&quot;,&quot;CreatorNames&quot;:[&quot;Howes, Ethel Puffer, 1872-1950&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;3751&quot;});" class='title'>The Psychology of Beauty</a>
+<div class='author'>Howes, Ethel Puffer, 1872-1950</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3773, {&quot;Title&quot;:&quot;Hopes and Fears for Art&quot;,&quot;Topics&quot;:[&quot;Art&quot;,&quot;Arts and crafts movement&quot;],&quot;Primary&quot;:&quot;3773.htm&quot;,&quot;CreatorNames&quot;:[&quot;Morris, William, 1834-1896&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;3773&quot;});" class='title'>Hopes and Fears for Art</a>
+<div class='author'>Morris, William, 1834-1896</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38154, {&quot;Title&quot;:&quot;Text books of art education, v. 4 of 7. Book IV, Fourth Year&quot;,&quot;Topics&quot;:[&quot;Art -- Textbooks&quot;,&quot;Art -- Study and teaching&quot;],&quot;Primary&quot;:&quot;38154.htm&quot;,&quot;CreatorNames&quot;:[&quot;Froehlich, Hugo B., 1862-1925&quot;,&quot;Snow, Bonnie E., -1925&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;38154&quot;});" class='title'>Text books of art education, v. 4 of 7. Book IV, Fourth Year</a>
+<div class='author'>Froehlich, Hugo B., 1862-1925, Snow, Bonnie E., -1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38158, {&quot;Title&quot;:&quot;Die Phantasie in der Malerei&quot;,&quot;Topics&quot;:[&quot;Aesthetics&quot;,&quot;Painting&quot;],&quot;Primary&quot;:&quot;38158.htm&quot;,&quot;CreatorNames&quot;:[&quot;Liebermann, Max, 1847-1935&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;38158&quot;});" class='title'>Die Phantasie in der Malerei</a>
+<div class='author'>Liebermann, Max, 1847-1935</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38500, {&quot;Title&quot;:&quot;The Great Painters&#39; Gospel - Pictures Representing Scenes and Incidents in the Life of Our Lord Jesus Christ&quot;,&quot;Topics&quot;:[&quot;Painting&quot;,&quot;Jesus Christ -- Biography&quot;,&quot;Jesus Christ -- Art&quot;],&quot;Primary&quot;:&quot;38500.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bailey, Henry Turner, 1865-1931&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;38500&quot;});" class='title'>The Great Painters' Gospel -<br><span class='subtitle'>Pictures Representing Scenes and Incidents in the Life of Our Lord Jesus Christ</span></a>
+<div class='author'>Bailey, Henry Turner, 1865-1931</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38724, {&quot;Title&quot;:&quot;The Dance of Death - Exhibited in Elegant Engravings on Wood with a Dissertation on the Several Representations of that Subject but More Particularly on Those Ascribed to Macaber and Hans Holbein&quot;,&quot;Topics&quot;:[&quot;Dance of death&quot;,&quot;Bible. Old Testament -- Illustrations&quot;],&quot;Primary&quot;:&quot;38724.htm&quot;,&quot;CreatorNames&quot;:[&quot;Douce, Francis, 1757-1834&quot;,&quot;Holbein, Hans, 1497-1543 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;38724&quot;});" class='title'>The Dance of Death -<br><span class='subtitle'>Exhibited in Elegant Engravings on Wood with a Dissertation on the Several Representations of that Subject but More Particularly on Those Ascribed to Macaber and Hans Holbein</span></a>
+<div class='author'>Douce, Francis, 1757-1834, Holbein, Hans, 1497-1543 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39264, {&quot;Title&quot;:&quot;The Grotesque in Church Art&quot;,&quot;Topics&quot;:[&quot;Church decoration and ornament&quot;,&quot;Christian art and symbolism&quot;,&quot;Grotesque&quot;],&quot;Primary&quot;:&quot;39264.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wildridge, T. Tindall (Thomas Tindall)&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;39264&quot;});" class='title'>The Grotesque in Church Art</a>
+<div class='author'>Wildridge, T. Tindall (Thomas Tindall)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39380, {&quot;Title&quot;:&quot;Famous European Artists&quot;,&quot;Topics&quot;:[&quot;Artists -- Europe&quot;],&quot;Primary&quot;:&quot;39380.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bolton, Sarah Knowles, 1841-1916&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;39380&quot;});" class='title'>Famous European Artists</a>
+<div class='author'>Bolton, Sarah Knowles, 1841-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40144, {&quot;Title&quot;:&quot;A History of Art in Ancient Egypt, Vol. 1 (of 2)&quot;,&quot;Topics&quot;:[&quot;Egypt -- Antiquities&quot;,&quot;Art -- Egypt -- History&quot;],&quot;Primary&quot;:&quot;40144.htm&quot;,&quot;CreatorNames&quot;:[&quot;Chipiez, Charles, 1835-1901&quot;,&quot;Perrot, Georges, 1832-1914&quot;,&quot;Armstrong, Walter, Sir, 1850-1918 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DT&quot;,&quot;N&quot;],&quot;PG_ID&quot;:&quot;40144&quot;});" class='title'>A History of Art in Ancient Egypt, Vol. 1 (of 2)</a>
+<div class='author'>Chipiez, Charles, 1835-1901, Perrot, Georges, 1832-1914, Armstrong, Walter, Sir, 1850-1918 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40149, {&quot;Title&quot;:&quot;A History of Art in Ancient Egypt, Vol. 2 (of 2)&quot;,&quot;Topics&quot;:[&quot;Egypt -- Antiquities&quot;,&quot;Art -- Egypt -- History&quot;],&quot;Primary&quot;:&quot;40149.htm&quot;,&quot;CreatorNames&quot;:[&quot;Chipiez, Charles, 1835-1901&quot;,&quot;Perrot, Georges, 1832-1914&quot;,&quot;Armstrong, Walter, Sir, 1850-1918 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DT&quot;,&quot;N&quot;],&quot;PG_ID&quot;:&quot;40149&quot;});" class='title'>A History of Art in Ancient Egypt, Vol. 2 (of 2)</a>
+<div class='author'>Chipiez, Charles, 1835-1901, Perrot, Georges, 1832-1914, Armstrong, Walter, Sir, 1850-1918 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40532, {&quot;Title&quot;:&quot;Portrait Miniatures&quot;,&quot;Topics&quot;:[&quot;Miniature painting&quot;,&quot;Miniature painting -- Reproduction&quot;],&quot;Primary&quot;:&quot;40532.htm&quot;,&quot;CreatorNames&quot;:[&quot;Williamson, George C., 1858-1942&quot;,&quot;Holme, Charles, 1848-1923 [Editor]&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;40532&quot;});" class='title'>Portrait Miniatures</a>
+<div class='author'>Williamson, George C., 1858-1942, Holme, Charles, 1848-1923 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40604, {&quot;Title&quot;:&quot;Art in America: A Critical and Historial Sketch&quot;,&quot;Topics&quot;:[&quot;Art, American&quot;],&quot;Primary&quot;:&quot;40604.htm&quot;,&quot;CreatorNames&quot;:[&quot;Benjamin, S. G. W. (Samuel Greene Wheeler), 1837-1914&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;40604&quot;});" class='title'>Art in America:<br><span class='subtitle'>A Critical and Historial Sketch</span></a>
+<div class='author'>Benjamin, S. G. W. (Samuel Greene Wheeler), 1837-1914</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4073, {&quot;Title&quot;:&quot;Ex Voto: An Account of the Sacro Monte or New Jerusalem at Varallo-Sesia - With Some Notice of Tabachetti&#39;s Remaining Work at the Sanctuary of Crea&quot;,&quot;Topics&quot;:[&quot;Sacro Monte di Varallo (Sanctuary)&quot;,&quot;Tabaguet, Jean Baptiste, 1568 -1615&quot;,&quot;Art -- Italy -- Varallo-Sesia&quot;],&quot;Primary&quot;:&quot;4073.htm&quot;,&quot;CreatorNames&quot;:[&quot;Butler, Samuel, 1835-1902&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;4073&quot;});" class='title'>Ex Voto:<br><span class='subtitle'>An Account of the Sacro Monte or New Jerusalem at Varallo-Sesia - With Some Notice of Tabachetti's Remaining Work at the Sanctuary of Crea</span></a>
+<div class='author'>Butler, Samuel, 1835-1902</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40825, {&quot;Title&quot;:&quot;Fictitious &amp; Symbolic Creatures in Art - With Special Reference to Their Use in British Heraldry&quot;,&quot;Topics&quot;:[&quot;Heraldry -- Great Britain&quot;,&quot;Symbolism&quot;,&quot;Animals, Mythical&quot;],&quot;Primary&quot;:&quot;40825.htm&quot;,&quot;CreatorNames&quot;:[&quot;Vinycomb, John&quot;],&quot;LoCC&quot;:[&quot;CR&quot;,&quot;N&quot;],&quot;PG_ID&quot;:&quot;40825&quot;});" class='title'>Fictitious & Symbolic Creatures in Art -<br><span class='subtitle'>With Special Reference to Their Use in British Heraldry</span></a>
+<div class='author'>Vinycomb, John</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41423, {&quot;Title&quot;:&quot;The Cubies&#39; ABC&quot;,&quot;Topics&quot;:[&quot;Alphabet rhymes&quot;,&quot;Art, Modern -- 20th century -- Humor&quot;,&quot;Cubism -- Humor&quot;,&quot;Armory Show (1913 : New York, N.Y.)&quot;],&quot;Primary&quot;:&quot;41423.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lyall, Mary Chase Mills, 1879-&quot;,&quot;Lyall, Earl Harvey, 1877-1932 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;41423&quot;});" class='title'>The Cubies' ABC</a>
+<div class='author'>Lyall, Mary Chase Mills, 1879-, Lyall, Earl Harvey, 1877-1932 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41551, {&quot;Title&quot;:&quot;Catania&quot;,&quot;Topics&quot;:[&quot;Art -- Italy -- Catania&quot;,&quot;Catania (Italy) -- Description and travel&quot;],&quot;Primary&quot;:&quot;41551.htm&quot;,&quot;CreatorNames&quot;:[&quot;De Roberto, Federico, 1861-1927&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;41551&quot;});" class='title'>Catania</a>
+<div class='author'>De Roberto, Federico, 1861-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41555, {&quot;Title&quot;:&quot;Il Valdarno da Firenze al mare&quot;,&quot;Topics&quot;:[&quot;Art -- Italy&quot;,&quot;Arno River Valley (Italy) -- Description and travel&quot;],&quot;Primary&quot;:&quot;41555.htm&quot;,&quot;CreatorNames&quot;:[&quot;Carocci, Guido, 1851-1916&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;41555&quot;});" class='title'>Il Valdarno da Firenze al mare</a>
+<div class='author'>Carocci, Guido, 1851-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41600, {&quot;Title&quot;:&quot;I Bagni di Lucca, Coreglia e Barga&quot;,&quot;Topics&quot;:[&quot;Art -- Italy -- Bagni di Lucca&quot;,&quot;Art -- Italy -- Coreglia&quot;,&quot;Art -- Italy -- Barga&quot;,&quot;Bagni di Lucca (Italy) -- Description and travel&quot;,&quot;Coreglia (Italy) -- Description and travel&quot;,&quot;Barga (Italy) -- Description and travel&quot;],&quot;Primary&quot;:&quot;41600.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bonaventura, Arnaldo, 1862-1952&quot;],&quot;LoCC&quot;:[&quot;DG&quot;,&quot;N&quot;],&quot;PG_ID&quot;:&quot;41600&quot;});" class='title'>I Bagni di Lucca, Coreglia e Barga</a>
+<div class='author'>Bonaventura, Arnaldo, 1862-1952</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42082, {&quot;Title&quot;:&quot;History of Ancient Art&quot;,&quot;Topics&quot;:[&quot;Art, Ancient&quot;],&quot;Primary&quot;:&quot;42082.htm&quot;,&quot;CreatorNames&quot;:[&quot;Reber, Franz von, 1834-1919&quot;,&quot;Clarke, Joseph Thacher, -1920 [Translator]&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;42082&quot;});" class='title'>History of Ancient Art</a>
+<div class='author'>Reber, Franz von, 1834-1919, Clarke, Joseph Thacher, -1920 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42371, {&quot;Title&quot;:&quot;Dissertation on the Progress of the Fine Arts&quot;,&quot;Topics&quot;:[&quot;Aesthetics&quot;,&quot;Art&quot;,&quot;Arts, Greek&quot;,&quot;Arts, British&quot;,&quot;Art patronage -- Greece&quot;,&quot;Art and society -- Greece&quot;,&quot;Art patronage -- Great Britain&quot;],&quot;Primary&quot;:&quot;42371.htm&quot;,&quot;CreatorNames&quot;:[&quot;Scott, John Robert&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;42371&quot;});" class='title'>Dissertation on the Progress of the Fine Arts</a>
+<div class='author'>Scott, John Robert</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42405, {&quot;Title&quot;:&quot;Monumental Java&quot;,&quot;Topics&quot;:[&quot;Monuments -- Indonesia -- Java&quot;,&quot;Java (Indonesia) -- Antiquities&quot;,&quot;Indonesia -- Antiquities&quot;],&quot;Primary&quot;:&quot;42405.htm&quot;,&quot;CreatorNames&quot;:[&quot;Scheltema, J. F. (Johann Friedrich ), 1855-1922&quot;],&quot;LoCC&quot;:[&quot;DS&quot;,&quot;N&quot;],&quot;PG_ID&quot;:&quot;42405&quot;});" class='title'>Monumental Java</a>
+<div class='author'>Scheltema, J. F. (Johann Friedrich ), 1855-1922</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42571, {&quot;Title&quot;:&quot;Travels in South Kensington - with Notes on Decorative Art and Architecture in England&quot;,&quot;Topics&quot;:[&quot;Victoria and Albert Museum&quot;,&quot;Decoration and ornament -- England&quot;,&quot;Architecture -- England&quot;,&quot;Suburban homes -- England -- Bedford Park&quot;],&quot;Primary&quot;:&quot;42571.htm&quot;,&quot;CreatorNames&quot;:[&quot;Conway, Moncure Daniel, 1832-1907&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;42571&quot;});" class='title'>Travels in South Kensington -<br><span class='subtitle'>with Notes on Decorative Art and Architecture in England</span></a>
+<div class='author'>Conway, Moncure Daniel, 1832-1907</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42917, {&quot;Title&quot;:&quot;The Eagle&#39;s Nest - Ten Lectures on the Relation of Natural Science to Art, Given Before the University of Oxford, in Lent Term, 1872&quot;,&quot;Topics&quot;:[&quot;Art and science&quot;],&quot;Primary&quot;:&quot;42917.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ruskin, John, 1819-1900&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;42917&quot;});" class='title'>The Eagle's Nest -<br><span class='subtitle'>Ten Lectures on the Relation of Natural Science to Art, Given Before the University of Oxford, in Lent Term, 1872</span></a>
+<div class='author'>Ruskin, John, 1819-1900</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43602, {&quot;Title&quot;:&quot;A History of Art for Beginners and Students: Painting, Sculpture, Architecture&quot;,&quot;Topics&quot;:[&quot;Art -- History&quot;],&quot;Primary&quot;:&quot;43602.htm&quot;,&quot;CreatorNames&quot;:[&quot;Waters, Clara Erskine Clement, 1834-1916&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;43602&quot;});" class='title'>A History of Art for Beginners and Students:<br><span class='subtitle'>Painting, Sculpture, Architecture</span></a>
+<div class='author'>Waters, Clara Erskine Clement, 1834-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4390, {&quot;Title&quot;:&quot;A History of Greek Art - With an Introductory Chapter on Art in Egypt and Mesopotamia&quot;,&quot;Topics&quot;:[&quot;Art, Greek -- History&quot;],&quot;Primary&quot;:&quot;4390.txt&quot;,&quot;CreatorNames&quot;:[&quot;Tarbell, F. B. (Frank Bigelow), 1853-1920&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;4390&quot;});" class='title'>A History of Greek Art -<br><span class='subtitle'>With an Introductory Chapter on Art in Egypt and Mesopotamia</span></a>
+<div class='author'>Tarbell, F. B. (Frank Bigelow), 1853-1920</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44334, {&quot;Title&quot;:&quot;Chantilly in History and Art&quot;,&quot;Topics&quot;:[&quot;Musée Condé&quot;,&quot;Chantilly (France)&quot;],&quot;Primary&quot;:&quot;44334.htm&quot;,&quot;CreatorNames&quot;:[&quot;Richter, Luise, 1852-&quot;],&quot;LoCC&quot;:[&quot;DC&quot;,&quot;N&quot;],&quot;PG_ID&quot;:&quot;44334&quot;});" class='title'>Chantilly in History and Art</a>
+<div class='author'>Richter, Luise, 1852-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44509, {&quot;Title&quot;:&quot;A Manual of the Historical Development of Art - Pre-Historic—Ancient—Classic—Early Christian; with Special Reference to Architecture, Sculpture, Painting, and Ornamentation&quot;,&quot;Topics&quot;:[&quot;Art -- History&quot;],&quot;Primary&quot;:&quot;44509.htm&quot;,&quot;CreatorNames&quot;:[&quot;Zerffi, G. G. (Gustavus George), 1820-1892&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;44509&quot;});" class='title'>A Manual of the Historical Development of Art -<br><span class='subtitle'>Pre-Historic—Ancient—Classic—Early Christian; with Special Reference to Architecture, Sculpture, Painting, and Ornamentation</span></a>
+<div class='author'>Zerffi, G. G. (Gustavus George), 1820-1892</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45229, {&quot;Title&quot;:&quot;Mesopotamian Archaeology - An introduction to the archaeology of Mesopotamia and Assyria&quot;,&quot;Topics&quot;:[&quot;Iraq -- Antiquities&quot;],&quot;Primary&quot;:&quot;45229.htm&quot;,&quot;CreatorNames&quot;:[&quot;Handcock, Percy S. P. (Percy Stuart Peache)&quot;],&quot;LoCC&quot;:[&quot;DS&quot;,&quot;N&quot;],&quot;PG_ID&quot;:&quot;45229&quot;});" class='title'>Mesopotamian Archaeology -<br><span class='subtitle'>An introduction to the archaeology of Mesopotamia and Assyria</span></a>
+<div class='author'>Handcock, Percy S. P. (Percy Stuart Peache)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45410, {&quot;Title&quot;:&quot;Composition -&quot;,&quot;Topics&quot;:[&quot;Composition (Art)&quot;,&quot;Art -- Study and teaching&quot;],&quot;Primary&quot;:&quot;45410.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dow, Arthur W. (Arthur Wesley), 1857-1922&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;45410&quot;});" class='title'>Composition -<br><span class='subtitle'></span></a>
+<div class='author'>Dow, Arthur W. (Arthur Wesley), 1857-1922</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45504, {&quot;Title&quot;:&quot;Where Art Begins&quot;,&quot;Topics&quot;:[&quot;Art&quot;],&quot;Primary&quot;:&quot;45504.htm&quot;,&quot;CreatorNames&quot;:[&quot;Nisbet, Hume, 1849-1923&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;45504&quot;});" class='title'>Where Art Begins</a>
+<div class='author'>Nisbet, Hume, 1849-1923</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45737, {&quot;Title&quot;:&quot;A Popular Handbook to the National Gallery, Volume I, Foreign Schools - Including by Special Permission Notes Collected from the Works of John Ruskin&quot;,&quot;Topics&quot;:[&quot;Painting -- England -- London -- Catalogs&quot;,&quot;National Gallery (Great Britain)&quot;],&quot;Primary&quot;:&quot;45737.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cook, Edward Tyas, Sir, 1857-1919 [Compiler]&quot;,&quot;National Gallery (Great Britain) [Contributor]&quot;,&quot;Ruskin, John, 1819-1900 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;45737&quot;});" class='title'>A Popular Handbook to the National Gallery, Volume I, Foreign Schools -<br><span class='subtitle'>Including by Special Permission Notes Collected from the Works of John Ruskin</span></a>
+<div class='author'>Cook, Edward Tyas, Sir, 1857-1919 [Compiler], National Gallery (Great Britain) [Contributor], Ruskin, John, 1819-1900 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45744, {&quot;Title&quot;:&quot;Catalogue of the Gallery of Art of The New York Historical Society&quot;,&quot;Topics&quot;:[&quot;Art -- New York (State) -- New York -- Catalogs&quot;],&quot;Primary&quot;:&quot;45744.htm&quot;,&quot;CreatorNames&quot;:[&quot;New-York Historical Society&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;45744&quot;});" class='title'>Catalogue of the Gallery of Art of The New York Historical Society</a>
+<div class='author'>New-York Historical Society</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46079, {&quot;Title&quot;:&quot;Evolution in Art: As Illustrated by the Life-histories of Designs&quot;,&quot;Topics&quot;:[&quot;Art, Primitive&quot;,&quot;Decoration and ornament&quot;,&quot;Decoration and ornament, Primitive&quot;],&quot;Primary&quot;:&quot;46079.htm&quot;,&quot;CreatorNames&quot;:[&quot;Haddon, Alfred C. (Alfred Cort), 1855-1940&quot;],&quot;LoCC&quot;:[&quot;N&quot;,&quot;NK&quot;],&quot;PG_ID&quot;:&quot;46079&quot;});" class='title'>Evolution in Art:<br><span class='subtitle'>As Illustrated by the Life-histories of Designs</span></a>
+<div class='author'>Haddon, Alfred C. (Alfred Cort), 1855-1940</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46203, {&quot;Title&quot;:&quot;Über das Geistige in der Kunst, Insbesondere in der Malerei&quot;,&quot;Topics&quot;:[&quot;Aesthetics&quot;,&quot;Painting&quot;],&quot;Primary&quot;:&quot;46203.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kandinsky, Wassily, 1866-1944&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;46203&quot;});" class='title'>Über das Geistige in der Kunst, Insbesondere in der Malerei</a>
+<div class='author'>Kandinsky, Wassily, 1866-1944</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46330, {&quot;Title&quot;:&quot;The Introduction to Hegel&#39;s Philosophy of Fine Arts - Translated from the German with Notes and Prefatory Essay&quot;,&quot;Topics&quot;:[&quot;Aesthetics&quot;,&quot;Art -- Philosophy&quot;],&quot;Primary&quot;:&quot;46330.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hegel, Georg Wilhelm Friedrich, 1770-1831&quot;,&quot;Bosanquet, Bernard, 1848-1923 [Translator]&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;46330&quot;});" class='title'>The Introduction to Hegel's Philosophy of Fine Arts -<br><span class='subtitle'>Translated from the German with Notes and Prefatory Essay</span></a>
+<div class='author'>Hegel, Georg Wilhelm Friedrich, 1770-1831, Bosanquet, Bernard, 1848-1923 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46599, {&quot;Title&quot;:&quot;Le lettere di Michelangelo Buonarroti&quot;,&quot;Topics&quot;:[&quot;Artists -- Correspondence&quot;],&quot;Primary&quot;:&quot;46599.htm&quot;,&quot;CreatorNames&quot;:[&quot;Michelangelo Buonarroti, 1475-1564&quot;,&quot;Milanesi, Gaetano, 1813-1895 [Editor]&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;46599&quot;});" class='title'>Le lettere di Michelangelo Buonarroti</a>
+<div class='author'>Michelangelo Buonarroti, 1475-1564, Milanesi, Gaetano, 1813-1895 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4672, {&quot;Title&quot;:&quot;The Galleries of the Exposition&quot;,&quot;Topics&quot;:[&quot;Panama-Pacific International Exposition (1915 : San Francisco, Calif.)&quot;,&quot;Art -- Exhibitions&quot;],&quot;Primary&quot;:&quot;4672.txt&quot;,&quot;CreatorNames&quot;:[&quot;Neuhaus, Eugen, 1879-1963&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;4672&quot;});" class='title'>The Galleries of the Exposition</a>
+<div class='author'>Neuhaus, Eugen, 1879-1963</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47205, {&quot;Title&quot;:&quot;Handbuch der Kunstgeschichte&quot;,&quot;Topics&quot;:[&quot;Art -- History&quot;],&quot;Primary&quot;:&quot;47205.htm&quot;,&quot;CreatorNames&quot;:[&quot;Springer, A. (Anton), 1825-1891&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;47205&quot;});" class='title'>Handbuch der Kunstgeschichte</a>
+<div class='author'>Springer, A. (Anton), 1825-1891</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47512, {&quot;Title&quot;:&quot;Chats on Old Miniatures&quot;,&quot;Topics&quot;:[&quot;Miniature painting&quot;],&quot;Primary&quot;:&quot;47512.htm&quot;,&quot;CreatorNames&quot;:[&quot;Foster, J. J. (Joshua James), 1847-1923&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;47512&quot;});" class='title'>Chats on Old Miniatures</a>
+<div class='author'>Foster, J. J. (Joshua James), 1847-1923</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47610, {&quot;Title&quot;:&quot;Sir Joshua Reynolds&#39; Discourses - Edited, with an Introduction, by Helen Zimmern&quot;,&quot;Topics&quot;:[&quot;Art&quot;],&quot;Primary&quot;:&quot;47610.htm&quot;,&quot;CreatorNames&quot;:[&quot;Reynolds, Joshua, Sir, 1723-1792&quot;,&quot;Zimmern, Helen, 1846-1934 [Editor]&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;47610&quot;});" class='title'>Sir Joshua Reynolds' Discourses -<br><span class='subtitle'>Edited, with an Introduction, by Helen Zimmern</span></a>
+<div class='author'>Reynolds, Joshua, Sir, 1723-1792, Zimmern, Helen, 1846-1934 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48053, {&quot;Title&quot;:&quot;The Haciendas of Mexico: An Artist&#39;s Record&quot;,&quot;Topics&quot;:[&quot;Bartlett, Paul Alexander, 1909-1990&quot;,&quot;Haciendas in art&quot;,&quot;Haciendas -- Mexico -- Pictorial works&quot;],&quot;Primary&quot;:&quot;48053.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bartlett, Paul Alexander, 1909-1990&quot;,&quot;Michener, James A. (James Albert), 1907-1997 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;N&quot;,&quot;F&quot;],&quot;PG_ID&quot;:&quot;48053&quot;});" class='title'>The Haciendas of Mexico:<br><span class='subtitle'>An Artist's Record</span></a>
+<div class='author'>Bartlett, Paul Alexander, 1909-1990, Michener, James A. (James Albert), 1907-1997 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48131, {&quot;Title&quot;:&quot;L&#39;Arte&quot;,&quot;Topics&quot;:[&quot;Art&quot;],&quot;Primary&quot;:&quot;48131.htm&quot;,&quot;CreatorNames&quot;:[&quot;De Roberto, Federico, 1861-1927&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;48131&quot;});" class='title'>L'Arte</a>
+<div class='author'>De Roberto, Federico, 1861-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48601, {&quot;Title&quot;:&quot;Album für Freunde des Bergbaues, - enthaltend eine Folge von vierzehn bildlichen Darstellungen aus dem Berufsleben des Berg- und Hüttenmannes.&quot;,&quot;Topics&quot;:[&quot;Mines and mineral resources in art&quot;,&quot;Miners in art&quot;],&quot;Primary&quot;:&quot;48601.htm&quot;,&quot;CreatorNames&quot;:[&quot;Heuchler, Eduard, 1801-1879&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;48601&quot;});" class='title'>Album für Freunde des Bergbaues, -<br><span class='subtitle'>enthaltend eine Folge von vierzehn bildlichen Darstellungen aus dem Berufsleben des Berg- und Hüttenmannes.</span></a>
+<div class='author'>Heuchler, Eduard, 1801-1879</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49586, {&quot;Title&quot;:&quot;L&#39;art pendant la guerre 1914-1918&quot;,&quot;Topics&quot;:[&quot;World War, 1914-1918 -- Art and the war&quot;],&quot;Primary&quot;:&quot;49586.htm&quot;,&quot;CreatorNames&quot;:[&quot;La Sizeranne, Robert de, 1866-1932&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;49586&quot;});" class='title'>L'art pendant la guerre 1914-1918</a>
+<div class='author'>La Sizeranne, Robert de, 1866-1932</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49892, {&quot;Title&quot;:&quot;The Mentor: The Wife in Art, Vol. 1, Num. 28, Serial No. 28&quot;,&quot;Topics&quot;:[&quot;Artists -- Relations with women&quot;,&quot;Artists&#39; spouses&quot;],&quot;Primary&quot;:&quot;49892.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kobbé, Gustav, 1857-1918&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;49892&quot;});" class='title'>The Mentor:<br><span class='subtitle'>The Wife in Art, Vol. 1, Num. 28, Serial No. 28</span></a>
+<div class='author'>Kobbé, Gustav, 1857-1918</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50626, {&quot;Title&quot;:&quot;Manual of Oriental Antiquities&quot;,&quot;Topics&quot;:[&quot;Oriental antiquities&quot;,&quot;Art, Asian&quot;],&quot;Primary&quot;:&quot;50626.htm&quot;,&quot;CreatorNames&quot;:[&quot;Babelon, Ernest, 1854-1924&quot;,&quot;Evetts, B. T. A. (Basil Thomas Alfred), 1858- [Editor]&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;50626&quot;});" class='title'>Manual of Oriental Antiquities</a>
+<div class='author'>Babelon, Ernest, 1854-1924, Evetts, B. T. A. (Basil Thomas Alfred), 1858- [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50628, {&quot;Title&quot;:&quot;Lexikon baltischer Künstler&quot;,&quot;Topics&quot;:[&quot;Artists -- Baltic States -- Dictionaries&quot;],&quot;Primary&quot;:&quot;50628.htm&quot;,&quot;CreatorNames&quot;:[&quot;Döring, Julius, 1818-1898 [Contributor]&quot;,&quot;Neumann, Wilhelm, 1849-1919 [Editor]&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;50628&quot;});" class='title'>Lexikon baltischer Künstler</a>
+<div class='author'>Döring, Julius, 1818-1898 [Contributor], Neumann, Wilhelm, 1849-1919 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51023, {&quot;Title&quot;:&quot;Le musée du Louvre, tome 1 (of 2)&quot;,&quot;Topics&quot;:[&quot;Musée du Louvre -- Catalogs&quot;,&quot;Art -- France -- Paris -- Catalogs&quot;,&quot;Painting -- France -- Paris -- Catalogs&quot;],&quot;Primary&quot;:&quot;51023.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dayot, Armand, 1851-1934&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;51023&quot;});" class='title'>Le musée du Louvre, tome 1 (of 2)</a>
+<div class='author'>Dayot, Armand, 1851-1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51401, {&quot;Title&quot;:&quot;Suomalaisen taiteen historia pääpiirteissään&quot;,&quot;Topics&quot;:[&quot;Art, Finnish -- History&quot;],&quot;Primary&quot;:&quot;51401.txt&quot;,&quot;CreatorNames&quot;:[&quot;Aspelin-Haapkylä, Eliel, 1847-1917&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;51401&quot;});" class='title'>Suomalaisen taiteen historia pääpiirteissään</a>
+<div class='author'>Aspelin-Haapkylä, Eliel, 1847-1917</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51459, {&quot;Title&quot;:&quot;The Analysis of Beauty - Written with a view of fixing the fluctuating ideas of taste&quot;,&quot;Topics&quot;:[&quot;Aesthetics -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;51459.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hogarth, William, 1697-1764&quot;],&quot;LoCC&quot;:[&quot;BH&quot;,&quot;N&quot;],&quot;PG_ID&quot;:&quot;51459&quot;});" class='title'>The Analysis of Beauty -<br><span class='subtitle'>Written with a view of fixing the fluctuating ideas of taste</span></a>
+<div class='author'>Hogarth, William, 1697-1764</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51837, {&quot;Title&quot;:&quot;Les questions esthétiques contemporaines&quot;,&quot;Topics&quot;:[&quot;Aesthetics&quot;],&quot;Primary&quot;:&quot;51837.htm&quot;,&quot;CreatorNames&quot;:[&quot;La Sizeranne, Robert de, 1866-1932&quot;],&quot;LoCC&quot;:[&quot;BH&quot;,&quot;N&quot;],&quot;PG_ID&quot;:&quot;51837&quot;});" class='title'>Les questions esthétiques contemporaines</a>
+<div class='author'>La Sizeranne, Robert de, 1866-1932</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52288, {&quot;Title&quot;:&quot;L&#39;art ochlocratique: salons de 1882 &amp; de 1883&quot;,&quot;Topics&quot;:[&quot;Salon (Exhibition : Paris, France) (1882)&quot;,&quot;Salon (Exhibition : Paris, France) (1883)&quot;,&quot;Art, French -- 19th century -- Exhibitions&quot;],&quot;Primary&quot;:&quot;52288.htm&quot;,&quot;CreatorNames&quot;:[&quot;Péladan, Joséphin, 1859-1918&quot;,&quot;Barbey d&#39;Aurevilly, J. (Jules), 1808-1889 [Commentator]&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;52288&quot;});" class='title'>L'art ochlocratique:<br><span class='subtitle'>salons de 1882 & de 1883</span></a>
+<div class='author'>Péladan, Joséphin, 1859-1918, Barbey d'Aurevilly, J. (Jules), 1808-1889 [Commentator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52436, {&quot;Title&quot;:&quot;Fifteen Discourses&quot;,&quot;Topics&quot;:[&quot;Art&quot;],&quot;Primary&quot;:&quot;52436.htm&quot;,&quot;CreatorNames&quot;:[&quot;Phillipps, L. March (Lisle March), 1863-1917 [Annotator]&quot;,&quot;Reynolds, Joshua, Sir, 1723-1792&quot;,&quot;Rhys, Ernest, 1859-1946 [Editor]&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;52436&quot;});" class='title'>Fifteen Discourses</a>
+<div class='author'>Phillipps, L. March (Lisle March), 1863-1917 [Annotator], Reynolds, Joshua, Sir, 1723-1792, Rhys, Ernest, 1859-1946 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52830, {&quot;Title&quot;:&quot;The Arts and Crafts of Ancient Egypt&quot;,&quot;Topics&quot;:[&quot;Art, Egyptian&quot;],&quot;Primary&quot;:&quot;52830.htm&quot;,&quot;CreatorNames&quot;:[&quot;Petrie, W. M. Flinders (William Matthew Flinders), 1853-1942&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;52830&quot;});" class='title'>The Arts and Crafts of Ancient Egypt</a>
+<div class='author'>Petrie, W. M. Flinders (William Matthew Flinders), 1853-1942</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52980, {&quot;Title&quot;:&quot;The Philosophy of Art&quot;,&quot;Topics&quot;:[&quot;Aesthetics&quot;],&quot;Primary&quot;:&quot;52980.htm&quot;,&quot;CreatorNames&quot;:[&quot;Taine, Hippolyte, 1828-1893&quot;,&quot;Durand, John, 1822-1908 [Translator]&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;52980&quot;});" class='title'>The Philosophy of Art</a>
+<div class='author'>Taine, Hippolyte, 1828-1893, Durand, John, 1822-1908 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5321, {&quot;Title&quot;:&quot;Concerning the Spiritual in Art&quot;,&quot;Topics&quot;:[&quot;Aesthetics&quot;,&quot;Painting&quot;],&quot;Primary&quot;:&quot;5321.txt&quot;,&quot;CreatorNames&quot;:[&quot;Kandinsky, Wassily, 1866-1944&quot;,&quot;Sadleir, Michael, 1888-1957 [Translator]&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;5321&quot;});" class='title'>Concerning the Spiritual in Art</a>
+<div class='author'>Kandinsky, Wassily, 1866-1944, Sadleir, Michael, 1888-1957 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53232, {&quot;Title&quot;:&quot;Spitzweg, Reime und Bilder&quot;,&quot;Topics&quot;:[&quot;German poetry -- 19th century&quot;,&quot;Spitzweg, Karl, 1808-1885&quot;],&quot;Primary&quot;:&quot;53232.htm&quot;,&quot;CreatorNames&quot;:[&quot;Spitzweg, Karl, 1808-1885&quot;,&quot;Uhde-Bernays, Hermann, 1873-1965 [Editor]&quot;,&quot;Preetorius, Emil, 1883-1973 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;N&quot;,&quot;PT&quot;],&quot;PG_ID&quot;:&quot;53232&quot;});" class='title'>Spitzweg, Reime und Bilder</a>
+<div class='author'>Spitzweg, Karl, 1808-1885, Uhde-Bernays, Hermann, 1873-1965 [Editor], Preetorius, Emil, 1883-1973 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53290, {&quot;Title&quot;:&quot;Engravings of Lions, Tigers, Panthers, Leopards, Dogs, &amp;c.&quot;,&quot;Topics&quot;:[&quot;Landseer, Edwin Henry, Sir, 1802-1873&quot;,&quot;Zoological illustration&quot;,&quot;Animals -- Pictorial work&quot;,&quot;Landseer, Thomas, 1795-1880&quot;],&quot;Primary&quot;:&quot;53290.htm&quot;,&quot;CreatorNames&quot;:[&quot;Landseer, Edwin Henry, Sir, 1802-1873 [Illustrator]&quot;,&quot;Landseer, Thomas, 1795-1880 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;53290&quot;});" class='title'>Engravings of Lions, Tigers, Panthers, Leopards, Dogs, &c.</a>
+<div class='author'>Landseer, Edwin Henry, Sir, 1802-1873 [Illustrator], Landseer, Thomas, 1795-1880 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53366, {&quot;Title&quot;:&quot;The Book of Fair Women&quot;,&quot;Topics&quot;:[&quot;Beauty, Personal&quot;,&quot;Women -- Portraits&quot;],&quot;Primary&quot;:&quot;53366.htm&quot;,&quot;CreatorNames&quot;:[&quot;King, Richard, 1879-1947 [Author of introduction, etc.]&quot;,&quot;Hoppé, E. O. (Emil Otto), 1878-1972 [Photographer]&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;53366&quot;});" class='title'>The Book of Fair Women</a>
+<div class='author'>King, Richard, 1879-1947 [Author of introduction, etc.], Hoppé, E. O. (Emil Otto), 1878-1972 [Photographer]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53477, {&quot;Title&quot;:&quot;The Relation of Art to Nature&quot;,&quot;Topics&quot;:[&quot;Art&quot;,&quot;Nature (Aesthetics)&quot;],&quot;Primary&quot;:&quot;53477.htm&quot;,&quot;CreatorNames&quot;:[&quot;Beatty, John W. (John Wesley), 1851-1924&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;53477&quot;});" class='title'>The Relation of Art to Nature</a>
+<div class='author'>Beatty, John W. (John Wesley), 1851-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53638, {&quot;Title&quot;:&quot;The Gentle Art of Faking - A history of the methods of producing imitations &amp; spurious works of art from  the earliest times up to the present day&quot;,&quot;Topics&quot;:[&quot;Collectors and collecting&quot;,&quot;Art -- Forgeries&quot;,&quot;Forgery of antiquities&quot;],&quot;Primary&quot;:&quot;53638.htm&quot;,&quot;CreatorNames&quot;:[&quot;Nobili, Riccardo, 1859-1939&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;53638&quot;});" class='title'>The Gentle Art of Faking -<br><span class='subtitle'>A history of the methods of producing imitations & spurious works of art from  the earliest times up to the present day</span></a>
+<div class='author'>Nobili, Riccardo, 1859-1939</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53850, {&quot;Title&quot;:&quot;Design and Tradition - A short account of the principles and historic development of architecture and the applied arts&quot;,&quot;Topics&quot;:[&quot;Art&quot;,&quot;Decoration and ornament&quot;,&quot;Decoration and ornament -- History&quot;,&quot;Architecture&quot;],&quot;Primary&quot;:&quot;53850.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fenn, Amor&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;53850&quot;});" class='title'>Design and Tradition -<br><span class='subtitle'>A short account of the principles and historic development of architecture and the applied arts</span></a>
+<div class='author'>Fenn, Amor</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53925, {&quot;Title&quot;:&quot;Belgiens Volkscharakter, Belgiens Kunst&quot;,&quot;Topics&quot;:[&quot;Art, Belgian&quot;,&quot;National characteristics, Belgian&quot;],&quot;Primary&quot;:&quot;53925.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bredt, Ernst Wilhelm, 1869-1938&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;53925&quot;});" class='title'>Belgiens Volkscharakter, Belgiens Kunst</a>
+<div class='author'>Bredt, Ernst Wilhelm, 1869-1938</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54154, {&quot;Title&quot;:&quot;Vision and Design&quot;,&quot;Topics&quot;:[&quot;Art&quot;],&quot;Primary&quot;:&quot;54154.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fry, Roger, 1866-1934&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;54154&quot;});" class='title'>Vision and Design</a>
+<div class='author'>Fry, Roger, 1866-1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54835, {&quot;Title&quot;:&quot;Le musée du Louvre, tome 2 (of 2)&quot;,&quot;Topics&quot;:[&quot;Musée du Louvre -- Catalogs&quot;,&quot;Art -- France -- Paris -- Catalogs&quot;,&quot;Painting -- France -- Paris -- Catalogs&quot;],&quot;Primary&quot;:&quot;54835.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dayot, Armand, 1851-1934&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;54835&quot;});" class='title'>Le musée du Louvre, tome 2 (of 2)</a>
+<div class='author'>Dayot, Armand, 1851-1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55334, {&quot;Title&quot;:&quot;The Philosophy of Fine Art, volume 1 (of 4) - Hegel&#39;s Aesthetik&quot;,&quot;Topics&quot;:[&quot;Aesthetics&quot;],&quot;Primary&quot;:&quot;55334.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hegel, Georg Wilhelm Friedrich, 1770-1831&quot;,&quot;Osmaston, Francis Plumptre Beresford, 1857-1925 [Translator]&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;55334&quot;});" class='title'>The Philosophy of Fine Art, volume 1 (of 4) -<br><span class='subtitle'>Hegel's Aesthetik</span></a>
+<div class='author'>Hegel, Georg Wilhelm Friedrich, 1770-1831, Osmaston, Francis Plumptre Beresford, 1857-1925 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55440, {&quot;Title&quot;:&quot;Estudio descriptivo de los monumentos árabes de Granada, Sevilla y Córdoba - ó sea La Alhambra, el Alcázar y la Gran Mezquita de Occidente&quot;,&quot;Topics&quot;:[&quot;Alhambra (Granada, Spain)&quot;,&quot;Alcázar (Seville, Spain)&quot;,&quot;Catedral (Córdoba, Spain)&quot;,&quot;Islamic art -- Spain&quot;,&quot;Islamic architecture -- Spain&quot;],&quot;Primary&quot;:&quot;55440.htm&quot;,&quot;CreatorNames&quot;:[&quot;Contreras, Rafael, 1826-1890&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;55440&quot;});" class='title'>Estudio descriptivo de los monumentos árabes de Granada, Sevilla y Córdoba -<br><span class='subtitle'>ó sea La Alhambra, el Alcázar y la Gran Mezquita de Occidente</span></a>
+<div class='author'>Contreras, Rafael, 1826-1890</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55445, {&quot;Title&quot;:&quot;The Philosophy of Fine Art, volume 2 (of 4) - Hegel&#39;s Aesthetik&quot;,&quot;Topics&quot;:[&quot;Aesthetics&quot;],&quot;Primary&quot;:&quot;55445.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hegel, Georg Wilhelm Friedrich, 1770-1831&quot;,&quot;Osmaston, Francis Plumptre Beresford, 1857-1925 [Translator]&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;55445&quot;});" class='title'>The Philosophy of Fine Art, volume 2 (of 4) -<br><span class='subtitle'>Hegel's Aesthetik</span></a>
+<div class='author'>Hegel, Georg Wilhelm Friedrich, 1770-1831, Osmaston, Francis Plumptre Beresford, 1857-1925 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55623, {&quot;Title&quot;:&quot;The Philosophy of Fine Art, volume 3 (of 4) - Hegel&#39;s Aesthetik&quot;,&quot;Topics&quot;:[&quot;Aesthetics&quot;],&quot;Primary&quot;:&quot;55623.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hegel, Georg Wilhelm Friedrich, 1770-1831&quot;,&quot;Osmaston, Francis Plumptre Beresford, 1857-1925 [Translator]&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;55623&quot;});" class='title'>The Philosophy of Fine Art, volume 3 (of 4) -<br><span class='subtitle'>Hegel's Aesthetik</span></a>
+<div class='author'>Hegel, Georg Wilhelm Friedrich, 1770-1831, Osmaston, Francis Plumptre Beresford, 1857-1925 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55731, {&quot;Title&quot;:&quot;The Philosophy of Fine Art, volume 4 (of 4) - Hegel&#39;s Aesthetik&quot;,&quot;Topics&quot;:[&quot;Aesthetics&quot;],&quot;Primary&quot;:&quot;55731.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hegel, Georg Wilhelm Friedrich, 1770-1831&quot;,&quot;Osmaston, Francis Plumptre Beresford, 1857-1925 [Translator]&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;55731&quot;});" class='title'>The Philosophy of Fine Art, volume 4 (of 4) -<br><span class='subtitle'>Hegel's Aesthetik</span></a>
+<div class='author'>Hegel, Georg Wilhelm Friedrich, 1770-1831, Osmaston, Francis Plumptre Beresford, 1857-1925 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5620, {&quot;Title&quot;:&quot;Palaces and Courts of the Exposition - A Handbook of the Architecture, Sculpture and Mural Paintings, with Special Reference to the Symbolism&quot;,&quot;Topics&quot;:[&quot;Panama-Pacific International Exposition (1915 : San Francisco, Calif.)&quot;],&quot;Primary&quot;:&quot;5620.txt&quot;,&quot;CreatorNames&quot;:[&quot;James, Juliet Helena Lumbard, 1864-&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;5620&quot;});" class='title'>Palaces and Courts of the Exposition -<br><span class='subtitle'>A Handbook of the Architecture, Sculpture and Mural Paintings, with Special Reference to the Symbolism</span></a>
+<div class='author'>James, Juliet Helena Lumbard, 1864-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56859, {&quot;Title&quot;:&quot;La \&quot;\&quot;National Gallery\&quot;\&quot;&quot;,&quot;Topics&quot;:[&quot;Painting -- England -- London -- Catalogs&quot;,&quot;National Gallery (Great Britain)&quot;],&quot;Primary&quot;:&quot;56859.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dayot, Armand, 1851-1934&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;56859&quot;});" class='title'>La "National Gallery"</a>
+<div class='author'>Dayot, Armand, 1851-1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57131, {&quot;Title&quot;:&quot;Michelangelo&quot;,&quot;Topics&quot;:[&quot;Michelangelo Buonarroti, 1475-1564&quot;,&quot;Artists -- Italy -- Biography&quot;],&quot;Primary&quot;:&quot;57131.htm&quot;,&quot;CreatorNames&quot;:[&quot;Knackfuss, H. (Hermann), 1848-1915&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;57131&quot;});" class='title'>Michelangelo</a>
+<div class='author'>Knackfuss, H. (Hermann), 1848-1915</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57612, {&quot;Title&quot;:&quot;Ladies&#39; manual of art; or, profit and pastime. - A self teacher in all branches of decorative art, embracing every variety of painting and drawing on china, glass, velvet, canvas, paper and wood the secret of all glass transparencies, sketching from nature. pastel and crayon drawing, taxidermy, etc.&quot;,&quot;Topics&quot;:[&quot;Taxidermy&quot;,&quot;Women -- Recreation&quot;,&quot;Art -- Technique&quot;,&quot;Handicraft -- Technique&quot;],&quot;Primary&quot;:&quot;57612.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;N&quot;,&quot;NK&quot;],&quot;PG_ID&quot;:&quot;57612&quot;});" class='title'>Ladies' manual of art;<br><span class='subtitle'>or, profit and pastime. - A self teacher in all branches of decorative art, embracing every variety of painting and drawing on china, glass, velvet, canvas, paper and wood the secret of all glass transparencies, sketching from nature. pastel and crayon drawing, taxidermy, etc.</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5771, {&quot;Title&quot;:&quot;The Art of the Exposition - Personal Impressions of the Architecture, Sculpture, Mural Decorations, Color Scheme &amp; Other Aesthetic Aspects of the Panama-Pacific International Exposition&quot;,&quot;Topics&quot;:[&quot;Panama-Pacific International Exposition (1915 : San Francisco, Calif.)&quot;,&quot;Art -- Exhibitions&quot;],&quot;Primary&quot;:&quot;5771.txt&quot;,&quot;CreatorNames&quot;:[&quot;Neuhaus, Eugen, 1879-1963&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;5771&quot;});" class='title'>The Art of the Exposition -<br><span class='subtitle'>Personal Impressions of the Architecture, Sculpture, Mural Decorations, Color Scheme & Other Aesthetic Aspects of the Panama-Pacific International Exposition</span></a>
+<div class='author'>Neuhaus, Eugen, 1879-1963</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57852, {&quot;Title&quot;:&quot;Ideals in Art: Papers Theoretical, Practical, Critical&quot;,&quot;Topics&quot;:[&quot;Art&quot;],&quot;Primary&quot;:&quot;57852.htm&quot;,&quot;CreatorNames&quot;:[&quot;Crane, Walter, 1845-1915&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;57852&quot;});" class='title'>Ideals in Art:<br><span class='subtitle'>Papers Theoretical, Practical, Critical</span></a>
+<div class='author'>Crane, Walter, 1845-1915</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58279, {&quot;Title&quot;:&quot;Modern French Masters&quot;,&quot;Topics&quot;:[&quot;Art, French&quot;,&quot;Artists -- France&quot;],&quot;Primary&quot;:&quot;58279.htm&quot;,&quot;CreatorNames&quot;:[&quot;Van Vorst, Marie, 1867-1936&quot;,&quot;Harrison, Alexander, 1853-1930 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;N&quot;,&quot;ND&quot;],&quot;PG_ID&quot;:&quot;58279&quot;});" class='title'>Modern French Masters</a>
+<div class='author'>Van Vorst, Marie, 1867-1936, Harrison, Alexander, 1853-1930 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58522, {&quot;Title&quot;:&quot;Sexueele Zeden in Woord en Beeld: De Humor in het Geslachtsleven&quot;,&quot;Topics&quot;:[&quot;Love in art -- History&quot;,&quot;Nude in art -- History&quot;,&quot;Sex -- Caricatures and cartoons&quot;],&quot;Primary&quot;:&quot;58522.htm&quot;,&quot;CreatorNames&quot;:[&quot;Vloten Elderinck, D. Ph. van&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;58522&quot;});" class='title'>Sexueele Zeden in Woord en Beeld:<br><span class='subtitle'>De Humor in het Geslachtsleven</span></a>
+<div class='author'>Vloten Elderinck, D. Ph. van</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58981, {&quot;Title&quot;:&quot;History of Sculpture, Painting, and Architecture&quot;,&quot;Topics&quot;:[&quot;Art -- History&quot;],&quot;Primary&quot;:&quot;58981.htm&quot;,&quot;CreatorNames&quot;:[&quot;Memes, J. S. (John Smythe)&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;58981&quot;});" class='title'>History of Sculpture, Painting, and Architecture</a>
+<div class='author'>Memes, J. S. (John Smythe)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59288, {&quot;Title&quot;:&quot;French Painting of the 19th Century in the National Gallery of Art&quot;,&quot;Topics&quot;:[&quot;Painting, French&quot;],&quot;Primary&quot;:&quot;59288.htm&quot;,&quot;CreatorNames&quot;:[&quot;Evans, Grose, 1928-2000&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;59288&quot;});" class='title'>French Painting of the 19th Century in the National Gallery of Art</a>
+<div class='author'>Evans, Grose, 1928-2000</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59392, {&quot;Title&quot;:&quot;Index of the Project Gutenberg Works of John Ruskin&quot;,&quot;Topics&quot;:[&quot;Indexes&quot;],&quot;Primary&quot;:&quot;59392.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ruskin, John, 1819-1900&quot;,&quot;Widger, David, 1932-2021? [Editor]&quot;],&quot;LoCC&quot;:[&quot;N&quot;,&quot;PR&quot;],&quot;PG_ID&quot;:&quot;59392&quot;});" class='title'>Index of the Project Gutenberg Works of John Ruskin</a>
+<div class='author'>Ruskin, John, 1819-1900, Widger, David, 1932-2021? [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59776, {&quot;Title&quot;:&quot;Moorish Remains in Spain&quot;,&quot;Topics&quot;:[&quot;Islamic art -- Spain&quot;,&quot;Art -- Spain&quot;,&quot;Architecture -- Spain -- Córdoba&quot;,&quot;Architecture -- Spain -- Seville&quot;,&quot;Architecture -- Spain -- Toledo&quot;,&quot;Islamic decoration and ornament -- Spain&quot;,&quot;Islamic mural painting and decoration -- Spain&quot;],&quot;Primary&quot;:&quot;59776.htm&quot;,&quot;CreatorNames&quot;:[&quot;Calvert, Albert Frederick, 1872-1946&quot;],&quot;LoCC&quot;:[&quot;N&quot;,&quot;NA&quot;],&quot;PG_ID&quot;:&quot;59776&quot;});" class='title'>Moorish Remains in Spain</a>
+<div class='author'>Calvert, Albert Frederick, 1872-1946</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59799, {&quot;Title&quot;:&quot;Art&quot;,&quot;Topics&quot;:[&quot;Art&quot;,&quot;Artists&quot;,&quot;Sculpture&quot;,&quot;Artists -- France -- Interviews&quot;],&quot;Primary&quot;:&quot;59799.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rodin, Auguste, 1840-1917&quot;,&quot;Gsell, Paul, 1870-1947 [Editor]&quot;,&quot;Fedden, Katharine Waldo Douglas, 1870-1939 [Translator]&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;59799&quot;});" class='title'>Art</a>
+<div class='author'>Rodin, Auguste, 1840-1917, Gsell, Paul, 1870-1947 [Editor], Fedden, Katharine Waldo Douglas, 1870-1939 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59924, {&quot;Title&quot;:&quot;The Arts in the Middle Ages and at the Period of the Renaissance&quot;,&quot;Topics&quot;:[&quot;Art, Renaissance&quot;,&quot;Middle Ages&quot;,&quot;Art, Medieval&quot;],&quot;Primary&quot;:&quot;59924.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jacob, P. L., 1806-1884&quot;,&quot;Dafforne, James, 1804-1880 [Translator]&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;59924&quot;});" class='title'>The Arts in the Middle Ages and at the Period of the Renaissance</a>
+<div class='author'>Jacob, P. L., 1806-1884, Dafforne, James, 1804-1880 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60006, {&quot;Title&quot;:&quot;Grand Moving Diorama of Hindostan - Displaying the Scenery of the Hoogly, the Bhagirathi, and the Ganges, from Fort William, Bengal, to Gangoutri, in the Himalaya&quot;,&quot;Topics&quot;:[&quot;India -- Description and travel&quot;,&quot;Panoramas -- England -- London -- History -- 19th century&quot;],&quot;Primary&quot;:&quot;60006.htm&quot;,&quot;CreatorNames&quot;:[&quot;Parlby, Fanny Parkes, 1794-1875&quot;,&quot;Haghe, Louis, 1806-1885 [Illustrator]&quot;,&quot;Knell, William Adolphus, 1805?-1875 [Illustrator]&quot;,&quot;Phillips, Philip [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DS&quot;,&quot;N&quot;],&quot;PG_ID&quot;:&quot;60006&quot;});" class='title'>Grand Moving Diorama of Hindostan -<br><span class='subtitle'>Displaying the Scenery of the Hoogly, the Bhagirathi, and the Ganges, from Fort William, Bengal, to Gangoutri, in the Himalaya</span></a>
+<div class='author'>Parlby, Fanny Parkes, 1794-1875, Haghe, Louis, 1806-1885 [Illustrator], Knell, William Adolphus, 1805?-1875 [Illustrator], Phillips, Philip [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61001, {&quot;Title&quot;:&quot;Flowers from Mediæval History&quot;,&quot;Topics&quot;:[&quot;Architecture, Gothic&quot;,&quot;Art, Medieval&quot;],&quot;Primary&quot;:&quot;61001.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kellogg, Minnie D.&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;61001&quot;});" class='title'>Flowers from Mediæval History</a>
+<div class='author'>Kellogg, Minnie D.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61317, {&quot;Title&quot;:&quot;Reflections on the painting and sculpture of the Greeks: - with instructions for the connoisseur, and an essay on grace in works of art&quot;,&quot;Topics&quot;:[&quot;Art, Greek&quot;,&quot;Aesthetics -- Early works to 1800&quot;,&quot;Art -- Philosophy&quot;],&quot;Primary&quot;:&quot;61317.htm&quot;,&quot;CreatorNames&quot;:[&quot;Winckelmann, Johann Joachim, 1717-1768&quot;,&quot;Fuseli, Henry, 1741-1825 [Translator]&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;61317&quot;});" class='title'>Reflections on the painting and sculpture of the Greeks:<br><span class='subtitle'>- with instructions for the connoisseur, and an essay on grace in works of art</span></a>
+<div class='author'>Winckelmann, Johann Joachim, 1717-1768, Fuseli, Henry, 1741-1825 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61896, {&quot;Title&quot;:&quot;Angels in Art&quot;,&quot;Topics&quot;:[&quot;Christian art and symbolism&quot;,&quot;Angels in art&quot;,&quot;Painting -- Reproduction&quot;],&quot;Primary&quot;:&quot;61896.htm&quot;,&quot;CreatorNames&quot;:[&quot;Waters, Clara Erskine Clement, 1834-1916&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;61896&quot;});" class='title'>Angels in Art</a>
+<div class='author'>Waters, Clara Erskine Clement, 1834-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62252, {&quot;Title&quot;:&quot;The Spirit of Japanese Art&quot;,&quot;Topics&quot;:[&quot;Art -- Japan&quot;],&quot;Primary&quot;:&quot;62252.htm&quot;,&quot;CreatorNames&quot;:[&quot;Noguchi, Yoné, 1875-1947&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;62252&quot;});" class='title'>The Spirit of Japanese Art</a>
+<div class='author'>Noguchi, Yoné, 1875-1947</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62593, {&quot;Title&quot;:&quot;Stories Pictures Tell. Book 3&quot;,&quot;Topics&quot;:[&quot;Painters&quot;,&quot;Painting&quot;],&quot;Primary&quot;:&quot;62593.htm&quot;,&quot;CreatorNames&quot;:[&quot;Carpenter, Flora L. (Flora Leona), 1880-&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;62593&quot;});" class='title'>Stories Pictures Tell. Book 3</a>
+<div class='author'>Carpenter, Flora L. (Flora Leona), 1880-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6306, {&quot;Title&quot;:&quot;Little Journeys to the Homes of the Great - Volume 06 - Little Journeys to the Homes of Eminent Artists&quot;,&quot;Topics&quot;:[&quot;Cellini, Benvenuto, 1500-1571&quot;,&quot;Leonardo, da Vinci, 1452-1519&quot;,&quot;Whistler, James McNeill, 1834-1903&quot;,&quot;Correggio, 1489?-1534&quot;,&quot;Raphael, 1483-1520&quot;,&quot;Velázquez, Diego, 1599-1660&quot;,&quot;Gainsborough, Thomas, 1727-1788&quot;,&quot;Bellini, Giovanni, -1516&quot;,&quot;Botticelli, Sandro, 1444 or 5-1510&quot;,&quot;Thorvaldsen, Bertel, 1770-1844&quot;,&quot;Corot, Jean-Baptiste-Camille, 1796-1875&quot;],&quot;Primary&quot;:&quot;6306.txt&quot;,&quot;CreatorNames&quot;:[&quot;Hubbard, Elbert, 1856-1915&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;6306&quot;});" class='title'>Little Journeys to the Homes of the Great -<br><span class='subtitle'>Volume 06 - Little Journeys to the Homes of Eminent Artists</span></a>
+<div class='author'>Hubbard, Elbert, 1856-1915</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63114, {&quot;Title&quot;:&quot;Stories Pictures Tell. Book 5&quot;,&quot;Topics&quot;:[&quot;Painters&quot;,&quot;Painting&quot;],&quot;Primary&quot;:&quot;63114.htm&quot;,&quot;CreatorNames&quot;:[&quot;Carpenter, Flora L. (Flora Leona), 1880-&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;63114&quot;});" class='title'>Stories Pictures Tell. Book 5</a>
+<div class='author'>Carpenter, Flora L. (Flora Leona), 1880-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63171, {&quot;Title&quot;:&quot;Stories Pictures Tell. Book 7&quot;,&quot;Topics&quot;:[&quot;Painters&quot;,&quot;Painting&quot;],&quot;Primary&quot;:&quot;63171.htm&quot;,&quot;CreatorNames&quot;:[&quot;Carpenter, Flora L. (Flora Leona), 1880-&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;63171&quot;});" class='title'>Stories Pictures Tell. Book 7</a>
+<div class='author'>Carpenter, Flora L. (Flora Leona), 1880-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63199, {&quot;Title&quot;:&quot;Stories Pictures Tell. Book 6&quot;,&quot;Topics&quot;:[&quot;Painters&quot;,&quot;Painting&quot;],&quot;Primary&quot;:&quot;63199.htm&quot;,&quot;CreatorNames&quot;:[&quot;Carpenter, Flora L. (Flora Leona), 1880-&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;63199&quot;});" class='title'>Stories Pictures Tell. Book 6</a>
+<div class='author'>Carpenter, Flora L. (Flora Leona), 1880-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63204, {&quot;Title&quot;:&quot;Biographical Notices of the Portraits at Hinchingbrook&quot;,&quot;Topics&quot;:[&quot;Private collections -- Great Britain -- Catalogs&quot;,&quot;Great Britain -- Biography -- Portraits -- Catalogs&quot;,&quot;Hinchingbrooke House (Huntingdon, England)&quot;,&quot;Sandwich, John Montagu, Earl of, 1811-1884 -- Art collections -- Catalogs&quot;],&quot;Primary&quot;:&quot;63204.htm&quot;,&quot;CreatorNames&quot;:[&quot;Boyle, Mary Louisa, 1810-1890&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;63204&quot;});" class='title'>Biographical Notices of the Portraits at Hinchingbrook</a>
+<div class='author'>Boyle, Mary Louisa, 1810-1890</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63278, {&quot;Title&quot;:&quot;Stories Pictures Tell. Book 8&quot;,&quot;Topics&quot;:[&quot;Painters&quot;,&quot;Painting&quot;],&quot;Primary&quot;:&quot;63278.htm&quot;,&quot;CreatorNames&quot;:[&quot;Carpenter, Flora L. (Flora Leona), 1880-&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;63278&quot;});" class='title'>Stories Pictures Tell. Book 8</a>
+<div class='author'>Carpenter, Flora L. (Flora Leona), 1880-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63698, {&quot;Title&quot;:&quot;Biographical Catalogue of the Portraits at Panshanger, the Seat of Earl Cowper, K.G.&quot;,&quot;Topics&quot;:[&quot;Cowper, Francis Thomas de Grey Cowper, Earl, 1834-1905 -- Art collections -- Catalogs&quot;,&quot;Panshanger Hall (England)&quot;,&quot;Private collections -- Great Britain -- Catalogs&quot;,&quot;Great Britain -- Biography -- Portraits -- Catalogs&quot;],&quot;Primary&quot;:&quot;63698.htm&quot;,&quot;CreatorNames&quot;:[&quot;Boyle, Mary Louisa, 1810-1890&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;63698&quot;});" class='title'>Biographical Catalogue of the Portraits at Panshanger, the Seat of Earl Cowper, K.G.</a>
+<div class='author'>Boyle, Mary Louisa, 1810-1890</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63719, {&quot;Title&quot;:&quot;The Louvre: Fifty Plates in Colour&quot;,&quot;Topics&quot;:[&quot;Musée du Louvre&quot;],&quot;Primary&quot;:&quot;63719.htm&quot;,&quot;CreatorNames&quot;:[&quot;Brockwell, Maurice W., 1869-1958&quot;,&quot;Konody, Paul G. (Paul George), 1872-1933&quot;,&quot;Hare, T. Leman (Thomas Leman), 1872-1935 [Editor]&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;63719&quot;});" class='title'>The Louvre:<br><span class='subtitle'>Fifty Plates in Colour</span></a>
+<div class='author'>Brockwell, Maurice W., 1869-1958, Konody, Paul G. (Paul George), 1872-1933, Hare, T. Leman (Thomas Leman), 1872-1935 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63924, {&quot;Title&quot;:&quot;Verrocchio&quot;,&quot;Topics&quot;:[&quot;Verrocchio, Andrea del, 1435?-1488&quot;],&quot;Primary&quot;:&quot;63924.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mackowsky, Hans, 1871-1938&quot;,&quot;Knackfuss, H. (Hermann), 1848-1915 [Editor]&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;63924&quot;});" class='title'>Verrocchio</a>
+<div class='author'>Mackowsky, Hans, 1871-1938, Knackfuss, H. (Hermann), 1848-1915 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64387, {&quot;Title&quot;:&quot;Egyptian Art: Studies&quot;,&quot;Topics&quot;:[&quot;Egypt -- Antiquities&quot;,&quot;Art, Egyptian&quot;,&quot;Sculpture, Egyptian&quot;],&quot;Primary&quot;:&quot;64387.htm&quot;,&quot;CreatorNames&quot;:[&quot;Maspero, G. (Gaston), 1846-1916&quot;,&quot;Lee, Elizabeth, 1858?-1920 [Translator]&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;64387&quot;});" class='title'>Egyptian Art:<br><span class='subtitle'>Studies</span></a>
+<div class='author'>Maspero, G. (Gaston), 1846-1916, Lee, Elizabeth, 1858?-1920 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64653, {&quot;Title&quot;:&quot;Biographical catalogue of the portraits at Longleat in the county of Wilts, the seat of the Marquis of Bath&quot;,&quot;Topics&quot;:[&quot;Private collections -- Great Britain -- Catalogs&quot;,&quot;Great Britain -- Biography -- Portraits -- Catalogs&quot;,&quot;Bath, John Alexander Thynne, Marquis of, 1831-1896 -- Art collections -- Catalogs&quot;,&quot;Longleat House (Warminster, England)&quot;],&quot;Primary&quot;:&quot;64653.htm&quot;,&quot;CreatorNames&quot;:[&quot;Boyle, Mary Louisa, 1810-1890&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;64653&quot;});" class='title'>Biographical catalogue of the portraits at Longleat in the county of Wilts, the seat of the Marquis of Bath</a>
+<div class='author'>Boyle, Mary Louisa, 1810-1890</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64686, {&quot;Title&quot;:&quot;Forgers and Forgeries&quot;,&quot;Topics&quot;:[&quot;Art -- Forgeries&quot;],&quot;Primary&quot;:&quot;64686.htm&quot;,&quot;CreatorNames&quot;:[&quot;Constable, W. G. (William George), 1887-1976&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;64686&quot;});" class='title'>Forgers and Forgeries</a>
+<div class='author'>Constable, W. G. (William George), 1887-1976</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64984, {&quot;Title&quot;:&quot;Biographical catalogue of the portraits at Weston, the seat of the Earl of Bradford&quot;,&quot;Topics&quot;:[&quot;Private collections -- Great Britain -- Catalogs&quot;,&quot;Great Britain -- Biography -- Portraits -- Catalogs&quot;,&quot;Weston Park (House: Shropshire, England)&quot;,&quot;Bradford, George Cecil Orlando Bridgeman, 4th Earl of, 1845-1915 -- Art collections -- Catalogs&quot;],&quot;Primary&quot;:&quot;64984.htm&quot;,&quot;CreatorNames&quot;:[&quot;Boyle, Mary Louisa, 1810-1890&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;64984&quot;});" class='title'>Biographical catalogue of the portraits at Weston, the seat of the Earl of Bradford</a>
+<div class='author'>Boyle, Mary Louisa, 1810-1890</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65245, {&quot;Title&quot;:&quot;Emblems of Mortality; representing, in upwards of fifty cuts, death seizing all ranks and degrees of people&quot;,&quot;Topics&quot;:[&quot;Dance of death -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;65245.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hawkins, John Sidney, 1758-1842 [Editor]&quot;,&quot;Bewick, John, 1760-1795 [Engraver]&quot;,&quot;Holbein, Hans, 1497-1543 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;65245&quot;});" class='title'>Emblems of Mortality;<br><span class='subtitle'>representing, in upwards of fifty cuts, death seizing all ranks and degrees of people</span></a>
+<div class='author'>Hawkins, John Sidney, 1758-1842 [Editor], Bewick, John, 1760-1795 [Engraver], Holbein, Hans, 1497-1543 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65604, {&quot;Title&quot;:&quot;Notes on the Art Treasures at Penicuik House Midlothian&quot;,&quot;Topics&quot;:[&quot;Penicuik House (Penicuik, Scotland)&quot;,&quot;Art -- Scotland -- Penicuik&quot;],&quot;Primary&quot;:&quot;65604.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gray, John Miller, 1850-1894&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;65604&quot;});" class='title'>Notes on the Art Treasures at Penicuik House Midlothian</a>
+<div class='author'>Gray, John Miller, 1850-1894</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66010, {&quot;Title&quot;:&quot;Anecdotes of Painters, Engravers, Sculptors and Architects, and Curiosities of Art  (Vol. 1 of 3)&quot;,&quot;Topics&quot;:[&quot;Art -- Anecdotes&quot;,&quot;Artists -- Anecdotes&quot;],&quot;Primary&quot;:&quot;66010.htm&quot;,&quot;CreatorNames&quot;:[&quot;Spooner, Shearjashub, 1809-1859&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;66010&quot;});" class='title'>Anecdotes of Painters, Engravers, Sculptors and Architects, and Curiosities of Art  (Vol. 1 of 3)</a>
+<div class='author'>Spooner, Shearjashub, 1809-1859</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6631, {&quot;Title&quot;:&quot;The Sculpture and Mural Decorations of the Exposition - A Pictorial Survey of the Art of the Panama-Pacific international exposition&quot;,&quot;Topics&quot;:[&quot;Panama-Pacific International Exposition (1915 : San Francisco, Calif.)&quot;,&quot;Sculpture, American&quot;],&quot;Primary&quot;:&quot;6631.txt&quot;,&quot;CreatorNames&quot;:[&quot;Perry, Stella G. S. (Stella George Stern), 1877-1956&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;6631&quot;});" class='title'>The Sculpture and Mural Decorations of the Exposition -<br><span class='subtitle'>A Pictorial Survey of the Art of the Panama-Pacific international exposition</span></a>
+<div class='author'>Perry, Stella G. S. (Stella George Stern), 1877-1956</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66746, {&quot;Title&quot;:&quot;Brief Guide: National Gallery of Art&quot;,&quot;Topics&quot;:[&quot;National Gallery of Art (U.S.)&quot;,&quot;Art museums -- Washington (D.C.) -- Guidebooks&quot;],&quot;Primary&quot;:&quot;66746.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;66746&quot;});" class='title'>Brief Guide:<br><span class='subtitle'>National Gallery of Art</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66869, {&quot;Title&quot;:&quot;The origins of art; a psychological &amp; sociological inquiry&quot;,&quot;Topics&quot;:[&quot;Art, Primitive&quot;,&quot;Aesthetics&quot;,&quot;Art -- Philosophy&quot;],&quot;Primary&quot;:&quot;66869.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hirn, Y. (Yrjö), 1870-1952&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;66869&quot;});" class='title'>The origins of art;<br><span class='subtitle'>a psychological & sociological inquiry</span></a>
+<div class='author'>Hirn, Y. (Yrjö), 1870-1952</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67096, {&quot;Title&quot;:&quot;Essais et portraits&quot;,&quot;Topics&quot;:[&quot;Whistler, James McNeill, 1834-1903&quot;,&quot;Watts, George Frederick, 1817-1904&quot;,&quot;Beardsley, Aubrey, 1872-1898&quot;,&quot;Manet, Édouard, 1832-1883&quot;,&quot;Fantin-Latour, Henri, 1836-1904&quot;,&quot;Forain, Jean Louis, 1852-1931&quot;,&quot;Conder, Charles Edward, 1868-1909&quot;],&quot;Primary&quot;:&quot;67096.htm&quot;,&quot;CreatorNames&quot;:[&quot;Blanche, Jacques-Émile, 1861-1942&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;67096&quot;});" class='title'>Essais et portraits</a>
+<div class='author'>Blanche, Jacques-Émile, 1861-1942</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67629, {&quot;Title&quot;:&quot;An Illustrated Dictionary of Words used in Art and Archaeology - Explaining terms frequently used in works on architecture, arms, bronzes, Christian art, colour, costume, decoration, devices, emblems, heraldry, lace, personal ornaments, pottery, painting, sculpture, &amp;c., with their derivations.&quot;,&quot;Topics&quot;:[&quot;Art -- Dictionaries&quot;,&quot;Archaeology -- Dictionaries&quot;],&quot;Primary&quot;:&quot;67629.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mollett, John W. (John William)&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;67629&quot;});" class='title'>An Illustrated Dictionary of Words used in Art and Archaeology -<br><span class='subtitle'>Explaining terms frequently used in works on architecture, arms, bronzes, Christian art, colour, costume, decoration, devices, emblems, heraldry, lace, personal ornaments, pottery, painting, sculpture, &c., with their derivations.</span></a>
+<div class='author'>Mollett, John W. (John William)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67931, {&quot;Title&quot;:&quot;Frammenti letterari e filosofici&quot;,&quot;Topics&quot;:[&quot;Leonardo, da Vinci, 1452-1519&quot;,&quot;Art -- Philosophy&quot;],&quot;Primary&quot;:&quot;67931.htm&quot;,&quot;CreatorNames&quot;:[&quot;Leonardo, da Vinci, 1452-1519&quot;,&quot;Solmi, Edmondo, 1874-1912 [Compiler]&quot;],&quot;LoCC&quot;:[&quot;B&quot;,&quot;N&quot;],&quot;PG_ID&quot;:&quot;67931&quot;});" class='title'>Frammenti letterari e filosofici</a>
+<div class='author'>Leonardo, da Vinci, 1452-1519, Solmi, Edmondo, 1874-1912 [Compiler]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67999, {&quot;Title&quot;:&quot;Caen et Bayeux&quot;,&quot;Topics&quot;:[&quot;Art -- France -- Caen&quot;,&quot;Art -- France -- Bayeux&quot;,&quot;Caen (France) -- Description and travel&quot;,&quot;Bayeux (France) -- Description and travel&quot;],&quot;Primary&quot;:&quot;67999.htm&quot;,&quot;CreatorNames&quot;:[&quot;Prentout, Henri, 1867-1933&quot;],&quot;LoCC&quot;:[&quot;DC&quot;,&quot;N&quot;],&quot;PG_ID&quot;:&quot;67999&quot;});" class='title'>Caen et Bayeux</a>
+<div class='author'>Prentout, Henri, 1867-1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68150, {&quot;Title&quot;:&quot;Salt mines and castles: The discovery and restitution of looted European art&quot;,&quot;Topics&quot;:[&quot;Art -- Europe&quot;,&quot;World War, 1939-1945 -- Art and the war&quot;,&quot;World War, 1939-1945 -- Confiscations and contributions&quot;],&quot;Primary&quot;:&quot;68150.htm&quot;,&quot;CreatorNames&quot;:[&quot;Howe, Thomas Carr, 1904-1994&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;68150&quot;});" class='title'>Salt mines and castles:<br><span class='subtitle'>The discovery and restitution of looted European art</span></a>
+<div class='author'>Howe, Thomas Carr, 1904-1994</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68262, {&quot;Title&quot;:&quot;Die Entwicklungsgeschichte der Stile in der bildenden Kunst. Erster Band.: Vom Altertum bis zur Gotik&quot;,&quot;Topics&quot;:[&quot;Art -- History&quot;],&quot;Primary&quot;:&quot;68262.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cohn-Wiener, Ernst, 1882-1941&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;68262&quot;});" class='title'>Die Entwicklungsgeschichte der Stile in der bildenden Kunst. Erster Band.:<br><span class='subtitle'>Vom Altertum bis zur Gotik</span></a>
+<div class='author'>Cohn-Wiener, Ernst, 1882-1941</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68263, {&quot;Title&quot;:&quot;Die Entwicklungsgeschichte der Stile in der bildenden Kunst. Zweiter Band.: Von der Renaissance bis zur Gegenwart&quot;,&quot;Topics&quot;:[&quot;Art -- History&quot;],&quot;Primary&quot;:&quot;68263.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cohn-Wiener, Ernst, 1882-1941&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;68263&quot;});" class='title'>Die Entwicklungsgeschichte der Stile in der bildenden Kunst. Zweiter Band.:<br><span class='subtitle'>Von der Renaissance bis zur Gegenwart</span></a>
+<div class='author'>Cohn-Wiener, Ernst, 1882-1941</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68526, {&quot;Title&quot;:&quot;Some eminent Victorians: Personal recollections in the world of art and letters&quot;,&quot;Topics&quot;:[&quot;English literature -- 19th century&quot;,&quot;Great Britain -- Intellectual life -- 19th century&quot;,&quot;Art, Victorian&quot;],&quot;Primary&quot;:&quot;68526.htm&quot;,&quot;CreatorNames&quot;:[&quot;Carr, J. Comyns (Joseph Comyns), 1849-1916&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;68526&quot;});" class='title'>Some eminent Victorians:<br><span class='subtitle'>Personal recollections in the world of art and letters</span></a>
+<div class='author'>Carr, J. Comyns (Joseph Comyns), 1849-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6889, {&quot;Title&quot;:&quot;Laokoon: Oder, Über die Grenzen der Malerei und Poesie&quot;,&quot;Topics&quot;:[&quot;Aesthetics -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;6889.txt&quot;,&quot;CreatorNames&quot;:[&quot;Lessing, Gotthold Ephraim, 1729-1781&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;6889&quot;});" class='title'>Laokoon:<br><span class='subtitle'>Oder, Über die Grenzen der Malerei und Poesie</span></a>
+<div class='author'>Lessing, Gotthold Ephraim, 1729-1781</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69303, {&quot;Title&quot;:&quot;Michelangelo&quot;,&quot;Topics&quot;:[&quot;Michelangelo Buonarroti, 1475-1564&quot;],&quot;Primary&quot;:&quot;69303.htm&quot;,&quot;CreatorNames&quot;:[&quot;Strutt, Edward C.&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;69303&quot;});" class='title'>Michelangelo</a>
+<div class='author'>Strutt, Edward C.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69571, {&quot;Title&quot;:&quot;Euterpe; or, The future of art&quot;,&quot;Topics&quot;:[&quot;Art&quot;],&quot;Primary&quot;:&quot;69571.htm&quot;,&quot;CreatorNames&quot;:[&quot;McColvin, Lionel R. (Lionel Roy), 1896-1976&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;69571&quot;});" class='title'>Euterpe;<br><span class='subtitle'>or, The future of art</span></a>
+<div class='author'>McColvin, Lionel R. (Lionel Roy), 1896-1976</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69581, {&quot;Title&quot;:&quot;Sacred and legendary art, volume 1 (of 2) - Containing legends of the angels and archangels, the evangelists, the Apostles, the doctors of the church, and St. Mary magdalene, as represented in the fine arts.&quot;,&quot;Topics&quot;:[&quot;Christian art and symbolism&quot;,&quot;Christian saints in art&quot;],&quot;Primary&quot;:&quot;69581.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jameson, Mrs. (Anna), 1794-1860&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;69581&quot;});" class='title'>Sacred and legendary art, volume 1 (of 2) -<br><span class='subtitle'>Containing legends of the angels and archangels, the evangelists, the Apostles, the doctors of the church, and St. Mary magdalene, as represented in the fine arts.</span></a>
+<div class='author'>Jameson, Mrs. (Anna), 1794-1860</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69897, {&quot;Title&quot;:&quot;Women artists in all ages and countries&quot;,&quot;Topics&quot;:[&quot;Women artists&quot;],&quot;Primary&quot;:&quot;69897.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ellet, E. F. (Elizabeth Fries), 1818-1877&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;69897&quot;});" class='title'>Women artists in all ages and countries</a>
+<div class='author'>Ellet, E. F. (Elizabeth Fries), 1818-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70374, {&quot;Title&quot;:&quot;The Burlington magazine&quot;,&quot;Topics&quot;:[&quot;Art -- Periodicals&quot;,&quot;Decoration and ornament -- Periodicals&quot;],&quot;Primary&quot;:&quot;70374.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various [Contributor]&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;70374&quot;});" class='title'>The Burlington magazine</a>
+<div class='author'>Various [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70433, {&quot;Title&quot;:&quot;The floral symbolism of the great masters&quot;,&quot;Topics&quot;:[&quot;Flowers -- Symbolic aspects&quot;],&quot;Primary&quot;:&quot;70433.htm&quot;,&quot;CreatorNames&quot;:[&quot;Haig, Elizabeth&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;70433&quot;});" class='title'>The floral symbolism of the great masters</a>
+<div class='author'>Haig, Elizabeth</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7227, {&quot;Title&quot;:&quot;Mornings in Florence&quot;,&quot;Topics&quot;:[&quot;Art -- Italy -- Florence&quot;,&quot;Art, Italian -- Italy -- Florence&quot;],&quot;Primary&quot;:&quot;7227.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ruskin, John, 1819-1900&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;7227&quot;});" class='title'>Mornings in Florence</a>
+<div class='author'>Ruskin, John, 1819-1900</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7291, {&quot;Title&quot;:&quot;The Two Paths&quot;,&quot;Topics&quot;:[&quot;Art&quot;,&quot;Decoration and ornament&quot;,&quot;Decorative arts&quot;],&quot;Primary&quot;:&quot;7291.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ruskin, John, 1819-1900&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;7291&quot;});" class='title'>The Two Paths</a>
+<div class='author'>Ruskin, John, 1819-1900</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7411, {&quot;Title&quot;:&quot;An Art-Lovers Guide to the Exposition - Explanations of the Architecture, Sculpture and Mural Paintings, With a Guide for Study in the Art Gallery&quot;,&quot;Topics&quot;:[&quot;Panama-Pacific International Exposition (1915 : San Francisco, Calif.)&quot;],&quot;Primary&quot;:&quot;7411.txt&quot;,&quot;CreatorNames&quot;:[&quot;Cheney, Sheldon, 1886-1980&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;7411&quot;});" class='title'>An Art-Lovers Guide to the Exposition -<br><span class='subtitle'>Explanations of the Architecture, Sculpture and Mural Paintings, With a Guide for Study in the Art Gallery</span></a>
+<div class='author'>Cheney, Sheldon, 1886-1980</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(8523, {&quot;Title&quot;:&quot;Val d&#39;Arno - Ten Lectures on the Tuscan Art Directly Antecedent to the Florentine Year of Victories; Given Before the University of Oxford in Michaelmas Term, 1873&quot;,&quot;Topics&quot;:[&quot;Art -- Italy -- Tuscany&quot;],&quot;Primary&quot;:&quot;8523.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ruskin, John, 1819-1900&quot;],&quot;LoCC&quot;:[&quot;N&quot;,&quot;PR&quot;],&quot;PG_ID&quot;:&quot;8523&quot;});" class='title'>Val d'Arno -<br><span class='subtitle'>Ten Lectures on the Tuscan Art Directly Antecedent to the Florentine Year of Victories; Given Before the University of Oxford in Michaelmas Term, 1873</span></a>
+<div class='author'>Ruskin, John, 1819-1900</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(8536, {&quot;Title&quot;:&quot;Philip Gilbert Hamerton - An Autobiography, 1834-1858, and a Memoir by His Wife, 1858-1894&quot;,&quot;Topics&quot;:[&quot;Hamerton, Philip Gilbert, 1834-1894&quot;,&quot;Art critics -- Great Britain -- Biography&quot;],&quot;Primary&quot;:&quot;8536.txt&quot;,&quot;CreatorNames&quot;:[&quot;Hamerton, Eugénie, 1839?-&quot;,&quot;Hamerton, Philip Gilbert, 1834-1894&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;8536&quot;});" class='title'>Philip Gilbert Hamerton -<br><span class='subtitle'>An Autobiography, 1834-1858, and a Memoir by His Wife, 1858-1894</span></a>
+<div class='author'>Hamerton, Eugénie, 1839?-, Hamerton, Philip Gilbert, 1834-1894</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(8701, {&quot;Title&quot;:&quot;The Doré Bible Gallery, Volume 1&quot;,&quot;Topics&quot;:[&quot;Bible -- Illustrations&quot;],&quot;Primary&quot;:&quot;8701.htm&quot;,&quot;CreatorNames&quot;:[&quot;Doré, Gustave, 1832-1883 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;8701&quot;});" class='title'>The Doré Bible Gallery, Volume 1</a>
+<div class='author'>Doré, Gustave, 1832-1883 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(8702, {&quot;Title&quot;:&quot;The Doré Bible Gallery, Volume 2&quot;,&quot;Topics&quot;:[&quot;Bible -- Illustrations&quot;],&quot;Primary&quot;:&quot;8702.htm&quot;,&quot;CreatorNames&quot;:[&quot;Doré, Gustave, 1832-1883 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;8702&quot;});" class='title'>The Doré Bible Gallery, Volume 2</a>
+<div class='author'>Doré, Gustave, 1832-1883 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(8703, {&quot;Title&quot;:&quot;The Doré Bible Gallery, Volume 3&quot;,&quot;Topics&quot;:[&quot;Bible -- Illustrations&quot;],&quot;Primary&quot;:&quot;8703.htm&quot;,&quot;CreatorNames&quot;:[&quot;Doré, Gustave, 1832-1883 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;8703&quot;});" class='title'>The Doré Bible Gallery, Volume 3</a>
+<div class='author'>Doré, Gustave, 1832-1883 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(8704, {&quot;Title&quot;:&quot;The Doré Bible Gallery, Volume 4&quot;,&quot;Topics&quot;:[&quot;Bible -- Illustrations&quot;],&quot;Primary&quot;:&quot;8704.htm&quot;,&quot;CreatorNames&quot;:[&quot;Doré, Gustave, 1832-1883 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;8704&quot;});" class='title'>The Doré Bible Gallery, Volume 4</a>
+<div class='author'>Doré, Gustave, 1832-1883 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(8705, {&quot;Title&quot;:&quot;The Doré Bible Gallery, Volume 5&quot;,&quot;Topics&quot;:[&quot;Bible -- Illustrations&quot;],&quot;Primary&quot;:&quot;8705.htm&quot;,&quot;CreatorNames&quot;:[&quot;Doré, Gustave, 1832-1883 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;8705&quot;});" class='title'>The Doré Bible Gallery, Volume 5</a>
+<div class='author'>Doré, Gustave, 1832-1883 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(8706, {&quot;Title&quot;:&quot;The Doré Bible Gallery, Volume 6&quot;,&quot;Topics&quot;:[&quot;Bible -- Illustrations&quot;],&quot;Primary&quot;:&quot;8706.htm&quot;,&quot;CreatorNames&quot;:[&quot;Doré, Gustave, 1832-1883 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;8706&quot;});" class='title'>The Doré Bible Gallery, Volume 6</a>
+<div class='author'>Doré, Gustave, 1832-1883 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(8707, {&quot;Title&quot;:&quot;The Doré Bible Gallery, Volume 7&quot;,&quot;Topics&quot;:[&quot;Bible -- Illustrations&quot;],&quot;Primary&quot;:&quot;8707.htm&quot;,&quot;CreatorNames&quot;:[&quot;Doré, Gustave, 1832-1883 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;8707&quot;});" class='title'>The Doré Bible Gallery, Volume 7</a>
+<div class='author'>Doré, Gustave, 1832-1883 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(8708, {&quot;Title&quot;:&quot;The Doré Bible Gallery, Volume 8&quot;,&quot;Topics&quot;:[&quot;Bible -- Illustrations&quot;],&quot;Primary&quot;:&quot;8708.htm&quot;,&quot;CreatorNames&quot;:[&quot;Doré, Gustave, 1832-1883 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;8708&quot;});" class='title'>The Doré Bible Gallery, Volume 8</a>
+<div class='author'>Doré, Gustave, 1832-1883 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(8709, {&quot;Title&quot;:&quot;The Doré Bible Gallery, Volume 9&quot;,&quot;Topics&quot;:[&quot;Bible -- Illustrations&quot;],&quot;Primary&quot;:&quot;8709.htm&quot;,&quot;CreatorNames&quot;:[&quot;Doré, Gustave, 1832-1883 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;8709&quot;});" class='title'>The Doré Bible Gallery, Volume 9</a>
+<div class='author'>Doré, Gustave, 1832-1883 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(8710, {&quot;Title&quot;:&quot;The Doré Bible Gallery, Complete - Containing One Hundred Superb Illustrations, and a Page of Explanatory Letter-press Facing Each&quot;,&quot;Topics&quot;:[&quot;Bible -- Illustrations&quot;],&quot;Primary&quot;:&quot;8710.htm&quot;,&quot;CreatorNames&quot;:[&quot;Doré, Gustave, 1832-1883 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;8710&quot;});" class='title'>The Doré Bible Gallery, Complete -<br><span class='subtitle'>Containing One Hundred Superb Illustrations, and a Page of Explanatory Letter-press Facing Each</span></a>
+<div class='author'>Doré, Gustave, 1832-1883 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(8858, {&quot;Title&quot;:&quot;Earthwork out of Tuscany: Being Impressions and Translations of Maurice Hewlett&quot;,&quot;Topics&quot;:[&quot;Art -- Italy -- Tuscany&quot;,&quot;Tuscany (Italy) -- Description and travel&quot;],&quot;Primary&quot;:&quot;8858.txt&quot;,&quot;CreatorNames&quot;:[&quot;Hewlett, Maurice, 1861-1923&quot;],&quot;LoCC&quot;:[&quot;N&quot;],&quot;PG_ID&quot;:&quot;8858&quot;});" class='title'>Earthwork out of Tuscany:<br><span class='subtitle'>Being Impressions and Translations of Maurice Hewlett</span></a>
+<div class='author'>Hewlett, Maurice, 1861-1923</div>
+</div>
+</ul></div>
+</body></html>

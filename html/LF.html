@@ -1,0 +1,190 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Individual institutions - Europe (LF)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13245, {&quot;Title&quot;:&quot;The Charm of Oxford&quot;,&quot;Topics&quot;:[&quot;University of Oxford&quot;],&quot;Primary&quot;:&quot;13245.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wells, J. (Joseph), 1855-1929&quot;],&quot;LoCC&quot;:[&quot;LF&quot;],&quot;PG_ID&quot;:&quot;13245&quot;});" class='title'>The Charm of Oxford</a>
+<div class='author'>Wells, J. (Joseph), 1855-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18036, {&quot;Title&quot;:&quot;Uppingham by the Sea: A Narrative of the Year at Borth&quot;,&quot;Topics&quot;:[&quot;Uppingham School&quot;],&quot;Primary&quot;:&quot;18036.htm&quot;,&quot;CreatorNames&quot;:[&quot;Skrine, John Huntley, 1848-1923&quot;],&quot;LoCC&quot;:[&quot;LF&quot;],&quot;PG_ID&quot;:&quot;18036&quot;});" class='title'>Uppingham by the Sea:<br><span class='subtitle'>A Narrative of the Year at Borth</span></a>
+<div class='author'>Skrine, John Huntley, 1848-1923</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20932, {&quot;Title&quot;:&quot;Advice to a Young Man upon First Going to Oxford - In Ten Letters, From an Uncle to His Nephew&quot;,&quot;Topics&quot;:[&quot;Young men -- Conduct of life&quot;,&quot;University of Oxford -- Students&quot;],&quot;Primary&quot;:&quot;20932.htm&quot;,&quot;CreatorNames&quot;:[&quot;Berens, Edward, 1777?-1859&quot;],&quot;LoCC&quot;:[&quot;LF&quot;],&quot;PG_ID&quot;:&quot;20932&quot;});" class='title'>Advice to a Young Man upon First Going to Oxford -<br><span class='subtitle'>In Ten Letters, From an Uncle to His Nephew</span></a>
+<div class='author'>Berens, Edward, 1777?-1859</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2444, {&quot;Title&quot;:&quot;Oxford&quot;,&quot;Topics&quot;:[&quot;University of Oxford -- History&quot;],&quot;Primary&quot;:&quot;2444.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lang, Andrew, 1844-1912&quot;],&quot;LoCC&quot;:[&quot;LF&quot;],&quot;PG_ID&quot;:&quot;2444&quot;});" class='title'>Oxford</a>
+<div class='author'>Lang, Andrew, 1844-1912</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25306, {&quot;Title&quot;:&quot;A Dominie in Doubt&quot;,&quot;Topics&quot;:[&quot;Education -- Philosophy&quot;,&quot;Neill, Alexander Sutherland, 1883-1973&quot;,&quot;Education -- Scotland&quot;,&quot;Teachers -- Scotland -- Biography&quot;],&quot;Primary&quot;:&quot;25306.txt&quot;,&quot;CreatorNames&quot;:[&quot;Neill, Alexander Sutherland, 1883-1973&quot;],&quot;LoCC&quot;:[&quot;LF&quot;],&quot;PG_ID&quot;:&quot;25306&quot;});" class='title'>A Dominie in Doubt</a>
+<div class='author'>Neill, Alexander Sutherland, 1883-1973</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26674, {&quot;Title&quot;:&quot;The Life and Times of John Wilkins - Warden of Wadham College, Oxford; Master of Trinity College, Cambridge; and Bishop of Chester&quot;,&quot;Topics&quot;:[&quot;Wilkins, John, 1614-1672&quot;,&quot;Wadham College&quot;,&quot;Bishops -- England -- Chester -- Biography&quot;],&quot;Primary&quot;:&quot;26674.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wright Henderson, P. A. (Patrick Arkley), 1841-1922&quot;],&quot;LoCC&quot;:[&quot;LF&quot;],&quot;PG_ID&quot;:&quot;26674&quot;});" class='title'>The Life and Times of John Wilkins -<br><span class='subtitle'>Warden of Wadham College, Oxford; Master of Trinity College, Cambridge; and Bishop of Chester</span></a>
+<div class='author'>Wright Henderson, P. A. (Patrick Arkley), 1841-1922</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27320, {&quot;Title&quot;:&quot;St. John&#39;s College, Cambridge&quot;,&quot;Topics&quot;:[&quot;St. John&#39;s College (University of Cambridge) -- History&quot;],&quot;Primary&quot;:&quot;27320.htm&quot;,&quot;CreatorNames&quot;:[&quot;Scott, Robert Forsyth, 1849-1933&quot;,&quot;New, E. H. (Edmund Hort), 1871-1931 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;LF&quot;],&quot;PG_ID&quot;:&quot;27320&quot;});" class='title'>St. John's College, Cambridge</a>
+<div class='author'>Scott, Robert Forsyth, 1849-1933, New, E. H. (Edmund Hort), 1871-1931 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30168, {&quot;Title&quot;:&quot;A History of Giggleswick School from its Foundation, 1499 to 1912&quot;,&quot;Topics&quot;:[&quot;Giggleswick School (Giggleswick, England) -- History&quot;],&quot;Primary&quot;:&quot;30168.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bell, Edward Allen, 1884-1959&quot;],&quot;LoCC&quot;:[&quot;LF&quot;],&quot;PG_ID&quot;:&quot;30168&quot;});" class='title'>A History of Giggleswick School from its Foundation, 1499 to 1912</a>
+<div class='author'>Bell, Edward Allen, 1884-1959</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31408, {&quot;Title&quot;:&quot;The Oxford Degree Ceremony&quot;,&quot;Topics&quot;:[&quot;University of Oxford -- Degrees&quot;,&quot;Degrees, Academic&quot;],&quot;Primary&quot;:&quot;31408.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wells, J. (Joseph), 1855-1929&quot;],&quot;LoCC&quot;:[&quot;LF&quot;],&quot;PG_ID&quot;:&quot;31408&quot;});" class='title'>The Oxford Degree Ceremony</a>
+<div class='author'>Wells, J. (Joseph), 1855-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37893, {&quot;Title&quot;:&quot;Oxford and Her Colleges: A View from the Radcliffe Library&quot;,&quot;Topics&quot;:[&quot;University of Oxford&quot;],&quot;Primary&quot;:&quot;37893.htm&quot;,&quot;CreatorNames&quot;:[&quot;Smith, Goldwin, 1823-1910&quot;],&quot;LoCC&quot;:[&quot;LF&quot;],&quot;PG_ID&quot;:&quot;37893&quot;});" class='title'>Oxford and Her Colleges:<br><span class='subtitle'>A View from the Radcliffe Library</span></a>
+<div class='author'>Smith, Goldwin, 1823-1910</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38180, {&quot;Title&quot;:&quot;An American at Oxford&quot;,&quot;Topics&quot;:[&quot;Education -- United States&quot;,&quot;University of Oxford&quot;,&quot;Americans -- England -- Oxford&quot;,&quot;Education, Higher -- England -- Oxford&quot;],&quot;Primary&quot;:&quot;38180.htm&quot;,&quot;CreatorNames&quot;:[&quot;Corbin, John, 1870-1959&quot;],&quot;LoCC&quot;:[&quot;LF&quot;],&quot;PG_ID&quot;:&quot;38180&quot;});" class='title'>An American at Oxford</a>
+<div class='author'>Corbin, John, 1870-1959</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39203, {&quot;Title&quot;:&quot;An Edinburgh Eleven: Pencil Portraits from College Life&quot;,&quot;Topics&quot;:[&quot;University of Edinburgh -- Biography&quot;],&quot;Primary&quot;:&quot;39203.htm&quot;,&quot;CreatorNames&quot;:[&quot;Barrie, J. M. (James Matthew), 1860-1937&quot;],&quot;LoCC&quot;:[&quot;LF&quot;],&quot;PG_ID&quot;:&quot;39203&quot;});" class='title'>An Edinburgh Eleven:<br><span class='subtitle'>Pencil Portraits from College Life</span></a>
+<div class='author'>Barrie, J. M. (James Matthew), 1860-1937</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39525, {&quot;Title&quot;:&quot;Aspects of Modern Oxford, by a Mere Don&quot;,&quot;Topics&quot;:[&quot;University of Oxford&quot;],&quot;Primary&quot;:&quot;39525.htm&quot;,&quot;CreatorNames&quot;:[&quot;Godley, A. D. (Alfred Denis), 1856-1925&quot;,&quot;Crawford, T. Hamilton [Illustrator]&quot;,&quot;Lorimer, John Henry, 1856-1936 [Illustrator]&quot;,&quot;Speed, Lancelot, 1860-1931 [Illustrator]&quot;,&quot;Stamp, E. [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;LF&quot;],&quot;PG_ID&quot;:&quot;39525&quot;});" class='title'>Aspects of Modern Oxford, by a Mere Don</a>
+<div class='author'>Godley, A. D. (Alfred Denis), 1856-1925, Crawford, T. Hamilton [Illustrator], Lorimer, John Henry, 1856-1936 [Illustrator], Speed, Lancelot, 1860-1931 [Illustrator], Stamp, E. [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42717, {&quot;Title&quot;:&quot;Regulations for the establishment and government of the Royal Military Asylum&quot;,&quot;Topics&quot;:[&quot;Royal Military Asylum&quot;,&quot;Duke of York&#39;s Royal Military School&quot;],&quot;Primary&quot;:&quot;42717.htm&quot;,&quot;CreatorNames&quot;:[&quot;Duke of York&#39;s Royal Military School&quot;],&quot;LoCC&quot;:[&quot;LF&quot;],&quot;PG_ID&quot;:&quot;42717&quot;});" class='title'>Regulations for the establishment and government of the Royal Military Asylum</a>
+<div class='author'>Duke of York's Royal Military School</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42960, {&quot;Title&quot;:&quot;Rowlandson&#39;s Oxford&quot;,&quot;Topics&quot;:[&quot;University of Oxford&quot;],&quot;Primary&quot;:&quot;42960.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gibbs, A. Hamilton (Arthur Hamilton), 1888-1964&quot;,&quot;Rowlandson, Thomas, 1756-1827 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;LF&quot;],&quot;PG_ID&quot;:&quot;42960&quot;});" class='title'>Rowlandson's Oxford</a>
+<div class='author'>Gibbs, A. Hamilton (Arthur Hamilton), 1888-1964, Rowlandson, Thomas, 1756-1827 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43764, {&quot;Title&quot;:&quot;Cambridge and Its Story&quot;,&quot;Topics&quot;:[&quot;University of Cambridge -- History&quot;,&quot;Cambridge (England) -- History&quot;],&quot;Primary&quot;:&quot;43764.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stubbs, Charles William, 1845-1912&quot;,&quot;Railton, Fanny [Illustrator]&quot;,&quot;Railton, Herbert, 1857-1910 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DA&quot;,&quot;LF&quot;],&quot;PG_ID&quot;:&quot;43764&quot;});" class='title'>Cambridge and Its Story</a>
+<div class='author'>Stubbs, Charles William, 1845-1912, Railton, Fanny [Illustrator], Railton, Herbert, 1857-1910 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46274, {&quot;Title&quot;:&quot;Oxford and Its Story&quot;,&quot;Topics&quot;:[&quot;University of Oxford -- History&quot;,&quot;Oxford (England) -- History&quot;],&quot;Primary&quot;:&quot;46274.htm&quot;,&quot;CreatorNames&quot;:[&quot;Headlam, Cecil, 1872-1934&quot;,&quot;Railton, Fanny [Illustrator]&quot;,&quot;Railton, Herbert, 1857-1910 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DA&quot;,&quot;LF&quot;],&quot;PG_ID&quot;:&quot;46274&quot;});" class='title'>Oxford and Its Story</a>
+<div class='author'>Headlam, Cecil, 1872-1934, Railton, Fanny [Illustrator], Railton, Herbert, 1857-1910 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47019, {&quot;Title&quot;:&quot;Cambridge&quot;,&quot;Topics&quot;:[&quot;University of Cambridge -- Pictorial works&quot;,&quot;Cambridge (England) -- Pictorial works&quot;],&quot;Primary&quot;:&quot;47019.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tuker, M. A. R. (Mildred Anna Rosalie)&quot;,&quot;Matthison, William [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;LF&quot;],&quot;PG_ID&quot;:&quot;47019&quot;});" class='title'>Cambridge</a>
+<div class='author'>Tuker, M. A. R. (Mildred Anna Rosalie), Matthison, William [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50618, {&quot;Title&quot;:&quot;Oxford Days; or, How Ross Got His Degree&quot;,&quot;Topics&quot;:[&quot;University of Oxford&quot;],&quot;Primary&quot;:&quot;50618.htm&quot;,&quot;CreatorNames&quot;:[&quot;Weatherly, F. E. (Frederic Edward), 1848-1929&quot;],&quot;LoCC&quot;:[&quot;LF&quot;],&quot;PG_ID&quot;:&quot;50618&quot;});" class='title'>Oxford Days;<br><span class='subtitle'>or, How Ross Got His Degree</span></a>
+<div class='author'>Weatherly, F. E. (Frederic Edward), 1848-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50937, {&quot;Title&quot;:&quot;Die Universität Basel in den fünfzig Jahren seit ihrer Reorganisation im Jahre 1835&quot;,&quot;Topics&quot;:[&quot;Universität Basel&quot;],&quot;Primary&quot;:&quot;50937.htm&quot;,&quot;CreatorNames&quot;:[&quot;Teichmann, Albert, 1844-1912&quot;],&quot;LoCC&quot;:[&quot;LF&quot;],&quot;PG_ID&quot;:&quot;50937&quot;});" class='title'>Die Universität Basel in den fünfzig Jahren seit ihrer Reorganisation im Jahre 1835</a>
+<div class='author'>Teichmann, Albert, 1844-1912</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52286, {&quot;Title&quot;:&quot;The Colleges of Oxford: Their History and Traditions - XXI Chapters Contributed by Members of the Colleges&quot;,&quot;Topics&quot;:[&quot;University of Oxford -- History&quot;],&quot;Primary&quot;:&quot;52286.htm&quot;,&quot;CreatorNames&quot;:[&quot;Clark, Andrew, 1856-1922 [Editor]&quot;],&quot;LoCC&quot;:[&quot;LF&quot;],&quot;PG_ID&quot;:&quot;52286&quot;});" class='title'>The Colleges of Oxford:<br><span class='subtitle'>Their History and Traditions - XXI Chapters Contributed by Members of the Colleges</span></a>
+<div class='author'>Clark, Andrew, 1856-1922 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53769, {&quot;Title&quot;:&quot;Floreat Etona: Anecdotes and Memories of Eton College&quot;,&quot;Topics&quot;:[&quot;Eton College&quot;],&quot;Primary&quot;:&quot;53769.htm&quot;,&quot;CreatorNames&quot;:[&quot;Nevill, Ralph, 1865-1930&quot;],&quot;LoCC&quot;:[&quot;LF&quot;],&quot;PG_ID&quot;:&quot;53769&quot;});" class='title'>Floreat Etona:<br><span class='subtitle'>Anecdotes and Memories of Eton College</span></a>
+<div class='author'>Nevill, Ralph, 1865-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53909, {&quot;Title&quot;:&quot;A Short History of Newnham College, Cambridge&quot;,&quot;Topics&quot;:[&quot;Newnham College&quot;],&quot;Primary&quot;:&quot;53909.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gardner, Alice, 1854-1927&quot;],&quot;LoCC&quot;:[&quot;LF&quot;],&quot;PG_ID&quot;:&quot;53909&quot;});" class='title'>A Short History of Newnham College, Cambridge</a>
+<div class='author'>Gardner, Alice, 1854-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54023, {&quot;Title&quot;:&quot;Cambridge Papers&quot;,&quot;Topics&quot;:[&quot;University of Cambridge -- History&quot;,&quot;Trinity College (University of Cambridge)&quot;],&quot;Primary&quot;:&quot;54023.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ball, W. W. Rouse (Walter William Rouse), 1850-1925&quot;],&quot;LoCC&quot;:[&quot;LF&quot;],&quot;PG_ID&quot;:&quot;54023&quot;});" class='title'>Cambridge Papers</a>
+<div class='author'>Ball, W. W. Rouse (Walter William Rouse), 1850-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54220, {&quot;Title&quot;:&quot;Oxford: A Sketch-Book&quot;,&quot;Topics&quot;:[&quot;University of Oxford -- Pictorial works&quot;],&quot;Primary&quot;:&quot;54220.htm&quot;,&quot;CreatorNames&quot;:[&quot;Richards, Fred, 1878-1932&quot;],&quot;LoCC&quot;:[&quot;LF&quot;,&quot;NC&quot;],&quot;PG_ID&quot;:&quot;54220&quot;});" class='title'>Oxford:<br><span class='subtitle'>A Sketch-Book</span></a>
+<div class='author'>Richards, Fred, 1878-1932</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55438, {&quot;Title&quot;:&quot;Olavi Maununpoika Pariisissa ja Suomalaisten opinkäynti ulkomailla keski-aialla&quot;,&quot;Topics&quot;:[&quot;Olaus, Magnus, Archbishop of Uppsala, 1490-1557&quot;,&quot;Finnish students -- France -- Paris -- History&quot;],&quot;Primary&quot;:&quot;55438.txt&quot;,&quot;CreatorNames&quot;:[&quot;Yrjö-Koskinen, Yrjö Sakari, 1830-1903&quot;],&quot;LoCC&quot;:[&quot;BX&quot;,&quot;LF&quot;],&quot;PG_ID&quot;:&quot;55438&quot;});" class='title'>Olavi Maununpoika Pariisissa ja Suomalaisten opinkäynti ulkomailla keski-aialla</a>
+<div class='author'>Yrjö-Koskinen, Yrjö Sakari, 1830-1903</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55918, {&quot;Title&quot;:&quot;Oxford&quot;,&quot;Topics&quot;:[&quot;Oxford (England) -- Description and travel&quot;,&quot;University of Oxford&quot;],&quot;Primary&quot;:&quot;55918.htm&quot;,&quot;CreatorNames&quot;:[&quot;Thomas, Edward, 1878-1917&quot;,&quot;Fulleylove, John, 1847-1908 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DA&quot;,&quot;LF&quot;],&quot;PG_ID&quot;:&quot;55918&quot;});" class='title'>Oxford</a>
+<div class='author'>Thomas, Edward, 1878-1917, Fulleylove, John, 1847-1908 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57028, {&quot;Title&quot;:&quot;A Dominie&#39;s Log&quot;,&quot;Topics&quot;:[&quot;Education -- Philosophy&quot;,&quot;Neill, Alexander Sutherland, 1883-1973&quot;,&quot;Education -- Scotland&quot;,&quot;Teachers -- Scotland -- Biography&quot;],&quot;Primary&quot;:&quot;57028.htm&quot;,&quot;CreatorNames&quot;:[&quot;Neill, Alexander Sutherland, 1883-1973&quot;],&quot;LoCC&quot;:[&quot;LF&quot;],&quot;PG_ID&quot;:&quot;57028&quot;});" class='title'>A Dominie's Log</a>
+<div class='author'>Neill, Alexander Sutherland, 1883-1973</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57059, {&quot;Title&quot;:&quot;A Dominie Dismissed&quot;,&quot;Topics&quot;:[&quot;Education -- Philosophy&quot;,&quot;Neill, Alexander Sutherland, 1883-1973&quot;,&quot;Education -- Scotland&quot;,&quot;Teachers -- Scotland -- Biography&quot;],&quot;Primary&quot;:&quot;57059.htm&quot;,&quot;CreatorNames&quot;:[&quot;Neill, Alexander Sutherland, 1883-1973&quot;],&quot;LoCC&quot;:[&quot;LF&quot;],&quot;PG_ID&quot;:&quot;57059&quot;});" class='title'>A Dominie Dismissed</a>
+<div class='author'>Neill, Alexander Sutherland, 1883-1973</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57266, {&quot;Title&quot;:&quot;Cambridge and Its Colleges&quot;,&quot;Topics&quot;:[&quot;University of Cambridge&quot;],&quot;Primary&quot;:&quot;57266.htm&quot;,&quot;CreatorNames&quot;:[&quot;Thompson, A. Hamilton (Alexander Hamilton), 1873-1952&quot;,&quot;New, E. H. (Edmund Hort), 1871-1931 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;LF&quot;],&quot;PG_ID&quot;:&quot;57266&quot;});" class='title'>Cambridge and Its Colleges</a>
+<div class='author'>Thompson, A. Hamilton (Alexander Hamilton), 1873-1952, New, E. H. (Edmund Hort), 1871-1931 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60064, {&quot;Title&quot;:&quot;Dorothea Beale of Cheltenham&quot;,&quot;Topics&quot;:[&quot;Beale, Dorothea, 1831-1906&quot;,&quot;Cheltenham Ladies&#39; College -- History&quot;,&quot;Teachers -- England -- Biography&quot;],&quot;Primary&quot;:&quot;60064.htm&quot;,&quot;CreatorNames&quot;:[&quot;Raikes, Elizabeth&quot;],&quot;LoCC&quot;:[&quot;LF&quot;],&quot;PG_ID&quot;:&quot;60064&quot;});" class='title'>Dorothea Beale of Cheltenham</a>
+<div class='author'>Raikes, Elizabeth</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61000, {&quot;Title&quot;:&quot;The Book of Trinity College Dublin 1591-1891&quot;,&quot;Topics&quot;:[&quot;Trinity College (Dublin, Ireland)&quot;],&quot;Primary&quot;:&quot;61000.htm&quot;,&quot;CreatorNames&quot;:[&quot;Trinity College (Dublin, Ireland)&quot;],&quot;LoCC&quot;:[&quot;LF&quot;],&quot;PG_ID&quot;:&quot;61000&quot;});" class='title'>The Book of Trinity College Dublin 1591-1891</a>
+<div class='author'>Trinity College (Dublin, Ireland)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61938, {&quot;Title&quot;:&quot;The Burston School Strike&quot;,&quot;Topics&quot;:[&quot;Higdon, Thomas George&quot;,&quot;Higdon, Annie K.&quot;,&quot;Burston Strike School -- History&quot;],&quot;Primary&quot;:&quot;61938.htm&quot;,&quot;CreatorNames&quot;:[&quot;Casey, 1864-1932&quot;],&quot;LoCC&quot;:[&quot;LF&quot;],&quot;PG_ID&quot;:&quot;61938&quot;});" class='title'>The Burston School Strike</a>
+<div class='author'>Casey, 1864-1932</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(62064, {&quot;Title&quot;:&quot;Rules of the Western Grammar School, Brompton&quot;,&quot;Topics&quot;:[&quot;Western Grammar School (Brompton, England)&quot;,&quot;Schools -- England -- Brompton -- History&quot;],&quot;Primary&quot;:&quot;62064.htm&quot;,&quot;CreatorNames&quot;:[&quot;Western Grammar School (Brompton, England)&quot;],&quot;LoCC&quot;:[&quot;LF&quot;],&quot;PG_ID&quot;:&quot;62064&quot;});" class='title'>Rules of the Western Grammar School, Brompton</a>
+<div class='author'>Western Grammar School (Brompton, England)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63761, {&quot;Title&quot;:&quot;A Letter to the Viscount Palmerston, M.P. &amp;c. &amp;c. &amp;c. on the Monitorial System of Harrow School&quot;,&quot;Topics&quot;:[&quot;Harrow School&quot;,&quot;Monitorial system of education&quot;],&quot;Primary&quot;:&quot;63761.htm&quot;,&quot;CreatorNames&quot;:[&quot;Vaughan, C. J. (Charles John), 1816-1897&quot;],&quot;LoCC&quot;:[&quot;LF&quot;],&quot;PG_ID&quot;:&quot;63761&quot;});" class='title'>A Letter to the Viscount Palmerston, M.P. &c. &c. &c. on the Monitorial System of Harrow School</a>
+<div class='author'>Vaughan, C. J. (Charles John), 1816-1897</div>
+</div>
+</ul></div>
+</body></html>

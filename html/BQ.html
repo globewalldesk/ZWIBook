@@ -1,0 +1,158 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Buddhism (BQ)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18194, {&quot;Title&quot;:&quot;The Life of Buddha and Its Lessons&quot;,&quot;Topics&quot;:[&quot;Gautama Buddha&quot;],&quot;Primary&quot;:&quot;18194.htm&quot;,&quot;CreatorNames&quot;:[&quot;Olcott, Henry Steel, 1832-1907&quot;],&quot;LoCC&quot;:[&quot;BQ&quot;],&quot;PG_ID&quot;:&quot;18194&quot;});" class='title'>The Life of Buddha and Its Lessons</a>
+<div class='author'>Olcott, Henry Steel, 1832-1907</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18223, {&quot;Title&quot;:&quot;The Essence of Buddhism&quot;,&quot;Topics&quot;:[&quot;Buddhism&quot;],&quot;Primary&quot;:&quot;18223.htm&quot;,&quot;CreatorNames&quot;:[&quot;Arnold, Edwin, Sir, 1832-1904 [Author of introduction, etc.]&quot;,&quot;Bowden, Ernest M. [Compiler]&quot;],&quot;LoCC&quot;:[&quot;BQ&quot;],&quot;PG_ID&quot;:&quot;18223&quot;});" class='title'>The Essence of Buddhism</a>
+<div class='author'>Arnold, Edwin, Sir, 1832-1904 [Author of introduction, etc.], Bowden, Ernest M. [Compiler]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2017, {&quot;Title&quot;:&quot;Dhammapada, a Collection of Verses; Being One of the Canonical Books of the Buddhists&quot;,&quot;Topics&quot;:[&quot;Buddhism&quot;,&quot;Theravada Buddhism -- Sacred texts&quot;],&quot;Primary&quot;:&quot;2017.htm&quot;,&quot;CreatorNames&quot;:[&quot;Müller, F. Max (Friedrich Max), 1823-1900 [Translator]&quot;],&quot;LoCC&quot;:[&quot;BQ&quot;],&quot;PG_ID&quot;:&quot;2017&quot;});" class='title'>Dhammapada, a Collection of Verses;<br><span class='subtitle'>Being One of the Canonical Books of the Buddhists</span></a>
+<div class='author'>Müller, F. Max (Friedrich Max), 1823-1900 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23585, {&quot;Title&quot;:&quot;佛說四十二章經&quot;,&quot;Topics&quot;:[&quot;Buddhism -- Sacred books&quot;],&quot;Primary&quot;:&quot;23585.txt&quot;,&quot;CreatorNames&quot;:[&quot;Buddha&quot;],&quot;LoCC&quot;:[&quot;BQ&quot;],&quot;PG_ID&quot;:&quot;23585&quot;});" class='title'>佛說四十二章經</a>
+<div class='author'>Buddha</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23844, {&quot;Title&quot;:&quot;六祖壇經&quot;,&quot;Topics&quot;:[&quot;Zen Buddhism -- Doctrines -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;23844.txt&quot;,&quot;CreatorNames&quot;:[&quot;Huineng, 638-713&quot;,&quot;Shi, Fa-Hai [Editor]&quot;],&quot;LoCC&quot;:[&quot;BQ&quot;],&quot;PG_ID&quot;:&quot;23844&quot;});" class='title'>六祖壇經</a>
+<div class='author'>Huineng, 638-713, Shi, Fa-Hai [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24098, {&quot;Title&quot;:&quot;金剛般若波羅蜜經&quot;,&quot;Topics&quot;:[&quot;Buddhism -- Sacred books&quot;],&quot;Primary&quot;:&quot;24098.txt&quot;,&quot;CreatorNames&quot;:[&quot;Huang, Kunshan [Annotator]&quot;,&quot;Kumarajiva, -412? [Translator]&quot;],&quot;LoCC&quot;:[&quot;BQ&quot;],&quot;PG_ID&quot;:&quot;24098&quot;});" class='title'>金剛般若波羅蜜經</a>
+<div class='author'>Huang, Kunshan [Annotator], Kumarajiva, -412? [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24106, {&quot;Title&quot;:&quot;安樂集&quot;,&quot;Topics&quot;:[&quot;Pure Land Buddhism -- Doctrines -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;24106.txt&quot;,&quot;CreatorNames&quot;:[&quot;Daochuo, 562-645&quot;],&quot;LoCC&quot;:[&quot;BQ&quot;],&quot;PG_ID&quot;:&quot;24106&quot;});" class='title'>安樂集</a>
+<div class='author'>Daochuo, 562-645</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25498, {&quot;Title&quot;:&quot;佛說無量壽經&quot;,&quot;Topics&quot;:[&quot;Pure Land Buddhism -- Sacred books&quot;],&quot;Primary&quot;:&quot;25498.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sanghavarman, -520 [Translator]&quot;],&quot;LoCC&quot;:[&quot;BQ&quot;],&quot;PG_ID&quot;:&quot;25498&quot;});" class='title'>佛說無量壽經</a>
+<div class='author'>Sanghavarman, -520 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30216, {&quot;Title&quot;:&quot;The Buddhist Catechism&quot;,&quot;Topics&quot;:[&quot;Buddhism -- Catechisms&quot;],&quot;Primary&quot;:&quot;30216.htm&quot;,&quot;CreatorNames&quot;:[&quot;Olcott, Henry Steel, 1832-1907&quot;],&quot;LoCC&quot;:[&quot;BQ&quot;],&quot;PG_ID&quot;:&quot;30216&quot;});" class='title'>The Buddhist Catechism</a>
+<div class='author'>Olcott, Henry Steel, 1832-1907</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34325, {&quot;Title&quot;:&quot;The Zen Experience&quot;,&quot;Topics&quot;:[&quot;Zen Buddhism -- History&quot;,&quot;Zen priests -- Biography&quot;],&quot;Primary&quot;:&quot;34325.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hoover, Thomas, 1941-&quot;],&quot;LoCC&quot;:[&quot;BQ&quot;],&quot;PG_ID&quot;:&quot;34325&quot;});" class='title'>The Zen Experience</a>
+<div class='author'>Hoover, Thomas, 1941-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35895, {&quot;Title&quot;:&quot;The Gospel of Buddha, Compiled from Ancient Records&quot;,&quot;Topics&quot;:[&quot;Buddhism&quot;,&quot;Christianity and other religions -- Buddhism&quot;,&quot;Gautama Buddha&quot;,&quot;Gautama Buddha -- Teachings&quot;],&quot;Primary&quot;:&quot;35895.htm&quot;,&quot;CreatorNames&quot;:[&quot;Carus, Paul, 1852-1919&quot;,&quot;Kopetzky, O. (Olga) [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;BQ&quot;],&quot;PG_ID&quot;:&quot;35895&quot;});" class='title'>The Gospel of Buddha, Compiled from Ancient Records</a>
+<div class='author'>Carus, Paul, 1852-1919, Kopetzky, O. (Olga) [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36039, {&quot;Title&quot;:&quot;The Giant Crab, and Other Tales from Old India&quot;,&quot;Topics&quot;:[&quot;Folklore -- India&quot;,&quot;Tipitaka. Suttapitaka. Khuddakanikaya. Jataka -- Paraphrases, English&quot;],&quot;Primary&quot;:&quot;36039.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rouse, W. H. D. (William Henry Denham), 1863-1950&quot;,&quot;Robinson, W. Heath (William Heath), 1872-1944 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;BQ&quot;,&quot;GR&quot;],&quot;PG_ID&quot;:&quot;36039&quot;});" class='title'>The Giant Crab, and Other Tales from Old India</a>
+<div class='author'>Rouse, W. H. D. (William Henry Denham), 1863-1950, Robinson, W. Heath (William Heath), 1872-1944 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38580, {&quot;Title&quot;:&quot;True Heart/Mind&quot;,&quot;Topics&quot;:[&quot;Zen Buddhism&quot;],&quot;Primary&quot;:&quot;38580.txt&quot;,&quot;CreatorNames&quot;:[&quot;Sengcan, -606&quot;,&quot;Linnell, Bruce R. [Translator]&quot;],&quot;LoCC&quot;:[&quot;BQ&quot;],&quot;PG_ID&quot;:&quot;38580&quot;});" class='title'>True Heart/Mind</a>
+<div class='author'>Sengcan, -606, Linnell, Bruce R. [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4100, {&quot;Title&quot;:&quot;Όραμα και Μεταμόρφωση : Μια εισαγωγή στο Ευγενές Οκταπλό Μονοπάτι του Βούδδα&quot;,&quot;Topics&quot;:[&quot;Sangharakshita, Bhikshu, 1925-&quot;,&quot;Religious life -- Buddhism&quot;],&quot;Primary&quot;:&quot;4100.txt&quot;,&quot;CreatorNames&quot;:[&quot;Sangharakshita, Bhikshu, 1925-&quot;,&quot;Doikas, Spiros [Translator]&quot;],&quot;LoCC&quot;:[&quot;BQ&quot;],&quot;PG_ID&quot;:&quot;4100&quot;});" class='title'>Όραμα και Μεταμόρφωση :<br><span class='subtitle'>Μια εισαγωγή στο Ευγενές Οκταπλό Μονοπάτι του Βούδδα</span></a>
+<div class='author'>Sangharakshita, Bhikshu, 1925-, Doikas, Spiros [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46984, {&quot;Title&quot;:&quot;The Gâtakamâlâ; Or, Garland of Birth-Stories&quot;,&quot;Topics&quot;:[&quot;Gautama Buddha -- Pre-existence&quot;],&quot;Primary&quot;:&quot;46984.htm&quot;,&quot;CreatorNames&quot;:[&quot;Aryasura&quot;,&quot;Müller, F. Max (Friedrich Max), 1823-1900 [Editor]&quot;,&quot;Speyer, J. S. (Jacob Samuel), 1849-1913 [Translator]&quot;],&quot;LoCC&quot;:[&quot;BQ&quot;],&quot;PG_ID&quot;:&quot;46984&quot;});" class='title'>The Gâtakamâlâ;<br><span class='subtitle'>Or, Garland of Birth-Stories</span></a>
+<div class='author'>Aryasura, Müller, F. Max (Friedrich Max), 1823-1900 [Editor], Speyer, J. S. (Jacob Samuel), 1849-1913 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47214, {&quot;Title&quot;:&quot;Buddhism, in Its Connexion with Brahmanism and Hinduism, and in Its Contrast with Christianity&quot;,&quot;Topics&quot;:[&quot;India -- Religion&quot;,&quot;Buddhism&quot;,&quot;Christianity and other religions -- Buddhism&quot;,&quot;Buddhism -- Relations -- Christianity&quot;],&quot;Primary&quot;:&quot;47214.htm&quot;,&quot;CreatorNames&quot;:[&quot;Monier-Williams, Monier, Sir, 1819-1899&quot;],&quot;LoCC&quot;:[&quot;BL&quot;,&quot;BQ&quot;],&quot;PG_ID&quot;:&quot;47214&quot;});" class='title'>Buddhism, in Its Connexion with Brahmanism and Hinduism, and in Its Contrast with Christianity</a>
+<div class='author'>Monier-Williams, Monier, Sir, 1819-1899</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47957, {&quot;Title&quot;:&quot;Korean Buddhism: History—Condition—Art&quot;,&quot;Topics&quot;:[&quot;Buddhist art&quot;,&quot;Buddhism -- Korea&quot;,&quot;Art -- Korea&quot;],&quot;Primary&quot;:&quot;47957.htm&quot;,&quot;CreatorNames&quot;:[&quot;Starr, Frederick, 1858-1933&quot;],&quot;LoCC&quot;:[&quot;BQ&quot;],&quot;PG_ID&quot;:&quot;47957&quot;});" class='title'>Korean Buddhism:<br><span class='subtitle'>History—Condition—Art</span></a>
+<div class='author'>Starr, Frederick, 1858-1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48345, {&quot;Title&quot;:&quot;Die Reden Gotamo Buddhos. Mittlere Sammlung, erster Band&quot;,&quot;Topics&quot;:[&quot;Buddhism&quot;],&quot;Primary&quot;:&quot;48345.htm&quot;,&quot;CreatorNames&quot;:[&quot;Neumann, Karl Eugen, 1865-1915 [Translator]&quot;],&quot;LoCC&quot;:[&quot;BQ&quot;],&quot;PG_ID&quot;:&quot;48345&quot;});" class='title'>Die Reden Gotamo Buddhos. Mittlere Sammlung, erster Band</a>
+<div class='author'>Neumann, Karl Eugen, 1865-1915 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48901, {&quot;Title&quot;:&quot;Die Reden Gotamo Buddhos. Mittlere Sammlung, zweiter Band&quot;,&quot;Topics&quot;:[&quot;Buddhism&quot;],&quot;Primary&quot;:&quot;48901.htm&quot;,&quot;CreatorNames&quot;:[&quot;Neumann, Karl Eugen, 1865-1915 [Translator]&quot;],&quot;LoCC&quot;:[&quot;BQ&quot;],&quot;PG_ID&quot;:&quot;48901&quot;});" class='title'>Die Reden Gotamo Buddhos. Mittlere Sammlung, zweiter Band</a>
+<div class='author'>Neumann, Karl Eugen, 1865-1915 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49044, {&quot;Title&quot;:&quot;Die Reden Gotamo Buddhos. Mittlere Sammlung, dritter Band&quot;,&quot;Topics&quot;:[&quot;Buddhism&quot;],&quot;Primary&quot;:&quot;49044.htm&quot;,&quot;CreatorNames&quot;:[&quot;Neumann, Karl Eugen, 1865-1915 [Translator]&quot;],&quot;LoCC&quot;:[&quot;BQ&quot;],&quot;PG_ID&quot;:&quot;49044&quot;});" class='title'>Die Reden Gotamo Buddhos. Mittlere Sammlung, dritter Band</a>
+<div class='author'>Neumann, Karl Eugen, 1865-1915 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5173, {&quot;Title&quot;:&quot;The Religion of the Samurai - A Study of Zen Philosophy and Discipline in China and Japan&quot;,&quot;Topics&quot;:[&quot;Human beings -- Origin&quot;,&quot;Buddhism -- China&quot;,&quot;Buddhism -- Japan&quot;,&quot;China -- Religion&quot;,&quot;Japan -- Religion&quot;,&quot;Zen Buddhism&quot;],&quot;Primary&quot;:&quot;5173.txt&quot;,&quot;CreatorNames&quot;:[&quot;Nukariya, Kaiten&quot;],&quot;LoCC&quot;:[&quot;BQ&quot;],&quot;PG_ID&quot;:&quot;5173&quot;});" class='title'>The Religion of the Samurai -<br><span class='subtitle'>A Study of Zen Philosophy and Discipline in China and Japan</span></a>
+<div class='author'>Nukariya, Kaiten</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57380, {&quot;Title&quot;:&quot;Eastern Stories and Legends&quot;,&quot;Topics&quot;:[&quot;Buddha (The concept) -- Juvenile literature&quot;,&quot;Buddhism -- Juvenile literature&quot;,&quot;Buddhist legends&quot;],&quot;Primary&quot;:&quot;57380.htm&quot;,&quot;CreatorNames&quot;:[&quot;Davids, T. W. Rhys (Thomas William Rhys), 1843-1922 [Author of introduction, etc.]&quot;,&quot;Moore, Anne Carroll, 1871-1961 [Author of introduction, etc.]&quot;,&quot;Shedlock, Marie L., 1854-1935 [Editor]&quot;],&quot;LoCC&quot;:[&quot;BQ&quot;,&quot;PZ&quot;],&quot;PG_ID&quot;:&quot;57380&quot;});" class='title'>Eastern Stories and Legends</a>
+<div class='author'>Davids, T. W. Rhys (Thomas William Rhys), 1843-1922 [Author of introduction, etc.], Moore, Anne Carroll, 1871-1961 [Author of introduction, etc.], Shedlock, Marie L., 1854-1935 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63057, {&quot;Title&quot;:&quot;Ruins of Buddhistic Temples in Prågå Valley—Tyandis Båråbudur, Mendut and Pawon&quot;,&quot;Topics&quot;:[&quot;Buddhist temples&quot;,&quot;Temples -- Indonesia -- Java&quot;],&quot;Primary&quot;:&quot;63057.htm&quot;,&quot;CreatorNames&quot;:[&quot;Groneman, I. (Isaac), 1832-1912&quot;,&quot;J. H. [Translator]&quot;],&quot;LoCC&quot;:[&quot;BQ&quot;,&quot;NA&quot;],&quot;PG_ID&quot;:&quot;63057&quot;});" class='title'>Ruins of Buddhistic Temples in Prågå Valley—Tyandis Båråbudur, Mendut and Pawon</a>
+<div class='author'>Groneman, I. (Isaac), 1832-1912, J. H. [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64623, {&quot;Title&quot;:&quot;The Diamond Sutra (Chin-Kang-Ching) or Prajna-Paramita&quot;,&quot;Topics&quot;:[&quot;Buddhism&quot;,&quot;Buddhism -- Sacred books&quot;],&quot;Primary&quot;:&quot;64623.htm&quot;,&quot;CreatorNames&quot;:[&quot;Unknown&quot;,&quot;Gemmell, William [Translator]&quot;,&quot;Kumarajiva, -412? [Translator]&quot;],&quot;LoCC&quot;:[&quot;BQ&quot;,&quot;PK&quot;],&quot;PG_ID&quot;:&quot;64623&quot;});" class='title'>The Diamond Sutra (Chin-Kang-Ching) or Prajna-Paramita</a>
+<div class='author'>Unknown, Gemmell, William [Translator], Kumarajiva, -412? [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67451, {&quot;Title&quot;:&quot;Minor Tibetan Texts: 1. The song of the Eastern Snow-mountain&quot;,&quot;Topics&quot;:[&quot;Prayer -- China -- Tibet Autonomous Region -- Buddhism&quot;,&quot;Buddhist literature, Tibetan&quot;,&quot;Tibetan language -- Texts&quot;],&quot;Primary&quot;:&quot;67451.htm&quot;,&quot;CreatorNames&quot;:[&quot;Manen, Johan van, 1877-1943 [Editor]&quot;],&quot;LoCC&quot;:[&quot;BQ&quot;,&quot;PL&quot;],&quot;PG_ID&quot;:&quot;67451&quot;});" class='title'>Minor Tibetan Texts:<br><span class='subtitle'>1. The song of the Eastern Snow-mountain</span></a>
+<div class='author'>Manen, Johan van, 1877-1943 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7015, {&quot;Title&quot;:&quot;Buddhist Psalms translated from the Japanese of Shinran Shonin&quot;,&quot;Topics&quot;:[&quot;Buddhism&quot;],&quot;Primary&quot;:&quot;7015.txt&quot;,&quot;CreatorNames&quot;:[&quot;Shinran, 1173-1263&quot;,&quot;Beck, L. Adams (Lily Adams), 1862-1931 [Translator]&quot;,&quot;Yamabe, S. [Translator]&quot;],&quot;LoCC&quot;:[&quot;BQ&quot;],&quot;PG_ID&quot;:&quot;7015&quot;});" class='title'>Buddhist Psalms translated from the Japanese of Shinran Shonin</a>
+<div class='author'>Shinran, 1173-1263, Beck, L. Adams (Lily Adams), 1862-1931 [Translator], Yamabe, S. [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(8390, {&quot;Title&quot;:&quot;Buddhism and Buddhists in China&quot;,&quot;Topics&quot;:[&quot;Buddhism&quot;],&quot;Primary&quot;:&quot;8390.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hodous, Lewis, 1872-1949&quot;],&quot;LoCC&quot;:[&quot;BQ&quot;],&quot;PG_ID&quot;:&quot;8390&quot;});" class='title'>Buddhism and Buddhists in China</a>
+<div class='author'>Hodous, Lewis, 1872-1949</div>
+</div>
+</ul></div>
+</body></html>

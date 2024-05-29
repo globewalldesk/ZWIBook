@@ -1,0 +1,346 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Musical instruction and study (MT)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12856, {&quot;Title&quot;:&quot;The Renaissance of the Vocal Art - A Practical Study of Vitality, Vitalized Energy, of the Physical, Mental and Emotional Powers of the Singer, through Flexible, Elastic Bodily Movements&quot;,&quot;Topics&quot;:[&quot;Singing -- Instruction and study&quot;],&quot;Primary&quot;:&quot;12856.htm&quot;,&quot;CreatorNames&quot;:[&quot;Myer, Edmund J. (Edmund John), 1846-1934&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;12856&quot;});" class='title'>The Renaissance of the Vocal Art -<br><span class='subtitle'>A Practical Study of Vitality, Vitalized Energy, of the Physical, Mental and Emotional Powers of the Singer, through Flexible, Elastic Bodily Movements</span></a>
+<div class='author'>Myer, Edmund J. (Edmund John), 1846-1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12903, {&quot;Title&quot;:&quot;Symphonies and Their Meaning; Third Series, Modern Symphonies&quot;,&quot;Topics&quot;:[&quot;Symphonies -- Analysis, appreciation&quot;],&quot;Primary&quot;:&quot;12903.htm&quot;,&quot;CreatorNames&quot;:[&quot;Goepp, Philip H. (Philip Henry), 1864-1936&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;12903&quot;});" class='title'>Symphonies and Their Meaning;<br><span class='subtitle'>Third Series, Modern Symphonies</span></a>
+<div class='author'>Goepp, Philip H. (Philip Henry), 1864-1936</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14185, {&quot;Title&quot;:&quot;Edward MacDowell: A Great American Tone Poet, His Life and Music&quot;,&quot;Topics&quot;:[&quot;Composers -- United States -- Biography&quot;,&quot;MacDowell, Edward, 1860-1908&quot;],&quot;Primary&quot;:&quot;14185.txt&quot;,&quot;CreatorNames&quot;:[&quot;Porte, John Fielder&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;14185&quot;});" class='title'>Edward MacDowell:<br><span class='subtitle'>A Great American Tone Poet, His Life and Music</span></a>
+<div class='author'>Porte, John Fielder</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(1487, {&quot;Title&quot;:&quot;The Perfect Wagnerite: A Commentary on the Niblung&#39;s Ring&quot;,&quot;Topics&quot;:[&quot;Wagner, Richard, 1813-1883. Ring des Nibelungen&quot;,&quot;Opera&quot;],&quot;Primary&quot;:&quot;1487.htm&quot;,&quot;CreatorNames&quot;:[&quot;Shaw, Bernard, 1856-1950&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;1487&quot;});" class='title'>The Perfect Wagnerite:<br><span class='subtitle'>A Commentary on the Niblung's Ring</span></a>
+<div class='author'>Shaw, Bernard, 1856-1950</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14968, {&quot;Title&quot;:&quot;The Standard Operas: Their Plots, Their Music, and Their Composers - (12th edition)&quot;,&quot;Topics&quot;:[&quot;Operas -- Stories, plots, etc.&quot;],&quot;Primary&quot;:&quot;14968.txt&quot;,&quot;CreatorNames&quot;:[&quot;Upton, George P. (George Putnam), 1834-1919&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;14968&quot;});" class='title'>The Standard Operas:<br><span class='subtitle'>Their Plots, Their Music, and Their Composers - (12th edition)</span></a>
+<div class='author'>Upton, George P. (George Putnam), 1834-1919</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15446, {&quot;Title&quot;:&quot;Vocal Mastery - Talks with Master Singers and Teachers, Comprising Interviews with Caruso, Farrar, Maurel, Lehmann, and Others&quot;,&quot;Topics&quot;:[&quot;Singers&quot;,&quot;Singing -- Instruction and study&quot;],&quot;Primary&quot;:&quot;15446.htm&quot;,&quot;CreatorNames&quot;:[&quot;Brower, Harriette, 1869-1928&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;15446&quot;});" class='title'>Vocal Mastery -<br><span class='subtitle'>Talks with Master Singers and Teachers, Comprising Interviews with Caruso, Farrar, Maurel, Lehmann, and Others</span></a>
+<div class='author'>Brower, Harriette, 1869-1928</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15535, {&quot;Title&quot;:&quot;Violin Mastery: Talks with Master Violinists and Teachers&quot;,&quot;Topics&quot;:[&quot;Violin -- Instruction and study&quot;,&quot;Violinists&quot;],&quot;Primary&quot;:&quot;15535.htm&quot;,&quot;CreatorNames&quot;:[&quot;Martens, Frederick Herman, 1874-1932&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;15535&quot;});" class='title'>Violin Mastery:<br><span class='subtitle'>Talks with Master Violinists and Teachers</span></a>
+<div class='author'>Martens, Frederick Herman, 1874-1932</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15604, {&quot;Title&quot;:&quot;Piano Mastery: Talks with Master Pianists and Teachers&quot;,&quot;Topics&quot;:[&quot;Piano -- Instruction and study&quot;,&quot;Pianists&quot;],&quot;Primary&quot;:&quot;15604.htm&quot;,&quot;CreatorNames&quot;:[&quot;Brower, Harriette, 1869-1928&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;15604&quot;});" class='title'>Piano Mastery:<br><span class='subtitle'>Talks with Master Pianists and Teachers</span></a>
+<div class='author'>Brower, Harriette, 1869-1928</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16225, {&quot;Title&quot;:&quot;Music as a Language: Lectures to Music Students&quot;,&quot;Topics&quot;:[&quot;Music -- Instruction and study&quot;],&quot;Primary&quot;:&quot;16225.htm&quot;,&quot;CreatorNames&quot;:[&quot;Home, Ethel&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;16225&quot;});" class='title'>Music as a Language:<br><span class='subtitle'>Lectures to Music Students</span></a>
+<div class='author'>Home, Ethel</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16342, {&quot;Title&quot;:&quot;A Treatise on Simple Counterpoint in Forty Lessons&quot;,&quot;Topics&quot;:[&quot;Counterpoint&quot;],&quot;Primary&quot;:&quot;16342.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lehmann, Friedrich J. (Friedrich Johann), 1866-1950&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;16342&quot;});" class='title'>A Treatise on Simple Counterpoint in Forty Lessons</a>
+<div class='author'>Lehmann, Friedrich J. (Friedrich Johann), 1866-1950</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16488, {&quot;Title&quot;:&quot;Debussy&#39;s Pelléas et Mélisande - A Guide to the Opera with Musical Examples from the Score&quot;,&quot;Topics&quot;:[&quot;Debussy, Claude, 1862-1918. Pelléas et Mélisande&quot;,&quot;Opera&quot;],&quot;Primary&quot;:&quot;16488.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gilman, Lawrence, 1878-1939&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;16488&quot;});" class='title'>Debussy's Pelléas et Mélisande -<br><span class='subtitle'>A Guide to the Opera with Musical Examples from the Score</span></a>
+<div class='author'>Gilman, Lawrence, 1878-1939</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16658, {&quot;Title&quot;:&quot;Piano and Song - How to Teach, How to Learn, and How to Form a Judgment of Musical Performances&quot;,&quot;Topics&quot;:[&quot;Singing&quot;,&quot;Piano -- Instruction and study&quot;],&quot;Primary&quot;:&quot;16658.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wieck, Friedrich, 1785-1873&quot;,&quot;Nichols, Mary Pickering [Translator]&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;16658&quot;});" class='title'>Piano and Song -<br><span class='subtitle'>How to Teach, How to Learn, and How to Form a Judgment of Musical Performances</span></a>
+<div class='author'>Wieck, Friedrich, 1785-1873, Nichols, Mary Pickering [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17474, {&quot;Title&quot;:&quot;How to Listen to Music, 7th ed. - Hints and Suggestions to Untaught Lovers of the Art&quot;,&quot;Topics&quot;:[&quot;Music appreciation&quot;],&quot;Primary&quot;:&quot;17474.htm&quot;,&quot;CreatorNames&quot;:[&quot;Krehbiel, Henry Edward, 1854-1923&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;17474&quot;});" class='title'>How to Listen to Music, 7th ed. -<br><span class='subtitle'>Hints and Suggestions to Untaught Lovers of the Art</span></a>
+<div class='author'>Krehbiel, Henry Edward, 1854-1923</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17571, {&quot;Title&quot;:&quot;Piano Tuning: A Simple and Accurate Method for Amateurs&quot;,&quot;Topics&quot;:[&quot;Piano -- Tuning&quot;],&quot;Primary&quot;:&quot;17571.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fischer, J. Cree (Jerry Cree), 1871-&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;17571&quot;});" class='title'>Piano Tuning:<br><span class='subtitle'>A Simple and Accurate Method for Amateurs</span></a>
+<div class='author'>Fischer, J. Cree (Jerry Cree), 1871-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18567, {&quot;Title&quot;:&quot;Tintinnalogia, or, the Art of Ringing - Wherein is laid down plain and easie Rules for Ringing all sorts of Plain Changes&quot;,&quot;Topics&quot;:[&quot;Change ringing&quot;,&quot;Bells&quot;],&quot;Primary&quot;:&quot;18567.htm&quot;,&quot;CreatorNames&quot;:[&quot;Duckworth, Richard&quot;,&quot;Stedman, Fabian, 1631?-1713&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;18567&quot;});" class='title'>Tintinnalogia, or, the Art of Ringing -<br><span class='subtitle'>Wherein is laid down plain and easie Rules for Ringing all sorts of Plain Changes</span></a>
+<div class='author'>Duckworth, Richard, Stedman, Fabian, 1631?-1713</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19116, {&quot;Title&quot;:&quot;How to Sing - [Meine Gesangskunst]&quot;,&quot;Topics&quot;:[&quot;Singing -- Methods&quot;],&quot;Primary&quot;:&quot;19116.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lehmann, Lilli, 1848-1929&quot;,&quot;Aldrich, Richard, 1863-1937 [Translator]&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;19116&quot;});" class='title'>How to Sing -<br><span class='subtitle'>[Meine Gesangskunst]</span></a>
+<div class='author'>Lehmann, Lilli, 1848-1929, Aldrich, Richard, 1863-1937 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19138, {&quot;Title&quot;:&quot;Resonance in Singing and Speaking&quot;,&quot;Topics&quot;:[&quot;Voice culture&quot;],&quot;Primary&quot;:&quot;19138.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fillebrown, Thomas, 1836-1908&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;19138&quot;});" class='title'>Resonance in Singing and Speaking</a>
+<div class='author'>Fillebrown, Thomas, 1836-1908</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19354, {&quot;Title&quot;:&quot;Lessons in Music Form - A Manual of Analysis of All the Structural Factors and Designs Employed in Musical Composition&quot;,&quot;Topics&quot;:[&quot;Musical form&quot;],&quot;Primary&quot;:&quot;19354.htm&quot;,&quot;CreatorNames&quot;:[&quot;Goetschius, Percy, 1853-1943&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;19354&quot;});" class='title'>Lessons in Music Form -<br><span class='subtitle'>A Manual of Analysis of All the Structural Factors and Designs Employed in Musical Composition</span></a>
+<div class='author'>Goetschius, Percy, 1853-1943</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19493, {&quot;Title&quot;:&quot;The Head Voice and Other Problems: Practical Talks on Singing&quot;,&quot;Topics&quot;:[&quot;Singing&quot;],&quot;Primary&quot;:&quot;19493.htm&quot;,&quot;CreatorNames&quot;:[&quot;Clippinger, D. A. (David Alva), 1860-1938&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;19493&quot;});" class='title'>The Head Voice and Other Problems:<br><span class='subtitle'>Practical Talks on Singing</span></a>
+<div class='author'>Clippinger, D. A. (David Alva), 1860-1938</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19499, {&quot;Title&quot;:&quot;Music Notation and Terminology&quot;,&quot;Topics&quot;:[&quot;Musical notation&quot;,&quot;Music -- Terminology&quot;],&quot;Primary&quot;:&quot;19499.txt&quot;,&quot;CreatorNames&quot;:[&quot;Gehrkens, Karl Wilson, 1882-1975&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;19499&quot;});" class='title'>Music Notation and Terminology</a>
+<div class='author'>Gehrkens, Karl Wilson, 1882-1975</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19880, {&quot;Title&quot;:&quot;Voice Production in Singing and Speaking - Based on Scientific Principles (Fourth Edition, Revised and Enlarged)&quot;,&quot;Topics&quot;:[&quot;Singing&quot;,&quot;Voice culture&quot;],&quot;Primary&quot;:&quot;19880.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mills, Wesley, 1847-1915&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;19880&quot;});" class='title'>Voice Production in Singing and Speaking -<br><span class='subtitle'>Based on Scientific Principles (Fourth Edition, Revised and Enlarged)</span></a>
+<div class='author'>Mills, Wesley, 1847-1915</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20069, {&quot;Title&quot;:&quot;Caruso and Tetrazzini on the Art of Singing&quot;,&quot;Topics&quot;:[&quot;Singing&quot;],&quot;Primary&quot;:&quot;20069.htm&quot;,&quot;CreatorNames&quot;:[&quot;Caruso, Enrico, 1873-1921&quot;,&quot;Tetrazzini, Luisa, 1871-1940&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;20069&quot;});" class='title'>Caruso and Tetrazzini on the Art of Singing</a>
+<div class='author'>Caruso, Enrico, 1873-1921, Tetrazzini, Luisa, 1871-1940</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(21400, {&quot;Title&quot;:&quot;Style in Singing&quot;,&quot;Topics&quot;:[&quot;Singing&quot;,&quot;Voice culture&quot;],&quot;Primary&quot;:&quot;21400.htm&quot;,&quot;CreatorNames&quot;:[&quot;Haslam, W. E.&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;21400&quot;});" class='title'>Style in Singing</a>
+<div class='author'>Haslam, W. E.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(21653, {&quot;Title&quot;:&quot;The Eurhythmics of Jaques-Dalcroze&quot;,&quot;Topics&quot;:[&quot;Music -- Instruction and study&quot;,&quot;Eurythmics&quot;,&quot;Musical meter and rhythm&quot;],&quot;Primary&quot;:&quot;21653.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jaques-Dalcroze, Émile, 1865-1950&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;21653&quot;});" class='title'>The Eurhythmics of Jaques-Dalcroze</a>
+<div class='author'>Jaques-Dalcroze, Émile, 1865-1950</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(21957, {&quot;Title&quot;:&quot;The Psychology of Singing - A Rational Method of Voice Culture Based on a Scientific Analysis of All Systems, Ancient and Modern&quot;,&quot;Topics&quot;:[&quot;Singing&quot;,&quot;Voice culture&quot;],&quot;Primary&quot;:&quot;21957.htm&quot;,&quot;CreatorNames&quot;:[&quot;Taylor, David C. (David Clark), 1871-1918&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;21957&quot;});" class='title'>The Psychology of Singing -<br><span class='subtitle'>A Rational Method of Voice Culture Based on a Scientific Analysis of All Systems, Ancient and Modern</span></a>
+<div class='author'>Taylor, David C. (David Clark), 1871-1918</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22392, {&quot;Title&quot;:&quot;Essentials in Conducting&quot;,&quot;Topics&quot;:[&quot;Conducting&quot;],&quot;Primary&quot;:&quot;22392.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gehrkens, Karl Wilson, 1882-1975&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;22392&quot;});" class='title'>Essentials in Conducting</a>
+<div class='author'>Gehrkens, Karl Wilson, 1882-1975</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22581, {&quot;Title&quot;:&quot;The Child-Voice in Singing - Treated from a physiological and a practical standpoint and especially adapted to schools and boy choirs&quot;,&quot;Topics&quot;:[&quot;Singing&quot;,&quot;Choral singing -- Juvenile&quot;,&quot;Voice culture&quot;],&quot;Primary&quot;:&quot;22581.htm&quot;,&quot;CreatorNames&quot;:[&quot;Howard, Francis E. (Francis Edward), 1858-&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;22581&quot;});" class='title'>The Child-Voice in Singing -<br><span class='subtitle'>Treated from a physiological and a practical standpoint and especially adapted to schools and boy choirs</span></a>
+<div class='author'>Howard, Francis E. (Francis Edward), 1858-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22793, {&quot;Title&quot;:&quot;The Standard Oratorios: Their Stories, Their Music, And Their Composers&quot;,&quot;Topics&quot;:[&quot;Oratorio&quot;],&quot;Primary&quot;:&quot;22793.htm&quot;,&quot;CreatorNames&quot;:[&quot;Upton, George P. (George Putnam), 1834-1919&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;22793&quot;});" class='title'>The Standard Oratorios:<br><span class='subtitle'>Their Stories, Their Music, And Their Composers</span></a>
+<div class='author'>Upton, George P. (George Putnam), 1834-1919</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24622, {&quot;Title&quot;:&quot;The Pianolist: A Guide for Pianola Players&quot;,&quot;Topics&quot;:[&quot;Music -- Instruction and study&quot;,&quot;Pianola&quot;],&quot;Primary&quot;:&quot;24622.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kobbé, Gustav, 1857-1918&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;24622&quot;});" class='title'>The Pianolist:<br><span class='subtitle'>A Guide for Pianola Players</span></a>
+<div class='author'>Kobbé, Gustav, 1857-1918</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24647, {&quot;Title&quot;:&quot;The Standard Operaglass - Detailed Plots of One Hundred and Fifty-one Celebrated Operas&quot;,&quot;Topics&quot;:[&quot;Operas -- Stories, plots, etc.&quot;],&quot;Primary&quot;:&quot;24647.htm&quot;,&quot;CreatorNames&quot;:[&quot;Annesley, Charles, pseud.&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;24647&quot;});" class='title'>The Standard Operaglass -<br><span class='subtitle'>Detailed Plots of One Hundred and Fifty-one Celebrated Operas</span></a>
+<div class='author'>Annesley, Charles, pseud.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26477, {&quot;Title&quot;:&quot;Observations on the Florid Song; Or, Sentiments on the Ancient and Modern Singers&quot;,&quot;Topics&quot;:[&quot;Singing&quot;,&quot;Performance practice (Music) -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;26477.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tosi, Pier Francesco, 1653?-1732&quot;,&quot;Galliard, John Ernest, -1747 [Translator]&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;26477&quot;});" class='title'>Observations on the Florid Song;<br><span class='subtitle'>Or, Sentiments on the Ancient and Modern Singers</span></a>
+<div class='author'>Tosi, Pier Francesco, 1653?-1732, Galliard, John Ernest, -1747 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27646, {&quot;Title&quot;:&quot;The Orchestral Conductor: Theory of His Art&quot;,&quot;Topics&quot;:[&quot;Conducting&quot;],&quot;Primary&quot;:&quot;27646.htm&quot;,&quot;CreatorNames&quot;:[&quot;Berlioz, Hector, 1803-1869&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;27646&quot;});" class='title'>The Orchestral Conductor:<br><span class='subtitle'>Theory of His Art</span></a>
+<div class='author'>Berlioz, Hector, 1803-1869</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28026, {&quot;Title&quot;:&quot;Great Pianists on Piano Playing - Study Talks with Foremost Virtuosos. A Series of Personal Educational Conferences with Renowned Masters of the Keyboard, Presenting the Most Modern Ideas upon the Subjects of Technic, Interpretation, Style and Expression&quot;,&quot;Topics&quot;:[&quot;Piano -- Instruction and study&quot;,&quot;Pianists&quot;,&quot;Piano -- Performance&quot;],&quot;Primary&quot;:&quot;28026.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cooke, James Francis, 1875-1960&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;28026&quot;});" class='title'>Great Pianists on Piano Playing -<br><span class='subtitle'>Study Talks with Foremost Virtuosos. A Series of Personal Educational Conferences with Renowned Masters of the Keyboard, Presenting the Most Modern Ideas upon the Subjects of Technic, Interpretation, Style and Expression</span></a>
+<div class='author'>Cooke, James Francis, 1875-1960</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30412, {&quot;Title&quot;:&quot;On the Execution of Music, and Principally of Ancient Music&quot;,&quot;Topics&quot;:[&quot;Music appreciation&quot;,&quot;Gregorian chants -- History and criticism&quot;],&quot;Primary&quot;:&quot;30412.htm&quot;,&quot;CreatorNames&quot;:[&quot;Saint-Saëns, Camille, 1835-1921&quot;,&quot;Bowie, Henry P., 1848-1921 [Translator]&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;30412&quot;});" class='title'>On the Execution of Music, and Principally of Ancient Music</a>
+<div class='author'>Saint-Saëns, Camille, 1835-1921, Bowie, Henry P., 1848-1921 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30560, {&quot;Title&quot;:&quot;Music: An Art and a Language&quot;,&quot;Topics&quot;:[&quot;Music appreciation&quot;,&quot;Musical form&quot;],&quot;Primary&quot;:&quot;30560.htm&quot;,&quot;CreatorNames&quot;:[&quot;Spalding, Walter Raymond, 1865-1962&quot;],&quot;LoCC&quot;:[&quot;MT&quot;,&quot;ML&quot;],&quot;PG_ID&quot;:&quot;30560&quot;});" class='title'>Music:<br><span class='subtitle'>An Art and a Language</span></a>
+<div class='author'>Spalding, Walter Raymond, 1865-1962</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30854, {&quot;Title&quot;:&quot;The Voice: Its Production, Care and Preservation&quot;,&quot;Topics&quot;:[&quot;Singing -- Instruction and study&quot;,&quot;Voice -- Care and hygiene&quot;],&quot;Primary&quot;:&quot;30854.htm&quot;,&quot;CreatorNames&quot;:[&quot;Miller, Frank E. (Frank Ebenezer), 1859-1932&quot;,&quot;Kobbé, Gustav, 1857-1918 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;30854&quot;});" class='title'>The Voice:<br><span class='subtitle'>Its Production, Care and Preservation</span></a>
+<div class='author'>Miller, Frank E. (Frank Ebenezer), 1859-1932, Kobbé, Gustav, 1857-1918 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30889, {&quot;Title&quot;:&quot;The Mechanism of the Human Voice&quot;,&quot;Topics&quot;:[&quot;Voice&quot;,&quot;Singing -- Instruction and study&quot;],&quot;Primary&quot;:&quot;30889.htm&quot;,&quot;CreatorNames&quot;:[&quot;Behnke, Emil, 1836-1892&quot;,&quot;Behnke, Emil, Mrs., -1920 [Contributor]&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;30889&quot;});" class='title'>The Mechanism of the Human Voice</a>
+<div class='author'>Behnke, Emil, 1836-1892, Behnke, Emil, Mrs., -1920 [Contributor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31170, {&quot;Title&quot;:&quot;Acht Briefe an eine Freundin über Clavier-Unterricht&quot;,&quot;Topics&quot;:[&quot;Music&quot;,&quot;Piano -- Instruction and study&quot;],&quot;Primary&quot;:&quot;31170.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kinkel, Johanna, 1810-1858&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;31170&quot;});" class='title'>Acht Briefe an eine Freundin über Clavier-Unterricht</a>
+<div class='author'>Kinkel, Johanna, 1810-1858</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31828, {&quot;Title&quot;:&quot;Vocal Expression: A Class-book of Voice Training and Interpretation&quot;,&quot;Topics&quot;:[&quot;Elocution&quot;,&quot;Voice&quot;],&quot;Primary&quot;:&quot;31828.htm&quot;,&quot;CreatorNames&quot;:[&quot;Everts, Katherine Jewell&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;31828&quot;});" class='title'>Vocal Expression:<br><span class='subtitle'>A Class-book of Voice Training and Interpretation</span></a>
+<div class='author'>Everts, Katherine Jewell</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32023, {&quot;Title&quot;:&quot;The Boy&#39;s Voice - A Book of Practical Information on The Training of Boys&#39; Voices For Church Choirs, &amp;c.&quot;,&quot;Topics&quot;:[&quot;Singing&quot;,&quot;Voice culture&quot;,&quot;Choirs (Music)&quot;,&quot;Choirboys -- Training of -- England&quot;],&quot;Primary&quot;:&quot;32023.htm&quot;,&quot;CreatorNames&quot;:[&quot;Curwen, J. Spencer (John Spencer), 1847-1916&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;32023&quot;});" class='title'>The Boy's Voice -<br><span class='subtitle'>A Book of Practical Information on The Training of Boys' Voices For Church Choirs, &c.</span></a>
+<div class='author'>Curwen, J. Spencer (John Spencer), 1847-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32248, {&quot;Title&quot;:&quot;The Standard Cantatas: Their Stories, Their Music, and Their Composers - A Handbook&quot;,&quot;Topics&quot;:[&quot;Cantatas -- History and criticism&quot;],&quot;Primary&quot;:&quot;32248.htm&quot;,&quot;CreatorNames&quot;:[&quot;Upton, George P. (George Putnam), 1834-1919&quot;],&quot;LoCC&quot;:[&quot;MT&quot;,&quot;ML&quot;],&quot;PG_ID&quot;:&quot;32248&quot;});" class='title'>The Standard Cantatas:<br><span class='subtitle'>Their Stories, Their Music, and Their Composers - A Handbook</span></a>
+<div class='author'>Upton, George P. (George Putnam), 1834-1919</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32602, {&quot;Title&quot;:&quot;What Every Singer Should Know&quot;,&quot;Topics&quot;:[&quot;Voice culture&quot;,&quot;Singing -- Instruction and study&quot;],&quot;Primary&quot;:&quot;32602.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ryan, Millie&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;32602&quot;});" class='title'>What Every Singer Should Know</a>
+<div class='author'>Ryan, Millie</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33358, {&quot;Title&quot;:&quot;Great Singers on the Art of Singing - Educational Conferences with Foremost Artists&quot;,&quot;Topics&quot;:[&quot;Singing&quot;,&quot;Voice culture&quot;,&quot;Singers&quot;],&quot;Primary&quot;:&quot;33358.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cooke, James Francis, 1875-1960&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;33358&quot;});" class='title'>Great Singers on the Art of Singing -<br><span class='subtitle'>Educational Conferences with Foremost Artists</span></a>
+<div class='author'>Cooke, James Francis, 1875-1960</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33900, {&quot;Title&quot;:&quot;Principles of Orchestration, with Musical Examples Drawn from His Own Works&quot;,&quot;Topics&quot;:[&quot;Instrumentation and orchestration&quot;],&quot;Primary&quot;:&quot;33900.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rimsky-Korsakov, Nikolay, 1844-1908&quot;,&quot;Shteinberg, Maksimilian, 1883-1946 [Editor]&quot;,&quot;Agate, Edward [Translator]&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;33900&quot;});" class='title'>Principles of Orchestration, with Musical Examples Drawn from His Own Works</a>
+<div class='author'>Rimsky-Korsakov, Nikolay, 1844-1908, Shteinberg, Maksimilian, 1883-1946 [Editor], Agate, Edward [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34610, {&quot;Title&quot;:&quot;How to Appreciate Music&quot;,&quot;Topics&quot;:[&quot;Music&quot;,&quot;Music appreciation&quot;],&quot;Primary&quot;:&quot;34610.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kobbé, Gustav, 1857-1918&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;34610&quot;});" class='title'>How to Appreciate Music</a>
+<div class='author'>Kobbé, Gustav, 1857-1918</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36978, {&quot;Title&quot;:&quot;Le chef d&#39;orchestre: théorie de son art&quot;,&quot;Topics&quot;:[&quot;Conducting&quot;],&quot;Primary&quot;:&quot;36978.htm&quot;,&quot;CreatorNames&quot;:[&quot;Berlioz, Hector, 1803-1869&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;36978&quot;});" class='title'>Le chef d'orchestre:<br><span class='subtitle'>théorie de son art</span></a>
+<div class='author'>Berlioz, Hector, 1803-1869</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37281, {&quot;Title&quot;:&quot;How to Write Music: Musical Orthography&quot;,&quot;Topics&quot;:[&quot;Musical notation&quot;],&quot;Primary&quot;:&quot;37281.htm&quot;,&quot;CreatorNames&quot;:[&quot;Harris, Clement A. (Clement Antrobus), 1862-1942&quot;,&quot;Randall, Mallinson [Editor]&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;37281&quot;});" class='title'>How to Write Music:<br><span class='subtitle'>Musical Orthography</span></a>
+<div class='author'>Harris, Clement A. (Clement Antrobus), 1862-1942, Randall, Mallinson [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37662, {&quot;Title&quot;:&quot;Seed Thoughts for Singers&quot;,&quot;Topics&quot;:[&quot;Singing&quot;,&quot;Voice culture&quot;],&quot;Primary&quot;:&quot;37662.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tubbs, Frank Herbert, 1853-1938&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;37662&quot;});" class='title'>Seed Thoughts for Singers</a>
+<div class='author'>Tubbs, Frank Herbert, 1853-1938</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3770, {&quot;Title&quot;:&quot;A Second Book of Operas&quot;,&quot;Topics&quot;:[&quot;Operas -- Stories, plots, etc.&quot;],&quot;Primary&quot;:&quot;3770.htm&quot;,&quot;CreatorNames&quot;:[&quot;Krehbiel, Henry Edward, 1854-1923&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;3770&quot;});" class='title'>A Second Book of Operas</a>
+<div class='author'>Krehbiel, Henry Edward, 1854-1923</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39211, {&quot;Title&quot;:&quot;Piano Playing, with Piano Questions Answered&quot;,&quot;Topics&quot;:[&quot;Piano -- Instruction and study&quot;],&quot;Primary&quot;:&quot;39211.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hofmann, Josef, 1876-1957&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;39211&quot;});" class='title'>Piano Playing, with Piano Questions Answered</a>
+<div class='author'>Hofmann, Josef, 1876-1957</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40540, {&quot;Title&quot;:&quot;The Complete Opera Book - The Stories of the Operas, together with 400 of the Leading Airs and Motives in Musical Notation&quot;,&quot;Topics&quot;:[&quot;Operas -- Stories, plots, etc.&quot;],&quot;Primary&quot;:&quot;40540.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kobbé, Gustav, 1857-1918&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;40540&quot;});" class='title'>The Complete Opera Book -<br><span class='subtitle'>The Stories of the Operas, together with 400 of the Leading Airs and Motives in Musical Notation</span></a>
+<div class='author'>Kobbé, Gustav, 1857-1918</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40849, {&quot;Title&quot;:&quot;Beethoven&#39;s Symphonies Critically Discussed&quot;,&quot;Topics&quot;:[&quot;Beethoven, Ludwig van, 1770-1827. Symphonies&quot;],&quot;Primary&quot;:&quot;40849.htm&quot;,&quot;CreatorNames&quot;:[&quot;Teetgen, Alexander&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;40849&quot;});" class='title'>Beethoven's Symphonies Critically Discussed</a>
+<div class='author'>Teetgen, Alexander</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41013, {&quot;Title&quot;:&quot;Advice to Singers&quot;,&quot;Topics&quot;:[&quot;Singing&quot;,&quot;Voice culture&quot;],&quot;Primary&quot;:&quot;41013.htm&quot;,&quot;CreatorNames&quot;:[&quot;Crowest, Frederick James, 1850-1927&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;41013&quot;});" class='title'>Advice to Singers</a>
+<div class='author'>Crowest, Frederick James, 1850-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42080, {&quot;Title&quot;:&quot;The Voice in Singing&quot;,&quot;Topics&quot;:[&quot;Singing&quot;],&quot;Primary&quot;:&quot;42080.htm&quot;,&quot;CreatorNames&quot;:[&quot;Seiler, Emma, 1821-1887&quot;,&quot;Furness, William Henry, 1802-1896 [Translator]&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;42080&quot;});" class='title'>The Voice in Singing</a>
+<div class='author'>Seiler, Emma, 1821-1887, Furness, William Henry, 1802-1896 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42378, {&quot;Title&quot;:&quot;Chats to &#39;Cello Students&quot;,&quot;Topics&quot;:[&quot;Cello -- Instruction and study&quot;],&quot;Primary&quot;:&quot;42378.htm&quot;,&quot;CreatorNames&quot;:[&quot;Broadley, Arthur&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;42378&quot;});" class='title'>Chats to 'Cello Students</a>
+<div class='author'>Broadley, Arthur</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42918, {&quot;Title&quot;:&quot;The Standard Light Operas, Their Plots and Their Music&quot;,&quot;Topics&quot;:[&quot;Operas -- Stories, plots, etc.&quot;,&quot;Operetta&quot;],&quot;Primary&quot;:&quot;42918.htm&quot;,&quot;CreatorNames&quot;:[&quot;Upton, George P. (George Putnam), 1834-1919&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;42918&quot;});" class='title'>The Standard Light Operas, Their Plots and Their Music</a>
+<div class='author'>Upton, George P. (George Putnam), 1834-1919</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44910, {&quot;Title&quot;:&quot;Descriptive Analyses of Piano Works - For the Use of Teachers, Players, and Music Clubs&quot;,&quot;Topics&quot;:[&quot;Piano music -- Analysis, appreciation&quot;],&quot;Primary&quot;:&quot;44910.htm&quot;,&quot;CreatorNames&quot;:[&quot;Perry, Edward Baxter, 1855-1924&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;44910&quot;});" class='title'>Descriptive Analyses of Piano Works -<br><span class='subtitle'>For the Use of Teachers, Players, and Music Clubs</span></a>
+<div class='author'>Perry, Edward Baxter, 1855-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4523, {&quot;Title&quot;:&quot;On Conducting (Üeber Das Dirigiren) : A Treatise on Style in the Execution of Classical Music&quot;,&quot;Topics&quot;:[&quot;Conducting&quot;],&quot;Primary&quot;:&quot;4523.txt&quot;,&quot;CreatorNames&quot;:[&quot;Wagner, Richard, 1813-1883&quot;,&quot;Dannreuther, Edward, 1844-1905 [Translator]&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;4523&quot;});" class='title'>On Conducting (Üeber Das Dirigiren) :<br><span class='subtitle'>A Treatise on Style in the Execution of Classical Music</span></a>
+<div class='author'>Wagner, Richard, 1813-1883, Dannreuther, Edward, 1844-1905 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52674, {&quot;Title&quot;:&quot;How to Become a Successful Singer&quot;,&quot;Topics&quot;:[&quot;Singing&quot;,&quot;Voice culture&quot;],&quot;Primary&quot;:&quot;52674.htm&quot;,&quot;CreatorNames&quot;:[&quot;Butt, Clara, Dame, 1872-1936&quot;,&quot;Caruso, Enrico, 1873-1921&quot;,&quot;Davies, Ben, 1858-1943&quot;,&quot;Melba, Nellie, Dame, 1861-1931&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;52674&quot;});" class='title'>How to Become a Successful Singer</a>
+<div class='author'>Butt, Clara, Dame, 1872-1936, Caruso, Enrico, 1873-1921, Davies, Ben, 1858-1943, Melba, Nellie, Dame, 1861-1931</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53022, {&quot;Title&quot;:&quot;First Steps to Bell Ringing - Being an Introduction to the Healthful and Pleasant Exercise of Bell Ringing in Rounds and Changes upon Church Bells&quot;,&quot;Topics&quot;:[&quot;Change ringing&quot;],&quot;Primary&quot;:&quot;53022.htm&quot;,&quot;CreatorNames&quot;:[&quot;Goslin, Samuel B.&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;53022&quot;});" class='title'>First Steps to Bell Ringing -<br><span class='subtitle'>Being an Introduction to the Healthful and Pleasant Exercise of Bell Ringing in Rounds and Changes upon Church Bells</span></a>
+<div class='author'>Goslin, Samuel B.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53656, {&quot;Title&quot;:&quot;How To Get the Most Out of Your Victrola&quot;,&quot;Topics&quot;:[&quot;Music appreciation&quot;,&quot;Phonograph -- Catalogs&quot;,&quot;Sound recordings -- United States -- Catalogs&quot;],&quot;Primary&quot;:&quot;53656.htm&quot;,&quot;CreatorNames&quot;:[&quot;Victor Talking Machine Company&quot;],&quot;LoCC&quot;:[&quot;MT&quot;,&quot;TS&quot;],&quot;PG_ID&quot;:&quot;53656&quot;});" class='title'>How To Get the Most Out of Your Victrola</a>
+<div class='author'>Victor Talking Machine Company</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56208, {&quot;Title&quot;:&quot;Philip Hale&#39;s Boston Symphony Programme Notes&quot;,&quot;Topics&quot;:[&quot;Music appreciation&quot;,&quot;Music -- History and criticism&quot;,&quot;Boston Symphony Orchestra&quot;,&quot;Concert programs&quot;,&quot;Orchestral music -- Analysis, appreciation&quot;,&quot;Musical analysis&quot;],&quot;Primary&quot;:&quot;56208.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hale, Philip, 1854-1934&quot;,&quot;Burk, John N. (John Naglee), 1891-1967 [Editor]&quot;,&quot;Gilman, Lawrence, 1878-1939 [Editor]&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;56208&quot;});" class='title'>Philip Hale's Boston Symphony Programme Notes</a>
+<div class='author'>Hale, Philip, 1854-1934, Burk, John N. (John Naglee), 1891-1967 [Editor], Gilman, Lawrence, 1878-1939 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56280, {&quot;Title&quot;:&quot;Stories from the Operas&quot;,&quot;Topics&quot;:[&quot;Operas -- Stories, plots, etc.&quot;],&quot;Primary&quot;:&quot;56280.htm&quot;,&quot;CreatorNames&quot;:[&quot;Davidson, Gladys&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;56280&quot;});" class='title'>Stories from the Operas</a>
+<div class='author'>Davidson, Gladys</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57063, {&quot;Title&quot;:&quot;Stories of Symphonic Music - A Guide to the Meaning of Important Symphonies, Overtures, and Tone-poems from Beethoven to the Present Day&quot;,&quot;Topics&quot;:[&quot;Music appreciation&quot;,&quot;Orchestral music -- Analysis, appreciation&quot;,&quot;Program music&quot;],&quot;Primary&quot;:&quot;57063.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gilman, Lawrence, 1878-1939&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;57063&quot;});" class='title'>Stories of Symphonic Music -<br><span class='subtitle'>A Guide to the Meaning of Important Symphonies, Overtures, and Tone-poems from Beethoven to the Present Day</span></a>
+<div class='author'>Gilman, Lawrence, 1878-1939</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5724, {&quot;Title&quot;:&quot;A Book of Operas: Their Histories, Their Plots, and Their Music&quot;,&quot;Topics&quot;:[&quot;Operas -- Stories, plots, etc.&quot;],&quot;Primary&quot;:&quot;5724.txt&quot;,&quot;CreatorNames&quot;:[&quot;Krehbiel, Henry Edward, 1854-1923&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;5724&quot;});" class='title'>A Book of Operas:<br><span class='subtitle'>Their Histories, Their Plots, and Their Music</span></a>
+<div class='author'>Krehbiel, Henry Edward, 1854-1923</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57605, {&quot;Title&quot;:&quot;Tales from the Operas&quot;,&quot;Topics&quot;:[&quot;Operas -- Stories, plots, etc.&quot;],&quot;Primary&quot;:&quot;57605.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pardon, George Frederick, 1824-1884 [Editor]&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;57605&quot;});" class='title'>Tales from the Operas</a>
+<div class='author'>Pardon, George Frederick, 1824-1884 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58458, {&quot;Title&quot;:&quot;The Appreciation of Music - Vol. 1 (of 3)&quot;,&quot;Topics&quot;:[&quot;Music appreciation&quot;,&quot;Piano music&quot;,&quot;Music -- Instruction and study&quot;,&quot;Piano music, Arranged&quot;],&quot;Primary&quot;:&quot;58458.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mason, Daniel Gregory, 1873-1953&quot;,&quot;Surette, Thomas Whitney, 1861-1941&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;58458&quot;});" class='title'>The Appreciation of Music -<br><span class='subtitle'>Vol. 1 (of 3)</span></a>
+<div class='author'>Mason, Daniel Gregory, 1873-1953, Surette, Thomas Whitney, 1861-1941</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63664, {&quot;Title&quot;:&quot;Estudo de Guitarra&quot;,&quot;Topics&quot;:[&quot;Guitar -- Instruction and study&quot;],&quot;Primary&quot;:&quot;63664.htm&quot;,&quot;CreatorNames&quot;:[&quot;Leite, Antônio da Silva, 1759-1833&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;63664&quot;});" class='title'>Estudo de Guitarra</a>
+<div class='author'>Leite, Antônio da Silva, 1759-1833</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65129, {&quot;Title&quot;:&quot;How to Study Fiorillo - A detailed, descriptive analysis of how to practice these studies, based upon the best teachings of representative, modern violin playing&quot;,&quot;Topics&quot;:[&quot;Violin -- Instruction and study&quot;,&quot;Fiorillo, Federigo, 1755-approximately 1823&quot;],&quot;Primary&quot;:&quot;65129.htm&quot;,&quot;CreatorNames&quot;:[&quot;Winn, Edith Lynwood, 1868-1933&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;65129&quot;});" class='title'>How to Study Fiorillo -<br><span class='subtitle'>A detailed, descriptive analysis of how to practice these studies, based upon the best teachings of representative, modern violin playing</span></a>
+<div class='author'>Winn, Edith Lynwood, 1868-1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65146, {&quot;Title&quot;:&quot;How to Sing&quot;,&quot;Topics&quot;:[&quot;Singing&quot;],&quot;Primary&quot;:&quot;65146.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tetrazzini, Luisa, 1871-1940&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;65146&quot;});" class='title'>How to Sing</a>
+<div class='author'>Tetrazzini, Luisa, 1871-1940</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65500, {&quot;Title&quot;:&quot;Essentials of Music Theory: Elementary&quot;,&quot;Topics&quot;:[&quot;Music theory -- Elementary works&quot;],&quot;Primary&quot;:&quot;65500.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gardner, Carl E. (Carl Edward), 1885-&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;65500&quot;});" class='title'>Essentials of Music Theory:<br><span class='subtitle'>Elementary</span></a>
+<div class='author'>Gardner, Carl E. (Carl Edward), 1885-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66346, {&quot;Title&quot;:&quot;The Lighter Classics in Music - A Comprehensive Guide to Musical Masterworks in a Lighter Vein by 187 Composers&quot;,&quot;Topics&quot;:[&quot;Music appreciation&quot;,&quot;Composers&quot;],&quot;Primary&quot;:&quot;66346.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ewen, David, 1907-1985&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;66346&quot;});" class='title'>The Lighter Classics in Music -<br><span class='subtitle'>A Comprehensive Guide to Musical Masterworks in a Lighter Vein by 187 Composers</span></a>
+<div class='author'>Ewen, David, 1907-1985</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66816, {&quot;Title&quot;:&quot;Automatic finger control - Seventh Edition&quot;,&quot;Topics&quot;:[&quot;Mind and body&quot;,&quot;Physical education and training&quot;,&quot;Music -- Performance -- Physiological aspects&quot;,&quot;Musical instruments -- Studies and exercises&quot;,&quot;Musical instruments -- Instruction and study&quot;],&quot;Primary&quot;:&quot;66816.htm&quot;,&quot;CreatorNames&quot;:[&quot;U.S. School of Music&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;66816&quot;});" class='title'>Automatic finger control -<br><span class='subtitle'>Seventh Edition</span></a>
+<div class='author'>U.S. School of Music</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67375, {&quot;Title&quot;:&quot;Jackson&#39;s Gymnastics for the Fingers and Wrist - being a system of gymnastics, based on anatomical principles, for developing and strengthening the muscles of the hand for musical, mechanical and medical purposes: with thirty-seven diagrams&quot;,&quot;Topics&quot;:[&quot;Musical instruments -- Instruction and study&quot;,&quot;Hand exercises&quot;],&quot;Primary&quot;:&quot;67375.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jackson, Edwin Ward&quot;],&quot;LoCC&quot;:[&quot;MT&quot;],&quot;PG_ID&quot;:&quot;67375&quot;});" class='title'>Jackson's Gymnastics for the Fingers and Wrist -<br><span class='subtitle'>being a system of gymnastics, based on anatomical principles, for developing and strengthening the muscles of the hand for musical, mechanical and medical purposes: with thirty-seven diagrams</span></a>
+<div class='author'>Jackson, Edwin Ward</div>
+</div>
+</ul></div>
+</body></html>

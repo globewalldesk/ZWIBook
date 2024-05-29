@@ -1,0 +1,278 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Collections, Series, Collected works (AC)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(1486, {&quot;Title&quot;:&quot;The Unseen World, and Other Essays&quot;,&quot;Topics&quot;:[&quot;American essays&quot;],&quot;Primary&quot;:&quot;1486.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fiske, John, 1842-1901&quot;],&quot;LoCC&quot;:[&quot;AC&quot;],&quot;PG_ID&quot;:&quot;1486&quot;});" class='title'>The Unseen World, and Other Essays</a>
+<div class='author'>Fiske, John, 1842-1901</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15249, {&quot;Title&quot;:&quot;Outspoken Essays&quot;,&quot;Topics&quot;:[&quot;Christianity -- England -- 20th century&quot;],&quot;Primary&quot;:&quot;15249.htm&quot;,&quot;CreatorNames&quot;:[&quot;Inge, William Ralph, 1860-1954&quot;],&quot;LoCC&quot;:[&quot;AC&quot;],&quot;PG_ID&quot;:&quot;15249&quot;});" class='title'>Outspoken Essays</a>
+<div class='author'>Inge, William Ralph, 1860-1954</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16510, {&quot;Title&quot;:&quot;Essays on Education and Kindred Subjects - Everyman&#39;s Library&quot;,&quot;Topics&quot;:[&quot;Education&quot;],&quot;Primary&quot;:&quot;16510.htm&quot;,&quot;CreatorNames&quot;:[&quot;Spencer, Herbert, 1820-1903&quot;,&quot;Eliot, Charles William, 1834-1926 [Commentator]&quot;],&quot;LoCC&quot;:[&quot;AC&quot;],&quot;PG_ID&quot;:&quot;16510&quot;});" class='title'>Essays on Education and Kindred Subjects -<br><span class='subtitle'>Everyman's Library</span></a>
+<div class='author'>Spencer, Herbert, 1820-1903, Eliot, Charles William, 1834-1926 [Commentator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16858, {&quot;Title&quot;:&quot;Wit, Humor, Reason, Rhetoric, Prose, Poetry and Story Woven into Eight Popular Lectures&quot;,&quot;Topics&quot;:[&quot;Speeches, addresses, etc.&quot;],&quot;Primary&quot;:&quot;16858.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bain, George Washington, 1840-&quot;],&quot;LoCC&quot;:[&quot;AC&quot;,&quot;PS&quot;],&quot;PG_ID&quot;:&quot;16858&quot;});" class='title'>Wit, Humor, Reason, Rhetoric, Prose, Poetry and Story Woven into Eight Popular Lectures</a>
+<div class='author'>Bain, George Washington, 1840-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17320, {&quot;Title&quot;:&quot;Political and Literary essays, 1908-1913&quot;,&quot;Topics&quot;:[&quot;History&quot;,&quot;Literature&quot;,&quot;Colonization&quot;,&quot;Colonies&quot;],&quot;Primary&quot;:&quot;17320.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cromer, Evelyn Baring, Earl of, 1841-1917&quot;],&quot;LoCC&quot;:[&quot;AC&quot;],&quot;PG_ID&quot;:&quot;17320&quot;});" class='title'>Political and Literary essays, 1908-1913</a>
+<div class='author'>Cromer, Evelyn Baring, Earl of, 1841-1917</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17437, {&quot;Title&quot;:&quot;Health and Education&quot;,&quot;Topics&quot;:[&quot;Natural history&quot;,&quot;Hygiene&quot;],&quot;Primary&quot;:&quot;17437.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kingsley, Charles, 1819-1875&quot;],&quot;LoCC&quot;:[&quot;AC&quot;],&quot;PG_ID&quot;:&quot;17437&quot;});" class='title'>Health and Education</a>
+<div class='author'>Kingsley, Charles, 1819-1875</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20023, {&quot;Title&quot;:&quot;The Letters of Queen Victoria : A Selection from Her Majesty&#39;s Correspondence between the Years 1837 and 1861. Volume 1, 1837-1843&quot;,&quot;Topics&quot;:[&quot;Great Britain -- History -- Victoria, 1837-1901&quot;,&quot;Victoria, Queen of Great Britain, 1819-1901 -- Correspondence&quot;,&quot;Great Britain -- Politics and government -- 1837-1901&quot;,&quot;Europe -- Politics and government -- 1848-1871&quot;,&quot;Great Britain -- History -- Victoria, 1837-1901 -- Sources&quot;],&quot;Primary&quot;:&quot;20023.htm&quot;,&quot;CreatorNames&quot;:[&quot;Victoria, Queen of Great Britain, 1819-1901&quot;,&quot;Benson, Arthur Christopher, 1862-1925 [Editor]&quot;,&quot;Esher, Reginald Baliol Brett, Viscount, 1852-1930 [Editor]&quot;],&quot;LoCC&quot;:[&quot;AC&quot;,&quot;DA&quot;],&quot;PG_ID&quot;:&quot;20023&quot;});" class='title'>The Letters of Queen Victoria :<br><span class='subtitle'>A Selection from Her Majesty's Correspondence between the Years 1837 and 1861. Volume 1, 1837-1843</span></a>
+<div class='author'>Victoria, Queen of Great Britain, 1819-1901, Benson, Arthur Christopher, 1862-1925 [Editor], Esher, Reginald Baliol Brett, Viscount, 1852-1930 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20447, {&quot;Title&quot;:&quot;The Works of Robert G. Ingersoll, Volume VIII. - Interviews&quot;,&quot;Topics&quot;:[&quot;Free thought&quot;],&quot;Primary&quot;:&quot;20447.txt&quot;,&quot;CreatorNames&quot;:[&quot;Ingersoll, Robert Green, 1833-1899&quot;],&quot;LoCC&quot;:[&quot;AC&quot;,&quot;BL&quot;],&quot;PG_ID&quot;:&quot;20447&quot;});" class='title'>The Works of Robert G. Ingersoll, Volume VIII. -<br><span class='subtitle'>Interviews</span></a>
+<div class='author'>Ingersoll, Robert Green, 1833-1899</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20755, {&quot;Title&quot;:&quot;Short Studies on Great Subjects&quot;,&quot;Topics&quot;:[&quot;History&quot;,&quot;English literature&quot;,&quot;English essays&quot;,&quot;Religion -- Biography&quot;],&quot;Primary&quot;:&quot;20755.htm&quot;,&quot;CreatorNames&quot;:[&quot;Froude, James Anthony, 1818-1894&quot;],&quot;LoCC&quot;:[&quot;AC&quot;,&quot;PR&quot;],&quot;PG_ID&quot;:&quot;20755&quot;});" class='title'>Short Studies on Great Subjects</a>
+<div class='author'>Froude, James Anthony, 1818-1894</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23100, {&quot;Title&quot;:&quot;A Budget of Paradoxes, Volume I&quot;,&quot;Topics&quot;:[&quot;Circle-squaring&quot;,&quot;Science -- Miscellanea&quot;,&quot;Perpetual motion&quot;,&quot;Trisection of angle&quot;],&quot;Primary&quot;:&quot;23100.htm&quot;,&quot;CreatorNames&quot;:[&quot;De Morgan, Augustus, 1806-1871&quot;,&quot;Smith, David Eugene, 1860-1944 [Editor]&quot;],&quot;LoCC&quot;:[&quot;AC&quot;],&quot;PG_ID&quot;:&quot;23100&quot;});" class='title'>A Budget of Paradoxes, Volume I</a>
+<div class='author'>De Morgan, Augustus, 1806-1871, Smith, David Eugene, 1860-1944 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23833, {&quot;Title&quot;:&quot;商君書&quot;,&quot;Topics&quot;:[&quot;China -- Politics and government -- To 221 B.C.&quot;,&quot;Political science -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;23833.txt&quot;,&quot;CreatorNames&quot;:[&quot;Shang, Yang, -338 BCE&quot;],&quot;LoCC&quot;:[&quot;AC&quot;],&quot;PG_ID&quot;:&quot;23833&quot;});" class='title'>商君書</a>
+<div class='author'>Shang, Yang, -338 BCE</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23915, {&quot;Title&quot;:&quot;虬髯客傳&quot;,&quot;Topics&quot;:[&quot;Short stories, Chinese&quot;],&quot;Primary&quot;:&quot;23915.txt&quot;,&quot;CreatorNames&quot;:[&quot;Du, Guangting, 850-933&quot;],&quot;LoCC&quot;:[&quot;AC&quot;],&quot;PG_ID&quot;:&quot;23915&quot;});" class='title'>虬髯客傳</a>
+<div class='author'>Du, Guangting, 850-933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24780, {&quot;Title&quot;:&quot;The Letters of Queen Victoria : A Selection from her Majesty&#39;s correspondence between the years 1837 and 1861. Volume 2, 1844-1853&quot;,&quot;Topics&quot;:[&quot;Great Britain -- History -- Victoria, 1837-1901&quot;,&quot;Victoria, Queen of Great Britain, 1819-1901 -- Correspondence&quot;,&quot;Great Britain -- Politics and government -- 1837-1901&quot;,&quot;Europe -- Politics and government -- 1848-1871&quot;,&quot;Great Britain -- History -- Victoria, 1837-1901 -- Sources&quot;],&quot;Primary&quot;:&quot;24780.htm&quot;,&quot;CreatorNames&quot;:[&quot;Victoria, Queen of Great Britain, 1819-1901&quot;,&quot;Benson, Arthur Christopher, 1862-1925 [Editor]&quot;,&quot;Esher, Reginald Baliol Brett, Viscount, 1852-1930 [Editor]&quot;],&quot;LoCC&quot;:[&quot;AC&quot;,&quot;DA&quot;],&quot;PG_ID&quot;:&quot;24780&quot;});" class='title'>The Letters of Queen Victoria :<br><span class='subtitle'>A Selection from her Majesty's correspondence between the years 1837 and 1861. Volume 2, 1844-1853</span></a>
+<div class='author'>Victoria, Queen of Great Britain, 1819-1901, Benson, Arthur Christopher, 1862-1925 [Editor], Esher, Reginald Baliol Brett, Viscount, 1852-1930 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25161, {&quot;Title&quot;:&quot;魏鄭公諫錄&quot;,&quot;Topics&quot;:[&quot;China -- Biography&quot;,&quot;Wei, Zheng, 580-643&quot;,&quot;China -- History -- Ming dynasty, 1368-1644 -- Biography&quot;],&quot;Primary&quot;:&quot;25161.txt&quot;,&quot;CreatorNames&quot;:[&quot;Wang, Fangqing, -702&quot;],&quot;LoCC&quot;:[&quot;AC&quot;],&quot;PG_ID&quot;:&quot;25161&quot;});" class='title'>魏鄭公諫錄</a>
+<div class='author'>Wang, Fangqing, -702</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25252, {&quot;Title&quot;:&quot;貞觀政要&quot;,&quot;Topics&quot;:[&quot;Tang Taizong, Emperor of China, 597-649&quot;,&quot;Political ethics -- China&quot;,&quot;China -- Politics and government -- 581-907&quot;],&quot;Primary&quot;:&quot;25252.txt&quot;,&quot;CreatorNames&quot;:[&quot;Wu, Jing, 670-749&quot;],&quot;LoCC&quot;:[&quot;AC&quot;],&quot;PG_ID&quot;:&quot;25252&quot;});" class='title'>貞觀政要</a>
+<div class='author'>Wu, Jing, 670-749</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25253, {&quot;Title&quot;:&quot;杜陽雜編&quot;,&quot;Topics&quot;:[&quot;China -- History -- Tang dynasty, 618-907 -- Anecdotes&quot;],&quot;Primary&quot;:&quot;25253.txt&quot;,&quot;CreatorNames&quot;:[&quot;Su, E, jin shi 886&quot;],&quot;LoCC&quot;:[&quot;AC&quot;],&quot;PG_ID&quot;:&quot;25253&quot;});" class='title'>杜陽雜編</a>
+<div class='author'>Su, E, jin shi 886</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25262, {&quot;Title&quot;:&quot;日知錄&quot;,&quot;Topics&quot;:[&quot;China -- History&quot;],&quot;Primary&quot;:&quot;25262.txt&quot;,&quot;CreatorNames&quot;:[&quot;Gu, Yanwu, 1613-1682&quot;],&quot;LoCC&quot;:[&quot;AC&quot;],&quot;PG_ID&quot;:&quot;25262&quot;});" class='title'>日知錄</a>
+<div class='author'>Gu, Yanwu, 1613-1682</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25263, {&quot;Title&quot;:&quot;周禮&quot;,&quot;Topics&quot;:&quot;&quot;,&quot;Primary&quot;:&quot;25263.txt&quot;,&quot;CreatorNames&quot;:[&quot;Zhou, Gong, -1105 BCE&quot;],&quot;LoCC&quot;:[&quot;AC&quot;],&quot;PG_ID&quot;:&quot;25263&quot;});" class='title'>周禮</a>
+<div class='author'>Zhou, Gong, -1105 BCE</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25287, {&quot;Title&quot;:&quot;續世說&quot;,&quot;Topics&quot;:[&quot;China -- History -- Anecdotes&quot;],&quot;Primary&quot;:&quot;25287.txt&quot;,&quot;CreatorNames&quot;:[&quot;Kong, Pingzhong, 1044-1111&quot;],&quot;LoCC&quot;:[&quot;AC&quot;],&quot;PG_ID&quot;:&quot;25287&quot;});" class='title'>續世說</a>
+<div class='author'>Kong, Pingzhong, 1044-1111</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25937, {&quot;Title&quot;:&quot;Studies in Literature and History&quot;,&quot;Topics&quot;:[&quot;Religion&quot;,&quot;History&quot;,&quot;Literature&quot;,&quot;English literature&quot;,&quot;Utilitarianism&quot;],&quot;Primary&quot;:&quot;25937.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lyall, Alfred Comyn, Sir, 1835-1911&quot;,&quot;Miller, John O. [Editor]&quot;],&quot;LoCC&quot;:[&quot;AC&quot;,&quot;PN&quot;],&quot;PG_ID&quot;:&quot;25937&quot;});" class='title'>Studies in Literature and History</a>
+<div class='author'>Lyall, Alfred Comyn, Sir, 1835-1911, Miller, John O. [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26374, {&quot;Title&quot;:&quot;The Cookery Blue Book&quot;,&quot;Topics&quot;:[&quot;Cooking, American&quot;,&quot;Community cookbooks -- California -- San Francisco&quot;],&quot;Primary&quot;:&quot;26374.htm&quot;,&quot;CreatorNames&quot;:[&quot;First Unitarian Society of San Francisco. Society for Christian Work&quot;],&quot;LoCC&quot;:[&quot;AC&quot;,&quot;TX&quot;],&quot;PG_ID&quot;:&quot;26374&quot;});" class='title'>The Cookery Blue Book</a>
+<div class='author'>First Unitarian Society of San Francisco. Society for Christian Work</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26408, {&quot;Title&quot;:&quot;A Budget of Paradoxes, Volume II&quot;,&quot;Topics&quot;:[&quot;Circle-squaring&quot;,&quot;Science -- Miscellanea&quot;,&quot;Perpetual motion&quot;,&quot;Trisection of angle&quot;],&quot;Primary&quot;:&quot;26408.htm&quot;,&quot;CreatorNames&quot;:[&quot;De Morgan, Augustus, 1806-1871&quot;,&quot;Smith, David Eugene, 1860-1944 [Editor]&quot;],&quot;LoCC&quot;:[&quot;AC&quot;],&quot;PG_ID&quot;:&quot;26408&quot;});" class='title'>A Budget of Paradoxes, Volume II</a>
+<div class='author'>De Morgan, Augustus, 1806-1871, Smith, David Eugene, 1860-1944 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26932, {&quot;Title&quot;:&quot;治世餘聞&quot;,&quot;Topics&quot;:[&quot;China -- History -- Ming dynasty, 1368-1644 -- Anecdotes&quot;],&quot;Primary&quot;:&quot;26932.txt&quot;,&quot;CreatorNames&quot;:[&quot;Chen, Hongmo, 1474-1555&quot;],&quot;LoCC&quot;:[&quot;AC&quot;,&quot;PL&quot;],&quot;PG_ID&quot;:&quot;26932&quot;});" class='title'>治世餘聞</a>
+<div class='author'>Chen, Hongmo, 1474-1555</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26979, {&quot;Title&quot;:&quot;海島算經&quot;,&quot;Topics&quot;:[&quot;Arithmetic -- Early works to 1900&quot;],&quot;Primary&quot;:&quot;26979.txt&quot;,&quot;CreatorNames&quot;:[&quot;Liu, Hui, active 3rd century-4th century&quot;],&quot;LoCC&quot;:[&quot;AC&quot;,&quot;QA&quot;],&quot;PG_ID&quot;:&quot;26979&quot;});" class='title'>海島算經</a>
+<div class='author'>Liu, Hui, active 3rd century-4th century</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27017, {&quot;Title&quot;:&quot;尹文子&quot;,&quot;Topics&quot;:[&quot;Philosophy, Chinese&quot;,&quot;Chinese classics&quot;],&quot;Primary&quot;:&quot;27017.txt&quot;,&quot;CreatorNames&quot;:[&quot;Yin, Wen, 350 BCE-284 BCE&quot;],&quot;LoCC&quot;:[&quot;AC&quot;,&quot;B&quot;],&quot;PG_ID&quot;:&quot;27017&quot;});" class='title'>尹文子</a>
+<div class='author'>Yin, Wen, 350 BCE-284 BCE</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27207, {&quot;Title&quot;:&quot;封氏聞見記&quot;,&quot;Topics&quot;:[&quot;China -- History -- Tang dynasty, 618-907 -- Sources&quot;],&quot;Primary&quot;:&quot;27207.txt&quot;,&quot;CreatorNames&quot;:[&quot;Feng, Yan, jin shi 756&quot;],&quot;LoCC&quot;:[&quot;AC&quot;],&quot;PG_ID&quot;:&quot;27207&quot;});" class='title'>封氏聞見記</a>
+<div class='author'>Feng, Yan, jin shi 756</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27294, {&quot;Title&quot;:&quot;方言&quot;,&quot;Topics&quot;:[&quot;Chinese language -- Dialects&quot;],&quot;Primary&quot;:&quot;27294.txt&quot;,&quot;CreatorNames&quot;:[&quot;Yang, Xiong, 53 BCE-18&quot;],&quot;LoCC&quot;:[&quot;AC&quot;],&quot;PG_ID&quot;:&quot;27294&quot;});" class='title'>方言</a>
+<div class='author'>Yang, Xiong, 53 BCE-18</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27581, {&quot;Title&quot;:&quot;吳船錄&quot;,&quot;Topics&quot;:[&quot;Fan, Chengda, 1126-1193 -- Travel -- China -- Chang Jiang&quot;,&quot;Yangtze River (China) -- Description and travel&quot;],&quot;Primary&quot;:&quot;27581.txt&quot;,&quot;CreatorNames&quot;:[&quot;Fan, Chengda, 1126-1193&quot;],&quot;LoCC&quot;:[&quot;AC&quot;],&quot;PG_ID&quot;:&quot;27581&quot;});" class='title'>吳船錄</a>
+<div class='author'>Fan, Chengda, 1126-1193</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2812, {&quot;Title&quot;:&quot;Letters of Marcus Tullius Cicero&quot;,&quot;Topics&quot;:[&quot;Cicero, Marcus Tullius -- Correspondence&quot;,&quot;Statesmen -- Rome -- Correspondence&quot;,&quot;Authors, Latin -- Correspondence&quot;],&quot;Primary&quot;:&quot;2812.txt&quot;,&quot;CreatorNames&quot;:[&quot;Cicero, Marcus Tullius, 106 BCE-43 BCE&quot;,&quot;Shuckburgh, Evelyn S. (Evelyn Shirley), 1843-1906 [Translator]&quot;],&quot;LoCC&quot;:[&quot;AC&quot;,&quot;PA&quot;],&quot;PG_ID&quot;:&quot;2812&quot;});" class='title'>Letters of Marcus Tullius Cicero</a>
+<div class='author'>Cicero, Marcus Tullius, 106 BCE-43 BCE, Shuckburgh, Evelyn S. (Evelyn Shirley), 1843-1906 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28197, {&quot;Title&quot;:&quot;The Trial of Reuben Crandall, M.D. - Charged with Publishing and Circulating Seditious and Incendiary Papers, &amp;c. in the District of Columbia, with the Intent of Exciting Servile Insurrection. Carefully Reported, and Compiled from the Written Statements of the Court and the Counsel.&quot;,&quot;Topics&quot;:[&quot;Crandall, Reuben, 1805?-1838 -- Trials, litigation, etc.&quot;,&quot;American Anti-Slavery Society&quot;,&quot;Trials (Seditious libel) -- Washington (D.C.)&quot;,&quot;Slavery -- Washington (D.C.)&quot;],&quot;Primary&quot;:&quot;28197.htm&quot;,&quot;CreatorNames&quot;:[&quot;Unknown&quot;],&quot;LoCC&quot;:[&quot;AC&quot;,&quot;KF&quot;],&quot;PG_ID&quot;:&quot;28197&quot;});" class='title'>The Trial of Reuben Crandall, M.D. -<br><span class='subtitle'>Charged with Publishing and Circulating Seditious and Incendiary Papers, &c. in the District of Columbia, with the Intent of Exciting Servile Insurrection. Carefully Reported, and Compiled from the Written Statements of the Court and the Counsel.</span></a>
+<div class='author'>Unknown</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28649, {&quot;Title&quot;:&quot;The Letters of Queen Victoria : A Selection from Her Majesty&#39;s Correspondence between the Years 1837 and 1861. Volume 3, 1854-1861&quot;,&quot;Topics&quot;:[&quot;Great Britain -- History -- Victoria, 1837-1901&quot;,&quot;Victoria, Queen of Great Britain, 1819-1901 -- Correspondence&quot;,&quot;Great Britain -- Politics and government -- 1837-1901&quot;,&quot;Europe -- Politics and government -- 1848-1871&quot;,&quot;Great Britain -- History -- Victoria, 1837-1901 -- Sources&quot;],&quot;Primary&quot;:&quot;28649.htm&quot;,&quot;CreatorNames&quot;:[&quot;Victoria, Queen of Great Britain, 1819-1901&quot;,&quot;Benson, Arthur Christopher, 1862-1925 [Editor]&quot;,&quot;Esher, Reginald Baliol Brett, Viscount, 1852-1930 [Editor]&quot;],&quot;LoCC&quot;:[&quot;AC&quot;,&quot;DA&quot;],&quot;PG_ID&quot;:&quot;28649&quot;});" class='title'>The Letters of Queen Victoria :<br><span class='subtitle'>A Selection from Her Majesty's Correspondence between the Years 1837 and 1861. Volume 3, 1854-1861</span></a>
+<div class='author'>Victoria, Queen of Great Britain, 1819-1901, Benson, Arthur Christopher, 1862-1925 [Editor], Esher, Reginald Baliol Brett, Viscount, 1852-1930 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28747, {&quot;Title&quot;:&quot;The Works of Oliver Wendell Holmes: An Index of the Project Gutenberg Editions&quot;,&quot;Topics&quot;:[&quot;Indexes&quot;],&quot;Primary&quot;:&quot;28747.htm&quot;,&quot;CreatorNames&quot;:[&quot;Holmes, Oliver Wendell, 1809-1894&quot;,&quot;Widger, David, 1932-2021? [Editor]&quot;],&quot;LoCC&quot;:[&quot;AC&quot;,&quot;PS&quot;],&quot;PG_ID&quot;:&quot;28747&quot;});" class='title'>The Works of Oliver Wendell Holmes:<br><span class='subtitle'>An Index of the Project Gutenberg Editions</span></a>
+<div class='author'>Holmes, Oliver Wendell, 1809-1894, Widger, David, 1932-2021? [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29076, {&quot;Title&quot;:&quot;Critical Miscellanies (Vol. 3 of 3), Essay 1: On Popular Culture&quot;,&quot;Topics&quot;:[&quot;Literature -- History and criticism&quot;],&quot;Primary&quot;:&quot;29076.htm&quot;,&quot;CreatorNames&quot;:[&quot;Morley, John, 1838-1923&quot;],&quot;LoCC&quot;:[&quot;AC&quot;],&quot;PG_ID&quot;:&quot;29076&quot;});" class='title'>Critical Miscellanies (Vol. 3 of 3), Essay 1:<br><span class='subtitle'>On Popular Culture</span></a>
+<div class='author'>Morley, John, 1838-1923</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29277, {&quot;Title&quot;:&quot;Mountain Meditations, and some subjects of the day and the war&quot;,&quot;Topics&quot;:[&quot;Essays&quot;],&quot;Primary&quot;:&quot;29277.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lind-af-Hageby, L. (Lizzy), 1878-1963&quot;],&quot;LoCC&quot;:[&quot;AC&quot;],&quot;PG_ID&quot;:&quot;29277&quot;});" class='title'>Mountain Meditations, and some subjects of the day and the war</a>
+<div class='author'>Lind-af-Hageby, L. (Lizzy), 1878-1963</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29440, {&quot;Title&quot;:&quot;Leading Articles on Various Subjects&quot;,&quot;Topics&quot;:[&quot;English essays&quot;],&quot;Primary&quot;:&quot;29440.htm&quot;,&quot;CreatorNames&quot;:[&quot;Miller, Hugh, 1802-1856&quot;,&quot;Davidson, John, -1881 [Editor]&quot;],&quot;LoCC&quot;:[&quot;AC&quot;],&quot;PG_ID&quot;:&quot;29440&quot;});" class='title'>Leading Articles on Various Subjects</a>
+<div class='author'>Miller, Hugh, 1802-1856, Davidson, John, -1881 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30208, {&quot;Title&quot;:&quot;The Ghosts, and Other Lectures&quot;,&quot;Topics&quot;:[&quot;Free thought&quot;],&quot;Primary&quot;:&quot;30208.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ingersoll, Robert Green, 1833-1899&quot;],&quot;LoCC&quot;:[&quot;AC&quot;],&quot;PG_ID&quot;:&quot;30208&quot;});" class='title'>The Ghosts, and Other Lectures</a>
+<div class='author'>Ingersoll, Robert Green, 1833-1899</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3252, {&quot;Title&quot;:&quot;Complete Project Gutenberg Oliver Wendell Holmes, Sr. Works&quot;,&quot;Topics&quot;:[&quot;American literature&quot;,&quot;Literature -- Collections&quot;],&quot;Primary&quot;:&quot;3252.txt&quot;,&quot;CreatorNames&quot;:[&quot;Holmes, Oliver Wendell, 1809-1894&quot;],&quot;LoCC&quot;:[&quot;AC&quot;,&quot;PS&quot;],&quot;PG_ID&quot;:&quot;3252&quot;});" class='title'>Complete Project Gutenberg Oliver Wendell Holmes, Sr. Works</a>
+<div class='author'>Holmes, Oliver Wendell, 1809-1894</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3254, {&quot;Title&quot;:&quot;Complete Project Gutenberg John Galsworthy Works&quot;,&quot;Topics&quot;:[&quot;Literature -- Collections&quot;,&quot;English literature -- 20th century&quot;],&quot;Primary&quot;:&quot;3254.txt&quot;,&quot;CreatorNames&quot;:[&quot;Galsworthy, John, 1867-1933&quot;],&quot;LoCC&quot;:[&quot;AC&quot;,&quot;PR&quot;],&quot;PG_ID&quot;:&quot;3254&quot;});" class='title'>Complete Project Gutenberg John Galsworthy Works</a>
+<div class='author'>Galsworthy, John, 1867-1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3338, {&quot;Title&quot;:&quot;Sir Humphrey Gilbert&#39;s Voyage to Newfoundland&quot;,&quot;Topics&quot;:[&quot;Voyages and travels&quot;,&quot;Newfoundland and Labrador -- History&quot;,&quot;Gilbert, Humphrey, Sir, 1539?-1583&quot;],&quot;Primary&quot;:&quot;3338.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hayes, Edward, active 1602&quot;],&quot;LoCC&quot;:[&quot;AC&quot;,&quot;F&quot;],&quot;PG_ID&quot;:&quot;3338&quot;});" class='title'>Sir Humphrey Gilbert's Voyage to Newfoundland</a>
+<div class='author'>Hayes, Edward, active 1602</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33668, {&quot;Title&quot;:&quot;Springtime and Other Essays&quot;,&quot;Topics&quot;:[&quot;Essays&quot;],&quot;Primary&quot;:&quot;33668.htm&quot;,&quot;CreatorNames&quot;:[&quot;Darwin, Francis, Sir, 1848-1925&quot;],&quot;LoCC&quot;:[&quot;AC&quot;],&quot;PG_ID&quot;:&quot;33668&quot;});" class='title'>Springtime and Other Essays</a>
+<div class='author'>Darwin, Francis, Sir, 1848-1925</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40590, {&quot;Title&quot;:&quot;A Century of Science, and Other Essays&quot;,&quot;Topics&quot;:[&quot;Science -- History&quot;,&quot;Evolution&quot;,&quot;Shakespeare, William, 1564-1616 -- Authorship&quot;,&quot;Folklore -- Ireland&quot;,&quot;Arbitration (International law)&quot;,&quot;Youmans, Edward Livingston, 1821-1887&quot;,&quot;Vane, Henry, Sir, 1613-1662&quot;,&quot;Parkman, Francis, 1823-1893&quot;,&quot;Freeman, Edward A. (Edward Augustus), 1823-1892&quot;,&quot;Cook, Joseph, 1838-1901&quot;,&quot;Cambridge (Mass.) -- Description and travel&quot;],&quot;Primary&quot;:&quot;40590.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fiske, John, 1842-1901&quot;],&quot;LoCC&quot;:[&quot;AC&quot;],&quot;PG_ID&quot;:&quot;40590&quot;});" class='title'>A Century of Science, and Other Essays</a>
+<div class='author'>Fiske, John, 1842-1901</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40622, {&quot;Title&quot;:&quot;Stories from Virgil&quot;,&quot;Topics&quot;:[&quot;Virgil -- Adaptations&quot;,&quot;Latin poetry -- Adaptations&quot;],&quot;Primary&quot;:&quot;40622.htm&quot;,&quot;CreatorNames&quot;:[&quot;Church, Alfred John, 1829-1912&quot;],&quot;LoCC&quot;:[&quot;AC&quot;,&quot;PA&quot;],&quot;PG_ID&quot;:&quot;40622&quot;});" class='title'>Stories from Virgil</a>
+<div class='author'>Church, Alfred John, 1829-1912</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44416, {&quot;Title&quot;:&quot;A Collection of Essays and Fugitiv Writings - On Moral, Historical, Political, and Literary Subjects&quot;,&quot;Topics&quot;:[&quot;United States -- Politics and government -- 1783-1789 -- Sources&quot;,&quot;American essays&quot;,&quot;United States -- History -- Confederation, 1783-1789 -- Sources&quot;,&quot;United States -- Intellectual life -- 1783-1865 -- Sources&quot;],&quot;Primary&quot;:&quot;44416.htm&quot;,&quot;CreatorNames&quot;:[&quot;Webster, Noah, 1758-1843&quot;],&quot;LoCC&quot;:[&quot;AC&quot;,&quot;E&quot;],&quot;PG_ID&quot;:&quot;44416&quot;});" class='title'>A Collection of Essays and Fugitiv Writings -<br><span class='subtitle'>On Moral, Historical, Political, and Literary Subjects</span></a>
+<div class='author'>Webster, Noah, 1758-1843</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47127, {&quot;Title&quot;:&quot;Tradition, Principally with Reference to Mythology and the Law of Nations&quot;,&quot;Topics&quot;:[&quot;Mythology&quot;,&quot;International law&quot;,&quot;Natural law&quot;,&quot;Macdonell, George, 1780-1870&quot;,&quot;Tradition (Theology)&quot;],&quot;Primary&quot;:&quot;47127.htm&quot;,&quot;CreatorNames&quot;:[&quot;Arundell of Wardour, John Francis Arundell, Baron, 1831-1906&quot;],&quot;LoCC&quot;:[&quot;AC&quot;,&quot;BL&quot;],&quot;PG_ID&quot;:&quot;47127&quot;});" class='title'>Tradition, Principally with Reference to Mythology and the Law of Nations</a>
+<div class='author'>Arundell of Wardour, John Francis Arundell, Baron, 1831-1906</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49791, {&quot;Title&quot;:&quot;Miscellanea Curiosa, Vol. 1 - Containing a collection of some of the principal phaenomena in nature, accounted for by the greatest philosophers of this age&quot;,&quot;Topics&quot;:[&quot;Natural history&quot;,&quot;Voyages and travels -- Early works to 1800&quot;,&quot;Science -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;49791.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fontenelle, M. de (Bernard Le Bovier), 1657-1757 [Contributor]&quot;,&quot;Garden, George, 1649-1733 [Contributor]&quot;,&quot;Havers, Clopton, -1702 [Contributor]&quot;,&quot;Mead, Richard, 1673-1754 [Contributor]&quot;,&quot;Newton, Isaac, 1642-1727 [Contributor]&quot;,&quot;Royal Society (Great Britain) [Contributor]&quot;,&quot;Wallis, John, 1616-1703 [Contributor]&quot;,&quot;Halley, Edmond, 1656-1742 [Editor]&quot;],&quot;LoCC&quot;:[&quot;AC&quot;,&quot;Q&quot;,&quot;QH&quot;],&quot;PG_ID&quot;:&quot;49791&quot;});" class='title'>Miscellanea Curiosa, Vol. 1 -<br><span class='subtitle'>Containing a collection of some of the principal phaenomena in nature, accounted for by the greatest philosophers of this age</span></a>
+<div class='author'>Fontenelle, M. de (Bernard Le Bovier), 1657-1757 [Contributor], Garden, George, 1649-1733 [Contributor], Havers, Clopton, -1702 [Contributor], Mead, Richard, 1673-1754 [Contributor], Newton, Isaac, 1642-1727 [Contributor], Royal Society (Great Britain) [Contributor], Wallis, John, 1616-1703 [Contributor], Halley, Edmond, 1656-1742 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50004, {&quot;Title&quot;:&quot;The Evil Eye, Thanatology, and Other Essays&quot;,&quot;Topics&quot;:[&quot;Religion&quot;,&quot;Medicine&quot;,&quot;Mythology&quot;,&quot;Bruno, Giordano, 1548-1600&quot;,&quot;Knights of Malta&quot;,&quot;Evil eye&quot;,&quot;Students&quot;],&quot;Primary&quot;:&quot;50004.htm&quot;,&quot;CreatorNames&quot;:[&quot;Park, Roswell, 1852-1914&quot;],&quot;LoCC&quot;:[&quot;AC&quot;],&quot;PG_ID&quot;:&quot;50004&quot;});" class='title'>The Evil Eye, Thanatology, and Other Essays</a>
+<div class='author'>Park, Roswell, 1852-1914</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50229, {&quot;Title&quot;:&quot;Miscellanea Curiosa, Vol. 3 - containing a collection of curious travels, voyages, and natural histories of countries as they have been delivered in to the Royal Society&quot;,&quot;Topics&quot;:[&quot;Natural history&quot;,&quot;Voyages and travels -- Early works to 1800&quot;,&quot;Science -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;50229.htm&quot;,&quot;CreatorNames&quot;:[&quot;Royal Society (Great Britain)&quot;],&quot;LoCC&quot;:[&quot;AC&quot;,&quot;Q&quot;,&quot;QH&quot;],&quot;PG_ID&quot;:&quot;50229&quot;});" class='title'>Miscellanea Curiosa, Vol. 3 -<br><span class='subtitle'>containing a collection of curious travels, voyages, and natural histories of countries as they have been delivered in to the Royal Society</span></a>
+<div class='author'>Royal Society (Great Britain)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51620, {&quot;Title&quot;:&quot;爾雅&quot;,&quot;Topics&quot;:[&quot;Chinese language -- To 600&quot;,&quot;Encyclopedias and dictionaries, Chinese&quot;],&quot;Primary&quot;:&quot;51620.txt&quot;,&quot;CreatorNames&quot;:[&quot;Unknown&quot;],&quot;LoCC&quot;:[&quot;AC&quot;],&quot;PG_ID&quot;:&quot;51620&quot;});" class='title'>爾雅</a>
+<div class='author'>Unknown</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52271, {&quot;Title&quot;:&quot;漢武帝別國洞冥記&quot;,&quot;Topics&quot;:[&quot;Fantasy fiction, Chinese&quot;,&quot;Curiosities and wonders -- China -- Early works to 1900&quot;,&quot;Han Wudi, Emperor of China, 156 B.C.-87 B.C. -- Fiction&quot;],&quot;Primary&quot;:&quot;52271.txt&quot;,&quot;CreatorNames&quot;:[&quot;Guo, Xian, active 1st century&quot;],&quot;LoCC&quot;:[&quot;AC&quot;],&quot;PG_ID&quot;:&quot;52271&quot;});" class='title'>漢武帝別國洞冥記</a>
+<div class='author'>Guo, Xian, active 1st century</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52278, {&quot;Title&quot;:&quot;幽明錄&quot;,&quot;Topics&quot;:[&quot;China -- History -- Anecdotes&quot;,&quot;Curiosities and wonders -- China&quot;],&quot;Primary&quot;:&quot;52278.txt&quot;,&quot;CreatorNames&quot;:[&quot;Liu, Yiqing, 403-444&quot;,&quot;Genlin, Wang [Editor]&quot;],&quot;LoCC&quot;:[&quot;AC&quot;],&quot;PG_ID&quot;:&quot;52278&quot;});" class='title'>幽明錄</a>
+<div class='author'>Liu, Yiqing, 403-444, Genlin, Wang [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55817, {&quot;Title&quot;:&quot;Automata Old and New&quot;,&quot;Topics&quot;:[&quot;Robots&quot;,&quot;Machine theory&quot;],&quot;Primary&quot;:&quot;55817.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cooke, Conrad William, 1843-1926&quot;],&quot;LoCC&quot;:[&quot;AC&quot;,&quot;TJ&quot;],&quot;PG_ID&quot;:&quot;55817&quot;});" class='title'>Automata Old and New</a>
+<div class='author'>Cooke, Conrad William, 1843-1926</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5637, {&quot;Title&quot;:&quot;Literary and Philosophical Essays: French, German and Italian&quot;,&quot;Topics&quot;:[&quot;Essays&quot;],&quot;Primary&quot;:&quot;5637.txt&quot;,&quot;CreatorNames&quot;:[&quot;Kant, Immanuel, 1724-1804&quot;,&quot;Lessing, Gotthold Ephraim, 1729-1781&quot;,&quot;Mazzini, Giuseppe, 1805-1872&quot;,&quot;Montaigne, Michel de, 1533-1592&quot;,&quot;Renan, Ernest, 1823-1892&quot;,&quot;Sainte-Beuve, Charles Augustin, 1804-1869&quot;,&quot;Schiller, Friedrich, 1759-1805&quot;],&quot;LoCC&quot;:[&quot;AC&quot;,&quot;PN&quot;],&quot;PG_ID&quot;:&quot;5637&quot;});" class='title'>Literary and Philosophical Essays:<br><span class='subtitle'>French, German and Italian</span></a>
+<div class='author'>Kant, Immanuel, 1724-1804, Lessing, Gotthold Ephraim, 1729-1781, Mazzini, Giuseppe, 1805-1872, Montaigne, Michel de, 1533-1592, Renan, Ernest, 1823-1892, Sainte-Beuve, Charles Augustin, 1804-1869, Schiller, Friedrich, 1759-1805</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64021, {&quot;Title&quot;:&quot;The Scientific Spirit of the Age, and Other Pleas and Discussions&quot;,&quot;Topics&quot;:[&quot;Philosophy and religion&quot;,&quot;Science -- Moral and ethical aspects&quot;,&quot;Knowledge, Sociology of&quot;],&quot;Primary&quot;:&quot;64021.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cobbe, Frances Power, 1822-1904&quot;],&quot;LoCC&quot;:[&quot;AC&quot;],&quot;PG_ID&quot;:&quot;64021&quot;});" class='title'>The Scientific Spirit of the Age, and Other Pleas and Discussions</a>
+<div class='author'>Cobbe, Frances Power, 1822-1904</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6570, {&quot;Title&quot;:&quot;Lectures and Essays&quot;,&quot;Topics&quot;:[&quot;Canadian essays -- 19th century&quot;],&quot;Primary&quot;:&quot;6570.txt&quot;,&quot;CreatorNames&quot;:[&quot;Smith, Goldwin, 1823-1910&quot;],&quot;LoCC&quot;:[&quot;AC&quot;,&quot;PS&quot;],&quot;PG_ID&quot;:&quot;6570&quot;});" class='title'>Lectures and Essays</a>
+<div class='author'>Smith, Goldwin, 1823-1910</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7257, {&quot;Title&quot;:&quot;Reflections and Comments 1865-1895&quot;,&quot;Topics&quot;:[&quot;Essays&quot;],&quot;Primary&quot;:&quot;7257.txt&quot;,&quot;CreatorNames&quot;:[&quot;Godkin, Edwin Lawrence, 1831-1902&quot;],&quot;LoCC&quot;:[&quot;AC&quot;],&quot;PG_ID&quot;:&quot;7257&quot;});" class='title'>Reflections and Comments 1865-1895</a>
+<div class='author'>Godkin, Edwin Lawrence, 1831-1902</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7340, {&quot;Title&quot;:&quot;六韜&quot;,&quot;Topics&quot;:[&quot;Military art and science -- China -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;7340.txt&quot;,&quot;CreatorNames&quot;:[&quot;Lü, Shang&quot;],&quot;LoCC&quot;:[&quot;AC&quot;,&quot;U&quot;],&quot;PG_ID&quot;:&quot;7340&quot;});" class='title'>六韜</a>
+<div class='author'>Lü, Shang</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7407, {&quot;Title&quot;:&quot;棋經&quot;,&quot;Topics&quot;:[&quot;Go (Game) -- China&quot;],&quot;Primary&quot;:&quot;7407.txt&quot;,&quot;CreatorNames&quot;:[&quot;Zhang, Ni&quot;],&quot;LoCC&quot;:[&quot;AC&quot;,&quot;PL&quot;],&quot;PG_ID&quot;:&quot;7407&quot;});" class='title'>棋經</a>
+<div class='author'>Zhang, Ni</div>
+</div>
+</ul></div>
+</body></html>

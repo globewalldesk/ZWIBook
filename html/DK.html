@@ -1,0 +1,854 @@
+<html>
+<head>
+<title>Subcategory</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+  <!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+          <button id="findButton">Find</button>
+      </div>
+  </div>
+  <div class="sort-overlay" id="sortOverlay"></div>
+  <div id="header">
+    <div id="header-content">
+      <div class="header-container">
+        <a id="backBtn" class="header-btn" href="#">
+            <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+        </a>
+        <a id="search" class="header-btn" href="../search.html">
+            <img src="../images/icons/search.svg" title="Search book titles">
+        </a>
+      </div>
+      <h1 id="headTitle">Russia, Soviet Union, Former Soviet Republics, Poland (DK)</h1>
+      <div class="header-container">
+          <a id="sortBtn" class="header-btn" href="#">
+            <img src="../images/icons/sort.svg" title="Re-sort books">
+          </a>
+          <div id="sortDropdown" class="dropdown" style="display: none">
+            <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+            <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+            <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+            <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+          </div>
+          <a class="header-btn" href="categories.html">
+            <img src="../images/icons/categories.svg" title="Browse categories">
+          </a>      
+          <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+              <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+          </a>
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <ul>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(11980, {&quot;Title&quot;:&quot;A Tramp&#39;s Sketches&quot;,&quot;Topics&quot;:[&quot;Russia -- Description and travel&quot;,&quot;Jerusalem&quot;,&quot;Russia -- Social life and customs&quot;,&quot;Graham, Stephen, 1884-1975&quot;],&quot;Primary&quot;:&quot;11980.txt&quot;,&quot;CreatorNames&quot;:[&quot;Graham, Stephen, 1884-1975&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;11980&quot;});" class='title'>A Tramp's Sketches</a>
+<div class='author'>Graham, Stephen, 1884-1975</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12266, {&quot;Title&quot;:&quot;Von Haparanda bis San Francisco: Reise-Erinnerungen&quot;,&quot;Topics&quot;:[&quot;Germany -- Description and travel&quot;,&quot;United States -- Description and travel&quot;,&quot;Denmark -- Description and travel&quot;,&quot;Sweden -- Description and travel&quot;,&quot;Latvia -- Description and travel&quot;],&quot;Primary&quot;:&quot;12266.txt&quot;,&quot;CreatorNames&quot;:[&quot;Wasserzieher, Ernst, 1860-1927&quot;],&quot;LoCC&quot;:[&quot;DD&quot;,&quot;DK&quot;,&quot;DL&quot;,&quot;E&quot;],&quot;PG_ID&quot;:&quot;12266&quot;});" class='title'>Von Haparanda bis San Francisco:<br><span class='subtitle'>Reise-Erinnerungen</span></a>
+<div class='author'>Wasserzieher, Ernst, 1860-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12328, {&quot;Title&quot;:&quot;Tent Life in Siberia - A New Account of an Old Undertaking; Adventures among the Koraks and Other Tribes In Kamchatka and Northern Asia&quot;,&quot;Topics&quot;:[&quot;Kennan, George, 1845-1924&quot;,&quot;Siberia, Eastern (Russia) -- Description and travel&quot;,&quot;Kamchatka Peninsula (Russia) -- Description and travel&quot;],&quot;Primary&quot;:&quot;12328.txt&quot;,&quot;CreatorNames&quot;:[&quot;Kennan, George, 1845-1924&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;12328&quot;});" class='title'>Tent Life in Siberia -<br><span class='subtitle'>A New Account of an Old Undertaking; Adventures among the Koraks and Other Tribes In Kamchatka and Northern Asia</span></a>
+<div class='author'>Kennan, George, 1845-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(1324, {&quot;Title&quot;:&quot;Russia in 1919&quot;,&quot;Topics&quot;:[&quot;Soviet Union -- History -- Revolution, 1917-1921&quot;],&quot;Primary&quot;:&quot;1324.txt&quot;,&quot;CreatorNames&quot;:[&quot;Ransome, Arthur, 1884-1967&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;1324&quot;});" class='title'>Russia in 1919</a>
+<div class='author'>Ransome, Arthur, 1884-1967</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(1326, {&quot;Title&quot;:&quot;The Crisis in Russia&quot;,&quot;Topics&quot;:[&quot;Communism -- Soviet Union&quot;,&quot;Soviet Union -- Economic conditions -- 1917-1945&quot;,&quot;Soviet Union -- Politics and government -- 1917-1936&quot;],&quot;Primary&quot;:&quot;1326.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ransome, Arthur, 1884-1967&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;1326&quot;});" class='title'>The Crisis in Russia</a>
+<div class='author'>Ransome, Arthur, 1884-1967</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(1349, {&quot;Title&quot;:&quot;Russia&quot;,&quot;Topics&quot;:[&quot;Russia -- Politics and government -- 1801-1917&quot;,&quot;Russia -- Religious life and customs&quot;,&quot;Nobility -- Russia&quot;,&quot;Peasants -- Russia&quot;,&quot;Industries -- Russia -- History -- 19th century&quot;],&quot;Primary&quot;:&quot;1349.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wallace, Donald Mackenzie, 1841-1919&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;1349&quot;});" class='title'>Russia</a>
+<div class='author'>Wallace, Donald Mackenzie, 1841-1919</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13802, {&quot;Title&quot;:&quot;Indrukken van Finland - De Aarde en haar Volken, 1906&quot;,&quot;Topics&quot;:[&quot;Finland -- Description and travel&quot;],&quot;Primary&quot;:&quot;13802.htm&quot;,&quot;CreatorNames&quot;:[&quot;Engelen, Clara, 1879-1956&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;13802&quot;});" class='title'>Indrukken van Finland -<br><span class='subtitle'>De Aarde en haar Volken, 1906</span></a>
+<div class='author'>Engelen, Clara, 1879-1956</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(13806, {&quot;Title&quot;:&quot;Overland through Asia; Pictures of Siberian, Chinese, and Tartar Life&quot;,&quot;Topics&quot;:[&quot;Siberia (Russia) -- Description and travel&quot;,&quot;Asia -- Description and travel&quot;],&quot;Primary&quot;:&quot;13806.htm&quot;,&quot;CreatorNames&quot;:[&quot;Knox, Thomas Wallace, 1835-1896&quot;],&quot;LoCC&quot;:[&quot;DK&quot;,&quot;DS&quot;],&quot;PG_ID&quot;:&quot;13806&quot;});" class='title'>Overland through Asia;<br><span class='subtitle'>Pictures of Siberian, Chinese, and Tartar Life</span></a>
+<div class='author'>Knox, Thomas Wallace, 1835-1896</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15269, {&quot;Title&quot;:&quot;The Empire of Russia: From the Remotest Periods to the Present Time&quot;,&quot;Topics&quot;:[&quot;Russia -- History&quot;],&quot;Primary&quot;:&quot;15269.htm&quot;,&quot;CreatorNames&quot;:[&quot;Abbott, John S. C. (John Stevens Cabot), 1805-1877&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;15269&quot;});" class='title'>The Empire of Russia:<br><span class='subtitle'>From the Remotest Periods to the Present Time</span></a>
+<div class='author'>Abbott, John S. C. (John Stevens Cabot), 1805-1877</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15440, {&quot;Title&quot;:&quot;Kansallista itsetutkistelua: Suomalaisia kulttuuri-ääriviivoja&quot;,&quot;Topics&quot;:[&quot;Finland -- Civilization&quot;],&quot;Primary&quot;:&quot;15440.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kilpi, Volter, 1874-1939&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;15440&quot;});" class='title'>Kansallista itsetutkistelua:<br><span class='subtitle'>Suomalaisia kulttuuri-ääriviivoja</span></a>
+<div class='author'>Kilpi, Volter, 1874-1939</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16481, {&quot;Title&quot;:&quot;Muistoja lapsen ja hopeahapsen 1 - Kuvauksia&quot;,&quot;Topics&quot;:[&quot;Finland -- Biography&quot;,&quot;Ramsay, Anders, 1832-1910&quot;],&quot;Primary&quot;:&quot;16481.txt&quot;,&quot;CreatorNames&quot;:[&quot;Ramsay, Anders, 1832-1910&quot;,&quot;Sarlin, Knut, 1882-1923 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;16481&quot;});" class='title'>Muistoja lapsen ja hopeahapsen 1 -<br><span class='subtitle'>Kuvauksia</span></a>
+<div class='author'>Ramsay, Anders, 1832-1910, Sarlin, Knut, 1882-1923 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16482, {&quot;Title&quot;:&quot;Muistoja lapsen ja hopeahapsen 2 - Kuvauksia&quot;,&quot;Topics&quot;:[&quot;Finland -- Biography&quot;,&quot;Ramsay, Anders, 1832-1910&quot;],&quot;Primary&quot;:&quot;16482.txt&quot;,&quot;CreatorNames&quot;:[&quot;Ramsay, Anders, 1832-1910&quot;,&quot;Sarlin, Knut, 1882-1923 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;16482&quot;});" class='title'>Muistoja lapsen ja hopeahapsen 2 -<br><span class='subtitle'>Kuvauksia</span></a>
+<div class='author'>Ramsay, Anders, 1832-1910, Sarlin, Knut, 1882-1923 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16483, {&quot;Title&quot;:&quot;Muistoja lapsen ja hopeahapsen 3 - Kuvauksia&quot;,&quot;Topics&quot;:[&quot;Finland -- Biography&quot;,&quot;Ramsay, Anders, 1832-1910&quot;],&quot;Primary&quot;:&quot;16483.txt&quot;,&quot;CreatorNames&quot;:[&quot;Ramsay, Anders, 1832-1910&quot;,&quot;Sarlin, Knut, 1882-1923 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;16483&quot;});" class='title'>Muistoja lapsen ja hopeahapsen 3 -<br><span class='subtitle'>Kuvauksia</span></a>
+<div class='author'>Ramsay, Anders, 1832-1910, Sarlin, Knut, 1882-1923 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16613, {&quot;Title&quot;:&quot;Bolshevism: The Enemy of Political and Industrial Democracy&quot;,&quot;Topics&quot;:[&quot;Soviet Union -- History -- Revolution, 1917-1921&quot;,&quot;Communism -- Soviet Union&quot;],&quot;Primary&quot;:&quot;16613.htm&quot;,&quot;CreatorNames&quot;:[&quot;Spargo, John, 1876-1966&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;16613&quot;});" class='title'>Bolshevism:<br><span class='subtitle'>The Enemy of Political and Industrial Democracy</span></a>
+<div class='author'>Spargo, John, 1876-1966</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16930, {&quot;Title&quot;:&quot;A Short History of Russia&quot;,&quot;Topics&quot;:[&quot;Russia -- History&quot;],&quot;Primary&quot;:&quot;16930.htm&quot;,&quot;CreatorNames&quot;:[&quot;Parmele, Mary Platt, 1843-1911&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;16930&quot;});" class='title'>A Short History of Russia</a>
+<div class='author'>Parmele, Mary Platt, 1843-1911</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17339, {&quot;Title&quot;:&quot;Schetsen uit den Kaukasus - De Aarde en haar Volken, 1887&quot;,&quot;Topics&quot;:[&quot;Caucasus -- Description and travel&quot;],&quot;Primary&quot;:&quot;17339.htm&quot;,&quot;CreatorNames&quot;:[&quot;Serena, Carla, -1884&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;17339&quot;});" class='title'>Schetsen uit den Kaukasus -<br><span class='subtitle'>De Aarde en haar Volken, 1887</span></a>
+<div class='author'>Serena, Carla, -1884</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17350, {&quot;Title&quot;:&quot;The Practice and Theory of Bolshevism&quot;,&quot;Topics&quot;:[&quot;Soviet Union -- Social conditions&quot;,&quot;Communism -- Soviet Union -- History&quot;],&quot;Primary&quot;:&quot;17350.htm&quot;,&quot;CreatorNames&quot;:[&quot;Russell, Bertrand, 1872-1970&quot;],&quot;LoCC&quot;:[&quot;DK&quot;,&quot;HX&quot;],&quot;PG_ID&quot;:&quot;17350&quot;});" class='title'>The Practice and Theory of Bolshevism</a>
+<div class='author'>Russell, Bertrand, 1872-1970</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18165, {&quot;Title&quot;:&quot;Russian Rambles&quot;,&quot;Topics&quot;:[&quot;Russia -- Description and travel&quot;],&quot;Primary&quot;:&quot;18165.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hapgood, Isabel Florence, 1850-1928&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;18165&quot;});" class='title'>Russian Rambles</a>
+<div class='author'>Hapgood, Isabel Florence, 1850-1928</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18339, {&quot;Title&quot;:&quot;Het Vrije Rusland - De Aarde en haar Volken, 1873&quot;,&quot;Topics&quot;:[&quot;Russia&quot;,&quot;Russia -- Religion&quot;],&quot;Primary&quot;:&quot;18339.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dixon, William Hepworth, 1821-1879&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;18339&quot;});" class='title'>Het Vrije Rusland -<br><span class='subtitle'>De Aarde en haar Volken, 1873</span></a>
+<div class='author'>Dixon, William Hepworth, 1821-1879</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19125, {&quot;Title&quot;:&quot;Satanen muistelmia Pohjanmaalta 1&quot;,&quot;Topics&quot;:[&quot;Oulu (Finland) -- Biography -- Anecdotes, facetiae, satire, etc.&quot;],&quot;Primary&quot;:&quot;19125.txt&quot;,&quot;CreatorNames&quot;:[&quot;Wacklin, Sara, 1790-1846&quot;,&quot;Aulén, Johan, 1837-1906 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;19125&quot;});" class='title'>Satanen muistelmia Pohjanmaalta 1</a>
+<div class='author'>Wacklin, Sara, 1790-1846, Aulén, Johan, 1837-1906 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19326, {&quot;Title&quot;:&quot;Van Orenburg naar Samarkand - De Aarde en haar Volken, 1873&quot;,&quot;Topics&quot;:[&quot;Asia, Central -- Description and travel&quot;],&quot;Primary&quot;:&quot;19326.htm&quot;,&quot;CreatorNames&quot;:[&quot;Vereshchagin, Vasilïĭ Vasilʹevich, 1842-1904&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;19326&quot;});" class='title'>Van Orenburg naar Samarkand -<br><span class='subtitle'>De Aarde en haar Volken, 1873</span></a>
+<div class='author'>Vereshchagin, Vasilïĭ Vasilʹevich, 1842-1904</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19534, {&quot;Title&quot;:&quot;Russia, as Seen and Described by Famous Writers&quot;,&quot;Topics&quot;:[&quot;Russia&quot;],&quot;Primary&quot;:&quot;19534.htm&quot;,&quot;CreatorNames&quot;:[&quot;Singleton, Esther, 1865-1930 [Editor]&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;19534&quot;});" class='title'>Russia, as Seen and Described by Famous Writers</a>
+<div class='author'>Singleton, Esther, 1865-1930 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19629, {&quot;Title&quot;:&quot;Venäjän historia 1878-1918&quot;,&quot;Topics&quot;:[&quot;Russia -- History -- Alexander III, 1881-1894&quot;,&quot;Russia -- History -- Nicholas II, 1894-1917&quot;],&quot;Primary&quot;:&quot;19629.txt&quot;,&quot;CreatorNames&quot;:[&quot;Hedenström, Alfred von, 1869-&quot;,&quot;Malinen, V. [Translator]&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;19629&quot;});" class='title'>Venäjän historia 1878-1918</a>
+<div class='author'>Hedenström, Alfred von, 1869-, Malinen, V. [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19712, {&quot;Title&quot;:&quot;Per auto door den Kaukasus naar Perzië - De Aarde en haar Volken, 1907&quot;,&quot;Topics&quot;:[&quot;Iran -- Description and travel&quot;,&quot;Caucasus -- Description and travel&quot;],&quot;Primary&quot;:&quot;19712.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anet, Claude, 1868-1931&quot;],&quot;LoCC&quot;:[&quot;DK&quot;,&quot;DS&quot;],&quot;PG_ID&quot;:&quot;19712&quot;});" class='title'>Per auto door den Kaukasus naar Perzië -<br><span class='subtitle'>De Aarde en haar Volken, 1907</span></a>
+<div class='author'>Anet, Claude, 1868-1931</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19891, {&quot;Title&quot;:&quot;De Reis van Prins Scipio Borghese naar de Hemelsche Bergen - De Aarde en haar Volken, 1907&quot;,&quot;Topics&quot;:[&quot;Asia, Central -- Description and travel&quot;],&quot;Primary&quot;:&quot;19891.htm&quot;,&quot;CreatorNames&quot;:[&quot;Brocherel, Jules, 1871-1954&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;19891&quot;});" class='title'>De Reis van Prins Scipio Borghese naar de Hemelsche Bergen -<br><span class='subtitle'>De Aarde en haar Volken, 1907</span></a>
+<div class='author'>Brocherel, Jules, 1871-1954</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20880, {&quot;Title&quot;:&quot;The Story of Russia&quot;,&quot;Topics&quot;:[&quot;Russia -- History&quot;],&quot;Primary&quot;:&quot;20880.htm&quot;,&quot;CreatorNames&quot;:[&quot;Van Bergen, R. (Robert)&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;20880&quot;});" class='title'>The Story of Russia</a>
+<div class='author'>Van Bergen, R. (Robert)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(21889, {&quot;Title&quot;:&quot;Peter the Great&quot;,&quot;Topics&quot;:[&quot;Peter I, Emperor of Russia, 1672-1725&quot;,&quot;Russia -- History -- Peter I, 1689-1725&quot;],&quot;Primary&quot;:&quot;21889.htm&quot;,&quot;CreatorNames&quot;:[&quot;Abbott, Jacob, 1803-1879&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;21889&quot;});" class='title'>Peter the Great</a>
+<div class='author'>Abbott, Jacob, 1803-1879</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22361, {&quot;Title&quot;:&quot;Päiväkirja&quot;,&quot;Topics&quot;:[&quot;Löfving, Stefan, 1689-1777&quot;,&quot;Northern War, 1700-1721 -- Sources&quot;,&quot;Finland -- Biography&quot;],&quot;Primary&quot;:&quot;22361.txt&quot;,&quot;CreatorNames&quot;:[&quot;Löfving, Stefan, 1689-1777&quot;,&quot;Löfgren, Elisabeth, 1851-1931 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;22361&quot;});" class='title'>Päiväkirja</a>
+<div class='author'>Löfving, Stefan, 1689-1777, Löfgren, Elisabeth, 1851-1931 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22533, {&quot;Title&quot;:&quot;Life of Schamyl - And Narrative of the Circassian War of Independence Against Russia&quot;,&quot;Topics&quot;:[&quot;Shamil, Imam, 1798?-1871&quot;,&quot;Caucasus -- History&quot;],&quot;Primary&quot;:&quot;22533.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mackie, J. Milton (John Milton), 1813-1894&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;22533&quot;});" class='title'>Life of Schamyl -<br><span class='subtitle'>And Narrative of the Circassian War of Independence Against Russia</span></a>
+<div class='author'>Mackie, J. Milton (John Milton), 1813-1894</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22655, {&quot;Title&quot;:&quot;Nelka - Mrs. Helen de Smirnoff Moukhanoff, 1878-1963, a Biographical Sketch&quot;,&quot;Topics&quot;:[&quot;Moukhanoff, Helen de Smirnoff, 1878-1963&quot;,&quot;Moukhanoff, Helen de Smirnoff, 1878-1963 -- Correspondence&quot;,&quot;Russia (Federation) -- History -- Revolution, 1917-1921 -- Personal narratives&quot;],&quot;Primary&quot;:&quot;22655.txt&quot;,&quot;CreatorNames&quot;:[&quot;Moukhanoff, Michael&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;22655&quot;});" class='title'>Nelka -<br><span class='subtitle'>Mrs. Helen de Smirnoff Moukhanoff, 1878-1963, a Biographical Sketch</span></a>
+<div class='author'>Moukhanoff, Michael</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23031, {&quot;Title&quot;:&quot;Wonderful Adventures of Mrs. Seacole in Many Lands&quot;,&quot;Topics&quot;:[&quot;Seacole, Mary, 1805-1881 -- Travel -- Ukraine -- Crimea&quot;,&quot;Crimean War, 1853-1856 -- Personal narratives, Jamaican&quot;,&quot;Women, Black -- Jamaica -- Biography&quot;],&quot;Primary&quot;:&quot;23031.htm&quot;,&quot;CreatorNames&quot;:[&quot;Seacole, Mary, 1805-1881&quot;,&quot;Russell, William Howard, Sir, 1820-1907 [Commentator]&quot;,&quot;W. J. S. [Editor]&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;23031&quot;});" class='title'>Wonderful Adventures of Mrs. Seacole in Many Lands</a>
+<div class='author'>Seacole, Mary, 1805-1881, Russell, William Howard, Sir, 1820-1907 [Commentator], W. J. S. [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23437, {&quot;Title&quot;:&quot;Reis naar Merw - De Aarde en haar Volken, 1887&quot;,&quot;Topics&quot;:[&quot;Trans-Caspian Railroad&quot;,&quot;Petroleum -- Russia&quot;,&quot;Merv (Extinct city) -- Description and travel&quot;,&quot;Asia, Central -- Description and travel&quot;,&quot;Baku (Azerbaijan)&quot;],&quot;Primary&quot;:&quot;23437.htm&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;23437&quot;});" class='title'>Reis naar Merw -<br><span class='subtitle'>De Aarde en haar Volken, 1887</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25755, {&quot;Title&quot;:&quot;La Russie en 1839, Volume I&quot;,&quot;Topics&quot;:[&quot;Russia -- Description and travel&quot;],&quot;Primary&quot;:&quot;25755.txt&quot;,&quot;CreatorNames&quot;:[&quot;Custine, Astolphe, marquis de, 1790-1857&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;25755&quot;});" class='title'>La Russie en 1839, Volume I</a>
+<div class='author'>Custine, Astolphe, marquis de, 1790-1857</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25850, {&quot;Title&quot;:&quot;La Russie en 1839, Volume II&quot;,&quot;Topics&quot;:[&quot;Russia -- Description and travel&quot;],&quot;Primary&quot;:&quot;25850.txt&quot;,&quot;CreatorNames&quot;:[&quot;Custine, Astolphe, marquis de, 1790-1857&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;25850&quot;});" class='title'>La Russie en 1839, Volume II</a>
+<div class='author'>Custine, Astolphe, marquis de, 1790-1857</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27267, {&quot;Title&quot;:&quot;La Russie en 1839, Volume III&quot;,&quot;Topics&quot;:[&quot;Russia -- Description and travel&quot;],&quot;Primary&quot;:&quot;27267.txt&quot;,&quot;CreatorNames&quot;:[&quot;Custine, Astolphe, marquis de, 1790-1857&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;27267&quot;});" class='title'>La Russie en 1839, Volume III</a>
+<div class='author'>Custine, Astolphe, marquis de, 1790-1857</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27345, {&quot;Title&quot;:&quot;La Russie en 1839, Volume IV&quot;,&quot;Topics&quot;:[&quot;Russia -- Description and travel&quot;],&quot;Primary&quot;:&quot;27345.txt&quot;,&quot;CreatorNames&quot;:[&quot;Custine, Astolphe, marquis de, 1790-1857&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;27345&quot;});" class='title'>La Russie en 1839, Volume IV</a>
+<div class='author'>Custine, Astolphe, marquis de, 1790-1857</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27366, {&quot;Title&quot;:&quot;A Journey in Russia in 1858&quot;,&quot;Topics&quot;:[&quot;Russia -- Description and travel&quot;],&quot;Primary&quot;:&quot;27366.htm&quot;,&quot;CreatorNames&quot;:[&quot;Heywood, Robert, 1786-1868&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;27366&quot;});" class='title'>A Journey in Russia in 1858</a>
+<div class='author'>Heywood, Robert, 1786-1868</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27723, {&quot;Title&quot;:&quot;Moja Pierwsza Bitwa: Opowiadanie Sierżanta&quot;,&quot;Topics&quot;:[&quot;Stoczek, Battle of, Poland, 1831&quot;],&quot;Primary&quot;:&quot;27723.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mickiewicz, Adam, 1798-1855&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;27723&quot;});" class='title'>Moja Pierwsza Bitwa:<br><span class='subtitle'>Opowiadanie Sierżanta</span></a>
+<div class='author'>Mickiewicz, Adam, 1798-1855</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27733, {&quot;Title&quot;:&quot;Through Siberia and Manchuria By Rail&quot;,&quot;Topics&quot;:[&quot;Siberia (Russia) -- Description and travel&quot;],&quot;Primary&quot;:&quot;27733.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ready, Oliver George&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;27733&quot;});" class='title'>Through Siberia and Manchuria By Rail</a>
+<div class='author'>Ready, Oliver George</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27743, {&quot;Title&quot;:&quot;Through Finland in Carts&quot;,&quot;Topics&quot;:[&quot;Finland -- Description and travel&quot;],&quot;Primary&quot;:&quot;27743.htm&quot;,&quot;CreatorNames&quot;:[&quot;Alec-Tweedie, Mrs. (Ethel), 1862-1940&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;27743&quot;});" class='title'>Through Finland in Carts</a>
+<div class='author'>Alec-Tweedie, Mrs. (Ethel), 1862-1940</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27882, {&quot;Title&quot;:&quot;Kościuszko - A Biography&quot;,&quot;Topics&quot;:[&quot;Kościuszko, Tadeusz, 1746-1817&quot;],&quot;Primary&quot;:&quot;27882.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gardner, Monica M. (Monica Mary), 1873-1941&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;27882&quot;});" class='title'>Kościuszko -<br><span class='subtitle'>A Biography</span></a>
+<div class='author'>Gardner, Monica M. (Monica Mary), 1873-1941</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28277, {&quot;Title&quot;:&quot;My First Battle: A Sergeant&#39;s Story&quot;,&quot;Topics&quot;:[&quot;Stoczek, Battle of, Poland, 1831&quot;],&quot;Primary&quot;:&quot;28277.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mickiewicz, Adam, 1798-1855&quot;,&quot;O&#39;Regan, Jimmy [Translator]&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;28277&quot;});" class='title'>My First Battle:<br><span class='subtitle'>A Sergeant's Story</span></a>
+<div class='author'>Mickiewicz, Adam, 1798-1855, O'Regan, Jimmy [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(3076, {&quot;Title&quot;:&quot;Ten Days That Shook the World&quot;,&quot;Topics&quot;:[&quot;Soviet Union -- History -- Revolution, 1917-1921&quot;,&quot;Communism -- Soviet Union&quot;],&quot;Primary&quot;:&quot;3076.htm&quot;,&quot;CreatorNames&quot;:[&quot;Reed, John, 1887-1920&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;3076&quot;});" class='title'>Ten Days That Shook the World</a>
+<div class='author'>Reed, John, 1887-1920</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30774, {&quot;Title&quot;:&quot;Московия в представлении иностранцев XVI-XVII в.&quot;,&quot;Topics&quot;:[&quot;Russia -- Description and travel&quot;],&quot;Primary&quot;:&quot;30774.htm&quot;,&quot;CreatorNames&quot;:[&quot;Apostol, P. N. (Pavel Natanovich), 1872-1942&quot;,&quot;Lukomskii, G. K. (Georgii Kreskent&#39;evich), 1884-1952 [Editor]&quot;,&quot;Arnshtam, Aleksandr Martinovich, 1881-1969 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;30774&quot;});" class='title'>Московия в представлении иностранцев XVI-XVII в.</a>
+<div class='author'>Apostol, P. N. (Pavel Natanovich), 1872-1942, Lukomskii, G. K. (Georgii Kreskent'evich), 1884-1952 [Editor], Arnshtam, Aleksandr Martinovich, 1881-1969 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31812, {&quot;Title&quot;:&quot;Adlercreutzin sanansaattaja: Tapaus Revonlahden tappelusta v. 1808&quot;,&quot;Topics&quot;:[&quot;Finland -- History&quot;,&quot;Russo-Swedish War, 1808-1809&quot;],&quot;Primary&quot;:&quot;31812.txt&quot;,&quot;CreatorNames&quot;:[&quot;Åberg, J. O. (Johan Olof), 1843-1898&quot;,&quot;Lempiranta, Arvo, 1860-1914 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;31812&quot;});" class='title'>Adlercreutzin sanansaattaja:<br><span class='subtitle'>Tapaus Revonlahden tappelusta v. 1808</span></a>
+<div class='author'>Åberg, J. O. (Johan Olof), 1843-1898, Lempiranta, Arvo, 1860-1914 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33303, {&quot;Title&quot;:&quot;Russian Life To-day&quot;,&quot;Topics&quot;:[&quot;Russia -- Social life and customs&quot;],&quot;Primary&quot;:&quot;33303.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bury, Herbert, Bp., 1853-1933&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;33303&quot;});" class='title'>Russian Life To-day</a>
+<div class='author'>Bury, Herbert, Bp., 1853-1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33719, {&quot;Title&quot;:&quot;Martelaren van Rusland&quot;,&quot;Topics&quot;:[&quot;Martyrs&quot;,&quot;Russia -- History -- 1801-1917&quot;],&quot;Primary&quot;:&quot;33719.htm&quot;,&quot;CreatorNames&quot;:[&quot;Michelet, Jules, 1798-1874&quot;,&quot;Wilson, S. J. Bouberg [Translator]&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;33719&quot;});" class='title'>Martelaren van Rusland</a>
+<div class='author'>Michelet, Jules, 1798-1874, Wilson, S. J. Bouberg [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35232, {&quot;Title&quot;:&quot;A Letter to American Workingmen, from the Socialist Soviet Republic of Russia&quot;,&quot;Topics&quot;:[&quot;Socialism&quot;,&quot;World War, 1914-1918 -- Economic aspects&quot;],&quot;Primary&quot;:&quot;35232.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lenin, Vladimir Il&#39;ich, 1870-1924&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;35232&quot;});" class='title'>A Letter to American Workingmen, from the Socialist Soviet Republic of Russia</a>
+<div class='author'>Lenin, Vladimir Il'ich, 1870-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36303, {&quot;Title&quot;:&quot;Our Revolution: Essays on Working-Class and International Revolution, 1904-1917&quot;,&quot;Topics&quot;:[&quot;Soviet Union -- History -- Revolution, 1917-1921&quot;,&quot;Russia -- Politics and government -- 1894-1917&quot;,&quot;Working class -- Russia&quot;,&quot;Communism -- Russia&quot;,&quot;Russia -- Social conditions -- 1801-1917&quot;],&quot;Primary&quot;:&quot;36303.htm&quot;,&quot;CreatorNames&quot;:[&quot;Trotsky, Leon, 1879-1940&quot;,&quot;Olgin, Moissaye J. (Moissaye Joseph), 1874-1939 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;36303&quot;});" class='title'>Our Revolution:<br><span class='subtitle'>Essays on Working-Class and International Revolution, 1904-1917</span></a>
+<div class='author'>Trotsky, Leon, 1879-1940, Olgin, Moissaye J. (Moissaye Joseph), 1874-1939 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36505, {&quot;Title&quot;:&quot;Travels in the Steppes of the Caspian Sea, the Crimea, the Caucasus, &amp;c.&quot;,&quot;Topics&quot;:[&quot;Caucasus -- Description and travel&quot;,&quot;Crimea (Ukraine) -- Description and travel&quot;],&quot;Primary&quot;:&quot;36505.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hommaire de Hell, Adèle, 1815?-1883?&quot;,&quot;Hommaire de Hell, Xavier, 1812-1848&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;36505&quot;});" class='title'>Travels in the Steppes of the Caspian Sea, the Crimea, the Caucasus, &c.</a>
+<div class='author'>Hommaire de Hell, Adèle, 1815?-1883?, Hommaire de Hell, Xavier, 1812-1848</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37620, {&quot;Title&quot;:&quot;Kuusi vuotta Siperiassa&quot;,&quot;Topics&quot;:[&quot;Siberia (Russia) -- Description and travel&quot;],&quot;Primary&quot;:&quot;37620.txt&quot;,&quot;CreatorNames&quot;:[&quot;Granö, Johannes, 1850-1913&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;37620&quot;});" class='title'>Kuusi vuotta Siperiassa</a>
+<div class='author'>Granö, Johannes, 1850-1913</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37875, {&quot;Title&quot;:&quot;Seitsemän päivää keskusasemalla&quot;,&quot;Topics&quot;:[&quot;Kock, Johan, 1861-1915&quot;,&quot;Soldiers -- Finland -- Biography&quot;],&quot;Primary&quot;:&quot;37875.txt&quot;,&quot;CreatorNames&quot;:[&quot;Kock, Johan, 1861-1915&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;37875&quot;});" class='title'>Seitsemän päivää keskusasemalla</a>
+<div class='author'>Kock, Johan, 1861-1915</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37889, {&quot;Title&quot;:&quot;Incidents of Travel in Greece, Turkey, Russia, and Poland, Vol. 1 (of 2)&quot;,&quot;Topics&quot;:[&quot;Europe -- Description and travel&quot;,&quot;Greece -- Description and travel&quot;,&quot;Russia -- Description and travel&quot;,&quot;Turkey -- Description and travel&quot;,&quot;Poland -- Description and travel&quot;],&quot;Primary&quot;:&quot;37889.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stephens, John L., 1805-1852&quot;],&quot;LoCC&quot;:[&quot;DF&quot;,&quot;DK&quot;,&quot;DR&quot;],&quot;PG_ID&quot;:&quot;37889&quot;});" class='title'>Incidents of Travel in Greece, Turkey, Russia, and Poland, Vol. 1 (of 2)</a>
+<div class='author'>Stephens, John L., 1805-1852</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37947, {&quot;Title&quot;:&quot;Incidents of Travel in Greece, Turkey, Russia, and Poland, Vol. 2 (of 2)&quot;,&quot;Topics&quot;:[&quot;Europe -- Description and travel&quot;,&quot;Greece -- Description and travel&quot;,&quot;Russia -- Description and travel&quot;,&quot;Turkey -- Description and travel&quot;,&quot;Poland -- Description and travel&quot;],&quot;Primary&quot;:&quot;37947.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stephens, John L., 1805-1852&quot;],&quot;LoCC&quot;:[&quot;DF&quot;,&quot;DK&quot;,&quot;DR&quot;],&quot;PG_ID&quot;:&quot;37947&quot;});" class='title'>Incidents of Travel in Greece, Turkey, Russia, and Poland, Vol. 2 (of 2)</a>
+<div class='author'>Stephens, John L., 1805-1852</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38690, {&quot;Title&quot;:&quot;What Shall We Do?&quot;,&quot;Topics&quot;:[&quot;Russia -- Social conditions -- 1801-1917&quot;],&quot;Primary&quot;:&quot;38690.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tolstoy, Leo, graf, 1828-1910&quot;,&quot;Fifield, A. C. (Arthur Charles) [Editor]&quot;,&quot;Mayo, Isabella Fyvie, 1843-1914 [Editor]&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;38690&quot;});" class='title'>What Shall We Do?</a>
+<div class='author'>Tolstoy, Leo, graf, 1828-1910, Fifield, A. C. (Arthur Charles) [Editor], Mayo, Isabella Fyvie, 1843-1914 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38781, {&quot;Title&quot;:&quot;A Russian Gentleman&quot;,&quot;Topics&quot;:[&quot;Aksakov, S. T. (Sergei Timofeevich), 1791-1859 -- Family&quot;,&quot;Aksakov family&quot;,&quot;Russia -- Social life and customs -- 1533-1917&quot;,&quot;Russia -- Biography&quot;],&quot;Primary&quot;:&quot;38781.htm&quot;,&quot;CreatorNames&quot;:[&quot;Aksakov, S. T. (Sergei Timofeevich), 1791-1859&quot;,&quot;Duff, J. D. (James Duff), 1860-1940 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DK&quot;,&quot;PG&quot;],&quot;PG_ID&quot;:&quot;38781&quot;});" class='title'>A Russian Gentleman</a>
+<div class='author'>Aksakov, S. T. (Sergei Timofeevich), 1791-1859, Duff, J. D. (James Duff), 1860-1940 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39888, {&quot;Title&quot;:&quot;Thirty Days in Lithuania in 1919&quot;,&quot;Topics&quot;:[&quot;Lithuania&quot;],&quot;Primary&quot;:&quot;39888.htm&quot;,&quot;CreatorNames&quot;:[&quot;Saurusaitis, Peter&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;39888&quot;});" class='title'>Thirty Days in Lithuania in 1919</a>
+<div class='author'>Saurusaitis, Peter</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4076, {&quot;Title&quot;:&quot;The Discovery of Muscovy&quot;,&quot;Topics&quot;:[&quot;Willoughby, Hugh, Sir, -1554&quot;,&quot;Chancellor, Richard, -1556&quot;,&quot;Europe -- Description and travel&quot;,&quot;Russia -- Description and travel&quot;],&quot;Primary&quot;:&quot;4076.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hakluyt, Richard, 1552?-1616&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;4076&quot;});" class='title'>The Discovery of Muscovy</a>
+<div class='author'>Hakluyt, Richard, 1552?-1616</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41237, {&quot;Title&quot;:&quot;In Search of a Siberian Klondike&quot;,&quot;Topics&quot;:[&quot;Siberia (Russia) -- Description and travel&quot;,&quot;Gold mines and mining -- Russia (Federation) -- Siberia&quot;],&quot;Primary&quot;:&quot;41237.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hulbert, Homer B. (Homer Bezaleel), 1863-1949&quot;,&quot;Vanderlip, Washington Baker, 1867-&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;41237&quot;});" class='title'>In Search of a Siberian Klondike</a>
+<div class='author'>Hulbert, Homer B. (Homer Bezaleel), 1863-1949, Vanderlip, Washington Baker, 1867-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41452, {&quot;Title&quot;:&quot;Rasputin the Rascal Monk - Disclosing the Secret Scandal of the Betrayal of Russia by the Mock-Monk Grichka and the Consequent Ruin of the Romanoffs. With official documents revealed and recorded for the first time.&quot;,&quot;Topics&quot;:[&quot;Soviet Union -- History -- Revolution, 1917-1921&quot;,&quot;Rasputin, Grigorii Efimovich, 1869-1916&quot;],&quot;Primary&quot;:&quot;41452.htm&quot;,&quot;CreatorNames&quot;:[&quot;Le Queux, William, 1864-1927&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;41452&quot;});" class='title'>Rasputin the Rascal Monk -<br><span class='subtitle'>Disclosing the Secret Scandal of the Betrayal of Russia by the Mock-Monk Grichka and the Consequent Ruin of the Romanoffs. With official documents revealed and recorded for the first time.</span></a>
+<div class='author'>Le Queux, William, 1864-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41495, {&quot;Title&quot;:&quot;Russia: Its People and Its Literature&quot;,&quot;Topics&quot;:[&quot;Russian literature -- History and criticism&quot;,&quot;Russia -- Civilization&quot;],&quot;Primary&quot;:&quot;41495.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pardo Bazán, Emilia, condesa de, 1852-1921&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;41495&quot;});" class='title'>Russia:<br><span class='subtitle'>Its People and Its Literature</span></a>
+<div class='author'>Pardo Bazán, Emilia, condesa de, 1852-1921</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41751, {&quot;Title&quot;:&quot;Travels in Central Asia - Being the Account of a Journey from Teheran Across the Turkoman Desert on the Eastern Shore of the Caspian to Khiva, Bokhara, and Samarcand&quot;,&quot;Topics&quot;:[&quot;Asia, Central -- Description and travel&quot;,&quot;Vámbéry, Ármin, 1832-1913 -- Travel -- Asia, Central&quot;],&quot;Primary&quot;:&quot;41751.htm&quot;,&quot;CreatorNames&quot;:[&quot;Vámbéry, Ármin, 1832-1913&quot;],&quot;LoCC&quot;:[&quot;DK&quot;,&quot;DS&quot;],&quot;PG_ID&quot;:&quot;41751&quot;});" class='title'>Travels in Central Asia -<br><span class='subtitle'>Being the Account of a Journey from Teheran Across the Turkoman Desert on the Eastern Shore of the Caspian to Khiva, Bokhara, and Samarcand</span></a>
+<div class='author'>Vámbéry, Ármin, 1832-1913</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42028, {&quot;Title&quot;:&quot;En Rusujo per Esperanto&quot;,&quot;Topics&quot;:[&quot;Esperanto&quot;,&quot;Russia -- Description and travel&quot;],&quot;Primary&quot;:&quot;42028.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rivier, A.&quot;],&quot;LoCC&quot;:[&quot;DK&quot;,&quot;PM&quot;],&quot;PG_ID&quot;:&quot;42028&quot;});" class='title'>En Rusujo per Esperanto</a>
+<div class='author'>Rivier, A.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42132, {&quot;Title&quot;:&quot;Through Scandinavia to Moscow&quot;,&quot;Topics&quot;:[&quot;Scandinavia -- Description and travel&quot;,&quot;Russia -- Description and travel&quot;],&quot;Primary&quot;:&quot;42132.htm&quot;,&quot;CreatorNames&quot;:[&quot;Edwards, William Seymour, 1856-1915&quot;],&quot;LoCC&quot;:[&quot;DK&quot;,&quot;DL&quot;],&quot;PG_ID&quot;:&quot;42132&quot;});" class='title'>Through Scandinavia to Moscow</a>
+<div class='author'>Edwards, William Seymour, 1856-1915</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42540, {&quot;Title&quot;:&quot;The History of Peter the Great, Emperor of Russia&quot;,&quot;Topics&quot;:[&quot;Peter I, Emperor of Russia, 1672-1725&quot;,&quot;Russia -- History -- Peter I, 1689-1725&quot;],&quot;Primary&quot;:&quot;42540.htm&quot;,&quot;CreatorNames&quot;:[&quot;Voltaire, 1694-1778&quot;,&quot;Smollett, T. (Tobias), 1721-1771 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;42540&quot;});" class='title'>The History of Peter the Great, Emperor of Russia</a>
+<div class='author'>Voltaire, 1694-1778, Smollett, T. (Tobias), 1721-1771 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42544, {&quot;Title&quot;:&quot;Soyer&#39;s Culinary Campaign: Being Historical Reminiscences of the Late War. - With The Plain Art of Cookery for Military and Civil Institutions&quot;,&quot;Topics&quot;:[&quot;Crimean War, 1853-1856&quot;,&quot;Cooking for military personnel&quot;],&quot;Primary&quot;:&quot;42544.htm&quot;,&quot;CreatorNames&quot;:[&quot;Soyer, Alexis, 1809-1858&quot;],&quot;LoCC&quot;:[&quot;DK&quot;,&quot;UC&quot;],&quot;PG_ID&quot;:&quot;42544&quot;});" class='title'>Soyer's Culinary Campaign:<br><span class='subtitle'>Being Historical Reminiscences of the Late War. - With The Plain Art of Cookery for Military and Civil Institutions</span></a>
+<div class='author'>Soyer, Alexis, 1809-1858</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42986, {&quot;Title&quot;:&quot;La Cour de Lunéville au XVIIIe siècle - Les marquises de Boufflers et du Châtelet, Voltaire, Devau, Saint-Lambert, etc.&quot;,&quot;Topics&quot;:[&quot;Voltaire, 1694-1778&quot;,&quot;Stanislaw I Leszczynski, King of Poland, 1677-1766&quot;,&quot;Boufflers, Marie Françoise Catherine de Beauvau, marquise de, 1711-1786&quot;,&quot;Du Châtelet, Gabrielle Emilie Le Tonnelier de Breteuil, marquise, 1706-1749&quot;],&quot;Primary&quot;:&quot;42986.htm&quot;,&quot;CreatorNames&quot;:[&quot;Maugras, Gaston, 1850-1927&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;42986&quot;});" class='title'>La Cour de Lunéville au XVIIIe siècle -<br><span class='subtitle'>Les marquises de Boufflers et du Châtelet, Voltaire, Devau, Saint-Lambert, etc.</span></a>
+<div class='author'>Maugras, Gaston, 1850-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43426, {&quot;Title&quot;:&quot;Our Little Finnish Cousin&quot;,&quot;Topics&quot;:[&quot;Children -- Finland -- Juvenile literature&quot;,&quot;Finland -- Description and travel -- Juvenile literature&quot;,&quot;Finland -- Social life and customs -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;43426.htm&quot;,&quot;CreatorNames&quot;:[&quot;Winlow, Clara Vostrovsky, 1876-&quot;,&quot;O&#39;Brien, Harriet [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DK&quot;,&quot;PZ&quot;],&quot;PG_ID&quot;:&quot;43426&quot;});" class='title'>Our Little Finnish Cousin</a>
+<div class='author'>Winlow, Clara Vostrovsky, 1876-, O'Brien, Harriet [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43513, {&quot;Title&quot;:&quot;Our Little Polish Cousin&quot;,&quot;Topics&quot;:[&quot;Children -- Poland -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;43513.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mendel, Florence Emma Voigt, 1874-&quot;,&quot;O&#39;Brien, Harriet [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DK&quot;,&quot;PZ&quot;],&quot;PG_ID&quot;:&quot;43513&quot;});" class='title'>Our Little Polish Cousin</a>
+<div class='author'>Mendel, Florence Emma Voigt, 1874-, O'Brien, Harriet [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43680, {&quot;Title&quot;:&quot;The Russian Turmoil; Memoirs: Military, Social, and Political&quot;,&quot;Topics&quot;:[&quot;Soviet Union -- History -- Revolution, 1917-1921&quot;,&quot;Soviet Union -- Politics and government -- 1917-1936&quot;,&quot;Soviet Union. Sovetskaia Armiia&quot;],&quot;Primary&quot;:&quot;43680.htm&quot;,&quot;CreatorNames&quot;:[&quot;Denikin, Anton Ivanovich, 1872-1947&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;43680&quot;});" class='title'>The Russian Turmoil;<br><span class='subtitle'>Memoirs: Military, Social, and Political</span></a>
+<div class='author'>Denikin, Anton Ivanovich, 1872-1947</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43795, {&quot;Title&quot;:&quot;Sketches of Central Asia (1868) - Additional chapters on my travels, adventures, and on the ethnology of Central Asia&quot;,&quot;Topics&quot;:[&quot;Asia, Central -- Description and travel&quot;],&quot;Primary&quot;:&quot;43795.htm&quot;,&quot;CreatorNames&quot;:[&quot;Vámbéry, Ármin, 1832-1913&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;43795&quot;});" class='title'>Sketches of Central Asia (1868) -<br><span class='subtitle'>Additional chapters on my travels, adventures, and on the ethnology of Central Asia</span></a>
+<div class='author'>Vámbéry, Ármin, 1832-1913</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44047, {&quot;Title&quot;:&quot;Historisch dagverhaal der reize van den heer De Lesseps - Zedert het verlaten van den Heer Graaf de la Perouse en zyne togtgenooten in de haven van St. Pieter &amp; Paulus op Kamchatka, enz.&quot;,&quot;Topics&quot;:[&quot;Kamchatka Peninsula (Russia) -- Description and travel&quot;,&quot;Siberia (Russia) -- Description and travel&quot;,&quot;Siberia (Russia) -- Languages&quot;],&quot;Primary&quot;:&quot;44047.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lesseps, Jean-Baptiste-Barthélemy, baron de, 1766-1834&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;44047&quot;});" class='title'>Historisch dagverhaal der reize van den heer De Lesseps -<br><span class='subtitle'>Zedert het verlaten van den Heer Graaf de la Perouse en zyne togtgenooten in de haven van St. Pieter & Paulus op Kamchatka, enz.</span></a>
+<div class='author'>Lesseps, Jean-Baptiste-Barthélemy, baron de, 1766-1834</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44300, {&quot;Title&quot;:&quot;Dernières Années de la Cour de Lunéville - Mme de Boufflers, ses enfants et ses amis&quot;,&quot;Topics&quot;:[&quot;Stanislaw I Leszczynski, King of Poland, 1677-1766&quot;,&quot;Boufflers, Marie Françoise Catherine de Beauvau, marquise de, 1711-1786&quot;],&quot;Primary&quot;:&quot;44300.htm&quot;,&quot;CreatorNames&quot;:[&quot;Maugras, Gaston, 1850-1927&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;44300&quot;});" class='title'>Dernières Années de la Cour de Lunéville -<br><span class='subtitle'>Mme de Boufflers, ses enfants et ses amis</span></a>
+<div class='author'>Maugras, Gaston, 1850-1927</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44372, {&quot;Title&quot;:&quot;Valkoinen armeija Antrean rintamalla&quot;,&quot;Topics&quot;:[&quot;Finland -- History -- Civil War, 1918&quot;],&quot;Primary&quot;:&quot;44372.txt&quot;,&quot;CreatorNames&quot;:[&quot;Sihvo, Aarne, 1889-1963&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;44372&quot;});" class='title'>Valkoinen armeija Antrean rintamalla</a>
+<div class='author'>Sihvo, Aarne, 1889-1963</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44698, {&quot;Title&quot;:&quot;Kertomuksia Suomen historiasta I - Unionin aika&quot;,&quot;Topics&quot;:[&quot;Finland -- History&quot;],&quot;Primary&quot;:&quot;44698.txt&quot;,&quot;CreatorNames&quot;:[&quot;Krohn, Julius, 1835-1888&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;44698&quot;});" class='title'>Kertomuksia Suomen historiasta I -<br><span class='subtitle'>Unionin aika</span></a>
+<div class='author'>Krohn, Julius, 1835-1888</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44711, {&quot;Title&quot;:&quot;Kertomuksia Suomen historiasta II - Kustaa Vaasa&quot;,&quot;Topics&quot;:[&quot;Finland -- History&quot;],&quot;Primary&quot;:&quot;44711.txt&quot;,&quot;CreatorNames&quot;:[&quot;Krohn, Julius, 1835-1888&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;44711&quot;});" class='title'>Kertomuksia Suomen historiasta II -<br><span class='subtitle'>Kustaa Vaasa</span></a>
+<div class='author'>Krohn, Julius, 1835-1888</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44749, {&quot;Title&quot;:&quot;Mémoires de l&#39;Impératrice Catherine II. - Écrits par elle-même&quot;,&quot;Topics&quot;:[&quot;Catherine II, Empress of Russia, 1729-1796&quot;,&quot;Empresses -- Russia -- Biography&quot;,&quot;Russia -- History -- Catherine II, 1762-1796&quot;],&quot;Primary&quot;:&quot;44749.htm&quot;,&quot;CreatorNames&quot;:[&quot;Catherine II, Empress of Russia, 1729-1796&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;44749&quot;});" class='title'>Mémoires de l'Impératrice Catherine II. -<br><span class='subtitle'>Écrits par elle-même</span></a>
+<div class='author'>Catherine II, Empress of Russia, 1729-1796</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44757, {&quot;Title&quot;:&quot;Kertomuksia Suomen historiasta III - Eerikki XIV ja Juhana III&quot;,&quot;Topics&quot;:[&quot;Finland -- History&quot;],&quot;Primary&quot;:&quot;44757.txt&quot;,&quot;CreatorNames&quot;:[&quot;Krohn, Julius, 1835-1888&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;44757&quot;});" class='title'>Kertomuksia Suomen historiasta III -<br><span class='subtitle'>Eerikki XIV ja Juhana III</span></a>
+<div class='author'>Krohn, Julius, 1835-1888</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44817, {&quot;Title&quot;:&quot;Muistelmia matkoilta Venäjällä vuosina 1854-1858&quot;,&quot;Topics&quot;:[&quot;Russia -- Description and travel&quot;],&quot;Primary&quot;:&quot;44817.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ahlqvist, August, 1826-1889&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;44817&quot;});" class='title'>Muistelmia matkoilta Venäjällä vuosina 1854-1858</a>
+<div class='author'>Ahlqvist, August, 1826-1889</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44856, {&quot;Title&quot;:&quot;Kertomuksia Suomen historiasta IV - Sigismund ja Kaarle IX&quot;,&quot;Topics&quot;:[&quot;Finland -- History&quot;],&quot;Primary&quot;:&quot;44856.txt&quot;,&quot;CreatorNames&quot;:[&quot;Krohn, Julius, 1835-1888&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;44856&quot;});" class='title'>Kertomuksia Suomen historiasta IV -<br><span class='subtitle'>Sigismund ja Kaarle IX</span></a>
+<div class='author'>Krohn, Julius, 1835-1888</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44857, {&quot;Title&quot;:&quot;Kertomuksia Suomen historiasta V:1 - Kustaa Aadolf ja Kristiina: Sodat&quot;,&quot;Topics&quot;:[&quot;Finland -- History&quot;],&quot;Primary&quot;:&quot;44857.txt&quot;,&quot;CreatorNames&quot;:[&quot;Krohn, Julius, 1835-1888&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;44857&quot;});" class='title'>Kertomuksia Suomen historiasta V:1 -<br><span class='subtitle'>Kustaa Aadolf ja Kristiina: Sodat</span></a>
+<div class='author'>Krohn, Julius, 1835-1888</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44858, {&quot;Title&quot;:&quot;Kertomuksia Suomen historiasta V:2 - Kustaa Aadolf ja Kristiina: Suomen sisällinen tila&quot;,&quot;Topics&quot;:[&quot;Finland -- History&quot;],&quot;Primary&quot;:&quot;44858.txt&quot;,&quot;CreatorNames&quot;:[&quot;Krohn, Julius, 1835-1888&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;44858&quot;});" class='title'>Kertomuksia Suomen historiasta V:2 -<br><span class='subtitle'>Kustaa Aadolf ja Kristiina: Suomen sisällinen tila</span></a>
+<div class='author'>Krohn, Julius, 1835-1888</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44859, {&quot;Title&quot;:&quot;Kertomuksia Suomen historiasta VI - Kaarle X Kustaa&quot;,&quot;Topics&quot;:[&quot;Finland -- History&quot;],&quot;Primary&quot;:&quot;44859.txt&quot;,&quot;CreatorNames&quot;:[&quot;Krohn, Julius, 1835-1888&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;44859&quot;});" class='title'>Kertomuksia Suomen historiasta VI -<br><span class='subtitle'>Kaarle X Kustaa</span></a>
+<div class='author'>Krohn, Julius, 1835-1888</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45099, {&quot;Title&quot;:&quot;The Rise of the Russian Empire&quot;,&quot;Topics&quot;:[&quot;Russia -- History&quot;],&quot;Primary&quot;:&quot;45099.htm&quot;,&quot;CreatorNames&quot;:[&quot;Saki, 1870-1916&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;45099&quot;});" class='title'>The Rise of the Russian Empire</a>
+<div class='author'>Saki, 1870-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45167, {&quot;Title&quot;:&quot;The Siberian Overland Route from Peking to Petersburg, - Through the Deserts and Steppes of Mongolia, Tartary, &amp;c.&quot;,&quot;Topics&quot;:[&quot;China -- Description and travel&quot;,&quot;Siberia (Russia) -- Description and travel&quot;],&quot;Primary&quot;:&quot;45167.htm&quot;,&quot;CreatorNames&quot;:[&quot;Michie, Alexander, 1833-1902&quot;],&quot;LoCC&quot;:[&quot;DK&quot;,&quot;DS&quot;],&quot;PG_ID&quot;:&quot;45167&quot;});" class='title'>The Siberian Overland Route from Peking to Petersburg, -<br><span class='subtitle'>Through the Deserts and Steppes of Mongolia, Tartary, &c.</span></a>
+<div class='author'>Michie, Alexander, 1833-1902</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45309, {&quot;Title&quot;:&quot;The Cause of the Charge of Balaclava&quot;,&quot;Topics&quot;:[&quot;Crimean War, 1853-1856&quot;,&quot;Balaklava, Battle of, Balaklava, Ukraine, 1854&quot;,&quot;Morley, Thomas, 1831 or 1832-1906&quot;],&quot;Primary&quot;:&quot;45309.htm&quot;,&quot;CreatorNames&quot;:[&quot;Morley, Thomas, 1832?-1906&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;45309&quot;});" class='title'>The Cause of the Charge of Balaclava</a>
+<div class='author'>Morley, Thomas, 1832?-1906</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45574, {&quot;Title&quot;:&quot;Suomenlahden salaisuus&quot;,&quot;Topics&quot;:[&quot;Shipwrecks&quot;,&quot;Rusalka (Ship)&quot;],&quot;Primary&quot;:&quot;45574.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tavaststjerna, Karl August, 1860-1898&quot;,&quot;Kivimäki, Urho, 1889-1958 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;45574&quot;});" class='title'>Suomenlahden salaisuus</a>
+<div class='author'>Tavaststjerna, Karl August, 1860-1898, Kivimäki, Urho, 1889-1958 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45845, {&quot;Title&quot;:&quot;Our Little Russian Cousin&quot;,&quot;Topics&quot;:[&quot;Children -- Russia -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;45845.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wade, Mary Hazelton Blanchard, 1860-1936&quot;,&quot;Bridgman, L. J. (Lewis Jesse), 1857-1931 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DK&quot;,&quot;PZ&quot;],&quot;PG_ID&quot;:&quot;45845&quot;});" class='title'>Our Little Russian Cousin</a>
+<div class='author'>Wade, Mary Hazelton Blanchard, 1860-1936, Bridgman, L. J. (Lewis Jesse), 1857-1931 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45937, {&quot;Title&quot;:&quot;Polnische Geschichte&quot;,&quot;Topics&quot;:[&quot;Poland -- History&quot;],&quot;Primary&quot;:&quot;45937.htm&quot;,&quot;CreatorNames&quot;:[&quot;Brandenburger, Clemens, 1879-1947&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;45937&quot;});" class='title'>Polnische Geschichte</a>
+<div class='author'>Brandenburger, Clemens, 1879-1947</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45994, {&quot;Title&quot;:&quot;Our Little Cossack Cousin in Siberia&quot;,&quot;Topics&quot;:[&quot;Children -- Russia (Federation) -- Siberia -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;45994.htm&quot;,&quot;CreatorNames&quot;:[&quot;Postnikov, Fedor Alexis, 1872-&quot;,&quot;Rogers, Walter S., 1871-1937 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DK&quot;,&quot;PZ&quot;],&quot;PG_ID&quot;:&quot;45994&quot;});" class='title'>Our Little Cossack Cousin in Siberia</a>
+<div class='author'>Postnikov, Fedor Alexis, 1872-, Rogers, Walter S., 1871-1937 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46242, {&quot;Title&quot;:&quot;The British Expedition to the Crimea&quot;,&quot;Topics&quot;:[&quot;Crimean War, 1853-1856&quot;],&quot;Primary&quot;:&quot;46242.htm&quot;,&quot;CreatorNames&quot;:[&quot;Russell, William Howard, Sir, 1820-1907&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;46242&quot;});" class='title'>The British Expedition to the Crimea</a>
+<div class='author'>Russell, William Howard, Sir, 1820-1907</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46407, {&quot;Title&quot;:&quot;Memoirs of the Empress Catherine II. - Written by Herself&quot;,&quot;Topics&quot;:[&quot;Catherine II, Empress of Russia, 1729-1796&quot;,&quot;Empresses -- Russia -- Biography&quot;,&quot;Russia -- History -- Catherine II, 1762-1796&quot;],&quot;Primary&quot;:&quot;46407.htm&quot;,&quot;CreatorNames&quot;:[&quot;Catherine II, Empress of Russia, 1729-1796&quot;,&quot;Herzen, Aleksandr, 1812-1870 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;46407&quot;});" class='title'>Memoirs of the Empress Catherine II. -<br><span class='subtitle'>Written by Herself</span></a>
+<div class='author'>Catherine II, Empress of Russia, 1729-1796, Herzen, Aleksandr, 1812-1870 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46510, {&quot;Title&quot;:&quot;The Story of Moscow&quot;,&quot;Topics&quot;:[&quot;Moscow (Russia) -- Description and travel&quot;,&quot;Moscow (Russia) -- History&quot;],&quot;Primary&quot;:&quot;46510.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gerrare, Wirt, 1862-1935&quot;,&quot;James, Helen M. [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;46510&quot;});" class='title'>The Story of Moscow</a>
+<div class='author'>Gerrare, Wirt, 1862-1935, James, Helen M. [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46989, {&quot;Title&quot;:&quot;A Soldier&#39;s Experience; or, A Voice from the Ranks - Showing the Cost of War in Blood and Treasure. A Personal Narrative of the Crimean Campaign, from the Standpoint of the Ranks; the Indian Mutiny, and Some of its Atrocities; the Afghan Campaigns of 1863&quot;,&quot;Topics&quot;:[&quot;Crimean War, 1853-1856 -- Personal narratives&quot;],&quot;Primary&quot;:&quot;46989.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gowing, T. (Timothy), 1834-1908&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;46989&quot;});" class='title'>A Soldier's Experience;<br><span class='subtitle'>or, A Voice from the Ranks - Showing the Cost of War in Blood and Treasure. A Personal Narrative of the Crimean Campaign, from the Standpoint of the Ranks; the Indian Mutiny, and Some of its Atrocities; the Afghan Campaigns of 1863</span></a>
+<div class='author'>Gowing, T. (Timothy), 1834-1908</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47453, {&quot;Title&quot;:&quot;Matkakertomuksia Karjalan kankahilta&quot;,&quot;Topics&quot;:[&quot;Paulaharju, Samuli, 1875-1944&quot;,&quot;Karelia (Russia) -- Description and travel&quot;],&quot;Primary&quot;:&quot;47453.txt&quot;,&quot;CreatorNames&quot;:[&quot;Paulaharju, Samuli, 1875-1944&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;47453&quot;});" class='title'>Matkakertomuksia Karjalan kankahilta</a>
+<div class='author'>Paulaharju, Samuli, 1875-1944</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47522, {&quot;Title&quot;:&quot;Légendes démocratiques du Nord&quot;,&quot;Topics&quot;:[&quot;Kościuszko, Tadeusz, 1746-1817&quot;,&quot;Romania -- History&quot;,&quot;Russia -- Politics and government -- 1801-1825&quot;,&quot;Europe, Eastern -- History&quot;],&quot;Primary&quot;:&quot;47522.htm&quot;,&quot;CreatorNames&quot;:[&quot;Michelet, Jules, 1798-1874&quot;],&quot;LoCC&quot;:[&quot;DK&quot;,&quot;DR&quot;],&quot;PG_ID&quot;:&quot;47522&quot;});" class='title'>Légendes démocratiques du Nord</a>
+<div class='author'>Michelet, Jules, 1798-1874</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47545, {&quot;Title&quot;:&quot;Kun kansa nousee: Muistelmia ja kokemuksia Suomen vapaussodasta&quot;,&quot;Topics&quot;:[&quot;Finland -- History -- Revolution, 1917-1918 -- Personal narratives&quot;],&quot;Primary&quot;:&quot;47545.txt&quot;,&quot;CreatorNames&quot;:[&quot;Wilkuna, Kyösti, 1879-1922&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;47545&quot;});" class='title'>Kun kansa nousee:<br><span class='subtitle'>Muistelmia ja kokemuksia Suomen vapaussodasta</span></a>
+<div class='author'>Wilkuna, Kyösti, 1879-1922</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(4779, {&quot;Title&quot;:&quot;Russian Roulette: Russia&#39;s Economy in Putin&#39;s Era&quot;,&quot;Topics&quot;:[&quot;Russia (Federation) -- Politics and government -- 1991-&quot;,&quot;Putin, Vladimir Vladimirovich, 1952-&quot;],&quot;Primary&quot;:&quot;4779.txt&quot;,&quot;CreatorNames&quot;:[&quot;Vaknin, Samuel, 1961-&quot;,&quot;Rangelovska, Lidija [Editor]&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;4779&quot;});" class='title'>Russian Roulette:<br><span class='subtitle'>Russia's Economy in Putin's Era</span></a>
+<div class='author'>Vaknin, Samuel, 1961-, Rangelovska, Lidija [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48373, {&quot;Title&quot;:&quot;From Paris to Pekin over Siberian Snows - A Narrative of a Journey by Sledge over the Snows of European Russia and Siberia, by Caravan Through Mongolia, Across the Gobi Desert and the Great Wall, and by Mule Palanquin Through China to Pekin&quot;,&quot;Topics&quot;:[&quot;China -- Description and travel&quot;,&quot;Russia -- Description and travel&quot;,&quot;Siberia (Russia) -- Description and travel&quot;,&quot;Mongolia -- Description and travel&quot;],&quot;Primary&quot;:&quot;48373.htm&quot;,&quot;CreatorNames&quot;:[&quot;Meignan, Victor&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;48373&quot;});" class='title'>From Paris to Pekin over Siberian Snows -<br><span class='subtitle'>A Narrative of a Journey by Sledge over the Snows of European Russia and Siberia, by Caravan Through Mongolia, Across the Gobi Desert and the Great Wall, and by Mule Palanquin Through China to Pekin</span></a>
+<div class='author'>Meignan, Victor</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48403, {&quot;Title&quot;:&quot;The Kingdom of Georgia: Notes of travel in a land of women, wine, and song&quot;,&quot;Topics&quot;:[&quot;Georgia (Republic) -- Description and travel&quot;,&quot;Georgia (Republic) -- Bibliography&quot;],&quot;Primary&quot;:&quot;48403.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wardrop, John Oliver, 1864-1948&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;48403&quot;});" class='title'>The Kingdom of Georgia:<br><span class='subtitle'>Notes of travel in a land of women, wine, and song</span></a>
+<div class='author'>Wardrop, John Oliver, 1864-1948</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48479, {&quot;Title&quot;:&quot;Travels in Kamtschatka, During the Years 1787 and 1788, Volume 1&quot;,&quot;Topics&quot;:[&quot;Kamchatka Peninsula (Russia) -- Description and travel&quot;],&quot;Primary&quot;:&quot;48479.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lesseps, Jean-Baptiste-Barthélemy, baron de, 1766-1834&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;48479&quot;});" class='title'>Travels in Kamtschatka, During the Years 1787 and 1788, Volume 1</a>
+<div class='author'>Lesseps, Jean-Baptiste-Barthélemy, baron de, 1766-1834</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49017, {&quot;Title&quot;:&quot;Travels in Kamtschatka, during the years 1787 and 1788, Volume 2&quot;,&quot;Topics&quot;:[&quot;Kamchatka Peninsula (Russia) -- Description and travel&quot;],&quot;Primary&quot;:&quot;49017.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lesseps, Jean-Baptiste-Barthélemy, baron de, 1766-1834&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;49017&quot;});" class='title'>Travels in Kamtschatka, during the years 1787 and 1788, Volume 2</a>
+<div class='author'>Lesseps, Jean-Baptiste-Barthélemy, baron de, 1766-1834</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49055, {&quot;Title&quot;:&quot;\&quot;\&quot;Barbarous Soviet Russia\&quot;\&quot;&quot;,&quot;Topics&quot;:[&quot;Communism -- Soviet Union&quot;,&quot;Soviet Union -- Economic conditions -- 1917-1945&quot;,&quot;Soviet Union -- Politics and government -- 1917-1936&quot;],&quot;Primary&quot;:&quot;49055.htm&quot;,&quot;CreatorNames&quot;:[&quot;McBride, Isaac&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;49055&quot;});" class='title'>"Barbarous Soviet Russia"</a>
+<div class='author'>McBride, Isaac</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49093, {&quot;Title&quot;:&quot;Kertomuksia Suomen historiasta 1 - Pakanuuden aikakausi&quot;,&quot;Topics&quot;:[&quot;Finland -- History&quot;],&quot;Primary&quot;:&quot;49093.txt&quot;,&quot;CreatorNames&quot;:[&quot;Krohn, Julius, 1835-1888&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;49093&quot;});" class='title'>Kertomuksia Suomen historiasta 1 -<br><span class='subtitle'>Pakanuuden aikakausi</span></a>
+<div class='author'>Krohn, Julius, 1835-1888</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49094, {&quot;Title&quot;:&quot;Kertomuksia Suomen historiasta 2 - Katolinen aikakausi&quot;,&quot;Topics&quot;:[&quot;Finland -- History&quot;],&quot;Primary&quot;:&quot;49094.txt&quot;,&quot;CreatorNames&quot;:[&quot;Krohn, Julius, 1835-1888&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;49094&quot;});" class='title'>Kertomuksia Suomen historiasta 2 -<br><span class='subtitle'>Katolinen aikakausi</span></a>
+<div class='author'>Krohn, Julius, 1835-1888</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49102, {&quot;Title&quot;:&quot;Tampereen kaupunki - Muisto Sen Satavuotis-Juhlastansa Lokakuun 1. päivänä 1879&quot;,&quot;Topics&quot;:[&quot;Tampere (Finland) -- History&quot;],&quot;Primary&quot;:&quot;49102.txt&quot;,&quot;CreatorNames&quot;:[&quot;Blåfield, Karl Otto Johan&quot;,&quot;Reinholm, Henrik August, 1819-1883&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;49102&quot;});" class='title'>Tampereen kaupunki -<br><span class='subtitle'>Muisto Sen Satavuotis-Juhlastansa Lokakuun 1. päivänä 1879</span></a>
+<div class='author'>Blåfield, Karl Otto Johan, Reinholm, Henrik August, 1819-1883</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49142, {&quot;Title&quot;:&quot;Siperian samojedien keskuudessa vuosina 1911-13 ja 1914&quot;,&quot;Topics&quot;:[&quot;Siberia (Russia) -- Description and travel&quot;,&quot;Samoyeds&quot;],&quot;Primary&quot;:&quot;49142.txt&quot;,&quot;CreatorNames&quot;:[&quot;Donner, Kai, 1888-1935&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;49142&quot;});" class='title'>Siperian samojedien keskuudessa vuosina 1911-13 ja 1914</a>
+<div class='author'>Donner, Kai, 1888-1935</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50110, {&quot;Title&quot;:&quot;Alfred Kihlman: Elämän kuvaus. 1 (of 2)&quot;,&quot;Topics&quot;:[&quot;Kihlman, Alfred, 1825-1904&quot;,&quot;Lutheran Church -- Clergy -- Biography&quot;,&quot;Clergy -- Finland -- Helsinki -- Biography&quot;,&quot;Helsinki (Finland) -- Biography&quot;],&quot;Primary&quot;:&quot;50110.txt&quot;,&quot;CreatorNames&quot;:[&quot;Aspelin-Haapkylä, Eliel, 1847-1917&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;50110&quot;});" class='title'>Alfred Kihlman:<br><span class='subtitle'>Elämän kuvaus. 1 (of 2)</span></a>
+<div class='author'>Aspelin-Haapkylä, Eliel, 1847-1917</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50142, {&quot;Title&quot;:&quot;Alfred Kihlman: Elämän kuvaus. 2 (of 2)&quot;,&quot;Topics&quot;:[&quot;Kihlman, Alfred, 1825-1904&quot;,&quot;Lutheran Church -- Clergy -- Biography&quot;,&quot;Clergy -- Finland -- Helsinki -- Biography&quot;,&quot;Helsinki (Finland) -- Biography&quot;],&quot;Primary&quot;:&quot;50142.txt&quot;,&quot;CreatorNames&quot;:[&quot;Aspelin-Haapkylä, Eliel, 1847-1917&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;50142&quot;});" class='title'>Alfred Kihlman:<br><span class='subtitle'>Elämän kuvaus. 2 (of 2)</span></a>
+<div class='author'>Aspelin-Haapkylä, Eliel, 1847-1917</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50239, {&quot;Title&quot;:&quot;Kuuden vuosikymmenen ajoilta: Muistelmia Suomesta&quot;,&quot;Topics&quot;:[&quot;Finland -- History&quot;],&quot;Primary&quot;:&quot;50239.txt&quot;,&quot;CreatorNames&quot;:[&quot;Schauman, August, 1826-1896&quot;,&quot;Ivalo, Santeri, 1866-1937 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;50239&quot;});" class='title'>Kuuden vuosikymmenen ajoilta:<br><span class='subtitle'>Muistelmia Suomesta</span></a>
+<div class='author'>Schauman, August, 1826-1896, Ivalo, Santeri, 1866-1937 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50482, {&quot;Title&quot;:&quot;Mitä meidän siis on tekeminen?&quot;,&quot;Topics&quot;:[&quot;Russia -- Social conditions -- 1801-1917&quot;],&quot;Primary&quot;:&quot;50482.txt&quot;,&quot;CreatorNames&quot;:[&quot;Tolstoy, Leo, graf, 1828-1910&quot;,&quot;Järnefelt, K. W. [Translator]&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;50482&quot;});" class='title'>Mitä meidän siis on tekeminen?</a>
+<div class='author'>Tolstoy, Leo, graf, 1828-1910, Järnefelt, K. W. [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50541, {&quot;Title&quot;:&quot;Muoto- ja muistikuvia I&quot;,&quot;Topics&quot;:[&quot;Finland -- Civilization&quot;,&quot;Finland -- Intellectual life&quot;],&quot;Primary&quot;:&quot;50541.txt&quot;,&quot;CreatorNames&quot;:[&quot;Aspelin-Haapkylä, Eliel, 1847-1917&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;50541&quot;});" class='title'>Muoto-<br><span class='subtitle'>ja muistikuvia I</span></a>
+<div class='author'>Aspelin-Haapkylä, Eliel, 1847-1917</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50579, {&quot;Title&quot;:&quot;Muoto- ja muistikuvia II&quot;,&quot;Topics&quot;:[&quot;Finland -- Civilization&quot;,&quot;Finland -- Intellectual life&quot;],&quot;Primary&quot;:&quot;50579.txt&quot;,&quot;CreatorNames&quot;:[&quot;Aspelin-Haapkylä, Eliel, 1847-1917&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;50579&quot;});" class='title'>Muoto-<br><span class='subtitle'>ja muistikuvia II</span></a>
+<div class='author'>Aspelin-Haapkylä, Eliel, 1847-1917</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50610, {&quot;Title&quot;:&quot;Muoto- ja muistikuvia III&quot;,&quot;Topics&quot;:[&quot;Finland -- Civilization&quot;,&quot;Finland -- Intellectual life&quot;],&quot;Primary&quot;:&quot;50610.txt&quot;,&quot;CreatorNames&quot;:[&quot;Aspelin-Haapkylä, Eliel, 1847-1917&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;50610&quot;});" class='title'>Muoto-<br><span class='subtitle'>ja muistikuvia III</span></a>
+<div class='author'>Aspelin-Haapkylä, Eliel, 1847-1917</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50695, {&quot;Title&quot;:&quot;Muistelmia vuosien 1808-1809 sodasta: Kansan suusta kokoillut&quot;,&quot;Topics&quot;:[&quot;Finland -- History -- Russian Conquest, 1808-1809&quot;],&quot;Primary&quot;:&quot;50695.txt&quot;,&quot;CreatorNames&quot;:[&quot;Castrén, Kaarle Alfred, 1845-1873&quot;],&quot;LoCC&quot;:[&quot;DK&quot;,&quot;DL&quot;],&quot;PG_ID&quot;:&quot;50695&quot;});" class='title'>Muistelmia vuosien 1808-1809 sodasta:<br><span class='subtitle'>Kansan suusta kokoillut</span></a>
+<div class='author'>Castrén, Kaarle Alfred, 1845-1873</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51033, {&quot;Title&quot;:&quot;Tiedot Suomen-suvun muinaisuudesta: Yliopistollinen väitöskirja&quot;,&quot;Topics&quot;:[&quot;Thesis (Ph. D.)&quot;,&quot;Finland -- History&quot;],&quot;Primary&quot;:&quot;51033.txt&quot;,&quot;CreatorNames&quot;:[&quot;Yrjö-Koskinen, Yrjö Sakari, 1830-1903&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;51033&quot;});" class='title'>Tiedot Suomen-suvun muinaisuudesta:<br><span class='subtitle'>Yliopistollinen väitöskirja</span></a>
+<div class='author'>Yrjö-Koskinen, Yrjö Sakari, 1830-1903</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51117, {&quot;Title&quot;:&quot;Free Russia&quot;,&quot;Topics&quot;:[&quot;Russia&quot;,&quot;Russia -- Religion&quot;],&quot;Primary&quot;:&quot;51117.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dixon, William Hepworth, 1821-1879&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;51117&quot;});" class='title'>Free Russia</a>
+<div class='author'>Dixon, William Hepworth, 1821-1879</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51159, {&quot;Title&quot;:&quot;Turun linna&quot;,&quot;Topics&quot;:[&quot;Turun linna (Turku, Finland)&quot;,&quot;Castles -- Finland -- Turku&quot;],&quot;Primary&quot;:&quot;51159.txt&quot;,&quot;CreatorNames&quot;:[&quot;Jahnsson, Adolf Waldemar, 1841-1894&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;51159&quot;});" class='title'>Turun linna</a>
+<div class='author'>Jahnsson, Adolf Waldemar, 1841-1894</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51485, {&quot;Title&quot;:&quot;Päiväkirja matkaltani Venäjällä, ja käynti Leo Tolstoin luona keväällä 1899&quot;,&quot;Topics&quot;:[&quot;Tolstoy, Leo, graf, 1828-1910&quot;,&quot;Järnefelt, Arvid, 1861-1932 -- Travel -- Russia&quot;],&quot;Primary&quot;:&quot;51485.txt&quot;,&quot;CreatorNames&quot;:[&quot;Järnefelt, Arvid, 1861-1932&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;51485&quot;});" class='title'>Päiväkirja matkaltani Venäjällä, ja käynti Leo Tolstoin luona keväällä 1899</a>
+<div class='author'>Järnefelt, Arvid, 1861-1932</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51594, {&quot;Title&quot;:&quot;\&quot;\&quot;The Greatest Failure in All History\&quot;\&quot; - A Critical Examination of the Actual Workings of Bolshevism in Russia&quot;,&quot;Topics&quot;:[&quot;Communism -- Russia&quot;],&quot;Primary&quot;:&quot;51594.htm&quot;,&quot;CreatorNames&quot;:[&quot;Spargo, John, 1876-1966&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;51594&quot;});" class='title'>"The Greatest Failure in All History" -<br><span class='subtitle'>A Critical Examination of the Actual Workings of Bolshevism in Russia</span></a>
+<div class='author'>Spargo, John, 1876-1966</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52080, {&quot;Title&quot;:&quot;Mikael Speranski&quot;,&quot;Topics&quot;:[&quot;Russia -- Politics and government -- 1801-1917&quot;,&quot;Speranski, Mikhail Mikhailovich, graf, 1772-1839&quot;,&quot;Statesmen -- Russia -- Biography&quot;],&quot;Primary&quot;:&quot;52080.txt&quot;,&quot;CreatorNames&quot;:[&quot;Schybergson, Magnus Gottfrid, 1851-1925&quot;,&quot;Forsgren, Eemil [Translator]&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;52080&quot;});" class='title'>Mikael Speranski</a>
+<div class='author'>Schybergson, Magnus Gottfrid, 1851-1925, Forsgren, Eemil [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52431, {&quot;Title&quot;:&quot;Voyages en Sibérie&quot;,&quot;Topics&quot;:[&quot;Siberia (Russia) -- Description and travel&quot;,&quot;Kubalski, N. A. (Nicolas A.), 1794-1875 -- Travel&quot;],&quot;Primary&quot;:&quot;52431.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kubalski, N. A. (Nicolas A.), 1794-1875&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;52431&quot;});" class='title'>Voyages en Sibérie</a>
+<div class='author'>Kubalski, N. A. (Nicolas A.), 1794-1875</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52737, {&quot;Title&quot;:&quot;Muistelmia matkalta Venäjän Karjalassa kesällä 1879&quot;,&quot;Topics&quot;:[&quot;Karelia (Russia) -- Description and travel&quot;],&quot;Primary&quot;:&quot;52737.txt&quot;,&quot;CreatorNames&quot;:[&quot;Ervasti, A. V. (August Vilhelm), 1845-1900&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;52737&quot;});" class='title'>Muistelmia matkalta Venäjän Karjalassa kesällä 1879</a>
+<div class='author'>Ervasti, A. V. (August Vilhelm), 1845-1900</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52961, {&quot;Title&quot;:&quot;Suomalaiset Jäämeren rannalla: Matkamuistelmia&quot;,&quot;Topics&quot;:[&quot;Russia -- Description and travel&quot;,&quot;Finnmark fylke (Norway) -- Description and travel&quot;],&quot;Primary&quot;:&quot;52961.txt&quot;,&quot;CreatorNames&quot;:[&quot;Ervasti, A. V. (August Vilhelm), 1845-1900&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;52961&quot;});" class='title'>Suomalaiset Jäämeren rannalla:<br><span class='subtitle'>Matkamuistelmia</span></a>
+<div class='author'>Ervasti, A. V. (August Vilhelm), 1845-1900</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53017, {&quot;Title&quot;:&quot;Pietari Suuri: Venäjän ensimmäinen keisari&quot;,&quot;Topics&quot;:[&quot;Peter I, Emperor of Russia, 1672-1725&quot;],&quot;Primary&quot;:&quot;53017.txt&quot;,&quot;CreatorNames&quot;:[&quot;Lindeqvist, K. O.&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;53017&quot;});" class='title'>Pietari Suuri:<br><span class='subtitle'>Venäjän ensimmäinen keisari</span></a>
+<div class='author'>Lindeqvist, K. O.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53108, {&quot;Title&quot;:&quot;Confessions of the Czarina&quot;,&quot;Topics&quot;:[&quot;Alexandra, Empress, consort of Nicholas II, Emperor of Russia, 1872-1918&quot;,&quot;Russia -- Court and courtiers&quot;],&quot;Primary&quot;:&quot;53108.htm&quot;,&quot;CreatorNames&quot;:[&quot;Radziwill, Catherine, Princess, 1858-1941&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;53108&quot;});" class='title'>Confessions of the Czarina</a>
+<div class='author'>Radziwill, Catherine, Princess, 1858-1941</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54129, {&quot;Title&quot;:&quot;Sixteen years in Siberia: Some experiences of a Russian revolutionist&quot;,&quot;Topics&quot;:[&quot;Exiles -- Russia (Federation) -- Siberia -- Biography&quot;,&quot;Deich, L. G. (Lev Grigor&#39;evich), 1855-1941&quot;],&quot;Primary&quot;:&quot;54129.htm&quot;,&quot;CreatorNames&quot;:[&quot;Deich, L. G. (Lev Grigor&#39;evich), 1855-1941&quot;,&quot;Chisholm, Helen [Translator]&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;54129&quot;});" class='title'>Sixteen years in Siberia:<br><span class='subtitle'>Some experiences of a Russian revolutionist</span></a>
+<div class='author'>Deich, L. G. (Lev Grigor'evich), 1855-1941, Chisholm, Helen [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54164, {&quot;Title&quot;:&quot;Sortovuosilta: Poliittisia muistelmia&quot;,&quot;Topics&quot;:[&quot;Zilliacus, Konni, 1855-1924&quot;,&quot;Finland -- History -- 1809-1917&quot;],&quot;Primary&quot;:&quot;54164.txt&quot;,&quot;CreatorNames&quot;:[&quot;Zilliacus, Konni, 1855-1924&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;54164&quot;});" class='title'>Sortovuosilta:<br><span class='subtitle'>Poliittisia muistelmia</span></a>
+<div class='author'>Zilliacus, Konni, 1855-1924</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54447, {&quot;Title&quot;:&quot;Vankilasta ja Siperiasta&quot;,&quot;Topics&quot;:[&quot;Prisons -- Russia (Federation) -- Siberia&quot;],&quot;Primary&quot;:&quot;54447.txt&quot;,&quot;CreatorNames&quot;:[&quot;Relander, Oskar, 1863-1930&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;54447&quot;});" class='title'>Vankilasta ja Siperiasta</a>
+<div class='author'>Relander, Oskar, 1863-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54507, {&quot;Title&quot;:&quot;Russian Memories&quot;,&quot;Topics&quot;:[&quot;Russia -- Social life and customs&quot;,&quot;Russia -- Foreign relations -- Great Britain&quot;,&quot;Great Britain -- Foreign relations -- Russia&quot;],&quot;Primary&quot;:&quot;54507.htm&quot;,&quot;CreatorNames&quot;:[&quot;Novikova, Olga Alekseevna, 1840-1925&quot;,&quot;Graham, Stephen, 1884-1975 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;54507&quot;});" class='title'>Russian Memories</a>
+<div class='author'>Novikova, Olga Alekseevna, 1840-1925, Graham, Stephen, 1884-1975 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54927, {&quot;Title&quot;:&quot;Kiannan rannoilta Kaspian poikki: Päiväkirjani kotimaassa ja Venäjällä v. 1902&quot;,&quot;Topics&quot;:[&quot;Russia -- Description and travel&quot;,&quot;Finland -- Description and travel&quot;],&quot;Primary&quot;:&quot;54927.txt&quot;,&quot;CreatorNames&quot;:[&quot;Kianto, Ilmari, 1874-1970&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;54927&quot;});" class='title'>Kiannan rannoilta Kaspian poikki:<br><span class='subtitle'>Päiväkirjani kotimaassa ja Venäjällä v. 1902</span></a>
+<div class='author'>Kianto, Ilmari, 1874-1970</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55248, {&quot;Title&quot;:&quot;Aatteiden mies: Piirteitä August Fredrik Soldanin elämästä&quot;,&quot;Topics&quot;:[&quot;Soldan, August Fredrik, 1817-1885&quot;],&quot;Primary&quot;:&quot;55248.txt&quot;,&quot;CreatorNames&quot;:[&quot;Aho, Juhani, 1861-1921&quot;],&quot;LoCC&quot;:[&quot;CT&quot;,&quot;DK&quot;],&quot;PG_ID&quot;:&quot;55248&quot;});" class='title'>Aatteiden mies:<br><span class='subtitle'>Piirteitä August Fredrik Soldanin elämästä</span></a>
+<div class='author'>Aho, Juhani, 1861-1921</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55355, {&quot;Title&quot;:&quot;Leo Mechelinin elämä&quot;,&quot;Topics&quot;:[&quot;Mechelin, Leo, 1839-1914&quot;,&quot;Finland -- Politics and government -- 1809-1917&quot;],&quot;Primary&quot;:&quot;55355.txt&quot;,&quot;CreatorNames&quot;:[&quot;Rein, Th. (Thiodolf), 1838-1919&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;55355&quot;});" class='title'>Leo Mechelinin elämä</a>
+<div class='author'>Rein, Th. (Thiodolf), 1838-1919</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55356, {&quot;Title&quot;:&quot;Bolshevismi ja olot Venäjällä&quot;,&quot;Topics&quot;:[&quot;Communism -- Soviet Union&quot;,&quot;Soviet Union -- Social conditions&quot;,&quot;Soviet Union -- History&quot;],&quot;Primary&quot;:&quot;55356.txt&quot;,&quot;CreatorNames&quot;:[&quot;Rauhala, K. N. (Kalle Nikodemus), 1887-1937&quot;],&quot;LoCC&quot;:[&quot;DK&quot;,&quot;HX&quot;],&quot;PG_ID&quot;:&quot;55356&quot;});" class='title'>Bolshevismi ja olot Venäjällä</a>
+<div class='author'>Rauhala, K. N. (Kalle Nikodemus), 1887-1937</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56225, {&quot;Title&quot;:&quot;Hajamietteitä kapinaviikoilta 1/3 - Ensimmäinen ja toinen viikko&quot;,&quot;Topics&quot;:[&quot;Communism -- Finland&quot;,&quot;Helsinki (Finland) -- History&quot;],&quot;Primary&quot;:&quot;56225.txt&quot;,&quot;CreatorNames&quot;:[&quot;Aho, Juhani, 1861-1921&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;56225&quot;});" class='title'>Hajamietteitä kapinaviikoilta 1/3 -<br><span class='subtitle'>Ensimmäinen ja toinen viikko</span></a>
+<div class='author'>Aho, Juhani, 1861-1921</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56558, {&quot;Title&quot;:&quot;Au pays russe&quot;,&quot;Topics&quot;:[&quot;Russia -- Description and travel&quot;,&quot;Russia -- Social life and customs&quot;],&quot;Primary&quot;:&quot;56558.htm&quot;,&quot;CreatorNames&quot;:[&quot;Legras, Jules, 1866-1939&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;56558&quot;});" class='title'>Au pays russe</a>
+<div class='author'>Legras, Jules, 1866-1939</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56561, {&quot;Title&quot;:&quot;In het Hol van den Leeuw: Reisschetsen uit Sovjet-Rusland&quot;,&quot;Topics&quot;:[&quot;Soviet Union -- History -- Revolution, 1917-1921&quot;,&quot;Soviet Union -- Description and travel&quot;],&quot;Primary&quot;:&quot;56561.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fabius, J. (Jan), 1888-1964&quot;,&quot;Wagner, Piet C. (Pieter Cornelis), 1891-1962 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;56561&quot;});" class='title'>In het Hol van den Leeuw:<br><span class='subtitle'>Reisschetsen uit Sovjet-Rusland</span></a>
+<div class='author'>Fabius, J. (Jan), 1888-1964, Wagner, Piet C. (Pieter Cornelis), 1891-1962 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56611, {&quot;Title&quot;:&quot;The Romance of the Romanoffs&quot;,&quot;Topics&quot;:[&quot;Romanov, House of&quot;,&quot;Russia -- Kings and rulers&quot;],&quot;Primary&quot;:&quot;56611.htm&quot;,&quot;CreatorNames&quot;:[&quot;McCabe, Joseph, 1867-1955&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;56611&quot;});" class='title'>The Romance of the Romanoffs</a>
+<div class='author'>McCabe, Joseph, 1867-1955</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56772, {&quot;Title&quot;:&quot;The Land of Riddles (Russia of To-day)&quot;,&quot;Topics&quot;:[&quot;Russia&quot;],&quot;Primary&quot;:&quot;56772.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ganz, Hugo, 1862-1922&quot;,&quot;Rosenthal, Herman, 1843-1917 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;56772&quot;});" class='title'>The Land of Riddles (Russia of To-day)</a>
+<div class='author'>Ganz, Hugo, 1862-1922, Rosenthal, Herman, 1843-1917 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57084, {&quot;Title&quot;:&quot;Hajamietteitä kapinaviikoilta 2/3 - Kolmas ja neljäs viikko&quot;,&quot;Topics&quot;:[&quot;Communism -- Finland&quot;,&quot;Helsinki (Finland) -- History&quot;],&quot;Primary&quot;:&quot;57084.txt&quot;,&quot;CreatorNames&quot;:[&quot;Aho, Juhani, 1861-1921&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;57084&quot;});" class='title'>Hajamietteitä kapinaviikoilta 2/3 -<br><span class='subtitle'>Kolmas ja neljäs viikko</span></a>
+<div class='author'>Aho, Juhani, 1861-1921</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57377, {&quot;Title&quot;:&quot;Muinais-tiedustuksia Pohjanperiltä&quot;,&quot;Topics&quot;:[&quot;Finland -- Description and travel&quot;],&quot;Primary&quot;:&quot;57377.txt&quot;,&quot;CreatorNames&quot;:[&quot;Calamnius, J. W. (Johan Wiktor), 1838-1891&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;57377&quot;});" class='title'>Muinais-tiedustuksia Pohjanperiltä</a>
+<div class='author'>Calamnius, J. W. (Johan Wiktor), 1838-1891</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57534, {&quot;Title&quot;:&quot;Kynällä ja kiväärillä: \&quot;\&quot;Sissin\&quot;\&quot; itsenäisyys- ja vapaustaistelumme ajalta&quot;,&quot;Topics&quot;:[&quot;Finland -- History -- Revolution, 1917-1918&quot;,&quot;Finland -- History -- Autonomy and independence movements&quot;],&quot;Primary&quot;:&quot;57534.txt&quot;,&quot;CreatorNames&quot;:[&quot;Railo, Eino, 1884-1948&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;57534&quot;});" class='title'>Kynällä ja kiväärillä:<br><span class='subtitle'>"Sissin" itsenäisyys- ja vapaustaistelumme ajalta</span></a>
+<div class='author'>Railo, Eino, 1884-1948</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57750, {&quot;Title&quot;:&quot;The Heart of Asia - A history of Russian Turkestan and the Central Asian Khanates from the earliest times&quot;,&quot;Topics&quot;:[&quot;Asia, Central -- History&quot;,&quot;Asia, Central -- Relations -- Russia&quot;,&quot;Russia -- Relations -- Asia, Central&quot;],&quot;Primary&quot;:&quot;57750.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ross, E. Denison (Edward Denison), Sir, 1871-1940&quot;,&quot;Skrine, Francis Henry, 1847-1933&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;57750&quot;});" class='title'>The Heart of Asia -<br><span class='subtitle'>A history of Russian Turkestan and the Central Asian Khanates from the earliest times</span></a>
+<div class='author'>Ross, E. Denison (Edward Denison), Sir, 1871-1940, Skrine, Francis Henry, 1847-1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57804, {&quot;Title&quot;:&quot;Red Dusk and the Morrow: Adventures and Investigations in Red Russia&quot;,&quot;Topics&quot;:[&quot;Communism -- Soviet Union&quot;,&quot;Soviet Union -- Social conditions&quot;,&quot;Spies -- Great Britain -- Biography&quot;,&quot;Dukes, Paul, 1889-1967&quot;,&quot;Espionage, British -- Soviet Union -- History -- 20th century&quot;],&quot;Primary&quot;:&quot;57804.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dukes, Paul, 1889-1967&quot;],&quot;LoCC&quot;:[&quot;DK&quot;,&quot;UB&quot;],&quot;PG_ID&quot;:&quot;57804&quot;});" class='title'>Red Dusk and the Morrow:<br><span class='subtitle'>Adventures and Investigations in Red Russia</span></a>
+<div class='author'>Dukes, Paul, 1889-1967</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58009, {&quot;Title&quot;:&quot;Russian Portraits&quot;,&quot;Topics&quot;:[&quot;Soviet Union -- Description and travel&quot;],&quot;Primary&quot;:&quot;58009.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sheridan, Clare, 1885-1970&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;58009&quot;});" class='title'>Russian Portraits</a>
+<div class='author'>Sheridan, Clare, 1885-1970</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58074, {&quot;Title&quot;:&quot;Travels Into Bokhara (Volume 1 of 3) - Being the Account of A Journey from India to Cabool, Tartary, and Persia; Also, Narrative of a Voyage on the Indus, From the Sea to Lahore, With Presents From the King of Great Britain; Performed Under the Orders of the Supreme Government of India, in the Years 1831, 1832, and 1833&quot;,&quot;Topics&quot;:[&quot;Asia, Central -- Description and travel&quot;,&quot;Afghanistan -- Description and travel&quot;,&quot;Burnes, Alexander, Sir, 1805-1841 -- Travel&quot;,&quot;Bukhoro (Uzbekistan) -- Description and travel&quot;,&quot;Indus River Valley -- Description and travel&quot;],&quot;Primary&quot;:&quot;58074.htm&quot;,&quot;CreatorNames&quot;:[&quot;Burnes, Alexander, Sir, 1805-1841&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;58074&quot;});" class='title'>Travels Into Bokhara (Volume 1 of 3) -<br><span class='subtitle'>Being the Account of A Journey from India to Cabool, Tartary, and Persia; Also, Narrative of a Voyage on the Indus, From the Sea to Lahore, With Presents From the King of Great Britain; Performed Under the Orders of the Supreme Government of India, in the Years 1831, 1832, and 1833</span></a>
+<div class='author'>Burnes, Alexander, Sir, 1805-1841</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58143, {&quot;Title&quot;:&quot;Suomen kultainen kirja I&quot;,&quot;Topics&quot;:[&quot;Finnish language&quot;,&quot;Finland&quot;,&quot;Finns&quot;],&quot;Primary&quot;:&quot;58143.txt&quot;,&quot;CreatorNames&quot;:[&quot;Wettenhovi-Aspa, Sigurd, 1870-1946&quot;,&quot;Raekallio, J. [Translator]&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;58143&quot;});" class='title'>Suomen kultainen kirja I</a>
+<div class='author'>Wettenhovi-Aspa, Sigurd, 1870-1946, Raekallio, J. [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58177, {&quot;Title&quot;:&quot;Itsenäinen Suomi, unelmasta todellisuuteen&quot;,&quot;Topics&quot;:[&quot;Finland -- History -- 1809-1917&quot;,&quot;Finland -- History -- Revolution, 1917-1918&quot;,&quot;Finland -- History -- Autonomy and independence movements&quot;],&quot;Primary&quot;:&quot;58177.txt&quot;,&quot;CreatorNames&quot;:[&quot;Hjelt, Edv. (Edvard), 1855-1921&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;58177&quot;});" class='title'>Itsenäinen Suomi, unelmasta todellisuuteen</a>
+<div class='author'>Hjelt, Edv. (Edvard), 1855-1921</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58637, {&quot;Title&quot;:&quot;Hajamietteitä kapinaviikoilta 3/3 - Loppuviikot&quot;,&quot;Topics&quot;:[&quot;Communism -- Finland&quot;,&quot;Helsinki (Finland) -- History&quot;],&quot;Primary&quot;:&quot;58637.txt&quot;,&quot;CreatorNames&quot;:[&quot;Aho, Juhani, 1861-1921&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;58637&quot;});" class='title'>Hajamietteitä kapinaviikoilta 3/3 -<br><span class='subtitle'>Loppuviikot</span></a>
+<div class='author'>Aho, Juhani, 1861-1921</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58794, {&quot;Title&quot;:&quot;The Englishwoman in Russia - Impressions of the Society and Manners of the Russians at Home&quot;,&quot;Topics&quot;:[&quot;Russia -- Social life and customs -- 1533-1917&quot;],&quot;Primary&quot;:&quot;58794.htm&quot;,&quot;CreatorNames&quot;:[&quot;A lady&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;58794&quot;});" class='title'>The Englishwoman in Russia -<br><span class='subtitle'>Impressions of the Society and Manners of the Russians at Home</span></a>
+<div class='author'>A lady</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58914, {&quot;Title&quot;:&quot;The White Eagle of Poland&quot;,&quot;Topics&quot;:[&quot;Polish question&quot;,&quot;Poland -- History -- German occupation, 1914-1918&quot;],&quot;Primary&quot;:&quot;58914.htm&quot;,&quot;CreatorNames&quot;:[&quot;Benson, E. F. (Edward Frederic), 1867-1940&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;58914&quot;});" class='title'>The White Eagle of Poland</a>
+<div class='author'>Benson, E. F. (Edward Frederic), 1867-1940</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58932, {&quot;Title&quot;:&quot;A Vagabond in the Caucasus - With Some Notes of His Experiences Among the Russians&quot;,&quot;Topics&quot;:[&quot;Russia -- Description and travel&quot;,&quot;Russia -- Social life and customs&quot;,&quot;Caucasus&quot;],&quot;Primary&quot;:&quot;58932.htm&quot;,&quot;CreatorNames&quot;:[&quot;Graham, Stephen, 1884-1975&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;58932&quot;});" class='title'>A Vagabond in the Caucasus -<br><span class='subtitle'>With Some Notes of His Experiences Among the Russians</span></a>
+<div class='author'>Graham, Stephen, 1884-1975</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59095, {&quot;Title&quot;:&quot;One Year at the Russian Court: 1904-1905&quot;,&quot;Topics&quot;:[&quot;Rasputin, Grigorii Efimovich, 1869-1916&quot;,&quot;Russia -- Court and courtiers&quot;,&quot;Saint Petersburg (Russia) -- Social life and customs&quot;],&quot;Primary&quot;:&quot;59095.htm&quot;,&quot;CreatorNames&quot;:[&quot;Maud, Renée Gaudin de Villaine&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;59095&quot;});" class='title'>One Year at the Russian Court:<br><span class='subtitle'>1904-1905</span></a>
+<div class='author'>Maud, Renée Gaudin de Villaine</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59278, {&quot;Title&quot;:&quot;Kalevalan laulumailta: Elias Lönnrotin poluilla Vienan Karjalassa - Kuvaus Vienan Karjalan maasta, kansasta, siellä tapahtuneesta runonkeruusta ja runoista itsestään&quot;,&quot;Topics&quot;:[&quot;Kalevala&quot;,&quot;Lönnrot, Elias, 1802-1884&quot;,&quot;Karelia (Russia) -- Description and travel&quot;,&quot;Folk poetry, Karelian -- Translations into Finnish&quot;],&quot;Primary&quot;:&quot;59278.txt&quot;,&quot;CreatorNames&quot;:[&quot;Inha, Into Konrad, 1865-1930&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;59278&quot;});" class='title'>Kalevalan laulumailta:<br><span class='subtitle'>Elias Lönnrotin poluilla Vienan Karjalassa - Kuvaus Vienan Karjalan maasta, kansasta, siellä tapahtuneesta runonkeruusta ja runoista itsestään</span></a>
+<div class='author'>Inha, Into Konrad, 1865-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59564, {&quot;Title&quot;:&quot;Memories of the Russian Court&quot;,&quot;Topics&quot;:[&quot;Soviet Union -- History -- Revolution, 1917-1921&quot;,&quot;Russia -- History -- Nicholas II, 1894-1917&quot;,&quot;Russia -- Court and courtiers&quot;,&quot;Romanov, House of&quot;],&quot;Primary&quot;:&quot;59564.htm&quot;,&quot;CreatorNames&quot;:[&quot;Vyrubova, Anna Aleksandrovna, 1884-1964&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;59564&quot;});" class='title'>Memories of the Russian Court</a>
+<div class='author'>Vyrubova, Anna Aleksandrovna, 1884-1964</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59871, {&quot;Title&quot;:&quot;Suomalaisia keskiajan tutkimuksia: Veroja, laitoksia, virkamiehiä&quot;,&quot;Topics&quot;:[&quot;Finland -- History&quot;,&quot;Finland -- Politics and government&quot;],&quot;Primary&quot;:&quot;59871.txt&quot;,&quot;CreatorNames&quot;:[&quot;Voionmaa, Väinö, 1869-1947&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;59871&quot;});" class='title'>Suomalaisia keskiajan tutkimuksia:<br><span class='subtitle'>Veroja, laitoksia, virkamiehiä</span></a>
+<div class='author'>Voionmaa, Väinö, 1869-1947</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60173, {&quot;Title&quot;:&quot;Russia in the Shadows&quot;,&quot;Topics&quot;:[&quot;Communism -- Soviet Union&quot;,&quot;Soviet Union -- Social conditions&quot;],&quot;Primary&quot;:&quot;60173.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wells, H. G. (Herbert George), 1866-1946&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;60173&quot;});" class='title'>Russia in the Shadows</a>
+<div class='author'>Wells, H. G. (Herbert George), 1866-1946</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60218, {&quot;Title&quot;:&quot;Försök att förklara Caj. Corn. Taciti omdömen öfver Finnarne&quot;,&quot;Topics&quot;:[&quot;Finns&quot;,&quot;Tacitus, Cornelius. Germania&quot;],&quot;Primary&quot;:&quot;60218.txt&quot;,&quot;CreatorNames&quot;:[&quot;Gottlund, C. A. (Carl Axel), 1796-1875&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;60218&quot;});" class='title'>Försök att förklara Caj. Corn. Taciti omdömen öfver Finnarne</a>
+<div class='author'>Gottlund, C. A. (Carl Axel), 1796-1875</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60315, {&quot;Title&quot;:&quot;My Disillusionment in Russia&quot;,&quot;Topics&quot;:[&quot;Communism -- Soviet Union&quot;,&quot;Soviet Union -- History -- Revolution, 1917-1921 -- Personal narratives, American&quot;,&quot;Goldman, Emma, 1869-1940&quot;],&quot;Primary&quot;:&quot;60315.htm&quot;,&quot;CreatorNames&quot;:[&quot;Goldman, Emma, 1869-1940&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;60315&quot;});" class='title'>My Disillusionment in Russia</a>
+<div class='author'>Goldman, Emma, 1869-1940</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60432, {&quot;Title&quot;:&quot;The Real Tsaritsa&quot;,&quot;Topics&quot;:[&quot;Alexandra, Empress, consort of Nicholas II, Emperor of Russia, 1872-1918&quot;],&quot;Primary&quot;:&quot;60432.htm&quot;,&quot;CreatorNames&quot;:[&quot;Den, Lili, 1888-1963&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;60432&quot;});" class='title'>The Real Tsaritsa</a>
+<div class='author'>Den, Lili, 1888-1963</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60546, {&quot;Title&quot;:&quot;Thirteen years at the Russian court - (a personal record of the last years and death of the Czar Nicholas II. and his family)&quot;,&quot;Topics&quot;:[&quot;Romanov, House of&quot;,&quot;Nicholas II, Emperor of Russia, 1868-1918&quot;,&quot;Soviet Union -- History -- Revolution, 1917-1921 -- Personal narratives&quot;],&quot;Primary&quot;:&quot;60546.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gilliard, Pierre, 1879-1962&quot;,&quot;Holt, F. A. (Frederic Appleby), 1888-1980 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;60546&quot;});" class='title'>Thirteen years at the Russian court -<br><span class='subtitle'>(a personal record of the last years and death of the Czar Nicholas II. and his family)</span></a>
+<div class='author'>Gilliard, Pierre, 1879-1962, Holt, F. A. (Frederic Appleby), 1888-1980 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60867, {&quot;Title&quot;:&quot;History of the Late Polish Revolution and the Events of the Campaign&quot;,&quot;Topics&quot;:[&quot;Poland -- History -- Revolution, 1830-1832&quot;],&quot;Primary&quot;:&quot;60867.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hordynski, Joseph&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;60867&quot;});" class='title'>History of the Late Polish Revolution and the Events of the Campaign</a>
+<div class='author'>Hordynski, Joseph</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61557, {&quot;Title&quot;:&quot;The Red Reign: The True Story of an Adventurous Year in Russia&quot;,&quot;Topics&quot;:[&quot;Russia -- Politics and government -- 1894-1917&quot;],&quot;Primary&quot;:&quot;61557.htm&quot;,&quot;CreatorNames&quot;:[&quot;Durland, Kellogg, 1881-1911&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;61557&quot;});" class='title'>The Red Reign:<br><span class='subtitle'>The True Story of an Adventurous Year in Russia</span></a>
+<div class='author'>Durland, Kellogg, 1881-1911</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61677, {&quot;Title&quot;:&quot;Nälkämailta - Kuvia ja havaintoja Koillis-Suomesta nälkävuodelta 1902&quot;,&quot;Topics&quot;:[&quot;Famines -- Finland&quot;],&quot;Primary&quot;:&quot;61677.txt&quot;,&quot;CreatorNames&quot;:[&quot;Kajander, Kalle, 1862-1928&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;61677&quot;});" class='title'>Nälkämailta -<br><span class='subtitle'>Kuvia ja havaintoja Koillis-Suomesta nälkävuodelta 1902</span></a>
+<div class='author'>Kajander, Kalle, 1862-1928</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61791, {&quot;Title&quot;:&quot;The Arab conquests in Central Asia&quot;,&quot;Topics&quot;:[&quot;Islamic Empire&quot;,&quot;Bukhoro (Uzbekistan) -- History&quot;,&quot;Khanate of Bukhara -- History&quot;],&quot;Primary&quot;:&quot;61791.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gibb, H. A. R. (Hamilton Alexander Rosskeen), 1895-1971&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;61791&quot;});" class='title'>The Arab conquests in Central Asia</a>
+<div class='author'>Gibb, H. A. R. (Hamilton Alexander Rosskeen), 1895-1971</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61886, {&quot;Title&quot;:&quot;Behind the veil at the Russian court&quot;,&quot;Topics&quot;:[&quot;Russia -- History -- Alexander III, 1881-1894&quot;,&quot;Russia -- History -- Nicholas II, 1894-1917&quot;,&quot;Russia -- Court and courtiers&quot;,&quot;Russia -- History -- Alexander II, 1855-1881&quot;],&quot;Primary&quot;:&quot;61886.htm&quot;,&quot;CreatorNames&quot;:[&quot;Radziwill, Catherine, Princess, 1858-1941&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;61886&quot;});" class='title'>Behind the veil at the Russian court</a>
+<div class='author'>Radziwill, Catherine, Princess, 1858-1941</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61903, {&quot;Title&quot;:&quot;The Cable Game - The Adventures of an American Press-Boat in Turkish Waters During the Russian Revolution&quot;,&quot;Topics&quot;:[&quot;Russia -- History -- Nicholas II, 1894-1917&quot;,&quot;Black Sea -- Description and travel&quot;],&quot;Primary&quot;:&quot;61903.htm&quot;,&quot;CreatorNames&quot;:[&quot;Washburn, Stanley, 1878-1950&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;61903&quot;});" class='title'>The Cable Game -<br><span class='subtitle'>The Adventures of an American Press-Boat in Turkish Waters During the Russian Revolution</span></a>
+<div class='author'>Washburn, Stanley, 1878-1950</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63595, {&quot;Title&quot;:&quot;Syntymä, lapsuus ja kuolema: Vienan Karjalan tapoja ja uskomuksia&quot;,&quot;Topics&quot;:[&quot;Karelia (Russia) -- Social life and customs&quot;],&quot;Primary&quot;:&quot;63595.txt&quot;,&quot;CreatorNames&quot;:[&quot;Paulaharju, Samuli, 1875-1944&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;63595&quot;});" class='title'>Syntymä, lapsuus ja kuolema:<br><span class='subtitle'>Vienan Karjalan tapoja ja uskomuksia</span></a>
+<div class='author'>Paulaharju, Samuli, 1875-1944</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6413, {&quot;Title&quot;:&quot;From October to Brest-Litovsk&quot;,&quot;Topics&quot;:[&quot;Soviet Union -- History -- Revolution, 1917-1921&quot;,&quot;Brest-Litovsk Peace Conference (1917-1918)&quot;],&quot;Primary&quot;:&quot;6413.txt&quot;,&quot;CreatorNames&quot;:[&quot;Trotsky, Leon, 1879-1940&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;6413&quot;});" class='title'>From October to Brest-Litovsk</a>
+<div class='author'>Trotsky, Leon, 1879-1940</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64247, {&quot;Title&quot;:&quot;Travels Into Bokhara (Volume 2 of 3) - Being the Account of A Journey from India to Cabool, Tartary, and Persia; Also, Narrative of a Voyage on the Indus, From the Sea to Lahore, With Presents From the King of Great Britain; Performed Under the Orders of the Supreme Government of India, in the Years 1831, 1832, and 1833&quot;,&quot;Topics&quot;:[&quot;Asia, Central -- Description and travel&quot;,&quot;Afghanistan -- Description and travel&quot;,&quot;Burnes, Alexander, Sir, 1805-1841 -- Travel&quot;,&quot;Bukhoro (Uzbekistan) -- Description and travel&quot;,&quot;Indus River Valley -- Description and travel&quot;],&quot;Primary&quot;:&quot;64247.htm&quot;,&quot;CreatorNames&quot;:[&quot;Burnes, Alexander, Sir, 1805-1841&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;64247&quot;});" class='title'>Travels Into Bokhara (Volume 2 of 3) -<br><span class='subtitle'>Being the Account of A Journey from India to Cabool, Tartary, and Persia; Also, Narrative of a Voyage on the Indus, From the Sea to Lahore, With Presents From the King of Great Britain; Performed Under the Orders of the Supreme Government of India, in the Years 1831, 1832, and 1833</span></a>
+<div class='author'>Burnes, Alexander, Sir, 1805-1841</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64276, {&quot;Title&quot;:&quot;Leivän ja seikkailun haussa: Hämäläisen mökinpojan tarina&quot;,&quot;Topics&quot;:[&quot;Koskelainen, Aatu, 1849-1930&quot;],&quot;Primary&quot;:&quot;64276.txt&quot;,&quot;CreatorNames&quot;:[&quot;Koskelainen, Aatu, 1849-1930&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;64276&quot;});" class='title'>Leivän ja seikkailun haussa:<br><span class='subtitle'>Hämäläisen mökinpojan tarina</span></a>
+<div class='author'>Koskelainen, Aatu, 1849-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64444, {&quot;Title&quot;:&quot;My empress; twenty-three years of intimate life with the empress of all the Russias from her marriage to the day of her exile&quot;,&quot;Topics&quot;:[&quot;Alexandra, Empress, consort of Nicholas II, Emperor of Russia, 1872-1918&quot;],&quot;Primary&quot;:&quot;64444.htm&quot;,&quot;CreatorNames&quot;:[&quot;Mouchanow, Marfa&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;64444&quot;});" class='title'>My empress;<br><span class='subtitle'>twenty-three years of intimate life with the empress of all the Russias from her marriage to the day of her exile</span></a>
+<div class='author'>Mouchanow, Marfa</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(64843, {&quot;Title&quot;:&quot;Around the Black Sea - Asia Minor, Armenia, Caucasus, Circassia, Daghestan, the Crimea, Roumania&quot;,&quot;Topics&quot;:[&quot;Romania&quot;,&quot;Caucasus&quot;,&quot;Black Sea&quot;,&quot;Turkey -- Politics and government&quot;],&quot;Primary&quot;:&quot;64843.htm&quot;,&quot;CreatorNames&quot;:[&quot;Curtis, William Eleroy, 1850-1911&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;64843&quot;});" class='title'>Around the Black Sea -<br><span class='subtitle'>Asia Minor, Armenia, Caucasus, Circassia, Daghestan, the Crimea, Roumania</span></a>
+<div class='author'>Curtis, William Eleroy, 1850-1911</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65102, {&quot;Title&quot;:&quot;Kainuun mailta: Kansantietoutta Kajaanin kulmilta&quot;,&quot;Topics&quot;:[&quot;Finns -- Finland -- Kajaani&quot;,&quot;Kainuu (Finland)&quot;,&quot;Kajaani (Finland)&quot;],&quot;Primary&quot;:&quot;65102.txt&quot;,&quot;CreatorNames&quot;:[&quot;Paulaharju, Samuli, 1875-1944&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;65102&quot;});" class='title'>Kainuun mailta:<br><span class='subtitle'>Kansantietoutta Kajaanin kulmilta</span></a>
+<div class='author'>Paulaharju, Samuli, 1875-1944</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65157, {&quot;Title&quot;:&quot;The Way of Martha and the Way of Mary&quot;,&quot;Topics&quot;:[&quot;Russia -- Religion&quot;,&quot;National characteristics, Russian&quot;],&quot;Primary&quot;:&quot;65157.htm&quot;,&quot;CreatorNames&quot;:[&quot;Graham, Stephen, 1884-1975&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;65157&quot;});" class='title'>The Way of Martha and the Way of Mary</a>
+<div class='author'>Graham, Stephen, 1884-1975</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65409, {&quot;Title&quot;:&quot;Itämerenmaakuntien venäläistyttämisyritys vuosina 1886-1906&quot;,&quot;Topics&quot;:[&quot;Self-determination, National -- Baltic States&quot;,&quot;Baltic States -- Foreign relations -- Russia&quot;,&quot;Russia -- Foreign relations -- Baltic States&quot;],&quot;Primary&quot;:&quot;65409.txt&quot;,&quot;CreatorNames&quot;:[&quot;Maanpakolainen&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;65409&quot;});" class='title'>Itämerenmaakuntien venäläistyttämisyritys vuosina 1886-1906</a>
+<div class='author'>Maanpakolainen</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65453, {&quot;Title&quot;:&quot;The Last Days of the Romanovs&quot;,&quot;Topics&quot;:[&quot;Romanov, House of&quot;,&quot;Nicholas II, Emperor of Russia, 1868-1918&quot;],&quot;Primary&quot;:&quot;65453.htm&quot;,&quot;CreatorNames&quot;:[&quot;Sokolov, N. (Nikolai), 1882-1924&quot;,&quot;Wilton, Robert, correspondent of The Times at Petrograd [Contributor]&quot;,&quot;Tel&#39;berg, G. G. (Georgii Gustavovich), 1882?-1954 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;65453&quot;});" class='title'>The Last Days of the Romanovs</a>
+<div class='author'>Sokolov, N. (Nikolai), 1882-1924, Wilton, Robert, correspondent of The Times at Petrograd [Contributor], Tel'berg, G. G. (Georgii Gustavovich), 1882?-1954 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65639, {&quot;Title&quot;:&quot;Savonlinna 1475-1875&quot;,&quot;Topics&quot;:[&quot;Savonlinna (Finland) -- History&quot;],&quot;Primary&quot;:&quot;65639.txt&quot;,&quot;CreatorNames&quot;:[&quot;Aspelin, J. R. (Johan Reinhold), 1842-1915&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;65639&quot;});" class='title'>Savonlinna 1475-1875</a>
+<div class='author'>Aspelin, J. R. (Johan Reinhold), 1842-1915</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65814, {&quot;Title&quot;:&quot;Kesäkausi Jäämeren ja Vienanmeren rannoilla: Matkamuistelma&quot;,&quot;Topics&quot;:[&quot;Arctic regions -- Description and travel&quot;,&quot;White Sea Region (Russia) -- Description and travel&quot;],&quot;Primary&quot;:&quot;65814.txt&quot;,&quot;CreatorNames&quot;:[&quot;Ailio, Julius Edvard, 1872-1933&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;65814&quot;});" class='title'>Kesäkausi Jäämeren ja Vienanmeren rannoilla:<br><span class='subtitle'>Matkamuistelma</span></a>
+<div class='author'>Ailio, Julius Edvard, 1872-1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65966, {&quot;Title&quot;:&quot;Roundabout to Moscow: An Epicurean Journey&quot;,&quot;Topics&quot;:[&quot;Europe -- Description and travel&quot;,&quot;Russia -- Description and travel&quot;],&quot;Primary&quot;:&quot;65966.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bouton, John Bell, 1830-1902&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;65966&quot;});" class='title'>Roundabout to Moscow:<br><span class='subtitle'>An Epicurean Journey</span></a>
+<div class='author'>Bouton, John Bell, 1830-1902</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66358, {&quot;Title&quot;:&quot;Rasputin and the Russian Revolution&quot;,&quot;Topics&quot;:[&quot;Soviet Union -- History -- Revolution, 1917-1921&quot;,&quot;Rasputin, Grigorii Efimovich, 1869-1916&quot;],&quot;Primary&quot;:&quot;66358.htm&quot;,&quot;CreatorNames&quot;:[&quot;Radziwill, Catherine, Princess, 1858-1941&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;66358&quot;});" class='title'>Rasputin and the Russian Revolution</a>
+<div class='author'>Radziwill, Catherine, Princess, 1858-1941</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66371, {&quot;Title&quot;:&quot;Inside the Russian Revolution&quot;,&quot;Topics&quot;:[&quot;World War, 1914-1918 -- Soviet Union&quot;,&quot;Soviet Union -- History -- Revolution, 1917-1921 -- Personal narratives&quot;],&quot;Primary&quot;:&quot;66371.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dorr, Rheta Childe, 1866-1948&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;66371&quot;});" class='title'>Inside the Russian Revolution</a>
+<div class='author'>Dorr, Rheta Childe, 1866-1948</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66386, {&quot;Title&quot;:&quot;Travels into Bokhara (Volume 3 of 3) - Being the Account of A Journey from India to Cabool, Tartary, and Persia; Also, Narrative of a Voyage on the Indus, From the Sea to Lahore, With Presents From the King of Great Britain; Performed Under the Orders of the Supreme Government of India, in the Years 1831, 1832, and 1833&quot;,&quot;Topics&quot;:[&quot;Asia, Central -- Description and travel&quot;,&quot;Afghanistan -- Description and travel&quot;,&quot;Burnes, Alexander, Sir, 1805-1841 -- Travel&quot;,&quot;Bukhoro (Uzbekistan) -- Description and travel&quot;,&quot;Indus River Valley -- Description and travel&quot;],&quot;Primary&quot;:&quot;66386.htm&quot;,&quot;CreatorNames&quot;:[&quot;Burnes, Alexander, Sir, 1805-1841&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;66386&quot;});" class='title'>Travels into Bokhara (Volume 3 of 3) -<br><span class='subtitle'>Being the Account of A Journey from India to Cabool, Tartary, and Persia; Also, Narrative of a Voyage on the Indus, From the Sea to Lahore, With Presents From the King of Great Britain; Performed Under the Orders of the Supreme Government of India, in the Years 1831, 1832, and 1833</span></a>
+<div class='author'>Burnes, Alexander, Sir, 1805-1841</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66525, {&quot;Title&quot;:&quot;Siberia To-Day&quot;,&quot;Topics&quot;:[&quot;Siberia (Russia) -- Description and travel&quot;,&quot;Siberia (Russia)&quot;],&quot;Primary&quot;:&quot;66525.htm&quot;,&quot;CreatorNames&quot;:[&quot;Moore, Frederick Ferdinand, 1881-1947&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;66525&quot;});" class='title'>Siberia To-Day</a>
+<div class='author'>Moore, Frederick Ferdinand, 1881-1947</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66741, {&quot;Title&quot;:&quot;Vámbéry Ármin vázlatai Közép-Ázsiából - Ujabb adalékok az oxusmelléki országok népismereti, társadalmi és politikai viszonyaihoz&quot;,&quot;Topics&quot;:[&quot;Asia, Central -- Description and travel&quot;],&quot;Primary&quot;:&quot;66741.htm&quot;,&quot;CreatorNames&quot;:[&quot;Vámbéry, Ármin, 1832-1913&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;66741&quot;});" class='title'>Vámbéry Ármin vázlatai Közép-<br><span class='subtitle'>Ázsiából - Ujabb adalékok az oxusmelléki országok népismereti, társadalmi és politikai viszonyaihoz</span></a>
+<div class='author'>Vámbéry, Ármin, 1832-1913</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67710, {&quot;Title&quot;:&quot;Russia in 1916&quot;,&quot;Topics&quot;:[&quot;Russia -- Description and travel&quot;,&quot;Russia -- Social life and customs&quot;],&quot;Primary&quot;:&quot;67710.htm&quot;,&quot;CreatorNames&quot;:[&quot;Graham, Stephen, 1884-1975&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;67710&quot;});" class='title'>Russia in 1916</a>
+<div class='author'>Graham, Stephen, 1884-1975</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67749, {&quot;Title&quot;:&quot;The Story of a Siberian Exile; Followed by a Narrative of Recent Events in Poland&quot;,&quot;Topics&quot;:[&quot;Polish question&quot;,&quot;Prisons -- Russia (Federation) -- Siberia&quot;,&quot;Exiles -- Russia (Federation) -- Siberia&quot;],&quot;Primary&quot;:&quot;67749.htm&quot;,&quot;CreatorNames&quot;:[&quot;Piotrowski, Rufin, 1806-1872&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;67749&quot;});" class='title'>The Story of a Siberian Exile;<br><span class='subtitle'>Followed by a Narrative of Recent Events in Poland</span></a>
+<div class='author'>Piotrowski, Rufin, 1806-1872</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67882, {&quot;Title&quot;:&quot;The Memoirs of Alexander Herzen, Parts I and II&quot;,&quot;Topics&quot;:[&quot;Authors, Russian -- Biography&quot;,&quot;Herzen, Aleksandr, 1812-1870&quot;,&quot;Revolutionaries -- Soviet Union -- Biography&quot;,&quot;Socialists -- Soviet Union -- Biography&quot;],&quot;Primary&quot;:&quot;67882.htm&quot;,&quot;CreatorNames&quot;:[&quot;Herzen, Aleksandr, 1812-1870&quot;,&quot;Duff, J. D. (James Duff), 1860-1940 [Translator]&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;67882&quot;});" class='title'>The Memoirs of Alexander Herzen, Parts I and II</a>
+<div class='author'>Herzen, Aleksandr, 1812-1870, Duff, J. D. (James Duff), 1860-1940 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67910, {&quot;Title&quot;:&quot;Journal d&#39;une Comédienne Française sous la Terreur Bolchevik, 1917-1918&quot;,&quot;Topics&quot;:[&quot;Soviet Union -- History -- Revolution, 1917-1921&quot;,&quot;Communism -- Soviet Union&quot;],&quot;Primary&quot;:&quot;67910.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pax, Paulette, 1887-1942&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;67910&quot;});" class='title'>Journal d'une Comédienne Française sous la Terreur Bolchevik, 1917-1918</a>
+<div class='author'>Pax, Paulette, 1887-1942</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67938, {&quot;Title&quot;:&quot;Through Russian Central Asia&quot;,&quot;Topics&quot;:[&quot;Asia, Central -- Description and travel&quot;,&quot;Graham, Stephen, 1884-1975 -- Travel -- Asia, Central&quot;],&quot;Primary&quot;:&quot;67938.htm&quot;,&quot;CreatorNames&quot;:[&quot;Graham, Stephen, 1884-1975&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;67938&quot;});" class='title'>Through Russian Central Asia</a>
+<div class='author'>Graham, Stephen, 1884-1975</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68451, {&quot;Title&quot;:&quot;Mirrors of Moscow&quot;,&quot;Topics&quot;:[&quot;Soviet Union -- History -- Revolution, 1917-1921&quot;,&quot;Soviet Union -- Biography&quot;],&quot;Primary&quot;:&quot;68451.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bryant, Louise Stevens, 1885-1959&quot;,&quot;Cesare, Oscar Edward, 1885-1948 [Illustrator]&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;68451&quot;});" class='title'>Mirrors of Moscow</a>
+<div class='author'>Bryant, Louise Stevens, 1885-1959, Cesare, Oscar Edward, 1885-1948 [Illustrator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68560, {&quot;Title&quot;:&quot;Deux années en Ukraine (1917-1919) - avec une carte de l&#39;Ukraine.&quot;,&quot;Topics&quot;:[&quot;Ukraine&quot;],&quot;Primary&quot;:&quot;68560.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dubreuil, Charles&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;68560&quot;});" class='title'>Deux années en Ukraine (1917-1919) -<br><span class='subtitle'>avec une carte de l'Ukraine.</span></a>
+<div class='author'>Dubreuil, Charles</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68578, {&quot;Title&quot;:&quot;John Sobieski: Lothian prize essay for 1881&quot;,&quot;Topics&quot;:[&quot;John III Sobieski, King of Poland, 1629-1696&quot;],&quot;Primary&quot;:&quot;68578.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tatham, Edward H. R. (Edward Henry Ralph), 1857-1938&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;68578&quot;});" class='title'>John Sobieski:<br><span class='subtitle'>Lothian prize essay for 1881</span></a>
+<div class='author'>Tatham, Edward H. R. (Edward Henry Ralph), 1857-1938</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68616, {&quot;Title&quot;:&quot;Anastasia: The autobiography of H.I.H. the Grand Duchess Anastasia Nicholaevna of Russia&quot;,&quot;Topics&quot;:[&quot;Anastasiia Nikolaevna, Grand Duchess, daughter of Nicholas II, Emperor of Russia, 1901-1918&quot;],&quot;Primary&quot;:&quot;68616.htm&quot;,&quot;CreatorNames&quot;:[&quot;Smith, Eugenia, 1899-1997&quot;,&quot;Anastasiia Nikolaevna, Grand Duchess, daughter of Nicholas II, Emperor of Russia, 1901-1918 [Dubious author]&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;68616&quot;});" class='title'>Anastasia:<br><span class='subtitle'>The autobiography of H.I.H. the Grand Duchess Anastasia Nicholaevna of Russia</span></a>
+<div class='author'>Smith, Eugenia, 1899-1997, Anastasiia Nikolaevna, Grand Duchess, daughter of Nicholas II, Emperor of Russia, 1901-1918 [Dubious author]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69003, {&quot;Title&quot;:&quot;Petsamhon valaskaloja onkimhan: Matkakuvaus&quot;,&quot;Topics&quot;:[&quot;Petsamo (Lapin lääni, Finland) -- Description and travel&quot;],&quot;Primary&quot;:&quot;69003.txt&quot;,&quot;CreatorNames&quot;:[&quot;Ikola, Jaakko, 1887-1951&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;69003&quot;});" class='title'>Petsamhon valaskaloja onkimhan:<br><span class='subtitle'>Matkakuvaus</span></a>
+<div class='author'>Ikola, Jaakko, 1887-1951</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69486, {&quot;Title&quot;:&quot;Through Bolshevik Russia&quot;,&quot;Topics&quot;:[&quot;Communism -- Russia&quot;],&quot;Primary&quot;:&quot;69486.htm&quot;,&quot;CreatorNames&quot;:[&quot;Snowden, Ethel, 1881-1951&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;69486&quot;});" class='title'>Through Bolshevik Russia</a>
+<div class='author'>Snowden, Ethel, 1881-1951</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69583, {&quot;Title&quot;:&quot;Mon voyage aventureux en Russie communiste&quot;,&quot;Topics&quot;:[&quot;Women -- Soviet Union -- Social conditions&quot;,&quot;Soviet Union -- Description and travel&quot;,&quot;Pelletier, Madeleine, 1874-1939 -- Travel -- Soviet Union&quot;,&quot;Soviet Union -- Social conditions -- 1917-1945&quot;],&quot;Primary&quot;:&quot;69583.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pelletier, Madeleine, 1874-1939&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;69583&quot;});" class='title'>Mon voyage aventureux en Russie communiste</a>
+<div class='author'>Pelletier, Madeleine, 1874-1939</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69795, {&quot;Title&quot;:&quot;Der Moskauer Prozeß gegen die Sozialrevolutionäre 1922. Revolution und Konterrevolution&quot;,&quot;Topics&quot;:[&quot;Soviet Union -- History -- Revolution, 1917-1921&quot;,&quot;Partiia sotsialistov-revoliusionerov&quot;],&quot;Primary&quot;:&quot;69795.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kersten, Kurt, 1891-1962&quot;,&quot;Leonhard, Rudolf, 1889-1953 [Editor]&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;69795&quot;});" class='title'>Der Moskauer Prozeß gegen die Sozialrevolutionäre 1922. Revolution und Konterrevolution</a>
+<div class='author'>Kersten, Kurt, 1891-1962, Leonhard, Rudolf, 1889-1953 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69996, {&quot;Title&quot;:&quot;The dawn in Russia&quot;,&quot;Topics&quot;:[&quot;Russia -- History -- Nicholas II, 1894-1917&quot;,&quot;Russia -- Politics and government -- 1894-1917&quot;,&quot;Russia -- Social conditions -- 1801-1917&quot;,&quot;Russia -- History -- Revolution, 1905-1907&quot;],&quot;Primary&quot;:&quot;69996.htm&quot;,&quot;CreatorNames&quot;:[&quot;Nevinson, Henry Woodd, 1856-1941&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;69996&quot;});" class='title'>The dawn in Russia</a>
+<div class='author'>Nevinson, Henry Woodd, 1856-1941</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70213, {&quot;Title&quot;:&quot;Yashka&quot;,&quot;Topics&quot;:[&quot;Soviet Union -- History -- Revolution, 1917-1921&quot;,&quot;World War, 1914-1918 -- Personal narratives, Russian&quot;],&quot;Primary&quot;:&quot;70213.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bochkareva, Mariia, 1889-1920&quot;,&quot;Levine, Isaac Don, 1892-1981&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;70213&quot;});" class='title'>Yashka</a>
+<div class='author'>Bochkareva, Mariia, 1889-1920, Levine, Isaac Don, 1892-1981</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(8465, {&quot;Title&quot;:&quot;The Russian Revolution; The Jugo-Slav Movement&quot;,&quot;Topics&quot;:[&quot;Soviet Union -- History -- Revolution, 1917-1921&quot;,&quot;Soviet Union -- Politics and government -- 1917-1936&quot;,&quot;Yugoslavs&quot;],&quot;Primary&quot;:&quot;8465.htm&quot;,&quot;CreatorNames&quot;:[&quot;Golder, Frank Alfred, 1877-1929&quot;,&quot;Harper, Samuel N. (Samuel Northrup), 1882-1943&quot;,&quot;Kerner, Robert Joseph, 1887-1956&quot;,&quot;Petrunkevitch, Alexander, 1875-1964&quot;],&quot;LoCC&quot;:[&quot;DK&quot;],&quot;PG_ID&quot;:&quot;8465&quot;});" class='title'>The Russian Revolution;<br><span class='subtitle'>The Jugo-Slav Movement</span></a>
+<div class='author'>Golder, Frank Alfred, 1877-1929, Harper, Samuel N. (Samuel Northrup), 1882-1943, Kerner, Robert Joseph, 1887-1956, Petrunkevitch, Alexander, 1875-1964</div>
+</div>
+</ul></div>
+</body></html>

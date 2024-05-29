@@ -1,0 +1,861 @@
+<html>
+<head>
+<title>Category</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<script src="../categories.js"></script>
+</head>
+<body>
+<!-- The Find on Page Modal -->
+  <div id="findOnPage" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+      <input type="text" id="searchText" placeholder="Enter text to find..." tabindex="0">
+      <button id="findButton">Find</button>
+  </div>
+</div>
+<div id="header">
+  <div id="header-content">
+    <div class="header-container">
+      <a id="backBtn" class="header-btn" href="#">
+          <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
+      </a>
+      <a id="search" class="header-btn" href="../search.html">
+          <img src="../images/icons/search.svg" title="Search book titles">
+      </a>
+    </div>
+    <h1 id="headTitle">Category: Science (General) (Q)</h1>
+    <div class="header-container">
+      <a id="sortBtn" class="header-btn" href="#">
+        <img src="../images/icons/sort.svg" title="Re-sort books">
+      </a>
+      <div id="sortDropdown" class="dropdown" style="display: none">
+        <a id="sortAuthor" class="dropdown-btn" href="#">Sort by author</a>
+        <a id="sortTitle" class="dropdown-btn" href="#">Sort by title</a>
+        <a id="sortDate" class="dropdown-btn" href="#">Sort by date</a>
+        <a id="sortDefault" class="dropdown-btn" href="#">Default sort</a>
+      </div>
+      <a class="header-btn" href="categories.html">
+        <img src="../images/icons/categories.svg" title="Browse categories">
+      </a>
+      <a id="savedBooksLink" class="header-btn" href="../bookshelf.html">
+          <img src="../images/icons/bookshelf.svg" title="Viewed/saved books">
+      </a>
+    </div>
+  </div>
+</div>
+<div id="body">
+<ul>
+<li><a href='QA.html'>Mathematics (QA)</a> <span class='count'>81</span></li>
+<li><a href='QB.html'>Astronomy (QB)</a> <span class='count'>153</span></li>
+<li><a href='QC.html'>Physics (QC)</a> <span class='count'>154</span></li>
+<li><a href='QD.html'>Chemistry (QD)</a> <span class='count'>83</span></li>
+<li><a href='QE.html'>Geology (QE)</a> <span class='count'>168</span></li>
+<li><a href='QH.html'>Natural History - Biology (QH)</a> <span class='count'>624</span></li>
+<li><a href='QK.html'>Botany (QK)</a> <span class='count'>205</span></li>
+<li><a href='QL.html'>Zoology (QL)</a> <span class='count'>668</span></li>
+<li><a href='QM.html'>Human anatomy (QM)</a> <span class='count'>16</span></li>
+<li><a href='QP.html'>Physiology (QP)</a> <span class='count'>76</span></li>
+<li><a href='QR.html'>Microbiology (QR)</a> <span class='count'>18</span></li>
+<p>&nbsp;</p>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(10060, {&quot;Title&quot;:&quot;Discourses: Biological &amp; Geological - Essays&quot;,&quot;Topics&quot;:[&quot;Geology&quot;,&quot;Biology&quot;],&quot;Primary&quot;:&quot;10060.txt&quot;,&quot;CreatorNames&quot;:[&quot;Huxley, Thomas Henry, 1825-1895&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;10060&quot;});" class='title'>Discourses:<br><span class='subtitle'>Biological & Geological - Essays</span></a>
+<div class='author'>Huxley, Thomas Henry, 1825-1895</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(1025, {&quot;Title&quot;:&quot;Essays; Political, Economical, and Philosophical — Volume 1&quot;,&quot;Topics&quot;:[&quot;Charities&quot;,&quot;Food&quot;,&quot;Fireplaces&quot;,&quot;Heat&quot;,&quot;Kitchen utensils&quot;,&quot;Poor -- Germany -- Munich&quot;],&quot;Primary&quot;:&quot;1025.txt&quot;,&quot;CreatorNames&quot;:[&quot;Rumford, Benjamin, Graf von, 1753-1814&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;1025&quot;});" class='title'>Essays;<br><span class='subtitle'>Political, Economical, and Philosophical — Volume 1</span></a>
+<div class='author'>Rumford, Benjamin, Graf von, 1753-1814</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(10427, {&quot;Title&quot;:&quot;Scientific Essays and Lectures&quot;,&quot;Topics&quot;:[&quot;Science&quot;],&quot;Primary&quot;:&quot;10427.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kingsley, Charles, 1819-1875&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;10427&quot;});" class='title'>Scientific Essays and Lectures</a>
+<div class='author'>Kingsley, Charles, 1819-1875</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(1216, {&quot;Title&quot;:&quot;Reflections on the Decline of Science in England, and on Some of Its Causes&quot;,&quot;Topics&quot;:[&quot;Science -- Great Britain -- History&quot;,&quot;Royal Society (Great Britain)&quot;],&quot;Primary&quot;:&quot;1216.htm&quot;,&quot;CreatorNames&quot;:[&quot;Babbage, Charles, 1791-1871&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;1216&quot;});" class='title'>Reflections on the Decline of Science in England, and on Some of Its Causes</a>
+<div class='author'>Babbage, Charles, 1791-1871</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(12506, {&quot;Title&quot;:&quot;Critiques and Addresses&quot;,&quot;Topics&quot;:[&quot;Science&quot;],&quot;Primary&quot;:&quot;12506.txt&quot;,&quot;CreatorNames&quot;:[&quot;Huxley, Thomas Henry, 1825-1895&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;12506&quot;});" class='title'>Critiques and Addresses</a>
+<div class='author'>Huxley, Thomas Henry, 1825-1895</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(1315, {&quot;Title&quot;:&quot;Autobiography and Selected Essays&quot;,&quot;Topics&quot;:[&quot;Science&quot;],&quot;Primary&quot;:&quot;1315.htm&quot;,&quot;CreatorNames&quot;:[&quot;Huxley, Thomas Henry, 1825-1895&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;1315&quot;});" class='title'>Autobiography and Selected Essays</a>
+<div class='author'>Huxley, Thomas Henry, 1825-1895</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(1331, {&quot;Title&quot;:&quot;ABC&#39;s of Science&quot;,&quot;Topics&quot;:[&quot;Science -- Study and teaching&quot;],&quot;Primary&quot;:&quot;1331.txt&quot;,&quot;CreatorNames&quot;:[&quot;Oliver, Charles A. (Charles Alexander), 1858-1932&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;1331&quot;});" class='title'>ABC's of Science</a>
+<div class='author'>Oliver, Charles A. (Charles Alexander), 1858-1932</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14565, {&quot;Title&quot;:&quot;Cosmos: A Sketch of the Physical Description of the Universe, Vol. 1&quot;,&quot;Topics&quot;:[&quot;Science -- History&quot;,&quot;Astronomy&quot;,&quot;Physical geography&quot;,&quot;Cosmography&quot;],&quot;Primary&quot;:&quot;14565.txt&quot;,&quot;CreatorNames&quot;:[&quot;Humboldt, Alexander von, 1769-1859&quot;,&quot;Otté, E. C. (Elise C.), 1818-1903 [Translator]&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;14565&quot;});" class='title'>Cosmos:<br><span class='subtitle'>A Sketch of the Physical Description of the Universe, Vol. 1</span></a>
+<div class='author'>Humboldt, Alexander von, 1769-1859, Otté, E. C. (Elise C.), 1818-1903 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(14750, {&quot;Title&quot;:&quot;Bowdoin Boys in Labrador - An Account of the Bowdoin College Scientific Expedition to Labrador led by Prof. Leslie A. Lee of the Biological Department&quot;,&quot;Topics&quot;:[&quot;Labrador (N.L.) -- Description and travel&quot;,&quot;Scientific expeditions&quot;],&quot;Primary&quot;:&quot;14750.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cilley, Jonathan Prince, 1835-1920&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;14750&quot;});" class='title'>Bowdoin Boys in Labrador -<br><span class='subtitle'>An Account of the Bowdoin College Scientific Expedition to Labrador led by Prof. Leslie A. Lee of the Biological Department</span></a>
+<div class='author'>Cilley, Jonathan Prince, 1835-1920</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15253, {&quot;Title&quot;:&quot;The Advance of Science in the Last Half-Century&quot;,&quot;Topics&quot;:[&quot;Science -- History&quot;],&quot;Primary&quot;:&quot;15253.htm&quot;,&quot;CreatorNames&quot;:[&quot;Huxley, Thomas Henry, 1825-1895&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;15253&quot;});" class='title'>The Advance of Science in the Last Half-Century</a>
+<div class='author'>Huxley, Thomas Henry, 1825-1895</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15468, {&quot;Title&quot;:&quot;Lectures on popular and scientific subjects&quot;,&quot;Topics&quot;:[&quot;Science&quot;,&quot;Industrial arts&quot;],&quot;Primary&quot;:&quot;15468.htm&quot;,&quot;CreatorNames&quot;:[&quot;Caithness, James Sinclair, 14th earl of, 1821-1881&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;15468&quot;});" class='title'>Lectures on popular and scientific subjects</a>
+<div class='author'>Caithness, James Sinclair, 14th earl of, 1821-1881</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15807, {&quot;Title&quot;:&quot;Among the Forces&quot;,&quot;Topics&quot;:[&quot;Religion and science&quot;,&quot;Science -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;15807.htm&quot;,&quot;CreatorNames&quot;:[&quot;Warren, Henry White, 1831-1912&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;15807&quot;});" class='title'>Among the Forces</a>
+<div class='author'>Warren, Henry White, 1831-1912</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15884, {&quot;Title&quot;:&quot;Young Folks&#39; Library, Volume XI (of 20) - Wonders of Earth, Sea and Sky&quot;,&quot;Topics&quot;:[&quot;Science -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;15884.htm&quot;,&quot;CreatorNames&quot;:[&quot;Holden, Edward S. (Edward Singleton), 1846-1914 [Editor]&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;15884&quot;});" class='title'>Young Folks' Library, Volume XI (of 20) -<br><span class='subtitle'>Wonders of Earth, Sea and Sky</span></a>
+<div class='author'>Holden, Edward S. (Edward Singleton), 1846-1914 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(15905, {&quot;Title&quot;:&quot;Collected Essays, Volume V - Science and Christian Tradition: Essays&quot;,&quot;Topics&quot;:[&quot;Religion and science&quot;,&quot;Miracles&quot;,&quot;Agnosticism&quot;],&quot;Primary&quot;:&quot;15905.htm&quot;,&quot;CreatorNames&quot;:[&quot;Huxley, Thomas Henry, 1825-1895&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;15905&quot;});" class='title'>Collected Essays, Volume V -<br><span class='subtitle'>Science and Christian Tradition: Essays</span></a>
+<div class='author'>Huxley, Thomas Henry, 1825-1895</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16325, {&quot;Title&quot;:&quot;Science in Arcady&quot;,&quot;Topics&quot;:[&quot;Science&quot;,&quot;Archaeology&quot;],&quot;Primary&quot;:&quot;16325.htm&quot;,&quot;CreatorNames&quot;:[&quot;Allen, Grant, 1848-1899&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;16325&quot;});" class='title'>Science in Arcady</a>
+<div class='author'>Allen, Grant, 1848-1899</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16474, {&quot;Title&quot;:&quot;Lectures and Essays&quot;,&quot;Topics&quot;:[&quot;Religion and science&quot;],&quot;Primary&quot;:&quot;16474.htm&quot;,&quot;CreatorNames&quot;:[&quot;Huxley, Thomas Henry, 1825-1895&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;16474&quot;});" class='title'>Lectures and Essays</a>
+<div class='author'>Huxley, Thomas Henry, 1825-1895</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16593, {&quot;Title&quot;:&quot;General Science&quot;,&quot;Topics&quot;:[&quot;Science&quot;],&quot;Primary&quot;:&quot;16593.htm&quot;,&quot;CreatorNames&quot;:[&quot;Clark, Bertha May, 1880-&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;16593&quot;});" class='title'>General Science</a>
+<div class='author'>Clark, Bertha May, 1880-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16614, {&quot;Title&quot;:&quot;The Birth-Time of the World and Other Scientific Essays&quot;,&quot;Topics&quot;:[&quot;Science&quot;],&quot;Primary&quot;:&quot;16614.htm&quot;,&quot;CreatorNames&quot;:[&quot;Joly, John, 1857-1933&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;16614&quot;});" class='title'>The Birth-Time of the World and Other Scientific Essays</a>
+<div class='author'>Joly, John, 1857-1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16729, {&quot;Title&quot;:&quot;Lay Sermons, Addresses and Reviews&quot;,&quot;Topics&quot;:[&quot;Science&quot;,&quot;Evolution (Biology)&quot;,&quot;Science -- Philosophy&quot;],&quot;Primary&quot;:&quot;16729.htm&quot;,&quot;CreatorNames&quot;:[&quot;Huxley, Thomas Henry, 1825-1895&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;16729&quot;});" class='title'>Lay Sermons, Addresses and Reviews</a>
+<div class='author'>Huxley, Thomas Henry, 1825-1895</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16775, {&quot;Title&quot;:&quot;Biographies of distinguished scientific men. First series&quot;,&quot;Topics&quot;:[&quot;Scientists -- Biography&quot;],&quot;Primary&quot;:&quot;16775.htm&quot;,&quot;CreatorNames&quot;:[&quot;Arago, F. (François), 1786-1853&quot;,&quot;Grant, Robert, 1814-1892 [Translator]&quot;,&quot;Powell, Baden, 1796-1860 [Translator]&quot;,&quot;Smyth, W. H. (William Henry), 1788-1865 [Translator]&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;16775&quot;});" class='title'>Biographies of distinguished scientific men. First series</a>
+<div class='author'>Arago, F. (François), 1786-1853, Grant, Robert, 1814-1892 [Translator], Powell, Baden, 1796-1860 [Translator], Smyth, W. H. (William Henry), 1788-1865 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(16807, {&quot;Title&quot;:&quot;Falling in Love; With Other Essays on More Exact Branches of Science&quot;,&quot;Topics&quot;:[&quot;Science&quot;],&quot;Primary&quot;:&quot;16807.htm&quot;,&quot;CreatorNames&quot;:[&quot;Allen, Grant, 1848-1899&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;16807&quot;});" class='title'>Falling in Love;<br><span class='subtitle'>With Other Essays on More Exact Branches of Science</span></a>
+<div class='author'>Allen, Grant, 1848-1899</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(1705, {&quot;Title&quot;:&quot;A History of Science — Volume 1&quot;,&quot;Topics&quot;:[&quot;Science -- History&quot;],&quot;Primary&quot;:&quot;1705.htm&quot;,&quot;CreatorNames&quot;:[&quot;Williams, Edward Huntington, 1868-1944&quot;,&quot;Williams, Henry Smith, 1863-1943&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;1705&quot;});" class='title'>A History of Science — Volume 1</a>
+<div class='author'>Williams, Edward Huntington, 1868-1944, Williams, Henry Smith, 1863-1943</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(1706, {&quot;Title&quot;:&quot;A History of Science — Volume 2&quot;,&quot;Topics&quot;:[&quot;Science -- History&quot;],&quot;Primary&quot;:&quot;1706.htm&quot;,&quot;CreatorNames&quot;:[&quot;Williams, Edward Huntington, 1868-1944&quot;,&quot;Williams, Henry Smith, 1863-1943&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;1706&quot;});" class='title'>A History of Science — Volume 2</a>
+<div class='author'>Williams, Edward Huntington, 1868-1944, Williams, Henry Smith, 1863-1943</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(1707, {&quot;Title&quot;:&quot;A History of Science — Volume 3&quot;,&quot;Topics&quot;:[&quot;Science -- History&quot;],&quot;Primary&quot;:&quot;1707.htm&quot;,&quot;CreatorNames&quot;:[&quot;Williams, Edward Huntington, 1868-1944&quot;,&quot;Williams, Henry Smith, 1863-1943&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;1707&quot;});" class='title'>A History of Science — Volume 3</a>
+<div class='author'>Williams, Edward Huntington, 1868-1944, Williams, Henry Smith, 1863-1943</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(1708, {&quot;Title&quot;:&quot;A History of Science — Volume 4&quot;,&quot;Topics&quot;:[&quot;Science -- History&quot;],&quot;Primary&quot;:&quot;1708.htm&quot;,&quot;CreatorNames&quot;:[&quot;Williams, Edward Huntington, 1868-1944&quot;,&quot;Williams, Henry Smith, 1863-1943&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;1708&quot;});" class='title'>A History of Science — Volume 4</a>
+<div class='author'>Williams, Edward Huntington, 1868-1944, Williams, Henry Smith, 1863-1943</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(17882, {&quot;Title&quot;:&quot;Consolations in Travel; or, the Last Days of a Philosopher&quot;,&quot;Topics&quot;:[&quot;Davy, Humphry, Sir, 1778-1829&quot;,&quot;Chemists -- Great Britain -- Biography&quot;],&quot;Primary&quot;:&quot;17882.htm&quot;,&quot;CreatorNames&quot;:[&quot;Davy, Humphry, Sir, 1778-1829&quot;,&quot;Morley, Henry, 1822-1894 [Editor]&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;17882&quot;});" class='title'>Consolations in Travel;<br><span class='subtitle'>or, the Last Days of a Philosopher</span></a>
+<div class='author'>Davy, Humphry, Sir, 1778-1829, Morley, Henry, 1822-1894 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18217, {&quot;Title&quot;:&quot;Chambers&#39;s Elementary Science Readers - Book I&quot;,&quot;Topics&quot;:[&quot;Science -- Readers&quot;],&quot;Primary&quot;:&quot;18217.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;PZ&quot;,&quot;Q&quot;],&quot;PG_ID&quot;:&quot;18217&quot;});" class='title'>Chambers's Elementary Science Readers -<br><span class='subtitle'>Book I</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(18835, {&quot;Title&quot;:&quot;The Concept of Nature - The Tarner Lectures Delivered in Trinity College, November 1919&quot;,&quot;Topics&quot;:[&quot;Knowledge, Theory of&quot;,&quot;Nature&quot;,&quot;Science -- Philosophy&quot;],&quot;Primary&quot;:&quot;18835.htm&quot;,&quot;CreatorNames&quot;:[&quot;Whitehead, Alfred North, 1861-1947&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;18835&quot;});" class='title'>The Concept of Nature -<br><span class='subtitle'>The Tarner Lectures Delivered in Trinity College, November 1919</span></a>
+<div class='author'>Whitehead, Alfred North, 1861-1947</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19013, {&quot;Title&quot;:&quot;Sciências Naturaes - Pela Redacção da «Educação Nacional»&quot;,&quot;Topics&quot;:[&quot;Science -- Study and teaching&quot;],&quot;Primary&quot;:&quot;19013.txt&quot;,&quot;CreatorNames&quot;:[&quot;Anonymous&quot;],&quot;LoCC&quot;:[&quot;LB&quot;,&quot;Q&quot;],&quot;PG_ID&quot;:&quot;19013&quot;});" class='title'>Sciências Naturaes -<br><span class='subtitle'>Pela Redacção da «Educação Nacional»</span></a>
+<div class='author'>Anonymous</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(19080, {&quot;Title&quot;:&quot;Little Journeys to the Homes of the Great - Volume 12 - Little Journeys to the Homes of Great Scientists&quot;,&quot;Topics&quot;:[&quot;Scientists -- Biography&quot;],&quot;Primary&quot;:&quot;19080.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hubbard, Elbert, 1856-1915&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;19080&quot;});" class='title'>Little Journeys to the Homes of the Great -<br><span class='subtitle'>Volume 12 - Little Journeys to the Homes of Great Scientists</span></a>
+<div class='author'>Hubbard, Elbert, 1856-1915</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(20417, {&quot;Title&quot;:&quot;The Outline of Science, Vol. 1 (of 4) - A Plain Story Simply Told&quot;,&quot;Topics&quot;:[&quot;Science&quot;],&quot;Primary&quot;:&quot;20417.htm&quot;,&quot;CreatorNames&quot;:[&quot;Thomson, J. Arthur (John Arthur), 1861-1933&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;20417&quot;});" class='title'>The Outline of Science, Vol. 1 (of 4) -<br><span class='subtitle'>A Plain Story Simply Told</span></a>
+<div class='author'>Thomson, J. Arthur (John Arthur), 1861-1933</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22085, {&quot;Title&quot;:&quot;Sir Jagadis Chunder Bose, His Life and Speeches&quot;,&quot;Topics&quot;:[&quot;Science&quot;],&quot;Primary&quot;:&quot;22085.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bose, Jagadis Chandra, 1858-1937&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;22085&quot;});" class='title'>Sir Jagadis Chunder Bose, His Life and Speeches</a>
+<div class='author'>Bose, Jagadis Chandra, 1858-1937</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22627, {&quot;Title&quot;:&quot;German Science Reader - An Introduction to Scientific German, for Students of Physics, Chemistry and Engineering&quot;,&quot;Topics&quot;:[&quot;German language -- Readers -- Science&quot;],&quot;Primary&quot;:&quot;22627.htm&quot;,&quot;CreatorNames&quot;:[&quot;Kroeh, Charles Frederick, 1846-1928&quot;],&quot;LoCC&quot;:[&quot;PD&quot;,&quot;Q&quot;],&quot;PG_ID&quot;:&quot;22627&quot;});" class='title'>German Science Reader -<br><span class='subtitle'>An Introduction to Scientific German, for Students of Physics, Chemistry and Engineering</span></a>
+<div class='author'>Kroeh, Charles Frederick, 1846-1928</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(22659, {&quot;Title&quot;:&quot;Rede, gehalten bei der Eröffnung der Versammlung deutscher Naturforscher und Ärzte in Berlin, am 18. September 1828&quot;,&quot;Topics&quot;:[&quot;Speeches, addresses, etc.&quot;],&quot;Primary&quot;:&quot;22659.htm&quot;,&quot;CreatorNames&quot;:[&quot;Humboldt, Alexander von, 1769-1859&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;22659&quot;});" class='title'>Rede, gehalten bei der Eröffnung der Versammlung deutscher Naturforscher und Ärzte in Berlin, am 18. September 1828</a>
+<div class='author'>Humboldt, Alexander von, 1769-1859</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(23422, {&quot;Title&quot;:&quot;Essays Towards a Theory of Knowledge&quot;,&quot;Topics&quot;:[&quot;Knowledge, Theory of&quot;,&quot;Force and energy&quot;,&quot;Cycles&quot;],&quot;Primary&quot;:&quot;23422.htm&quot;,&quot;CreatorNames&quot;:[&quot;Philip, Alexander&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;23422&quot;});" class='title'>Essays Towards a Theory of Knowledge</a>
+<div class='author'>Philip, Alexander</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24527, {&quot;Title&quot;:&quot;Fragments of Science: A Series of Detached Essays, Addresses, and Reviews. V. 1-2&quot;,&quot;Topics&quot;:[&quot;Science&quot;,&quot;Chemistry&quot;,&quot;Physics&quot;],&quot;Primary&quot;:&quot;24527.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tyndall, John, 1820-1893&quot;],&quot;LoCC&quot;:[&quot;Q&quot;,&quot;QC&quot;,&quot;QD&quot;],&quot;PG_ID&quot;:&quot;24527&quot;});" class='title'>Fragments of Science:<br><span class='subtitle'>A Series of Detached Essays, Addresses, and Reviews. V. 1-2</span></a>
+<div class='author'>Tyndall, John, 1820-1893</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(24684, {&quot;Title&quot;:&quot;Science and Morals and Other Essays&quot;,&quot;Topics&quot;:[&quot;Science&quot;,&quot;Essays&quot;,&quot;Religion and science&quot;],&quot;Primary&quot;:&quot;24684.htm&quot;,&quot;CreatorNames&quot;:[&quot;Windle, Bertram Coghill Alan, Sir, 1858-1929&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;24684&quot;});" class='title'>Science and Morals and Other Essays</a>
+<div class='author'>Windle, Bertram Coghill Alan, Sir, 1858-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25273, {&quot;Title&quot;:&quot;天工開物&quot;,&quot;Topics&quot;:[&quot;Science -- China -- History&quot;,&quot;Technology -- China -- History&quot;],&quot;Primary&quot;:&quot;25273.txt&quot;,&quot;CreatorNames&quot;:[&quot;Song, Yingxing, 1587-&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;25273&quot;});" class='title'>天工開物</a>
+<div class='author'>Song, Yingxing, 1587-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(25509, {&quot;Title&quot;:&quot;The World&#39;s Greatest Books — Volume 15 — Science&quot;,&quot;Topics&quot;:[&quot;Science&quot;],&quot;Primary&quot;:&quot;25509.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hammerton, J. A. (John Alexander), 1871-1949 [Editor]&quot;,&quot;Mee, Arthur, 1875-1943 [Editor]&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;25509&quot;});" class='title'>The World's Greatest Books — Volume 15 — Science</a>
+<div class='author'>Hammerton, J. A. (John Alexander), 1871-1949 [Editor], Mee, Arthur, 1875-1943 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26038, {&quot;Title&quot;:&quot;Drawings and Pharmacy in Al-Zahrawi&#39;s 10th-Century Surgical Treatise&quot;,&quot;Topics&quot;:[&quot;Pharmacy -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;26038.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hamarneh, Sami Khalaf, 1925-&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;26038&quot;});" class='title'>Drawings and Pharmacy in Al-Zahrawi's 10th-Century Surgical Treatise</a>
+<div class='author'>Hamarneh, Sami Khalaf, 1925-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(26139, {&quot;Title&quot;:&quot;Ontario Teachers&#39; Manuals: Nature Study&quot;,&quot;Topics&quot;:[&quot;Science -- Study and teaching (Elementary) -- Ontario&quot;,&quot;Nature study&quot;],&quot;Primary&quot;:&quot;26139.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ontario. Department of Education&quot;],&quot;LoCC&quot;:[&quot;LB&quot;,&quot;Q&quot;],&quot;PG_ID&quot;:&quot;26139&quot;});" class='title'>Ontario Teachers' Manuals:<br><span class='subtitle'>Nature Study</span></a>
+<div class='author'>Ontario. Department of Education</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2627, {&quot;Title&quot;:&quot;On the Method of Zadig - Essay #1 from \&quot;\&quot;Science and Hebrew Tradition\&quot;\&quot;&quot;,&quot;Topics&quot;:[&quot;Science&quot;,&quot;Evolution&quot;,&quot;Bible and science&quot;,&quot;Paleontology&quot;],&quot;Primary&quot;:&quot;2627.htm&quot;,&quot;CreatorNames&quot;:[&quot;Huxley, Thomas Henry, 1825-1895&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;2627&quot;});" class='title'>On the Method of Zadig -<br><span class='subtitle'>Essay #1 from "Science and Hebrew Tradition"</span></a>
+<div class='author'>Huxley, Thomas Henry, 1825-1895</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2628, {&quot;Title&quot;:&quot;The Rise and Progress of Palaeontology - Essay #2 from \&quot;\&quot;Science and Hebrew Tradition\&quot;\&quot;&quot;,&quot;Topics&quot;:[&quot;Science&quot;,&quot;Evolution&quot;,&quot;Bible and science&quot;,&quot;Paleontology&quot;],&quot;Primary&quot;:&quot;2628.htm&quot;,&quot;CreatorNames&quot;:[&quot;Huxley, Thomas Henry, 1825-1895&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;2628&quot;});" class='title'>The Rise and Progress of Palaeontology -<br><span class='subtitle'>Essay #2 from "Science and Hebrew Tradition"</span></a>
+<div class='author'>Huxley, Thomas Henry, 1825-1895</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2629, {&quot;Title&quot;:&quot;Lectures on Evolution - Essay #3 from \&quot;\&quot;Science and Hebrew Tradition\&quot;\&quot;&quot;,&quot;Topics&quot;:[&quot;Science&quot;,&quot;Evolution&quot;,&quot;Bible and science&quot;,&quot;Paleontology&quot;],&quot;Primary&quot;:&quot;2629.htm&quot;,&quot;CreatorNames&quot;:[&quot;Huxley, Thomas Henry, 1825-1895&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;2629&quot;});" class='title'>Lectures on Evolution -<br><span class='subtitle'>Essay #3 from "Science and Hebrew Tradition"</span></a>
+<div class='author'>Huxley, Thomas Henry, 1825-1895</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2630, {&quot;Title&quot;:&quot;The Interpreters of Genesis and the Interpreters of Nature - Essay #4 from \&quot;\&quot;Science and Hebrew Tradition\&quot;\&quot;&quot;,&quot;Topics&quot;:[&quot;Science&quot;,&quot;Evolution&quot;,&quot;Bible and science&quot;,&quot;Paleontology&quot;],&quot;Primary&quot;:&quot;2630.htm&quot;,&quot;CreatorNames&quot;:[&quot;Huxley, Thomas Henry, 1825-1895&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;2630&quot;});" class='title'>The Interpreters of Genesis and the Interpreters of Nature -<br><span class='subtitle'>Essay #4 from "Science and Hebrew Tradition"</span></a>
+<div class='author'>Huxley, Thomas Henry, 1825-1895</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2631, {&quot;Title&quot;:&quot;Mr. Gladstone and Genesis - Essay #5 from \&quot;\&quot;Science and Hebrew Tradition\&quot;\&quot;&quot;,&quot;Topics&quot;:[&quot;Science&quot;,&quot;Evolution&quot;,&quot;Bible and science&quot;,&quot;Paleontology&quot;],&quot;Primary&quot;:&quot;2631.htm&quot;,&quot;CreatorNames&quot;:[&quot;Huxley, Thomas Henry, 1825-1895&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;2631&quot;});" class='title'>Mr. Gladstone and Genesis -<br><span class='subtitle'>Essay #5 from "Science and Hebrew Tradition"</span></a>
+<div class='author'>Huxley, Thomas Henry, 1825-1895</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2632, {&quot;Title&quot;:&quot;The Lights of the Church and the Light of Science - Essay #6 from \&quot;\&quot;Science and Hebrew Tradition\&quot;\&quot;&quot;,&quot;Topics&quot;:[&quot;Science&quot;,&quot;Evolution&quot;,&quot;Bible and science&quot;,&quot;Paleontology&quot;],&quot;Primary&quot;:&quot;2632.htm&quot;,&quot;CreatorNames&quot;:[&quot;Huxley, Thomas Henry, 1825-1895&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;2632&quot;});" class='title'>The Lights of the Church and the Light of Science -<br><span class='subtitle'>Essay #6 from "Science and Hebrew Tradition"</span></a>
+<div class='author'>Huxley, Thomas Henry, 1825-1895</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2633, {&quot;Title&quot;:&quot;Hasisadra&#39;s Adventure - Essay #7 from \&quot;\&quot;Science and Hebrew Tradition\&quot;\&quot;&quot;,&quot;Topics&quot;:[&quot;Science&quot;,&quot;Evolution&quot;,&quot;Bible and science&quot;,&quot;Paleontology&quot;],&quot;Primary&quot;:&quot;2633.htm&quot;,&quot;CreatorNames&quot;:[&quot;Huxley, Thomas Henry, 1825-1895&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;2633&quot;});" class='title'>Hasisadra's Adventure -<br><span class='subtitle'>Essay #7 from "Science and Hebrew Tradition"</span></a>
+<div class='author'>Huxley, Thomas Henry, 1825-1895</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2634, {&quot;Title&quot;:&quot;The Evolution of Theology: an Anthropological Study - Essay #8 from \&quot;\&quot;Science and Hebrew Tradition\&quot;\&quot;&quot;,&quot;Topics&quot;:[&quot;Science&quot;,&quot;Evolution&quot;,&quot;Bible and science&quot;,&quot;Paleontology&quot;],&quot;Primary&quot;:&quot;2634.htm&quot;,&quot;CreatorNames&quot;:[&quot;Huxley, Thomas Henry, 1825-1895&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;2634&quot;});" class='title'>The Evolution of Theology:<br><span class='subtitle'>an Anthropological Study - Essay #8 from "Science and Hebrew Tradition"</span></a>
+<div class='author'>Huxley, Thomas Henry, 1825-1895</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27015, {&quot;Title&quot;:&quot;More Science from an Easy Chair&quot;,&quot;Topics&quot;:[&quot;Science&quot;,&quot;Natural history&quot;],&quot;Primary&quot;:&quot;27015.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lankester, E. Ray (Edwin Ray), Sir, 1847-1929&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;27015&quot;});" class='title'>More Science from an Easy Chair</a>
+<div class='author'>Lankester, E. Ray (Edwin Ray), Sir, 1847-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27076, {&quot;Title&quot;:&quot;Drug Supplies in the American Revolution&quot;,&quot;Topics&quot;:[&quot;Pharmacy -- History -- United States&quot;,&quot;United States -- History -- Revolution, 1775-1783 -- Medical and sanitary affairs&quot;],&quot;Primary&quot;:&quot;27076.htm&quot;,&quot;CreatorNames&quot;:[&quot;Griffenhagen, George B.&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;27076&quot;});" class='title'>Drug Supplies in the American Revolution</a>
+<div class='author'>Griffenhagen, George B.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27106, {&quot;Title&quot;:&quot;Kinematics of Mechanisms from the Time of Watt&quot;,&quot;Topics&quot;:[&quot;Machinery, Kinematics of&quot;],&quot;Primary&quot;:&quot;27106.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ferguson, Eugene S., 1916-2004&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;27106&quot;});" class='title'>Kinematics of Mechanisms from the Time of Watt</a>
+<div class='author'>Ferguson, Eugene S., 1916-2004</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27238, {&quot;Title&quot;:&quot;Woodworking Tools 1600-1900&quot;,&quot;Topics&quot;:[&quot;Woodworking tools -- History&quot;],&quot;Primary&quot;:&quot;27238.htm&quot;,&quot;CreatorNames&quot;:[&quot;Welsh, Peter C.&quot;],&quot;LoCC&quot;:[&quot;Q&quot;,&quot;T&quot;],&quot;PG_ID&quot;:&quot;27238&quot;});" class='title'>Woodworking Tools 1600-1900</a>
+<div class='author'>Welsh, Peter C.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27747, {&quot;Title&quot;:&quot;Personal Recollections, from Early Life to Old Age, of Mary Somerville&quot;,&quot;Topics&quot;:[&quot;Somerville, Mary, 1780-1872&quot;,&quot;Women scientists -- Great Britain -- Biography&quot;],&quot;Primary&quot;:&quot;27747.htm&quot;,&quot;CreatorNames&quot;:[&quot;Somerville, Mary, 1780-1872&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;27747&quot;});" class='title'>Personal Recollections, from Early Life to Old Age, of Mary Somerville</a>
+<div class='author'>Somerville, Mary, 1780-1872</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(27932, {&quot;Title&quot;:&quot;History of the Division of Medical Sciences - United States National Museum Bulletin 240, Contributions from the Museum of History and Technology, paper 43, 1964&quot;,&quot;Topics&quot;:[&quot;Museum of History and Technology (U.S.). Division of Medical Sciences&quot;],&quot;Primary&quot;:&quot;27932.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hamarneh, Sami Khalaf, 1925-&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;27932&quot;});" class='title'>History of the Division of Medical Sciences -<br><span class='subtitle'>United States National Museum Bulletin 240, Contributions from the Museum of History and Technology, paper 43, 1964</span></a>
+<div class='author'>Hamarneh, Sami Khalaf, 1925-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28160, {&quot;Title&quot;:&quot;The &#39;Pioneer&#39;: Light Passenger Locomotive of 1851 - United States Bulletin 240, Contributions from the Museum of History and Technology, paper 42, 1964&quot;,&quot;Topics&quot;:[&quot;Locomotives&quot;],&quot;Primary&quot;:&quot;28160.htm&quot;,&quot;CreatorNames&quot;:[&quot;White, John H., 1933-&quot;],&quot;LoCC&quot;:[&quot;Q&quot;,&quot;TJ&quot;],&quot;PG_ID&quot;:&quot;28160&quot;});" class='title'>The 'Pioneer':<br><span class='subtitle'>Light Passenger Locomotive of 1851 - United States Bulletin 240, Contributions from the Museum of History and Technology, paper 42, 1964</span></a>
+<div class='author'>White, John H., 1933-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28274, {&quot;Title&quot;:&quot;The Beauties of Nature, and the Wonders of the World We Live In&quot;,&quot;Topics&quot;:[&quot;Natural history&quot;,&quot;Astronomy&quot;,&quot;Physical geography&quot;],&quot;Primary&quot;:&quot;28274.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lubbock, John, Sir, 1834-1913&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;28274&quot;});" class='title'>The Beauties of Nature, and the Wonders of the World We Live In</a>
+<div class='author'>Lubbock, John, Sir, 1834-1913</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(28758, {&quot;Title&quot;:&quot;Philosophical Transactions of the Royal Society - Vol 1 - 1666 - Giving some Accompt of the present Undertakings, Studies, - and Labours of the Ingenious in many considerable parts - of the World&quot;,&quot;Topics&quot;:[&quot;Science -- Periodicals&quot;],&quot;Primary&quot;:&quot;28758.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;,&quot;Oldenburg, Henry, 1615?-1677 [Editor]&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;28758&quot;});" class='title'>Philosophical Transactions of the Royal Society -<br><span class='subtitle'>Vol 1 - 1666 - Giving some Accompt of the present Undertakings, Studies, - and Labours of the Ingenious in many considerable parts - of the World</span></a>
+<div class='author'>Various, Oldenburg, Henry, 1615?-1677 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29285, {&quot;Title&quot;:&quot;The Migrations of an American Boat Type&quot;,&quot;Topics&quot;:[&quot;Sharpies (Sailboats)&quot;],&quot;Primary&quot;:&quot;29285.htm&quot;,&quot;CreatorNames&quot;:[&quot;Chapelle, Howard Irving, 1901-1975&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;29285&quot;});" class='title'>The Migrations of an American Boat Type</a>
+<div class='author'>Chapelle, Howard Irving, 1901-1975</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2932, {&quot;Title&quot;:&quot;On the Relations of Man to the Lower Animals&quot;,&quot;Topics&quot;:[&quot;Human beings&quot;,&quot;Apes&quot;,&quot;Ethnology&quot;],&quot;Primary&quot;:&quot;2932.htm&quot;,&quot;CreatorNames&quot;:[&quot;Huxley, Thomas Henry, 1825-1895&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;2932&quot;});" class='title'>On the Relations of Man to the Lower Animals</a>
+<div class='author'>Huxley, Thomas Henry, 1825-1895</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2933, {&quot;Title&quot;:&quot;On Some Fossil Remains of Man&quot;,&quot;Topics&quot;:[&quot;Human beings&quot;,&quot;Apes&quot;,&quot;Ethnology&quot;],&quot;Primary&quot;:&quot;2933.htm&quot;,&quot;CreatorNames&quot;:[&quot;Huxley, Thomas Henry, 1825-1895&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;2933&quot;});" class='title'>On Some Fossil Remains of Man</a>
+<div class='author'>Huxley, Thomas Henry, 1825-1895</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2934, {&quot;Title&quot;:&quot;On the Advisableness of Improving Natural Knowledge&quot;,&quot;Topics&quot;:[&quot;Science&quot;],&quot;Primary&quot;:&quot;2934.htm&quot;,&quot;CreatorNames&quot;:[&quot;Huxley, Thomas Henry, 1825-1895&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;2934&quot;});" class='title'>On the Advisableness of Improving Natural Knowledge</a>
+<div class='author'>Huxley, Thomas Henry, 1825-1895</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(2935, {&quot;Title&quot;:&quot;On the Study of Zoology&quot;,&quot;Topics&quot;:[&quot;Science&quot;],&quot;Primary&quot;:&quot;2935.htm&quot;,&quot;CreatorNames&quot;:[&quot;Huxley, Thomas Henry, 1825-1895&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;2935&quot;});" class='title'>On the Study of Zoology</a>
+<div class='author'>Huxley, Thomas Henry, 1825-1895</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29633, {&quot;Title&quot;:&quot;The Beginnings of Cheap Steel&quot;,&quot;Topics&quot;:[&quot;Bessemer process&quot;,&quot;Steel&quot;],&quot;Primary&quot;:&quot;29633.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bishop, Philip W.&quot;],&quot;LoCC&quot;:[&quot;Q&quot;,&quot;TN&quot;],&quot;PG_ID&quot;:&quot;29633&quot;});" class='title'>The Beginnings of Cheap Steel</a>
+<div class='author'>Bishop, Philip W.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29653, {&quot;Title&quot;:&quot;Conestoga Wagons in Braddock&#39;s Campaign, 1755&quot;,&quot;Topics&quot;:[&quot;Wagons&quot;,&quot;Braddock&#39;s Campaign, 1755&quot;],&quot;Primary&quot;:&quot;29653.htm&quot;,&quot;CreatorNames&quot;:[&quot;Berkebile, Donald H.&quot;],&quot;LoCC&quot;:[&quot;E&quot;,&quot;Q&quot;],&quot;PG_ID&quot;:&quot;29653&quot;});" class='title'>Conestoga Wagons in Braddock's Campaign, 1755</a>
+<div class='author'>Berkebile, Donald H.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29838, {&quot;Title&quot;:&quot;Common Science&quot;,&quot;Topics&quot;:[&quot;Science&quot;],&quot;Primary&quot;:&quot;29838.htm&quot;,&quot;CreatorNames&quot;:[&quot;Washburne, Carleton, 1889-1968&quot;,&quot;Ritchie, John W. (John Woodside), 1871-1943 [Editor]&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;29838&quot;});" class='title'>Common Science</a>
+<div class='author'>Washburne, Carleton, 1889-1968, Ritchie, John W. (John Woodside), 1871-1943 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(29934, {&quot;Title&quot;:&quot;The Auburndale Watch Company - First American Attempt Toward the Dollar Watch&quot;,&quot;Topics&quot;:[&quot;Auburndale Watch Company (Auburndale, Mass.)&quot;,&quot;Clock and watch making -- United States&quot;],&quot;Primary&quot;:&quot;29934.htm&quot;,&quot;CreatorNames&quot;:[&quot;Battison, Edwin A.&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;29934&quot;});" class='title'>The Auburndale Watch Company -<br><span class='subtitle'>First American Attempt Toward the Dollar Watch</span></a>
+<div class='author'>Battison, Edwin A.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30001, {&quot;Title&quot;:&quot;On the Origin of Clockwork, Perpetual Motion Devices, and the Compass&quot;,&quot;Topics&quot;:[&quot;Clocks and watches&quot;,&quot;Horology&quot;],&quot;Primary&quot;:&quot;30001.htm&quot;,&quot;CreatorNames&quot;:[&quot;Price, Derek J. de Solla (Derek John de Solla), 1922-1983&quot;],&quot;LoCC&quot;:[&quot;Q&quot;,&quot;TS&quot;],&quot;PG_ID&quot;:&quot;30001&quot;});" class='title'>On the Origin of Clockwork, Perpetual Motion Devices, and the Compass</a>
+<div class='author'>Price, Derek J. de Solla (Derek John de Solla), 1922-1983</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30055, {&quot;Title&quot;:&quot;The 1893 Duryea Automobile In the Museum of History and Technology&quot;,&quot;Topics&quot;:[&quot;Duryea automobile&quot;],&quot;Primary&quot;:&quot;30055.htm&quot;,&quot;CreatorNames&quot;:[&quot;Berkebile, Donald H.&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;30055&quot;});" class='title'>The 1893 Duryea Automobile In the Museum of History and Technology</a>
+<div class='author'>Berkebile, Donald H.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30112, {&quot;Title&quot;:&quot;Development of the Phonograph at Alexander Graham Bell&#39;s Volta Laboratory - Contributions from the Museum of History and Technology, United States National Museum Bulletin 218, Paper 5, (pages 69-79)&quot;,&quot;Topics&quot;:[&quot;Phonograph&quot;],&quot;Primary&quot;:&quot;30112.htm&quot;,&quot;CreatorNames&quot;:[&quot;Newville, Leslie J.&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;30112&quot;});" class='title'>Development of the Phonograph at Alexander Graham Bell's Volta Laboratory -<br><span class='subtitle'>Contributions from the Museum of History and Technology, United States National Museum Bulletin 218, Paper 5, (pages 69-79)</span></a>
+<div class='author'>Newville, Leslie J.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(30495, {&quot;Title&quot;:&quot;A History of Science — Volume 5&quot;,&quot;Topics&quot;:[&quot;Science -- History&quot;],&quot;Primary&quot;:&quot;30495.htm&quot;,&quot;CreatorNames&quot;:[&quot;Williams, Edward Huntington, 1868-1944&quot;,&quot;Williams, Henry Smith, 1863-1943&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;30495&quot;});" class='title'>A History of Science — Volume 5</a>
+<div class='author'>Williams, Edward Huntington, 1868-1944, Williams, Henry Smith, 1863-1943</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(31756, {&quot;Title&quot;:&quot;Screw-Thread Cutting by the Master-Screw Method since 1480&quot;,&quot;Topics&quot;:[&quot;Screw-cutting machines -- History&quot;],&quot;Primary&quot;:&quot;31756.htm&quot;,&quot;CreatorNames&quot;:[&quot;Battison, Edwin A.&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;31756&quot;});" class='title'>Screw-Thread Cutting by the Master-Screw Method since 1480</a>
+<div class='author'>Battison, Edwin A.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32282, {&quot;Title&quot;:&quot;Elevator Systems of the Eiffel Tower, 1889&quot;,&quot;Topics&quot;:[&quot;Tour Eiffel (Paris, France)&quot;,&quot;Elevators -- History&quot;],&quot;Primary&quot;:&quot;32282.htm&quot;,&quot;CreatorNames&quot;:[&quot;Vogel, Robert M.&quot;],&quot;LoCC&quot;:[&quot;Q&quot;,&quot;T&quot;],&quot;PG_ID&quot;:&quot;32282&quot;});" class='title'>Elevator Systems of the Eiffel Tower, 1889</a>
+<div class='author'>Vogel, Robert M.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32482, {&quot;Title&quot;:&quot;The Introduction of Self-Registering Meteorological Instruments&quot;,&quot;Topics&quot;:[&quot;Meteorological instruments&quot;],&quot;Primary&quot;:&quot;32482.htm&quot;,&quot;CreatorNames&quot;:[&quot;Multhauf, Robert P., 1919-2004&quot;],&quot;LoCC&quot;:[&quot;Q&quot;,&quot;T&quot;],&quot;PG_ID&quot;:&quot;32482&quot;});" class='title'>The Introduction of Self-Registering Meteorological Instruments</a>
+<div class='author'>Multhauf, Robert P., 1919-2004</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32492, {&quot;Title&quot;:&quot;Endless Amusement - A Collection of Nearly 400 Entertaining Experiments in Various Branches of Science; Including Acoustics, Electricity, Magnetism, Arithmetic, Hydraulics, Mechanics, Chemistry, Hydrostatics, Optics; Wonders of the Air-Pump; All the Popular Tricks and Changes of the Cards, &amp;c., &amp;c. to Which is Added, a Complete System of Pyrotechny; Or, the Art of Making Fire-works.&quot;,&quot;Topics&quot;:[&quot;Magic tricks&quot;,&quot;Scientific recreations&quot;,&quot;Fireworks&quot;,&quot;Science -- Experiments&quot;,&quot;Card tricks&quot;],&quot;Primary&quot;:&quot;32492.htm&quot;,&quot;CreatorNames&quot;:[&quot;Unknown&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;32492&quot;});" class='title'>Endless Amusement -<br><span class='subtitle'>A Collection of Nearly 400 Entertaining Experiments in Various Branches of Science; Including Acoustics, Electricity, Magnetism, Arithmetic, Hydraulics, Mechanics, Chemistry, Hydrostatics, Optics; Wonders of the Air-Pump; All the Popular Tricks and Changes of the Cards, &c., &c. to Which is Added, a Complete System of Pyrotechny; Or, the Art of Making Fire-works.</span></a>
+<div class='author'>Unknown</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(32948, {&quot;Title&quot;:&quot;Henri Poincaré: Biographie, Bibliographie Analytique des Écrits&quot;,&quot;Topics&quot;:[&quot;Poincaré, Henri, 1854-1912&quot;],&quot;Primary&quot;:&quot;32948.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lebon, Ernest, 1846-1922&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;32948&quot;});" class='title'>Henri Poincaré:<br><span class='subtitle'>Biographie, Bibliographie Analytique des Écrits</span></a>
+<div class='author'>Lebon, Ernest, 1846-1922</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33198, {&quot;Title&quot;:&quot;The Borghesi Astronomical Clock in the Museum of History and Technology - Contributions from the Museum of History and Technology, Paper 35&quot;,&quot;Topics&quot;:[&quot;Astronomical clocks&quot;],&quot;Primary&quot;:&quot;33198.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bedini, Silvio A., 1917-2007&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;33198&quot;});" class='title'>The Borghesi Astronomical Clock in the Museum of History and Technology -<br><span class='subtitle'>Contributions from the Museum of History and Technology, Paper 35</span></a>
+<div class='author'>Bedini, Silvio A., 1917-2007</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33405, {&quot;Title&quot;:&quot;Familiar Talks on Science: World-Building and Life; Earth, Air and Water.&quot;,&quot;Topics&quot;:[&quot;Science&quot;],&quot;Primary&quot;:&quot;33405.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gray, Elisha, 1835-1901&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;33405&quot;});" class='title'>Familiar Talks on Science:<br><span class='subtitle'>World-Building and Life; Earth, Air and Water.</span></a>
+<div class='author'>Gray, Elisha, 1835-1901</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(33899, {&quot;Title&quot;:&quot;Optical Projection. Part 1: The Projection of Lantern Slides&quot;,&quot;Topics&quot;:[&quot;Lantern projection&quot;],&quot;Primary&quot;:&quot;33899.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wright, Lewis, 1838-1905&quot;,&quot;Wright, Russell Stuart&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;33899&quot;});" class='title'>Optical Projection. Part 1:<br><span class='subtitle'>The Projection of Lantern Slides</span></a>
+<div class='author'>Wright, Lewis, 1838-1905, Wright, Russell Stuart</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34061, {&quot;Title&quot;:&quot;The Earliest Electromagnetic Instruments&quot;,&quot;Topics&quot;:[&quot;Electric apparatus and appliances&quot;],&quot;Primary&quot;:&quot;34061.htm&quot;,&quot;CreatorNames&quot;:[&quot;Chipman, Robert A.&quot;],&quot;LoCC&quot;:[&quot;Q&quot;,&quot;T&quot;],&quot;PG_ID&quot;:&quot;34061&quot;});" class='title'>The Earliest Electromagnetic Instruments</a>
+<div class='author'>Chipman, Robert A.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34067, {&quot;Title&quot;:&quot;Catholic Churchmen in Science [First Series] - Sketches of the Lives of Catholic Ecclesiastics Who Were Among the Great Founders in Science&quot;,&quot;Topics&quot;:[&quot;Religion and science&quot;,&quot;Scientists -- Biography&quot;,&quot;Catholics&quot;],&quot;Primary&quot;:&quot;34067.htm&quot;,&quot;CreatorNames&quot;:[&quot;Walsh, James J. (James Joseph), 1865-1942&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;34067&quot;});" class='title'>Catholic Churchmen in Science [First Series] -<br><span class='subtitle'>Sketches of the Lives of Catholic Ecclesiastics Who Were Among the Great Founders in Science</span></a>
+<div class='author'>Walsh, James J. (James Joseph), 1865-1942</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34221, {&quot;Title&quot;:&quot;Electricity and Magnetism&quot;,&quot;Topics&quot;:[&quot;Science&quot;,&quot;Electricity&quot;,&quot;Magnetism&quot;],&quot;Primary&quot;:&quot;34221.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gray, Elisha, 1835-1901&quot;],&quot;LoCC&quot;:[&quot;Q&quot;,&quot;QC&quot;],&quot;PG_ID&quot;:&quot;34221&quot;});" class='title'>Electricity and Magnetism</a>
+<div class='author'>Gray, Elisha, 1835-1901</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34698, {&quot;Title&quot;:&quot;Essays Upon Some Controverted Questions&quot;,&quot;Topics&quot;:[&quot;Science&quot;],&quot;Primary&quot;:&quot;34698.htm&quot;,&quot;CreatorNames&quot;:[&quot;Huxley, Thomas Henry, 1825-1895&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;34698&quot;});" class='title'>Essays Upon Some Controverted Questions</a>
+<div class='author'>Huxley, Thomas Henry, 1825-1895</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34771, {&quot;Title&quot;:&quot;The Scientific Basis of National Progress, Including that of Morality&quot;,&quot;Topics&quot;:[&quot;Science&quot;,&quot;Ethics&quot;,&quot;Progress&quot;],&quot;Primary&quot;:&quot;34771.txt&quot;,&quot;CreatorNames&quot;:[&quot;Gore, George, 1826-1909&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;34771&quot;});" class='title'>The Scientific Basis of National Progress, Including that of Morality</a>
+<div class='author'>Gore, George, 1826-1909</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(34912, {&quot;Title&quot;:&quot;Woman in Science - With an Introductory Chapter on Woman&#39;s Long Struggle for Things of the Mind&quot;,&quot;Topics&quot;:[&quot;Women -- History&quot;,&quot;Women scientists&quot;],&quot;Primary&quot;:&quot;34912.htm&quot;,&quot;CreatorNames&quot;:[&quot;Zahm, J. A. (John Augustine), 1851-1921&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;34912&quot;});" class='title'>Woman in Science -<br><span class='subtitle'>With an Introductory Chapter on Woman's Long Struggle for Things of the Mind</span></a>
+<div class='author'>Zahm, J. A. (John Augustine), 1851-1921</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35024, {&quot;Title&quot;:&quot;Development of Gravity Pendulums in the 19th Century - Contributions from the Museum of History and Technology, Papers 34-44 On Science and Technology, Smithsonian Institution, 1966&quot;,&quot;Topics&quot;:[&quot;Pendulum&quot;],&quot;Primary&quot;:&quot;35024.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lenzen, Victor F. (Victor Fritz), 1890-1975&quot;,&quot;Multhauf, Robert P., 1919-2004&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;35024&quot;});" class='title'>Development of Gravity Pendulums in the 19th Century -<br><span class='subtitle'>Contributions from the Museum of History and Technology, Papers 34-44 On Science and Technology, Smithsonian Institution, 1966</span></a>
+<div class='author'>Lenzen, Victor F. (Victor Fritz), 1890-1975, Multhauf, Robert P., 1919-2004</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35489, {&quot;Title&quot;:&quot;Famous Men of Science&quot;,&quot;Topics&quot;:[&quot;Scientists -- Biography&quot;],&quot;Primary&quot;:&quot;35489.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bolton, Sarah Knowles, 1841-1916&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;35489&quot;});" class='title'>Famous Men of Science</a>
+<div class='author'>Bolton, Sarah Knowles, 1841-1916</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(35584, {&quot;Title&quot;:&quot;Aphorisms and Reflections from the works of T. H. Huxley&quot;,&quot;Topics&quot;:[&quot;Science&quot;],&quot;Primary&quot;:&quot;35584.htm&quot;,&quot;CreatorNames&quot;:[&quot;Huxley, Thomas Henry, 1825-1895&quot;,&quot;Huxley, Henrietta A., -1915 [Editor]&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;35584&quot;});" class='title'>Aphorisms and Reflections from the works of T. H. Huxley</a>
+<div class='author'>Huxley, Thomas Henry, 1825-1895, Huxley, Henrietta A., -1915 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36343, {&quot;Title&quot;:&quot;The Universe a Vast Electric Organism&quot;,&quot;Topics&quot;:[&quot;Science -- Miscellanea&quot;],&quot;Primary&quot;:&quot;36343.htm&quot;,&quot;CreatorNames&quot;:[&quot;Warder, Geo. W. (George Woodward), 1848-&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;36343&quot;});" class='title'>The Universe a Vast Electric Organism</a>
+<div class='author'>Warder, Geo. W. (George Woodward), 1848-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36457, {&quot;Title&quot;:&quot;A Treatise on Meteorological Instruments - Explanatory of Their Scientific Principles, Method of Construction, and Practical Utility&quot;,&quot;Topics&quot;:[&quot;Meteorological instruments&quot;,&quot;Meteorology&quot;,&quot;Scientific apparatus and instruments&quot;],&quot;Primary&quot;:&quot;36457.htm&quot;,&quot;CreatorNames&quot;:[&quot;Negretti, Enrico Angelo Lodovico, 1818-1879&quot;,&quot;Zambra, Joseph, 1822-1897&quot;],&quot;LoCC&quot;:[&quot;Q&quot;,&quot;QC&quot;],&quot;PG_ID&quot;:&quot;36457&quot;});" class='title'>A Treatise on Meteorological Instruments -<br><span class='subtitle'>Explanatory of Their Scientific Principles, Method of Construction, and Practical Utility</span></a>
+<div class='author'>Negretti, Enrico Angelo Lodovico, 1818-1879, Zambra, Joseph, 1822-1897</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(36547, {&quot;Title&quot;:&quot;The Seven Follies of Science [2nd ed.] - A popular account of the most famous scientific impossibilities and the attempts which have been made to solve them. To which is added a small budget of interesting paradoxes, illusions, and marvels&quot;,&quot;Topics&quot;:[&quot;Geometry -- Famous problems&quot;,&quot;Scientific recreations&quot;],&quot;Primary&quot;:&quot;36547.htm&quot;,&quot;CreatorNames&quot;:[&quot;Phin, John, 1830-1913&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;36547&quot;});" class='title'>The Seven Follies of Science [2nd ed.] -<br><span class='subtitle'>A popular account of the most famous scientific impossibilities and the attempts which have been made to solve them. To which is added a small budget of interesting paradoxes, illusions, and marvels</span></a>
+<div class='author'>Phin, John, 1830-1913</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37224, {&quot;Title&quot;:&quot;Popular Books on Natural Science - For Practical Use in Every Household, for Readers of All Classes&quot;,&quot;Topics&quot;:[&quot;Science -- Popular works&quot;],&quot;Primary&quot;:&quot;37224.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bernstein, Aaron David, 1812-1884&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;37224&quot;});" class='title'>Popular Books on Natural Science -<br><span class='subtitle'>For Practical Use in Every Household, for Readers of All Classes</span></a>
+<div class='author'>Bernstein, Aaron David, 1812-1884</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37427, {&quot;Title&quot;:&quot;Scientific Culture, and Other Essays - Second Edition; with Additions&quot;,&quot;Topics&quot;:[&quot;Science&quot;],&quot;Primary&quot;:&quot;37427.htm&quot;,&quot;CreatorNames&quot;:[&quot;Cooke, Josiah P., Jr. (Josiah Parsons), 1827-1894&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;37427&quot;});" class='title'>Scientific Culture, and Other Essays -<br><span class='subtitle'>Second Edition; with Additions</span></a>
+<div class='author'>Cooke, Josiah P., Jr. (Josiah Parsons), 1827-1894</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37513, {&quot;Title&quot;:&quot;Spencer&#39;s Philosophy of Science - The Herbert Spencer Lecture Delivered at the Museum 7 November, 1913&quot;,&quot;Topics&quot;:[&quot;Science -- Philosophy&quot;,&quot;Spencer, Herbert, 1820-1903&quot;],&quot;Primary&quot;:&quot;37513.htm&quot;,&quot;CreatorNames&quot;:[&quot;Morgan, C. Lloyd (Conwy Lloyd), 1852-1936&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;37513&quot;});" class='title'>Spencer's Philosophy of Science -<br><span class='subtitle'>The Herbert Spencer Lecture Delivered at the Museum 7 November, 1913</span></a>
+<div class='author'>Morgan, C. Lloyd (Conwy Lloyd), 1852-1936</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(37589, {&quot;Title&quot;:&quot;Through Magic Glasses and Other Lectures - A Sequel to The Fairyland of Science&quot;,&quot;Topics&quot;:[&quot;Natural history -- Juvenile literature&quot;,&quot;Science -- Juvenile literature&quot;,&quot;Physical sciences -- Juvenile literature&quot;,&quot;Science -- History -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;37589.htm&quot;,&quot;CreatorNames&quot;:[&quot;Buckley, Arabella B. (Arabella Burton), 1840-1929&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;37589&quot;});" class='title'>Through Magic Glasses and Other Lectures -<br><span class='subtitle'>A Sequel to The Fairyland of Science</span></a>
+<div class='author'>Buckley, Arabella B. (Arabella Burton), 1840-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38097, {&quot;Title&quot;:&quot;Aphorisms and Reflections from the Works of T. H. Huxley&quot;,&quot;Topics&quot;:[&quot;Science&quot;],&quot;Primary&quot;:&quot;38097.htm&quot;,&quot;CreatorNames&quot;:[&quot;Huxley, Thomas Henry, 1825-1895&quot;,&quot;Huxley, Henrietta A., -1915 [Editor]&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;38097&quot;});" class='title'>Aphorisms and Reflections from the Works of T. H. Huxley</a>
+<div class='author'>Huxley, Thomas Henry, 1825-1895, Huxley, Henrietta A., -1915 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38379, {&quot;Title&quot;:&quot;An Address to Men of Science - Calling Upon Them to Stand Forward and Vindicate the Truth....&quot;,&quot;Topics&quot;:[&quot;Science&quot;,&quot;Superstition&quot;],&quot;Primary&quot;:&quot;38379.htm&quot;,&quot;CreatorNames&quot;:[&quot;Carlile, Richard, 1790-1843&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;38379&quot;});" class='title'>An Address to Men of Science -<br><span class='subtitle'>Calling Upon Them to Stand Forward and Vindicate the Truth....</span></a>
+<div class='author'>Carlile, Richard, 1790-1843</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38456, {&quot;Title&quot;:&quot;Narrative of the Circumnavigation of the Globe by the Austrian Frigate Novara, Volume I - (Commodore B. Von Wullerstorf-Urbair,) Undertaken by Order of the Imperial Government in the Years 1857, 1858, &amp; 1859, Under the Immediate Auspices of His I. and R. Highness the Archduke Ferdinand Maximilian, Commander-In-Chief of the - Austrian Navy.&quot;,&quot;Topics&quot;:[&quot;Voyages around the world -- History -- 19th century&quot;,&quot;Novara Expedition (1857-1859)&quot;],&quot;Primary&quot;:&quot;38456.htm&quot;,&quot;CreatorNames&quot;:[&quot;Scherzer, Karl, Ritter von, 1821-1903&quot;,&quot;Humboldt, Alexander von, 1769-1859 [Commentator]&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;38456&quot;});" class='title'>Narrative of the Circumnavigation of the Globe by the Austrian Frigate Novara, Volume I -<br><span class='subtitle'>(Commodore B. Von Wullerstorf-Urbair,) Undertaken by Order of the Imperial Government in the Years 1857, 1858, & 1859, Under the Immediate Auspices of His I. and R. Highness the Archduke Ferdinand Maximilian, Commander-In-Chief of the - Austrian Navy.</span></a>
+<div class='author'>Scherzer, Karl, Ritter von, 1821-1903, Humboldt, Alexander von, 1769-1859 [Commentator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38462, {&quot;Title&quot;:&quot;Narrative of the Circumnavigation of the Globe by the Austrian Frigate Novara, Volume II - (Commodore B. Von Wullerstorf-Urbair,) Undertaken by Order of the Imperial Government in the Years 1857, 1858, &amp; 1859, Under the Immediate Auspices of His I. and R. Highness the Archduke Ferdinand Maximilian, Commander-In-Chief of the - Austrian Navy.&quot;,&quot;Topics&quot;:[&quot;Voyages around the world -- History -- 19th century&quot;,&quot;Novara Expedition (1857-1859)&quot;],&quot;Primary&quot;:&quot;38462.htm&quot;,&quot;CreatorNames&quot;:[&quot;Scherzer, Karl, Ritter von, 1821-1903&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;38462&quot;});" class='title'>Narrative of the Circumnavigation of the Globe by the Austrian Frigate Novara, Volume II -<br><span class='subtitle'>(Commodore B. Von Wullerstorf-Urbair,) Undertaken by Order of the Imperial Government in the Years 1857, 1858, & 1859, Under the Immediate Auspices of His I. and R. Highness the Archduke Ferdinand Maximilian, Commander-In-Chief of the - Austrian Navy.</span></a>
+<div class='author'>Scherzer, Karl, Ritter von, 1821-1903</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(38478, {&quot;Title&quot;:&quot;Narrative of the Circumnavigation of the Globe by the Austrian Frigate Novara, Volume III - (Commodore B. Von Wullerstorf-Urbair,) Undertaken by Order of the Imperial Government in the Years 1857, 1858, &amp; 1859, Under the Immediate Auspices of His I. and R. Highness the Archduke Ferdinand Maximilian, Commander-In-Chief of the - Austrian Navy.&quot;,&quot;Topics&quot;:[&quot;Voyages around the world -- History -- 19th century&quot;,&quot;Novara Expedition (1857-1859)&quot;],&quot;Primary&quot;:&quot;38478.htm&quot;,&quot;CreatorNames&quot;:[&quot;Scherzer, Karl, Ritter von, 1821-1903&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;38478&quot;});" class='title'>Narrative of the Circumnavigation of the Globe by the Austrian Frigate Novara, Volume III -<br><span class='subtitle'>(Commodore B. Von Wullerstorf-Urbair,) Undertaken by Order of the Imperial Government in the Years 1857, 1858, & 1859, Under the Immediate Auspices of His I. and R. Highness the Archduke Ferdinand Maximilian, Commander-In-Chief of the - Austrian Navy.</span></a>
+<div class='author'>Scherzer, Karl, Ritter von, 1821-1903</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39141, {&quot;Title&quot;:&quot;Early American Scientific Instruments and Their Makers&quot;,&quot;Topics&quot;:[&quot;Scientific apparatus and instruments&quot;],&quot;Primary&quot;:&quot;39141.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bedini, Silvio A., 1917-2007&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;39141&quot;});" class='title'>Early American Scientific Instruments and Their Makers</a>
+<div class='author'>Bedini, Silvio A., 1917-2007</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(39713, {&quot;Title&quot;:&quot;The Foundations of Science: Science and Hypothesis, The Value of Science, Science and Method&quot;,&quot;Topics&quot;:[&quot;Science -- Methodology&quot;,&quot;Science -- Philosophy&quot;,&quot;Mathematics -- Philosophy&quot;],&quot;Primary&quot;:&quot;39713.htm&quot;,&quot;CreatorNames&quot;:[&quot;Poincaré, Henri, 1854-1912&quot;,&quot;Royce, Josiah, 1855-1916 [Author of introduction, etc.]&quot;,&quot;Halsted, George Bruce, 1853-1922 [Translator]&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;39713&quot;});" class='title'>The Foundations of Science:<br><span class='subtitle'>Science and Hypothesis, The Value of Science, Science and Method</span></a>
+<div class='author'>Poincaré, Henri, 1854-1912, Royce, Josiah, 1855-1916 [Author of introduction, etc.], Halsted, George Bruce, 1853-1922 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40652, {&quot;Title&quot;:&quot;A Guide to the Scientific Knowledge of Things Familiar&quot;,&quot;Topics&quot;:[&quot;Science -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;40652.htm&quot;,&quot;CreatorNames&quot;:[&quot;Brewer, Ebenezer Cobham, 1810-1897&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;40652&quot;});" class='title'>A Guide to the Scientific Knowledge of Things Familiar</a>
+<div class='author'>Brewer, Ebenezer Cobham, 1810-1897</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40706, {&quot;Title&quot;:&quot;An Introduction to the History of Science&quot;,&quot;Topics&quot;:[&quot;Science -- History&quot;],&quot;Primary&quot;:&quot;40706.htm&quot;,&quot;CreatorNames&quot;:[&quot;Libby, Walter, 1867-&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;40706&quot;});" class='title'>An Introduction to the History of Science</a>
+<div class='author'>Libby, Walter, 1867-</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(40782, {&quot;Title&quot;:&quot;Smithsonian Institution - United States National Museum - Bulletin 240 - Contributions From the Museum of History and Technology - Papers 34-44 on Science and Technology&quot;,&quot;Topics&quot;:[&quot;Science -- History&quot;,&quot;Technology -- History&quot;],&quot;Primary&quot;:&quot;40782.htm&quot;,&quot;CreatorNames&quot;:[&quot;Museum of History and Technology (U.S.)&quot;],&quot;LoCC&quot;:[&quot;Q&quot;,&quot;T&quot;],&quot;PG_ID&quot;:&quot;40782&quot;});" class='title'>Smithsonian Institution -<br><span class='subtitle'>United States National Museum - Bulletin 240 - Contributions From the Museum of History and Technology - Papers 34-44 on Science and Technology</span></a>
+<div class='author'>Museum of History and Technology (U.S.)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41695, {&quot;Title&quot;:&quot;The Appendages, Anatomy, and Relationships of Trilobites&quot;,&quot;Topics&quot;:[&quot;Trilobites&quot;],&quot;Primary&quot;:&quot;41695.htm&quot;,&quot;CreatorNames&quot;:[&quot;Raymond, Percy E. (Percy Edward), 1879-1952&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;41695&quot;});" class='title'>The Appendages, Anatomy, and Relationships of Trilobites</a>
+<div class='author'>Raymond, Percy E. (Percy Edward), 1879-1952</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(41839, {&quot;Title&quot;:&quot;The Boy&#39;s Playbook of Science - Including the Various Manipulations and Arrangements of Chemical and Philosophical Apparatus Required for the Successful Performance of Scientific Experiments in Illustration of the Elementary Branches of Chemistry and Natural Philosophy&quot;,&quot;Topics&quot;:[&quot;Science -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;41839.htm&quot;,&quot;CreatorNames&quot;:[&quot;Pepper, John Henry, 1821-1900&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;41839&quot;});" class='title'>The Boy's Playbook of Science -<br><span class='subtitle'>Including the Various Manipulations and Arrangements of Chemical and Philosophical Apparatus Required for the Successful Performance of Scientific Experiments in Illustration of the Elementary Branches of Chemistry and Natural Philosophy</span></a>
+<div class='author'>Pepper, John Henry, 1821-1900</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(42128, {&quot;Title&quot;:&quot;The Edinburgh New Philosophical Journal, Vol. XLIX - April-October 1850&quot;,&quot;Topics&quot;:[&quot;Science -- Periodicals&quot;],&quot;Primary&quot;:&quot;42128.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;,&quot;Jameson, Robert, 1774-1854 [Editor]&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;42128&quot;});" class='title'>The Edinburgh New Philosophical Journal, Vol. XLIX -<br><span class='subtitle'>April-October 1850</span></a>
+<div class='author'>Various, Jameson, Robert, 1774-1854 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(43791, {&quot;Title&quot;:&quot;Natural Philosophy&quot;,&quot;Topics&quot;:[&quot;Science -- Philosophy&quot;],&quot;Primary&quot;:&quot;43791.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ostwald, Wilhelm, 1853-1932&quot;,&quot;Seltzer, Thomas, 1875?-1943 [Translator]&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;43791&quot;});" class='title'>Natural Philosophy</a>
+<div class='author'>Ostwald, Wilhelm, 1853-1932, Seltzer, Thomas, 1875?-1943 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44525, {&quot;Title&quot;:&quot;Report on the Radiolaria Collected by H.M.S. Challenger During the Years 1873-1876, First Part: Porulosa (Spumellaria and Acantharia) - Report on the Scientific Results of the Voyage of H.M.S. Challenger During the Years 1873-76, Vol. XVIII&quot;,&quot;Topics&quot;:[&quot;Radiolaria&quot;],&quot;Primary&quot;:&quot;44525.htm&quot;,&quot;CreatorNames&quot;:[&quot;Haeckel, Ernst, 1834-1919&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;44525&quot;});" class='title'>Report on the Radiolaria Collected by H.M.S. Challenger During the Years 1873-1876, First Part:<br><span class='subtitle'>Porulosa (Spumellaria and Acantharia) - Report on the Scientific Results of the Voyage of H.M.S. Challenger During the Years 1873-76, Vol. XVIII</span></a>
+<div class='author'>Haeckel, Ernst, 1834-1919</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44526, {&quot;Title&quot;:&quot;Report on the Radiolaria Collected by H.M.S. Challenger During the Years 1873-1876, Second Part: Subclass Osculosa; Index - Report on the Scientific Results of the Voyage of H.M.S. Challenger During the Years 1873-76, Vol. XVIII&quot;,&quot;Topics&quot;:[&quot;Radiolaria&quot;],&quot;Primary&quot;:&quot;44526.htm&quot;,&quot;CreatorNames&quot;:[&quot;Haeckel, Ernst, 1834-1919&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;44526&quot;});" class='title'>Report on the Radiolaria Collected by H.M.S. Challenger During the Years 1873-1876, Second Part:<br><span class='subtitle'>Subclass Osculosa; Index - Report on the Scientific Results of the Voyage of H.M.S. Challenger During the Years 1873-76, Vol. XVIII</span></a>
+<div class='author'>Haeckel, Ernst, 1834-1919</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(44527, {&quot;Title&quot;:&quot;Report on the Radiolaria Collected by H.M.S. Challenger During the Years 1873-1876, Plates - Report on the Scientific Results of the Voyage of H.M.S. Challenger During the Years 1873-76, Vol. XVIII&quot;,&quot;Topics&quot;:[&quot;Radiolaria&quot;],&quot;Primary&quot;:&quot;44527.htm&quot;,&quot;CreatorNames&quot;:[&quot;Haeckel, Ernst, 1834-1919&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;44527&quot;});" class='title'>Report on the Radiolaria Collected by H.M.S. Challenger During the Years 1873-1876, Plates -<br><span class='subtitle'>Report on the Scientific Results of the Voyage of H.M.S. Challenger During the Years 1873-76, Vol. XVIII</span></a>
+<div class='author'>Haeckel, Ernst, 1834-1919</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(45971, {&quot;Title&quot;:&quot;Parallel Paths: A Study in Biology, Ethics, and Art&quot;,&quot;Topics&quot;:[&quot;Ethics&quot;,&quot;Art&quot;,&quot;Science -- Philosophy&quot;],&quot;Primary&quot;:&quot;45971.htm&quot;,&quot;CreatorNames&quot;:[&quot;Rolleston, T. W. (Thomas William), 1857-1920&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;45971&quot;});" class='title'>Parallel Paths:<br><span class='subtitle'>A Study in Biology, Ethics, and Art</span></a>
+<div class='author'>Rolleston, T. W. (Thomas William), 1857-1920</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46572, {&quot;Title&quot;:&quot;Studies in the History and Method of Science, vol. 1 (of 2)&quot;,&quot;Topics&quot;:[&quot;Medicine -- History&quot;,&quot;Science -- History&quot;],&quot;Primary&quot;:&quot;46572.htm&quot;,&quot;CreatorNames&quot;:[&quot;Osler, William, 1849-1919 [Author of introduction, etc.]&quot;,&quot;Singer, Charles, 1876-1960 [Editor]&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;46572&quot;});" class='title'>Studies in the History and Method of Science, vol. 1 (of 2)</a>
+<div class='author'>Osler, William, 1849-1919 [Author of introduction, etc.], Singer, Charles, 1876-1960 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46781, {&quot;Title&quot;:&quot;Aus den Tiefen des Weltmeeres - Schilderungen von der deutschen Tiefsee-Expedition&quot;,&quot;Topics&quot;:[&quot;Marine animals&quot;,&quot;Deutsche Tiefsee-Expedition (1898-1999)&quot;],&quot;Primary&quot;:&quot;46781.htm&quot;,&quot;CreatorNames&quot;:[&quot;Chun, Carl, 1852-1914&quot;,&quot;Gansberg, Fritz, 1871-1950 [Editor]&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;46781&quot;});" class='title'>Aus den Tiefen des Weltmeeres -<br><span class='subtitle'>Schilderungen von der deutschen Tiefsee-Expedition</span></a>
+<div class='author'>Chun, Carl, 1852-1914, Gansberg, Fritz, 1871-1950 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46869, {&quot;Title&quot;:&quot;The Royal Institution: Its Founder and First Professors&quot;,&quot;Topics&quot;:[&quot;Davy, Humphry, Sir, 1778-1829&quot;,&quot;Rumford, Benjamin, Graf von, 1753-1814&quot;,&quot;Young, Thomas, 1773-1829&quot;,&quot;Royal Institution of Great Britain&quot;],&quot;Primary&quot;:&quot;46869.htm&quot;,&quot;CreatorNames&quot;:[&quot;Jones, Bence, 1814-1873&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;46869&quot;});" class='title'>The Royal Institution:<br><span class='subtitle'>Its Founder and First Professors</span></a>
+<div class='author'>Jones, Bence, 1814-1873</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(46896, {&quot;Title&quot;:&quot;Beitrag zur Beurteilung der Lehren Machs - Inaugural-Dissertation zur Erlangung der Doktorwürde&quot;,&quot;Topics&quot;:[&quot;Knowledge, Theory of&quot;,&quot;Science -- Philosophy&quot;,&quot;Mach, Ernst, 1838-1916&quot;],&quot;Primary&quot;:&quot;46896.htm&quot;,&quot;CreatorNames&quot;:[&quot;Musil, Robert, 1880-1942&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;46896&quot;});" class='title'>Beitrag zur Beurteilung der Lehren Machs -<br><span class='subtitle'>Inaugural-Dissertation zur Erlangung der Doktorwürde</span></a>
+<div class='author'>Musil, Robert, 1880-1942</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47384, {&quot;Title&quot;:&quot;The Quarterly Journal of Science, Literature and the Arts, July-December, 1827&quot;,&quot;Topics&quot;:[&quot;Science -- Periodicals&quot;,&quot;Arts -- Periodicals&quot;,&quot;Technology -- Periodicals&quot;],&quot;Primary&quot;:&quot;47384.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;47384&quot;});" class='title'>The Quarterly Journal of Science, Literature and the Arts, July-December, 1827</a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47436, {&quot;Title&quot;:&quot;The American Journal of Science and Arts, Volume 50 (First Series) - General Index to Forty-Nine Volumes&quot;,&quot;Topics&quot;:[&quot;Science -- Periodicals&quot;,&quot;Indexes&quot;,&quot;Geology -- Periodicals&quot;],&quot;Primary&quot;:&quot;47436.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;,&quot;Silliman, Benjamin, 1816-1885 [Editor]&quot;,&quot;Silliman, Benjamin, 1779-1864 [Editor]&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;47436&quot;});" class='title'>The American Journal of Science and Arts, Volume 50 (First Series) -<br><span class='subtitle'>General Index to Forty-Nine Volumes</span></a>
+<div class='author'>Various, Silliman, Benjamin, 1816-1885 [Editor], Silliman, Benjamin, 1779-1864 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47499, {&quot;Title&quot;:&quot;Philosophy in Sport Made Science in Earnest - Being an Attempt to Illustrate the First Principles of Natural Philosophy by the Aid of Popular Toys and Sports&quot;,&quot;Topics&quot;:[&quot;Science -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;47499.htm&quot;,&quot;CreatorNames&quot;:[&quot;Paris, John Ayrton, 1785-1856&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;47499&quot;});" class='title'>Philosophy in Sport Made Science in Earnest -<br><span class='subtitle'>Being an Attempt to Illustrate the First Principles of Natural Philosophy by the Aid of Popular Toys and Sports</span></a>
+<div class='author'>Paris, John Ayrton, 1785-1856</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47505, {&quot;Title&quot;:&quot;Louis Pasteur: His Life and Labours&quot;,&quot;Topics&quot;:[&quot;Pasteur, Louis, 1822-1895&quot;,&quot;Scientists -- France -- Biography&quot;],&quot;Primary&quot;:&quot;47505.htm&quot;,&quot;CreatorNames&quot;:[&quot;Vallery-Radot, René, 1853-1933&quot;,&quot;Tyndall, John, 1820-1893 [Contributor]&quot;,&quot;Hamilton, Elizabeth Emma Proby, Lady, 1821-1900 [Translator]&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;47505&quot;});" class='title'>Louis Pasteur:<br><span class='subtitle'>His Life and Labours</span></a>
+<div class='author'>Vallery-Radot, René, 1853-1933, Tyndall, John, 1820-1893 [Contributor], Hamilton, Elizabeth Emma Proby, Lady, 1821-1900 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47748, {&quot;Title&quot;:&quot;The Reason Why - A Careful Collection of Many Hundreds of Reasons for Things Which, Though Generally Believed, Are Imperfectly Understood&quot;,&quot;Topics&quot;:[&quot;Science&quot;],&quot;Primary&quot;:&quot;47748.htm&quot;,&quot;CreatorNames&quot;:[&quot;Philp, Robert Kemp, 1819-1882&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;47748&quot;});" class='title'>The Reason Why -<br><span class='subtitle'>A Careful Collection of Many Hundreds of Reasons for Things Which, Though Generally Believed, Are Imperfectly Understood</span></a>
+<div class='author'>Philp, Robert Kemp, 1819-1882</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(47837, {&quot;Title&quot;:&quot;The Mysteryes of Nature and Art - Conteined in foure severall Tretises, The first of water workes, The second of Fyer workes, The third of Drawing, Colouring, Painting, and Engraving, The fourth of divers Experiments, as wel serviceable as delightful: partly Collected, and partly of the Authors Peculiar Practice, - and Invention&quot;,&quot;Topics&quot;:[&quot;Science -- Early works to 1800&quot;,&quot;Waterworks -- Early works to 1800&quot;,&quot;Fireworks -- Early works to 1800&quot;,&quot;Art -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;47837.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bate, John&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;47837&quot;});" class='title'>The Mysteryes of Nature and Art -<br><span class='subtitle'>Conteined in foure severall Tretises, The first of water workes, The second of Fyer workes, The third of Drawing, Colouring, Painting, and Engraving, The fourth of divers Experiments, as wel serviceable as delightful: partly Collected, and partly of the Authors Peculiar Practice, - and Invention</span></a>
+<div class='author'>Bate, John</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48516, {&quot;Title&quot;:&quot;Curiosities of Science, Past and Present - A Book for Old and Young&quot;,&quot;Topics&quot;:[&quot;Science&quot;],&quot;Primary&quot;:&quot;48516.htm&quot;,&quot;CreatorNames&quot;:[&quot;Timbs, John, 1801-1875&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;48516&quot;});" class='title'>Curiosities of Science, Past and Present -<br><span class='subtitle'>A Book for Old and Young</span></a>
+<div class='author'>Timbs, John, 1801-1875</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(48994, {&quot;Title&quot;:&quot;The Old Humanities and the New Science&quot;,&quot;Topics&quot;:[&quot;Science&quot;,&quot;Classical education&quot;],&quot;Primary&quot;:&quot;48994.htm&quot;,&quot;CreatorNames&quot;:[&quot;Osler, William, 1849-1919&quot;,&quot;Cushing, Harvey, 1869-1939 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;LC&quot;,&quot;Q&quot;],&quot;PG_ID&quot;:&quot;48994&quot;});" class='title'>The Old Humanities and the New Science</a>
+<div class='author'>Osler, William, 1849-1919, Cushing, Harvey, 1869-1939 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(49791, {&quot;Title&quot;:&quot;Miscellanea Curiosa, Vol. 1 - Containing a collection of some of the principal phaenomena in nature, accounted for by the greatest philosophers of this age&quot;,&quot;Topics&quot;:[&quot;Natural history&quot;,&quot;Voyages and travels -- Early works to 1800&quot;,&quot;Science -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;49791.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fontenelle, M. de (Bernard Le Bovier), 1657-1757 [Contributor]&quot;,&quot;Garden, George, 1649-1733 [Contributor]&quot;,&quot;Havers, Clopton, -1702 [Contributor]&quot;,&quot;Mead, Richard, 1673-1754 [Contributor]&quot;,&quot;Newton, Isaac, 1642-1727 [Contributor]&quot;,&quot;Royal Society (Great Britain) [Contributor]&quot;,&quot;Wallis, John, 1616-1703 [Contributor]&quot;,&quot;Halley, Edmond, 1656-1742 [Editor]&quot;],&quot;LoCC&quot;:[&quot;AC&quot;,&quot;Q&quot;,&quot;QH&quot;],&quot;PG_ID&quot;:&quot;49791&quot;});" class='title'>Miscellanea Curiosa, Vol. 1 -<br><span class='subtitle'>Containing a collection of some of the principal phaenomena in nature, accounted for by the greatest philosophers of this age</span></a>
+<div class='author'>Fontenelle, M. de (Bernard Le Bovier), 1657-1757 [Contributor], Garden, George, 1649-1733 [Contributor], Havers, Clopton, -1702 [Contributor], Mead, Richard, 1673-1754 [Contributor], Newton, Isaac, 1642-1727 [Contributor], Royal Society (Great Britain) [Contributor], Wallis, John, 1616-1703 [Contributor], Halley, Edmond, 1656-1742 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50229, {&quot;Title&quot;:&quot;Miscellanea Curiosa, Vol. 3 - containing a collection of curious travels, voyages, and natural histories of countries as they have been delivered in to the Royal Society&quot;,&quot;Topics&quot;:[&quot;Natural history&quot;,&quot;Voyages and travels -- Early works to 1800&quot;,&quot;Science -- Early works to 1800&quot;],&quot;Primary&quot;:&quot;50229.htm&quot;,&quot;CreatorNames&quot;:[&quot;Royal Society (Great Britain)&quot;],&quot;LoCC&quot;:[&quot;AC&quot;,&quot;Q&quot;,&quot;QH&quot;],&quot;PG_ID&quot;:&quot;50229&quot;});" class='title'>Miscellanea Curiosa, Vol. 3 -<br><span class='subtitle'>containing a collection of curious travels, voyages, and natural histories of countries as they have been delivered in to the Royal Society</span></a>
+<div class='author'>Royal Society (Great Britain)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(50404, {&quot;Title&quot;:&quot;Parlour Magic&quot;,&quot;Topics&quot;:[&quot;Magic tricks -- Juvenile literature&quot;,&quot;Scientific recreations -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;50404.htm&quot;,&quot;CreatorNames&quot;:[&quot;Perkins, Henry, 1803-1889 [Publisher]&quot;],&quot;LoCC&quot;:[&quot;GV&quot;,&quot;Q&quot;],&quot;PG_ID&quot;:&quot;50404&quot;});" class='title'>Parlour Magic</a>
+<div class='author'>Perkins, Henry, 1803-1889 [Publisher]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51133, {&quot;Title&quot;:&quot;How to Use the Popular Science Library; History of Science; General Index&quot;,&quot;Topics&quot;:[&quot;Science -- History&quot;,&quot;Popular science library&quot;],&quot;Primary&quot;:&quot;51133.htm&quot;,&quot;CreatorNames&quot;:[&quot;Selwyn-Brown, Arthur&quot;,&quot;Serviss, Garrett Putman, 1851-1929&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;51133&quot;});" class='title'>How to Use the Popular Science Library;<br><span class='subtitle'>History of Science; General Index</span></a>
+<div class='author'>Selwyn-Brown, Arthur, Serviss, Garrett Putman, 1851-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51516, {&quot;Title&quot;:&quot;L&#39;Académie des sciences et les académiciens de 1666 à 1793&quot;,&quot;Topics&quot;:[&quot;Scientists -- France -- Biography&quot;,&quot;Académie des sciences (France)&quot;],&quot;Primary&quot;:&quot;51516.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bertrand, Joseph, 1822-1900&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;51516&quot;});" class='title'>L'Académie des sciences et les académiciens de 1666 à 1793</a>
+<div class='author'>Bertrand, Joseph, 1822-1900</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51555, {&quot;Title&quot;:&quot;On the Philosophy of Discovery, Chapters Historical and Critical&quot;,&quot;Topics&quot;:[&quot;Science -- History&quot;,&quot;Science -- Philosophy&quot;,&quot;Philosophy -- History&quot;],&quot;Primary&quot;:&quot;51555.htm&quot;,&quot;CreatorNames&quot;:[&quot;Whewell, William, 1794-1866&quot;],&quot;LoCC&quot;:[&quot;B&quot;,&quot;Q&quot;],&quot;PG_ID&quot;:&quot;51555&quot;});" class='title'>On the Philosophy of Discovery, Chapters Historical and Critical</a>
+<div class='author'>Whewell, William, 1794-1866</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51645, {&quot;Title&quot;:&quot;Letters on Natural Magic; Addressed to Sir Walter Scott, Bart.&quot;,&quot;Topics&quot;:[&quot;Scientific recreations&quot;],&quot;Primary&quot;:&quot;51645.htm&quot;,&quot;CreatorNames&quot;:[&quot;Brewster, David, 1781-1868&quot;],&quot;LoCC&quot;:[&quot;GV&quot;,&quot;Q&quot;],&quot;PG_ID&quot;:&quot;51645&quot;});" class='title'>Letters on Natural Magic;<br><span class='subtitle'>Addressed to Sir Walter Scott, Bart.</span></a>
+<div class='author'>Brewster, David, 1781-1868</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(51897, {&quot;Title&quot;:&quot;The Poetry of Science; or, Studies of the Physical Phenomena of Nature&quot;,&quot;Topics&quot;:[&quot;Science&quot;,&quot;Physics&quot;],&quot;Primary&quot;:&quot;51897.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hunt, Robert, 1807-1887&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;51897&quot;});" class='title'>The Poetry of Science;<br><span class='subtitle'>or, Studies of the Physical Phenomena of Nature</span></a>
+<div class='author'>Hunt, Robert, 1807-1887</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52344, {&quot;Title&quot;:&quot;Science and Culture, and Other Essays&quot;,&quot;Topics&quot;:[&quot;Science&quot;],&quot;Primary&quot;:&quot;52344.htm&quot;,&quot;CreatorNames&quot;:[&quot;Huxley, Thomas Henry, 1825-1895&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;52344&quot;});" class='title'>Science and Culture, and Other Essays</a>
+<div class='author'>Huxley, Thomas Henry, 1825-1895</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52663, {&quot;Title&quot;:&quot;American Journal of Science, Vol. 1.&quot;,&quot;Topics&quot;:[&quot;Science -- Periodicals&quot;,&quot;Geology -- Periodicals&quot;],&quot;Primary&quot;:&quot;52663.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;,&quot;Silliman, Benjamin, 1779-1864 [Editor]&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;52663&quot;});" class='title'>American Journal of Science, Vol. 1.</a>
+<div class='author'>Various, Silliman, Benjamin, 1779-1864 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52709, {&quot;Title&quot;:&quot;Popular Scientific Recreations - in Natural Philosphy, Astronomy, Geology, Chemistry, etc., etc., etc.&quot;,&quot;Topics&quot;:[&quot;Scientific recreations&quot;],&quot;Primary&quot;:&quot;52709.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tissandier, Gaston, 1843-1899&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;52709&quot;});" class='title'>Popular Scientific Recreations -<br><span class='subtitle'>in Natural Philosphy, Astronomy, Geology, Chemistry, etc., etc., etc.</span></a>
+<div class='author'>Tissandier, Gaston, 1843-1899</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52869, {&quot;Title&quot;:&quot;On the Connexion of the Physical Sciences&quot;,&quot;Topics&quot;:[&quot;Science&quot;,&quot;Physical sciences&quot;],&quot;Primary&quot;:&quot;52869.htm&quot;,&quot;CreatorNames&quot;:[&quot;Somerville, Mary, 1780-1872&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;52869&quot;});" class='title'>On the Connexion of the Physical Sciences</a>
+<div class='author'>Somerville, Mary, 1780-1872</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(52921, {&quot;Title&quot;:&quot;Science for the School and Family, Part I. Natural Philosophy&quot;,&quot;Topics&quot;:[&quot;Science&quot;,&quot;Physics&quot;],&quot;Primary&quot;:&quot;52921.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hooker, Worthington, 1806-1867&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;52921&quot;});" class='title'>Science for the School and Family, Part I. Natural Philosophy</a>
+<div class='author'>Hooker, Worthington, 1806-1867</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53300, {&quot;Title&quot;:&quot;Nature&#39;s Teachings: Human Invention Anticipated by Nature&quot;,&quot;Topics&quot;:[&quot;Natural history&quot;,&quot;Inventions&quot;],&quot;Primary&quot;:&quot;53300.htm&quot;,&quot;CreatorNames&quot;:[&quot;Wood, J. G. (John George), 1827-1889&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;53300&quot;});" class='title'>Nature's Teachings:<br><span class='subtitle'>Human Invention Anticipated by Nature</span></a>
+<div class='author'>Wood, J. G. (John George), 1827-1889</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53428, {&quot;Title&quot;:&quot;Die Naturwissenschaften in ihrer Entwicklung und in ihrem Zusammenhange, I. Band - Von den Anfängen bis zum Wiederaufleben der Wissenschaften&quot;,&quot;Topics&quot;:[&quot;Science -- History&quot;],&quot;Primary&quot;:&quot;53428.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dannemann, Friedrich, 1859-1936&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;53428&quot;});" class='title'>Die Naturwissenschaften in ihrer Entwicklung und in ihrem Zusammenhange, I. Band -<br><span class='subtitle'>Von den Anfängen bis zum Wiederaufleben der Wissenschaften</span></a>
+<div class='author'>Dannemann, Friedrich, 1859-1936</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(53751, {&quot;Title&quot;:&quot;Secrets of Earth and Sea&quot;,&quot;Topics&quot;:[&quot;Science&quot;,&quot;Art, Primitive&quot;,&quot;Natural history&quot;,&quot;Archaeology&quot;],&quot;Primary&quot;:&quot;53751.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lankester, E. Ray (Edwin Ray), Sir, 1847-1929&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;53751&quot;});" class='title'>Secrets of Earth and Sea</a>
+<div class='author'>Lankester, E. Ray (Edwin Ray), Sir, 1847-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54127, {&quot;Title&quot;:&quot;Die Naturwissenschaften in ihrer Entwicklung und in ihrem Zusammenhange, II. Band - Von Galilei bis zur Mitte des XVIII. Jahrhunderts&quot;,&quot;Topics&quot;:[&quot;Science -- History&quot;],&quot;Primary&quot;:&quot;54127.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dannemann, Friedrich, 1859-1936&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;54127&quot;});" class='title'>Die Naturwissenschaften in ihrer Entwicklung und in ihrem Zusammenhange, II. Band -<br><span class='subtitle'>Von Galilei bis zur Mitte des XVIII. Jahrhunderts</span></a>
+<div class='author'>Dannemann, Friedrich, 1859-1936</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54376, {&quot;Title&quot;:&quot;Pleasant Ways in Science&quot;,&quot;Topics&quot;:[&quot;Science&quot;],&quot;Primary&quot;:&quot;54376.htm&quot;,&quot;CreatorNames&quot;:[&quot;Proctor, Richard A. (Richard Anthony), 1837-1888&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;54376&quot;});" class='title'>Pleasant Ways in Science</a>
+<div class='author'>Proctor, Richard A. (Richard Anthony), 1837-1888</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54455, {&quot;Title&quot;:&quot;Light Science for Leisure Hours - A series of familiar essays on scientific subjects, natural phenomena, &amp;c.&quot;,&quot;Topics&quot;:[&quot;Science&quot;],&quot;Primary&quot;:&quot;54455.htm&quot;,&quot;CreatorNames&quot;:[&quot;Proctor, Richard A. (Richard Anthony), 1837-1888&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;54455&quot;});" class='title'>Light Science for Leisure Hours -<br><span class='subtitle'>A series of familiar essays on scientific subjects, natural phenomena, &c.</span></a>
+<div class='author'>Proctor, Richard A. (Richard Anthony), 1837-1888</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54557, {&quot;Title&quot;:&quot;Rough Ways Made Smooth: A series of familiar essays on scientific subjects&quot;,&quot;Topics&quot;:[&quot;Science&quot;],&quot;Primary&quot;:&quot;54557.htm&quot;,&quot;CreatorNames&quot;:[&quot;Proctor, Richard A. (Richard Anthony), 1837-1888&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;54557&quot;});" class='title'>Rough Ways Made Smooth:<br><span class='subtitle'>A series of familiar essays on scientific subjects</span></a>
+<div class='author'>Proctor, Richard A. (Richard Anthony), 1837-1888</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54581, {&quot;Title&quot;:&quot;The Kansas University Science Bulletin (Vol. I, No. 1)&quot;,&quot;Topics&quot;:[&quot;Science -- Periodicals&quot;],&quot;Primary&quot;:&quot;54581.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;54581&quot;});" class='title'>The Kansas University Science Bulletin (Vol. I, No. 1)</a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54609, {&quot;Title&quot;:&quot;The Ohio Journal of Science, Vol. XVI, No. 1, November 1915&quot;,&quot;Topics&quot;:[&quot;Science -- Periodicals&quot;,&quot;Natural history -- Periodicals&quot;],&quot;Primary&quot;:&quot;54609.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;54609&quot;});" class='title'>The Ohio Journal of Science, Vol. XVI, No. 1, November 1915</a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54694, {&quot;Title&quot;:&quot;International Language and Science - Considerations on the Introduction of an International Language into Science&quot;,&quot;Topics&quot;:[&quot;Language, Universal&quot;,&quot;Communication in science&quot;],&quot;Primary&quot;:&quot;54694.htm&quot;,&quot;CreatorNames&quot;:[&quot;Couturat, Louis, 1868-1914&quot;,&quot;Jespersen, Otto, 1860-1943&quot;,&quot;Lorenz, Richard, 1863-1929&quot;,&quot;Ostwald, Wilhelm, 1853-1932&quot;,&quot;Pfaundler von Hadermur, Leopold, 1839-1920&quot;,&quot;Donnan, F. G. (Frederick George), 1870-1956 [Translator]&quot;],&quot;LoCC&quot;:[&quot;PM&quot;,&quot;Q&quot;],&quot;PG_ID&quot;:&quot;54694&quot;});" class='title'>International Language and Science -<br><span class='subtitle'>Considerations on the Introduction of an International Language into Science</span></a>
+<div class='author'>Couturat, Louis, 1868-1914, Jespersen, Otto, 1860-1943, Lorenz, Richard, 1863-1929, Ostwald, Wilhelm, 1853-1932, Pfaundler von Hadermur, Leopold, 1839-1920, Donnan, F. G. (Frederick George), 1870-1956 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54827, {&quot;Title&quot;:&quot;Leonardo da Vinci, Pathfinder of Science&quot;,&quot;Topics&quot;:[&quot;Leonardo, da Vinci, 1452-1519&quot;],&quot;Primary&quot;:&quot;54827.htm&quot;,&quot;CreatorNames&quot;:[&quot;Gillette, Henry S.&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;54827&quot;});" class='title'>Leonardo da Vinci, Pathfinder of Science</a>
+<div class='author'>Gillette, Henry S.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54868, {&quot;Title&quot;:&quot;The Kansas University Science Bulletin, Vol. I, No. 2, February, 1902&quot;,&quot;Topics&quot;:[&quot;Science -- Periodicals&quot;],&quot;Primary&quot;:&quot;54868.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;54868&quot;});" class='title'>The Kansas University Science Bulletin, Vol. I, No. 2, February, 1902</a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(54897, {&quot;Title&quot;:&quot;Preliminary Discourse on the Study of Natural Philosophy&quot;,&quot;Topics&quot;:[&quot;Science -- History&quot;,&quot;Astronomy -- History&quot;,&quot;Science -- Philosophy&quot;,&quot;Physics -- History&quot;],&quot;Primary&quot;:&quot;54897.htm&quot;,&quot;CreatorNames&quot;:[&quot;Herschel, John F. W. (John Frederick William), 1792-1871&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;54897&quot;});" class='title'>Preliminary Discourse on the Study of Natural Philosophy</a>
+<div class='author'>Herschel, John F. W. (John Frederick William), 1792-1871</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55207, {&quot;Title&quot;:&quot;The Kansas University Quarterly, Vol. I, No. 1 (1892)&quot;,&quot;Topics&quot;:[&quot;Science -- Periodicals&quot;,&quot;Natural history -- Periodicals&quot;],&quot;Primary&quot;:&quot;55207.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;,&quot;Kellogg, Vernon L. (Vernon Lyman), 1867-1937 [Editor]&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;55207&quot;});" class='title'>The Kansas University Quarterly, Vol. I, No. 1 (1892)</a>
+<div class='author'>Various, Kellogg, Vernon L. (Vernon Lyman), 1867-1937 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55280, {&quot;Title&quot;:&quot;An Enquiry into the Life and Legend of Michael Scot&quot;,&quot;Topics&quot;:[&quot;Mathematicians -- Biography&quot;,&quot;Scot, Michael, approximately 1175-approximately 1234&quot;,&quot;Astronomers -- Biography&quot;],&quot;Primary&quot;:&quot;55280.htm&quot;,&quot;CreatorNames&quot;:[&quot;Brown, J. Wood (James Wood)&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;55280&quot;});" class='title'>An Enquiry into the Life and Legend of Michael Scot</a>
+<div class='author'>Brown, J. Wood (James Wood)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55626, {&quot;Title&quot;:&quot;Science in Short Chapters&quot;,&quot;Topics&quot;:[&quot;Science&quot;],&quot;Primary&quot;:&quot;55626.htm&quot;,&quot;CreatorNames&quot;:[&quot;Williams, W. Mattieu (William Mattieu), 1820-1892&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;55626&quot;});" class='title'>Science in Short Chapters</a>
+<div class='author'>Williams, W. Mattieu (William Mattieu), 1820-1892</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(55754, {&quot;Title&quot;:&quot;The O. S. U. Naturalist, Vol. 1, No. 1, November, 1900&quot;,&quot;Topics&quot;:[&quot;Science -- Periodicals&quot;,&quot;Natural history -- Periodicals&quot;,&quot;Natural history -- Ohio -- Periodicals&quot;],&quot;Primary&quot;:&quot;55754.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ohio State University. Biological Club&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;55754&quot;});" class='title'>The O. S. U. Naturalist, Vol. 1, No. 1, November, 1900</a>
+<div class='author'>Ohio State University. Biological Club</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56181, {&quot;Title&quot;:&quot;The Ohio Journal of Science. Vol. XVI., No. 2 (December, 1915)&quot;,&quot;Topics&quot;:[&quot;Science -- Periodicals&quot;,&quot;Natural history -- Periodicals&quot;],&quot;Primary&quot;:&quot;56181.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;56181&quot;});" class='title'>The Ohio Journal of Science. Vol. XVI., No. 2 (December, 1915)</a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56648, {&quot;Title&quot;:&quot;Memoirs of the Distinguished Men of Science of Great Britain Living in the Years 1807-8&quot;,&quot;Topics&quot;:[&quot;Scientists -- Great Britain -- Biography&quot;],&quot;Primary&quot;:&quot;56648.htm&quot;,&quot;CreatorNames&quot;:[&quot;Walker, William, 1821-&quot;,&quot;Hunt, Robert, 1807-1887 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;56648&quot;});" class='title'>Memoirs of the Distinguished Men of Science of Great Britain Living in the Years 1807-8</a>
+<div class='author'>Walker, William, 1821-, Hunt, Robert, 1807-1887 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(56795, {&quot;Title&quot;:&quot;The Story-book of Science&quot;,&quot;Topics&quot;:[&quot;Science -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;56795.htm&quot;,&quot;CreatorNames&quot;:[&quot;Fabre, Jean-Henri, 1823-1915&quot;,&quot;Bicknell, Florence Constable [Translator]&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;56795&quot;});" class='title'>The Story-book of Science</a>
+<div class='author'>Fabre, Jean-Henri, 1823-1915, Bicknell, Florence Constable [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5694, {&quot;Title&quot;:&quot;The Harvard Classics Volume 38 - Scientific Papers (Physiology, Medicine, Surgery, Geology)&quot;,&quot;Topics&quot;:[&quot;Science&quot;,&quot;Medicine&quot;,&quot;Geology&quot;,&quot;Physiology&quot;,&quot;Surgery&quot;],&quot;Primary&quot;:&quot;5694.txt&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;5694&quot;});" class='title'>The Harvard Classics Volume 38 -<br><span class='subtitle'>Scientific Papers (Physiology, Medicine, Surgery, Geology)</span></a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57136, {&quot;Title&quot;:&quot;Science from an Easy Chair&quot;,&quot;Topics&quot;:[&quot;Science&quot;,&quot;Natural history&quot;],&quot;Primary&quot;:&quot;57136.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lankester, E. Ray (Edwin Ray), Sir, 1847-1929&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;57136&quot;});" class='title'>Science from an Easy Chair</a>
+<div class='author'>Lankester, E. Ray (Edwin Ray), Sir, 1847-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(5726, {&quot;Title&quot;:&quot;The Fairy-Land of Science&quot;,&quot;Topics&quot;:[&quot;Natural history -- Juvenile literature&quot;,&quot;Science -- Juvenile literature&quot;,&quot;Physical sciences -- Juvenile literature&quot;,&quot;Science -- History -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;5726.txt&quot;,&quot;CreatorNames&quot;:[&quot;Buckley, Arabella B. (Arabella Burton), 1840-1929&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;5726&quot;});" class='title'>The Fairy-Land of Science</a>
+<div class='author'>Buckley, Arabella B. (Arabella Burton), 1840-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(57952, {&quot;Title&quot;:&quot;Die Naturwissenschaften in ihrer Entwicklung und in ihrem Zusammenhange, III. Band - Das Emporblühen der modernen Naturwissenschaften bis zur Entdeckung des Energieprinzipes&quot;,&quot;Topics&quot;:[&quot;Science -- History&quot;],&quot;Primary&quot;:&quot;57952.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dannemann, Friedrich, 1859-1936&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;57952&quot;});" class='title'>Die Naturwissenschaften in ihrer Entwicklung und in ihrem Zusammenhange, III. Band -<br><span class='subtitle'>Das Emporblühen der modernen Naturwissenschaften bis zur Entdeckung des Energieprinzipes</span></a>
+<div class='author'>Dannemann, Friedrich, 1859-1936</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58054, {&quot;Title&quot;:&quot;De martelaars der wetenschap&quot;,&quot;Topics&quot;:[&quot;Scientists -- Biography&quot;],&quot;Primary&quot;:&quot;58054.htm&quot;,&quot;CreatorNames&quot;:[&quot;Tissandier, Gaston, 1843-1899&quot;,&quot;Gilbert, Camille, 1838- [Illustrator]&quot;,&quot;Vries, Jo. de (Jeronimo), 1838-1915 [Translator]&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;58054&quot;});" class='title'>De martelaars der wetenschap</a>
+<div class='author'>Tissandier, Gaston, 1843-1899, Gilbert, Camille, 1838- [Illustrator], Vries, Jo. de (Jeronimo), 1838-1915 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(58421, {&quot;Title&quot;:&quot;The Child&#39;s Book of Nature - Three parts in one&quot;,&quot;Topics&quot;:[&quot;Natural history -- Juvenile literature&quot;,&quot;Readers&quot;,&quot;Animals -- Juvenile literature&quot;,&quot;Science -- Juvenile literature&quot;,&quot;Physical sciences -- Juvenile literature&quot;,&quot;Plants -- Juvenile literature&quot;,&quot;Nature -- Juvenile literature&quot;],&quot;Primary&quot;:&quot;58421.htm&quot;,&quot;CreatorNames&quot;:[&quot;Hooker, Worthington, 1806-1867&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;58421&quot;});" class='title'>The Child's Book of Nature -<br><span class='subtitle'>Three parts in one</span></a>
+<div class='author'>Hooker, Worthington, 1806-1867</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59493, {&quot;Title&quot;:&quot;Die Naturwissenschaften in ihrer Entwicklung und in ihrem Zusammenhange, IV. Band - Das Emporblühen der modernen Naturwissenschaften seit der Entdeckung des Energieprinzips&quot;,&quot;Topics&quot;:[&quot;Science -- History&quot;],&quot;Primary&quot;:&quot;59493.htm&quot;,&quot;CreatorNames&quot;:[&quot;Dannemann, Friedrich, 1859-1936&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;59493&quot;});" class='title'>Die Naturwissenschaften in ihrer Entwicklung und in ihrem Zusammenhange, IV. Band -<br><span class='subtitle'>Das Emporblühen der modernen Naturwissenschaften seit der Entdeckung des Energieprinzips</span></a>
+<div class='author'>Dannemann, Friedrich, 1859-1936</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(59928, {&quot;Title&quot;:&quot;The Kingdom of Man&quot;,&quot;Topics&quot;:[&quot;Science -- History&quot;,&quot;Human beings&quot;,&quot;African trypanosomiasis&quot;],&quot;Primary&quot;:&quot;59928.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lankester, E. Ray (Edwin Ray), Sir, 1847-1929&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;59928&quot;});" class='title'>The Kingdom of Man</a>
+<div class='author'>Lankester, E. Ray (Edwin Ray), Sir, 1847-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60289, {&quot;Title&quot;:&quot;Science Primers, Introductory&quot;,&quot;Topics&quot;:[&quot;Science&quot;],&quot;Primary&quot;:&quot;60289.htm&quot;,&quot;CreatorNames&quot;:[&quot;Huxley, Thomas Henry, 1825-1895&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;60289&quot;});" class='title'>Science Primers, Introductory</a>
+<div class='author'>Huxley, Thomas Henry, 1825-1895</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60631, {&quot;Title&quot;:&quot;A Modern Zoroastrian&quot;,&quot;Topics&quot;:[&quot;Religion&quot;,&quot;Science&quot;,&quot;Zoroastrianism&quot;],&quot;Primary&quot;:&quot;60631.htm&quot;,&quot;CreatorNames&quot;:[&quot;Laing, S. (Samuel), 1812-1897&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;60631&quot;});" class='title'>A Modern Zoroastrian</a>
+<div class='author'>Laing, S. (Samuel), 1812-1897</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(60956, {&quot;Title&quot;:&quot;The life of Pasteur&quot;,&quot;Topics&quot;:[&quot;Pasteur, Louis, 1822-1895&quot;,&quot;Scientists -- France -- Biography&quot;],&quot;Primary&quot;:&quot;60956.htm&quot;,&quot;CreatorNames&quot;:[&quot;Vallery-Radot, René, 1853-1933&quot;,&quot;Osler, William, 1849-1919 [Author of introduction, etc.]&quot;,&quot;Devonshire, R. L., Mrs., 1864-1949 [Translator]&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;60956&quot;});" class='title'>The life of Pasteur</a>
+<div class='author'>Vallery-Radot, René, 1853-1933, Osler, William, 1849-1919 [Author of introduction, etc.], Devonshire, R. L., Mrs., 1864-1949 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61184, {&quot;Title&quot;:&quot;Proceedings of the California Academy of Sciences, Volume III, 1863-1867&quot;,&quot;Topics&quot;:[&quot;Science -- Periodicals&quot;,&quot;California Academy of Sciences -- Periodicals&quot;],&quot;Primary&quot;:&quot;61184.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;61184&quot;});" class='title'>Proceedings of the California Academy of Sciences, Volume III, 1863-1867</a>
+<div class='author'>Various</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(61795, {&quot;Title&quot;:&quot;From an Easy Chair&quot;,&quot;Topics&quot;:[&quot;Science&quot;,&quot;Natural history&quot;],&quot;Primary&quot;:&quot;61795.htm&quot;,&quot;CreatorNames&quot;:[&quot;Lankester, E. Ray (Edwin Ray), Sir, 1847-1929&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;61795&quot;});" class='title'>From an Easy Chair</a>
+<div class='author'>Lankester, E. Ray (Edwin Ray), Sir, 1847-1929</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(63033, {&quot;Title&quot;:&quot;Emanuel Swedenborg&#39;s Investigations in Natural Science and the Basis for His Statements Concerning the Functions of the Brain&quot;,&quot;Topics&quot;:[&quot;Science -- History&quot;,&quot;Astronomy -- History&quot;,&quot;Swedenborg, Emanuel, 1688-1772&quot;],&quot;Primary&quot;:&quot;63033.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ramström, Martin, 1861-1930&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;63033&quot;});" class='title'>Emanuel Swedenborg's Investigations in Natural Science and the Basis for His Statements Concerning the Functions of the Brain</a>
+<div class='author'>Ramström, Martin, 1861-1930</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(6414, {&quot;Title&quot;:&quot;Lectures and Essays&quot;,&quot;Topics&quot;:[&quot;Science&quot;],&quot;Primary&quot;:&quot;6414.htm&quot;,&quot;CreatorNames&quot;:[&quot;Huxley, Thomas Henry, 1825-1895&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;6414&quot;});" class='title'>Lectures and Essays</a>
+<div class='author'>Huxley, Thomas Henry, 1825-1895</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65867, {&quot;Title&quot;:&quot;Philosophical transactions, Vol. L. Part I. For the year 1757. - Giving some account of the present undertakings, studies, and labours, of the ingenious, in many considerable parts of the world.&quot;,&quot;Topics&quot;:[&quot;Science -- Periodicals&quot;],&quot;Primary&quot;:&quot;65867.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;,&quot;Royal Society (Great Britain)&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;65867&quot;});" class='title'>Philosophical transactions, Vol. L. Part I. For the year 1757. -<br><span class='subtitle'>Giving some account of the present undertakings, studies, and labours, of the ingenious, in many considerable parts of the world.</span></a>
+<div class='author'>Various, Royal Society (Great Britain)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(65893, {&quot;Title&quot;:&quot;Atoms at the Science Fair: Exhibiting Nuclear Projects&quot;,&quot;Topics&quot;:[&quot;Science -- Exhibitions&quot;,&quot;Nuclear physics -- Exhibitions&quot;],&quot;Primary&quot;:&quot;65893.htm&quot;,&quot;CreatorNames&quot;:[&quot;LeCompte, Robert G.&quot;,&quot;Wood, Burrell L.&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;65893&quot;});" class='title'>Atoms at the Science Fair:<br><span class='subtitle'>Exhibiting Nuclear Projects</span></a>
+<div class='author'>LeCompte, Robert G., Wood, Burrell L.</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66177, {&quot;Title&quot;:&quot;Half Hours With Modern Scientists: Lectures and Essays&quot;,&quot;Topics&quot;:[&quot;Science&quot;],&quot;Primary&quot;:&quot;66177.htm&quot;,&quot;CreatorNames&quot;:[&quot;Barker, George F. (George Frederick), 1835-1910&quot;,&quot;Cope, E. D. (Edward Drinker), 1840-1897&quot;,&quot;Huxley, Thomas Henry, 1825-1895&quot;,&quot;Stirling, James Hutchison, 1820-1909&quot;,&quot;Tyndall, John, 1820-1893&quot;,&quot;Porter, Noah, 1811-1892 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;66177&quot;});" class='title'>Half Hours With Modern Scientists:<br><span class='subtitle'>Lectures and Essays</span></a>
+<div class='author'>Barker, George F. (George Frederick), 1835-1910, Cope, E. D. (Edward Drinker), 1840-1897, Huxley, Thomas Henry, 1825-1895, Stirling, James Hutchison, 1820-1909, Tyndall, John, 1820-1893, Porter, Noah, 1811-1892 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66225, {&quot;Title&quot;:&quot;Icarus; or, The Future of Science&quot;,&quot;Topics&quot;:[&quot;Science&quot;,&quot;Civilization&quot;,&quot;Science and state&quot;],&quot;Primary&quot;:&quot;66225.htm&quot;,&quot;CreatorNames&quot;:[&quot;Russell, Bertrand, 1872-1970&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;66225&quot;});" class='title'>Icarus;<br><span class='subtitle'>or, The Future of Science</span></a>
+<div class='author'>Russell, Bertrand, 1872-1970</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66286, {&quot;Title&quot;:&quot;Self-Organizing Systems, 1963&quot;,&quot;Topics&quot;:[&quot;Self-organizing systems&quot;],&quot;Primary&quot;:&quot;66286.htm&quot;,&quot;CreatorNames&quot;:[&quot;Garvey, James Emmett, 1917- [Editor]&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;66286&quot;});" class='title'>Self-Organizing Systems, 1963</a>
+<div class='author'>Garvey, James Emmett, 1917- [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(66373, {&quot;Title&quot;:&quot;Reglas y consejos sobre investigación científica - (Los tónicos de la voluntad)&quot;,&quot;Topics&quot;:[&quot;Research&quot;,&quot;Scientists&quot;],&quot;Primary&quot;:&quot;66373.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ramón y Cajal, Santiago, 1852-1934&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;66373&quot;});" class='title'>Reglas y consejos sobre investigación científica -<br><span class='subtitle'>(Los tónicos de la voluntad)</span></a>
+<div class='author'>Ramón y Cajal, Santiago, 1852-1934</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67183, {&quot;Title&quot;:&quot;Aspects of nature, in different lands and different climates (Vol. 1 of 2) - with scientific elucidations&quot;,&quot;Topics&quot;:[&quot;Science&quot;,&quot;South America -- Description and travel&quot;,&quot;Physical geography&quot;,&quot;Plant morphology&quot;],&quot;Primary&quot;:&quot;67183.htm&quot;,&quot;CreatorNames&quot;:[&quot;Humboldt, Alexander von, 1769-1859&quot;,&quot;Sabine, Elizabeth Juliana, 1807-1879 [Translator]&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;67183&quot;});" class='title'>Aspects of nature, in different lands and different climates (Vol. 1 of 2) -<br><span class='subtitle'>with scientific elucidations</span></a>
+<div class='author'>Humboldt, Alexander von, 1769-1859, Sabine, Elizabeth Juliana, 1807-1879 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67330, {&quot;Title&quot;:&quot;A History of Magic and Experimental Science, Volume 2 (of 2) - During the First Thirteen Centuries of Our Era&quot;,&quot;Topics&quot;:[&quot;Science -- History&quot;,&quot;Magic -- History&quot;],&quot;Primary&quot;:&quot;67330.htm&quot;,&quot;CreatorNames&quot;:[&quot;Thorndike, Lynn, 1882-1965&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;67330&quot;});" class='title'>A History of Magic and Experimental Science, Volume 2 (of 2) -<br><span class='subtitle'>During the First Thirteen Centuries of Our Era</span></a>
+<div class='author'>Thorndike, Lynn, 1882-1965</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67420, {&quot;Title&quot;:&quot;Letters of Alexander von Humboldt to Varnhagen von Ense. - From 1827 to 1858. With extracts from Varnhagen&#39;s diaries, and letters of Varnhagen and others to Humboldt&quot;,&quot;Topics&quot;:[&quot;Humboldt, Alexander von, 1769-1859 -- Correspondence&quot;],&quot;Primary&quot;:&quot;67420.htm&quot;,&quot;CreatorNames&quot;:[&quot;Humboldt, Alexander von, 1769-1859&quot;,&quot;Varnhagen von Ense, Karl August, 1785-1858 [Contributor]&quot;,&quot;Assing, Ludmilla, 1821-1880 [Editor]&quot;,&quot;Kapp, Friedrich, 1824-1884 [Translator]&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;67420&quot;});" class='title'>Letters of Alexander von Humboldt to Varnhagen von Ense. -<br><span class='subtitle'>From 1827 to 1858. With extracts from Varnhagen's diaries, and letters of Varnhagen and others to Humboldt</span></a>
+<div class='author'>Humboldt, Alexander von, 1769-1859, Varnhagen von Ense, Karl August, 1785-1858 [Contributor], Assing, Ludmilla, 1821-1880 [Editor], Kapp, Friedrich, 1824-1884 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67668, {&quot;Title&quot;:&quot;Hints to Travellers, Scientific and General, Vol. 2 - Tenth edition, revised and corrected&quot;,&quot;Topics&quot;:[&quot;Topographical surveying&quot;,&quot;Scientific expeditions -- Handbooks, manuals, etc.&quot;,&quot;Spherical astronomy&quot;],&quot;Primary&quot;:&quot;67668.htm&quot;,&quot;CreatorNames&quot;:[&quot;Royal Geographical Society (Great Britain)&quot;,&quot;Reeves, Edward Ayearst, 1862-1945 [Editor]&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;67668&quot;});" class='title'>Hints to Travellers, Scientific and General, Vol. 2 -<br><span class='subtitle'>Tenth edition, revised and corrected</span></a>
+<div class='author'>Royal Geographical Society (Great Britain), Reeves, Edward Ayearst, 1862-1945 [Editor]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67684, {&quot;Title&quot;:&quot;Views of nature: or Contemplations on the sublime phenomena of creation - with scientific illustrations&quot;,&quot;Topics&quot;:[&quot;Science&quot;,&quot;South America -- Description and travel&quot;,&quot;Physical geography&quot;,&quot;Plant morphology&quot;],&quot;Primary&quot;:&quot;67684.htm&quot;,&quot;CreatorNames&quot;:[&quot;Humboldt, Alexander von, 1769-1859&quot;,&quot;Bohn, Henry G. (Henry George), 1796-1884 [Translator]&quot;,&quot;Otté, E. C. (Elise C.), 1818-1903 [Translator]&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;67684&quot;});" class='title'>Views of nature:<br><span class='subtitle'>or Contemplations on the sublime phenomena of creation - with scientific illustrations</span></a>
+<div class='author'>Humboldt, Alexander von, 1769-1859, Bohn, Henry G. (Henry George), 1796-1884 [Translator], Otté, E. C. (Elise C.), 1818-1903 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(67792, {&quot;Title&quot;:&quot;A History of Magic and Experimental Science, Volume 1 (of 2) - During the First Thirteen Centuries of Our Era&quot;,&quot;Topics&quot;:[&quot;Science -- History&quot;,&quot;Magic -- History&quot;],&quot;Primary&quot;:&quot;67792.htm&quot;,&quot;CreatorNames&quot;:[&quot;Thorndike, Lynn, 1882-1965&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;67792&quot;});" class='title'>A History of Magic and Experimental Science, Volume 1 (of 2) -<br><span class='subtitle'>During the First Thirteen Centuries of Our Era</span></a>
+<div class='author'>Thorndike, Lynn, 1882-1965</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68025, {&quot;Title&quot;:&quot;A természettudomány fejlődésének története (1. kötet)&quot;,&quot;Topics&quot;:[&quot;Science -- History&quot;],&quot;Primary&quot;:&quot;68025.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bölsche, Wilhelm, 1861-1939&quot;,&quot;Schöpflin, Aladár, 1872-1950 [Translator]&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;68025&quot;});" class='title'>A természettudomány fejlődésének története (1. kötet)</a>
+<div class='author'>Bölsche, Wilhelm, 1861-1939, Schöpflin, Aladár, 1872-1950 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68026, {&quot;Title&quot;:&quot;A természettudomány fejlődésének története (2. kötet)&quot;,&quot;Topics&quot;:[&quot;Science -- History&quot;],&quot;Primary&quot;:&quot;68026.htm&quot;,&quot;CreatorNames&quot;:[&quot;Bölsche, Wilhelm, 1861-1939&quot;,&quot;Schöpflin, Aladár, 1872-1950 [Translator]&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;68026&quot;});" class='title'>A természettudomány fejlődésének története (2. kötet)</a>
+<div class='author'>Bölsche, Wilhelm, 1861-1939, Schöpflin, Aladár, 1872-1950 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68326, {&quot;Title&quot;:&quot;History of electric light&quot;,&quot;Topics&quot;:[&quot;Electric lighting -- History&quot;],&quot;Primary&quot;:&quot;68326.htm&quot;,&quot;CreatorNames&quot;:[&quot;Schroeder, Henry, 1879-1952&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;68326&quot;});" class='title'>History of electric light</a>
+<div class='author'>Schroeder, Henry, 1879-1952</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68412, {&quot;Title&quot;:&quot;Philosophical transactions, Vol. L. Part II. For the year 1758. - Giving some account of the present undertakings, studies, and labours, of the ingenious, in many considerable parts of the world.&quot;,&quot;Topics&quot;:[&quot;Science -- Periodicals&quot;],&quot;Primary&quot;:&quot;68412.htm&quot;,&quot;CreatorNames&quot;:[&quot;Various&quot;,&quot;Royal Society (Great Britain)&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;68412&quot;});" class='title'>Philosophical transactions, Vol. L. Part II. For the year 1758. -<br><span class='subtitle'>Giving some account of the present undertakings, studies, and labours, of the ingenious, in many considerable parts of the world.</span></a>
+<div class='author'>Various, Royal Society (Great Britain)</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68611, {&quot;Title&quot;:&quot;Science and the modern world&quot;,&quot;Topics&quot;:[&quot;Science&quot;],&quot;Primary&quot;:&quot;68611.htm&quot;,&quot;CreatorNames&quot;:[&quot;Whitehead, Alfred North, 1861-1947&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;68611&quot;});" class='title'>Science and the modern world</a>
+<div class='author'>Whitehead, Alfred North, 1861-1947</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68693, {&quot;Title&quot;:&quot;History of the inductive sciences, from the earliest to the present time&quot;,&quot;Topics&quot;:[&quot;Science -- History&quot;],&quot;Primary&quot;:&quot;68693.htm&quot;,&quot;CreatorNames&quot;:[&quot;Whewell, William, 1794-1866&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;68693&quot;});" class='title'>History of the inductive sciences, from the earliest to the present time</a>
+<div class='author'>Whewell, William, 1794-1866</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(68953, {&quot;Title&quot;:&quot;Aspects of nature, in different lands and different climates (Vol. 2 of 2) - with scientific elucidations&quot;,&quot;Topics&quot;:[&quot;Science&quot;,&quot;South America -- Description and travel&quot;,&quot;Physical geography&quot;,&quot;Plant morphology&quot;],&quot;Primary&quot;:&quot;68953.htm&quot;,&quot;CreatorNames&quot;:[&quot;Humboldt, Alexander von, 1769-1859&quot;,&quot;Sabine, Elizabeth Juliana, 1807-1879 [Translator]&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;68953&quot;});" class='title'>Aspects of nature, in different lands and different climates (Vol. 2 of 2) -<br><span class='subtitle'>with scientific elucidations</span></a>
+<div class='author'>Humboldt, Alexander von, 1769-1859, Sabine, Elizabeth Juliana, 1807-1879 [Translator]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69092, {&quot;Title&quot;:&quot;The Ohio naturalist, Vol. 1, No. 4, February 1901&quot;,&quot;Topics&quot;:[&quot;Science -- Periodicals&quot;,&quot;Natural history -- Periodicals&quot;,&quot;Natural history -- Ohio -- Periodicals&quot;],&quot;Primary&quot;:&quot;69092.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ohio State University. Biological Club&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;69092&quot;});" class='title'>The Ohio naturalist, Vol. 1, No. 4, February 1901</a>
+<div class='author'>Ohio State University. Biological Club</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69093, {&quot;Title&quot;:&quot;History of scientific ideas&quot;,&quot;Topics&quot;:[&quot;Science -- Philosophy&quot;],&quot;Primary&quot;:&quot;69093.htm&quot;,&quot;CreatorNames&quot;:[&quot;Whewell, William, 1794-1866&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;69093&quot;});" class='title'>History of scientific ideas</a>
+<div class='author'>Whewell, William, 1794-1866</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69491, {&quot;Title&quot;:&quot;The Ohio naturalist, Vol. 1, No. 8, June 1901&quot;,&quot;Topics&quot;:[&quot;Science -- Periodicals&quot;,&quot;Natural history -- Periodicals&quot;,&quot;Natural history -- Ohio -- Periodicals&quot;],&quot;Primary&quot;:&quot;69491.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ohio State University. Biological Club&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;69491&quot;});" class='title'>The Ohio naturalist, Vol. 1, No. 8, June 1901</a>
+<div class='author'>Ohio State University. Biological Club</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(69764, {&quot;Title&quot;:&quot;Novum organon renovatum - Being the second part of the philosophy of the inductive sciences&quot;,&quot;Topics&quot;:[&quot;Science -- Philosophy&quot;],&quot;Primary&quot;:&quot;69764.htm&quot;,&quot;CreatorNames&quot;:[&quot;Whewell, William, 1794-1866&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;69764&quot;});" class='title'>Novum organon renovatum -<br><span class='subtitle'>Being the second part of the philosophy of the inductive sciences</span></a>
+<div class='author'>Whewell, William, 1794-1866</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(698, {&quot;Title&quot;:&quot;Memoir of Fleeming Jenkin&quot;,&quot;Topics&quot;:[&quot;Biography&quot;,&quot;Jenkin, Fleeming, 1833-1885&quot;],&quot;Primary&quot;:&quot;698.htm&quot;,&quot;CreatorNames&quot;:[&quot;Stevenson, Robert Louis, 1850-1894&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;698&quot;});" class='title'>Memoir of Fleeming Jenkin</a>
+<div class='author'>Stevenson, Robert Louis, 1850-1894</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70312, {&quot;Title&quot;:&quot;Histoire de ma jeunesse&quot;,&quot;Topics&quot;:[&quot;Arago, F. (François), 1786-1853&quot;,&quot;Physicists -- France -- Biography&quot;],&quot;Primary&quot;:&quot;70312.htm&quot;,&quot;CreatorNames&quot;:[&quot;Arago, F. (François), 1786-1853&quot;,&quot;Humboldt, Alexander von, 1769-1859 [Author of introduction, etc.]&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;70312&quot;});" class='title'>Histoire de ma jeunesse</a>
+<div class='author'>Arago, F. (François), 1786-1853, Humboldt, Alexander von, 1769-1859 [Author of introduction, etc.]</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(70477, {&quot;Title&quot;:&quot;The O. S. U. Naturalist, Vol. 1, No. 2, December, 1900&quot;,&quot;Topics&quot;:[&quot;Science -- Periodicals&quot;,&quot;Natural history -- Periodicals&quot;,&quot;Natural history -- Ohio -- Periodicals&quot;],&quot;Primary&quot;:&quot;70477.htm&quot;,&quot;CreatorNames&quot;:[&quot;Ohio State University. Biological Club&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;70477&quot;});" class='title'>The O. S. U. Naturalist, Vol. 1, No. 2, December, 1900</a>
+<div class='author'>Ohio State University. Biological Club</div>
+</div>
+<div class='searchResultItem'>
+<a href='javascript:void(0);' onclick="onBookClick(7150, {&quot;Title&quot;:&quot;Science &amp; Education: Essays&quot;,&quot;Topics&quot;:[&quot;Education&quot;,&quot;Priestley, Joseph, 1733-1804&quot;,&quot;Science -- Study and teaching&quot;],&quot;Primary&quot;:&quot;7150.htm&quot;,&quot;CreatorNames&quot;:[&quot;Huxley, Thomas Henry, 1825-1895&quot;],&quot;LoCC&quot;:[&quot;Q&quot;],&quot;PG_ID&quot;:&quot;7150&quot;});" class='title'>Science & Education:<br><span class='subtitle'>Essays</span></a>
+<div class='author'>Huxley, Thomas Henry, 1825-1895</div>
+</div>
+</ul></div>
+</body></html>
