@@ -26,5 +26,6 @@ contextBridge.exposeInMainWorld('electronAPI', {
         ipcRenderer.send('navigate', url);
     },
     downloadImage: (imagePath) => ipcRenderer.invoke('download-image', imagePath),
+    onDownloadImageRequest: (callback) => ipcRenderer.on('download-image-request', callback),
     sendBookInfo: (bookInfo) => ipcRenderer.send('send-book-info', bookInfo)
 });

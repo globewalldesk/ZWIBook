@@ -414,6 +414,18 @@ function createWindow() {
             role: 'selectAll'  // Automatically handles selecting all text
         }));
 
+        // Check if the right-clicked element is an image
+        if (params.mediaType === 'image') {
+            contextMenu.append(new MenuItem({
+                label: 'Download Image',
+                click: () => {
+                    const originalFilename = path.basename(params.srcURL);
+                    console.log('Context menu clicked:', { srcURL: params.srcURL, originalFilename });
+                    mainWindow.webContents.send('download-image-request', { imageUrl: params.srcURL, originalFilename });
+                }
+            }));
+        }
+        
         // Show these items only if some text is selected and it is under 50 characters
         if (params.selectionText && params.selectionText.length <= 50) {
             contextMenu.append(new MenuItem({
@@ -462,16 +474,49 @@ function createWindow() {
                     shell.openExternal(`https://www.bing.com/translator/?text=${selectedText}`);
                 }
             }));
+            function truncateText(text, maxLength) {
+                return text.length > maxLength ? text.slice(0, maxLength - 3) + "..." : text;
+            }
+            function calculateRemainingChars(totalLimit, title, author, additionalChars) {
+                return totalLimit - title.length - author.length - additionalChars;
+            }            
             contextMenu.append(new MenuItem({
                 label: 'Ask Bing Copilot (AI) to explain',
                 click: () => {
-                    const selectedText = params.selectionText.slice(0,200);
-                    const prompt = `Please explain the following quotation from "${currentBookTitle}" by ${currentBookAuthor}: "${selectedText}"`;
+                    const maxTotalCharsBing = 300;
+                    const additionalFormattingChars = `Please explain this (source: "" by ): ""`.length;
+                    
+                    const truncatedTitle = truncateText(currentBookTitle, 40);
+                    const truncatedAuthor = truncateText(currentBookAuthor, 30);
+                    
+                    const remainingCharsBing = calculateRemainingChars(maxTotalCharsBing, truncatedTitle, truncatedAuthor, additionalFormattingChars);
+                    const truncatedSelectedText = params.selectionText.slice(0, remainingCharsBing);
+                    
+                    const prompt = `Please explain this (source: "${truncatedTitle}" by ${truncatedAuthor}): "${truncatedSelectedText}"`;
                     const formattedPrompt = encodeURIComponent(prompt);
-                    const bingUrl = `https://www.bing.com/search?showconv=1&sendquery=1&q=${formattedPrompt}`;
+                    const bingUrl = `https://www.bing.com/search?showconv=1&sendquery=1&q=${formattedPrompt}&qs=ds&form=CHRD01`;
                     shell.openExternal(bingUrl);
                 }
-            }));                                
+            }));
+            
+            contextMenu.append(new MenuItem({
+                label: 'Ask You.com (AI) to explain',
+                click: () => {
+                    const maxTotalCharsYou = 220;
+                    const additionalFormattingChars = `Please explain this (source: "" by ): ""`.length;
+                    
+                    const truncatedTitle = truncateText(currentBookTitle, 40);
+                    const truncatedAuthor = truncateText(currentBookAuthor, 30);
+                    
+                    const remainingCharsYou = calculateRemainingChars(maxTotalCharsYou, truncatedTitle, truncatedAuthor, additionalFormattingChars);
+                    const truncatedSelectedText = params.selectionText.slice(0, remainingCharsYou);
+                    
+                    const prompt = `Please explain this (source: "${truncatedTitle}" by ${truncatedAuthor}): "${truncatedSelectedText}"`;
+                    const formattedPrompt = encodeURIComponent(prompt);
+                    const youUrl = `https://you.com/search?q=${formattedPrompt}&fromSearchBar=true&tbm=youchat`;
+                    shell.openExternal(youUrl);
+                }
+            }));            
         }
 
         contextMenu.popup(mainWindow);
@@ -975,18 +1020,32 @@ ipcMain.on('finish-export-zwi', async (event, bookId) => {
     }
 });
 
+// Handle download image request from renderer process
 ipcMain.handle('download-image', async (event, imagePath) => {
     const absolutePath = path.resolve(__dirname, imagePath);
 
     try {
-        // Ensure the main window is focused before opening dialog
-        mainWindow.focus();
-
         const data = await fs.promises.readFile(absolutePath);
         return data.toString('base64'); // Return the image data as a base64 string
     } catch (error) {
+        console.error('Failed to read image for download:', error);
         throw error; // Rethrow the error to be caught by the renderer process
     }
+});
+
+// Handle download image request from renderer process
+ipcMain.on('download-image-request', (event, { imageUrl, originalFilename }) => {
+    const absolutePath = path.resolve(__dirname, imageUrl);
+    console.log('Download image request received:', { absolutePath, originalFilename });
+
+    fs.promises.readFile(absolutePath)
+        .then(data => {
+            console.log('Image read successfully:', { absolutePath, originalFilename });
+            event.sender.send('download-image', { data: data.toString('base64'), originalFilename });
+        })
+        .catch(error => {
+            console.error('Failed to read image for download:', error);
+        });
 });
 
 // Listen for the book info from the renderer process (Copilot inquiries)

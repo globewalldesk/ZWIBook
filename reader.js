@@ -247,7 +247,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 let combinedText = tempParagraph.join(' ').replace(/ {2,}/g, ' ');
                 combinedText = combinedText.replace(/(\w)  (\w)/g, '$1 $2');
                 paragraphs.push(`
-                    <div class="paragraph" id="p${paragraphIndex}">
+                    <div class="bm-paragraph" id="p${paragraphIndex}">
                         <img src="images/icons/bookmark.svg" class="bookmark-icon" id="bookmark-${paragraphIndex}" onclick="toggleBookmark(${paragraphIndex})">
                         <p>${combinedText}</p>
                     </div>
@@ -433,8 +433,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
 
         function addBookmarkIcon(element, index) {
-            // Create a new wrapper element
-            const wrapper = document.createElement('div');
             // Add bookmark icon
             const bookmarkIcon = document.createElement('img');
             bookmarkIcon.src = "images/icons/bookmark.svg";
@@ -442,25 +440,32 @@ document.addEventListener('DOMContentLoaded', async () => {
             bookmarkIcon.id = `bookmark-${index}`;
             bookmarkIcon.onclick = () => toggleBookmark(index);
         
-            // Wrap the element's content with a paragraph if it's not a paragraph
-            if (element.tagName !== 'P') {
-                const paragraph = document.createElement('p');
-                paragraph.innerHTML = element.innerHTML;
-                wrapper.appendChild(bookmarkIcon);
-                wrapper.appendChild(paragraph);
+            // Check if the element is already wrapped in a <div> with the 'bm-paragraph' class
+            const parentDiv = element.closest('div.bm-paragraph');
+        
+            if (parentDiv) {
+                // If already wrapped, just insert the bookmark icon before the element
+                parentDiv.insertBefore(bookmarkIcon, element);
             } else {
+                // Create a new wrapper element
+                const wrapper = document.createElement('div');
+                wrapper.className = 'bm-paragraph';
+                wrapper.id = element.id;
+        
+                // Preserve the original class of the paragraph
+                const newElement = document.createElement(element.tagName);
+                newElement.className = element.className;
+                newElement.innerHTML = element.innerHTML;
+        
+                // Add bookmark icon and the original element to the wrapper
                 wrapper.appendChild(bookmarkIcon);
-                wrapper.appendChild(element.cloneNode(true));
-            }
+                wrapper.appendChild(newElement);
         
-            // Replace the element's content
-            element.innerHTML = '';
-            while (wrapper.firstChild) {
-                element.appendChild(wrapper.firstChild);
+                // Replace the original element with the wrapper
+                element.parentNode.replaceChild(wrapper, element);
             }
-            element.classList.add("paragraph"); // Ensure it has the 'paragraph' class for consistent styling and behavior
         }
-        
+                        
         function assignIDsToContentElements(content) {
             let paragraphIndex = 0;
             const elements = content.querySelectorAll('p, div');
@@ -540,6 +545,12 @@ document.addEventListener('DOMContentLoaded', async () => {
                     }
                 });
 
+                // Add target="_blank" to external links
+                const href = anchor.getAttribute('href');
+                if (href && (href.startsWith('http:') || href.startsWith('https:'))) {
+                    anchor.setAttribute('target', '_blank');
+                }
+
                 // Check if there is a 'name' attribute without a corresponding 'id'
                 if (anchor.hasAttribute('name') && !anchor.hasAttribute('id')) {
                     let nameValue = anchor.getAttribute('name');
@@ -566,48 +577,63 @@ document.addEventListener('DOMContentLoaded', async () => {
             return path.replace(/<\/?[^>]+>/gi, ''); // Strip out HTML tags
         }
 
+        const filenameMap = {}; // New hashmap to store Blob URLs and their original filenames
         // When creating Blob URLs and storing them in the resourceMap:
         Object.keys(unzipped).forEach(filename => {
             if (filename !== primaryFilename && (filename.endsWith('.png') || filename.endsWith('.jpg') || filename.endsWith('.gif'))) {
                 const fileBlob = new Blob([unzipped[filename]], {type: 'image/' + filename.split('.').pop()});
                 const fileUrl = URL.createObjectURL(fileBlob);
-                // Normalize and clean filename to match the expected src format in HTML
                 const normalizedFilename = cleanPath(filename.replace('data/media/images/', ''));
                 resourceMap[normalizedFilename] = fileUrl;
+                filenameMap[fileUrl] = normalizedFilename; // Store the mapping from Blob URL to original filename
             }
         });
-
-        // Replace <img src> with blob link
+        
         document.querySelectorAll('#book-content img').forEach(img => {
             const originalSrc = img.getAttribute('src');
         
-            // Skip processing for known static assets to avoid unnecessary errors
             if (originalSrc.startsWith('images/icons/')) {
-                return; // Skip this image as it's a static asset
+                return;
             }
         
             const normalizedSrc = cleanPath(originalSrc.replace('data/media/images/', ''));
             if (resourceMap[normalizedSrc]) {
                 img.setAttribute('src', resourceMap[normalizedSrc]);
+                img.setAttribute('data-original-path', originalSrc);
         
-                // Add event listener for opening the modal
                 img.onclick = function(event) {
-                    event.preventDefault(); // Prevent the default anchor behavior
+                    event.preventDefault();
                     const modal = document.getElementById('imageModal');
                     const modalImg = document.getElementById('modalImage');
                     const captionText = document.getElementById('caption');
                     modal.style.display = "block";
                     modalImg.src = this.src;
-                    captionText.innerHTML = img.alt; // Assuming you might use the alt attribute as caption
+                    captionText.innerHTML = img.alt;
                 };
             } else {
                 console.log('No Blob URL found for:', originalSrc);
             }
         });
-
+        
+        window.electronAPI.onDownloadImageRequest(async (event, { imageUrl }) => {
+            try {
+                const originalFilename = filenameMap[imageUrl] || 'downloaded_image'; // Look up the original filename
+                console.log('onDownloadImageRequest received:', { imageUrl, originalFilename });
+                // Create a temporary link element to trigger the download
+                const downloadLink = document.createElement('a');
+                downloadLink.href = imageUrl;
+                downloadLink.download = originalFilename;
+                console.log('Triggering download with filename:', downloadLink.download);
+                downloadLink.click();
+            } catch (error) {
+                console.error('Failed to download image:', error);
+            }
+        });
+        
+                                
         // Close the image modal that was just created
         // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
+        var span = document.getElementsByClassName("close-this")[0];
         // When the user clicks on <span> (x), close the modal
         span.onclick = function() {
             var modal = document.getElementById('imageModal');
@@ -621,7 +647,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 }
             }
         });
-
+        
         // Utility function to get the basename from a path or URL
         function getBasename(url) {
             return url.split('/').pop().split('#')[0].split('?')[0];
@@ -633,20 +659,16 @@ document.addEventListener('DOMContentLoaded', async () => {
             if (anchor && anchor.getAttribute('href').endsWith('.jpg')) { // Adjust as needed for other image types
                 event.preventDefault();
                 const imagePath = anchor.getAttribute('href').replace('data/media/images/', '');
-
-                if (resourceMap[imagePath]) {
-                    const blobUrl = resourceMap[imagePath];
-                    const downloadAnchor = document.createElement('a');
-                    downloadAnchor.href = blobUrl;
-                    downloadAnchor.download = getBasename(imagePath); // Use the custom function to get the image file name for downloading
-                    downloadAnchor.click();
-                    URL.revokeObjectURL(blobUrl); // Clean up the URL object
+                const blobUrl = resourceMap[imagePath];
+        
+                if (blobUrl) {
+                    window.electronAPI.onDownloadImageRequest({ imageUrl: blobUrl });
                 } else {
                     console.error('Blob URL not found for:', imagePath);
                 }
             }
         }
-
+        
         // Add event listener to the document for intercepting link clicks
         document.addEventListener('click', handleImageDownload);
 

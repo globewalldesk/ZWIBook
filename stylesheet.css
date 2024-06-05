@@ -532,9 +532,10 @@ a.more:hover {
     display: none;
     position: absolute;
     background-color: white;
+    margin: 13px 0 0 13px;
     border: 1px solid #ccc;
     padding: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     z-index: 1000;
     font-size: 16px;
     border-radius: 5px;
@@ -545,8 +546,9 @@ a.more:hover {
 #book-content p.titlepage p,
 #book-content p.center,
 #book-content p.center p,
-.ph2 p,
-.c p,
+.center,
+.front, .front p, 
+.ph2 p, .c p,
 .caption p,
 .booktitle,
 .h1.paragraph,
@@ -598,7 +600,7 @@ pre {
 }
 
 /* Base styling for paragraph containers */
-.paragraph {
+.bm-paragraph {
     position: relative;
     display: block;
     /* Ensure block-level element behavior */
@@ -610,7 +612,7 @@ pre {
 }
 
 /* Extend the clickable area using ::before pseudo-element */
-.paragraph::before {
+.bm-paragraph::before {
     content: '';
     position: absolute;
     left: -30px;
@@ -622,6 +624,10 @@ pre {
     z-index: 500;
     /* Lower than the icon but above other content */
     cursor: pointer;
+}
+
+span.scenenum {
+    position: unset !important;
 }
 
 .pagenum:not(p .pagenum), p .pagenum, .xxpn, .stpagenum, .pb {
@@ -658,6 +664,11 @@ pre {
 .sidenote {
     float: right !important;
     margin: 10px 0px 10px 10px !important;
+}
+
+.sidenote p {
+    text-indent: 0%  !important;
+    padding-left: 5px;
 }
 
 .chapnum {
@@ -707,7 +718,7 @@ a:has(> sup) {
     text-decoration-line: none !important; /* Force override of browser default styles */
 }
 
-.paragraph a img {
+.bm-paragraph a img {
     position: relative !important;
     z-index: 1 !important;
 }
@@ -728,8 +739,8 @@ a:has(> sup) {
 }
 
 /* Show bookmark icon when the parent paragraph is hovered */
-.paragraph:hover .bookmark-icon,
-.paragraph:hover::before {
+.bm-paragraph:hover .bookmark-icon,
+.bm-paragraph:hover::before {
     /* Make the ::before area visible on hover */
     visibility: visible;
 }
@@ -1032,7 +1043,7 @@ a:has(> sup) {
 }
 
 /* The Close Button */
-.close {
+.close-this {
     position: absolute;
     top: 85px;
     right: 35px;
@@ -1043,12 +1054,12 @@ a:has(> sup) {
     z-index: 2000;
 }
 
-#findOnPage .close {
+#findOnPage .close-this {
     display: none;
 }
 
-.close:hover,
-.close:focus {
+.close-this:hover,
+.close-this:focus {
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
@@ -1144,13 +1155,28 @@ input:checked + .slider:before {
 }
 
 
-
 /* ABOUT PAGE */
+
+#abtoc .dropcap {
+    color: #007BFF;
+    float: left;
+    font-size: 75px;
+    line-height: 60px;
+    padding-right: 8px;
+    padding-left: 3px;
+  }
+
+.about-intro {
+    padding: 0 10px;
+}
 
 /* Table of Contents Styles */
 .abtoc {
     margin: 20px 0;
-    font-size: 1.1em;
+}
+
+.abtoc ul {
+    list-style-type: "⇒   ";
 }
 
 .abfeature {
@@ -1172,7 +1198,7 @@ input:checked + .slider:before {
     border-bottom: 2px solid #ddd;
 }
 
-.abfeature h2 a {
+.abfeature h2 a, .abtoc a {
     color: #007bff;
     text-decoration: none;
 }
@@ -1202,6 +1228,16 @@ input:checked + .slider:before {
     margin-left: -1em;
 }
 
+.abfeature ul li.nobullet:before {
+    display: none;
+}
+
+.abfeature ul li.nobullet img {
+    height: 50px;
+    float: left;
+    margin-right: 10px;
+}
+
 .abfeature p {
     margin: 10px 0;
 }
@@ -1213,4 +1249,48 @@ pre.ab {
     padding: 10px;
     overflow-x: auto;
     font-family: 'Courier New', Courier, monospace;
+}
+
+.inline-button {
+    padding: 2px;
+    background-color: #007BFF;
+    border-radius: 2px;
+    display: inline-flex;
+}
+
+.inline-button {
+    padding: 2px;
+    background-color: #007BFF;
+    border-radius: 2px;
+    display: inline-flex;
+}
+
+.inline-button.noblue {
+    background-color: unset;
+}
+
+.inline-button img {
+    height: 13px;
+}
+
+h2 .inline-button img {
+    height: 18px;
+}
+
+.ab-figure {
+    float: right;
+    width: 100px;
+    margin-left: 15px; /* Optional: Adds some spacing between the text and the image */
+    text-align: center; /* Center the caption under the image */
+}
+
+.ab-figure-img {
+    width: 100%; /* Ensure the image fits within the figure */
+}
+
+.ab-figure-caption {
+    font-size: 0.9em;
+    color: #666; /* Optional: Caption color */
+    display: block;
+    margin-top: 5px; /* Adjust spacing as needed */
 }
