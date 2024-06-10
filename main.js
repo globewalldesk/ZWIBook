@@ -173,6 +173,12 @@ function createWindow() {
         },
     });
 
+    // Open external links in default browser
+    ipcMain.on('open-external', (event, url) => {
+        shell.openExternal(url);
+    });
+    
+
     // Read the last visited URL if it exists
     let initialUrl = `file://${path.join(__dirname, 'search.html')}`; // Default URL
     if (fs.existsSync(latestUrlPath)) {
@@ -538,7 +544,7 @@ function createWindow() {
         } else {
             mainWindow.webContents.findInPage(text);
         }
-    });
+    });        
 }
 
 // Used to load latest.txt path
@@ -1053,4 +1059,17 @@ ipcMain.on('send-book-info', (event, bookInfo) => {
     console.log("Setting title and author.");
     currentBookTitle = bookInfo.title;
     currentBookAuthor = bookInfo.author;
+});
+
+let zoomLevel = 0; // Initial zoom level
+
+ipcMain.on('zoom', (event, deltaY) => {
+    if (deltaY < 0) {
+        zoomLevel += 0.1; // Zoom in
+    } else {
+        zoomLevel -= 0.1; // Zoom out
+    }
+    if (mainWindow) {
+        mainWindow.webContents.setZoomLevel(zoomLevel);
+    }
 });

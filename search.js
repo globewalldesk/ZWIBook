@@ -191,7 +191,7 @@ function performSearch(query, searchType, isNewSearch) {
     
         // Join the filtered words and check the remaining length
         if (filteredWords.join('').length < 3) {
-            document.getElementById('searchResults').innerHTML = '<p style="color:grey !important;">Type more.</p>';
+            document.getElementById('searchResults').innerHTML = '<p class="nosearch">Type more. <a href="about.html#search-books">About</a>.</p>';
             return;
         }
     }
@@ -662,3 +662,10 @@ function hideSortModal() {
     sortDropdown.style.display = 'none';   // Hide the sort options modal
     sortOverlay.style.display = 'none';    // Hide the overlay
 }
+
+document.addEventListener('wheel', (event) => {
+    if (event.ctrlKey) {
+        event.preventDefault();
+        window.electronAPI.zoom(event.deltaY);
+    }
+});

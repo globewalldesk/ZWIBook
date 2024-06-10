@@ -14,7 +14,6 @@ FileUtils.mkdir_p(html_dir)
 
 # Read the codes from the CSV file
 codes = CSV.read('codes.csv', col_sep: '|', headers: false)
-codes << ["Amisc", "Misc and Other"]
 
 # Initialize a hash to store categories
 categories = {}
@@ -31,6 +30,12 @@ codes.each do |row|
   else
     categories[parent_code][:subcategories] << [code, description]
   end
+end
+
+# Add the "Amisc" category to categories only if it doesn't already exist
+categories["A"] ||= { description: nil, subcategories: [] }
+unless categories["A"][:subcategories].any? { |subcat| subcat[0] == "Amisc" }
+  categories["A"][:subcategories] << ["Amisc", "Misc and Other"]
 end
 
 # Load LoCC counts from CSV
@@ -72,7 +77,7 @@ File.open('./html/categories.html', 'w') do |file|
             <img src="data:image/svg+xml,%3Csvg width='32' height='32' fill='currentColor' class='bi bi-arrow-left' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M30 16a1 1 0 0 0-1-1H5.416l6.293-6.292a1.001 1.001 0 1 0-1.416-1.415l-8 7.999a1 1 0 0 0 0 1.416l8 8a1.001 1.001 0 0 0 1.416-1.416L5.416 17H29a1 1 0 0 0 1-1' style='stroke-width:1.99987;fill:%23fff;fill-opacity:1'/%3E%3C/svg%3E">
         </a>
         <a id="search" class="header-btn" href="../search.html">
-            <img src="../images/icons/search.svg" title="Search took titles">
+            <img src="../images/icons/search.svg" title="Search book titles">
         </a>
       </div>
       <h1 id="headTitle">Browse Categories</h1>
@@ -96,12 +101,12 @@ File.open('./html/categories.html', 'w') do |file|
     </div>
   </div>
   <div id="body">
-    <h1>Categories</h1>
+    <h1>Categories <span class="about-link-wrapper"> <a class="about-link" href="../about.html#book-categories">About</a></span></h1>
     <ul>
 HTML
   categories.keys.sort.each do |code|
     count = locc_counts[code] || '0'  # Default to '0' if no count is available
-    file.puts "<li><a href='#{code}.html' id='#{code}'>#{categories[code][:description]} (#{code})</a> <span class='count'>#{count}</span></li>"
+    file.puts "<li class=\"catli\"><a class=\"catlink\" href='#{code}.html' id='#{code}'>#{categories[code][:description]} (#{code})</a> <span class='count'>#{count}</span></li>"
   end
   file.puts '</ul>'
   file.puts '</div></body></html>'
@@ -162,7 +167,7 @@ HTML
     details[:subcategories].each do |code, description|
       next if locc_counts[code] == 0
       count = locc_counts[code] || '0'  # Default to '0' if no count is available
-      file.puts "<li><a href='#{code}.html'>#{description} (#{code})</a> <span class='count'>#{count}</span></li>"
+      file.puts "<li class=\"catli\"><a class=\"catlink\" href='#{code}.html'>#{description} (#{code})</a> <span class='count'>#{count}</span></li>"
     end
     file.puts "<p>&nbsp;</p>"
   end
@@ -209,11 +214,10 @@ books.each do |book|
     code.sub!(/\d+\.?\d+?$/, '')
     # Ensure a directory and HTML file for each LoCC code
     description = codes.find { |pair| pair[0] == code.upcase }
-    code = "Amisc" if code == ''
-    description = "Misc and Other" unless description
-    description = description[1] unless description == "Misc and Other"
-    notfound << code unless description
+    code = "Amisc" if code == '' || description.nil?
+    description = "Misc and Other" if code == "Amisc"
     filename = "./html/#{code}.html"
+    
     unless File.exist?(filename)
       File.open(filename, 'w') do |f|
         f.puts <<~HTML

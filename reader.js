@@ -76,7 +76,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     function manageNavigationOnLoad() {
         if (history.length > 1 && localStorage.getItem('lastAddress') && 
             localStorage.getItem('lastAddress') == window.location.pathname) {
-            console.log(window.location.pathname);
             return;
         } else if (history.length <= 1) {
             localStorage.removeItem('navCounter');
@@ -351,6 +350,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         // Remove weird PG tic: double-double quotes in titles
         bookContent = bookContent.replace(/(?<!=[ ]?)""/g, '"');
+        // Convert underscore-for-italics into italics
         bookContent = processText(bookContent);
 
         // Define a regular expression that includes the root words for "poet" or "poem" in various languages
@@ -373,6 +373,115 @@ document.addEventListener('DOMContentLoaded', async () => {
         // Set content in the appropriate format
         // Call prepPlainText with the isPoetry flag to adjust processing accordingly
         bookContentDiv.innerHTML = primaryFilename.endsWith(".txt") ? prepPlainText(bookContent, isPoetry) : bookContent;
+
+        // Hide the first <pre> element with a toggle link
+        const firstPre = bookContentDiv.querySelector('pre');
+        if (firstPre) {
+            const showLink = document.createElement('a');
+            showLink.textContent = 'show front-matter';
+            showLink.className = 'toggle-front-matter show-link';
+
+            const hideLink = document.createElement('a');
+            hideLink.textContent = 'hide front-matter';
+            hideLink.className = 'toggle-front-matter hide-link hidden-bits';
+
+            firstPre.classList.add('hidden-front-matter');
+            firstPre.parentNode.insertBefore(showLink, firstPre);
+            firstPre.parentNode.insertBefore(hideLink, firstPre);
+
+            const frontMatterStateKey = 'pgFrontMatterState';
+
+            // Check local storage for the state of the toggle
+            const frontMatterState = localStorage.getItem(frontMatterStateKey);
+            if (frontMatterState === 'shown') {
+                firstPre.classList.remove('hidden-front-matter');
+                showLink.classList.add('hidden-bits');
+                hideLink.classList.remove('hidden-bits');
+            } else {
+                firstPre.classList.add('hidden-front-matter');
+                showLink.classList.remove('hidden-bits');
+                hideLink.classList.add('hidden-bits');
+            }
+
+            showLink.addEventListener('click', () => {
+                firstPre.classList.remove('hidden-front-matter');
+                showLink.classList.add('hidden-bits');
+                hideLink.classList.remove('hidden-bits');
+                localStorage.setItem(frontMatterStateKey, 'shown');
+            });
+
+            hideLink.addEventListener('click', () => {
+                firstPre.classList.add('hidden-front-matter');
+                showLink.classList.remove('hidden-bits');
+                hideLink.classList.add('hidden-bits');
+                localStorage.setItem(frontMatterStateKey, 'hidden');
+            });
+        }
+        
+        // Function to preprocess <a> and <img> tags by removing <i>, </i> and updating refs
+        function preprocessDocumentElements() {
+            const anchors = document.querySelectorAll('a');
+            const images = document.querySelectorAll('img');
+            const centeredElements = document.querySelectorAll('[style*="text-align: center"]');
+            
+            anchors.forEach(anchor => {
+                ['name', 'id', 'href'].forEach(attr => {
+                    if (anchor.hasAttribute(attr)) {
+                        let value = anchor.getAttribute(attr);
+                        // Remove <i> and </i> tags
+                        value = value.replace(/<\/?i>/g, '_');
+                        value = value.replace(/(noteref|note|page|fnote|fnanchor)(\d+)/ig, (_, p1, p2) => `${p1}_${p2}`);
+        
+                        // Ensure IDs and hrefs do not start with a digit
+                        if ((attr === 'id' || attr === 'name') && /^\d/.test(value)) {
+                            value = `id_${value}`;
+                        } else if (attr === 'href' && value.startsWith('#')) {
+                            value = value.replace(/#(noteref|note|page)(\d+)/ig, (_, p1, p2) => `#${p1}_${p2}`);
+                            if (/^#\d/.test(value)) {
+                                value = `#id_${value.slice(1)}`;
+                            }
+                        }
+        
+                        anchor.setAttribute(attr, value);
+                    }
+                });
+        
+                // Add target="_blank" to external links
+                const href = anchor.getAttribute('href');
+                if (href && (href.startsWith('http:') || href.startsWith('https:'))) {
+                    anchor.setAttribute('target', '_blank');
+                }
+        
+                // Check if there is a 'name' attribute without a corresponding 'id'
+                if (anchor.hasAttribute('name') && !anchor.hasAttribute('id')) {
+                    let nameValue = anchor.getAttribute('name');
+                    // Ensure 'id' does not start with a digit
+                    if (/^\d/.test(nameValue)) {
+                        nameValue = `id_${nameValue}`;
+                    }
+                    anchor.setAttribute('id', nameValue);
+                }
+            });
+        
+            images.forEach(img => {
+                if (img.hasAttribute('src')) {
+                    let src = img.getAttribute('src');
+                    // Remove <i> and </i> tags from src
+                    src = src.replace(/<\/?i>/g, '_');
+                    img.setAttribute('src', src);
+                }
+            });
+        
+            centeredElements.forEach(element => {
+                // Check if the element has 'text-align: center' in its style attribute
+                if (element.style.textAlign === 'center') {
+                    element.style.textAlign = ''; // Remove the inline style
+                    element.classList.add('center'); // Add the 'center' class
+                }
+            });            
+        }
+
+        preprocessDocumentElements();
 
         // WORD COUNT LOGIC
         // Function to strip HTML tags and get plain text content
@@ -517,61 +626,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
                 
         applyBookmarks();
-        
-        // Function to preprocess <a> and <img> tags by removing <i>, </i> and updating refs
-        function preprocessDocumentElements() {
-            const anchors = document.querySelectorAll('a');
-            const images = document.querySelectorAll('img');
-
-            anchors.forEach(anchor => {
-                ['name', 'id', 'href'].forEach(attr => {
-                    if (anchor.hasAttribute(attr)) {
-                        let value = anchor.getAttribute(attr);
-                        // Remove <i> and </i> tags
-                        value = value.replace(/<\/?i>/g, '_');
-                        value = value.replace(/(noteref|note|page|fnote|fnanchor)(\d+)/ig, (_, p1, p2) => `${p1}_${p2}`);
-
-                        // Ensure IDs and hrefs do not start with a digit
-                        if ((attr === 'id' || attr === 'name') && /^\d/.test(value)) {
-                            value = `id_${value}`;
-                        } else if (attr === 'href' && value.startsWith('#')) {
-                            value = value.replace(/#(noteref|note|page)(\d+)/ig, (_, p1, p2) => `#${p1}_${p2}`);
-                            if (/^#\d/.test(value)) {
-                                value = `#id_${value.slice(1)}`;
-                            }
-                        }
-
-                        anchor.setAttribute(attr, value);
-                    }
-                });
-
-                // Add target="_blank" to external links
-                const href = anchor.getAttribute('href');
-                if (href && (href.startsWith('http:') || href.startsWith('https:'))) {
-                    anchor.setAttribute('target', '_blank');
-                }
-
-                // Check if there is a 'name' attribute without a corresponding 'id'
-                if (anchor.hasAttribute('name') && !anchor.hasAttribute('id')) {
-                    let nameValue = anchor.getAttribute('name');
-                    // Ensure 'id' does not start with a digit
-                    if (/^\d/.test(nameValue)) {
-                        nameValue = `id_${nameValue}`;
-                    }
-                    anchor.setAttribute('id', nameValue);
-                }
-            });
-
-            images.forEach(img => {
-                if (img.hasAttribute('src')) {
-                    let src = img.getAttribute('src');
-                    // Remove <i> and </i> tags from src
-                    src = src.replace(/<\/?i>/g, '_');
-                    img.setAttribute('src', src);
-                }
-            });
-        }
-            
+                    
         // Function to clean up file paths
         function cleanPath(path) {
             return path.replace(/<\/?[^>]+>/gi, ''); // Strip out HTML tags
@@ -672,22 +727,34 @@ document.addEventListener('DOMContentLoaded', async () => {
         // Add event listener to the document for intercepting link clicks
         document.addEventListener('click', handleImageDownload);
 
-        // Existing code for preprocessing document elements and handling modals
-        preprocessDocumentElements();
-
-
         // WORD COUNT DISPLAY
-        // Append the word count to the bottom of #book-content
+        // Create a container for both the word count and the "About" link
+        const footerDiv = document.createElement('div');
+        footerDiv.classList.add('footer-container');
+
+        // Create the "About" link
+        const aboutLinkWrapper = document.createElement('div');
+        aboutLinkWrapper.classList.add('about-link-wrapper-reader');
+        aboutLinkWrapper.innerHTML = `<a href="about.html#book-reader">About this<br>reader software</a>`;
+
+        // Create the word count div
         const wordCountDiv = document.createElement('div');
         wordCountDiv.classList.add('word-count');
         wordCountDiv.innerHTML = `<i>Word count: ${wordCount.toLocaleString()}<br>(${pageCount.toLocaleString()} average pages)</i>`;
-        document.getElementById('book-content').appendChild(wordCountDiv);
         
         // Create the word count hover-over popup
         const countPopup = document.createElement('div');
         countPopup.classList.add('count-popup');
         countPopup.innerHTML = `<i>Word count: ${wordCount.toLocaleString()}<br>(${pageCount.toLocaleString()} average pages)</i>`;
         document.body.appendChild(countPopup);
+
+        // Append the "About" link and word count div to the container
+        footerDiv.appendChild(aboutLinkWrapper);
+        footerDiv.appendChild(wordCountDiv);
+
+        // Append the container to the bottom of #book-content
+        document.getElementById('book-content').appendChild(footerDiv);
+                
 
         // Add event listeners to #headTitle
         const headTitle = document.getElementById('headTitle');
@@ -766,7 +833,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
     
     setTitle();
-    window.addEventListener('resize', setTitle);
+    window.addEventListener('resize', () => {
+        setTitle();
+        updateButtonPositions();
+    });
 
 
     try {
@@ -823,19 +893,26 @@ document.addEventListener('DOMContentLoaded', async () => {
             const bookmarks = await window.electronAPI.requestBookmarks(currentBookId);
             const docHeight = document.documentElement.scrollHeight;
             if (bookmarks && bookmarks.length > 0) {
-                const bookmarksHtml = bookmarks.map(id => {
+                const bookmarksWithPosition = bookmarks.map(id => {
                     const paragraphElement = document.getElementById(id);
-                    let snippet = paragraphElement ? paragraphElement.textContent.slice(0, 150) + '...' : 'No preview available';
                     let position = paragraphElement ? (paragraphElement.offsetTop / docHeight) * 100 : 0;
-                    position = position.toFixed(0); // Format to 2 decimal places
+                    return { id, position };
+                });
+                
+                bookmarksWithPosition.sort((a, b) => a.position - b.position);
+                
+                const bookmarksHtml = bookmarksWithPosition.map(bookmark => {
+                    const paragraphElement = document.getElementById(bookmark.id);
+                    let snippet = paragraphElement ? paragraphElement.textContent.slice(0, 150) + '...' : 'No preview available';
+                    let position = bookmark.position.toFixed(0); // Format to 0 decimal places
                     return `
-                    <div class="dropdown-btn bookmark-item" data-bookmark-id="${id}">
-                        <div class="bookmark-column" onclick='goToBookmark("${id}");'">
+                    <div class="dropdown-btn bookmark-item" data-bookmark-id="${bookmark.id}">
+                        <div class="bookmark-column" onclick='goToBookmark("${bookmark.id}");'>
                             <img src="images/icons/bookmark-fill.svg">
                             <div class="bookmark-percentage">${position}%</div>
                         </div>
-                        <span class="bookmark-snippet" onclick='goToBookmark("${id}");'>${snippet}</span>
-                        <img src="images/icons/trash.svg" class="delete-bookmark" onclick="deleteBookmark('${id}')" title="Delete">
+                        <span class="bookmark-snippet" onclick='goToBookmark("${bookmark.id}");'>${snippet}</span>
+                        <img src="images/icons/trash.svg" class="delete-bookmark" onclick="deleteBookmark('${bookmark.id}')" title="Delete">
                     </div>
                     `;
                 }).join('');
@@ -981,7 +1058,92 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
         }
     });
-        
+
+
+    // BEGIN left-right navigation buttons
+    const prevPage = document.getElementById('prevPage');
+    const nextPage = document.getElementById('nextPage');
+
+    const prevPageImg = prevPage.querySelector('img');
+    const nextPageImg = nextPage.querySelector('img');
+
+    // Function to update the button positions
+    const updateButtonPositions = () => {
+        const bookContentRect = bookContentDiv.getBoundingClientRect();
+        const viewportHeight = window.innerHeight;
+        const headerHeight = document.querySelector('header').offsetHeight;
+
+        const styleString = `calc(50% - ${bookContentDiv.offsetWidth / 1.99}px)`;
+        prevPage.style.left = styleString;
+        nextPage.style.right = styleString;
+
+        //console.log('Book content boundaries:', bookContentRect);  // Debugging info
+
+        document.addEventListener('mousemove', (event) => {
+            const { left, right } = bookContentRect;
+            if (event.clientX < left + 70 && event.clientX > left - 70) {
+                prevPage.style.display = 'flex';
+                prevPage.style.visibility = 'visible';
+            } else {
+                prevPage.style.display = 'none';
+                prevPage.style.visibility = 'hidden';
+            }
+
+            if (event.clientX > right - 70 && event.clientX < right + 70) {
+                nextPage.style.display = 'flex';
+                nextPage.style.visibility = 'visible';
+            } else {
+                nextPage.style.display = 'none';
+                nextPage.style.visibility = 'hidden';
+            }
+        });
+
+        prevPage.addEventListener('mouseover', () => {
+            prevPageImg.src = 'images/icons/previous-filled.svg';
+        });
+
+        prevPage.addEventListener('mouseout', () => {
+            prevPageImg.src = 'images/icons/previous-unfilled.svg';
+        });
+
+        nextPage.addEventListener('mouseover', () => {
+            nextPageImg.src = 'images/icons/next-filled.svg';
+        });
+
+        nextPage.addEventListener('mouseout', () => {
+            nextPageImg.src = 'images/icons/next-unfilled.svg';
+        });
+    };
+
+    // Function to calculate the scroll amount and handle the page navigation
+    const scrollPage = (direction) => {
+        const viewportHeight = window.innerHeight;
+        const headerHeight = document.querySelector('header').offsetHeight;
+
+        if (direction === 'next') {
+            document.documentElement.scrollBy({
+                top: viewportHeight - headerHeight - 125
+            });
+        } else if (direction === 'prev') {
+            document.documentElement.scrollBy({
+                top: - viewportHeight + headerHeight + 125
+            });
+        }
+
+        setTimeout(() => {
+            console.log('New scroll position:', bookContentDiv.scrollTop);
+        }, 500); // Wait a bit for the scroll action to complete
+    };
+
+    // Attach click event listeners to the navigation buttons
+    nextPage.addEventListener('click', () => scrollPage('next'));
+    prevPage.addEventListener('click', () => scrollPage('prev'));
+
+    // Update button positions after the content is loaded and window is resized
+    updateButtonPositions();
+    window.addEventListener('resize', updateButtonPositions);
+    // END of left-right nav button logic
+
 
     // Save Current Position for Current Book
     function saveCurrentPosition() {
@@ -1148,3 +1310,346 @@ function restoreScrollPosition() {
         console.log("bookshelfData is not loaded yet");
     }
 }
+
+document.addEventListener('wheel', (event) => {
+    if (event.ctrlKey) {
+        event.preventDefault();
+        window.electronAPI.zoom(event.deltaY);
+    }
+});
+
+
+
+// HIGHLIGHT FUNCTIONALITY
+let ignoreNextClick = false;
+
+let selectedText = null;
+
+document.addEventListener('mouseup', function() {
+    const selection = window.getSelection();
+    if (selection.toString().length > 0) {
+        selectedText = selection.getRangeAt(0).cloneRange(); // Preserve the selection
+        showHighlightModal(selection);
+        ignoreNextClick = true; // Set flag to ignore the next click
+        setTimeout(() => { ignoreNextClick = false; }, 200); // Reset the flag after 200ms
+    }
+});
+
+document.addEventListener('mousedown', function(event) {
+    const hmodal = document.getElementById('highlightModal');
+    if (hmodal && hmodal.contains(event.target)) {
+        event.preventDefault(); // Prevents the text from being unselected when clicking inside the modal
+    }
+});
+
+document.addEventListener('keydown', function(event) {
+    const hmodal = document.getElementById('highlightModal');
+    if (event.key === "Escape" && hmodal.style.display === 'block') {
+        hmodal.style.display = 'none';
+    }
+});
+
+window.addEventListener('resize', function() {
+    const hmodal = document.getElementById('highlightModal');
+    if (hmodal) {
+        hmodal.style.display = 'none';
+    }
+});
+
+document.addEventListener('selectionchange', function() {
+    let hmodal = document.getElementById('highlightModal');
+    if (!hmodal) {
+        hmodal = document.createElement('div');
+        hmodal.id = 'highlightModal';
+        hmodal.innerHTML = '<div class="highlight-modal-content">Content will go here</div>';
+        hmodal.style.pointerEvents = 'none';
+        hmodal.style.display = 'none'; // Ensure the modal is initially hidden
+        document.body.appendChild(hmodal);
+    }
+
+    const selection = window.getSelection();
+    const range = selection.rangeCount > 0 ? selection.getRangeAt(0) : null;
+    if (range && !range.collapsed) {
+        const rect = range.getBoundingClientRect();
+        const modalWidth = 300; // Assuming max-width is 300px
+        const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+        const leftPosition = (window.innerWidth - modalWidth - scrollbarWidth) / 2;
+
+        hmodal.style.top = `${rect.bottom + window.scrollY}px`;
+        hmodal.style.left = `${leftPosition + window.scrollX}px`;
+        hmodal.style.display = 'block';
+        hmodal.focus();
+    } else {
+        hmodal.style.display = 'none';
+    }
+});
+
+// Ensure the modal is created and listeners are attached only once
+let hmodal = document.getElementById('highlightModal');
+if (!hmodal) {
+    hmodal = document.createElement('div');
+    hmodal.id = 'highlightModal';
+    hmodal.className = 'highlight-modal';
+    hmodal.innerHTML = `
+        <div class="highlight-modal-content">
+            <div class="color-selection">
+                <div class="color-circle" style="background-color: #FFEE58;" title="Yellow"></div>
+                <div class="color-circle" style="background-color: #FF8A80;" title="Pink"></div>
+                <div class="color-circle" style="background-color: #A5D6A7;" title="Green"></div>
+                <div class="color-circle" style="background-color: #90CAF9;" title="Blue"></div>
+                <div class="color-circle" style="background-color: #CE93D8;" title="Purple"></div>
+                <div class="color-circle notes-placeholder" title="Add Note">+</div>
+            </div>
+        </div>
+    `;
+    document.body.appendChild(hmodal);
+
+    document.querySelectorAll('.color-circle').forEach(circle => {
+        circle.addEventListener('click', function(event) {
+            event.stopPropagation(); // Ensure the click event is not interfered with
+            if (!this.classList.contains('notes-placeholder')) {
+                highlightSelection(this.style.backgroundColor);
+            }
+        });
+    });
+
+    hmodal.style.pointerEvents = 'auto'; // Ensure the modal is interactive
+}
+
+function showHighlightModal(selection) {
+    const range = selection.getRangeAt(0);
+    const rect = range.getBoundingClientRect();
+    const modalWidth = 300; // Assuming max-width is 300px
+    const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+    const leftPosition = (window.innerWidth - modalWidth - scrollbarWidth) / 2;
+
+    hmodal.style.top = `${rect.bottom + window.scrollY}px`;
+    hmodal.style.left = `${leftPosition + window.scrollX}px`;
+    hmodal.style.display = 'block';
+    hmodal.focus();
+}
+
+// Add a new highlight and recalculate indexes
+function highlightSelection(color) {
+    const selection = window.getSelection();
+    if (selection.rangeCount > 0) {
+        let range = selection.getRangeAt(0);
+        adjustRangeOffsets(range);
+
+        const textNodes = collectTextNodes(range);
+        highlightTextNodes(textNodes, range, color);
+
+        selection.removeAllRanges();
+        const hmodal = document.getElementById('highlightModal');
+        if (hmodal) {
+            hmodal.style.display = 'none';
+        }
+    }
+}
+
+function adjustRangeOffsets(range) {
+    let startContainer = range.startContainer;
+    let endContainer = range.endContainer;
+    let startOffset = range.startOffset;
+    let endOffset = range.endOffset;
+
+    // Adjust the start and end offsets to ensure whole words are highlighted
+    if (startContainer.nodeType === Node.TEXT_NODE) {
+        while (startOffset > 0 && !/\s/.test(startContainer.textContent[startOffset - 1])) {
+            startOffset--;
+        }
+    }
+
+    if (endContainer.nodeType === Node.TEXT_NODE) {
+        while (endOffset < endContainer.textContent.length && !/\s/.test(endContainer.textContent[endOffset])) {
+            endOffset++;
+        }
+    }
+
+    range.setStart(startContainer, startOffset);
+    range.setEnd(endContainer, endOffset);
+}
+
+function highlightTextNodes(textNodes, range, color) {
+    if (textNodes.length === 1) {
+        return highlightSingleTextNode(textNodes[0], range, color);
+    } else if (textNodes.length > 1) {
+        return highlightMultipleTextNodes(textNodes, range, color);
+    }
+    return [];
+}
+
+function highlightSingleTextNode(node, range, color) {
+    const text = node.textContent;
+    const before = text.slice(0, range.startOffset);
+    const highlight = text.slice(range.startOffset, range.endOffset);
+    const after = text.slice(range.endOffset);
+
+    const wrapper = createSpanWrapper(color);
+    wrapper.textContent = highlight;
+
+    const parent = node.parentNode;
+    const referenceNode = node.nextSibling; // Store the next sibling to insert before it
+
+    // Remove the original text node
+    parent.removeChild(node);
+
+    // Insert nodes in the correct order
+    if (before) {
+        parent.insertBefore(document.createTextNode(before), referenceNode);
+    }
+    parent.insertBefore(wrapper, referenceNode);
+    if (after) {
+        parent.insertBefore(document.createTextNode(after), referenceNode);
+    }
+
+    // Return the highlighted text as an array
+    return [highlight];
+}
+
+function highlightMultipleTextNodes(textNodes, range, color) {
+    const startNode = textNodes[0];
+    const endNode = textNodes[textNodes.length - 1];
+    let selectedContent = [];
+
+    const startText = startNode.textContent;
+    const startBefore = startText.slice(0, range.startOffset);
+    const startHighlight = startText.slice(range.startOffset);
+
+    const endText = endNode.textContent;
+    const endHighlight = endText.slice(0, range.endOffset);
+    const endAfter = endText.slice(range.endOffset);
+
+    const startWrapper = createSpanWrapper(color);
+    startWrapper.textContent = startHighlight;
+
+    const endWrapper = createSpanWrapper(color);
+    endWrapper.textContent = endHighlight;
+
+    // Replace start node
+    const startParent = startNode.parentNode;
+    const startAfterNode = document.createTextNode(startBefore);
+    startParent.replaceChild(startAfterNode, startNode);
+    startParent.insertBefore(startWrapper, startAfterNode.nextSibling);
+
+    // Replace end node
+    const endParent = endNode.parentNode;
+    const endAfterNode = document.createTextNode(endAfter);
+    endParent.replaceChild(endAfterNode, endNode);
+    endParent.insertBefore(endWrapper, endAfterNode);
+
+    // Concatenate the highlighted text parts to selectedContent
+    selectedContent.push(startHighlight);
+
+    // Wrap intervening nodes and add their text content to selectedContent
+    if (textNodes.length > 2) {
+        const interveningNodes = textNodes.slice(1, -1);
+        interveningNodes.forEach(node => {
+            const wrapper = createSpanWrapper(color);
+            wrapper.textContent = node.textContent;
+
+            node.parentNode.replaceChild(wrapper, node);
+            selectedContent.push(node.textContent);
+        });
+    }
+
+    // Add the text from the end node to selectedContent
+    selectedContent.push(endHighlight);
+
+    return selectedContent;
+}
+
+// Function to manually collect text nodes within the range
+function collectTextNodes(range) {
+    const textNodes = [];
+    const startContainer = range.startContainer;
+    const endContainer = range.endContainer;
+
+    if (startContainer === endContainer && startContainer.nodeType === Node.TEXT_NODE) {
+        textNodes.push(startContainer);
+    } else {
+        let currentNode = startContainer;
+        let endNodeReached = false;
+
+        while (currentNode && !endNodeReached) {
+            if (currentNode.nodeType === Node.TEXT_NODE) {
+                textNodes.push(currentNode);
+            }
+            if (currentNode === endContainer) {
+                endNodeReached = true;
+            }
+            currentNode = nextNode(currentNode);
+        }
+    }
+
+    return textNodes;
+}
+
+// Helper function to get the next node in the DOM
+function nextNode(node) {
+    if (node.firstChild) return node.firstChild;
+    while (node) {
+        if (node.nextSibling) return node.nextSibling;
+        node = node.parentNode;
+    }
+    return null;
+}
+
+// Recursive function to wrap text nodes within an element
+function wrapTextNodes(nodes, color) {
+    for (let node of nodes) {
+        const wrapper = createSpanWrapper(color);
+        node.parentNode.replaceChild(wrapper, node);
+        wrapper.appendChild(node);
+    }
+}
+
+// Helper function to create a span wrapper
+function createSpanWrapper(color) {
+    const spanWrapper = document.createElement('span');
+    spanWrapper.style.backgroundColor = color;
+    spanWrapper.className = 'highlight-span';
+    return spanWrapper;
+}
+
+function reapplyHighlightsNotes() {
+    return 0;
+}
+
+let highlightsReapplied = false;
+
+function observeDOMChangesOnce() {
+    if (highlightsReapplied) {
+        console.log("Highlights have already been reapplied.");
+        return;
+    }
+
+    let timeoutId;
+
+    const observer = new MutationObserver((mutationsList, observer) => {
+        // Clear the previous timeout to prevent multiple calls
+        clearTimeout(timeoutId);
+
+        // Set a new timeout to reapply highlights after 250ms
+        timeoutId = setTimeout(() => {
+            console.log("Reapplying highlights...");
+            reapplyHighlightsNotes();
+            observer.disconnect(); // Stop observing after highlights are reapplied
+            highlightsReapplied = true; // Set the flag to indicate highlights have been reapplied
+            console.log("Observer disconnected and highlightsReapplied set to true.");
+        }, 250);
+    });
+
+    // Observe changes to the entire document body
+    observer.observe(document.body, {
+        childList: true,
+        subtree: true,
+        characterData: true,
+    });
+
+    // Initial call to reapply highlights when the script is first run
+    console.log("Initial call to reapply highlights.");
+}
+
+// Call observeDOMChangesOnce on window load
+window.addEventListener('load', observeDOMChangesOnce);

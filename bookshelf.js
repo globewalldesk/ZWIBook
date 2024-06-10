@@ -552,3 +552,9 @@ function hideSortModal() {
     sortOverlay.style.display = 'none';    // Hide the overlay
 }
 
+document.addEventListener('wheel', (event) => {
+    if (event.ctrlKey) {
+        event.preventDefault();
+        window.electronAPI.zoom(event.deltaY);
+    }
+});

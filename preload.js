@@ -27,5 +27,7 @@ contextBridge.exposeInMainWorld('electronAPI', {
     },
     downloadImage: (imagePath) => ipcRenderer.invoke('download-image', imagePath),
     onDownloadImageRequest: (callback) => ipcRenderer.on('download-image-request', callback),
-    sendBookInfo: (bookInfo) => ipcRenderer.send('send-book-info', bookInfo)
+    sendBookInfo: (bookInfo) => ipcRenderer.send('send-book-info', bookInfo),
+    zoom: (deltaY) => ipcRenderer.send('zoom', deltaY),
+    openExternal: (url) => ipcRenderer.send('open-external', url)
 });
