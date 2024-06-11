@@ -1468,8 +1468,27 @@ h2 .inline-button img {
     pointer-events: auto; /* Ensures pointer events are enabled */
 }
 
-.color-circle.notes-placeholder {
-    background-color: #BDBDBD; /* Gray for placeholder */
+/* CSS for Delete Circle */
+.delete-circle {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid red;
+    position: relative;
+    cursor: pointer; /* Ensures the pointer cursor is displayed */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.delete-circle::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 30px;
+    background-color: red;
+    transform: rotate(45deg);
 }
 
 /* Slightly brighter colors */
@@ -1490,6 +1509,32 @@ h2 .inline-button img {
 }
 
 .color-circle[title="Purple"] {
+    background-color: #CE93D8;
+}
+
+.color-circle.notes-placeholder {
+    background-color: #BDBDBD; /* Gray for placeholder */
+}
+
+
+/* Highlight classes */
+.hl-yellow {
+    background-color: #FFEE58;
+}
+
+.hl-pink {
+    background-color: #FF8A80;
+}
+
+.hl-green {
+    background-color: #A5D6A7;
+}
+
+.hl-blue {
+    background-color: #90CAF9;
+}
+
+.hl-purple {
     background-color: #CE93D8;
 }
 

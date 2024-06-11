@@ -1132,7 +1132,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         setTimeout(() => {
             console.log('New scroll position:', bookContentDiv.scrollTop);
-        }, 500); // Wait a bit for the scroll action to complete
+        }, 250); // Wait a bit for the scroll action to complete
     };
 
     // Attach click event listeners to the navigation buttons
@@ -1320,10 +1320,11 @@ document.addEventListener('wheel', (event) => {
 
 
 
+///////////////////////////
 // HIGHLIGHT FUNCTIONALITY
 let ignoreNextClick = false;
-
 let selectedText = null;
+let highlightCounter = 0;
 
 document.addEventListener('mouseup', function() {
     const selection = window.getSelection();
@@ -1393,11 +1394,12 @@ if (!hmodal) {
     hmodal.innerHTML = `
         <div class="highlight-modal-content">
             <div class="color-selection">
-                <div class="color-circle" style="background-color: #FFEE58;" title="Yellow"></div>
-                <div class="color-circle" style="background-color: #FF8A80;" title="Pink"></div>
-                <div class="color-circle" style="background-color: #A5D6A7;" title="Green"></div>
-                <div class="color-circle" style="background-color: #90CAF9;" title="Blue"></div>
-                <div class="color-circle" style="background-color: #CE93D8;" title="Purple"></div>
+                <div class="color-circle" title="Yellow"></div>
+                <div class="color-circle" title="Pink"></div>
+                <div class="color-circle" title="Green"></div>
+                <div class="color-circle" title="Blue"></div>
+                <div class="color-circle" title="Purple"></div>
+                <div class="delete-circle" title="Delete Highlight"></div>
                 <div class="color-circle notes-placeholder" title="Add Note">+</div>
             </div>
         </div>
@@ -1408,9 +1410,14 @@ if (!hmodal) {
         circle.addEventListener('click', function(event) {
             event.stopPropagation(); // Ensure the click event is not interfered with
             if (!this.classList.contains('notes-placeholder')) {
-                highlightSelection(this.style.backgroundColor);
+                highlightSelection(this.title.toLowerCase());
             }
         });
+    });
+
+    document.querySelector('.delete-circle').addEventListener('click', function(event) {
+        event.stopPropagation();
+        deleteHighlight();
     });
 
     hmodal.style.pointerEvents = 'auto'; // Ensure the modal is interactive
@@ -1429,7 +1436,7 @@ function showHighlightModal(selection) {
     hmodal.focus();
 }
 
-// Add a new highlight and recalculate indexes
+// Add a new highlight and save it
 function highlightSelection(color) {
     const selection = window.getSelection();
     if (selection.rangeCount > 0) {
@@ -1437,7 +1444,12 @@ function highlightSelection(color) {
         adjustRangeOffsets(range);
 
         const textNodes = collectTextNodes(range);
-        highlightTextNodes(textNodes, range, color);
+        let hlid = 'hlid-' + (highlightCounter++);
+
+        highlightTextNodes(textNodes, range, color, hlid);
+
+        let parentElement = getRelevantParentElement(range.commonAncestorContainer);
+        saveHighlightsToLocalStorage(parentElement);
 
         selection.removeAllRanges();
         const hmodal = document.getElementById('highlightModal');
@@ -1445,6 +1457,62 @@ function highlightSelection(color) {
             hmodal.style.display = 'none';
         }
     }
+}
+
+function getRelevantParentElement(node) {
+    // Traverse up the DOM tree to find the closest relevant parent element
+    while (node && node.nodeType === Node.ELEMENT_NODE) {
+        if (['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol', 'pre', 'figcaption', 'aside', 'address', 'details', 'summary'].includes(node.tagName.toLowerCase())) {
+            return node;
+        }
+        node = node.parentNode;
+    }
+    return null;
+}
+
+function saveHighlightsToLocalStorage(rootElement) {
+    if (!rootElement) return;
+
+    let highlights = JSON.parse(localStorage.getItem('highlights')) || {};
+    if (!highlights[bookId]) {
+        highlights[bookId] = {};
+    }
+
+    function stripHighlightSpans(element) {
+        let highlights = element.querySelectorAll('.highlight-span');
+        highlights.forEach(span => {
+            let parent = span.parentNode;
+            while (span.firstChild) {
+                parent.insertBefore(span.firstChild, span);
+            }
+            parent.removeChild(span);
+        });
+    }
+
+    function processElement(element) {
+        let cleanedElement = element.cloneNode(true);
+        stripHighlightSpans(cleanedElement);
+        let cleanedHTML = cleanedElement.outerHTML;
+        let originalHTML = element.outerHTML;
+        highlights[bookId][cleanedHTML] = originalHTML;
+    }
+
+    if (rootElement.querySelector('.highlight-span')) {
+        processElement(rootElement);
+    }
+
+    localStorage.setItem('highlights', JSON.stringify(highlights));
+}
+
+function stripHighlightSpans(element) {
+    let highlights = element.querySelectorAll('.highlight-span');
+    highlights.forEach(span => {
+        let parent = span.parentNode;
+        while (span.firstChild) {
+            parent.insertBefore(span.firstChild, span);
+        }
+        parent.removeChild(span);
+    });
 }
 
 function adjustRangeOffsets(range) {
@@ -1470,31 +1538,29 @@ function adjustRangeOffsets(range) {
     range.setEnd(endContainer, endOffset);
 }
 
-function highlightTextNodes(textNodes, range, color) {
+function highlightTextNodes(textNodes, range, color, hlid) {
     if (textNodes.length === 1) {
-        return highlightSingleTextNode(textNodes[0], range, color);
+        return highlightSingleTextNode(textNodes[0], range, color, hlid);
     } else if (textNodes.length > 1) {
-        return highlightMultipleTextNodes(textNodes, range, color);
+        return highlightMultipleTextNodes(textNodes, range, color, hlid);
     }
     return [];
 }
 
-function highlightSingleTextNode(node, range, color) {
+// Update the single node highlighting function to return the span
+function highlightSingleTextNode(node, range, color, hlid) {
     const text = node.textContent;
     const before = text.slice(0, range.startOffset);
     const highlight = text.slice(range.startOffset, range.endOffset);
     const after = text.slice(range.endOffset);
 
-    const wrapper = createSpanWrapper(color);
+    const wrapper = createSpanWrapper(color, hlid);
     wrapper.textContent = highlight;
 
     const parent = node.parentNode;
-    const referenceNode = node.nextSibling; // Store the next sibling to insert before it
+    const referenceNode = node.nextSibling;
 
-    // Remove the original text node
     parent.removeChild(node);
-
-    // Insert nodes in the correct order
     if (before) {
         parent.insertBefore(document.createTextNode(before), referenceNode);
     }
@@ -1503,11 +1569,10 @@ function highlightSingleTextNode(node, range, color) {
         parent.insertBefore(document.createTextNode(after), referenceNode);
     }
 
-    // Return the highlighted text as an array
     return [highlight];
 }
 
-function highlightMultipleTextNodes(textNodes, range, color) {
+function highlightMultipleTextNodes(textNodes, range, color, hlid) {
     const startNode = textNodes[0];
     const endNode = textNodes[textNodes.length - 1];
     let selectedContent = [];
@@ -1520,40 +1585,32 @@ function highlightMultipleTextNodes(textNodes, range, color) {
     const endHighlight = endText.slice(0, range.endOffset);
     const endAfter = endText.slice(range.endOffset);
 
-    const startWrapper = createSpanWrapper(color);
+    const startWrapper = createSpanWrapper(color, hlid);
     startWrapper.textContent = startHighlight;
 
-    const endWrapper = createSpanWrapper(color);
+    const endWrapper = createSpanWrapper(color, hlid);
     endWrapper.textContent = endHighlight;
 
-    // Replace start node
     const startParent = startNode.parentNode;
     const startAfterNode = document.createTextNode(startBefore);
     startParent.replaceChild(startAfterNode, startNode);
     startParent.insertBefore(startWrapper, startAfterNode.nextSibling);
 
-    // Replace end node
     const endParent = endNode.parentNode;
     const endAfterNode = document.createTextNode(endAfter);
     endParent.replaceChild(endAfterNode, endNode);
     endParent.insertBefore(endWrapper, endAfterNode);
 
-    // Concatenate the highlighted text parts to selectedContent
     selectedContent.push(startHighlight);
-
-    // Wrap intervening nodes and add their text content to selectedContent
     if (textNodes.length > 2) {
         const interveningNodes = textNodes.slice(1, -1);
         interveningNodes.forEach(node => {
-            const wrapper = createSpanWrapper(color);
+            const wrapper = createSpanWrapper(color, hlid);
             wrapper.textContent = node.textContent;
-
             node.parentNode.replaceChild(wrapper, node);
             selectedContent.push(node.textContent);
         });
     }
-
-    // Add the text from the end node to selectedContent
     selectedContent.push(endHighlight);
 
     return selectedContent;
@@ -1604,52 +1661,87 @@ function wrapTextNodes(nodes, color) {
     }
 }
 
-// Helper function to create a span wrapper
-function createSpanWrapper(color) {
+// Update createSpanWrapper to apply color classes
+function createSpanWrapper(color, hlid) {
     const spanWrapper = document.createElement('span');
-    spanWrapper.style.backgroundColor = color;
-    spanWrapper.className = 'highlight-span';
+    spanWrapper.className = `highlight-span hl-${color}`;
+    spanWrapper.dataset.hlid = hlid;
     return spanWrapper;
 }
 
-function reapplyHighlightsNotes() {
-    return 0;
+function deleteHighlight() {
+    // Implement the deletion logic here
 }
 
-let highlightsReapplied = false;
+// REAPPLY HIGHLIGHTS
 
-function observeDOMChangesOnce() {
-    if (highlightsReapplied) {
-        console.log("Highlights have already been reapplied.");
+// Function to reapply highlights and notes
+function reapplyHighlightsNotes() {
+    let highlights = JSON.parse(localStorage.getItem('highlights')) || {};
+    if (!highlights[bookId]) {
+        console.warn("No highlights found for this book.");
         return;
     }
 
-    let timeoutId;
+    Object.keys(highlights[bookId]).forEach(key => {
+        let regex = new RegExp(key.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g');
+        let elements = document.body.querySelectorAll('*');
 
-    const observer = new MutationObserver((mutationsList, observer) => {
-        // Clear the previous timeout to prevent multiple calls
-        clearTimeout(timeoutId);
-
-        // Set a new timeout to reapply highlights after 250ms
-        timeoutId = setTimeout(() => {
-            console.log("Reapplying highlights...");
-            reapplyHighlightsNotes();
-            observer.disconnect(); // Stop observing after highlights are reapplied
-            highlightsReapplied = true; // Set the flag to indicate highlights have been reapplied
-            console.log("Observer disconnected and highlightsReapplied set to true.");
-        }, 250);
+        elements.forEach(element => {
+            if (element.innerHTML.match(regex)) {
+                element.innerHTML = element.innerHTML.replace(regex, highlights[bookId][key]);
+            }
+        });
     });
-
-    // Observe changes to the entire document body
-    observer.observe(document.body, {
-        childList: true,
-        subtree: true,
-        characterData: true,
-    });
-
-    // Initial call to reapply highlights when the script is first run
-    console.log("Initial call to reapply highlights.");
 }
 
-// Call observeDOMChangesOnce on window load
-window.addEventListener('load', observeDOMChangesOnce);
+
+// Add or update an element in highlights
+function saveHighlightsToLocalStorage(rootElement) {
+    if (!rootElement) return; // Ensure rootElement is valid
+
+    // Retrieve existing highlights from Local Storage
+    let highlights = JSON.parse(localStorage.getItem('highlights')) || {};
+    if (!highlights[bookId]) {
+        highlights[bookId] = {};
+    }
+
+    // Function to strip highlight spans
+    function stripHighlightSpans(element) {
+        let highlights = element.querySelectorAll('.highlight-span');
+        highlights.forEach(span => {
+            let parent = span.parentNode;
+            while (span.firstChild) {
+                parent.insertBefore(span.firstChild, span);
+            }
+            parent.removeChild(span);
+        });
+    }
+
+    // Function to add or update an element in highlights
+    function processElement(element) {
+        let cleanedElement = element.cloneNode(true);
+        stripHighlightSpans(cleanedElement);
+        let cleanedHTML = cleanedElement.outerHTML;
+        let originalHTML = element.outerHTML;
+
+        // Update the element if it already exists, otherwise add it
+        highlights[bookId][cleanedHTML] = originalHTML;
+    }
+
+    // Process the passed element
+    if (rootElement.querySelector('.highlight-span')) {
+        processElement(rootElement);
+    }
+
+    // Save the updated highlights object to Local Storage
+    localStorage.setItem('highlights', JSON.stringify(highlights));
+}
+
+
+// Call reapplyHighlightsNotes on window load
+window.addEventListener('load', () => {
+    setTimeout(reapplyHighlightsNotes, 250);
+});
+
+// END OF HIGHLIGHT FUNCTIONALITY
