@@ -1471,13 +1471,13 @@ function getRelevantParentElement(node) {
 }
 
 function saveHighlightsToLocalStorage(rootElement) {
-    if (!rootElement) return;
+    if (!rootElement) return; // Ensure rootElement is valid
 
+    // Retrieve existing highlights from Local Storage
     let highlights = JSON.parse(localStorage.getItem('highlights')) || {};
-    if (!highlights[bookId]) {
-        highlights[bookId] = {};
-    }
+    let bookHighlights = highlights[bookId] || {};
 
+    // Function to strip highlight spans
     function stripHighlightSpans(element) {
         let highlights = element.querySelectorAll('.highlight-span');
         highlights.forEach(span => {
@@ -1489,18 +1489,33 @@ function saveHighlightsToLocalStorage(rootElement) {
         });
     }
 
-    function processElement(element) {
-        let cleanedElement = element.cloneNode(true);
+    // Process the passed element
+    if (rootElement.querySelector('.highlight-span')) {
+        let cleanedElement = rootElement.cloneNode(true);
         stripHighlightSpans(cleanedElement);
         let cleanedHTML = cleanedElement.outerHTML;
-        let originalHTML = element.outerHTML;
-        highlights[bookId][cleanedHTML] = originalHTML;
+        let originalHTML = rootElement.outerHTML;
+
+        // Update or create the entry for this cleanedHTML
+        if (!bookHighlights[cleanedHTML]) {
+            bookHighlights[cleanedHTML] = { hlids: [], highlightedHTML: originalHTML };
+        }
+
+        // Extract highlight IDs from the original HTML
+        let highlightSpans = rootElement.querySelectorAll('.highlight-span');
+        highlightSpans.forEach(span => {
+            let hlid = parseInt(span.getAttribute('data-hlid').replace('hlid-', ''), 10);
+            if (!bookHighlights[cleanedHTML].hlids.includes(hlid)) {
+                bookHighlights[cleanedHTML].hlids.push(hlid);
+            }
+        });
+
+        // Update the highlighted HTML
+        bookHighlights[cleanedHTML].highlightedHTML = originalHTML;
     }
 
-    if (rootElement.querySelector('.highlight-span')) {
-        processElement(rootElement);
-    }
-
+    // Save the updated highlights object to Local Storage
+    highlights[bookId] = bookHighlights;
     localStorage.setItem('highlights', JSON.stringify(highlights));
 }
 
@@ -1683,33 +1698,32 @@ function reapplyHighlightsNotes() {
         return;
     }
 
-    Object.keys(highlights[bookId]).forEach(key => {
+    let bookHighlights = highlights[bookId];
+
+    Object.keys(bookHighlights).forEach(key => {
         let regex = new RegExp(key.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g');
         let elements = document.body.querySelectorAll('*');
 
         elements.forEach(element => {
             if (element.innerHTML.match(regex)) {
-                element.innerHTML = element.innerHTML.replace(regex, highlights[bookId][key]);
+                element.innerHTML = element.innerHTML.replace(regex, bookHighlights[key].highlightedHTML);
             }
         });
     });
 }
 
-
 // Add or update an element in highlights
 function saveHighlightsToLocalStorage(rootElement) {
     if (!rootElement) return; // Ensure rootElement is valid
 
-    // Retrieve existing highlights from Local Storage
     let highlights = JSON.parse(localStorage.getItem('highlights')) || {};
     if (!highlights[bookId]) {
         highlights[bookId] = {};
     }
 
-    // Function to strip highlight spans
     function stripHighlightSpans(element) {
-        let highlights = element.querySelectorAll('.highlight-span');
-        highlights.forEach(span => {
+        let highlightSpans = element.querySelectorAll('.highlight-span');
+        highlightSpans.forEach(span => {
             let parent = span.parentNode;
             while (span.firstChild) {
                 parent.insertBefore(span.firstChild, span);
@@ -1718,26 +1732,30 @@ function saveHighlightsToLocalStorage(rootElement) {
         });
     }
 
-    // Function to add or update an element in highlights
     function processElement(element) {
         let cleanedElement = element.cloneNode(true);
         stripHighlightSpans(cleanedElement);
         let cleanedHTML = cleanedElement.outerHTML;
         let originalHTML = element.outerHTML;
 
-        // Update the element if it already exists, otherwise add it
-        highlights[bookId][cleanedHTML] = originalHTML;
+        if (!highlights[bookId][highlightCounter]) {
+            highlights[bookId][highlightCounter] = [];
+        }
+
+        highlights[bookId][highlightCounter].push({
+            cleanedHTML: cleanedHTML,
+            originalHTML: originalHTML
+        });
+
+        highlightCounter++; // Increment the counter for the next highlight
     }
 
-    // Process the passed element
     if (rootElement.querySelector('.highlight-span')) {
         processElement(rootElement);
     }
 
-    // Save the updated highlights object to Local Storage
     localStorage.setItem('highlights', JSON.stringify(highlights));
 }
-
 
 // Call reapplyHighlightsNotes on window load
 window.addEventListener('load', () => {
