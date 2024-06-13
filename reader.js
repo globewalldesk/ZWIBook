@@ -1488,19 +1488,17 @@ function getHighestHnid() {
 
     Object.keys(highlights).forEach(bookId => {
         Object.keys(highlights[bookId]).forEach(pid => {
-            Object.keys(highlights[bookId][pid]).forEach(cleanedHTML => {
-                let hnids = highlights[bookId][pid][cleanedHTML].hnids;
-                if (Array.isArray(hnids)) { // Check if hnids is an array
-                    hnids.forEach(hnid => {
-                        let numericHnid = parseInt(hnid);
-                        if (!isNaN(numericHnid) && numericHnid > highestHnid) {
-                            highestHnid = numericHnid;
-                        }
-                    });
-                } else {
-                    console.warn("hnid is not an array");
-                }
-            });
+            let hnids = highlights[bookId][pid].hnids;
+            if (Array.isArray(hnids)) { // Check if hnids is an array
+                hnids.forEach(hnid => {
+                    let numericHnid = parseInt(hnid);
+                    if (!isNaN(numericHnid) && numericHnid > highestHnid) {
+                        highestHnid = numericHnid;
+                    }
+                });
+            } else {
+                console.warn("hnid is not an array");
+            }
         });
     });
 
@@ -1716,27 +1714,32 @@ function reapplyHighlightsNotes() {
     }
 
     Object.keys(highlights[bookId]).forEach(pid => {
-        // Destructure the cleanedHTML and highlightedHTML properties correctly
-        Object.keys(highlights[bookId][pid]).forEach(key => {
-            let { cleanedHTML, highlightedHTML } = highlights[bookId][pid][key];
-            console.log("highlights", highlights);
+        let { cleanedHTML, highlightedHTML } = highlights[bookId][pid];
+        console.log("highlights", highlights);
 
-            // Construct regex to match cleanedHTML
-            let regex = new RegExp(cleanedHTML.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g');
+        // Construct regex to match cleanedHTML
+        let regex = new RegExp(cleanedHTML.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g');
 
-            // Get the pid div element
-            let pidElement = document.getElementById(pid);
-            if (!pidElement) {
-                console.warn(`Element with id '${pid}' not found.`);
-                return;
-            }
+        // Get the pid div element
+        let pidElement = document.getElementById(pid);
+        if (!pidElement) {
+            console.warn(`Element with id '${pid}' not found.`);
+            return;
+        }
 
-            // Replace content within pid div element
-            const regexTimeStart = performance.now();
-            pidElement.innerHTML = pidElement.innerHTML.replace(regex, highlightedHTML);
-            const regexTimeEnd = performance.now();
-            console.log(`Time taken to replace content for '${pid}': ${regexTimeEnd - regexTimeStart} milliseconds`);
-        });
+        // Replace content within pid div element
+        const regexTimeStart = performance.now();
+        pidElement.innerHTML = pidElement.innerHTML.replace(regex, highlightedHTML);
+
+        // Re-add onclick functionality to bookmark-icon in the current pidElement
+        const bookmarkIcon = pidElement.querySelector('.bookmark-icon');
+        if (bookmarkIcon) {
+            const paragraphIndex = bookmarkIcon.id.split('-')[1];
+            bookmarkIcon.setAttribute('onclick', `toggleBookmark(${paragraphIndex})`);
+        }
+
+        const regexTimeEnd = performance.now();
+        console.log(`Time taken to replace content for '${pid}': ${regexTimeEnd - regexTimeStart} milliseconds`);
     });
 
     const endTime = performance.now();
@@ -1779,25 +1782,22 @@ function saveHighlightsToLocalStorage(rootElement) {
         let pid = pidElement.id;
 
         if (!highlights[bookId][pid]) {
-            highlights[bookId][pid] = {};
-        }
-
-        if (!highlights[bookId][pid][cleanedHTML]) {
-            highlights[bookId][pid][cleanedHTML] = {
-                hnids: [],
+            highlights[bookId][pid] = {
                 cleanedHTML: cleanedHTML,
-                highlightedHTML: originalHTML
+                highlightedHTML: originalHTML,
+                hnids: []
             };
         } else {
-            highlights[bookId][pid][cleanedHTML].highlightedHTML = originalHTML;
+            highlights[bookId][pid].cleanedHTML = cleanedHTML;
+            highlights[bookId][pid].highlightedHTML = originalHTML;
         }
 
         let currentHnids = Array.from(element.querySelectorAll('.highlight-span'))
             .map(span => span.getAttribute('data-hnid'));
 
-        highlights[bookId][pid][cleanedHTML].hnids = Array.from(new Set(currentHnids));
+        highlights[bookId][pid].hnids = Array.from(new Set(currentHnids));
         // Convert hnids to numbers
-        highlights[bookId][pid][cleanedHTML].hnids = highlights[bookId][pid][cleanedHTML].hnids.map(hnid => parseInt(hnid));
+        highlights[bookId][pid].hnids = highlights[bookId][pid].hnids.map(hnid => parseInt(hnid));
     }
 
     if (rootElement.querySelector('.highlight-span')) {
@@ -1806,6 +1806,7 @@ function saveHighlightsToLocalStorage(rootElement) {
 
     localStorage.setItem('highlights', JSON.stringify(highlights));
 }
+
 
 // Call reapplyHighlightsNotes on window load
 window.addEventListener('load', () => {
