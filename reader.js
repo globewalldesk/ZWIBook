@@ -2,7 +2,7 @@
 const urlParams = new URLSearchParams(window.location.search);
 const bookId = urlParams.get('bookId');
 console.log(`Opening book Project Gutenberg number: ${bookId}`)
-let currentBookId = bookId; 
+let currentBookId = bookId;
 let bookshelfData = null;
 let bookContentDiv;
 let currentBookMetadata;
@@ -14,37 +14,37 @@ let buffer;
 function loadFont() {
     // Load the font choice from local storage
     const selectedFont = localStorage.getItem('selectedFont') || 'Liberation Serif';  // Default font
-    
+
     // If there's a font saved, apply it
     document.body.style.fontFamily = selectedFont;
 }
 
 // Perform asynchronous operations
 async function fetchData() {
-    return new Promise(async(resolve, reject) => {
+    return new Promise(async (resolve, reject) => {
         try {
             bookshelfData = await window.electronAPI.requestBookshelfData();
             const backBtnInvoked = localStorage.getItem('backBtnInvoked') === 'true';
-    
+
             //if (backBtnInvoked) {
-                buffer = await window.electronAPI.fetchZWI(currentBookId);
-                if (!buffer) {
-                    console.error('Failed to load book: no buffer.');
-                    return;
-                }
-                // Convert Buffer to Uint8Array directly
-                zwiData = new Uint8Array(buffer);
-    
-                const bookMetadata = await window.electronAPI.fetchBookMetadata(currentBookId);
-                if (bookMetadata) {
-                    // Convert the metadata to a string and store it
-                    currentBookMetadata = bookMetadata;
-                    localStorage.setItem('currentBookMetadata', JSON.stringify(bookMetadata));        
-                    window.electronAPI.updateBookshelf({bookMetadata, action: 'addViewed'});
-                } else {
-                    console.error("Book metadata not found for ID:", bookId);
-                }
-                resolve();
+            buffer = await window.electronAPI.fetchZWI(currentBookId);
+            if (!buffer) {
+                console.error('Failed to load book: no buffer.');
+                return;
+            }
+            // Convert Buffer to Uint8Array directly
+            zwiData = new Uint8Array(buffer);
+
+            const bookMetadata = await window.electronAPI.fetchBookMetadata(currentBookId);
+            if (bookMetadata) {
+                // Convert the metadata to a string and store it
+                currentBookMetadata = bookMetadata;
+                localStorage.setItem('currentBookMetadata', JSON.stringify(bookMetadata));
+                window.electronAPI.updateBookshelf({ bookMetadata, action: 'addViewed' });
+            } else {
+                console.error("Book metadata not found for ID:", bookId);
+            }
+            resolve();
         } catch (error) {
             console.error('Failed to fetch book data:', error);
             reject(error);
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         title: currentBookMetadata.Title,
         author: currentBookMetadata.CreatorNames[0]
     });
-    
+
     // Now the DOM is fully loaded and we can safely interact with it
     bookContentDiv = document.getElementById('book-content');
     if (!buffer) {
@@ -74,14 +74,14 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // Back button logic
     function manageNavigationOnLoad() {
-        if (history.length > 1 && localStorage.getItem('lastAddress') && 
+        if (history.length > 1 && localStorage.getItem('lastAddress') &&
             localStorage.getItem('lastAddress') == window.location.pathname) {
             return;
         } else if (history.length <= 1) {
             localStorage.removeItem('navCounter');
         }
         localStorage.setItem('lastAddress', window.location.pathname);
-        if (history.length == 1) {localStorage.removeItem('navCounter')};
+        if (history.length == 1) { localStorage.removeItem('navCounter') };
         let navCounter = parseInt(localStorage.getItem('navCounter'), 10);
         if (isNaN(navCounter)) { // Case 1: navCounter empty
             localStorage.setItem('navCounter', '2'); // Initial setting
@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     manageNavigationOnLoad();
 
     // Event listener for the back button
-    document.getElementById('backBtn').addEventListener('click', function(event) {
+    document.getElementById('backBtn').addEventListener('click', function (event) {
         event.preventDefault();
         let navCounter = parseInt(localStorage.getItem('navCounter'), 10);
         navCounter -= 2;
@@ -117,10 +117,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         history.back();
     });
     // End back button block
-    
-    
+
+
     const bookshelfAddRemove = document.querySelector('#bookshelfAddRemove');
-    
+
     bookshelfAddRemove.style.display = 'flex';
 
     async function showSavedState(bookId) {
@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     function processText(text) {
         // Split the text into parts by HTML tags
         const parts = text.split(/(<[^>]*>)/);
-        
+
         // Process the parts without HTML tags
         const processedParts = parts.map(part => {
             // If the part is an HTML tag, return it as is
@@ -170,40 +170,40 @@ document.addEventListener('DOMContentLoaded', async () => {
             // Otherwise, process the text to replace underscores, allowing multi-line processing
             return part.replace(/_([^_]{1,100}?)_/gs, '<i>$1</i>');
         });
-    
+
         // Join the processed parts back together
         return processedParts.join('');
     }
-                
+
     function extractAuthor() {
         let creatorNames = currentBookMetadata.CreatorNames;
         console.log(creatorNames);
         const suffixes = ["Ph.D.", "PhD", "Ph. D.", "D.Phil.", "DPhil", "Doctor", "D.D.", "D. D.", "Jr.", "Junior", "Sr.", "Senior", "II", "III", "IV", "V", "Esq.", "Esquire", "MD", "M.D.", "Dr.", "Doctor", "RN", "R.N.", "DO", "D.O.", "DDS", "D.D.S.", "DVM", "D.V.M.", "JD", "J.D.", "LLD", "LL.D.", "EdD", "Ed.D.", "PharmD", "Pharm.D.", "MBA", "M.B.A.", "CPA", "C.P.A.", "DMD", "D.M.D.", "DC", "D.C.", "OD", "O.D.", "PA", "P.A.", "P.A.-C", "MA", "M.A.", "MS", "M.S.", "MSc", "M.Sc.", "MPH", "M.P.H.", "BSc", "B.Sc.", "BA", "B.A.", "BS", "B.S.", "MFA", "M.F.A.", "MPhil", "M.Phil.", "PsyD", "Psy.D.", "EdS", "Ed.S.", "MSW", "M.S.W.", "BFA", "B.F.A.", "MSEd", "M.S.Ed.", "MSE", "M.S.E.", "DPT", "D.P.T.", "DPA", "D.P.A.", "ScD", "Sc.D.", "EngD", "Eng.D.", "ASN", "A.S.N."];
-    
+
         // Clean creator names by removing square brackets and anything inside them
         let cleanedNames = creatorNames.map(name => name.replace(/\s*\[.*?\]\s*/g, '').trim());
-    
+
         // Continue with extracting the first author's formatted name
         if (cleanedNames.length > 0) {
             const firstAuthorRegex = /^([^,]+),\s*([^,]+)/;
             let match = cleanedNames[0].match(firstAuthorRegex);
-    
+
             if (match) {
                 let lastName = match[1].trim();
                 let firstName = match[2].trim();
-    
+
                 // Handle suffixes
                 let suffix = suffixes.find(s => firstName.endsWith(s));
                 if (suffix) {
                     firstName = firstName.replace(new RegExp(`\\s*${suffix}$`), ''); // Remove suffix from first name
                 }
-    
+
                 // Reformat name from "Lastname, Firstname" to "Firstname Lastname"
                 let formattedName = `${firstName} ${lastName}`;
-    
+
                 if (suffix) {
                     formattedName += `, ${suffix}`; // Append suffix if present
-                }    
+                }
                 return formattedName;
             } else {
                 return "No valid author data found.";
@@ -228,18 +228,18 @@ document.addEventListener('DOMContentLoaded', async () => {
             </div>
         `;
         return switchElement.innerHTML; // Return the HTML to be added
-    }    
+    }
 
     function prepPlainText(text, isPoetry) {
         const lines = text.split(/\r\n|\r|\n/);
         const paragraphs = [];
         let paragraphIndex = 0;
         let singleLineFlag = false;
-    
+
         // Extract and format author name
         const formattedAuthorName = extractAuthor(); // Assuming extractAuthor() is available globally and returns a formatted name
         const title = currentBookMetadata.Title; // Assuming title is stored in currentBookMetadata
-            
+
         let tempParagraph = [];
         function flushParagraph() {
             if (tempParagraph.length > 0) {
@@ -255,19 +255,19 @@ document.addEventListener('DOMContentLoaded', async () => {
                 tempParagraph = [];
             }
         }
-        
+
         // PREPROCESS LINES INDIVIDUALLY
         let titleProcessed = false;
-        let authorProcessed = false;            
+        let authorProcessed = false;
         lines.forEach((line, index) => {
             // Replace leading spaces and tabs with `&nbsp;`
-            const modifiedLine = line.replace(/^(\s+)/, function(match) {
+            const modifiedLine = line.replace(/^(\s+)/, function (match) {
                 return match.replace(/ /g, '&nbsp;').replace(/\t/g, '&nbsp;&nbsp;&nbsp;');
             });
-    
+
             // Check for title or author in the line
             if (!titleProcessed && line.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, '') === title.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, '')) {
-                paragraphs.push(`<h1 class="center">${line}</h1>`); 
+                paragraphs.push(`<h1 class="center">${line}</h1>`);
                 titleProcessed = true;
             } else if (titleProcessed && !authorProcessed && line.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, '').startsWith('by') && percentageMatch(line.substring(3).toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, ''), formattedAuthorName.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, '')) >= 50) {
                 paragraphs.push(`<h2 class="center">${line}</h2>`);
@@ -295,13 +295,13 @@ document.addEventListener('DOMContentLoaded', async () => {
                 }
             }
         });
-    
+
         flushParagraph();  // Ensure the last paragraph is flushed if not already
         const separateSwitch = addSwitch();  // Prepend the poetrySwitch
         paragraphs.unshift(separateSwitch);
         return paragraphs.join('');
     }
-    
+
     // Helper function to calculate the percentage match between two strings
     function percentageMatch(str1, str2) {
         const words1 = str1.split(/\s+/);
@@ -327,7 +327,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const rawContent = unzipped[primaryFilename];
         const preliminaryContent = new TextDecoder("utf-8").decode(rawContent).substring(0, 5000);
 
-        let decoder;  
+        let decoder;
         if (preliminaryContent.toLowerCase().includes("utf-8")) {
             decoder = new TextDecoder("utf-8");
         } else if (preliminaryContent.toLowerCase().includes("language: russian")) {
@@ -418,13 +418,13 @@ document.addEventListener('DOMContentLoaded', async () => {
                 localStorage.setItem(frontMatterStateKey, 'hidden');
             });
         }
-        
+
         // Function to preprocess <a> and <img> tags by removing <i>, </i> and updating refs
         function preprocessDocumentElements() {
             const anchors = document.querySelectorAll('a');
             const images = document.querySelectorAll('img');
             const centeredElements = document.querySelectorAll('[style*="text-align: center"]');
-            
+
             anchors.forEach(anchor => {
                 ['name', 'id', 'href'].forEach(attr => {
                     if (anchor.hasAttribute(attr)) {
@@ -432,7 +432,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                         // Remove <i> and </i> tags
                         value = value.replace(/<\/?i>/g, '_');
                         value = value.replace(/(noteref|note|page|fnote|fnanchor)(\d+)/ig, (_, p1, p2) => `${p1}_${p2}`);
-        
+
                         // Ensure IDs and hrefs do not start with a digit
                         if ((attr === 'id' || attr === 'name') && /^\d/.test(value)) {
                             value = `id_${value}`;
@@ -442,17 +442,17 @@ document.addEventListener('DOMContentLoaded', async () => {
                                 value = `#id_${value.slice(1)}`;
                             }
                         }
-        
+
                         anchor.setAttribute(attr, value);
                     }
                 });
-        
+
                 // Add target="_blank" to external links
                 const href = anchor.getAttribute('href');
                 if (href && (href.startsWith('http:') || href.startsWith('https:'))) {
                     anchor.setAttribute('target', '_blank');
                 }
-        
+
                 // Check if there is a 'name' attribute without a corresponding 'id'
                 if (anchor.hasAttribute('name') && !anchor.hasAttribute('id')) {
                     let nameValue = anchor.getAttribute('name');
@@ -463,7 +463,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     anchor.setAttribute('id', nameValue);
                 }
             });
-        
+
             images.forEach(img => {
                 if (img.hasAttribute('src')) {
                     let src = img.getAttribute('src');
@@ -472,14 +472,14 @@ document.addEventListener('DOMContentLoaded', async () => {
                     img.setAttribute('src', src);
                 }
             });
-        
+
             centeredElements.forEach(element => {
                 // Check if the element has 'text-align: center' in its style attribute
                 if (element.style.textAlign === 'center') {
                     element.style.textAlign = ''; // Remove the inline style
                     element.classList.add('center'); // Add the 'center' class
                 }
-            });            
+            });
         }
 
         preprocessDocumentElements();
@@ -512,12 +512,12 @@ document.addEventListener('DOMContentLoaded', async () => {
             p.style.textAlign = ''; // Remove the inline style
             p.classList.add('center'); // Add the center class
         });
-            
+
         // Check if the switch exists
         const poetrySwitch = document.querySelector('.poetrySwitch input');
         if (poetrySwitch) {
             // Adding event listener to the switch
-            poetrySwitch.addEventListener('change', function() {
+            poetrySwitch.addEventListener('change', function () {
                 let separateLines = JSON.parse(localStorage.getItem('separateLines')) || {};
                 if (this.checked) {
                     separateLines[bookId] = 'true';
@@ -530,11 +530,11 @@ document.addEventListener('DOMContentLoaded', async () => {
                 }, 800);
             });
 
-    // Set the switch position based on the latest setting
-    let separateLines = JSON.parse(localStorage.getItem('separateLines')) || {};
-    let separateLinesSetting = separateLines[bookId];
-    poetrySwitch.checked = separateLinesSetting === 'true';
-}
+            // Set the switch position based on the latest setting
+            let separateLines = JSON.parse(localStorage.getItem('separateLines')) || {};
+            let separateLinesSetting = separateLines[bookId];
+            poetrySwitch.checked = separateLinesSetting === 'true';
+        }
 
         function addBookmarkIcon(element, index) {
             // Add bookmark icon
@@ -543,10 +543,10 @@ document.addEventListener('DOMContentLoaded', async () => {
             bookmarkIcon.className = "bookmark-icon";
             bookmarkIcon.id = `bookmark-${index}`;
             bookmarkIcon.onclick = () => toggleBookmark(index);
-        
+
             // Check if the element is already wrapped in a <div> with the 'bm-paragraph' class
             const parentDiv = element.closest('div.bm-paragraph');
-        
+
             if (parentDiv) {
                 // If already wrapped, just insert the bookmark icon before the element
                 parentDiv.insertBefore(bookmarkIcon, element);
@@ -555,26 +555,26 @@ document.addEventListener('DOMContentLoaded', async () => {
                 const wrapper = document.createElement('div');
                 wrapper.className = 'bm-paragraph';
                 wrapper.id = element.id;
-        
+
                 // Preserve the original class of the paragraph
                 const newElement = document.createElement(element.tagName);
                 newElement.className = element.className;
                 newElement.innerHTML = element.innerHTML;
-        
+
                 // Add bookmark icon and the original element to the wrapper
                 wrapper.appendChild(bookmarkIcon);
                 wrapper.appendChild(newElement);
-        
+
                 // Replace the original element with the wrapper
                 element.parentNode.replaceChild(wrapper, element);
             }
         }
-                        
+
         function assignIDsToContentElements(content) {
             let paragraphIndex = 0;
             const elements = content.querySelectorAll('p, div');
             const updates = [];
-        
+
             elements.forEach(element => {
                 if (!element.id && ((element.tagName === 'DIV' && !element.querySelector('p') && element.textContent.trim().length > 0) || element.tagName === 'P')) {
                     element.id = `p${paragraphIndex}`;
@@ -582,19 +582,19 @@ document.addEventListener('DOMContentLoaded', async () => {
                     paragraphIndex++;
                 }
             });
-        
+
             updates.forEach(({ element, index }) => {
                 addBookmarkIcon(element, index);
             });
-        
+
             return content;
         }
-        
+
         // Usage after setting the innerHTML for bookContentDiv
         if (primaryFilename.endsWith(".html") || primaryFilename.endsWith(".htm")) {
             assignIDsToContentElements(bookContentDiv);
         }
-        
+
         async function applyBookmarks() {
             try {
                 const bookmarks = await window.electronAPI.requestBookmarks(currentBookId);
@@ -619,9 +619,9 @@ document.addEventListener('DOMContentLoaded', async () => {
                 console.error('Error fetching bookmarks:', error);
             }
         }
-                
+
         applyBookmarks();
-                    
+
         // Function to clean up file paths
         function cleanPath(path) {
             return path.replace(/<\/?[^>]+>/gi, ''); // Strip out HTML tags
@@ -631,27 +631,27 @@ document.addEventListener('DOMContentLoaded', async () => {
         // When creating Blob URLs and storing them in the resourceMap:
         Object.keys(unzipped).forEach(filename => {
             if (filename !== primaryFilename && (filename.endsWith('.png') || filename.endsWith('.jpg') || filename.endsWith('.gif'))) {
-                const fileBlob = new Blob([unzipped[filename]], {type: 'image/' + filename.split('.').pop()});
+                const fileBlob = new Blob([unzipped[filename]], { type: 'image/' + filename.split('.').pop() });
                 const fileUrl = URL.createObjectURL(fileBlob);
                 const normalizedFilename = cleanPath(filename.replace('data/media/images/', ''));
                 resourceMap[normalizedFilename] = fileUrl;
                 filenameMap[fileUrl] = normalizedFilename; // Store the mapping from Blob URL to original filename
             }
         });
-        
+
         document.querySelectorAll('#book-content img').forEach(img => {
             const originalSrc = img.getAttribute('src');
-        
+
             if (originalSrc.startsWith('images/icons/')) {
                 return;
             }
-        
+
             const normalizedSrc = cleanPath(originalSrc.replace('data/media/images/', ''));
             if (resourceMap[normalizedSrc]) {
                 img.setAttribute('src', resourceMap[normalizedSrc]);
                 img.setAttribute('data-original-path', originalSrc);
-        
-                img.onclick = function(event) {
+
+                img.onclick = function (event) {
                     event.preventDefault();
                     const modal = document.getElementById('imageModal');
                     const modalImg = document.getElementById('modalImage');
@@ -664,7 +664,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 console.log('No Blob URL found for:', originalSrc);
             }
         });
-        
+
         window.electronAPI.onDownloadImageRequest(async (event, { imageUrl }) => {
             try {
                 const originalFilename = filenameMap[imageUrl] || 'downloaded_image'; // Look up the original filename
@@ -679,17 +679,17 @@ document.addEventListener('DOMContentLoaded', async () => {
                 console.error('Failed to download image:', error);
             }
         });
-        
-                                
+
+
         // Close the image modal that was just created
         // Get the <span> element that closes the modal
         var span = document.getElementsByClassName("close-this")[0];
         // When the user clicks on <span> (x), close the modal
-        span.onclick = function() {
+        span.onclick = function () {
             var modal = document.getElementById('imageModal');
             modal.style.display = "none";
         }
-        document.addEventListener('keydown', function(event) {
+        document.addEventListener('keydown', function (event) {
             if (event.key === "Escape") {  // Check if the key pressed is 'Escape'
                 var modal = document.getElementById('imageModal');
                 if (modal.style.display === "block") {  // Check if the modal is currently displayed
@@ -697,7 +697,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 }
             }
         });
-        
+
         // Utility function to get the basename from a path or URL
         function getBasename(url) {
             return url.split('/').pop().split('#')[0].split('?')[0];
@@ -710,7 +710,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 event.preventDefault();
                 const imagePath = anchor.getAttribute('href').replace('data/media/images/', '');
                 const blobUrl = resourceMap[imagePath];
-        
+
                 if (blobUrl) {
                     window.electronAPI.onDownloadImageRequest({ imageUrl: blobUrl });
                 } else {
@@ -718,7 +718,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 }
             }
         }
-        
+
         // Add event listener to the document for intercepting link clicks
         document.addEventListener('click', handleImageDownload);
 
@@ -736,7 +736,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const wordCountDiv = document.createElement('div');
         wordCountDiv.classList.add('word-count');
         wordCountDiv.innerHTML = `<i>Word count: ${wordCount.toLocaleString()}<br>(${pageCount.toLocaleString()} average pages)</i>`;
-        
+
         // Create the word count hover-over popup
         const countPopup = document.createElement('div');
         countPopup.classList.add('count-popup');
@@ -749,26 +749,26 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         // Append the container to the bottom of #book-content
         document.getElementById('book-content').appendChild(footerDiv);
-                
+
 
         // Add event listeners to #headTitle
         const headTitle = document.getElementById('headTitle');
-        headTitle.addEventListener('mouseover', function(event) {
+        headTitle.addEventListener('mouseover', function (event) {
             countPopup.style.display = 'block';
             countPopup.style.left = event.pageX + 'px';
             countPopup.style.top = event.pageY + 'px';
         });
 
-        headTitle.addEventListener('mousemove', function(event) {
+        headTitle.addEventListener('mousemove', function (event) {
             countPopup.style.left = event.pageX + 'px';
             countPopup.style.top = event.pageY + 'px';
         });
 
-        headTitle.addEventListener('mouseout', function() {
+        headTitle.addEventListener('mouseout', function () {
             countPopup.style.display = 'none';
         });
     });
-    
+
     // Helper for title-setter
     function setMoretext(more, headTitle, wholeTitle, truncatedTitle, space) {
         more.addEventListener('click', function (event) {
@@ -789,16 +789,16 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     function setTitle() {
         if (!currentBookMetadata?.Title) return;
-    
+
         let headTitle = document.getElementById('headTitle');
-    
+
         let wholeTitle = currentBookMetadata.Title;
         wholeTitle = wholeTitle.replace(/\"\"/g, '"'); // Remove weird PG tic: double-double quotes in titles
         let truncatedTitle = wholeTitle;
         let more = document.createElement('a');
         more.classList.add("more");
         const space = document.createTextNode(" ");
-    
+
         // Determine truncation length based on viewport width
         const viewportWidth = window.innerWidth;
         let truncationLength = 65; // Default truncation length for large screens
@@ -809,7 +809,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         } else if (viewportWidth <= 530) {
             truncationLength = 37;
         }
-    
+
         // Adjust the title display based on actual length
         const moreText = "… more";
         if (wholeTitle.length > truncationLength) {
@@ -821,12 +821,12 @@ document.addEventListener('DOMContentLoaded', async () => {
             truncatedTitle = wholeTitle; // Use the full title if no truncation is needed
             more.style.display = 'none'; // Optionally hide the 'more' link if not needed
         }
-    
+
         headTitle.textContent = truncatedTitle;
         headTitle.appendChild(space);
         headTitle.appendChild(more);
     }
-    
+
     setTitle();
     window.addEventListener('resize', () => {
         setTitle();
@@ -844,7 +844,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 icon.src = 'images/icons/bookmark-fill.svg';
                 icon.style.visibility = 'visible'; // Ensure it is always visible
             }
-            
+
         });
     } catch (error) {
         console.error('Error fetching bookmarks:', error);
@@ -853,18 +853,18 @@ document.addEventListener('DOMContentLoaded', async () => {
     const bookmarksBtn = document.getElementById('bookmarksBtn');
     const bookmarksDropdown = document.getElementById('bookmarksDropdown');
 
-    bookmarksBtn.addEventListener('click', function(event) {
+    bookmarksBtn.addEventListener('click', function (event) {
         event.preventDefault();
         const isDisplayed = bookmarksDropdown.style.display === 'flex';
         bookmarksDropdown.style.display = isDisplayed ? 'none' : 'flex';
-        
+
         if (!isDisplayed) {
             displayBookmarks();
         }
     });
 
     // Ensure bookmark modal is closed on 'Escape' key press
-    document.addEventListener('keydown', function(event) {
+    document.addEventListener('keydown', function (event) {
         if (event.key === "Escape") {
             if (bookmarksDropdown && bookmarksDropdown.style.display === 'flex') {
                 bookmarksDropdown.style.display = 'none';
@@ -872,17 +872,17 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     });
 
-    document.addEventListener('click', function(event) {
+    document.addEventListener('click', function (event) {
         if (!bookmarksDropdown.contains(event.target) && !bookmarksBtn.contains(event.target)) {
             bookmarksDropdown.style.display = 'none';
         }
     });
 
     // Prevent clicks inside the dropdown from propagating
-    bookmarksDropdown.addEventListener('click', function(event) {
+    bookmarksDropdown.addEventListener('click', function (event) {
         event.stopPropagation();
     });
-    
+
     async function displayBookmarks() {
         try {
             const bookmarks = await window.electronAPI.requestBookmarks(currentBookId);
@@ -893,9 +893,9 @@ document.addEventListener('DOMContentLoaded', async () => {
                     let position = paragraphElement ? (paragraphElement.offsetTop / docHeight) * 100 : 0;
                     return { id, position };
                 });
-                
+
                 bookmarksWithPosition.sort((a, b) => a.position - b.position);
-                
+
                 const bookmarksHtml = bookmarksWithPosition.map(bookmark => {
                     const paragraphElement = document.getElementById(bookmark.id);
                     let snippet = paragraphElement ? paragraphElement.textContent.slice(0, 150) + '...' : 'No preview available';
@@ -923,8 +923,8 @@ document.addEventListener('DOMContentLoaded', async () => {
             // Ensure the dropdown remains visible even on error
             bookmarksDropdown.style.display = 'flex';
         }
-    }       
-     
+    }
+
     /////////////////////////////
     // Find on page functionality
     const inputField = document.getElementById('searchText');
@@ -934,9 +934,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     const performSearch = () => window.electronAPI.performFind(inputField.value.trim());
 
     const realText = "";
-    
+
     // Modify the keypress listener to use the search counter
-    inputField.addEventListener('keypress', function(event) {
+    inputField.addEventListener('keypress', function (event) {
         if (event.key === 'Enter') {
             event.preventDefault();  // Prevent form submission
             inputField.setAttribute("inert", "");
@@ -947,7 +947,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             }, 100); // Refocus after a delay
         }
     });
-    
+
     // Reset the search counter explicitly when the "Find" button is clicked
     findButton.addEventListener('click', performSearch);
 
@@ -960,7 +960,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
 
     // Handling closing modal when clicking outside the modal
-    window.onclick = function(event) {
+    window.onclick = function (event) {
         if (event.target === modal) {
             modal.style.display = 'none';
         } else if (event.target === fontModal) {
@@ -969,7 +969,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     };
 
     // Handling closing modal on pressing the 'Escape' key
-    document.onkeydown = function(event) {
+    document.onkeydown = function (event) {
         if (event.key === 'Escape') {
             modal.style.display = 'none';
         }
@@ -982,35 +982,35 @@ document.addEventListener('DOMContentLoaded', async () => {
                 console.error("No current book metadata available.");
                 return;
             }
-    
+
             // Retrieve the viewed books list from local storage
             const viewedBooks = JSON.parse(localStorage.getItem('booksViewed')) || [];
-            
+
             // Find if the current book is already in the viewed books list
             const existingIndex = viewedBooks.findIndex(book => book.PG_ID === currentBookMetadata.PG_ID);
-    
+
             // If it exists, remove it to avoid duplicates and to update its position
             if (existingIndex > -1) {
                 viewedBooks.splice(existingIndex, 1);
             }
-    
+
             // Add the current book to the front of the list
             viewedBooks.unshift(currentBookMetadata);
-    
+
             // Update local storage with the new viewed books list
             localStorage.setItem('booksViewed', JSON.stringify(viewedBooks));
-    
+
             // Update the bookshelf in the backend via IPC
             window.electronAPI.updateBookshelf({ bookMetadata: currentBookMetadata, action: 'addViewed' });
-    
+
         } catch (e) {
             console.error("Error updating Books Viewed: ", e);
         }
     }
 
-    
+
     updateBooksViewed();
-    
+
     // Listen for the 'export-zwi' message from the main process
     window.electronAPI.startZWIExport(() => {
         console.log("Received 'export-zwi' message in reader.js");
@@ -1026,29 +1026,29 @@ document.addEventListener('DOMContentLoaded', async () => {
         window.electronAPI.finishZwiExport(bookId);
     }
 
-    document.body.addEventListener('click', function(e) {
+    document.body.addEventListener('click', function (e) {
         // Use closest to find the nearest ancestor that is an <a> tag with an href attribute starting with "#"
         let target = e.target.closest('a[href^="#"]');
-    
+
         if (target) {
             e.preventDefault(); // Prevent default anchor click behavior
-    
+
             const targetId = target.getAttribute('href');
             if (targetId == '#') {
                 return;
             }
             const targetElement = document.querySelector(targetId);
-    
+
             if (targetElement) {
                 // Calculate the corrected scroll position considering the fixed header
                 const headerHeight = 100; // Adjust if your header height changes
                 const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
                 const offsetPosition = elementPosition - headerHeight;
-    
+
                 window.scrollTo({
                     top: offsetPosition
                 });
-    
+
                 history.pushState(null, null, targetId);
             }
         }
@@ -1146,36 +1146,36 @@ document.addEventListener('DOMContentLoaded', async () => {
         const scrollPosition = window.scrollY;
         let percentageThrough = (scrollPosition / totalHeight) * 100;
         percentageThrough = isNaN(percentageThrough) ? 0 : percentageThrough; // Default to 0 if calculation fails
-    
+
         // console.log(`Attempting to save position: ${percentageThrough.toFixed(2)}% for bookId: ${currentBookId}`);
-    
+
         if (percentageThrough >= 0 && percentageThrough <= 100) {
-            window.electronAPI.sendLastReadPosition({ 
-                bookId: currentBookId, 
+            window.electronAPI.sendLastReadPosition({
+                bookId: currentBookId,
                 position: percentageThrough.toFixed(2)  // Make sure to use 'position' as the key
             });
         } else {
             console.error(`Invalid scroll percentage: ${percentageThrough.toFixed(2)}%`);
         }
     }
-    
+
     // Throttle position saving
     function throttlePosition(func, initialDelay, interval) {
         let timeout;
         let lastExec = 0;
-    
-        return function() {
+
+        return function () {
             const context = this;
             const args = arguments;
             const elapsed = Date.now() - lastExec;
-    
-            const execute = function() {
+
+            const execute = function () {
                 func.apply(context, args);
                 lastExec = Date.now();
             };
-    
+
             clearTimeout(timeout);
-    
+
             if (elapsed > interval) {
                 // If sufficient time has elapsed, execute immediately
                 execute();
@@ -1185,10 +1185,10 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
         };
     }
-    
+
     // Usage of the updated throttle function
     window.addEventListener('scroll', throttlePosition(saveCurrentPosition, 500, 2000));
-    
+
     // Menu management
     window.electronAPI.updateGutenbergMenu(currentBookId);
     window.electronAPI.refreshMenu();
@@ -1233,7 +1233,7 @@ function toggleBookmark(index) {
         bookmarkId: `p${index}`,
         isAdd: isAdding
     });
-}    
+}
 
 // This function might be defined to scroll to the specific paragraph
 function goToBookmark(paragraphId) {
@@ -1241,7 +1241,7 @@ function goToBookmark(paragraphId) {
     console.log("element:", element);
     if (element) {
         element.scrollIntoView({ behavior: 'auto', block: 'start' });
-        window.scrollBy(0,-120);
+        window.scrollBy(0, -120);
     }
 }
 
@@ -1258,7 +1258,7 @@ function toggleFontModal() {
 function setFont(fontName) {
     // Apply the font to the body or specific element
     document.body.style.fontFamily = fontName;
-    
+
     // Save the font choice to local storage
     localStorage.setItem('selectedFont', fontName);
 }
@@ -1281,7 +1281,7 @@ electronAPI.onChooseFont(() => {
 
 
 // Keydown event to close modal on pressing the Escape key or toggle with CmdOrCtrl+Alt+F
-window.onkeydown = function(event) {
+window.onkeydown = function (event) {
     const fontModal = document.getElementById('fontModal');
     if (event.key === "Escape" && fontModal.style.display === 'block') {
         fontModal.style.display = 'none';
@@ -1295,7 +1295,7 @@ function restoreScrollPosition() {
     if (bookshelfData) {
         const lastReadData = bookshelfData.readingPositions.find(pos => pos.PG_ID === currentBookId);
         const lastReadPercentage = lastReadData ? parseFloat(lastReadData.lastReadPosition) : null;
-    
+
         if (lastReadPercentage) {
             const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
             const scrollPosition = (lastReadPercentage / 100) * totalHeight;
@@ -1321,7 +1321,45 @@ let ignoreNextClick = false;
 let selectedText = null;
 let highlightCounter = 0;
 
-document.addEventListener('mouseup', function() {
+// Ensure the modal is created and listeners are attached only once
+let hmodal = document.getElementById('highlightModal');
+if (!hmodal) {
+    hmodal = document.createElement('div');
+    hmodal.id = 'highlightModal';
+    hmodal.className = 'highlight-modal';
+    hmodal.innerHTML = `
+        <div class="highlight-modal-content">
+            <div class="color-selection">
+                <div class="color-circle" title="Yellow"></div>
+                <div class="color-circle" title="Pink"></div>
+                <div class="color-circle" title="Green"></div>
+                <div class="color-circle" title="Blue"></div>
+                <div class="color-circle" title="Purple"></div>
+                <div class="delete-circle" title="Delete Highlight"></div>
+                <div class="color-circle notes-placeholder" title="Add Note">+</div>
+            </div>
+        </div>
+    `;
+    document.body.appendChild(hmodal);
+
+    document.querySelectorAll('.color-circle').forEach(circle => {
+        circle.addEventListener('click', function (event) {
+            event.stopPropagation(); // Ensure the click event is not interfered with
+            if (!this.classList.contains('notes-placeholder')) {
+                highlightSelection(this.title.toLowerCase());
+            }
+        });
+    });
+
+    document.querySelector('.delete-circle').addEventListener('click', function (event) {
+        event.stopPropagation();
+        deleteHighlight();
+    });
+
+    hmodal.style.pointerEvents = 'auto'; // Ensure the modal is interactive
+}
+
+document.addEventListener('mouseup', function () {
     const selection = window.getSelection();
     if (selection.toString().length > 0) {
         selectedText = selection.getRangeAt(0).cloneRange(); // Preserve the selection
@@ -1331,28 +1369,28 @@ document.addEventListener('mouseup', function() {
     }
 });
 
-document.addEventListener('mousedown', function(event) {
+document.addEventListener('mousedown', function (event) {
     const hmodal = document.getElementById('highlightModal');
     if (hmodal && hmodal.contains(event.target)) {
         event.preventDefault(); // Prevents the text from being unselected when clicking inside the modal
     }
 });
 
-document.addEventListener('keydown', function(event) {
+document.addEventListener('keydown', function (event) {
     const hmodal = document.getElementById('highlightModal');
     if (event.key === "Escape" && hmodal.style.display === 'block') {
         hmodal.style.display = 'none';
     }
 });
 
-window.addEventListener('resize', function() {
+window.addEventListener('resize', function () {
     const hmodal = document.getElementById('highlightModal');
     if (hmodal) {
         hmodal.style.display = 'none';
     }
 });
 
-document.addEventListener('selectionchange', function() {
+document.addEventListener('selectionchange', function () {
     let hmodal = document.getElementById('highlightModal');
     if (!hmodal) {
         hmodal = document.createElement('div');
@@ -1380,43 +1418,6 @@ document.addEventListener('selectionchange', function() {
     }
 });
 
-// Ensure the modal is created and listeners are attached only once
-let hmodal = document.getElementById('highlightModal');
-if (!hmodal) {
-    hmodal = document.createElement('div');
-    hmodal.id = 'highlightModal';
-    hmodal.className = 'highlight-modal';
-    hmodal.innerHTML = `
-        <div class="highlight-modal-content">
-            <div class="color-selection">
-                <div class="color-circle" title="Yellow"></div>
-                <div class="color-circle" title="Pink"></div>
-                <div class="color-circle" title="Green"></div>
-                <div class="color-circle" title="Blue"></div>
-                <div class="color-circle" title="Purple"></div>
-                <div class="delete-circle" title="Delete Highlight"></div>
-                <div class="color-circle notes-placeholder" title="Add Note">+</div>
-            </div>
-        </div>
-    `;
-    document.body.appendChild(hmodal);
-
-    document.querySelectorAll('.color-circle').forEach(circle => {
-        circle.addEventListener('click', function(event) {
-            event.stopPropagation(); // Ensure the click event is not interfered with
-            if (!this.classList.contains('notes-placeholder')) {
-                highlightSelection(this.title.toLowerCase());
-            }
-        });
-    });
-
-    document.querySelector('.delete-circle').addEventListener('click', function(event) {
-        event.stopPropagation();
-        deleteHighlight();
-    });
-
-    hmodal.style.pointerEvents = 'auto'; // Ensure the modal is interactive
-}
 
 function showHighlightModal(selection) {
     const range = selection.getRangeAt(0);
@@ -1453,17 +1454,51 @@ function highlightSelection(color) {
     }
 }
 
+function handleSelectionChange() {
+    let hmodal = document.getElementById('highlightModal');
+    if (!hmodal) {
+        hmodal = document.createElement('div');
+        hmodal.id = 'highlightModal';
+        hmodal.innerHTML = '<div class="highlight-modal-content">Content will go here</div>';
+        hmodal.style.pointerEvents = 'none';
+        hmodal.style.display = 'none'; // Ensure the modal is initially hidden
+        document.body.appendChild(hmodal);
+    }
+
+    const selection = window.getSelection();
+    const range = selection.rangeCount > 0 ? selection.getRangeAt(0) : null;
+    if (range && !range.collapsed) {
+        const rect = range.getBoundingClientRect();
+        const modalWidth = 300; // Assuming max-width is 300px
+        const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+        const leftPosition = (window.innerWidth - modalWidth - scrollbarWidth) / 2;
+
+        hmodal.style.top = `${rect.bottom + window.scrollY}px`;
+        hmodal.style.left = `${leftPosition + window.scrollX}px`;
+        hmodal.style.display = 'block';
+        hmodal.focus();
+    } else {
+        hmodal.style.display = 'none';
+    }
+}
+
 function getHighestHnid() {
     let highlights = JSON.parse(localStorage.getItem('highlights')) || {};
     let highestHnid = -1;
 
     Object.keys(highlights).forEach(bookId => {
-        Object.keys(highlights[bookId]).forEach(cleanedHTML => {
-            let hnids = highlights[bookId][cleanedHTML].hnids;
-            hnids.forEach(hnid => {
-                let numericHnid = parseInt(hnid);
-                if (numericHnid > highestHnid) {
-                    highestHnid = numericHnid;
+        Object.keys(highlights[bookId]).forEach(pid => {
+            Object.keys(highlights[bookId][pid]).forEach(cleanedHTML => {
+                let hnids = highlights[bookId][pid][cleanedHTML].hnids;
+                if (Array.isArray(hnids)) { // Check if hnids is an array
+                    hnids.forEach(hnid => {
+                        let numericHnid = parseInt(hnid);
+                        if (!isNaN(numericHnid) && numericHnid > highestHnid) {
+                            highestHnid = numericHnid;
+                        }
+                    });
+                } else {
+                    console.warn("hnid is not an array");
                 }
             });
         });
@@ -1554,14 +1589,12 @@ function highlightSingleTextNode(node, range, color, hnid) {
 }
 
 function highlightMultipleTextNodes(textNodes, range, color, hnid) {
-    console.log("Highlighting multiple text nodes:", textNodes.map(node => node.textContent));
     // Get all relevant parent element based
-    let allParentElements = new Set(); 
+    let allParentElements = new Set();
     textNodes.forEach(textNode => {
-        console.log("Mr. textNode", textNode);
         allParentElements.add(getRelevantParentElement(textNode));
     });
-    
+
     const startNode = textNodes[0];
     const endNode = textNodes[textNodes.length - 1];
     let usedHnids = [];
@@ -1664,7 +1697,6 @@ function createSpanWrapper(color, hnid) {
     const spanWrapper = document.createElement('span');
     spanWrapper.className = `highlight-span hl-${color}`;
     spanWrapper.dataset.hnid = hnid;
-    console.log(`Created span wrapper with hnid: ${hnid}, color: ${color}`); // Debug log
     return spanWrapper;
 }
 function deleteHighlight() {
@@ -1683,28 +1715,27 @@ function reapplyHighlightsNotes() {
         return;
     }
 
-    let bookHighlights = highlights[bookId];
+    Object.keys(highlights[bookId]).forEach(pid => {
+        // Destructure the cleanedHTML and highlightedHTML properties correctly
+        Object.keys(highlights[bookId][pid]).forEach(key => {
+            let { cleanedHTML, highlightedHTML } = highlights[bookId][pid][key];
+            console.log("highlights", highlights);
 
-    Object.keys(bookHighlights).forEach(key => {
-        let regex = new RegExp(key.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g');
-        let elements = document.body.querySelectorAll('*');
+            // Construct regex to match cleanedHTML
+            let regex = new RegExp(cleanedHTML.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g');
 
-        elements.forEach(element => {
-            if (element.innerHTML.match(regex)) {
-                const regexTimeStart = performance.now();
-
-                let highlightedHTML = bookHighlights[key].highlightedHTML;
-
-                // Add prefix back to hnid
-                bookHighlights[key].hnids.forEach(hnid => {
-                    highlightedHTML = highlightedHTML.replace(new RegExp(`data-hnid="${hnid}"`, 'g'), `data-hnid="${hnid}"`);
-                });
-
-                element.innerHTML = element.innerHTML.replace(regex, highlightedHTML);
-
-                const regexTimeEnd = performance.now();
-                console.log(`Time taken to replace content for '${key}': ${regexTimeEnd - regexTimeStart} milliseconds`);
+            // Get the pid div element
+            let pidElement = document.getElementById(pid);
+            if (!pidElement) {
+                console.warn(`Element with id '${pid}' not found.`);
+                return;
             }
+
+            // Replace content within pid div element
+            const regexTimeStart = performance.now();
+            pidElement.innerHTML = pidElement.innerHTML.replace(regex, highlightedHTML);
+            const regexTimeEnd = performance.now();
+            console.log(`Time taken to replace content for '${pid}': ${regexTimeEnd - regexTimeStart} milliseconds`);
         });
     });
 
@@ -1717,6 +1748,7 @@ function saveHighlightsToLocalStorage(rootElement) {
     if (!rootElement) return; // Ensure rootElement is valid
 
     let highlights = JSON.parse(localStorage.getItem('highlights')) || {};
+
     if (!highlights[bookId]) {
         highlights[bookId] = {};
     }
@@ -1738,22 +1770,34 @@ function saveHighlightsToLocalStorage(rootElement) {
         let cleanedHTML = cleanedElement.outerHTML;
         let originalHTML = element.outerHTML;
 
-        if (!highlights[bookId][cleanedHTML]) {
-            highlights[bookId][cleanedHTML] = {
+        // Find a suitable pid ancestor element for the current element
+        let pidElement = element.closest('[id^="p"]');
+        if (!pidElement) {
+            console.warn("No suitable pid ancestor found for the current element.");
+            return;
+        }
+        let pid = pidElement.id;
+
+        if (!highlights[bookId][pid]) {
+            highlights[bookId][pid] = {};
+        }
+
+        if (!highlights[bookId][pid][cleanedHTML]) {
+            highlights[bookId][pid][cleanedHTML] = {
                 hnids: [],
+                cleanedHTML: cleanedHTML,
                 highlightedHTML: originalHTML
             };
         } else {
-            highlights[bookId][cleanedHTML].highlightedHTML = originalHTML;
+            highlights[bookId][pid][cleanedHTML].highlightedHTML = originalHTML;
         }
 
         let currentHnids = Array.from(element.querySelectorAll('.highlight-span'))
             .map(span => span.getAttribute('data-hnid'));
-        
-        highlights[bookId][cleanedHTML].hnids = Array.from(new Set(currentHnids));
 
+        highlights[bookId][pid][cleanedHTML].hnids = Array.from(new Set(currentHnids));
         // Convert hnids to numbers
-        highlights[bookId][cleanedHTML].hnids = highlights[bookId][cleanedHTML].hnids.map(hnid => parseInt(hnid));
+        highlights[bookId][pid][cleanedHTML].hnids = highlights[bookId][pid][cleanedHTML].hnids.map(hnid => parseInt(hnid));
     }
 
     if (rootElement.querySelector('.highlight-span')) {
@@ -1762,7 +1806,6 @@ function saveHighlightsToLocalStorage(rootElement) {
 
     localStorage.setItem('highlights', JSON.stringify(highlights));
 }
-
 
 // Call reapplyHighlightsNotes on window load
 window.addEventListener('load', () => {
