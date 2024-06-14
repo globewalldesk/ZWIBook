@@ -1527,6 +1527,57 @@ function highlightSelection(color) {
     }
 }
 
+// Collects all text nodes within the range
+function collectTextNodes(range) {
+    const textNodes = [];
+    const startContainer = range.startContainer;
+    let endContainer = range.endContainer;
+
+    if (startContainer === endContainer && startContainer.nodeType === Node.TEXT_NODE) {
+        textNodes.push(startContainer);
+    } else {
+        let currentNode = startContainer;
+        let endNodeReached = false;
+
+        while (currentNode && !endNodeReached) {
+            if (currentNode.nodeType === Node.TEXT_NODE && currentNode.textContent.trim() !== '') {
+                textNodes.push(currentNode);
+            }
+            if (currentNode === endContainer) {
+                endNodeReached = true;
+            }
+            currentNode = nextNode(currentNode);
+        }
+    }
+
+    // Filter out text nodes that are only whitespace
+    return textNodes.filter(node => node.textContent.trim() !== '');
+}
+
+// Get the highest hnid value from the localStorage highlights
+function getHighestHnid() {
+    let highlights = JSON.parse(localStorage.getItem('highlights')) || {};
+    let highestHnid = -1;
+
+    Object.keys(highlights).forEach(bookId => {
+        Object.keys(highlights[bookId]).forEach(pid => {
+            let hnids = highlights[bookId][pid].hnids;
+            if (Array.isArray(hnids)) { // Check if hnids is an array
+                hnids.forEach(hnid => {
+                    let numericHnid = parseInt(hnid);
+                    if (!isNaN(numericHnid) && numericHnid > highestHnid) {
+                        highestHnid = numericHnid;
+                    }
+                });
+            } else {
+                console.warn("hnid is not an array");
+            }
+        });
+    });
+
+    return highestHnid;
+}
+
 // Adjust the range offsets to ensure whole words are highlighted
 function adjustRangeOffsets(range) {
     let startContainer = range.startContainer;
@@ -1617,33 +1668,6 @@ function findLastNonEmptyTextNode(node) {
     return null;
 }
 
-// Collects all text nodes within the range
-function collectTextNodes(range) {
-    const textNodes = [];
-    const startContainer = range.startContainer;
-    let endContainer = range.endContainer;
-
-    if (startContainer === endContainer && startContainer.nodeType === Node.TEXT_NODE) {
-        textNodes.push(startContainer);
-    } else {
-        let currentNode = startContainer;
-        let endNodeReached = false;
-
-        while (currentNode && !endNodeReached) {
-            if (currentNode.nodeType === Node.TEXT_NODE && currentNode.textContent.trim() !== '') {
-                textNodes.push(currentNode);
-            }
-            if (currentNode === endContainer) {
-                endNodeReached = true;
-            }
-            currentNode = nextNode(currentNode);
-        }
-    }
-
-    // Filter out text nodes that are only whitespace
-    return textNodes.filter(node => node.textContent.trim() !== '');
-}
-
 // Helper function to get the next node in the DOM
 function nextNode(node) {
     if (node.firstChild) return node.firstChild;
@@ -1655,54 +1679,7 @@ function nextNode(node) {
 }
 
 
-// Get the highest hnid value from the localStorage highlights
-function getHighestHnid() {
-    let highlights = JSON.parse(localStorage.getItem('highlights')) || {};
-    let highestHnid = -1;
-
-    Object.keys(highlights).forEach(bookId => {
-        Object.keys(highlights[bookId]).forEach(pid => {
-            let hnids = highlights[bookId][pid].hnids;
-            if (Array.isArray(hnids)) { // Check if hnids is an array
-                hnids.forEach(hnid => {
-                    let numericHnid = parseInt(hnid);
-                    if (!isNaN(numericHnid) && numericHnid > highestHnid) {
-                        highestHnid = numericHnid;
-                    }
-                });
-            } else {
-                console.warn("hnid is not an array");
-            }
-        });
-    });
-
-    return highestHnid;
-}
-
-// Get the relevant parent element from the given node
-function getRelevantParentElement(node) {
-    const relevantTags = ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol', 'pre', 'figcaption', 'aside', 'address', 'details', 'summary'];
-    while (node && node.nodeType !== Node.DOCUMENT_NODE) {
-        if (node.tagName && relevantTags.includes(node.tagName.toLowerCase())) {
-            return node;
-        }
-        node = node.parentNode;
-    }
-    console.warn("No relevant parent element found.");
-    return null;
-}
-
-// Strip highlight spans from the given element
-function stripHighlightSpans(element) {
-    let highlights = element.querySelectorAll('.highlight-span');
-    highlights.forEach(span => {
-        let parent = span.parentNode;
-        while (span.firstChild) {
-            parent.insertBefore(span.firstChild, span);
-        }
-        parent.removeChild(span);
-    });
-}
+// APPLY HIGHLIGHTS TO DOM (create highlight spans, etc.)
 
 // Highlights the text nodes within the given range with the specified color and hnid
 function highlightTextNodes(textNodes, range, color, hnid) {
@@ -1808,13 +1785,17 @@ function highlightMultipleTextNodes(textNodes, range, color, hnid) {
     });
 }
 
-// Wraps text nodes within an element with a span of the specified color
-function wrapTextNodes(nodes, color) {
-    for (let node of nodes) {
-        const wrapper = createSpanWrapper(color);
-        node.parentNode.replaceChild(wrapper, node);
-        wrapper.appendChild(node);
+// Get the relevant parent element from the given node
+function getRelevantParentElement(node) {
+    const relevantTags = ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol', 'pre', 'figcaption', 'aside', 'address', 'details', 'summary'];
+    while (node && node.nodeType !== Node.DOCUMENT_NODE) {
+        if (node.tagName && relevantTags.includes(node.tagName.toLowerCase())) {
+            return node;
+        }
+        node = node.parentNode;
     }
+    console.warn("No relevant parent element found.");
+    return null;
 }
 
 // Creates a span wrapper with the specified color and hnid
@@ -1830,7 +1811,8 @@ function deleteHighlight() {
     // Implement the deletion logic here
 }
 
-// REAPPLY HIGHLIGHTS
+
+// REAPPLY HIGHLIGHTS (apply saved highlights when loading page)
 
 // Function to reapply highlights and notes
 function reapplyHighlightsNotes() {
