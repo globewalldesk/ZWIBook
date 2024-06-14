@@ -1317,48 +1317,72 @@ document.addEventListener('wheel', (event) => {
 
 ///////////////////////////
 // HIGHLIGHT FUNCTIONALITY
+
+// Global variables for highlight functionality
 let ignoreNextClick = false;
 let selectedText = null;
 let highlightCounter = 0;
 
-// Ensure the modal is created and listeners are attached only once
-let hmodal = document.getElementById('highlightModal');
-if (!hmodal) {
-    hmodal = document.createElement('div');
-    hmodal.id = 'highlightModal';
-    hmodal.className = 'highlight-modal';
-    hmodal.innerHTML = `
-        <div class="highlight-modal-content">
-            <div class="color-selection">
-                <div class="color-circle" title="Yellow"></div>
-                <div class="color-circle" title="Pink"></div>
-                <div class="color-circle" title="Green"></div>
-                <div class="color-circle" title="Blue"></div>
-                <div class="color-circle" title="Purple"></div>
-                <div class="delete-circle" title="Delete Highlight"></div>
-                <div class="color-circle notes-placeholder" title="Add Note">+</div>
+// Initialize highlight modal and its event listeners
+function initializeHighlightModal() {
+    let hmodal = document.getElementById('highlightModal');
+    if (!hmodal) {
+        hmodal = document.createElement('div');
+        hmodal.id = 'highlightModal';
+        hmodal.className = 'highlight-modal';
+        hmodal.innerHTML = `
+            <div class="highlight-modal-content">
+                <div class="color-selection">
+                    <div class="color-circle" title="Yellow"></div>
+                    <div class="color-circle" title="Pink"></div>
+                    <div class="color-circle" title="Green"></div>
+                    <div class="color-circle" title="Blue"></div>
+                    <div class="color-circle" title="Purple"></div>
+                    <div class="delete-circle" title="Delete Highlight"></div>
+                    <div class="color-circle notes-placeholder" title="Add Note">+</div>
+                </div>
             </div>
-        </div>
-    `;
-    document.body.appendChild(hmodal);
+        `;
+        document.body.appendChild(hmodal);
 
-    document.querySelectorAll('.color-circle').forEach(circle => {
-        circle.addEventListener('click', function (event) {
-            event.stopPropagation(); // Ensure the click event is not interfered with
-            if (!this.classList.contains('notes-placeholder')) {
-                highlightSelection(this.title.toLowerCase());
-            }
+        // Attach event listeners to color circles
+        document.querySelectorAll('.color-circle').forEach(circle => {
+            circle.addEventListener('click', function (event) {
+                event.stopPropagation(); // Prevent interference with the click event
+                if (!this.classList.contains('notes-placeholder')) {
+                    highlightSelection(this.title.toLowerCase());
+                }
+            });
         });
-    });
 
-    document.querySelector('.delete-circle').addEventListener('click', function (event) {
-        event.stopPropagation();
-        deleteHighlight();
-    });
+        // Attach event listener to delete circle
+        document.querySelector('.delete-circle').addEventListener('click', function (event) {
+            event.stopPropagation();
+            deleteHighlight();
+        });
 
-    hmodal.style.pointerEvents = 'auto'; // Ensure the modal is interactive
+        hmodal.style.pointerEvents = 'auto'; // Make the modal interactive
+    }
 }
 
+// Show highlight modal near the text selection
+function showHighlightModal(selection) {
+    const range = selection.getRangeAt(0);
+    const rect = range.getBoundingClientRect();
+    const modalWidth = 300; // Assuming max-width is 300px
+    const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+    const leftPosition = (window.innerWidth - modalWidth - scrollbarWidth) / 2;
+
+    const hmodal = document.getElementById('highlightModal');
+    if (hmodal) {
+        hmodal.style.top = `${rect.bottom + window.scrollY}px`;
+        hmodal.style.left = `${leftPosition + window.scrollX}px`;
+        hmodal.style.display = 'block';
+        hmodal.focus();
+    }
+}
+
+// Event listener for mouseup to trigger highlight modal
 document.addEventListener('mouseup', function () {
     const selection = window.getSelection();
     if (selection.toString().length > 0) {
@@ -1369,6 +1393,10 @@ document.addEventListener('mouseup', function () {
     }
 });
 
+// Initialize the highlight modal when the script loads
+initializeHighlightModal();
+
+// Event listener to handle mousedown events
 document.addEventListener('mousedown', function (event) {
     const hmodal = document.getElementById('highlightModal');
     if (hmodal && hmodal.contains(event.target)) {
@@ -1376,20 +1404,23 @@ document.addEventListener('mousedown', function (event) {
     }
 });
 
+// Event listener to handle keydown events
 document.addEventListener('keydown', function (event) {
     const hmodal = document.getElementById('highlightModal');
     if (event.key === "Escape" && hmodal.style.display === 'block') {
-        hmodal.style.display = 'none';
+        hmodal.style.display = 'none'; // Hides the modal when the Escape key is pressed
     }
 });
 
+// Event listener to handle window resize events
 window.addEventListener('resize', function () {
     const hmodal = document.getElementById('highlightModal');
     if (hmodal) {
-        hmodal.style.display = 'none';
+        hmodal.style.display = 'none'; // Hides the modal on window resize
     }
 });
 
+// Event listener to handle selection changes
 document.addEventListener('selectionchange', function () {
     let hmodal = document.getElementById('highlightModal');
     if (!hmodal) {
@@ -1412,13 +1443,13 @@ document.addEventListener('selectionchange', function () {
         hmodal.style.top = `${rect.bottom + window.scrollY}px`;
         hmodal.style.left = `${leftPosition + window.scrollX}px`;
         hmodal.style.display = 'block';
-        hmodal.focus();
+        hmodal.focus(); // Display and focus the modal at the calculated position
     } else {
-        hmodal.style.display = 'none';
+        hmodal.style.display = 'none'; // Hide the modal if no valid range is selected
     }
 });
 
-
+// Function to show the highlight modal
 function showHighlightModal(selection) {
     const range = selection.getRangeAt(0);
     const rect = range.getBoundingClientRect();
@@ -1429,138 +1460,10 @@ function showHighlightModal(selection) {
     hmodal.style.top = `${rect.bottom + window.scrollY}px`;
     hmodal.style.left = `${leftPosition + window.scrollX}px`;
     hmodal.style.display = 'block';
-    hmodal.focus();
+    hmodal.focus(); // Display and focus the modal at the calculated position
 }
 
-function adjustRangeOffsets(range) {
-    let startContainer = range.startContainer;
-    let endContainer = range.endContainer;
-    let startOffset = range.startOffset;
-    let endOffset = range.endOffset;
-
-    // Adjust the start and end offsets to ensure whole words are highlighted
-    if (startContainer.nodeType === Node.TEXT_NODE) {
-        while (startOffset > 0 && !/\s/.test(startContainer.textContent[startOffset - 1])) {
-            startOffset--;
-        }
-    }
-
-    if (endContainer.nodeType === Node.TEXT_NODE) {
-        while (endOffset < endContainer.textContent.length && !/\s/.test(endContainer.textContent[endOffset])) {
-            endOffset++;
-        }
-    }
-
-    // Check if the endOffset is 0 and adjust the endContainer accordingly
-    if (endOffset === 0 && startContainer !== endContainer) {
-        // Navigate to the previous text node if endContainer is a whitespace text node
-        console.log("endContainer.textContent =", endContainer.textContent);
-        let newEndContainer = findPreviousTextNode(endContainer);
-
-        if (newEndContainer) {
-            endContainer = newEndContainer;
-            endOffset = endContainer.textContent.length;
-        } else {
-            console.error("Failed to adjust range: no valid previous text node found.");
-        }
-    }
-
-    try {
-        range.setStart(startContainer, startOffset);
-        range.setEnd(endContainer, endOffset);
-    } catch (error) {
-        console.error("Error setting range end:", error);
-    }
-
-    console.log("Adjusted Range Offsets: ", {
-        startContainer: startContainer.textContent,
-        startOffset: startOffset,
-        endContainer: endContainer ? endContainer.textContent : null,
-        endOffset: endOffset
-    });
-}
-
-function findPreviousTextNode(node) {
-    console.log("node:", node);
-    if (!node) return null;
-
-    // Check previous siblings
-    if (node.previousSibling) {
-        let prevSibling = node.previousSibling;
-        while (prevSibling) {
-            let lastNonEmptyTextNode = findLastNonEmptyTextNode(prevSibling);
-            if (lastNonEmptyTextNode) {
-                return lastNonEmptyTextNode;
-            }
-            prevSibling = prevSibling.previousSibling;
-        }
-    }
-
-    // Check parent nodes
-    return findPreviousTextNode(node.parentNode);
-}
-
-function findLastNonEmptyTextNode(node) {
-    if (node.nodeType === Node.TEXT_NODE && /\w/.test(node.textContent)) {
-        return node;
-    }
-
-    for (let i = node.childNodes.length - 1; i >= 0; i--) {
-        let childNode = node.childNodes[i];
-        let result = findLastNonEmptyTextNode(childNode);
-        if (result) {
-            return result;
-        }
-    }
-
-    return null;
-}
-
-function highlightSelection(color) {
-    const selection = window.getSelection();
-    if (selection.rangeCount > 0) {
-        let range = selection.getRangeAt(0);
-        
-        adjustRangeOffsets(range);
-
-        console.log("Later Range Offsets: ", {
-            startContainer: range.startContainer.textContent,
-            startOffset: range.startOffset,
-            endContainer: range.endContainer.textContent,
-            endOffset: range.endOffset
-        });
-
-        const textNodes = collectTextNodes(range);
-        let highestHnid = getHighestHnid(); // Get the highest hnid
-        let hnid = (highestHnid + 1).toString(); // Increment the highest hnid
-
-        // console.log("Text Nodes:", textNodes.map(node => node.textContent));
-
-
-        
-
-
-        // Process all text nodes within the range, regardless of their parent elements
-        highlightTextNodes(textNodes, range, color, hnid);
-
-        selection.removeAllRanges();
-        const hmodal = document.getElementById('highlightModal');
-        if (hmodal) {
-            hmodal.style.display = 'none';
-        }
-    }
-}
-
-function getPreviousTextNode(node) {
-    while (node && node.previousSibling) {
-        node = node.previousSibling;
-        if (node.nodeType === Node.TEXT_NODE && node.textContent.trim().length > 0) {
-            return node;
-        }
-    }
-    return null;
-}
-
+// Handle changes to the selection and display the highlight modal
 function handleSelectionChange() {
     let hmodal = document.getElementById('highlightModal');
     if (!hmodal) {
@@ -1589,170 +1492,132 @@ function handleSelectionChange() {
     }
 }
 
-function getHighestHnid() {
-    let highlights = JSON.parse(localStorage.getItem('highlights')) || {};
-    let highestHnid = -1;
 
-    Object.keys(highlights).forEach(bookId => {
-        Object.keys(highlights[bookId]).forEach(pid => {
-            let hnids = highlights[bookId][pid].hnids;
-            if (Array.isArray(hnids)) { // Check if hnids is an array
-                hnids.forEach(hnid => {
-                    let numericHnid = parseInt(hnid);
-                    if (!isNaN(numericHnid) && numericHnid > highestHnid) {
-                        highestHnid = numericHnid;
-                    }
-                });
-            } else {
-                console.warn("hnid is not an array");
-            }
+
+// HIGHLIGHT SELECTION AND ADJUSTMENT
+
+// Highlight the selected text with the specified color
+function highlightSelection(color) {
+    const selection = window.getSelection();
+    if (selection.rangeCount > 0) {
+        let range = selection.getRangeAt(0);
+        
+        adjustRangeOffsets(range);
+
+        console.log("Later Range Offsets: ", {
+            startContainer: range.startContainer.textContent,
+            startOffset: range.startOffset,
+            endContainer: range.endContainer.textContent,
+            endOffset: range.endOffset
         });
-    });
 
-    return highestHnid;
+        const textNodes = collectTextNodes(range);
+        let highestHnid = getHighestHnid(); // Get the highest hnid
+        let hnid = (highestHnid + 1).toString(); // Increment the highest hnid
+
+        // Process all text nodes within the range, regardless of their parent elements
+        highlightTextNodes(textNodes, range, color, hnid);
+
+        // Clear the selection and hide the modal
+        selection.removeAllRanges();
+        const hmodal = document.getElementById('highlightModal');
+        if (hmodal) {
+            hmodal.style.display = 'none';
+        }
+    }
 }
 
-function getRelevantParentElement(node) {
-    const relevantTags = ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol', 'pre', 'figcaption', 'aside', 'address', 'details', 'summary'];
-    while (node && node.nodeType !== Node.DOCUMENT_NODE) {
-        if (node.tagName && relevantTags.includes(node.tagName.toLowerCase())) {
-            return node;
+// Adjust the range offsets to ensure whole words are highlighted
+function adjustRangeOffsets(range) {
+    let startContainer = range.startContainer;
+    let endContainer = range.endContainer;
+    let startOffset = range.startOffset;
+    let endOffset = range.endOffset;
+
+    // Adjust the start offset to include whole words
+    if (startContainer.nodeType === Node.TEXT_NODE) {
+        while (startOffset > 0 && !/\s/.test(startContainer.textContent[startOffset - 1])) {
+            startOffset--;
         }
-        node = node.parentNode;
     }
-    console.warn("No relevant parent element found.");
+
+    // Adjust the end offset to include whole words
+    if (endContainer.nodeType === Node.TEXT_NODE) {
+        while (endOffset < endContainer.textContent.length && !/\s/.test(endContainer.textContent[endOffset])) {
+            endOffset++;
+        }
+    }
+
+    // Check if the endOffset is 0 and adjust the endContainer accordingly
+    if (endOffset === 0 && startContainer !== endContainer) {
+        // Navigate to the previous text node if endContainer is a whitespace text node
+        console.log("endContainer.textContent =", endContainer.textContent);
+        let newEndContainer = findPreviousTextNode(endContainer);
+
+        if (newEndContainer) {
+            endContainer = newEndContainer;
+            endOffset = endContainer.textContent.length;
+        } else {
+            console.error("Failed to adjust range: no valid previous text node found.");
+        }
+    }
+
+    // Set the adjusted range
+    try {
+        range.setStart(startContainer, startOffset);
+        range.setEnd(endContainer, endOffset);
+    } catch (error) {
+        console.error("Error setting range end:", error);
+    }
+
+    console.log("Adjusted Range Offsets: ", {
+        startContainer: startContainer.textContent,
+        startOffset: startOffset,
+        endContainer: endContainer ? endContainer.textContent : null,
+        endOffset: endOffset
+    });
+}
+
+// Find the previous non-empty text node from the given node
+function findPreviousTextNode(node) {
+    console.log("node:", node);
+    if (!node) return null;
+
+    // Check previous siblings
+    if (node.previousSibling) {
+        let prevSibling = node.previousSibling;
+        while (prevSibling) {
+            let lastNonEmptyTextNode = findLastNonEmptyTextNode(prevSibling);
+            if (lastNonEmptyTextNode) {
+                return lastNonEmptyTextNode;
+            }
+            prevSibling = prevSibling.previousSibling;
+        }
+    }
+
+    // Check parent nodes
+    return findPreviousTextNode(node.parentNode);
+}
+
+// Find the last non-empty text node within a given node
+function findLastNonEmptyTextNode(node) {
+    if (node.nodeType === Node.TEXT_NODE && /\w/.test(node.textContent)) {
+        return node;
+    }
+
+    // Recursively search child nodes in reverse order
+    for (let i = node.childNodes.length - 1; i >= 0; i--) {
+        let childNode = node.childNodes[i];
+        let result = findLastNonEmptyTextNode(childNode);
+        if (result) {
+            return result;
+        }
+    }
+
     return null;
 }
 
-function stripHighlightSpans(element) {
-    let highlights = element.querySelectorAll('.highlight-span');
-    highlights.forEach(span => {
-        let parent = span.parentNode;
-        while (span.firstChild) {
-            parent.insertBefore(span.firstChild, span);
-        }
-        parent.removeChild(span);
-    });
-}
-
-function highlightTextNodes(textNodes, range, color, hnid) {
-    // console.log("Highlighting text nodes:", textNodes.map(node => node.textContent));
-    if (textNodes.length === 1) {
-        highlightSingleTextNode(textNodes[0], range, color, hnid);
-    } else if (textNodes.length > 1) {
-        highlightMultipleTextNodes(textNodes, range, color, hnid);
-    }
-}
-
-function highlightSingleTextNode(node, range, color, hnid) {
-    // console.log("Highlighting single text node:", node.textContent); // Debug log
-    const text = node.textContent;
-
-    // Verify range start and end offsets
-    // console.log("Range Start Offset:", range.startOffset);
-    // console.log("range.endContainer: ", range.endContainer);
-    // console.log("Range End Offset:", range.endOffset);
-
-    const before = text.slice(0, range.startOffset);
-    const highlight = text.slice(range.startOffset, range.endOffset);
-    const after = text.slice(range.endOffset);
-
-    // console.log("Before Text:", before);
-    // console.log("Highlight Text:", highlight);
-    // console.log("After Text:", after);
-
-    const wrapper = createSpanWrapper(color, hnid);
-
-    // Special handling for edge cases
-    if (highlight === '' && range.startOffset === 0 && range.endOffset === 0) {
-        wrapper.textContent = text;
-    } else {
-        wrapper.textContent = highlight;
-    }
-
-    const parent = node.parentNode;
-    const referenceNode = node.nextSibling;
-
-    parent.removeChild(node);
-    if (before) {
-        parent.insertBefore(document.createTextNode(before), referenceNode);
-    }
-    parent.insertBefore(wrapper, referenceNode);
-    if (after && highlight !== '') {
-        parent.insertBefore(document.createTextNode(after), referenceNode);
-    }
-
-    // console.log("Final Highlight Wrapper:", wrapper.outerHTML);
-
-    // Save to localStorage
-    saveHighlightsToLocalStorage(parent);
-}
-
-function highlightMultipleTextNodes(textNodes, range, color, hnid) {
-    let allParentElements = new Set();
-    textNodes.forEach(textNode => {
-        allParentElements.add(getRelevantParentElement(textNode));
-    });
-
-    const startNode = textNodes[0];
-    const endNode = textNodes[textNodes.length - 1];
-    let usedHnids = [];
-
-    const startText = startNode.textContent;
-    const startBefore = startText.slice(0, range.startOffset);
-    const startHighlight = startText.slice(range.startOffset);
-
-    let endText = endNode.textContent;
-    let endHighlight, endAfter;
-
-    // If the end offset is at the very end of the end node, include the entire node
-    if (range.endOffset >= endNode.textContent.length) {
-        endHighlight = endText;
-        endAfter = '';
-    } else {
-        endHighlight = endText.slice(0, range.endOffset);
-        endAfter = endText.slice(range.endOffset);
-    }
-
-    // console.log(`Start Highlight: "${startHighlight}", End Highlight: "${endHighlight}"`);
-
-    const startWrapper = createSpanWrapper(color, hnid);
-    startWrapper.textContent = startHighlight;
-
-    const endWrapper = createSpanWrapper(color, hnid);
-    endWrapper.textContent = endHighlight;
-
-    const startParent = startNode.parentNode;
-    const startAfterNode = document.createTextNode(startBefore);
-    startParent.replaceChild(startAfterNode, startNode);
-    startParent.insertBefore(startWrapper, startAfterNode.nextSibling);
-    usedHnids.push(hnid);
-
-    const endParent = endNode.parentNode;
-    const endAfterNode = document.createTextNode(endAfter);
-    endParent.replaceChild(endAfterNode, endNode);
-    endParent.insertBefore(endWrapper, endAfterNode);
-    usedHnids.push(hnid);
-
-    let interveningNodes;
-    if (textNodes.length > 2) {
-        interveningNodes = textNodes.slice(1, -1);
-        interveningNodes.forEach(node => {
-            if (node.textContent.trim() !== '') {
-                const wrapper = createSpanWrapper(color, hnid);
-                wrapper.textContent = node.textContent;
-                node.parentNode.replaceChild(wrapper, node);
-                usedHnids.push(hnid);
-            }
-        });
-    }
-
-    allParentElements.forEach(parentElement => {
-        saveHighlightsToLocalStorage(parentElement);
-    });
-}
-
-// Function to manually collect text nodes within the range
+// Collects all text nodes within the range
 function collectTextNodes(range) {
     const textNodes = [];
     const startContainer = range.startContainer;
@@ -1789,7 +1654,161 @@ function nextNode(node) {
     return null;
 }
 
-// Recursive function to wrap text nodes within an element
+
+// Get the highest hnid value from the localStorage highlights
+function getHighestHnid() {
+    let highlights = JSON.parse(localStorage.getItem('highlights')) || {};
+    let highestHnid = -1;
+
+    Object.keys(highlights).forEach(bookId => {
+        Object.keys(highlights[bookId]).forEach(pid => {
+            let hnids = highlights[bookId][pid].hnids;
+            if (Array.isArray(hnids)) { // Check if hnids is an array
+                hnids.forEach(hnid => {
+                    let numericHnid = parseInt(hnid);
+                    if (!isNaN(numericHnid) && numericHnid > highestHnid) {
+                        highestHnid = numericHnid;
+                    }
+                });
+            } else {
+                console.warn("hnid is not an array");
+            }
+        });
+    });
+
+    return highestHnid;
+}
+
+// Get the relevant parent element from the given node
+function getRelevantParentElement(node) {
+    const relevantTags = ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol', 'pre', 'figcaption', 'aside', 'address', 'details', 'summary'];
+    while (node && node.nodeType !== Node.DOCUMENT_NODE) {
+        if (node.tagName && relevantTags.includes(node.tagName.toLowerCase())) {
+            return node;
+        }
+        node = node.parentNode;
+    }
+    console.warn("No relevant parent element found.");
+    return null;
+}
+
+// Strip highlight spans from the given element
+function stripHighlightSpans(element) {
+    let highlights = element.querySelectorAll('.highlight-span');
+    highlights.forEach(span => {
+        let parent = span.parentNode;
+        while (span.firstChild) {
+            parent.insertBefore(span.firstChild, span);
+        }
+        parent.removeChild(span);
+    });
+}
+
+// Highlights the text nodes within the given range with the specified color and hnid
+function highlightTextNodes(textNodes, range, color, hnid) {
+    if (textNodes.length === 1) {
+        highlightSingleTextNode(textNodes[0], range, color, hnid);
+    } else if (textNodes.length > 1) {
+        highlightMultipleTextNodes(textNodes, range, color, hnid);
+    }
+}
+
+// Highlights a single text node within the range with the specified color and hnid
+function highlightSingleTextNode(node, range, color, hnid) {
+    const text = node.textContent;
+
+    const before = text.slice(0, range.startOffset);
+    const highlight = text.slice(range.startOffset, range.endOffset);
+    const after = text.slice(range.endOffset);
+
+    const wrapper = createSpanWrapper(color, hnid);
+
+    // Special handling for edge cases
+    if (highlight === '' && range.startOffset === 0 && range.endOffset === 0) {
+        wrapper.textContent = text;
+    } else {
+        wrapper.textContent = highlight;
+    }
+
+    const parent = node.parentNode;
+    const referenceNode = node.nextSibling;
+
+    parent.removeChild(node);
+    if (before) {
+        parent.insertBefore(document.createTextNode(before), referenceNode);
+    }
+    parent.insertBefore(wrapper, referenceNode);
+    if (after && highlight !== '') {
+        parent.insertBefore(document.createTextNode(after), referenceNode);
+    }
+
+    // Save to localStorage
+    saveHighlightsToLocalStorage(parent);
+}
+
+// Highlights multiple text nodes within the range with the specified color and hnid
+function highlightMultipleTextNodes(textNodes, range, color, hnid) {
+    let allParentElements = new Set();
+    textNodes.forEach(textNode => {
+        allParentElements.add(getRelevantParentElement(textNode));
+    });
+
+    const startNode = textNodes[0];
+    const endNode = textNodes[textNodes.length - 1];
+    let usedHnids = [];
+
+    const startText = startNode.textContent;
+    const startBefore = startText.slice(0, range.startOffset);
+    const startHighlight = startText.slice(range.startOffset);
+
+    let endText = endNode.textContent;
+    let endHighlight, endAfter;
+
+    // If the end offset is at the very end of the end node, include the entire node
+    if (range.endOffset >= endNode.textContent.length) {
+        endHighlight = endText;
+        endAfter = '';
+    } else {
+        endHighlight = endText.slice(0, range.endOffset);
+        endAfter = endText.slice(range.endOffset);
+    }
+
+    const startWrapper = createSpanWrapper(color, hnid);
+    startWrapper.textContent = startHighlight;
+
+    const endWrapper = createSpanWrapper(color, hnid);
+    endWrapper.textContent = endHighlight;
+
+    const startParent = startNode.parentNode;
+    const startAfterNode = document.createTextNode(startBefore);
+    startParent.replaceChild(startAfterNode, startNode);
+    startParent.insertBefore(startWrapper, startAfterNode.nextSibling);
+    usedHnids.push(hnid);
+
+    const endParent = endNode.parentNode;
+    const endAfterNode = document.createTextNode(endAfter);
+    endParent.replaceChild(endAfterNode, endNode);
+    endParent.insertBefore(endWrapper, endAfterNode);
+    usedHnids.push(hnid);
+
+    if (textNodes.length > 2) {
+        const interveningNodes = textNodes.slice(1, -1);
+        interveningNodes.forEach(node => {
+            if (node.textContent.trim() !== '') {
+                const wrapper = createSpanWrapper(color, hnid);
+                wrapper.textContent = node.textContent;
+                node.parentNode.replaceChild(wrapper, node);
+                usedHnids.push(hnid);
+            }
+        });
+    }
+
+    allParentElements.forEach(parentElement => {
+        saveHighlightsToLocalStorage(parentElement);
+    });
+}
+
+// Wraps text nodes within an element with a span of the specified color
 function wrapTextNodes(nodes, color) {
     for (let node of nodes) {
         const wrapper = createSpanWrapper(color);
@@ -1798,13 +1817,15 @@ function wrapTextNodes(nodes, color) {
     }
 }
 
-// Update createSpanWrapper to apply color classes
+// Creates a span wrapper with the specified color and hnid
 function createSpanWrapper(color, hnid) {
     const spanWrapper = document.createElement('span');
     spanWrapper.className = `highlight-span hl-${color}`;
     spanWrapper.dataset.hnid = hnid;
     return spanWrapper;
 }
+
+// Function to delete a highlight (to be implemented)
 function deleteHighlight() {
     // Implement the deletion logic here
 }
@@ -1814,8 +1835,8 @@ function deleteHighlight() {
 // Function to reapply highlights and notes
 function reapplyHighlightsNotes() {
     const startTime = performance.now();
-
     let highlights = JSON.parse(localStorage.getItem('highlights')) || {};
+
     if (!highlights[bookId]) {
         console.warn("No highlights found for this book.");
         return;
@@ -1835,7 +1856,6 @@ function reapplyHighlightsNotes() {
         }
 
         // Replace content within pid div element
-        const regexTimeStart = performance.now();
         pidElement.innerHTML = pidElement.innerHTML.replace(regex, highlightedHTML);
 
         // Re-add onclick functionality to bookmark-icon in the current pidElement
@@ -1844,8 +1864,6 @@ function reapplyHighlightsNotes() {
             const paragraphIndex = bookmarkIcon.id.split('-')[1];
             bookmarkIcon.setAttribute('onclick', `toggleBookmark(${paragraphIndex})`);
         }
-
-        const regexTimeEnd = performance.now();
     });
 
     const endTime = performance.now();
@@ -1861,6 +1879,7 @@ function saveHighlightsToLocalStorage(rootElement) {
         highlights[bookId] = {};
     }
 
+    // Strip highlight spans from the element
     function stripHighlightSpans(element) {
         let highlightSpans = element.querySelectorAll('.highlight-span');
         highlightSpans.forEach(span => {
@@ -1872,6 +1891,7 @@ function saveHighlightsToLocalStorage(rootElement) {
         });
     }
 
+    // Process the element and update highlights
     function processElement(element) {
         let cleanedElement = element.cloneNode(true);
         stripHighlightSpans(cleanedElement);
@@ -1911,7 +1931,6 @@ function saveHighlightsToLocalStorage(rootElement) {
 
     localStorage.setItem('highlights', JSON.stringify(highlights));
 }
-
 
 // Call reapplyHighlightsNotes on window load
 window.addEventListener('load', () => {
