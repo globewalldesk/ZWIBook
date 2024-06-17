@@ -1425,7 +1425,7 @@ h2 .inline-button img {
     margin-top: 5px; /* Adjust spacing as needed */
 }
 
-
+/* //////////////// */
 /* HIGHLIGHT DESIGN */
 #highlightModal {
     margin-top: 5px;
@@ -1436,7 +1436,7 @@ h2 .inline-button img {
     position: absolute;
     max-width: 300px;
     overflow: hidden;
-    z-index: 999;
+    z-index: 9999;
     display: none; /* Initially hidden */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
@@ -1472,7 +1472,7 @@ h2 .inline-button img {
     border: 1px solid white;
 }
 
-/* CSS for Delete Circle */
+/* Delete Circle */
 .delete-circle {
     width: 27px;
     height: 27px;
@@ -1553,6 +1553,8 @@ h2 .inline-button img {
     max-height: 800px; /* Set a maximum height */
     overflow-y: auto; /* Enable vertical scrolling if content exceeds max height */
     margin-top: 10px; /* Add some space above the note input */
+    pointer-events: auto; /* Ensure textarea is interactable */
+    z-index: 10000; /* Ensure it is above other elements */
 }
 
 .note-textarea {
@@ -1563,6 +1565,7 @@ h2 .inline-button img {
     padding: 10px;
     font-size: 16px;
     resize: none; /* Prevent manual resizing */
+    z-index: 10000;
 }
 
 /* END HIGHLIGHT DESIGN */

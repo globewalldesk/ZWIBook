@@ -1322,6 +1322,7 @@ document.addEventListener('wheel', (event) => {
 let ignoreNextClick = false;
 let selectedText = null;
 let highlightCounter = 0;
+let defaultNoteOpen = true;
 
 // Initialize highlight modal and its event listeners
 function initializeHighlightAndNoteModal() {
@@ -1341,7 +1342,7 @@ function initializeHighlightAndNoteModal() {
                     <div class="color-circle delete-circle" title="Delete Highlight"></div>
                     <div class="color-circle edit-note" title="Edit Note"><img src="images/icons/edit-note.svg"></div>
                 </div>
-                <textarea class="note-input"></textarea>
+                <textarea class="note-input" style="display: none;"></textarea>
             </div>
         `;
         document.body.appendChild(hmodal);
@@ -1372,6 +1373,7 @@ function showHighlightModal(selection) {
 
     const hmodal = document.getElementById('highlightModal');
     if (hmodal) {
+        console.log("OPENING HIGHLIGHT MODAL");
         hmodal.style.top = `${rect.bottom + window.scrollY}px`;
         hmodal.style.left = `${leftPosition + window.scrollX}px`;
         hmodal.style.display = 'block';
@@ -1382,29 +1384,46 @@ function showHighlightModal(selection) {
         const hnid = selection.anchorNode.parentNode.dataset.hnid; // Assuming hnid is set in the parent node's dataset
         const noteInput = hmodal.querySelector('.note-input');
         if (notes[bookId] && notes[bookId].hnids[hnid]) {
+            defaultNoteOpen = true;
             noteInput.style.display = 'block';
             noteInput.value = notes[bookId].hnids[hnid];
         } else {
-            noteInput.style.display = 'none'; // Always display for now
+            defaultNoteOpen = false;
+            noteInput.style.display = 'none';
             noteInput.value = '';
         }
+
+        // Explicitly focus the textarea
+        noteInput.focus();
+
+        // Add log to track focus
+        noteInput.addEventListener('focus', () => {
+            console.log('Note input focused');
+        });
+
+        logFocusedElement(); // Log the focused element
     }
 }
 
-// BEGIN TEMPORARY
-// Add temporary test data for notes to localStorage
-let notes = JSON.parse(localStorage.getItem('notes')) || {};
-if (!notes[bookId]) {
-    notes[bookId] = { hnids: {} };
+// Log the currently focused element
+function logFocusedElement() {
+    let focusedElement = document.activeElement;
+    if (focusedElement) {
+        console.log('Focused element:', focusedElement);
+        console.log('Tag name:', focusedElement.tagName);
+        console.log('ID:', focusedElement.id);
+        console.log('Class:', focusedElement.className);
+        console.log('Attributes:', focusedElement.attributes);
+        console.log('Value:', focusedElement.value); // For input elements
+        // Add more properties as needed based on the type of element
+    } else {
+        console.log('No element currently has focus.');
+    }
 }
-notes[bookId].hnids[0] = "I am a note."; // Temporary note data for testing
-localStorage.setItem('notes', JSON.stringify(notes));
-// END TEMPORARY
 
 function toggleNoteInput() {
     const noteInput = document.querySelector('.note-input');
     if (noteInput) {
-        userToggledNoteInput = true; // Set the flag indicating the user has toggled the note input
         noteInput.style.display = noteInput.style.display === 'none' ? 'block' : 'none';
     }
 }
@@ -1416,14 +1435,17 @@ initializeHighlightAndNoteModal();
 document.addEventListener('keydown', function (event) {
     const hmodal = document.getElementById('highlightModal');
     if (event.key === "Escape" && hmodal.style.display === 'block') {
+        logFocusedElement();
         hmodal.style.display = 'none'; // Hides the modal when the Escape key is pressed
     }
 });
-
 // Event listener for mouseup to trigger highlight modal
-document.addEventListener('mouseup', function () {
+document.addEventListener('mouseup', function (event) {
     const selection = window.getSelection();
-    if (selection.toString().length > 0) {
+    const hmodal = document.getElementById('highlightModal');
+
+    // Check if the modal is already displayed or if the selection is empty
+    if (selection.toString().length > 0 && hmodal.style.display === 'none') {
         selectedText = selection.getRangeAt(0).cloneRange(); // Preserve the selection
         showHighlightModal(selection);
         ignoreNextClick = true; // Set flag to ignore the next click
@@ -1438,6 +1460,8 @@ document.addEventListener('mousedown', function (event) {
         hmodal.style.pointerEvents = 'none'; // Disable interaction with the modal during selection
         if (hmodal.contains(event.target)) {
             event.preventDefault(); // Prevents the text from being unselected when clicking inside the modal
+            hmodal.focus(); // Ensure the modal itself gains focus
+            logFocusedElement(); // Log the focused element
         }
     }
 });
