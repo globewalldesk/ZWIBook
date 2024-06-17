@@ -1324,7 +1324,7 @@ let selectedText = null;
 let highlightCounter = 0;
 
 // Initialize highlight modal and its event listeners
-function initializeHighlightModal() {
+function initializeHighlightAndNoteModal() {
     let hmodal = document.getElementById('highlightModal');
     if (!hmodal) {
         hmodal = document.createElement('div');
@@ -1338,9 +1338,10 @@ function initializeHighlightModal() {
                     <div class="color-circle" title="Green"></div>
                     <div class="color-circle" title="Blue"></div>
                     <div class="color-circle" title="Purple"></div>
-                    <div class="delete-circle" title="Delete Highlight"></div>
-                    <div class="color-circle notes-placeholder" title="Add Note">+</div>
+                    <div class="color-circle delete-circle" title="Delete Highlight"></div>
+                    <div class="color-circle edit-note" title="Edit Note"><img src="images/icons/edit-note.svg"></div>
                 </div>
+                <textarea class="note-input"></textarea>
             </div>
         `;
         document.body.appendChild(hmodal);
@@ -1349,16 +1350,12 @@ function initializeHighlightModal() {
         document.querySelectorAll('.color-circle').forEach(circle => {
             circle.addEventListener('click', function (event) {
                 event.stopPropagation(); // Prevent interference with the click event
-                if (!this.classList.contains('notes-placeholder')) {
+                if (!this.classList.contains('edit-note')) {
                     highlightSelection(this.title.toLowerCase());
+                } else {
+                    toggleNoteInput();
                 }
             });
-        });
-
-        // Attach event listener to delete circle
-        document.querySelector('.delete-circle').addEventListener('click', function (event) {
-            event.stopPropagation();
-            deleteHighlight();
         });
 
         hmodal.style.pointerEvents = 'auto'; // Make the modal interactive
@@ -1379,8 +1376,49 @@ function showHighlightModal(selection) {
         hmodal.style.left = `${leftPosition + window.scrollX}px`;
         hmodal.style.display = 'block';
         hmodal.focus();
+
+        // Check for existing notes for the current hnid
+        const notes = JSON.parse(localStorage.getItem('notes')) || {};
+        const hnid = selection.anchorNode.parentNode.dataset.hnid; // Assuming hnid is set in the parent node's dataset
+        const noteInput = hmodal.querySelector('.note-input');
+        if (notes[bookId] && notes[bookId].hnids[hnid]) {
+            noteInput.style.display = 'block';
+            noteInput.value = notes[bookId].hnids[hnid];
+        } else {
+            noteInput.style.display = 'none'; // Always display for now
+            noteInput.value = '';
+        }
     }
 }
+
+// BEGIN TEMPORARY
+// Add temporary test data for notes to localStorage
+let notes = JSON.parse(localStorage.getItem('notes')) || {};
+if (!notes[bookId]) {
+    notes[bookId] = { hnids: {} };
+}
+notes[bookId].hnids[0] = "I am a note."; // Temporary note data for testing
+localStorage.setItem('notes', JSON.stringify(notes));
+// END TEMPORARY
+
+function toggleNoteInput() {
+    const noteInput = document.querySelector('.note-input');
+    if (noteInput) {
+        userToggledNoteInput = true; // Set the flag indicating the user has toggled the note input
+        noteInput.style.display = noteInput.style.display === 'none' ? 'block' : 'none';
+    }
+}
+
+// Initialize the highlight modal when the script loads
+initializeHighlightAndNoteModal();
+
+// Event listener to handle keydown events
+document.addEventListener('keydown', function (event) {
+    const hmodal = document.getElementById('highlightModal');
+    if (event.key === "Escape" && hmodal.style.display === 'block') {
+        hmodal.style.display = 'none'; // Hides the modal when the Escape key is pressed
+    }
+});
 
 // Event listener for mouseup to trigger highlight modal
 document.addEventListener('mouseup', function () {
@@ -1393,30 +1431,44 @@ document.addEventListener('mouseup', function () {
     }
 });
 
-// Initialize the highlight modal when the script loads
-initializeHighlightModal();
-
 // Event listener to handle mousedown events
 document.addEventListener('mousedown', function (event) {
     const hmodal = document.getElementById('highlightModal');
-    if (hmodal && hmodal.contains(event.target)) {
-        event.preventDefault(); // Prevents the text from being unselected when clicking inside the modal
-    }
-});
-
-// Event listener to handle keydown events
-document.addEventListener('keydown', function (event) {
-    const hmodal = document.getElementById('highlightModal');
-    if (event.key === "Escape" && hmodal.style.display === 'block') {
-        hmodal.style.display = 'none'; // Hides the modal when the Escape key is pressed
-    }
-});
-
-// Event listener to handle window resize events
-window.addEventListener('resize', function () {
-    const hmodal = document.getElementById('highlightModal');
     if (hmodal) {
-        hmodal.style.display = 'none'; // Hides the modal on window resize
+        hmodal.style.pointerEvents = 'none'; // Disable interaction with the modal during selection
+        if (hmodal.contains(event.target)) {
+            event.preventDefault(); // Prevents the text from being unselected when clicking inside the modal
+        }
+    }
+});
+
+// Make highlights clickable; listener added to elements with the class 'highlight-span'.
+// For deletion and notes.
+document.addEventListener('click', function(event) {
+    const highlightSpan = event.target;
+
+    // Ensure the clicked element has the class 'highlight-span'.
+    if (highlightSpan.classList.contains('highlight-span')) {
+        // Get the text nodes within the highlight span
+        const textNodes = [];
+        const walker = document.createTreeWalker(highlightSpan, NodeFilter.SHOW_TEXT, null, false);
+        while (walker.nextNode()) {
+            textNodes.push(walker.currentNode);
+        }
+
+        if (textNodes.length > 0) {
+            const range = document.createRange();
+            range.setStart(textNodes[0], 0);
+            range.setEnd(textNodes[textNodes.length - 1], textNodes[textNodes.length - 1].textContent.length);
+
+            // Use window.getSelection to get the current selection and set the new range.
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+
+            // Call showHighlightModal with the new selection to display the modal.
+            showHighlightModal(selection);
+        }
     }
 });
 
@@ -1449,19 +1501,13 @@ document.addEventListener('selectionchange', function () {
     }
 });
 
-// Function to show the highlight modal
-function showHighlightModal(selection) {
-    const range = selection.getRangeAt(0);
-    const rect = range.getBoundingClientRect();
-    const modalWidth = 300; // Assuming max-width is 300px
-    const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
-    const leftPosition = (window.innerWidth - modalWidth - scrollbarWidth) / 2;
-
-    hmodal.style.top = `${rect.bottom + window.scrollY}px`;
-    hmodal.style.left = `${leftPosition + window.scrollX}px`;
-    hmodal.style.display = 'block';
-    hmodal.focus(); // Display and focus the modal at the calculated position
-}
+// Event listener to handle window resize events
+window.addEventListener('resize', function () {
+    const hmodal = document.getElementById('highlightModal');
+    if (hmodal) {
+        hmodal.style.display = 'none'; // Hides the modal on window resize
+    }
+});
 
 // Handle changes to the selection and display the highlight modal
 function handleSelectionChange() {
@@ -1493,7 +1539,6 @@ function handleSelectionChange() {
 }
 
 
-
 // HIGHLIGHT SELECTION AND ADJUSTMENT
 
 // Highlight the selected text with the specified color
@@ -1501,15 +1546,8 @@ function highlightSelection(color) {
     const selection = window.getSelection();
     if (selection.rangeCount > 0) {
         let range = selection.getRangeAt(0);
-        
-        adjustRangeOffsets(range);
 
-        console.log("Later Range Offsets: ", {
-            startContainer: range.startContainer.textContent,
-            startOffset: range.startOffset,
-            endContainer: range.endContainer.textContent,
-            endOffset: range.endOffset
-        });
+        adjustRangeOffsets(range);
 
         const textNodes = collectTextNodes(range);
         let highestHnid = getHighestHnid(); // Get the highest hnid
@@ -1524,7 +1562,83 @@ function highlightSelection(color) {
         if (hmodal) {
             hmodal.style.display = 'none';
         }
+
+        handleHighlightMerges(hnid, color);
     }
+}
+
+function handleHighlightMerges(hnid, color) {
+    // Query the DOM for all spans with the current hnid
+    let matchingSpans = document.querySelectorAll(`.highlight-span[data-hnid='${hnid}']`);
+
+    // To track affected parent elements
+    let affectedParents = new Set();
+
+    // Discover and log the enclosing span for each matching span
+    matchingSpans.forEach(span => {
+        // Initialize the enclosingSpan variable
+        let enclosingSpan = null;
+
+        // Traverse up the DOM to find the enclosing .highlight-span
+        let parentElement = span.parentNode;
+        while (parentElement) {
+            if (parentElement.classList && parentElement.classList.contains('highlight-span')) {
+                enclosingSpan = parentElement;
+                break;
+            }
+            parentElement = parentElement.parentNode;
+        }
+
+        // Identify and add the saveable parent element for the overlapping span
+        let overlappingParent = getRelevantParentElement(span);
+        if (overlappingParent) {
+            affectedParents.add(overlappingParent);
+        }
+
+        // If an enclosing span is found, find all adjacent spans with the same hnid
+        if (enclosingSpan) {
+            let enclosingHnid = enclosingSpan.dataset.hnid;
+
+            // Log the old hnid (the hnid of the enclosing span that will be replaced)
+
+            // Initialize an array to store all confederate spans
+            let confederateSpans = [enclosingSpan];
+
+            // Get all spans with the same hnid as the enclosing span
+            let allSpansWithSameHnid = document.querySelectorAll(`.highlight-span[data-hnid='${enclosingHnid}']`);
+
+            allSpansWithSameHnid.forEach(confederateSpan => {
+                // Ensure we don't include the same enclosing span twice
+                if (confederateSpan !== enclosingSpan) {
+                    confederateSpans.push(confederateSpan);
+                }
+            });
+
+            // Remove the inner spans
+            while (span.firstChild) {
+                enclosingSpan.insertBefore(span.firstChild, span);
+            }
+            span.remove();
+
+            // Assign the new hnid and color to the confederate spans
+            confederateSpans.forEach(confederateSpan => {
+                confederateSpan.dataset.hnid = hnid;
+                confederateSpan.className = `highlight-span hl-${color}`;
+
+                // Identify and add the saveable parent element for each confederate span
+                let saveableParent = getRelevantParentElement(confederateSpan);
+                if (saveableParent) {
+                    affectedParents.add(saveableParent);
+                }
+            });
+        }
+    });
+
+    // Submit to saveHighlightsToLocalStorage
+    affectedParents.forEach(parentElement => {
+        saveHighlightsToLocalStorage(parentElement);
+        deleteMarkedHighlights(parentElement);
+    });
 }
 
 // Collects all text nodes within the range
@@ -1620,13 +1734,6 @@ function adjustRangeOffsets(range) {
     } catch (error) {
         console.error("Error setting range end:", error);
     }
-
-    console.log("Adjusted Range Offsets: ", {
-        startContainer: startContainer.textContent,
-        startOffset: startOffset,
-        endContainer: endContainer ? endContainer.textContent : null,
-        endOffset: endOffset
-    });
 }
 
 // Find the previous non-empty text node from the given node
@@ -1787,7 +1894,7 @@ function highlightMultipleTextNodes(textNodes, range, color, hnid) {
 
 // Get the relevant parent element from the given node
 function getRelevantParentElement(node) {
-    const relevantTags = ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol', 'pre', 'figcaption', 'aside', 'address', 'details', 'summary'];
+    const relevantTags = ['p'];
     while (node && node.nodeType !== Node.DOCUMENT_NODE) {
         if (node.tagName && relevantTags.includes(node.tagName.toLowerCase())) {
             return node;
@@ -1804,11 +1911,6 @@ function createSpanWrapper(color, hnid) {
     spanWrapper.className = `highlight-span hl-${color}`;
     spanWrapper.dataset.hnid = hnid;
     return spanWrapper;
-}
-
-// Function to delete a highlight (to be implemented)
-function deleteHighlight() {
-    // Implement the deletion logic here
 }
 
 
@@ -1912,6 +2014,80 @@ function saveHighlightsToLocalStorage(rootElement) {
     }
 
     localStorage.setItem('highlights', JSON.stringify(highlights));
+}
+
+// Function to delete a highlight (to be implemented)
+function deleteMarkedHighlights(parentElement) {
+    if (!parentElement) return; // Ensure parentElement is valid
+
+    // Find and remove hl-delete spans
+    let deleteSpans = parentElement.querySelectorAll('.hl-delete');
+    deleteSpans.forEach(span => {
+        let parent = span.parentNode;
+        while (span.firstChild) {
+            parent.insertBefore(span.firstChild, span);
+        }
+        parent.removeChild(span);
+    });
+
+    // Find the suitable pid ancestor element for the current element
+    let pidElement = parentElement.closest('[id^="p"]');
+    if (!pidElement) {
+        console.warn("No suitable pid ancestor found for the current element.");
+        return;
+    }
+    let pid = pidElement.id;
+
+    // Update the highlights object
+    let highlights = JSON.parse(localStorage.getItem('highlights')) || {};
+
+    if (!highlights[bookId] || !highlights[bookId][pid]) {
+        console.warn("No highlights found for the given pid.");
+        return;
+    }
+
+    // Process the element to update highlightedHTML and hnids
+    let cleanedElement = parentElement.cloneNode(true);
+    stripHighlightSpans(cleanedElement);
+    let cleanedHTML = cleanedElement.outerHTML;
+    let originalHTML = parentElement.outerHTML;
+
+    highlights[bookId][pid].cleanedHTML = cleanedHTML;
+    highlights[bookId][pid].highlightedHTML = originalHTML;
+
+    let currentHnids = Array.from(parentElement.querySelectorAll('.highlight-span'))
+        .map(span => span.getAttribute('data-hnid'));
+
+    highlights[bookId][pid].hnids = Array.from(new Set(currentHnids));
+    highlights[bookId][pid].hnids = highlights[bookId][pid].hnids.map(hnid => parseInt(hnid));
+
+    // Delete the pid if hnids array is empty
+    if (highlights[bookId][pid].hnids.length === 0) {
+        delete highlights[bookId][pid];
+    }
+
+    // Save the updated highlights object to localStorage
+    localStorage.setItem('highlights', JSON.stringify(highlights));
+}
+
+// Helper function to strip highlight spans from an element
+function stripHighlightSpans(element) {
+    let highlightSpans = element.querySelectorAll('.highlight-span');
+    highlightSpans.forEach(span => {
+        let parent = span.parentNode;
+        while (span.firstChild) {
+            parent.insertBefore(span.firstChild, span);
+        }
+        parent.removeChild(span);
+    });
+}
+
+
+// EDIT NOTES
+
+// Note editing: landing function that fires immediately after clicking.
+function editNote() {
+    console.log('Clicked!');
 }
 
 // Call reapplyHighlightsNotes on window load
