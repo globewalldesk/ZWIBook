@@ -1373,16 +1373,73 @@ function showHighlightModal(selection) {
 
     const hmodal = document.getElementById('highlightModal');
     if (hmodal) {
-        console.log("OPENING HIGHLIGHT MODAL");
         hmodal.style.top = `${rect.bottom + window.scrollY}px`;
         hmodal.style.left = `${leftPosition + window.scrollX}px`;
         hmodal.style.display = 'block';
-        hmodal.focus();
+
+        // Assign a new hnid for new selections
+        const highestHnid = getHighestHnid();
+        const newHnid = (highestHnid + 1).toString();
+        const noteInput = hmodal.querySelector('.note-input');
+        noteInput.dataset.hnid = newHnid; // Ensure hnid is set in the dataset of the note input
+        console.log("noteInput.dataset.hnid:", noteInput.dataset.hnid);
+
+        // Clear the note input value for new highlights
+        noteInput.value = '';
 
         // Check for existing notes for the current hnid
         const notes = JSON.parse(localStorage.getItem('notes')) || {};
-        const hnid = selection.anchorNode.parentNode.dataset.hnid; // Assuming hnid is set in the parent node's dataset
+        if (notes[bookId] && notes[bookId].hnids[newHnid]) {
+            defaultNoteOpen = true;
+            noteInput.style.display = 'block';
+            noteInput.value = notes[bookId].hnids[newHnid];
+        } else {
+            defaultNoteOpen = false;
+            noteInput.style.display = 'none';
+            noteInput.value = '';
+        }
+    }
+}
+
+// Function to show the highlight modal and set the hnid properly
+function showHighlightModalOnHighlightClick(hnid, boundingRects) {
+    const modalWidth = 300; // Assuming max-width is 300px
+    const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+
+    const hmodal = document.getElementById('highlightModal');
+    if (hmodal) {
+        let bottomPosition = 0;
+        let leftMost = Number.MAX_VALUE;
+        let rightMost = Number.MIN_VALUE;
+
+        // Find the bottom-most position and the left-most and right-most positions among the bounding rectangles
+        for (let i = 0; i < boundingRects.length; i++) {
+            const rect = boundingRects[i];
+            const bottom = rect.top + rect.height;
+            if (bottom > bottomPosition) {
+                bottomPosition = bottom;
+            }
+            if (rect.left < leftMost) {
+                leftMost = rect.left;
+            }
+            if (rect.right > rightMost) {
+                rightMost = rect.right;
+            }
+        }
+
+        // Calculate the center position
+        const centerPosition = (leftMost + rightMost) / 2 - modalWidth / 2;
+
+        hmodal.style.top = `${bottomPosition + window.scrollY}px`;
+        hmodal.style.left = `${centerPosition + window.scrollX}px`;
+        hmodal.style.display = 'block';
+
+        // Assign the hnid to the note input
         const noteInput = hmodal.querySelector('.note-input');
+        noteInput.dataset.hnid = hnid; // Ensure hnid is set in the dataset of the note input
+
+        // Check for existing notes for the current hnid
+        const notes = JSON.parse(localStorage.getItem('notes')) || {};
         if (notes[bookId] && notes[bookId].hnids[hnid]) {
             defaultNoteOpen = true;
             noteInput.style.display = 'block';
@@ -1392,40 +1449,29 @@ function showHighlightModal(selection) {
             noteInput.style.display = 'none';
             noteInput.value = '';
         }
-
-        // Explicitly focus the textarea
-        noteInput.focus();
-
-        // Add log to track focus
-        noteInput.addEventListener('focus', () => {
-            console.log('Note input focused');
-        });
-
-        logFocusedElement(); // Log the focused element
-    }
-}
-
-// Log the currently focused element
-function logFocusedElement() {
-    let focusedElement = document.activeElement;
-    if (focusedElement) {
-        console.log('Focused element:', focusedElement);
-        console.log('Tag name:', focusedElement.tagName);
-        console.log('ID:', focusedElement.id);
-        console.log('Class:', focusedElement.className);
-        console.log('Attributes:', focusedElement.attributes);
-        console.log('Value:', focusedElement.value); // For input elements
-        // Add more properties as needed based on the type of element
-    } else {
-        console.log('No element currently has focus.');
     }
 }
 
 function toggleNoteInput() {
     const noteInput = document.querySelector('.note-input');
-    if (noteInput) {
-        noteInput.style.display = noteInput.style.display === 'none' ? 'block' : 'none';
+    const hmodal = document.getElementById('highlightModal');
+    if (noteInput && hmodal) {
+        if (noteInput.style.display === 'none') {
+            noteInput.style.display = 'block';
+            hmodal.style.width = '500px'; // Expand modal width
+        } else {
+            noteInput.style.display = 'none';
+            hmodal.style.width = '300px'; // Reset modal width
+        }
+        centerHighlightModal(hmodal);
     }
+}
+
+function centerHighlightModal(hmodal) {
+    const modalWidth = parseInt(hmodal.style.width, 10);
+    const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+    const leftPosition = (window.innerWidth - modalWidth - scrollbarWidth) / 2;
+    hmodal.style.left = `${leftPosition + window.scrollX}px`;
 }
 
 // Initialize the highlight modal when the script loads
@@ -1435,10 +1481,12 @@ initializeHighlightAndNoteModal();
 document.addEventListener('keydown', function (event) {
     const hmodal = document.getElementById('highlightModal');
     if (event.key === "Escape" && hmodal.style.display === 'block') {
-        logFocusedElement();
-        hmodal.style.display = 'none'; // Hides the modal when the Escape key is pressed
+        hmodal.style.display = 'none';
+        hmodal.style.width = '300px'; // Reset modal width to default when closed
+        noteInput.style.display = 'none'; // Ensure the note input is also hidden
     }
 });
+
 // Event listener for mouseup to trigger highlight modal
 document.addEventListener('mouseup', function (event) {
     const selection = window.getSelection();
@@ -1456,14 +1504,26 @@ document.addEventListener('mouseup', function (event) {
 // Event listener to handle mousedown events
 document.addEventListener('mousedown', function (event) {
     const hmodal = document.getElementById('highlightModal');
-    if (hmodal) {
-        hmodal.style.pointerEvents = 'none'; // Disable interaction with the modal during selection
-        if (hmodal.contains(event.target)) {
-            event.preventDefault(); // Prevents the text from being unselected when clicking inside the modal
-            hmodal.focus(); // Ensure the modal itself gains focus
-            logFocusedElement(); // Log the focused element
+    const noteInput = document.querySelector('.note-input');
+    const highlightSpan = event.target.closest('.highlight-span');
+
+    if (hmodal && hmodal.contains(event.target)) {
+        if (noteInput && event.target !== noteInput) {
+            event.preventDefault(); // Prevents text from being unselected when clicking inside the modal
+        }
+    } else {
+        hmodal.style.display = 'none';
+        hmodal.style.width = '300px'; // Reset modal width to default when closed
+        if (noteInput) {
+            noteInput.style.display = 'none'; // Ensure the note input is also hidden
         }
     }
+});
+
+// Ensure note input retains focus
+document.querySelector('.note-input').addEventListener('focus', function () {
+    const hmodal = document.getElementById('highlightModal');
+    hmodal.style.pointerEvents = 'auto';
 });
 
 // Make highlights clickable; listener added to elements with the class 'highlight-span'.
@@ -1473,31 +1533,27 @@ document.addEventListener('click', function(event) {
 
     // Ensure the clicked element has the class 'highlight-span'.
     if (highlightSpan.classList.contains('highlight-span')) {
-        // Get the text nodes within the highlight span
-        const textNodes = [];
-        const walker = document.createTreeWalker(highlightSpan, NodeFilter.SHOW_TEXT, null, false);
-        while (walker.nextNode()) {
-            textNodes.push(walker.currentNode);
-        }
+        const hnid = highlightSpan.dataset.hnid;
+        const allSpans = document.querySelectorAll(`.highlight-span[data-hnid="${hnid}"]`);
+        let boundingRects = [];
 
-        if (textNodes.length > 0) {
-            const range = document.createRange();
-            range.setStart(textNodes[0], 0);
-            range.setEnd(textNodes[textNodes.length - 1], textNodes[textNodes.length - 1].textContent.length);
+        allSpans.forEach(span => {
+            let rect = span.getBoundingClientRect();
+            boundingRects.push(rect);
+            // Apply the temporary styling
+            span.classList.add('temp-underline');
+        });
 
-            // Use window.getSelection to get the current selection and set the new range.
-            const selection = window.getSelection();
-            selection.removeAllRanges();
-            selection.addRange(range);
-
-            // Call showHighlightModal with the new selection to display the modal.
-            showHighlightModal(selection);
-        }
+        // Show and place the highlight modal
+        showHighlightModalOnHighlightClick(hnid, boundingRects);
     }
 });
 
 // Event listener to handle selection changes
 document.addEventListener('selectionchange', function () {
+    // Don't interfere with functionality of note input
+    if (document.activeElement === document.querySelector('.note-input')) return;
+
     let hmodal = document.getElementById('highlightModal');
     if (!hmodal) {
         hmodal = document.createElement('div');
@@ -1519,17 +1575,27 @@ document.addEventListener('selectionchange', function () {
         hmodal.style.top = `${rect.bottom + window.scrollY}px`;
         hmodal.style.left = `${leftPosition + window.scrollX}px`;
         hmodal.style.display = 'block';
-        hmodal.focus(); // Display and focus the modal at the calculated position
     } else {
         hmodal.style.display = 'none'; // Hide the modal if no valid range is selected
+        // Remove the .temp-underline class from all spans
+        const spans = document.querySelectorAll('span');
+        spans.forEach(span => {
+            span.classList.remove('temp-underline');
+        });
     }
 });
+
 
 // Event listener to handle window resize events
 window.addEventListener('resize', function () {
     const hmodal = document.getElementById('highlightModal');
     if (hmodal) {
         hmodal.style.display = 'none'; // Hides the modal on window resize
+        // Remove the .temp-underline class from all spans
+        const spans = document.querySelectorAll('span');
+        spans.forEach(span => {
+            span.classList.remove('temp-underline');
+        });
     }
 });
 
@@ -1556,7 +1622,6 @@ function handleSelectionChange() {
         hmodal.style.top = `${rect.bottom + window.scrollY}px`;
         hmodal.style.left = `${leftPosition + window.scrollX}px`;
         hmodal.style.display = 'block';
-        hmodal.focus();
     } else {
         hmodal.style.display = 'none';
     }
@@ -1576,6 +1641,10 @@ function highlightSelection(color) {
         const textNodes = collectTextNodes(range);
         let highestHnid = getHighestHnid(); // Get the highest hnid
         let hnid = (highestHnid + 1).toString(); // Increment the highest hnid
+
+        // Store the hnid in the note input's dataset
+        const noteInput = document.querySelector('.note-input');
+        noteInput.dataset.hnid = hnid;
 
         // Process all text nodes within the range, regardless of their parent elements
         highlightTextNodes(textNodes, range, color, hnid);
@@ -2109,10 +2178,57 @@ function stripHighlightSpans(element) {
 
 // EDIT NOTES
 
-// Note editing: landing function that fires immediately after clicking.
-function editNote() {
-    console.log('Clicked!');
+let debounceTimer;
+let lastSavedTime = Date.now();
+let isSaving = false;
+let lastNoteContent = '';
+let typingTimer;
+let lastSavedNote = '';
+
+function autosaveNote() {
+    const noteInput = document.querySelector('.note-input');
+    if (!noteInput) return;
+
+    const currentNote = noteInput.value;
+    let hnid = noteInput.dataset.hnid;
+    console.log("I think hnid =", hnid);
+
+    if (!hnid) {
+        console.error("No hnid found in dataset.");
+        return;
+    }
+
+    if (currentNote !== lastSavedNote) {
+        const notes = JSON.parse(localStorage.getItem('notes')) || {};
+        if (!notes[bookId]) notes[bookId] = {};
+        if (!notes[bookId].hnids) notes[bookId].hnids = {};
+        notes[bookId].hnids[hnid] = currentNote;
+
+        localStorage.setItem('notes', JSON.stringify(notes));
+        lastSavedNote = currentNote;
+
+        const savingIndicator = document.querySelector('.saving-indicator');
+        if (savingIndicator) {
+            savingIndicator.textContent = 'Saved.';
+            savingIndicator.style.display = 'block';
+        }
+    }
 }
+
+const noteInput = document.querySelector('.note-input');
+if (noteInput) {
+    noteInput.addEventListener('input', function () {
+        autosaveNote();
+    });
+}
+
+// Save notes automatically every 10 seconds
+setInterval(() => {
+    if (Date.now() - lastSavedTime > 3000) {
+        autosaveNote();
+    }
+}, 10000);
+
 
 // Call reapplyHighlightsNotes on window load
 window.addEventListener('load', () => {
@@ -2120,3 +2236,12 @@ window.addEventListener('load', () => {
 });
 
 // END OF HIGHLIGHT FUNCTIONALITY
+
+/*
+- On startup and between saves (when saving needs doing), the message "We autosave notes."
+- If it has been 10s since the last save, flash "Saving..." for 1s...
+- ...and actually do save.
+- Thereafter show "Saved." for 1s.
+
+- until the user starts typing again.
+*/
