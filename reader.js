@@ -1363,58 +1363,25 @@ function initializeHighlightAndNoteModal() {
     }
 }
 
-// Show highlight modal near the text selection
+// Function to show the highlight modal on text selection
 function showHighlightModal(selection) {
     const range = selection.getRangeAt(0);
     const rect = range.getBoundingClientRect();
-    const modalWidth = 300; // Assuming max-width is 300px
-    const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
-    const leftPosition = (window.innerWidth - modalWidth - scrollbarWidth) / 2;
-
     const hmodal = document.getElementById('highlightModal');
     if (hmodal) {
-        hmodal.style.top = `${rect.bottom + window.scrollY}px`;
-        hmodal.style.left = `${leftPosition + window.scrollX}px`;
-        hmodal.style.display = 'block';
-
-        // Assign a new hnid for new selections
-        const highestHnid = getHighestHnid();
-        const newHnid = (highestHnid + 1).toString();
-        const noteInput = hmodal.querySelector('.note-input');
-        noteInput.dataset.hnid = newHnid; // Ensure hnid is set in the dataset of the note input
-        console.log("noteInput.dataset.hnid:", noteInput.dataset.hnid);
-
-        // Clear the note input value for new highlights
-        noteInput.value = '';
-
-        // Check for existing notes for the current hnid
-        const notes = JSON.parse(localStorage.getItem('notes')) || {};
-        if (notes[bookId] && notes[bookId].hnids[newHnid]) {
-            defaultNoteOpen = true;
-            noteInput.style.display = 'block';
-            noteInput.value = notes[bookId].hnids[newHnid];
-        } else {
-            defaultNoteOpen = false;
-            noteInput.style.display = 'none';
-            noteInput.value = '';
-        }
+        designHighlightModal(hmodal, rect.bottom);
     }
 }
 
-// Function to show the highlight modal and set the hnid properly
+// Function to show the highlight modal on highlight click
 function showHighlightModalOnHighlightClick(hnid, boundingRects) {
-    const modalWidth = 300; // Assuming max-width is 300px
-    const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
-
     const hmodal = document.getElementById('highlightModal');
     if (hmodal) {
         let bottomPosition = 0;
         let leftMost = Number.MAX_VALUE;
         let rightMost = Number.MIN_VALUE;
 
-        // Find the bottom-most position and the left-most and right-most positions among the bounding rectangles
-        for (let i = 0; i < boundingRects.length; i++) {
-            const rect = boundingRects[i];
+        for (let rect of boundingRects) {
             const bottom = rect.top + rect.height;
             if (bottom > bottomPosition) {
                 bottomPosition = bottom;
@@ -1427,18 +1394,11 @@ function showHighlightModalOnHighlightClick(hnid, boundingRects) {
             }
         }
 
-        // Calculate the center position
-        const centerPosition = (leftMost + rightMost) / 2 - modalWidth / 2;
+        designHighlightModal(hmodal, bottomPosition, (leftMost + rightMost) / 2 - 150);
 
-        hmodal.style.top = `${bottomPosition + window.scrollY}px`;
-        hmodal.style.left = `${centerPosition + window.scrollX}px`;
-        hmodal.style.display = 'block';
-
-        // Assign the hnid to the note input
         const noteInput = hmodal.querySelector('.note-input');
-        noteInput.dataset.hnid = hnid; // Ensure hnid is set in the dataset of the note input
+        noteInput.dataset.hnid = hnid;
 
-        // Check for existing notes for the current hnid
         const notes = JSON.parse(localStorage.getItem('notes')) || {};
         if (notes[bookId] && notes[bookId].hnids[hnid]) {
             defaultNoteOpen = true;
@@ -1451,6 +1411,18 @@ function showHighlightModalOnHighlightClick(hnid, boundingRects) {
         }
     }
 }
+
+// Function to design and position the modal
+function designHighlightModal(hmodal, bottomPosition, leftPosition, modalWidth = 300) {
+    const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+    const centerPosition = leftPosition || (window.innerWidth - modalWidth - scrollbarWidth) / 2;
+
+    hmodal.style.top = `${bottomPosition + window.scrollY}px`;
+    hmodal.style.left = `${centerPosition + window.scrollX}px`;
+    hmodal.style.width = `${modalWidth}px`;
+    hmodal.style.display = 'block';
+}
+
 
 function toggleNoteInput() {
     const noteInput = document.querySelector('.note-input');
@@ -1499,6 +1471,11 @@ document.addEventListener('mouseup', function (event) {
         ignoreNextClick = true; // Set flag to ignore the next click
         setTimeout(() => { ignoreNextClick = false; }, 200); // Reset the flag after 200ms
     }
+
+    // Re-enable pointer events for color circles (after drag-to-select)
+    document.querySelectorAll('.color-circle').forEach(circle => {
+        circle.style.pointerEvents = 'auto';
+    });
 });
 
 // Event listener to handle mousedown events
@@ -1563,6 +1540,11 @@ document.addEventListener('selectionchange', function () {
         hmodal.style.display = 'none'; // Ensure the modal is initially hidden
         document.body.appendChild(hmodal);
     }
+    hmodal.style.pointerEvents = 'none'; // Disable pointer events during selection
+    // Disable pointer events for color circles during selection
+    document.querySelectorAll('.color-circle').forEach(circle => {
+        circle.style.pointerEvents = 'none';
+    });
 
     const selection = window.getSelection();
     const range = selection.rangeCount > 0 ? selection.getRangeAt(0) : null;
