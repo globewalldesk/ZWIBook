@@ -1603,11 +1603,11 @@ h2 .inline-button img {
 /* Modal styling */
 #hn-highlightsNotesModal {
     position: fixed;
-    top: 100px;
+    top: 90px; /* Nudged 10px higher */
     left: 50%;
     transform: translateX(-50%);
     width: 500px;
-    max-height: calc(100vh - 200px); /* Ensure the modal grows to the bottom of the window */
+    max-height: calc(100vh - 125px); /* Adjusted to move the bottom border 75px down */
     background-color: white;
     border: 2px solid gray;
     border-radius: 5px;
@@ -1616,6 +1616,7 @@ h2 .inline-button img {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3), 0 10px 30px 0 rgba(0, 0, 0, 0.25); /* Darker and bigger hovering shade effect */
     overflow: hidden; /* Prevent the entire modal from scrolling */
 }
+
 
 /* Tabs container styling */
 .hn-tabs-container {
@@ -1632,7 +1633,7 @@ h2 .inline-button img {
 }
 
 .hn-tab-content-container {
-    max-height: calc(100vh - 260px);
+    max-height: calc(100vh);
     overflow-y: auto; /* Ensure scrolling */
 }
 
@@ -1686,6 +1687,7 @@ h2 .inline-button img {
     padding: 6px 12px;
     border: 1px solid #ccc;
     border-top: none;
+    overflow-y: auto; /* Enable vertical scrolling if content exceeds max height */
 }
 
 /* Highlight item styling */
@@ -1707,6 +1709,49 @@ h2 .inline-button img {
     font-size: 1.2em;
     font-style: italic;
     text-indent: unset !important;
+}
+
+.han-container > .note-container {
+    font-size: 1.1em;
+}
+
+/* New classes for coloring the border lines */
+.border-yellow {
+    border: 6px solid #fff495;
+    padding: 10px;
+}
+
+.border-pink {
+    border: 6px solid #fdaaa3;
+    padding: 10px;
+}
+
+.border-green {
+    border: 6px solid #A5D6A7;
+    padding: 10px;
+}
+
+.border-blue {
+    border: 6px solid #a5d7ff;
+    padding: 10px;
+}
+
+.border-purple {
+    border: 6px solid #f5baff;
+    padding: 10px;
+}
+
+/* Horizontal separator styling */
+.hn-highlight-separator {
+    height: 1px;
+    background-color: #ececec;
+    margin: 20px 0;
+}
+
+/* Vertical line for highlights in summary modal */
+.highlight-paragraph {
+    padding-left: 10px;
+    margin-bottom: 10px;
 }
 
 /* END HIGHLIGHT DESIGN */

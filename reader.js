@@ -2686,6 +2686,98 @@ function populateHighlightsTab() {
     }
 }
 
+// Function to clean paragraphs by removing spans that do not match the current hnid
+function cleanParagraphByHnid(html, hnid) {
+    const tempDiv = document.createElement('div');
+    tempDiv.innerHTML = html;
+
+    const spans = tempDiv.querySelectorAll(`.highlight-span`);
+    spans.forEach(span => {
+        if (span.getAttribute('data-hnid') !== hnid) {
+            span.replaceWith(document.createTextNode(' ... '));
+        }
+    });
+
+    // Iteratively remove empty elements, including those that are just " ... "
+    function removeEmptyElements(node) {
+        const elements = node.querySelectorAll('*');
+        elements.forEach(element => {
+            if (element.textContent.trim() === '...') {
+                element.remove();
+            }
+        });
+
+        const childNodes = Array.from(node.childNodes);
+        childNodes.forEach(childNode => {
+            if (childNode.nodeType === Node.TEXT_NODE && childNode.textContent.trim() === '...') {
+                childNode.remove();
+            }
+        });
+    }
+
+    removeEmptyElements(tempDiv);
+
+    // Function to clean up multiple " ... " into a single " ... "
+    function cleanEllipses(node) {
+        let textContent = node.innerHTML;
+        node.innerHTML = textContent.replace(/(\s*\.\.\.\s*){2,}/g, ' ... ');
+    }
+
+    cleanEllipses(tempDiv);
+
+    return tempDiv.innerHTML;
+}
+
+
+// Helper function to produce a 'han' container
+function createHanContainer(hnid, hnidSpans, noteContent) {
+    // Create a container for the highlights (pids)
+    const highlightContainer = document.createElement('div');
+    highlightContainer.classList.add('highlight-container');
+    hnidSpans.forEach(({ html, colorClass }) => {
+        const paragraphDiv = document.createElement('div');
+        paragraphDiv.classList.add('highlight-paragraph'); // Add class for styling
+        paragraphDiv.innerHTML = html;
+
+        // Add the color class for the vertical line
+        switch (colorClass) {
+            case 'hl-yellow':
+                paragraphDiv.classList.add('border-yellow');
+                break;
+            case 'hl-pink':
+                paragraphDiv.classList.add('border-pink');
+                break;
+            case 'hl-green':
+                paragraphDiv.classList.add('border-green');
+                break;
+            case 'hl-blue':
+                paragraphDiv.classList.add('border-blue');
+                break;
+            case 'hl-purple':
+                paragraphDiv.classList.add('border-purple');
+                break;
+            default:
+                console.warn('No matching color class found for:', colorClass);
+                break;
+        }
+
+        highlightContainer.appendChild(paragraphDiv);
+    });
+
+    // Create a container for the note content
+    const noteContainer = document.createElement('div');
+    noteContainer.classList.add('note-container');
+    noteContainer.textContent = noteContent;
+
+    // Combine the highlight and note containers into a 'han' container
+    const hanContainer = document.createElement('div');
+    hanContainer.classList.add('han-container');
+    hanContainer.appendChild(highlightContainer);
+    hanContainer.appendChild(noteContainer);
+
+    return hanContainer.outerHTML;
+}
+
 // Function to populate the Notes tab
 function populateNotesTab() {
     try {
@@ -2705,40 +2797,67 @@ function populateNotesTab() {
         const highlightsData = localStorage.getItem('highlights');
         const highlights = highlightsData ? JSON.parse(highlightsData)[bookId] : {};
 
-        for (const hnid in bookNotes.hnids) {
-            console.log('-----------------------------');
-            console.log('hnid ID:', hnid);
-            console.log('Note:', bookNotes.hnids[hnid]);
+        let hans = [];
 
+        for (const hnid in bookNotes.hnids) {
             const hnidSpans = [];
             const pidsSet = new Set();
 
             for (const pid in highlights) {
                 const highlight = highlights[pid];
-                let cleanedHTML = cleanHighlightedHTML(highlight.highlightedHTML);
 
-                // Wrap each pid's content in a div to maintain block structure
+                // Extract the color class before cleaning
                 const tempDiv = document.createElement('div');
-                tempDiv.innerHTML = cleanedHTML;
-
+                tempDiv.innerHTML = highlight.highlightedHTML;
                 const spans = tempDiv.querySelectorAll(`.highlight-span[data-hnid="${hnid}"]`);
                 if (spans.length > 0) {
+                    const colorClass = [...spans[0].classList].find(cls => cls.startsWith('hl-'));
+
                     pidsSet.add(pid);
-                    hnidSpans.push({ pid: pid, html: tempDiv.innerHTML });
+                    let cleanedHTML = cleanHighlightedHTML(tempDiv.innerHTML);
+                    const cleanedParagraph = cleanParagraphByHnid(cleanedHTML, hnid);
+                    hnidSpans.push({ pid: pid, html: cleanedParagraph, colorClass });
                 }
             }
 
-            console.log('Number of associated pids:', pidsSet.size);
-            hnidSpans.forEach(({ pid, html }) => {
-                console.log(`pid: ${pid}`);
-                console.log(`HTML content of pid ${pid}:`, html);
+            // Produce the 'han' container and add it to the hans array
+            hans.push({
+                hnid,
+                html: createHanContainer(hnid, hnidSpans, bookNotes.hnids[hnid]),
+                firstPid: Math.min(...Array.from(pidsSet).map(pid => parseInt(pid.slice(1))))
             });
         }
+
+        // Sort the hans by firstPid
+        hans.sort((a, b) => a.firstPid - b.firstPid);
+
+        // Ensure no duplicate paragraphs
+        const seenPids = new Set();
+        hans.forEach(han => {
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = han.html;
+
+            tempDiv.querySelectorAll('.highlight-container > div').forEach(paragraphDiv => {
+                const pid = paragraphDiv.querySelector('.highlight-span')?.getAttribute('data-hnid');
+                if (seenPids.has(pid)) {
+                    paragraphDiv.remove();
+                } else {
+                    seenPids.add(pid);
+                }
+            });
+
+            han.html = tempDiv.innerHTML;
+        });
+
+        // Display the combined highlights and notes in the notes tab with horizontal separators
+        document.getElementById('notes').innerHTML = hans.map(han => `<div>${han.html}</div><div class="hn-highlight-separator"></div>`).join('');
+
     } catch (error) {
         console.error('Error populating notes tab:', error);
         document.getElementById('notes').innerHTML = '<p class="no-data-message">Error loading notes.</p>';
     }
 }
+
 
 // Function to populate the Both tab
 function populateBothTab() {
