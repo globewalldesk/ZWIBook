@@ -198,6 +198,10 @@ h2, h3, h4, h5, h6, p, td {
         background: white !important;
     }
 
+    .nav-button {
+        display: none !important;
+    }
+
     .poetrySwitch {
         display: none;
     }
@@ -1437,7 +1441,7 @@ h2 .inline-button img {
     position: absolute;
     max-width: 500px; /* Update to allow expansion */
     overflow: hidden;
-    z-index: 9999;
+    z-index: 999;
     display: none; /* Initially hidden */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     pointer-events: auto;
@@ -1550,8 +1554,13 @@ h2 .inline-button img {
 }
 
 .temp-underline {
-    border-top: 2px dotted green;
-    border-bottom: 2px dotted green;
+    border-top: 2px dotted #2ec400 !important;
+    border-bottom: 2px dotted #2ec400 !important;
+}
+
+.note-attached {
+    border-top: 1.5px dotted #007bff;
+    border-bottom: 1.5px dotted #007bff;
 }
 
 /* Note input styles */
@@ -1563,9 +1572,10 @@ h2 .inline-button img {
     margin-top: 10px; /* Add some space above the note input */
     pointer-events: auto; /* Ensure textarea is interactable */
     resize: none; /* Prevent manual resizing */
-    z-index: 10000; /* Ensure it is above other elements */
     box-sizing: border-box; /* Ensure padding is included in height calculation */
     margin-bottom: 10px;
+    font-family: inherit;
+    font-size: 1em;
 }
 
 .note-textarea {
@@ -1585,6 +1595,106 @@ h2 .inline-button img {
     right: 10px;
     font-size: 11px;
     color: grey;
+}
+
+
+/* Big note/highlight modal design */
+
+/* Modal styling */
+#hn-highlightsNotesModal {
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 500px;
+    max-height: calc(100vh - 200px); /* Ensure the modal grows to the bottom of the window */
+    background-color: white;
+    border: 2px solid gray;
+    border-radius: 5px;
+    z-index: 10000; /* Ensure the modal is on top of other elements */
+    display: none; /* Initially hidden */
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3), 0 10px 30px 0 rgba(0, 0, 0, 0.25); /* Darker and bigger hovering shade effect */
+    overflow-y: auto; /* Enable scrolling */
+}
+
+/* Tabs container styling */
+.hn-tabs-container {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 10001; /* Ensure the tabs are on top of the modal content */
+}
+
+/* Content container styling */
+.hn-content-container {
+    max-height: calc(100vh - 260px); /* Adjust this value based on the actual height of your tabs */
+    overflow-y: auto;
+    padding-top: 10px; /* Adjust to provide space for the fixed tabs */
+}
+
+/* Close button styling */
+.hn-close-btn {
+    position: absolute;
+    top: 0px;
+    right: 6px;
+    cursor: pointer;
+    font-size: 36px;
+    color: #999;
+}
+
+.hn-close-btn:hover {
+    color: #333;
+}
+
+/* Tab styling */
+.hn-tabs {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    border-bottom: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+.hn-tab {
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 20px 10px 20px; /* Increased padding to prevent size shift */
+    transition: 0.3s;
+    font-size: 17px;
+    width: 25%;
+}
+
+.hn-tab:hover {
+    background-color: #ddd;
+}
+
+.hn-tab.active {
+    background-color: #007BFF;
+    color: white;
+    font-weight: bold;
+}
+
+/* Tab content styling */
+.hn-tab-content {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+/* Highlight item styling */
+.hn-highlight-item {
+    padding: 10px 0;
+}
+
+/* Separator styling */
+.hn-highlight-separator {
+    height: 1px;
+    background-color: #e0e0e0;
+    margin: 10px 0;
 }
 
 /* END HIGHLIGHT DESIGN */
