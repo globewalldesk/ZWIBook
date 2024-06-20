@@ -2517,6 +2517,7 @@ function switchTab(tabName) {
     }
 }
 
+/*
 // Function to populate the Highlights tab
 function populateHighlightsTab() {
     try {
@@ -2569,6 +2570,7 @@ function populateHighlightsTab() {
         document.getElementById('highlights').innerHTML = '<p>Error loading highlights.</p>';
     }
 }
+*/
 
 // Helper function to clean HTML that goes in the highlight tab
 function cleanHighlightedHTML(html) {
@@ -2625,6 +2627,7 @@ function cleanHighlightedHTML(html) {
 
     return tempDiv.innerHTML;
 }
+
 
 // Function to populate the Highlights tab
 function populateHighlightsTab() {
