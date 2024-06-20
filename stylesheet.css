@@ -1614,7 +1614,7 @@ h2 .inline-button img {
     z-index: 10000; /* Ensure the modal is on top of other elements */
     display: none; /* Initially hidden */
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3), 0 10px 30px 0 rgba(0, 0, 0, 0.25); /* Darker and bigger hovering shade effect */
-    overflow-y: auto; /* Enable scrolling */
+    overflow: hidden; /* Prevent the entire modal from scrolling */
 }
 
 /* Tabs container styling */
@@ -1628,9 +1628,12 @@ h2 .inline-button img {
 
 /* Content container styling */
 .hn-content-container {
-    max-height: calc(100vh - 260px); /* Adjust this value based on the actual height of your tabs */
-    overflow-y: auto;
     padding-top: 10px; /* Adjust to provide space for the fixed tabs */
+}
+
+.hn-tab-content-container {
+    max-height: calc(100vh - 260px);
+    overflow-y: auto; /* Ensure scrolling */
 }
 
 /* Close button styling */

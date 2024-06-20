@@ -2228,11 +2228,12 @@ function reapplyHighlightsNotes() {
         let notes = JSON.parse(localStorage.getItem('notes')) || {};
         if (notes[bookId] && highlights[bookId][pid].hnids) {
             highlights[bookId][pid].hnids.forEach(hnid => {
-                if (notes[bookId].hnids[hnid]) {
-                    document.querySelectorAll(`.highlight-span[data-hnid="${hnid}"]`).forEach(span => {
+                document.querySelectorAll(`.highlight-span[data-hnid="${hnid}"]`).forEach(span => {
+                    // Check if the span is not a descendant of .hn-tab-content-container
+                    if (! span.closest('.hn-tab-content-container')) {
                         span.classList.add('note-attached');
-                    });
-                }
+                    }
+                });
             });
         }
     });
@@ -2449,6 +2450,28 @@ function openHighlightsNotesModal(event) {
     event.stopPropagation(); // Prevent the click event from propagating to the document level
     const modal = document.getElementById('hn-highlightsNotesModal');
     modal.style.display = 'block';
+
+    // Clear existing content
+    document.getElementById('highlights').innerHTML = '';
+    document.getElementById('notes').innerHTML = '';
+    document.getElementById('both').innerHTML = '';
+
+    // Repopulate based on the active tab
+    const activeTab = localStorage.getItem('activeTab') || 'highlights';
+    switchTab(activeTab);
+    switch (activeTab) {
+        case 'highlights':
+            populateHighlightsTab();
+            break;
+        case 'notes':
+            populateNotesTab();
+            break;
+        case 'both':
+            populateBothTab();
+            break;
+        default:
+            populateHighlightsTab();
+    }
 }
 
 // Function to close the highlights and notes modal
@@ -2480,13 +2503,17 @@ function switchTab(tabName) {
     // Save the active tab to local storage
     localStorage.setItem('activeTab', tabName);
 
-    // Populate content based on the selected tab
-    if (tabName === 'highlights') {
-        populateHighlightsTab();
-    } else if (tabName === 'notes') {
-        populateNotesTab();
-    } else if (tabName === 'both') {
-        populateBothTab();
+    // Populate the active tab content
+    switch (tabName) {
+        case 'highlights':
+            populateHighlightsTab();
+            break;
+        case 'notes':
+            populateNotesTab();
+            break;
+        case 'both':
+            populateBothTab();
+            break;
     }
 }
 
@@ -2624,19 +2651,39 @@ function populateHighlightsTab() {
             const highlight = bookHighlights[pid];
             let cleanedHTML = cleanHighlightedHTML(highlight.highlightedHTML);
 
-            // Wrap each pid's content in a div to maintain block structure
-            highlightsHTML += `<div>${cleanedHTML}</div>`;
+            // Wrap each pid's content in a div to maintain block structure and make it clickable
+            highlightsHTML += `<div class="highlight-item" data-pid="${pid}">${cleanedHTML}</div>`;
             highlightsHTML += `<div class="hn-highlight-separator"></div>`;
         });
 
         document.getElementById('highlights').innerHTML = highlightsHTML;
         console.log('Highlights tab populated.');
+
+        // Add click event listeners to each highlight item
+        document.querySelectorAll('.highlight-item').forEach(item => {
+            item.addEventListener('click', function() {
+                const pid = this.getAttribute('data-pid');
+                window.location.hash = `#${pid}`;
+                closeHighlightsNotesModal();
+                
+                // Scroll adjustment
+                setTimeout(() => {
+                    const targetElement = document.getElementById(pid);
+                    if (targetElement) {
+                        const offset = 100;
+                        const elementPosition = targetElement.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition - offset;
+                        window.scrollBy({ top: offsetPosition });
+                    }
+                }, 100); // Delay to ensure the page navigates to the correct section
+            });
+        });
+
     } catch (error) {
         console.error('Error populating highlights tab:', error);
         document.getElementById('highlights').innerHTML = '<p>Error loading highlights.</p>';
     }
 }
-
 
 function populateNotesTab() {
     // Placeholder log for the Notes tab function
