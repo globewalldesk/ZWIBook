@@ -2634,16 +2634,14 @@ function populateHighlightsTab() {
     try {
         const highlightsData = localStorage.getItem('highlights');
         if (!highlightsData) {
-            console.log('No highlights found in localStorage.');
-            document.getElementById('highlights').innerHTML = '<p>No highlights available.</p>';
+            document.getElementById('highlights').innerHTML = '<p class="no-data-message">No highlights yet. To add a highlight, select some text and click the color you want.</p>';
             return;
         }
 
         const highlights = JSON.parse(highlightsData);
         const bookHighlights = highlights[bookId];
         if (!bookHighlights) {
-            console.log('No highlights for the current book.');
-            document.getElementById('highlights').innerHTML = '<p>No highlights available for this book.</p>';
+            document.getElementById('highlights').innerHTML = '<p class="no-data-message">No highlights yet. To add a highlight, select some text and click the color you want.</p>';
             return;
         }
 
@@ -2684,18 +2682,87 @@ function populateHighlightsTab() {
 
     } catch (error) {
         console.error('Error populating highlights tab:', error);
-        document.getElementById('highlights').innerHTML = '<p>Error loading highlights.</p>';
+        document.getElementById('highlights').innerHTML = '<p class="no-data-message">Error loading highlights.</p>';
     }
 }
 
+// Function to populate the Notes tab
 function populateNotesTab() {
-    // Placeholder log for the Notes tab function
-    console.log('populateNotesTab function executed');
+    try {
+        const notesData = localStorage.getItem('notes');
+        if (!notesData) {
+            document.getElementById('notes').innerHTML = '<p class="no-data-message">No notes yet. To add a note, select some text and click the note icon.</p>';
+            return;
+        }
+
+        const bookNotes = JSON.parse(notesData)[bookId];
+        if (!bookNotes) {
+            document.getElementById('notes').innerHTML = '<p class="no-data-message">No notes yet. To add a note, select some text and click the note icon.</p>';
+            return;
+        }
+
+        // Fetch highlighted spans corresponding to each hnid
+        const highlightsData = localStorage.getItem('highlights');
+        const highlights = highlightsData ? JSON.parse(highlightsData)[bookId] : {};
+
+        for (const hnid in bookNotes.hnids) {
+            console.log('-----------------------------');
+            console.log('hnid ID:', hnid);
+            console.log('Note:', bookNotes.hnids[hnid]);
+
+            const hnidSpans = [];
+            const pidsSet = new Set();
+
+            for (const pid in highlights) {
+                const highlight = highlights[pid];
+                let cleanedHTML = cleanHighlightedHTML(highlight.highlightedHTML);
+
+                // Wrap each pid's content in a div to maintain block structure
+                const tempDiv = document.createElement('div');
+                tempDiv.innerHTML = cleanedHTML;
+
+                const spans = tempDiv.querySelectorAll(`.highlight-span[data-hnid="${hnid}"]`);
+                if (spans.length > 0) {
+                    pidsSet.add(pid);
+                    hnidSpans.push({ pid: pid, html: tempDiv.innerHTML });
+                }
+            }
+
+            console.log('Number of associated pids:', pidsSet.size);
+            hnidSpans.forEach(({ pid, html }) => {
+                console.log(`pid: ${pid}`);
+                console.log(`HTML content of pid ${pid}:`, html);
+            });
+        }
+    } catch (error) {
+        console.error('Error populating notes tab:', error);
+        document.getElementById('notes').innerHTML = '<p class="no-data-message">Error loading notes.</p>';
+    }
 }
 
+// Function to populate the Both tab
 function populateBothTab() {
-    // Placeholder log for the Both tab function
-    console.log('populateBothTab function executed');
+    try {
+        const highlightsData = localStorage.getItem('highlights');
+        const notesData = localStorage.getItem('notes');
+        if (!highlightsData && !notesData) {
+            document.getElementById('both').innerHTML = '<p class="no-data-message">No highlights or notes yet. To add a highlight, select some text and click the color you want. To add a note, select some text and click the note icon.</p>';
+            return;
+        }
+
+        const highlights = highlightsData ? JSON.parse(highlightsData)[bookId] : null;
+        const notes = notesData ? JSON.parse(notesData)[bookId] : null;
+        if (!highlights && !notes) {
+            document.getElementById('both').innerHTML = '<p class="no-data-message">No highlights or notes yet. To add a highlight, select some text and click the color you want. To add a note, select some text and click the note icon.</p>';
+            return;
+        }
+
+        // Implementation for fetching, sorting, and rendering both highlights and notes goes here
+
+    } catch (error) {
+        console.error('Error populating both tab:', error);
+        document.getElementById('both').innerHTML = '<p class="no-data-message">Error loading highlights and notes.</p>';
+    }
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
