@@ -10,6 +10,25 @@ body {
     width: unset !important;
 }
 
+body.no-scroll {
+    overflow: hidden;
+}
+
+body.modal-open {
+    padding-right: 15.5px; /* Adjust this value based on the scrollbar width */
+}
+
+#grey-line {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 15.5px; /* Adjust this value based on the scrollbar width */
+    height: 100%;
+    background-color: #f1f1f1;
+    display: none;
+    z-index: 1001; /* Ensure it is above other elements */
+}
+
 /* Ensure the header stays fixed at the top of the viewport with original styling */
 body > #header {
     position: fixed;
@@ -23,6 +42,10 @@ body > #header {
     color: white !important;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin: unset !important;
+}
+
+#header.modal-open {
+    width: calc(100% - 15.5px); /* Adjust this value based on the scrollbar width */
 }
 
 /* Category page titles */
@@ -194,9 +217,6 @@ h2, h3, h4, h5, h6, p, td {
     #book-content {
         border: none !important;
     }
-    body {
-        background: white !important;
-    }
 
     .nav-button {
         display: none !important;
@@ -282,6 +302,8 @@ header {
     /* Center the content */
     max-width: 800px !important;
     /* Max content width */
+    overflow-x: none;
+    overflow-y: auto;
 }
 
 .searchResultItem {
@@ -562,7 +584,6 @@ a.more:hover {
 }
 
 #book-content {
-    overflow: auto;
     /* Scrollable content */
     padding: 10px;
     border: 1px solid #ccc;
@@ -1439,14 +1460,14 @@ h2 .inline-button img {
     border-radius: 5px;
     padding: 10px;
     position: absolute;
-    max-width: 500px; /* Update to allow expansion */
-    overflow: hidden;
+    max-width: 500px; /* Allow expansion */
+    max-height: calc(100vw - 120px); /* Maximum height relative to viewport */
     z-index: 999;
     display: none; /* Initially hidden */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     pointer-events: auto;
+    resize: both;
 }
-
 
 .highlight-modal-content {
     color: black;
@@ -1523,6 +1544,10 @@ h2 .inline-button img {
     background-color: #CE93D8;
 }
 
+.color-circle[title="None"] {
+    background-color: #fff;
+}
+
 .color-circle.edit-note {
     background-color: #fff;
 }
@@ -1549,6 +1574,10 @@ h2 .inline-button img {
     background-color: #f5baff;
 }
 
+.hl-white {
+    background-color: #fff;
+}
+
 .highlight-span {
     cursor: pointer;
 }
@@ -1567,15 +1596,16 @@ h2 .inline-button img {
 .note-input {
     width: 100%; /* Match the width of the modal */
     min-height: 100px; /* Set a minimum height */
-    max-height: 800px; /* Set a maximum height */
+    max-height: calc(100vh - 210px); /* Set a maximum height based on modal's padding and borders */
     overflow-y: auto; /* Enable vertical scrolling if content exceeds max height */
     margin-top: 10px; /* Add some space above the note input */
     pointer-events: auto; /* Ensure textarea is interactable */
     resize: none; /* Prevent manual resizing */
     box-sizing: border-box; /* Ensure padding is included in height calculation */
     margin-bottom: 10px;
-    font-family: inherit;
-    font-size: 1em;
+    padding: 6px;
+    font-family: "Liberation Sans", Arial, Helvetica, sans-serif;
+    font-size: 1.05em;
 }
 
 .note-textarea {
@@ -1585,7 +1615,6 @@ h2 .inline-button img {
     border-radius: 4px;
     padding: 10px;
     font-size: 16px;
-    resize: none; /* Prevent manual resizing */
     z-index: 10000;
 }
 
@@ -1633,7 +1662,7 @@ h2 .inline-button img {
 }
 
 .hn-tab-content-container {
-    max-height: calc(100vh);
+    max-height: calc(100vh - 170px);
     overflow-y: auto; /* Ensure scrolling */
 }
 
@@ -1695,13 +1724,6 @@ h2 .inline-button img {
     padding: 10px 0;
 }
 
-/* Separator styling */
-.hn-highlight-separator {
-    height: 1px;
-    background-color: #ececec;
-    margin: 10px 0;
-}
-
 .no-data-message {
     margin: 10px 0;
     padding: 20px;
@@ -1711,47 +1733,127 @@ h2 .inline-button img {
     text-indent: unset !important;
 }
 
+.han-container {
+    cursor: pointer;
+}
+
 .han-container > .note-container {
-    font-size: 1.1em;
+    font-size: 1.05em;
+    font-family: "Liberation Sans", Arial, Helvetica, sans-serif;
 }
 
-/* New classes for coloring the border lines */
-.border-yellow {
-    border: 6px solid #fff495;
-    padding: 10px;
-}
-
-.border-pink {
-    border: 6px solid #fdaaa3;
-    padding: 10px;
-}
-
-.border-green {
-    border: 6px solid #A5D6A7;
-    padding: 10px;
-}
-
-.border-blue {
-    border: 6px solid #a5d7ff;
-    padding: 10px;
-}
-
-.border-purple {
-    border: 6px solid #f5baff;
-    padding: 10px;
+/* Vertical line for highlights in summary modal */
+.han-container > .highlight-container {
+    padding-left: 10px;
+    font-family: 'Liberation Serif', 'Times New Roman', Times, serif;
+    margin: 20px 0;
 }
 
 /* Horizontal separator styling */
 .hn-highlight-separator {
     height: 1px;
-    background-color: #ececec;
-    margin: 20px 0;
+    background-color: #8b8b8b;
+    margin: 14px auto;
 }
 
-/* Vertical line for highlights in summary modal */
-.highlight-paragraph {
-    padding-left: 10px;
-    margin-bottom: 10px;
+#notes > .hn-highlight-separator {
+    margin: 20px auto;
+    width: 80%;
 }
+
+/* New classes for coloring the border lines */
+.border-yellow {
+    border-left: 6px solid #fff495;
+    padding-left: 10px;
+}
+
+.border-pink {
+    border-left: 6px solid #fdaaa3;
+    padding-left: 10px;
+}
+
+.border-green {
+    border-left: 6px solid #A5D6A7;
+    padding-left: 10px;
+}
+
+.border-blue {
+    border-left: 6px solid #a5d7ff;
+    padding-left: 10px;
+}
+
+.border-purple {
+    border-left: 6px solid #f5baff;
+    padding-left: 10px;
+}
+
+.border-white {
+    border-left: 6px solid #fff;
+    padding-left: 10px;
+}
+
+/* Compact rendering CSS rules */
+
+.md-h1, .md-h2, .md-h3 {
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: left;
+}
+
+.md-h1 {
+    font-size: 1.5em !important;
+}
+
+.md-h2 {
+    font-size: 1.25em !important;
+}
+
+.md-h3 {
+    font-size: 1.1em !important;
+}
+
+.md-strong {
+    font-weight: bold !important;
+}
+
+.md-em {
+    font-style: italic !important;
+}
+
+.md-blockquote {
+    margin: 0 !important;
+    padding-left: 10px !important;
+    border-left: 3px solid #ccc !important;
+    font-style: italic !important;
+}
+
+.md-ol, .md-ul {
+    margin: 0 !important;
+    padding-left: 10px !important;
+}
+
+.md-li {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.md-code {
+    background-color: #f5f5f5 !important;
+    padding: 2px 4px !important;
+    border-radius: 3px !important;
+    font-family: monospace !important;
+}
+
+.md-hr {
+    margin: 10px auto !important;
+    border: none !important;
+    border-top: 1px solid #ccc !important;
+}
+
+.md-br {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
 
 /* END HIGHLIGHT DESIGN */

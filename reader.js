@@ -427,7 +427,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         function preprocessDocumentElements() {
             const anchors = document.querySelectorAll('a');
             const images = document.querySelectorAll('img');
-            const centeredElements = document.querySelectorAll('[style*="text-align: center"]');
 
             anchors.forEach(anchor => {
                 ['name', 'id', 'href'].forEach(attr => {
@@ -476,14 +475,6 @@ document.addEventListener('DOMContentLoaded', async () => {
                     img.setAttribute('src', src);
                 }
             });
-
-            centeredElements.forEach(element => {
-                // Check if the element has 'text-align: center' in its style attribute
-                if (element.style.textAlign === 'center') {
-                    element.style.textAlign = ''; // Remove the inline style
-                    element.classList.add('center'); // Add the 'center' class
-                }
-            });
         }
 
         preprocessDocumentElements();
@@ -511,12 +502,28 @@ document.addEventListener('DOMContentLoaded', async () => {
         const pageCount = Math.ceil(wordCount / 300);
 
         // Move inline centering to class.
-        let paragraphs = bookContentDiv.querySelectorAll('p[style*="text-align: center;"]');
-        paragraphs.forEach(p => {
-            p.style.textAlign = ''; // Remove the inline style
-            p.classList.add('center'); // Add the center class
+        const relevantTags = ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol', 'pre', 'figcaption', 'aside', 'address', 'details', 'summary'];
+        // Iterate over each relevant tag and process elements with inline centering
+        relevantTags.forEach(tag => {
+            let elements = bookContentDiv.querySelectorAll(`${tag}[style*="text-align: center"]`);
+             elements.forEach(element => {
+                if (element.style.textAlign === 'center') {
+                    element.style.textAlign = ''; // Remove the inline style
+                    element.classList.add('center'); // Add the center class
+                }
+            });
         });
-
+        relevantTags.forEach(tag => {
+            // Select elements with align="center"
+            let elementsWithAlign = bookContentDiv.querySelectorAll(`${tag}[align="center"]`);
+        
+            elementsWithAlign.forEach(element => {
+                element.removeAttribute('align'); // Remove the align attribute
+                element.classList.add('center'); // Add the center class
+            });
+        });
+        
+        
         // Check if the switch exists
         const poetrySwitch = document.querySelector('.poetrySwitch input');
         if (poetrySwitch) {
@@ -1345,15 +1352,14 @@ function initializeHighlightAndNoteModal() {
                     <div class="color-circle" title="Green"></div>
                     <div class="color-circle" title="Blue"></div>
                     <div class="color-circle" title="Purple"></div>
+                    <div class="color-circle" title="White"></div>
                     <div class="color-circle delete-circle" title="Delete Highlight"></div>
-                    <div class="color-circle edit-note" title="Edit Note"><img src="images/icons/edit-note.svg"></div>
+                    <div class="color-circle edit-note" title="Edit Note (select+'n')"><img src="images/icons/edit-note.svg"></div>
                 </div>
                 <textarea class="note-input" style="display: none;"></textarea>
             </div>
         `;
         document.body.appendChild(hmodal);
-
-        console.log("Modal initialized with empty note input field");
 
         // Attach event listeners to color circles
         document.querySelectorAll('.color-circle').forEach(circle => {
@@ -1428,13 +1434,13 @@ function showHighlightModalOnHighlightClick(hnid, boundingRects) {
             defaultNoteOpen = true;
             noteInput.style.display = 'block';
             noteInput.value = notes[bookId].hnids[hnid];
+            noteInput.style.height = `${noteInput.scrollHeight + 5}px`;
             hmodal.style.width = '500px'; // Expand modal width when note is present
-            console.log("Note found, noteInput value set:", notes[bookId].hnids[hnid]);
         } else {
             defaultNoteOpen = false;
             noteInput.style.display = 'none';
             noteInput.value = '';
-            hmodal.style.width = '300px'; // Reset modal width
+            hmodal.style.width = '350px'; // Reset modal width
         }
 
         centerHighlightModal(hmodal); // Center the modal based on the updated width
@@ -1454,10 +1460,10 @@ function toggleNoteInput() {
     if (noteInput && hmodal) {
         if (noteInput.style.display === 'none') {
             noteInput.style.display = 'block';
-            hmodal.style.width = '500px'; // Expand modal width
+            adjustModalHeight();
         } else {
             noteInput.style.display = 'none';
-            hmodal.style.width = '300px'; // Reset modal width
+            hmodal.style.height = 'auto'; // Reset modal height
         }
         centerHighlightModal(hmodal);
     }
@@ -1479,7 +1485,7 @@ document.addEventListener('keydown', function (event) {
     const noteInput = document.querySelector('.note-input');
     if (event.key === "Escape" && hmodal.style.display === 'block') {
         hmodal.style.display = 'none';
-        hmodal.style.width = '300px'; // Reset modal width to default when closed
+        hmodal.style.width = '350px'; // Reset modal width to default when closed
         if (noteInput) {
             if (noteInput.value.trim() === '') {
                 const hnid = noteInput.dataset.hnid;
@@ -1490,6 +1496,98 @@ document.addEventListener('keydown', function (event) {
             noteInput.style.display = 'none'; // Ensure the note input is also hidden
             noteInput.dataset.hnid = ''; // Clear the dataset.hnid
             noteInput.value = ''; // Clear the note input value
+        }
+    }
+});
+
+// Event listener for keydown events
+document.addEventListener('keydown', function (event) {
+    const selection = window.getSelection();
+    const range = selection.rangeCount > 0 ? selection.getRangeAt(0) : null;
+    const hmodal = document.getElementById('highlightModal');
+    if (range && !range.collapsed) {
+        console.log("Selection range preserved:", range.toString());
+
+        switch (event.key.toLowerCase()) {
+            case 'n':
+                // Trigger the functionality of the .edit-note button
+                const editNoteButton = document.querySelector('.edit-note');
+                if (editNoteButton) {
+                    editNoteButton.click();
+                }
+                event.preventDefault();
+                break;
+            case 'y':
+                highlightSelection('yellow');
+                event.preventDefault();
+                break;
+            case 'r':
+                highlightSelection('pink');
+                event.preventDefault();
+                break;
+            case 'g':
+                highlightSelection('green');
+                event.preventDefault();
+                break;
+            case 'b':
+                highlightSelection('blue');
+                event.preventDefault();
+                break;
+            case 'p':
+                highlightSelection('purple');
+                event.preventDefault();
+                break;
+            case ('w'):
+                highlightSelection('white');
+                event.preventDefault();
+                break;
+            default:
+                break;
+        }
+    } else if (hmodal.style.display === 'block' && noteInput.style.display === 'none') {
+        switch (event.key) {
+            case 'y':
+                highlightSelection('yellow');
+                event.preventDefault();
+                break;
+            case 'r':
+                highlightSelection('pink');
+                event.preventDefault();
+                break;
+            case 'g':
+                highlightSelection('green');
+                event.preventDefault();
+                break;
+            case 'b':
+                highlightSelection('blue');
+                event.preventDefault();
+                break;
+            case 'p':
+                highlightSelection('purple');
+                event.preventDefault();
+                break;
+            case ('w'):
+                highlightSelection('white');
+                event.preventDefault();
+                break;
+            case 'n':
+                const nbutton = document.querySelector('.edit-note');
+                if (nbutton) {
+                    nbutton.click();
+                    document.querySelector('.note-input').focus();
+                    event.preventDefault();
+                }
+                break;
+            case 'Backspace':
+            case 'Delete':
+                const deleteHighlightButton = document.querySelector('.delete-circle');
+                if (deleteHighlightButton) {
+                    deleteHighlightButton.click();
+                }
+                event.preventDefault();
+                break;
+            default:
+                break;
         }
     }
 });
@@ -1525,7 +1623,7 @@ document.addEventListener('mousedown', function (event) {
         }
     } else {
         hmodal.style.display = 'none';
-        hmodal.style.width = '300px'; // Reset modal width to default when closed
+        hmodal.style.width = '350px'; // Reset modal width to default when closed
         if (noteInput) {
             if (noteInput.value.trim() === '') {
                 const hnid = noteInput.dataset.hnid;
@@ -1548,6 +1646,7 @@ function handleEditNoteClick() {
     hmodal.style.pointerEvents = 'auto';
 
     if (selection.rangeCount > 0 && selection.toString().length > 0) {
+        if (mostRecentColor == "delete highlight") { mostRecentColor = 'yellow';}
         highlightSelection(mostRecentColor);
 
         // Retrieve the newly created hnid from the note input's dataset
@@ -1584,6 +1683,17 @@ function handleEditNoteClick() {
 document.querySelector('.edit-note').addEventListener('click', function(event) {
     event.stopPropagation(); // Prevent interference with the click event
     handleEditNoteClick();
+});
+
+// Note input grows with height of input
+let inputHeight = 0;
+document.querySelector('.note-input').addEventListener('input', function(event) {
+    const noteInput = document.querySelector('.note-input');
+    if (inputHeight !== noteInput.scrollHeight) {
+        noteInput.style.height = 'auto';
+        inputHeight = noteInput.scrollHeight;
+        noteInput.style.height = `${inputHeight + 5}px`;
+    };
 });
 
 // Make highlights clickable; listener added to elements with the class 'highlight-span'.
@@ -1627,7 +1737,7 @@ document.addEventListener('selectionchange', function () {
     const range = selection.rangeCount > 0 ? selection.getRangeAt(0) : null;
     if (range && !range.collapsed) {
         const rect = range.getBoundingClientRect();
-        const modalWidth = 300; // Assuming max-width is 300px
+        const modalWidth = 350; // Assuming max-width is 350px
         const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
         const leftPosition = (window.innerWidth - modalWidth - (scrollbarWidth * 2.5)) / 2;
 
@@ -1673,7 +1783,7 @@ function handleSelectionChange() {
     const range = selection.rangeCount > 0 ? selection.getRangeAt(0) : null;
     if (range && !range.collapsed) {
         const rect = range.getBoundingClientRect();
-        const modalWidth = 300; // Assuming max-width is 300px
+        const modalWidth = 350; // Assuming max-width is 350px
         const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
         const leftPosition = (window.innerWidth - modalWidth - scrollbarWidth) / 2;
 
@@ -1697,12 +1807,26 @@ function highlightSelection(color) {
         adjustRangeOffsets(range);
 
         const textNodes = collectTextNodes(range);
+        // Failsafe in case the selection ends up being too large.
+        if (textNodes.length > 40) {
+            alert("Something went wrong. Either your selection was too large or there was another error. Please try another way.");
+            return; // Stop the highlighting process
+        }
+
         let highestHnid = getHighestHnid(); // Get the highest hnid
         let hnid = (highestHnid + 1).toString(); // Increment the highest hnid
 
         // Store the hnid in the note input's dataset
         const noteInput = document.querySelector('.note-input');
         noteInput.dataset.hnid = hnid;
+
+        // Perform check for deletion if color is hl-delete
+        if (color === 'delete highlight') {
+            if (!checkForNotesBeforeDelete(range, textNodes)) {
+                console.log(textNodes);
+                return; // User canceled the deletion
+            }
+        }
 
         // Process all text nodes within the range, regardless of their parent elements
         highlightTextNodes(textNodes, range, color, hnid);
@@ -1745,10 +1869,91 @@ function collectTextNodes(range) {
     return textNodes.filter(node => node.textContent.trim() !== '');
 }
 
-// Function to handle existing notes before merging
-function handleExistingNotesBeforeMerge(newHnid, matchingSpans) {
+// Helper function to collect hnids from text nodes
+function collectHnidsFromTextNodes(textNodes) {
     let hnidSet = new Set();
+    textNodes.forEach(node => {
+        let parentElement = node.parentNode;
+        while (parentElement) {
+            if (parentElement.classList && parentElement.classList.contains('highlight-span')) {
+                let hnid = parentElement.dataset.hnid;
+                hnidSet.add(hnid);
+                break;
+            }
+            parentElement = parentElement.parentNode;
+        }
+    });
+    return hnidSet;
+}
+
+// Helper function to check for notes, prompt user, and delete notes if confirmed
+function checkForNotesBeforeDelete(range, textNodes) {
     let notes = JSON.parse(localStorage.getItem('notes')) || {};
+    let spansInRange = [];
+    let hnidSet = new Set();
+
+    // Collect spans within the text nodes range
+    textNodes.forEach(node => {
+        let parentElement = node.parentNode;
+        while (parentElement) {
+            if (parentElement.classList && parentElement.classList.contains('highlight-span')) {
+                spansInRange.push(parentElement);
+                hnidSet.add(parentElement.dataset.hnid);
+                break;
+            }
+            parentElement = parentElement.parentNode;
+        }
+    });
+
+    let notedHnids = [];
+
+    // Check if any of the hnids in the set have attached notes in the notes object
+    hnidSet.forEach(hnid => {
+        if (notes[bookId] && notes[bookId].hnids[hnid]) {
+            notedHnids.push(hnid);
+        }
+    });
+
+    // If there are notes to be deleted, prepare and display the confirmation prompt
+    if (notedHnids.length > 0) {
+        let promptMessage = '';
+
+        if (notedHnids.length === 1) {
+            let noteSnippet = notes[bookId].hnids[notedHnids[0]].substring(0, 100);
+            promptMessage = `There is a note attached:\n\n"${noteSnippet}"\n\nDelete?`;
+        } else {
+            promptMessage = `There are ${notedHnids.length} notes attached:\n\n`;
+            notedHnids.forEach(hnid => {
+                let noteSnippet = notes[bookId].hnids[hnid].substring(0, 25);
+                promptMessage += `→ ${noteSnippet}\n\n`;
+            });
+            promptMessage += 'Delete ALL notes? Cannot be undone.';
+        }
+
+        let userResponse = confirm(promptMessage);
+        if (userResponse) {
+            // Remove .note-attached class from spans in the DOM
+            spansInRange.forEach(span => {
+                span.classList.remove('note-attached');
+            });
+
+            // Delete notes from localStorage
+            notedHnids.forEach(hnid => {
+                delete notes[bookId].hnids[hnid];
+            });
+
+            // Save the updated notes object to localStorage
+            localStorage.setItem('notes', JSON.stringify(notes));
+        }
+        return userResponse; // Returns true if user confirms, false if user cancels
+    }
+
+    return true; // No notes attached or user confirms deletion
+}
+
+// Function to handle existing notes before merging
+function handleExistingNotesBeforeMerge(newHnid, matchingSpans, color) { 
+    let hnidSet = new Set();
     let notedHnids = [];
     let combinedNoteContent = '';
 
@@ -1764,6 +1969,8 @@ function handleExistingNotesBeforeMerge(newHnid, matchingSpans) {
             parentElement = parentElement.parentNode;
         }
     });
+
+    let notes = JSON.parse(localStorage.getItem('notes')) || {};
 
     // Check for existing notes and collect them
     hnidSet.forEach(hnid => {
@@ -1814,7 +2021,7 @@ function handleHighlightMerges(hnid, color) {
     let matchingSpans = document.querySelectorAll(`.highlight-span[data-hnid='${hnid}']`);
 
     // Check for existing notes before merging
-    let notedHnid = handleExistingNotesBeforeMerge(hnid, matchingSpans);
+    let notedHnid = handleExistingNotesBeforeMerge(hnid, matchingSpans, color);
 
     // To track affected parent elements
     let affectedParents = new Set();
@@ -1939,6 +2146,11 @@ function deleteMarkedHighlights(parentElement) {
         delete highlights[bookId][pid];
     }
 
+    // If there are no remaining pids for this bookId, delete the bookId entry
+    if (Object.keys(highlights[bookId]).length === 0) {
+        delete highlights[bookId];
+    }
+
     // Save the updated highlights object to localStorage
     localStorage.setItem('highlights', JSON.stringify(highlights));
 }
@@ -2013,7 +2225,6 @@ function adjustRangeOffsets(range) {
 
 // Find the previous non-empty text node from the given node
 function findPreviousTextNode(node) {
-    console.log("node:", node);
     if (!node) return null;
 
     // Check previous siblings
@@ -2052,9 +2263,13 @@ function findLastNonEmptyTextNode(node) {
 
 // Helper function to get the next node in the DOM
 function nextNode(node) {
-    if (node.firstChild) return node.firstChild;
+    if (node.firstChild) {
+        return node.firstChild;
+    }
     while (node) {
-        if (node.nextSibling) return node.nextSibling;
+        if (node.nextSibling) {
+            return node.nextSibling;
+        }
         node = node.parentNode;
     }
     return null;
@@ -2330,38 +2545,50 @@ function autosaveNote() {
     const noteInput = document.querySelector('.note-input');
     if (!noteInput) return;
 
-    const currentNote = noteInput.value;
+    const currentNote = noteInput.value.trim();
     let hnid = noteInput.dataset.hnid;
     if (!hnid) {
         console.error("No hnid found in dataset.");
         return;
     }
 
-    if (currentNote !== lastSavedNote) {
-        const notes = JSON.parse(localStorage.getItem('notes')) || {};
-        if (!notes[bookId]) notes[bookId] = {};
-        if (!notes[bookId].hnids) notes[bookId].hnids = {};
+    const notes = JSON.parse(localStorage.getItem('notes')) || {};
+    if (!notes[bookId]) notes[bookId] = {};
+    if (!notes[bookId].hnids) notes[bookId].hnids = {};
+
+    if (currentNote === "" || /^\s*$/.test(currentNote)) {
+        // Delete the note if it is empty
+        if (notes[bookId].hnids[hnid]) {
+            delete notes[bookId].hnids[hnid];
+        }
+    } else {
+        // Save the note if it is not empty
         notes[bookId].hnids[hnid] = currentNote;
+    }
 
-        localStorage.setItem('notes', JSON.stringify(notes));
-        lastSavedNote = currentNote;
+    // Check if there are any remaining notes for the bookId
+    if (Object.keys(notes[bookId].hnids).length === 0) {
+        delete notes[bookId];
+    }
 
-        const savingIndicator = document.querySelector('.saving-indicator');
-        if (savingIndicator) {
-            savingIndicator.textContent = 'Saved.';
-            savingIndicator.style.display = 'block';
-        }
+    localStorage.setItem('notes', JSON.stringify(notes));
+    lastSavedNote = currentNote;
 
-        // Apply or remove .note-attached class to relevant spans
-        if (currentNote.trim() !== '') {
-            document.querySelectorAll(`.highlight-span[data-hnid="${hnid}"]`).forEach(span => {
-                span.classList.add('note-attached');
-            });
-        } else {
-            document.querySelectorAll(`.highlight-span[data-hnid="${hnid}"]`).forEach(span => {
-                span.classList.remove('note-attached');
-            });
-        }
+    const savingIndicator = document.querySelector('.saving-indicator');
+    if (savingIndicator) {
+        savingIndicator.textContent = 'Saved.';
+        savingIndicator.style.display = 'block';
+    }
+
+    // Apply or remove .note-attached class to relevant spans
+    if (currentNote !== '') {
+        document.querySelectorAll(`.highlight-span[data-hnid="${hnid}"]`).forEach(span => {
+            span.classList.add('note-attached');
+        });
+    } else {
+        document.querySelectorAll(`.highlight-span[data-hnid="${hnid}"]`).forEach(span => {
+            span.classList.remove('note-attached');
+        });
     }
 }
 
@@ -2375,22 +2602,13 @@ if (noteInput) {
     });
 }
 
-// Save notes automatically every 10 seconds only if the note input is visible
-setInterval(() => {
-    const noteInput = document.querySelector('.note-input');
-    if (noteInput && isElementVisible(noteInput) && (Date.now() - lastSavedTime > 3000)) {
-        autosaveNote();
-    }
-}, 10000);
-
-
-
 // Call reapplyHighlightsNotes on window load
 window.addEventListener('load', () => {
     setTimeout(reapplyHighlightsNotes, 250);
 });
 
 
+/////////////////////////////////
 // BIG NOTES AND HIGHLIGHT MODAL
 
 // Function to initialize the modal
@@ -2403,9 +2621,8 @@ function initializeHighlightsNotesModal() {
         modal.innerHTML = `
             <span class="hn-close-btn" onclick="closeHighlightsNotesModal()">×</span>
             <div class="hn-tabs">
-                <button class="hn-tab active" onclick="switchTab('highlights')">Highlights</button>
+                <button class="hn-tab" onclick="switchTab('highlights')">Highlights</button>
                 <button class="hn-tab" onclick="switchTab('notes')">Notes</button>
-                <button class="hn-tab" onclick="switchTab('both')">Both</button>
             </div>
             <div class="hn-tab-content-container">
                 <div id="highlights" class="hn-tab-content">
@@ -2414,14 +2631,9 @@ function initializeHighlightsNotesModal() {
                 <div id="notes" class="hn-tab-content">
                     <p>Loading notes...</p>
                 </div>
-                <div id="both" class="hn-tab-content">
-                    <p>Loading both...</p>
-                </div>
             </div>
         `;
         document.body.appendChild(modal);
-
-        console.log("Highlights & Notes modal initialized");
     }
 
     // Add an event listener to the document to close the modal when clicking outside
@@ -2436,12 +2648,16 @@ function initializeHighlightsNotesModal() {
         event.stopPropagation();
     });
 
+    // Add an event listener for the Esc key to close the modal
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+            closeHighlightsNotesModal();
+        }
+    });
+
     // Load the content for the initially selected tab
-    const activeTab = document.querySelector('.hn-tab.active');
-    if (activeTab) {
-        const tabName = activeTab.getAttribute('onclick').match(/switchTab\('(.+?)'\)/)[1];
-        switchTab(tabName);
-    }
+    const activeTab = localStorage.getItem('activeTab') || 'highlights';
+    switchTab(activeTab);
 }
 
 // Function to open the highlights and notes modal
@@ -2450,11 +2666,12 @@ function openHighlightsNotesModal(event) {
     event.stopPropagation(); // Prevent the click event from propagating to the document level
     const modal = document.getElementById('hn-highlightsNotesModal');
     modal.style.display = 'block';
+    const greyLine = document.getElementById('grey-line');
+    greyLine.style.display = 'block';
 
     // Clear existing content
     document.getElementById('highlights').innerHTML = '';
     document.getElementById('notes').innerHTML = '';
-    document.getElementById('both').innerHTML = '';
 
     // Repopulate based on the active tab
     const activeTab = localStorage.getItem('activeTab') || 'highlights';
@@ -2466,18 +2683,23 @@ function openHighlightsNotesModal(event) {
         case 'notes':
             populateNotesTab();
             break;
-        case 'both':
-            populateBothTab();
-            break;
         default:
             populateHighlightsTab();
     }
+    document.body.classList.add('no-scroll'); // Disable background scrolling
+    document.body.classList.add('modal-open'); // Add class for padding adjustment
+    document.getElementById('header').classList.add('modal-open'); // Add class to header for padding adjustment
 }
 
 // Function to close the highlights and notes modal
 function closeHighlightsNotesModal() {
     const modal = document.getElementById('hn-highlightsNotesModal');
     modal.style.display = 'none';
+    document.body.classList.remove('no-scroll'); // Enable background scrolling
+    document.body.classList.remove('modal-open'); // Remove padding adjustment
+    const greyLine = document.getElementById('grey-line');
+    greyLine.style.display = 'none';
+    document.getElementById('header').classList.remove('modal-open'); // Remove padding adjustment from header
 }
 
 // Event listener to open the modal
@@ -2511,66 +2733,8 @@ function switchTab(tabName) {
         case 'notes':
             populateNotesTab();
             break;
-        case 'both':
-            populateBothTab();
-            break;
     }
 }
-
-/*
-// Function to populate the Highlights tab
-function populateHighlightsTab() {
-    try {
-        const highlightsData = localStorage.getItem('highlights');
-        if (!highlightsData) {
-            console.log('No highlights found in localStorage.');
-            document.getElementById('highlights').innerHTML = '<p>No highlights available.</p>';
-            return;
-        }
-
-        const highlights = JSON.parse(highlightsData);
-        const bookHighlights = highlights[bookId];
-        if (!bookHighlights) {
-            console.log('No highlights for the current book.');
-            document.getElementById('highlights').innerHTML = '<p>No highlights available for this book.</p>';
-            return;
-        }
-
-        let highlightsHTML = '';
-        const orderedPids = Object.keys(bookHighlights).sort((a, b) => parseInt(a.slice(1)) - parseInt(b.slice(1)));
-
-        let previousHnid = null;
-        orderedPids.forEach(pid => {
-            const highlight = bookHighlights[pid];
-            let cleanedHTML = cleanHighlightedHTML(highlight.highlightedHTML);
-
-            // Wrap each pid's content in a div to maintain block structure
-            const tempDiv = document.createElement('div');
-            tempDiv.innerHTML = cleanedHTML;
-
-            const spans = tempDiv.querySelectorAll('.highlight-span');
-            spans.forEach(span => {
-                const hnid = span.getAttribute('data-hnid');
-                if (previousHnid && hnid !== previousHnid) {
-                    highlightsHTML += `<div class="hn-highlight-separator"></div>`;
-                }
-                previousHnid = hnid;
-
-                highlightsHTML += span.outerHTML;
-            });
-
-            // Wrap the result in a div to maintain block structure
-            highlightsHTML += `<div>${tempDiv.innerHTML}</div>`;
-        });
-
-        document.getElementById('highlights').innerHTML = highlightsHTML;
-        console.log('Highlights tab populated.');
-    } catch (error) {
-        console.error('Error populating highlights tab:', error);
-        document.getElementById('highlights').innerHTML = '<p>Error loading highlights.</p>';
-    }
-}
-*/
 
 // Helper function to clean HTML that goes in the highlight tab
 function cleanHighlightedHTML(html) {
@@ -2633,11 +2797,11 @@ function cleanHighlightedHTML(html) {
 function populateHighlightsTab() {
     try {
         const highlightsData = localStorage.getItem('highlights');
-        if (!highlightsData) {
+        if (!highlightsData || !JSON.parse(highlightsData)[bookId] || Object.keys(JSON.parse(highlightsData)[bookId]).length === 0) {
             document.getElementById('highlights').innerHTML = '<p class="no-data-message">No highlights yet. To add a highlight, select some text and click the color you want.</p>';
             return;
         }
-
+        
         const highlights = JSON.parse(highlightsData);
         const bookHighlights = highlights[bookId];
         if (!bookHighlights) {
@@ -2647,14 +2811,20 @@ function populateHighlightsTab() {
 
         let highlightsHTML = '';
         const orderedPids = Object.keys(bookHighlights).sort((a, b) => parseInt(a.slice(1)) - parseInt(b.slice(1)));
+        let previousPid = null;
 
         orderedPids.forEach(pid => {
             const highlight = bookHighlights[pid];
             let cleanedHTML = cleanHighlightedHTML(highlight.highlightedHTML);
 
+            // Check if the current pid is consecutive to the previous pid
+            if (previousPid !== null && parseInt(pid.slice(1)) !== parseInt(previousPid.slice(1)) + 1) {
+                highlightsHTML += `<div class="hn-highlight-separator"></div>`;
+            }
+
             // Wrap each pid's content in a div to maintain block structure and make it clickable
             highlightsHTML += `<div class="highlight-item" data-pid="${pid}">${cleanedHTML}</div>`;
-            highlightsHTML += `<div class="hn-highlight-separator"></div>`;
+            previousPid = pid;
         });
 
         document.getElementById('highlights').innerHTML = highlightsHTML;
@@ -2684,6 +2854,43 @@ function populateHighlightsTab() {
         console.error('Error populating highlights tab:', error);
         document.getElementById('highlights').innerHTML = '<p class="no-data-message">Error loading highlights.</p>';
     }
+}
+
+// Function to render Markdown to HTML
+function renderMarkdown(markdownText) {
+    // Convert headings
+    markdownText = markdownText.replace(/^### (.*$)/gim, '<h3 class="md-h3">$1</h3>');
+    markdownText = markdownText.replace(/^## (.*$)/gim, '<h2 class="md-h2">$1</h2>');
+    markdownText = markdownText.replace(/^# (.*$)/gim, '<h1 class="md-h1">$1</h1>');
+
+    // Convert bold text
+    markdownText = markdownText.replace(/\*\*(.*)\*\*/gim, '<strong class="md-strong">$1</strong>');
+
+    // Convert italic text
+    markdownText = markdownText.replace(/\*(.*)\*/gim, '<em class="md-em">$1</em>');
+
+    // Convert blockquotes
+    markdownText = markdownText.replace(/^\> (.*$)/gim, '<blockquote class="md-blockquote">$1</blockquote>');
+
+    // Convert ordered lists
+    markdownText = markdownText.replace(/^\d+\.\s(.*$)/gim, '<li class="md-li">$1</li>');
+    markdownText = markdownText.replace(/(<li class="md-li">.*<\/li>)/gim, '<ol class="md-ol">$1</ol>');
+
+    // Convert unordered lists
+    markdownText = markdownText.replace(/^\-\s(.*$)/gim, '<li class="md-li">$1</li>');
+    markdownText = markdownText.replace(/(<li class="md-li">.*<\/li>)/gim, '<ul class="md-ul">$1</ul>');
+
+    // Convert inline code
+    markdownText = markdownText.replace(/\`(.*)\`/gim, '<code class="md-code">$1</code>');
+
+    // Convert horizontal rules
+    markdownText = markdownText.replace(/^\-\-\-$/gim, '<hr class="md-hr">');
+
+    // Convert line breaks to <br> between word characters
+    markdownText = markdownText.replace(/\n\n/gim, '<br class="md-br"><br>');
+    markdownText = markdownText.replace(/([\w!"?,"-.:\];])\n/gim, '$1<br>');
+    
+    return markdownText.trim(); // Remove leading and trailing whitespace
 }
 
 // Function to clean paragraphs by removing spans that do not match the current hnid
@@ -2728,8 +2935,6 @@ function cleanParagraphByHnid(html, hnid) {
     return tempDiv.innerHTML;
 }
 
-
-// Helper function to produce a 'han' container
 function createHanContainer(hnid, hnidSpans, noteContent) {
     // Create a container for the highlights (pids)
     const highlightContainer = document.createElement('div');
@@ -2739,7 +2944,7 @@ function createHanContainer(hnid, hnidSpans, noteContent) {
         paragraphDiv.classList.add('highlight-paragraph'); // Add class for styling
         paragraphDiv.innerHTML = html;
 
-        // Add the color class for the vertical line
+        // Add the color class for the border lines
         switch (colorClass) {
             case 'hl-yellow':
                 paragraphDiv.classList.add('border-yellow');
@@ -2760,20 +2965,29 @@ function createHanContainer(hnid, hnidSpans, noteContent) {
                 console.warn('No matching color class found for:', colorClass);
                 break;
         }
-
         highlightContainer.appendChild(paragraphDiv);
     });
 
-    // Create a container for the note content
     const noteContainer = document.createElement('div');
     noteContainer.classList.add('note-container');
-    noteContainer.textContent = noteContent;
+
+    // Render the note content using Markdown
+    const renderedNoteContent = renderMarkdown(noteContent);
+    noteContainer.innerHTML = renderedNoteContent;
 
     // Combine the highlight and note containers into a 'han' container
     const hanContainer = document.createElement('div');
-    hanContainer.classList.add('han-container');
+    hanContainer.classList.add('han-container', 'highlight-item'); // Added 'highlight-item' class for consistency
+    hanContainer.setAttribute('data-pid', hnidSpans[0]?.pid);
     hanContainer.appendChild(highlightContainer);
     hanContainer.appendChild(noteContainer);
+
+    // Simplify the event listener to just log the click
+    hanContainer.addEventListener('click', function(event) {
+        event.stopPropagation(); // Ensure the event doesn't propagate further
+        const pid = hanContainer.getAttribute('data-pid');
+        console.log(`Clicked han with pid: ${pid}`);
+    });
 
     return hanContainer.outerHTML;
 }
@@ -2782,11 +2996,11 @@ function createHanContainer(hnid, hnidSpans, noteContent) {
 function populateNotesTab() {
     try {
         const notesData = localStorage.getItem('notes');
-        if (!notesData) {
+        if (!notesData || !JSON.parse(notesData)[bookId] || Object.keys(JSON.parse(notesData)[bookId].hnids).length === 0) {
             document.getElementById('notes').innerHTML = '<p class="no-data-message">No notes yet. To add a note, select some text and click the note icon.</p>';
             return;
         }
-
+        
         const bookNotes = JSON.parse(notesData)[bookId];
         if (!bookNotes) {
             document.getElementById('notes').innerHTML = '<p class="no-data-message">No notes yet. To add a note, select some text and click the note icon.</p>';
@@ -2820,10 +3034,13 @@ function populateNotesTab() {
                 }
             }
 
+            console.log("-------------------------------------");
+            const hanHTML = createHanContainer(hnid, hnidSpans, bookNotes.hnids[hnid]);
+            
             // Produce the 'han' container and add it to the hans array
             hans.push({
                 hnid,
-                html: createHanContainer(hnid, hnidSpans, bookNotes.hnids[hnid]),
+                html: hanHTML,
                 firstPid: Math.min(...Array.from(pidsSet).map(pid => parseInt(pid.slice(1))))
             });
         }
@@ -2831,56 +3048,50 @@ function populateNotesTab() {
         // Sort the hans by firstPid
         hans.sort((a, b) => a.firstPid - b.firstPid);
 
-        // Ensure no duplicate paragraphs
-        const seenPids = new Set();
-        hans.forEach(han => {
-            const tempDiv = document.createElement('div');
-            tempDiv.innerHTML = han.html;
+        // Display the combined highlights and notes in the notes tab with horizontal separators
+        document.getElementById('notes').innerHTML = hans.map(han => `<div>${han.html}</div><div class="hn-highlight-separator"></div>`).join('');
 
-            tempDiv.querySelectorAll('.highlight-container > div').forEach(paragraphDiv => {
-                const pid = paragraphDiv.querySelector('.highlight-span')?.getAttribute('data-hnid');
-                if (seenPids.has(pid)) {
-                    paragraphDiv.remove();
-                } else {
-                    seenPids.add(pid);
+        // Attach event listeners to the han containers; permits dragging/selection.
+        document.querySelectorAll('.han-container').forEach(hanContainer => {
+            const pid = hanContainer.getAttribute('data-pid');
+            let isDragging = false;
+            let startX, startY;
+
+            hanContainer.addEventListener('mousedown', function(e) {
+                isDragging = false;
+                startX = e.clientX;
+                startY = e.clientY;
+            });
+
+            hanContainer.addEventListener('mousemove', function(e) {
+                if (Math.abs(e.clientX - startX) > 5 || Math.abs(e.clientY - startY) > 5) {
+                    isDragging = true;
                 }
             });
 
-            han.html = tempDiv.innerHTML;
-        });
+            hanContainer.addEventListener('mouseup', function(e) {
+                if (!isDragging) {
+                    console.log(`Clicked han with pid: ${pid}`);
+                    window.location.hash = `#${pid}`;
+                    closeHighlightsNotesModal();
 
-        // Display the combined highlights and notes in the notes tab with horizontal separators
-        document.getElementById('notes').innerHTML = hans.map(han => `<div>${han.html}</div><div class="hn-highlight-separator"></div>`).join('');
+                    // Scroll adjustment
+                    setTimeout(() => {
+                        const targetElement = document.getElementById(pid);
+                        if (targetElement) {
+                            const offset = 100;
+                            const elementPosition = targetElement.getBoundingClientRect().top;
+                            const offsetPosition = elementPosition - offset;
+                            window.scrollBy({ top: offsetPosition });
+                        }
+                    }, 100); // Delay to ensure the page navigates to the correct section
+                }
+            });
+        });
 
     } catch (error) {
         console.error('Error populating notes tab:', error);
         document.getElementById('notes').innerHTML = '<p class="no-data-message">Error loading notes.</p>';
-    }
-}
-
-
-// Function to populate the Both tab
-function populateBothTab() {
-    try {
-        const highlightsData = localStorage.getItem('highlights');
-        const notesData = localStorage.getItem('notes');
-        if (!highlightsData && !notesData) {
-            document.getElementById('both').innerHTML = '<p class="no-data-message">No highlights or notes yet. To add a highlight, select some text and click the color you want. To add a note, select some text and click the note icon.</p>';
-            return;
-        }
-
-        const highlights = highlightsData ? JSON.parse(highlightsData)[bookId] : null;
-        const notes = notesData ? JSON.parse(notesData)[bookId] : null;
-        if (!highlights && !notes) {
-            document.getElementById('both').innerHTML = '<p class="no-data-message">No highlights or notes yet. To add a highlight, select some text and click the color you want. To add a note, select some text and click the note icon.</p>';
-            return;
-        }
-
-        // Implementation for fetching, sorting, and rendering both highlights and notes goes here
-
-    } catch (error) {
-        console.error('Error populating both tab:', error);
-        document.getElementById('both').innerHTML = '<p class="no-data-message">Error loading highlights and notes.</p>';
     }
 }
 
