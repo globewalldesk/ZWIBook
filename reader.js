@@ -1460,13 +1460,58 @@ function toggleNoteInput() {
     if (noteInput && hmodal) {
         if (noteInput.style.display === 'none') {
             noteInput.style.display = 'block';
-            adjustModalHeight();
+            snapModalToTopAndAdjustHeight();
         } else {
-            noteInput.style.display = 'none';
+            noteInput.style.display = 'none';function snapModalToTopAndAdjustHeight() {
+    const noteInput = document.querySelector('.note-input');
+    const hmodal = document.getElementById('highlightModal');
+
+    // Calculate available height for the modal
+    const maxHeight = window.innerHeight - 160; // 120px top margin + 40px bottom margin
+
+    // Set the top position of the modal
+    hmodal.style.top = '120px';
+
+    // Calculate the initial height of the modal based on the input content
+    let inputHeight = noteInput.scrollHeight;
+    if (inputHeight > maxHeight) {
+        inputHeight = maxHeight; // Cap the input height to the available space
+    }
+
+    // Set the height of the note input
+    noteInput.style.height = `${inputHeight}px`;
+
+    // Set the height of the modal
+    hmodal.style.height = `${inputHeight + 40}px`; // Add some margin for the modal padding
+}
+
             hmodal.style.height = 'auto'; // Reset modal height
         }
         centerHighlightModal(hmodal);
     }
+}
+
+function snapModalToTopAndAdjustHeight() {
+    const noteInput = document.querySelector('.note-input');
+    const hmodal = document.getElementById('highlightModal');
+
+    // Calculate available height for the modal
+    const maxHeight = window.innerHeight - 160; // 120px top margin + 40px bottom margin
+
+    // Set the top position of the modal
+    hmodal.style.top = '120px';
+
+    // Calculate the initial height of the modal based on the input content
+    let inputHeight = noteInput.scrollHeight;
+    if (inputHeight > maxHeight) {
+        inputHeight = maxHeight; // Cap the input height to the available space
+    }
+
+    // Set the height of the note input
+    noteInput.style.height = `${inputHeight}px`;
+
+    // Set the height of the modal
+    hmodal.style.height = `${inputHeight + 40}px`; // Add some margin for the modal padding
 }
 
 function centerHighlightModal(hmodal) {
@@ -1685,14 +1730,14 @@ document.querySelector('.edit-note').addEventListener('click', function(event) {
     handleEditNoteClick();
 });
 
-// Note input grows with height of input
+// Note input grows with height of input, up to max (set in CSS)
 let inputHeight = 0;
 document.querySelector('.note-input').addEventListener('input', function(event) {
     const noteInput = document.querySelector('.note-input');
     if (inputHeight !== noteInput.scrollHeight) {
         noteInput.style.height = 'auto';
         inputHeight = noteInput.scrollHeight;
-        noteInput.style.height = `${inputHeight + 5}px`;
+        noteInput.style.height = `${inputHeight + 10}px`;
     };
 });
 
@@ -1756,14 +1801,24 @@ document.addEventListener('selectionchange', function () {
 
 // Event listener to handle window resize events
 window.addEventListener('resize', function () {
+
     const hmodal = document.getElementById('highlightModal');
-    if (hmodal) {
+    const noteInput = document.querySelector('note-input');
+    if (hmodal && noteInput && noteInput.style.display == 'none') {
         hmodal.style.display = 'none'; // Hides the modal on window resize
         // Remove the .temp-underline class from all spans
         const spans = document.querySelectorAll('span');
         spans.forEach(span => {
             span.classList.remove('temp-underline');
         });
+    } else if (noteInput && noteInput.style.display == 'block') {
+        console.log("here");
+        const rect = hmodel.getBoundingClientRect();
+        // Is modal bottom somewhere below a line 40px above the bottom of the window?
+        const distanceFromBottom = window.innerHeight - 40 - rect.bottom;
+        if (distanceFromBottom < 0) {
+            console.log('must snap');
+        }
     }
 });
 

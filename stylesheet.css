@@ -1603,7 +1603,7 @@ h2 .inline-button img {
     resize: none; /* Prevent manual resizing */
     box-sizing: border-box; /* Ensure padding is included in height calculation */
     margin-bottom: 10px;
-    padding: 6px;
+    padding: 6px 4px 8px 8px;
     font-family: "Liberation Sans", Arial, Helvetica, sans-serif;
     font-size: 1.05em;
 }
@@ -1792,12 +1792,13 @@ h2 .inline-button img {
     padding-left: 10px;
 }
 
-/* Compact rendering CSS rules */
+/* Compact rendering CSS rules override all other styles */
 
 .md-h1, .md-h2, .md-h3 {
     margin: 0 !important;
     padding: 0 !important;
-    text-align: left;
+    text-align: left !important;
+    font-weight: bold !important;
 }
 
 .md-h1 {
@@ -1833,8 +1834,9 @@ h2 .inline-button img {
 }
 
 .md-li {
-    margin: 0 !important;
+    margin: 0 0 0 10px !important;
     padding: 0 !important;
+    list-style-type: disc !important;
 }
 
 .md-code {
