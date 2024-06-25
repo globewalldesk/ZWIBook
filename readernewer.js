@@ -1456,7 +1456,6 @@ function designHighlightModal(hmodal, bottomPosition, modalWidth = 300) {
 }
 
 function toggleNoteInput() {
-    console.log("togglin'");
     const noteInput = document.querySelector('.note-input');
     const hmodal = document.getElementById('highlightModal');
     if (noteInput && hmodal) {
@@ -1464,6 +1463,7 @@ function toggleNoteInput() {
             noteInput.style.display = 'block';
             hmodal.style.width = '500px';
             snapModalToTopAndAdjustHeight();
+            noteInput.focus();
         } else {
             noteInput.style.display = 'none';
             hmodal.style.width = '350px';
@@ -1475,12 +1475,12 @@ function toggleNoteInput() {
 
 function snapModalToTopAndAdjustHeight() {
     console.log("snappin'");
-    const hmodal = document.getElementById('highlightModal');
     const noteInput = document.querySelector('.note-input');
+    const associatedHighlight = document.querySelector('.highlight-span'); // Replace with actual associated highlight element
 
     // Calculate available height for the modal
     const maxHeight = window.innerHeight - 180; //
-    noteInput.style.height = 'auto';
+    console.log("maxHeight", maxHeight);
 
     // Calculate the initial height of the modal based on the input content
     let inputHeight = noteInput.scrollHeight;
@@ -1489,14 +1489,14 @@ function snapModalToTopAndAdjustHeight() {
     }
 
     // Set the height of the note input (and thus the modal)
-    noteInput.style.height = `${inputHeight + 5}px`;
+    noteInput.style.height = `${inputHeight}px`;
 
     // Determine the position of the highlight element relative to the document
-    const hmodalRect = hmodal.getBoundingClientRect();
-    const highlightTopRelativeToDocument = hmodalRect.top + window.scrollY;
+    const highlightRect = associatedHighlight.getBoundingClientRect();
+    const highlightTopRelativeToDocument = highlightRect.top + window.scrollY;
 
     // Calculate the desired scroll position
-    const desiredScrollPosition = highlightTopRelativeToDocument - 120;
+    const desiredScrollPosition = highlightTopRelativeToDocument - 40;
 
     // Scroll the document to the calculated position
     window.scrollTo(0, desiredScrollPosition);
@@ -1677,11 +1677,6 @@ function handleEditNoteClick() {
     const selection = window.getSelection();
     const hmodal = document.getElementById('highlightModal');
     hmodal.style.pointerEvents = 'auto';
-
-
-    console.log("Am I highlighting? I am trying!");
-    console.log("selection.rangeCount =", selection.rangeCount);
-    console.log("selection.toString().length =", selection.toString().length);
 
     if (selection.rangeCount > 0 && selection.toString().length > 0) {
         if (mostRecentColor == "delete highlight") { mostRecentColor = 'yellow';}
