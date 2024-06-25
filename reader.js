@@ -1479,8 +1479,17 @@ function snapModalToTopAndAdjustHeight() {
     const noteInput = document.querySelector('.note-input');
 
     // Calculate available height for the modal
-    const maxHeight = window.innerHeight - 180; //
+    const maxHeight = window.innerHeight - 180;
     noteInput.style.height = 'auto';
+
+    // Determine the position of the highlight element relative to the document
+    const hmodalRect = hmodal.getBoundingClientRect();
+    const hmodalTopRelativeToDocument = hmodalRect.top + window.scrollY;
+
+    // Get the position of the highlighted text relative to the document
+    const highlightElement = document.querySelector('.temp-underline');
+    const highlightRect = highlightElement.getBoundingClientRect();
+    const highlightTopRelativeToDocument = highlightRect.top + window.scrollY;
 
     // Calculate the initial height of the modal based on the input content
     let inputHeight = noteInput.scrollHeight;
@@ -1491,12 +1500,26 @@ function snapModalToTopAndAdjustHeight() {
     // Set the height of the note input (and thus the modal)
     noteInput.style.height = `${inputHeight + 5}px`;
 
-    // Determine the position of the highlight element relative to the document
-    const hmodalRect = hmodal.getBoundingClientRect();
-    const highlightTopRelativeToDocument = hmodalRect.top + window.scrollY;
+    // Calculate the combined height of the highlighted text and the note input
+    const highlightHeight = highlightRect.height;
+    const combinedHeight = highlightHeight + inputHeight;
 
-    // Calculate the desired scroll position
-    const desiredScrollPosition = highlightTopRelativeToDocument - 120;
+    // Determine the desired scroll position
+    let desiredScrollPosition;
+    if (combinedHeight <= maxHeight) {
+        // If it fits, align based on the highlighted text's top position
+        desiredScrollPosition = highlightTopRelativeToDocument - 100;
+    } else {
+        // If it doesn't fit, ensure the input field is correctly positioned
+        const availableHeight = window.innerHeight - highlightTopRelativeToDocument;
+        if (inputHeight <= availableHeight) {
+            // If the input field fits below the highlight, snap to highlight top
+            desiredScrollPosition = highlightTopRelativeToDocument - 100;
+        } else {
+            // Otherwise, snap as far up as possible within the highlight while keeping the note visible
+            desiredScrollPosition = highlightTopRelativeToDocument - (maxHeight - 20);
+        }
+    }
 
     // Scroll the document to the calculated position
     window.scrollTo(0, desiredScrollPosition);
@@ -1723,7 +1746,7 @@ document.querySelector('.edit-note').addEventListener('click', function(event) {
     handleEditNoteClick();
 });
 
-// Note input grows with height of input, up to max (set in CSS)
+// Note input grows with height of input, up to max (set by "snap" function)
 let inputHeight = 0;
 document.querySelector('.note-input').addEventListener('input', function(event) {
     const noteInput = document.querySelector('.note-input');
