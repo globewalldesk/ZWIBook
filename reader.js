@@ -502,7 +502,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const pageCount = Math.ceil(wordCount / 300);
 
         // Move inline centering to class.
-        const relevantTags = ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol', 'pre', 'figcaption', 'aside', 'address', 'details', 'summary'];
+        const relevantTags = ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol', 'tr', 'pre', 'figcaption', 'aside', 'address', 'details', 'summary'];
         // Iterate over each relevant tag and process elements with inline centering
         relevantTags.forEach(tag => {
             let elements = bookContentDiv.querySelectorAll(`${tag}[style*="text-align: center"]`);
@@ -1078,7 +1078,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const updateButtonPositions = () => {
         const bookContentRect = bookContentDiv.getBoundingClientRect();
         const viewportHeight = window.innerHeight;
-        const headerHeight = document.querySelector('header').offsetHeight;
+        const headerHeight = document.getElementById('header').offsetHeight;
 
         const styleString = `calc(50% - ${bookContentDiv.offsetWidth / 1.99}px)`;
         prevPage.style.left = styleString;
@@ -1125,7 +1125,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Function to calculate the scroll amount and handle the page navigation
     const scrollPage = (direction) => {
         const viewportHeight = window.innerHeight;
-        const headerHeight = document.querySelector('header').offsetHeight;
+        const headerHeight = document.querySelector('.header').offsetHeight;
 
         if (direction === 'next') {
             document.documentElement.scrollBy({
@@ -1367,7 +1367,8 @@ function initializeHighlightAndNoteModal() {
                 event.stopPropagation(); // Prevent interference with the click event
                 if (!this.classList.contains('edit-note')) {
                     mostRecentColor = this.title.toLowerCase(); // Update the most recent color
-                    highlightSelection(mostRecentColor);
+                    let returnValue = true; // Becomes false if deletion is canceled.
+                    returnValue = highlightSelection(mostRecentColor);
                 } else if (this.classList.contains('edit-note')) {
                     toggleNoteInput();
                 }
@@ -1436,7 +1437,6 @@ function showHighlightModalOnHighlightClick(hnid, boundingRects) {
             noteInput.value = notes[bookId].hnids[hnid];
             hmodal.style.width = '500px'; // Expand modal width when note is present
             snapModalToTopAndAdjustHeight();
-            noteInput.focus();
         } else {
             defaultNoteOpen = false;
             noteInput.style.display = 'none';
@@ -1473,23 +1473,17 @@ function toggleNoteInput() {
     centerHighlightModal(hmodal);
 }
 
+// Adjusts top position of color modal when (a) clicking a highlight;
+// (b) toggling note input; or (c) scrolling; and only if a note is
+// on the long side.
 function snapModalToTopAndAdjustHeight() {
     console.log("snappin'");
     const hmodal = document.getElementById('highlightModal');
     const noteInput = document.querySelector('.note-input');
 
     // Calculate available height for the modal
-    const maxHeight = window.innerHeight - 180;
+    const maxHeight = window.innerHeight - 180; 
     noteInput.style.height = 'auto';
-
-    // Determine the position of the highlight element relative to the document
-    const hmodalRect = hmodal.getBoundingClientRect();
-    const hmodalTopRelativeToDocument = hmodalRect.top + window.scrollY;
-
-    // Get the position of the highlighted text relative to the document
-    const highlightElement = document.querySelector('.temp-underline');
-    const highlightRect = highlightElement.getBoundingClientRect();
-    const highlightTopRelativeToDocument = highlightRect.top + window.scrollY;
 
     // Calculate the initial height of the modal based on the input content
     let inputHeight = noteInput.scrollHeight;
@@ -1500,29 +1494,18 @@ function snapModalToTopAndAdjustHeight() {
     // Set the height of the note input (and thus the modal)
     noteInput.style.height = `${inputHeight + 5}px`;
 
-    // Calculate the combined height of the highlighted text and the note input
-    const highlightHeight = highlightRect.height;
-    const combinedHeight = highlightHeight + inputHeight;
+    // Check if the input height is greater than 50% of the viewport height
+    if (inputHeight > window.innerHeight * 0.5) {
+        // Determine the position of the highlight element relative to the document
+        const hmodalRect = hmodal.getBoundingClientRect();
+        const highlightTopRelativeToDocument = hmodalRect.top + window.scrollY;
 
-    // Determine the desired scroll position
-    let desiredScrollPosition;
-    if (combinedHeight <= maxHeight) {
-        // If it fits, align based on the highlighted text's top position
-        desiredScrollPosition = highlightTopRelativeToDocument - 100;
-    } else {
-        // If it doesn't fit, ensure the input field is correctly positioned
-        const availableHeight = window.innerHeight - highlightTopRelativeToDocument;
-        if (inputHeight <= availableHeight) {
-            // If the input field fits below the highlight, snap to highlight top
-            desiredScrollPosition = highlightTopRelativeToDocument - 100;
-        } else {
-            // Otherwise, snap as far up as possible within the highlight while keeping the note visible
-            desiredScrollPosition = highlightTopRelativeToDocument - (maxHeight - 20);
-        }
+        // Calculate the desired scroll position
+        const desiredScrollPosition = highlightTopRelativeToDocument - 120;
+
+        // Scroll the document to the calculated position
+        window.scrollTo(0, desiredScrollPosition);
     }
-
-    // Scroll the document to the calculated position
-    window.scrollTo(0, desiredScrollPosition);
 }
 
 function centerHighlightModal(hmodal) {
@@ -1561,9 +1544,8 @@ document.addEventListener('keydown', function (event) {
     const selection = window.getSelection();
     const range = selection.rangeCount > 0 ? selection.getRangeAt(0) : null;
     const hmodal = document.getElementById('highlightModal');
-    if (range && !range.collapsed) {
-        console.log("Selection range preserved:", range.toString());
-
+    const noteInput = document.querySelector('.note-input');
+    if (range && !range.collapsed && document.activeElement !== noteInput) {
         switch (event.key.toLowerCase()) {
             case 'n':
                 // Trigger the functionality of the .edit-note button
@@ -1600,7 +1582,7 @@ document.addEventListener('keydown', function (event) {
             default:
                 break;
         }
-    } else if (hmodal.style.display === 'block' && noteInput.style.display === 'none') {
+    } else if (hmodal.style.display === 'block' && document.activeElement !== noteInput) {
         switch (event.key) {
             case 'y':
                 highlightSelection('yellow');
@@ -1627,12 +1609,14 @@ document.addEventListener('keydown', function (event) {
                 event.preventDefault();
                 break;
             case 'n':
+                console.log("case 2");
                 const nbutton = document.querySelector('.edit-note');
-                if (nbutton) {
+                const noteInput = document.querySelector('.note-input');
+                if (noteInput.style.display === 'none') {
                     nbutton.click();
-                    document.querySelector('.note-input').focus();
-                    event.preventDefault();
                 }
+                noteInput.focus();
+                event.preventDefault();                    
                 break;
             case 'Backspace':
             case 'Delete':
@@ -1746,7 +1730,7 @@ document.querySelector('.edit-note').addEventListener('click', function(event) {
     handleEditNoteClick();
 });
 
-// Note input grows with height of input, up to max (set by "snap" function)
+// Note input grows with height of input, up to max (set in CSS)
 let inputHeight = 0;
 document.querySelector('.note-input').addEventListener('input', function(event) {
     const noteInput = document.querySelector('.note-input');
@@ -1833,7 +1817,7 @@ document.addEventListener('selectionchange', function () {
 window.addEventListener('resize', function () {
 
     const hmodal = document.getElementById('highlightModal');
-    const noteInput = document.querySelector('note-input');
+    const noteInput = document.querySelector('.note-input');
     if (hmodal && noteInput && noteInput.style.display == 'none') {
         hmodal.style.display = 'none'; // Hides the modal on window resize
         // Remove the .temp-underline class from all spans
@@ -1883,48 +1867,75 @@ function handleSelectionChange() {
 
 // HIGHLIGHT SELECTION AND ADJUSTMENT
 
-// Highlight the selected text with the specified color
 function highlightSelection(color) {
     const selection = window.getSelection();
+    let range, textNodes;
+
     if (selection.rangeCount > 0) {
-        let range = selection.getRangeAt(0);
-
+        range = selection.getRangeAt(0);
         adjustRangeOffsets(range);
+        textNodes = collectTextNodes(range);
+    }
 
-        const textNodes = collectTextNodes(range);
-        // Failsafe in case the selection ends up being too large.
-        if (textNodes.length > 40) {
-            alert("Something went wrong. Either your selection was too large or there was another error. Please try another way.");
-            return; // Stop the highlighting process
+    // If no valid text nodes found in the initial selection, use .temp-underline
+    if (!textNodes || textNodes.length === 0) {
+        const tempUnderline = document.querySelector('.temp-underline');
+        if (tempUnderline) {
+            range = document.createRange();
+            range.selectNodeContents(tempUnderline);
+            textNodes = getTextNodesFromElement(tempUnderline);
+        } else {
+            console.log("No temp-underline element found, returning");
+            return;
         }
+    }
 
-        let highestHnid = getHighestHnid(); // Get the highest hnid
-        let hnid = (highestHnid + 1).toString(); // Increment the highest hnid
+    // Failsafe in case the selection ends up being too large.
+    if (textNodes.length > 40) {
+        alert("Something went wrong. Either your selection was too large or there was another error. Please try another way.");
+        return; // Stop the highlighting process
+    }
 
-        // Store the hnid in the note input's dataset
-        const noteInput = document.querySelector('.note-input');
-        noteInput.dataset.hnid = hnid;
+    let highestHnid = getHighestHnid(); // Get the highest hnid
+    let hnid = (highestHnid + 1).toString(); // Increment the highest hnid
 
-        // Perform check for deletion if color is hl-delete
-        if (color === 'delete highlight') {
-            if (!checkForNotesBeforeDelete(range, textNodes)) {
-                console.log(textNodes);
-                return; // User canceled the deletion
+    // Store the hnid in the note input's dataset
+    const noteInput = document.querySelector('.note-input');
+    noteInput.dataset.hnid = hnid;
+
+    // Perform check for deletion if color is hl-delete
+    if (color === 'delete highlight') {
+        if (!checkForNotesBeforeDelete(range, textNodes)) {
+            return false; // User canceled the deletion
+        }
+    }
+
+    // Process all text nodes within the range, regardless of their parent elements
+    highlightTextNodes(textNodes, range, color, hnid);
+
+    // Clear the selection and hide the modal
+    selection.removeAllRanges();
+    const hmodal = document.getElementById('highlightModal');
+    if (hmodal) {
+        hmodal.style.display = 'none';
+    }
+
+    handleHighlightMerges(hnid, color);
+}
+
+function getTextNodesFromElement(element) {
+    let textNodes = [];
+    function getTextNodes(node) {
+        if (node.nodeType === Node.TEXT_NODE) {
+            textNodes.push(node);
+        } else {
+            for (let child = node.firstChild; child; child = child.nextSibling) {
+                getTextNodes(child);
             }
         }
-
-        // Process all text nodes within the range, regardless of their parent elements
-        highlightTextNodes(textNodes, range, color, hnid);
-
-        // Clear the selection and hide the modal
-        selection.removeAllRanges();
-        const hmodal = document.getElementById('highlightModal');
-        if (hmodal) {
-            hmodal.style.display = 'none';
-        }
-
-        handleHighlightMerges(hnid, color);
     }
+    getTextNodes(element);
+    return textNodes;
 }
 
 // Collects all text nodes within the range
@@ -2365,6 +2376,8 @@ function nextNode(node) {
 
 // Highlights the text nodes within the given range with the specified color and hnid
 function highlightTextNodes(textNodes, range, color, hnid) {
+    console.log("I did get to highlightTextNodes");
+    console.log("I say textNodes.length =", textNodes.length);
     if (textNodes.length === 1) {
         highlightSingleTextNode(textNodes[0], range, color, hnid);
     } else if (textNodes.length > 1) {
@@ -2375,6 +2388,7 @@ function highlightTextNodes(textNodes, range, color, hnid) {
 // Highlights a single text node within the range with the specified color and hnid
 function highlightSingleTextNode(node, range, color, hnid) {
     const text = node.textContent;
+    console.log("I know the text is: ", text);
 
     const before = text.slice(0, range.startOffset);
     const highlight = text.slice(range.startOffset, range.endOffset);
@@ -2417,6 +2431,7 @@ function highlightMultipleTextNodes(textNodes, range, color, hnid) {
     let usedHnids = [];
 
     const startText = startNode.textContent;
+    console.log("I say start text is:", startText);
     const startBefore = startText.slice(0, range.startOffset);
     const startHighlight = startText.slice(range.startOffset);
 
@@ -2469,7 +2484,7 @@ function highlightMultipleTextNodes(textNodes, range, color, hnid) {
 
 // Get the relevant parent element from the given node
 function getRelevantParentElement(node) {
-    const relevantTags = ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol', 'pre', 'figcaption', 'aside', 'address', 'details', 'summary'];
+    const relevantTags = ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol', 'tr', 'pre', 'figcaption', 'aside', 'address', 'details', 'summary'];
     while (node && node.nodeType !== Node.DOCUMENT_NODE) {
         if (node.tagName && relevantTags.includes(node.tagName.toLowerCase())) {
             return node;
@@ -2487,6 +2502,7 @@ function createSpanWrapper(color, hnid) {
     spanWrapper.dataset.hnid = hnid;
     return spanWrapper;
 }
+
 
 
 // REAPPLY HIGHLIGHTS (apply saved highlights when loading page)
@@ -2510,7 +2526,6 @@ function reapplyHighlightsNotes() {
         // Get the pid div element
         let pidElement = document.getElementById(pid);
         if (!pidElement) {
-            console.warn(`Element with id '${pid}' not found.`);
             return;
         }
 
@@ -2523,21 +2538,18 @@ function reapplyHighlightsNotes() {
             const paragraphIndex = bookmarkIcon.id.split('-')[1];
             bookmarkIcon.setAttribute('onclick', `toggleBookmark(${paragraphIndex})`);
         }
-
-        // Apply .note-attached class to spans with notes
-        let notes = JSON.parse(localStorage.getItem('notes')) || {};
-        if (notes[bookId] && highlights[bookId][pid].hnids) {
-            highlights[bookId][pid].hnids.forEach(hnid => {
-                document.querySelectorAll(`.highlight-span[data-hnid="${hnid}"]`).forEach(span => {
-                    // Check if the span is not a descendant of .hn-tab-content-container
-                    if (! span.closest('.hn-tab-content-container')) {
-                        span.classList.add('note-attached');
-                    }
-                });
-            });
-        }
     });
 
+    // Apply .note-attached class to spans with notes
+    let notes = JSON.parse(localStorage.getItem('notes')) || {};
+    if (notes[bookId]) {
+        Object.keys(notes[bookId].hnids).forEach(hnid => {
+            document.querySelectorAll(`.highlight-span[data-hnid="${hnid}"]`).forEach(span => {
+                span.classList.add('note-attached');
+            });
+        });
+    }
+    
     const endTime = performance.now();
 }
 
@@ -3197,5 +3209,18 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
 
 });
+
+
+
+/*
+document.addEventListener('focus', function(event) {
+    console.log('Active element:', document.activeElement);
+}, true); // Use capture phase to detect focus changes on all elements
+
+setInterval(function() {
+    console.log('Active element:', document.activeElement);
+}, 5000);
+*/
+
 
 // END OF HIGHLIGHT FUNCTIONALITY
