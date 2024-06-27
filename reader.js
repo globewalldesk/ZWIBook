@@ -1336,6 +1336,7 @@ let selectedText = null;
 let highlightCounter = 0;
 let defaultNoteOpen = true;
 let mostRecentColor = 'yellow'; // Default color
+let openingHmodal = false; // Stymie a race condition.
 
 // Initialize highlight modal and its event listeners
 function initializeHighlightAndNoteModal() {
@@ -1454,6 +1455,8 @@ function designHighlightModal(hmodal, bottomPosition, modalWidth = 300) {
     hmodal.style.top = `${bottomPosition + window.scrollY}px`;
     hmodal.style.width = `${modalWidth}px`;
     hmodal.style.display = 'block';
+    console.log("hmodal: block 1");
+    openingHmodal = false;
 }
 
 function toggleNoteInput() {
@@ -1525,6 +1528,7 @@ document.addEventListener('keydown', function (event) {
     const noteInput = document.querySelector('.note-input');
     if (event.key === "Escape" && hmodal.style.display === 'block') {
         hmodal.style.display = 'none';
+        console.log("hmodal: none 1");
         hmodal.style.width = '350px'; // Reset modal width to default when closed
         // Remove the .temp-underline class from all spans
         const spans = document.querySelectorAll('span');
@@ -1671,6 +1675,8 @@ document.addEventListener('mousedown', function (event) {
         }
     } else {
         hmodal.style.display = 'none';
+        console.log("hmodal: none 2");
+        openingHmodal = true;
         hmodal.style.width = '350px'; // Reset modal width to default when closed
         if (noteInput) {
             if (noteInput.value.trim() === '') {
@@ -1811,8 +1817,10 @@ document.addEventListener('selectionchange', function () {
         hmodal.style.top = `${rect.bottom + window.scrollY}px`;
         hmodal.style.left = `${leftPosition + window.scrollX}px`;
         hmodal.style.display = 'block';
+        console.log("hmodal: block 2");
     } else {
-        hmodal.style.display = 'none'; // Hide the modal if no valid range is selected
+        hmodal.style.display = 'none'; // Hide the modal if no valid range is
+        console.log("hmodal: none 3");
         // Remove the .temp-underline class from all spans
         const spans = document.querySelectorAll('span');
         spans.forEach(span => {
@@ -1837,6 +1845,7 @@ function handleSelectionChange() {
         hmodal.innerHTML = '<div class="highlight-modal-content">Content will go here</div>';
         hmodal.style.pointerEvents = 'none';
         hmodal.style.display = 'none'; // Ensure the modal is initially hidden
+        console.log("hmodal: none 4");
         document.body.appendChild(hmodal);
     }
 
@@ -1851,8 +1860,10 @@ function handleSelectionChange() {
         hmodal.style.top = `${rect.bottom + window.scrollY}px`;
         hmodal.style.left = `${leftPosition + window.scrollX}px`;
         hmodal.style.display = 'block';
+        console.log("hmodal: block 3");
     } else {
         hmodal.style.display = 'none';
+        console.log("hmodal: none 5");
     }
 }
 
@@ -1902,6 +1913,7 @@ function highlightSelection(color) {
             const hmodal = document.getElementById('highlightModal');
             if (hmodal) {
                 hmodal.style.display = 'block';
+                console.log("hmodal: block 4");
                 document.activeElement.blur()
                 hmodal.focus();
             }
@@ -1917,6 +1929,7 @@ function highlightSelection(color) {
     const hmodal = document.getElementById('highlightModal');
     if (hmodal) {
         hmodal.style.display = 'none';
+        console.log("hmodal: none 6");
     }
 
     handleHighlightMerges(hnid, color);
