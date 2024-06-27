@@ -1451,12 +1451,13 @@ function showHighlightModalOnHighlightClick(hnid, boundingRects) {
 }
 
 // Function to design and position the modal
-function designHighlightModal(hmodal, bottomPosition, modalWidth = 300) {
-    hmodal.style.top = `${bottomPosition + window.scrollY}px`;
-    hmodal.style.width = `${modalWidth}px`;
-    hmodal.style.display = 'block';
-    console.log("hmodal: block 1");
-    openingHmodal = false;
+function designHighlightModal(hmodal, bottomPosition) {
+    setTimeout(() => {
+        hmodal.style.top = `${bottomPosition + window.scrollY}px`;
+        hmodal.style.display = 'block';
+        console.log("hmodal: block 1");
+        snapModalToTopAndAdjustHeight();
+    }, 40); // Delay execution by 100ms
 }
 
 function toggleNoteInput() {
@@ -1675,6 +1676,7 @@ document.addEventListener('mousedown', function (event) {
         }
     } else {
         hmodal.style.display = 'none';
+        console.log("--------------------------------------");
         console.log("hmodal: none 2");
         openingHmodal = true;
         hmodal.style.width = '350px'; // Reset modal width to default when closed
