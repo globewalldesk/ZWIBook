@@ -29,5 +29,22 @@ contextBridge.exposeInMainWorld('electronAPI', {
     onDownloadImageRequest: (callback) => ipcRenderer.on('download-image-request', callback),
     sendBookInfo: (bookInfo) => ipcRenderer.send('send-book-info', bookInfo),
     zoom: (deltaY) => ipcRenderer.send('zoom', deltaY),
-    openExternal: (url) => ipcRenderer.send('open-external', url)
+    openExternal: (url) => ipcRenderer.send('open-external', url),
+    showConfirmDialog: (message) => ipcRenderer.sendSync('show-confirm-dialog', message),
+    toggleSpellChecking: (callback) => ipcRenderer.on('toggle-spell-checking', callback)
+});
+
+// Loads the same on all pages
+ipcRenderer.on('toggle-spell-checking', (event, isEnabled) => {
+    document.body.spellcheck = isEnabled;
+    
+    // Optional: Save the state to localStorage
+    localStorage.setItem('spellCheckEnabled', isEnabled);
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const spellCheckEnabled = localStorage.getItem('spellCheckEnabled') === 'true';;
+    if (spellCheckEnabled !== null) {
+        document.body.spellcheck = (spellCheckEnabled === 'true');
+    }
 });

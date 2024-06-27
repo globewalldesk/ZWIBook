@@ -344,6 +344,12 @@ function createWindow() {
                 { role: 'zoomIn' },
                 { role: 'zoomOut' },
                 { role: 'resetZoom' },
+                {
+                    label: 'Check Spelling (in Your Notes)',
+                    type: 'checkbox',
+                    checked: isSpellCheckEnabled,
+                    click: toggleSpellChecking
+                },
                 { type: 'separator' },
                 { role: 'reload' },
                 { role: 'forceReload' },
@@ -1073,3 +1079,22 @@ ipcMain.on('zoom', (event, deltaY) => {
         mainWindow.webContents.setZoomLevel(zoomLevel);
     }
 });
+
+ipcMain.on('show-confirm-dialog', (event, message) => {
+    const result = dialog.showMessageBoxSync(mainWindow, {
+        type: 'question',
+        buttons: ['Yes, delete', 'No, cancel'],
+        defaultId: 0,
+        title: 'Confirm',
+        message: message,
+    });
+    event.returnValue = result === 0; // Returns true if 'OK' is clicked, false otherwise
+});
+
+let isSpellCheckEnabled = false; // Default value
+
+// Function to toggle spell-checking
+function toggleSpellChecking() {
+    isSpellCheckEnabled = !isSpellCheckEnabled;
+    mainWindow.webContents.send('toggle-spell-checking', isSpellCheckEnabled);
+}
