@@ -31,7 +31,9 @@ contextBridge.exposeInMainWorld('electronAPI', {
     zoom: (deltaY) => ipcRenderer.send('zoom', deltaY),
     openExternal: (url) => ipcRenderer.send('open-external', url),
     showConfirmDialog: (message) => ipcRenderer.sendSync('show-confirm-dialog', message),
-    toggleSpellChecking: (callback) => ipcRenderer.on('toggle-spell-checking', callback)
+    toggleSpellChecking: (callback) => ipcRenderer.on('toggle-spell-checking', callback),
+    loadHlnotesData: (bookId) => ipcRenderer.invoke('read-hlnotes-data', bookId),
+    saveHlnotesData: (bookId, data) => ipcRenderer.invoke('write-hlnotes-data', bookId, data)
 });
 
 // Loads the same on all pages

@@ -13,7 +13,7 @@ console.log = function (message) {
 */
 
 let mainWindow; // Declare mainWindow globally
-let dataDir, latestUrlPath, bookshelfPath; // Declare these globally to use in createWindow()
+let dataDir, latestUrlPath, bookshelfPath, hlnotesPath; // Declare these globally to use in createWindow()
 let currentBookTitle = ""; // For Copilot inquiries
 let currentBookAuthor = "";
 
@@ -582,6 +582,7 @@ app.whenReady().then(async () => {
 
         latestUrlPath = path.join(dataDir, 'latest.txt');
         bookshelfPath = path.join(dataDir, 'bookshelf.json');
+        hlnotesPath = path.join(dataDir, 'hlnotes.json');
 
         if (!fs.existsSync(bookshelfPath)) {
             const defaultBookshelfContent = JSON.stringify({
@@ -591,6 +592,11 @@ app.whenReady().then(async () => {
                 bookmarks: []
             }, null, 2);
             await fs.promises.writeFile(bookshelfPath, defaultBookshelfContent);
+        }
+
+        if (!fs.existsSync(hlnotesPath)) {
+            const defaultHlnotesContent = JSON.stringify({}, null, 2);
+            await fs.promises.writeFile(hlnotesPath, defaultHlnotesContent);
         }
 
         createWindow();
@@ -1098,3 +1104,64 @@ function toggleSpellChecking() {
     isSpellCheckEnabled = !isSpellCheckEnabled;
     mainWindow.webContents.send('toggle-spell-checking', isSpellCheckEnabled);
 }
+
+
+// Function to read highlights and notes data from a JSON file
+async function readHlnotesData(bookId) {
+    try {
+        if (fs.existsSync(hlnotesPath)) {
+            const fileData = await fs.promises.readFile(hlnotesPath, 'utf8');
+            const currentData = JSON.parse(fileData);
+
+            const highlights = currentData.highlights ? currentData.highlights[bookId] : {};
+            const notes = currentData.notes ? currentData.notes[bookId] : {};
+
+            return { highlights, notes };
+        }
+        return { highlights: {}, notes: {} };
+    } catch (error) {
+        console.error('Error reading hlnotes data:', error);
+        return { highlights: {}, notes: {} };
+    }
+}
+
+// Function to write highlights and notes data to a JSON file
+async function writeHlnotesData(bookId, data) {
+    try {
+        console.log("data:", data);
+        let currentData = {};
+        if (fs.existsSync(hlnotesPath)) {
+            const fileData = await fs.promises.readFile(hlnotesPath, 'utf8');
+            currentData = JSON.parse(fileData);
+        }
+        if (!currentData.highlights) {
+            currentData.highlights = {};
+        }
+        if (!currentData.notes) {
+            currentData.notes = {};
+        }
+
+        // Merge highlights
+        if (data.highlights && data.highlights[bookId]) {
+            currentData.highlights[bookId] = data.highlights[bookId];
+        }
+
+        // Merge notes
+        if (data.notes && data.notes[bookId]) {
+            currentData.notes[bookId] = data.notes[bookId];
+        }
+
+        await fs.promises.writeFile(hlnotesPath, JSON.stringify(currentData, null, 2), 'utf8');
+    } catch (error) {
+        console.error('Error writing hlnotes data:', error);
+    }
+}
+
+// IPC handlers
+ipcMain.handle('read-hlnotes-data', async (event, bookId) => {
+    return await readHlnotesData(bookId);
+});
+
+ipcMain.handle('write-hlnotes-data', async (event, bookId, data) => {
+    await writeHlnotesData(bookId, data);
+});

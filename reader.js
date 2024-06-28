@@ -9,11 +9,11 @@ let currentBookMetadata;
 let resourceMap = {};
 let zwiData;
 let buffer;
+let saveInterval;
 
 function isElementVisible(element) {
     return element && element.style.display !== 'none' && element.offsetWidth > 0 && element.offsetHeight > 0;
 }
-
 
 function loadFont() {
     // Load the font choice from local storage
@@ -30,24 +30,30 @@ async function fetchData() {
             bookshelfData = await window.electronAPI.requestBookshelfData();
             const backBtnInvoked = localStorage.getItem('backBtnInvoked') === 'true';
 
-            //if (backBtnInvoked) {
             buffer = await window.electronAPI.fetchZWI(currentBookId);
             if (!buffer) {
                 console.error('Failed to load book: no buffer.');
                 return;
             }
-            // Convert Buffer to Uint8Array directly
             zwiData = new Uint8Array(buffer);
 
             const bookMetadata = await window.electronAPI.fetchBookMetadata(currentBookId);
             if (bookMetadata) {
-                // Convert the metadata to a string and store it
                 currentBookMetadata = bookMetadata;
                 localStorage.setItem('currentBookMetadata', JSON.stringify(bookMetadata));
                 window.electronAPI.updateBookshelf({ bookMetadata, action: 'addViewed' });
             } else {
                 console.error("Book metadata not found for ID:", bookId);
             }
+
+            // Ensure notes and highlights are initialized
+            if (!localStorage.getItem('highlights')) {
+                localStorage.setItem('highlights', JSON.stringify({}));
+            }
+            if (!localStorage.getItem('notes')) {
+                localStorage.setItem('notes', JSON.stringify({}));
+            }
+
             resolve();
         } catch (error) {
             console.error('Failed to fetch book data:', error);
@@ -56,12 +62,55 @@ async function fetchData() {
     });
 }
 
+function saveHlnotesDataOnInterval(bookId) {
+    // Function to save highlights and notes data to disk
+    const saveData = async () => {
+        const highlights = JSON.parse(localStorage.getItem('highlights')) || {};
+        const notes = JSON.parse(localStorage.getItem('notes')) || {};
+        const data = { highlights, notes };
+        await window.electronAPI.saveHlnotesData(bookId, data);
+    };
+
+    // Save data immediately on load
+    saveData();
+
+    // Set interval to save data every minute (60000 milliseconds)
+    saveInterval = setInterval(saveData, 60000);
+
+    // Clear interval when the user navigates away or closes the app
+    window.addEventListener('beforeunload', () => clearInterval(saveInterval));
+}
+
 document.addEventListener('DOMContentLoaded', async () => {
     loadFont();
 
+    // Clear existing highlights and notes from local storage
+    localStorage.removeItem('highlights');
+    localStorage.removeItem('notes');
+    
     // Fetch data
     await fetchData();
 
+    // Load highlights and notes data from disk
+    const hlnotesData = await window.electronAPI.loadHlnotesData(currentBookId);
+    if (hlnotesData) {
+        // Ensure the structure includes the currentBookId
+        const highlights = { [currentBookId]: {} };
+        highlights[currentBookId] = hlnotesData.highlights || {};
+        const notes = { [currentBookId]: {} };
+        notes[currentBookId] = hlnotesData.notes || {};
+
+        localStorage.setItem('highlights', JSON.stringify(highlights));
+        localStorage.setItem('notes', JSON.stringify(notes));
+    } else {
+        // If no data is returned, initialize with empty objects
+        const highlights = { [currentBookId]: {} };
+        const notes = { [currentBookId]: {} };
+
+        localStorage.setItem('highlights', JSON.stringify(highlights));
+        localStorage.setItem('notes', JSON.stringify(notes));
+    }
+    
     // Send the current book title and author to the main process
     // Used when asking Bing Copilot to comment on selection
     window.electronAPI.sendBookInfo({
@@ -502,7 +551,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const pageCount = Math.ceil(wordCount / 300);
 
         // Move inline centering to class.
-        const relevantTags = ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol', 'tr', 'pre', 'figcaption', 'aside', 'address', 'details', 'summary'];
+        const relevantTags = ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol', 'tr', 'figcaption', 'aside', 'address', 'details', 'summary'];
         // Iterate over each relevant tag and process elements with inline centering
         relevantTags.forEach(tag => {
             let elements = bookContentDiv.querySelectorAll(`${tag}[style*="text-align: center"]`);
@@ -584,7 +633,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         function assignIDsToContentElements(content) {
             let paragraphIndex = 0;
             // Select the additional tags along with 'p'
-            const elements = content.querySelectorAll('p, h1, h2, h3, h4, h5, h6, ul, ol, pre, figcaption, aside, address, details, summary');
+            const elements = content.querySelectorAll('p, h1, h2, h3, h4, h5, h6, ul, ol, figcaption, aside, address, details, summary');
             const updates = [];
 
             elements.forEach(element => {
@@ -842,9 +891,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     setTitle();
     window.addEventListener('resize', () => {
         setTitle();
-        updateButtonPositions();
     });
-
 
     try {
         const bookmarks = await window.electronAPI.requestBookmarks(currentBookId);
@@ -1074,7 +1121,38 @@ document.addEventListener('DOMContentLoaded', async () => {
     const prevPageImg = prevPage.querySelector('img');
     const nextPageImg = nextPage.querySelector('img');
 
-    // Function to update the button positions
+    // Throttle function to limit the frequency of calls
+    function throttlePercentageRead(fn, wait) {
+        let time = Date.now();
+        return function() {
+            if ((time + wait - Date.now()) < 0) {
+                fn();
+                time = Date.now();
+            }
+        };
+    }
+
+    // Function to calculate the percentage read based on scroll position
+    const calculateReadPercentage = () => {
+        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
+        const clientHeight = document.documentElement.clientHeight;
+        const percentage = Math.min(Math.max((scrollTop / (scrollHeight - clientHeight)) * 100, 0), 100);
+        return Math.round(percentage);
+    };
+
+    // Function to update the title attribute with the read percentage
+    const updateReadPercentageTitle = () => {
+        const percentage = calculateReadPercentage();
+        prevPage.title = `${percentage}% read`; // Set title for previous page button
+        nextPage.title = `${percentage}% read`; // Set title for next page button
+    };
+
+    // Throttled version of updateReadPercentageTitle
+    const throttledUpdateReadPercentageTitle = throttlePercentageRead(updateReadPercentageTitle, 500);
+
+
+    // Function to update the button positions and set title on hover
     const updateButtonPositions = () => {
         const bookContentRect = bookContentDiv.getBoundingClientRect();
         const viewportHeight = window.innerHeight;
@@ -1084,13 +1162,12 @@ document.addEventListener('DOMContentLoaded', async () => {
         prevPage.style.left = styleString;
         nextPage.style.right = styleString;
 
-        //console.log('Book content boundaries:', bookContentRect);  // Debugging info
-
         document.addEventListener('mousemove', (event) => {
             const { left, right } = bookContentRect;
             if (event.clientX < left + 70 && event.clientX > left - 70) {
                 prevPage.style.display = 'flex';
                 prevPage.style.visibility = 'visible';
+                updateReadPercentageTitle(); // Update title on hover
             } else {
                 prevPage.style.display = 'none';
                 prevPage.style.visibility = 'hidden';
@@ -1099,10 +1176,28 @@ document.addEventListener('DOMContentLoaded', async () => {
             if (event.clientX > right - 70 && event.clientX < right + 70) {
                 nextPage.style.display = 'flex';
                 nextPage.style.visibility = 'visible';
+                updateReadPercentageTitle(); // Update title on hover
             } else {
                 nextPage.style.display = 'none';
                 nextPage.style.visibility = 'hidden';
             }
+        });
+
+        prevPage.addEventListener('mouseover', () => {
+            window.addEventListener('scroll', throttledUpdateReadPercentageTitle);
+            updateReadPercentageTitle(); // Initial update on hover
+        });
+        nextPage.addEventListener('mouseover', () => {
+            window.addEventListener('scroll', throttledUpdateReadPercentageTitle);
+            updateReadPercentageTitle(); // Initial update on hover
+        });
+
+        // Remove scroll listener when not hovering
+        prevPage.addEventListener('mouseout', () => {
+            window.removeEventListener('scroll', throttledUpdateReadPercentageTitle);
+        });
+        nextPage.addEventListener('mouseout', () => {
+            window.removeEventListener('scroll', throttledUpdateReadPercentageTitle);
         });
 
         prevPage.addEventListener('mouseover', () => {
@@ -1121,6 +1216,12 @@ document.addEventListener('DOMContentLoaded', async () => {
             nextPageImg.src = 'images/icons/next-unfilled.svg';
         });
     };
+
+    // Highlights and notes are applied after everything else is set up
+    setTimeout(reapplyHighlightsNotes, 250);
+
+    // Start saving highlight and notes data at regular intervals
+    setTimeout(saveHlnotesDataOnInterval(currentBookId)), 500;
 
     // Function to calculate the scroll amount and handle the page navigation
     const scrollPage = (direction) => {
@@ -1142,12 +1243,14 @@ document.addEventListener('DOMContentLoaded', async () => {
         }, 250); // Wait a bit for the scroll action to complete
     };
 
+    // Ensure button positions are updated after the DOM is fully rendered
+    
+    setTimeout(updateButtonPositions, 500); // Adding a delay of 100ms
+
     // Attach click event listeners to the navigation buttons
     nextPage.addEventListener('click', () => scrollPage('next'));
     prevPage.addEventListener('click', () => scrollPage('prev'));
 
-    // Update button positions after the content is loaded and window is resized
-    updateButtonPositions();
     window.addEventListener('resize', updateButtonPositions);
     // END of left-right nav button logic
 
@@ -1336,7 +1439,6 @@ let selectedText = null;
 let highlightCounter = 0;
 let defaultNoteOpen = true;
 let mostRecentColor = 'yellow'; // Default color
-let openingHmodal = false; // Stymie a race condition.
 
 // Initialize highlight modal and its event listeners
 function initializeHighlightAndNoteModal() {
@@ -1369,7 +1471,6 @@ function initializeHighlightAndNoteModal() {
                 if (!this.classList.contains('edit-note')) {
                     mostRecentColor = this.title.toLowerCase(); // Update the most recent color
                     let returnValue = true; // Becomes false if deletion is canceled.
-                    console.log("I am here@@@");
                     returnValue = highlightSelection(mostRecentColor);
                 } else if (this.classList.contains('edit-note')) {
                     toggleNoteInput();
@@ -1455,7 +1556,6 @@ function designHighlightModal(hmodal, bottomPosition) {
     setTimeout(() => {
         hmodal.style.top = `${bottomPosition + window.scrollY}px`;
         hmodal.style.display = 'block';
-        console.log("hmodal: block 1");
         snapModalToTopAndAdjustHeight();
     }, 40); // Delay execution by 100ms
 }
@@ -1482,7 +1582,6 @@ function toggleNoteInput() {
 // (b) toggling note input; or (c) scrolling; and only if a note is
 // on the long side.
 function snapModalToTopAndAdjustHeight() {
-    console.log("snappin'");
     const hmodal = document.getElementById('highlightModal');
     const noteInput = document.querySelector('.note-input');
 
@@ -1529,7 +1628,6 @@ document.addEventListener('keydown', function (event) {
     const noteInput = document.querySelector('.note-input');
     if (event.key === "Escape" && hmodal.style.display === 'block') {
         hmodal.style.display = 'none';
-        console.log("hmodal: none 1");
         hmodal.style.width = '350px'; // Reset modal width to default when closed
         // Remove the .temp-underline class from all spans
         const spans = document.querySelectorAll('span');
@@ -1676,9 +1774,6 @@ document.addEventListener('mousedown', function (event) {
         }
     } else {
         hmodal.style.display = 'none';
-        console.log("--------------------------------------");
-        console.log("hmodal: none 2");
-        openingHmodal = true;
         hmodal.style.width = '350px'; // Reset modal width to default when closed
         if (noteInput) {
             if (noteInput.value.trim() === '') {
@@ -1819,10 +1914,8 @@ document.addEventListener('selectionchange', function () {
         hmodal.style.top = `${rect.bottom + window.scrollY}px`;
         hmodal.style.left = `${leftPosition + window.scrollX}px`;
         hmodal.style.display = 'block';
-        console.log("hmodal: block 2");
     } else {
         hmodal.style.display = 'none'; // Hide the modal if no valid range is
-        console.log("hmodal: none 3");
         // Remove the .temp-underline class from all spans
         const spans = document.querySelectorAll('span');
         spans.forEach(span => {
@@ -1847,7 +1940,6 @@ function handleSelectionChange() {
         hmodal.innerHTML = '<div class="highlight-modal-content">Content will go here</div>';
         hmodal.style.pointerEvents = 'none';
         hmodal.style.display = 'none'; // Ensure the modal is initially hidden
-        console.log("hmodal: none 4");
         document.body.appendChild(hmodal);
     }
 
@@ -1862,10 +1954,8 @@ function handleSelectionChange() {
         hmodal.style.top = `${rect.bottom + window.scrollY}px`;
         hmodal.style.left = `${leftPosition + window.scrollX}px`;
         hmodal.style.display = 'block';
-        console.log("hmodal: block 3");
     } else {
         hmodal.style.display = 'none';
-        console.log("hmodal: none 5");
     }
 }
 
@@ -1915,7 +2005,6 @@ function highlightSelection(color) {
             const hmodal = document.getElementById('highlightModal');
             if (hmodal) {
                 hmodal.style.display = 'block';
-                console.log("hmodal: block 4");
                 document.activeElement.blur()
                 hmodal.focus();
             }
@@ -1931,7 +2020,6 @@ function highlightSelection(color) {
     const hmodal = document.getElementById('highlightModal');
     if (hmodal) {
         hmodal.style.display = 'none';
-        console.log("hmodal: none 6");
     }
 
     handleHighlightMerges(hnid, color);
@@ -2393,8 +2481,6 @@ function nextNode(node) {
 
 // Highlights the text nodes within the given range with the specified color and hnid
 function highlightTextNodes(textNodes, range, color, hnid) {
-    console.log("I did get to highlightTextNodes");
-    console.log("I say textNodes.length =", textNodes.length);
     if (textNodes.length === 1) {
         highlightSingleTextNode(textNodes[0], range, color, hnid);
     } else if (textNodes.length > 1) {
@@ -2405,8 +2491,6 @@ function highlightTextNodes(textNodes, range, color, hnid) {
 // Highlights a single text node within the range with the specified color and hnid
 function highlightSingleTextNode(node, range, color, hnid) {
     const text = node.textContent;
-    console.log("I know the text is: ", text);
-
     const before = text.slice(0, range.startOffset);
     const highlight = text.slice(range.startOffset, range.endOffset);
     const after = text.slice(range.endOffset);
@@ -2501,7 +2585,7 @@ function highlightMultipleTextNodes(textNodes, range, color, hnid) {
 
 // Get the relevant parent element from the given node
 function getRelevantParentElement(node) {
-    const relevantTags = ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol', 'tr', 'pre', 'figcaption', 'aside', 'address', 'details', 'summary'];
+    const relevantTags = ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol', 'tr', 'figcaption', 'aside', 'address', 'details', 'summary'];
     while (node && node.nodeType !== Node.DOCUMENT_NODE) {
         if (node.tagName && relevantTags.includes(node.tagName.toLowerCase())) {
             return node;
@@ -2559,7 +2643,7 @@ function reapplyHighlightsNotes() {
 
     // Apply .note-attached class to spans with notes
     let notes = JSON.parse(localStorage.getItem('notes')) || {};
-    if (notes[bookId]) {
+    if (notes[bookId] && notes[bookId].hnids) {
         Object.keys(notes[bookId].hnids).forEach(hnid => {
             document.querySelectorAll(`.highlight-span[data-hnid="${hnid}"]`).forEach(span => {
                 span.classList.add('note-attached');
@@ -2644,6 +2728,28 @@ function stripHighlightSpans(element) {
     });
 }
 
+// Function to save highlights and notes data on navigation away
+function saveHlnotesDataOnNavigationAway() {
+    const highlights = JSON.parse(localStorage.getItem('highlights')) || {};
+    const notes = JSON.parse(localStorage.getItem('notes')) || {};
+    const data = { highlights, notes };
+    window.electronAPI.saveHlnotesData(currentBookId, data);
+}
+
+// Function to save highlights and notes data on app close (similar to foregoing)
+function saveHlnotesDataOnAppClose() {
+    const highlights = JSON.parse(localStorage.getItem('highlights')) || {};
+    const notes = JSON.parse(localStorage.getItem('notes')) || {};
+    const data = { highlights, notes };
+    window.electronAPI.saveHlnotesData(currentBookId, data);
+}
+
+// Add event listener for navigation away
+window.addEventListener('beforeunload', saveHlnotesDataOnNavigationAway);
+
+// Add event listener for app close
+window.addEventListener('beforeunload', saveHlnotesDataOnAppClose);
+
 
 // EDIT NOTES
 
@@ -2715,10 +2821,6 @@ if (noteInput) {
     });
 }
 
-// Call reapplyHighlightsNotes on window load
-window.addEventListener('load', () => {
-    setTimeout(reapplyHighlightsNotes, 250);
-});
 
 
 /////////////////////////////////

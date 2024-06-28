@@ -24,7 +24,7 @@ codes.each do |row|
   parent_code = code[0] # Get the first letter of the code for top-level categories
 
   # Organize codes into a hash where each top-level category has its subcategories
-  categories[parent_code] ||= {description: nil, subcategories: []}
+  categories[parent_code] ||= { description: nil, subcategories: [] }
   if code.length == 1
     categories[parent_code][:description] = description # Capture the description for single-letter categories
   else
@@ -178,11 +178,11 @@ file = File.read('metadatabase.json')
 books = JSON.parse(file)
 # Update LoCC codes to remove numbers and ensure each LoCC is treated correctly
 books.each do |book|
-  locc_codes = Array(book['LoCC'])  # Wraps in array if not already one, handles empty string by making it an empty array
+  locc_codes = Array(book['LoCC']) # Wraps in array if not already one, handles empty string by making it an empty array
 
   # Update codes to remove trailing numbers, only if they exist
   locc_codes.map! do |code|
-    code.gsub(/[0-9]+\.?\d+?$/, '')  # Remove trailing numbers with regex
+    code.gsub(/[0-9]+\.?\d+?$/, '') # Remove trailing numbers with regex
   end
 
   # Assign back updated codes to the book
@@ -212,12 +212,14 @@ books.each do |book|
 
   book['LoCC'].each do |code|
     code.sub!(/\d+\.?\d+?$/, '')
+
     # Ensure a directory and HTML file for each LoCC code
-    description = codes.find { |pair| pair[0] == code.upcase }
-    code = "Amisc" if code == '' || description.nil?
-    description = "Misc and Other" if code == "Amisc"
+    pair = codes.find { |pair| pair[0] == code.upcase }
+    description = pair ? pair[1] : "Misc and Other"
+    code = pair ? code : "Amisc"
+
     filename = "./html/#{code}.html"
-    
+
     unless File.exist?(filename)
       File.open(filename, 'w') do |f|
         f.puts <<~HTML
