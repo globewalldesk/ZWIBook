@@ -14,10 +14,6 @@ body.no-scroll {
     overflow: hidden;
 }
 
-body.modal-open {
-    padding-right: 15.5px; /* Adjust this value based on the scrollbar width */
-}
-
 #grey-line {
     position: fixed;
     top: 0;
@@ -628,7 +624,7 @@ a.more:hover {
     display: none;
     align-items: center;
     justify-content: center;
-    z-index: 1000;
+    z-index: 800;
 }
 
 .nav-button img {
@@ -1713,7 +1709,7 @@ h2 .inline-button img {
 /* Tab content styling */
 .hn-tab-content {
     display: none;
-    padding: 6px 12px;
+    padding: 18px 12px 6px 12px;
     border: 1px solid #ccc;
     border-top: none;
     overflow-y: auto; /* Enable vertical scrolling if content exceeds max height */
@@ -1722,6 +1718,21 @@ h2 .inline-button img {
 /* Highlight item styling */
 .hn-highlight-item {
     padding: 10px 0;
+}
+
+#copyText {
+    padding-left: 120px;
+    padding-top: 20px;
+}
+
+#copyText a {
+    font-size: .8em;
+    text-decoration: none;
+    color: blue;
+}
+
+#copyText a:hover {
+    text-decoration: underline;
 }
 
 .no-data-message {
@@ -1738,26 +1749,46 @@ h2 .inline-button img {
 }
 
 .han-container > .note-container {
-    font-size: 1.05em;
+    font-size: 1em;
     font-family: "Liberation Sans", Arial, Helvetica, sans-serif;
 }
 
 /* Vertical line for highlights in summary modal */
 .han-container > .highlight-container {
-    padding-left: 10px;
     font-family: 'Liberation Serif', 'Times New Roman', Times, serif;
-    margin: 20px 0;
+    margin-bottom: 20px;
+}
+
+.curly-left, .curly-right {
+    font-size: 36px; /* Adjust size as needed */
+    position: absolute;
+}
+
+.curly-left {
+    top: -10px;
+    left: 8px;
+}
+
+.curly-right {
+    right: -9px;
+    bottom: -20px;
+    margin-right: 5px;
+}
+
+.highlight-paragraph {
+    position: relative;
+    padding-right: 15px;
 }
 
 /* Horizontal separator styling */
 .hn-highlight-separator {
     height: 1px;
     background-color: #8b8b8b;
-    margin: 14px auto;
+    margin: 24px auto;
 }
 
 #notes > .hn-highlight-separator {
-    margin: 20px auto;
+    margin: 0px auto 20px auto;
     width: 80%;
 }
 

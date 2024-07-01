@@ -1,4 +1,4 @@
-const { contextBridge, ipcRenderer } = require('electron');
+const { contextBridge, ipcRenderer, webFrame } = require('electron');
 
 contextBridge.exposeInMainWorld('electronAPI', {
     updateBookshelf: (bookMetadata) => ipcRenderer.send('update-bookshelf', bookMetadata),
@@ -31,9 +31,11 @@ contextBridge.exposeInMainWorld('electronAPI', {
     zoom: (deltaY) => ipcRenderer.send('zoom', deltaY),
     openExternal: (url) => ipcRenderer.send('open-external', url),
     showConfirmDialog: (message) => ipcRenderer.sendSync('show-confirm-dialog', message),
+    showAlertDialog: (message) => ipcRenderer.sendSync('show-alert-dialog', message),
     toggleSpellChecking: (callback) => ipcRenderer.on('toggle-spell-checking', callback),
     loadHlnotesData: (bookId) => ipcRenderer.invoke('read-hlnotes-data', bookId),
-    saveHlnotesData: (bookId, data) => ipcRenderer.invoke('write-hlnotes-data', bookId, data)
+    saveHlnotesData: (bookId, data) => ipcRenderer.invoke('write-hlnotes-data', bookId, data),
+    getZoomFactor: () => webFrame.getZoomFactor()
 });
 
 // Loads the same on all pages

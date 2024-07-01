@@ -3,6 +3,21 @@ const fs = require('fs');
 const path = require('path');
 const os = require('os');
 
+// Request single instance lock
+const gotTheLock = app.requestSingleInstanceLock();
+
+if (!gotTheLock) {
+  app.quit();
+} else {
+  app.on('second-instance', (event, commandLine, workingDirectory) => {
+    // Someone tried to run a second instance, focus the main window.
+    if (mainWindow) {
+      if (mainWindow.isMinimized()) mainWindow.restore();
+      mainWindow.focus();
+    }
+  });
+}
+
 /*
 // Logging dev console output.
 const logFilePath = path.join(process.cwd(), 'app.log'); // Creates a log file in the current working directory
@@ -1097,6 +1112,17 @@ ipcMain.on('show-confirm-dialog', (event, message) => {
     event.returnValue = result === 0; // Returns true if 'OK' is clicked, false otherwise
 });
 
+ipcMain.on('show-alert-dialog', (event, message) => {
+    const result = dialog.showMessageBoxSync(mainWindow, {
+        type: 'info',
+        buttons: ['OK'],
+        defaultId: 0,
+        title: 'Alert',
+        message: message,
+    });
+    event.returnValue = result === 0; // Returns true if 'OK' is clicked
+});
+
 let isSpellCheckEnabled = false; // Default value
 
 // Function to toggle spell-checking
@@ -1128,7 +1154,6 @@ async function readHlnotesData(bookId) {
 // Function to write highlights and notes data to a JSON file
 async function writeHlnotesData(bookId, data) {
     try {
-        console.log("data:", data);
         let currentData = {};
         if (fs.existsSync(hlnotesPath)) {
             const fileData = await fs.promises.readFile(hlnotesPath, 'utf8');

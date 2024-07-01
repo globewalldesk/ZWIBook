@@ -1,4 +1,6 @@
 // Declare variables globally
+window.fullLoadingApproved = false;
+let hlnotesDataFound = false;
 const urlParams = new URLSearchParams(window.location.search);
 const bookId = urlParams.get('bookId');
 console.log(`Opening book Project Gutenberg number: ${bookId}`)
@@ -23,50 +25,47 @@ function loadFont() {
     document.body.style.fontFamily = selectedFont;
 }
 
-// Perform asynchronous operations
 async function fetchData() {
-    return new Promise(async (resolve, reject) => {
-        try {
-            bookshelfData = await window.electronAPI.requestBookshelfData();
-            const backBtnInvoked = localStorage.getItem('backBtnInvoked') === 'true';
+    try {
+        bookshelfData = await window.electronAPI.requestBookshelfData();
+        const backBtnInvoked = localStorage.getItem('backBtnInvoked') === 'true';
 
-            buffer = await window.electronAPI.fetchZWI(currentBookId);
-            if (!buffer) {
-                console.error('Failed to load book: no buffer.');
-                return;
-            }
-            zwiData = new Uint8Array(buffer);
-
-            const bookMetadata = await window.electronAPI.fetchBookMetadata(currentBookId);
-            if (bookMetadata) {
-                currentBookMetadata = bookMetadata;
-                localStorage.setItem('currentBookMetadata', JSON.stringify(bookMetadata));
-                window.electronAPI.updateBookshelf({ bookMetadata, action: 'addViewed' });
-            } else {
-                console.error("Book metadata not found for ID:", bookId);
-            }
-
-            // Ensure notes and highlights are initialized
-            if (!localStorage.getItem('highlights')) {
-                localStorage.setItem('highlights', JSON.stringify({}));
-            }
-            if (!localStorage.getItem('notes')) {
-                localStorage.setItem('notes', JSON.stringify({}));
-            }
-
-            resolve();
-        } catch (error) {
-            console.error('Failed to fetch book data:', error);
-            reject(error);
+        buffer = await window.electronAPI.fetchZWI(currentBookId);
+        if (!buffer) {
+            console.error('Failed to load book: no buffer.');
+            document.getElementById('body').innerHTML = '<p style="width: 400px; font-size: 36px; margin: 50px auto;">Failed to load book. Is the thumb drive inserted? Have you moved the book files, or deleted the file for this particular book?</p>';
+            window.fullLoadingApproved = false;
+            return; // Stop further execution in this function
         }
-    });
+        zwiData = new Uint8Array(buffer);
+
+        const bookMetadata = await window.electronAPI.fetchBookMetadata(currentBookId);
+        if (bookMetadata) {
+            currentBookMetadata = bookMetadata;
+            localStorage.setItem('currentBookMetadata', JSON.stringify(bookMetadata));
+            window.electronAPI.updateBookshelf({ bookMetadata, action: 'addViewed' });
+        } else {
+            console.error("Book metadata not found for ID:", bookId);
+        }
+
+        // Ensure notes and highlights are initialized
+        localStorage.setItem('highlights', localStorage.getItem('highlights') || JSON.stringify({}));
+        localStorage.setItem('notes', localStorage.getItem('notes') || JSON.stringify({}));
+
+        window.fullLoadingApproved = true;
+    } catch (error) {
+        console.error('Failed to fetch book data:', error);
+        window.fullLoadingApproved = false;
+    }
 }
 
 function saveHlnotesDataOnInterval(bookId) {
     // Function to save highlights and notes data to disk
     const saveData = async () => {
         const highlights = JSON.parse(localStorage.getItem('highlights')) || {};
+        if (!highlights[bookId] || Object.keys(highlights[bookId]).length === 0) highlights[bookId] = {};
         const notes = JSON.parse(localStorage.getItem('notes')) || {};
+        if (!notes[bookId] || Object.keys(notes[bookId]).length === 0) notes[bookId] = {};
         const data = { highlights, notes };
         await window.electronAPI.saveHlnotesData(bookId, data);
     };
@@ -88,12 +87,20 @@ document.addEventListener('DOMContentLoaded', async () => {
     localStorage.removeItem('highlights');
     localStorage.removeItem('notes');
     
-    // Fetch data
-    await fetchData();
+    try {
+        await fetchData();
+
+        if (!window.fullLoadingApproved) {
+            console.error('Book loading not approved. Halting further initialization.');
+        }
+    } catch (error) {
+        console.error('Error during book fetching:', error);
+    }
 
     // Load highlights and notes data from disk
     const hlnotesData = await window.electronAPI.loadHlnotesData(currentBookId);
     if (hlnotesData) {
+        hlnotesDataFound = true;
         // Ensure the structure includes the currentBookId
         const highlights = { [currentBookId]: {} };
         highlights[currentBookId] = hlnotesData.highlights || {};
@@ -103,6 +110,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         localStorage.setItem('highlights', JSON.stringify(highlights));
         localStorage.setItem('notes', JSON.stringify(notes));
     } else {
+        hlnotesDataFound = false;
         // If no data is returned, initialize with empty objects
         const highlights = { [currentBookId]: {} };
         const notes = { [currentBookId]: {} };
@@ -210,6 +218,105 @@ document.addEventListener('DOMContentLoaded', async () => {
         showSavedState(currentBookId);
     });
 
+    // Function to update the button positions and set title on hover
+    const updateButtonPositions = () => {
+        const bookContentRect = bookContentDiv.getBoundingClientRect();
+        const viewportHeight = window.innerHeight;
+        const headerHeight = document.getElementById('header').offsetHeight;
+
+        const styleString = `calc(50% - ${bookContentDiv.offsetWidth / 1.99}px)`;
+        prevPage.style.left = styleString;
+        nextPage.style.right = styleString;
+
+        document.addEventListener('mousemove', (event) => {
+            const { left, right } = bookContentRect;
+            if (event.clientX < left + 70 && event.clientX > left - 70) {
+                prevPage.style.display = 'flex';
+                prevPage.style.visibility = 'visible';
+                updateReadPercentageTitle(); // Update title on hover
+            } else {
+                prevPage.style.display = 'none';
+                prevPage.style.visibility = 'hidden';
+            }
+
+            if (event.clientX > right - 70 && event.clientX < right + 70) {
+                nextPage.style.display = 'flex';
+                nextPage.style.visibility = 'visible';
+                updateReadPercentageTitle(); // Update title on hover
+            } else {
+                nextPage.style.display = 'none';
+                nextPage.style.visibility = 'hidden';
+            }
+        });
+
+        prevPage.addEventListener('mouseover', () => {
+            window.addEventListener('scroll', throttledUpdateReadPercentageTitle);
+            updateReadPercentageTitle(); // Initial update on hover
+        });
+        nextPage.addEventListener('mouseover', () => {
+            window.addEventListener('scroll', throttledUpdateReadPercentageTitle);
+            updateReadPercentageTitle(); // Initial update on hover
+        });
+
+        // Remove scroll listener when not hovering
+        prevPage.addEventListener('mouseout', () => {
+            window.removeEventListener('scroll', throttledUpdateReadPercentageTitle);
+        });
+        nextPage.addEventListener('mouseout', () => {
+            window.removeEventListener('scroll', throttledUpdateReadPercentageTitle);
+        });
+
+        prevPage.addEventListener('mouseover', () => {
+            prevPageImg.src = 'images/icons/previous-filled.svg';
+        });
+
+        prevPage.addEventListener('mouseout', () => {
+            prevPageImg.src = 'images/icons/previous-unfilled.svg';
+        });
+
+        nextPage.addEventListener('mouseover', () => {
+            nextPageImg.src = 'images/icons/next-filled.svg';
+        });
+
+        nextPage.addEventListener('mouseout', () => {
+            nextPageImg.src = 'images/icons/next-unfilled.svg';
+        });
+    };
+
+    document.body.addEventListener('click', function (e) {
+        // Use closest to find the nearest ancestor that is an <a> tag with an href attribute starting with "#"
+        let target = e.target.closest('a[href^="#"]');
+
+        if (target) {
+            e.preventDefault(); // Prevent default anchor click behavior
+
+            const targetId = target.getAttribute('href');
+            if (targetId == '#') {
+                return;
+            }
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+                // Calculate the corrected scroll position considering the fixed header
+                const headerHeight = 100; // Adjust if your header height changes
+                const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+                const offsetPosition = elementPosition - headerHeight;
+
+                window.scrollTo({
+                    top: offsetPosition
+                });
+
+                history.pushState(null, null, targetId);
+            }
+        }
+    });
+
+    // Everything above this loads, regardless of whether the book
+    if (!window.fullLoadingApproved) {
+        return;
+    }
+
+
     function processText(text) {
         // Split the text into parts by HTML tags
         const parts = text.split(/(<[^>]*>)/);
@@ -230,7 +337,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     function extractAuthor() {
         let creatorNames = currentBookMetadata.CreatorNames;
-        console.log(creatorNames);
         const suffixes = ["Ph.D.", "PhD", "Ph. D.", "D.Phil.", "DPhil", "Doctor", "D.D.", "D. D.", "Jr.", "Junior", "Sr.", "Senior", "II", "III", "IV", "V", "Esq.", "Esquire", "MD", "M.D.", "Dr.", "Doctor", "RN", "R.N.", "DO", "D.O.", "DDS", "D.D.S.", "DVM", "D.V.M.", "JD", "J.D.", "LLD", "LL.D.", "EdD", "Ed.D.", "PharmD", "Pharm.D.", "MBA", "M.B.A.", "CPA", "C.P.A.", "DMD", "D.M.D.", "DC", "D.C.", "OD", "O.D.", "PA", "P.A.", "P.A.-C", "MA", "M.A.", "MS", "M.S.", "MSc", "M.Sc.", "MPH", "M.P.H.", "BSc", "B.Sc.", "BA", "B.A.", "BS", "B.S.", "MFA", "M.F.A.", "MPhil", "M.Phil.", "PsyD", "Psy.D.", "EdS", "Ed.S.", "MSW", "M.S.W.", "BFA", "B.F.A.", "MSEd", "M.S.Ed.", "MSE", "M.S.E.", "DPT", "D.P.T.", "DPA", "D.P.A.", "ScD", "Sc.D.", "EngD", "Eng.D.", "ASN", "A.S.N."];
 
         // Clean creator names by removing square brackets and anything inside them
@@ -1085,35 +1191,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         window.electronAPI.finishZwiExport(bookId);
     }
 
-    document.body.addEventListener('click', function (e) {
-        // Use closest to find the nearest ancestor that is an <a> tag with an href attribute starting with "#"
-        let target = e.target.closest('a[href^="#"]');
-
-        if (target) {
-            e.preventDefault(); // Prevent default anchor click behavior
-
-            const targetId = target.getAttribute('href');
-            if (targetId == '#') {
-                return;
-            }
-            const targetElement = document.querySelector(targetId);
-
-            if (targetElement) {
-                // Calculate the corrected scroll position considering the fixed header
-                const headerHeight = 100; // Adjust if your header height changes
-                const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
-                const offsetPosition = elementPosition - headerHeight;
-
-                window.scrollTo({
-                    top: offsetPosition
-                });
-
-                history.pushState(null, null, targetId);
-            }
-        }
-    });
-
-
     // BEGIN left-right navigation buttons
     const prevPage = document.getElementById('prevPage');
     const nextPage = document.getElementById('nextPage');
@@ -1151,77 +1228,13 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Throttled version of updateReadPercentageTitle
     const throttledUpdateReadPercentageTitle = throttlePercentageRead(updateReadPercentageTitle, 500);
 
+    if (window.fullLoadingApproved) {
+        // Highlights and notes are applied after everything else is set up
+        setTimeout(reapplyHighlightsNotes, 250);
 
-    // Function to update the button positions and set title on hover
-    const updateButtonPositions = () => {
-        const bookContentRect = bookContentDiv.getBoundingClientRect();
-        const viewportHeight = window.innerHeight;
-        const headerHeight = document.getElementById('header').offsetHeight;
-
-        const styleString = `calc(50% - ${bookContentDiv.offsetWidth / 1.99}px)`;
-        prevPage.style.left = styleString;
-        nextPage.style.right = styleString;
-
-        document.addEventListener('mousemove', (event) => {
-            const { left, right } = bookContentRect;
-            if (event.clientX < left + 70 && event.clientX > left - 70) {
-                prevPage.style.display = 'flex';
-                prevPage.style.visibility = 'visible';
-                updateReadPercentageTitle(); // Update title on hover
-            } else {
-                prevPage.style.display = 'none';
-                prevPage.style.visibility = 'hidden';
-            }
-
-            if (event.clientX > right - 70 && event.clientX < right + 70) {
-                nextPage.style.display = 'flex';
-                nextPage.style.visibility = 'visible';
-                updateReadPercentageTitle(); // Update title on hover
-            } else {
-                nextPage.style.display = 'none';
-                nextPage.style.visibility = 'hidden';
-            }
-        });
-
-        prevPage.addEventListener('mouseover', () => {
-            window.addEventListener('scroll', throttledUpdateReadPercentageTitle);
-            updateReadPercentageTitle(); // Initial update on hover
-        });
-        nextPage.addEventListener('mouseover', () => {
-            window.addEventListener('scroll', throttledUpdateReadPercentageTitle);
-            updateReadPercentageTitle(); // Initial update on hover
-        });
-
-        // Remove scroll listener when not hovering
-        prevPage.addEventListener('mouseout', () => {
-            window.removeEventListener('scroll', throttledUpdateReadPercentageTitle);
-        });
-        nextPage.addEventListener('mouseout', () => {
-            window.removeEventListener('scroll', throttledUpdateReadPercentageTitle);
-        });
-
-        prevPage.addEventListener('mouseover', () => {
-            prevPageImg.src = 'images/icons/previous-filled.svg';
-        });
-
-        prevPage.addEventListener('mouseout', () => {
-            prevPageImg.src = 'images/icons/previous-unfilled.svg';
-        });
-
-        nextPage.addEventListener('mouseover', () => {
-            nextPageImg.src = 'images/icons/next-filled.svg';
-        });
-
-        nextPage.addEventListener('mouseout', () => {
-            nextPageImg.src = 'images/icons/next-unfilled.svg';
-        });
-    };
-
-    // Highlights and notes are applied after everything else is set up
-    setTimeout(reapplyHighlightsNotes, 250);
-
-    // Start saving highlight and notes data at regular intervals
-    setTimeout(saveHlnotesDataOnInterval(currentBookId)), 500;
+        // Start saving highlight and notes data at regular intervals
+        setTimeout(saveHlnotesDataOnInterval(currentBookId)), 500;
+    }
 
     // Function to calculate the scroll amount and handle the page navigation
     const scrollPage = (direction) => {
@@ -1534,7 +1547,8 @@ function showHighlightModalOnHighlightClick(hnid, boundingRects) {
         noteInput.dataset.hnid = hnid;
 
         const notes = JSON.parse(localStorage.getItem('notes')) || {};
-        if (notes[bookId] && notes[bookId].hnids[hnid]) {
+        if (!notes[bookId] || Object.keys(notes[bookId]).length === 0) notes[bookId] = {};
+        if (notes[bookId] && notes[bookId].hnids && notes[bookId].hnids[hnid]) {
             defaultNoteOpen = true;
             noteInput.style.display = 'block';
             noteInput.value = notes[bookId].hnids[hnid];
@@ -1598,8 +1612,8 @@ function snapModalToTopAndAdjustHeight() {
     // Set the height of the note input (and thus the modal)
     noteInput.style.height = `${inputHeight + 5}px`;
 
-    // Check if the input height is greater than 50% of the viewport height
-    if (inputHeight > window.innerHeight * 0.5) {
+    // Check if the input height is greater than 37% of the viewport height
+    if (inputHeight > window.innerHeight * 0.37) {
         // Determine the position of the highlight element relative to the document
         const hmodalRect = hmodal.getBoundingClientRect();
         const highlightTopRelativeToDocument = hmodalRect.top + window.scrollY;
@@ -1610,6 +1624,22 @@ function snapModalToTopAndAdjustHeight() {
         // Scroll the document to the calculated position
         window.scrollTo(0, desiredScrollPosition);
     }
+
+    // Ensure the viewport always shows the typing area
+    const noteInputRect = noteInput.getBoundingClientRect();
+    const distanceFromBottom = window.innerHeight - noteInputRect.bottom;
+
+    if (distanceFromBottom < 40) {
+        const hmodalRect = hmodal.getBoundingClientRect();
+        const highlightTopRelativeToDocument = hmodalRect.top + window.scrollY;
+        const desiredScrollPosition = highlightTopRelativeToDocument - 120;
+        window.scrollTo(0, desiredScrollPosition);
+    }
+}
+
+const hmodal = document.getElementById('highlightModal');
+if (hmodal) {
+    hmodal.addEventListener('resize', snapModalToTopAndAdjustHeight);
 }
 
 function centerHighlightModal(hmodal) {
@@ -1796,11 +1826,6 @@ function handleEditNoteClick() {
     const hmodal = document.getElementById('highlightModal');
     hmodal.style.pointerEvents = 'auto';
 
-
-    console.log("Am I highlighting? I am trying!");
-    console.log("selection.rangeCount =", selection.rangeCount);
-    console.log("selection.toString().length =", selection.toString().length);
-
     if (selection.rangeCount > 0 && selection.toString().length > 0) {
         if (mostRecentColor == "delete highlight") { mostRecentColor = 'yellow'; }
         highlightSelection(mostRecentColor);
@@ -1848,7 +1873,10 @@ document.querySelector('.note-input').addEventListener('input', function (event)
     if (inputHeight !== noteInput.scrollHeight) {
         noteInput.style.height = 'auto';
         inputHeight = noteInput.scrollHeight;
-        noteInput.style.height = `${inputHeight}px`;
+        noteInput.style.height = `${inputHeight + 5}px`;
+
+        // Call snapModalToTopAndAdjustHeight to ensure the modal's position is adjusted if needed
+        snapModalToTopAndAdjustHeight();
     };
 });
 
@@ -1927,7 +1955,6 @@ document.addEventListener('selectionchange', function () {
 // Event listener to handle window resize events
 window.addEventListener('resize', function () {
     const hmodal = document.getElementById('highlightModal');
-    console.log("yo");
     centerHighlightModal(hmodal);
 });
 
@@ -1987,7 +2014,7 @@ function highlightSelection(color) {
 
     // Failsafe in case the selection ends up being too large.
     if (textNodes.length > 40) {
-        alert("Something went wrong. Either your selection was too large or there was another error. Please try another way.");
+        window.electronAPI.showAlertDialog("Something went wrong. Either your selection was too large or there was another error. Please try another way.");
         return; // Stop the highlighting process
     }
 
@@ -1999,6 +2026,7 @@ function highlightSelection(color) {
     noteInput.dataset.hnid = hnid;
 
     // Perform check for deletion if color is hl-delete
+    //
     if (color === 'delete highlight') {
         if (!checkForNotesBeforeDelete(range, textNodes)) {
             selection.removeAllRanges();
@@ -2087,6 +2115,7 @@ function collectHnidsFromTextNodes(textNodes) {
 // Helper function to check for notes, prompt user, and delete notes if confirmed
 function checkForNotesBeforeDelete(range, textNodes) {
     let notes = JSON.parse(localStorage.getItem('notes')) || {};
+    if (!notes[bookId] || Object.keys(notes[bookId]).length === 0) notes[bookId] = {};
     let spansInRange = [];
     let hnidSet = new Set();
 
@@ -2107,7 +2136,7 @@ function checkForNotesBeforeDelete(range, textNodes) {
 
     // Check if any of the hnids in the set have attached notes in the notes object
     hnidSet.forEach(hnid => {
-        if (notes[bookId] && notes[bookId].hnids[hnid]) {
+        if (notes[bookId] && notes[bookId].hnids && notes[bookId].hnids[hnid]) {
             notedHnids.push(hnid);
         }
     });
@@ -2172,10 +2201,11 @@ function handleExistingNotesBeforeMerge(newHnid, matchingSpans, color) {
     });
 
     let notes = JSON.parse(localStorage.getItem('notes')) || {};
+    if (!notes[bookId] || Object.keys(notes[bookId]).length === 0) notes[bookId] = {};
 
     // Check for existing notes and collect them
     hnidSet.forEach(hnid => {
-        if (notes[bookId] && notes[bookId].hnids[hnid]) {
+        if (notes[bookId] && notes[bookId].hnids && notes[bookId].hnids[hnid]) {
             notedHnids.push(hnid);
             combinedNoteContent += (notes[bookId].hnids[hnid] + '\n'); // Append notes with a newline for separation
         }
@@ -2183,7 +2213,7 @@ function handleExistingNotesBeforeMerge(newHnid, matchingSpans, color) {
 
     // If more than one hnid has an associated note, merge the notes
     if (notedHnids.length > 1) {
-        alert("Merged highlights with multiple notes attached. Notes have been combined.");
+        window.electronAPI.showAlertDialog("Merged highlights with multiple notes attached. Notes have been combined.");
 
         // Remove old note records
         notedHnids.forEach(hnid => {
@@ -2219,6 +2249,7 @@ function handleExistingNotesBeforeMerge(newHnid, matchingSpans, color) {
 
 // Change and merge highlight colors (with support for notes)
 function handleHighlightMerges(hnid, color) {
+    console.log("I be here");
     let matchingSpans = document.querySelectorAll(`.highlight-span[data-hnid='${hnid}']`);
 
     // Check for existing notes before merging
@@ -2321,6 +2352,7 @@ function deleteMarkedHighlights(parentElement) {
 
     // Update the highlights object
     let highlights = JSON.parse(localStorage.getItem('highlights')) || {};
+    if (!highlights[bookId] || Object.keys(highlights[bookId]).length === 0) highlights[bookId] = {};
 
     if (!highlights[bookId] || !highlights[bookId][pid]) {
         console.warn("No highlights found for the given pid.");
@@ -2359,6 +2391,7 @@ function deleteMarkedHighlights(parentElement) {
 // Get the highest hnid value from the localStorage highlights
 function getHighestHnid() {
     let highlights = JSON.parse(localStorage.getItem('highlights')) || {};
+    if (!highlights[bookId] || Object.keys(highlights[bookId]).length === 0) highlights[bookId] = {};
     let highestHnid = -1;
 
     Object.keys(highlights).forEach(bookId => {
@@ -2404,7 +2437,6 @@ function adjustRangeOffsets(range) {
     // Check if the endOffset is 0 and adjust the endContainer accordingly
     if (endOffset === 0 && startContainer !== endContainer) {
         // Navigate to the previous text node if endContainer is a whitespace text node
-        console.log("endContainer.textContent =", endContainer.textContent);
         let newEndContainer = findPreviousTextNode(endContainer);
 
         if (newEndContainer) {
@@ -2532,7 +2564,6 @@ function highlightMultipleTextNodes(textNodes, range, color, hnid) {
     let usedHnids = [];
 
     const startText = startNode.textContent;
-    console.log("I say start text is:", startText);
     const startBefore = startText.slice(0, range.startOffset);
     const startHighlight = startText.slice(range.startOffset);
 
@@ -2612,6 +2643,8 @@ function createSpanWrapper(color, hnid) {
 function reapplyHighlightsNotes() {
     const startTime = performance.now();
     let highlights = JSON.parse(localStorage.getItem('highlights')) || {};
+    console.log("highlights 1a:", highlights);
+    if (!highlights[bookId] || Object.keys(highlights[bookId]).length === 0) highlights[bookId] = {};
 
     if (!highlights[bookId]) {
         console.warn("No highlights found for this book.");
@@ -2640,9 +2673,12 @@ function reapplyHighlightsNotes() {
             bookmarkIcon.setAttribute('onclick', `toggleBookmark(${paragraphIndex})`);
         }
     });
+    console.log("highlights 1b:", highlights);
 
     // Apply .note-attached class to spans with notes
     let notes = JSON.parse(localStorage.getItem('notes')) || {};
+    console.log("notes 1a:", notes);
+    if (!notes[bookId] || Object.keys(notes[bookId]).length === 0) notes[bookId] = {};
     if (notes[bookId] && notes[bookId].hnids) {
         Object.keys(notes[bookId].hnids).forEach(hnid => {
             document.querySelectorAll(`.highlight-span[data-hnid="${hnid}"]`).forEach(span => {
@@ -2652,6 +2688,7 @@ function reapplyHighlightsNotes() {
     }
 
     const endTime = performance.now();
+    console.log("notes 1b:", notes);
 }
 
 // Add or update an element in highlights
@@ -2659,6 +2696,7 @@ function saveHighlightsToLocalStorage(rootElement) {
     if (!rootElement) return; // Ensure rootElement is valid
 
     let highlights = JSON.parse(localStorage.getItem('highlights')) || {};
+    if (!highlights[bookId] || Object.keys(highlights[bookId]).length === 0) highlights[bookId] = {};
 
     if (!highlights[bookId]) {
         highlights[bookId] = {};
@@ -2728,28 +2766,33 @@ function stripHighlightSpans(element) {
     });
 }
 
-// Function to save highlights and notes data on navigation away
+// Function to save highlights and notes data on navigation away/app close
 function saveHlnotesDataOnNavigationAway() {
     const highlights = JSON.parse(localStorage.getItem('highlights')) || {};
+    if (!highlights[bookId] || Object.keys(highlights[bookId]).length === 0) highlights[bookId] = {};
     const notes = JSON.parse(localStorage.getItem('notes')) || {};
+    if (!notes[bookId] || Object.keys(notes[bookId]).length === 0) notes[bookId] = {};
     const data = { highlights, notes };
+
+    // Check if data is empty and hlnotesDataFound is true
+    if (hlnotesDataFound && (!data.highlights || !data.highlights[bookId] || Object.keys(data.highlights[bookId]).length === 0) && (!data.notes || !data.notes[bookId] || Object.keys(data.notes[bookId]).length === 0 || Object.keys(data.notes[bookId]['hnids']).length === 0)) {
+        const confirmMessage = "WARNING: We found highlights and/or notes when opening this book, but now we find none. We can recover the old notes or highlights, or delete them.\n\nShould we delete this data?";
+        const userConfirmed = window.electronAPI.showConfirmDialog(confirmMessage);
+        if (!userConfirmed) {
+            console.log('User chose not to delete the data. Halting save operation.');
+            return;
+        }
+    }
+
     window.electronAPI.saveHlnotesData(currentBookId, data);
 }
 
-// Function to save highlights and notes data on app close (similar to foregoing)
-function saveHlnotesDataOnAppClose() {
-    const highlights = JSON.parse(localStorage.getItem('highlights')) || {};
-    const notes = JSON.parse(localStorage.getItem('notes')) || {};
-    const data = { highlights, notes };
-    window.electronAPI.saveHlnotesData(currentBookId, data);
-}
-
-// Add event listener for navigation away
-window.addEventListener('beforeunload', saveHlnotesDataOnNavigationAway);
-
-// Add event listener for app close
-window.addEventListener('beforeunload', saveHlnotesDataOnAppClose);
-
+setTimeout(() => {
+    if (window.fullLoadingApproved) {
+        // Add event listener for navigation away/app close
+        window.addEventListener('beforeunload', saveHlnotesDataOnNavigationAway);
+    }
+}, 500);
 
 // EDIT NOTES
 
@@ -2772,6 +2815,7 @@ function autosaveNote() {
     }
 
     const notes = JSON.parse(localStorage.getItem('notes')) || {};
+    if (!notes[bookId] || Object.keys(notes[bookId]).length === 0) notes[bookId] = {};
     if (!notes[bookId]) notes[bookId] = {};
     if (!notes[bookId].hnids) notes[bookId].hnids = {};
 
@@ -2838,6 +2882,7 @@ function initializeHighlightsNotesModal() {
             <div class="hn-tabs">
                 <button class="hn-tab" onclick="switchTab('highlights')">Highlights</button>
                 <button class="hn-tab" onclick="switchTab('notes')">Notes</button>
+                <span id="copyText"><a href="#">Copy Text</a></span>
             </div>
             <div class="hn-tab-content-container">
                 <div id="highlights" class="hn-tab-content">
@@ -2849,6 +2894,12 @@ function initializeHighlightsNotesModal() {
             </div>
         `;
         document.body.appendChild(modal);
+
+        // Event listener to handle the click on "Copy to Clipboard" link
+        document.getElementById('copyText').addEventListener('click', function(event) {
+            event.preventDefault();
+            copyTabContent();
+        });
     }
 
     // Add an event listener to the document to close the modal when clicking outside
@@ -2875,6 +2926,70 @@ function initializeHighlightsNotesModal() {
     switchTab(activeTab);
 }
 
+// Copies content of hlnotes modal to clipboard
+function copyTabContent() {
+    const activeTab = localStorage.getItem('activeTab');
+    let contentToCopy;
+    let header;
+
+    if (activeTab === 'highlights') {
+        contentToCopy = document.getElementById('highlights').innerHTML;
+        header = `<h2>Highlights: <br>${currentBookMetadata.Title}</h2><h4 style="text-align: left;">By ${currentBookMetadata.CreatorNames[0]}</h4><br>`;
+    } else if (activeTab === 'notes') {
+        contentToCopy = document.getElementById('notes').innerHTML;
+        header = `<h2>Notes: <br>${currentBookMetadata.Title}</h2><h4 style="text-align: left;">By ${currentBookMetadata.CreatorNames[0]}</h4><br>`;
+    } else {
+        console.error('Unknown tab type.');
+        return;
+    }
+
+    // Create a temporary container to hold the content
+    const tempContainer = document.createElement('div');
+    tempContainer.innerHTML = header + contentToCopy;
+
+    // Remove elements with class 'curly-left' and 'curly-right'
+    tempContainer.querySelectorAll('.curly-left, .curly-right').forEach(el => el.remove());
+
+    // Add an extra <p> </p> after each .note-container
+    tempContainer.querySelectorAll('.note-container').forEach(el => {
+        const p = document.createElement('p');
+        p.innerHTML = ' ';
+        el.insertAdjacentElement('afterend', p);
+    });
+
+    // Replace <div class="hn-highlight-separator"></div> with <p> </p>
+    tempContainer.querySelectorAll('.hn-highlight-separator').forEach(el => {
+        const p = document.createElement('p');
+        p.innerHTML = '--------------------';
+        el.replaceWith(p);
+    });
+
+    // Prevent the issue with justified text when copying
+    tempContainer.innerHTML = tempContainer.innerHTML.replace(/<br>\n?<br>/g, '<p> </p>');
+
+    // Temporarily append to the body to perform the copy operation
+    document.body.appendChild(tempContainer);
+
+    // Copy to clipboard
+    const range = document.createRange();
+    range.selectNodeContents(tempContainer);
+    const selection = window.getSelection();
+    selection.removeAllRanges();
+    selection.addRange(range);
+
+    try {
+        document.execCommand('copy');
+        alert('Content copied to clipboard.');
+    } catch (err) {
+        console.error('Failed to copy content:', err);
+    }
+
+    selection.removeAllRanges(); // Clear the selection
+
+    // Remove the temporary container from the DOM
+    document.body.removeChild(tempContainer);
+}
+
 // Function to open the highlights and notes modal
 function openHighlightsNotesModal(event) {
     event.preventDefault(); // Prevent the default link behavior
@@ -2883,6 +2998,12 @@ function openHighlightsNotesModal(event) {
     modal.style.display = 'block';
     const greyLine = document.getElementById('grey-line');
     greyLine.style.display = 'block';
+    // Adjust grey line width based on zoom factor
+    const originalWidth = parseFloat(getComputedStyle(greyLine).width); // Fetch the current width from CSS
+    const zoomFactor = window.electronAPI.getZoomFactor();
+    greyLine.style.width = `${15.5 / zoomFactor}px`;
+    document.getElementById('header').style.width = `calc(100% - ${15.5 / zoomFactor}px)`;
+    document.body.style.paddingRight = `${15.5 / zoomFactor}px`;
 
     // Clear existing content
     document.getElementById('highlights').innerHTML = '';
@@ -2902,8 +3023,6 @@ function openHighlightsNotesModal(event) {
             populateHighlightsTab();
     }
     document.body.classList.add('no-scroll'); // Disable background scrolling
-    document.body.classList.add('modal-open'); // Add class for padding adjustment
-    document.getElementById('header').classList.add('modal-open'); // Add class to header for padding adjustment
 }
 
 // Function to close the highlights and notes modal
@@ -2914,7 +3033,8 @@ function closeHighlightsNotesModal() {
     document.body.classList.remove('modal-open'); // Remove padding adjustment
     const greyLine = document.getElementById('grey-line');
     greyLine.style.display = 'none';
-    document.getElementById('header').classList.remove('modal-open'); // Remove padding adjustment from header
+    document.body.style.paddingRight = '0px';
+    document.getElementById('header').style.width = "100%";
 }
 
 // Event listener to open the modal
@@ -2922,7 +3042,6 @@ document.getElementById('highlightsNotesBtn').addEventListener('click', openHigh
 
 // Function to switch between tabs
 function switchTab(tabName) {
-    console.log('Switching to tab:', tabName);
     const tabs = document.querySelectorAll('.hn-tab');
     const tabContents = document.querySelectorAll('.hn-tab-content');
 
@@ -3012,6 +3131,7 @@ function cleanHighlightedHTML(html) {
 function populateHighlightsTab() {
     try {
         const highlightsData = localStorage.getItem('highlights');
+        console.log("highlightsData 2a:", highlightsData);
         if (!highlightsData || !JSON.parse(highlightsData)[bookId] || Object.keys(JSON.parse(highlightsData)[bookId]).length === 0) {
             document.getElementById('highlights').innerHTML = '<p class="no-data-message">No highlights yet. To add a highlight, select some text and click the color you want.</p>';
             return;
@@ -3043,7 +3163,6 @@ function populateHighlightsTab() {
         });
 
         document.getElementById('highlights').innerHTML = highlightsHTML;
-        console.log('Highlights tab populated.');
 
         // Add click event listeners to each highlight item
         document.querySelectorAll('.highlight-item').forEach(item => {
@@ -3069,43 +3188,54 @@ function populateHighlightsTab() {
         console.error('Error populating highlights tab:', error);
         document.getElementById('highlights').innerHTML = '<p class="no-data-message">Error loading highlights.</p>';
     }
+    console.log("highlightsData 2b:", highlightsData);
 }
 
-// Function to render Markdown to HTML
-function renderMarkdown(markdownText) {
+// Function to render Markdown to HTML, and make necessary changes to user-input HTML
+function renderMarkdownAndFixHTML(markdownText) {
     // Convert headings
-    markdownText = markdownText.replace(/^### (.*$)/gim, '<h3 class="md-h3">$1</h3>');
-    markdownText = markdownText.replace(/^## (.*$)/gim, '<h2 class="md-h2">$1</h2>');
-    markdownText = markdownText.replace(/^# (.*$)/gim, '<h1 class="md-h1">$1</h1>');
+    markdownText = markdownText.replace(/^### (.+$)/gim, '<h3 class="md-h3">$1</h3>');
+    markdownText = markdownText.replace(/^## (.+$)/gim, '<h2 class="md-h2">$1</h2>');
+    markdownText = markdownText.replace(/^# (.+$)/gim, '<h1 class="md-h1">$1</h1>');
 
     // Convert bold text
-    markdownText = markdownText.replace(/\*\*(.*)\*\*/gim, '<strong class="md-strong">$1</strong>');
+    markdownText = markdownText.replace(/\*\*(?=\S)([^\*]*?\S)\*\*/gim, '<strong>$1</strong>');
 
     // Convert italic text
-    markdownText = markdownText.replace(/\*(.*)\*/gim, '<em class="md-em">$1</em>');
+    markdownText = markdownText.replace(/\*(?=\S)([^\*]*?\S)\*/gim, '<i>$1</i>');
 
     // Convert blockquotes
-    markdownText = markdownText.replace(/^\> (.*$)/gim, '<blockquote class="md-blockquote">$1</blockquote>');
+    markdownText = markdownText.replace(/^\> (.+$)/gim, '<blockquote class="md-blockquote">$1</blockquote>');
 
     // Convert ordered lists
     markdownText = markdownText.replace(/^\d+\.\s(.*$)/gim, '<li class="md-li">$1</li>');
     markdownText = markdownText.replace(/(<li class="md-li">.*<\/li>)/gim, '<ol class="md-ol">$1</ol>');
 
     // Convert unordered lists
-    markdownText = markdownText.replace(/^\-\s(.*$)/gim, '<li class="md-li">$1</li>');
+    markdownText = markdownText.replace(/^\-\s(.+$)/gim, '<li class="md-li">$1</li>');
     markdownText = markdownText.replace(/(<li class="md-li">.*<\/li>)/gim, '<ul class="md-ul">$1</ul>');
 
     // Convert inline code
-    markdownText = markdownText.replace(/\`(.*)\`/gim, '<code class="md-code">$1</code>');
+    markdownText = markdownText.replace(/\`(.+)\`/gim, '<code class="md-code">$1</code>');
 
     // Convert horizontal rules
     markdownText = markdownText.replace(/^\-\-\-$/gim, '<hr class="md-hr">');
 
     // Convert line breaks to <br> between word characters
-    markdownText = markdownText.replace(/\n\n/gim, '<br class="md-br"><br>');
+    markdownText = markdownText.replace(/\n\n/gim, '<br><br>');
     markdownText = markdownText.replace(/([\w!"?,"-.:\];])\n/gim, '$1<br>');
 
-    return markdownText.trim(); // Remove leading and trailing whitespace
+    // Create a temporary element to hold the HTML
+    const tempDiv = document.createElement('div');
+    tempDiv.innerHTML = markdownText.trim();
+
+    // Add target="_new" to all links
+    const links = tempDiv.querySelectorAll('a');
+    links.forEach(link => {
+        link.setAttribute('target', '_new');
+    });
+
+    return tempDiv.innerHTML; // Return the modified HTML
 }
 
 // Function to clean paragraphs by removing spans that do not match the current hnid
@@ -3157,7 +3287,10 @@ function createHanContainer(hnid, hnidSpans, noteContent) {
     hnidSpans.forEach(({ html, colorClass }) => {
         const paragraphDiv = document.createElement('div');
         paragraphDiv.classList.add('highlight-paragraph'); // Add class for styling
-        paragraphDiv.innerHTML = html;
+
+        // Modify the inner HTML to include the curly quotes
+        const modifiedHtml = `<span class="curly-left">&#8220;</span>${html}<span class="curly-right">&#8221;</span>`;
+        paragraphDiv.innerHTML = modifiedHtml;
 
         // Add the color class for the border lines
         switch (colorClass) {
@@ -3187,8 +3320,8 @@ function createHanContainer(hnid, hnidSpans, noteContent) {
     noteContainer.classList.add('note-container');
 
     // Render the note content using Markdown
-    const renderedNoteContent = renderMarkdown(noteContent);
-    noteContainer.innerHTML = renderedNoteContent;
+    const renderedNoteContent = renderMarkdownAndFixHTML(noteContent);
+    noteContainer.innerHTML = `${renderedNoteContent}<p>&nbsp;</p>`;
 
     // Combine the highlight and note containers into a 'han' container
     const hanContainer = document.createElement('div');
@@ -3211,13 +3344,16 @@ function createHanContainer(hnid, hnidSpans, noteContent) {
 function populateNotesTab() {
     try {
         const notesData = localStorage.getItem('notes');
-        if (!notesData || !JSON.parse(notesData)[bookId] || Object.keys(JSON.parse(notesData)[bookId].hnids).length === 0) {
+        console.log("notesData 3a:", notesData);
+        if (!notesData) {
             document.getElementById('notes').innerHTML = '<p class="no-data-message">No notes yet. To add a note, select some text and click the note icon.</p>';
             return;
         }
 
-        const bookNotes = JSON.parse(notesData)[bookId];
-        if (!bookNotes) {
+        const parsedNotesData = JSON.parse(notesData);
+        const bookNotes = parsedNotesData[bookId];
+
+        if (!bookNotes || Object.keys(bookNotes).length === 0 || (bookNotes.hnids && Object.keys(bookNotes.hnids).length === 0)) {
             document.getElementById('notes').innerHTML = '<p class="no-data-message">No notes yet. To add a note, select some text and click the note icon.</p>';
             return;
         }
@@ -3249,7 +3385,6 @@ function populateNotesTab() {
                 }
             }
 
-            console.log("-------------------------------------");
             const hanHTML = createHanContainer(hnid, hnidSpans, bookNotes.hnids[hnid]);
 
             // Produce the 'han' container and add it to the hans array
@@ -3308,6 +3443,7 @@ function populateNotesTab() {
         console.error('Error populating notes tab:', error);
         document.getElementById('notes').innerHTML = '<p class="no-data-message">Error loading notes.</p>';
     }
+    console.log("notesData 3b:", notesData);
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
