@@ -1,5 +1,5 @@
 // Declare variables globally
-window.fullLoadingApproved = false;
+fullLoadingApproved = false;
 let hlnotesDataFound = false;
 const urlParams = new URLSearchParams(window.location.search);
 const bookId = urlParams.get('bookId');
@@ -34,7 +34,7 @@ async function fetchData() {
         if (!buffer) {
             console.error('Failed to load book: no buffer.');
             document.getElementById('body').innerHTML = '<p style="width: 400px; font-size: 36px; margin: 50px auto;">Failed to load book. Is the thumb drive inserted? Have you moved the book files, or deleted the file for this particular book?</p>';
-            window.fullLoadingApproved = false;
+            fullLoadingApproved = false;
             return; // Stop further execution in this function
         }
         zwiData = new Uint8Array(buffer);
@@ -52,60 +52,68 @@ async function fetchData() {
         localStorage.setItem('highlights', localStorage.getItem('highlights') || JSON.stringify({}));
         localStorage.setItem('notes', localStorage.getItem('notes') || JSON.stringify({}));
 
-        window.fullLoadingApproved = true;
+        fullLoadingApproved = true;
     } catch (error) {
         console.error('Failed to fetch book data:', error);
-        window.fullLoadingApproved = false;
+        fullLoadingApproved = false;
     }
 }
 
 function saveHlnotesDataOnInterval(bookId) {
-    // Function to save highlights and notes data to disk
     const saveData = async () => {
         const highlights = JSON.parse(localStorage.getItem('highlights')) || {};
-        if (!highlights[bookId] || Object.keys(highlights[bookId]).length === 0) highlights[bookId] = {};
         const notes = JSON.parse(localStorage.getItem('notes')) || {};
-        if (!notes[bookId] || Object.keys(notes[bookId]).length === 0) notes[bookId] = {};
+        if (!highlights[bookId] && !notes[bookId]) return; // No need to save if nothing exists for the book
+
+        highlights[bookId] = highlights[bookId] || {};
+        notes[bookId] = notes[bookId] || {};
+
         const data = { highlights, notes };
         await window.electronAPI.saveHlnotesData(bookId, data);
     };
 
-    // Save data immediately on load
     saveData();
 
-    // Set interval to save data every minute (60000 milliseconds)
     saveInterval = setInterval(saveData, 60000);
 
-    // Clear interval when the user navigates away or closes the app
     window.addEventListener('beforeunload', () => clearInterval(saveInterval));
 }
 
+///////////////////////////////////
+// YE OLDE BIGGE DOM CONTENT LOADED
 document.addEventListener('DOMContentLoaded', async () => {
     loadFont();
 
-    // Clear existing highlights and notes from local storage
-    localStorage.removeItem('highlights');
-    localStorage.removeItem('notes');
-    
+    // Preload data before manipulating DOM
     try {
         await fetchData();
-
-        if (!window.fullLoadingApproved) {
-            console.error('Book loading not approved. Halting further initialization.');
-        }
     } catch (error) {
         console.error('Error during book fetching:', error);
     }
 
+    if (!fullLoadingApproved) {
+        console.error('Book loading not approved. Halting further initialization.');
+        document.body.innerHTML = '<p style="width: 400px; font-size: 36px; margin: 50px auto;">Failed to load book. Is the thumb drive inserted? Have you moved the book files, or deleted the file for this particular book?</p>';
+        return; // Exit if book loading is not approved
+    }
+
+    // Clear existing highlights and notes from local storage after fetching data
+    localStorage.removeItem('highlights');
+    localStorage.removeItem('notes');
+
     // Load highlights and notes data from disk
     const hlnotesData = await window.electronAPI.loadHlnotesData(currentBookId);
     if (hlnotesData) {
-        hlnotesDataFound = true;
         // Ensure the structure includes the currentBookId
         const highlights = { [currentBookId]: {} };
         highlights[currentBookId] = hlnotesData.highlights || {};
         const notes = { [currentBookId]: {} };
         notes[currentBookId] = hlnotesData.notes || {};
+        if (Object.keys(highlights[currentBookId]).length === 0 && Object.keys(notes[currentBookId]).length === 0) {
+            hlnotesDataFound = false;
+        } else {
+            hlnotesDataFound = true;
+        }
 
         localStorage.setItem('highlights', JSON.stringify(highlights));
         localStorage.setItem('notes', JSON.stringify(notes));
@@ -135,37 +143,16 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // Back button logic
     function manageNavigationOnLoad() {
-        if (history.length > 1 && localStorage.getItem('lastAddress') &&
-            localStorage.getItem('lastAddress') == window.location.pathname) {
-            return;
-        } else if (history.length <= 1) {
-            localStorage.removeItem('navCounter');
-        }
-        localStorage.setItem('lastAddress', window.location.pathname);
-        if (history.length == 1) { localStorage.removeItem('navCounter') };
-        let navCounter = parseInt(localStorage.getItem('navCounter'), 10);
-        if (isNaN(navCounter)) { // Case 1: navCounter empty
-            localStorage.setItem('navCounter', '2'); // Initial setting
-            displayBackButton(false);
-        } else if (navCounter === 1) { // Case 2: navCounter == 1
-            navCounter += 1;
-            localStorage.setItem('navCounter', navCounter.toString());
-            displayBackButton(false);
-        } else { // Case 3: navCounter > 1
-            navCounter += 1;
-            localStorage.setItem('navCounter', navCounter.toString());
-            displayBackButton(true);
-        }
+        const navCounter = parseInt(localStorage.getItem('navCounter'), 10);
+        const shouldDisplay = navCounter > 1 || (history.length > 1 && localStorage.getItem('lastAddress') !== window.location.pathname);
+        displayBackButton(shouldDisplay);
     }
 
     function displayBackButton(shouldDisplay) {
         const backBtn = document.getElementById('backBtn');
-        if (shouldDisplay) {
-            backBtn.style.display = 'block';
-        } else {
-            backBtn.style.display = 'none';
-        }
+        backBtn.style.display = shouldDisplay ? 'block' : 'none';
     }
+
     manageNavigationOnLoad();
 
     // Event listener for the back button
@@ -312,12 +299,12 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
 
     // Everything above this loads, regardless of whether the book
-    if (!window.fullLoadingApproved) {
+    if (!fullLoadingApproved) {
         return;
     }
 
 
-    function processText(text) {
+    function processText(text) {  // KJV load: 45ms
         // Split the text into parts by HTML tags
         const parts = text.split(/(<[^>]*>)/);
 
@@ -389,15 +376,15 @@ document.addEventListener('DOMContentLoaded', async () => {
         return switchElement.innerHTML; // Return the HTML to be added
     }
 
-    function prepPlainText(text, isPoetry) {
+    function prepPlainText(text, isPoetry) {   // Luther Works load: 30.4ms
         const lines = text.split(/\r\n|\r|\n/);
         const paragraphs = [];
         let paragraphIndex = 0;
         let singleLineFlag = false;
 
         // Extract and format author name
-        const formattedAuthorName = extractAuthor(); // Assuming extractAuthor() is available globally and returns a formatted name
-        const title = currentBookMetadata.Title; // Assuming title is stored in currentBookMetadata
+        const formattedAuthorName = extractAuthor();
+        const title = currentBookMetadata.Title;
 
         let tempParagraph = [];
         function flushParagraph() {
@@ -419,10 +406,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         let titleProcessed = false;
         let authorProcessed = false;
         lines.forEach((line, index) => {
-            // Replace leading spaces and tabs with `&nbsp;`
-            const modifiedLine = line.replace(/^(\s+)/, function (match) {
-                return match.replace(/ /g, '&nbsp;').replace(/\t/g, '&nbsp;&nbsp;&nbsp;');
-            });
+            const modifiedLine = line.replace(/^(\s+)/, match => match.replace(/ /g, '&nbsp;').replace(/\t/g, '&nbsp;&nbsp;&nbsp;'));
 
             // Check for title or author in the line
             if (!titleProcessed && line.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, '') === title.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, '')) {
@@ -455,9 +439,10 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
         });
 
-        flushParagraph();  // Ensure the last paragraph is flushed if not already
-        const separateSwitch = addSwitch();  // Prepend the poetrySwitch
+        flushParagraph();
+        const separateSwitch = addSwitch();
         paragraphs.unshift(separateSwitch);
+
         return paragraphs.join('');
     }
 
@@ -469,7 +454,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         return (matches.length / words1.length) * 100;
     }
 
-    fflate.unzip(zwiData, async (err, unzipped) => {
+    fflate.unzip(zwiData, async (err, unzipped) => {   // KJV load 2465.3ms
+        console.time("Load");
+
         if (err) {
             bookContentDiv.textContent = 'Failed to unzip book. Error: ' + err.message;
             console.error('Unzip error:', err);
@@ -484,25 +471,24 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
 
         const rawContent = unzipped[primaryFilename];
-        const preliminaryContent = new TextDecoder("utf-8").decode(rawContent).substring(0, 5000);
+        const preliminaryContent = new TextDecoder("utf-8").decode(rawContent).substring(0, 5000).toLowerCase();
 
-        let decoder;
-        if (preliminaryContent.toLowerCase().includes("utf-8")) {
-            decoder = new TextDecoder("utf-8");
-        } else if (preliminaryContent.toLowerCase().includes("language: russian")) {
-            decoder = new TextDecoder("cp1251");
-        } else if (preliminaryContent.toLowerCase().includes("language: serbian")) {
-            decoder = new TextDecoder("cp1251");
-        } else if (preliminaryContent.toLowerCase().includes("iso-8859-1")) {
-            decoder = new TextDecoder("iso88591");
-        } else if (preliminaryContent.toLowerCase().includes("iso-8859-2")) {
-            decoder = new TextDecoder("iso88592");
-        } else if (preliminaryContent.toLowerCase().includes("unicode")) {
-            decoder = new TextDecoder("utf-8");
-        } else if (preliminaryContent.toLowerCase().includes("language: chinese")) {
-            decoder = new TextDecoder("utf-8");
-        } else {
-            decoder = new TextDecoder("iso88591");
+        const encodingMap = {
+            "utf-8": "utf-8",
+            "language: russian": "cp1251",
+            "language: serbian": "cp1251",
+            "iso-8859-1": "iso88591",
+            "iso-8859-2": "iso88592",
+            "unicode": "utf-8",
+            "language: chinese": "utf-8"
+        };
+
+        let decoder = new TextDecoder("iso88591"); // Default decoder
+        for (const [key, value] of Object.entries(encodingMap)) {
+            if (preliminaryContent.includes(key)) {
+                decoder = new TextDecoder(value);
+                break;
+            }
         }
 
         let bookContent = decoder.decode(rawContent);
@@ -512,17 +498,12 @@ document.addEventListener('DOMContentLoaded', async () => {
         // Convert underscore-for-italics into italics
         bookContent = processText(bookContent);
 
-        // Define a regular expression that includes the root words for "poet" or "poem" in various languages
-        // Words: poet, poem, poète, poème, dichter, gedicht, poeta, poema, poet, dikt, поэт, стих, 诗人, 诗
         const pattern = /poet(?:s)?|poem(?:s)?|poète(?:s)?|poème(?:s)?|dichter(?:s)?|gedicht(?:e|er)?|poeta(?:s)?|poema(?:s)?|dikt(?:er)?|поэт(?:ы|ов)?|стих(?:и|ов)?|诗人|诗|song(?:s)?|canzone(?:i)?|lied(?:er|je)?|canción(?:es)?|canto(?:s)?|sång(?:er)?|песня(?:и|ей)?|歌|lyric(?:s)?|lyrique(?:s)?|lyrik(?:en)?|lirica(?:s)?|lyrik(?:er)?|лир(?:ика|ы)?|诗歌/i;
 
-
-        // Fetch the title from the metadata and test it against the regular expression
         let isPoetry = pattern.test(currentBookMetadata.Title);
-
-        // Override isPoetry based on the separateLines setting from localStorage
         let separateLines = JSON.parse(localStorage.getItem('separateLines')) || {};
         let separateLinesSetting = separateLines[bookId];
+
         if (separateLinesSetting !== undefined) {
             isPoetry = separateLinesSetting === 'true';
         } else if (isPoetry) {
@@ -530,11 +511,8 @@ document.addEventListener('DOMContentLoaded', async () => {
             localStorage.setItem('separateLines', JSON.stringify(separateLines));
         }
 
-        // Set content in the appropriate format
-        // Call prepPlainText with the isPoetry flag to adjust processing accordingly
         bookContentDiv.innerHTML = primaryFilename.endsWith(".txt") ? prepPlainText(bookContent, isPoetry) : bookContent;
 
-        // Hide the first <pre> element with a toggle link
         const firstPre = bookContentDiv.querySelector('pre');
         if (firstPre) {
             const showLink = document.createElement('a');
@@ -550,9 +528,8 @@ document.addEventListener('DOMContentLoaded', async () => {
             firstPre.parentNode.insertBefore(hideLink, firstPre);
 
             const frontMatterStateKey = 'pgFrontMatterState';
-
-            // Check local storage for the state of the toggle
             const frontMatterState = localStorage.getItem(frontMatterStateKey);
+
             if (frontMatterState === 'shown') {
                 firstPre.classList.remove('hidden-front-matter');
                 showLink.classList.add('hidden-bits');
@@ -584,24 +561,28 @@ document.addEventListener('DOMContentLoaded', async () => {
             const images = document.querySelectorAll('img');
 
             anchors.forEach(anchor => {
+                let hasChanged = false;
                 ['name', 'id', 'href'].forEach(attr => {
                     if (anchor.hasAttribute(attr)) {
                         let value = anchor.getAttribute(attr);
                         // Remove <i> and </i> tags
-                        value = value.replace(/<\/?i>/g, '_');
-                        value = value.replace(/(noteref|note|page|fnote|fnanchor)(\d+)/ig, (_, p1, p2) => `${p1}_${p2}`);
+                        let newValue = value.replace(/<\/?i>/g, '_')
+                                            .replace(/(noteref|note|page|fnote|fnanchor)(\d+)/ig, (_, p1, p2) => `${p1}_${p2}`);
 
                         // Ensure IDs and hrefs do not start with a digit
-                        if ((attr === 'id' || attr === 'name') && /^\d/.test(value)) {
-                            value = `id_${value}`;
-                        } else if (attr === 'href' && value.startsWith('#')) {
-                            value = value.replace(/#(noteref|note|page)(\d+)/ig, (_, p1, p2) => `#${p1}_${p2}`);
-                            if (/^#\d/.test(value)) {
-                                value = `#id_${value.slice(1)}`;
+                        if ((attr === 'id' || attr === 'name') && /^\d/.test(newValue)) {
+                            newValue = `id_${newValue}`;
+                        } else if (attr === 'href' && newValue.startsWith('#')) {
+                            newValue = newValue.replace(/#(noteref|note|page)(\d+)/ig, (_, p1, p2) => `#${p1}_${p2}`);
+                            if (/^#\d/.test(newValue)) {
+                                newValue = `#id_${newValue.slice(1)}`;
                             }
                         }
 
-                        anchor.setAttribute(attr, value);
+                        if (value !== newValue) {
+                            anchor.setAttribute(attr, newValue);
+                            hasChanged = true;
+                        }
                     }
                 });
 
@@ -626,8 +607,10 @@ document.addEventListener('DOMContentLoaded', async () => {
                 if (img.hasAttribute('src')) {
                     let src = img.getAttribute('src');
                     // Remove <i> and </i> tags from src
-                    src = src.replace(/<\/?i>/g, '_');
-                    img.setAttribute('src', src);
+                    let newSrc = src.replace(/<\/?i>/g, '_');
+                    if (src !== newSrc) {
+                        img.setAttribute('src', newSrc);
+                    }
                 }
             });
         }
@@ -644,15 +627,11 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         // Function to count words in a given text
         function countWords(text) {
-            // Match words using a regex pattern
-            const words = text.match(/\b\w+\b/g) || [];
-            return words.length;
+            return text.split(/\s+/).filter(Boolean).length;
         }
 
-        // Get the plain text content
+        // Get the plain text content and count the words
         const plainTextContent = getTextContent(bookContentDiv.innerHTML);
-
-        // Count the words
         const wordCount = countWords(plainTextContent);
         const pageCount = Math.ceil(wordCount / 300);
 
@@ -660,36 +639,23 @@ document.addEventListener('DOMContentLoaded', async () => {
         const relevantTags = ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol', 'tr', 'figcaption', 'aside', 'address', 'details', 'summary'];
         // Iterate over each relevant tag and process elements with inline centering
         relevantTags.forEach(tag => {
-            let elements = bookContentDiv.querySelectorAll(`${tag}[style*="text-align: center"]`);
-            elements.forEach(element => {
+            bookContentDiv.querySelectorAll(`${tag}[style*="text-align: center"], ${tag}[align="center"]`).forEach(element => {
                 if (element.style.textAlign === 'center') {
                     element.style.textAlign = ''; // Remove the inline style
-                    element.classList.add('center'); // Add the center class
                 }
-            });
-        });
-        relevantTags.forEach(tag => {
-            // Select elements with align="center"
-            let elementsWithAlign = bookContentDiv.querySelectorAll(`${tag}[align="center"]`);
-
-            elementsWithAlign.forEach(element => {
-                element.removeAttribute('align'); // Remove the align attribute
+                element.removeAttribute('align'); // Remove the align attribute if present
                 element.classList.add('center'); // Add the center class
             });
         });
 
-
         // Check if the switch exists
         const poetrySwitch = document.querySelector('.poetrySwitch input');
         if (poetrySwitch) {
+            let separateLines = JSON.parse(localStorage.getItem('separateLines')) || {};
+
             // Adding event listener to the switch
             poetrySwitch.addEventListener('change', function () {
-                let separateLines = JSON.parse(localStorage.getItem('separateLines')) || {};
-                if (this.checked) {
-                    separateLines[bookId] = 'true';
-                } else {
-                    separateLines[bookId] = 'false';
-                }
+                separateLines[bookId] = this.checked ? 'true' : 'false';
                 localStorage.setItem('separateLines', JSON.stringify(separateLines));
                 setTimeout(() => {
                     location.reload();
@@ -697,9 +663,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             });
 
             // Set the switch position based on the latest setting
-            let separateLines = JSON.parse(localStorage.getItem('separateLines')) || {};
-            let separateLinesSetting = separateLines[bookId];
-            poetrySwitch.checked = separateLinesSetting === 'true';
+            poetrySwitch.checked = separateLines[bookId] === 'true';
         }
 
         function addBookmarkIcon(element, index) {
@@ -738,20 +702,14 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         function assignIDsToContentElements(content) {
             let paragraphIndex = 0;
-            // Select the additional tags along with 'p'
             const elements = content.querySelectorAll('p, h1, h2, h3, h4, h5, h6, ul, ol, figcaption, aside, address, details, summary');
-            const updates = [];
 
             elements.forEach(element => {
                 if (!element.id && ((element.tagName === 'DIV' && !element.querySelector('p') && element.textContent.trim().length > 0) || element.tagName !== 'DIV')) {
                     element.id = `p${paragraphIndex}`;
-                    updates.push({ element, index: paragraphIndex });
+                    addBookmarkIcon(element, paragraphIndex);
                     paragraphIndex++;
                 }
-            });
-
-            updates.forEach(({ element, index }) => {
-                addBookmarkIcon(element, index);
             });
 
             return content;
@@ -769,19 +727,16 @@ document.addEventListener('DOMContentLoaded', async () => {
                     const elem = document.getElementById(bookmarkId);
                     if (elem) {
                         const icon = elem.querySelector('.bookmark-icon');
-                        if (icon) {
+                        if (icon && !icon.classList.contains('filled')) {
                             icon.classList.add('filled');
                             icon.src = 'images/icons/bookmark-fill.svg';
                             icon.style.visibility = 'visible'; // Ensure it is always visible
-                        } else {
-                            console.log('Bookmark icon not found for:', bookmarkId);
                         }
                     } else {
                         console.log('Element not found for bookmark:', bookmarkId); // Log missing elements
                     }
                 });
-                // This is placed here simply because this function takes longest.
-                setTimeout(restoreScrollPosition, 250);
+                setTimeout(restoreScrollPosition, 250); // This is placed here simply because this function takes longest.
             } catch (error) {
                 console.error('Error fetching bookmarks:', error);
             }
@@ -809,41 +764,49 @@ document.addEventListener('DOMContentLoaded', async () => {
         document.querySelectorAll('#book-content img').forEach(img => {
             const originalSrc = img.getAttribute('src');
 
-            if (originalSrc.startsWith('images/icons/')) {
-                return;
-            }
-
-            const normalizedSrc = cleanPath(originalSrc.replace('data/media/images/', ''));
-            if (resourceMap[normalizedSrc]) {
-                img.setAttribute('src', resourceMap[normalizedSrc]);
-                img.setAttribute('data-original-path', originalSrc);
-
-                img.onclick = function (event) {
-                    event.preventDefault();
-                    const modal = document.getElementById('imageModal');
-                    const modalImg = document.getElementById('modalImage');
-                    const captionText = document.getElementById('caption');
-                    modal.style.display = "block";
-                    modalImg.src = this.src;
-                    captionText.innerHTML = img.alt;
-                };
-            } else {
-                console.log('No Blob URL found for:', originalSrc);
+            if (!originalSrc.startsWith('images/icons/')) {
+                const normalizedSrc = cleanPath(originalSrc.replace('data/media/images/', ''));
+                if (resourceMap[normalizedSrc]) {
+                    img.setAttribute('src', resourceMap[normalizedSrc]);
+                    img.setAttribute('data-original-path', originalSrc);
+                } else {
+                    console.log('No Blob URL found for:', originalSrc);
+                }
             }
         });
 
-        window.electronAPI.onDownloadImageRequest(async (event, { imageUrl }) => {
-            try {
-                const originalFilename = filenameMap[imageUrl] || 'downloaded_image'; // Look up the original filename
-                console.log('onDownloadImageRequest received:', { imageUrl, originalFilename });
-                // Create a temporary link element to trigger the download
-                const downloadLink = document.createElement('a');
-                downloadLink.href = imageUrl;
-                downloadLink.download = originalFilename;
-                console.log('Triggering download with filename:', downloadLink.download);
-                downloadLink.click();
-            } catch (error) {
-                console.error('Failed to download image:', error);
+        document.addEventListener('click', function(event) {
+            const target = event.target.closest('img');
+            if (target && target.getAttribute('data-original-path')) {
+                event.preventDefault();
+                const modal = document.getElementById('imageModal');
+                const modalImg = document.getElementById('modalImage');
+                const captionText = document.getElementById('caption');
+                modal.style.display = "block";
+                modalImg.src = target.src;
+                captionText.innerHTML = target.alt;
+            }
+        });
+
+        document.addEventListener('click', function(event) {
+            const anchor = event.target.closest('a');
+            if (anchor && anchor.getAttribute('href').endsWith('.jpg')) { // Adjust as needed for other image types
+                event.preventDefault();
+                const imagePath = anchor.getAttribute('href').replace('data/media/images/', '');
+                const blobUrl = resourceMap[imagePath];
+
+                if (blobUrl) {
+                    const originalFilename = filenameMap[blobUrl] || 'downloaded_image'; // Look up the original filename
+                    console.log('onDownloadImageRequest received:', { imageUrl: blobUrl, originalFilename });
+                    // Create a temporary link element to trigger the download
+                    const downloadLink = document.createElement('a');
+                    downloadLink.href = blobUrl;
+                    downloadLink.download = originalFilename;
+                    console.log('Triggering download with filename:', downloadLink.download);
+                    downloadLink.click();
+                } else {
+                    console.error('Blob URL not found for:', imagePath);
+                }
             }
         });
 
@@ -934,7 +897,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         headTitle.addEventListener('mouseout', function () {
             countPopup.style.display = 'none';
         });
-    });
+        console.timeEnd("Load");
+
+    }); // END of fflate
 
     // Helper for title-setter
     function setMoretext(more, headTitle, wholeTitle, truncatedTitle, space) {
@@ -1228,7 +1193,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Throttled version of updateReadPercentageTitle
     const throttledUpdateReadPercentageTitle = throttlePercentageRead(updateReadPercentageTitle, 500);
 
-    if (window.fullLoadingApproved) {
+    if (fullLoadingApproved) {
         // Highlights and notes are applied after everything else is set up
         setTimeout(reapplyHighlightsNotes, 250);
 
@@ -2788,7 +2753,7 @@ function saveHlnotesDataOnNavigationAway() {
 }
 
 setTimeout(() => {
-    if (window.fullLoadingApproved) {
+    if (fullLoadingApproved) {
         // Add event listener for navigation away/app close
         window.addEventListener('beforeunload', saveHlnotesDataOnNavigationAway);
     }
@@ -2992,6 +2957,7 @@ function copyTabContent() {
 
 // Function to open the highlights and notes modal
 function openHighlightsNotesModal(event) {
+    document.body.classList.add('no-scroll'); // Disable background scrolling
     event.preventDefault(); // Prevent the default link behavior
     event.stopPropagation(); // Prevent the click event from propagating to the document level
     const modal = document.getElementById('hn-highlightsNotesModal');
@@ -3022,7 +2988,6 @@ function openHighlightsNotesModal(event) {
         default:
             populateHighlightsTab();
     }
-    document.body.classList.add('no-scroll'); // Disable background scrolling
 }
 
 // Function to close the highlights and notes modal
@@ -3131,7 +3096,6 @@ function cleanHighlightedHTML(html) {
 function populateHighlightsTab() {
     try {
         const highlightsData = localStorage.getItem('highlights');
-        console.log("highlightsData 2a:", highlightsData);
         if (!highlightsData || !JSON.parse(highlightsData)[bookId] || Object.keys(JSON.parse(highlightsData)[bookId]).length === 0) {
             document.getElementById('highlights').innerHTML = '<p class="no-data-message">No highlights yet. To add a highlight, select some text and click the color you want.</p>';
             return;
@@ -3188,7 +3152,6 @@ function populateHighlightsTab() {
         console.error('Error populating highlights tab:', error);
         document.getElementById('highlights').innerHTML = '<p class="no-data-message">Error loading highlights.</p>';
     }
-    console.log("highlightsData 2b:", highlightsData);
 }
 
 // Function to render Markdown to HTML, and make necessary changes to user-input HTML
