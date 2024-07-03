@@ -109,7 +109,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         highlights[currentBookId] = hlnotesData.highlights || {};
         const notes = { [currentBookId]: {} };
         notes[currentBookId] = hlnotesData.notes || {};
-        if (Object.keys(highlights[currentBookId]).length === 0 && Object.keys(notes[currentBookId]).length === 0) {
+        if (Object.keys(highlights[currentBookId]).length === 0 && (Object.keys(notes[currentBookId]).length === 0 || 
+            Object.keys(notes[currentBookId]['hnids']).length === 0)) {
             hlnotesDataFound = false;
         } else {
             hlnotesDataFound = true;
@@ -455,8 +456,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     fflate.unzip(zwiData, async (err, unzipped) => {   // KJV load 2465.3ms
-        console.time("Load");
-
         if (err) {
             bookContentDiv.textContent = 'Failed to unzip book. Error: ' + err.message;
             console.error('Unzip error:', err);
@@ -897,8 +896,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         headTitle.addEventListener('mouseout', function () {
             countPopup.style.display = 'none';
         });
-        console.timeEnd("Load");
-
     }); // END of fflate
 
     // Helper for title-setter
@@ -1143,17 +1140,28 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // Listen for the 'export-zwi' message from the main process
     window.electronAPI.startZWIExport(() => {
-        console.log("Received 'export-zwi' message in reader.js");
-        console.log(`Exporting ZWI for book ID: ${currentBookId}`);
-        window.electronAPI.finishZwiExport(currentBookId);  // This should now work as intended
+        window.electronAPI.finishZwiExport(currentBookId);
     });
 
+    // Open external clicks with the default browser.
+    document.body.addEventListener('click', (event) => {
+        const target = event.target.closest('a');
+        if (target && (target.href.startsWith('http:') || target.href.startsWith('https:'))) {
+            event.preventDefault();
+            window.electronAPI.openExternal(target.href);
+        }
+    });
 
-    // Definition of the exportZwiFunction, which handles exporting a ZWI file
-    function exportZwiFunction(bookId) {
-        console.log(`Initiating export for book ID: ${bookId}`);
-        // Send the book ID back to the main process for exporting the ZWI
-        window.electronAPI.finishZwiExport(bookId);
+    // Make links added to highlight/note summary modal external
+    const highlightsNotesModal = document.getElementById('hn-highlightsNotesModal');
+    if (highlightsNotesModal) {
+        highlightsNotesModal.addEventListener('click', (event) => {
+            const target = event.target.closest('a');
+            if (target && (target.href.startsWith('http:') || target.href.startsWith('https:'))) {
+                event.preventDefault();
+                window.electronAPI.openExternal(target.href);
+            }
+        });
     }
 
     // BEGIN left-right navigation buttons
@@ -1286,6 +1294,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     window.electronAPI.updateGutenbergMenu(currentBookId);
     window.electronAPI.refreshMenu();
 });
+
 
 async function deleteBookmark(bookmarkId) {
     // Remove bookmark visually from the dropdown
@@ -1870,15 +1879,19 @@ document.addEventListener('click', function (event) {
         const allSpans = document.querySelectorAll(`.highlight-span[data-hnid="${hnid}"]`);
         let boundingRects = [];
 
-        allSpans.forEach(span => {
-            let rect = span.getBoundingClientRect();
-            boundingRects.push(rect);
-            // Apply the temporary styling
-            span.classList.add('temp-underline');
-        });
+        setTimeout(() => {
+            allSpans.forEach(span => {
+                let rect = span.getBoundingClientRect();
+                boundingRects.push(rect);
+                // Apply the temporary styling
+                span.classList.add('temp-underline');
+            });
+        }, 20);
 
-        // Show and place the highlight modal
-        showHighlightModalOnHighlightClick(hnid, boundingRects);
+        setTimeout(() => {
+            // Show and place the highlight modal
+            showHighlightModalOnHighlightClick(hnid, boundingRects);
+        }, 30);
     }
 });
 
@@ -2606,9 +2619,7 @@ function createSpanWrapper(color, hnid) {
 
 // Function to reapply highlights and notes
 function reapplyHighlightsNotes() {
-    const startTime = performance.now();
     let highlights = JSON.parse(localStorage.getItem('highlights')) || {};
-    console.log("highlights 1a:", highlights);
     if (!highlights[bookId] || Object.keys(highlights[bookId]).length === 0) highlights[bookId] = {};
 
     if (!highlights[bookId]) {
@@ -2638,11 +2649,9 @@ function reapplyHighlightsNotes() {
             bookmarkIcon.setAttribute('onclick', `toggleBookmark(${paragraphIndex})`);
         }
     });
-    console.log("highlights 1b:", highlights);
-
+    
     // Apply .note-attached class to spans with notes
     let notes = JSON.parse(localStorage.getItem('notes')) || {};
-    console.log("notes 1a:", notes);
     if (!notes[bookId] || Object.keys(notes[bookId]).length === 0) notes[bookId] = {};
     if (notes[bookId] && notes[bookId].hnids) {
         Object.keys(notes[bookId].hnids).forEach(hnid => {
@@ -2651,9 +2660,6 @@ function reapplyHighlightsNotes() {
             });
         });
     }
-
-    const endTime = performance.now();
-    console.log("notes 1b:", notes);
 }
 
 // Add or update an element in highlights
@@ -2741,7 +2747,7 @@ function saveHlnotesDataOnNavigationAway() {
 
     // Check if data is empty and hlnotesDataFound is true
     if (hlnotesDataFound && (!data.highlights || !data.highlights[bookId] || Object.keys(data.highlights[bookId]).length === 0) && (!data.notes || !data.notes[bookId] || Object.keys(data.notes[bookId]).length === 0 || Object.keys(data.notes[bookId]['hnids']).length === 0)) {
-        const confirmMessage = "WARNING: We found highlights and/or notes when opening this book, but now we find none. We can recover the old notes or highlights, or delete them.\n\nShould we delete this data?";
+        const confirmMessage = "WARNING: We found highlights and/or notes when opening this book, but now we find none. We can try to recover the old notes or highlights, or delete them.\n\nShould we delete this data?";
         const userConfirmed = window.electronAPI.showConfirmDialog(confirmMessage);
         if (!userConfirmed) {
             console.log('User chose not to delete the data. Halting save operation.');
@@ -3184,6 +3190,9 @@ function renderMarkdownAndFixHTML(markdownText) {
     // Convert horizontal rules
     markdownText = markdownText.replace(/^\-\-\-$/gim, '<hr class="md-hr">');
 
+    // Convert links
+    markdownText = markdownText.replace(/\[([^\]]+)\]\((https?:\/\/[^\)]+)\)/gim, '<a href="$2">$1</a>');
+
     // Convert line breaks to <br> between word characters
     markdownText = markdownText.replace(/\n\n/gim, '<br><br>');
     markdownText = markdownText.replace(/([\w!"?,"-.:\];])\n/gim, '$1<br>');
@@ -3192,10 +3201,10 @@ function renderMarkdownAndFixHTML(markdownText) {
     const tempDiv = document.createElement('div');
     tempDiv.innerHTML = markdownText.trim();
 
-    // Add target="_new" to all links
+    // Add target="_blank" to all links
     const links = tempDiv.querySelectorAll('a');
     links.forEach(link => {
-        link.setAttribute('target', '_new');
+        link.setAttribute('target', '_blank');
     });
 
     return tempDiv.innerHTML; // Return the modified HTML
@@ -3293,11 +3302,8 @@ function createHanContainer(hnid, hnidSpans, noteContent) {
     hanContainer.appendChild(highlightContainer);
     hanContainer.appendChild(noteContainer);
 
-    // Simplify the event listener to just log the click
     hanContainer.addEventListener('click', function (event) {
         event.stopPropagation(); // Ensure the event doesn't propagate further
-        const pid = hanContainer.getAttribute('data-pid');
-        console.log(`Clicked han with pid: ${pid}`);
     });
 
     return hanContainer.outerHTML;
@@ -3307,7 +3313,6 @@ function createHanContainer(hnid, hnidSpans, noteContent) {
 function populateNotesTab() {
     try {
         const notesData = localStorage.getItem('notes');
-        console.log("notesData 3a:", notesData);
         if (!notesData) {
             document.getElementById('notes').innerHTML = '<p class="no-data-message">No notes yet. To add a note, select some text and click the note icon.</p>';
             return;
@@ -3384,7 +3389,6 @@ function populateNotesTab() {
 
             hanContainer.addEventListener('mouseup', function (e) {
                 if (!isDragging) {
-                    console.log(`Clicked han with pid: ${pid}`);
                     window.location.hash = `#${pid}`;
                     closeHighlightsNotesModal();
 
@@ -3406,7 +3410,6 @@ function populateNotesTab() {
         console.error('Error populating notes tab:', error);
         document.getElementById('notes').innerHTML = '<p class="no-data-message">Error loading notes.</p>';
     }
-    console.log("notesData 3b:", notesData);
 }
 
 document.addEventListener('DOMContentLoaded', async () => {

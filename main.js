@@ -295,35 +295,40 @@ function createWindow() {
                     }
                 },
                 {
-                    label: 'Export ZWI',
+                    label: 'Export ZWI (original book files)',
                     accelerator: 'CmdOrCtrl+Shift+Z',
                     click: () => {
                         mainWindow.webContents.send('export-zwi');
                     }
                 },
                 {
-                    label: 'Export Bookshelf Data',
-                    click: async () => {
-                        await exportBookshelfData();
-                    }
-                },
-                {
-                    label: 'Import Bookshelf Data',
-                    click: async () => {
-                        await importBookshelfData();
-                    }
-                },
-                {
-                    label: 'Export Highlight/Note Data',
-                    click: async () => {
-                        await exportHlnotesData();
-                    }
-                },
-                {
-                    label: 'Import Highlight/Note Data',
-                    click: async () => {
-                        await importHlnotesData();
-                    }
+                    label: 'Import/Export User Data',
+                    submenu: [
+                        {
+                            label: 'Export Bookshelf Data',
+                            click: async () => {
+                                await exportBookshelfData();
+                            }
+                        },
+                        {
+                            label: 'Import Bookshelf Data',
+                            click: async () => {
+                                await importBookshelfData();
+                            }
+                        },
+                        {
+                            label: 'Export Highlight/Note Data',
+                            click: async () => {
+                                await exportHlnotesData();
+                            }
+                        },
+                        {
+                            label: 'Import Highlight/Note Data',
+                            click: async () => {
+                                await importHlnotesData();
+                            }
+                        }
+                    ]
                 },
                 { type: 'separator' },
                 {
@@ -1533,7 +1538,7 @@ async function importHlnotesData() {
     dialog.showMessageBox({
         type: 'info',
         title: 'Import Successful',
-        message: 'Highlight/Note data imported successfully. The application will now restart to apply the changes.'
+        message: 'Highlight/Note data imported successfully. Please now restart the app (if it doesn not start automatically).'
     }).then(() => {
         app.relaunch();
         app.exit();
