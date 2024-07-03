@@ -673,10 +673,10 @@ document.addEventListener('DOMContentLoaded', async () => {
             bookmarkIcon.className = "bookmark-icon";
             bookmarkIcon.id = `bookmark-${index}`;
             bookmarkIcon.onclick = () => toggleBookmark(index);
-
+        
             // Check if the element is already wrapped in a <div> with the 'bm-paragraph' class
             const parentDiv = element.closest('div.bm-paragraph');
-
+        
             if (parentDiv) {
                 // If already wrapped, just insert the bookmark icon before the element
                 parentDiv.insertBefore(bookmarkIcon, element);
@@ -685,25 +685,25 @@ document.addEventListener('DOMContentLoaded', async () => {
                 const wrapper = document.createElement('div');
                 wrapper.className = 'bm-paragraph';
                 wrapper.id = element.id;
-
+        
                 // Preserve the original class of the paragraph
                 const newElement = document.createElement(element.tagName);
                 newElement.className = element.className;
                 newElement.innerHTML = element.innerHTML;
-
+        
                 // Add bookmark icon and the original element to the wrapper
                 wrapper.appendChild(bookmarkIcon);
                 wrapper.appendChild(newElement);
-
+        
                 // Replace the original element with the wrapper
                 element.parentNode.replaceChild(wrapper, element);
             }
         }
-
+        
         function assignIDsToContentElements(content) {
             let paragraphIndex = 0;
             const elements = content.querySelectorAll('p, h1, h2, h3, h4, h5, h6, ul, ol, figcaption, aside, address, details, summary');
-
+        
             elements.forEach(element => {
                 if (!element.id && ((element.tagName === 'DIV' && !element.querySelector('p') && element.textContent.trim().length > 0) || element.tagName !== 'DIV')) {
                     element.id = `p${paragraphIndex}`;
@@ -711,10 +711,10 @@ document.addEventListener('DOMContentLoaded', async () => {
                     paragraphIndex++;
                 }
             });
-
+        
             return content;
         }
-
+        
         // Usage after setting the innerHTML for bookContentDiv
         if (primaryFilename.endsWith(".html") || primaryFilename.endsWith(".htm")) {
             assignIDsToContentElements(bookContentDiv);

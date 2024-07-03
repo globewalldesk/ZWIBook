@@ -35,7 +35,11 @@ contextBridge.exposeInMainWorld('electronAPI', {
     toggleSpellChecking: (callback) => ipcRenderer.on('toggle-spell-checking', callback),
     loadHlnotesData: (bookId) => ipcRenderer.invoke('read-hlnotes-data', bookId),
     saveHlnotesData: (bookId, data) => ipcRenderer.invoke('write-hlnotes-data', bookId, data),
-    getZoomFactor: () => webFrame.getZoomFactor()
+    getZoomFactor: () => webFrame.getZoomFactor(),
+    exportBookshelfData: () => ipcRenderer.invoke('export-bookshelf-data'),
+    importBookshelfData: () => ipcRenderer.invoke('import-bookshelf-data'),
+    exportHlnotesData: () => ipcRenderer.invoke('export-hlnotes-data'),
+    importHlnotesData: () => ipcRenderer.invoke('import-hlnotes-data'),
 });
 
 // Loads the same on all pages

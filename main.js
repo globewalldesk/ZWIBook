@@ -301,6 +301,30 @@ function createWindow() {
                         mainWindow.webContents.send('export-zwi');
                     }
                 },
+                {
+                    label: 'Export Bookshelf Data',
+                    click: async () => {
+                        await exportBookshelfData();
+                    }
+                },
+                {
+                    label: 'Import Bookshelf Data',
+                    click: async () => {
+                        await importBookshelfData();
+                    }
+                },
+                {
+                    label: 'Export Highlight/Note Data',
+                    click: async () => {
+                        await exportHlnotesData();
+                    }
+                },
+                {
+                    label: 'Import Highlight/Note Data',
+                    click: async () => {
+                        await importHlnotesData();
+                    }
+                },
                 { type: 'separator' },
                 {
                     label: 'Project Gutenberg book files (requires Internet)',
@@ -1190,3 +1214,409 @@ ipcMain.handle('read-hlnotes-data', async (event, bookId) => {
 ipcMain.handle('write-hlnotes-data', async (event, bookId, data) => {
     await writeHlnotesData(bookId, data);
 });
+
+
+//////////////////////////////////////////////////
+// Import/export of bookshelf and highlights/notes
+async function exportBookshelfData() {
+    const options = {
+        title: 'Save Bookshelf Data',
+        defaultPath: 'bookshelf.json',
+        buttonLabel: 'Save',
+        filters: [
+            { name: 'JSON Files', extensions: ['json'] },
+            { name: 'All Files', extensions: ['*'] }
+        ]
+    };
+
+    const { filePath, canceled } = await dialog.showSaveDialog(options);
+
+    if (!canceled && filePath) {
+        try {
+            await fs.promises.copyFile(bookshelfPath, filePath);
+            dialog.showMessageBox({
+                type: 'info',
+                buttons: ['OK'],
+                title: 'Export Successful',
+                message: 'This file, bookshelf.json, has your books saved, books viewed, the last-read position for each book, and bookmark positions. You should be able to import this file into any instance of ZWIBook. Your highlights and notes are in a separate file, which must be exported and imported separately.'
+            });
+            console.log('Bookshelf data exported successfully to:', filePath);
+        } catch (error) {
+            console.error('Error exporting bookshelf data:', error);
+            dialog.showMessageBox({
+                type: 'error',
+                buttons: ['OK'],
+                title: 'Export Failed',
+                message: 'An error occurred while exporting the bookshelf data. Please try again.'
+            });
+        }
+    }
+}
+
+async function importBookshelfData() {
+    // Prompt the user to select a file
+    const { canceled, filePaths } = await dialog.showOpenDialog({
+        title: 'Import Bookshelf Data',
+        buttonLabel: 'Import',
+        filters: [{ name: 'JSON Files', extensions: ['json'] }],
+        properties: ['openFile']
+    });
+
+    // Check if the user canceled the dialog
+    if (canceled) {
+        console.log('Import canceled by user');
+        return;
+    }
+
+    // Read the selected file
+    const filePath = filePaths[0];
+    const fileContent = await fs.promises.readFile(filePath, 'utf-8');
+
+    // Parse the JSON content
+    let importedData;
+    try {
+        importedData = JSON.parse(fileContent);
+    } catch (error) {
+        console.error('Error parsing JSON file:', error);
+        dialog.showErrorBox('Import Error', 'The selected file is not a valid JSON file. Please check the file format and try again.');
+        return;
+    }
+
+    // Validate the imported data
+    const validationResult = validateBookshelfData(importedData);
+    if (!validationResult.isValid) {
+        console.error('Bookshelf data is invalid:', validationResult.errors);
+        dialog.showErrorBox('Import Error', `The selected file is not a valid bookshelf data file. Errors: ${validationResult.errors.join(', ')}`);
+        return;
+    }
+
+    // Prompt the user for confirmation
+    const { response } = await dialog.showMessageBox({
+        type: 'warning',
+        buttons: ['Yes', 'No'],
+        defaultId: 1,
+        title: 'Confirm Import',
+        message: 'Importing this file will overwrite your current bookshelf data. Are you sure you want to proceed?',
+        detail: 'This file, bookshelf.json, has your books saved, books viewed, the last-read position for each book, and bookmark positions. You should be able to import this file into any instance of ZWIBook. Your highlights and notes are in a separate file, which must be exported and imported separately.'
+    });
+
+    // Check if the user confirmed the import
+    if (response !== 0) {
+        console.log('Import canceled by user');
+        dialog.showMessageBox({
+            type: 'info',
+            buttons: ['OK'],
+            defaultId: 0,
+            title: 'Import Canceled',
+            message: 'Import canceled. The file was not imported.'
+        });
+        return;
+    }
+
+    // Write the imported data to the bookshelf.json file
+    try {
+        await fs.promises.writeFile(bookshelfPath, JSON.stringify(importedData, null, 2), 'utf-8');
+        console.log('Bookshelf data imported successfully');
+    } catch (error) {
+        console.error('Error writing bookshelf data file:', error);
+        dialog.showErrorBox('Import Error', 'Failed to write the bookshelf data file. Please check file permissions and try again.');
+        return;
+    }
+
+    // Restart the app
+    dialog.showMessageBox({
+        type: 'info',
+        buttons: ['OK'],
+        defaultId: 0,
+        title: 'Restart Required',
+        message: 'The app will now restart to apply the imported bookshelf data.'
+    }).then(() => {
+        app.relaunch();
+        app.exit();
+    });
+}
+
+function validateBookshelfData(data) {
+    let isValid = true;
+    let errors = [];
+
+    // Check if the root keys are valid
+    const validRootKeys = ['viewedBooks', 'savedBooks', 'readingPositions', 'bookmarks'];
+    const rootKeys = Object.keys(data);
+
+    rootKeys.forEach(key => {
+        if (!validRootKeys.includes(key)) {
+            isValid = false;
+            errors.push(`Invalid root key: ${key}`);
+        }
+    });
+
+    // Validate viewedBooks
+    if (data.viewedBooks) {
+        data.viewedBooks.forEach((book, index) => {
+            if (!book.Title) {
+                isValid = false;
+                errors.push(`Missing Title in viewedBooks at index ${index}`);
+            }
+            if (!(book.CreatorNames === "" || (Array.isArray(book.CreatorNames) && book.CreatorNames.every(name => typeof name === 'string')))) {
+                isValid = false;
+                errors.push(`Invalid CreatorNames in viewedBooks at index ${index}`);
+            }
+        });
+    }
+
+    // Validate savedBooks
+    if (data.savedBooks) {
+        data.savedBooks.forEach((book, index) => {
+            if (!book.Title) {
+                isValid = false;
+                errors.push(`Missing Title in savedBooks at index ${index}`);
+            }
+            if (!Array.isArray(book.CreatorNames) || !book.CreatorNames.every(name => typeof name === 'string')) {
+                isValid = false;
+                errors.push(`Invalid CreatorNames in savedBooks at index ${index}`);
+            }
+        });
+    }
+
+    // Validate readingPositions
+    if (data.readingPositions) {
+        data.readingPositions.forEach((position, index) => {
+            if (!position.PG_ID) {
+                isValid = false;
+                errors.push(`Missing PG_ID in readingPositions at index ${index}`);
+            }
+            if (typeof position.lastReadPosition !== 'string') {
+                isValid = false;
+                errors.push(`Invalid lastReadPosition in readingPositions at index ${index}`);
+            }
+        });
+    }
+
+    // Validate bookmarks
+    if (data.bookmarks) {
+        data.bookmarks.forEach((bookmark, index) => {
+            if (!bookmark.PG_ID) {
+                isValid = false;
+                errors.push(`Missing PG_ID in bookmarks at index ${index}`);
+            }
+            if (!Array.isArray(bookmark.positions) || !bookmark.positions.every(pos => typeof pos === 'string')) {
+                isValid = false;
+                errors.push(`Invalid positions in bookmarks at index ${index}`);
+            }
+        });
+    }
+
+    return { isValid, errors };
+}
+
+async function exportHlnotesData() {
+    try {
+        // Prompt the user to choose a save location
+        const { canceled, filePath } = await dialog.showSaveDialog({
+            title: 'Export Highlight/Note Data',
+            defaultPath: path.join(app.getPath('documents'), 'hlnotes.json'),
+            filters: [
+                { name: 'JSON Files', extensions: ['json'] }
+            ]
+        });
+
+        if (canceled) {
+            console.log('Export canceled');
+            return;
+        }
+
+        // Read the current hlnotes.json file
+        const hlnotesPath = path.join(dataDir, 'hlnotes.json');
+        const hlnotesData = fs.readFileSync(hlnotesPath, 'utf-8');
+
+        // Save the file to the chosen location
+        fs.writeFileSync(filePath, hlnotesData);
+        console.log('Highlight/Note data exported successfully');
+    } catch (error) {
+        console.error('Error exporting Highlight/Note data:', error);
+    }
+}
+
+async function importHlnotesData() {
+    // Check if the current window is displaying reader.html
+    const currentUrl = mainWindow.webContents.getURL();
+    const isReaderOpen = currentUrl.includes('reader.html');
+
+    if (isReaderOpen) {
+        dialog.showMessageBox({
+            type: 'warning',
+            title: 'Import Canceled',
+            message: 'Please close the current book and then try again.'
+        });
+        return;
+    }
+
+    // Prompt the user to select a file
+    const { canceled, filePaths } = await dialog.showOpenDialog({
+        title: 'Import Highlight/Note Data',
+        buttonLabel: 'Import',
+        filters: [{ name: 'JSON Files', extensions: ['json'] }],
+        properties: ['openFile']
+    });
+
+    if (canceled || filePaths.length === 0) {
+        dialog.showMessageBox({
+            type: 'info',
+            title: 'Import Canceled',
+            message: 'Import canceled. The file was not imported.'
+        });
+        return;
+    }
+
+    const filePath = filePaths[0];
+
+    // Read the file content
+    let fileContent;
+    try {
+        fileContent = fs.readFileSync(filePath, 'utf8');
+    } catch (error) {
+        console.error('Failed to read the file:', error);
+        dialog.showErrorBox('Read Error', 'There was an error reading the file. Please try again.');
+        return;
+    }
+
+    // Parse the JSON content
+    let importedData;
+    try {
+        importedData = JSON.parse(fileContent);
+    } catch (error) {
+        console.error('Failed to parse JSON:', error);
+        dialog.showErrorBox('Parse Error', 'The selected file is not a valid JSON file. Please check the file format and try again.');
+        return;
+    }
+
+    // Validate the imported data
+    const validationResult = validateHlnotesData(importedData);
+    if (!validationResult.isValid) {
+        console.error('Highlight/Note data is invalid:', validationResult.errors);
+        dialog.showErrorBox('Import Error', `The selected file is not a valid highlight/note data file. Please check the file format and try again.\n\nErrors:\n${validationResult.errors.join('\n')}`);
+        return;
+    }
+
+    // Prompt the user for confirmation
+    const { response } = await dialog.showMessageBox({
+        type: 'warning',
+        buttons: ['Yes', 'No'],
+        defaultId: 1,
+        title: 'Confirm Import',
+        message: 'Importing this file will overwrite your current highlight/note data. Are you sure you want to proceed?',
+        detail: 'This file, hlnotes.json, contains all your highlights and notes. You should be able to import this file into any instance of ZWIBook. Your bookshelf data is in a separate file, which must be exported and imported separately.'
+    });
+
+    // Check if the user confirmed the import
+    if (response !== 0) {
+        dialog.showMessageBox({
+            type: 'info',
+            title: 'Import Canceled',
+            message: 'Import canceled. The file was not imported.'
+        });
+        return;
+    }
+
+    // Save the new data
+    try {
+        fs.writeFileSync(hlnotesPath, JSON.stringify(importedData, null, 4));
+        console.log('Highlight/Note data successfully imported.');
+    } catch (error) {
+        console.error('Failed to save the imported data:', error);
+        dialog.showErrorBox('Save Error', 'There was an error saving the imported data. Please try again.');
+        return;
+    }
+
+    // Inform the user that the import was successful and restart the app
+    dialog.showMessageBox({
+        type: 'info',
+        title: 'Import Successful',
+        message: 'Highlight/Note data imported successfully. The application will now restart to apply the changes.'
+    }).then(() => {
+        app.relaunch();
+        app.exit();
+    });
+}
+
+function validateHlnotesData(data) {
+    let isValid = true;
+    let errors = [];
+
+    if (typeof data !== 'object' || data === null) {
+        isValid = false;
+        errors.push('Data should be an object.');
+        return { isValid, errors };
+    }
+
+    const { highlights, notes } = data;
+
+    if (highlights !== undefined) {
+        if (typeof highlights !== 'object' || highlights === null) {
+            isValid = false;
+            errors.push('Invalid highlights format: should be an object.');
+        } else {
+            for (const bookId in highlights) {
+                const bookHighlights = highlights[bookId];
+                if (typeof bookHighlights !== 'object' || bookHighlights === null) {
+                    isValid = false;
+                    errors.push(`Invalid highlights format for bookId ${bookId}: should be an object.`);
+                } else {
+                    for (const paragraphId in bookHighlights) {
+                        const paragraphHighlight = bookHighlights[paragraphId];
+                        if (typeof paragraphHighlight !== 'object' || paragraphHighlight === null) {
+                            isValid = false;
+                            errors.push(`Invalid highlights format for paragraphId ${paragraphId} in bookId ${bookId}: should be an object.`);
+                        } else {
+                            if (typeof paragraphHighlight.cleanedHTML !== 'string') {
+                                isValid = false;
+                                errors.push(`Invalid cleanedHTML format for paragraphId ${paragraphId} in bookId ${bookId}: should be a string.`);
+                            }
+                            if (typeof paragraphHighlight.highlightedHTML !== 'string') {
+                                isValid = false;
+                                errors.push(`Invalid highlightedHTML format for paragraphId ${paragraphId} in bookId ${bookId}: should be a string.`);
+                            }
+                            if (!Array.isArray(paragraphHighlight.hnids) || !paragraphHighlight.hnids.every(hnid => typeof hnid === 'number')) {
+                                isValid = false;
+                                errors.push(`Invalid hnids format for paragraphId ${paragraphId} in bookId ${bookId}: should be an array of numbers.`);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    if (notes !== undefined) {
+        if (typeof notes !== 'object' || notes === null) {
+            isValid = false;
+            errors.push('Invalid notes format: should be an object.');
+        } else {
+            for (const bookId in notes) {
+                const bookNotes = notes[bookId];
+                if (typeof bookNotes !== 'object' || bookNotes === null) {
+                    isValid = false;
+                    errors.push(`Invalid notes format for bookId ${bookId}: should be an object.`);
+                } else {
+                    const { hnids } = bookNotes;
+                    if (hnids !== undefined) {
+                        if (typeof hnids !== 'object' || hnids === null) {
+                            isValid = false;
+                            errors.push(`Invalid hnids format for bookId ${bookId}: should be an object.`);
+                        } else {
+                            for (const hnid in hnids) {
+                                if (typeof hnids[hnid] !== 'string') {
+                                    isValid = false;
+                                    errors.push(`Invalid hnid format for hnid ${hnid} in bookId ${bookId}: should be a string.`);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    return { isValid, errors };
+}
