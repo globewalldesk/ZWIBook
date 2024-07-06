@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <title>About ZWIBook</title>
     <link rel="stylesheet" href="stylesheet.css">
+    <style>
+        body {
+            font-size: 1.2em !important;
+        }
+    </style>
     <script src="about.js"></script>
 </head>
 <body>
@@ -38,9 +43,11 @@
         </div>
     </div>
     <div id="body">
-        <p class="about-intro"><span class="dropcap">T</span>his app, which we call "ZWIBook," is a user-friendly digital library application, allowing users to access the vast collection of texts from Project Gutenberg as of December 2023. With over 69,000 texts—primarily books published before 1920—ZWIBook was written to show off the usefulness of the ZWI file format. The software can be used to find and read books (and much more). The ZWI format is a self-contained ZIP file. All of the book ZWI files can be easily found in the <code>/book_zwis</code> directory.</p>
+        <p class="about-intro"><span class="dropcap">Z</span>WIBook is a user-friendly digital library application. The software can be used to find and read books, highlight them, take notes, do research, and more. The ZWI format is a self-contained ZIP file originally designed for encyclopedia articles. ZWIBook allows users to access the vast collection of texts from Project Gutenberg as of December 2023. With over 69,000 texts—primarily books published before 1920—ZWIBook was written to show off the usefulness of the ZWI file format. All of the book ZWI files can be easily found in the <code>/book_zwis</code> directory on the thumb drive.</p>
         
-        <p class="about-intro" id="abtoc">We, the Knowledge Standards Foundation (KSF), wanted to give donors a compelling reason to support our efforts, by involving them in the preservation of knowledge. If enough people have these drives, we will have made the digital censorship of these books, at least, essentially impossible. The preservation of knowledge is what the KSF stands for. If there is a solid demand, we might make a version containing nothing but encyclopedias (a greatly expanded offline version of our Oldpedia.org). Please note that the KSF has no special relationship with Project Gutenberg, and we use their files according to their generous license (on which, see below).</p>
+        <p class="about-intro">We, the Knowledge Standards Foundation (KSF), are a 501(c)(3) nonprofit technical organization that is attempting to create the <a href="https://encyclosphere.org">Encyclosphere</a>, which organizes, disseminates, and promotes free and decentralized knowledge. We wanted to give donors a compelling reason to support our efforts, by involving them in the preservation of knowledge.</p>
+
+        <p class="about-intro" id="abtoc">If enough people have these drives, we will have made the digital censorship of these books, at least, essentially impossible. The preservation of knowledge is what the KSF stands for. If there is a solid demand, we might make a version containing nothing but encyclopedias (a greatly expanded offline version of our Oldpedia.org). Please note that the KSF has no special relationship with Project Gutenberg, and we use their files according to their generous license (on which, see below).</p>
 
         <div class="abtoc about-intro">
             <h2>Table of Contents</h2>
@@ -73,11 +80,24 @@
                 <li>To return to a bookmark, click on the bookmarks icon <span class="inline-button"><img src="images/icons/bookmarks.svg"></span> in the header.</li>
                 <li>Change font styles under the "Text and View" menu (appears &rArr; on the reader page only). Choices will be saved.</li>
                 <li>Images are clickable and saveable.</li>
-                <li>Opened books are added to the top of the "Books Viewed" tab in the Bookshelf (when using default sorting; see below).</li>
+                <li><span id="hn"></a>Opened books are added to the top of the "Books Viewed" tab in the Bookshelf (when using default sorting; see below).</li>
                 <li>To save a particular book, click the "save book" button <span class="inline-button"><img src="images/icons/add-book.svg"></span> in the header.</li>
             </ul>
-                        <p><b>Research features:</b></p>
-            <p>&#9758; First, select text in a book; then right-click on your selection.</p>
+            <p><b>Highlights and notes:</b></p>
+            <p>&#9758; First, select text in a book.</p>
+            <ul>
+                <li>Click a color to highlight the selected text.</li>
+                <li>Click the "edit note" button <span class="inline-button" style="background-color:white"><img src="images/icons/edit-note.svg"></span> to open a note. Notes are saved as you type. For styling, notes support simple <a href="https://www.markdownguide.org/cheat-sheet/">markdown</a>. (Your *asterisked* notes will show up <b>bold</b> in the notes summary, accessible from the header button <span class="inline-button"><img src="images/icons/highlights.svg"></span>.)</li>
+                <li>If you don't want a highlight for your note, choose the white highlight color.</li>
+                <li>Keyboard shortcuts make the process faster. Colors: <b><code style="font-size: 1.2em;">y</code></b>ellow, <b><code style="font-size: 1.2em;">r</code></b>ed, <b><code style="font-size: 1.2em;">g</code></b>reen, <b><code style="font-size: 1.2em;">b</code></b>lue, <b><code style="font-size: 1.2em;">p</code></b>urple, and <b><code style="font-size: 1.2em;">w</code></b>hite. Open or edit a note: <b><code style="font-size: 1.2em;">n</code></b>. Delete a highlight and/or note: <b><code style="font-size: 1.2em;">Backspace</code></b> or <b><code style="font-size: 1.2em;">Delete</code></b>. (If a highlight has a note, you'll be prompted to confirm.)
+                <li>Other highlight/note features are about as you'd expect; e.g., click a highlight to edit it.</li>
+                <li>To view a summary of all your notes and highlights, click the highlight icon <span class="inline-button"><img src="images/icons/highlights.svg"></span> in the page header. Note the "Highlights" and "Notes" tabs. You can use color circles to filter by color.</li>
+                <li><b>To print or save your highlights or notes in a human-readable format,</b> press the "Copy text" link in the upper right of your note summary, then paste (Ctrl-v or Cmd-v) into a document. (There is no PDF export.)</li>
+                <li><b>To export or import highlight/note data,</b> as when you move from one workstation to another, select the options in the page menu under File > Import/Export User Data. Highlight and note data is bundled together in one file, according to a standard file format. You can share highlights and notes with any other ZWIBook user, and it should work just fine.</li>
+
+            </ul>
+            <p><b>Research features:</b></p>
+            <p>&#9758; First, select text in a book; <b>then</b> right-click on your selection.</p>
             <ul>
                 <li>Book search (short selections): searches the ZWIBook database for matching titles and authors.</li>
                 <li>Encyclopedia search (short selections): look up a word, name, or short phrase on EncycloSearch and EncycloReader.</li>
@@ -144,7 +164,9 @@
                 <li>Print a book: this function opens a PDF; you must use the print function of a PDF reader.</li>
                 <li>Save/download a book as PDF: while we have tried to prepare PDFs in a way that is convenient and attractive for reading and printing, your mileage may vary. In some cases, the Project Gutenberg file (see below) might work better.</li>
                 <li>Export ZWI: while you can find all the ZWI files in the <code>/book_zwis</code> folder, this feature makes it easier to move a copy of a ZWI file to wherever you like.</li>
-                <li>Open Project Gutenberg files: if you have trouble with a book's formatting, and you are online, you can try one of the files in the "Project Gutenberg book files" submenu. "Read online (HTML with images)" is recommended. (In our opinion, the ZWIBook rendering usually looks and works better than the original, both because of our more consistent formatting and because of <span id="verify-zwi"></span>our bookmarking system and other features.)</li>
+                <li>Open Project Gutenberg files: if you have trouble with a book's formatting, and you are online, you can try one of the files in the "Project Gutenberg book files" submenu. "Read online (HTML with images)" is recommended. (In our opinion, the ZWIBook rendering usually looks and works better than the original, both because of our more consistent formatting and because of our bookmarking system and other features.)</li>
+                <li>Save as HTML: Any available HTML file can be found inside the ZWI file (see above).</li>
+                <li>Import and export your highlight and note data: <a href="#hn">see above</a><span id="verify-zwi"></span>.</li>
             </ul>
         </div>
 
@@ -178,10 +200,11 @@
         <div class="abfeature">
             <h2><a href="#abtoc">↑</a> why ZWIBook?</h2>
             <ul>
-                <li><b>A permanent library in your pocket?!</b> 70,000 local copies of books, in the palm of your hand. It's pretty darned cool knowing that, as long as you have this thumb drive, you will be able to access <i>all those books.</i> The fact that you can search and read the books on any computer with the drive just makes it better.</li>
+                <li><b>A permanent library in your pocket?!</b> 70,000 local copies of books, in the palm of your hand. It's pretty darned cool knowing that, as long as you have this thumb drive, you will be able to access <i>all those books.</i> The fact that you can search and read the books, and highlight and take notes on them, on any computer with the drive just makes it better.</li>
                 <li><b>Anti-censorship.</b> We are preserving (future-proofing, you might say) knowledge in the face of the very real threat of censorship. Having many copies of these thumb drives, with about 70,000 signed book files, helps us as a society to guarantee that there are many copies of the original Project Gutenberg files, as well as of the books themselves.</li>
                 <li><b>AI concerns.</b> Our world is increasingly having to deal with AI-generated text, which makes it possible for unscrupulous people to counterfeit data. Your copy of the Project Gutenberg library is a massive trove of human-written content; the fact that the books are stored offline means your copies are stable and unchanging; and the digitally-signed ZWI format proves they are reliable.</li>
-                <li><b>Hey, this software is actually <i>good!</i></b> We put in the time needed to make this software usable. Title search is fast and works well. The category feature is useful. The bookshelf lets you highlight particular books in the library and track your reading history. And as far as the reader itself goes, works well: font choice and size, page zoom, bookmarks, find-on-page, and research tools. <span id="notes-disclaimers"></span>And, in our tests, the files looked consistently good—sometimes better than the Project Gutenberg originals.</li>
+                <li><b>Hey, this software is actually <i>good!</i></b> We put in the time needed to make this software usable. Title search is fast and works well. The category feature is useful. The bookshelf lets you highlight particular books in the library and track your reading history. And as far as the reader itself goes, works well: font choice and size, page zoom, bookmarks, find-on-page, and research tools. And, in our tests, the files looked consistently good—sometimes better than the Project Gutenberg originals.</li>
+                <li><b>You're supporting the KSF.</b> Apart from the merits of the software itself, this software supports the Knowledge Standards Foundation, a small technical organization devoted to spreading free and uncensored knowledge, beginning with encyclopedias, but including other sorts of knowledge as well.<span id="notes-disclaimers"></span> Your donation helps keep our mission alive. Thanks!</li>
             </ul>
 
         </div>

@@ -18,7 +18,6 @@ body.no-scroll {
     position: fixed;
     top: 0;
     right: 0;
-    width: 15.5px; /* Adjust this value based on the scrollbar width */
     height: 100%;
     background-color: #f1f1f1;
     display: none;
@@ -47,9 +46,6 @@ body > #header {
 /* Category page titles */
 body > div#body > h1 {
     margin-left: 10px;
-}
-
-img {
 }
 
 h1#headTitle {
@@ -646,9 +642,6 @@ a.more:hover {
     display: none;
 }
 
-
-
-
 .footer-container {
     display: flex;
     justify-content: space-between;
@@ -868,11 +861,15 @@ a:has(> sup) {
     height: 16px;
     cursor: pointer;
     position: absolute;
-    left: -20px;
-    /* Adjust based on new clickable area size */
     top: 0;
+    left: -22px;
+    /* Adjust based on new clickable area size */
     z-index: 500;
     /* Ensure the icon is above the clickable area */
+}
+
+.single-spaced .bookmark-icon {
+    top: -5px;
 }
 
 /* Show bookmark icon when the parent paragraph is hovered */
@@ -1315,7 +1312,7 @@ input:checked + .slider:before {
 
 /* ABOUT PAGE */
 
-#abtoc .dropcap {
+.about-intro .dropcap {
     color: #007BFF;
     float: left;
     font-size: 75px;
@@ -1491,7 +1488,7 @@ h2 .inline-button img {
     font-size: 18px;
     font-weight: bold;
     color: white;
-    border: 1px solid #e0e0e0be; /* Light grey thin border */
+    border: 1px solid #aaa; /* Light grey thin border */
     pointer-events: auto; /* Ensures pointer events are enabled */
 }
 
@@ -1661,7 +1658,7 @@ h2 .inline-button img {
 }
 
 .hn-tab-content-container {
-    max-height: calc(100vh - 170px);
+    max-height: calc(100vh - 160px);
     overflow-y: auto; /* Ensure scrolling */
 }
 
@@ -1723,18 +1720,17 @@ h2 .inline-button img {
     padding: 10px 0;
 }
 
-#copyText {
+.hn-links {
     padding-left: 120px;
-    padding-top: 20px;
 }
 
-#copyText a {
+.hn-links a {
     font-size: .8em;
     text-decoration: none;
     color: blue;
 }
 
-#copyText a:hover {
+.hn-links a:hover {
     text-decoration: underline;
 }
 
@@ -1889,6 +1885,72 @@ h2 .inline-button img {
 .md-br {
     margin: 0 !important;
     padding: 0 !important;
+}
+
+
+.hn-filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 0;
+    border: 1px solid #ccc; /* Add this line for the subtle border */
+    border-top: 1px solid #f1f1f1;
+    border-radius: 0px 0px 10px 10px; /* Optional: Add rounded corners */
+    margin: -2px 60px 10px 60px; /* Optional: Add some space below the container */
+    background-color: #f1f1f1;
+    z-index: 1000002;
+}
+
+.hl-color-circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer; /* Ensures the pointer cursor is displayed */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    border: 1px solid #bbb; /* Light grey thin border */
+    pointer-events: auto; /* Ensures pointer events are enabled */
+}
+
+.hl-color-circle.hl-all {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: conic-gradient(#FF8A80, #A5D6A7, #90CAF9, #CE93D8, #FFEE58, #FF8A80);
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'Liberation Sans', Arial, sans-serif;
+    color: #777;
+    border: 1px solid #e0e0e0be;
+    pointer-events: auto;
+}
+
+.hl-color-circle[title="Yellow"] {
+    background-color: #FFEE58;
+}
+.hl-color-circle[title="Pink"] {
+    background-color: #FF8A80;
+}
+.hl-color-circle[title="Green"] {
+    background-color: #A5D6A7;
+}
+.hl-color-circle[title="Blue"] {
+    background-color: #90CAF9;
+}
+.hl-color-circle[title="Purple"] {
+    background-color: #CE93D8;
+}
+.hl-color-circle[title="White"] {
+    background-color: #fff;
 }
 
 

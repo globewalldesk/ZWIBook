@@ -407,7 +407,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         let titleProcessed = false;
         let authorProcessed = false;
         lines.forEach((line, index) => {
-            const modifiedLine = line.replace(/^(\s+)/, match => match.replace(/ /g, '&nbsp;').replace(/\t/g, '&nbsp;&nbsp;&nbsp;'));
+            const modifiedLine = line.replace(/^(\s+)/, match => match.replace(/ /g, '&nbsp;&nbsp;').replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'));
 
             // Check for title or author in the line
             if (!titleProcessed && line.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, '') === title.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, '')) {
@@ -416,11 +416,13 @@ document.addEventListener('DOMContentLoaded', async () => {
             } else if (titleProcessed && !authorProcessed && line.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, '').startsWith('by') && percentageMatch(line.substring(3).toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, ''), formattedAuthorName.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, '')) >= 50) {
                 paragraphs.push(`<h2 class="center">${line}</h2>`);
                 authorProcessed = true;
+
+            // "isPoetry" = lines not merged
             } else if (isPoetry || /^\s+/.test(line)) {
                 if (modifiedLine.trim() === '') {
                     paragraphs.push('<p class="single-spaced">&nbsp;</p>');
                 } else {
-                    paragraphs.push(`<div class="paragraph single-spaced" id="p${paragraphIndex}">
+                    paragraphs.push(`<div class="bm-paragraph single-spaced" id="p${paragraphIndex}">
                         <img src="images/icons/bookmark.svg" class="bookmark-icon" id="bookmark-${paragraphIndex}" onclick="toggleBookmark(${paragraphIndex})">
                         <p>${modifiedLine}</p>
                     </div>`);
@@ -1445,6 +1447,7 @@ function initializeHighlightAndNoteModal() {
                     <div class="color-circle" title="White"></div>
                     <div class="color-circle delete-circle" title="Delete Highlight"></div>
                     <div class="color-circle edit-note" title="Edit Note (select+'n')"><img src="images/icons/edit-note.svg"></div>
+                    <div class="about-hmodal"><a href="about.html#hn">About</a></div>
                 </div>
                 <textarea class="note-input" style="display: none;"></textarea>
             </div>
@@ -1461,6 +1464,8 @@ function initializeHighlightAndNoteModal() {
                     returnValue = highlightSelection(mostRecentColor);
                 } else if (this.classList.contains('edit-note')) {
                     toggleNoteInput();
+                } else if (this.classList.contains('about-hmodal')) {
+                    // START HERE
                 }
             });
         });
@@ -1763,6 +1768,9 @@ document.addEventListener('mouseup', function (event) {
     // Re-enable pointer events for color circles (after drag-to-select)
     document.querySelectorAll('.color-circle').forEach(circle => {
         circle.style.pointerEvents = 'auto';
+    });
+    document.querySelectorAll('.about-hmodal').forEach(about => {
+        about.style.pointerEvents = 'auto';
     });
 });
 
@@ -2853,9 +2861,23 @@ function initializeHighlightsNotesModal() {
             <div class="hn-tabs">
                 <button class="hn-tab" onclick="switchTab('highlights')">Highlights</button>
                 <button class="hn-tab" onclick="switchTab('notes')">Notes</button>
-                <span id="copyText"><a href="#">Copy Text</a></span>
+                <div class="hn-links">
+                    <span id="hnAbout"><a href="about.html#hn">About</a></span>
+                    <br/>
+                    <span id="copyText"><a href="#">Copy Text</a></span>
+                </div>
             </div>
             <div class="hn-tab-content-container">
+                <div class="hn-filter">
+                    <label>Display: </label>
+                    <div class="hl-color-circle hl-all" title="All">All</div>
+                    <div class="hl-color-circle hl-yellow" title="Yellow"></div>
+                    <div class="hl-color-circle hl-pink" title="Pink"></div>
+                    <div class="hl-color-circle hl-green" title="Green"></div>
+                    <div class="hl-color-circle hl-blue" title="Blue"></div>
+                    <div class="hl-color-circle hl-purple" title="Purple"></div>
+                    <div class="hl-color-circle hl-white" title="White"></div>
+                </div>
                 <div id="highlights" class="hn-tab-content">
                     <p>Loading highlights...</p>
                 </div>
@@ -2865,6 +2887,25 @@ function initializeHighlightsNotesModal() {
             </div>
         `;
         document.body.appendChild(modal);
+
+        // Add event listeners to the color circles
+        const colorCircles = modal.querySelectorAll('.hl-color-circle');
+        setTimeout(() => {
+            colorCircles.forEach(circle => {
+                circle.addEventListener('click', function(event) {
+                    event.stopPropagation();
+                    const color = this.getAttribute('title');
+                    console.log(`Filter by color: ${color}`);
+
+                    const activeTab = document.querySelector('.hn-tab.active').textContent.trim().toLowerCase();
+                    if (activeTab === 'highlights') {
+                        filterHighlightsByColor(color.toLowerCase());
+                    } else if (activeTab === 'notes') {
+                        filterHansByColor(color.toLowerCase());
+                    }
+                });
+            });
+        }, 250);
 
         // Event listener to handle the click on "Copy to Clipboard" link
         document.getElementById('copyText').addEventListener('click', function(event) {
@@ -2895,6 +2936,152 @@ function initializeHighlightsNotesModal() {
     // Load the content for the initially selected tab
     const activeTab = localStorage.getItem('activeTab') || 'highlights';
     switchTab(activeTab);
+}
+
+let originalHighlightsContent = '';
+
+// New function to filter highlights by color
+function filterHighlightsByColor(color) {
+    resetHighlightsToOriginal();
+    const highlightDivs = document.querySelectorAll('#highlights .highlight-item');
+
+    highlightDivs.forEach(div => {
+        const highlightSpans = div.querySelectorAll('.highlight-span');
+        let shouldDisplayDiv = false;
+
+        highlightSpans.forEach(span => {
+            const itemColor = span.getAttribute('data-color');
+            if (color === 'all' || itemColor === color.toLowerCase()) {
+                span.style.display = ''; // Show the span
+                shouldDisplayDiv = true;
+            } else {
+                span.style.display = 'none'; // Hide the span
+            }
+        });
+
+        if (shouldDisplayDiv) {
+            div.style.display = ''; // Show the div
+        } else {
+            div.style.display = 'none'; // Hide the div
+
+            // Check if the next sibling is a separator and hide it if it is
+            const nextSibling = div.nextElementSibling;
+            if (nextSibling && nextSibling.classList.contains('hn-highlight-separator')) {
+                nextSibling.style.display = 'none';
+            }
+        }
+
+        // Handle the ellipses
+        highlightSpans.forEach(span => {
+            if (span.style.display === 'none') {
+                let nextSibling = span.nextSibling;
+                while (nextSibling) {
+                    if (nextSibling.nodeType === Node.TEXT_NODE && nextSibling.textContent.trim() === '...') {
+                        const textNodeWrapper = document.createElement('span');
+                        textNodeWrapper.style.display = 'none';
+                        textNodeWrapper.textContent = '...';
+                        nextSibling.replaceWith(textNodeWrapper);
+
+                        const spaceNode = document.createTextNode(' ');
+                        textNodeWrapper.after(spaceNode);
+
+                        nextSibling = spaceNode.nextSibling;
+                    } else if (nextSibling.nodeType === Node.ELEMENT_NODE && nextSibling.style.display === 'none') {
+                        nextSibling = nextSibling.nextSibling;
+                    } else {
+                        break;
+                    }
+                }
+            }
+        });
+    });
+}
+
+function resetHighlightsToOriginal() {
+    document.getElementById('highlights').innerHTML = originalHighlightsContent;
+
+    // Re-add event listeners to each highlight item
+    document.querySelectorAll('.highlight-item').forEach(item => {
+        item.addEventListener('click', function () {
+            const pid = this.getAttribute('data-pid');
+            window.location.hash = `#${pid}`;
+            closeHighlightsNotesModal();
+
+            // Scroll adjustment
+            setTimeout(() => {
+                const targetElement = document.getElementById(pid);
+                if (targetElement) {
+                    const offset = 100;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition - offset;
+                    window.scrollBy({ top: offsetPosition });
+                }
+            }, 100); // Delay to ensure the page navigates to the correct section
+        });
+    });
+}
+
+// Filters hans by color in the Notes tab
+function filterHansByColor(color) {
+    // Re-display all elements in the hn-tab-content initially
+    const tabContent = document.querySelectorAll('.hn-tab-content > *');
+    tabContent.forEach(element => {
+        element.style.display = ''; // Show all children elements
+    });
+
+    const hanContainers = document.querySelectorAll('.han-container');
+    hanContainers.forEach(han => {
+        const highlightParagraph = han.querySelector('.highlight-paragraph');
+        const borderColorClass = [...highlightParagraph.classList].find(cls => cls.startsWith('border-'));
+        const itemColor = borderColorClass ? borderColorClass.split('-')[1] : null;
+
+        if (color === 'all' || itemColor === color.toLowerCase()) {
+            han.style.display = ''; // Show the han
+        } else {
+            han.style.display = 'none'; // Hide the han
+            // Hide the following separator if it's a sibling
+            const parentDiv = han.parentElement;
+            let nextSibling = parentDiv.nextElementSibling;
+            if (nextSibling && nextSibling.classList.contains('hn-highlight-separator')) {
+                nextSibling.style.display = 'none';
+            }
+        }
+    });
+}
+
+// Function to open the highlights and notes modal
+function openHighlightsNotesModal(event) {
+    document.body.classList.add('no-scroll'); // Disable background scrolling
+    event.preventDefault(); // Prevent the default link behavior
+    event.stopPropagation(); // Prevent the click event from propagating to the document level
+    const modal = document.getElementById('hn-highlightsNotesModal');
+    modal.style.display = 'block';
+    const greyLine = document.getElementById('grey-line');
+    greyLine.style.display = 'block';
+    // Adjust grey line width based on zoom factor
+    const originalWidth = parseFloat(getComputedStyle(greyLine).width); // Fetch the current width from CSS
+    const zoomFactor = window.electronAPI.getZoomFactor();
+    greyLine.style.width = `${14 / zoomFactor}px`;
+    document.getElementById('header').style.width = `calc(100% - ${14 / zoomFactor}px)`;
+    document.body.style.paddingRight = `${14 / zoomFactor}px`;
+
+    // Clear existing content
+    document.getElementById('highlights').innerHTML = '';
+    document.getElementById('notes').innerHTML = '';
+
+    // Repopulate based on the active tab
+    const activeTab = localStorage.getItem('activeTab') || 'highlights';
+    switchTab(activeTab);
+    switch (activeTab) {
+        case 'highlights':
+            populateHighlightsTab();
+            break;
+        case 'notes':
+            populateNotesTab();
+            break;
+        default:
+            populateHighlightsTab();
+    }
 }
 
 // Copies content of hlnotes modal to clipboard
@@ -2928,15 +3115,14 @@ function copyTabContent() {
         el.insertAdjacentElement('afterend', p);
     });
 
-    // Replace <div class="hn-highlight-separator"></div> with <p> </p>
+    // Replace <div class="hn-highlight-separator"></div> with <p>--------------------</p> only if the line is display: block
     tempContainer.querySelectorAll('.hn-highlight-separator').forEach(el => {
-        const p = document.createElement('p');
-        p.innerHTML = '--------------------';
-        el.replaceWith(p);
+        if (el.style.display !== 'none') {
+            const p = document.createElement('p');
+            p.innerHTML = '--------------------';
+            el.replaceWith(p);
+        }
     });
-
-    // Prevent the issue with justified text when copying
-    tempContainer.innerHTML = tempContainer.innerHTML.replace(/<br>\n?<br>/g, '<p> </p>');
 
     // Temporarily append to the body to perform the copy operation
     document.body.appendChild(tempContainer);
@@ -2961,40 +3147,6 @@ function copyTabContent() {
     document.body.removeChild(tempContainer);
 }
 
-// Function to open the highlights and notes modal
-function openHighlightsNotesModal(event) {
-    document.body.classList.add('no-scroll'); // Disable background scrolling
-    event.preventDefault(); // Prevent the default link behavior
-    event.stopPropagation(); // Prevent the click event from propagating to the document level
-    const modal = document.getElementById('hn-highlightsNotesModal');
-    modal.style.display = 'block';
-    const greyLine = document.getElementById('grey-line');
-    greyLine.style.display = 'block';
-    // Adjust grey line width based on zoom factor
-    const originalWidth = parseFloat(getComputedStyle(greyLine).width); // Fetch the current width from CSS
-    const zoomFactor = window.electronAPI.getZoomFactor();
-    greyLine.style.width = `${15.5 / zoomFactor}px`;
-    document.getElementById('header').style.width = `calc(100% - ${15.5 / zoomFactor}px)`;
-    document.body.style.paddingRight = `${15.5 / zoomFactor}px`;
-
-    // Clear existing content
-    document.getElementById('highlights').innerHTML = '';
-    document.getElementById('notes').innerHTML = '';
-
-    // Repopulate based on the active tab
-    const activeTab = localStorage.getItem('activeTab') || 'highlights';
-    switchTab(activeTab);
-    switch (activeTab) {
-        case 'highlights':
-            populateHighlightsTab();
-            break;
-        case 'notes':
-            populateNotesTab();
-            break;
-        default:
-            populateHighlightsTab();
-    }
-}
 
 // Function to close the highlights and notes modal
 function closeHighlightsNotesModal() {
@@ -3085,11 +3237,17 @@ function cleanHighlightedHTML(html) {
     // Function to remove unwanted classes from any element
     function cleanHighlightSpans(node) {
         if (node.nodeType === Node.ELEMENT_NODE) {
-            node.classList.remove('hl-yellow', 'hl-pink', 'hl-green', 'hl-blue', 'hl-purple');
+            // Add data-color attribute based on the class before removing it
+            const colorClass = [...node.classList].find(cls => cls.startsWith('hl-'));
+            if (colorClass) {
+                node.setAttribute('data-color', colorClass.slice(3)); // Remove 'hl-' prefix
+            }
+            node.classList.remove('hl-yellow', 'hl-pink', 'hl-green', 'hl-blue', 'hl-purple', 'hl-white');
             node.classList.remove('note-attached');
             Array.from(node.childNodes).forEach(childNode => cleanHighlightSpans(childNode));
         }
     }
+
 
     // Clean highlight spans
     cleanHighlightSpans(tempDiv);
@@ -3133,6 +3291,9 @@ function populateHighlightsTab() {
         });
 
         document.getElementById('highlights').innerHTML = highlightsHTML;
+
+        // Save original content
+        originalHighlightsContent = highlightsHTML;
 
         // Add click event listeners to each highlight item
         document.querySelectorAll('.highlight-item').forEach(item => {
@@ -3413,21 +3574,10 @@ function populateNotesTab() {
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
-    // Initialize the modal when the script loads
-    initializeHighlightsNotesModal();
-
-    // Call this function when switching to the Highlights tab
-    document.querySelector('.hn-tab[onclick="switchTab(\'highlights\')"]').addEventListener('click', populateHighlightsTab);
-
-
-    // Event listener to close modal when clicking outside of it
-    document.addEventListener('click', function (event) {
-        const modal = document.getElementById('hn-highlightsNotesModal');
-        if (event.target.matches('.hn-modal-overlay') || event.target.matches('.hn-close-button')) {
-            modal.style.display = 'none';
-        }
-    });
-
+    setTimeout(() => {
+        // Initialize the modal when the script loads
+        initializeHighlightsNotesModal();
+    }, 250);
 });
 
 
