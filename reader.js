@@ -898,6 +898,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         headTitle.addEventListener('mouseout', function () {
             countPopup.style.display = 'none';
         });
+
+        document.addEventListener('scroll', function() {
+            countPopup.style.display = 'none';
+        });
     }); // END of fflate
 
     // Helper for title-setter
@@ -1085,6 +1089,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         modal.style.display = modal.style.display === 'block' ? 'none' : 'block';
         if (modal.style.display === 'block') {
             inputField.focus();  // Automatically focus on the input when the modal is shown
+            inputField.select();  // Select, so typing = delete
         }
     });
 

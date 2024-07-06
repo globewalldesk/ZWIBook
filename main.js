@@ -110,9 +110,9 @@ async function confirmZwiDirectory() {
     const response = await dialog.showMessageBox(mainWindow, {
         type: 'info',
         title: 'Confirm Book ZWIs Location',
-        message: 'Let\'s confirm where the books are (i.e., the big directory of ZWI format book files).\n\n' +
-                 'Are you running this app from a new KSF thumb drive? If so, the files should be on there. Or have you moved the directory somewhere else? (You probably haven\'t.)',
-        buttons: ['Thumb drive', 'Somewhere else'],
+        message: 'Where are the books?\n\n' +
+                 'IMPORTANT, PLEASE READ: Are you (a) running this app from a KSF thumb drive? If so, the book files should be on there. Or (b) have you copied the directory somewhere else? (You could, but probably haven\'t.)',
+        buttons: ['(a) Thumb drive (usual case)', '(b) Somewhere else (atypical)'],
         defaultId: 0, // Default button index for Thumb drive
         cancelId: 1, // Alternative action for Somewhere else
         noLink: true
@@ -160,6 +160,22 @@ const getZwiDirectoryPath = () => {
 
 let zwiDirectoryPath = getZwiDirectoryPath();
 console.log('ZWI Directory Path:', zwiDirectoryPath);
+
+// New function to validate the ZWI directory path
+const validateZwiPath = async (zwiPath) => {
+    const requiredFiles = ['131.zwi', '1041.zwi', '1911.zwi'];
+    try {
+        const files = await fs.promises.readdir(zwiPath);
+        return requiredFiles.every(file => files.includes(file));
+    } catch (error) {
+        console.error('Error validating ZWI path:', error);
+        return false;
+    }
+};
+
+// Temporary line to run the function and log the result
+validateZwiPath(zwiDirectoryPath).then(result => console.log('ZWI path valid:', result));
+
 
 function selectZwiDirectory() {
     if (mainWindow) {
@@ -832,7 +848,7 @@ ipcMain.on('choose-font', () => {
     mainWindow.webContents.send('choose-font');
 });
 
-// New IPC handler to fetch ZWI files (used in reader.js)
+// IPC handler to fetch ZWI files (used in reader.js)
 ipcMain.handle('fetch-zwi', async (event, bookId) => {
     if (!zwiDirectoryPath) {
         console.error('ZWI directory path is not set.');
