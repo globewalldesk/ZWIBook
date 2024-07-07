@@ -40,6 +40,7 @@ contextBridge.exposeInMainWorld('electronAPI', {
     importBookshelfData: () => ipcRenderer.invoke('import-bookshelf-data'),
     exportHlnotesData: () => ipcRenderer.invoke('export-hlnotes-data'),
     importHlnotesData: () => ipcRenderer.invoke('import-hlnotes-data'),
+    resetBooksLocation: () => ipcRenderer.invoke('reset-books-location')
 });
 
 // Loads the same on all pages

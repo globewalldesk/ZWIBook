@@ -500,8 +500,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         bookContent = processText(bookContent);
 
         const pattern = /poet(?:s)?|poem(?:s)?|poète(?:s)?|poème(?:s)?|dichter(?:s)?|gedicht(?:e|er)?|poeta(?:s)?|poema(?:s)?|dikt(?:er)?|поэт(?:ы|ов)?|стих(?:и|ов)?|诗人|诗|song(?:s)?|canzone(?:i)?|lied(?:er|je)?|canción(?:es)?|canto(?:s)?|sång(?:er)?|песня(?:и|ей)?|歌|lyric(?:s)?|lyrique(?:s)?|lyrik(?:en)?|lirica(?:s)?|lyrik(?:er)?|лир(?:ика|ы)?|诗歌/i;
-
-        let isPoetry = pattern.test(currentBookMetadata.Title);
+        const poetsPattern = /Shakespeare|Frost,?\sR|Dickinson,?\sE|Whitman,?\sW|Poe,?\sE|Wordsworth,?\sW|Coleridge,?\sS|Shelley,?\sP|Keats,?\sJ|Byron,?\sL|Burns,?\sR|Tennyson,?\sA|Rossetti,?\sC|Longfellow,?\sH|Browning,?\sE|Blake,?\sW|Emerson,?\sR|Masters,?\sE|H\.?D|Riley,?\sJ|Dante,?\sA|Goethe,?\sJ|Schiller,?\sF|Rilke,?\sR|Baudelaire,?\sC|Verlaine,?\sP|Mallarmé,?\sS|Neruda,?\sP|Lorca,?\sF|Hugo,?\sV|Rimbaud,?\sA|Heine,?\sH|Valéry,?\sP|Petrarca,?\sF|Villon,?\sF|Pushkin,?\sA|Lermontov,?\sM|Pascoli,?\sG|Carducci,?\sG/i;
+        let isPoetry = pattern.test(currentBookMetadata.Title) || poetsPattern.test(currentBookMetadata.CreatorNames[0]);
+        
         let separateLines = JSON.parse(localStorage.getItem('separateLines')) || {};
         let separateLinesSetting = separateLines[bookId];
 

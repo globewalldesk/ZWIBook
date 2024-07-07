@@ -28,7 +28,7 @@ console.log = function (message) {
 */
 
 let mainWindow; // Declare mainWindow globally
-let dataDir, latestUrlPath, bookshelfPath, hlnotesPath; // Declare these globally to use in createWindow()
+let dataDir, zwiDirectoryPath, latestUrlPath, bookshelfPath, hlnotesPath; // Declare these globally to use in createWindow()
 let currentBookTitle = ""; // For Copilot inquiries
 let currentBookAuthor = "";
 
@@ -158,9 +158,6 @@ const getZwiDirectoryPath = () => {
     }
 };
 
-let zwiDirectoryPath = getZwiDirectoryPath();
-console.log('ZWI Directory Path:', zwiDirectoryPath);
-
 // New function to validate the ZWI directory path
 const validateZwiPath = async (zwiPath) => {
     const requiredFiles = ['131.zwi', '1041.zwi', '1911.zwi'];
@@ -173,16 +170,43 @@ const validateZwiPath = async (zwiPath) => {
     }
 };
 
-// Temporary line to run the function and log the result
-validateZwiPath(zwiDirectoryPath).then(result => console.log('ZWI path valid:', result));
+// Try to autodetect the ZWI directory path; used in app.whenReady() if config lacks a path. 
+const autodetectZwiDirectoryPath = async () => {
+    const possiblePaths = [
+        path.join(__dirname, 'book_zwis'),
+        path.join(__dirname, '..', 'book_zwis'),
+        path.join(__dirname, '..', '..', 'book_zwis'),
+        path.join(os.homedir(), 'book_zwis'),
+        path.join('/', 'media', os.userInfo().username, 'book_zwis'),
+        path.join('/', 'mnt', 'book_zwis'),
+        path.join('/', 'Volumes', 'book_zwis')
+    ];
 
+    // For Windows, add drive letters
+    if (os.platform() === 'win32') {
+        for (let drive = 67; drive <= 90; drive++) { // ASCII values for C to Z
+            possiblePaths.push(`${String.fromCharCode(drive)}:\\book_zwis`);
+        }
+    }
+
+    console.log("possiblePaths", possiblePaths);
+
+    for (const possiblePath of possiblePaths) {
+        if (await validateZwiPath(possiblePath)) {
+            return possiblePath;
+        }
+    }
+
+    return null;
+};
 
 function selectZwiDirectory() {
     if (mainWindow) {
         mainWindow.focus();
     }
     return dialog.showOpenDialog({
-        properties: ['openDirectory']
+        properties: ['openDirectory'],
+        title: 'Locate the ZWI (book) files'
     }).then(result => {
         if (result.canceled) {
             return null;
@@ -346,7 +370,6 @@ function createWindow() {
                         }
                     ]
                 },
-                { type: 'separator' },
                 {
                     label: 'Project Gutenberg book files (requires Internet)',
                     submenu: [
@@ -449,7 +472,13 @@ function createWindow() {
                             mainWindow.loadFile('about.html');
                         }
                     }
-                },        
+                },
+                { 
+                    label: 'Reset Books Location',
+                    click: async () => {
+                        await resetBooksLocation();
+                    }
+                },
                 {
                     label: 'KSF Website (Encyclosphere.org)',
                     click: async () => {
@@ -631,19 +660,21 @@ app.whenReady().then(async () => {
         if (!config) {
             config = {};
         }
+
         // Set data directory
         if (!config.dataDir) {
-            dataDir = await setupDataDirectory(config);
+            dataDir = await setupDataDirectory(config); // This function sets up the data directory
             config.dataDir = dataDir;
-            await saveConfig(config);
+            await saveConfig(config); // Save the config with the new data directory
         } else {
-            dataDir = config.dataDir;
+            dataDir = config.dataDir; // Use the existing data directory from the config
         }
 
-        latestUrlPath = path.join(dataDir, 'latest.txt');
-        bookshelfPath = path.join(dataDir, 'bookshelf.json');
-        hlnotesPath = path.join(dataDir, 'hlnotes.json');
+        latestUrlPath = path.join(dataDir, 'latest.txt'); // Path for the latest URL file
+        bookshelfPath = path.join(dataDir, 'bookshelf.json'); // Path for the bookshelf JSON file
+        hlnotesPath = path.join(dataDir, 'hlnotes.json'); // Path for the highlights and notes JSON file
 
+        // Check if the bookshelf file exists, if not, create it with default content
         if (!fs.existsSync(bookshelfPath)) {
             const defaultBookshelfContent = JSON.stringify({
                 viewedBooks: [],
@@ -654,25 +685,62 @@ app.whenReady().then(async () => {
             await fs.promises.writeFile(bookshelfPath, defaultBookshelfContent);
         }
 
+        // Check if the highlights and notes file exists; if not, create it with default content
         if (!fs.existsSync(hlnotesPath)) {
             const defaultHlnotesContent = JSON.stringify({}, null, 2);
             await fs.promises.writeFile(hlnotesPath, defaultHlnotesContent);
         }
 
-        createWindow();
+        createWindow(); // Function to create the main application window
 
+        // Check if zwiDirectoryPath is in the config
         if (!config.zwiDirectoryPath) {
-            const zwiLocationChoice = await confirmZwiDirectory();
-            zwiDirectoryPath = zwiLocationChoice === 0 ? getZwiDirectoryPath() : await selectZwiDirectory();
+            // Try to autodetect the ZWI directory path
+            zwiDirectoryPath = await autodetectZwiDirectoryPath();
+            // If autodetection fails, prompt the user to set it up
             if (!zwiDirectoryPath) {
-                console.error('ZWI path could not be determined. Exiting application.');
-                app.quit();
-                return;
+                const zwiLocationChoice = await confirmZwiDirectory();
+                zwiDirectoryPath = zwiLocationChoice === 0 ? getZwiDirectoryPath() : await selectZwiDirectory();
+                // If the path is still not set, exit the application
+                if (!zwiDirectoryPath) {
+                    console.error('ZWI path could not be determined. Exiting application.');
+                    dialog.showMessageBoxSync({
+                        type: 'error',
+                        title: 'Error',
+                        message: 'Sorry, we could not locate the books. Closing the app.'
+                    });
+                    app.quit();
+                    return;
+                }
             }
-            config.zwiDirectoryPath = zwiDirectoryPath;
+            config.zwiDirectoryPath = zwiDirectoryPath; // Save the new ZWI directory path to config
             await saveConfig(config);
         } else {
-            zwiDirectoryPath = config.zwiDirectoryPath;
+            zwiDirectoryPath = config.zwiDirectoryPath; // Use the existing ZWI directory path from the config
+            // Validate the existing ZWI directory path
+            const isValidPath = await validateZwiPath(zwiDirectoryPath);
+            if (!isValidPath) {
+                // Try to autodetect the ZWI directory path
+                zwiDirectoryPath = await autodetectZwiDirectoryPath();
+                // If autodetection fails, prompt the user to set it up
+                if (!zwiDirectoryPath) {
+                    const zwiLocationChoice = await confirmZwiDirectory();
+                    zwiDirectoryPath = zwiLocationChoice === 0 ? getZwiDirectoryPath() : await selectZwiDirectory();
+                    // If the path is still not set, exit the application
+                    if (!zwiDirectoryPath) {
+                        console.error('ZWI path could not be determined. Exiting application.');
+                        dialog.showMessageBoxSync({
+                            type: 'error',
+                            title: 'Error',
+                            message: 'Sorry, we could not locate the books. Closing the app.'
+                        });
+                        app.quit();
+                        return;
+                    }
+                }
+                config.zwiDirectoryPath = zwiDirectoryPath; // Save the new ZWI directory path to config
+                await saveConfig(config);
+            }
         }
     } catch (err) {
         console.error('Failed during application initialization:', err);
@@ -1641,3 +1709,44 @@ function validateHlnotesData(data) {
 
     return { isValid, errors };
 }
+
+// Let user determine a new location for the book zwi files
+async function resetBooksLocation() {
+    const newZwiDirectoryPath = await selectZwiDirectory();
+    if (!newZwiDirectoryPath) {
+        dialog.showMessageBoxSync({
+            type: 'error',
+            title: 'Error',
+            message: 'No directory selected. Books location remains unchanged.'
+        });
+        return;
+    }
+    
+    const isValidPath = await validateZwiPath(newZwiDirectoryPath);
+    if (!isValidPath) {
+        dialog.showMessageBoxSync({
+            type: 'error',
+            title: 'Error',
+            message: 'Selected directory is invalid. Books location remains unchanged.'
+        });
+        return;
+    }
+
+    let config = await loadConfig();
+    config.zwiDirectoryPath = newZwiDirectoryPath;
+    await saveConfig(config);
+    zwiDirectoryPath = newZwiDirectoryPath;
+    
+    dialog.showMessageBoxSync({
+        type: 'info',
+        title: 'Success',
+        message: 'Books location has been successfully updated.'
+    });
+
+    console.log('Books location updated successfully to:', newZwiDirectoryPath);
+}
+
+// IPC Communication Handler
+ipcMain.handle('reset-books-location', async () => {
+    await resetBooksLocation();
+});
