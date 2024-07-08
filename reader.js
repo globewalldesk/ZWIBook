@@ -499,7 +499,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         // Convert underscore-for-italics into italics
         bookContent = processText(bookContent);
 
-        const pattern = /poet(?:s)?|poem(?:s)?|poète(?:s)?|poème(?:s)?|dichter(?:s)?|gedicht(?:e|er)?|poeta(?:s)?|poema(?:s)?|dikt(?:er)?|поэт(?:ы|ов)?|стих(?:и|ов)?|诗人|诗|song(?:s)?|canzone(?:i)?|lied(?:er|je)?|canción(?:es)?|canto(?:s)?|sång(?:er)?|песня(?:и|ей)?|歌|lyric(?:s)?|lyrique(?:s)?|lyrik(?:en)?|lirica(?:s)?|lyrik(?:er)?|лир(?:ика|ы)?|诗歌/i;
+        const pattern = /poet(?:s)?|poem(?:s)?|poète(?:s)?|poème(?:s)?|dichter(?:s)?|gedicht(?:e|er)?|poeta(?:s)?|poema(?:s)?|dikt(?:er)?|поэт(?:ы|ов)?|стих(?:и|ов)?|诗人|诗|song(?:s)?|canzone(?:i)?|lied(?:er|je)?|canción(?:es)?|canto(?:s)?|sång(?:er)?|песня(?:и|ей)?|歌|lyric(?:s)?|lyrique(?:s)?|lyrik(?:en)?|lirica(?:s)?|lyrik(?:er)?|лир(?:ика|ы)?|诗歌|sonnet(?:s)?|verse(?:s)?|rhyme(?:s)?|ode(?:s)?|ballad(?:s)?|eleg(?:y|ies)|limerick(?:s)?|villanelle(?:s)?|sestina(?:s)?|epic(?:s)?|hymn(?:s)?/i;
         const poetsPattern = /Shakespeare|Frost,?\sR|Dickinson,?\sE|Whitman,?\sW|Poe,?\sE|Wordsworth,?\sW|Coleridge,?\sS|Shelley,?\sP|Keats,?\sJ|Byron,?\sL|Burns,?\sR|Tennyson,?\sA|Rossetti,?\sC|Longfellow,?\sH|Browning,?\sE|Blake,?\sW|Emerson,?\sR|Masters,?\sE|H\.?D|Riley,?\sJ|Dante,?\sA|Goethe,?\sJ|Schiller,?\sF|Rilke,?\sR|Baudelaire,?\sC|Verlaine,?\sP|Mallarmé,?\sS|Neruda,?\sP|Lorca,?\sF|Hugo,?\sV|Rimbaud,?\sA|Heine,?\sH|Valéry,?\sP|Petrarca,?\sF|Villon,?\sF|Pushkin,?\sA|Lermontov,?\sM|Pascoli,?\sG|Carducci,?\sG/i;
         let isPoetry = pattern.test(currentBookMetadata.Title) || poetsPattern.test(currentBookMetadata.CreatorNames[0]);
         
@@ -561,6 +561,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         function preprocessDocumentElements() {
             const anchors = document.querySelectorAll('a');
             const images = document.querySelectorAll('img');
+            const tables = document.querySelectorAll('table');
 
             anchors.forEach(anchor => {
                 let hasChanged = false;
@@ -613,6 +614,21 @@ document.addEventListener('DOMContentLoaded', async () => {
                     if (src !== newSrc) {
                         img.setAttribute('src', newSrc);
                     }
+                }
+            });
+
+            tables.forEach(table => {
+                if (table.hasAttribute('width')) {
+                    let width = parseInt(table.getAttribute('width'), 10);
+                    if (width > 720) {
+                        table.removeAttribute('width');
+                    }
+                }
+
+                // Additionally, check if the table has an inline style width set
+                let styleWidth = table.style.width;
+                if (styleWidth && parseInt(styleWidth, 10) > 720) {
+                    table.style.width = '';
                 }
             });
         }
@@ -2426,16 +2442,25 @@ function adjustRangeOffsets(range) {
         }
     }
 
-    // Check if the endOffset is 0 and adjust the endContainer accordingly
-    if (endOffset === 0 && startContainer !== endContainer) {
-        // Navigate to the previous text node if endContainer is a whitespace text node
-        let newEndContainer = findPreviousTextNode(endContainer);
-
-        if (newEndContainer) {
-            endContainer = newEndContainer;
-            endOffset = endContainer.textContent.length;
-        } else {
-            console.error("Failed to adjust range: no valid previous text node found.");
+    // Check if the selection ends at a <br> element
+    if (endContainer.nodeType === Node.ELEMENT_NODE && endContainer.tagName === 'P') {
+        const childNodes = endContainer.childNodes;
+        if (endOffset > 0 && childNodes[endOffset - 1].nodeName === 'BR') {
+            console.log('Selection ends at a <br> element');
+            endOffset--; // Move the endOffset to exclude the <br>
+            // Adjust the endContainer if necessary
+            if (endOffset > 0 && childNodes[endOffset - 1].nodeType === Node.TEXT_NODE) {
+                endContainer = childNodes[endOffset - 1];
+                endOffset = endContainer.textContent.length;
+            } else if (endOffset === 0) {
+                let newEndContainer = findPreviousTextNode(endContainer);
+                if (newEndContainer) {
+                    endContainer = newEndContainer;
+                    endOffset = endContainer.textContent.length;
+                } else {
+                    console.error("Failed to adjust range: no valid previous text node found.");
+                }
+            }
         }
     }
 
@@ -2443,6 +2468,7 @@ function adjustRangeOffsets(range) {
     try {
         range.setStart(startContainer, startOffset);
         range.setEnd(endContainer, endOffset);
+        console.log('Adjusted Range:', { startContainer, endContainer, startOffset, endOffset });
     } catch (error) {
         console.error("Error setting range end:", error);
     }
@@ -3231,10 +3257,17 @@ function cleanHighlightedHTML(html) {
         }
     });
 
-    // Function to clean up multiple "..." into a single "..."
+    // Function to clean up multiple "..." and "<br>" combinations into a single "..."
     function cleanEllipses(node) {
         let textContent = node.innerHTML;
-        node.innerHTML = textContent.replace(/(\s*\.\.\.\s*){2,}/g, ' ... ');
+
+        // Replace multiple instances of " ... <br>" with a single instance
+        textContent = textContent.replace(/(\s*\.\.\.\s*<br>\s*){2,}/g, ' ... <br>');
+
+        // Further replace multiple instances of "<br> ... " with a single instance
+        textContent = textContent.replace(/(\s*<br>\s*\.\.\.\s*){2,}/g, '<br> ... ');
+
+        node.innerHTML = textContent;
     }
 
     // Clean up ellipses in the processed HTML

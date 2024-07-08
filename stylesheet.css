@@ -52,6 +52,10 @@ h1#headTitle {
     color: white !important;
 }
 
+img {
+    max-width: 720px !important;
+}
+
 #header-content {
     max-width: 800px;
     min-height: 56px;
@@ -298,7 +302,7 @@ header {
     max-width: 800px !important;
     /* Max content width */
     overflow-x: none;
-    overflow-y: auto;
+    overflow-y: none;
 }
 
 .searchResultItem {
@@ -1364,13 +1368,18 @@ input:checked + .slider:before {
     margin: 10px 0 0 0;
 }
 
+.abfeature ol {
+    padding: 0;
+    margin: 10px 0 0 20px;
+}
+
 .abfeature ul li {
     margin-bottom: 10px;
     padding-left: 20px;
     position: relative;
 }
 
-.abfeature ul li:before {
+.abfeature ul > li:before {
     content: '\2022';
     color: #007bff;
     font-weight: bold;
@@ -1379,11 +1388,11 @@ input:checked + .slider:before {
     margin-left: -1em;
 }
 
-.abfeature ul li.nobullet:before {
+.abfeature ul > li.nobullet:before {
     display: none;
 }
 
-.abfeature ul li.nobullet img {
+.abfeature ul > li.nobullet img {
     height: 50px;
     float: left;
     margin-right: 10px;
@@ -1460,7 +1469,7 @@ h2 .inline-button img {
     max-width: 500px; /* Allow expansion */
     z-index: 999;
     display: none; /* Initially hidden */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3), 0 10px 30px 0 rgba(0, 0, 0, 0.25); /* Darker and bigger hovering shade effect */
     pointer-events: auto;
     resize: both;
 }
