@@ -72,7 +72,7 @@ async function setupDataDirectory() {
 
         // Ensure config is not null and initialize if needed
         config = config || {};
-        let dataDir = config.dataDir || path.join(os.homedir(), '.ksfdata');
+        let dataDir = config.dataDir || path.join(os.homedir(), '.zwibook');
 
         // Ensure the directory exists
         try {
@@ -1521,9 +1521,22 @@ async function exportHlnotesData() {
 
         // Save the file to the chosen location
         fs.writeFileSync(filePath, hlnotesData);
-        console.log('Highlight/Note data exported successfully');
+
+        dialog.showMessageBox({
+            type: 'info',
+            buttons: ['OK'],
+            title: 'Export Successful',
+            message: 'This file, hlnotes.json, contains your highlights and notes. You should be able to import this file into any instance of ZWIBook.'
+        });
+        console.log('Highlight/Note data exported successfully to:', filePath);
     } catch (error) {
         console.error('Error exporting Highlight/Note data:', error);
+        dialog.showMessageBox({
+            type: 'error',
+            buttons: ['OK'],
+            title: 'Export Failed',
+            message: 'An error occurred while exporting the Highlight/Note data. Please try again.'
+        });
     }
 }
 
@@ -1622,7 +1635,7 @@ async function importHlnotesData() {
     dialog.showMessageBox({
         type: 'info',
         title: 'Import Successful',
-        message: 'Highlight/Note data imported successfully. Please now restart the app (if it doesn not start automatically).'
+        message: 'Highlight/Note data imported successfully. Please now restart the app (if it doesn\'t start automatically).'
     }).then(() => {
         app.relaunch();
         app.exit();
