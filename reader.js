@@ -561,7 +561,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         function preprocessDocumentElements() {
             const anchors = document.querySelectorAll('a');
             const images = document.querySelectorAll('img');
-            const tables = document.querySelectorAll('table');
 
             anchors.forEach(anchor => {
                 let hasChanged = false;
@@ -616,21 +615,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     }
                 }
             });
-
-            tables.forEach(table => {
-                if (table.hasAttribute('width')) {
-                    let width = parseInt(table.getAttribute('width'), 10);
-                    if (width > 720) {
-                        table.removeAttribute('width');
-                    }
-                }
-
-                // Additionally, check if the table has an inline style width set
-                let styleWidth = table.style.width;
-                if (styleWidth && parseInt(styleWidth, 10) > 720) {
-                    table.style.width = '';
-                }
-            });
+                                   
         }
 
         preprocessDocumentElements();
@@ -1779,22 +1764,68 @@ document.addEventListener('mouseup', function (event) {
     const selection = window.getSelection();
     const hmodal = document.getElementById('highlightModal');
 
-    // Check if the modal is already displayed or if the selection is empty
-    if (selection.toString().length > 0 && hmodal.style.display === 'none') {
-        selectedText = selection.getRangeAt(0).cloneRange(); // Preserve the selection
-        showHighlightModal(selection);
-        ignoreNextClick = true; // Set flag to ignore the next click
-        setTimeout(() => { ignoreNextClick = false; }, 200); // Reset the flag after 200ms
+    let rangeOK = rangePermitted();
+
+    setTimeout(() => {
+        console.log("OK?", rangeOK);
+        // Check if the modal is already displayed or if the selection is empty
+        if (selection.toString().length > 0 && hmodal.style.display === 'none' && rangeOK) {
+            selectedText = selection.getRangeAt(0).cloneRange(); // Preserve the selection
+            showHighlightModal(selection);
+            ignoreNextClick = true; // Set flag to ignore the next click
+            setTimeout(() => { ignoreNextClick = false; }, 200); // Reset the flag after 200ms
+        }
+        if (!rangeOK) {
+            hmodal.style.display = 'none';
+        }
+
+        // Re-enable pointer events for color circles (after drag-to-select)
+        document.querySelectorAll('.color-circle').forEach(circle => {
+            circle.style.pointerEvents = 'auto';
+        });
+        document.querySelectorAll('.about-hmodal').forEach(about => {
+            about.style.pointerEvents = 'auto';
+        });
+    }, 100);
+});
+
+function rangePermitted() {
+    const selection = window.getSelection();
+    let textNodes;
+
+    if (selection.rangeCount > 0) {
+        let originalRange = selection.getRangeAt(0);
+        let range = originalRange.cloneRange();
+        
+        range = adjustRangeOffsets(range);
+        textNodes = collectTextNodes(range);
     }
 
-    // Re-enable pointer events for color circles (after drag-to-select)
-    document.querySelectorAll('.color-circle').forEach(circle => {
-        circle.style.pointerEvents = 'auto';
-    });
-    document.querySelectorAll('.about-hmodal').forEach(about => {
-        about.style.pointerEvents = 'auto';
-    });
-});
+    // Check if any text nodes exist, and are within a .bm-paragraph element
+    let hasTextNodeWithinBmParagraph = false;
+    for (let node of textNodes) {
+        console.log("node", node);
+        let parent = node.parentElement;
+        while (parent) {
+            if (parent.classList && parent.classList.contains('bm-paragraph')) {
+                console.log("parent", parent);
+                hasTextNodeWithinBmParagraph = true;
+                break;
+            }
+            parent = parent.parentElement;
+        }
+        if (hasTextNodeWithinBmParagraph) {
+            break;
+        }
+    }
+
+    if (textNodes.length == 0 || !hasTextNodeWithinBmParagraph) {
+        const hmodal = document.getElementById("highlightModal");
+        hmodal.style.display = 'none';    
+    }
+    return hasTextNodeWithinBmParagraph;
+}
+
 
 // Event listener to handle mousedown events
 document.addEventListener('mousedown', function (event) {
@@ -2331,6 +2362,7 @@ function handleHighlightMerges(hnid, color) {
 
     // Submit to saveHighlightsToLocalStorage
     affectedParents.forEach(parentElement => {
+        parentElement.normalize();  // Normalize the parent element
         saveHighlightsToLocalStorage(parentElement);
         deleteMarkedHighlights(parentElement);
     });
@@ -2349,6 +2381,8 @@ function deleteMarkedHighlights(parentElement) {
         }
         parent.removeChild(span);
     });
+
+    parentElement.normalize();  // Normalize the parent element
 
     // Find the suitable pid ancestor element for the current element
     let pidElement = parentElement.closest('[id^="p"]');
@@ -2468,10 +2502,10 @@ function adjustRangeOffsets(range) {
     try {
         range.setStart(startContainer, startOffset);
         range.setEnd(endContainer, endOffset);
-        console.log('Adjusted Range:', { startContainer, endContainer, startOffset, endOffset });
     } catch (error) {
         console.error("Error setting range end:", error);
     }
+    return range;
 }
 
 // Find the previous non-empty text node from the given node

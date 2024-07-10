@@ -94,6 +94,21 @@ h2, h3, h4, h5, h6, p, td {
     color: black !important;
 }
 
+table {
+    max-width: 720px !important;
+    width: 100% !important; /* Ensure the table scales down within its max width */
+    table-layout: fixed; /* Prevent table from stretching */
+}
+
+td {
+    width: auto; /* Allow the cells to adjust their width */
+}
+
+td img {
+    max-width: 100% !important; /* Scale images to fit within the table cell */
+    height: auto; /* Maintain aspect ratio */
+}
+
 .dropdown {
     background-color: white;
     border: 2px solid gray;
