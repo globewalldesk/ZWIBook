@@ -52,10 +52,6 @@ h1#headTitle {
     color: white !important;
 }
 
-img {
-    max-width: 720px !important;
-}
-
 #header-content {
     max-width: 800px;
     min-height: 56px;
@@ -92,6 +88,11 @@ img {
 
 h2, h3, h4, h5, h6, p, td {
     color: black !important;
+}
+
+img {
+    max-width: 720px !important;
+    z-index: 100000;
 }
 
 table {
@@ -866,6 +867,23 @@ span.scenenum {
 a:has(> sup) {
     text-decoration-line: none !important; /* Force override of browser default styles */
 }
+
+
+/* Red, White, Blue Socks */
+.figcenter, .figright, .figleft, .imgcenter {
+    max-width: calc(100% - 20px) !important;
+    position: relative;
+    z-index: 2;
+}
+
+.figcenter img, .figright img, .figleft img {
+    max-width: calc(100% - 20px) !important;
+    height: auto !important;
+}
+
+
+
+/* //////////// BOOKMARKS /////////// */
 
 .bm-paragraph a img {
     position: relative !important;
@@ -1789,7 +1807,7 @@ h2 .inline-button img {
 
 .curly-left {
     top: -10px;
-    left: 8px;
+    left: -10px;
 }
 
 .curly-right {
@@ -1921,7 +1939,7 @@ h2 .inline-button img {
     border: 1px solid #ccc; /* Add this line for the subtle border */
     border-top: 1px solid #f1f1f1;
     border-radius: 0px 0px 10px 10px; /* Optional: Add rounded corners */
-    margin: -2px 60px 10px 60px; /* Optional: Add some space below the container */
+    margin: -2px 35px 10px 35px; /* Optional: Add some space below the container */
     background-color: #f1f1f1;
     z-index: 1000002;
 }
@@ -1977,5 +1995,77 @@ h2 .inline-button img {
     background-color: #fff;
 }
 
+.color-text-switch-container {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-left: 10px;
+    margin-top: -2px;
+}
+
+.color-text-switch-label {
+    margin-bottom: 2px;
+    font-size: 14px;
+}
+
+.color-text-switch {
+    position: relative;
+    display: inline-block;
+    width: 1.875em;
+    height: 1.05em;
+  }
+
+.color-text-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.hl-slider {
+    position: absolute;
+    margin-left: 2px;
+    margin-right: -2px;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .2s;
+    transition: .2s;
+    border-radius: 1em;
+  }
+
+.hl-slider:before {
+    position: absolute;
+    content: "";
+    height: 0.8125em;
+    width: 0.8125em;
+    left: 0.125em;
+    bottom: 0.125em;
+    background-color: white;
+    -webkit-transition: .2s;
+    transition: .2s;
+    border-radius: 0.9em;
+}
+
+#colorTextSwitch {
+    width: 1em;
+}
+
+input:checked + .hl-slider {
+    background-color: #2196F3;
+}
+
+input:focus + .hl-slider {
+    box-shadow: 0 0 0.5px #2196F3;
+  }  
+
+input:checked + .hl-slider:before {
+    -webkit-transform: translateX(0.8125em);
+    -ms-transform: translateX(0.8125em);
+    transform: translateX(0.8125em);
+  }
+  
 
 /* END HIGHLIGHT DESIGN */

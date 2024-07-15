@@ -25,10 +25,17 @@ contextBridge.exposeInMainWorld('electronAPI', {
         console.log(`sendNavigate called with URL: ${url}`);
         ipcRenderer.send('navigate', url);
     },
-    downloadImage: (imagePath) => ipcRenderer.invoke('download-image', imagePath),
-    onDownloadImageRequest: (callback) => ipcRenderer.on('download-image-request', callback),
+    downloadImageRequest: (imageData) => ipcRenderer.send('download-image-request', imageData),
+    onDownloadImageRequest: (callback) => ipcRenderer.on('download-image-request', (event, data) => callback(data)),
+    downloadImage: (imageData) => ipcRenderer.send('download-image', imageData),
+    onDownloadImage: (callback) => ipcRenderer.on('download-image', (event, imageData) => callback(imageData)),
     sendBookInfo: (bookInfo) => ipcRenderer.send('send-book-info', bookInfo),
     zoom: (deltaY) => ipcRenderer.send('zoom', deltaY),
+    setZoomLevel: (level) => {
+        webFrame.setZoomLevel(level);
+        localStorage.setItem('zoomLevel', level);
+    },
+    getZoomLevel: () => parseFloat(localStorage.getItem('zoomLevel')) || 0,
     openExternal: (url) => ipcRenderer.send('open-external', url),
     showConfirmDialog: (message) => ipcRenderer.sendSync('show-confirm-dialog', message),
     showAlertDialog: (message) => ipcRenderer.sendSync('show-alert-dialog', message),

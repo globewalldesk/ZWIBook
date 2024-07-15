@@ -280,7 +280,14 @@ function createWindow() {
         {
             label: 'File',
             submenu: [
-                isMac ? { role: 'close' } : { role: 'quit' },
+                {
+                    label: 'Home',
+                    click: () => {
+                        if (mainWindow) {
+                            mainWindow.loadFile('search.html');
+                        }
+                    }
+                },
                 { type: 'separator' },
                 {
                     label: 'Print (requires PDF reader)',
@@ -336,7 +343,7 @@ function createWindow() {
                 },
                 {
                     label: 'Export ZWI (original book files)',
-                    accelerator: 'CmdOrCtrl+Shift+Z',
+                    accelerator: 'CmdOrCtrl+Shift+K',
                     click: () => {
                         mainWindow.webContents.send('export-zwi');
                     }
@@ -383,7 +390,16 @@ function createWindow() {
                         { label: 'Plain Text UTF-8', id: 'plainText', click: () => shell.openExternal('https://www.gutenberg.org/ebooks/.txt.utf-8') },
                         { label: 'Download HTML (ZIP)', id: 'downloadHtmlZip', click: () => shell.openExternal('https://www.gutenberg.org/cache/epub//pg-h.zip') }
                     ]
-                }                
+                },
+                { type: 'separator' },
+                { 
+                    label: 'Reset Books Location',
+                    click: async () => {
+                        await resetBooksLocation();
+                    }
+                },
+                { type: 'separator' },
+                isMac ? { role: 'close' } : { role: 'quit' }
             ]
         },
         {
@@ -393,8 +409,10 @@ function createWindow() {
                 { role: 'redo' },
                 { type: 'separator' },
                 { role: 'cut' },
+                { role: 'delete' },
                 { role: 'copy' },
                 { role: 'paste' },
+                { role: 'selectAll' },
                 ...(isMac ? [
                     { role: 'pasteAndMatchStyle' },
                     { role: 'delete' },
@@ -408,43 +426,18 @@ function createWindow() {
                         ]
                     }
                 ] : [
-                    { role: 'delete' },
                     { type: 'separator' },
-                    { role: 'selectAll' }
+                    {
+                        label: 'Check Spelling (in Your Notes)',
+                        type: 'checkbox',
+                        checked: isSpellCheckEnabled,
+                        click: toggleSpellChecking
+                    }    
                 ])
             ]
         },
         {
-            label: 'Text and View',
-            submenu: [
-                {
-                    label: 'Font styles...',
-                    accelerator: 'CmdOrCtrl+Alt+F',
-                    click: () => {
-                        mainWindow.webContents.send('choose-font');
-                    }
-                },
-                { role: 'zoomIn' },
-                { role: 'zoomOut' },
-                { role: 'resetZoom' },
-                {
-                    label: 'Check Spelling (in Your Notes)',
-                    type: 'checkbox',
-                    checked: isSpellCheckEnabled,
-                    click: toggleSpellChecking
-                },
-                { type: 'separator' },
-                { role: 'reload' },
-                { role: 'forceReload' },
-                { role: 'toggleDevTools' }, // Enable DevTools
-                { type: 'separator' },
-                { role: 'togglefullscreen' }
-            ]
-        },
-
-        // Modify your menu template to call openFindDialog
-        {
-            label: 'Find on Page',
+            label: 'Text',
             submenu: [
                 {
                     label: 'Find...',
@@ -459,7 +452,31 @@ function createWindow() {
                     click: () => {
                         mainWindow.webContents.stopFindInPage('clearSelection');
                     }
-                }
+                },
+                { type: 'separator' },
+                {
+                    label: 'Font styles...',
+                    accelerator: 'CmdOrCtrl+Alt+F',
+                    click: () => {
+                        mainWindow.webContents.send('choose-font');
+                    }
+                },
+                { type: 'separator' },
+                { role: 'zoomIn' },
+                { role: 'zoomOut' },
+                { role: 'resetZoom' }
+            ]
+        },
+
+        // Modify your menu template to call openFindDialog
+        {
+            label: 'Page',
+            submenu: [
+                { role: 'reload' },
+                { role: 'forceReload' },
+                { role: 'toggleDevTools' }, // Enable DevTools
+                { type: 'separator' },
+                { role: 'togglefullscreen' }
             ]
         },
         {
@@ -471,12 +488,6 @@ function createWindow() {
                         if (mainWindow) {
                             mainWindow.loadFile('about.html');
                         }
-                    }
-                },
-                { 
-                    label: 'Reset Books Location',
-                    click: async () => {
-                        await resetBooksLocation();
                     }
                 },
                 {
@@ -520,13 +531,21 @@ function createWindow() {
             contextMenu.append(new MenuItem({
                 label: 'Download Image',
                 click: () => {
-                    const originalFilename = path.basename(params.srcURL);
-                    console.log('Context menu clicked:', { srcURL: params.srcURL, originalFilename });
-                    mainWindow.webContents.send('download-image-request', { imageUrl: params.srcURL, originalFilename });
+                    // Retrieve the base64 data from localStorage
+                    mainWindow.webContents.executeJavaScript('localStorage.getItem("base64ImageData")').then((result) => {
+                        const { base64data, originalFilename } = JSON.parse(result);
+                        if (base64data && originalFilename) {
+                            console.log('Download Image clicked:', { base64data, originalFilename });
+                            // Send the data to the main process to handle the download
+                            handleDownloadImageRequest({ base64data, originalFilename });
+                        } else {
+                            console.error('Base64 data or original filename is not set.');
+                        }
+                    }).catch(error => console.error('Failed to retrieve base64 image data:', error));
                 }
             }));
         }
-        
+    
         // Show these items only if some text is selected and it is under 50 characters
         if (params.selectionText && params.selectionText.length <= 50) {
             contextMenu.append(new MenuItem({
@@ -1169,30 +1188,45 @@ ipcMain.on('finish-export-zwi', async (event, bookId) => {
 // Handle download image request from renderer process
 ipcMain.handle('download-image', async (event, imagePath) => {
     const absolutePath = path.resolve(__dirname, imagePath);
-
     try {
         const data = await fs.promises.readFile(absolutePath);
-        return data.toString('base64'); // Return the image data as a base64 string
+        return data.toString('base64');
     } catch (error) {
         console.error('Failed to read image for download:', error);
-        throw error; // Rethrow the error to be caught by the renderer process
+        throw error;
     }
 });
 
-// Handle download image request from renderer process
-ipcMain.on('download-image-request', (event, { imageUrl, originalFilename }) => {
-    const absolutePath = path.resolve(__dirname, imageUrl);
-    console.log('Download image request received:', { absolutePath, originalFilename });
+// Function to handle the download image request
+function handleDownloadImageRequest({ base64data, originalFilename }) {
+    const buffer = Buffer.from(base64data, 'base64');
 
-    fs.promises.readFile(absolutePath)
-        .then(data => {
-            console.log('Image read successfully:', { absolutePath, originalFilename });
-            event.sender.send('download-image', { data: data.toString('base64'), originalFilename });
-        })
-        .catch(error => {
-            console.error('Failed to read image for download:', error);
-        });
-});
+    // Show the save dialog
+    dialog.showSaveDialog({
+        title: 'Save Image',
+        defaultPath: originalFilename,
+        filters: [
+            { name: 'Images', extensions: ['jpg', 'jpeg', 'png', 'gif'] }
+        ]
+    }).then(result => {
+        if (!result.canceled && result.filePath) {
+            const filePath = result.filePath;
+
+            fs.writeFile(filePath, buffer, (err) => {
+                if (err) {
+                    console.error('Failed to save image:', err);
+                } else {
+                    console.log('Image saved successfully:', filePath);
+                    shell.showItemInFolder(filePath); // Optionally show the downloaded file in the file explorer
+                }
+            });
+        } else {
+            console.log('Save dialog was canceled');
+        }
+    }).catch(err => {
+        console.error('Failed to show save dialog:', err);
+    });
+}
 
 // Listen for the book info from the renderer process (Copilot inquiries)
 ipcMain.on('send-book-info', (event, bookInfo) => {
@@ -1211,6 +1245,8 @@ ipcMain.on('zoom', (event, deltaY) => {
     }
     if (mainWindow) {
         mainWindow.webContents.setZoomLevel(zoomLevel);
+        // Save the zoom level to local storage
+        mainWindow.webContents.executeJavaScript(`localStorage.setItem('zoomLevel', ${zoomLevel});`);
     }
 });
 
@@ -1345,7 +1381,7 @@ async function exportBookshelfData() {
 async function importBookshelfData() {
     // Prompt the user to select a file
     const { canceled, filePaths } = await dialog.showOpenDialog({
-        title: 'Import Bookshelf Data',
+        title: 'Import Bookshelf Data (bookshelf.json)',
         buttonLabel: 'Import',
         filters: [{ name: 'JSON Files', extensions: ['json'] }],
         properties: ['openFile']
@@ -1359,8 +1395,15 @@ async function importBookshelfData() {
 
     // Read the selected file
     const filePath = filePaths[0];
+    const fileName = path.basename(filePath);
     const fileContent = await fs.promises.readFile(filePath, 'utf-8');
 
+    // Check if the file name is hlnotes.json
+    if (fileName === 'hlnotes.json') {
+        console.error('Attempted to import hlnotes.json file');
+        dialog.showErrorBox('Import Error', 'The selected file is hlnotes.json, which cannot be imported as bookshelf data. Please select bookmarks.json.');
+        return;
+    }
     // Parse the JSON content
     let importedData;
     try {
@@ -1431,12 +1474,17 @@ function validateBookshelfData(data) {
 
     // Check if the root keys are valid
     const validRootKeys = ['viewedBooks', 'savedBooks', 'readingPositions', 'bookmarks'];
+    const invalidKeys = ['notes', 'highlights'];
     const rootKeys = Object.keys(data);
 
     rootKeys.forEach(key => {
         if (!validRootKeys.includes(key)) {
             isValid = false;
             errors.push(`Invalid root key: ${key}`);
+        }
+        if (invalidKeys.includes(key)) {
+            isValid = false;
+            errors.push(`File contains prohibited key: ${key}`);
         }
     });
 
@@ -1556,7 +1604,7 @@ async function importHlnotesData() {
 
     // Prompt the user to select a file
     const { canceled, filePaths } = await dialog.showOpenDialog({
-        title: 'Import Highlight/Note Data',
+        title: 'Import Highlight/Note Data (hlnotes.json)',
         buttonLabel: 'Import',
         filters: [{ name: 'JSON Files', extensions: ['json'] }],
         properties: ['openFile']
@@ -1572,6 +1620,12 @@ async function importHlnotesData() {
     }
 
     const filePath = filePaths[0];
+
+    // Check if the file name is bookshelf.json
+    if (path.basename(filePath) === 'bookshelf.json') {
+        dialog.showErrorBox('Import Error', 'The selected file cannot be imported as highlight/note data. Please choose hlnotes.json.');
+        return;
+    }
 
     // Read the file content
     let fileContent;
@@ -1653,6 +1707,16 @@ function validateHlnotesData(data) {
     }
 
     const { highlights, notes } = data;
+
+    // Check for invalid top-level keys
+    const invalidRootKeys = ['viewedBooks', 'savedBooks', 'readingPositions', 'bookmarks'];
+    const rootKeys = Object.keys(data);
+    rootKeys.forEach(key => {
+        if (invalidRootKeys.includes(key)) {
+            isValid = false;
+            errors.push(`Invalid top-level key: ${key}`);
+        }
+    });
 
     if (highlights !== undefined) {
         if (typeof highlights !== 'object' || highlights === null) {

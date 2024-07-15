@@ -5,6 +5,10 @@ function onBookClick(bookId, bookMetadata) {
 }
 
 window.onload = () => {
+    // Set the initial zoom level from local storage
+    const initialZoomLevel = window.electronAPI.getZoomLevel();
+    window.electronAPI.setZoomLevel(initialZoomLevel);
+    
     function getDefaultContents() {
         const ulElement = document.querySelector('#body');
         return ulElement ? ulElement.innerHTML : ''; // Return an empty string if the element is not found

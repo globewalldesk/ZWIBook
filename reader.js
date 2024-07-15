@@ -84,6 +84,10 @@ function saveHlnotesDataOnInterval(bookId) {
 document.addEventListener('DOMContentLoaded', async () => {
     loadFont();
 
+    // Set the initial zoom level from local storage
+    const initialZoomLevel = window.electronAPI.getZoomLevel();
+    window.electronAPI.setZoomLevel(initialZoomLevel);
+
     // Preload data before manipulating DOM
     try {
         await fetchData();
@@ -328,7 +332,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const suffixes = ["Ph.D.", "PhD", "Ph. D.", "D.Phil.", "DPhil", "Doctor", "D.D.", "D. D.", "Jr.", "Junior", "Sr.", "Senior", "II", "III", "IV", "V", "Esq.", "Esquire", "MD", "M.D.", "Dr.", "Doctor", "RN", "R.N.", "DO", "D.O.", "DDS", "D.D.S.", "DVM", "D.V.M.", "JD", "J.D.", "LLD", "LL.D.", "EdD", "Ed.D.", "PharmD", "Pharm.D.", "MBA", "M.B.A.", "CPA", "C.P.A.", "DMD", "D.M.D.", "DC", "D.C.", "OD", "O.D.", "PA", "P.A.", "P.A.-C", "MA", "M.A.", "MS", "M.S.", "MSc", "M.Sc.", "MPH", "M.P.H.", "BSc", "B.Sc.", "BA", "B.A.", "BS", "B.S.", "MFA", "M.F.A.", "MPhil", "M.Phil.", "PsyD", "Psy.D.", "EdS", "Ed.S.", "MSW", "M.S.W.", "BFA", "B.F.A.", "MSEd", "M.S.Ed.", "MSE", "M.S.E.", "DPT", "D.P.T.", "DPA", "D.P.A.", "ScD", "Sc.D.", "EngD", "Eng.D.", "ASN", "A.S.N."];
 
         // Clean creator names by removing square brackets and anything inside them
-        let cleanedNames = creatorNames.map(name => name.replace(/\s*\[.*?\]\s*/g, '').trim());
+        let cleanedNames = creatorNames ? creatorNames.map(name => name.replace(/\s*\[.*?\]\s*/g, '').trim()) : [];
 
         // Continue with extracting the first author's formatted name
         if (cleanedNames.length > 0) {
@@ -605,7 +609,8 @@ document.addEventListener('DOMContentLoaded', async () => {
                 }
             });
 
-            images.forEach(img => {
+            // Iterate through all images
+            document.querySelectorAll('img').forEach(img => {
                 if (img.hasAttribute('src')) {
                     let src = img.getAttribute('src');
                     // Remove <i> and </i> tags from src
@@ -613,6 +618,16 @@ document.addEventListener('DOMContentLoaded', async () => {
                     if (src !== newSrc) {
                         img.setAttribute('src', newSrc);
                     }
+                }
+
+                // Check if the <img> is wrapped in an <a> tag with an href attribute
+                const parentAnchor = img.closest('#body a[href]');
+                if (parentAnchor) {
+                    // Replace the <a> tag with its contents
+                    while (parentAnchor.firstChild) {
+                        parentAnchor.parentNode.insertBefore(parentAnchor.firstChild, parentAnchor);
+                    }
+                    parentAnchor.parentNode.removeChild(parentAnchor);
                 }
             });
                                    
@@ -813,7 +828,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
         });
 
-
         // Close the image modal that was just created
         // Get the <span> element that closes the modal
         var span = document.getElementsByClassName("close-this")[0];
@@ -831,29 +845,67 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
         });
 
-        // Utility function to get the basename from a path or URL
-        function getBasename(url) {
-            return url.split('/').pop().split('#')[0].split('?')[0];
-        }
+        // Listener to handle the image download request from the context menu
+        window.electronAPI.onDownloadImageRequest(({ imageUrl, originalFilename }) => {
+            console.log('Download image request received:', { imageUrl, originalFilename });
 
-        // Support direct <a href> links to images (for direct download)
-        function handleImageDownload(event) {
-            const anchor = event.target.closest('a');
-            if (anchor && anchor.getAttribute('href').endsWith('.jpg')) { // Adjust as needed for other image types
-                event.preventDefault();
-                const imagePath = anchor.getAttribute('href').replace('data/media/images/', '');
-                const blobUrl = resourceMap[imagePath];
+            fetch(imageUrl)
+                .then(response => response.blob())
+                .then(blob => {
+                    const reader = new FileReader();
+                    reader.onloadend = () => {
+                        const base64data = reader.result.split(',')[1]; // Extract base64 part
+                        window.electronAPI.downloadImageRequest({ base64data, originalFilename });
+                    };
+                    reader.readAsDataURL(blob);
+                })
+                .catch(error => console.error('Failed to fetch blob:', error));
+        });
 
-                if (blobUrl) {
-                    window.electronAPI.onDownloadImageRequest({ imageUrl: blobUrl });
-                } else {
-                    console.error('Blob URL not found for:', imagePath);
-                }
+        // Handle the actual download process
+        window.electronAPI.onDownloadImage((imageData) => {
+            const { data, originalFilename } = imageData;
+            const link = document.createElement('a');
+            link.href = `data:image/jpeg;base64,${data}`;
+            link.download = originalFilename;
+            console.log('Triggering download with filename:', link.download);
+            link.click();
+        });
+
+        // Attach the context menu event listener to the document
+        document.addEventListener('contextmenu', function(event) {
+            const target = event.target.closest('img');
+            if (target && target.getAttribute('data-original-path')) {
+                const imageUrl = target.src;
+                const originalFilename = target.getAttribute('data-original-path');
+                console.log('Context menu triggered for image:', { imageUrl, originalFilename });
+
+                // Fetch the image blob and convert to base64
+                fetch(imageUrl)
+                    .then(response => response.blob())
+                    .then(blob => {
+                        const reader = new FileReader();
+                        reader.onloadend = () => {
+                            const base64data = reader.result.split(',')[1]; // Extract base64 part
+                            console.log('Base64 data prepared:', { base64data, originalFilename });
+                            // Store the base64data and filename in localStorage
+                            localStorage.setItem('base64ImageData', JSON.stringify({ base64data, originalFilename }));
+                        };
+                        reader.readAsDataURL(blob);
+                    })
+                    .catch(error => console.error('Failed to fetch blob:', error));
             }
-        }
-
-        // Add event listener to the document for intercepting link clicks
-        document.addEventListener('click', handleImageDownload);
+        });
+        
+        // Listen for the trigger from the main process to send the base64 data
+        window.electronAPI.onDownloadImageRequest(() => {
+            const { base64data, originalFilename } = window.electronAPI.base64ImageData || {};
+            if (base64data && originalFilename) {
+                window.electronAPI.downloadImageRequest({ base64data, originalFilename });
+            } else {
+                console.error('Base64 data or original filename is not set.');
+            }
+        });
 
         // WORD COUNT DISPLAY
         // Create a container for both the word count and the "About" link
@@ -1397,7 +1449,6 @@ window.onkeydown = function (event) {
     if (event.key === "Escape" && fontModal.style.display === 'block') {
         fontModal.style.display = 'none';
     }
-    // Optionally, add toggling with CmdOrCtrl+Alt+F if it needs to be handled directly here
 };
 
 
@@ -1471,8 +1522,6 @@ function initializeHighlightAndNoteModal() {
                     returnValue = highlightSelection(mostRecentColor);
                 } else if (this.classList.contains('edit-note')) {
                     toggleNoteInput();
-                } else if (this.classList.contains('about-hmodal')) {
-                    // START HERE
                 }
             });
         });
@@ -1759,15 +1808,19 @@ document.addEventListener('keydown', function (event) {
     }
 });
 
-// Event listener for mouseup to trigger highlight modal
 document.addEventListener('mouseup', function (event) {
     const selection = window.getSelection();
     const hmodal = document.getElementById('highlightModal');
+    const noteField = document.querySelector('.note-input'); // Adjust the selector to match your note field
+
+    // Check if the click occurred inside the highlight modal or note field
+    if (hmodal.contains(event.target) || (noteField && noteField.contains(event.target))) {
+        return; // Exit if the click was inside the modal or note field
+    }
 
     let rangeOK = rangePermitted();
 
     setTimeout(() => {
-        console.log("OK?", rangeOK);
         // Check if the modal is already displayed or if the selection is empty
         if (selection.toString().length > 0 && hmodal.style.display === 'none' && rangeOK) {
             selectedText = selection.getRangeAt(0).cloneRange(); // Preserve the selection
@@ -1803,22 +1856,24 @@ function rangePermitted() {
 
     // Check if any text nodes exist, and are within a .bm-paragraph element
     let hasTextNodeWithinBmParagraph = false;
-    for (let node of textNodes) {
-        console.log("node", node);
-        let parent = node.parentElement;
-        while (parent) {
-            if (parent.classList && parent.classList.contains('bm-paragraph')) {
-                console.log("parent", parent);
-                hasTextNodeWithinBmParagraph = true;
+    if (textNodes && textNodes[Symbol.iterator]) {
+        for (let node of textNodes) {
+            let parent = node.parentElement;
+            while (parent) {
+                if (parent.classList && parent.classList.contains('bm-paragraph')) {
+                    hasTextNodeWithinBmParagraph = true;
+                    break;
+                }
+                parent = parent.parentElement;
+            }
+            if (hasTextNodeWithinBmParagraph) {
                 break;
             }
-            parent = parent.parentElement;
         }
-        if (hasTextNodeWithinBmParagraph) {
-            break;
-        }
+    } else {
+        return hasTextNodeWithinBmParagraph;
     }
-
+    
     if (textNodes.length == 0 || !hasTextNodeWithinBmParagraph) {
         const hmodal = document.getElementById("highlightModal");
         hmodal.style.display = 'none';    
@@ -2288,7 +2343,6 @@ function handleExistingNotesBeforeMerge(newHnid, matchingSpans, color) {
 
 // Change and merge highlight colors (with support for notes)
 function handleHighlightMerges(hnid, color) {
-    console.log("I be here");
     let matchingSpans = document.querySelectorAll(`.highlight-span[data-hnid='${hnid}']`);
 
     // Check for existing notes before merging
@@ -2387,7 +2441,6 @@ function deleteMarkedHighlights(parentElement) {
     // Find the suitable pid ancestor element for the current element
     let pidElement = parentElement.closest('[id^="p"]');
     if (!pidElement) {
-        console.warn("No suitable pid ancestor found for the current element.");
         return;
     }
     let pid = pidElement.id;
@@ -2476,11 +2529,10 @@ function adjustRangeOffsets(range) {
         }
     }
 
-    // Check if the selection ends at a <br> element
+    // Move offset to actual end of selection (from beginning of next container)
     if (endContainer.nodeType === Node.ELEMENT_NODE && endContainer.tagName === 'P') {
         const childNodes = endContainer.childNodes;
-        if (endOffset > 0 && childNodes[endOffset - 1].nodeName === 'BR') {
-            console.log('Selection ends at a <br> element');
+        if (endOffset > 0 ) {
             endOffset--; // Move the endOffset to exclude the <br>
             // Adjust the endContainer if necessary
             if (endOffset > 0 && childNodes[endOffset - 1].nodeType === Node.TEXT_NODE) {
@@ -2495,6 +2547,14 @@ function adjustRangeOffsets(range) {
                     console.error("Failed to adjust range: no valid previous text node found.");
                 }
             }
+        } else if (endOffset === 0) {
+            let newEndContainer = findPreviousTextNode(endContainer);
+            if (newEndContainer) {
+                endContainer = newEndContainer;
+                endOffset = endContainer.textContent.length;
+            } else {
+                console.error("Failed to adjust range: no valid previous text node found.");
+            }       
         }
     }
 
@@ -2675,7 +2735,6 @@ function getRelevantParentElement(node) {
         }
         node = node.parentNode;
     }
-    console.warn("No relevant parent element found.");
     return null;
 }
 
@@ -2943,6 +3002,13 @@ function initializeHighlightsNotesModal() {
                     <div class="hl-color-circle hl-blue" title="Blue"></div>
                     <div class="hl-color-circle hl-purple" title="Purple"></div>
                     <div class="hl-color-circle hl-white" title="White"></div>
+                    <div class="color-text-switch-container">
+                        <label class="color-text-switch-label" for="colorTextSwitch">Show?</label>
+                        <label class="color-text-switch">
+                            <input type="checkbox" id="colorTextSwitch">
+                            <span class="hl-slider round"></span>
+                        </label>
+                    </div>
                 </div>
                 <div id="highlights" class="hn-tab-content">
                     <p>Loading highlights...</p>
@@ -3125,11 +3191,10 @@ function openHighlightsNotesModal(event) {
     const greyLine = document.getElementById('grey-line');
     greyLine.style.display = 'block';
     // Adjust grey line width based on zoom factor
-    const originalWidth = parseFloat(getComputedStyle(greyLine).width); // Fetch the current width from CSS
     const zoomFactor = window.electronAPI.getZoomFactor();
-    greyLine.style.width = `${14 / zoomFactor}px`;
-    document.getElementById('header').style.width = `calc(100% - ${14 / zoomFactor}px)`;
-    document.body.style.paddingRight = `${14 / zoomFactor}px`;
+    greyLine.style.width = `${15 / zoomFactor}px`;
+    document.getElementById('header').style.width = `calc(100% - ${15 / zoomFactor}px)`;
+    document.body.style.paddingRight = `${13.5 / zoomFactor}px`;
 
     // Clear existing content
     document.getElementById('highlights').innerHTML = '';
@@ -3295,11 +3360,22 @@ function cleanHighlightedHTML(html) {
     function cleanEllipses(node) {
         let textContent = node.innerHTML;
 
+        // Remove comments first
+        textContent = textContent.replace(/<!--[\s\S]*?-->/g, '');
+
+        // Replace any remaining simple ellipses 
+        textContent = textContent.replace(/(\s*\.\.\.\s*){2,}/g, ' ... ');
+
         // Replace multiple instances of " ... <br>" with a single instance
         textContent = textContent.replace(/(\s*\.\.\.\s*<br>\s*){2,}/g, ' ... <br>');
 
         // Further replace multiple instances of "<br> ... " with a single instance
         textContent = textContent.replace(/(\s*<br>\s*\.\.\.\s*){2,}/g, '<br> ... ');
+
+        textContent = textContent.replace(/(<li[^>]*>\s*\.\.\.\s*<\/li>\s*\n\s*){2,}/g, '$1');
+
+        // Replace multiple instances of "<...>" that follow "..."
+        textContent = textContent.replace(/(\.\.\.\s*<[^>]*>\s*){2,}/g, ' ... ');
 
         node.innerHTML = textContent;
     }
@@ -3387,6 +3463,21 @@ function populateHighlightsTab() {
                 }, 100); // Delay to ensure the page navigates to the correct section
             });
         });
+
+        const highlightsContainer = document.querySelector('#highlights.hn-tab-content');
+        const highlightElements = highlightsContainer.querySelectorAll('[data-color]');
+    
+        highlightElements.forEach(element => {
+            const color = element.getAttribute('data-color');
+            const colorClass = `hl-${color}`;
+
+            if (colorTextSwitch.checked) {
+                element.classList.add(colorClass);
+            } else {
+                element.classList.remove(colorClass);
+            }
+        });
+
 
     } catch (error) {
         console.error('Error populating highlights tab:', error);
@@ -3650,6 +3741,25 @@ document.addEventListener('DOMContentLoaded', async () => {
     setTimeout(() => {
         // Initialize the modal when the script loads
         initializeHighlightsNotesModal();
+
+        const colorTextSwitch = document.getElementById('colorTextSwitch');
+        const highlightsContainer = document.querySelector('#highlights.hn-tab-content');
+    
+        colorTextSwitch.addEventListener('change', () => {
+            const highlightElements = highlightsContainer.querySelectorAll('[data-color]');
+    
+            highlightElements.forEach(element => {
+                const color = element.getAttribute('data-color');
+                const colorClass = `hl-${color}`;
+    
+                if (colorTextSwitch.checked) {
+                    element.classList.add(colorClass);
+                } else {
+                    element.classList.remove(colorClass);
+                }
+            });
+        });
+    
     }, 250);
 });
 

@@ -1,3 +1,5 @@
+let searchReloaded = false; // Global track whether results have been reloaded (if necessary)
+
 function formatTitle(title) {
     // Regex to match ':', ';', or '-' not surrounded by \w characters
     const breakRegex = /([-:;])(?!\w)/;
@@ -157,29 +159,11 @@ function sortAndDisplayResults(results, query, searchType) {
     displayResults(results);
 }
 
-
-// Helper function to display results (mockup, replace with actual implementation)
-function displayResults(results) {
-    console.log("Displaying results:");
-    results.forEach(book => console.log(`${book.Title} (Score: ${book.score})`));
-}
-
-// Helper function to display results (mockup, replace with actual implementation)
-function displayResults(results) {
-    console.log("Displaying results:");
-    results.forEach(book => console.log(`${book.Title} (Score: ${book.score})`));
-}
-
-// Helper function to display results (mockup, replace with actual implementation)
-function displayResults(results) {
-    console.log("Displaying results:");
-    results.forEach(book => console.log(`${book.Title} (Score: ${book.score})`));
-}
-
-
 function performSearch(query, searchType, isNewSearch) {
     query = query.trim();
-    const disjuncts = query.split(' OR ');
+
+    // Split the query into disjuncts based on "OR"
+    const disjuncts = query.split(' OR ').map(disjunct => disjunct.replace(/\s+AND\s+/gi, ' '));
 
     // Check each disjunct to ensure it has at least three alphanumeric characters
     for (let disjunct of disjuncts) {
@@ -292,6 +276,9 @@ function onBookClick(bookId) {
 }
 
 document.addEventListener('DOMContentLoaded', async() => {
+    // Set the initial zoom level from local storage
+    const initialZoomLevel = window.electronAPI.getZoomLevel();
+    window.electronAPI.setZoomLevel(initialZoomLevel);
     
     window.electronAPI.refreshMenu();
 
@@ -299,7 +286,6 @@ document.addEventListener('DOMContentLoaded', async() => {
     function manageNavigationOnLoad() {
         if (history.length > 1 && localStorage.getItem('lastAddress') && 
             localStorage.getItem('lastAddress') == window.location.pathname) {
-            console.log(window.location.pathname);
             return;
         } else if (history.length <= 1) {
             localStorage.removeItem('navCounter');
@@ -360,8 +346,13 @@ document.addEventListener('DOMContentLoaded', async() => {
     // Perform the search again using the saved query and type, if any
     if (query) {
         await performSearch(query, searchType, false);
-        applySavedSorting();    
-        restoreScrollPosition();
+        applySavedSorting();
+        const intervalId = setInterval(() => {
+            if (searchReloaded) {
+                clearInterval(intervalId);
+                restoreScrollPosition();
+            }
+        }, 100);
     } else {
         restoreScrollPosition();
     }
@@ -510,9 +501,9 @@ function restoreScrollPosition() {
     if (lastScrollPosition) {
         setTimeout(() => {
             window.scrollTo(0, parseInt(lastScrollPosition, 10));
+            searchReloaded = false;
         }, 100); // A slight delay to ensure all elements have been rendered
     }
-    
 }
 
 
@@ -537,10 +528,11 @@ function applySavedSorting() {
             sortByDate();
             break;
         default:
-            sortByDefault();
+            sortByDefault(false); // false = don't redo search
             break;
     }
     highlightCurrentSortButton();
+    searchReloaded = true;
 }
 
 function highlightCurrentSortButton() {
@@ -636,14 +628,13 @@ function sortByDate() {
     highlightCurrentSortButton();
 }
 
-function sortByDefault() {
+function sortByDefault(redoSearch = true) {
     const container = getSearchResultsContainer();
     let items = container.querySelectorAll('.searchResultItem');
-    let itemsArray = Array.from(items);
     // Perform search again
     const query = document.getElementById('searchBox').value;
     const searchType = document.querySelector('input[name="searchOption"]:checked').value;
-    initiateSearch(query, searchType);
+    if (redoSearch){ initiateSearch(query, searchType); }
     // Save the sorting type in Local Storage
     localStorage.setItem('sortingType', 'default');
     highlightCurrentSortButton();

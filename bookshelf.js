@@ -206,6 +206,10 @@ function getActiveTabContent() {
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
+    // Set the initial zoom level from local storage
+    const initialZoomLevel = window.electronAPI.getZoomLevel();
+    window.electronAPI.setZoomLevel(initialZoomLevel);
+
     window.electronAPI.refreshMenu();
 
     // Back button logic
