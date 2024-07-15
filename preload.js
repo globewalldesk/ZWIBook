@@ -30,6 +30,7 @@ contextBridge.exposeInMainWorld('electronAPI', {
     downloadImage: (imageData) => ipcRenderer.send('download-image', imageData),
     onDownloadImage: (callback) => ipcRenderer.on('download-image', (event, imageData) => callback(imageData)),
     sendBookInfo: (bookInfo) => ipcRenderer.send('send-book-info', bookInfo),
+    getZoomFactor: () => webFrame.getZoomFactor(),
     zoom: (deltaY) => ipcRenderer.send('zoom', deltaY),
     setZoomLevel: (level) => {
         webFrame.setZoomLevel(level);
@@ -42,7 +43,6 @@ contextBridge.exposeInMainWorld('electronAPI', {
     toggleSpellChecking: (callback) => ipcRenderer.on('toggle-spell-checking', callback),
     loadHlnotesData: (bookId) => ipcRenderer.invoke('read-hlnotes-data', bookId),
     saveHlnotesData: (bookId, data) => ipcRenderer.invoke('write-hlnotes-data', bookId, data),
-    getZoomFactor: () => webFrame.getZoomFactor(),
     exportBookshelfData: () => ipcRenderer.invoke('export-bookshelf-data'),
     importBookshelfData: () => ipcRenderer.invoke('import-bookshelf-data'),
     exportHlnotesData: () => ipcRenderer.invoke('export-hlnotes-data'),

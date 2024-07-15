@@ -1475,6 +1475,17 @@ document.addEventListener('wheel', (event) => {
     }
 });
 
+document.addEventListener('keydown', (event) => {
+    if (event.ctrlKey && (event.key === '=' || event.key === '+')) {
+        // Ctrl and + key
+        event.preventDefault();
+        window.electronAPI.zoom(-1); // Zoom in
+    } else if (event.ctrlKey && event.key === '-') {
+        // Ctrl and - key
+        event.preventDefault();
+        window.electronAPI.zoom(1); // Zoom out
+    }
+});
 
 
 ///////////////////////////

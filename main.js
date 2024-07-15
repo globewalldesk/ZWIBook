@@ -455,7 +455,7 @@ function createWindow() {
                 },
                 { type: 'separator' },
                 {
-                    label: 'Font styles...',
+                    label: 'Font Styles...',
                     accelerator: 'CmdOrCtrl+Alt+F',
                     click: () => {
                         mainWindow.webContents.send('choose-font');

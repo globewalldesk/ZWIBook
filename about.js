@@ -9,6 +9,18 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     });
 
+    document.addEventListener('keydown', (event) => {
+        if (event.ctrlKey && (event.key === '=' || event.key === '+')) {
+            // Ctrl and + key
+            event.preventDefault();
+            window.electronAPI.zoom(-1); // Zoom in
+        } else if (event.ctrlKey && event.key === '-') {
+            // Ctrl and - key
+            event.preventDefault();
+            window.electronAPI.zoom(1); // Zoom out
+        }
+    });    
+
     // Back button logic
     function manageNavigationOnLoad() {
         if (history.length > 1 && localStorage.getItem('lastAddress') && 
@@ -94,15 +106,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             inputField.select();  // Select, so typing = delete
         }
     });
-
-    // Handling closing modal when clicking outside the modal
-    window.onclick = function (event) {
-        if (event.target === modal) {
-            modal.style.display = 'none';
-        } else if (event.target === fontModal) {
-            closeFontModal(); // Close the modal if the click was outside the modal content
-        }
-    };
 
     // Handling closing modal on pressing the 'Escape' key
     document.onkeydown = function (event) {
