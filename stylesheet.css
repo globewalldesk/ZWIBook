@@ -29,7 +29,7 @@ body > #header {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100% !important;
     /* Header takes full viewport width */
     z-index: 1000;
     background-color: #007BFF;
@@ -92,7 +92,8 @@ h2, h3, h4, h5, h6, p, td {
 
 img {
     max-width: 720px !important;
-    z-index: 100000;
+    z-index: 5;
+    position: relative;
 }
 
 table {
@@ -311,12 +312,9 @@ header {
     cursor: pointer;
 }
 
-
 #body {
     margin: 0 auto !important;
-    /* Center the content */
     max-width: 800px !important;
-    /* Max content width */
     overflow-x: none;
     overflow-y: none;
 }
@@ -603,6 +601,7 @@ a.more:hover {
     padding: 10px;
     border: 1px solid #ccc;
     margin: 0 20px 10px 20px;
+    width: unset !important;
 }
 
 /* Class for hiding the front matter initially */

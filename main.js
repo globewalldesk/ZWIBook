@@ -1201,8 +1201,9 @@ ipcMain.handle('download-image', async (event, imagePath) => {
 function handleDownloadImageRequest({ base64data, originalFilename }) {
     const buffer = Buffer.from(base64data, 'base64');
 
-    // Show the save dialog
-    dialog.showSaveDialog({
+    // Show the save dialog with mainWindow as the parent
+    dialog.showSaveDialog(mainWindow, {
+        modal: true,
         title: 'Save Image',
         defaultPath: originalFilename,
         filters: [
