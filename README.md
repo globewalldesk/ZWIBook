@@ -1,93 +1,105 @@
-# KSFGutenberg
+# ZWIBook
 
+**Note: this readme was generated automatically by ChatGPT-4. It might not be quite right.**
 
+ZWIBook is a digital library application developed by the Knowledge Standards Foundation (KSF). It allows users to find, read, highlight, and take notes on books from the extensive Project Gutenberg collection. The primary goal is to preserve knowledge and make it accessible offline, providing features that support research and personal reading.
 
-## Getting started
+## Features
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+### General Features
+- **Access to Project Gutenberg Collection**: Contains over 69,000 texts, mainly books published before 1920.
+- **Digital Preservation**: Ensures digital censorship resistance by distributing knowledge through thumb drives.
+- **User Control**: Allows users to manage their bookshelf, bookmarks, highlights, and notes locally.
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+### Reader Features
+- **Search and Browse Books**: Easily find books by title or author.
+- **Bookmarking**: Hover over a paragraph and click the bookmark icon to save your place.
+- **Highlighting and Notes**: Select text to highlight it in different colors or add notes with markdown support.
+- **Page Navigation**: Use page buttons to navigate through the book.
+- **Font Customization**: Change font styles and sizes, with preferences saved for future use.
+- **Research Tools**: Right-click on selected text to search related books, define words, translate passages, or ask AI for explanations.
 
-## Add your files
+### Bookshelf Features
+- **Manage Selections**: Switch between "Saved" and "Viewed" tabs to manage your book collection.
+- **Sorting and Filtering**: Sort books by author, title, or date. Use the "Remove All" button to clear lists with 20 or more books.
+- **Export/Import Data**: Easily export or import highlight and note data.
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+### Printing and Downloading
+- **Save as PDF**: Save books as PDFs for printing or offline reading.
+- **Export ZWI**: Export the original ZWI files, which are ZIP files containing the book's HTML and TXT files.
+- **Project Gutenberg Files**: Access the original Project Gutenberg files in various formats.
 
-```
-cd existing_repo
-git remote add origin https://gitlab.com/ks_found/ksfgutenberg.git
-git branch -M main
-git push -uf origin main
-```
+### Digital Signature Verification
+- **Verify ZWI Files**: Follow steps to ensure the integrity and authenticity of a ZWI file using digital signatures.
 
-## Integrate with your tools
+### Troubleshooting and Q&A
+- **Why Use ZWIBook?**: Local control over your library and research tools that make it unique.
+- **Share Notes**: Potential for sharing notes with other users.
+- **Move Book Files**: Instructions for transferring book files from the thumb drive to your computer.
+- **Backup Data**: Recommended steps for backing up your bookshelf, bookmarks, highlights, and notes.
+- **Report Issues**: Contact larry@encyclosphere.org for support with major bugs or unreadable books.
 
-- [ ] [Set up project integrations](https://gitlab.com/ks_found/ksfgutenberg/-/settings/integrations)
-
-## Collaborate with your team
-
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
-
-## Test and Deploy
-
-Use the built-in continuous integration in GitLab.
-
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
-
-***
-
-# Editing this README
-
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
-
-## Suggestions for a good README
-
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
-
-## Name
-Choose a self-explaining name for your project.
-
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+### Additional Notes and Disclaimers
+- **Rendering of Books**: Books should be well-rendered, but some design errors might remain.
+- **Software "As-Is"**: ZWIBook is provided as a "thank-you" gift and is presented "as-is" without guarantees.
+- **Respecting Project Gutenberg License**: Distribution complies with the Project Gutenberg license.
 
 ## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+1. **Installation**: Copy the ZWIBook application to your thumb drive.
+2. **Running ZWIBook**: Open the application and start exploring the Project Gutenberg collection.
+3. **Managing Your Library**: Use the bookshelf to save and view books, take notes, and highlight text.
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+## Development
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+### Prerequisites
+- **Node.js and npm**: Ensure you have Node.js and npm installed.
+- **Electron**: This project uses Electron to run the app.
+
+### Getting Started
+1. **Clone the repository**: `git clone https://gitlab.com/your-repo/zwibook.git`
+2. **Install dependencies**: Navigate to the project directory and run `npm install`.
+3. **Start the application**: Run `npm start` to launch the app.
+
+### Directory Structure
+- **/book_zwis**: Directory containing all the book ZWI files.
+- **/images**: Directory containing icons and images used in the app.
+- **/html**: Directory containing the HTML files for different views.
+- **/stylesheets**: Directory containing the CSS files for styling.
+- **/scripts**: Directory containing the JavaScript files for app functionality.
+
+### Main Components
+- **main.js**: The main process script, managing application lifecycle and system events.
+- **preload.js**: The script that bridges between the main process and the renderer process.
+- **renderer.js**: The script for rendering the UI and handling user interactions.
+- **index.html**: The main HTML file that loads the app interface.
+
+### Building the App
+To build the app for distribution, run the following command:
+```
+npm run build
+```
+This will package the app using Electron Packager.
 
 ## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+We welcome contributions from the community. Here’s how you can help:
+- **Bug Reports**: Submit detailed bug reports in the GitLab issue tracker.
+- **Feature Requests**: Suggest new features or enhancements.
+- **Code Contributions**: Fork the repository, make your changes, and submit a pull request.
 
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+### Code Style
+- Follow the existing code style.
+- Ensure your code is well-documented.
 
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+### Testing
+- Write unit tests for new features.
+- Ensure existing tests pass before submitting a pull request.
 
 ## License
-For open source projects, say how it is licensed.
 
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+ZWIBook is licensed under the MIT License.
+
+## Contact and Support
+
+For any issues, feature requests, or contributions, please contact larry@encyclosphere.org. For more details about the Knowledge Standards Foundation, visit [Encyclosphere](https://encyclosphere.org).
