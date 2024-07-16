@@ -57,7 +57,7 @@ File.open('./html/categories.html', 'w') do |file|
   file.puts <<~HTML
   <html>
   <head>
-  <title>Categories</title>
+  <title>ZWIBook Categories</title>
   <link rel="stylesheet" href="../stylesheet.css">
   <script src="../categories.js"></script>
   </head>
@@ -118,7 +118,7 @@ categories.each do |parent_code, details|
     file.puts <<~HTML
     <html>
     <head>
-    <title>Category</title>
+    <title>ZWIBook Category: #{details[:description]}</title>
     <link rel="stylesheet" href="../stylesheet.css">
     <script src="../categories.js"></script>
     </head>
@@ -225,7 +225,7 @@ books.each do |book|
         f.puts <<~HTML
         <html>
         <head>
-        <title>Subcategory</title>
+        <title>ZWIBook Subcategory: #{description}</title>
         <link rel="stylesheet" href="../stylesheet.css">
         <script src="../categories.js"></script>
         </head>
