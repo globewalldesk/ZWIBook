@@ -22,23 +22,31 @@ function sortAndDisplayResults(results, query, searchType) {
     const fullPhrase = query.toLowerCase(); // The full search phrase, not split
 
     // Function to generate all permutations of an array of strings
-    function generatePermutations(array) {
-        if (array.length === 0) return [[]];
-        const firstElement = array[0];
-        const rest = array.slice(1);
-        const permsWithoutFirst = generatePermutations(rest);
-        const allPermutations = [];
+    function generatePermutations(array, maxLength) {
+        const startTime = performance.now();
     
-        permsWithoutFirst.forEach(perm => {
-            for (let i = 0; i <= perm.length; i++) {
-                const permWithFirst = [...perm.slice(0, i), firstElement, ...perm.slice(i)];
-                allPermutations.push(permWithFirst);
-            }
-        });
+        // Helper function to generate permutations of a given length
+        function permute(arr, len) {
+            if (len === 1) return arr.map(el => [el]);
+            let permutations = [];
+            arr.forEach((el, i) => {
+                const smallerPerms = permute(arr.slice(0, i).concat(arr.slice(i + 1)), len - 1);
+                smallerPerms.forEach(smallerPerm => {
+                    permutations.push([el].concat(smallerPerm));
+                });
+            });
+            return permutations;
+        }
     
+        let allPermutations = [];
+        for (let len = 1; len <= Math.min(maxLength, array.length); len++) {
+            allPermutations = allPermutations.concat(permute(array, len));
+        }
+    
+        const endTime = performance.now();
         return allPermutations;
     }
-    
+        
     // Function to normalize strings by removing punctuation and converting to lowercase
     function normalizeString(str) {
         return str.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, '').trim();
@@ -49,78 +57,70 @@ function sortAndDisplayResults(results, query, searchType) {
         return regex.test(haystack);
     }
 
-    // Function to calculate the score for each book based on the search criteria
     function scoreBook(book) {
+        const startTime = performance.now(); // Start timing
         let score = 0;
         const title = normalizeString(book.Title);
         const authors = book.CreatorNames ? book.CreatorNames.map(name => normalizeString(name)) : [];
-
-        // Generate permutations of the search keywords
+    
         const normalizedKeywords = keywords.map(keyword => normalizeString(keyword));
-        const permutations = generatePermutations(normalizedKeywords).map(perm => perm.join(' '));
-
-        // Adjust scoring based on the type of search for exact phrase match
+        const maxPermutationLength = 3; // Limit the length of permutations to 3
+        const permutations = generatePermutations(normalizedKeywords, maxPermutationLength).map(perm => perm.join(' '));    
         switch (searchType) {
             case 'title':
                 if (title.includes(fullPhrase)) {
-                    score += 500; // Big boost for full phrase match in title
+                    score += 500;
                     if (title.startsWith(fullPhrase)) {
-                        score += 100; // Extra bonus for pole position in title
+                        score += 100;
                     }
                 }
                 break;
             case 'author':
-                // Check if any author matches any of the normalized permutations as whole words
                 const authorMatchesPhrase = authors.some(author => permutations.some(perm => isWholeWordMatch(author, perm)));
-
                 if (authorMatchesPhrase) {
-                    score += 500; // Big boost for full phrase match in authors
-                    // Check for pole position in any author
+                    score += 500;
                     const authorStartsWithPhrase = authors.some(author => permutations.some(perm => author.startsWith(perm)));
                     if (authorStartsWithPhrase) {
-                        score += 100; // Extra bonus for pole position in authors
+                        score += 100;
                     }
                 }
                 break;
             case 'both':
             default:
                 if (title.includes(fullPhrase)) {
-                    score += 500; // Big boost for full phrase match in title
+                    score += 500;
                     if (title.startsWith(fullPhrase)) {
-                        score += 100; // Extra bonus for pole position in title
+                        score += 100;
                     }
                 }
-
                 const authorMatchesPhraseForBoth = authors.some(author => permutations.some(perm => isWholeWordMatch(author, perm)));
-
                 if (authorMatchesPhraseForBoth) {
-                    score += 500; // Big boost for full phrase match in authors
+                    score += 500;
                     const authorStartsWithPhraseForBoth = authors.some(author => permutations.some(perm => author.startsWith(perm)));
                     if (authorStartsWithPhraseForBoth) {
-                        score += 100; // Extra bonus for pole position in authors
+                        score += 100;
                     }
                 }
                 break;
         }
-
+    
         keywords.forEach(keyword => {
             let titleIndex = title.indexOf(keyword);
             let authorIndex = Math.min(...authors.map(author => author.indexOf(keyword)).filter(index => index !== -1));
-
-            // Adjust scoring based on the type of search
+    
             switch (searchType) {
                 case 'title':
                     if (isWholeWordMatch(title, keyword)) {
-                        score += 200; // Higher score for exact match
+                        score += 200;
                     } else if (titleIndex !== -1) {
-                        score += (100 - titleIndex); // Lower score for partial match
+                        score += (100 - titleIndex);
                     }
                     break;
                 case 'author':
                     if (authors.some(author => isWholeWordMatch(author, keyword))) {
-                        score += 200; // Higher score for exact match
+                        score += 200;
                     } else if (authorIndex !== -1) {
-                        score += (100 - authorIndex); // Lower score for partial match
+                        score += (100 - authorIndex);
                     }
                     break;
                 case 'both':
@@ -128,25 +128,25 @@ function sortAndDisplayResults(results, query, searchType) {
                     let titleScore = 0;
                     let authorScore = 0;
                     if (isWholeWordMatch(title, keyword)) {
-                        titleScore += 200; // Higher score for exact match
+                        titleScore += 200;
                     } else if (titleIndex !== -1) {
-                        titleScore += (100 - titleIndex); // Lower score for partial match
+                        titleScore += (100 - titleIndex);
                     }
                     if (authors.some(author => isWholeWordMatch(author, keyword))) {
-                        authorScore += 200; // Higher score for exact match
+                        authorScore += 200;
                     } else if (authorIndex !== -1) {
-                        authorScore += (100 - authorIndex); // Lower score for partial match
+                        authorScore += (100 - authorIndex);
                     }
-                    // Credit only the higher score of the two
                     const maxScore = Math.max(titleScore, authorScore);
                     score += maxScore;
                     break;
             }
         });
-
+    
+        const endTime = performance.now(); // End timing
         return score;
     }
-
+    
 
     // Assign a score to each result
     results.forEach(book => {
@@ -163,7 +163,7 @@ function performSearch(query, searchType, isNewSearch) {
     query = query.trim();
 
     // Split the query into disjuncts based on "OR"
-    const disjuncts = query.split(' OR ').map(disjunct => disjunct.replace(/\s+AND\s+/gi, ' '));
+const disjuncts = query.split(' OR ').map(disjunct => disjunct.replace(/[^\w\s'-]|_+/g, '').replace(/\s+AND\s+/gi, ' '));
 
     // Check each disjunct to ensure it has at least three alphanumeric characters
     for (let disjunct of disjuncts) {

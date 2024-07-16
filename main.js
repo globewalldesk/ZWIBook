@@ -1,4 +1,5 @@
 const { app, BrowserWindow, ipcMain, Menu, MenuItem, shell, dialog } = require('electron');
+const { exec } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 const os = require('os');
@@ -216,6 +217,30 @@ function selectZwiDirectory() {
     });
 }
 
+function openExternalUrl(url) {
+    let command;
+    switch (os.platform()) {
+        case 'win32':
+            command = `start ${url}`;
+            break;
+        case 'darwin':
+            command = `open ${url}`;
+            break;
+        case 'linux':
+            command = `xdg-open ${url}`;
+            break;
+        default:
+            command = `start ${url}`;
+            break;
+    }
+
+    exec(command, (err) => {
+        if (err) {
+            console.error('Failed to open URL:', err);
+        }
+    });
+}
+
 function createWindow() {
     // Create the browser window.
     mainWindow = new BrowserWindow({
@@ -230,7 +255,7 @@ function createWindow() {
 
     // Open external links in default browser
     ipcMain.on('open-external', (event, url) => {
-        shell.openExternal(url);
+        openExternalUrl(url);
     });
     
 
@@ -313,7 +338,7 @@ function createWindow() {
                         try {
                             const data = await mainWindow.webContents.printToPDF(options);
                             fs.writeFileSync(pdfPath, data);
-                            shell.openExternal('file://' + pdfPath);
+                            openExternalUrl('file://' + pdfPath);
                         } catch (error) {
                             console.log('Failed to save PDF:', error);
                         }
@@ -335,7 +360,7 @@ function createWindow() {
                         try {
                             const data = await mainWindow.webContents.printToPDF(options);
                             fs.writeFileSync(pdfPath, data);
-                            shell.openExternal('file://' + pdfPath);
+                            openExternalUrl('file://' + pdfPath);
                         } catch (error) {
                             console.log('Failed to save PDF:', error);
                         }
@@ -380,15 +405,15 @@ function createWindow() {
                 {
                     label: 'Project Gutenberg book files (requires Internet)',
                     submenu: [
-                        { label: 'Project Gutenberg book page', id: 'pgBookPage', click: () => shell.openExternal('https://www.gutenberg.org/ebooks/') },
-                        { label: 'Read online (HTML with images)', id: 'readOnline', click: () => shell.openExternal('https://www.gutenberg.org/ebooks/.html.images') },
-                        { label: 'EPUB3 (E-readers, with images)', id: 'epub3', click: () => shell.openExternal('https://www.gutenberg.org/ebooks/.epub3.images') },
-                        { label: 'EPUB (Older E-readers, with images)', id: 'epubOldImages', click: () => shell.openExternal('https://www.gutenberg.org/ebooks/.epub.images') },
-                        { label: 'EPUB (No images, Older E-readers)', id: 'epubNoImages', click: () => shell.openExternal('https://www.gutenberg.org/ebooks/.epub.noimages') },
-                        { label: 'Kindle with images', id: 'kindleImages', click: () => shell.openExternal('https://www.gutenberg.org/ebooks/.kf8.images') },
-                        { label: 'Older Kindles with images', id: 'kindleOldImages', click: () => shell.openExternal('https://www.gutenberg.org/ebooks/.kindle.images') },
-                        { label: 'Plain Text UTF-8', id: 'plainText', click: () => shell.openExternal('https://www.gutenberg.org/ebooks/.txt.utf-8') },
-                        { label: 'Download HTML (ZIP)', id: 'downloadHtmlZip', click: () => shell.openExternal('https://www.gutenberg.org/cache/epub//pg-h.zip') }
+                        { label: 'Project Gutenberg book page', id: 'pgBookPage', click: () => openExternalUrl('https://www.gutenberg.org/ebooks/') },
+                        { label: 'Read online (HTML with images)', id: 'readOnline', click: () => openExternalUrl('https://www.gutenberg.org/ebooks/.html.images') },
+                        { label: 'EPUB3 (E-readers, with images)', id: 'epub3', click: () => openExternalUrl('https://www.gutenberg.org/ebooks/.epub3.images') },
+                        { label: 'EPUB (Older E-readers, with images)', id: 'epubOldImages', click: () => openExternalUrl('https://www.gutenberg.org/ebooks/.epub.images') },
+                        { label: 'EPUB (No images, Older E-readers)', id: 'epubNoImages', click: () => openExternalUrl('https://www.gutenberg.org/ebooks/.epub.noimages') },
+                        { label: 'Kindle with images', id: 'kindleImages', click: () => openExternalUrl('https://www.gutenberg.org/ebooks/.kf8.images') },
+                        { label: 'Older Kindles with images', id: 'kindleOldImages', click: () => openExternalUrl('https://www.gutenberg.org/ebooks/.kindle.images') },
+                        { label: 'Plain Text UTF-8', id: 'plainText', click: () => openExternalUrl('https://www.gutenberg.org/ebooks/.txt.utf-8') },
+                        { label: 'Download HTML (ZIP)', id: 'downloadHtmlZip', click: () => openExternalUrl('https://www.gutenberg.org/cache/epub//pg-h.zip') }
                     ]
                 },
                 { type: 'separator' },
@@ -494,7 +519,7 @@ function createWindow() {
                     label: 'KSF Website (Encyclosphere.org)',
                     click: async () => {
                         const { shell } = require('electron');
-                        await shell.openExternal('https://encyclosphere.org');
+                        await openExternalUrl('https://encyclosphere.org');
                     }
                 }
             ]
@@ -559,21 +584,21 @@ function createWindow() {
                 label: 'Look up on EncycloSearch.org',
                 click: () => {
                     const selectedText = encodeURIComponent(params.selectionText);
-                    shell.openExternal(`https://encyclosearch.org/?q=${selectedText}`);
+                    openExternalUrl(`https://encyclosearch.org/?q=${selectedText}`);
                 }
             }));
             contextMenu.append(new MenuItem({
                 label: 'Look up on EncycloReader.org',
                 click: () => {
                     const selectedText = encodeURIComponent(params.selectionText);
-                    shell.openExternal(`https://encycloreader.org/find.php?query=${selectedText}`);
+                    openExternalUrl(`https://encycloreader.org/find.php?query=${selectedText}`);
                 }
             }));
             contextMenu.append(new MenuItem({
                 label: 'Define on TheFreeDictionary.com',
                 click: () => {
                     const selectedText = encodeURIComponent(params.selectionText);
-                    shell.openExternal(`https://www.thefreedictionary.com/_/search.aspx?tab=1&SearchBy=0&Word=${selectedText}&TFDBy=0`);
+                    openExternalUrl(`https://www.thefreedictionary.com/_/search.aspx?tab=1&SearchBy=0&Word=${selectedText}&TFDBy=0`);
                 }
             }));
         }
@@ -584,14 +609,14 @@ function createWindow() {
                 label: 'Translate with Google',
                 click: () => {
                     const selectedText = encodeURIComponent(params.selectionText);
-                    shell.openExternal(`https://translate.google.com/?sl=auto&tl=en&text=${selectedText}`);
+                    openExternalUrl(`https://translate.google.com/?sl=auto&tl=en&text=${selectedText}`);
                 }
             }));
             contextMenu.append(new MenuItem({
                 label: 'Translate with Bing',
                 click: () => {
                     const selectedText = encodeURIComponent(params.selectionText);
-                    shell.openExternal(`https://www.bing.com/translator/?text=${selectedText}`);
+                    openExternalUrl(`https://www.bing.com/translator/?text=${selectedText}`);
                 }
             }));
             function truncateText(text, maxLength) {
@@ -615,7 +640,7 @@ function createWindow() {
                     const prompt = `Please explain this (source: "${truncatedTitle}" by ${truncatedAuthor}): "${truncatedSelectedText}"`;
                     const formattedPrompt = encodeURIComponent(prompt);
                     const bingUrl = `https://www.bing.com/search?showconv=1&sendquery=1&q=${formattedPrompt}&qs=ds&form=CHRD01`;
-                    shell.openExternal(bingUrl);
+                    openExternalUrl(bingUrl);
                 }
             }));
             
@@ -634,7 +659,7 @@ function createWindow() {
                     const prompt = `Please explain this (source: "${truncatedTitle}" by ${truncatedAuthor}): "${truncatedSelectedText}"`;
                     const formattedPrompt = encodeURIComponent(prompt);
                     const youUrl = `https://you.com/search?q=${formattedPrompt}&fromSearchBar=true&tbm=youchat`;
-                    shell.openExternal(youUrl);
+                    openExternalUrl(youUrl);
                 }
             }));            
         }
@@ -1039,7 +1064,7 @@ function searchDatabase(query, searchType) {
     const stopWords = ['the', 'of', 'in', 'on', 'at', 'for', 'with', 'a', 'an', 'and', 'or', 'but', 'is', 'if', 'it', 'as', 'to', 'that', 'which', 'by', 'from', 'up', 'out', 'off', 'this', 'all'];
     const searches = searchTerms.filter(term => !stopWords.includes(term.toLowerCase()));
     console.log("searchCount", searches.length);
-    if (results.length > 5000 || searches.length > 3) {
+    if (results.length > 5000) {
         return "TOOMANYRESULTS";
     }
 
@@ -1076,31 +1101,31 @@ ipcMain.on('update-gutenberg-menu', (event, bookId) => {
         pgSubMenu.submenu.items.forEach(item => {
             switch(item.id) {
                 case 'pgBookPage':
-                    item.click = () => shell.openExternal(`https://www.gutenberg.org/ebooks/${bookId}`);
+                    item.click = () => openExternalUrl(`https://www.gutenberg.org/ebooks/${bookId}`);
                     break;
                 case 'readOnline':
-                    item.click = () => shell.openExternal(`https://www.gutenberg.org/ebooks/${bookId}.html.images`);
+                    item.click = () => openExternalUrl(`https://www.gutenberg.org/ebooks/${bookId}.html.images`);
                     break;
                 case 'epub3':
-                    item.click = () => shell.openExternal(`https://www.gutenberg.org/ebooks/${bookId}.epub3.images`);
+                    item.click = () => openExternalUrl(`https://www.gutenberg.org/ebooks/${bookId}.epub3.images`);
                     break;
                 case 'epubOldImages':
-                    item.click = () => shell.openExternal(`https://www.gutenberg.org/ebooks/${bookId}.epub.images`);
+                    item.click = () => openExternalUrl(`https://www.gutenberg.org/ebooks/${bookId}.epub.images`);
                     break;
                 case 'epubNoImages':
-                    item.click = () => shell.openExternal(`https://www.gutenberg.org/ebooks/${bookId}.epub.noimages`);
+                    item.click = () => openExternalUrl(`https://www.gutenberg.org/ebooks/${bookId}.epub.noimages`);
                     break;
                 case 'kindleImages':
-                    item.click = () => shell.openExternal(`https://www.gutenberg.org/ebooks/${bookId}.kf8.images`);
+                    item.click = () => openExternalUrl(`https://www.gutenberg.org/ebooks/${bookId}.kf8.images`);
                     break;
                 case 'kindleOldImages':
-                    item.click = () => shell.openExternal(`https://www.gutenberg.org/ebooks/${bookId}.kindle.images`);
+                    item.click = () => openExternalUrl(`https://www.gutenberg.org/ebooks/${bookId}.kindle.images`);
                     break;
                 case 'plainText':
-                    item.click = () => shell.openExternal(`https://www.gutenberg.org/ebooks/${bookId}.txt.utf-8`);
+                    item.click = () => openExternalUrl(`https://www.gutenberg.org/ebooks/${bookId}.txt.utf-8`);
                     break;
                 case 'downloadHtmlZip':
-                    item.click = () => shell.openExternal(`https://www.gutenberg.org/cache/epub/${bookId}/pg${bookId}-h.zip`);
+                    item.click = () => openExternalUrl(`https://www.gutenberg.org/cache/epub/${bookId}/pg${bookId}-h.zip`);
                     break;
             }
         });
