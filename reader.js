@@ -3603,37 +3603,48 @@ function createHanContainer(hnid, hnidSpans, noteContent) {
     // Create a container for the highlights (pids)
     const highlightContainer = document.createElement('div');
     highlightContainer.classList.add('highlight-container');
-    hnidSpans.forEach(({ html, colorClass }) => {
-        const paragraphDiv = document.createElement('div');
-        paragraphDiv.classList.add('highlight-paragraph'); // Add class for styling
-
-        // Modify the inner HTML to include the curly quotes
-        const modifiedHtml = `<span class="curly-left">&#8220;</span>${html}<span class="curly-right">&#8221;</span>`;
-        paragraphDiv.innerHTML = modifiedHtml;
-
-        // Add the color class for the border lines
-        switch (colorClass) {
-            case 'hl-yellow':
-                paragraphDiv.classList.add('border-yellow');
-                break;
-            case 'hl-pink':
-                paragraphDiv.classList.add('border-pink');
-                break;
-            case 'hl-green':
-                paragraphDiv.classList.add('border-green');
-                break;
-            case 'hl-blue':
-                paragraphDiv.classList.add('border-blue');
-                break;
-            case 'hl-purple':
-                paragraphDiv.classList.add('border-purple');
-                break;
-            default:
-                console.warn('No matching color class found for:', colorClass);
-                break;
+    
+    // Determine the most common color class
+    const colorClassCount = {};
+    hnidSpans.forEach(({ colorClass }) => {
+        if (colorClass) {
+            colorClassCount[colorClass] = (colorClassCount[colorClass] || 0) + 1;
         }
+    });
+    const mostCommonColorClass = Object.keys(colorClassCount).reduce((a, b) => colorClassCount[a] > colorClassCount[b] ? a : b, 'hl-yellow');
+
+    // Add the most common color class to the highlight container
+    switch (mostCommonColorClass) {
+        case 'hl-yellow':
+            highlightContainer.classList.add('border-yellow');
+            break;
+        case 'hl-pink':
+            highlightContainer.classList.add('border-pink');
+            break;
+        case 'hl-green':
+            highlightContainer.classList.add('border-green');
+            break;
+        case 'hl-blue':
+            highlightContainer.classList.add('border-blue');
+            break;
+        case 'hl-purple':
+            highlightContainer.classList.add('border-purple');
+            break;
+        default:
+            console.warn('No matching color class found for:', mostCommonColorClass);
+            break;
+    }
+
+    hnidSpans.forEach(({ html }) => {
+        const paragraphDiv = document.createElement('div');
+        paragraphDiv.classList.add('highlight-paragraph');
+        paragraphDiv.innerHTML = html;
         highlightContainer.appendChild(paragraphDiv);
     });
+
+    // Wrap the content of the highlight container with curly quotes
+    const wrappedContent = `<span class="curly-left">&#8220;</span>${highlightContainer.innerHTML}<span class="curly-right">&#8221;</span>`;
+    highlightContainer.innerHTML = wrappedContent;
 
     const noteContainer = document.createElement('div');
     noteContainer.classList.add('note-container');
@@ -3644,13 +3655,13 @@ function createHanContainer(hnid, hnidSpans, noteContent) {
 
     // Combine the highlight and note containers into a 'han' container
     const hanContainer = document.createElement('div');
-    hanContainer.classList.add('han-container', 'highlight-item'); // Added 'highlight-item' class for consistency
+    hanContainer.classList.add('han-container', 'highlight-item');
     hanContainer.setAttribute('data-pid', hnidSpans[0]?.pid);
     hanContainer.appendChild(highlightContainer);
     hanContainer.appendChild(noteContainer);
 
     hanContainer.addEventListener('click', function (event) {
-        event.stopPropagation(); // Ensure the event doesn't propagate further
+        event.stopPropagation();
     });
 
     return hanContainer.outerHTML;
