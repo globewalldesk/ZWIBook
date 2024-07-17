@@ -85,6 +85,19 @@ h1#headTitle {
     margin-bottom: 0 !important;
 }
 
+#header img {
+    border: none;
+}
+.bm-paragraph img {
+    border: none;
+}
+.nav-button img {
+    border: none;
+}
+.edit-note img {
+    border: none !important;
+}
+
 h2, h3, h4, h5, h6, p, td {
     color: black !important;
 }
@@ -143,7 +156,6 @@ td img {
     border-radius: 3px;
     font-size: 12px !important;
     line-height: normal !important;
-    overflow: hidden;
     /* Hide overflow to maintain the shape of buttons */
 }
 
@@ -922,7 +934,8 @@ a:has(> sup) {
 
 #bookmarksDropdown {
     color: black;
-    max-height: unset !important;
+    flex-grow: 1;
+    overflow-y: auto !important;
 }
 
 .bookmark-item {
@@ -1109,6 +1122,30 @@ a:has(> sup) {
          url('fonts/LiberationSerif-Italic.ttf') format('truetype'),
          url('fonts/LiberationSerif-BoldItalic.ttf') format('truetype');
 }
+/* Calibri Regular */
+@font-face {
+    font-family: 'Calibri';
+    src: url('fonts/Calibri.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Calibri Bold */
+@font-face {
+    font-family: 'Calibri';
+    src: url('fonts/calibrib.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Calibri Italic */
+@font-face {
+    font-family: 'Calibri';
+    src: url('fonts/calibrii.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
 
 /* Default Cambria font */
 @font-face {
@@ -1144,6 +1181,36 @@ a:has(> sup) {
         font-style: normal;
     }
 }
+//* Calibri macOS */
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+    @font-face {
+        font-family: 'Calibri';
+        src: url('fonts/Calibri.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Calibri';
+        src: url('fonts/calibrib.ttf') format('truetype');
+        font-weight: bold;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Calibri';
+        src: url('fonts/calibrii.ttf') format('truetype');
+        font-weight: normal;
+        font-style: italic;
+    }
+
+    @font-face {
+        font-family: 'Calibri';
+        src: url('fonts/calibriz.ttf') format('truetype');
+        font-weight: bold;
+        font-style: italic;
+    }
+}
 
 /* Serif Fonts */
 #LiberationSerif {
@@ -1167,7 +1234,7 @@ a:has(> sup) {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 #Calibri {
-    font-family: Calibri, Arial, sans-serif;
+    font-family: Calibri, 'Helvetica Neue', Arial, sans-serif;
 }
 
 /* Monospace Font */

@@ -218,19 +218,21 @@ function selectZwiDirectory() {
 }
 
 function openExternalUrl(url) {
+    // Escape the URL to ensure it is properly handled by the shell command
+    const escapedUrl = url.replace(/"/g, '\\"');
     let command;
     switch (os.platform()) {
         case 'win32':
-            command = `start ${url}`;
+            command = `start "" "${escapedUrl}"`;
             break;
         case 'darwin':
-            command = `open ${url}`;
+            command = `open "${escapedUrl}"`;
             break;
         case 'linux':
-            command = `xdg-open ${url}`;
+            command = `xdg-open "${escapedUrl}"`;
             break;
         default:
-            command = `start ${url}`;
+            command = `start "" "${escapedUrl}"`;
             break;
     }
 
@@ -251,6 +253,11 @@ function createWindow() {
             nodeIntegration: false,
             contextIsolation: true
         },
+    });
+
+    // Handle the window closed event
+    mainWindow.on('closed', () => {
+        mainWindow = null;
     });
 
     // Open external links in default browser
@@ -291,8 +298,6 @@ function createWindow() {
         ...(isMac ? [{
             label: app.name,
             submenu: [
-                { role: 'about' },
-                { type: 'separator' },
                 { role: 'services' },
                 { type: 'separator' },
                 { role: 'hide' },
@@ -440,16 +445,6 @@ function createWindow() {
                 { role: 'selectAll' },
                 ...(isMac ? [
                     { role: 'pasteAndMatchStyle' },
-                    { role: 'delete' },
-                    { role: 'selectAll' },
-                    { type: 'separator' },
-                    {
-                        label: 'Speech',
-                        submenu: [
-                            { role: 'startSpeaking' },
-                            { role: 'stopSpeaking' }
-                        ]
-                    }
                 ] : [
                     { type: 'separator' },
                     {
@@ -489,7 +484,16 @@ function createWindow() {
                 { type: 'separator' },
                 { role: 'zoomIn' },
                 { role: 'zoomOut' },
-                { role: 'resetZoom' }
+                { role: 'resetZoom' },
+                { type: 'separator' },
+                {
+                    label: 'Speech',
+                    submenu: [
+                        { role: 'startSpeaking' },
+                        { role: 'stopSpeaking' }
+                    ]
+                }
+
             ]
         },
 
@@ -795,9 +799,7 @@ app.whenReady().then(async () => {
 // for applications and their menu bar to stay active until the user quits
 // explicitly with Cmd + Q.
 app.on('window-all-closed', () => {
-    if (process.platform !== 'darwin') {
         app.quit();
-    }
 });
 
 app.on('activate', () => {
@@ -1077,18 +1079,22 @@ ipcMain.handle('perform-search', async (event, { query, searchType }) => {
 });
 
 ipcMain.handle('fetch-book-metadata', async (event, bookId) => {
-    if (!metadatabase) {
-        console.log("Metadatabase not loaded yet.");
-        return null;
-    }
-
-    const bookMetadata = metadatabase.find(book => book.PG_ID === bookId);
-    if (bookMetadata) {
-        return bookMetadata;  // Return the metadata as an object
-    } else {
-        console.error("No book found with ID:", bookId);
-        return null;
-    }
+    return new Promise((resolve, reject) => {
+        const checkMetadatabase = setInterval(() => {
+            if (metadatabase) {
+                clearInterval(checkMetadatabase);
+                const bookMetadata = metadatabase.find(book => book.PG_ID === bookId);
+                if (bookMetadata) {
+                    resolve(bookMetadata);  // Return the metadata as an object
+                } else {
+                    console.error("No book found with ID:", bookId);
+                    resolve(null);
+                }
+            } else {
+                console.log("Metadatabase not loaded yet. Retrying...");
+            }
+        }, 100);
+    });
 });
 
 ipcMain.on('update-gutenberg-menu', (event, bookId) => {

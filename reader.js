@@ -1050,6 +1050,16 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     });
 
+    function adjustBookmarksDropdownHeight() {
+        var bookmarksDropdown = document.getElementById('bookmarksDropdown');
+        var topOffset = bookmarksDropdown.offsetTop;
+        var windowHeight = window.innerHeight;
+        var remainingHeight = windowHeight - topOffset - 30;
+
+        bookmarksDropdown.style.height = remainingHeight + 'px';
+    }
+
+
     // Ensure bookmark modal is closed on 'Escape' key press
     document.addEventListener('keydown', function (event) {
         if (event.key === "Escape") {
@@ -1104,6 +1114,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
             // Ensure the dropdown remains visible
             bookmarksDropdown.style.display = 'flex';
+            adjustBookmarksDropdownHeight();
         } catch (error) {
             console.error('Failed to fetch bookmarks:', error);
             bookmarksDropdown.innerHTML = '<i>Error loading bookmarks.</i>';
