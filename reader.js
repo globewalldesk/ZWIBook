@@ -1056,7 +1056,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         var windowHeight = window.innerHeight;
         var remainingHeight = windowHeight - topOffset - 30;
 
-        bookmarksDropdown.style.height = remainingHeight + 'px';
+        bookmarksDropdown.style.maxHeight = remainingHeight + 'px';
     }
 
 
@@ -3203,6 +3203,33 @@ function filterHansByColor(color) {
     });
 }
 
+// Function to measure the scrollbar width
+function getScrollbarWidth() {
+    // Create a temporary div element
+    const outer = document.createElement('div');
+    outer.style.visibility = 'hidden';
+    outer.style.overflow = 'scroll'; // Force scrollbar to appear
+    outer.style.width = '100px';
+    outer.style.position = 'absolute';
+    outer.style.top = '-9999px'; // Move it off screen
+
+    // Append the element to the body
+    document.body.appendChild(outer);
+
+    // Create a child div element inside the outer div
+    const inner = document.createElement('div');
+    inner.style.width = '100%';
+    outer.appendChild(inner);
+
+    // Calculate the scrollbar width
+    const scrollbarWidth = outer.offsetWidth - inner.offsetWidth;
+
+    // Remove the temporary elements
+    outer.parentNode.removeChild(outer);
+
+    return scrollbarWidth;
+}
+
 // Function to open the highlights and notes modal
 function openHighlightsNotesModal(event) {
     document.body.classList.add('no-scroll'); // Disable background scrolling
@@ -3212,11 +3239,13 @@ function openHighlightsNotesModal(event) {
     modal.style.display = 'block';
     const greyLine = document.getElementById('grey-line');
     greyLine.style.display = 'block';
-    // Adjust grey line width based on zoom factor
+    
+    // Adjust grey line width based on zoom factor and scrollbar width
     const zoomFactor = window.electronAPI.getZoomFactor();
-    greyLine.style.width = `${15 / zoomFactor}px`;
-    document.getElementById('header').style.width = `calc(100% - ${15 / zoomFactor}px)`;
-    document.body.style.paddingRight = `${13.5 / zoomFactor}px`;
+    const scrollbarWidth = getScrollbarWidth();
+    greyLine.style.width = `${scrollbarWidth}px`;
+    document.getElementById('header').style.width = `calc(100% - ${scrollbarWidth}px)`;
+    document.body.style.paddingRight = `${scrollbarWidth}px`;
 
     // Clear existing content
     document.getElementById('highlights').innerHTML = '';

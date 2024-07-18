@@ -243,6 +243,14 @@ function openExternalUrl(url) {
     });
 }
 
+let isSpellCheckEnabled = false; // Default value
+
+// Function to toggle spell-checking
+function toggleSpellChecking() {
+    isSpellCheckEnabled = !isSpellCheckEnabled;
+    mainWindow.webContents.send('toggle-spell-checking', isSpellCheckEnabled);
+}
+
 function createWindow() {
     // Create the browser window.
     mainWindow = new BrowserWindow({
@@ -320,33 +328,12 @@ function createWindow() {
                 },
                 { type: 'separator' },
                 {
-                    label: 'Print (requires PDF reader)',
+                    label: 'Print',
                     accelerator: 'CmdOrCtrl+P',
-                    click: async () => {
-                        const pdfPath = path.join(app.getPath('downloads'), 'output.pdf');
-                        const options = { 
-                            marginsType: 0, // Default to the standard preset, overridden by custom margin
-                            pageSize: 'A4',
-                            printBackground: true,
-                            printSelectionOnly: false,
-                            landscape: false,
-                            headerFooterEnabled: false,
-                            headerTemplate: '<div style="font-size: 10px; color: #999; text-align: center;">Header</div>',
-                            footerTemplate: '<div style="font-size: 10px; color: #999; text-align: center;">Footer</div>',
-                            margin: { // Custom margins
-                                top: '80px',    // Increase from '20px' to '40px' for twice as wide
-                                bottom: '80px', // Same increase as above
-                                left: '20px',   // Maintain original side margins
-                                right: '20px'
-                            }
-                        }
-                        try {
-                            const data = await mainWindow.webContents.printToPDF(options);
-                            fs.writeFileSync(pdfPath, data);
-                            openExternalUrl('file://' + pdfPath);
-                        } catch (error) {
-                            console.log('Failed to save PDF:', error);
-                        }
+                    click: () => {
+                        mainWindow.webContents.print({ silent: false, printBackground: true }, (success, errorType) => {
+                            if (!success) console.log(errorType);
+                        });
                     }
                 },
                 {
@@ -429,7 +416,15 @@ function createWindow() {
                     }
                 },
                 { type: 'separator' },
-                isMac ? { role: 'close' } : { role: 'quit' }
+                isMac ? { role: 'close' } :
+                    {
+                        label: 'Quit',
+                        accelerator: 'CmdOrCtrl+Q',
+                        click: () => {
+                            app.quit();
+                        }
+                    }
+
             ]
         },
         {
@@ -486,14 +481,13 @@ function createWindow() {
                 { role: 'zoomOut' },
                 { role: 'resetZoom' },
                 { type: 'separator' },
-                {
+                ...(isMac ? [{
                     label: 'Speech',
                     submenu: [
                         { role: 'startSpeaking' },
                         { role: 'stopSpeaking' }
                     ]
-                }
-
+                }] : [])
             ]
         },
 
@@ -692,8 +686,20 @@ function createWindow() {
 
 // Used to load latest.txt path
 function saveRelativeUrl(absoluteUrl) {
-    const relativeUrl = path.relative(__dirname, absoluteUrl.replace('file://', ''));
+    let relativeUrl;
+    
+    if (os.platform() === 'win32') {
+        // Windows specific logic
+        relativeUrl = absoluteUrl.replace('file:///', '');  // Adjusting for Windows paths
+        relativeUrl = relativeUrl.replace(/^([a-zA-Z]:\\)/, ''); // Ensure drive letter is removed
+        relativeUrl = path.relative(__dirname, relativeUrl); // Now calculate the relative path
+    } else {
+        // Original logic for Linux and macOS
+        relativeUrl = path.relative(__dirname, absoluteUrl.replace('file://', ''));
+    }
+
     fs.writeFileSync(latestUrlPath, relativeUrl, 'utf8');
+    console.log("latestUrlPath", relativeUrl);
 }
 
 // This method will be called when Electron has finished
@@ -1303,15 +1309,6 @@ ipcMain.on('show-alert-dialog', (event, message) => {
     });
     event.returnValue = result === 0; // Returns true if 'OK' is clicked
 });
-
-let isSpellCheckEnabled = false; // Default value
-
-// Function to toggle spell-checking
-function toggleSpellChecking() {
-    isSpellCheckEnabled = !isSpellCheckEnabled;
-    mainWindow.webContents.send('toggle-spell-checking', isSpellCheckEnabled);
-}
-
 
 // Function to read highlights and notes data from a JSON file
 async function readHlnotesData(bookId) {
