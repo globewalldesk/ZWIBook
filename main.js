@@ -19,14 +19,12 @@ if (!gotTheLock) {
   });
 }
 
-/*
 // Logging dev console output.
 const logFilePath = path.join(process.cwd(), 'app.log'); // Creates a log file in the current working directory
 const logStream = fs.createWriteStream(logFilePath, { flags: 'a' });
 console.log = function (message) {
     logStream.write(new Date().toISOString() + " - " + message + '\n');
 };
-*/
 
 let mainWindow; // Declare mainWindow globally
 let dataDir, zwiDirectoryPath, latestUrlPath, bookshelfPath, hlnotesPath; // Declare these globally to use in createWindow()
