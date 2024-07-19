@@ -57,8 +57,22 @@
       "stylesheet.css"
     ],
     "mac": {
-      "target": "dmg",
-      "icon": "images/icons/icon.icns"
+      "target": [
+        {
+          "target": "dmg",
+          "arch": [
+            "x64",
+            "arm64"
+          ]
+        }
+      ],
+      "icon": "images/icons/icon.icns",
+      "compression": "normal",
+      "artifactName": "${productName}.${ext}",
+      "hardenedRuntime": true,
+      "entitlements": "entitlements.mac.plist",
+      "entitlementsInherit": "entitlements.mac.plist",
+      "gatekeeperAssess": false
     }
   }
 }
