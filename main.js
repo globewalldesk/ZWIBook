@@ -22,7 +22,8 @@ if (!gotTheLock) {
 // Logging dev console output.
 const logFilePath = path.join(process.cwd(), 'app.log'); // Creates a log file in the current working directory
 const logStream = fs.createWriteStream(logFilePath, { flags: 'a' });
-console.log = function (message) {
+console.log = function (...args) {
+    const message = args.map(arg => (typeof arg === 'object' ? JSON.stringify(arg) : String(arg))).join(' ');
     logStream.write(new Date().toISOString() + " - " + message + '\n');
 };
 
@@ -169,17 +170,42 @@ const validateZwiPath = async (zwiPath) => {
     }
 };
 
-// Try to autodetect the ZWI directory path; used in app.whenReady() if config lacks a path. 
-const autodetectZwiDirectoryPath = async () => {
+// Function to add mounted paths
+const addMountedPaths = (baseDir, subDir, possiblePaths) => {
+    try {
+        const mountedDirs = fs.readdirSync(baseDir);
+        mountedDirs.forEach(mountedDir => {
+            possiblePaths.push(path.join(baseDir, mountedDir, subDir));
+        });
+    } catch (error) {
+        // Log the error but continue execution
+        console.error(`Error reading ${baseDir}:`, error);
+    }
+};
+
+const getPossiblePaths = () => {
     const possiblePaths = [
         path.join(__dirname, 'book_zwis'),
         path.join(__dirname, '..', 'book_zwis'),
         path.join(__dirname, '..', '..', 'book_zwis'),
+        path.join(__dirname, '..', '..', '..', 'book_zwis'),
         path.join(os.homedir(), 'book_zwis'),
-        path.join('/', 'media', os.userInfo().username, 'book_zwis'),
-        path.join('/', 'mnt', 'book_zwis'),
-        path.join('/', 'Volumes', 'book_zwis')
     ];
+
+    // Add mounted paths for Linux, including userID paths
+    const userID = os.userInfo().username;
+    addMountedPaths('/media', `book_zwis`, possiblePaths);
+    addMountedPaths(`/media/${userID}`, 'book_zwis', possiblePaths);
+    addMountedPaths('/mnt', 'book_zwis', possiblePaths);
+
+    // Add mounted paths for macOS
+    addMountedPaths('/Volumes', 'book_zwis', possiblePaths);
+
+    return possiblePaths;
+};
+
+const autodetectZwiDirectoryPath = async () => {
+    const possiblePaths = getPossiblePaths();
 
     // For Windows, add drive letters
     if (os.platform() === 'win32') {
@@ -767,6 +793,7 @@ app.whenReady().then(async () => {
             }
             config.zwiDirectoryPath = zwiDirectoryPath; // Save the new ZWI directory path to config
             await saveConfig(config);
+            mainWindow.reload();
         } else {
             zwiDirectoryPath = config.zwiDirectoryPath; // Use the existing ZWI directory path from the config
             // Validate the existing ZWI directory path
