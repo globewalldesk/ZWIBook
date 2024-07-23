@@ -19,9 +19,36 @@ if (!gotTheLock) {
   });
 }
 
-// Logging dev console output.
-const logFilePath = path.join(process.cwd(), 'app.log'); // Creates a log file in the current working directory
+// Determine log file path based on the operating system
+const getLogFilePath = () => {
+    const logFileName = 'app.log';
+    let logFilePath;
+
+    switch (process.platform) {
+        case 'win32':
+            // On Windows, use the user's AppData directory
+            logFilePath = path.join(app.getPath('userData'), logFileName);
+            break;
+        case 'darwin':
+            // On macOS, use the user's Library/Application Support directory
+            logFilePath = path.join(app.getPath('userData'), logFileName);
+            break;
+        case 'linux':
+            // On Linux, use the user's home directory
+            logFilePath = path.join(app.getPath('home'), logFileName);
+            break;
+        default:
+            // Default to the current working directory if the platform is unknown
+            logFilePath = path.join(process.cwd(), logFileName);
+    }
+
+    return logFilePath;
+};
+
+const logFilePath = getLogFilePath();
+console.log("log is at:", logFilePath);
 const logStream = fs.createWriteStream(logFilePath, { flags: 'a' });
+
 console.log = function (...args) {
     const message = args.map(arg => (typeof arg === 'object' ? JSON.stringify(arg) : String(arg))).join(' ');
     logStream.write(new Date().toISOString() + " - " + message + '\n');
