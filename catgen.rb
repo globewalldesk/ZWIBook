@@ -174,7 +174,7 @@ HTML
 end
 
 # Load the JSON data from 'metadatabase.json'
-file = File.read('metadatabase1.2.json')
+file = File.read('metadatabase1.1.json')
 books = JSON.parse(file)
 # Update LoCC codes to remove numbers and ensure each LoCC is treated correctly
 books.each do |book|

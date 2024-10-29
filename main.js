@@ -1058,7 +1058,7 @@ ipcMain.handle('fetch-zwi', async (event, bookId) => {
 
 
 // Construct the path to metadatabase.json
-const metaDataPath = path.join(__dirname, 'metadatabase1.2.json');
+const metaDataPath = path.join(__dirname, 'metadatabase1.1.json');
 
 let metadatabase;
 
