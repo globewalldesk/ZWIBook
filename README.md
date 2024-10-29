@@ -1,5 +1,7 @@
 # ZWIBook
 
+THIS IS A BACKUP OF THE GITLAB REPO (WHICH SHOULD BE MORE CURRENT).
+
 **Note: this readme was generated automatically by ChatGPT-4. It might not be quite right.**
 
 ZWIBook is a digital library application developed by the Knowledge Standards Foundation (KSF). It allows users to find, read, highlight, and take notes on books from the extensive Project Gutenberg collection. The primary goal is to preserve knowledge and make it accessible offline, providing features that support research and personal reading.
