@@ -163,13 +163,13 @@ function performSearch(query, searchType, isNewSearch) {
     query = query.trim();
 
     // Split the query into disjuncts based on "OR"
-const disjuncts = query.split(' OR ').map(disjunct => disjunct.replace(/[^\w\s'-]|_+/g, '').replace(/\s+AND\s+/gi, ' '));
+    const disjuncts = query.split(' OR ').map(disjunct => disjunct.replace(/[^\p{L}\s'-]|_+/gu, '').replace(/\s+AND\s+/gi, ' '));
 
     // Check each disjunct to ensure it has at least three alphanumeric characters
     for (let disjunct of disjuncts) {
         // Split the disjunct into words and remove non-alphanumeric characters per word
         let words = disjunct.split(/\s+/).map(word => word.replace(/[^\p{L}\p{N}]/gu, '').toLowerCase());
-    
+        
         // Filter out the stop words
         let filteredWords = words.filter(word => !stopWords.has(word));
     

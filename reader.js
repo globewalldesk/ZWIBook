@@ -146,6 +146,19 @@ document.addEventListener('DOMContentLoaded', async () => {
         return;
     }
 
+    // Fix weird CSS in which margin-left and margin-right are different
+    const bodyStyle = window.getComputedStyle(document.body);
+    const marginLeft = parseFloat(bodyStyle.marginLeft);
+    const marginRight = parseFloat(bodyStyle.marginRight);
+
+    // Find the highest margin value
+    const maxMargin = Math.max(marginLeft, marginRight);
+
+    // Set both margins to the highest value
+    document.body.style.marginLeft = `${maxMargin}px`;
+    document.body.style.marginRight = `${maxMargin}px`;
+
+
     // Back button logic
     function manageNavigationOnLoad() {
         const navCounter = parseInt(localStorage.getItem('navCounter'), 10);
@@ -485,16 +498,24 @@ document.addEventListener('DOMContentLoaded', async () => {
             "iso-8859-1": "iso88591",
             "iso-8859-2": "iso88592",
             "unicode": "utf-8",
-            "language: chinese": "utf-8"
+            "language: chinese": "utf-8",
+            "language: finnish": "utf-8"
         };
 
-        let decoder = new TextDecoder("iso88591"); // Default decoder
+        // Detect encoding in the main process using jschardet
+        const detectedEncoding = await window.electronAPI.detectEncoding(rawContent);
+
+        // Set a default encoding based on detection, fallback to iso88591
+        defaultEncoding = detectedEncoding || "utf-8";
+
+        let decoder = new TextDecoder(defaultEncoding); // Use the detected or default encoding
         for (const [key, value] of Object.entries(encodingMap)) {
             if (preliminaryContent.includes(key)) {
                 decoder = new TextDecoder(value);
                 break;
             }
         }
+        console.log("decoder =", decoder);
 
         let bookContent = decoder.decode(rawContent);
 
@@ -1365,6 +1386,177 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Menu management
     window.electronAPI.updateGutenbergMenu(currentBookId);
     window.electronAPI.refreshMenu();
+
+    
+    // EPUB LOGIC, UGH UGH
+    // Helper for EPUB export: Extract images from ZWI and send to main process
+    async function extractImagesFromZWI(zwiData, bookId) {
+        return new Promise((resolve, reject) => {
+            fflate.unzip(zwiData, async (err, unzipped) => {
+                if (err) {
+                    console.error('Unzip error:', err);
+                    reject(err);
+                    return;
+                }
+
+                const images = [];
+
+                // Iterate through ZWI files and extract images
+                Object.keys(unzipped).forEach(filename => {
+                    if (filename.endsWith('.jpg') || filename.endsWith('.png') || filename.endsWith('.gif')) {
+                        const rawImageData = unzipped[filename];
+
+                        // Convert the raw data (Uint8Array) to an array buffer (used for the main process)
+                        const arrayBuffer = rawImageData.buffer;
+                        
+                        // Push the image details to be sent to main.js
+                        images.push({
+                            filename,
+                            buffer: arrayBuffer  // Pass the array buffer instead of Buffer
+                        });
+                    }
+                });
+
+                if (images.length === 0) {
+                    console.log('No images found in the ZWI archive.');
+                    resolve([]);  // No images, resolve early
+                    return;
+                }
+
+                // Send images to main process to save them on the disk
+                window.electronAPI.saveImagesToTempFolder(bookId, images)
+                    .then(imagePaths => resolve(imagePaths))  // Resolve with the paths returned by main.js
+                    .catch(reject);
+            });
+        });
+    }
+
+    function replaceBlobUrlsWithFilePaths(bookContentElement, imagePaths) {
+        const imgElements = bookContentElement.querySelectorAll('img');
+        const usedImagePaths = new Set(); // Track used images
+    
+        imgElements.forEach(img => {
+            const originalPath = img.getAttribute('data-original-path');
+    
+            if (originalPath) {
+                // Extract the filename from the original path (e.g., "fp_250s.jpg")
+                const filename = originalPath.split('/').pop();
+                
+                console.log(`Looking for a match for image filename: ${filename}`);
+    
+                // Find the matching image path from the saved image paths
+                const matchingImagePath = imagePaths.find(path => path.endsWith(filename));
+    
+                if (matchingImagePath) {
+                    // Replace the blob URL with the relative file path ("images/filename.jpg")
+                    const relativePath = `file://${matchingImagePath}`; // `images/${filename}`;
+                    img.setAttribute('src', relativePath);
+    
+                    // Add the fully qualified path to the used images set
+                    usedImagePaths.add(matchingImagePath);
+                    console.log(`Replaced blob URL with relative file path: ${relativePath}`);
+                } else {
+                    console.log(`No matching image found for data-original-path: ${originalPath}`);
+                }
+            } else {
+                console.log('No data-original-path found for this <img> element.');
+            }
+        });
+    
+        // Filter out unused image paths
+        const filteredImagePaths = imagePaths.filter(path => usedImagePaths.has(path));
+    
+        console.log('Filtered image paths:', filteredImagePaths);
+        return filteredImagePaths; // Return only the used image paths
+    }    
+    
+    window.electronAPI.onEpubExportRequested(async () => {
+        try {
+            // Wait for #book-content to be fully loaded before proceeding
+            const bookContentElement = document.querySelector('#book-content').cloneNode(true);
+    
+            // Image prep
+            let imagePaths = await extractImagesFromZWI(zwiData, bookId);
+            console.log("Image paths received:", imagePaths);
+    
+            // Replace blob URLs with actual file paths
+            const filteredImagePaths = replaceBlobUrlsWithFilePaths(bookContentElement, imagePaths);
+            console.log("Filtered image paths:", filteredImagePaths);
+    
+            // Remove EPUB-unfriendly ID & classes
+            bookContentElement.id = '';
+            console.log('EPUB export initiated from reader.html');
+        
+            // Capture only the content inside #book-content
+            let singleChapterContent = bookContentElement.outerHTML;
+        
+            // Remove any <style> tags from the content
+            singleChapterContent = singleChapterContent.replace(/<style[^>]*>[\s\S]*?<\/style>/gi, '');
+    
+            // Use the document's title or metadata as the chapter title
+            const bookTitle = currentBookMetadata.Title || document.title || "Untitled";
+            const bookAuthor = extractAuthor();  // Extract the author from metadata or document
+        
+            // Collect inline styles, removing any @font-face declarations
+            let inlineStyles = '';
+            const styleTags = document.querySelectorAll('style');
+            styleTags.forEach((style) => {
+                let styleContent = style.innerHTML;
+                // Remove any @font-face blocks from the inline styles
+                styleContent = styleContent.replace(/@font-face\s*{[^}]*}/g, '');
+                inlineStyles += styleContent;
+            });
+        
+            // Get the external stylesheet from the <link> tag that refers to 'stylesheet.css'
+            let externalStyles = '';
+            const linkTag = document.querySelector('link[rel="stylesheet"]');
+            if (linkTag && linkTag.href) {
+                // Fetch the CSS content of the external stylesheet
+                const response = await fetch(linkTag.href);
+                if (response.ok) {
+                    externalStyles = await response.text();
+                    // Remove any @font-face blocks from the external styles as well
+                    externalStyles = externalStyles.replace(/@font-face\s*{[^}]*}/g, '');
+                } else {
+                    console.error('Failed to fetch external stylesheet');
+                }
+            }
+    
+            // Create the images object by mapping full image paths to their filenames
+            const imagesObject = filteredImagePaths.reduce((acc, imagePath) => {
+                const filename = imagePath.split('/').pop(); // Extract the image filename
+                acc[filename] = imagePath; // Use the imagePath as the key and filename as the value
+                return acc;
+            }, {});            
+        
+            // Prepare content array (only book content, no external elements)
+            const exportContent = [
+                {
+                    title: bookTitle,
+                    content: singleChapterContent  // Ensure only #book-content is exported
+                }
+            ];
+    
+            // Send the structured content along with other metadata to the main process
+            const exportData = {
+                title: bookTitle,
+                author: bookAuthor,
+                content: exportContent, // Export only the intended content
+                inlineStyles: inlineStyles,  // Collected inline styles (without @font-face)
+                externalStyles: externalStyles, // External stylesheet content (without @font-face)
+                images: imagesObject // Pass the image mapping to the main process
+            };
+
+            console.log(imagesObject);
+        
+            window.electronAPI.sendEpubExportDataToMain(exportData);
+        
+        } catch (error) {
+            console.error('Error during EPUB export:', error);
+        }
+    });
+    
+    
 });
 
 

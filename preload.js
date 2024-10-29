@@ -47,7 +47,11 @@ contextBridge.exposeInMainWorld('electronAPI', {
     importBookshelfData: () => ipcRenderer.invoke('import-bookshelf-data'),
     exportHlnotesData: () => ipcRenderer.invoke('export-hlnotes-data'),
     importHlnotesData: () => ipcRenderer.invoke('import-hlnotes-data'),
-    resetBooksLocation: () => ipcRenderer.invoke('reset-books-location')
+    resetBooksLocation: () => ipcRenderer.invoke('reset-books-location'),
+    onEpubExportRequested: (callback) => ipcRenderer.on('initiate-epub-export', callback),
+    sendEpubExportDataToMain: (exportData) => ipcRenderer.send('process-epub-export', exportData),
+    saveImagesToTempFolder: (bookID, images) => ipcRenderer.invoke('save-images-to-temp-folder', bookID, images),
+    detectEncoding: (rawContent) => ipcRenderer.invoke('detect-encoding', rawContent)
 });
 
 // Loads the same on all pages

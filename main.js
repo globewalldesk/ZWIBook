@@ -1,8 +1,12 @@
 const { app, BrowserWindow, ipcMain, Menu, MenuItem, shell, dialog } = require('electron');
 const { exec } = require('child_process');
+const cheerio = require('cheerio');
+const { EPub } = require('epub-gen-memory');  // Import the EPUB generation library
+const AdmZip = require('adm-zip');  // For EPUB fixer
 const fs = require('fs');
 const path = require('path');
 const os = require('os');
+const jschardet = require('jschardet');  // For detecting default book encoding
 
 // Request single instance lock
 const gotTheLock = app.requestSingleInstanceLock();
@@ -19,6 +23,7 @@ if (!gotTheLock) {
   });
 }
 
+/* LOCAL LOGGING TURNED ***OFF*** 
 // Determine log file path based on the operating system
 const getLogFilePath = () => {
     const logFileName = 'app.log';
@@ -53,6 +58,7 @@ console.log = function (...args) {
     const message = args.map(arg => (typeof arg === 'object' ? JSON.stringify(arg) : String(arg))).join(' ');
     logStream.write(new Date().toISOString() + " - " + message + '\n');
 };
+*/
 
 let mainWindow; // Declare mainWindow globally
 let dataDir, zwiDirectoryPath, latestUrlPath, bookshelfPath, hlnotesPath; // Declare these globally to use in createWindow()
@@ -388,7 +394,18 @@ function createWindow() {
                     }
                 },
                 {
-                    label: 'Save as PDF (requires PDF reader)',
+                    label: 'Export EPUB (for mobile book readers)',
+                    accelerator: 'CmdOrCtrl+Shift+E',
+                    click: () => {
+                        if (mainWindow.webContents.getURL().includes('reader.html')) {
+                            mainWindow.webContents.send('initiate-epub-export'); // Sends the message to reader.html via preload
+                        } else {
+                            console.log('Export EPUB option is only available in reader mode.');
+                        }
+                    }
+                },
+                {
+                    label: 'Export PDF',
                     accelerator: 'CmdOrCtrl+Shift+S',
                     click: async () => {
                         const pdfPath = path.join(app.getPath('downloads'), 'output.pdf');
@@ -410,7 +427,7 @@ function createWindow() {
                     }
                 },
                 {
-                    label: 'Export ZWI (original book files)',
+                    label: 'Export ZWI (with HTML/TXT)',
                     accelerator: 'CmdOrCtrl+Shift+K',
                     click: () => {
                         mainWindow.webContents.send('export-zwi');
@@ -721,7 +738,7 @@ function createWindow() {
 
     const menu = Menu.buildFromTemplate(template);
     Menu.setApplicationMenu(menu);
-    
+        
     let currentSearchText = '';
 
     // Listen to the search request
@@ -1041,7 +1058,7 @@ ipcMain.handle('fetch-zwi', async (event, bookId) => {
 
 
 // Construct the path to metadatabase.json
-const metaDataPath = path.join(__dirname, 'metadatabase.json');
+const metaDataPath = path.join(__dirname, 'metadatabase1.2.json');
 
 let metadatabase;
 
@@ -1057,6 +1074,10 @@ fs.readFile(metaDataPath, 'utf8', (err, data) => {
         console.error('Error parsing the metadatabase:', parseError);
     }
 });
+
+function normalizeString(str) {
+    return str.normalize('NFD').replace(/[\u0300-\u036f]/g, "").toLowerCase();
+}
 
 function searchDatabase(query, searchType) {
     console.log(query);
@@ -1079,8 +1100,10 @@ function searchDatabase(query, searchType) {
 
         // Collect initial results for the first keyword
         let subResults = metadatabase.filter(book => {
-            let titleMatch = book.Title.toLowerCase().includes(keywords[0].toLowerCase());
-            let authorMatch = Array.isArray(book.CreatorNames) && book.CreatorNames.some(author => author.toLowerCase().includes(keywords[0].toLowerCase()));
+            let normalizedTitle = normalizeString(book.Title);
+            let normalizedKeywords0 = normalizeString(keywords[0]);
+            let titleMatch = normalizedTitle.includes(normalizedKeywords0);
+            let authorMatch = Array.isArray(book.CreatorNames) && book.CreatorNames.some(author => normalizeString(author).includes(normalizedKeywords0));
 
             switch (searchType) {
                 case 'title':
@@ -1095,10 +1118,10 @@ function searchDatabase(query, searchType) {
 
         // For each additional keyword, filter the existing subResults
         for (let i = 1; i < keywords.length; i++) {
-            const keyword = keywords[i].toLowerCase();
+            const keyword = normalizeString(keywords[i]);
             subResults = subResults.filter(book => {
-                let titleMatch = book.Title.toLowerCase().includes(keyword);
-                let authorMatch = Array.isArray(book.CreatorNames) && book.CreatorNames.some(author => author.toLowerCase().includes(keyword));
+                let titleMatch = normalizeString(book.Title).includes(keyword);
+                let authorMatch = Array.isArray(book.CreatorNames) && book.CreatorNames.some(author => normalizeString(author).includes(keyword));
 
                 switch (searchType) {
                     case 'title':
@@ -1119,18 +1142,8 @@ function searchDatabase(query, searchType) {
     // Remove duplicates
     results = results.filter((value, index, self) => self.findIndex(v => v.PG_ID === value.PG_ID) === index);
 
-    // Throttle search when too much
-    console.log("searchTerms:", searchTerms);
-    const stopWords = ['the', 'of', 'in', 'on', 'at', 'for', 'with', 'a', 'an', 'and', 'or', 'but', 'is', 'if', 'it', 'as', 'to', 'that', 'which', 'by', 'from', 'up', 'out', 'off', 'this', 'all'];
-    const searches = searchTerms.filter(term => !stopWords.includes(term.toLowerCase()));
-    console.log("searchCount", searches.length);
-    if (results.length > 5000) {
-        return "TOOMANYRESULTS";
-    }
-
     return results;
 }
-
 
 ipcMain.handle('perform-search', async (event, { query, searchType }) => {
     return searchDatabase(query, searchType); // this assumes searchDatabase is defined as earlier mentioned
@@ -1362,6 +1375,325 @@ ipcMain.on('show-alert-dialog', (event, message) => {
     event.returnValue = result === 0; // Returns true if 'OK' is clicked
 });
 
+// Function to escape special characters in a string for use in a regular expression
+function escapeRegExp(string) {
+    return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+/**
+ * Helper for 'process-epub-export'. NOT USED, due to issues rendering text.
+ * Splits the chapter content into sections based on headings.
+ * Each section contains a title (from the heading) and the content that follows until the next heading.
+ * 
+ * @param {string} content - The entire HTML content of a chapter.
+ * @returns {Array} - An array of objects with title and content pairs.
+ */
+// THE BELOW IS NOT USED! 
+function splitIntoSections(content) {
+    const $ = cheerio.load(content);  // Load HTML content into Cheerio
+    const sections = [];
+    let currentTitle = "";  // This will store the title of the current section being built
+    let currentContent = "";  // This will store the content of the current section being built
+
+    // Replace all <div> elements with the class '.bm-paragraph' with their inner content
+    $('.bm-paragraph').each(function() {
+        $(this).replaceWith($(this).html()); // Replace the div with its contents
+    });
+
+    // Now proceed with iterating over the headings
+    $('h1, h2, h3, h4, h5, h6').each(function () {
+        const title = $(this).text(); // Extract the heading text
+        
+        // Initialize an empty string to collect section content
+        let sectionContent = "";
+    
+        console.log("Heading found:", title);
+    
+        // Capture all siblings after the heading
+        let sibling = $(this).next(); // Start with the next sibling
+        while (sibling.length && !sibling.is('h1, h2, h3, h4, h5, h6')) { // Continue until next heading
+            if (sibling.is('div') || sibling.is('pre') || sibling.is('p') || sibling.is('table')) { // Handle block elements
+                sectionContent += sibling.html() || ''; // Add HTML content of the sibling
+            }
+            sibling = sibling.next(); // Move to the next sibling
+        }
+    
+        // Now check the length of the section content
+        if (currentContent.length + sectionContent.length < 1000) {
+            // Combine the heading and content with the previous heading
+            currentTitle = currentTitle ? currentTitle + "\n" + title : title;
+            currentContent += sectionContent;
+        } else {
+            // If the current section has more than 1000 characters, flush the current content
+            if (currentTitle) {
+                sections.push({ title: currentTitle, content: currentContent });
+            }
+            // Reset currentTitle and currentContent for the new section
+            currentTitle = title;
+            currentContent = sectionContent;
+        }
+    });
+    
+    // After the loop, make sure to push the last section if it's not empty
+    if (currentTitle && currentContent.length > 0) {
+        sections.push({ title: currentTitle, content: currentContent });
+    }
+    
+    return sections;
+}
+// THE ABOVE IS NOT USED BY THE EPUB HANDLER!
+
+// EPUB-related function to save images to the data folder
+ipcMain.handle('save-images-to-temp-folder', async (event, bookId, images) => {
+    try {
+        const bookImagePath = path.join(dataDir, 'images', bookId.toString());
+
+        // Ensure the directory exists
+        fs.mkdirSync(bookImagePath, { recursive: true });
+        console.log(`bookImagePath = `, bookImagePath);
+
+        const savedImagePaths = images.map(image => {
+            // Extract just the filename from the full image filename
+            const imageFilePath = path.join(bookImagePath, path.basename(image.filename));
+        
+            // Convert ArrayBuffer to Buffer
+            const buffer = Buffer.from(image.buffer);
+        
+            // Save the image to the temp folder
+            fs.writeFileSync(imageFilePath, buffer);
+            return imageFilePath; // Return the full path to the saved image
+        });
+
+        console.log('Images saved successfully.');
+        return savedImagePaths; // Return the paths of the saved images
+
+    } catch (error) {
+        console.error('Error saving images:', error);
+        throw error;
+    }
+});
+
+// HELPER for epub handler: Function to convert image file to base64
+function convertFileToBase64(filePath) {
+    try {
+        const fileBuffer = fs.readFileSync(filePath);
+        const fileExtension = path.extname(filePath).substring(1); // Get the file extension without the dot
+        const base64File = `data:image/${fileExtension};base64,${fileBuffer.toString('base64')}`;
+        return base64File;
+    } catch (error) {
+        console.error(`Error reading file: ${filePath}`, error);
+        return null;
+    }
+}
+
+// HELPER for epub handler: Debugging function to log all potentially problematic nodes
+function logUnsupportedNodes(chapterContent) {
+    const unsupportedNodes = chapterContent.match(/<.*?(src|href)=["'](file:\/\/|ftp:\/\/|data:\/\/|[\w-]+:\/\/)[^"']*["']/g) || [];
+
+    if (unsupportedNodes.length > 0) {
+        console.log("Unsupported nodes found:", unsupportedNodes);
+    } else {
+        console.log("No unsupported nodes found in this chapter.");
+    }
+}
+
+// EPUB HANDLER: Post-process to fix issues
+async function postProcessEPUB(epubPath) {
+    const tempExtractPath = path.join(os.tmpdir(), `epub_extract_${Date.now()}`);
+    const tempZipPath = path.join(os.tmpdir(), `book_${Date.now()}.zip`); // Save as .zip first
+
+    try {
+        // Step 1: Initialize AdmZip and extract the EPUB contents
+        const zip = new AdmZip(epubPath);
+        zip.extractAllTo(tempExtractPath, true); // Extract to temp directory
+        console.log(`EPUB extracted to: ${tempExtractPath}`);
+
+        // Step 2: Repack the EPUB as .zip using AdmZip
+        const outputZip = new AdmZip();
+        outputZip.addLocalFolder(tempExtractPath);  // Add the entire extracted folder back into the ZIP
+        outputZip.writeZip(tempZipPath);  // Save as .zip
+        console.log(`EPUB saved as ZIP at: ${tempZipPath}`);
+
+        // Step 3: Rename the .zip file to .epub
+        const finalEpubPath = epubPath;  // Final EPUB output path remains the same
+        fs.renameSync(tempZipPath, finalEpubPath);  // Rename .zip to .epub
+        console.log(`ZIP renamed to EPUB at: ${finalEpubPath}`);
+
+    } catch (error) {
+        console.error('Error during EPUB post-processing:', error);
+    } finally {
+        // Cleanup: Remove the temporary extraction directory
+        fs.rmdirSync(tempExtractPath, { recursive: true });
+        console.log(`Temporary extraction path cleaned: ${tempExtractPath}`);
+    }
+}
+
+// Function to move the file after EPUB post-processing is complete
+async function moveFileAfterPostProcess(epubPath) {
+    // Show save dialog to prompt the user for the save location
+    const { filePath } = await dialog.showSaveDialog({
+        title: 'Save EPUB As',
+        defaultPath: epubPath, // Suggest the current Downloads location
+        filters: [
+            { name: 'EPUB Files', extensions: ['epub'] }
+        ]
+    });
+
+    // If the user cancels, filePath will be undefined
+    if (filePath) {
+        try {
+            // Move the file from Downloads to the selected location
+            fs.renameSync(epubPath, filePath);
+        } catch (error) {
+            console.error('Error moving the EPUB file:', error);
+            dialog.showErrorBox('File Move Error', 'An error occurred while moving the EPUB file.');
+        }
+    } else {
+        console.log('User canceled the save dialog. EPUB remains in Downloads.');
+    }
+}
+
+// MAIN EPUB HANDLER
+ipcMain.on('process-epub-export', async (event, exportData) => {
+    console.log('Received export data from renderer process.');
+
+    const { inlineStyles, externalStyles, images, author, title, content: exportContent } = exportData;
+
+    // Combine inline and external styles (but don't embed in chapter content)
+    const combinedStyles = `${inlineStyles}\n${externalStyles}`;
+
+    let processedContent;
+
+    try {
+        // Process each chapter, ensuring 'content' is correctly populated
+        processedContent = await Promise.all(exportContent.map(async (chapter, index) => {
+            let chapterContent = chapter.data || chapter.content;
+            console.log(`Processing book: ${chapter.title}`);
+
+            // Write the HTML to a file for debugging
+            const htmlFilePath = path.join(app.getPath('downloads'), `chapter_${index + 1}.html`);
+            fs.writeFileSync(htmlFilePath, chapterContent);
+            console.log(`Chapter HTML written to: ${htmlFilePath}`);
+            
+            // Log unsupported nodes (e.g., those using file://, ftp://, etc.)
+            logUnsupportedNodes(chapterContent);
+
+            // Load the chapter content into Cheerio
+            const $ = cheerio.load(chapterContent);
+
+            $('.bm-paragraph').each(function() {
+                $(this).replaceWith($(this).html());
+            });
+
+            // Remove all elements with the classes "bookmark-icon" and "bookmark-icon-filled"
+            $('.bookmark-icon, .bookmark-icon-filled').each(function() {
+                $(this).remove();  // Remove the entire element
+            });
+
+            // List of supported protocols
+            const supportedProtocols = ['http://', 'https://', '#', 'data:']; 
+
+            // Function to detect unsupported protocols
+            function checkUnsupportedProtocol(url) {
+                return url && !supportedProtocols.some(protocol => url.startsWith(protocol));
+            }
+
+            // Check all elements for unsupported protocols and log only remaining issues
+            $('img').each(function() {
+                const src = $(this).attr('src');
+                
+                // Log what we are about to check
+                console.log(`Checking img src for unsupported protocol: ${src}`);
+
+                // Skip protocol check for images specifically
+                if ($(this).is('img')) {
+                    this.next;
+                } else if (checkUnsupportedProtocol(src)) {
+                    console.log(`Removing element with unsupported src: ${src}`);
+                    $(this).remove();  // Remove element with unsupported src
+                }
+            });
+
+
+            // Get the modified chapter content
+            chapterContent = $.html();
+
+            // Refined regex to match and strip out any SVGs in images/icons, including bookmark-fill.svg
+            chapterContent = chapterContent.replace(/<img\s+[^>]*src=["']images\/icons\/[^"']*bookmark(-fill)?\.svg["'][^>]*>/g, '');
+
+            // Strip out any <a> tag with external or about.html links
+            chapterContent = chapterContent.replace(/<a[^>]*href=["'](https?:\/\/|about\.html)[^"']*["'][^>]*>(.*?)<\/a>/gi, '$2');
+
+            // Save the processed content to a file for inspection
+            const outputPath = path.join(app.getPath('downloads'), 'processedContent.html');
+            fs.writeFileSync(outputPath, chapterContent, 'utf8');
+
+            return [{ title: chapter.title, content: chapterContent }];
+        }));
+
+    } catch (error) {
+        console.error('Error processing content:', error);
+        return;
+    }
+
+    // Ensure processedContent is an array
+    if (Array.isArray(processedContent) && processedContent.length > 0) {
+        const description = `${title} by ${author}. A Project Gutenberg edition ebook, EPUB generated by ZWIBook.`;
+
+        const options = {
+            title: title || "Generated EPUB Title",
+            author: author || "Author Name",
+            description: description,
+            css: combinedStyles,  // Pass the combined styles to be referenced externally
+            images: images
+        };
+
+        try {
+            // Generate the EPUB file using epub-gen-memory with content as a separate argument
+            const epubBuffer = await new EPub(options, processedContent.flat()).genEpub(); // Flatten the sections
+
+            if (!epubBuffer) {
+                console.error('EPUB buffer is undefined. EPUB generation may have failed.');
+                return;
+            }
+
+            // Function to sanitize the title for use in a filename
+            function sanitizeForFileName(input) {
+                return input.replace(/[^a-zA-Z0-9-_ ]/g, '')  // Keep alphanumeric, dashes, underscores, spaces
+                            .trim()
+                            .replace(/\s+/g, '_')  // Replace spaces with underscores
+                            .slice(0, 40);  // Truncate to 40 chars
+            }
+            
+            // Generate the filename using the sanitized title
+            const sanitizedTitle = sanitizeForFileName(title || "Generated EPUB Title");
+            const outputFileName = `${sanitizedTitle}.epub`;
+
+            // Path to save the file (assuming it's saved in the downloads directory)
+            const outputPath = path.join(app.getPath('downloads'), outputFileName);
+            console.log(`Saving EPUB as: ${outputFileName}`);
+
+            // Write the Buffer to a file
+            fs.writeFileSync(outputPath, epubBuffer);
+
+            console.log('EPUB generated successfully at:', outputPath);
+
+            const epubPath = outputPath;  // Assuming this is the path to the generated EPUB
+            await postProcessEPUB(epubPath);
+
+            // After post-processing, prompt the user to move the file to their selected location
+            await moveFileAfterPostProcess(epubPath);
+
+        } catch (error) {
+            console.error('Failed to generate EPUB:', error);
+            dialog.showErrorBox('EPUB Generation Error', 'An error occurred while generating the EPUB file.');
+        }
+    } else {
+        console.error('Content is missing or incorrectly formatted.');
+    }
+});
+
+
 // Function to read highlights and notes data from a JSON file
 async function readHlnotesData(bookId) {
     try {
@@ -1387,8 +1719,11 @@ async function writeHlnotesData(bookId, data) {
         let currentData = {};
         if (fs.existsSync(hlnotesPath)) {
             const fileData = await fs.promises.readFile(hlnotesPath, 'utf8');
-            currentData = JSON.parse(fileData);
+            if (fileData.trim()) {  // Check if file is not empty
+                currentData = JSON.parse(fileData);
+            }
         }
+
         if (!currentData.highlights) {
             currentData.highlights = {};
         }
@@ -1907,4 +2242,12 @@ async function resetBooksLocation() {
 // IPC Communication Handler
 ipcMain.handle('reset-books-location', async () => {
     await resetBooksLocation();
+});
+
+// Function to detect charset of books, for use in reader.js
+ipcMain.handle('detect-encoding', async (event, rawContent) => {
+    // Convert the Uint8Array or Buffer to a string before passing to jschardet
+    const contentAsString = new TextDecoder('utf-8').decode(Buffer.from(rawContent));
+    const detection = jschardet.detect(contentAsString);
+    return detection.encoding || 'iso88591'; // Fallback to ISO-8859-1 if detection fails
 });
