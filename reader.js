@@ -499,23 +499,17 @@ document.addEventListener('DOMContentLoaded', async () => {
             "iso-8859-2": "iso88592",
             "unicode": "utf-8",
             "language: chinese": "utf-8",
-            "language: finnish": "utf-8"
+            "language: finnish": "utf-8", 
+            "language: swedish": "iso88591"
         };
 
-        // Detect encoding in the main process using jschardet
-        const detectedEncoding = await window.electronAPI.detectEncoding(rawContent);
-
-        // Set a default encoding based on detection, fallback to iso88591
-        defaultEncoding = detectedEncoding || "utf-8";
-
-        let decoder = new TextDecoder(defaultEncoding); // Use the detected or default encoding
+        let decoder = new TextDecoder("iso88591"); // Default decoder
         for (const [key, value] of Object.entries(encodingMap)) {
             if (preliminaryContent.includes(key)) {
                 decoder = new TextDecoder(value);
                 break;
             }
         }
-        console.log("decoder =", decoder);
 
         let bookContent = decoder.decode(rawContent);
 

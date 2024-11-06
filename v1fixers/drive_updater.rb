@@ -4,39 +4,29 @@ require 'fileutils'
 # Script purpose: update ZWIBook content, either in /home or on flash drives.
 
 # Paths to the home directory and flash drives
-HOME_PATH = "/home/globewalldesk/ZWIBook/book_zwis"
-FLASH_DRIVE_PATH = '/media/globewalldesk/ZWIBook*'
-DATA_SOURCE_PATH = '/media/globewalldesk/DATA/ProjectGutenberg/book_zwis'
+FLASH_DRIVE_PATH = '/media/globewalldesk/ZWIBook2'
+DATA_SOURCE_PATH = '/home/globewalldesk/ZWIBook/book_zwis'
 START_ZWI = 70566  # The starting point for copying files
 TARGET_FILE_COUNT = 69020  # The total number of files desired in the target directories
+V1_1_SOURCE_PATH = '/home/globewalldesk/ZWIBook/v1.1'  # Source path for the v1.1 directories
 
 # File lists (should be in the same directory as this script)
 FILES_TO_DELETE = 'files_to_delete.txt'
 
 # Step (a): Ask whether to update the home directory or flash drives
 def choose_location
-  puts "Would you like to update (a) the home directory or (b) flash drives?"
-  choice = gets.chomp.downcase
-  case choice
-  when 'a'
-    return [HOME_PATH], 'Home Directory'
-  when 'b'
-    drives = Dir.glob(FLASH_DRIVE_PATH)
-    if drives.empty?
-      puts "No ZWIBook drives found."
-      exit
-    end
-    puts "Detected drives:"
-    drives.each { |drive| puts drive }
-    puts "\nPress <Enter> to confirm the drives and continue."
-    gets.chomp
-    # Ensure the 'book_zwis' subdirectory is appended to the flash drives correctly
-    drives_with_book_zwis = drives.map { |drive| File.join(drive, 'book_zwis') }
-    return drives_with_book_zwis, 'Flash Drives'
-  else
-    puts "Invalid choice. Please choose 'a' or 'b'."
+  drives = Dir.glob(FLASH_DRIVE_PATH)
+  if drives.empty?
+    puts "No ZWIBook drives found."
     exit
   end
+  puts "Detected drives:"
+  drives.each { |drive| puts drive }
+  puts "\nPress <Enter> to confirm the drives and continue."
+  gets.chomp
+  # Ensure the 'book_zwis' subdirectory is appended to the flash drives correctly
+  drives_with_book_zwis = drives.map { |drive| File.join(drive, 'book_zwis') }
+  return drives_with_book_zwis, 'Flash Drives'
 end
 
 # Step (b): Read file lists
@@ -102,7 +92,7 @@ end
 def replace_files(drive, start_zwi, target_file_count)
   total_copied = 0
   missing_sources = 0
-  current_file_count = count_remaining_files(drive)
+  current_file_count = count_files(drive)
 
   file_number = start_zwi
   while current_file_count < target_file_count
@@ -130,7 +120,7 @@ def replace_files(drive, start_zwi, target_file_count)
 end
 
 # Step (f): Count remaining files in the target directory
-def count_remaining_files(drive)
+def count_files(drive)
   remaining_files = Dir.glob(File.join(drive, '*.zwi'))
   remaining_files_count = remaining_files.size
   remaining_files_count
@@ -144,6 +134,45 @@ def output_highest_numbered_file(drive)
   else
     highest_zwi = zwi_files.max
     puts "The highest-numbered ZWI file on #{drive} is: #{highest_zwi}.zwi"
+  end
+end
+
+# Step (h): Permanently delete the specified directories and files from the drive
+# Directories and files to be deleted
+DELETION_LIST = [
+  'Linux', 'mac', 'mac-arm64', 'Windows',
+  'builder-debug.yml', 'builder-effective-config.yaml',
+  'ZWIBook.dmg', 'ZWIBook.dmg.blockmap', '._Mac'
+]
+def delete_directories_and_files(drive)
+  DELETION_LIST.each do |item|
+    path = File.join(drive, "..", item)
+    if File.exist?(path)
+      if File.directory?(path)
+        FileUtils.rm_rf(path)
+        puts "Deleted directory: #{path}"
+      else
+        FileUtils.rm(path)
+        puts "Deleted file: #{path}"
+      end
+    else
+      puts "Path not found: #{path} (Skipping)"
+    end
+  end
+end
+
+# Step (i): Copy the directories from /v1.1 to the flash drive
+def copy_new_directories(drive)
+  %w[Linux Mac Windows].each do |folder|
+    source_dir = File.join(V1_1_SOURCE_PATH, folder)
+    dest_dir = File.join(drive, "..", folder)
+    
+    if File.exist?(source_dir)
+      FileUtils.cp_r(source_dir, dest_dir)
+      puts "Copied directory from #{source_dir} to #{dest_dir}"
+    else
+      puts "Source directory not found: #{source_dir}"
+    end
   end
 end
 
@@ -165,7 +194,7 @@ drives.each do |drive|
   total_copied, missing_sources = replace_files(drive, START_ZWI, TARGET_FILE_COUNT)
 
   # Count remaining files
-  remaining_files_count = count_remaining_files(drive)
+  remaining_files_count = count_files(drive)
 
   # Output the statistics for the current drive
   puts "\nUpdate process completed for drive: #{drive}"
@@ -181,6 +210,14 @@ drives.each do |drive|
   # Output the highest-numbered ZWI file on the current drive
   puts "\nOutputting the highest-numbered ZWI file on drive: #{drive}"
   output_highest_numbered_file(drive)
+
+  # Step (h): Delete unwanted directories and files
+  #puts "\nDeleting unwanted directories and files on drive: #{drive}"
+  #delete_directories_and_files(drive)
+
+  # Step (i): Copy over the new directories
+  #puts "\nCopying new directories to drive: #{drive}"
+  #copy_new_directories(drive)
 end
 
 puts "\nOperation completed on all selected drives/directories."
