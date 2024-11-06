@@ -23,7 +23,7 @@ if (!gotTheLock) {
   });
 }
 
-/* LOCAL LOGGING TURNED ***OFF*** 
+// /* START MULTI-LINE COMMENT-OUT TO TURN DEVELOPMENT LOGGING ***ON*** 
 // Determine log file path based on the operating system
 const getLogFilePath = () => {
     const logFileName = 'app.log';
@@ -58,7 +58,7 @@ console.log = function (...args) {
     const message = args.map(arg => (typeof arg === 'object' ? JSON.stringify(arg) : String(arg))).join(' ');
     logStream.write(new Date().toISOString() + " - " + message + '\n');
 };
-*/
+// */ END MULTI-LINE COMMENT-OUT TO TURN DEVELOPMENT LOGGING ***ON*** 
 
 let mainWindow; // Declare mainWindow globally
 let dataDir, zwiDirectoryPath, latestUrlPath, bookshelfPath, hlnotesPath; // Declare these globally to use in createWindow()
