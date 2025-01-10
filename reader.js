@@ -8,6 +8,7 @@ let currentBookId = bookId;
 let bookshelfData = null;
 let bookContentDiv;
 let currentBookMetadata;
+let pageCount;
 let resourceMap = {};
 let zwiData;
 let buffer;
@@ -666,7 +667,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         // Get the plain text content and count the words
         const plainTextContent = getTextContent(bookContentDiv.innerHTML);
         const wordCount = countWords(plainTextContent);
-        const pageCount = Math.ceil(wordCount / 300);
+        pageCount = Math.ceil(wordCount / 300);
 
         // Move inline centering to class.
         const relevantTags = ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol', 'tr', 'figcaption', 'aside', 'address', 'details', 'summary'];
@@ -1278,11 +1279,12 @@ document.addEventListener('DOMContentLoaded', async () => {
         return Math.round(percentage);
     };
 
-    // Function to update the title attribute with the read percentage
+    // Function to update the title attribute with the read percentage and page count
     const updateReadPercentageTitle = () => {
         const percentage = calculateReadPercentage();
-        prevPage.title = `${percentage}% read`; // Set title for previous page button
-        nextPage.title = `${percentage}% read`; // Set title for next page button
+        const currentPage = Math.ceil((percentage / 100) * pageCount) || 1; // Calculate current page
+        prevPage.title = `p. ${currentPage} (${percentage}%)\n~${pageCount} pages`; // Previous page button
+        nextPage.title = `p. ${currentPage} (${percentage}%)\n~${pageCount} pages`; // Next page button
     };
 
     // Throttled version of updateReadPercentageTitle
